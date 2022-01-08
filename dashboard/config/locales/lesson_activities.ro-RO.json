@@ -3224,6 +3224,21 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Încheiere"
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Oportunitate interdisciplinară"
+        },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Elemente pregătitoare: Același cuvânt, un sens diferit."
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "Urmărește: Puterea cuvintelor"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Investigați: Care este problema?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "Încheiere: Depășirea limitelor"
+        },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Aprofundare"
         },
@@ -3232,6 +3247,9 @@
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Încheiere"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Oportunitate interdisciplinară"
         },
         "0a159287-c2ef-4cfc-b1a3-f9147a79e747": {
           "name": "Activitatea principală"
@@ -3281,6 +3299,12 @@
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
           "name": "Aprofundare"
         },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Oportunitate interdisciplinară"
+        },
+        "5b774bd6-b243-4d1d-9145-20747f320129": {
+          "name": "Activitate de legătură - Alegeți una"
+        },
         "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
           "name": "Activitatea principală"
         },
@@ -3326,8 +3350,35 @@
         "19c350ea-4420-4a94-a91e-f7d798799cc4": {
           "name": "Evaluare"
         },
+        "80cbea1a-7c3f-4121-bab6-abd831772020": {
+          "name": "Ziua 1 - Explorează ideile de proiecte"
+        },
+        "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
+          "name": "Ziua 2 - Procesul de design"
+        },
+        "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
+          "name": "Ziua 3 - Construiește-ți proiectul"
+        },
+        "459d00f2-e296-4205-bca6-eab8d4599354": {
+          "name": "Ziua 4 - Revizuiți proiectul"
+        },
+        "25d5e16a-9db1-441d-a4c4-916612df574b": {
+          "name": "Ziua 5 și 6 - Prezintă-ți proiectul"
+        },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Aprofundare"
+        },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Urmăriți: Urma digitală"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Jucați: Urme de animale"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Recapitulare: E în regulă să partajăm informații despre noi?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Încheiere: Pauză de gândire"
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Aprofundare"
@@ -3341,6 +3392,9 @@
         "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
           "name": "Aprofundare"
         },
+        "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
+          "name": "Activitate de legătură - Alegeți una"
+        },
         "248075ed-be23-4145-bbe5-f629eb3df448": {
           "name": "Activitatea principală"
         },
@@ -3349,6 +3403,15 @@
         },
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
           "name": "Aprofundare"
+        },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Oportunitate interdisciplinară"
+        },
+        "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
+          "name": "Activitate de legătură - Alegeți una"
+        },
+        "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
+          "name": "Previzualizarea puzzle-urilor online împreună cu toți elevii"
         },
         "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
           "name": "Activitatea principală"
@@ -3377,6 +3440,9 @@
         "4a617b6e-9d56-472c-8a50-31052d127232": {
           "name": "Aprofundare"
         },
+        "06b2458e-a834-46c5-842e-385c1fc97bc8": {
+          "name": "Activitate de legătură - Alegeți una"
+        },
         "287b6295-2274-4349-a7c3-fab998a09e1c": {
           "name": "Activitatea principală"
         },
@@ -3386,14 +3452,26 @@
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
           "name": "Aprofundare"
         },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
           "name": "Activitatea principală"
+        },
+        "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
+          "name": "Încheiere"
+        },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Oportunitate interdisciplinară"
         },
         "8227e109-9b6a-448c-a107-e70498299438": {
           "name": "Activitatea principală"
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Încheiere"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Oportunitate interdisciplinară"
         },
         "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
           "name": "Activitate"
@@ -3413,6 +3491,12 @@
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
           "name": "Aprofundare"
         },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Oportunitate interdisciplinară"
+        },
+        "8e77b151-07f6-4404-98ec-473f310fc8b1": {
+          "name": "Activitate de legătură - Alegeți una"
+        },
         "b170b2ef-82f1-4067-aadc-add8074acb80": {
           "name": "Activitatea principală"
         },
@@ -3428,6 +3512,18 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Încheiere"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Urmăriți: Cartierul meu online"
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": "Citiți: Siguranța este importantă!"
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Explorați: Excursie pe internet"
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "Pauză de gândire"
+        },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
           "name": "Aprofundare"
         },
@@ -3440,6 +3536,9 @@
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
           "name": "Aprofundare"
         },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e": {
           "name": "Activitatea principală"
         },
@@ -3448,6 +3547,9 @@
         },
         "0915a618-f1c1-47be-b8fb-80664fa62e50": {
           "name": "Aprofundare"
+        },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Activitate de legătură - Alegeți una"
         },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Activitatea principală"
@@ -3467,6 +3569,9 @@
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
           "name": "Aprofundare"
         },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "fe01455d-0a26-4c9c-9031-25490a38f95e": {
           "name": "Activitatea principală"
         },
@@ -3482,11 +3587,20 @@
         "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
           "name": "Aprofundare"
         },
+        "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
+          "name": "Activitate de legătură - Alegeți una"
+        },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Activitatea principală"
         },
+        "647827d3-b6a3-4697-9cb8-fec35c819d12": {
+          "name": "Încheiere"
+        },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Aprofundare"
+        },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Oportunitate interdisciplinară"
         },
         "9513331c-917a-4e11-a63a-9c53ef1e708c": {
           "name": "Activitatea principală"
@@ -3500,6 +3614,9 @@
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Încheiere"
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "9a383162-e9c7-47d0-be4d-582abaef1ae8": {
           "name": "Activitatea principală"
         },
@@ -3508,6 +3625,9 @@
         },
         "32810ead-80cc-47b1-863f-ea8d023aaa94": {
           "name": "Aprofundare"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Activitate de legătură - Evenimente - Alegeți una"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Activitatea principală"
@@ -3524,6 +3644,18 @@
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Încheiere"
         },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Învață: Ce este atitudinea răutăcioasă?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Comportament online comparativ cu comportament în persoană"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Explorați: STOP comportamentelor răutăcioase"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Încheiere: Pauză de gândire"
+        },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Aprofundare"
         },
@@ -3536,6 +3668,12 @@
         "10dd8520-1410-493c-bd48-5233e4bf2965": {
           "name": "Încheiere"
         },
+        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
+          "name": "Activitate de legătură - Programare"
+        },
+        "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
+          "name": "Previzualizarea puzzle-urilor online împreună cu toți elevii"
+        },
         "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
           "name": "Activitatea principală"
         },
@@ -3545,6 +3683,9 @@
         "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
           "name": "Aprofundare"
         },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "62f7dfaa-f865-461e-a17f-6d5c09893246": {
           "name": "Activitatea principală"
         },
@@ -3553,6 +3694,9 @@
         },
         "756542f6-213e-4c07-9442-d1cf97e1ff26": {
           "name": "Aprofundare"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Activitate de legătură"
         },
         "e0fe20d3-be99-4212-83f8-21599085fcad": {
           "name": "Activitatea principală"
@@ -3569,6 +3713,9 @@
         "27034f13-f0bf-41c0-a198-385c740be6ab": {
           "name": "Aprofundare"
         },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
           "name": "Activitate"
         },
@@ -3577,6 +3724,9 @@
         },
         "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
           "name": "Aprofundare"
+        },
+        "8df58520-6127-4563-b145-8d7d81635bde": {
+          "name": "Activitate de legătură - Alegeți una"
         },
         "e36b6776-3c22-498e-94ef-44fae2c28065": {
           "name": "Activitatea principală"
@@ -3596,11 +3746,17 @@
         "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
           "name": "Aprofundare"
         },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "b20f1e20-6bb7-4cfb-9fe5-17928dc3ab60": {
           "name": "Activitatea principală"
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Încheiere"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Oportunitate interdisciplinară"
         },
         "4e9e15eb-a14e-4b52-ba13-768f4a7900c3": {
           "name": "Activitatea principală"
@@ -3611,6 +3767,9 @@
         "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
           "name": "Aprofundare"
         },
+        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
+          "name": "Activitate de legătură - Alegeți una"
+        },
         "7ec11452-1367-44ef-afe4-c8cf354bb183": {
           "name": "Activitatea principală"
         },
@@ -3619,6 +3778,9 @@
         },
         "7c0129f4-ba20-475d-b304-a85ddd87507e": {
           "name": "Aprofundare"
+        },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Oportunitate interdisciplinară"
         },
         "b0a66dc2-0e44-413c-8364-97799728aa5f": {
           "name": "Activitatea principală"
@@ -3635,6 +3797,9 @@
         "81828841-d023-4593-896d-b4ce1481da6f": {
           "name": "Încheiere"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Activitate principală"
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Încheiere"
         },
@@ -3650,6 +3815,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Încheiere"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Activitate pregătitoare: Pssst... ce este o parolă?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Evaluați: Uh-Oh! If ... Then..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Creați: Îmbunătățiți-vă parolele"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Încheiere: Sfaturi privind parolele - Note"
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Aprofundare"
         },
@@ -3662,8 +3839,14 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Încheiere"
         },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Evaluare opțională"
+        },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Aprofundare"
+        },
+        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
+          "name": "Activități de legătură - Programare"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Activitatea principală"
@@ -3680,6 +3863,9 @@
         "da433c13-5e0a-48fe-a697-d2288e831912": {
           "name": "Aprofundare"
         },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Activități de legătură - Alegeți una"
+        },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Activitatea principală"
         },
@@ -3694,6 +3880,9 @@
         },
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
           "name": "Aprofundare"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Oportunitate interdisciplinară"
         },
         "2ffe8a66-a950-4b74-91e5-5149b2808279": {
           "name": "Activitatea principală"
@@ -3713,6 +3902,9 @@
         "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
           "name": "Activitatea principală"
         },
+        "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
+          "name": "Încheiere"
+        },
         "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
           "name": "Aprofundare"
         },
@@ -3728,6 +3920,9 @@
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Încheiere"
         },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Activitate pregătitoare"
+        },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Activitatea principală"
         },
@@ -3739,6 +3934,9 @@
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
           "name": "Aprofundare"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Oportunitate interdisciplinară"
         },
         "c351a38f-ac03-4bc3-b2f1-8b5f06903317": {
           "name": "Activitatea principală"
@@ -3785,6 +3983,9 @@
         "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
           "name": "Aprofundare"
         },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "a26761fc-1bdc-4474-a043-307dbef1453a": {
           "name": "Activitatea principală"
         },
@@ -3793,6 +3994,9 @@
         },
         "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
           "name": "Aprofundare"
+        },
+        "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
+          "name": "Activitate de legătură"
         },
         "813fd866-1517-4302-b080-b035a842ae06": {
           "name": "Activitatea principală"
@@ -3808,6 +4012,9 @@
         },
         "1d75c580-140f-4796-9e75-5863162c676b": {
           "name": "Aprofundare"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Oportunitate interdisciplinară"
         },
         "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6": {
           "name": "Activitatea principală"
@@ -3833,6 +4040,9 @@
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Încheiere"
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
           "name": "Activitate (30-45 minute)"
         },
@@ -3853,6 +4063,9 @@
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Încheiere"
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Oportunitate interdisciplinară"
         },
         "4a006482-722c-43cd-81cd-cfc8b1180f80": {
           "name": "Activitatea principală"
@@ -3977,6 +4190,9 @@
         "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
           "name": "Aprofundare"
         },
+        "472354f3-e631-40c3-8001-dc5d7f1206db": {
+          "name": "Previzualizarea puzzle-urilor online împreună cu toți elevii"
+        },
         "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
           "name": "Activitatea principală"
         },
@@ -3985,6 +4201,9 @@
         },
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
           "name": "Aprofundare"
+        },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Activitate pregătitoare: Previzualizarea programării în Labirint"
         },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Activitatea principală"
@@ -4010,11 +4229,20 @@
         "0a77a438-3684-4874-b963-e5a75723888a": {
           "name": "Activitatea principală"
         },
+        "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
+          "name": "Încheiere"
+        },
         "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
           "name": "Aprofundare"
         },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "Elemente de bază online: Previzualizarea buclelor în Colecționar"
+        },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Activitatea principală"
+        },
+        "e6a1f5df-d8d4-41a1-8649-d518965997af": {
+          "name": "Încheiere"
         },
         "089afb18-d132-46ab-88ca-2af47333e237": {
           "name": "Activitatea principală"
@@ -4052,6 +4280,9 @@
         "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
           "name": "Încheiere"
         },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Activitate de legătură"
+        },
         "7007138d-bc16-4bc0-8d30-252440672814": {
           "name": "Activitatea principală"
         },
@@ -4064,8 +4295,32 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Încheiere"
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Activitate pregătitoare: Supereroul secret"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Învățați: Cum să fim modele de urmat"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Creați: Supereroul tău, cetățeanul digital"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Încheiere: Salvează situația! - Bandă desenată"
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Aprofundare"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Activitate pregătitoare: Ridicați-vă, așezați-vă"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analizați: De ce partajăm informații despre noi?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analizați: Privat sau personal?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Încheiere: Bilet de ieșire"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Aprofundare"
@@ -4078,6 +4333,12 @@
         },
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Încheiere"
+        },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Oportunitate interdisciplinară"
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Activitate pregătitoare (opțional)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Activitatea principală"
@@ -4094,6 +4355,9 @@
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Încheiere"
         },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "d8e700f9-bc93-424a-9ab3-3a06b63816b0": {
           "name": "Activitatea principală"
         },
@@ -4109,6 +4373,9 @@
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Încheiere"
         },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Oportunitate interdisciplinară"
+        },
         "b4ae143b-f79d-4ab9-9346-dca177438f61": {
           "name": "Activitatea principală"
         },
@@ -4120,6 +4387,12 @@
         },
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
           "name": "Aprofundare"
+        },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Oportunitate interdisciplinară"
+        },
+        "a80b5d47-5fb8-4557-9fb2-233074caad47": {
+          "name": "Activitate de legătură - Alegeți una"
         },
         "0da29d00-d95a-4538-ac89-116513fba104": {
           "name": "Activitatea principală"
@@ -4168,6 +4441,15 @@
         },
         "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
           "name": "Proiect de final de curs"
+        },
+        "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
+          "name": "Ziua 2 - Procesul de design"
+        },
+        "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
+          "name": "Ziua 3 - Construiește-ți proiectul"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Ziua 4 și 5 - Prezintă-ți proiectul"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Aprofundare"

@@ -11643,6 +11643,12 @@ ro:
               display_name: Conţinut
             lessonGroup-5:
               display_name: Cutie cu nisip
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -12675,23 +12681,6 @@ ro:
                 variante multiple de răspuns.
             lesson-1:
               key: lecția-1
-              description_student: Proiectele pe care le-ați dezvoltat în timpul acestui
-                curs au condus la o creștere a creativității în comunitate! Se va
-                organiza un Festival de literatură din cartier pentru a se prezenta
-                povești creative, scenarii, versuri de cântece, scrisori și poezii.
-                Proiectul Festivalul de literatură din cartier este un proiect de
-                amploare la care veți lucra pe parcursul acestei unități, iar strategiile
-                de management de proiect vă vor ajuta să vă organizați și să vă structurați
-                activitatea. Explorați strategii de scriere și structurare a codului
-                astfel încât și alți ingineri software să îl poată înțelege cu ușurință
-                și utilizați un instrument Java pentru a crea documentația programului.
-              description_teacher: Elevii se familiarizează cu proiectul Festivalul
-                de literatură din cartier și evaluează cerințele și exemplele pentru
-                a identifica întrebările și caracteristicile-cheie. Înainte de a începe
-                să lucreze la proiect, elevii vor înțelege structura programelor și
-                adăugarea de comentarii la acestea prin identificarea celor mai bune
-                practici și prin explorarea Javadocs, pentru generarea documentației
-                programului.
             lesson-2:
               key: lecția-2
               description_student: Veți elabora obiecte `Integer` și `Double` pentru
@@ -13112,3 +13101,110 @@ ro:
                 \n\n-   să adune obiecte, imagini, degete sau materiale didactice
                 până la 10."
           title: Numără cu Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lecția
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 1
+            lesson-12:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 2
+            lesson-13:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulator Epidemie
+            lesson-5:
+              name: Despre mine cu Laboratorul cu sprites
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
