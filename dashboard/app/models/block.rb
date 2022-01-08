@@ -37,19 +37,54 @@ class Block < ApplicationRecord
       return nil
     end
 
-    Rails.cache.fetch("blocks/#{pool}", force: !Script.should_cache?) do
+    Rails.cache.fetch("blocks/#{pool}/#{I18n.locale}", force: !Script.should_cache?) do
       Block.where(pool: pool).map(&:block_options)
     end
   end
 
   def block_options
-    {
+    options = {
       name: name,
       pool: pool,
       category: category,
       config: JSON.parse(config),
       helperCode: helper_code,
     }
+    block_text = options[:config]["blockText"]
+    unless block_text.blank?
+      block_text_translation = I18n.t(
+        "text",
+        scope: [:data, :blocks, name],
+        default: nil,
+        smart: true
+      )
+      options[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
+    end
+    arguments = options[:config]["args"]
+    unless arguments.blank?
+      arguments.each do |argument|
+        next if argument["options"].blank?
+        argument["options"]&.each_with_index do |option, i|
+          # Options come in arrays representing key,value pairs, which will
+          # ultimately determine the display of the dropdown.
+          # When only one element is in the array, it represents both the key
+          # and the value.
+          option_value = option.length > 1 ? option[1] : option[0]
+
+          # Get the translation from the value
+          option_translation = I18n.t(
+            option_value,
+            scope: [:data, :blocks, name, :options, argument['name']],
+            default: nil,
+            smart: true
+          )
+          # Update the key (the first element) with the new translated value
+          argument["options"][i][0] = option_translation unless option_translation.nil?
+        end
+      end
+      options[:config]["args"] = arguments
+    end
+    options
   end
 
   CONFIG_DIRECTORY = 'blocks'
