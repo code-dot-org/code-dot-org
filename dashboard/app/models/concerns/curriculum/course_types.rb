@@ -43,7 +43,7 @@ module Curriculum::CourseTypes
     all_family_courses = nil
 
     if is_a?(UnitGroup) || (is_a?(Script) && unit_group)
-      all_family_courses = UnitGroup.all_courses.select {|c| c.family_name == family_name}
+      all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
     elsif is_a?(Script)
       all_family_courses = Script.get_family_from_cache(family_name)
     end
