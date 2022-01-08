@@ -1618,57 +1618,63 @@ el:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Λουλούδια
-            '"hearts"': Καρδιές
+            '"hearts"': καρδιές
             '"iceCream"': Παγωτό
-            '"rainbow"': Ουράνιο τόξο
-            '"stars"': Αστέρια
-            '"waves"': Κύματα
+            '"rainbow"': ουράνιο τόξο
+            '"stars"': αστέρια
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': βροχή
       Poetry_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': νύχτα
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': αργή
       Poetry_playSound:
         text: παίξεΉχο {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Φωτεινό
+            '"sound://category_bell/long_bell_notification.mp3"': καμπάνα
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': πήδα
       Poetry_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Χρώματα
-            '"squiggles"': Μουτζούρες
-            '"space"': Διάστημα
-            '"stars"': Αστέρια
-            '"ripples"': Πτυχώσεις
-            '"rain"': Βροχή
             '"bubbles"': Μπουρμπουλήθρες
+            '"clouds"': συννεφιασμένος
             '"confetti"': Κομφετί
-            '"hearts"': Πολύχρωμες καρδιές
+            '"hearts"': καρδιές
+            '"space"': Διάστημα
+            '"rain"': βροχή
+            '"ripples"': Πτυχώσεις
+            '"colors"': Χρώματα
+            '"stars"': Αστέρια
+            '"squiggles"': Μουτζούρες
           PALETTE:
-            '"rainbow"': Ουράνιο τόξο
+            '"rainbow"': ουράνιο τόξο
+            '"winter"': χειμώνας
       Poetry_setBackgroundImageAs:
         text: Ορισμός φόντου σε {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Βροχή
             '"bubbles"': Μπουρμπουλήθρες
-            '"hearts"': Πολύχρωμες καρδιές
             '"confetti"': Κομφετί
+            '"hearts"': καρδιές
+            '"rain"': βροχή
             '"starburst"': Οδοντωτός σύνδεσμος
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            swimming_left_and_right: κολύμβηση
+            '"swimming_left_and_right"': κολύμβηση
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            swimming_left_and_right: κολύμβηση
+            '"swimming_left_and_right"': κολύμβηση
       Poetry_whenLineShows:
         options:
           'N':
