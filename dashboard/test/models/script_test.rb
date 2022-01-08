@@ -40,6 +40,36 @@ class ScriptTest < ActiveSupport::TestCase
     Script.clear_cache
   end
 
+  def populate_cache_and_disconnect_db
+    Script.stubs(:should_cache?).returns true
+    # Only need to populate cache once per test-suite run
+    @@script_cached ||= Script.unit_cache_to_cache
+    Script.script_cache
+    Script.unit_family_cache
+
+    # Also populate course_cache, as it's used by course_link
+    UnitGroup.stubs(:should_cache?).returns true
+    @@course_cached ||= UnitGroup.course_cache_to_cache
+    UnitGroup.course_cache
+
+    CourseVersion.stubs(:should_cache?).returns true
+    CourseVersion.course_offering_keys('Script')
+
+    CourseOffering.all.pluck(:key).each do |key|
+      CourseOffering.get_from_cache(key)
+    end
+
+    Script.all.pluck(:id, :name).each do |sid, name|
+      CourseOffering.get_from_cache(sid)
+      CourseOffering.get_from_cache(name)
+    end
+
+    # NOTE: ActiveRecord collection association still references an active DB connection,
+    # even when the data is already eager loaded.
+    # Best we can do is ensure that no queries are executed on the active connection.
+    ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
+  end
+
   test 'can setup migrated unit with new models' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
@@ -467,8 +497,6 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
-    Script.clear_cache
-    UnitGroup.clear_cache
     Script.stubs(:should_cache?).returns true
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
@@ -481,31 +509,23 @@ class ScriptTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
     CourseOffering.add_course_offering(csp_2018)
 
-    populate_cache
-
-    @csp1_2017 = Script.get_from_cache(csp1_2017.id)
-
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
     assert_queries(0) do
-      assert @csp1_2017.has_other_versions?
+      assert csp1_2017.has_other_versions?
     end
   end
 
   test 'has_other_versions? makes no queries when there are no other unit group versions' do
-    Script.clear_cache
-    UnitGroup.clear_cache
     Script.stubs(:should_cache?).returns true
 
-    csz_2017 = create(:unit_group, name: 'csz-2017', family_name: 'csz', version_year: '2017')
-    csz1_2017 = create(:script, name: 'csz1-2017')
-    create :unit_group_unit, unit_group: csz_2017, script: csz1_2017, position: 1
-    CourseOffering.add_course_offering(csz_2017)
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
 
-    populate_cache
-
-    @csz1_2017 = Script.get_from_cache(csz1_2017.id)
-
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
     assert_queries(0) do
-      refute @csz1_2017.has_other_versions?
+      refute csp1_2017.has_other_versions?
     end
   end
 
@@ -2020,7 +2040,9 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a standalone unit into a unit group' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
       UnitGroup.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name
