@@ -63,6 +63,10 @@ class CourseOffering < ApplicationRecord
     end
   end
 
+  def can_be_instructor?(user)
+    course_versions.any? {|cv| cv.can_be_instructor?(user)}
+  end
+
   def pl_course?
     course_versions.any?(&:pl_course?)
   end

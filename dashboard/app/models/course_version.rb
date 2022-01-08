@@ -59,10 +59,11 @@ class CourseVersion < ApplicationRecord
   # into the course version itself.
 
   delegate :name, to: :content_root
-  delegate :pl_course?, to: content_root
-  delegate :launched?, to: content_root
-  delegate :in_development?, to: content_root
-  delegate :has_pilot_access?, to: content_root
+  delegate :pl_course?, to: :content_root
+  delegate :launched?, to: :content_root
+  delegate :in_development?, to: :content_root
+  delegate :has_pilot_access?, to: :content_root
+  delegate :can_be_instructor?, to: :content_root
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
