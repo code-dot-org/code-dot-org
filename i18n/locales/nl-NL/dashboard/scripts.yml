@@ -5683,6 +5683,12 @@ nl:
               display_name: Content
             lessonGroup-5:
               display_name: Sandbox
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -6475,8 +6481,6 @@ nl:
               description_teacher: In deze unit gebruikten de leerlingen `ArrayList`s om programmagegevens op te slaan en maakten ze onderscheid tussen het gebruik van 1D en 2D arrays en `ArrayList`s. Leerlingen onderzochten de voordelen en functionaliteit van een `ArrayList`, en gebruikten deze om problemen op te lossen met numerieke en objectgegevens. Leerlingen gebruikten methoden in de `String` klasse om tekst, verkregen uit gebruikers- en bestandsinvoer, te analyseren en te verwerken. Gedurende de hele unit schreven de leerlingen programmadocumentatie met behulp van eenregelig commentaar, meerregelig commentaar en Javadoc commentaar om API documentatie te maken. In het proces, identificeerden en documenteerden de leerlingen precondities en postcondities van objecten en methodes. Nu evalueren de leerlingen het bereiken van de leerdoelen en vaardigheden van de unit op een meerkeuzebeoordeling.
             lesson-1:
               key: Les 1
-              description_student: De projecten die jullie tijdens de cursus hebben ontwikkeld, hebben veel creativiteit in de community geïnspireerd! Er wordt een literair buurtfeest gehouden worden om creatieve verhalen, scripts, liedteksten, brieven en gedichten te laten zien. Het Literair buurtfeest-project is een groot project waar je gedurende de hele unit aan werkt, en projectmanagementstrategieën helpen om je werk te organiseren en te structureren. Je verkent strategieën voor het schrijven en structureren van code zodat andere software-ingenieurs het gemakkelijk kunnen begrijpen, en je gebruikt een Java-tool om programmadocumentatie te maken.
-              description_teacher: Leerlingen maken kennis met het Literair buurtfeest-project en evalueren de vereisten en voorbeelden om vragen en hoofdkenmerken te identificeren. Alvorens aan het project te beginnen, breiden leerlingen hun begrip van programmastructuur en commentaar uit door best practices te identificeren en het gebruik van Javadocs te onderzoeken om programmadocumentatie te genereren.
             lesson-2:
               key: Les 2
               description_student: Je construeert `Integer` en `Dubbel` objecten om `int` en `double` primitieve waarden als referentiewaarden weer te geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen, retourneer je de waarden die deze objecten opslaan als primitieve waarden. Je onderzoekt ook de minimum en maximum waarden voor gehele getallen om overloopfouten te voorkomen, voordat je de taken plant die je moet voltooien voor je Literair buurtfeest-project.
@@ -6635,3 +6639,109 @@ nl:
               description_student: Help Laurel, de schatgraver, met tellen en voeg stappen toe om juwelen te verzamelen!
               description_teacher: "Deze les bouwt voort op voorafgaande activiteiten met betrekking tot tellen en optellen. Tellen met Laurel ondersteunt studenten op de kleuterschool en lagere school bij het oefenen van tellen en optellen als ze lussen gebruiken om Laurel, de schatgraver, te helpen bij het verzamelen van juwelen in een raster. Ze gebruiken een reeks aan coderingsopdrachten om Laurel te begeleiden in een raster om juwelen te verzamelen door middel van het blok \"Herhalen\" dat van hen vereist dat ze tellen hoeveel stappen Laurel moet zetten - waarna ze dat getal weergeven door middel van het juiste nummer in een codeblok.\n\n#### Vereiste vaardigheden\n\nDeze les heeft niet als doel studenten kennis te laten maken met getallen, tellen of optellen. Studenten dienen aan deze les te beginnen met al wat kennis en vaardigheden om in staat te zijn om:\n\n-   getallen te herkennen en op te tellen tot 10 met behulp van afbeeldingen, vingers of handvaardigheid.\n-   objecten, afbeeldingen, vingers of handvaardigheid toe te voegen om tot 10 te komen."
           title: Tellen met Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Les
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Literair buurtfeest-project - Dag 1
+            lesson-12:
+              name: Literair buurtfeest-project - Dag 2
+            lesson-13:
+              name: Literair buurtfeest-project - Dag 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Uitbraaksimulator
+          description_short: Intern
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: Les 10
+            lesson-6:
+              key: Les 6
+            lesson-7:
+              key: Les 7
+            lesson-8:
+              key: Les 8
+            lesson-9:
+              key: Les 9
+            lesson-11:
+              key: Les 11
+            lesson-12:
+              key: Les 12
+            lesson-13:
+              key: Les 13
+            lesson-14:
+              key: Les 14
+            lesson-15:
+              key: Les 15
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
+            lesson-4:
+              key: Les 4
+            lesson-5:
+              key: Les 5
+            lesson-16:
+              key: Les 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
+            lesson-4:
+              key: Les 4
+            lesson-5:
+              key: Les 5
+            lesson-10:
+              key: Les 10
+            lesson-6:
+              key: Les 6
+            lesson-7:
+              key: Les 7
+            lesson-8:
+              key: Les 8
+            lesson-9:
+              key: Les 9
+            lesson-11:
+              key: Les 11
+            lesson-12:
+              key: Les 12
+            lesson-13:
+              key: Les 13
+            lesson-14:
+              key: Les 14
+            lesson-15:
+              key: Les 15
+            lesson-16:
+              key: Les 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Sandbox
