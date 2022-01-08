@@ -210,8 +210,26 @@
           "name": "تعديلات الدرس الافتراضي",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: شرائح عرض الدرس"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: عالمي الافتراضي"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: الأمان، إنه يحكم!"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: لحظة \"توقف وفكر\"!"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "البرمجة الزوجية"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "الاهتزاز- جنون المعكرونة"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "استعد للبدء- أنشئ شعبة"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "الخرائط السعيدة"
@@ -228,6 +246,9 @@
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "قوالب بلوكلي غير المتصلة (الصفوف من رياض الأطفال وحتى الفصل الأول)"
         },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "إيجاد وتصحيح الخلل البرمجي مع زر \"خطوة\""
+        },
         "happy-map-cards-xl/coursea/2021": {
           "name": "بطاقات الخرائط السعيدة الكبيرة جدًا"
         },
@@ -237,8 +258,17 @@
         "feeling-faces-image/coursea/2021": {
           "name": "الإحساس بالوجوه"
         },
+        "pair-programming/coursea/2021": {
+          "name": "البرمجة مع صديق"
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "name": "أساسيات علم الكمبيوتر - توصيات الدرس"
+        },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت"
+        },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "أساسيات علم الكمبيوتر - توصيات الدرس"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "الحدث الكبير"
@@ -255,11 +285,26 @@
         "csf-lesson-recommend/coursea/2021": {
           "name": "نصائح النشاط الرئيسي في أساسيات علوم الكمبيوتر"
         },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "أساسيات علم الكمبيوتر - توصيات الدرس"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "مطابقة معايير رابطة معلمي علم الكمبيوتر"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "مفردات الدورة التدريبية"
+        },
         "implementation_guide/coursea/2021": {
           "name": "دليل التنفيذ"
         },
+        "debugging_guide/coursea/2021": {
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+        },
         "curriculum_guide_1/coursea/2021": {
           "name": "دليل المقرر الدراسي"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "سجل التغيير ٢٠٢١"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "منتدى المعلم"
