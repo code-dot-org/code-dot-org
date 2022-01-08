@@ -1581,12 +1581,12 @@ class ScriptTest < ActiveSupport::TestCase
     coursea_2019 = create :script, name: 'coursea-2019', published_state: 'preview'
     coursea_2020 = create :script, name: 'coursea-2020', published_state: 'pilot', pilot_experiment: 'my-experiment'
 
-    assert_equal [coursea_2019], Script.valid_scripts(teacher)
-    assert_equal [coursea_2019, coursea_2020], Script.valid_scripts(pilot_teacher)
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)[:student_units]
+    assert_equal [coursea_2019, coursea_2020], Script.valid_scripts(pilot_teacher)[:student_units]
 
     # This call to valid_scripts will hit the cache; verify that the call to
     # Script.valid_scripts(pilot_teacher) did not alter the cache.
-    assert_equal [coursea_2019], Script.valid_scripts(teacher)
+    assert_equal [coursea_2019], Script.valid_scripts(teacher)[:student_units]
   end
 
   test "get_assessment_script_levels returns an empty list if no level groups" do
