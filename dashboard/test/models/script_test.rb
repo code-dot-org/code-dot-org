@@ -1976,6 +1976,8 @@ class ScriptTest < ActiveSupport::TestCase
       @facilitator = create :facilitator
       @levelbuilder = create :levelbuilder
       @plc_reviewer = create :plc_reviewer
+
+      Script.clear_cache
     end
 
     test "assignable_for_user?: launched course taught by teachers for students" do
