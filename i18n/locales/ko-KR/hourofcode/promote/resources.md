@@ -84,7 +84,7 @@ Malala, Stephen Curry, Shakira 등의 사진이 들어 있는 새 포스터가 �
 
 **제목:**아워오브코드를 위해 저와 1억 명 이상 학생들과 함께 해주세요. <br />
 
-컴퓨터는 어디에나 존재하고, 지구상에 모든 산업을 변화시킵니다. But only 51% of all high schools teach computer science. 희소식은, 우리가 이러한 상황을 바꾸어가고 있다는 것입니다! 이전에 아워오브코브에 대해 들어봤다면, 이것이 역사를 만들었다는 걸 아실겁니다. 1억명 이상의 학생들이 아워오브코드를 해보고 있습니다.
+컴퓨터는 어디에나 존재하고, 지구상에 모든 산업을 변화시킵니다. But only 51% of all high schools offer computer science. 희소식은, 우리가 이러한 상황을 바꾸어가고 있다는 것입니다! 이전에 아워오브코브에 대해 들어봤다면, 이것이 역사를 만들었다는 걸 아실겁니다. 1억명 이상의 학생들이 아워오브코드를 해보고 있습니다.
 
 아워오브코드로, 컴퓨터 과학이 구글과 MSN, 야후!, 디즈니의 홈페이지에 이미 있습니다. 100개 이상의 파트너가 이 운동을 지원하기 위해 함께 협력하고 있습니다. 전세계 모든 애플스토어에서도 아워오브코드를 개최했으며 오바마 대통령과 캐나다 쥐스탱 트뤼도 총리 등과 같은 지도자는 캠페인의 일부로서 그들의 첫 번째 코드 라인을 작성했습니다. 
 
@@ -110,7 +110,7 @@ http://hourofcode.com/{{ country_language }}에서 시작하세요 <br />
 
 학생은 각자 자신의 앱 또는 게임을 만들어 학부모에게 보여줄 것이며 우리 역시 아워오브코드 인증서를 인쇄하여 학생들에게 나눠 줄 것입니다. 무엇보다 재밌습니다! 인터랙티브, 체험형 활동으로 학생은 접근 가능한 방식으로 컴퓨팅 사고력을 배울 것입니다.
 
-컴퓨터는 어디에나 존재하고, 지구상에 모든 산업을 변화시킵니다. But only 51% of all high schools teach computer science. 좋은 소식은 우리가 이러한 상황을 바꾸어가고 있다는 것입니다! 이전에 아워오브코드에 대해 들어봤다면, 이것이 역사를 만들었다는 걸 아실겁니다. 전세계 1억 명 이상의 학생들이 아워오브코드를 해 봤습니다. 심지어 오바마 대통령과 캐나다 쥐스탱 트뤼도 총리 등과 같은 지도자는 캠페인의 일부로서 그들의 첫 번째 코드 라인을 작성했습니다. 
+컴퓨터는 어디에나 존재하고, 지구상에 모든 산업을 변화시킵니다. But only 51% of all high schools offer computer science. 좋은 소식은 우리가 이러한 상황을 바꾸어가고 있다는 것입니다! 이전에 아워오브코드에 대해 들어봤다면, 이것이 역사를 만들었다는 걸 아실겁니다. 전세계 1억 명 이상의 학생들이 아워오브코드를 해 봤습니다. 심지어 오바마 대통령과 캐나다 쥐스탱 트뤼도 총리 등과 같은 지도자는 캠페인의 일부로서 그들의 첫 번째 코드 라인을 작성했습니다. 
 
 이벤트에 관한 더 자세한 내용은 http://hourofcode.com에서 읽을 수 있습니다. 또는 [학교명]가 (이) 참여하는 방법에 관해 논의할 시간을 갖고 싶으면 저희에게 말씀해 주십시오. <br />
 
@@ -126,7 +126,7 @@ http://hourofcode.com/{{ country_language }}에서 시작하세요 <br />
 
 우리는 기술로 둘러싸인 세상속에서 살아가고 있습니다. 그리고 우리는 학생들이 자라나 어른이 되면서 어떤 진로와 분야를 선택하게 되던지, 현재와 같은 IT 기술을 이해하고 활용할 수 있는 능력이 그 진로와 분야에서 성공하는데 전적으로 달려있다는 것을 알고 있습니다.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 그래서 우리 학교 전체가 컴퓨터 과학 교육주간 ({{ campaign_date/full }})에 역사상 가장 큰 학습 이벤트인 아워오브코드에 참여하려 합니다. 전세계 1억명 이상의 학생들이 이미 아워오브코드를 경험해 보았습니다. 우리의 아워오브코드는 [학교 이름]은 이러한 기본적인 21세기 스킬을 가르칠 준비가 되었다는 선언문을 만들고 있습니다. 우리 학생들이 프로그래밍 활동들을 계속 할 수 있도록 하기 위해, 아워오브코드 이벤트를 아주 크게 열고 싶습니다. 자원봉사를 하고 지역 언론매체에 연락하며 소셜 미디어 채널에서 뉴스를 공유하고 커뮤니티에서 추가적인 아워오브코드 이벤트를 열어주시면 좋겠습니다.
 
@@ -144,7 +144,7 @@ But only a fraction of us are learning **how** technology works. Only 51% of all
 
 **제목**: 학생들에게 컴퓨터 과학을 소개하는 미션에 지역 학교 참여.
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. 소외된 인종 및 민족 그룹의 어린 여성과 학생들은 컴퓨터 과학 수업을 받는 경우는 매우 적으며 더구나 테크 산업에 진출한 인원 역시 매우 적습니다. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. 소외된 인종 및 민족 그룹의 어린 여성과 학생들은 컴퓨터 과학 수업을 받는 경우는 매우 적으며 더구나 테크 산업에 진출한 인원 역시 매우 적습니다. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다.
 
 아워오브코드로, 컴퓨터 과학이 구글과 MSN, 야후!, 디즈니의 홈페이지에 이미 있습니다. 100개 이상의 파트너가 이 운동을 지원하기 위해 함께 협력하고 있습니다. 전세계의 애플 스토어가 아워오브코들 주최하고 있습니다. 오바마 대통령은 캠페인의 일환으로 그의 첫번째 코드를 작성했습니다.
 
@@ -172,7 +172,7 @@ Computers are everywhere, changing every industry on the planet, but only 51% of
 
 컴퓨팅 직종이 미국에서 가장 임금이 높은 직종인 걸 알고 계셨어요? 전국적으로 500,000개 이상의 컴퓨터 관련 일자리가 있지만, 작년엔 불과 42,969명의 컴퓨터 과학 전공자 만이 취업했습니다.
 
-오늘날 컴퓨터 과학은 각 산업의 기반이지만 대부분의 학교에서 가르치고 있지 않습니다. [학교명]에서, 우리는 이를 바꾸려 합니다.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 그래서 우리 학교 전체가 컴퓨터 과학 교육주간 ({{ campaign_date/full }})에 역사상 가장 큰 학습 이벤트인 아워오브코드에 참여하려 합니다. 전세계 1억명 이상의 학생들이 이미 아워오브코드를 경험해 보았습니다.
 

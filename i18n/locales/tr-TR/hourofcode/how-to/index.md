@@ -150,7 +150,7 @@ Bazı öğrenciler erken bitirirse ne yapmalı?
 ## Eğitimciler için diğer Hour of Code kaynakları:
 
 - Eğitmenlerden tavsiye, kavrama yardımı ve destek almak için [Hour of Code Öğretmen Forumu](http://forum.code.org/c/plc/hour-of-code)'nu ziyaret edin.
-- [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin.
+- [ Hour of Code SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) sayfasını gözden geçirin.
 
 ### Hour of Code etkinliğinden sonra ne yapmalı?
 
