@@ -1,0 +1,166 @@
+import React from 'react';
+import NewAssignmentSelector from './NewAssignmentSelector';
+
+const styles = {
+  dropdown: {
+    padding: '0.3em'
+  }
+};
+
+const courseOfferings = [
+  {
+    id: 1,
+    display_name: 'coursea',
+    course_versions: [
+      {
+        id: 84,
+        version_year: '2017',
+        display_name: '2017',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 94, name: 'Course A'}]
+      },
+      {
+        id: 85,
+        version_year: '2018',
+        display_name: '2018',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 95, name: 'Course A (2018)'}]
+      },
+      {
+        id: 86,
+        version_year: '2019',
+        display_name: '2019',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 96, name: 'Course A (2019)'}]
+      },
+      {
+        id: 87,
+        version_year: '2020',
+        display_name: '2020',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 97, name: 'Course A (2020)'}]
+      },
+      {
+        id: 88,
+        version_year: '2021',
+        display_name: '2021',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 551, name: 'Course A (2021)'}]
+      },
+      {
+        id: 261,
+        version_year: '2022',
+        display_name: '2022',
+        is_stable: false,
+        is_recommended: false,
+        units: [{id: 10211, name: 'coursea-2022'}]
+      }
+    ]
+  },
+  {
+    id: 2,
+    display_name: 'courseb',
+    course_versions: [
+      {
+        id: 89,
+        version_year: '2017',
+        display_name: '2017',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 99, name: 'Course B'}]
+      },
+      {
+        id: 90,
+        version_year: '2018',
+        display_name: '2018',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 100, name: 'Course B (2018)'}]
+      },
+      {
+        id: 91,
+        version_year: '2019',
+        display_name: '2019',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 101, name: 'Course B (2019)'}]
+      },
+      {
+        id: 92,
+        version_year: '2020',
+        display_name: '2020',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 102, name: 'Course B (2020)'}]
+      },
+      {
+        id: 93,
+        version_year: '2021',
+        display_name: '2021',
+        is_stable: true,
+        is_recommended: false,
+        units: [{id: 525, name: 'Course B (2021)'}]
+      },
+      {
+        id: 276,
+        version_year: '2022',
+        display_name: '2022',
+        is_stable: false,
+        is_recommended: false,
+        units: [{id: 11494, name: 'Course B (2021)'}]
+      }
+    ]
+  },
+  {
+    id: 13,
+    display_name: 'csa',
+    course_versions: [
+      {
+        id: 144,
+        version_year: '2020',
+        display_name: '2020',
+        is_stable: false,
+        is_recommended: true,
+        units: [
+          {id: 1148, name: 'Object Oriented Programming'},
+          {id: 1149, name: 'Giving Objects State'},
+          {id: 1150, name: 'Expanding Program Data'},
+          {id: 1151, name: 'Expanding Program Logic'},
+          {id: 1152, name: 'Giving Objects Organization'},
+          {id: 1153, name: 'Expanding Program Capabilities'},
+          {id: 1154, name: 'Expanding Software Design'},
+          {id: 1155, name: 'Giving Objects Life'},
+          {id: 1156, name: ''}
+        ]
+      }
+    ]
+  }
+];
+
+const assigned = {
+  course_offering: courseOfferings[0],
+  course_version: courseOfferings[0].course_versions[0],
+  unit: courseOfferings[0].course_versions[0].units[0]
+};
+
+export default storybook => {
+  storybook.storiesOf('NewAssignmentSelector', module).addStoryTable([
+    {
+      name: 'basic',
+      story: () => {
+        return (
+          <NewAssignmentSelector
+            assigned={assigned}
+            courseOfferings={courseOfferings}
+            dropdownStyle={styles.dropdown}
+          />
+        );
+      }
+    }
+  ]);
+};

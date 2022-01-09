@@ -2,24 +2,21 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import {newAssignmentShape, assignmentCourseOfferingShape} from './shapes';
-import {assignmentId} from './teacherSectionsRedux';
 import NewAssignmentVersionSelector from './NewAssignmentVersionSelector';
 
-const noAssignment = assignmentId(null, null);
-//Additional valid option in dropdown - no associated course
-const decideLater = '__decideLater__';
+const noUnitAssignment = {id: 0, name: ''};
+const noCourseVersionAssignment = {id: 0, display_name: '', units: []};
+const noCourseOfferingAssignment = {
+  id: 0,
+  display_name: '',
+  course_version: []
+};
 
 /**
  * This component displays a dropdown of course offerings, course version and units.
  */
 export default function NewAssignmentSelector(props) {
-  const {
-    assigned,
-    courseOfferings,
-    chooseLaterOption,
-    dropdownStyle,
-    disabled
-  } = props;
+  const {assigned, courseOfferings, dropdownStyle, disabled} = props;
 
   const [selectedCourseOffering, setSelectedCourseOffering] = useState(
     assigned.course_offering
@@ -29,6 +26,62 @@ export default function NewAssignmentSelector(props) {
   );
   const [selectedUnit, setSelectedUnit] = useState(assigned.unit);
 
+  const updateSelectedUnit = unitId => {
+    let newUnit = selectedCourseVersion.units.find(
+      unit => unit.id === Number(unitId)
+    );
+
+    if (!newUnit) {
+      setSelectedUnit(noUnitAssignment);
+    }
+
+    setSelectedUnit(newUnit);
+  };
+
+  const updateSelectedCourseVersion = courseVersionId => {
+    let newCourseVersion = selectedCourseOffering.course_versions.find(
+      courseVersion => courseVersion.id === Number(courseVersionId)
+    );
+
+    if (!newCourseVersion) {
+      setSelectedCourseVersion(noCourseVersionAssignment);
+      setSelectedUnit(noUnitAssignment);
+    }
+
+    setSelectedCourseVersion(newCourseVersion);
+
+    if (newCourseVersion.units.length === 1) {
+      setSelectedUnit(newCourseVersion.units[0]);
+    } else {
+      setSelectedUnit(noUnitAssignment);
+    }
+  };
+
+  const updateSelectedCourseOffering = courseOfferingId => {
+    let newCourseOffering = courseOfferings.find(
+      courseOffering => courseOffering.id === Number(courseOfferingId)
+    );
+
+    if (!newCourseOffering) {
+      setSelectedCourseOffering(noCourseOfferingAssignment);
+      setSelectedCourseVersion(noCourseVersionAssignment);
+      setSelectedUnit(noUnitAssignment);
+    }
+
+    setSelectedCourseOffering(newCourseOffering);
+    if (newCourseOffering.course_versions.length === 1) {
+      setSelectedCourseVersion(newCourseOffering.course_versions[0]);
+      if (newCourseOffering.course_versions[0].units.length === 1) {
+        setSelectedUnit(newCourseOffering.course_versions[0].units[0]);
+      } else {
+        setSelectedUnit(noUnitAssignment);
+      }
+    } else {
+      setSelectedCourseVersion(noCourseVersionAssignment);
+      setSelectedUnit(noUnitAssignment);
+    }
+  };
+
   return (
     <div>
       <span style={styles.family}>
@@ -37,55 +90,46 @@ export default function NewAssignmentSelector(props) {
         </div>
         <select
           id="uitest-assignment-course-offering"
-          value={selectedCourseOffering}
-          onChange={setSelectedCourseOffering}
+          value={selectedCourseOffering.id}
+          onChange={event => updateSelectedCourseOffering(event.target.value)}
           style={dropdownStyle}
           disabled={disabled}
         >
-          <option key="default" />
-          {chooseLaterOption && (
-            <option key="later" value={decideLater}>
-              {i18n.decideLater()}
-            </option>
-          )}
+          <option key={0} value={0} />
           {courseOfferings.map(courseOffering => (
-            <option
-              key={courseOffering.id}
-              label={courseOffering.display_name}
-              value={courseOffering}
-            >
+            <option key={courseOffering.id} value={courseOffering.id}>
               {courseOffering.display_name}
             </option>
           ))}
         </select>
       </span>
-      {selectedCourseOffering.course_versions.length > 1 && (
+      {selectedCourseOffering?.course_versions.length > 1 && (
         <NewAssignmentVersionSelector
           dropdownStyle={dropdownStyle}
           selectedCourseVersion={selectedCourseVersion}
-          versions={selectedCourseOffering.course_versions}
-          onChangeVersion={setSelectedCourseVersion}
+          courseVersions={selectedCourseOffering.course_versions}
+          onChangeVersion={updateSelectedCourseVersion}
           disabled={disabled}
         />
       )}
-      {selectedCourseVersion.units.length > 1 && (
+      {selectedCourseVersion?.units.length > 1 && (
         <div style={styles.secondary}>
           <div style={styles.dropdownLabel}>
             {i18n.assignmentSelectorUnit()}
           </div>
           <select
             id="uitest-unit-assignment"
-            value={selectedUnit}
-            onChange={setSelectedUnit}
+            value={selectedUnit.id}
+            onChange={event => updateSelectedUnit(event.target.value)}
             style={dropdownStyle}
             disabled={disabled}
           >
             {selectedCourseVersion.units.map(unit => (
-              <option key={unit.id} value={unit}>
+              <option key={unit.id} value={unit.id}>
                 {unit.name}
               </option>
             ))}
-            <option value={noAssignment} />
+            <option key={0} value={0} />
           </select>
         </div>
       )}
@@ -96,7 +140,6 @@ export default function NewAssignmentSelector(props) {
 NewAssignmentSelector.propTypes = {
   assigned: PropTypes.objectOf(newAssignmentShape).isRequired,
   courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape).isRequired,
-  chooseLaterOption: PropTypes.bool,
   dropdownStyle: PropTypes.object,
   disabled: PropTypes.bool
 };
