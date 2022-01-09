@@ -136,10 +136,25 @@ class CourseVersion < ApplicationRecord
     end
   end
 
+  def recommended?
+    return true if course_offering.course_versions.length == 1
+
+    false #set up something to calculate is recommended course_version
+
+    #Sort versions by year descending.
+    #We recommend the user use the latest stable version that is supported in their
+    #locale. If no versions support their locale, we recommend the latest stable version.
+    #Versions are sorted from most to least recent, so the first stable version will be the latest.
+  end
+
   def summarize_for_assignment_dropdown(user)
     {
       id: id,
+      version_year: key,
       display_name: display_name,
+      is_stable: stable?,
+      is_recommended: recommended?,
+      locales: [],
       units: units.select {|u| u.item_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
     }
   end
