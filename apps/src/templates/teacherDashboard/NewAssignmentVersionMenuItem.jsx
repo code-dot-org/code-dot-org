@@ -24,19 +24,21 @@ export default function NewAssignmentVersionMenuItem(props) {
     <PopUpMenu.Item onClick={onClick}>
       <div style={style.wrapper}>
         <span style={style.selectedColumn}>
-          {courseVersion.isSelected && <FontAwesome icon="check" />}
+          {courseVersion.id === props.selectedCourseVersion.id && (
+            <FontAwesome icon="check" />
+          )}
         </span>
         <span
           style={style.titleColumn}
           className="assignment-courseVersion-title"
         >
-          {courseVersion.title}
+          {courseVersion.display_name}
         </span>
         <span style={style.statusColumn}>
-          {courseVersion.isRecommended && (
+          {courseVersion.is_recommended && (
             <span style={style.recommended}>{i18n.recommended()}</span>
           )}
-          {!courseVersion.isStable && (
+          {!courseVersion.is_stable && (
             <span>
               <FontAwesome
                 icon="exclamation-triangle"
@@ -70,6 +72,7 @@ export default function NewAssignmentVersionMenuItem(props) {
 }
 
 NewAssignmentVersionMenuItem.propTypes = {
+  selectedCourseVersion: PropTypes.object,
   courseVersion: assignmentCourseVersionShape,
   onClick: PropTypes.func.isRequired
 };

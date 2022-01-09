@@ -18,7 +18,7 @@ export default class NewAssignmentVersionSelector extends Component {
   static propTypes = {
     dropdownStyle: PropTypes.object,
     onChangeVersion: PropTypes.func.isRequired,
-    selectedCourseVersion: PropTypes.objectOf(assignmentCourseVersionShape),
+    selectedCourseVersion: PropTypes.object,
     courseVersions: PropTypes.arrayOf(assignmentCourseVersionShape),
     disabled: PropTypes.bool,
     rightJustifiedPopupMenu: PropTypes.bool
@@ -55,12 +55,12 @@ export default class NewAssignmentVersionSelector extends Component {
   closeMenu = () => this.setState({isMenuOpen: false});
 
   handleNativeDropdownChange = event => {
-    const versionYear = event.target.value;
-    this.props.onChangeVersion(versionYear);
+    const version = event.target.value;
+    this.props.onChangeVersion(version.id);
   };
 
   chooseMenuItem = version => {
-    this.props.onChangeVersion(version);
+    this.props.onChangeVersion(version.id);
     this.closeMenu();
   };
 
@@ -87,7 +87,7 @@ export default class NewAssignmentVersionSelector extends Component {
         </div>
         <select
           id="assignment-version-year"
-          value={selectedCourseVersion}
+          value={selectedCourseVersion.id}
           onChange={this.handleNativeDropdownChange}
           onMouseDown={this.handleMouseDown}
           onClick={this.handleClick}
@@ -96,10 +96,10 @@ export default class NewAssignmentVersionSelector extends Component {
           ref={select => (this.select = select)}
         >
           {courseVersions.map(version => (
-            <option key={version.id} value={version}>
+            <option key={version.id} value={version.id}>
               {version.is_recommended
-                ? `${version.name} (${i18n.recommended()})`
-                : version.name}
+                ? `${version.display_name} (${i18n.recommended()})`
+                : version.display_name}
             </option>
           ))}
         </select>
@@ -113,6 +113,7 @@ export default class NewAssignmentVersionSelector extends Component {
           <AssignmentVersionMenuHeader />
           {courseVersions.map(version => (
             <NewAssignmentVersionMenuItem
+              selectedCourseVersion={selectedCourseVersion}
               courseVersion={version}
               onClick={() => this.chooseMenuItem(version)}
               key={version.id}

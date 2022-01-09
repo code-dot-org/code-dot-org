@@ -155,6 +155,7 @@ class CourseVersion < ApplicationRecord
       display_name: display_name,
       is_stable: stable?,
       is_recommended: recommended?,
+      locales: [],
       units: units.select {|u| u.item_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
     }
   end

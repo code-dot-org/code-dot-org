@@ -18,6 +18,7 @@ const courseOfferings = [
         display_name: '2017',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 94, name: 'Course A'}]
       },
       {
@@ -26,6 +27,7 @@ const courseOfferings = [
         display_name: '2018',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 95, name: 'Course A (2018)'}]
       },
       {
@@ -34,6 +36,7 @@ const courseOfferings = [
         display_name: '2019',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 96, name: 'Course A (2019)'}]
       },
       {
@@ -42,6 +45,7 @@ const courseOfferings = [
         display_name: '2020',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 97, name: 'Course A (2020)'}]
       },
       {
@@ -50,6 +54,7 @@ const courseOfferings = [
         display_name: '2021',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 551, name: 'Course A (2021)'}]
       },
       {
@@ -58,6 +63,7 @@ const courseOfferings = [
         display_name: '2022',
         is_stable: false,
         is_recommended: false,
+        locales: [],
         units: [{id: 10211, name: 'coursea-2022'}]
       }
     ]
@@ -72,6 +78,7 @@ const courseOfferings = [
         display_name: '2017',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 99, name: 'Course B'}]
       },
       {
@@ -80,6 +87,7 @@ const courseOfferings = [
         display_name: '2018',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 100, name: 'Course B (2018)'}]
       },
       {
@@ -88,6 +96,7 @@ const courseOfferings = [
         display_name: '2019',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 101, name: 'Course B (2019)'}]
       },
       {
@@ -96,6 +105,7 @@ const courseOfferings = [
         display_name: '2020',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 102, name: 'Course B (2020)'}]
       },
       {
@@ -104,6 +114,7 @@ const courseOfferings = [
         display_name: '2021',
         is_stable: true,
         is_recommended: false,
+        locales: [],
         units: [{id: 525, name: 'Course B (2021)'}]
       },
       {
@@ -111,7 +122,8 @@ const courseOfferings = [
         version_year: '2022',
         display_name: '2022',
         is_stable: false,
-        is_recommended: false,
+        is_recommended: true,
+        locales: [],
         units: [{id: 11494, name: 'Course B (2021)'}]
       }
     ]
@@ -126,6 +138,7 @@ const courseOfferings = [
         display_name: '2020',
         is_stable: false,
         is_recommended: true,
+        locales: [],
         units: [
           {id: 1148, name: 'Object Oriented Programming'},
           {id: 1149, name: 'Giving Objects State'},
@@ -136,6 +149,104 @@ const courseOfferings = [
           {id: 1154, name: 'Expanding Software Design'},
           {id: 1155, name: 'Giving Objects Life'},
           {id: 1156, name: ''}
+        ]
+      }
+    ]
+  },
+  {
+    id: 9,
+    display_name: 'csd',
+    course_versions: [
+      {
+        id: 124,
+        version_year: '2017',
+        display_name: '2017',
+        is_stable: true,
+        is_recommended: false,
+        locales: [],
+        units: [
+          {id: 140, name: "CSD Unit 1 - Problem Solving ('17-'18)"},
+          {id: 148, name: "CSD Unit 2 - Web Development ('17-'18)"},
+          {id: 159, name: "CSD Unit 3 - Animations and Games ('17-'18)"},
+          {id: 168, name: "CSD Unit 4 - The Design Process ('17-'18)"},
+          {id: 177, name: "CSD Unit 5 - Data and Society ('17-'18)"},
+          {id: 185, name: "CSD Unit 6 - Physical Computing ('17-'18)"}
+        ]
+      },
+      {
+        id: 125,
+        version_year: '2018',
+        display_name: '2018',
+        is_stable: true,
+        is_recommended: false,
+        locales: [],
+        units: [
+          {id: 141, name: "CSD Unit 1 - Problem Solving ('18-'19)"},
+          {id: 149, name: "CSD Unit 2 - Web Development ('18-'19)"},
+          {id: 160, name: "CSD Unit 3 - Animations and Games ('18-'19)"},
+          {id: 169, name: "CSD Unit 4 - The Design Process ('18-'19)"},
+          {id: 178, name: "CSD Unit 5 - Data and Society ('18-'19)"},
+          {id: 186, name: "CSD Unit 6 - Physical Computing ('18-'19)"},
+          {id: 134, name: "CSD Student Post-Course Survey ('18-'19)"}
+        ]
+      },
+      {
+        id: 126,
+        version_year: '2019',
+        display_name: '2019',
+        is_stable: true,
+        is_recommended: false,
+        locales: [],
+        units: [
+          {
+            id: 142,
+            name: "CSD Unit 1 - Problem Solving and Computing ('19-'20)"
+          },
+          {id: 150, name: "CSD Unit 2 - Web Development ('19-'20)"},
+          {id: 161, name: "CSD Unit 3 - Animations and Games ('19-'20)"},
+          {id: 170, name: "CSD Unit 4 - The Design Process ('19-'20)"},
+          {id: 179, name: "CSD Unit 5 - Data and Society ('19-'20)"},
+          {id: 187, name: "CSD Unit 6 - Physical Computing ('19-'20)"}
+        ]
+      },
+      {
+        id: 253,
+        version_year: '2020',
+        display_name: '2020',
+        is_stable: true,
+        is_recommended: false,
+        locales: [],
+        units: [
+          {
+            id: 9046,
+            name: "CSD Unit 1 - Problem Solving and Computing ('20-'21)"
+          },
+          {id: 151, name: "CSD Unit 2 - Web Development ('20-'21)"},
+          {
+            id: 162,
+            name: "CSD Unit 3 - Interactive Animations and Games ('20-'21)"
+          },
+          {id: 171, name: "CSD Unit 4 - The Design Process ('20-'21)"},
+          {id: 180, name: "CSD Unit 5 - Data and Society ('20-'21)"},
+          {id: 188, name: "CSD Unit 6 - Physical Computing ('20-'21)"}
+        ]
+      },
+      {
+        id: 128,
+        version_year: '2021',
+        display_name: '2021',
+        is_stable: true,
+        is_recommended: true,
+        locales: [],
+        units: [
+          {id: 530, name: "Problem Solving and Computing ('21-'22)"},
+          {id: 531, name: "Web Development ('21-'22)"},
+          {id: 532, name: "Interactive Animations and Games ('21-'22)"},
+          {id: 533, name: "The Design Process ('21-'22)"},
+          {id: 534, name: "Data and Society ('21-'22)"},
+          {id: 535, name: "Physical Computing ('21-'22)"},
+          {id: 2109, name: 'AI and Machine Learning'},
+          {id: 3593, name: 'CS Discoveries Post-Course Survey'}
         ]
       }
     ]
