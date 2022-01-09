@@ -64,6 +64,7 @@ class CourseVersion < ApplicationRecord
   delegate :in_development?, to: :content_root
   delegate :has_pilot_access?, to: :content_root
   delegate :can_be_instructor?, to: :content_root
+  delegate :stable?, to: :content_root
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -136,10 +137,24 @@ class CourseVersion < ApplicationRecord
     end
   end
 
+  def recommended?
+    return true if course_offering.course_versions.length == 1
+
+    false #set up something to calculate is recommended course_version
+
+    #Sort versions by year descending.
+    #We recommend the user use the latest stable version that is supported in their
+    #locale. If no versions support their locale, we recommend the latest stable version.
+    #Versions are sorted from most to least recent, so the first stable version will be the latest.
+  end
+
   def summarize_for_assignment_dropdown(user)
     {
       id: id,
+      version_year: key,
       display_name: display_name,
+      is_stable: stable?,
+      is_recommended: recommended?,
       units: units.select {|u| u.item_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
     }
   end

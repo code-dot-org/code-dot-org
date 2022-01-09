@@ -69,6 +69,30 @@ export const assignmentShape = PropTypes.shape({
   supported_locale_codes: PropTypes.arrayOf(PropTypes.string)
 });
 
+// An assignment is a course or script that a user can be assigned to.
+export const newAssignmentShape = PropTypes.shape({
+  course_offering: PropTypes.objectOf(assignmentCourseOfferingShape),
+  course_version: PropTypes.objectOf(assignmentCourseVersionShape),
+  unit: PropTypes.objectOf(assignmentUnitShape)
+});
+
+export const assignmentCourseOfferingShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  display_name: PropTypes.string.isRequired,
+  course_versions: PropTypes.arrayOf(assignmentCourseVersionShape).isRequired
+});
+
+export const assignmentCourseVersionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  display_name: PropTypes.string.isRequired,
+  units: PropTypes.arrayOf(assignmentUnitShape).isRequired
+});
+
+export const assignmentUnitShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
 // An assignment family is a collection of versions of a course or script like
 // "csd" or "coursea". For example, the assignment family "csd" could contain the
 // courses csd-2017 and csd-2018.
