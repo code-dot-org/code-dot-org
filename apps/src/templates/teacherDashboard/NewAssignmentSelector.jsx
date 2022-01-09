@@ -124,12 +124,12 @@ export default function NewAssignmentSelector(props) {
             style={dropdownStyle}
             disabled={disabled}
           >
+            <option key={0} value={0} />
             {selectedCourseVersion.units.map(unit => (
               <option key={unit.id} value={unit.id}>
                 {unit.name}
               </option>
             ))}
-            <option key={0} value={0} />
           </select>
         </div>
       )}

@@ -95,6 +95,7 @@ export default class NewAssignmentVersionSelector extends Component {
           disabled={disabled}
           ref={select => (this.select = select)}
         >
+          <option key={0} value={0} />
           {courseVersions.map(version => (
             <option key={version.id} value={version.id}>
               {version.is_recommended
