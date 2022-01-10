@@ -1,4 +1,5 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
+  include MultipleDatabasesTransitionHelper
   include Pd::WorkshopFilters
   include Api::CsvDownload
   include Pd::Application::RegionalPartnerTeacherconMapping
@@ -229,7 +230,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
   end
 
-  use_database_pool potential_organizers: :persistent
+  use_writer_connection_for_route(:potential_organizers)
 
   # Users who could be re-assigned to be the organizer of this workshop
   def potential_organizers
