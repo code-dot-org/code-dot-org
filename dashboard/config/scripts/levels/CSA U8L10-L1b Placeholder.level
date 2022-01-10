@@ -2,20 +2,23 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Evaluate and test this program using the guiding questions and prompts on the **Secure Software Design** activity guide.",
+    "long_instructions": "Evaluate and test this program using the guiding questions and prompts on the **Secure Coding Practices** activity guide.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "theater",
+    "csa_view_mode": "console",
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "The Teacher",
+    "bubble_choice_description": "Evaluate and test a teacher's program for managing students.",
+    "thumbnail_url": "https://images.code.org/ead6bdfe0203fece62887a108a3f31df-image-1641833592705.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-12-14T15:44:13.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2021-12-14T15:44:13.418+00:00\",\"changed\":[\"cloned from \\\"CSA U8L10-L1b\\\"\"],\"cloned_from\":\"CSA U8L10-L1b\"},{\"changed_at\":\"2021-12-14 15:44:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 14:03:34 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-14T15:44:13.418+00:00\",\"changed\":[\"cloned from \\\"CSA U8L10-L1b\\\"\"],\"cloned_from\":\"CSA U8L10-L1b\"},{\"changed_at\":\"2021-12-14 15:44:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 14:03:34 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 16:53:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 17:29:12 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
