@@ -150,6 +150,23 @@ describe('ProgrammingExpressionOverview', () => {
     );
   });
 
+  it('shows block in title if blockName is provided', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          blockName: 'gamelab_location_picker',
+          imageUrl: 'images.code.org/img'
+        }}
+      />
+    );
+    expect(wrapper.find('h3').length).to.equal(0);
+    expect(wrapper.find('img').length).to.equal(0);
+    expect(
+      wrapper.find('div[title="gamelab_location_picker"]').length
+    ).to.equal(1);
+  });
+
   it('shows image instead of name if image is provided', () => {
     const wrapper = shallow(
       <ProgrammingExpressionOverview

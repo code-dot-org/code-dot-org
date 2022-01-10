@@ -6,6 +6,7 @@ import javalab from '@cdo/apps/javalab/javalabRedux';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import sinon from 'sinon';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
@@ -16,7 +17,7 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
     backpackApiStub.hasBackpack.returns(true);
     defaultProps = {
-      isDarkMode: true,
+      displayTheme: DisplayTheme.DARK,
       isDisabled: false,
       onImport: () => {},
       backpackApi: backpackApiStub

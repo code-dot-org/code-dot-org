@@ -32,12 +32,32 @@ describe('MiniView', () => {
       wrapper.find(n => n.props().className === 'loading').length,
       0
     );
-    assert.equal(wrapper.find('MiniViewTopRow').length, 1);
-    assert.equal(wrapper.find('Connect(UnitOverview)').length, 1);
-    assert.equal(
-      wrapper.find('Connect(UnitOverview)').props().onOverviewPage,
-      false
+    assert.equal(wrapper.find('Connect(ProgressTable)').length, 1);
+  });
+
+  it('shows GoogleClassroomAttributionLabel once progress has loaded', () => {
+    const wrapper = shallow(
+      <MiniView {...defaultProps} hasFullProgress={true} />
     );
+
+    assert.equal(
+      wrapper.find(n => n.props().className === 'loading').length,
+      0
+    );
+    assert.equal(
+      wrapper.find('Connect(GoogleClassroomAttributionLabel)').length,
+      1
+    );
+  });
+
+  it('shows MiniViewTopRow if not minimal', () => {
+    const wrapper = shallow(<MiniView {...defaultProps} minimal={false} />);
+    assert.equal(wrapper.find('MiniViewTopRow').length, 1);
+  });
+
+  it('hides MiniViewTopRow if minimal', () => {
+    const wrapper = shallow(<MiniView {...defaultProps} minimal={true} />);
+    assert.equal(wrapper.find('MiniViewTopRow').length, 0);
   });
 
   it('has larger margins in group view', () => {
