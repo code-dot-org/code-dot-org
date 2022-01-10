@@ -1,6 +1,6 @@
 name 'CSA U8L10-L1'
-display_name 'Check for Understanding'
-description 'level description here'
+display_name 'Secure Coding Practices'
+description 'Choose a program to evaluate and test using your Secure Coding Practices activity guide.'
 
 sublevels
 level 'CSA U8L10-L1a'
