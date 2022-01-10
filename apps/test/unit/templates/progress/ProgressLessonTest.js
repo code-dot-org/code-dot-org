@@ -20,12 +20,14 @@ describe('ProgressLesson', () => {
     levels: fakeLevels(3),
     lessonNumber: 3,
     viewAs: ViewType.Instructor,
-    lessonIsVisible: () => true,
-    lessonIsLockedForUser: () => false,
-    lessonIsLockedForAllStudents: () => false,
+    isVisible: true,
+    hiddenForStudents: false,
+    isLockedForUser: false,
+    isLockedForAllStudents: false,
     lockableAuthorizedLoaded: true,
     lockableAuthorized: true,
-    isMiniView: false
+    isMiniView: false,
+    lockStatusLoaded: true
   };
 
   it('renders with gray background when not hidden', () => {
@@ -33,11 +35,12 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
   });
 
-  it('does not render when lessonIsVisible is false', () => {
+  it('does not render when isVisible is false', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        lessonIsVisible={() => false}
+        isVisible={false}
+        hiddenForStudents={true}
         viewAs={ViewType.Participant}
       />
     );
@@ -49,7 +52,8 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
+        hiddenForStudents={true}
+        isVisible={true}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -69,7 +73,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => true}
+        isLockedForUser={true}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -89,7 +93,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForAllStudents={() => true}
+        isLockedForAllStudents={true}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -109,29 +113,31 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => true}
+        isLockedForUser={true}
       />
     );
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
   });
 
-  it('renders with gray background when lesson is lockable but unlocked', () => {
+  it('renders with gray background when lesson is lockable but unlocked and lockStatusLoaded', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => false}
+        isLockedForUser={false}
+        lockStatusLoaded={true}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
   });
 
-  it('has an unlocked icon when lesson is lockable but unlocked', () => {
+  it('has an unlocked icon when lesson is lockable but unlocked and lockStatusLoaded', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => false}
+        isLockedForUser={false}
+        lockStatusLoaded={true}
       />
     );
     assert.equal(
@@ -150,12 +156,13 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('has a locked icon when lesson is lockable and locked', () => {
+  it('has a locked icon when lesson is lockable and locked and lockStatusLoaded', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => true}
+        isLockedForUser={true}
+        lockStatusLoaded={true}
       />
     );
     assert.equal(
@@ -174,13 +181,15 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('has both a hidden and a locked icon for instructor when lesson is lockable and locked and hidden', () => {
+  it('has both a hidden and a locked icon for instructor when lesson is lockable and locked and hidden and lockStatusLoaded', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
-        lessonIsLockedForUser={() => true}
+        isVisible={true}
+        hiddenForStudents={true}
+        isLockedForUser={true}
+        lockStatusLoaded={true}
       />
     );
     assert.equal(
@@ -298,7 +307,7 @@ describe('ProgressLesson', () => {
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorizedLoaded={true}
         lockableAuthorized={false}
-        lessonIsLockedForUser={() => true}
+        isLockedForUser={true}
       />
     );
     expect(wrapper.text()).to.include(

@@ -1,6 +1,6 @@
 {
-  "func": "mouseIsPressed",
+  "key": "mouseIsPressed",
+  "name": "mouseIsPressed",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "mouseIsPressed"
 }

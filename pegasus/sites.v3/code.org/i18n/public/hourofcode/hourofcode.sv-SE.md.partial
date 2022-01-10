@@ -1,45 +1,45 @@
 ---
-title: Teacher Resources - Write your first computer program
+title: Lärarresurser – koda ditt första program för dator
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# Koda ditt första program för dator: en lektion från Hour of Code
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## Lärarresurser
 
-### Lesson Plans:
+### Lektionsplaner:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [Koda ditt första program för dator]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### Avancerade aktiviteter:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Mer än en timmes kodning med Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Andra lärarresurser:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: handbok för lärare](https://hourofcode.com/how-to)
+- [Bästa praxis från framgångsrika lärare](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Direktsänt event: [Lärarhandbok till Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Översikt
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+Lär dig de grundläggande koncepten i datavetenskap med dra och släpp-programmering. Detta är en spelliknande, självständig handledning med videolektioner av Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs. Zombies. Lär dig upprepade loopar, villkor och grundläggande algoritmer. Finns på 37 språk.
 
-**Recommended Age Range:** 4-104
+**Rekommenderad ålder:** 4–104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Tekniska behov:** Modern webbläsare, smarta telefoner och surfplattor
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Prova på den handledda delen</button></a>
 
 [/col-50]

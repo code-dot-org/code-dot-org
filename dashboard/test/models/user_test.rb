@@ -2786,7 +2786,7 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair?
   end
 
-  test "authorized teacher" do
+  test "verified teacher" do
     # you can't just create your own authorized teacher account
     assert @teacher.teacher?
     refute @teacher.verified_teacher?
@@ -2801,10 +2801,6 @@ class UserTest < ActiveSupport::TestCase
     create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
     assert plc_teacher.teacher?
     assert plc_teacher.verified_teacher?
-
-    # admins should be authorized teachers too
-    assert @admin.teacher?
-    assert @admin.verified_teacher?
   end
 
   test "verified instructor" do
@@ -4657,6 +4653,18 @@ class UserTest < ActiveSupport::TestCase
     school_info = create :school_info, school: school
     teacher = create :teacher, school_info: school_info
     assert_equal title_i_status, teacher.marketing_segment_data[:school_title_i]
+  end
+
+  test 'marketing_segment_data returns expected value for school_state when there is a school and state' do
+    school = create :school, state: 'WA'
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal 'WA', teacher.marketing_segment_data[:school_state]
+  end
+
+  test 'marketing_segment_data returns expected value for school_state when there is no school' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_state]
   end
 
   test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do

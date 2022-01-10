@@ -1,13 +1,11 @@
 {
-  "func": "sin",
+  "key": "sin",
+  "name": "sin",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "angle"
     }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "value"
+  "syntax": "sin(angle)"
 }

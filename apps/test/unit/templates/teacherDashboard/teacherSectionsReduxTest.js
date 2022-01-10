@@ -12,7 +12,6 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
-  setPreReaderUnitIds,
   setSections,
   selectSection,
   removeSection,
@@ -268,8 +267,6 @@ const students = [
     sharingDisabled: false
   }
 ];
-
-const preReaderScripts = [37, 208];
 
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
@@ -734,31 +731,12 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
-      let state = reducer(
-        editingNewSectionState,
-        setPreReaderUnitIds(preReaderScripts)
-      );
+      let state = editingNewSectionState;
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 37}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
-    });
-
-    // TODO: add this test when tts autoplay is enabled by default for pre-reader scripts
-    it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
-      let state = reducer(
-        editingNewSectionState,
-        setPreReaderUnitIds(preReaderScripts)
-      );
-      state = reducer(state, editSectionProperties({scriptId: 2}));
-      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
-
-      state = reducer(state, editSectionProperties({scriptId: 37}));
-      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
-
-      state = reducer(state, editSectionProperties({scriptId: 208}));
-      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
     });
   });
 

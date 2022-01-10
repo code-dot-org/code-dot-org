@@ -72,7 +72,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson = create :lesson, script: script
     create :script_level, script: script, lesson: lesson, levels: [level]
 
-    assert_match /extras$/, lesson.summarize[:lesson_extras_level_url]
+    assert_match (/extras$/), lesson.summarize[:lesson_extras_level_url]
   end
 
   test "summary for lesson with extras where include_bonus_levels is true" do
@@ -169,7 +169,7 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson2
     create :script_level, script: script, lesson: lesson2
 
-    assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
+    assert_match (/\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/), lesson1.next_level_path_for_lesson_extras(@student)
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
   end
 
@@ -189,21 +189,11 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson with no levels' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, lesson_group: lesson_group, key: 'Lesson1', name: 'Lesson 1'
 
-    raw_lessons = [
-      {
-        key: "Lesson1",
-        name: "Lesson 1",
-        script_levels: []
-      }
-    ]
-
-    counters = LessonGroup::Counters.new(0, 0, 0, 0)
-
-    lessons = Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
-    summary = lessons.first.summarize
+    summary = unit.lessons.first.summarize
     assert_equal 'Lesson1', summary[:key]
   end
 
@@ -216,7 +206,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson1_summary = lesson1.summarize
     lesson2_summary = lesson2.summarize
     assert_equal '//test.code.org/curriculum/test-script/1/Teacher', lesson1_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+    assert_nil lesson2_summary[:lesson_plan_html_url]
   end
 
   test 'can summarize lesson with code studio lesson plans in migrated script' do
@@ -232,9 +222,9 @@ class LessonTest < ActiveSupport::TestCase
     lesson3_summary = lesson3.summarize
     lesson4_summary = lesson4.summarize
     assert_equal "/s/#{script.name}/lessons/#{lesson1.relative_position}", lesson1_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+    assert_nil lesson2_summary[:lesson_plan_html_url]
     assert_equal "/s/#{script.name}/lessons/#{lesson3.relative_position}", lesson3_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson4_summary[:lesson_plan_html_url]
+    assert_nil lesson4_summary[:lesson_plan_html_url]
   end
 
   test 'can summarize lesson with legacy lesson plan link in migrated script' do
@@ -250,9 +240,9 @@ class LessonTest < ActiveSupport::TestCase
     lesson3_summary = lesson3.summarize
     lesson4_summary = lesson4.summarize
     assert_equal '//test.code.org/curriculum/test-script/1/Teacher', lesson1_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+    assert_nil lesson2_summary[:lesson_plan_html_url]
     assert_equal '//test.code.org/curriculum/test-script/3/Teacher', lesson3_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson4_summary[:lesson_plan_html_url]
+    assert_nil lesson4_summary[:lesson_plan_html_url]
   end
 
   test 'can summarize lesson for lesson plan' do
@@ -510,94 +500,6 @@ class LessonTest < ActiveSupport::TestCase
 
     levels_data = lesson.summarize_for_calendar
     assert_equal 30, levels_data[:duration]
-  end
-
-  test 'raises error when creating invalid lockable lessons' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    create :level, name: 'Level1'
-    create :level, name: 'LockableAssessment1'
-
-    raw_lessons = [
-      {
-        key: "Lesson1",
-        name: "Lesson 1",
-        lockable: true,
-        script_levels: [
-          {levels: [{name: "LockableAssessment1"}], assessment: true},
-          {levels: [{name: "Level1"}]}
-        ]
-      }
-    ]
-    counters = LessonGroup::Counters.new(0, 0, 0, 0)
-
-    raise = assert_raises do
-      Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
-    end
-    assert_equal 'Expect lockable lessons to have an assessment as their last level. Lesson: Lesson 1', raise.message
-  end
-
-  test 'creates lessons correctly' do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    create :level, name: 'Level1'
-    create :level, name: 'Level2'
-    create :level, name: 'Level3'
-    create :level, name: 'Level4'
-
-    raw_lessons = [
-      {
-        key: "L1",
-        name: "Lesson 1",
-        has_lesson_plan: true,
-        script_levels: [
-          {levels: [{name: "Level1"}]},
-          {levels: [{name: "Level2"}]}
-        ]
-      },
-      {
-        key: "L2",
-        name: "Lesson 2",
-        has_lesson_plan: false,
-        script_levels: [
-          {levels: [{name: "Level3"}]}
-        ]
-      },
-      {
-        key: "L3",
-        name: "Lesson 3",
-        lockable: true,
-        has_lesson_plan: false,
-        script_levels: [
-          {levels: [{name: "Level3"}], assessment: true}
-        ]
-      },
-      {
-        key: "L4",
-        name: "Lesson 4",
-        lockable: true,
-        has_lesson_plan: true,
-        script_levels: [
-          {levels: [{name: "Level4"}], assessment: true}
-        ]
-      }
-    ]
-    counters = LessonGroup::Counters.new(0, 0, 0, 0)
-
-    lessons = Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
-
-    assert_equal ['L1', 'L2', 'L3', 'L4'], lessons.map(&:key)
-    assert_equal ['Lesson 1', 'Lesson 2', 'Lesson 3', 'Lesson 4'], lessons.map(&:name)
-    assert_equal [1, 2, 3, 4], lessons.map(&:absolute_position)
-    assert_equal [1, 2, 1, 3], lessons.map(&:relative_position)
-    assert_equal lesson_group, lessons[0].lesson_group
-    assert_equal 2, lessons[0].script_levels.count
-    assert_equal 1, lessons[1].script_levels.count
-    assert_equal 1, lessons[2].script_levels.count
-    assert_equal true, lessons[2].lockable
-    assert_equal true, lessons[3].lockable
-    assert_equal true, lessons[3].has_lesson_plan
-    assert_equal LessonGroup::Counters.new(3, 1, 4, 5), counters
   end
 
   test 'i18n_hash has correct value' do
