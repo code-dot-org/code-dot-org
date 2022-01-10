@@ -7,23 +7,24 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 
 describe('ProgrammingExpressionEditor', () => {
-  let defaultProps, fetchSpy;
+  let defaultProps, initialProgrammingExpression, fetchSpy;
 
   beforeEach(() => {
+    initialProgrammingExpression = {
+      id: 1,
+      name: 'Block',
+      key: 'block',
+      shortDescription: 'This is a short description.',
+      externalDocumentation: 'developer.mozilla.org',
+      content: 'This is a longer description of the code.',
+      syntax: 'block()',
+      returnValue: 'none',
+      tips: 'some tips on how to use this block',
+      parameters: [{name: 'id', type: 'string'}],
+      examples: [{name: 'example 1'}]
+    };
     defaultProps = {
-      initialProgrammingExpression: {
-        id: 1,
-        name: 'Block',
-        key: 'block',
-        shortDescription: 'This is a short description.',
-        externalDocumentation: 'developer.mozilla.org',
-        content: 'This is a longer description of the code.',
-        syntax: 'block()',
-        returnValue: 'none',
-        tips: 'some tips on how to use this block',
-        parameters: [{name: 'id', type: 'string'}],
-        examples: [{name: 'example 1'}]
-      },
+      initialProgrammingExpression,
       environmentCategories: ['Circuit', 'Variables', 'Canvas'],
       videoOptions: [
         {
@@ -151,6 +152,21 @@ describe('ProgrammingExpressionEditor', () => {
       'Add Another Example'
     );
     expect(orderableExampleList.props().list.length).to.equal(1);
+  });
+
+  it('shows blockName input if programming environment is blockly based', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionEditor
+        {...defaultProps}
+        initialProgrammingExpression={{
+          ...initialProgrammingExpression,
+          environmentEditorType: 'blockly',
+          blockName: 'gamelab_location_picker'
+        }}
+      />
+    );
+    const blockNameInput = wrapper.find('input').at(2);
+    expect(blockNameInput.props().value).to.equal('gamelab_location_picker');
   });
 
   it('shows upload image dialog when choose image button is pressed', () => {

@@ -2,11 +2,12 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import {DisplayTheme} from './DisplayTheme';
 
 export default class JavalabDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    isDarkMode: PropTypes.bool.isRequired,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     handleConfirm: PropTypes.func,
     handleClose: PropTypes.func,
     // message could be a string or html
@@ -20,7 +21,7 @@ export default class JavalabDialog extends Component {
       isOpen,
       handleClose,
       handleConfirm,
-      isDarkMode,
+      displayTheme,
       message,
       confirmButtonText,
       closeButtonText
@@ -31,12 +32,14 @@ export default class JavalabDialog extends Component {
         handleClose={handleClose}
         style={{
           ...styles.dialog,
-          ...(isDarkMode && styles.darkDialog)
+          ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
         }}
         useUpdatedStyles
         hideCloseButton
       >
-        <div style={isDarkMode ? styles.darkDialog : {}}>
+        <div
+          style={displayTheme === DisplayTheme.DARK ? styles.darkDialog : {}}
+        >
           <div style={styles.message}>{message}</div>
           <div style={styles.buttons}>
             {closeButtonText && (
@@ -44,7 +47,9 @@ export default class JavalabDialog extends Component {
                 type="button"
                 style={{
                   ...styles.button,
-                  ...(isDarkMode ? styles.darkButton : styles.lightCancel)
+                  ...(displayTheme === DisplayTheme.DARK
+                    ? styles.darkButton
+                    : styles.lightCancel)
                 }}
                 onClick={handleClose}
               >
@@ -56,7 +61,9 @@ export default class JavalabDialog extends Component {
                 type="button"
                 style={{
                   ...styles.button,
-                  ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
+                  ...(displayTheme === DisplayTheme.DARK
+                    ? styles.darkButton
+                    : styles.lightConfirm)
                 }}
                 onClick={handleConfirm}
               >
