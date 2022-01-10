@@ -7849,6 +7849,10 @@ en:
               name: CSP pre-survey 21-22
             CSD pre-survey 21-2:
               name: CSD pre-survey 21-22
+            lesson-20:
+              name: CSP post-survey 2021
+              description_student: 
+              description_teacher: 
           student_description: ''
           name: allthesurveys
         k1hoc2017:
@@ -24391,7 +24395,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-6:
-              name: Engage with machine learning apps
+              name: Create machine learning apps
               description_student: 
               description_teacher: 
             lesson-7:
@@ -27913,6 +27917,8 @@ en:
               name: Counting with Variables
             lesson-2:
               name: Lots of Sprites
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: 'Mini-Project: Collector Game'
             lesson-4:
@@ -28027,13 +28033,71 @@ en:
               name: 'Mini-Project: Collector Game'
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+            Introducing Sprite Lab:
+              name: Introducing Sprite Lab
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
+              description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
+
+'
+            Making Sprites:
+              name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
+            Sprites in Action:
+              name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Virtual Pet'
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
+              description_teacher: Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.
+            Blank Space Stories:
+              name: Blank Space Stories
+              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs®) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_teacher: 'In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
+            Text and Prompts:
+              name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: 'In this **skill-building** lesson, students will get practice with variables in Sprite Lab. '
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: User Input Programs'
+              description_student: Apply your new skills with variables to one of three open-ended projects.
+              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
+            Lots of Sprites:
+              name: "[New] Lots of Sprites"
+              description_student: 
+              description_teacher: 
+            Counting with Variables:
+              name: "[New] Counting with Variables"
+              description_student: 
+              description_teacher: 
+            'Mini-Project: Collector Game':
+              name: "[New] Mini-Project: Collector Game"
+              description_student: 
+              description_teacher: 
+            Simulating Experiments:
+              name: Simulating Experiments
+              description_student: Run simulations on the computer and experiment by changing variables.
+              description_teacher: In this **context-setting** lesson, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to predict how changing a variable in the simulation might impact the outcome and test that hypothesis.
+            End of Course Project:
+              name: "[New] End of Course Project"
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Variables
+            lessonGroup-4:
+              display_name: End of Course Project
           name: csf-2022-pilot
-          title: CS Fundamentals 2021 Pilot
+          title: Course F 2022 Pilot
           description_audience: Fifth grade
-          description_short: 'Learn about variables by programming groups of sprites in Sprite Lab. '
-          description: "Learn about variables by programming groups of sprites in Sprite Lab. \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2022 only.\n\nBefore beginning these lessons, it is suggested to complete at least three other Sprite Lab lessons. These lessons assume prior experience working with sprites, behaviors, and events. \n\n**Sprites and Behaviors**\n* [Course E](../s/coursee-2021) - [Swimming Fish](../s/coursee-2021/lessons/2)\n* [Course F](../s/coursef-2021) - [Making Sprites](../s/coursef-2021/lessons/2)\n\n**Sprites, Behaviors, and Events**\n* Hour of Code - [Hello World](https://code.org/helloworld)\n* [Course E](../s/coursee-2021) - [Alien Dance Party](../s/coursee-2021/lessons/3)\n* [Course F](../s/coursef-2021) - [Sprites in Action](../s/coursef-2021/lessons/3)"
-          student_description: "Learn about variables by programming groups of sprites in Sprite Lab. \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2022 only."
+          description_short: 'Learn about sprites and variables by programming in Sprite Lab. '
+          description: "Learn about sprites and variables by programming in Sprite Lab.  \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only. Note that the final version of Course F (2022) will include additional lessons and may have other differences. CS Fundamentals (2022) will launch this summer.\n\nWe need your feedback, especially on the lessons marked **[New]**. If you are eager to start the new lessons, you can give students a basic introduction to Sprite Lab using our  [Hello World](https://code.org/helloworld) Hour of Code tutorial."
+          student_description: "Learn about sprites and variables by programming in Sprite Lab. \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only."
         csd6-pilot-2022:
           lessons: {}
           lesson_groups: {}
@@ -30147,11 +30211,9 @@ en:
               key: End of Course Project
             lesson-6:
               key: lesson-6
-              name: Introducing Sprite Lab
-              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
-              description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
-
-'
+              name: 'Mini-Project: Collector Game'
+              description_student: 
+              description_teacher: 
             lesson-7:
               key: lesson-7
               name: Making Sprites
@@ -30226,9 +30288,9 @@ en:
               description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
             lesson-5:
               key: lesson-5
-              name: Outbreak
-              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
-              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
+              name: Counting with Variables
+              description_student: 
+              description_teacher: 
             AI for Oceans:
               key: AI for Oceans
               name: AI For Oceans
@@ -30239,6 +30301,8 @@ en:
               name: The Internet
               description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
               description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
+            lesson-4:
+              name: Lots of Sprites
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -30247,13 +30311,14 @@ en:
             lessonGroup-8:
               display_name: Variables
             csf_variables:
-              display_name: For Loops
+              display_name: Deprecated
             csf_data:
               display_name: Data and Simulations
             end_of_course_project:
               display_name: End of Course Project
-          title: Course F (2021)
-          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn more advanced concepts, including variables and “for” loops. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects and artwork to share with their friends and family.
-          student_description: Learn to code with sprites, variables, and loops and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          title: Course F (2022)
+          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
+          name: coursef-2022
