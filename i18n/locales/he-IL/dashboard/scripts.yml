@@ -477,6 +477,7 @@ he:
               name: סטודיו
             Web Lab:
               name: מעבדת האתרים
+            lesson-47: {}
         algebraPD2b:
           lessons:
             Defining Variables:
@@ -3892,7 +3893,7 @@ he:
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
-          title: סימולטור התפרצות
+          title: לנצח את הקורונה
           description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           name: התפרצות
@@ -3908,7 +3909,7 @@ he:
             lessonGroup-3:
               display_name: משתנים
             outbreak:
-              display_name: סימולטור התפרצות
+              display_name: לנצח את הקורונה
             debugging:
               display_name: מציאת טעויות
         csd1-2021:
@@ -4172,6 +4173,8 @@ he:
               key: לולאות עבור עם הדבורה
             For Loops in Artist:
               key: לולאות עבור עם האומן
+            lesson-5:
+              name: התפרצות
           lesson_groups:
             ramp_up:
               display_name: דמויות
@@ -4482,7 +4485,8 @@ he:
         poembot:
           lessons:
             lesson-1: {}
-        outbreak-module: {}
+        outbreak-module:
+          title: התפרצות
         csa1-exemplars:
           lessons:
             lesson-1: {}
@@ -4761,9 +4765,11 @@ he:
         hello-world-animals:
           lessons:
             lesson-1: {}
+          title: 'שלום, עולם: חיות'
         hello-world-emoji:
           lessons:
             lesson-1: {}
+          title: 'שלום, עולם: אמוג''י'
         hello-world-retro:
           lessons:
             lesson-1: {}
@@ -4827,7 +4833,8 @@ he:
             lesson-1:
               name: תחרות איות
           title: תחרות איות
-        outbreak-csc: {}
+        outbreak-csc:
+          title: התפרצות
         explore-data-1: {}
         counting-csc: {}
         csa5-exemplars:
@@ -4891,10 +4898,16 @@ he:
           title: 'שלום, עולם: אוכל'
         hello-world-emoji-2021:
           lessons:
+            Hello World:
+              name: 'שלום, עולם: אמוג''י'
             lesson-1: {}
+          title: 'שלום, עולם: אמוג''י'
         hello-world-animals-2021:
           lessons:
+            Hello World:
+              name: 'שלום, עולם: חיות'
             lesson-1: {}
+          title: 'שלום, עולם: חיות'
         hello-world-retro-2021:
           lessons:
             Hello World:

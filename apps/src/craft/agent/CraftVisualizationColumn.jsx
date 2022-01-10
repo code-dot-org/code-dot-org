@@ -20,8 +20,6 @@ var CraftVisualizationColumn = function(props) {
       <GameButtons>
         <ArrowButtons />
 
-        {' ' /* Explicitly insert whitespace*/}
-
         {props.showFinishButton && (
           <div id="right-button-cell">
             <button

@@ -117,75 +117,9 @@ class Lesson < ApplicationRecord
     )
   end
 
-  def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
-    unit.lessons.reload
-    raw_lessons.map do |raw_lesson|
-      Lesson.prevent_blank_display_name(raw_lesson)
-      Lesson.prevent_changing_stable_i18n_key(unit, raw_lesson)
-
-      lesson = unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
-        Lesson.find_or_create_by(
-          key: raw_lesson[:key],
-          script: unit
-        ) do |l|
-          l.name = raw_lesson[:name]
-          l.relative_position = 0 # will be updated below, but cant be null
-          l.has_lesson_plan = true # will be reset below if specified
-        end
-
-      numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
-
-      lesson.assign_attributes(
-        name: raw_lesson[:name],
-        absolute_position: (counters.lesson_position += 1),
-        lesson_group: lesson_group,
-        lockable: !!raw_lesson[:lockable],
-        has_lesson_plan: !!raw_lesson[:has_lesson_plan],
-        unplugged: !!raw_lesson[:unplugged],
-        relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
-      )
-      lesson.save! if lesson.changed?
-
-      lesson.script_levels = ScriptLevel.add_script_levels(
-        unit, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
-      )
-      lesson.save!
-      lesson.reload
-
-      Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
-
-      lesson
-    end
-  end
-
-  def self.prevent_changing_stable_i18n_key(unit, raw_lesson)
-    if unit.stable? && ScriptConstants.i18n?(unit.name) && I18n.t("data.script.name.#{unit.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
-
-      raise "Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
-    end
-  end
-
   def self.prevent_blank_display_name(raw_lesson)
     if raw_lesson[:name].blank?
       raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
-    end
-  end
-
-  # Go through all the script levels for this lesson, except the last one,
-  # and raise an exception if any of them are a multi-page assessment.
-  # (That's when the script level is marked assessment, and the level itself
-  # has a pages property and more than one page in that array.)
-  # This is because only the final level in a lesson can be a multi-page
-  # assessment.
-  def self.prevent_multi_page_assessment_outside_final_level(lesson)
-    lesson.script_levels.each do |script_level|
-      if lesson.script_levels.last != script_level && script_level.long_assessment?
-        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
-      end
-    end
-
-    if lesson.lockable && !lesson.script_levels.last.assessment?
-      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
     end
   end
 
@@ -505,7 +439,7 @@ class Lesson < ApplicationRecord
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
-      resources: resources_for_lesson_plan(user&.verified_teacher?),
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
@@ -515,7 +449,7 @@ class Lesson < ApplicationRecord
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
-      isVerifiedTeacher: user&.verified_teacher?,
+      isVerifiedInstructor: user&.verified_instructor?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
     }
@@ -527,7 +461,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       displayName: localized_name,
       preparation: render_property(:preparation),
-      resources: resources_for_lesson_plan(user&.verified_teacher?),
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),

@@ -1833,8 +1833,16 @@ ar:
             '"rainbow"': ألوان
             '"stars"': نجوم
             '"waves"': أمواج
+      Poetry_addLine:
+        text: إضافة سطر {LINE}
+      Poetry_animateText:
+        text: تحريك النص
+      Poetry_destroy:
+        text: إزالة {ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE} الانتقال إلى {LOCATION}"
+      Poetry_hideText:
+        text: إخفاء النص
       Poetry_makeBurst:
         text: إنشاء {EFFECT} تأثير مع {NUM} {ANIMATION_NAME} النقوش المتحركة
         options:
@@ -1872,26 +1880,43 @@ ar:
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ضوء
             '"sound://category_poof/puzzle_game_poof_04.mp3"': بوف
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': فحص
+            '"sound://category_background/typewriter.mp3"': آلة كاتبة
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': مهتز
             '"sound://category_achievements/peaceful_win_1.mp3"': فوز
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': دوامة
             '"sound://category_achievements/peaceful_win_6.mp3"': نغمات الرياح
+      Poetry_setAuthor:
+        text: تحديد المنشيء{AUTHOR}
       Poetry_setBackground:
         text: عيّن لون الخلفية {COLOR}
       Poetry_setBackgroundEffect:
+        text: ضبط الخلفية {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"colors"': ألوان
             '"squiggles"': سكويغلز
             '"space"': الفضاء
             '"stars"': نجوم
+            '"darkCircles"': خافت
+            '"fadeColors"': ثلجي
+            '"blooming"': مزهر
             '"ripples"': تموجات
+            '"clouds"': غائم
             '"rain"': مطر
             '"bubbles"': فقاعات
             '"confetti"': قصاصات من الورق
             '"hearts"': قلوب ملونة
           PALETTE:
             '"rainbow"': ألوان
+            '"grayscale"': رمادي
+            '"sky"': سماوي
+            '"sunrise"': الفجر
+            '"sunset"': الغسق
+            '"spring"': الربيع
+            '"summer"': الصيف
+            '"autumn"': الخريف
+            '"winter"': الشتاء
+            '"roses"': الورود
       Poetry_setBackgroundImageAs:
         text: تعيين الخلفية إلى {IMG}
       Poetry_setFont:
@@ -1908,34 +1933,75 @@ ar:
       Poetry_setFontColor:
         text: ضبط لون النص {FILL}
       Poetry_setForegroundEffect:
+        text: عمل {EFFECT} تأثير
         options:
           EFFECT:
             '"rain"': مطر
             '"bubbles"': فقاعات
             '"hearts"': قلوب ملونة
+            '"emojis"': رموز تعبيرية سعيدة
             '"confetti"': قصاصات من الورق
             '"starburst"': النجمي
+            '"glass"': زجاج محطم
+            '"twinkling"': وميض
+      Poetry_setPrompt:
+        text: مستخدم فوري {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} للمتغير {VAR}
+      Poetry_setPromptWithChoices:
+        text: مستخدم فوري {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} للمتغير {VAR} مع خيارات
+          {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: تحديد {SPRITE} حجم إلى {VAL}
+      Poetry_setTextEffect:
+        text: ضبط تأثيرات النص {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': باهت
+            '"typewriter"': آلة كاتبة
+            '"flyLeft"': تحليق من اليسار
+            '"flyRight"': تحليق من اليمين
+            '"flyTop"': تحليق من الأعلى
+            '"flyBottom"': تحليق من الأسفل
+      Poetry_setTitle:
+        text: تحديد العنوان {TITLE}
+      Poetry_showText:
+        text: إظهار النص
       Poetry_startBehavior:
+        text: 'النقش المتحرك {ANIMATION_NAME} يبدا {BEHAVIOR} '
         options:
           BEHAVIOR:
             growing: النمو
             jittering: الاهتزاز
+            moving_north_and_looping: الدوران ناحية الشمال
+            moving_south_and_looping: الدوران ناحية الجنوب
+            moving_east_and_looping: الدوران ناحية الشرق
+            moving_west_and_looping: الدوران ناحية الغرب
             shrinking: الانقباض
             spinning_left: الدوران ناحية اليسار
             spinning_right: الدوران ناحية اليمين
             wandering: التحرك
       Poetry_stopBehavior:
+        text: 'النقش المتحرك {ANIMATION_NAME} يتوقف {BEHAVIOR} '
         options:
           BEHAVIOR:
             growing: النمو
             jittering: الاهتزاز
+            moving_north_and_looping: الدوران ناحية الشمال
+            moving_south_and_looping: الدوران ناحية الجنوب
+            moving_east_and_looping: الدوران ناحية الشرق
+            moving_west_and_looping: الدوران ناحية الغرب
             shrinking: الانقباض
             spinning_left: الدوران ناحية اليسار
             spinning_right: الدوران ناحية اليمين
             wandering: التحرك
+            '"all"': "--جميع السلوكيات--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: عندما يظهر {N} سطر
         options:
           N:
             '0': "???"

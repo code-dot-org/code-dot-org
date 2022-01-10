@@ -1780,3 +1780,4 @@
   ai_try_activity: "Aktivität ausprobieren"
   outbreak_tile_title: "Ausbruch"
   outbreak_tile_subtitle: "Ein Virus hat Monster-Town infiziert! Programmieren Sie einen Ausbruchssimulator und prognostizieren Sie, was mit den Nachbarn von Monster-Town geschehen wird."
+  outbreak_tile_alt: "Eine Simulation, wie ein Virus sich in einer Gruppe violetter Monster verbreitet."

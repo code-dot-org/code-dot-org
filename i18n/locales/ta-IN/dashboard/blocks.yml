@@ -888,14 +888,28 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      gamelab_addBehaviorSimple:
+        text: ஸ்பிரைட்[SPRITE]தொடக்கம்{BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE}இலக்கை அடைகிறது{TARGET}க்கு{OPT}"
         options:
           OPT:
+            '"follow"': பின்பற்றவும்
             '"avoid"': தவிர்க்கவும்
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_atTime:
+        text: இல்{N} {UNIT}
         options:
           UNIT:
             '"seconds"': விநாடிகள்
+            '"frames"': சட்டங்கள்
+      gamelab_avoidingTargets:
+        text: இலக்குகளைத் தவிர்ப்பது
+      gamelab_beginCollectingData:
+        text: begin collecting data {BREAK}மதிப்பு{VALUE}முத்திரையுடன்{LABEL}
+      gamelab_bounceOff:
+        text: "{SPRITE}துள்ளுகிறது{TARGET}"
       gamelab_changePropBy:
         text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
@@ -904,12 +918,39 @@ ta:
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
       gamelab_checkTouching:
+        text: "{CONDITION}{SPRITE1}தொடுகிறது{SPRITE2}"
         options:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_clickedOn:
+        text: பொழுது{SPRITE}கிளிக் செய்த
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_comment:
+        text: கருத்து:{COMMENT}
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: number of{SPRITE}
+      gamelab_createNewSprite:
+        text: |-
+          ஒரு புதிய மனிதனை உருவாக்குங்கள்
+          அழைக்கப்பட்டது{NAME}
+          ஆடையுடன்{COSTUME}
+          இல்{LOCATION}
+      gamelab_destroy:
+        text: அகற்று {THIS}
+      gamelab_draggable:
+        text: இழுக்கப்படக்கூடியது
+      gamelab_drawLine:
+        text: கோடு வரைக {COLOR}  {LOC1}  {LOC2}
+      gamelab_edgesDisplace:
+        text: விளிம்புகள் தொகுதி [SPRITE] [0] நகரும் இருந்து
+      gamelab_followingTargets:
+        text: பின்வரும் இலக்குகள்
+      gamelab_getAllSprites:
+        text: அனைத்து உருவங்கள்
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -919,14 +960,29 @@ ta:
             '"direction"': நகர்வு திசை
             '"tint"': டின்ட்
       gamelab_getThisSprite:
+        text: "{CHOICE} ஸ்பிரைட்"
         options:
           CHOICE:
+            '"this"': இது
             '"other"': மற்றவை
       gamelab_getTime:
+        text: நேரம் {UNIT}
         options:
           UNIT:
             '"seconds"': விநாடிகள்
+            '"frames"': சட்டங்கள்
+      gamelab_glideTo:
+        text: "{SPRITE} சறுக்கி {LOCATION}"
+      gamelab_hideTitleScreen:
+        text: தலைப்பு திரையை மறை
+      gamelab_ifVarEquals:
+        text: |-
+          என்றால் {NUM} = {VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} ஆடை என்பது {COSTUME}"
       gamelab_isKeyPressed:
+        text: "{KEY} அழுத்தப்படுகிறது"
         options:
           KEY:
             '"up"': மேலே
@@ -960,9 +1016,14 @@ ta:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} விளிம்புகளைத் தொடுகிறது"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} தொடுகிறது {TARGET} "
       gamelab_jumpTo:
         text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} அழுத்தினார்"
         options:
           CONDITION:
             '"when"': எப்போது
@@ -999,7 +1060,33 @@ ta:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_locationAt:
+        text: 'இடம் x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} பிக்சல்கள் {DIRECTION} இருந்த {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': வடக்கு
+            '"East"': கிழக்கு
+            '"South"': தெற்கு
+            '"West"': மேற்கு
+      gamelab_locationMouse:
+        text: சுட்டி இடம்
+      gamelab_locationOf:
+        text: இடம் {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeBurst:
+        text: உருவாக்க {EFFECT} விளைவு {NUM} {ANIMATION_NAME} உருவங்கள்
+        options:
+          EFFECT:
+            '"pop"': பாப்
+      gamelab_makeNewSpriteAnon:
+        text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
+      gamelab_makeNumSprites:
+        text: புதிய {ANIMATION_NAME}உருவங்களை உருவாக்குங்கள் {NUM}
       gamelab_makeProjectile:
+        text: "எறிபொருளை உருவாக்கவும் \n{ANIMATION_NAME}இருந்து{LOCATION}வேகத்துடன்{SPEED}திசையில்{DIRECTION}"
         options:
           DIRECTION:
             '0': வலது
@@ -1007,41 +1094,132 @@ ta:
             '180': இடது
             '270': மேலே
       gamelab_mirrorSprite:
+        text: "[SPRITE][SPRITE]முகம்{DIRECTION}"
         options:
           DIRECTION:
             '"right"': வலது
             '"left"': இடது
+      gamelab_mouseLocation:
+        text: சுட்டி இடம்
+      gamelab_moveBackward:
+        text: நகர்வு {SPRITE} {DISTANCE} பிக்சல்கள் பின்னோக்கி
+      gamelab_moveForward:
+        text: பிக்சல்களை {SPRITE} [DISTANCE[1] நகர்த்தவும்
+      gamelab_moveInDirection:
+        text: பிக்சல்களை {SPRITE} {DISTANCE} நகர்த்தவும் {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': வடக்கு
+            '"East"': கிழக்கு
+            '"South"': தெற்கு
+            '"West"': மேற்கு
+      gamelab_moveToward:
+        text: பிக்சல்களை {DISTANCE} நோக்கி {TARGET} நகர்த்தவும் {SPRITE}
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: மேலும் கீழும் ரோந்து
+      gamelab_playSound:
+        text: ஒலி விளையாட்டு {SOUND}
       gamelab_playSoundOptions:
+        text: ஒலி விளையாட்டு {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": உச்சரிப்பு
+            "'sound://category_digital/boing_2.mp3'": போயிங்
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": பாப்
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": மின்னும்
+            "'sound://category_swish/quick_swing.mp3'": சுழல்தள்
+            "'sound://category_nature/summer_night_loop.mp3'": கோடை இரவு
+            "'sound://category_background/ocean_waves.mp3'": கடல் அலைகள்
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": கடற்கரை சிற்றலை
             "'sound://category_animals/bear.mp3'": கரடி
             "'sound://category_animals/cat.mp3'": பூனை
             "'sound://category_animals/cow.mp3'": மாடு
             "'sound://category_animals/sheep.mp3'": ஆடு
             "'sound://category_animals/chicken.mp3'": கோழி
+            "'sound://category_nature/thunderstorm_1.mp3'": இடியுடன் கூடிய மழை
             "'sound://category_animals/dog.mp3'": நாய்
+            "'sound://category_collect/trill_stings.mp3'": தில்லுமுல்லு
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": தட்டவும்
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": டோனல் ஹிட்
+            "'sound://category_transition/trippy_robotic_transition.mp3'": ரோபோ மாற்றம்
+            "'sound://category_transition/star_dust_particle_10.mp3'": நட்சத்திர தூசி
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": அன்னிய கப்பல்
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": மந்திர எழுத்துப்பிழை
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": நகைச்சுவையான பாஸ்
             "'sound://category_digital/jump_7.mp3'": குதி
+      gamelab_playSpeech:
+        text: பேச்சு விளையாடு {SOUND}
+      gamelab_pointInDirection:
+        text: புள்ளி {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': வடக்கு
+            '"East"': கிழக்கு
+            '"South"': தெற்கு
+            '"West"': மேற்கு
+      gamelab_printText:
+        text: அச்சு {TEXT}
       gamelab_randColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
+      gamelab_randomLocation:
+        text: சீரற்ற இடம்
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} எல்லாவற்றையும் நிறுத்துகிறது "
+      gamelab_removeBehaviorSimple:
+        text: ஸ்பிரைட் {SPRITE} நிறுத்துகிறது {BEHAVIOR}
+      gamelab_removeTint:
+        text: நிறத்தை அகற்று {THIS}
+      gamelab_setAnimation:
+        text: ஆடையை {ANIMATION}மாற்று {THIS}
       gamelab_setBackground:
         text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
       gamelab_setBackgroundImage:
+        text: பின்னணி அமைக்க {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': குகை
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': தொடர்ச்சியான புல்
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': பாலைவனம்
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': பாலைவன சாலை
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': விவசாய நிலம்
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': மிதக்கும் புல்
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': வீட்டுக்கு முன்னால்
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': கிரிட்
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'சமையலறை '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': வாழ்க்கை அறை
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': பூங்கா காட்சி
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': பைன் மரங்கள்
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': வானவில்
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': அறிவியல் புனைகதை
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': கால்பந்து துறை
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': சூரியன் மற்றும் வானவில்
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': சூரிய ஒளி மழை
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': டென்னிஸ் மைதானம்
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': மரத் தீவு
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': நீருக்கடியில்
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': குளிர்காலம்
             undefined: எதுவுமில்லை
+      gamelab_setBackgroundImageAs:
+        text: பின்னணி அமைக்க {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: புதிய ஸ்ப்ரைட் இயல்புநிலை அளவை {SIZE}
+        options:
+          SIZE:
+            '25': மிகச்சிறியது
+            '50': சிறிய
+            '75': medium
+            '100': பெரிய
+      gamelab_setPrompt:
+        text: மாறிக்கான {VAR} உடனடி பயனர் {QUESTION}
+      gamelab_setPromptWithChoices:
+        text: "{A}{B}{C} விருப்பங்களுடன் {VAR} மாறிக்கான பயனர் {QUESTION} ஐத் தூண்டவும்"
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} ஐ {VAL} ஆக்கவும்"
         options:
@@ -1054,24 +1232,77 @@ ta:
         options:
           PROPERTY:
             '"scale"': அளவு
+          SIZE:
+            '25': மிகச்சிறியது
+            '50': சிறிய
+            '75': medium
+            '100': பெரிய
       gamelab_setSizes:
+        text: "{SPRITE} {PROPERTY} க்கு{N}% என அமை"
         options:
           PROPERTY:
             '"scale"': அளவு
             '"width"': அகலம்
             '"height"': உயரம்
+      gamelab_setTint:
+        text: இந்த [0] இன் நிறத்தை {COLOR} ஆக மாற்றவும்
+      gamelab_setupScoreboard:
+        text: |-
+          ஸ்கோர்போர்டை வரையவும்
+          {SPRITE1COSTUME}ஸ்கோர்{VAR1}{SPRITE2COSTUME}ஸ்கோர்{VAR2}இலக்கு{SPRITE3COSTUME}
+      gamelab_setupSim:
+        text: |-
+          உடன் அமைப்பு உருவகப்படுத்துதல்
+          {SPRITE1N}{SPRITE1COSTUME}வேகம்{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}வேகம்{SPRITE2SPEED}
+          சேகரிக்கிறது
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: தலைப்புத் திரையைக் காட்டு {BREAK} தலைப்பு {TITLE} துணைத் தலைப்பு {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} கிளிக் செய்தார் "
         options:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_spriteSay:
+        text: "{SPRITE} சொல் {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}சொல்லுங்கள்{TEXT1}{NUM}வினாடிகள்"
+      gamelab_startAvoiding:
+        text: "{SPRITE}தவிர்க்க தொடங்குகிறது{TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE}தொடர்ந்து தொடங்குகிறது{TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} சறுக்க ஆரம்பிக்கிறது"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} மற்ற உருவங்களைத் தவிர்ப்பதை நிறுத்துகிறது"
+      gamelab_stopCollectingData:
+        text: தரவு சேகரிப்பதை நிறுத்துங்கள்
+      gamelab_stopFollowing:
+        text: "{SPRITE} மற்ற உருவங்களைப் பின்பற்றுவதை நிறுத்துகிறது"
+      gamelab_stopGliding:
+        text: "{SPRITE}சறுக்குவதை நிறுத்துகிறது"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "[LEFT_QUOTE][TEXT1]{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: உருளும்
       gamelab_turn:
+        text: திருப்பம் {SPRITE} {DIRECTION} {N} டிகிரி
         options:
           DIRECTION:
             '"right"': வலது
             '"left"': இடது
+      gamelab_updateTitleWithColor:
+        text: தலைப்புத் திரையைக் காட்டு {BREAK} தலைப்பு {TITLE} நிறம் {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: அனைத்து தூண்டுதல்களும் பதிலளிக்கும் போது
+      gamelab_whenDownArrow:
+        text: கீழ் அம்புக்குறியை அழுத்தும் போது
       gamelab_whenKey:
         text: "{KEY} அழுத்தப்படுகையில்"
         options:
@@ -1085,7 +1316,22 @@ ta:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: இடது அம்புக்குறியை அழுத்தும் போது
+      gamelab_whenPromptAnswered:
+        text: "{VAR} பதிலளித்த போது "
+      gamelab_whenRightArrow:
+        text: வலது அம்பு அழுத்தும் போது
+      gamelab_whenSpriteCreated:
+        text: "{SPRITE} உருவாக்கிய போது"
+      gamelab_whenTouching:
+        text: "{SPRITE1} {SPRITE2} ஐ தொடும் போது"
+      gamelab_whenUpArrow:
+        text: மேல் அம்புக்குறியை அழுத்தும் போது
+      gamelab_whileDownArrow:
+        text: கீழ் அம்புக்குறி அழுத்தும் போது
       gamelab_whileKey:
+        text: "{KEY} அழுத்தும் போது "
         options:
           KEY:
             '"up"': மேலே
@@ -1097,12 +1343,43 @@ ta:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: இடது அம்புக்குறி அழுத்தும் போது
+      gamelab_whileRightArrow:
+        text: வலது அம்பு அழுத்தும் போது
+      gamelab_whileTouching:
+        text: "{SPRITE1} {SPRITE2} ஐத் தொடும் போது"
+      gamelab_whileUpArrow:
+        text: மேல் அம்புக்குறி அழுத்தும் போது
+      gamelab_withPercentChance:
+        text: |-
+          {NUM}% வாய்ப்பு இருந்தால்
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: "{NUM} வாய்ப்பு\n{STATEMENT} "
+        options:
+          NUM:
+            '10': மிகக் குறைவு
+            '25': குறைவு
+            '50': 50/50
+            '75': உயரமான
+            '90': மிக அதிகம்
+      gamelab_xLocationOf:
+        text: x ஒருங்கிணைப்பு {SPRITE}
+      gamelab_yLocationOf:
+        text: y ஒருங்கிணைப்பு {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: ஸ்பிரைட்[SPRITE]தொடக்கம்{BEHAVIOR}
       Mikelab_addTrainingData:
         options:
           NAME:
             "{x: 200, y: 100}": மீன்
           LOCATION:
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": மீன்
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: "{A}{B}{C} விருப்பங்களுடன் {VAR} மாறிக்கான பயனர் {QUESTION} ஐத் தூண்டவும்"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1127,8 +1404,14 @@ ta:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"this"': இது
       Mikelab_groupChangePropBy:
         options:
+          SELECT:
+            '"this"': இது
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
@@ -1145,18 +1428,42 @@ ta:
             "{x: 300, y: 100}": மேல் வலது
             "{x: 100, y: 300}": கீழ் இடது
             "{x: 300, y: 300}": கீழ் வலது
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"this"': இது
       Mikelab_groupGetProp:
         options:
+          SELECT:
+            '"this"': இது
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"this"': இது
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"this"': இது
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"this"': இது
       Mikelab_groupSetProp:
         options:
+          SELECT:
+            '"this"': இது
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"this"': இது
       Mikelab_hideFish:
         options:
           TRASH:
@@ -1192,14 +1499,34 @@ ta:
             MOVES.ClapHigh: மீன்
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
+      Mikelab_locationAt:
+        text: 'இடம் x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_poemTextJoin:
         text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
+      Mikelab_removeBehaviorSimple:
+        text: ஸ்பிரைட் {SPRITE} நிறுத்துகிறது {BEHAVIOR}
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': தொடர்ச்சியான புல்
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': பாலைவன சாலை
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': விவசாய நிலம்
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': மிதக்கும் புல்
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': வீட்டுக்கு முன்னால்
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'சமையலறை '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': வாழ்க்கை அறை
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': பூங்கா காட்சி
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': பைன் மரங்கள்
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': கால்பந்து துறை
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': சூரியன் மற்றும் வானவில்
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': சூரிய ஒளி மழை
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': டென்னிஸ் மைதானம்
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': மரத் தீவு
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1208,6 +1535,13 @@ ta:
             '"direction"': நகர்வு திசை
       Mikelab_setupOutbreak:
         text: "அவுட்பிரேக்  செட்அப் \nமக்கள் தொகை:{SPRITE2N}\n{TOGGLE}வைரஸ்"
+      Mikelab_setupSim:
+        text: |-
+          உடன் அமைப்பு உருவகப்படுத்துதல்
+          {SPRITE1N}{SPRITE1COSTUME}வேகம்{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}வேகம்{SPRITE2SPEED}
+          சேகரிக்கிறது
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1229,6 +1563,8 @@ ta:
             "{x: 300, y: 100}": மேல் வலது
             "{x: 100, y: 300}": கீழ் இடது
             "{x: 300, y: 300}": கீழ் வலது
+      Mikelab_whenClickedOn:
+        text: பொழுது{SPRITE}கிளிக் செய்த
       Mikelab_whenKeyPressed:
         text: "{KEY} அழுத்தப்படுகையில்"
         options:
@@ -1249,6 +1585,10 @@ ta:
           KEY:
             '"yes"': ஆம்
             '"no"': இல்லை
+      Mikelab_xLocationOf:
+        text: x ஒருங்கிணைப்பு {SPRITE}
+      Mikelab_yLocationOf:
+        text: y ஒருங்கிணைப்பு {SPRITE}
       Outbreak_beginCongregating:
         text: அரக்கர்கள் ஒன்றுகூடத் தொடங்குகிறார்கள்
       Outbreak_beginQuarantining:
@@ -1278,6 +1618,25 @@ ta:
             '"rainbow"': வானவில்
             '"stars"': நட்சத்திரங்கள்
             '"waves"': அலைகள்
+      Poetry_addLine:
+        text: வரி சேர்க்க {LINE}
+      Poetry_animateText:
+        text: உயிரூட்டு உரை
+      Poetry_destroy:
+        text: அகற்று {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} சறுக்கி {LOCATION}"
+      Poetry_hideText:
+        text: உரையை மறை
+      Poetry_makeBurst:
+        text: உருவாக்க {EFFECT} விளைவு {NUM} {ANIMATION_NAME} உருவங்கள்
+        options:
+          EFFECT:
+            '"pop"': பாப்
+      Poetry_makeNewSpriteAnon:
+        text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
+      Poetry_makeNumSprites:
+        text: புதிய {ANIMATION_NAME}உருவங்களை உருவாக்குங்கள் {NUM}
       Poetry_playMusic:
         options:
           SOUND:
@@ -1290,6 +1649,7 @@ ta:
             '"sound://category_background/repitition.mp3"': சவாரி
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': மெதுவான
       Poetry_playSound:
+        text: ஒலி விளையாட்டு {SOUND}
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': மணி
@@ -1303,32 +1663,112 @@ ta:
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': லைட்
             '"sound://category_poof/puzzle_game_poof_04.mp3"': பூஃப்
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': ஸ்கேன்
+            '"sound://category_background/typewriter.mp3"': தட்டச்சுப்பொறி
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': உயிர்துடிப்பான
             '"sound://category_achievements/peaceful_win_1.mp3"': வெல்லுங்கள்
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': சுழல்
             '"sound://category_achievements/peaceful_win_6.mp3"': காற்றின் மணியோசைகள்
+      Poetry_setAuthor:
+        text: தொகுப்பு ஆசிரியர் {AUTHOR}
       Poetry_setBackground:
         text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
       Poetry_setBackgroundEffect:
+        text: பின்னணி அமைக்க {EFFECT}{PALETTE}
         options:
           EFFECT:
             '"colors"': வண்ணங்கள்
             '"squiggles"': சிறு வளை கோடுகள்
             '"space"': ஸ்பேஸ்
             '"stars"': நட்சத்திரங்கள்
+            '"darkCircles"': மறைதல்
+            '"fadeColors"': இனிப்பான
+            '"blooming"': பூக்கும்
             '"ripples"': சிற்றலைகள்
+            '"clouds"': மேகமூட்டம்
             '"rain"': மழை
             '"bubbles"': குமிழிகள்
             '"confetti"': கான்ஃபெடி
           PALETTE:
             '"rainbow"': வானவில்
+            '"grayscale"': சாம்பல் நிறங்கள்
+            '"sky"': வானம்
+            '"sunrise"': விடியல்
+            '"sunset"': அந்தி
+            '"spring"': வசந்தம்
+            '"summer"': கோடை
+            '"autumn"': இலையுதிர் காலம்
+            '"winter"': குளிர்காலம்
+            '"roses"': ரோஜாக்கள்
+      Poetry_setBackgroundImageAs:
+        text: பின்னணி அமைக்க {IMG}
+      Poetry_setFont:
+        text: எழுத்துருவை அமைக்கவும் {FONT}
+        options:
+          FONT:
+            '"Arial"': ஏரியல்
+            '"Georgia"': ஜார்ஜியா
+            '"Times"': நேரங்கள்
+            '"Courier"': கூரியர்
+            '"Arial Black"': ஏரியல் ப்ளாக்
+            '"Impact"': தாக்கம்
+            '"Cursive"': கையெழுத்து
+      Poetry_setFontColor:
+        text: உரை வண்ணத்தை அமைக்கவும் {FILL}
       Poetry_setForegroundEffect:
+        text: விளைவு {EFFECT}செய்ய
         options:
           EFFECT:
             '"rain"': மழை
             '"bubbles"': குமிழிகள்
+            '"emojis"': மகிழ்ச்சியான எமோஜிகள்
             '"confetti"': கான்ஃபெடி
+            '"glass"': நொறுங்கும் கண்ணாடி
+            '"twinkling"': மின்னும்
+      Poetry_setPrompt:
+        text: மாறிக்கான {LEFT_QUOTE}{NAME}{RIGHT_QUOTE}உடனடி பயனர்
+      Poetry_setPromptWithChoices:
+        text: விருப்பங்கள்{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} கொண்ட {VAR}மாறிக்கான பயனரைத் தூண்டவும் {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A}{LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}{LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: "{SPRITE} அளவை {VAL} ஆக அமைக்கவும்"
+      Poetry_setTextEffect:
+        text: உரை விளைவை அமைக்கவும் {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': மங்கிவிடும்
+            '"typewriter"': தட்டச்சுப்பொறி
+            '"flyLeft"': இடமிருந்து பறக்க
+            '"flyRight"': வலமிருந்து பறக்க
+            '"flyTop"': மேலிருந்து பறக்க
+            '"flyBottom"': கீழே இருந்து பறக்க
+      Poetry_setTitle:
+        text: தலைப்பு {TITLE} அமை
+      Poetry_showText:
+        text: உரையைக் காட்டு
+      Poetry_startBehavior:
+        text: 'ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} தொடங்குகிறது '
+        options:
+          BEHAVIOR:
+            moving_north_and_looping: வடக்கில் வளையும்
+            moving_south_and_looping: தெற்கே சுழல்கிறது
+            moving_east_and_looping: கிழக்கில் வளையும்
+            moving_west_and_looping: மேற்கு நோக்கி வளையும்
+      Poetry_stopBehavior:
+        text: ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} நிறுத்துகிறது
+        options:
+          BEHAVIOR:
+            moving_north_and_looping: வடக்கில் வளையும்
+            moving_south_and_looping: தெற்கே சுழல்கிறது
+            moving_east_and_looping: கிழக்கில் வளையும்
+            moving_west_and_looping: மேற்கு நோக்கி வளையும்
+            '"all"': "--எல்லா நடத்தைகளும்-- "
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}\n "
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: வரி {N} காண்பிக்கும் போது
         options:
           'N':
             '0': "???"
@@ -1342,6 +1782,8 @@ ta:
             '8': '8'
             '9': '9'
             '10': '10'
+      Poetry_whenPromptAnswered:
+        text: "{VAR} பதிலளித்த போது "
       RyanLab_moveForward:
         text: முன்னோக்கி நகர்த்த
       RyanLab_turnLeft:
@@ -1350,6 +1792,8 @@ ta:
         text: வலதுபுறம் திரும்பவும்
       Vector_positionCenter:
         text: மையம்
+      Vector_randomLocation:
+        text: சீரற்ற இடம்
       Vector_where:
         options:
           PROPERTY:
@@ -1361,6 +1805,8 @@ ta:
             '"border"': பார்டர்
             '"row"': வரிசை
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      aalab_spriteSayChoices:
+        text: "{SPRITE} சொல் {SPEECH}"
       binary_move:
         options:
           DIR:
@@ -1426,3 +1872,5 @@ ta:
           DIR:
             right: சரி ↻
             left: இடது  ↺
+      validation_validatedBackground:
+        text: பின்னணி அமைக்க {IMG}

@@ -1591,10 +1591,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.1.tgz#77d1f975d75923792b6c72e0aa2ed9cf2bde7841"
-  integrity sha512-gmCY1Lx94chMNxC6ZOdQ/H0MBp+UzJKbJVLQ8JC77DpO5y3+LrFcM3y7DIcyCQEtbKq6qlgfY1nx4lAqdIIalw==
+"@code-dot-org/blockly@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.3.tgz#7a76ae946d29ed4999cbe50700ccf3ec45ab9017"
+  integrity sha512-ipj30/Qol3GH4lVs0JsMJKre5KtULpy70h307zGzN2kA5OgfRAMTsQZYegMduW1Rn77kn1wlXaIxRSCegXJMcQ==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
@@ -16664,8 +16664,9 @@ xtend@~4.0.0:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"

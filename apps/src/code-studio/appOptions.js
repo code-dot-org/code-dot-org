@@ -38,6 +38,7 @@
  * @property {number} serverLevelId
  * @property {number} serverProjectLevelId
  * @property {string} gameDisplayName
+ * @property {string} appName
  * @property {boolean} publicCaching
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
  *           false if they are 12 or younger, and undefined if we don't know

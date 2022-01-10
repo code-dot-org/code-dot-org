@@ -45,6 +45,7 @@ export default class ProgressLessonContent extends React.Component {
         />
       ));
     }
+
     return (
       <div>
         {description && (

@@ -524,7 +524,7 @@ az:
             Encode a Complex Thing:
               name: Təcrübəni dekodlaşdır
             Encoding B&W Images:
-              name: B&W Şəkillərinin Kodlaşdırılması
+              name: Ağ-qara şəkillərinin şifrələnməsi
             Encoding Color Images:
               name: Rəngli Şəkillərin Kodlaşdırılması
             Encoding Numbers in the Real World:
@@ -974,7 +974,7 @@ az:
             Computer Science Fundamentals:
               name: Kompüter Elmləri Əsasları.
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             'Mastering the Basics: Functions':
               name: 'Əsaslara yiyələnmək: funksiyalar'
             Next Steps:
@@ -1019,7 +1019,7 @@ az:
             Creating Equitable Learning Environments:
               name: Adil öyrənmə mühiti yaratmaq
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Next Steps:
               name: Növbəti addımlar
         sciencePD2b-iZone:
@@ -1043,7 +1043,7 @@ az:
         CSPPD2:
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Welcome to the Course!:
               name: Kursa xoş gəlmişsiniz!
             Wrap Up and Next Steps:
@@ -1079,7 +1079,7 @@ az:
         ECSPD3-Unit2:
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Lesson Overviews:
               name: Dərs İcmalları
             Teaching Strategies:
@@ -1089,7 +1089,7 @@ az:
         ECSPD3-Unit3:
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Intro to Unit 3:
               name: Bölmə 3-ə giriş
             Teaching Strategies:
@@ -1097,7 +1097,7 @@ az:
         ECSPD3-Unit4:
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Teaching Strategies:
               name: Öyrətmə strategiyası
             Unit 4 Day-by-Day:
@@ -1107,7 +1107,7 @@ az:
             Complete the Challenge:
               name: Çağırışı tamamlayın
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 5 Overview:
               name: 5cü Hissə Baxış
             Unit 5 lessons:
@@ -1115,7 +1115,7 @@ az:
         ECSPD3-Unit6:
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 6 Challenge:
               name: Bölmə 6 Meydan oxuma
             Unit 6 Overview:
@@ -1157,7 +1157,7 @@ az:
           title: Cəbrd PD də Kompyuter Elmləri
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Teaching Support - Lessons 1-3:
               name: Tədris Dəstəyi - Dərslər 1-3
             Teaching Support - Lessons 13-16:
@@ -1173,7 +1173,7 @@ az:
             Complete the Challenge:
               name: Çağırışı tamamlayın
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 2 Overview:
               name: 2cü Hissə Baxış
         duino:
@@ -1197,7 +1197,7 @@ az:
             Complete the Challenge:
               name: Çağırışı tamamlayın
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 3 Overview:
               name: 3cü Hissə Baxış
         cspunit3temp:
@@ -1278,7 +1278,7 @@ az:
             Complete the Challenge:
               name: Çağırışı tamamlayın
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 4 Overview:
               name: 4cü Hissə Baxış
         cspunit6draft:
@@ -1304,7 +1304,7 @@ az:
             Complete the Challenge:
               name: Çağırışı tamamlayın
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 5 Overview:
               name: 5cü Hissə Baxış
         cspunit6:
@@ -1348,7 +1348,7 @@ az:
           title: Cəbrd PD də Kompyuter Elmləri
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
         csp1-2017:
           lesson_groups:
             cspSurvey:
@@ -1378,7 +1378,7 @@ az:
             Cleaning Data:
               name: Məlumatların Təmizlənməsi
             Encoding B&W Images:
-              name: B&W Şəkillərinin Kodlaşdırılması
+              name: Ağ-qara şəkillərinin şifrələnməsi
             Encoding Color Images:
               name: Rəngli Şəkillərin Kodlaşdırılması
             Intro to Data:
@@ -1762,7 +1762,7 @@ az:
         ecs-unit2:
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Lesson Overviews:
               name: Dərs İcmalları
             Teaching Strategies:
@@ -1772,7 +1772,7 @@ az:
         ecs-unit3:
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Intro to Unit 3:
               name: Bölmə 3-ə giriş
             Teaching Strategies:
@@ -1782,7 +1782,7 @@ az:
           description_short: 'Hissə 4: Proqramlaşdırma'
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Teaching Strategies:
               name: Öyrətmə strategiyası
             Unit 4 Day-by-Day:
@@ -1793,7 +1793,7 @@ az:
             Complete the Challenge:
               name: Çağırışı tamamlayın
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 5 Overview:
               name: 5cü Hissə Baxış
             Unit 5 lessons:
@@ -1803,7 +1803,7 @@ az:
           description_short: 'Hissə 6: Robototexnika'
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Unit 6 Challenge:
               name: Bölmə 6 Meydan oxuma
             Unit 6 Overview:
@@ -3558,7 +3558,7 @@ az:
             Bytes and File Sizes:
               name: Bayt və Fayl ölçüləri
             Encoding B&W Images:
-              name: B&W Şəkillərinin Kodlaşdırılması
+              name: Ağ-qara şəkillərinin şifrələnməsi
             Encoding Color Images:
               name: Rəngli Şəkillərin Kodlaşdırılması
             Lossy Compression and File Formats:
@@ -4381,7 +4381,7 @@ az:
             Bytes and File Sizes:
               name: Bayt və Fayl ölçüləri
             Encoding B&W Images:
-              name: B&W Şəkillərinin Kodlaşdırılması
+              name: Ağ-qara şəkillərinin şifrələnməsi
             Encoding Color Images:
               name: Rəngli Şəkillərin Kodlaşdırılması
         csp3-2019:
@@ -4915,12 +4915,12 @@ az:
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
-              display_name: Başlanqıc
+              display_name: Başlanğıc
             k5_next_steps:
               display_name: Növbəti addımlar
           lessons:
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             Computer Science Fundamentals:
               name: Kompüter Elmləri Əsasları.
             'Mastering the Basics: Functions':
@@ -5698,7 +5698,7 @@ az:
               name: Növbəti addımlar
           lesson_groups:
             k5_getting_started_1:
-              display_name: Başlanqıc
+              display_name: Başlanğıc
             k5_next_steps_1:
               display_name: Növbəti addımlar
         dani-june-2020-test:
@@ -5820,7 +5820,7 @@ az:
             csf:
               name: Kompüter Elmlərinin əsasları
             sprites_in_action_2021:
-              name: 'Cin Laboratoriyası: Hərəkətdə olan cin'
+              name: 'Sprayt Laboratoriyası: Hərəkətdə olan sprayt'
             text_and_prompts_2021:
               name: 'Sprite laboratoriyası: Mətn və İstəklər'
             minitoolbox_2021:
@@ -6550,6 +6550,14 @@ az:
               display_name: Məzmun
           name: csa6-pilot
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            lesson-5:
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
           name: csa7-pilot
         csa8-pilot:
           name: csa8-pilot
@@ -6588,7 +6596,7 @@ az:
             Module 1:
               name: Modul 1
             Getting Started:
-              name: Başlanqıc
+              name: Başlanğıc
             What is Code.org:
               name: Code.org nədir?
             Lesson Planning:
@@ -6651,8 +6659,8 @@ az:
         kodea-pd-2021:
           lessons:
             Getting Started:
-              key: Başlanqıc
-              name: Başlanqıc
+              key: Başlanğıc
+              name: Başlanğıc
             Computer Science Fundamentals:
               key: Kompüter Elmləri Əsasları.
               name: Kompüter Elmləri Əsasları.

@@ -4375,6 +4375,11 @@
           "move and get nectar with counter": {
             "name": "déplace-toi et recueille le nectar avec le compteur"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "réinitialiser le jeu"
+          }
         }
       }
     }

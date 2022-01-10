@@ -1,7 +1,8 @@
 {
-  "func": "image",
+  "key": "image",
+  "name": "image",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -9,10 +10,5 @@
       "name": "url"
     }
   ],
-  "params": [
-    "\"id\"",
-    "\"https://code.org/images/logo.png\""
-  ],
-  "dropdown": {
-  }
+  "syntax": "image(id, url)"
 }

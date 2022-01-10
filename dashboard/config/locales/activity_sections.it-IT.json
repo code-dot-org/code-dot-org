@@ -110,6 +110,7 @@
           "description": "**Leggere poesie insieme:** Leggi un [paio di poesie](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) insieme come classe ed esercitati a nominare lo stato d'animo di ogni poesia. Incoraggia gli studenti a condividere la loro interpretazione, anche se è diversa da quella di qualcun altro. "
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "L'arte della poesia",
           "description": "#### Supporto\n\ngeneraleAlla fine di questa attività, gli studenti avranno una poesia animata che rappresenta la loro interpretazione visiva della poesia che hanno scelto. Questa lezione è progettata per dare agli studenti l'opportunità di armeggiare con il loro codice e trovare gli effetti visivi che preferiscono. \n\nMentre girano per la stanza, incoraggia gli studenti a:\n\n-   **Prenditi il tuo tempo:** La maggior parte dei livelli richiede agli studenti di trovare gli effetti perfetti per abbinare la loro interpretazione dell'umore della poesia. Rimanere su un livello e armeggiare con il loro codice è altamente incoraggiato. \n\n-   **Trova una poesia che ti piace:** La poesia che viene visualizzata per uno studente ad un nuovo livello è solo un suggerimento. C'è un menu a tendina con poesie precaricate in cima allo spazio di gioco. Chiedi agli studenti di leggerne qualcuna e di trovarne una che parli con loro. Possono poi iniziare ad animare la poesia che hanno scelto con il codice. \n\n-   **Mostra un livello completato:** Ogni bolla di livello che è completamente verde significa che lo studente ha completato con successo tutti i requisiti per quel livello. Chiedi ad uno studente di cliccare su una bolla verde per mostrare ciò che ha creato. \n\nPer le volte in cui uno studente si sente bloccato:\n\n-   **Leggi le istruzioni:** Le istruzioni sono punti elencati su come completare il livello. Se uno studente si sente bloccato, chiedigli di leggere le istruzioni ad alta voce e chiedigli di ripetere ciò che le istruzioni dicono con parole proprie. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Gli studenti possono anche cliccare su questa icona di sintesi vocale per ascoltare le istruzioni lette ad alta voce.- \n        <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \n        **Cerca i suggerimenti**: La maggior parte dei livelli include almeno un suggerimento con dettagli più espliciti su come superare il livello. -   **Celebrare i bug:** Trovare un bug nel proprio codice è una parte naturale del processo di codifica. Se il programma non funziona correttamente, chiedi allo studente di dire prima cosa vogliono che accada, clicca su esegui per osservare cosa sta effettivamente accadendo, poi trova il punto del codice che ha causato la discrepanza. Non dimenticare di festeggiare il fatto di aver trovato dei bug e di averli risolti. Trovare un bug significa che gli studenti stanno facendo un ottimo lavoro costruendo un programma più complesso. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
@@ -240,6 +241,10 @@
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "description": "Questi sono alcuni consigli che dovrebbero aiutare gli studenti indipendentemente dal livello a cui stanno lavorando\n\n-   **Collabora con i vicini:** incoraggia gli studenti a controllare con un vicino quando si bloccano. In base all'età e alle capacità dei tuoi studenti, potresti considerare di dividere formalmente la tua classe in coppie, per completare il tutorial utilizzando [pair programming](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Leggi le istruzioni:** le istruzioni forniscono solitamente consigli utili su come completare il livello. Prima di dare la risposta agli studenti, assicurati che abbiano letto attentamente le istruzioni, i suggerimenti, i video e qualsiasi codice per principianti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Sei bloccato? Cerca dei suggerimenti:** oggni include un suggerimento con un consigli su come superare il livello, inclusi quali blocchi del codice da provare. \n\n-   **Prenditi il tuo tempo e prova.** Generalmente le istruzioni informano gli studenti su cosa fare, ma devono anche sentirsi liberi di provare a mettere in pratica le loro idee."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Ciao Mondo",
+          "progression_name": "Ciao Mondo"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Se un gruppo o una persona finisce in anticipo, incoraggialo a continuare a lavorare al suo progetto nell'ultimo livello. Se gli studenti non sono sicuri su cos'altro fare, puoi rivolgere loro le seguenti domanda:\n\n-   Quali altri personaggi potresti aggiungere al tuo progetto?\n-   Hai controllato la galleria degli indumenti o hai provato a disegnare l'indumento del tuo personaggio?\n-   Cos'altro potresti far dire ai tuoi personaggi?\n-   Cosa dovrebbero fare i tuoi personaggi quando si clicca su di loro?\n-   Invita gli studenti a condividere le loro idee e a imparare gli uni dagli altri. Possono anche provare un altro tutorial visitando [code.org/learn](https://code.org/learn)."
         },
@@ -314,6 +319,10 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "description": "Questi sono alcuni consigli che dovrebbero aiutare gli studenti indipendentemente dal livello a cui stanno lavorando\n\n-   **Collabora con i vicini:** incoraggia gli studenti a controllare con un vicino quando si bloccano. In base all'età e alle capacità dei tuoi studenti, potresti considerare di dividere formalmente la tua classe in coppie, per completare il tutorial utilizzando [pair programming](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Leggi le istruzioni:** le istruzioni forniscono solitamente consigli utili su come completare il livello. Prima di dare la risposta agli studenti, assicurati che abbiano letto attentamente le istruzioni, i suggerimenti, i video e qualsiasi codice per principianti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Sei bloccato? Cerca dei suggerimenti:** oggni include un suggerimento con un consigli su come superare il livello, inclusi quali blocchi del codice da provare. \n\n-   **Prenditi il tuo tempo e prova.** Generalmente le istruzioni informano gli studenti su cosa fare, ma devono anche sentirsi liberi di provare a mettere in pratica le loro idee."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Ciao Mondo",
+          "progression_name": "Ciao Mondo"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Se un gruppo o una persona finisce in anticipo, incoraggialo a continuare a lavorare al suo progetto nell'ultimo livello. Se gli studenti non sono sicuri su cos'altro fare, puoi rivolgere loro le seguenti domanda:\n\n-   Quali altri personaggi potresti aggiungere al tuo progetto?\n-   Hai controllato la galleria degli indumenti o hai provato a disegnare l'indumento del tuo personaggio?\n-   Cos'altro potresti far dire ai tuoi personaggi?\n-   Cosa dovrebbero fare i tuoi personaggi quando si clicca su di loro?\n-   Invita gli studenti a condividere le loro idee e a imparare gli uni dagli altri. Possono anche provare un altro tutorial visitando [code.org/learn](https://code.org/learn)."
@@ -393,6 +402,10 @@
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "description": "Questi sono alcuni consigli che dovrebbero aiutare gli studenti indipendentemente dal livello a cui stanno lavorando\n\n-   **Collabora con i vicini:** incoraggia gli studenti a controllare con un vicino quando si bloccano. In base all'età e alle capacità dei tuoi studenti, potresti considerare di dividere formalmente la tua classe in coppie, per completare il tutorial utilizzando [pair programming](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Leggi le istruzioni:** le istruzioni forniscono solitamente consigli utili su come completare il livello. Prima di dare la risposta agli studenti, assicurati che abbiano letto attentamente le istruzioni, i suggerimenti, i video e qualsiasi codice per principianti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Sei bloccato? Cerca dei suggerimenti:** oggni include un suggerimento con un consigli su come superare il livello, inclusi quali blocchi del codice da provare. \n\n-   **Prenditi il tuo tempo e prova.** Generalmente le istruzioni informano gli studenti su cosa fare, ma devono anche sentirsi liberi di provare a mettere in pratica le loro idee."
         },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Ciao Mondo",
+          "progression_name": "Ciao Mondo"
+        },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Se un gruppo o una persona finisce in anticipo, incoraggialo a continuare a lavorare al suo progetto nell'ultimo livello. Se gli studenti non sono sicuri su cos'altro fare, puoi rivolgere loro le seguenti domanda:\n\n-   Quali altri personaggi potresti aggiungere al tuo progetto?\n-   Hai controllato la galleria degli indumenti o hai provato a disegnare l'indumento del tuo personaggio?\n-   Cos'altro potresti far dire ai tuoi personaggi?\n-   Cosa dovrebbero fare i tuoi personaggi quando si clicca su di loro?\n-   Invita gli studenti a condividere le loro idee e a imparare gli uni dagli altri. Possono anche provare un altro tutorial visitando [code.org/learn](https://code.org/learn)."
         },
@@ -467,7 +480,8 @@
           "name": "Dopo l'Ora del Codice"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Introduzione"
+          "name": "Introduzione",
+          "progression_name": "App di Introduzione al Laboratorio: video"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Introduzione a Sviluppo App"
@@ -498,6 +512,10 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "description": "Questi sono alcuni consigli che dovrebbero aiutare gli studenti indipendentemente dal livello a cui stanno lavorando\n\n-   **Collabora con i vicini:** incoraggia gli studenti a controllare con un vicino quando si bloccano. In base all'età e alle capacità dei tuoi studenti, potresti considerare di dividere formalmente la tua classe in coppie, per completare il tutorial utilizzando [pair programming](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Leggi le istruzioni:** le istruzioni forniscono solitamente consigli utili su come completare il livello. Prima di dare la risposta agli studenti, assicurati che abbiano letto attentamente le istruzioni, i suggerimenti, i video e qualsiasi codice per principianti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Sei bloccato? Cerca dei suggerimenti:** oggni include un suggerimento con un consigli su come superare il livello, inclusi quali blocchi del codice da provare. \n\n-   **Prenditi il tuo tempo e prova.** Generalmente le istruzioni informano gli studenti su cosa fare, ma devono anche sentirsi liberi di provare a mettere in pratica le loro idee."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Ciao Mondo",
+          "progression_name": "Ciao Mondo"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Se un gruppo o una persona finisce in anticipo, incoraggialo a continuare a lavorare al suo progetto nell'ultimo livello. Se gli studenti non sono sicuri su cos'altro fare, puoi rivolgere loro le seguenti domanda:\n\n-   Quali altri personaggi potresti aggiungere al tuo progetto?\n-   Hai controllato la galleria degli indumenti o hai provato a disegnare l'indumento del tuo personaggio?\n-   Cos'altro potresti far dire ai tuoi personaggi?\n-   Cosa dovrebbero fare i tuoi personaggi quando si clicca su di loro?\n-   Invita gli studenti a condividere le loro idee e a imparare gli uni dagli altri. Possono anche provare un altro tutorial visitando [code.org/learn](https://code.org/learn)."
@@ -660,7 +678,8 @@
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Apprendimento automatico IA: video"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "L'Intelligenza Artificiale per il mare",
@@ -668,10 +687,19 @@
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "IA: dati di training e bias - video"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
           ]
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "IA: impatto sulla società - Video"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Apprendimento automatico IA: video"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Riscaldamento"
@@ -693,6 +721,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "description": "Questi sono alcuni consigli che dovrebbero aiutare gli studenti indipendentemente dal livello a cui stanno lavorando\n\n-   **Collabora con i vicini:** incoraggia gli studenti a controllare con un vicino quando si bloccano. In base all'età e alle capacità dei tuoi studenti, potresti considerare di dividere formalmente la tua classe in coppie, per completare il tutorial utilizzando [pair programming][0].  \n\n-   **Leggi le istruzioni:** le istruzioni forniscono solitamente consigli utili su come completare il livello. Prima di dare la risposta agli studenti, assicurati che abbiano letto attentamente le istruzioni, i suggerimenti, i video e qualsiasi codice per principianti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Sei bloccato? Cerca dei suggerimenti:** oggni include un suggerimento con un consigli su come superare il livello, inclusi quali blocchi del codice da provare. \n\n-   **Prenditi il tuo tempo e prova.** Generalmente le istruzioni informano gli studenti su cosa fare, ma devono anche sentirsi liberi di provare a mettere in pratica le loro idee."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Ciao Mondo"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Se un gruppo o una persona finisce in anticipo, incoraggialo a continuare a lavorare al suo progetto nell'ultimo livello. Se gli studenti non sono sicuri su cos'altro fare, puoi rivolgere loro le seguenti domanda:\n\n-   Quali altri personaggi potresti aggiungere al tuo progetto?\n-   Hai controllato la galleria degli indumenti o hai provato a disegnare l'indumento del tuo personaggio?\n-   Cos'altro potresti far dire ai tuoi personaggi?\n-   Cosa dovrebbero fare i tuoi personaggi quando si clicca su di loro?\n-   Invita gli studenti a condividere le loro idee e a imparare gli uni dagli altri. Possono anche provare un altro tutorial visitando [code.org/learn][0]."
@@ -3944,6 +3975,7 @@
           "description": "**Leggere poesie insieme:** Leggi un [paio di poesie](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) insieme come classe ed esercitati a nominare lo stato d'animo di ogni poesia. Incoraggia gli studenti a condividere la loro interpretazione, anche se è diversa da quella di qualcun altro. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "L'arte della poesia",
           "description": "#### Supporto\n\ngeneraleAlla fine di questa attività, gli studenti avranno una poesia animata che rappresenta la loro interpretazione visiva della poesia che hanno scelto. Questa lezione è progettata per dare agli studenti l'opportunità di armeggiare con il loro codice e trovare gli effetti visivi che preferiscono. \n\nMentre girano per la stanza, incoraggia gli studenti a:\n\n-   **Prenditi il tuo tempo:** La maggior parte dei livelli richiede agli studenti di trovare gli effetti perfetti per abbinare la loro interpretazione dell'umore della poesia. Rimanere su un livello e armeggiare con il loro codice è altamente incoraggiato. \n\n-   **Trova una poesia che ti piace:** La poesia che viene visualizzata per uno studente ad un nuovo livello è solo un suggerimento. C'è un menu a tendina con poesie precaricate in cima allo spazio di gioco. Chiedi agli studenti di leggerne qualcuna e di trovarne una che parli con loro. Possono poi iniziare ad animare la poesia che hanno scelto con il codice. \n\n-   **Mostra un livello completato:** Ogni bolla di livello che è completamente verde significa che lo studente ha completato con successo tutti i requisiti per quel livello. Chiedi ad uno studente di cliccare su una bolla verde per mostrare ciò che ha creato. \n\nPer le volte in cui uno studente si sente bloccato:\n\n-   **Leggi le istruzioni:** Le istruzioni sono punti elencati su come completare il livello. Se uno studente si sente bloccato, chiedigli di leggere le istruzioni ad alta voce e chiedigli di ripetere ciò che le istruzioni dicono con parole proprie. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Gli studenti possono anche cliccare su questa icona di sintesi vocale per ascoltare le istruzioni lette ad alta voce.- \n        <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \n        **Cerca i suggerimenti**: La maggior parte dei livelli include almeno un suggerimento con dettagli più espliciti su come superare il livello. -   **Celebrare i bug:** Trovare un bug nel proprio codice è una parte naturale del processo di codifica. Se il programma non funziona correttamente, chiedi allo studente di dire prima cosa vogliono che accada, clicca su esegui per osservare cosa sta effettivamente accadendo, poi trova il punto del codice che ha causato la discrepanza. Non dimenticare di festeggiare il fatto di aver trovato dei bug e di averli risolti. Trovare un bug significa che gli studenti stanno facendo un ottimo lavoro costruendo un programma più complesso. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {

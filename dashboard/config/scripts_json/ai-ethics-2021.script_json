@@ -5,6 +5,7 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSC",
+      "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
       "tts": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-11-22 17:09:18 UTC",
+    "serialized_at": "2021-12-15 18:39:26 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

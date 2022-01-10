@@ -83,6 +83,7 @@ ta:
     email_preference_privacy: "(எங்கள் தனியுரிமைக் கொள்கையைப் பார்க்கவும்)"
     email_preference_yes: "ஆம்"
     email_preference_no: "இல்லை"
+    share_teacher_email_reg_partner_question: "உள்ளூர் தொழில் மேம்பாடு, வளங்கள் மற்றும் நிகழ்வுகள் குறித்து அவர்கள் உங்களுக்குத் தெரிவிக்க உங்கள் மாநிலத்தில் உள்ள [Code.org regional partner](%{cdo_regional_partner_desc}) உங்கள் தொடர்புத் தகவலை நாங்கள் பகிர விரும்புகிறீர்களா?"
     share_teacher_email_reg_partner_preference_yes: "ஆம்"
     share_teacher_email_reg_partner_preference_no: "இல்லை"
     parent_account_checkbox: "நான் எனது குழந்தையின் சார்பாக பதிவு செய்யும் பெற்றோர் / பாதுகாவலர்"
@@ -161,6 +162,8 @@ ta:
       minecraft_aquatic: 'Minecraft நீர்வாழ்'
       minecraft_hero: 'Minecraft ஹீரோ'
       playlab_k1: 'ப்ளே லேப் (முன்-ரீடர்)'
+      poetry: 'கவிதை'
+      poetry_hoc: 'கவிதை கலை'
       sports: 'விளையாட்டு'
       starwars: 'ஸ்டார் வார்ஸ் '
       starwarsblocks: 'ஸ்டார் வார்ஸ் (பிளாக்ஸ்)'
@@ -289,6 +292,7 @@ ta:
     form_labels:
       email: 'மின்னஞ்சல்'
       school_city: 'பள்ளி நகரம்'
+      school_city_district: 'பள்ளி நகரம்/மாவட்டம்'
       colombian_school_city: 'பள்ளி நகரம்'
     form_entries:
       subjects:

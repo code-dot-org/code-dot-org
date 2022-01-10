@@ -85,6 +85,10 @@ ur:
     email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
     email_preference_yes: جی
     email_preference_no: نہيں
+    share_teacher_email_reg_partner_question: کیا آپ چاہیں گے کہ ہم آپ کی ریاست میں
+      [Code.org علاقائی پارٹنر](%{cdo_regional_partner_desc}) کے ساتھ آپ کے رابطہ
+      کی معلومات کا اشتراک کریں تاکہ وہ آپ کو مقامی پیشہ ورانہ ترقی، وسائل اور واقعات
+      کے بارے میں مطلع کر سکیں؟
     share_teacher_email_reg_partner_preference_yes: جی
     share_teacher_email_reg_partner_preference_no: نہيں
     parent_account_checkbox: میں ایک والد یا والدہ/سرپرست ہوں جو اپنے بچے کی جانب
@@ -154,6 +158,8 @@ ur:
       minecraft_aquatic: Minecraft تعلیم کے لئے جانا
       minecraft_hero: Minecraft ہیرو
       playlab_k1: لیب کھیلیں (پری ریڈر)
+      poetry: شاعری
+      poetry_hoc: نظم کا فن
       starwars: اسٹار وارز
       starwarsblocks: اسٹار وارز (بلاکس)
       starwarsblocks_hour: اسٹار وارز (بلاکس)
@@ -259,6 +265,7 @@ ur:
   pd:
     form_labels:
       email: Email
+      school_city_district: سکول سٹی/ضلع
     form_entries:
       subjects:
         cs: کمپیوٹر سائنس

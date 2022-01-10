@@ -3711,7 +3711,8 @@
         "poetry_hoc_spriteBehaviors": "Hareketli nesneler, program çalışırken belirli eylemleri veya davranışları tekrar tekrar yapabilir.",
         "poetry_hoc_spriteSizes": "Daha önce oluşturduğunuz bir hareketli nesnenin boyutunu değiştirebilirsiniz.",
         "ramp_artist_loops6v1_2021": "Bu merdiveni çizmek için bir döngü kullanın.",
-        "simcustom_2021": "Hareketli nesne kostümlerinde veya aşağıdaki kodda bazı değişiklikler yapmayı deneyin."
+        "simcustom_2021": "Hareketli nesne kostümlerinde veya aşağıdaki kodda bazı değişiklikler yapmayı deneyin.",
+        "New Artist Project": "Muhteşem bir şey çiz! Kodunuz, istediğiniz zaman tekrar değişiklik yapabilmeniz için bir proje olarak kaydedildi."
       }
     }
   }

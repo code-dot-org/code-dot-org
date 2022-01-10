@@ -59,7 +59,7 @@ social:
     vertical-align: top;
   }
 
-- unless ["soon-hoc", "actual-hoc"].include?(hoc_mode)
+- unless ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
   :css
     @media screen and (min-width: 992px) {
       #fullwidth {
@@ -87,7 +87,7 @@ social:
   = view :header
 
 
-  - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
+  - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
     .banner.container{style: "color: black; display: flex"}
       .col-sm-4.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
       .col-sm-4.col-xs-12{style: "text-align: center"}
