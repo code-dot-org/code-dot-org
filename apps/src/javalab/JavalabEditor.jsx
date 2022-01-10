@@ -593,21 +593,21 @@ class JavalabEditor extends React.Component {
           </PaneSection>
           <PaneSection style={styles.headerSectionRight}>
             <PaneButton
-              id="data-mode-versions-header"
-              iconClass="fa fa-clock-o"
-              label={msg.showVersionsHeader()}
-              headerHasFocus
-              isRtl={false}
-              onClick={() => this.handleVersionHistory()}
-              isDisabled={isReadOnlyWorkspace}
-            />
-            <PaneButton
               id="javalab-editor-save"
               iconClass="fa fa-check-circle"
               onClick={this.onOpenCommitDialog}
               headerHasFocus
               isRtl={false}
               label={javalabMsg.commitCode()}
+              isDisabled={isReadOnlyWorkspace}
+            />
+            <PaneButton
+              id="data-mode-versions-header"
+              iconClass="fa fa-clock-o"
+              label={msg.showVersionsHeader()}
+              headerHasFocus
+              isRtl={false}
+              onClick={() => this.handleVersionHistory()}
               isDisabled={isReadOnlyWorkspace}
             />
           </PaneSection>
