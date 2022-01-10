@@ -1303,7 +1303,7 @@ ta:
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_textJoin:
-        text: "[LEFT_QUOTE][TEXT1]{RIGHT_QUOTE}{TEXT2}"
+        text: "[LEFT_QUOTE][null]{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
@@ -1642,12 +1642,8 @@ ta:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': மலர்கள்
-            '"hearts"': இதயங்கள்
             '"iceCream"': ஐஸ்க்ரீம்
             '"rainbow"': வானவில்
-            '"stars"': நட்சத்திரங்கள்
-            '"waves"': அலைகள்
       Poetry_addLine:
         text: வரி சேர்க்க {LINE}
       Poetry_animateText:
@@ -1676,6 +1672,7 @@ ta:
             '"sound://category_loops/faultering_desicion_loop1.mp3"': பேய்
             '"sound://category_background/inside_plane.mp3"': ஹம்
             '"sound://category_loops/red_flag_loop1.mp3"': பணி
+            '"sound://category_nature/summer_night_loop.mp3"': இரவு
             '"sound://category_background/repitition.mp3"': சவாரி
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': மெதுவான
       Poetry_playSound:
@@ -1692,7 +1689,6 @@ ta:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': தோல்வி
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': படபடப்பு
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': குதித்தல்
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': லைட்
             '"sound://category_poof/puzzle_game_poof_04.mp3"': பூஃப்
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': ஸ்கேன்
             '"sound://category_background/typewriter.mp3"': தட்டச்சுப்பொறி
@@ -1708,29 +1704,28 @@ ta:
         text: பின்னணி அமைக்க {EFFECT}{PALETTE}
         options:
           EFFECT:
-            '"colors"': வண்ணங்கள்
-            '"squiggles"': சிறு வளை கோடுகள்
-            '"space"': ஸ்பேஸ்
-            '"stars"': நட்சத்திரங்கள்
+            '"blooming"': பூக்கும்
+            '"bubbles"': குமிழிகள்
+            '"clouds"': மேகமூட்டம்
+            '"confetti"': கான்ஃபெடி
             '"darkCircles"': மறைதல்
             '"fadeColors"': இனிப்பான
-            '"blooming"': பூக்கும்
+            '"space"': ஸ்பேஸ்
             '"ripples"': சிற்றலைகள்
-            '"clouds"': மேகமூட்டம்
-            '"rain"': மழை
-            '"bubbles"': குமிழிகள்
-            '"confetti"': கான்ஃபெடி
+            '"colors"': வண்ணங்கள்
+            '"stars"': நட்சத்திரங்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
           PALETTE:
-            '"rainbow"': வானவில்
-            '"grayscale"': சாம்பல் நிறங்கள்
-            '"sky"': வானம்
+            '"autumn"': இலையுதிர் காலம்
             '"sunrise"': விடியல்
             '"sunset"': அந்தி
+            '"grayscale"': சாம்பல் நிறங்கள்
+            '"rainbow"': வானவில்
+            '"roses"': ரோஜாக்கள்
+            '"sky"': வானம்
             '"spring"': வசந்தம்
             '"summer"': கோடை
-            '"autumn"': இலையுதிர் காலம்
             '"winter"': குளிர்காலம்
-            '"roses"': ரோஜாக்கள்
       Poetry_setBackgroundImageAs:
         text: பின்னணி அமைக்க {IMG}
       Poetry_setFont:
@@ -1738,22 +1733,21 @@ ta:
         options:
           FONT:
             '"Arial"': ஏரியல்
+            '"Arial Black"': ஏரியல் ப்ளாக்
+            '"Courier"': கூரியர்
+            '"Cursive"': கையெழுத்து
+            '"Impact"': தாக்கம்
             '"Georgia"': ஜார்ஜியா
             '"Times"': நேரங்கள்
-            '"Courier"': கூரியர்
-            '"Arial Black"': ஏரியல் ப்ளாக்
-            '"Impact"': தாக்கம்
-            '"Cursive"': கையெழுத்து
       Poetry_setFontColor:
         text: உரை வண்ணத்தை அமைக்கவும் {FILL}
       Poetry_setForegroundEffect:
         text: விளைவு {EFFECT}செய்ய
         options:
           EFFECT:
-            '"rain"': மழை
             '"bubbles"': குமிழிகள்
-            '"emojis"': மகிழ்ச்சியான எமோஜிகள்
             '"confetti"': கான்ஃபெடி
+            '"emojis"': மகிழ்ச்சியான எமோஜிகள்
             '"glass"': நொறுங்கும் கண்ணாடி
             '"twinkling"': மின்னும்
       Poetry_setPrompt:
@@ -1768,31 +1762,21 @@ ta:
         options:
           EFFECT:
             '"fade"': மங்கிவிடும்
-            '"typewriter"': தட்டச்சுப்பொறி
             '"flyLeft"': இடமிருந்து பறக்க
             '"flyRight"': வலமிருந்து பறக்க
             '"flyTop"': மேலிருந்து பறக்க
             '"flyBottom"': கீழே இருந்து பறக்க
+            '"typewriter"': தட்டச்சுப்பொறி
       Poetry_setTitle:
         text: தலைப்பு {TITLE} அமை
       Poetry_showText:
         text: உரையைக் காட்டு
       Poetry_startBehavior:
         text: 'ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} தொடங்குகிறது '
-        options:
-          BEHAVIOR:
-            moving_north_and_looping: வடக்கில் வளையும்
-            moving_south_and_looping: தெற்கே சுழல்கிறது
-            moving_east_and_looping: கிழக்கில் வளையும்
-            moving_west_and_looping: மேற்கு நோக்கி வளையும்
       Poetry_stopBehavior:
         text: ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} நிறுத்துகிறது
         options:
           BEHAVIOR:
-            moving_north_and_looping: வடக்கில் வளையும்
-            moving_south_and_looping: தெற்கே சுழல்கிறது
-            moving_east_and_looping: கிழக்கில் வளையும்
-            moving_west_and_looping: மேற்கு நோக்கி வளையும்
             '"all"': "--எல்லா நடத்தைகளும்-- "
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}\n "

@@ -4241,6 +4241,13 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -4452,3 +4459,35 @@ bg:
           lessons:
             lesson-1:
               name: Правопис
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Урок
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание

@@ -432,6 +432,7 @@ cs:
       prizes_link: 'Více informací'
   teacher:
     answer: Odpověď
+    dashboard: 'Katedra učitele'
     for_teachers_only: Pouze pro učitele
     title:
       one: 'Tvůj učitel:'

@@ -496,6 +496,7 @@ uz:
       prizes_link: Batafsil
   teacher:
     answer: Javob
+    dashboard: Teacher Dashboard
     for_teachers_only: Faqat o'qituvchilar uchun
     title:
       one: 'Oʻqituvchingiz:'

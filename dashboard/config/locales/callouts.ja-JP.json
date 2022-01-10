@@ -1886,6 +1886,9 @@
           "New Play Lab Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
           "New Play Lab Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
           "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "デザイン・モードです。"
         }
       }
     }

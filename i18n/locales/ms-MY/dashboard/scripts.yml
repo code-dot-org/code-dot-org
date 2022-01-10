@@ -5611,6 +5611,10 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -6281,8 +6285,6 @@ ms:
               description_teacher: Dalam unit ini, pelajar menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Pelajar meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Pelajar menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, pelajar menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, pelajar mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, pelajar menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
             lesson-1:
               key: pelajaran-1
-              description_student: Projek yang telah anda bangunkan sepanjang kursus ini telah memberikan inspirasi kepada banyak kreativiti dalam komuniti! Pesta Cahaya Kejiranan akan diadakan untuk mempamerkan cerita, skrip, lirik lagu, surat dan sajak kreatif. Projek Pesta Cahaya Kejiranan ialah projek besar yang anda usahakan di seluruh unit dan strategi pengurusan projek membantu mengatur dan menstruktur kerja anda. Anda meneroka strategi untuk menulis dan menstruktur kod supaya jurutera perisian lain boleh memahami dengan mudah dan menggunakan alat Java untuk mencipta dokumentasi atur cara.
-              description_teacher: Pelajar diperkenalkan kepada Projek Pesta Cahaya Kejiranan dan menilai keperluan, serta contoh untuk mengenal pasti soalan dan ciri utama. Sebelum memulakan kerja ke atas projek, pelajar mengembangkan pemahaman mereka mengenai struktur atur cara dan memberi komen dengan mengenal pasti amalan terbaik dan meneroka penggunaan Javadocs untuk menjana dokumentasi atur cara.
             lesson-2:
               key: pelajaran-2
               description_student: Anda membina objek `Integer` dan `Ganda Dua` untuk mewakili nilai primitif `int` dan `ganda dua` sebagai nilai rujukan. Dengan menggunakan kaedah dalam kelas `Integer` dan `Ganda Dua`, anda mengembalikan nilai yang disimpan oleh objek ini sebagai nilai primitif. Anda juga meneroka nilai minimum dan maksimum untuk integer bagi mengelakkan ralat limpah atas sebelum merancang tugas yang perlu anda selesaikan untuk Projek Pesta Cahaya Kejiranan anda.
@@ -6439,3 +6441,89 @@ ms:
               description_student: Bantu Laurel, pemburu harta karun, mengira dan menambah langkah untuk mengumpul permata!
               description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan mengira dan mewakili penambahan. Mengira dengan Laurel menyokong pelajar di tadika dan gred satu dengan latihan mengira dan menambah sambil mereka menggunakan gelung untuk membantu Laurel, pemburu harta karun, mengumpul permata merentasi grid mez. Mereka menggunakan satu siri perintah pengekodan untuk membimbing Laurel merentasi grid untuk mengumpulkan permata, menggunakan blok \"Ulang\" yang memerlukan mereka mengira berapa banyak langkah yang perlu diambil oleh Laurel- kemudian mewakili nombor itu menggunakan angka yang betul dalam blok kod.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada nombor, mengira atau menambah. Pelajar harus mengikuti pelajaran ini dengan beberapa pengetahuan dan kemahiran terdahulu untuk dapat:\n\n-   mengenal dan mengira nombor hingga 10 menggunakan imej, jari atau manipulatif.\n-   tambah objek, imej, jari atau manipulatif sehingga jumlah 10."
           title: Mengira dengan Laurel
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Projek Pesta Cahaya Kejiranan - Hari 1
+            lesson-12:
+              name: Projek Pesta Cahaya Kejiranan - Hari 2
+            lesson-13:
+              name: Projek Pesta Cahaya Kejiranan - Hari 3
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulator Wabak
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: pelajaran-10
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-16:
+              key: pelajaran-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-10:
+              key: pelajaran-10
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-16:
+              key: pelajaran-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox

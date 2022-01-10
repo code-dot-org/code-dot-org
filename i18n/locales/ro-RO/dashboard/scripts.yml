@@ -901,6 +901,8 @@ ro:
               name: Referință curriculum
             Sprite Lab:
               name: Laborator Sprite
+            Java Lab:
+              name: Laboratorul Java
             lesson-47: {}
           student_description: Toate tipurile de nivel pentru testarea interfeței utilizatorului
         algebraPD2b:
@@ -2267,6 +2269,8 @@ ro:
               name: Liste
             For Loops:
               name: Bucle Pentru
+            Map:
+              name: Hartă
             Functions with Parameters:
               name: Funcții cu Parametrii
         workshop-gamelab:
@@ -8432,7 +8436,8 @@ ro:
         csa1-pilot:
           lessons:
             lesson-21: {}
-            lesson-24: {}
+            lesson-24:
+              name: Laboratorul Java
             lesson-22: {}
             lesson-23: {}
           lesson_groups:
@@ -8444,7 +8449,8 @@ ro:
           lessons:
             lesson-1:
               name: Unitatea 2 a Studiului Pilot
-            lesson-16: {}
+            lesson-16:
+              name: Laboratorul Java
             lesson-17: {}
             lesson-18: {}
           lesson_groups:
@@ -8456,7 +8462,8 @@ ro:
           lessons:
             lesson-16:
               name: Unitatea 3 a Studiului Pilot
-            lesson-17: {}
+            lesson-17:
+              name: Laboratorul Java
             lesson-18: {}
             lesson-19: {}
           lesson_groups:
@@ -8478,7 +8485,8 @@ ro:
             lesson-10:
               description_student: Tu explorezi problemele care implică condiții multiple și înveți să utilizezi declarațiile în serie `if` în soluțiile tale. Scrii expresii utilizând noi operatori logici în declarațiile condiționale și identifici efectul acestor operatori asupra rezultatului. Apoi, îmbunătățești jocul și funcționalitatea jocului tău Sparge Baloanele, utilizând declarațiile în serie `if` și operatorii logici.
               description_teacher: Elevii explorează problemele care implică condiții multiple și scriu declarațiile în serie `if`pentru a dezvolta soluții. Elevii scriu expresii utilizând operatori logici în declarațiile condiționale și identifică efectul operatorilor logici asupra rezultatului. Apoi, declarațiile în serie `if` și operatorii logici sunt implementați în jocul Sparge Baloanele, pentru a îmbunătăți jocul și funcționalitatea globală.
-            lesson-16: {}
+            lesson-16:
+              name: Laboratorul Java
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
@@ -8490,7 +8498,8 @@ ro:
               display_name: Cutie cu nisip
         csa5-pilot:
           lessons:
-            Java Lab: {}
+            Java Lab:
+              name: Laboratorul Java
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
@@ -8502,7 +8511,8 @@ ro:
               display_name: Cutie cu nisip
         csa6-pilot:
           lessons:
-            Java Lab: {}
+            Java Lab:
+              name: Laboratorul Java
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
@@ -8551,6 +8561,7 @@ ro:
             lesson-15:
               description_student: În această unitate, ați folosit `liste de matrice` pentru a stoca date ale programului și ați făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, ați analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Ați utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, ați scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, ați identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum urmează să evaluați atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
               description_teacher: În această unitate, elevii au folosit `liste de matrice` pentru a stoca date ale programului și au făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, aceștia au analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Elevii au utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, aceștia au scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, aceștia au identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum elevii urmează să evalueze atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8558,16 +8569,30 @@ ro:
               display_name: Cutie cu nisip
         csa7-pilot:
           lessons:
-            Java Lab: {}
+            Java Lab:
+              name: Laboratorul Java
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
             lessonGroup-5:
               display_name: Cutie cu nisip
-        csa8-pilot: {}
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
         csa9-pilot: {}
         k5-onlinepd-2021:
           lessons:
@@ -8724,10 +8749,7 @@ ro:
             lesson-6: {}
         self-paced-pl-csd7-2021: {}
         self-paced-pl-csd8-2021: {}
-        self-paced-pl-csp1-2021:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
+        self-paced-pl-csp1-2021: {}
         self-paced-pl-csp2-2021: {}
         self-paced-pl-csp3-2021: {}
         self-paced-pl-csp4-2021: {}
@@ -8837,7 +8859,9 @@ ro:
         poster-experiment:
           lessons:
             lesson-1: {}
-        tesspltest: {}
+        tesspltest:
+          lessons:
+            lesson-1: {}
         tesspl2: {}
         sb-pt-cont:
           lessons:
@@ -8993,6 +9017,7 @@ ro:
             Unit 1 Pilot Survey: {}
             lesson-1:
               key: lecția-1
+              name: Laboratorul Java
             lesson-2:
               key: lecția-2
             lesson-3:
@@ -9073,6 +9098,7 @@ ro:
               key: lecția-15
             lesson-1:
               key: lecția-1
+              name: Laboratorul Java
           lesson_groups:
             lesson group:
               display_name: Conţinut
@@ -9085,6 +9111,7 @@ ro:
               name: Unitatea 3 a Studiului Pilot
             lesson-1:
               key: lecția-1
+              name: Laboratorul Java
             lesson-2:
               key: lecția-2
             lesson-3:
@@ -9142,6 +9169,7 @@ ro:
               description_teacher: Elevii explorează problemele care implică condiții multiple și scriu declarațiile în serie `if`pentru a dezvolta soluții. Elevii scriu expresii utilizând operatori logici în declarațiile condiționale și identifică efectul operatorilor logici asupra rezultatului. Apoi, declarațiile în serie `if` și operatorii logici sunt implementați în jocul Sparge Baloanele, pentru a îmbunătăți jocul și funcționalitatea globală.
             lesson-1:
               key: lecția-1
+              name: Laboratorul Java
             lesson-3:
               key: lecția-3
             lesson-4:
@@ -9208,7 +9236,8 @@ ro:
               key: lecția-14
             lesson-15:
               key: lecția-15
-            Java Lab: {}
+            Java Lab:
+              name: Laboratorul Java
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
@@ -9582,14 +9611,14 @@ ro:
             Assessment Day:
               description_student: În această unitate, ați folosit `liste de matrice` pentru a stoca date ale programului și ați făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, ați analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Ați utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, ați scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, ați identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum urmează să evaluați atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
               description_teacher: În această unitate, elevii au folosit `liste de matrice` pentru a stoca date ale programului și au făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, aceștia au analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Elevii au utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, aceștia au scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, aceștia au identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum elevii urmează să evalueze atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
-            Java Lab: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
             lesson-1:
               key: lecția-1
-              description_student: Proiectele pe care le-ați dezvoltat în timpul acestui curs au condus la o creștere a creativității în comunitate! Se va organiza un Festival de literatură din cartier pentru a se prezenta povești creative, scenarii, versuri de cântece, scrisori și poezii. Proiectul Festivalul de literatură din cartier este un proiect de amploare la care veți lucra pe parcursul acestei unități, iar strategiile de management de proiect vă vor ajuta să vă organizați și să vă structurați activitatea. Explorați strategii de scriere și structurare a codului astfel încât și alți ingineri software să îl poată înțelege cu ușurință și utilizați un instrument Java pentru a crea documentația programului.
-              description_teacher: Elevii se familiarizează cu proiectul Festivalul de literatură din cartier și evaluează cerințele și exemplele pentru a identifica întrebările și caracteristicile-cheie. Înainte de a începe să lucreze la proiect, elevii vor înțelege structura programelor și adăugarea de comentarii la acestea prin identificarea celor mai bune practici și prin explorarea Javadocs, pentru generarea documentației programului.
             lesson-2:
               key: lecția-2
               description_student: Veți elabora obiecte `Integer` și `Double` pentru a reprezenta valorile primitive `int` și `double` ca valori de referință. Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`, veți obține valorile pe care aceste obiecte le stochează ca valori primitive. De asemenea, veți explora valorile minime și maxime ale numerelor întregi pentru a evita erorile de depășire a limitei înainte de a planifica sarcinile pe care trebuie să le îndepliniți pentru proiectul Festivalul de literatură din cartier.
@@ -9751,3 +9780,179 @@ ro:
               description_student: Ajut-o pe Laurel, vânătoarea de comori, să numere și să adauge pași pentru colectarea pietrelor prețioase!
               description_teacher: "Această lecție se bazează pe activitățile anterioare care implică numărarea și reprezentarea adunării. Numărarea cu Laurel îi ajută pe elevii din grădiniță și din clasa întâi să exerseze numărarea și adunarea în timp ce folosesc buclele pentru a o ajuta pe Laurel, vânătoarea de comori, să colecteze pietre prețioase pe o grilă de labirint. Aceștia folosesc o serie de comenzi de codare pentru a o ghida pe Laurel prin grilă pentru a colecta pietre prețioase, utilizând un bloc \"Repeat\" care le cere să numere câți pași trebuie să facă Laurel - apoi să reprezinte acel număr folosind cifra corectă în cadrul unui bloc de cod.\n\n#### Aptitudini Obligatorii\n\nAceastă lecție nu are rolul să le prezinte elevilor cum să numere, să socotească, sau să adune. Elevrii ar trebui să intre în această lecție cu anumite cunoștințe prealabile și să fie apți:\n\n-   să recunoască și să numere până la 10 utilizând imaginile, degetele sau materialele didactice. \n\n-   să adune obiecte, imagini, degete sau materiale didactice până la 10."
           title: Numără cu Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lecția
+        csa6-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 1
+            lesson-12:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 2
+            lesson-13:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 3
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulator Epidemie
+            lesson-5:
+              name: Despre mine cu Laboratorul cu sprites
+        csa7-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csf-2022-pilot:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+        csd6-pilot-2022: {}
+        csa8-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels: {}
+            Dani Test Lesson 2: {}
+        csa7-pilot-facilitator:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa8-pilot-facilitator:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa9-pilot-facilitator: {}
