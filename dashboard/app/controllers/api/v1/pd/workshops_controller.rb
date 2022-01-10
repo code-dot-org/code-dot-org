@@ -1,5 +1,4 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
-  include MultipleDatabasesTransitionHelper
   include Pd::WorkshopFilters
   include Api::CsvDownload
   include Pd::Application::RegionalPartnerTeacherconMapping

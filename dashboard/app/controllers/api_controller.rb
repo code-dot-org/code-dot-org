@@ -4,7 +4,6 @@ require 'google/apis/classroom_v1'
 class ApiController < ApplicationController
   layout false
   include LevelsHelper
-  include MultipleDatabasesTransitionHelper
 
   private def query_clever_service(endpoint)
     tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
