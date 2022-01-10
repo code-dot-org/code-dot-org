@@ -27,6 +27,14 @@ module MultipleDatabasesTransitionHelper
     end
   end
 
+  def self.use_persistent_read_connection
+    if MultipleDatabasesTransitionHelper.transitioned?
+      # TODO
+    else
+      SeamlessDatabasePool.user_persistent_read_connection
+    end
+  end
+
   def self.transitioned?
     case Rails.version
     when "5.2.4.4"
