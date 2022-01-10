@@ -94,6 +94,7 @@ class UnitEditor extends React.Component {
     initialCourseVersionId: PropTypes.number,
     initialUseLegacyLessonPlans: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
+    hasBeenAssignable: PropTypes.bool.isRequired,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -624,6 +625,7 @@ class UnitEditor extends React.Component {
             handleParticipantAudienceChange={e =>
               this.setState({participantAudience: e.target.value})
             }
+            cannotChangeParticipantType={this.props.hasBeenAssignable}
           />
         )}
 

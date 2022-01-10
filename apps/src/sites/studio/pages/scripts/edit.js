@@ -106,6 +106,7 @@ export default function initPage(unitEditorData) {
         }
         initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
+        hasBeenAssignable={scriptData.hasBeenAssignable || false}
       />
     </Provider>,
     document.querySelector('.edit_container')
