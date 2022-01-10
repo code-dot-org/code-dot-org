@@ -94,7 +94,7 @@
 
             // Start building new url
             <%- if rack_env?(:production) -%>
-            let newUrl = 'https://<%=CDO.pegasus_hostname%>'
+            let newUrl = 'https://<%=CDO.pegasus_hostname%>';
             <%- else -%>
             let newUrl = 'https://<%= subdomain %>';
             <%- end -%>
