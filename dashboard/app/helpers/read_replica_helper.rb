@@ -2,7 +2,7 @@ require 'dynamic_config/gatekeeper'
 
 module ReadReplicaHelper
   def self.included(base)
-    SeamlessDatabasePool::ControllerFilter.prepend GatekeeperReadReplica
+    #SeamlessDatabasePool::ControllerFilter.prepend GatekeeperReadReplica
   end
 
   # Wrap SeamlessDatabasePool::ControllerFilter methods in Gatekeeper flag
