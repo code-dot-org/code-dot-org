@@ -302,7 +302,7 @@ class ScriptTest < ActiveSupport::TestCase
     facilitator = create :facilitator
     pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp', version_year: '2019')
+    create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp', version_year: '2019', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     create :section, user: facilitator, script: pl_csp1_2017
 
     redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: facilitator)
