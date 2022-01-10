@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-07 21:55:49 UTC",
+    "serialized_at": "2022-01-08 16:03:40 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -863,6 +863,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2"
+        ],
         "progression": "AI and ethics"
       },
       "bonus": false,
@@ -885,6 +888,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
+        ],
         "progression": "AI and ethics"
       },
       "bonus": false,
