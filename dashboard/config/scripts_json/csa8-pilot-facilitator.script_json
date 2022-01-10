@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-09 00:16:39 UTC",
+    "serialized_at": "2022-01-10 17:25:47 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2720,7 +2720,7 @@
       "properties": {
         "description": "You have learned a lot about Java this year and have spent a lot of time practicing software development. In addition to writing and manipulating code to create programs for end-users, a software engineer has a moral obligation to respect the privacy of the users and enhance the security of the program.",
         "duration": "15",
-        "name": "Secure Software Design",
+        "name": "Secure Coding Practices",
         "remarks": true
       },
       "seeding_key": {
@@ -2755,8 +2755,8 @@
       "key": "8f384862-b58a-4dac-8ea1-4d0606003cd1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss secure software design principles.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Software Design handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Software Design handout.",
-        "progression_name": "Secure Software Design"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss secure coding practices.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Coding Practices handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Coding Practices handout.",
+        "progression_name": "Secure Coding Practices"
       },
       "seeding_key": {
         "activity_section.key": "8f384862-b58a-4dac-8ea1-4d0606003cd1",
@@ -3970,7 +3970,7 @@
         "level_keys": [
           "CSA U8L10-L1"
         ],
-        "progression": "Secure Software Design"
+        "progression": "Secure Coding Practices"
       },
       "bonus": false,
       "seeding_key": {
@@ -4685,7 +4685,7 @@
       }
     },
     {
-      "name": "[KEY] Secure Software Design",
+      "name": "[KEY] Secure Coding Practices",
       "url": "https://docs.google.com/document/d/1AFMBp9GBhWBDEi2cISF-z2ezcKoCqdgFMBrlAxzSBNs/edit?usp=sharing",
       "key": "_key_secure_software_design",
       "properties": {
@@ -4949,7 +4949,7 @@
       }
     },
     {
-      "name": "Secure Software Design",
+      "name": "Secure Coding Practices",
       "url": "https://docs.google.com/document/d/1rezVAXZugSKWFnYKYYI7Ff68iarRXFQVlL2zfxBjvEk/edit?usp=sharing",
       "key": "secure_software_design",
       "properties": {
