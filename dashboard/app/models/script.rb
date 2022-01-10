@@ -697,6 +697,9 @@ class Script < ApplicationRecord
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
   def can_view_version?(user, locale: nil)
+    # Must be part of instructor or participant audience to view version
+    return false unless can_be_participant?(user) || can_be_instructor?(user)
+
     # Users can view any course not in a family.
     return true unless family_name
 
@@ -709,7 +712,7 @@ class Script < ApplicationRecord
 
     # Restrictions only apply to students and logged out users.
     return false if user.nil?
-    return true unless user.student?
+    return true unless can_be_participant?(user)
 
     # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
