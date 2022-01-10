@@ -6,6 +6,8 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import * as utils from '@cdo/apps/code-studio/utils';
+import sinon from 'sinon';
 
 const unpluggedLevel = {
   id: '1',
@@ -82,6 +84,26 @@ describe('ProgressPill', () => {
       <ProgressPill levels={[levelWithUrl]} text="Unplugged Activity" />
     );
     assert.equal(wrapper.find('a').props().href, '/foo/bar');
+  });
+
+  it('includes section in href when selectedSectionId is present', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        levels={[levelWithUrl]}
+        text="Unplugged Activity"
+        selectedSectionId="1234"
+      />
+    );
+    assert.equal(wrapper.find('a').props().href, '/foo/bar?section_id=1234');
+  });
+
+  it('includes user_id in href when user_id query param is present', () => {
+    sinon.stub(utils, 'queryParams').returns('123');
+    const wrapper = shallow(
+      <ProgressPill levels={[levelWithUrl]} text="Unplugged Activity" />
+    );
+    assert.equal(wrapper.find('a').props().href, '/foo/bar?user_id=123');
+    utils.queryParams.restore();
   });
 
   it('does not have an href when disabled', () => {

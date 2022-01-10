@@ -22,8 +22,13 @@ Feature: Script overview page
     Then I verify progress for lesson 29 level 4 in detail view is "perfect"
     When I click selector ".teacher-panel table td:contains(Sally)" once I see it
     And I wait until element "td:contains(Maze)" is visible
+    # verify name format in summary view
+    And element "td:contains(2. Maze)" is visible
     Then I verify progress for lesson 2 level 1 is "perfect"
     Then I verify progress for lesson 2 level 2 is "not_tried"
+    And I reload the page
+    # verify name format in summary view
+    And element "td:contains(2. Maze)" is visible
 
     # Make sure we only see student progress, not teacher progress.
     Then I verify progress for lesson 29 level 4 is "not_tried"
