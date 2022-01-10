@@ -21,6 +21,17 @@ export default class FieldDropdown extends GoogleBlockly.FieldDropdown {
         }
       };
     }
+
+    const isMissingSecondValue = menuGenerator.some(
+      entry => entry.length === 1
+    );
+
+    if (isMissingSecondValue) {
+      menuGenerator = menuGenerator.map(entry => {
+        return [entry[0], entry[0]];
+      });
+    }
+
     super(menuGenerator, validator);
   }
 
