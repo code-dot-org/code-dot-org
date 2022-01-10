@@ -596,13 +596,25 @@ class Script < ApplicationRecord
 
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    # Only students should be redirected based on unit progress and/or section assignments.
-    if user&.student?
+    return nil unless family_units.last.can_be_instructor?(user) || family_units.last.can_be_participant?(user)
+
+    # Only signed in participants should be redirected based on unit progress and/or section assignments.
+    if user && family_units.last.can_be_participant?(user)
       assigned_unit_ids = user.section_scripts.pluck(:id)
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) if unit_name
+      if unit_name
+        # This creates a temporary script which is used to redirect the user. The audiences are set
+        # to instructor as teacher and student as participant because that will allow the redirect to
+        # happen for any course
+        return Script.new(
+          redirect_to: unit_name,
+          published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
+          instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+          participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+        )
+      end
     end
 
     locale_str = locale&.to_s
@@ -621,7 +633,17 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) : nil
+
+    unit_name ?
+      # This creates a temporary script which is used to redirect the user. The audiences are set
+      # to instructor as teacher and student as participant because that will allow the redirect to
+      # happen for any course
+      Script.new(
+        redirect_to: unit_name,
+        published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      ) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
