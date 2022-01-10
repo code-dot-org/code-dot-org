@@ -14410,6 +14410,7 @@ en:
             Wrap Up:
               name: Wrap Up
           student_description: This is the set of apprentice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop
+          name: fit2019-apprentice
         csd-sample-online:
           title: Sample of online activities for CS Discoveries
           description_audience: ''
@@ -24320,31 +24321,85 @@ en:
               description_teacher: 
             lesson-2:
               name: Introduction to AI and machine learning
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to artificial intelligence and machine learning.
+                * Get a preview of the first week of the AI and Machine Learning unit content.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to artificial intelligence and machine learning.
+                * Get a preview of the first week of the AI and Machine Learning unit content.
+
+                **Suggested time:** 25 minutes
             lesson-3:
               name: Train a machine learning model
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Train a machine learning model using AI Lab.
+
+                **Suggested time:** 35 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Train a machine learning model using AI Lab.
+
+                **Suggested time:** 35 minutes
             lesson-4:
               name: Engage with machine learning apps
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Engage with machine learning apps in App Lab.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Engage with machine learning apps in App Lab.
+
+                **Suggested time:** 20 minutes
             lesson-5:
               name: Consider real world implications
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Consider real-world implications of AI and machine learning.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Consider real-world implications of AI and machine learning.
+
+                **Suggested time:** 20 minutes
             lesson-6:
               name: Unit wrap up
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+                * Make a plan for implementing the unit with your students.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+                * Make a plan for implementing the unit with your students.
+
+                **Suggested time:** 20 minutes
             lesson-7:
               name: AI and Machine Learning
               description_student: 
               description_teacher: 'Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org''s AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. '
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Preparing to Teach Unit 1 '
+              display_name: Teaching Artificial Intelligence and Machine Learning
               description: Students learn the problem-solving process, the input-output-store-process model of a computer, and how computers help humans solve problems. Students end the unit by proposing their own app to solve a problem.
             lessonGroup-3:
               display_name: 'Preparing to Teach Unit 2 '
@@ -24370,7 +24425,7 @@ en:
           title: Teaching AI and machine learning
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes\n"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes\n"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
         self-paced-pl-csd6-2021:
           lessons:
