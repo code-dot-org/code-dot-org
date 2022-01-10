@@ -125,3 +125,25 @@ div#visualizationResizeBar {
     transform-origin: 0 0;
   }
 }
+
+.pane-header-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+};
+
+.pane-header-section-left {
+  justify-content: flex-start;
+};
+
+.pane-header-section-center {
+  justify-content: center;
+};
+
+// Note that in PreviewPaneHeader,
+// we (in addition to what is in the class below)
+// add element-specific styling of overflow-x to the right header section
+// to override some element-specific styling in PaneSection.
+.pane-header-section-right {
+  justify-content: flex-end;
+};
