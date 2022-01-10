@@ -703,8 +703,15 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
  */
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
+  // Some levels have solutions that can be validated for correctness
+  // automatically by our system. Currently, level validation
+  // depends on different properties that vary by level type. Until
+  // validatability is more consistent across level types, we have to check
+  // multiple fields.
+  var validatedLevel =
+    options.level?.validationEnabled || options.level?.requiredBlocks;
 
-  if (options.level?.validationEnabled) {
+  if (validatedLevel) {
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
         logDialogActions('level_unchanged_failure', options, null);
