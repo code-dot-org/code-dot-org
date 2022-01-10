@@ -35,7 +35,9 @@ export default function PreviewPaneHeader({
           <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
         )}
       </PaneSection>
-      {/* This overflowX styling should ideally be in style.scss */}
+      {/* This overflowX styling should ideally be in style.scss.
+          See that file for more details.
+       */}
       <PaneSection
         className={'pane-header-section pane-header-section-right'}
         style={{overflowX: 'visible'}}
