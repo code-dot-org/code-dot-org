@@ -234,13 +234,21 @@ Resources:
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
+    # Support different canonical names.
+    # In prod, for example, we have autoscale-prod.code.org and code.org
+    canonical_name = app == 'Dashboard' ? dashboard_hostname : pegasus_hostname
+    record_set_names = [
+      app_domain,
+      *(canonical_name if canonical_name != app_domain)
+    ]
 -%>
   <%=app%>DNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: <%=app_domain%>
+<% record_set_names.each do |record_set_name| -%>
+        - Name: <%=record_set_name%>
           Type: A
 <%   if cdn_enabled -%>
           AliasTarget:
@@ -254,6 +262,7 @@ Resources:
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
+<% end -%>
 
 <%   if cdn_enabled -%>
   <%=app%>CDN:
