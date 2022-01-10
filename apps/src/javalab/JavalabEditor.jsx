@@ -33,7 +33,6 @@ import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
-import {headerSectionsStyles} from './sharedStyleConstants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
@@ -565,7 +564,9 @@ class JavalabEditor extends React.Component {
           />
         )}
         <PaneHeader hasFocus style={{display: 'flex'}}>
-          <PaneSection style={styles.headerSectionLeft}>
+          <PaneSection
+            className={'pane-header-section pane-header-section-left'}
+          >
             <PaneButton
               id="javalab-editor-create-file"
               iconClass="fa fa-plus-circle"
@@ -585,13 +586,17 @@ class JavalabEditor extends React.Component {
               />
             </PaneSection>
           </PaneSection>
-          <PaneSection style={styles.headerSectionCenter}>
+          <PaneSection
+            className={'pane-header-section pane-header-section-center'}
+          >
             {showProjectTemplateWorkspaceIcon && (
               <ProjectTemplateWorkspaceIcon />
             )}
             {this.editorHeaderText()}
           </PaneSection>
-          <PaneSection style={styles.headerSectionRight}>
+          <PaneSection
+            className={'pane-header-section pane-header-section-right'}
+          >
             <PaneButton
               id="javalab-editor-save"
               iconClass="fa fa-check-circle"
@@ -758,7 +763,6 @@ class JavalabEditor extends React.Component {
 }
 
 const styles = {
-  ...headerSectionsStyles,
   editor: {
     width: '100%',
     minHeight: MIN_HEIGHT,

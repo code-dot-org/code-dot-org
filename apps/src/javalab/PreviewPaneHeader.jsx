@@ -8,7 +8,6 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import {RecordingFileType} from '../code-studio/components/recorders';
-import {headerSectionsStyles} from './sharedStyleConstants';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -20,7 +19,7 @@ export default function PreviewPaneHeader({
 }) {
   return (
     <PaneHeader hasFocus style={{display: 'flex'}}>
-      <PaneSection style={styles.headerSectionLeft}>
+      <PaneSection className={'pane-header-section pane-header-section-left'}>
         <PaneButton
           headerHasFocus
           icon={<CollapserIcon isCollapsed={isCollapsed} />}
@@ -31,12 +30,16 @@ export default function PreviewPaneHeader({
           leftJustified
         />
       </PaneSection>
-      <PaneSection style={styles.headerSectionCenter}>
+      <PaneSection className={'pane-header-section pane-header-section-center'}>
         {showPreviewTitle && (
           <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
         )}
       </PaneSection>
-      <PaneSection style={styles.headerSectionRight}>
+      {/* This overflowX styling should ideally be in style.scss */}
+      <PaneSection
+        className={'pane-header-section pane-header-section-right'}
+        style={{overflowX: 'visible'}}
+      >
         {/* TODO: Uncomment fullscreen button when we are ready to implement fullscreen.
         <PaneButton
           headerHasFocus
@@ -77,7 +80,6 @@ PreviewPaneHeader.propTypes = {
 };
 
 const styles = {
-  ...headerSectionsStyles,
   transparent: {
     marginLeft: -4, // Adjust icon position to align with instructions collapser icon.
     backgroundColor: 'transparent',
