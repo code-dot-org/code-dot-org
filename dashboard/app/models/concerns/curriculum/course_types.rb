@@ -24,9 +24,9 @@ module Curriculum::CourseTypes
     return if all_family_courses.nil_or_empty?
 
     return unless all_family_courses.length > 1
-    errors.add(:instructor_audience, 'Instructor Audience must be the same for all courses in a family.') if all_family_courses.map(&:instructor_audience).uniq.length > 1 || all_family_courses.last&.instructor_audience != instructor_audience
-    errors.add(:participant_audience, 'Participant Audience must be the same for all courses in a family.') if all_family_courses.map(&:participant_audience).uniq.length > 1 || all_family_courses.last&.participant_audience != participant_audience
-    errors.add(:instruction_type, 'Instruction Type must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).uniq.length > 1 || all_family_courses.last&.instruction_type != instruction_type
+    errors.add(:instructor_audience, 'must be the same for all courses in a family.') if all_family_courses.map(&:instructor_audience).uniq.length > 1 || all_family_courses.last&.instructor_audience != instructor_audience
+    errors.add(:participant_audience, 'must be the same for all courses in a family.') if all_family_courses.map(&:participant_audience).uniq.length > 1 || all_family_courses.last&.participant_audience != participant_audience
+    errors.add(:instruction_type, 'must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).uniq.length > 1 || all_family_courses.last&.instruction_type != instruction_type
   end
 
   # Get the family name for the course based on if its set on the UnitGroup or Unit
@@ -53,7 +53,7 @@ module Curriculum::CourseTypes
 
   # Instructor and Participant Audience can not be equal unless they are nil
   def cannot_have_same_audiences
-    errors.add(:instructor_audience, 'You cannot have the same instructor and participant audiences.') if !instructor_audience.nil? && instructor_audience == participant_audience
+    errors.add(:instructor_audience, 'should be different from participant audiences.') if !instructor_audience.nil? && instructor_audience == participant_audience
   end
 
   # Checks if a user can be the instructor for the course. universal instructors and levelbuilders
