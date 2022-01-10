@@ -2,8 +2,6 @@ require 'digest/md5'
 
 # The controller for seaching for and surfacing of internal admin data.
 class AdminSearchController < ApplicationController
-  include MultipleDatabasesTransitionHelper
-
   before_action :authenticate_user!
   before_action :require_admin
   check_authorization

@@ -4,7 +4,6 @@ require 'cdo/firehose'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
-  include MultipleDatabasesTransitionHelper
 
   # The action below disables the default request forgery protection from
   # application controller. We don't do request forgery protection on the
