@@ -31,6 +31,13 @@ CHART_TYPE = {
   VIRAL: 'VIRAL',
 }
 
+SPOTIFY_CHARTS = [
+  {'id' => TOP_50_GLOBAL_ID, 'title' => 'Top 50 Worldwide', 'type' => CHART_TYPE[:TOP]},
+  {'id' => TOP_50_USA_ID, 'title' => 'Top 50 USA', 'type' => CHART_TYPE[:TOP]},
+  {'id' => VIRAL_50_GLOBAL_ID, 'title' => 'Viral 50 Worldwide', 'type' => CHART_TYPE[:VIRAL]},
+  {'id' => VIRAL_50_USA_ID, 'title' => 'Viral 50 USA', 'type' => CHART_TYPE[:VIRAL]}
+]
+
 def get_token
   client_id = CDO.spotify_api_client_id
   client_secret = CDO.spotify_api_client_secret
@@ -126,21 +133,25 @@ def main
   fb = FirebaseHelper.new('shared')
 
   if $token.nil_or_empty?
-    Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.",)
+    Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
     return
   end
 
-  records, columns = get_playlist_data(CHART_TYPE[:TOP], TOP_50_GLOBAL_ID)
-  fb.upload_live_table('Top 50 Worldwide', records, columns) unless records.nil_or_empty?
-
-  records, columns = get_playlist_data(CHART_TYPE[:TOP], TOP_50_USA_ID)
-  fb.upload_live_table('Top 50 USA', records, columns) unless records.nil_or_empty?
-
-  records, columns = get_playlist_data(CHART_TYPE[:VIRAL], VIRAL_50_GLOBAL_ID)
-  fb.upload_live_table('Viral 50 Worldwide', records, columns) unless records.nil_or_empty?
-
-  records, columns = get_playlist_data(CHART_TYPE[:VIRAL], VIRAL_50_USA_ID)
-  fb.upload_live_table('Viral 50 USA', records, columns) unless records.nil_or_empty?
+  SPOTIFY_CHARTS.each do |chart|
+    records, columns = get_playlist_data(chart['type'], chart['id'])
+    if records.nil_or_empty?
+      Honeybadger.notify_cronjob_error(
+        error_message: "Did not to upload Spotify playlist data due to nil or empty list of records.",
+        context: {
+          chart_id: chart['id'],
+          chart_title: chart['title'],
+          chart_type: chart['type']
+        }
+      )
+      next
+    end
+    fb.upload_live_table(chart['title'], records, columns)
+  end
 end
 
 main
