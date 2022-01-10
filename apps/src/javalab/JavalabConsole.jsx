@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {KeyCodes} from '@cdo/apps/constants';
-import {headerSectionsStyles} from './sharedStyleConstants';
 import {
   appendInputLog,
   clearConsoleLogs,
@@ -190,11 +189,17 @@ class JavalabConsole extends React.Component {
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneSection style={styles.headerSectionLeft} />
-          <PaneSection style={styles.headerSectionCenter}>
+          <PaneSection
+            className={'pane-header-section pane-header-section-left'}
+          />
+          <PaneSection
+            className={'pane-header-section pane-header-section-center'}
+          >
             {javalabMsg.console()}
           </PaneSection>
-          <PaneSection style={styles.headerSectionRight}>
+          <PaneSection
+            className={'pane-header-section pane-header-section-right'}
+          >
             <PaneButton
               id="javalab-console-clear"
               headerHasFocus
@@ -243,7 +248,6 @@ export default connect(
 )(JavalabConsole);
 
 const styles = {
-  ...headerSectionsStyles,
   darkMode: {
     backgroundColor: color.black,
     color: color.white
