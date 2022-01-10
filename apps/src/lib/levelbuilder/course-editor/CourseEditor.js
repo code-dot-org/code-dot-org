@@ -57,6 +57,7 @@ class CourseEditor extends Component {
     useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
     coursePath: PropTypes.string.isRequired,
+    hasBeenAssignable: PropTypes.bool.isRequired,
 
     // Provided by redux
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
@@ -332,6 +333,7 @@ class CourseEditor extends Component {
           handleParticipantAudienceChange={e =>
             this.setState({participantAudience: e.target.value})
           }
+          cannotChangeParticipantType={this.props.hasBeenAssignable}
         />
 
         <CollapsibleEditorSection title="Publishing Settings">
