@@ -2,12 +2,13 @@ require 'digest/md5'
 
 # The controller for seaching for and surfacing of internal admin data.
 class AdminSearchController < ApplicationController
+  include MultipleDatabasesTransitionHelper
+
   before_action :authenticate_user!
   before_action :require_admin
   check_authorization
 
-  include SeamlessDatabasePool::ControllerFilter
-  use_database_pool find_students: :persistent
+  use_writer_connection_for_route(:find_students)
 
   MAX_PAGE_SIZE = 50
   MAX_TOTAL_SIZE = 1000
