@@ -21,7 +21,7 @@ markdown <<MARKDOWN
 
 ## Selecting labels and features
 
-##### Students will start by using the image below to suggest some features they might use to train their machine learning models to predict shapes(label). Example features include number of sides, border color, fill color, background color, or size. 
+##### Students will start by using the image below to suggest some features they might use to train their machine learning models to predict shapes (label). Example features include number of sides, border color, fill color, background color, or size. 
 
 <img src="https://images.code.org/da2edc2f9785327ad83d10cd0887df82-image-1636138191377.47.43 PM.png" alt="Image of shapes of various colors and sizes"  style="padding-left: 175px; height: 550px; clear: both; margin: 0 20px 20px 0;">
 
@@ -34,4 +34,6 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/db58fc03de23991f516ab4356e80d307-image-1636138834412.00.24 PM.png" alt="Image of a data table in AI Lab"  style="clear: both; margin: 0 20px 20px 0;">
 
 ## Let's practice in AI Lab! 
+
+##### In the next level of this professional learning module, you will complete an activity in AI Lab that your students will complete as part of Lesson 6. 
 MARKDOWN
