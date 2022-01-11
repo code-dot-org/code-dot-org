@@ -58,7 +58,7 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
         useFilesApi: false,
-        isProjectOwned: true
+        isProjectEditor: true
       },
       finishVersionHistoryLoad: () => {
         sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
@@ -89,7 +89,7 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
         useFilesApi: true,
-        isProjectOwned: true
+        isProjectEditor: true
       },
       finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](

@@ -17,7 +17,7 @@ describe('VersionRow', () => {
         {...MINIMUM_PROPS}
         isLatest={false}
         isSelectedVersion={false}
-        isProjectOwned={true}
+        isProjectEditor={true}
       />
     );
     expect(wrapper).to.not.have.className('highlight');
@@ -41,7 +41,7 @@ describe('VersionRow', () => {
         {...MINIMUM_PROPS}
         isLatest={false}
         isSelectedVersion={true}
-        isProjectOwned={true}
+        isProjectEditor={true}
       />
     );
     expect(wrapper).to.have.className('highlight');
@@ -65,7 +65,7 @@ describe('VersionRow', () => {
         {...MINIMUM_PROPS}
         isLatest={true}
         isSelectedVersion={false}
-        isProjectOwned={true}
+        isProjectEditor={true}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -82,7 +82,7 @@ describe('VersionRow', () => {
         {...MINIMUM_PROPS}
         isLatest={false}
         isSelectedVersion={false}
-        isProjectOwned={true}
+        isProjectEditor={true}
         onChoose={onChoose}
       />
     );

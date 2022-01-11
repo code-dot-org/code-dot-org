@@ -13,7 +13,7 @@ export default class VersionRow extends React.Component {
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool.isRequired,
     isSelectedVersion: PropTypes.bool.isRequired,
-    isProjectOwned: PropTypes.bool.isRequired,
+    isProjectEditor: PropTypes.bool.isRequired,
     onChoose: PropTypes.func
   };
 
@@ -50,7 +50,7 @@ export default class VersionRow extends React.Component {
           {msg.latestVersion()}
         </button>
       );
-    } else if (this.props.isProjectOwned) {
+    } else if (this.props.isProjectEditor) {
       buttons.push(
         <button
           key={buttons.length}
