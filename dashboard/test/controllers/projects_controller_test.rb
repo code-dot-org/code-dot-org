@@ -131,6 +131,9 @@ class ProjectsControllerTest < ActionController::TestCase
     )
   end
 
+  # This test will fail when run locally,
+  # the asset_url method returns http://test.host/applab_sharing_drawing.png
+  # which is missing the /asset path when tests are run locally
   test 'applab project level has sharing meta tags' do
     applab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:applab][:name])
     # populate level with correct game
@@ -149,6 +152,9 @@ class ProjectsControllerTest < ActionController::TestCase
     )
   end
 
+  # This test will fail when run locally,
+  # the asset_url method returns http://test.host/studio_sharing_drawing.png
+  # which is missing the /asset path when tests are run locally
   test 'playlab project level has sharing meta tags' do
     playlab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:playlab][:name])
     # populate level with correct game
