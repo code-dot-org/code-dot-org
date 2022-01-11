@@ -21,7 +21,6 @@ export const sectionDataPropType = PropTypes.shape({
       name: PropTypes.string.isRequired
     })
   ).isRequired,
-  codeReviewEnabled: PropTypes.bool,
   isAssignedCSA: PropTypes.bool,
   lessonExtras: PropTypes.bool,
   ttsAutoplayEnabled: PropTypes.bool,
