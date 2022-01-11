@@ -715,7 +715,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
     // check to see if they level blocks have been changed at all.
     options.level?.freePlay;
 
-  if (validatedLevel) {
+  if (!!validatedLevel) {
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
         logDialogActions('level_unchanged_failure', options, null);
