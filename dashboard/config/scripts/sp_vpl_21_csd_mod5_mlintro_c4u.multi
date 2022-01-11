@@ -2,10 +2,10 @@ name 'SP-VPL-21-CSD-mod5-MLintro-c4u'
 title 'Check for understanding'
 description ''
 question '**Which of the following responses indicates an understanding of how machine learning works?**'
-wrong 'There is probably a bug in the code. We should email Code.org.'
-wrong 'I think A.I. Bot is just randomly deciding what is a fish and what is not.'
-right 'Student B used 100 examples to train A.I. Bot. I only used 30.'
-wrong 'My first example was a piece of trash. Student B had a fish as the first example.'
+wrong '"There is probably a bug in the code. We should email Code.org."'
+wrong '"I think A.I. Bot is just randomly deciding what is a fish and what is not."'
+right '"Student B used 100 examples to train A.I. Bot. I only used 30."'
+wrong '"My first example was a piece of trash. Student B had a fish as the first example."'
 
 
 markdown <<MARKDOWN
