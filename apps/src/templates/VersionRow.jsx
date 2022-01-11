@@ -12,7 +12,7 @@ export default class VersionRow extends React.Component {
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool.isRequired,
-    isViewingVersion: PropTypes.bool.isRequired,
+    isSelectedVersion: PropTypes.bool.isRequired,
     isProjectOwned: PropTypes.bool.isRequired,
     onChoose: PropTypes.func
   };
@@ -23,6 +23,16 @@ export default class VersionRow extends React.Component {
       return timestamp.toLocaleString();
     }
     return timestamp.toString();
+  }
+
+  getUrlAttributes() {
+    const user_id = queryParams('user_id');
+    const viewAs = queryParams('viewAs');
+    return (
+      (this.props.isLatest ? '' : '?version=' + this.props.versionId) +
+      (user_id ? `&user_id=${user_id}` : '') +
+      (viewAs ? `&viewAs=${viewAs}` : '')
+    );
   }
 
   render() {
@@ -53,19 +63,11 @@ export default class VersionRow extends React.Component {
       );
     }
 
-    if (!this.props.isViewingVersion) {
-      const user_id = queryParams('user_id');
-      const viewAs = queryParams('viewAs');
+    if (!this.props.isSelectedVersion) {
       buttons.push(
         <a
-          key={buttons.length}
-          href={
-            location.origin +
-            location.pathname +
-            (this.props.isLatest ? '' : '?version=' + this.props.versionId) +
-            (user_id ? `&user_id=${user_id}` : '') +
-            (viewAs ? `&viewAs=${viewAs}` : '')
-          }
+          key={'latest-version-button'}
+          href={location.origin + location.pathname + this.getUrlAttributes()}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -80,7 +82,7 @@ export default class VersionRow extends React.Component {
       <tr
         className={classnames({
           versionRow: true,
-          highlight: this.props.isViewingVersion
+          highlight: this.props.isSelectedVersion
         })}
       >
         <td>
