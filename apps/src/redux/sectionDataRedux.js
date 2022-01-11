@@ -56,7 +56,6 @@ export const setSection = section => {
     id: section.id,
     script: section.script,
     students: sortedStudents,
-    codeReviewEnabled: section.code_review_enabled,
     isAssignedCSA: section.is_assigned_csa,
     lessonExtras: section.lesson_extras,
     ttsAutoplayEnabled: section.tts_autoplay_enabled,
