@@ -29669,30 +29669,37 @@ en:
               name: Parameters and Return Explore
               description_student: Develop a mental model for how functions can be generalized using parameters and return values.
               description_teacher: 'Students work with envelopes and paper to model functions with parameters and return values. Students create their own physical function envelope for drawing a house that takes in different parameters, and then build another function to calculate and return the cost of building that house.  '
+              key: Parameters and Return Explore
             Parameters and Return Investigate:
               name: Parameters and Return Investigate
               description_student: 'Investigate and modify sample apps that use parameters and return values. '
               description_teacher: 'In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. '
+              key: Parameters and Return Investigate
             Parameters and Return Practice:
               name: Parameters and Return Practice
               description_student: Practice programming with parameters and return values through a set of programming puzzles.
               description_teacher: Students practice writing programs with parameters and return values by creating and debugging functions that use them.
+              key: Parameters and Return Practice
             Parameters and Return Make:
               name: Parameters and Return Make
               description_student: Make an app that uses functions with parameters and return.
               description_teacher: Students use the knowledge and skills they've developed working with parameters and return values to develop a Rock Paper Scissors App. Unlike typical Make projects, students are given a significant portion of the starter code but are given three functions with parameters and return values that they'll need to develop themselves. At the end students submit their apps which can be assessed using a provided rubric.
+              key: Parameters and Return Make
             Libraries Explore:
               name: Libraries Explore
               description_student: 'Develop a mental model for how libraries work. '
               description_teacher: 'Students learn the basics of libraries while building upon the envelope model of a function with a folder to represent a library. '
+              key: Libraries Explore
             Libraries Investigate:
               name: Libraries Investigate
               description_student: Investigate and modify sample apps that use libraries learn how libraries help programmers simplify and reuse their code.
               description_teacher: In this lesson students work with partners to investigate two apps that use libraries as well as the code used to make a library. Through a series of guided discussions they learn how libraries help programmers simplify and reuse their code.
+              key: Libraries Investigate
             Libraries Practice:
               name: Libraries Practice
               description_student: Practice programming with libraries through a set of programming puzzles.
               description_teacher: Students practice important skills for working with libraries, including testing and debugging libraries, and using libraries to help develop apps. After a brief introduction to these practices by the teacher, students spend the majority of their time programming in a level progression.
+              key: Libraries Practice
             Project   Make a Library Part 1:
               name: Project   Make a Library Part 1
               description_student: The first day of a three day project where students build and test their own libraries.
@@ -29705,9 +29712,40 @@ en:
               name: Project   Make a Library Part 3
               description_student: The third day of a three day project where students build and test their own libraries.
               description_teacher: Students complete their library project, finalizing their code and writing written responses explaining the way one of the functions in their library works.
+            Assessment Day:
+              name: Assessment Day
+              description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
+              description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
+            Project - Make a Library Part 1:
+              key: Project - Make a Library Part 1
+              name: Project   Make a Library Part 1
+              description_student: The first day of a three day project where students build and test their own libraries.
+              description_teacher: In this lesson students begin a multi-day project designing a library of functions. Students will brainstorm common problems they've encountered while programming this year and begin to design functions that address those common problems.
+            Project - Make a Library Part 2:
+              key: Project - Make a Library Part 2
+              name: Project   Make a Library Part 2
+              description_student: The second day of a three day project where students build and test their own libraries.
+              description_teacher: Students continue to develop their library of functions. Students are encouraged to begin developing tests for their functions to make sure they return values as expected. Late in the lesson students exchange their library with a classmate for feedback.
+            Project - Make a Library Part 3:
+              key: Project - Make a Library Part 3
+              name: Project   Make a Library Part 3
+              description_student: The third day of a three day project where students build and test their own libraries.
+              description_teacher: Students complete their library project, finalizing their code and writing written responses explaining the way one of the functions in their library works.
+            'Lesson 11: Assessment Day':
+              key: 'Lesson 11: Assessment Day'
+              name: Assessment Day
+              description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
+              description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
+          title: Parameters, Return, and Libraries ('21-'22)
+          description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
+          description_audience: ''
         csp8-2022:
           lessons:
             Create PT   Review the Task:
