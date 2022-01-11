@@ -387,11 +387,11 @@ class ScriptTest < ActiveSupport::TestCase
       @plc_reviewer = create :plc_reviewer
 
       @courseq_2017 = create(:script, name: 'courseq-2017', family_name: 'courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @courseq_2018 = create(:unit_group, name: 'courseq-2018', family_name: 'courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @courseq_2019 = create(:unit_group, name: 'courseq-2019', family_name: 'courseq', version_year: '2019')
+      @courseq_2018 = create(:script, name: 'courseq-2018', family_name: 'courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2019 = create(:script, name: 'courseq-2019', family_name: 'courseq', version_year: '2019')
 
       @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
-      @pl_courseq_2018 = create(:unit_group, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
