@@ -2,10 +2,10 @@ name 'SP-VPL-21-CSD-mod5-ModelCards-c4u'
 title 'Check for understanding'
 description ''
 question '**Which of the following indicates understanding of using model cards to identify machine learning bias?**'
-wrong 'A limitation of the model is that it should not be used in a way that could reduce care for people entering an emergency room.'
-right 'The model was trained using data from a remote hospital in Alaska that relies on features related to temperature and winter sports.'
-wrong 'Hospitals should not use machine learning models to determine medical priority.'
-wrong 'There is probably a bug in the app. The company should check to make sure the code is accurate.'
+wrong '"A limitation of the model is that it should not be used in a way that could reduce care for people entering an emergency room."'
+right '“The model was trained using data from a remote hospital in Alaska that relies on features unique to that region that are not represented everywhere (specifically: temperature and winter sports)."'
+wrong '"Hospitals should not use machine learning models to determine medical priority."'
+wrong '"There is probably a bug in the app. The company should check to make sure the code is accurate".'
 
 
 markdown <<MARKDOWN

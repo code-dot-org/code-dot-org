@@ -30428,3 +30428,56 @@ en:
           description_short: ''
           description: This unit contains the CS Principles Post-Course Survey.
           student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
+        csa1-2022:
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+            lesson-2:
+              name: Exploring The Neighborhood
+            lesson-3:
+              name: Working with the Painter
+            lesson-4:
+              name: Navigating and Painting
+            lesson-5:
+              name: Making Decisions
+            lesson-6:
+              name: Creating Types of Painters
+            lesson-7:
+              name: Improving Programs with Code Reviews
+            lesson-8:
+              name: Repeating Instructions
+            lesson-9:
+              name: Expanding Decisions
+            lesson-10:
+              name: Debugging with the Painter
+            lesson-11:
+              name: Adding New Capabilities
+            lesson-12:
+              name: Creating a StampPainter
+            lesson-13:
+              name: Expanding the StampPainter
+            lesson-14:
+              name: Creating a BackgroundPainter
+            lesson-15:
+              name: Becoming Software Engineers
+            lesson-16:
+              name: Asphalt Art Project – Day 1
+            lesson-17:
+              name: Asphalt Art Project – Day 2
+            lesson-18:
+              name: Asphalt Art Project – Day 3
+            lesson-19:
+              name: FRQ Practice
+            lesson-20:
+              name: Unit 1 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa1-2022
+          title: Object-Oriented Programming ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
