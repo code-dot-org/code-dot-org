@@ -269,7 +269,6 @@ class Script < ApplicationRecord
     seeded_from
     is_maker_unit
     use_legacy_lesson_plans
-    has_been_assignable
   )
 
   def self.twenty_hour_unit
@@ -1002,10 +1001,6 @@ class Script < ApplicationRecord
     transaction do
       unit = fetch_unit(options)
 
-      if [SharedCourseConstants::PUBLISHED_STATE.pilot, SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include? unit.get_published_state
-        unit.has_been_assignable = true
-      end
-
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
@@ -1511,7 +1506,6 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:hasBeenAssignable] = has_been_assignable?
     summary
   end
 

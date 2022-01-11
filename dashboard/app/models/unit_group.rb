@@ -75,7 +75,6 @@ class UnitGroup < ApplicationRecord
     version_year
     pilot_experiment
     announcements
-    has_been_assignable
   )
 
   def to_param
@@ -382,7 +381,6 @@ class UnitGroup < ApplicationRecord
       announcements: announcements,
       course_version_id: course_version&.id,
       course_path: link,
-      has_been_assignable: has_been_assignable?
     }
   end
 
