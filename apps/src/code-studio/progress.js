@@ -226,7 +226,7 @@ function extractLevelResults(userProgressResponse) {
  * @param {string} scriptData.name
  * @param {boolean} scriptData.hideable_lessons
  * @param {boolean} scriptData.age_13_required
- * Render our progress on the course overview page.
+ * Fetch and store progress for the course overview page.
  */
 progress.initCourseProgress = function(scriptData) {
   const store = getStore();
