@@ -53,7 +53,7 @@ def load_pegasus_settings
   I18n.backend = CDO.i18n_backend
   I18n.backend.class.send(:include, I18n::Backend::Fallbacks)
   I18n.fallbacks = I18n::Locale::Fallbacks.new(['en-US'])
-  if rack_env?(:development) && !CDO.load_locales
+  if (rack_env?(:development) || rack_env?(:test)) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
     I18n.load_path += Dir[hoc_dir('i18n/en.yml')]
     I18n.load_path += Dir[cache_dir('i18n/es-ES.yml')]
