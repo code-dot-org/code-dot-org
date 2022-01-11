@@ -162,7 +162,6 @@ class ProjectsControllerTest < ActionController::TestCase
     # TODO: maureen add check for image_url: 'http://test.host/assets/studio_sharing_drawing.png'
     assert_sharing_meta_tags(
       url: "http://test.host/projects/playlab/#{channel}",
-      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true
