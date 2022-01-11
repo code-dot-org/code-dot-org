@@ -709,7 +709,11 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   // validatability is more consistent across level types, we have to check
   // multiple fields.
   var validatedLevel =
-    options.level?.validationEnabled || options.level?.requiredBlocks;
+    options.level?.validationEnabled ||
+    options.level?.requiredBlocks ||
+    // Free-play levels aren't validated for correctness, but the system does
+    // check to see if they level blocks have been changed at all.
+    options.level?.freePlay;
 
   if (validatedLevel) {
     switch (options.feedbackType) {
