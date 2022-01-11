@@ -22,6 +22,8 @@ export default class FieldDropdown extends GoogleBlockly.FieldDropdown {
       };
     }
 
+    // For backwards compatibility, we must account for and format existing blocks
+    // that are missing the second value (used as the generated code for that option).
     const isMissingSecondValue = menuGenerator.some(
       entry => entry.length === 1
     );
