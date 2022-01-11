@@ -284,16 +284,15 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
-  test 'student in same CSA code review enabled section as student seeking code review can view as peer' do
+  test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
       levels: [create(:javalab)]
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
@@ -303,7 +302,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
-  test 'student in same CSA code review enabled section as student seeking code review can view as peer on bubble choice level' do
+  test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer on bubble choice level' do
     javalab_sublevel = create(:javalab)
     bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
     bubble_choice_script_level = create :script_level,
@@ -311,9 +310,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: bubble_choice_script_level.script_id,
@@ -323,16 +321,15 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, bubble_choice_script_level, project_owner, javalab_sublevel
   end
 
-  test 'student in same CSA non code review enabled section as student seeking code review cannot view as peer' do
+  test 'student in same CSA non code review enabled section and code review group as student seeking code review cannot view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
       levels: [create(:javalab)]
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: false
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc - 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
@@ -365,9 +362,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -379,8 +375,8 @@ class AbilityTest < ActiveSupport::TestCase
       levels: [create(:javalab)]
 
     project_owner = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
@@ -403,5 +399,15 @@ class AbilityTest < ActiveSupport::TestCase
     pd_enrollment = create :pd_enrollment
 
     assert Ability.new(workshop_admin).can? :update_scholarship_info, pd_enrollment
+  end
+
+  private
+
+  def put_students_in_section_and_code_review_group(students, section)
+    code_review_group = create :code_review_group, section: section
+    students.each do |student|
+      follower = create :follower, student_user: student, section: section
+      create :code_review_group_member, follower: follower, code_review_group: code_review_group
+    end
   end
 end
