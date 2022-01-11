@@ -4,6 +4,26 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
+const availablePublishedStates = {
+  in_development: PublishedState,
+  pilot: {
+    pilot: 'pilot',
+    beta: 'beta',
+    preview: 'preview',
+    stable: 'stable'
+  },
+  beta: {
+    beta: 'beta',
+    preview: 'preview',
+    stable: 'stable'
+  },
+  preview: {
+    preview: 'preview',
+    stable: 'stable'
+  },
+  stable: {stable: 'stable'}
+};
+
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
     pilotExperiment: PropTypes.string,
@@ -17,6 +37,7 @@ export default class CourseVersionPublishingEditor extends Component {
     isCourse: PropTypes.bool,
     updateIsCourse: PropTypes.func,
     showIsCourseSelector: PropTypes.bool,
+    initialPublishedState: PropTypes.string,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired,
     preventCourseVersionChange: PropTypes.bool
@@ -158,7 +179,9 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
-            {Object.values(PublishedState).map(state => (
+            {Object.values(
+              availablePublishedStates[this.props.initialPublishedState]
+            ).map(state => (
               <option key={state} value={state}>
                 {state}
               </option>

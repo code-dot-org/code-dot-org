@@ -349,6 +349,7 @@ class CourseEditor extends Component {
             updateVersionYear={versionYear => this.setState({versionYear})}
             families={courseFamilies}
             versionYearOptions={versionYearOptions}
+            initialPublishedState={this.props.initialPublishedState}
             publishedState={publishedState}
             updatePublishedState={publishedState =>
               this.setState({publishedState})
