@@ -7,15 +7,6 @@ def hoc_load_countries
 end
 HOC_COUNTRIES = hoc_load_countries
 
-def hoc_load_i18n
-  i18n = {}
-  Dir.glob(hoc_dir('i18n/*.yml')).each do |string_file|
-    i18n.merge!(YAML.load_file(string_file))
-  end
-  i18n
-end
-HOC_I18N = hoc_load_i18n
-
 # Can be called by pages on hourofcode.com, code.org, or csedweek.org to retrieve
 # a string from the hourofcode.com translations.
 # When called on hourofcode.com, it uses @language.
