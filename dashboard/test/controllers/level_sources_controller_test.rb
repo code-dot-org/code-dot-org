@@ -171,7 +171,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_response :success
     assert_sharing_meta_tags(
       url: "http://test.host/c/#{level_source.id}",
-      image_url: 'http://test.host/sharing_drawing.png',
+      image_url: 'http://test.host/assets/sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       small_thumbnail: true
@@ -186,7 +186,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
     assert_sharing_meta_tags(
       url: "http://test.host/c/#{level_source.id}",
-      image_url: 'http://test.host/studio_sharing_drawing.png',
+      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true
