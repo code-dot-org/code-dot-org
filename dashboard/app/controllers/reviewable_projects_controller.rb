@@ -62,22 +62,13 @@ class ReviewableProjectsController < ApplicationController
   end
 
   def for_level
-    peer_user_ids = if DCDO.get('code_review_groups_enabled', false)
-                      current_user.
-                        code_review_groups.
-                        map(&:members).
-                        flatten.
-                        map(&:follower).
-                        pluck(:student_user_id).
-                        select {|student_user_id| current_user.id != student_user_id}
-                    else
-                      current_user.
-                        sections_as_student.
-                        map(&:followers).
-                        flatten.
-                        pluck(:student_user_id).
-                        select {|student_user_id| current_user.id != student_user_id}
-                    end
+    peer_user_ids = current_user.
+      code_review_groups.
+      map(&:members).
+      flatten.
+      map(&:follower).
+      pluck(:student_user_id).
+      select {|student_user_id| current_user.id != student_user_id}
 
     peers_ready_for_review = ReviewableProject.where(
       user_id: peer_user_ids,
