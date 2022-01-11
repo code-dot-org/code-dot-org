@@ -406,6 +406,7 @@ ka:
       prizes_link: მეტი ინფორმაცია
   teacher:
     answer: პასუხი
+    dashboard: მასწავლებლის მართვის პანელი
     for_teachers_only: მხოლოდ მასწავლებლებისთვის
     title:
       one: 'თქვენი მასწავლებელი:'

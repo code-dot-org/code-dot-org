@@ -499,6 +499,7 @@ az:
       prizes_link: daha ətraflı
   teacher:
     answer: Cavab
+    dashboard: Müəllimin idarəetmə paneli
     for_teachers_only: Ancaq müəllimlər üçün
     title:
       one: 'Müəlliminiz:'

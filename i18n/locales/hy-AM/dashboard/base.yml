@@ -234,6 +234,7 @@ hy:
       prizes_link: 'ավելի շատ տեղեկություն'
   teacher:
     answer: պատասխան
+    dashboard: 'Ուսուցչի Վահանակ'
     for_teachers_only: Ուսուցիչների համար Միայն
     title:
       one: 'Ձեր ուսուցիչը.'

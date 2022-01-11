@@ -3,6 +3,9 @@ zh-CN:
   data:
     progressions:
       '"If/Else" with the Bee': "“如果/否则”与蜜蜂"
+      AI Machine Learning - Video: 人工智能机器学习 - 视频
+      'AI: Impact on Society - Video': 人工智能：对社会的影响 - 视频
+      'AI: Training Data & Bias - Video': 人工智能：训练数据与偏差 - 视频
       Accelerometer Events: 加速传感器事件
       Adding Images: 添加图画
       Adding Screens: 添加屏幕
@@ -10,6 +13,7 @@ zh-CN:
       Analog Sensors: 模拟传感器
       Animate Your Scene: 活动你的场景
       Animating Sprites: 精灵图的动画
+      App Lab Intro - Video: 应用程序实验室简介 - 视频
       'App Project: Bugs and Features': '应用程序项目: 错误和功能'
       'App Project: Linking Screens': 应用程序项目：链接屏幕
       'App Project: Screen Design': 应用程序项目：屏幕设计
@@ -103,6 +107,7 @@ zh-CN:
       Hardware and Software: 硬件和软件
       Headings: 标题
       Headings in HTML: HTML中的标题
+      Hello World: 你好世界
       How to Make a Sprite: 如何制作精灵图
       Hyperlinks: 超链接
       If Statements: If 语句
@@ -183,6 +188,7 @@ zh-CN:
       Sprite Properties: 精灵图属性
       Sprite Scenes: 精灵图场景
       Sprite Velocity: 精灵图速度
+      Teach AI a New Word: 教人工智能一个新词
       Text Compression: 文本压缩
       The Accelerometer: 加速传感器
       The Animation Tab: 动画标签页
