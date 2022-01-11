@@ -729,6 +729,7 @@ class UnitEditor extends React.Component {
                     isCourse={this.state.isCourse}
                     updateIsCourse={this.handleStandaloneUnitChange}
                     showIsCourseSelector
+                    initialPublishedState={this.props.initialPublishedState}
                     publishedState={this.state.publishedState}
                     updatePublishedState={publishedState =>
                       this.setState({publishedState})
