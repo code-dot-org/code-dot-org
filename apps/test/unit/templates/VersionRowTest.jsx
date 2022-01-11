@@ -16,7 +16,7 @@ describe('VersionRow', () => {
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={false}
-        isViewingVersion={false}
+        isSelectedVersion={false}
         isProjectOwned={true}
       />
     );
@@ -40,7 +40,7 @@ describe('VersionRow', () => {
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={false}
-        isViewingVersion={true}
+        isSelectedVersion={true}
         isProjectOwned={true}
       />
     );
@@ -64,7 +64,7 @@ describe('VersionRow', () => {
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={true}
-        isViewingVersion={false}
+        isSelectedVersion={false}
         isProjectOwned={true}
       />
     );
@@ -81,7 +81,7 @@ describe('VersionRow', () => {
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={false}
-        isViewingVersion={false}
+        isSelectedVersion={false}
         isProjectOwned={true}
         onChoose={onChoose}
       />
