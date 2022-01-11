@@ -26,9 +26,9 @@ Feature: Script overview page
     And element "td:contains(2. Maze)" is visible
     Then I verify progress for lesson 2 level 1 is "perfect"
     Then I verify progress for lesson 2 level 2 is "not_tried"
+    # verify when teacher is viewing student, script overview page loads in summary view
     And I reload the page
-    # verify name format in summary view
-    And element "td:contains(2. Maze)" is visible
+    And I wait to see ".uitest-summary-progress-table"
 
     # Make sure we only see student progress, not teacher progress.
     Then I verify progress for lesson 29 level 4 is "not_tried"
