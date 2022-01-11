@@ -12,6 +12,11 @@ import PropTypes from 'prop-types';
  * different shape than some other places we use sections. For now, I'm just
  * going to document the parts of section that we use here
  */
+// codeReviewEnabled can get out of sync with codeReviewExpiresAt
+// while editing code review groups on the teacher dashboard.
+// This doesn't affect functionality, as codeReviewEnabled
+// is used on level pages to determine whether the functionality
+// should be active or not, but it is confusing.
 export const sectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   script: PropTypes.object,
