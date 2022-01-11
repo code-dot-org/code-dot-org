@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-10 18:27:18 UTC",
+    "serialized_at": "2022-01-10 21:40:52 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3028,31 +3028,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseF_groups_size"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_size"
-        ],
-        "lesson.key": "Lots of Sprites",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
-      },
-      "level_keys": [
-        "courseF_groups_size"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "courseF_groups_make"
         ],
         "progression": "Skill Building"
@@ -3069,6 +3044,31 @@
       },
       "level_keys": [
         "courseF_groups_make"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_size"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_size"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+      },
+      "level_keys": [
+        "courseF_groups_size"
       ]
     },
     {
@@ -3788,9 +3788,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_groups_size",
+        "level.key": "courseF_groups_make",
         "script_level.level_keys": [
-          "courseF_groups_size"
+          "courseF_groups_make"
         ],
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
@@ -3800,9 +3800,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_groups_make",
+        "level.key": "courseF_groups_size",
         "script_level.level_keys": [
-          "courseF_groups_make"
+          "courseF_groups_size"
         ],
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
