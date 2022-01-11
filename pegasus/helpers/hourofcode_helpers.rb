@@ -57,7 +57,7 @@ def hoc_canonicalized_i18n_path(uri, query_string)
 
   if @country || @company
     if possible_language && I18n.backend.translations[possible_language.to_sym]
-      @user_language = possible_language[0..1]
+      @user_language = possible_language
     else
       path = File.join([possible_language, path].reject(&:nil_or_empty?))
     end
@@ -106,13 +106,11 @@ def hoc_detect_country
   country_code
 end
 
-# Used to set @language instance variable in short format (ex. 'en')
 def hoc_detect_language
   language = request.env['rack.locale']
-  return nil unless language
-  language = language[0..1]
-
   return language if I18n.backend.translations[language.to_sym]
+  language_short = language[0..1]
+  return language_short if I18n.backend.translations[language_short.to_sym]
   nil
 end
 
