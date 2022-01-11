@@ -114,6 +114,9 @@ class OwnedSections extends React.Component {
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.archivedSections()}
                 </div>
+                <div style={styles.hiddenSectionDesc}>
+                  {i18n.archivedSectionsTeacherDescription()}
+                </div>
                 <OwnedSectionsTable
                   sectionIds={hiddenSectionIds}
                   onEdit={this.onEditSection}
