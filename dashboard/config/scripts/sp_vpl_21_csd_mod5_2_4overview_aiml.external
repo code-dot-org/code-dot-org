@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 2 - 4
 
-#### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
+##### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
 
 ## Key terms used throughout the AI and Machine Learning unit
 
