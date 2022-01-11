@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 14:59:26 UTC",
+    "serialized_at": "2022-01-11 16:26:08 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -1182,6 +1182,28 @@
     {
       "chapter": 35,
       "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectExamples-AIML"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "c21b67df-0924-4a57-ab23-af264fbc4dae"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-ProjectExamples-AIML"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1205,8 +1227,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 5,
+      "chapter": 37,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1632,6 +1654,18 @@
         "level.key": "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML",
         "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "c21b67df-0924-4a57-ab23-af264fbc4dae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-ProjectExamples-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectExamples-AIML"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
