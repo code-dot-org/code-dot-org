@@ -191,3 +191,10 @@ function initViewAs(store, userType) {
 
   store.dispatch(setViewType(initialViewAs));
 }
+
+// export private function(s) to expose to unit testing
+export const __testonly__ = IN_UNIT_TEST
+  ? {
+      initViewAs
+    }
+  : {};
