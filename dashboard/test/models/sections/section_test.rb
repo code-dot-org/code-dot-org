@@ -392,7 +392,6 @@ class SectionTest < ActiveSupport::TestCase
         hidden: false,
         students: [],
         restrict_section: false,
-        code_review_enabled: true,
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil
@@ -435,7 +434,6 @@ class SectionTest < ActiveSupport::TestCase
         hidden: false,
         students: [],
         restrict_section: false,
-        code_review_enabled: true,
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil
@@ -482,7 +480,6 @@ class SectionTest < ActiveSupport::TestCase
         hidden: false,
         students: [],
         restrict_section: false,
-        code_review_enabled: true,
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil
