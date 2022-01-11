@@ -142,7 +142,7 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
     assert_sharing_meta_tags(
       url: "http://test.host/projects/applab/#{channel}",
-      image_url: 'http://test.host/applab_sharing_drawing.png',
+      image_url: 'http://test.host/assets/applab_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true
@@ -160,7 +160,7 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
     assert_sharing_meta_tags(
       url: "http://test.host/projects/playlab/#{channel}",
-      image_url: 'http://test.host/studio_sharing_drawing.png',
+      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true
