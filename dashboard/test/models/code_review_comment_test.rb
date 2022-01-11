@@ -35,12 +35,12 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
   test 'teacher can review own students project' do
     project_owner = create :student
     teacher = create :teacher
-    section = create :section, code_review_enabled: Time.now.utc + 1.day, teacher: teacher
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day, teacher: teacher
     create :follower, section: section, student_user: project_owner
     assert CodeReviewComment.user_can_review_project?(project_owner, teacher, nil)
   end
 
-  test 'teacher can review own students project when code_review_enabled is false and code review groups enabled' do
+  test 'teacher can review own students project when code review is not enabled at section level' do
     project_owner = create :student
     teacher = create :teacher
     section = create :section, code_review_expires_at: Time.now.utc - 1.day, teacher: teacher
@@ -79,7 +79,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
   test 'cannot review peers project if there is no reviewable project' do
     project_owner = create :student
     reviewer = create :student
-    section = create :section, code_review_enabled: true
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
     create :follower, section: section, student_user: project_owner
     create :follower, section: section, student_user: reviewer
     refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
