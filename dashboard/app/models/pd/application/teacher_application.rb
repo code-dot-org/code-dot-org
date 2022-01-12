@@ -1148,31 +1148,33 @@ module Pd::Application
 
     # Called after the application is created. Do any manipulation needed for the form data
     # hash here, as well as send emails
-    # [MEG] TODO: should only do a lot of this on a completed submitted application
     def on_successful_create
       update_user_school_info!
-      queue_email :confirmation, deliver_now: true unless status == 'incomplete'
 
       form_data_hash = sanitize_form_data_hash
+      status = form_data_hash[:status] if form_data_hash[:status]
 
-      update_form_data_hash(
-        {
-          cs_total_course_hours: form_data_hash.slice(
-            :cs_how_many_minutes,
-            :cs_how_many_days_per_week,
-            :cs_how_many_weeks_per_year
-          ).values.map(&:to_i).reduce(:*) / 60
-        }
-      )
+      unless status == 'incomplete'
+        queue_email :confirmation, deliver_now: true
 
-      auto_score! unless status == 'incomplete'
-      save
+        update_form_data_hash(
+          {
+            cs_total_course_hours: form_data_hash.slice(
+              :cs_how_many_minutes,
+              :cs_how_many_days_per_week,
+              :cs_how_many_weeks_per_year
+            ).values.map(&:to_i).reduce(:*) / 60
+          }
+        )
 
-      unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        unless status == 'incomplete'
+        auto_score!
+
+        unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
           queue_email :principal_approval, deliver_now: true
         end
       end
+
+      save
     end
 
     # Called after principal approval has been created. Do any manipulation needed for the
