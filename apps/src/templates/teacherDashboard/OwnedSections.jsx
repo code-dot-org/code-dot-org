@@ -145,7 +145,12 @@ const styles = {
     paddingBottom: 10
   },
   hiddenSectionLabel: {
-    fontSize: 14,
+    fontSize: 16,
+    paddingBottom: 5,
+    color: color.charcoal
+  },
+  hiddenSectionDesc: {
+    fontSize: 12,
     paddingBottom: 5,
     color: color.charcoal
   },
