@@ -355,7 +355,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
-  test 'student in same section cannot view as peer if peer is not seeking code review' do
+  test 'student in same section and code review group cannot view as peer if peer is not seeking code review' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
       levels: [create(:javalab)]
