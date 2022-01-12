@@ -34,8 +34,8 @@ module I18n
         # inserting them. We do this because Redshift doesn't have unique keys, so if we inserted data for a normalized_key which
         # already exists, then there would be two rows in the database for the normalized_key.
         delete_translation_status(redshift_client, day_count)
-        string_keys = get_all_unique_string_keys(redshift_client, day_count)
-        insert_translation_status(redshift_client, translation_service, locales, string_keys, current_time)
+        normalized_keys = get_all_unique_normalized_keys(redshift_client, day_count)
+        insert_translation_status(redshift_client, translation_service, locales, normalized_keys, current_time)
       end
 
       # Deletes the existing translation status data for normalized_key's in the past day_count days.
@@ -66,12 +66,14 @@ module I18n
         # Retrieve all the unique normalized_key's we have logged in the
         # analysis.i18n_string_tracking_events table.
         unique_normalized_key_query = unique_normalized_key_sql_query(day_count)
-        redshift_client.exec(unique_normalized_key_query).reduce({}) {|keys, row|
-          keys.update(row['normalized_key'] => {
-            "scope" => row['scope'],
-            "string_key" => row['string_key']
-          })
-        }
+        redshift_client.exec(unique_normalized_key_query).reduce({}) do |keys, row|
+          keys.update(row['normalized_key'] =>
+            {
+              "scope" => row['scope'],
+              "string_key" => row['string_key']
+            }
+        )
+        end
       end
 
       # Checks if given normalized_keys are translated or not in each language, and then

@@ -131,7 +131,7 @@ class I18nStringUrlTracker
     buffer&.each_key do |url|
       buffer[url].each_key do |normalized_key|
         buffer[url][normalized_key].each do |values|
-          # record the string : url association.
+          # record the <url>:<normalized_key>:[source, string_key, scope, separator] association.
           FirehoseClient.instance.put_record(
             :i18n,
             {url: url, normalized_key: normalized_key, source: values[0], string_key: values[1], scope: values[2], separator: values[3]}
