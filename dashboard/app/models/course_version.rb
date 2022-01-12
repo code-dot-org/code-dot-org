@@ -137,7 +137,7 @@ class CourseVersion < ApplicationRecord
     end
   end
 
-  def recommended?(locale: 'en-us')
+  def recommended?(locale)
     return false unless stable?
     return true if course_offering.course_versions.length == 1
 
@@ -154,7 +154,7 @@ class CourseVersion < ApplicationRecord
       display_name: display_name,
       is_stable: stable?,
       is_recommended: recommended?(locale),
-      locales: [],
+      locales: content_root_type == 'UnitGroup' ? [] : content_root.supported_locales,
       units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
     }
   end
