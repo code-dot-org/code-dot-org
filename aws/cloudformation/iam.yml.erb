@@ -212,7 +212,10 @@ Resources:
             Condition:
               StringEquals:
                 SAML:aud: https://signin.aws.amazon.com/saml
-      ManagedPolicyArns: [!Ref DataAnalystPolicy]
+      ManagedPolicyArns:
+        - !Ref DataAnalystPolicy
+        - 'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor'
+        - 'arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess'
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
