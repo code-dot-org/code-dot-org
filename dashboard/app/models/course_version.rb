@@ -22,7 +22,6 @@
 
 class CourseVersion < ApplicationRecord
   include Rails.application.routes.url_helpers
-  include Curriculum::AssignableCourseOffering
 
   belongs_to :course_offering
   has_many :resources
@@ -60,11 +59,12 @@ class CourseVersion < ApplicationRecord
 
   delegate :name, to: :content_root
   delegate :pl_course?, to: :content_root
+  delegate :stable?, to: :content_root
   delegate :launched?, to: :content_root
   delegate :in_development?, to: :content_root
   delegate :has_pilot_access?, to: :content_root
   delegate :can_be_instructor?, to: :content_root
-  delegate :stable?, to: :content_root
+  delegate :course_assignable?, to: :content_root
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -137,26 +137,25 @@ class CourseVersion < ApplicationRecord
     end
   end
 
-  def recommended?
+  def recommended?(locale: 'en-us')
+    return false unless stable?
     return true if course_offering.course_versions.length == 1
 
-    false #set up something to calculate is recommended course_version
+    family_name = course_offering.key
+    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale)
 
-    #Sort versions by year descending.
-    #We recommend the user use the latest stable version that is supported in their
-    #locale. If no versions support their locale, we recommend the latest stable version.
-    #Versions are sorted from most to least recent, so the first stable version will be the latest.
+    latest_stable_version == content_root
   end
 
-  def summarize_for_assignment_dropdown(user)
+  def summarize_for_assignment_dropdown(user, locale)
     {
       id: id,
       version_year: key,
       display_name: display_name,
       is_stable: stable?,
-      is_recommended: recommended?,
+      is_recommended: recommended?(locale),
       locales: [],
-      units: units.select {|u| u.item_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
+      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
     }
   end
 end

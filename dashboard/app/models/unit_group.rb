@@ -27,6 +27,7 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
   include Curriculum::CourseTypes
+  include Curriculum::AssignableCourse
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
@@ -341,6 +342,11 @@ class UnitGroup < ApplicationRecord
     if user&.teacher?
       UnitGroup.valid_course_id?(id, user)
     end
+  end
+
+  # Only English-speaking locales are supported currently
+  def supported_for_locale(locale_str)
+    locale_str&.downcase&.start_with?('en')
   end
 
   # A course that the general public can assign. Has been soft or
