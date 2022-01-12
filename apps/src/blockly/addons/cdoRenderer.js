@@ -8,6 +8,6 @@ export default class CdoRenderer extends GoogleBlockly.geras.Renderer {
    * different styles for highlighted and disabled blocks than the geras default.
    */
   makePathObject(root, style) {
-    return new CdoPathObject(root, style);
+    return new CdoPathObject(root, style, this.getConstants());
   }
 }
