@@ -1,5 +1,6 @@
 import $ from 'jquery';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import announcementsReducer, {
   addAnnouncement
 } from '@cdo/apps/code-studio/announcementsRedux';
@@ -14,6 +15,7 @@ import {
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -60,6 +62,19 @@ function initPage() {
     );
   }
 
+  const url = window.location.search;
+  const urlParams = new URLSearchParams(url);
+  const endOfLessonNumber = urlParams.get('endOfLesson');
+
+  if (endOfLessonNumber) {
+    ReactDOM.render(
+      <EndOfLessonDialog
+        isDialogOpen={true}
+        lessonNumber={endOfLessonNumber}
+      />,
+      document.getElementById('end-of-lesson-dialog')
+    );
+  }
   renderCourseProgress(scriptData);
   tooltipifyVocabulary();
 }
