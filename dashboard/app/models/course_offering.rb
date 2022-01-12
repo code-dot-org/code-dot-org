@@ -85,16 +85,16 @@ class CourseOffering < ApplicationRecord
     CourseOffering.all.select {|co| co.assignable?(user)}
   end
 
-  def self.assignable_course_offerings_info(user)
-    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user)}
+  def self.assignable_course_offerings_info(user, locale)
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale)}
   end
 
   def self.assignable_pl_course_offerings(user)
     assignable_course_offerings(user).select(&:pl_course?)
   end
 
-  def self.assignable_pl_course_offerings_info(user)
-    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user)}
+  def self.assignable_pl_course_offerings_info(user, locale)
+    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale)}
   end
 
   def assignable?(user)
