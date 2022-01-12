@@ -18,7 +18,32 @@ const courseOfferings = [
         display_name: '2017',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: [
+          'ar-SA',
+          'cs-CZ',
+          'de-DE',
+          'es-ES',
+          'es-MX',
+          'fr-FR',
+          'hi-IN',
+          'id-ID',
+          'it-IT',
+          'ja-JP',
+          'ko-KR',
+          'mn-MN',
+          'pl-PL',
+          'pt-BR',
+          'pt-PT',
+          'ro-RO',
+          'ru-RU',
+          'sk-SK',
+          'tr-TR',
+          'ur-PK',
+          'uz-UZ',
+          'vi-VN',
+          'zh-CN',
+          'zh-TW'
+        ],
         units: [{id: 94, name: 'Course A'}]
       },
       {
@@ -27,7 +52,7 @@ const courseOfferings = [
         display_name: '2018',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: ['it-IT', 'sk-SK'],
         units: [{id: 95, name: 'Course A (2018)'}]
       },
       {
@@ -36,7 +61,7 @@ const courseOfferings = [
         display_name: '2019',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: ['cs-CZ', 'sk-SK'],
         units: [{id: 96, name: 'Course A (2019)'}]
       },
       {
@@ -56,15 +81,6 @@ const courseOfferings = [
         is_recommended: false,
         locales: [],
         units: [{id: 551, name: 'Course A (2021)'}]
-      },
-      {
-        id: 261,
-        version_year: '2022',
-        display_name: '2022',
-        is_stable: false,
-        is_recommended: false,
-        locales: [],
-        units: [{id: 10211, name: 'coursea-2022'}]
       }
     ]
   },
@@ -78,7 +94,33 @@ const courseOfferings = [
         display_name: '2017',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: [
+          'ar-SA',
+          'cs-CZ',
+          'de-DE',
+          'es-ES',
+          'es-MX',
+          'fr-FR',
+          'hi-IN',
+          'id-ID',
+          'it-IT',
+          'ja-JP',
+          'ko-KR',
+          'mn-MN',
+          'pl-PL',
+          'pt-BR',
+          'pt-PT',
+          'ro-RO',
+          'ru-RU',
+          'sk-SK',
+          'ta-IN',
+          'th-TH',
+          'tr-TR',
+          'ur-PK',
+          'uz-UZ',
+          'zh-CN',
+          'zh-TW'
+        ],
         units: [{id: 99, name: 'Course B'}]
       },
       {
@@ -87,7 +129,7 @@ const courseOfferings = [
         display_name: '2018',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: ['it-IT', 'sk-SK'],
         units: [{id: 100, name: 'Course B (2018)'}]
       },
       {
@@ -96,7 +138,7 @@ const courseOfferings = [
         display_name: '2019',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: ['cs-CZ', 'sk-SK'],
         units: [{id: 101, name: 'Course B (2019)'}]
       },
       {
@@ -116,15 +158,6 @@ const courseOfferings = [
         is_recommended: false,
         locales: [],
         units: [{id: 525, name: 'Course B (2021)'}]
-      },
-      {
-        id: 276,
-        version_year: '2022',
-        display_name: '2022',
-        is_stable: false,
-        is_recommended: true,
-        locales: [],
-        units: [{id: 11494, name: 'Course B (2021)'}]
       }
     ]
   },
