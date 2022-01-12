@@ -568,6 +568,7 @@ class JavalabEditor extends React.Component {
         <PaneHeader hasFocus style={{display: 'flex'}}>
           <PaneSection
             className={'pane-header-section pane-header-section-left'}
+            style={styles.headerSection}
           >
             <PaneButton
               id="javalab-editor-create-file"
@@ -590,6 +591,7 @@ class JavalabEditor extends React.Component {
           </PaneSection>
           <PaneSection
             className={'pane-header-section pane-header-section-center'}
+            style={styles.headerSection}
           >
             {showProjectTemplateWorkspaceIcon && (
               <ProjectTemplateWorkspaceIcon />
@@ -598,6 +600,7 @@ class JavalabEditor extends React.Component {
           </PaneSection>
           <PaneSection
             className={'pane-header-section pane-header-section-right'}
+            style={styles.headerSection}
           >
             <PaneButton
               id="javalab-editor-save"
@@ -804,6 +807,9 @@ const styles = {
     float: 'left',
     overflow: 'visible',
     marginLeft: 3
+  },
+  headerSection: {
+    overflowX: 'visible'
   }
 };
 
