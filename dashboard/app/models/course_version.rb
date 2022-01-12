@@ -22,7 +22,6 @@
 
 class CourseVersion < ApplicationRecord
   include Rails.application.routes.url_helpers
-  include Curriculum::AssignableCourseOffering
 
   belongs_to :course_offering
   has_many :resources
@@ -64,6 +63,7 @@ class CourseVersion < ApplicationRecord
   delegate :in_development?, to: :content_root
   delegate :has_pilot_access?, to: :content_root
   delegate :can_be_instructor?, to: :content_root
+  delegate :course_assignable?, to: :content_root
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -155,7 +155,7 @@ class CourseVersion < ApplicationRecord
       is_stable: stable?,
       is_recommended: recommended?,
       locales: [],
-      units: units.select {|u| u.item_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
+      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
     }
   end
 end

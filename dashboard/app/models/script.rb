@@ -42,7 +42,7 @@ class Script < ApplicationRecord
   include SharedCourseConstants
   include SharedConstants
   include Curriculum::CourseTypes
-  include Curriculum::AssignableCourseOffering
+  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
 
   include Seeded
