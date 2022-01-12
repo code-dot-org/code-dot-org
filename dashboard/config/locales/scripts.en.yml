@@ -30243,11 +30243,14 @@ en:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
-          title: Course E (2021)
+            lessonGroup-8:
+              display_name: Deprecated
+          title: Course E (2022)
           description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
+          name: coursee-2022
         coursef-2022:
           lessons:
             Introducing Sprite Lab:

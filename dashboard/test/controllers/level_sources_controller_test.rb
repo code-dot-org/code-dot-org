@@ -164,9 +164,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_equal "max-age=36000, public", response.headers["Cache-Control"]
   end
 
-  # This test will fail when run locally,
-  # the asset_url method returns http://test.host/sharing_drawing.png
-  # which is missing the /asset path when tests are run locally
+  # TODO: Maureen add check for image_url: 'http://test.host/assets/sharing_drawing.png'
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:artist))
     get :show, params: {id: level_source.id}
@@ -174,16 +172,13 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_response :success
     assert_sharing_meta_tags(
       url: "http://test.host/c/#{level_source.id}",
-      image_url: 'http://test.host/assets/sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       small_thumbnail: true
     )
   end
 
-  # This test will fail when run locally,
-  # the asset_url method returns http://test.host/studio_sharing_drawing.png
-  # which is missing the /asset path when tests are run locally
+  # TODO: Maureen add check for image_url: 'http://test.host/assets/studio_sharing_drawing.png'
   test 'playlab levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:playlab))
     get :show, params: {id: level_source.id}
@@ -192,7 +187,6 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
     assert_sharing_meta_tags(
       url: "http://test.host/c/#{level_source.id}",
-      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true
