@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_17_121759) do
+ActiveRecord::Schema.define(version: 2022_01_12_004019) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1650,7 +1650,6 @@ ActiveRecord::Schema.define(version: 2021_12_17_121759) do
     t.boolean "hidden", default: false, null: false
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
-    t.boolean "code_review_enabled", default: true
     t.text "properties"
     t.string "participant_type", default: "student", null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
