@@ -1793,12 +1793,12 @@ ro:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Flori
-            '"hearts"': Inimi
+            '"brick"': cărămidă
+            '"fire"': foc
+            '"hearts"': inimi
             '"iceCream"': Îngheţată
-            '"rainbow"': Curcubeu
-            '"stars"': Stele
-            '"waves"': Valuri
+            '"rainbow"': curcubeu
+            '"stars"': stele
       Poetry_addLine:
         text: adaugă rând {LINE}
       Poetry_animateText:
@@ -1825,9 +1825,11 @@ ro:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calm
             '"sound://category_nature/steady_campfire_loop.mp3"': Foc de tabără
             '"sound://category_nature/rain_loop.mp3"': Burniță
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': pădure
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Bântuit
             '"sound://category_background/inside_plane.mp3"': Murmurat
             '"sound://category_loops/red_flag_loop1.mp3"': Misiune
+            '"sound://category_nature/summer_night_loop.mp3"': noapte
             '"sound://category_background/repitition.mp3"': Călărit
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Încet
       Poetry_playSound:
@@ -1842,7 +1844,6 @@ ro:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Eșec
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fâlfâit
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Săritură
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lumină
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scanare
             '"sound://category_background/typewriter.mp3"': Mașină de scris
@@ -1859,30 +1860,30 @@ ro:
         text: setează fundalul în {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Culori
-            '"squiggles"': Mâzgălituri
-            '"space"': Spaţiu
-            '"stars"': Stele
+            '"blooming"': Înflorit
+            '"bubbles"': Baloane
+            '"clouds"': Înnorat
+            '"confetti"': Confeti
             '"darkCircles"': Atenuare
             '"fadeColors"': Glazurat
-            '"blooming"': Înflorit
+            '"hearts"': inimi
+            '"space"': Spaţiu
+            '"rain"': ploaie
             '"ripples"': Ondulații
-            '"clouds"': Înnorat
-            '"rain"': Ploaie
-            '"bubbles"': Baloane
-            '"confetti"': Confeti
-            '"hearts"': Inimi colorate
+            '"colors"': Culori
+            '"stars"': Stele
+            '"squiggles"': Mâzgălituri
           PALETTE:
-            '"rainbow"': Curcubeu
-            '"grayscale"': Cenușii
-            '"sky"': Cer
+            '"autumn"': Toamnă
             '"sunrise"': Zori
             '"sunset"': Amurg
+            '"grayscale"': Cenușii
+            '"rainbow"': curcubeu
+            '"roses"': Trandafiri
+            '"sky"': Cer
             '"spring"': Primăvară
             '"summer"': Vară
-            '"autumn"': Toamnă
             '"winter"': Iarnă
-            '"roses"': Trandafiri
       Poetry_setBackgroundImageAs:
         text: setează fundalul cu {IMG}
       Poetry_setFont:
@@ -1890,23 +1891,23 @@ ro:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Bold
+            '"Courier"': Courier
+            '"Cursive"': Scris de mână
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Bold
-            '"Impact"': Impact
-            '"Cursive"': Scris de mână
       Poetry_setFontColor:
         text: stabilește culoarea fontului{FILL}
       Poetry_setForegroundEffect:
         text: realizează efectul {EFFECT}
         options:
           EFFECT:
-            '"rain"': Ploaie
             '"bubbles"': Baloane
-            '"hearts"': Inimi colorate
-            '"emojis"': Emoji-uri Vesele
             '"confetti"': Confeti
+            '"hearts"': inimi
+            '"emojis"': Emoji-uri Vesele
+            '"rain"': ploaie
             '"starburst"': Accelerare
             '"glass"': Cioburi de Sticlă
             '"twinkling"': Licărire
@@ -1924,31 +1925,21 @@ ro:
         options:
           EFFECT:
             '"fade"': atenuează
-            '"typewriter"': mașină de scris
             '"flyLeft"': zboară de la stânga
             '"flyRight"': zboară de la dreapta
             '"flyTop"': zboară de sus
             '"flyBottom"': zboară de jos
+            '"typewriter"': mașină de scris
       Poetry_setTitle:
         text: stabilește titlul {TITLE}
       Poetry_showText:
         text: arată text
       Poetry_startBehavior:
         text: spiridușul {ANIMATION_NAME} începe {BEHAVIOR}
-        options:
-          BEHAVIOR:
-            moving_north_and_looping: formează bucle la nord
-            moving_south_and_looping: formează bucle la sud
-            moving_east_and_looping: formează bucle la est
-            moving_west_and_looping: formează bucle la vest
       Poetry_stopBehavior:
         text: spiridușul {ANIMATION_NAME} oprește {BEHAVIOR}
         options:
           BEHAVIOR:
-            moving_north_and_looping: formează bucle la nord
-            moving_south_and_looping: formează bucle la sud
-            moving_east_and_looping: formează bucle la est
-            moving_west_and_looping: formează bucle la vest
             '"all"': "--toate comportamentele--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

@@ -180,6 +180,7 @@ zh-CN:
     email_preference_yes: 对
     email_preference_no: 不
     email_preference_required: 你必须指定一个电子邮件地址。
+    share_teacher_email_reg_partner_question: 您是否希望我们与您所在州的[Code.org区域合作伙伴](%{cdo_regional_partner_desc})共享您的联系信息，以便他们向您告知当地的专业开发、资源和活动？
     share_teacher_email_reg_partner_preference_yes: 对
     share_teacher_email_reg_partner_preference_no: 不
     share_teacher_email_reg_partner_preference_required: 你必须指定一个电子邮件地址。
@@ -404,6 +405,8 @@ zh-CN:
       minecraft_hero: "《我的世界》英雄"
       playlab: 游戏实验室
       playlab_k1: 剧本实验室（学龄前）
+      poetry: 诗歌
+      poetry_hoc: 诗歌艺术
       scratch: Scratch
       sports: 运动
       spritelab: 精灵图实验室
@@ -426,6 +429,7 @@ zh-CN:
       prizes_link: 更多信息
   teacher:
     answer: 回答
+    dashboard: 教师的仪表板
     for_teachers_only: 仅限教师
     title:
       one: 你的老师：
@@ -1021,6 +1025,7 @@ zh-CN:
       school: 学校
       school_name: 学校名称
       school_city: 学校所在城市
+      school_city_district: 学校城市/区
       school_country: 学校所在国家
       colombian_school_city: 学校所在城市
       colombian_school_municipality: 学校政府

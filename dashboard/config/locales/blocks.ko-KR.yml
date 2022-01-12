@@ -1789,12 +1789,14 @@ ko:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': 벽돌
+            '"fire"': 불
             '"flowers"': 꽃
             '"hearts"': 하트
             '"iceCream"': 아이스크림
-            '"rainbow"': 무지개
+            '"leaves"': 잎
+            '"rainbow"': 비
             '"stars"': 별
-            '"waves"': 파도
       Poetry_addLine:
         text: 선 {LINE} 추가
       Poetry_animateText:
@@ -1822,10 +1824,14 @@ ko:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 차분한
             '"sound://category_nature/steady_campfire_loop.mp3"': 캠프파이어
             '"sound://category_nature/rain_loop.mp3"': 이슬비
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 숲
             '"sound://category_loops/faultering_desicion_loop1.mp3"': 귀신 들린
             '"sound://category_background/inside_plane.mp3"': 웅웅
             '"sound://category_loops/red_flag_loop1.mp3"': 임무
+            '"sound://category_nature/summer_night_loop.mp3"': 밤
+            '"sound://category_background/ocean_waves.mp3"': 바다
             '"sound://category_background/repitition.mp3"': 라이딩
+            '"sound://category_background/wavering_wind.mp3"': 잠 자는
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': 천천히
       Poetry_playSound:
         text: Playsound {SOUND}
@@ -1857,30 +1863,31 @@ ko:
         text: 배경을 {EFFECT} {PALETTE}에 설정
         options:
           EFFECT:
-            '"colors"': 색상
-            '"squiggles"': 구불구불
-            '"space"': 우주
-            '"stars"': 별
+            '"blooming"': 만발한
+            '"bubbles"': 거품
+            '"clouds"': 흐림
+            '"confetti"': 색종이
             '"darkCircles"': 페이딩
             '"fadeColors"': 서리가 내린
-            '"blooming"': 만발한
-            '"ripples"': 물결
-            '"clouds"': 흐림
+            '"hearts"': 하트
+            '"space"': 우주
             '"rain"': 비
-            '"bubbles"': 거품
-            '"confetti"': 색종이
-            '"hearts"': 형형색색 하트
+            '"ripples"': 물결
+            '"colors"': 색상
+            '"stars"': 별
+            '"squiggles"': 구불구불
           PALETTE:
-            '"rainbow"': 무지개
-            '"grayscale"': 회색
-            '"sky"': 하늘
+            '"autumn"': 가을
             '"sunrise"': 새벽
             '"sunset"': 황혼
+            '"grayscale"': 회색
+            '"ocean"': 바다
+            '"rainbow"': 비
+            '"roses"': 장미
+            '"sky"': 하늘
             '"spring"': 봄
             '"summer"': 여름
-            '"autumn"': 가을
             '"winter"': 겨울
-            '"roses"': 장미
       Poetry_setBackgroundImageAs:
         text: 배경을 {IMG}으로 설정
       Poetry_setFont:
@@ -1888,23 +1895,23 @@ ko:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: 텍스트 색상 {FILL} 설정
       Poetry_setForegroundEffect:
         text: "{EFFECT} 효과 연출"
         options:
           EFFECT:
-            '"rain"': 비
             '"bubbles"': 거품
-            '"hearts"': 형형색색 하트
-            '"emojis"': 해피 이모티콘
             '"confetti"': 색종이
+            '"hearts"': 하트
+            '"emojis"': 해피 이모티콘
+            '"rain"': 비
             '"starburst"': 스타버스트
             '"glass"': 산산조각나는 유리
             '"twinkling"': 반짝거림
@@ -1920,11 +1927,11 @@ ko:
         options:
           EFFECT:
             '"fade"': 페이드
-            '"typewriter"': 타입라이터
             '"flyLeft"': 왼쪽에서 날기
             '"flyRight"': 오른쪽에서 날기
             '"flyTop"': 위쪽에서 날기
             '"flyBottom"': 아래쪽에서 날기
+            '"typewriter"': 타입라이터
       Poetry_setTitle:
         text: 제목 {TITLE} 설정
       Poetry_showText:
@@ -1933,28 +1940,20 @@ ko:
         text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 시작합니다 '
         options:
           BEHAVIOR:
-            growing: 성장
-            jittering: 지터링
-            moving_north_and_looping: 북쪽으로 반복
-            moving_south_and_looping: 남쪽으로 반복
-            moving_east_and_looping: 동쪽으로 반복
-            moving_west_and_looping: 서쪽으로 반복
-            spinning_left: 왼쪽으로 회전
-            spinning_right: 오른쪽으로 회전
-            wandering: 배회
+            '"growing"': 성장
+            '"jittering"': 지터링
+            '"spinning_left"': 왼쪽으로 회전
+            '"spinning_right"': 오른쪽으로 회전
+            '"wandering"': 배회
       Poetry_stopBehavior:
         text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 멈춥니다 '
         options:
           BEHAVIOR:
-            growing: 성장
-            jittering: 지터링
-            moving_north_and_looping: 북쪽으로 반복
-            moving_south_and_looping: 남쪽으로 반복
-            moving_east_and_looping: 동쪽으로 반복
-            moving_west_and_looping: 서쪽으로 반복
-            spinning_left: 왼쪽으로 회전
-            spinning_right: 오른쪽으로 회전
-            wandering: 배회
+            '"growing"': 성장
+            '"jittering"': 지터링
+            '"spinning_left"': 왼쪽으로 회전
+            '"spinning_right"': 오른쪽으로 회전
+            '"wandering"': 배회
             '"all"': "--모든 행동--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

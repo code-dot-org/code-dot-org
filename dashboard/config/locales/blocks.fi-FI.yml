@@ -1590,47 +1590,52 @@ fi:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Kukat
-            '"hearts"': Sydämet
+            '"hearts"': sydämet
             '"iceCream"': Jäätelö
-            '"rainbow"': Sateenkaari
-            '"stars"': Äänet
-            '"waves"': Aallot
+            '"rainbow"': sateenkaari
+            '"stars"': Tähdet
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': sade
       Poetry_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': yö
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': hidas
       Poetry_playSound:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Vaalea
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hyppää
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Värit
-            '"space"': Avaruus
-            '"stars"': Äänet
-            '"ripples"': Aaltoilu
-            '"rain"': Sade
             '"bubbles"': Kuplat
+            '"clouds"': pilvinen
             '"confetti"': Konfetti
-            '"hearts"': Värikkäät sydämet
+            '"hearts"': sydämet
+            '"space"': Avaruus
+            '"rain"': sade
+            '"ripples"': Aaltoilu
+            '"colors"': Värit
+            '"stars"': Äänet
           PALETTE:
-            '"rainbow"': Sateenkaari
+            '"rainbow"': sateenkaari
+            '"winter"': talvi
       Poetry_setBackgroundImageAs:
         text: aseta tausta {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Sade
             '"bubbles"': Kuplat
-            '"hearts"': Värikkäät sydämet
             '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
             '"starburst"': Tähtisäteet
       Poetry_whenLineShows:
         options:

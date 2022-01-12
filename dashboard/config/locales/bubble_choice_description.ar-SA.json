@@ -19,7 +19,26 @@
         "helloworld_food_costumes": "تعلم كيفية تغيير ظهور الكائنات.",
         "helloworld_food_sounds": "تعلم كيفية تشغيل الأصوات.",
         "helloworld_retro_costumes": "تعلم كيفية تغيير ظهور الكائنات.",
-        "helloworld_retro_sounds": "تعلم كيفية تشغيل الأصوات."
+        "helloworld_retro_sounds": "تعلم كيفية تشغيل الأصوات.",
+        "courseC_artist_prog7_2021": "إن رقعة اسم هذا الحيوان الأليف لها شكل مميز!",
+        "courseC_artist_prog_challenge2a_2021": "ساعدني لأرسم الخطوط الصفراء على هذا الطريق!",
+        "courseF_apps_aquarium": "املأ حوض السمك الخاص بك بأشياء مختلفة.",
+        "courseF_apps_card": "سيسألك هذا البرنامج مجموعة من الأسئلة ثم سيصنع رسالة عيد ميلاد خصيصاً لك!",
+        "courseF_apps_chatbot": "سيسألك هذا الروبوت عدة أسئلة ويتذكر ما تكتب! اكتب إجابتك وقم بمحادثة مع X-9!",
+        "courseF_apps_collector": "اجمع الأشياء بأسرع ما تستطيع!",
+        "courseF_apps_madlib": "سيطلب منك هذا البرنامج إدخال عدة كلمات ثم سيستخدمها ليخبرك قصة ساذجة!",
+        "courseF_apps_pet": "اسحب الأشياء باتجاه الكلب وراقب كيف سيتفاعل!",
+        "courseF_editable_madlib": "سيطلب منك هذا البرنامج إدخال عدة كلمات ثم سيستخدمها ليخبرك قصة ساذجة!",
+        "courseF_place_fruit": "الفراولة كبيرة جداً! تدرب على تغيير حجم الكائنات.",
+        "courseF_sprites_behaviors": "امنح سلوكاً للكائن.",
+        "courseF_sprites_clouds": "تدرب على استخدام السلوكيات.",
+        "courseF_sprites_desert": "اصنع مشهداً. تدرب على تحضير الكائنات واختيار مواقعهم.",
+        "courseF_sprites_make": "تدرب على تحضير الكائنات.",
+        "courseF_sprites_moreSprites": "تدرب على تحضير الكائنات واختيار مواقعهم.",
+        "courseF_sprites_positioning": "تدرب على تحضير الكائنات واختيار مواقعهم.",
+        "courseF_sprites_properties": "تعلم كيفية تغيير حجم الكائنات.",
+        "courseF_sprites_ship": "تدرب على تحريك الكائنات واستخدام السلوكيات.",
+        "ramp_artist_loops4_2021": "أنشئ هذا النمط للنجمة من خلال تكرار متسلسلة من القطع البرمجية."
       }
     }
   }

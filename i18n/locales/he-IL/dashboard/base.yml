@@ -375,6 +375,7 @@ he:
       prizes_link: 'מידע נוסף'
   teacher:
     answer: "תשובה\n"
+    dashboard: 'לוח בקרה למורה'
     for_teachers_only: למורים בלבד
     title:
       one: 'המורה שלך :'
