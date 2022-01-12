@@ -14,7 +14,7 @@ export default class VersionRow extends React.Component {
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool.isRequired,
     isSelectedVersion: PropTypes.bool.isRequired,
-    isProjectEditor: PropTypes.bool.isRequired,
+    isReadOnly: PropTypes.bool.isRequired,
     onChoose: PropTypes.func
   };
 
@@ -53,7 +53,7 @@ export default class VersionRow extends React.Component {
           {msg.latestVersion()}
         </div>
       );
-    } else if (this.props.isProjectEditor) {
+    } else if (!this.props.isReadOnly) {
       buttons.push(
         <button
           key={'restore-version-button'}

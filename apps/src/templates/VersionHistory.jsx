@@ -16,7 +16,7 @@ export default class VersionHistory extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
     selectedVersion: PropTypes.string,
-    isProjectEditor: PropTypes.bool.isRequired
+    isReadOnly: PropTypes.bool.isRequired
   };
 
   /**
@@ -190,7 +190,7 @@ export default class VersionHistory extends React.Component {
                   ? version.versionId === this.props.selectedVersion
                   : version.isLatest
               }
-              isProjectEditor={this.props.isProjectEditor}
+              isReadOnly={this.props.isReadOnly}
               onChoose={this.onChooseVersion.bind(this, version.versionId)}
             />
           );
@@ -203,7 +203,7 @@ export default class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                {this.props.isProjectEditor && (
+                {this.props.isReadOnly && (
                   <tr>
                     <td>
                       <p>{i18n.versionHistory_initialVersion_label()}</p>
