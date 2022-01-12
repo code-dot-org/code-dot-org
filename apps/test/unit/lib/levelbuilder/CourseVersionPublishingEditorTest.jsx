@@ -30,8 +30,74 @@ describe('CourseVersionPublishedStateSelector', () => {
       updatePublishedState,
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
+      initialPublishedState: PublishedState.beta,
       publishedState: PublishedState.beta
     };
+  });
+
+  it('published state dropdown shows only available published states when course is in development', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        initialPublishedState={PublishedState.in_development}
+        publishedState={PublishedState.in_development}
+      />
+    );
+    expect(
+      wrapper.find('.publishedStateSelector').find('option').length
+    ).to.equal(5);
+  });
+
+  it('published state dropdown shows only available published states when course is pilot', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        initialPublishedState={PublishedState.pilot}
+        publishedState={PublishedState.pilot}
+      />
+    );
+    expect(
+      wrapper.find('.publishedStateSelector').find('option').length
+    ).to.equal(4);
+  });
+
+  it('published state dropdown shows only available published states when course is beta', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        initialPublishedState={PublishedState.beta}
+        publishedState={PublishedState.beta}
+      />
+    );
+    expect(
+      wrapper.find('.publishedStateSelector').find('option').length
+    ).to.equal(3);
+  });
+
+  it('published state dropdown shows only available published states when course is preview', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        initialPublishedState={PublishedState.preview}
+        publishedState={PublishedState.preview}
+      />
+    );
+    expect(
+      wrapper.find('.publishedStateSelector').find('option').length
+    ).to.equal(2);
+  });
+
+  it('published state dropdown shows only available published states when course is stable', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        initialPublishedState={PublishedState.stable}
+        publishedState={PublishedState.stable}
+      />
+    );
+    expect(
+      wrapper.find('.publishedStateSelector').find('option').length
+    ).to.equal(1);
   });
 
   it('pilot input field shows if published state is pilot', () => {
