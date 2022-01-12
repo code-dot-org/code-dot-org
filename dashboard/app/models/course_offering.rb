@@ -15,8 +15,6 @@
 #
 
 class CourseOffering < ApplicationRecord
-  include Curriculum::AssignableCourseOffering
-
   has_many :course_versions
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -71,23 +69,48 @@ class CourseOffering < ApplicationRecord
     course_versions.any?(&:pl_course?)
   end
 
-  def launched?
+  def any_versions_launched?
     course_versions.any?(&:launched?)
   end
 
-  def in_development?
+  def any_versions_in_development?
     course_versions.any?(&:in_development?)
   end
 
-  def has_pilot_access?(user)
+  def any_version_has_pilot_access?(user)
     course_versions.any? {|cv| cv.has_pilot_access?(user)}
+  end
+
+  def self.assignable_course_offerings(user)
+    CourseOffering.all.select {|co| co.assignable?(user)}
+  end
+
+  def self.assignable_course_offerings_info(user)
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user)}
+  end
+
+  def self.assignable_pl_course_offerings(user)
+    assignable_course_offerings(user).select(&:pl_course?)
+  end
+
+  def self.assignable_pl_course_offerings_info(user)
+    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user)}
+  end
+
+  def assignable?(user)
+    return false unless can_be_instructor?(user)
+    return true if any_versions_launched?
+    return true if Script.has_any_pilot_access?(user) && any_version_has_pilot_access?(user)
+    return true if user.permission?(UserPermission::LEVELBUILDER) && any_versions_in_development?
+
+    false
   end
 
   def summarize_for_assignment_dropdown(user)
     {
       id: id,
       display_name: display_name,
-      course_versions: course_versions.select {|cv| cv.item_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user)}
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user)}
     }
   end
 end
