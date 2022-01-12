@@ -70,12 +70,7 @@ export default class CourseVersionPublishingEditor extends Component {
         PublishedState.preview,
         PublishedState.stable
       ],
-      pilot: [
-        PublishedState.pilot,
-        PublishedState.beta,
-        PublishedState.preview,
-        PublishedState.stable
-      ],
+      pilot: [PublishedState.pilot],
       beta: [
         PublishedState.beta,
         PublishedState.preview,

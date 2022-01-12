@@ -46,6 +46,41 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(5);
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(0)
+        .props().value
+    ).to.equal('in_development');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(1)
+        .props().value
+    ).to.equal('pilot');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(2)
+        .props().value
+    ).to.equal('beta');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(3)
+        .props().value
+    ).to.equal('preview');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(4)
+        .props().value
+    ).to.equal('stable');
   });
 
   it('published state dropdown shows only available published states when course is pilot', () => {
@@ -58,7 +93,13 @@ describe('CourseVersionPublishedStateSelector', () => {
     );
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
-    ).to.equal(4);
+    ).to.equal(1);
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .props().value
+    ).to.equal('pilot');
   });
 
   it('published state dropdown shows only available published states when course is beta', () => {
@@ -72,6 +113,27 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(3);
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(0)
+        .props().value
+    ).to.equal('beta');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(1)
+        .props().value
+    ).to.equal('preview');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(2)
+        .props().value
+    ).to.equal('stable');
   });
 
   it('published state dropdown shows only available published states when course is preview', () => {
@@ -85,6 +147,20 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(2);
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(0)
+        .props().value
+    ).to.equal('preview');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(1)
+        .props().value
+    ).to.equal('stable');
   });
 
   it('published state dropdown shows only available published states when course is stable', () => {
@@ -98,6 +174,12 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(1);
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .props().value
+    ).to.equal('stable');
   });
 
   it('pilot input field shows if published state is pilot', () => {
