@@ -4,26 +4,6 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
-const availablePublishedStates = {
-  in_development: PublishedState,
-  pilot: {
-    pilot: 'pilot',
-    beta: 'beta',
-    preview: 'preview',
-    stable: 'stable'
-  },
-  beta: {
-    beta: 'beta',
-    preview: 'preview',
-    stable: 'stable'
-  },
-  preview: {
-    preview: 'preview',
-    stable: 'stable'
-  },
-  stable: {stable: 'stable'}
-};
-
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
     pilotExperiment: PropTypes.string,
@@ -73,6 +53,39 @@ export default class CourseVersionPublishingEditor extends Component {
   onFamilyNameSelect = e => {
     this.setState({selectedFamilyName: e.target.value});
     this.props.updateFamilyName(e.target.value);
+  };
+
+  /*
+   * We only want a course to be able to progress
+   * forward in published states. So as the editor updates the
+   * published start of the course the options to update in the
+   * future should get smaller.
+   */
+  getAvailablePublishedStates = currentState => {
+    const availablePublishedStates = {
+      in_development: [
+        PublishedState.in_development,
+        PublishedState.pilot,
+        PublishedState.beta,
+        PublishedState.preview,
+        PublishedState.stable
+      ],
+      pilot: [
+        PublishedState.pilot,
+        PublishedState.beta,
+        PublishedState.preview,
+        PublishedState.stable
+      ],
+      beta: [
+        PublishedState.beta,
+        PublishedState.preview,
+        PublishedState.stable
+      ],
+      preview: [PublishedState.preview, PublishedState.stable],
+      stable: [PublishedState.stable]
+    };
+
+    return availablePublishedStates[currentState];
   };
 
   render() {
@@ -179,8 +192,8 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
-            {Object.values(
-              availablePublishedStates[this.props.initialPublishedState]
+            {this.getAvailablePublishedStates(
+              this.props.initialPublishedState
             ).map(state => (
               <option key={state} value={state}>
                 {state}
