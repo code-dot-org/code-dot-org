@@ -3,6 +3,7 @@ import React from 'react';
 import msg from '@cdo/locale';
 import classnames from 'classnames';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import queryString from 'query-string';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -26,34 +27,36 @@ export default class VersionRow extends React.Component {
   }
 
   getUrlAttributes() {
-    const user_id = queryParams('user_id');
+    const userId = queryParams('user_id');
     const viewAs = queryParams('viewAs');
-    return (
-      (this.props.isLatest ? '' : '?version=' + this.props.versionId) +
-      (user_id ? `&user_id=${user_id}` : '') +
-      (viewAs ? `&viewAs=${viewAs}` : '')
-    );
+    const params = {};
+    if (viewAs) {
+      params.viewAs = viewAs;
+    }
+    if (userId) {
+      params.user_id = userId;
+    }
+    if (!this.props.isLatest) {
+      params.version = this.props.versionId;
+    }
+    return queryString.stringify(params);
   }
 
   render() {
     let buttons = [];
     if (this.props.isLatest) {
-      // this is the placeholder for the latest version (can't be resolved)
       buttons.push(
-        <button
-          key={buttons.length}
-          type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default'}}
+        <div
+          key={'latest-version-message'}
+          style={{marginRight: '20px', fontSize: 18}}
         >
           {msg.latestVersion()}
-        </button>
+        </div>
       );
     } else if (this.props.isProjectEditor) {
       buttons.push(
         <button
-          key={buttons.length}
+          key={'restore-version-button'}
           type="button"
           className="btn-info"
           onClick={this.props.onChoose}
@@ -66,8 +69,10 @@ export default class VersionRow extends React.Component {
     if (!this.props.isSelectedVersion) {
       buttons.push(
         <a
-          key={'latest-version-button'}
-          href={location.origin + location.pathname + this.getUrlAttributes()}
+          key={'not-selected-version-button'}
+          href={
+            location.origin + location.pathname + '?' + this.getUrlAttributes()
+          }
           target="_blank"
           rel="noopener noreferrer"
         >

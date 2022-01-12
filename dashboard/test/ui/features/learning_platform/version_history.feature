@@ -1,8 +1,7 @@
 @no_ie
-@no_mobile
 Feature: Version History in Teacher View
 
-Scenario: Teacher can view versions
+Scenario: Teacher can view student versions
   Given I create an authorized teacher-associated student named "Ron"
   Then I sign in as "Ron"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
@@ -33,7 +32,20 @@ Scenario: Teacher can view versions
   Then ".versionRow:nth-child(2) p" contains the saved text
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
 
-  # When I log in as the teacher, I can view and restore my own versions
+  # Teacher cannot restore a version
+  Then I sign in as "Teacher_Ron"
+  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
+  And I wait until element ".student-table" is visible
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I wait for the page to fully load
+  And I press "versions-header"
+  And I wait until element "button:contains(Latest Version)" is visible
+  And element ".versionRow:nth-child(0) .btn-info" does not contain text "Restore this Version"
+  And element ".versionRow:nth-child(1) .btn-info" does not contain text "Restore this Version"
+  And element ".versionRow:nth-child(2) .btn-info" does not contain text "Restore this Version"
+
+Scenario: Teacher can view own versions
+  Given I create an authorized teacher-associated student named "Ron"
   Then I sign in as "Teacher_Ron"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
   And I dismiss the teacher panel
@@ -58,14 +70,3 @@ Scenario: Teacher can view versions
   And I wait until element "button:contains(Latest Version)" is visible
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
   And I close the dialog
-
-  # But when I view Ron's versions, I cannot restore
-  And I click selector ".teacher-panel > .show-handle > .fa-chevron-left"
-  And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait for the page to fully load
-  And I press "versions-header"
-  And I wait until element "button:contains(Latest Version)" is visible
-  And element ".versionRow:nth-child(0) .btn-info" does not contain text "Restore this Version"
-  And element ".versionRow:nth-child(1) .btn-info" does not contain text "Restore this Version"
-  And element ".versionRow:nth-child(2) .btn-info" does not contain text "Restore this Version"
