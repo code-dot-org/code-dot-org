@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-01-07 14:51:38 UTC",
+    "serialized_at": "2022-01-12 19:52:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -30,26 +30,26 @@
   },
   "lesson_groups": [
     {
-      "key": "ramp_up",
-      "user_facing": true,
-      "position": 1,
-      "properties": {
-        "display_name": "Sprites"
-      },
-      "seeding_key": {
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
       "key": "lessonGroup-7",
       "user_facing": true,
-      "position": 2,
+      "position": 1,
       "properties": {
         "display_name": "Digital Citizenship"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "ramp_up",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Sprites"
+      },
+      "seeding_key": {
+        "lesson_group.key": "ramp_up",
         "script.name": "coursef-2022"
       }
     },
@@ -104,12 +104,32 @@
   ],
   "lessons": [
     {
-      "key": "Introducing Sprite Lab",
-      "name": "Introducing Sprite Lab",
+      "key": "The Power of Words",
+      "name": "The Power of Words",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAs kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.",
+        "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare a long string (or rope) and paper for class.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.",
+        "student_overview": "Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "Introducing Sprite Lab",
+      "name": "Introducing Sprite Lab",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
         "overview": "In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.\n",
         "preparation": "- Determine how students will login to Code.org.\n- If needed, create Code.org accounts for students.\n- Assign Introducing Sprite Lab to students.\n- Print copies of ***Exploring Apps** worksheet (or post the digital version to your LMS).",
@@ -125,10 +145,10 @@
     {
       "key": "Making Sprites",
       "name": "Making Sprites",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
         "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. ",
         "preparation": "Play through the levels and review the ***lesson slides**.",
@@ -144,10 +164,10 @@
     {
       "key": "Sprites in Action",
       "name": "Sprites in Action",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. ",
         "preparation": "Play through the levels and review the lesson slides.",
@@ -163,10 +183,10 @@
     {
       "key": "Mini-Project: Virtual Pet",
       "name": "Mini-Project: Virtual Pet",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.",
@@ -177,26 +197,6 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Virtual Pet",
         "lesson_group.key": "ramp_up",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "key": "The Power of Words",
-      "name": "The Power of Words",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
-      "properties": {
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAs kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.",
-        "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare a long string (or rope) and paper for class.",
-        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.",
-        "student_overview": "Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "lessonGroup-7",
         "script.name": "coursef-2022"
       }
     },
@@ -546,6 +546,75 @@
   ],
   "lesson_activities": [
     {
+      "key": "f375918e-bc0a-4cdd-8211-e4afb6da0107",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up: Same Word. Different Meaning."
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f375918e-bc0a-4cdd-8211-e4afb6da0107",
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "4f657075-930c-48b8-a259-39a494b4b454",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Watch: The Power of Words"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f657075-930c-48b8-a259-39a494b4b454",
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "41e4cbe2-9896-427f-a50e-faadee2d5925",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Investigate: What's the Problem?"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41e4cbe2-9896-427f-a50e-faadee2d5925",
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "1cbfffa4-1fbf-4997-ade7-407abe77b439",
+      "position": 4,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up: Crossing the Line"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1cbfffa4-1fbf-4997-ade7-407abe77b439",
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "13651361-4d75-4dbb-b465-19a6d106836c",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "13651361-4d75-4dbb-b465-19a6d106836c",
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
       "key": "37c1790c-e4c7-4ea1-96f4-6b10205d37b2",
       "position": 1,
       "properties": {
@@ -723,75 +792,6 @@
         "lesson_activity.key": "e23bc18a-bd5b-4d05-bc93-66f22306fc13",
         "lesson.key": "Mini-Project: Virtual Pet",
         "lesson_group.key": "ramp_up",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "key": "f375918e-bc0a-4cdd-8211-e4afb6da0107",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up: Same Word. Different Meaning."
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f375918e-bc0a-4cdd-8211-e4afb6da0107",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "key": "4f657075-930c-48b8-a259-39a494b4b454",
-      "position": 2,
-      "properties": {
-        "duration": 35,
-        "name": "Watch: The Power of Words"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4f657075-930c-48b8-a259-39a494b4b454",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "key": "41e4cbe2-9896-427f-a50e-faadee2d5925",
-      "position": 3,
-      "properties": {
-        "duration": 15,
-        "name": "Investigate: What's the Problem?"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "41e4cbe2-9896-427f-a50e-faadee2d5925",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "key": "1cbfffa4-1fbf-4997-ade7-407abe77b439",
-      "position": 4,
-      "properties": {
-        "duration": 10,
-        "name": "Wrap Up: Crossing the Line"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1cbfffa4-1fbf-4997-ade7-407abe77b439",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "key": "13651361-4d75-4dbb-b465-19a6d106836c",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "13651361-4d75-4dbb-b465-19a6d106836c",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "lessonGroup-7",
         "script.name": "coursef-2022"
       }
     },
@@ -1645,6 +1645,63 @@
   ],
   "activity_sections": [
     {
+      "key": "bbd1a2d0-bab0-417f-9ee1-3c8af4fb8435",
+      "position": 1,
+      "properties": {
+        "description": "* **empathy**: to imagine the feelings that someone else is experiencing\n* **interpret**: to understand something based on our point of view\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Project** [Slide 4](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3da8846a99_1_0) and ask students: *Imagine when you walked in, I said to you* [in a friendly tone, with a big smile] *\"Hello!\" Which emoji would fit?*\n\nHave students show their answer by holding up fingers (1, 2, 3, or 4). If anyone holds up a number other than 1, ask them to share out why.\n\n**Repeat** this two more times, saying *Hello* differently each time: once with an angry tone and a scowl, and once with a nervous or scared tone.\n\n**Project** [Slide 5](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3da8846a99_2_13) and ask: *What about if you're just reading it? How does it make you feel now?*\n\nPoint out how when something is just in text, it can be even more difficult to interpret what someone means. Explain that their responses might be different depending on who they are because we all interpret the world a little differently. Clarify that interpret means *to understand something based on our point of view.* ([Slide 6](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_4))\n\n**Say**: *Because words can be interpreted differently by different people, it's important to think about the words we use and how they affect people. We might say something just to be funny, but someone might take it seriously, and it might hurt their feelings. This can happen in person, and it can also happen online. It may even happen more online, because the words are just text -- we're not actually face-to-face with other people.*",
+        "name": "Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "bbd1a2d0-bab0-417f-9ee1-3c8af4fb8435",
+        "lesson_activity.key": "f375918e-bc0a-4cdd-8211-e4afb6da0107"
+      }
+    },
+    {
+      "key": "c46c15fc-4a00-4919-add8-a92f4c5bbf5b",
+      "position": 1,
+      "properties": {
+        "description": "**Ask**: *Who has heard of the saying \"Sticks and stones may break my bones, but words can never hurt me\"?*\n\nInvite students to respond. Answers will vary. Follow up by asking students if they think the saying is true.\n\n**Project** [Slide 7](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_117) and say: *We're going to watch a video now called \"The Power of Words.\" As we watch, continue to think about whether that statement is true or not.*\n\nShow the video [The Power of Words](https://www.commonsense.org/education/videos/the-power-of-words) and then call on students to share out what it says about whether the statement is true or not. Emphasize that sometimes it is hard to ignore what someone is saying when it's a mean name. Names CAN make you feel sad or hurt.\n\n**Ask**: *Why do you think those other players said those things to Guts?* ([Slide 8](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3e3f96c340_0_0))\n\nInvite students to respond. Answers will vary, but possible reasons include *they were trying to joke around* or *they feel badly themselves and are taking it out on someone*.\n\n**Ask**: *What does Guts do in response to the mean words?*\n\nInvite students to respond and clarify that Guts talked to someone he trusted, who was able to empathize with him and give him some good advice. Define empathy as *imagining the feelings that someone else is experiencing*. ([Slide 9](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_109))\n\n**Project** [Slide 10](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_157) and review the acronym S-T-O-P for responding to mean words online."
+      },
+      "seeding_key": {
+        "activity_section.key": "c46c15fc-4a00-4919-add8-a92f4c5bbf5b",
+        "lesson_activity.key": "4f657075-930c-48b8-a259-39a494b4b454"
+      }
+    },
+    {
+      "key": "4c37fcfa-dc78-4c3f-918b-cf5507ceeb7b",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute** the [Words Can Hurt Student Handout](https://drive.google.com/open?id=1G7urBAgM9G3D4zI4KVRgN-yX-Q4qAyb_HWEHsnREl3M) and read the directions aloud. Allow pairs five minutes to complete the activity.\n\n**Invite** pairs to share their answers. Refer to the [Teacher Version](https://drive.google.com/open?id=1kAcaaYor5vegqj2cncK5FOgFOeg2PtKUXWw-muodELE) for possible responses."
+      },
+      "seeding_key": {
+        "activity_section.key": "4c37fcfa-dc78-4c3f-918b-cf5507ceeb7b",
+        "lesson_activity.key": "41e4cbe2-9896-427f-a50e-faadee2d5925"
+      }
+    },
+    {
+      "key": "cc4310f3-fe2b-4dbe-8918-c60a4a3bb941",
+      "position": 1,
+      "properties": {
+        "description": "**Place** a string across the length of the classroom. Mark one half of the room \"OK.\" Mark the other half \"Not OK.\" Have students all stand on the OK side of the line.\n\n**Project** [Slide 11](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_106) and read the directions aloud.\n\n**Have** students read the statements on [Slides 12-15](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3e3f96c340_0_14). After each statement, allow time for students to move or stay. Call on students to explain their thinking. If possible, choose students from each side to debate reasons why the statement is or isn't okay.\n\nFor the examples where students say it's Not OK, follow-up by asking them what they could do if they received that message from someone.\n\n**Review** that kids like to go online to chat, watch videos, send messages, play games, and do homework. Sometimes people say mean or scary things. Messages that make people feel bad cross the line.\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy).",
+        "progression_name": "The Power of Words - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc4310f3-fe2b-4dbe-8918-c60a4a3bb941",
+        "lesson_activity.key": "1cbfffa4-1fbf-4997-ade7-407abe77b439"
+      }
+    },
+    {
+      "key": "50657113-1eed-4f19-b3bc-d842e94e67ac",
+      "position": 1,
+      "properties": {
+        "description": "Here are additional resources you can provide students to enhance their learning:\n\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw) \n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n* **Prepare** slips of paper with comments that say mildly unkind things, like:\n\n    * I can't believe you like superhero shows. Only first-graders do.\n    * You are weird.\n    * Why are you wearing THAT shirt?\n\n    <br>\n\n    Pass out one slip to each student and pair them up. Have students trade slips and read them silently. Then have them trade back and take turns saying the comment aloud to the other person. Ask them what the difference was between writing something not-so-nice and being accountable for what they were saying to someone's face. Emphasize that people sometimes hide behind the anonymity of their online activity. Remind students that if they wouldn't say something to another person's face, it's not OK to say it in their online activities."
+      },
+      "seeding_key": {
+        "activity_section.key": "50657113-1eed-4f19-b3bc-d842e94e67ac",
+        "lesson_activity.key": "13651361-4d75-4dbb-b465-19a6d106836c"
+      }
+    },
+    {
       "key": "8174a37a-6250-428d-b287-a069f66e24f6",
       "position": 1,
       "properties": {
@@ -2196,63 +2253,6 @@
       "seeding_key": {
         "activity_section.key": "09bc8a82-4703-4f2f-9646-be05efeea569",
         "lesson_activity.key": "e23bc18a-bd5b-4d05-bc93-66f22306fc13"
-      }
-    },
-    {
-      "key": "bbd1a2d0-bab0-417f-9ee1-3c8af4fb8435",
-      "position": 1,
-      "properties": {
-        "description": "* **empathy**: to imagine the feelings that someone else is experiencing\n* **interpret**: to understand something based on our point of view\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Project** [Slide 4](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3da8846a99_1_0) and ask students: *Imagine when you walked in, I said to you* [in a friendly tone, with a big smile] *\"Hello!\" Which emoji would fit?*\n\nHave students show their answer by holding up fingers (1, 2, 3, or 4). If anyone holds up a number other than 1, ask them to share out why.\n\n**Repeat** this two more times, saying *Hello* differently each time: once with an angry tone and a scowl, and once with a nervous or scared tone.\n\n**Project** [Slide 5](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3da8846a99_2_13) and ask: *What about if you're just reading it? How does it make you feel now?*\n\nPoint out how when something is just in text, it can be even more difficult to interpret what someone means. Explain that their responses might be different depending on who they are because we all interpret the world a little differently. Clarify that interpret means *to understand something based on our point of view.* ([Slide 6](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_4))\n\n**Say**: *Because words can be interpreted differently by different people, it's important to think about the words we use and how they affect people. We might say something just to be funny, but someone might take it seriously, and it might hurt their feelings. This can happen in person, and it can also happen online. It may even happen more online, because the words are just text -- we're not actually face-to-face with other people.*",
-        "name": "Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "bbd1a2d0-bab0-417f-9ee1-3c8af4fb8435",
-        "lesson_activity.key": "f375918e-bc0a-4cdd-8211-e4afb6da0107"
-      }
-    },
-    {
-      "key": "c46c15fc-4a00-4919-add8-a92f4c5bbf5b",
-      "position": 1,
-      "properties": {
-        "description": "**Ask**: *Who has heard of the saying \"Sticks and stones may break my bones, but words can never hurt me\"?*\n\nInvite students to respond. Answers will vary. Follow up by asking students if they think the saying is true.\n\n**Project** [Slide 7](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_117) and say: *We're going to watch a video now called \"The Power of Words.\" As we watch, continue to think about whether that statement is true or not.*\n\nShow the video [The Power of Words](https://www.commonsense.org/education/videos/the-power-of-words) and then call on students to share out what it says about whether the statement is true or not. Emphasize that sometimes it is hard to ignore what someone is saying when it's a mean name. Names CAN make you feel sad or hurt.\n\n**Ask**: *Why do you think those other players said those things to Guts?* ([Slide 8](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3e3f96c340_0_0))\n\nInvite students to respond. Answers will vary, but possible reasons include *they were trying to joke around* or *they feel badly themselves and are taking it out on someone*.\n\n**Ask**: *What does Guts do in response to the mean words?*\n\nInvite students to respond and clarify that Guts talked to someone he trusted, who was able to empathize with him and give him some good advice. Define empathy as *imagining the feelings that someone else is experiencing*. ([Slide 9](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_109))\n\n**Project** [Slide 10](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_157) and review the acronym S-T-O-P for responding to mean words online."
-      },
-      "seeding_key": {
-        "activity_section.key": "c46c15fc-4a00-4919-add8-a92f4c5bbf5b",
-        "lesson_activity.key": "4f657075-930c-48b8-a259-39a494b4b454"
-      }
-    },
-    {
-      "key": "4c37fcfa-dc78-4c3f-918b-cf5507ceeb7b",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute** the [Words Can Hurt Student Handout](https://drive.google.com/open?id=1G7urBAgM9G3D4zI4KVRgN-yX-Q4qAyb_HWEHsnREl3M) and read the directions aloud. Allow pairs five minutes to complete the activity.\n\n**Invite** pairs to share their answers. Refer to the [Teacher Version](https://drive.google.com/open?id=1kAcaaYor5vegqj2cncK5FOgFOeg2PtKUXWw-muodELE) for possible responses."
-      },
-      "seeding_key": {
-        "activity_section.key": "4c37fcfa-dc78-4c3f-918b-cf5507ceeb7b",
-        "lesson_activity.key": "41e4cbe2-9896-427f-a50e-faadee2d5925"
-      }
-    },
-    {
-      "key": "cc4310f3-fe2b-4dbe-8918-c60a4a3bb941",
-      "position": 1,
-      "properties": {
-        "description": "**Place** a string across the length of the classroom. Mark one half of the room \"OK.\" Mark the other half \"Not OK.\" Have students all stand on the OK side of the line.\n\n**Project** [Slide 11](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_106) and read the directions aloud.\n\n**Have** students read the statements on [Slides 12-15](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3e3f96c340_0_14). After each statement, allow time for students to move or stay. Call on students to explain their thinking. If possible, choose students from each side to debate reasons why the statement is or isn't okay.\n\nFor the examples where students say it's Not OK, follow-up by asking them what they could do if they received that message from someone.\n\n**Review** that kids like to go online to chat, watch videos, send messages, play games, and do homework. Sometimes people say mean or scary things. Messages that make people feel bad cross the line.\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy).",
-        "progression_name": "The Power of Words - Unplugged Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "cc4310f3-fe2b-4dbe-8918-c60a4a3bb941",
-        "lesson_activity.key": "1cbfffa4-1fbf-4997-ade7-407abe77b439"
-      }
-    },
-    {
-      "key": "50657113-1eed-4f19-b3bc-d842e94e67ac",
-      "position": 1,
-      "properties": {
-        "description": "Here are additional resources you can provide students to enhance their learning:\n\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw) \n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n* **Prepare** slips of paper with comments that say mildly unkind things, like:\n\n    * I can't believe you like superhero shows. Only first-graders do.\n    * You are weird.\n    * Why are you wearing THAT shirt?\n\n    <br>\n\n    Pass out one slip to each student and pair them up. Have students trade slips and read them silently. Then have them trade back and take turns saying the comment aloud to the other person. Ask them what the difference was between writing something not-so-nice and being accountable for what they were saying to someone's face. Emphasize that people sometimes hide behind the anonymity of their online activity. Remind students that if they wouldn't say something to another person's face, it's not OK to say it in their online activities."
-      },
-      "seeding_key": {
-        "activity_section.key": "50657113-1eed-4f19-b3bc-d842e94e67ac",
-        "lesson_activity.key": "13651361-4d75-4dbb-b465-19a6d106836c"
       }
     },
     {
@@ -4103,6 +4103,31 @@
   ],
   "script_levels": [
     {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PowerOfWords-Unplugged2022"
+        ],
+        "progression": "The Power of Words - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PowerOfWords-Unplugged2022"
+        ],
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursef-2022",
+        "activity_section.key": "cc4310f3-fe2b-4dbe-8918-c60a4a3bb941"
+      },
+      "level_keys": [
+        "PowerOfWords-Unplugged2022"
+      ]
+    },
+    {
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
@@ -4775,31 +4800,6 @@
       },
       "level_keys": [
         "Virtual Pet 82022"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "PowerOfWords-Unplugged2022"
-        ],
-        "progression": "The Power of Words - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PowerOfWords-Unplugged2022"
-        ],
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "coursef-2022",
-        "activity_section.key": "cc4310f3-fe2b-4dbe-8918-c60a4a3bb941"
-      },
-      "level_keys": [
-        "PowerOfWords-Unplugged2022"
       ]
     },
     {
