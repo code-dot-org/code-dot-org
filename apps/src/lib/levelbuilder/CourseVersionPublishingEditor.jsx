@@ -17,7 +17,7 @@ export default class CourseVersionPublishingEditor extends Component {
     isCourse: PropTypes.bool,
     updateIsCourse: PropTypes.func,
     showIsCourseSelector: PropTypes.bool,
-    initialPublishedState: PropTypes.string,
+    initialPublishedState: PropTypes.string.isRequired,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired,
     preventCourseVersionChange: PropTypes.bool
