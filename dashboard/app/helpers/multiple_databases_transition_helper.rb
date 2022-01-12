@@ -9,17 +9,17 @@ module MultipleDatabasesTransitionHelper
     #include SeamlessDatabasePool::ControllerFilter
     extend ActiveSupport::Concern
     class_methods do
-      def use_writer_connection_for_route(route)
+      def use_reader_connection_for_route(route)
         if MultipleDatabasesTransitionHelper.transitioned?
-          around_action :connect_to_writer, only: route
+          around_action :connect_to_reader, only: route
         else
           use_database_pool route => :persistent
         end
       end
     end
 
-    def connect_to_writer
-      ActiveRecord::Base.connected_to(role: :writing) do
+    def connect_to_reader
+      ActiveRecord::Base.connected_to(role: :reading) do
         yield
       end
     end
@@ -35,11 +35,11 @@ module MultipleDatabasesTransitionHelper
     end
   end
 
-  def self.use_persistent_read_connection
+  def self.use_persistent_read_connection(*args, &blk)
     if MultipleDatabasesTransitionHelper.transitioned?
       # TODO
     else
-      SeamlessDatabasePool.user_persistent_read_connection
+      SeamlessDatabasePool.use_persistent_read_connection(*args, &blk)
     end
   end
 
