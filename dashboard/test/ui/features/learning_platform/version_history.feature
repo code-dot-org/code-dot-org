@@ -9,26 +9,20 @@ Scenario: Teacher can view student versions
   And I click selector "#runButton"
   And I press "show-code-header"
 
-  And I add code "// comment A" to ace editor
-  And I wait until element "#resetButton" is visible
-  And I press "resetButton"
-  And I click selector "#runButton" once I see it
+  And I add another version to the project
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Latest Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
   Then I save the text from ".versionRow:nth-child(1) p"
   
   When I close the dialog
   And I set the project version interval to 1 second
   And I wait for 1.5 seconds
   And I ensure droplet is in text mode
-  And I add code "// comment B" to ace editor
-  And I wait until element "#resetButton" is visible
-  And I press "resetButton"
-  And I click selector "#runButton" once I see it
+  And I add another version to the project
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Latest Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
   Then ".versionRow:nth-child(2) p" contains the saved text
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
 
@@ -39,7 +33,7 @@ Scenario: Teacher can view student versions
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait for the page to fully load
   And I press "versions-header"
-  And I wait until element "button:contains(Latest Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
   And element ".versionRow:nth-child(0) .btn-info" does not contain text "Restore this Version"
   And element ".versionRow:nth-child(1) .btn-info" does not contain text "Restore this Version"
   And element ".versionRow:nth-child(2) .btn-info" does not contain text "Restore this Version"
@@ -51,22 +45,16 @@ Scenario: Teacher can view own versions
   And I dismiss the teacher panel
   And I click selector "#runButton" once I see it
 
-  And I add code "// comment A" to ace editor
-  And I wait until element "#resetButton" is visible
-  And I press "resetButton"
-  And I click selector "#runButton" once I see it
+  And I add another version to the project
   And element ".project_updated_at" eventually contains text "Saved"
 
   And I wait for 1.5 seconds
   And I ensure droplet is in text mode
-  And I add code "// comment B" to ace editor
-  And I wait until element "#resetButton" is visible
-  And I press "resetButton"
-  And I click selector "#runButton" once I see it
+  And I add another version to the project
   And element ".project_updated_at" eventually contains text "Saved"
 
   And I press "show-code-header"
   And I press "versions-header"
-  And I wait until element "button:contains(Latest Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
   And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
   And I close the dialog
