@@ -69,7 +69,7 @@ export default class StudentSections extends Component {
         paddingBottom: 10
       },
       hiddenSectionLabel: {
-        fontSize: 14,
+        fontSize: 16,
         paddingBottom: 5,
         color: color.charcoal
       },
