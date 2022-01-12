@@ -17,11 +17,19 @@ module MultipleDatabasesTransitionHelper
         end
       end
     end
+
+    def connect_to_writer
+      ActiveRecord::Base.connected_to(role: :writing) do
+        yield
+      end
+    end
   end
 
   def self.use_writer_connection(*args, &blk)
     if MultipleDatabasesTransitionHelper.transitioned?
-      connect_to_writer
+      ActiveRecord::Base.connected_to(role: :writing) do
+        yield
+      end
     else
       SeamlessDatabasePool.use_master_connection(*args, &blk)
     end
@@ -43,14 +51,6 @@ module MultipleDatabasesTransitionHelper
       true
     else
       raise "unknown Rails version #{Rails.version.inspect}"
-    end
-  end
-
-  private
-
-  def connect_to_writer
-    ActiveRecord::Base.connected_to(role: :writing) do
-      yield
     end
   end
 end
