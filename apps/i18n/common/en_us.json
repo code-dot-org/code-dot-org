@@ -809,6 +809,7 @@
   "enablePeerFeedbackDescription": "When peer feedback is enabled, students may leave comments on other projects in the Review section.",
   "encrypted": "encrypted",
   "end": "end",
+  "endOfLesson": "Congratulations! You've reached the end of the lesson.",
   "endOfLessonDialogDetails": "Check in with your teacher for the next activity.",
   "endOfLessonDialogHeading": "You finished Lesson {lessonNumber}!",
   "englishOnly": "English-only",
