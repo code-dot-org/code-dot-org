@@ -10,8 +10,6 @@ export default function UnassignedStudentsPanel({
   unassignedGroup,
   onUnassignAllClick
 }) {
-  // TO DO: implement unassigning students and style
-  // https://codedotorg.atlassian.net/browse/CSA-1028
   return (
     <div style={styles.unassignedStudentsPanel}>
       <div style={styles.header}>
