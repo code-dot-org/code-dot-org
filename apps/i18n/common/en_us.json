@@ -809,6 +809,7 @@
   "enablePeerFeedbackDescription": "When peer feedback is enabled, students may leave comments on other projects in the Review section.",
   "encrypted": "encrypted",
   "end": "end",
+  "endOfLesson": "Congratulations! You've reached the end of the lesson.",
   "englishOnly": "English-only",
   "englishOnlyWarning": "Sorry! This lesson is not available in your language. The levels in this lesson use a mix of English words and characters that can’t be translated right now. You can move on to Lesson {nextStage}.",
   "enterGroupName": "Enter a group name",
