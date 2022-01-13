@@ -591,6 +591,8 @@ describe('entry tests', () => {
   var internalEntries = {
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
+    'course_offerings/edit':
+      './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',

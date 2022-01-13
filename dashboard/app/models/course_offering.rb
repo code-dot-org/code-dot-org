@@ -15,6 +15,8 @@
 #
 
 class CourseOffering < ApplicationRecord
+  include SerializedProperties
+
   has_many :course_versions
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -22,6 +24,11 @@ class CourseOffering < ApplicationRecord
   validates_format_of :key,
     with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
+
+  serialized_attrs %w(
+    is_featured
+    category
+  )
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -59,5 +66,14 @@ class CourseOffering < ApplicationRecord
     Rails.cache.fetch("course_offering/#{key}", force: !should_cache?) do
       CourseOffering.find_by_key(key)
     end
+  end
+
+  def summarize_for_edit
+    {
+      key: key,
+      isFeatured: is_featured?,
+      category: category,
+      displayName: display_name
+    }
   end
 end

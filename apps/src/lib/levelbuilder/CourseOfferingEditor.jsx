@@ -1,14 +1,58 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import $ from 'jquery';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+
+const categories = ['Full Courses', 'CSF', 'HOC', 'Other'];
 
 export default function CourseOfferingEditor(props) {
   const [featured, setFeatured] = useState(props.initialIsFeatured);
   const [category, setCategory] = useState(props.initialCategory);
   const [displayName, setDisplayName] = useState(props.initialDisplayName);
+  const [error, setError] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
+  const [lastSaved, setLastSaved] = useState(null);
+
+  const handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
+
+    setError(null);
+    setLastSaved(null);
+    setIsSaving(true);
+
+    let dataToSave = {
+      key: props.key,
+      display_name: displayName,
+      is_featured: featured,
+      category: category
+    };
+
+    $.ajax({
+      url: `/course_offerings/${props.key}`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    })
+      .done(data => {
+        if (shouldCloseAfterSave) {
+          navigateToHref(linkWithQueryParams('/'));
+        } else {
+          setLastSaved(Date.now());
+          setIsSaving(false);
+        }
+      })
+      .fail(error => {
+        setError(error.responseText);
+        setIsSaving(false);
+      });
+  };
 
   return (
     <div>
+      <h1>{'Editing Course Offering ' + props.key}</h1>
       <label>
         Display Name
         <input
@@ -25,7 +69,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => setCategory(e.target.value)}
         >
-          {props.categories.map(category => (
+          {categories.map(category => (
             <option key={category} value={category}>
               {category}
             </option>
@@ -53,15 +97,22 @@ export default function CourseOfferingEditor(props) {
           onChange={e => setFeatured(e.target.value)}
         />
       </label>
+      <SaveBar
+        handleSave={handleSave}
+        error={error}
+        isSaving={isSaving}
+        lastSaved={lastSaved}
+        pathForShowButton={'/'}
+      />
     </div>
   );
 }
 
 CourseOfferingEditor.propTypes = {
+  key: PropTypes.string,
   initialIsFeatured: PropTypes.bool,
   initialCategory: PropTypes.string,
-  initialDisplayName: PropTypes.string,
-  categories: PropTypes.array
+  initialDisplayName: PropTypes.string
 };
 
 const styles = {
