@@ -34,7 +34,7 @@ export default function CourseTypeEditor({
   handleInstructionTypeChange,
   handleInstructorAudienceChange,
   handleParticipantAudienceChange,
-  cannotChangeParticipantType
+  canChangeParticipantType
 }) {
   return (
     <div>
@@ -109,7 +109,7 @@ export default function CourseTypeEditor({
             value={participantAudience}
             style={styles.dropdown}
             onChange={handleParticipantAudienceChange}
-            disabled={cannotChangeParticipantType}
+            disabled={!canChangeParticipantType}
           >
             {Object.values(ParticipantAudience).map(audience => (
               <option key={audience} value={audience}>
@@ -139,7 +139,7 @@ CourseTypeEditor.propTypes = {
   handleInstructionTypeChange: PropTypes.func,
   handleInstructorAudienceChange: PropTypes.func,
   handleParticipantAudienceChange: PropTypes.func,
-  cannotChangeParticipantType: PropTypes.bool.isRequired
+  canChangeParticipantType: PropTypes.bool.isRequired
 };
 
 const styles = {
