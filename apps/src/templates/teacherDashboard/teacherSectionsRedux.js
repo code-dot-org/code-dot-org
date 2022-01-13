@@ -49,7 +49,6 @@ const SET_LESSON_EXTRAS_UNIT_IDS =
   'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
 const SET_TEXT_TO_SPEECH_UNIT_IDS =
   'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
-const SET_PREREADER_UNIT_IDS = 'teacherDashboard/SET_PREREADER_UNIT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -116,10 +115,6 @@ export const setLessonExtrasUnitIds = ids => ({
 });
 export const setTextToSpeechUnitIds = ids => ({
   type: SET_TEXT_TO_SPEECH_UNIT_IDS,
-  ids
-});
-export const setPreReaderUnitIds = ids => ({
-  type: SET_PREREADER_UNIT_IDS,
   ids
 });
 export const setAuthProviders = providers => ({
@@ -540,7 +535,6 @@ const initialState = {
   saveInProgress: false,
   lessonExtrasUnitIds: [],
   textToSpeechUnitIds: [],
-  preReaderUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -631,13 +625,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       textToSpeechUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_PREREADER_UNIT_IDS) {
-    return {
-      ...state,
-      preReaderUnitIds: action.ids
     };
   }
 
@@ -865,10 +852,6 @@ export default function teacherSections(state = initialState, action) {
     const lessonExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
-      // TODO: enable autoplay by default if unit is a pre-reader unit
-      // and teacher is on IE, Edge or Chrome after initial release
-      // ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
-      //   state.preReaderUnitIds.indexOf(action.props.scriptId) > -1;
       const unit =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (unit) {

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-29 18:59:03 UTC",
+    "serialized_at": "2022-01-03 16:42:00 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -652,6 +652,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 13"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -674,6 +677,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 14"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -696,6 +702,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 15"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -718,6 +727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 21"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -739,6 +751,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 22"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -760,6 +775,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 23"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -781,6 +799,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 24"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -802,6 +823,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 25"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -823,6 +847,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 20"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -844,6 +871,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 19"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -865,6 +895,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 18"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -886,6 +919,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 17"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -907,6 +943,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 16"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -924,10 +963,118 @@
     },
     {
       "chapter": 26,
+      "position": 26,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 26"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 26"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 27"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 27"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 28"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 29"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 29"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 30"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 30"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Project Examples"
+        ],
         "progression": "Neighborhood Store Management Project [Console]"
       },
       "bonus": false,
@@ -945,7 +1092,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1264,6 +1411,66 @@
         "level.key": "CSA Unit 1 Project - Student Example 16",
         "script_level.level_keys": [
           "CSA Unit 1 Project - Student Example 16"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 26",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 26"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 27",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 27"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 28",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 29",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 29"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "c197cb80-a4bb-4ecd-afe4-f311ef67f7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 30",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 30"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

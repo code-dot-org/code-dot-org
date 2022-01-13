@@ -86,6 +86,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    newsapi.org
     noaa.gov
     numbersapi.com
     opentdb.com
@@ -99,7 +100,6 @@ class XhrProxyController < ApplicationController
     restcountries.eu
     roblox.com
     runescape.com
-    script.google.com
     sessionserver.mojang.com
     spreadsheets.google.com
     stats.minecraftservers.org

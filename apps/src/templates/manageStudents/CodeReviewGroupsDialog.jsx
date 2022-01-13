@@ -103,6 +103,8 @@ export default function CodeReviewGroupsDialog({
 
   const getInitialGroups = () => {
     setLoadingStatus(LOADING_STATES.LOADING);
+    setSubmitStatus(SUBMIT_STATES.DEFAULT);
+    setGroupsHaveChanged(false);
     dataApi
       .getCodeReviewGroups()
       .done(groups => {

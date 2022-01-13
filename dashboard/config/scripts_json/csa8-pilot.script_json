@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-15 14:46:32 UTC",
+    "serialized_at": "2022-01-12 18:55:00 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1475,7 +1475,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "00cc3aa7-68bd-495c-954a-89e484c8413d",
@@ -1746,7 +1747,7 @@
       "key": "ae344379-91ee-4fe5-ad31-408712fe6572",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students identify the different parts of the recursive binary search method, including its parameters, conditional statements, return value, and recursive calls. They notice the difference in how binary search is implemented iteratively and recursively. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the parameters, base cases, and recursive calls in the recursive binary search method."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students identify the different parts of the recursive binary search method, including its parameters, conditional statements, return value, and recursive calls. They notice the difference in how binary search is implemented iteratively and recursively. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the parameters in the recursive binary search method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base cases in the recursive binary search method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the recursive calls in the recursive binary search method."
       },
       "seeding_key": {
         "activity_section.key": "ae344379-91ee-4fe5-ad31-408712fe6572",
@@ -1863,6 +1864,19 @@
       }
     },
     {
+      "key": "dd184400-818f-455d-8b07-fca3ec37e4ea",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd184400-818f-455d-8b07-fca3ec37e4ea",
+        "lesson_activity.key": "9772f493-6a4d-4db9-bee5-db057dd0172f"
+      }
+    },
+    {
       "key": "3909e19d-4f82-417a-bcf2-e63ff2063ec9",
       "position": 1,
       "properties": {
@@ -1901,10 +1915,33 @@
       }
     },
     {
-      "key": "4ede086b-a208-4584-81bf-fef52283593a",
+      "key": "bfd745e0-9524-45bf-afb1-0d479e8618a9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review binary search.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you use the “Sort By” feature on an e-commerce site, like Amazon? What are some of the different options offered to sort the products?*\n\n**Discussion Goal:** Students note that they use the \"Sort By\" feature to find products quickly. Students share that they can sort by size, color, weight, delivery time, price, and other options."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review binary search."
+      },
+      "seeding_key": {
+        "activity_section.key": "bfd745e0-9524-45bf-afb1-0d479e8618a9",
+        "lesson_activity.key": "06defe85-9d43-490b-94b0-bb235b39ec8e"
+      }
+    },
+    {
+      "key": "357bf747-6e1a-477b-91de-c77e0ca4f6ea",
+      "position": 3,
+      "properties": {
+        "description": "If we used a binary search, and there are 1000 items in a collection, you’d have to look at a maximum of 10 items to find the one you want. If there are a million items, you’d have to look at a maximum of 20 items compared to as many as a million items if the list is not sorted.\n\nUnlike humans, a computer only compares two values at a time when sorting. A computer cannot “see” the rest of values in the list.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "357bf747-6e1a-477b-91de-c77e0ca4f6ea",
+        "lesson_activity.key": "06defe85-9d43-490b-94b0-bb235b39ec8e"
+      }
+    },
+    {
+      "key": "4ede086b-a208-4584-81bf-fef52283593a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you use the “Sort By” feature on an e-commerce site, like Amazon? What are some of the different options offered to sort the products?*\n\n**Discussion Goal:** Students note that they use the \"Sort By\" feature to find products quickly. Students share that they can sort by size, color, weight, delivery time, price, and other options."
       },
       "seeding_key": {
         "activity_section.key": "4ede086b-a208-4584-81bf-fef52283593a",
@@ -1913,7 +1950,7 @@
     },
     {
       "key": "6f700431-b8cd-461e-a68b-9a35e309769d",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "There are many ways to sort a collection of items. One commonly used approach is a selection sort.",
         "remarks": true
@@ -1925,7 +1962,7 @@
     },
     {
       "key": "03ad77ad-19d4-4154-ac1f-ea9870ae6efa",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define selection sort.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the selection sort algorithm.",
         "tips": [
@@ -1941,8 +1978,20 @@
       }
     },
     {
+      "key": "c0e9aa4f-c437-4c1b-baac-957c953d9a4c",
+      "position": 7,
+      "properties": {
+        "description": "Remember, if the value is smaller than the value in the current position, SWAP IT! The selection sort algorithm SWAPs the values to sort them in the correct order.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0e9aa4f-c437-4c1b-baac-957c953d9a4c",
+        "lesson_activity.key": "06defe85-9d43-490b-94b0-bb235b39ec8e"
+      }
+    },
+    {
       "key": "cbb775f9-92b6-421c-8914-374476f0326d",
-      "position": 5,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Selection Sort Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the pseudocode for the selection sort algorithm.\n\n**Group:** Place students in groups of 4 to 6.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Selection Sort handout and five cups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Selection Sort activity.",
         "tips": [
@@ -1959,7 +2008,7 @@
     },
     {
       "key": "870e5716-57f8-4ea1-8d88-92f952929799",
-      "position": 6,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question with a partner before discussing the question as a class. Click through the animated slide to show the correct answer."
       },
@@ -1970,7 +2019,7 @@
     },
     {
       "key": "037da405-3daf-44e7-84ba-503ece0eac2f",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "You now have time to continue your planning for your project. Remember, your planning might include outlines, rough drafts, flowcharts, UML diagrams, or pseudocode for key algorithms in your program. Take a look at your Project Planning Board to decide what task you need to tackle first.",
         "duration": "10",
@@ -1984,7 +2033,7 @@
     },
     {
       "key": "bde48ad6-d325-40a9-8098-8bd6be3e2508",
-      "position": 8,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Inclusive Playground Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
@@ -2420,7 +2469,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "fcac3e18-3629-4f3b-aeb3-278b2fad38f7",
@@ -2502,6 +2552,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to work on their Inclusive Playground Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "progression_name": "Inclusive Playground Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2560,7 +2611,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "859fb7b7-b81f-4a5a-ba1e-c3845af7efb8",
@@ -2671,7 +2723,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ca22f9f2-29bd-4e89-8846-037f5f5d0e71",
@@ -2702,7 +2755,7 @@
       "properties": {
         "description": "You have learned a lot about Java this year and have spent a lot of time practicing software development. In addition to writing and manipulating code to create programs for end-users, a software engineer has a moral obligation to respect the privacy of the users and enhance the security of the program.",
         "duration": "15",
-        "name": "Secure Software Design",
+        "name": "Secure Coding Practices",
         "remarks": true
       },
       "seeding_key": {
@@ -2737,8 +2790,8 @@
       "key": "c379b025-b249-4021-b313-1e455e60eaae",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss secure software design principles.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Software Design handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Software Design handout.",
-        "progression_name": "Secure Software Design"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss secure coding practices.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Coding Practices handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Coding Practices handout.",
+        "progression_name": "Secure Coding Practices"
       },
       "seeding_key": {
         "activity_section.key": "c379b025-b249-4021-b313-1e455e60eaae",
@@ -3456,6 +3509,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "CSA U8L2-L1"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "00cc3aa7-68bd-495c-954a-89e484c8413d"
+      },
+      "level_keys": [
+        "CSA U8L2-L1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "CSA U8L3-L1"
         ],
         "progression": "Binary Search"
@@ -3475,7 +3553,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3500,7 +3578,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3525,7 +3603,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3550,7 +3628,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3575,7 +3653,32 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L4-L3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L4-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "dd184400-818f-455d-8b07-fca3ec37e4ea"
+      },
+      "level_keys": [
+        "CSA U8L4-L3"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3600,7 +3703,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3625,7 +3728,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3650,7 +3753,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3675,9 +3778,59 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L7-L3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L7-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "fcac3e18-3629-4f3b-aeb3-278b2fad38f7"
+      },
+      "level_keys": [
+        "CSA U8L7-L3"
+      ]
+    },
+    {
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "progression": "Algorithms in Games"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "1f7560b6-809c-4a39-8836-58d20cbb89d1"
+      },
+      "level_keys": [
+        "CSA U8L8-L1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3700,7 +3853,57 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "progression": "Inclusive Playground Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "2ce35469-d62a-47af-956e-78300792b800"
+      },
+      "level_keys": [
+        "CSA U8L8-L3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "859fb7b7-b81f-4a5a-ba1e-c3845af7efb8"
+      },
+      "level_keys": [
+        "CSA U8L8-L4"
+      ]
+    },
+    {
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3725,9 +3928,34 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L9-L2"
+        ],
+        "progression": "Multiple Lists in Games"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "8417fdf5-77d7-4539-b027-aade8e40db02"
+      },
+      "level_keys": [
+        "CSA U8L9-L2"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3750,7 +3978,32 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L9-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "ca22f9f2-29bd-4e89-8846-037f5f5d0e71"
+      },
+      "level_keys": [
+        "CSA U8L9-L4"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3758,7 +4011,7 @@
         "level_keys": [
           "CSA U8L10-L1"
         ],
-        "progression": "Secure Software Design"
+        "progression": "Secure Coding Practices"
       },
       "bonus": false,
       "seeding_key": {
@@ -3775,7 +4028,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3800,7 +4053,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3825,7 +4078,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3850,7 +4103,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3875,7 +4128,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3900,11 +4153,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 8"
+        ],
         "progression": "Unit 8 Pilot Survey"
       },
       "bonus": false,
@@ -3922,7 +4178,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3947,7 +4203,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3972,7 +4228,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3997,7 +4253,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4057,6 +4313,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot",
         "activity_section.key": "63d15eef-9048-4933-b061-3c3501106ee1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L2-L1",
+        "script_level.level_keys": [
+          "CSA U8L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "00cc3aa7-68bd-495c-954a-89e484c8413d"
       }
     },
     {
@@ -4121,6 +4389,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8L4-L3",
+        "script_level.level_keys": [
+          "CSA U8L4-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "dd184400-818f-455d-8b07-fca3ec37e4ea"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U8L5-L1",
         "script_level.level_keys": [
           "CSA U8L5-L1"
@@ -4169,6 +4449,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8L7-L3",
+        "script_level.level_keys": [
+          "CSA U8L7-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "fcac3e18-3629-4f3b-aeb3-278b2fad38f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L1",
+        "script_level.level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "1f7560b6-809c-4a39-8836-58d20cbb89d1"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U8L8-L2",
         "script_level.level_keys": [
           "CSA U8L8-L2"
@@ -4177,6 +4481,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot",
         "activity_section.key": "1f7560b6-809c-4a39-8836-58d20cbb89d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L3",
+        "script_level.level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "2ce35469-d62a-47af-956e-78300792b800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L4",
+        "script_level.level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "859fb7b7-b81f-4a5a-ba1e-c3845af7efb8"
       }
     },
     {
@@ -4193,6 +4521,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8L9-L2",
+        "script_level.level_keys": [
+          "CSA U8L9-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "8417fdf5-77d7-4539-b027-aade8e40db02"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U8L9-L3",
         "script_level.level_keys": [
           "CSA U8L9-L3"
@@ -4201,6 +4541,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot",
         "activity_section.key": "8417fdf5-77d7-4539-b027-aade8e40db02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L9-L4",
+        "script_level.level_keys": [
+          "CSA U8L9-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "ca22f9f2-29bd-4e89-8846-037f5f5d0e71"
       }
     },
     {
@@ -4374,7 +4726,7 @@
       }
     },
     {
-      "name": "[KEY] Secure Software Design",
+      "name": "[KEY] Secure Coding Practices",
       "url": "https://docs.google.com/document/d/1AFMBp9GBhWBDEi2cISF-z2ezcKoCqdgFMBrlAxzSBNs/edit?usp=sharing",
       "key": "_key_secure_software_design",
       "properties": {
@@ -4638,7 +4990,7 @@
       }
     },
     {
-      "name": "Secure Software Design",
+      "name": "Secure Coding Practices",
       "url": "https://docs.google.com/document/d/1rezVAXZugSKWFnYKYYI7Ff68iarRXFQVlL2zfxBjvEk/edit?usp=sharing",
       "key": "secure_software_design",
       "properties": {

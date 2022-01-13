@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 ## Help us make this module better!
 
-#### Code.org values and is responsive to feedback. Please fill out this <span style="background-color: #FFFF00">short survey</span> to provide your feedback on this module.
+#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csp_selfpaced_pl_module2" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
 
-<a class="btn btn-large btn-primary" href="" target="blank" rel="noopener noreferrer">UPDATE LINK</a>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csp_selfpaced_pl_module2" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 ___
 
@@ -45,7 +45,7 @@ ___
   <td style="background-color:#a6e3e8; color:black; border-style:none; vertical-align: text-top;"">
       <ul>
         <li><a href="https://studio.code.org/s/self-paced-pl-csp1-2021/lessons/1/levels/1" > Welcome to Code.org </a></li>
-        <li><a href="https://studio.code.org/s/self-paced-pl-csp1-2021/lessons/2/levels/1" >"Welcome to "Teaching CS Principles"</a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp1-2021/lessons/2/levels/1" >Welcome to "Teaching CS Principles"</a></li>
       </ul>
     </td>
     <td style="background-color:#cfc9de; color:black; border-style:none; vertical-align: text-top;"">
