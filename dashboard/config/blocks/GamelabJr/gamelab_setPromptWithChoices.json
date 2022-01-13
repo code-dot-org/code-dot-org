@@ -1,28 +1,28 @@
 {
   "category": "World",
   "config": {
-    "func": "setPromptWithChoices",
+    "name": "setPromptWithChoices",
+    "expression": "setPromptWithChoices(QUESTION, C1, C2, C3, VAR, function(val) {VAR = val;});",
     "inline": false,
-    "blockText": "prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}",
+    "blockText": "prompt user {QUESTION} for variable {VAR} with choices {C1}{C2}{C3}",
     "args": [
       {
         "name": "QUESTION",
         "type": "String"
       },
       {
-        "name": "VAR",
-        "customInput": "variableNamePicker"
+        "name": "VAR"
       },
       {
-        "name": "A",
+        "name": "C1",
         "type": "String"
       },
       {
-        "name": "B",
+        "name": "C2",
         "type": "String"
       },
       {
-        "name": "C",
+        "name": "C3",
         "type": "String"
       }
     ]

@@ -1176,31 +1176,27 @@ exports.createJsWrapperBlockCreator = function(
 
     generator[blockName] = function() {
       let prefix = '';
-      const values = args
-        .map(arg => {
-          const inputConfig = inputConfigs.find(
-            input => input.name === arg.name
-          );
-          if (!inputConfig) {
-            return;
-          }
-          let inputCode = inputTypes[inputConfig.mode].generateCode(
-            this,
-            inputConfig
-          );
-          if (inputConfig.assignment) {
-            prefix += `${inputCode} = `;
-          }
-          if (inputCode === '') {
-            // Missing inputs should be passed into func as undefined
-            inputCode = 'undefined';
-          }
-          if (inputConfig.defer) {
-            inputCode = `function () {\n  return ${inputCode};\n}`;
-          }
-          return inputCode;
-        })
-        .filter(value => value !== null);
+      const values = args.map(arg => {
+        const inputConfig = inputConfigs.find(input => input.name === arg.name);
+        if (!inputConfig) {
+          return;
+        }
+        let inputCode = inputTypes[inputConfig.mode].generateCode(
+          this,
+          inputConfig
+        );
+        if (inputConfig.assignment) {
+          prefix += `${inputCode} = `;
+        }
+        if (inputCode === '') {
+          // Missing inputs should be passed into func as undefined
+          inputCode = 'undefined';
+        }
+        if (inputConfig.defer) {
+          inputCode = `function () {\n  return ${inputCode};\n}`;
+        }
+        return inputCode;
+      });
 
       if (extraArgs) {
         values.push(...extraArgs);
@@ -1238,24 +1234,14 @@ exports.createJsWrapperBlockCreator = function(
         }
       }
 
-      if (
-        this.type === 'gamelab_setPrompt' ||
-        this.type === 'gamelab_setPromptWithChoices'
-      ) {
-        const input = this.getInput('VAR');
-        if (input) {
-          const targetBlock = input.connection.targetBlock();
-          if (targetBlock && targetBlock.type === 'variables_get') {
-            const varName = Blockly.JavaScript.blockToCode(targetBlock)[0];
-            values.push(`function(val) {${varName} = val;}`);
-          }
-        }
-      }
-
       if (expression) {
-        // If the original expression has a value placeholder, replace it
-        // with the selected value.
-        let valueExpression = expression.replace('VALUE', values[0]);
+        // If the original expression has arg placeholders, replace them
+        // with the corresponding value.
+        let valueExpression = expression;
+        args.forEach((arg, index) => {
+          valueExpression = valueExpression.replaceAll(arg.name, values[index]);
+        });
+
         if (returnType !== undefined) {
           return [
             `${prefix}${valueExpression}`,

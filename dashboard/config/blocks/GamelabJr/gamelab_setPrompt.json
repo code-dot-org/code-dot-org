@@ -1,7 +1,8 @@
 {
   "category": "World",
   "config": {
-    "func": "setPrompt",
+    "name": "setPrompt",
+    "expression": "setPrompt(QUESTION, 'VAR', function(val) {VAR = val;});",
     "inline": false,
     "blockText": "prompt user {QUESTION} for variable {VAR}",
     "args": [
@@ -10,8 +11,7 @@
         "type": "String"
       },
       {
-        "name": "VAR",
-        "customInput": "variableNamePicker"
+        "name": "VAR"
       }
     ]
   }

@@ -2,7 +2,7 @@
   "category": "Sprites",
   "config": {
     "name": "allSpritesWithAnimation",
-    "expression": "{costume: VALUE}",
+    "expression": "{costume: ANIMATION}",
     "inline": false,
     "blockText": "{ANIMATION}",
     "returnType": "Sprite",
