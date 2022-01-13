@@ -58,6 +58,7 @@ def load_pegasus_settings
     I18n.load_path += Dir[cache_dir('i18n/es-ES.yml')]
     I18n.load_path += Dir[hoc_dir('i18n/en.yml')]
     I18n.load_path += Dir[hoc_dir('i18n/es.yml')]
+    I18n.load_path += Dir[hoc_dir('i18n/fr.yml')]
   else
     I18n.load_path += Dir[cache_dir('i18n/*.yml')]
     I18n.load_path += Dir[hoc_dir('i18n/*.yml')]
