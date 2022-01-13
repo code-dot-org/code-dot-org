@@ -38,8 +38,8 @@ export default class CourseVersionPublishingEditor extends Component {
 
     const msg =
       'Are you sure you want to update the published state? ' +
-      'Once you set the published state you can not go backwards.' +
-      'For example once you set the published state to beta you can not go back to in development.' +
+      'Once you set the published state you can not go back to this published state. ' +
+      'For example once you set the published state to beta you can not go back to in development. ' +
       'Also once a course as a published state of pilot it can not be fully launched (marked as preview or stable).';
     if (window.confirm(msg)) {
       this.props.updatePublishedState(newPublishedState);
