@@ -8,7 +8,7 @@
   "backpackListLoadErrorMessageCommitDialog": "Coba tutup dan buka kembali dialog ini.",
   "backpackErrorTitle": "Terjadi kesalahan",
   "backpackSaveErrorMessage": "Silakan coba lagi",
-  "cancel": "Batal",
+  "cancel": "Batalkan",
   "clearConsole": "Hapus Konsol",
   "classNotFound": "Kesalahan: satu atau lebih file Java Anda tidak memiliki definisi kelas.",
   "commentUpdateError": "Terjadi kesalahan saat memproses permintaan Anda, silakan coba lagi.",

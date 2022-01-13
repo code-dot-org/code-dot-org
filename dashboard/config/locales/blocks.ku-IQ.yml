@@ -1253,28 +1253,28 @@ ku:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"hearts"': دڵ
             '"iceCream"': دۆندرمە
             '"rainbow"': پەلكەزێرینە
             '"stars"': ئەستێرە
       Poetry_makeNewSpriteAnon:
         text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
-      Poetry_playSound:
-        text: دەنگ هەڵکەر {SOUND}
+      Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ڕووناکی
+            '"sound://category_nature/summer_night_loop.mp3"': شەو
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': خاو
+      Poetry_playSound:
+        text: دەنگ هەڵکەر {SOUND}
       Poetry_setBackground:
         text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': ڕەنگ
-            '"space"': بۆشایی ئاسمان
-            '"stars"': ئەستێرە
-            '"rain"': باران
             '"bubbles"': بڵق
             '"confetti"': بڕشتی کاغەز
+            '"space"': بۆشایی ئاسمان
+            '"colors"': ڕەنگ
+            '"stars"': ئەستێرە
           PALETTE:
             '"rainbow"': پەلكەزێرینە
       Poetry_setBackgroundImageAs:
@@ -1282,7 +1282,6 @@ ku:
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': باران
             '"bubbles"': بڵق
             '"confetti"': بڕشتی کاغەز
       Poetry_whenLineShows:

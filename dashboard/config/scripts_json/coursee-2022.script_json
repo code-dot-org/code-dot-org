@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-01-06 20:23:41 UTC",
+    "serialized_at": "2022-01-12 19:52:22 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -30,26 +30,26 @@
   },
   "lesson_groups": [
     {
-      "key": "csf_sprites",
-      "user_facing": true,
-      "position": 1,
-      "properties": {
-        "display_name": "Sprites"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
       "key": "csf_digcit",
       "user_facing": true,
-      "position": 2,
+      "position": 1,
       "properties": {
         "display_name": "Digital Citizenship"
       },
       "seeding_key": {
         "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "csf_sprites",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Sprites"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
       }
     },
@@ -112,77 +112,28 @@
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2022"
       }
+    },
+    {
+      "key": "lessonGroup-8",
+      "user_facing": true,
+      "position": 8,
+      "properties": {
+        "display_name": "Deprecated"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022"
+      }
     }
   ],
   "lessons": [
     {
-      "key": "Follow the Algorithm",
-      "name": "Follow the Algorithm",
+      "key": "Be A Super Digital Citizen",
+      "name": "Be A Super Digital Citizen",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
-        "purpose": "This lesson is designed to prepare students to think about one of the core programming concepts in Sprite Lab, behaviors. ",
-        "student_overview": "Play a game and think about what commands are needed to get the right result.",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "Swimming Fish with Sprite Lab",
-      "name": "Swimming Fish with Sprite Lab",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 2,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will program a simple animated underwater scene in this **skill-building** lesson.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
-        "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
-        "student_overview": "Learn how to create and edit sprites."
-      },
-      "seeding_key": {
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "Alien Dance Party with Sprite Lab",
-      "name": "Alien Dance Party with Sprite Lab",
-      "absolute_position": 3,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 3,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
-        "purpose": "This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
-        "student_overview": "Create an interactive project that can be shared with classmates."
-      },
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "Be A Super Digital Citizen",
-      "name": "Be A Super Digital Citizen",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-ND",
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
@@ -200,10 +151,10 @@
     {
       "key": "Private and Personal Information",
       "name": "Private and Personal Information",
-      "absolute_position": 5,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-ND",
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nIt's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.",
@@ -219,12 +170,52 @@
       }
     },
     {
-      "key": "Mini-Project: About Me",
-      "name": "Mini-Project: About Me",
-      "absolute_position": 6,
+      "key": "Swimming Fish with Sprite Lab",
+      "name": "Swimming Fish with Sprite Lab",
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 3,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students will program a simple animated underwater scene in this **skill-building** lesson.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
+        "student_overview": "Learn how to create and edit sprites."
+      },
+      "seeding_key": {
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "Alien Dance Party with Sprite Lab",
+      "name": "Alien Dance Party with Sprite Lab",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
+        "student_overview": "Create an interactive project that can be shared with classmates."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "Mini-Project: About Me",
+      "name": "Mini-Project: About Me",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.\n",
@@ -234,38 +225,17 @@
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "Digital Sharing",
-      "name": "Digital Sharing",
-      "absolute_position": 7,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 7,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This **exploratory** lesson helps students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. ",
-        "preparation": "- Locate the ***Copyright Sharing video** in \"Links\" below\n- Download and review the complete ***Digital Sharing Lesson Plan** from Copyright and Creativity\n- As the teacher, create a piece of art for the lesson (picture, song, slideshow, etc.) \n- Make sure every student has a reflection journal.\n- You will need a tablet or smart phone to replicate the sharing of that item",
-        "purpose": "Students will soon be creating projects to share and most of these projects will contain either code or imagery that students did not create themselves. This lesson is here to show students the proper way to handle the use of content that is not their own.",
-        "student_overview": "In this lesson, you'll learn about the challenges and benefits of ownership and copyright. ",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
       }
     },
     {
       "key": "Drawing with Loops",
       "name": "Drawing with Loops",
-      "absolute_position": 8,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.  ",
@@ -282,10 +252,10 @@
     {
       "key": "Fancy Shapes using Nested Loops",
       "name": "Fancy Shapes using Nested Loops",
-      "absolute_position": 9,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will create intricate designs using the Artist. The lesson ends with an opportunity for students to create their own designs.",
@@ -302,10 +272,10 @@
     {
       "key": "Mini-Project: Design a Snowflake",
       "name": "Mini-Project: Design a Snowflake",
-      "absolute_position": 10,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the *Frozen* movies.",
@@ -322,10 +292,10 @@
     {
       "key": "Songwriting",
       "name": "Songwriting",
-      "absolute_position": 11,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson will help students understand why combining chunks of code into functions can be a helpful practice.",
@@ -343,10 +313,10 @@
     {
       "key": "Functions in Minecraft",
       "name": "Functions in Minecraft",
-      "absolute_position": 12,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will begin to understand how functions can be helpful!",
@@ -363,10 +333,10 @@
     {
       "key": "Functions with Artist",
       "name": "Functions with Artist",
-      "absolute_position": 13,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
@@ -383,10 +353,10 @@
     {
       "key": "Conditionals in Minecraft: Voyage Aquatic",
       "name": "Conditionals in Minecraft: Voyage Aquatic",
-      "absolute_position": 14,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!",
@@ -403,10 +373,10 @@
     {
       "key": "Conditionals with the Farmer",
       "name": "Conditionals with the Farmer",
-      "absolute_position": 15,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson focuses on a new type of programming puzzle, featuring a farmer who needs to prepare her fields for planting crops. ",
@@ -423,10 +393,10 @@
     {
       "key": "Functions with Harvester",
       "name": "Functions with Harvester",
-      "absolute_position": 16,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use conditionals with functions to harvest crops in _Harvester_.",
@@ -443,10 +413,10 @@
     {
       "key": "Designing for Accessibility",
       "name": "Designing for Accessibility",
-      "absolute_position": 17,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 15,
       "properties": {
         "overview": "In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
         "preparation": "* For context, read about the ***types of disabilities**. \n* Read through the speaker notes in the ***slide deck**.\n* Prepare enough sketching/drawing supplies for all students.",
@@ -460,12 +430,33 @@
       }
     },
     {
-      "key": "End of Course Project",
-      "name": "End of Course Project",
-      "absolute_position": 18,
+      "key": "Digital Sharing",
+      "name": "Digital Sharing",
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 16,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **exploratory** lesson helps students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. ",
+        "preparation": "- Locate the ***Copyright Sharing video** in \"Links\" below\n- Download and review the complete ***Digital Sharing Lesson Plan** from Copyright and Creativity\n- As the teacher, create a piece of art for the lesson (picture, song, slideshow, etc.) \n- Make sure every student has a reflection journal.\n- You will need a tablet or smart phone to replicate the sharing of that item",
+        "purpose": "Students will soon be creating projects to share and most of these projects will contain either code or imagery that students did not create themselves. This lesson is here to show students the proper way to handle the use of content that is not their own.",
+        "student_overview": "In this lesson, you'll learn about the challenges and benefits of ownership and copyright. ",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects! ",
@@ -478,160 +469,30 @@
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2022"
       }
+    },
+    {
+      "key": "Follow the Algorithm",
+      "name": "Follow the Algorithm",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson is designed to prepare students to think about one of the core programming concepts in Sprite Lab, behaviors. ",
+        "student_overview": "Play a game and think about what commands are needed to get the right result.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022"
+      }
     }
   ],
   "lesson_activities": [
-    {
-      "key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3",
-        "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "acd2af40-b43f-4c8c-bfd4-e5451300ab38",
-      "position": 2,
-      "properties": {
-        "duration": 20,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "acd2af40-b43f-4c8c-bfd4-e5451300ab38",
-        "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "d9c996a9-9751-44af-887b-3caa47ce10e6",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d9c996a9-9751-44af-887b-3caa47ce10e6",
-        "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "e92de163-da5e-489f-bec1-dad888b836d7",
-      "position": 4,
-      "properties": {
-        "duration": 15,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e92de163-da5e-489f-bec1-dad888b836d7",
-        "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "4d2e3a7b-6f10-4ae8-a150-38c094379da1",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4d2e3a7b-6f10-4ae8-a150-38c094379da1",
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847",
-      "position": 2,
-      "properties": {
-        "name": "Bridging Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847",
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "49c18026-c59e-4aa1-93da-e7f15d4bee21",
-      "position": 3,
-      "properties": {
-        "duration": 20,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "49c18026-c59e-4aa1-93da-e7f15d4bee21",
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "3826fff9-9484-4a83-9311-70c70d492e25",
-      "position": 4,
-      "properties": {
-        "duration": 15,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3826fff9-9484-4a83-9311-70c70d492e25",
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "6db0ff4e-ead4-45de-a39f-2ac300887a77",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6db0ff4e-ead4-45de-a39f-2ac300887a77",
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "c0791049-60d2-46ef-901a-9ee58088939f",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c0791049-60d2-46ef-901a-9ee58088939f",
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "c895306f-7535-4166-b9b8-abcae9bfe7e7",
-      "position": 3,
-      "properties": {
-        "duration": 10,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c895306f-7535-4166-b9b8-abcae9bfe7e7",
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022"
-      }
-    },
     {
       "key": "457f5ed8-0041-4bd5-b6e6-800291ae5cf5",
       "position": 1,
@@ -796,6 +657,103 @@
       }
     },
     {
+      "key": "4d2e3a7b-6f10-4ae8-a150-38c094379da1",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d2e3a7b-6f10-4ae8-a150-38c094379da1",
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847",
+      "position": 2,
+      "properties": {
+        "name": "Bridging Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847",
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "49c18026-c59e-4aa1-93da-e7f15d4bee21",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49c18026-c59e-4aa1-93da-e7f15d4bee21",
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "3826fff9-9484-4a83-9311-70c70d492e25",
+      "position": 4,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3826fff9-9484-4a83-9311-70c70d492e25",
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "6db0ff4e-ead4-45de-a39f-2ac300887a77",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6db0ff4e-ead4-45de-a39f-2ac300887a77",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "c0791049-60d2-46ef-901a-9ee58088939f",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0791049-60d2-46ef-901a-9ee58088939f",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "c895306f-7535-4166-b9b8-abcae9bfe7e7",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c895306f-7535-4166-b9b8-abcae9bfe7e7",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
       "key": "124a474b-26b3-42dc-bb84-af0a9be14cc5",
       "position": 1,
       "properties": {
@@ -805,7 +763,7 @@
       "seeding_key": {
         "lesson_activity.key": "124a474b-26b3-42dc-bb84-af0a9be14cc5",
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
       }
     },
@@ -819,7 +777,7 @@
       "seeding_key": {
         "lesson_activity.key": "300d8beb-b7c0-464c-be82-33fa92340fb8",
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
       }
     },
@@ -833,7 +791,7 @@
       "seeding_key": {
         "lesson_activity.key": "e8117fa4-c0ea-4ad9-b368-24ec9f6d4923",
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
       }
     },
@@ -846,74 +804,7 @@
       "seeding_key": {
         "lesson_activity.key": "3f920d9d-49c0-4a91-af81-7fbb5b9fc757",
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "74d92853-37dc-4cd5-9d69-087420e81160",
-      "position": 1,
-      "properties": {
-        "duration": 15,
-        "name": "Warm-Up (Optional)"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "74d92853-37dc-4cd5-9d69-087420e81160",
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "3df49bdd-03d3-4d4e-aa6a-7df0588bb582",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3df49bdd-03d3-4d4e-aa6a-7df0588bb582",
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "cf2cf265-ee91-467c-89f9-e183b94e93d3",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3",
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f",
-      "position": 4,
-      "properties": {
-        "duration": 10,
-        "name": "Wrap-Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f",
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022"
-      }
-    },
-    {
-      "key": "36227e91-065d-4acc-8155-f954f1fe1ffc",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "36227e91-065d-4acc-8155-f954f1fe1ffc",
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
       }
     },
@@ -1482,6 +1373,73 @@
       }
     },
     {
+      "key": "74d92853-37dc-4cd5-9d69-087420e81160",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm-Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74d92853-37dc-4cd5-9d69-087420e81160",
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "3df49bdd-03d3-4d4e-aa6a-7df0588bb582",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3df49bdd-03d3-4d4e-aa6a-7df0588bb582",
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "cf2cf265-ee91-467c-89f9-e183b94e93d3",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3",
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f",
+      "position": 4,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f",
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "36227e91-065d-4acc-8155-f954f1fe1ffc",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36227e91-065d-4acc-8155-f954f1fe1ffc",
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
       "key": "03e20d6a-151e-4f7c-8455-81945f0789b6",
       "position": 1,
       "properties": {
@@ -1548,96 +1506,194 @@
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2022"
       }
+    },
+    {
+      "key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "acd2af40-b43f-4c8c-bfd4-e5451300ab38",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "acd2af40-b43f-4c8c-bfd4-e5451300ab38",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "d9c996a9-9751-44af-887b-3caa47ce10e6",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9c996a9-9751-44af-887b-3caa47ce10e6",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "e92de163-da5e-489f-bec1-dad888b836d7",
+      "position": 4,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e92de163-da5e-489f-bec1-dad888b836d7",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022"
+      }
     }
   ],
   "activity_sections": [
     {
-      "key": "13024eaa-2a91-43af-8b4a-550f5682c6a1",
+      "key": "b01367f6-8c61-4417-9d29-193fd67ddac0",
       "position": 1,
       "properties": {
-        "description": "**Think-Pair-Share:** Think of hobby, sport, or activity that you know how to do well. What does it take to do it well? Are there times when you need think about multiple things or perform different actions at the same time?",
-        "name": "Introduction\r"
+        "description": "* **cyberbullying**: using digital devices, sites, and apps to intimidate, harm, and upset someone\n* **digital citizen**: someone who uses technology responsibly to learn, create, and participate\n* **upstander**: a person who supports and stands up for someone else\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _Do you have a favorite superhero? If so, who is it and why? If not, why not? Take turns sharing with your partner._ ([Slide 4](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3e441b4e86_1_16))\n\nInvite students to share out. Follow up by asking students to name specific super powers from their favorite superhero. Point out that one thing that all superheroes have in common is that they use their powers to help other people.\n\n**Say**: _Today we're going to talk about how we can all be superheroes and help others. We're going to watch a video about being super digital citizens. As we watch, think about the question, \"What does a super digital citizen do?\"_\n\n**Show** the video [Super Digital Citizen](https://www.commonsense.org/education/videos/super-digital-citizen) on [Slide 5](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_18).\n\n**Invite** students to share out their responses. Their answers should be based on what the Super Digital Citizen helps Guts do:\n\n* _Changes his password to be secure._\n* _Protects his tablet with a case and carries it in his backpack so that it won't break._\n* _Asks permission from Heart first before sharing a photo of her online._\n\n**Ask**: _You might have noticed that Guts became a superhero too. How did he do that?_\n\nInvite students to respond. Explain that Guts became a superhero because he took steps to help himself and others be responsible online. Define **digital citizen** as _someone who uses technology responsibly to learn, create, and participate._ ([Slide 6](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_30))",
+        "name": "Key Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "13024eaa-2a91-43af-8b4a-550f5682c6a1",
-        "lesson_activity.key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3"
+        "activity_section.key": "b01367f6-8c61-4417-9d29-193fd67ddac0",
+        "lesson_activity.key": "457f5ed8-0041-4bd5-b6e6-800291ae5cf5"
       }
     },
     {
-      "key": "ca1cfaa3-55dd-4565-ab27-8237e9754c51",
-      "position": 2,
-      "properties": {
-        "description": "* What parts of your body are you using? Does this change at different points?\n* Are there times when you need to stop one action before you can begin another? (For example, you must stop dribbling the basketball before you can shoot.)\n\n**Goal:** Help students think about times when they must keep track of multiple tasks or instructions simultaneously. The main activity will get students performing silly actions, either in sequence or simultaneously. This will eventually lead to connections about a new way to write programs, but you don't need to get the discussion there yet.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "ca1cfaa3-55dd-4565-ab27-8237e9754c51",
-        "lesson_activity.key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3"
-      }
-    },
-    {
-      "key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8",
+      "key": "9292ebdf-3b55-436b-a66d-ebb5ae87c34e",
       "position": 1,
       "properties": {
-        "description": "Today we’re going to start with a quick game. In this game, I will be giving you all commands to follow and your job is to follow my instructions. The commands will always start with “begin” or “stop”. If I tell you to begin doing something, you need to start that behavior and keep it going until I tell you to stop. I might also tell you to “stop everything” which means you can end all of the behaviors I’ve given you so far. We’ll play 3 rounds and after each round I’ll ask you all a couple questions.",
-        "name": "Follow the Algorithm",
-        "progression_name": "Follow the Algorithm - Unplugged Activity",
-        "remarks": true
+        "description": "**Say**: _One situation a super digital citizen might see online is cyberbullying. **Cyberbullying** is when someone uses digital devices, sites, or apps to intimidate, harm, or upset someone._ ([Slide 7](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3e441b4e86_1_43))\n\nExplain that cyberbullying can take many forms, including:\n\n* Someone making fun of or pressuring someone else repeatedly\n* Comments, memes, private messages, or chatting\n* The person being bullied not knowing everyone who's doing the bullying (as people can hide their identity online)\n* A group of people ganging up on someone\n\n**Ask**: _So if you saw someone being cyberbullied, what's something you could do to stop it? Take turns sharing with your partner._\n\nInvite students to respond. Point out three ways that cyberbullying can be addressed:\n\n* Defending or supporting the person being bullied\n* Telling a trusted adult\n* Addressing it directly with the bully\n\n**Explain** to students that doing any of these things makes you an upstander. An **upstander** is _a person who supports and stands up for someone else._ ([Slide 8](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_124))\n\n**Distribute** the [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) to each student and have a student read the directions for Part 1 aloud. Allow students five minutes to complete the activity. ([Slide 9](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3dbf0be0a2_0_0))"
       },
       "seeding_key": {
-        "activity_section.key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8",
-        "lesson_activity.key": "acd2af40-b43f-4c8c-bfd4-e5451300ab38"
+        "activity_section.key": "9292ebdf-3b55-436b-a66d-ebb5ae87c34e",
+        "lesson_activity.key": "0ead3881-08bc-4d6c-9fda-5bd889adbb5f"
       }
     },
     {
-      "key": "29a71d6e-302b-47b5-b14c-79ab3309795a",
+      "key": "4d7af415-953e-43ab-9a88-b282764926df",
       "position": 1,
       "properties": {
-        "description": "#### Rules\n\n*All commands should be prefaced with either “begin” or “stop”.*\n\nWhen players are told to “begin” a behavior, they should continue it until told to “stop”. For example, players should not told be told to clap once, but might be told to “begin clapping”. Their clapping should continue until they are told to “stop clapping” even if they are given other new behaviors in between. \n\n*The leader can also call for the players to “stop everything”.* \n\nThis should result in everyone just standing at rest regardless of all previous commands.\n\nYou as the teacher should take on the role of the leader. You can try make up your own sequences, but here are some you can try. Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion.\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n**Debrief:** *What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?*\n\n#### Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n**Debrief:**\n\n*What kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?*\n\n#### Round 3 (Challenging)\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n**Discussion:** _What happens if two behaviors seem to conflict with each other?_\n\n_What should you do when told to clap your hands and flap your arms at the same time?_\n\n_How can you jump up and down while crouching?_\n\n_What happens if you need to tap your knees and your head at the same time?_\n\n_When you were told to spin in two opposite directions what did you see people do?_ \n\n_What would happen if you were told to spin left and right at the exact same time?_\n\nStudents should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out."
+        "description": "**Distribute** colored pencils or markers and tell students: _You're going to create your own digital citizen superhero, who will help people like Guts to become super digital citizens._\n\n**Distribute** the [Digital Citizen Superhero Student Handout](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) and read the directions aloud. ([Slide 10](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g410938bbc1_132_0))\n\n**Optional**: Have students use [Marvel's Create Your Own Superhero](https://www.marvelhq.com/create-your-own-super-hero), save the image, and paste the image into the handout.\n\n**Allow** students 10 minutes to work on their superheroes. If time permits, have students share out their superheroes with the class, or have them on display for a gallery walk."
       },
       "seeding_key": {
-        "activity_section.key": "29a71d6e-302b-47b5-b14c-79ab3309795a",
-        "lesson_activity.key": "d9c996a9-9751-44af-887b-3caa47ce10e6"
+        "activity_section.key": "4d7af415-953e-43ab-9a88-b282764926df",
+        "lesson_activity.key": "069f8d26-8e31-484a-9e8c-3d67add0197d"
       }
     },
     {
-      "key": "6b3e28ed-cca9-4226-ae16-46d692a5705c",
-      "position": 2,
-      "properties": {
-        "description": "\n####Extension\n\nIf you want to make things even more complicated, you can consider changing the rules so that only some players follow some commands. For example, you could try commands like “All girls begin spinning to the left”, “All boys begin clapping your hands”, or “Everyone stop everything.”"
-      },
-      "seeding_key": {
-        "activity_section.key": "6b3e28ed-cca9-4226-ae16-46d692a5705c",
-        "lesson_activity.key": "d9c996a9-9751-44af-887b-3caa47ce10e6"
-      }
-    },
-    {
-      "key": "b56443f5-f77b-49a5-8ca5-4c9eea6ca9b4",
+      "key": "e6cb920e-45c4-44e9-8271-b7f213e02b3c",
       "position": 1,
       "properties": {
-        "description": "**Say:** *In this activity, you followed the step-by-step instructions that I gave you. We call this an* ***algorithm***.\n\nInvite students to think about other times in their lives when they use or follow algorithms. Examples include following a schedule or a daily routine.  Let students know that in the next lesson, they will be able to give an algorithm for their *computers* to follow. ",
-        "name": "What did we learn?"
+        "description": "**Have** students go back to their [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) and go to Part 2. Have a student read the directions aloud before students create their comic strip stories. ([Slide 11](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3dbf0be0a2_1_0))\n\n**Optional**: Have students use a digital comic creation tool. See our recommendations: [Classroom-Friendly Websites and Apps for Making Comics](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
       },
       "seeding_key": {
-        "activity_section.key": "b56443f5-f77b-49a5-8ca5-4c9eea6ca9b4",
-        "lesson_activity.key": "e92de163-da5e-489f-bec1-dad888b836d7"
+        "activity_section.key": "e6cb920e-45c4-44e9-8271-b7f213e02b3c",
+        "lesson_activity.key": "da7bb20b-3692-45ca-a939-6b44411eea77"
       }
     },
     {
-      "key": "29764c6d-53e6-422a-a177-856e9ca164e3",
-      "position": 2,
+      "key": "08c7cb73-c18b-4396-aa07-a290f6212431",
+      "position": 1,
       "properties": {
-        "description": "**Prompt:**\n\nThink back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
-        "name": "Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options! "
-          }
-        ]
+        "description": "Here are additional resources you can provide students to enhance their learning:\n\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n* Have students brainstorm and write an opinion piece on what the quote \"with great power comes great responsibility\" means in the digital world. How is having access to the internet a \"great power\"? What responsibilities do we have to ourselves and others? Students can post their work to a blog or your class page."
       },
       "seeding_key": {
-        "activity_section.key": "29764c6d-53e6-422a-a177-856e9ca164e3",
-        "lesson_activity.key": "e92de163-da5e-489f-bec1-dad888b836d7"
+        "activity_section.key": "08c7cb73-c18b-4396-aa07-a290f6212431",
+        "lesson_activity.key": "02ff6b22-0825-41c1-9e77-721f5801fede"
+      }
+    },
+    {
+      "key": "3c23fa37-7254-47f3-b576-da07d0b605dd",
+      "position": 1,
+      "properties": {
+        "progression_name": "Be a Super Digital Citizen"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c23fa37-7254-47f3-b576-da07d0b605dd",
+        "lesson_activity.key": "0696bab6-1e27-488e-85e3-2266ce48e16b"
+      }
+    },
+    {
+      "key": "8a089041-e523-46ab-99f6-80c9f1f22523",
+      "position": 1,
+      "properties": {
+        "description": "* **hardwired**: something you are born with\n* **personal information**: information about you that cannot be used to identify you because it is also true for many other people (e.g. your hair color or the city you live in)\n* **private information**: information about you that can be used to identify you because it is unique to you (e.g. your full name or your address)\n* **register (online)**: to enter your information in order to sign up and get access to a website or app\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [Share Jumper](https://www.digitalpassport.org/share-jumper.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Say**: _Today we're going to start with a little game. For each statement that I read, if it is true about you, stand up. If it isn't true, stay seated. After each statement, look around to see who else is standing or sitting._ ([Slide 4](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_283))\n\n**Read** the statements below to your class, allowing time for students to stand or sit after each one. Prompt all students to sit back down before moving on to the next statement.\n\n* _Stand up if you or your family speak another language besides English._\n* _Stand up if you have two or more siblings._\n* _Stand up if you have a pet._\n* _Stand up if you have ever been on YouTube._\n* _Stand up if you have ever shared something about yourself online._\n \n**Have** students all sit back down and ask: _What did you learn from doing that activity? Did you enjoy it? Why or why not?_\n\nInvite volunteers to share out. If necessary, follow up with students who share by asking to explain what they found fun or not fun about it.\n\n**Say**: _The purpose of that activity was to have some fun getting to know each other better. There are many situations where sharing information about yourself can be fun and positive. One of those situations is on the internet, where sharing your likes, opinions, and other personal information -- but not private information -- can be positive and fun._",
+        "name": "Key Vocabulary\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a089041-e523-46ab-99f6-80c9f1f22523",
+        "lesson_activity.key": "01746bcd-3c02-43f5-8a35-0a775acc2095"
+      }
+    },
+    {
+      "key": "59629eb7-2e23-4771-9373-7ac7917bde80",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: _In today's lesson, we're going to talk about being online -- and ways that you can share things about yourself that are fun and that connect you with others. We're also going to talk about ways that you can protect yourself so that you don't share more than you should._\n\n**Project** \"Did You Know?\" on [Slide 5](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_93).\n\n**Ask**: _What do you observe in this slide? What's the main idea it's trying to show? Share your ideas with your partner._\n\nInvite students to share their responses. If necessary, clarify the meaning of **hardwired** as _something you're born with_, that sharing is something humans do naturally, and that there are many benefits to it.\n\n**Say**: _What is something about you that you might share with others that would give you one of these benefits? Take turns sharing your idea with your partner._\n\nInvite students to share out their answers. Follow up by asking them to explain which benefit the example would give them (feel good, learn, connect, or persuade). If the student isn't sure, open it up to the rest of the class. Examples may connect to more than one benefit."
+      },
+      "seeding_key": {
+        "activity_section.key": "59629eb7-2e23-4771-9373-7ac7917bde80",
+        "lesson_activity.key": "6114e1af-1c83-4f1f-add9-a97c2523b343"
+      }
+    },
+    {
+      "key": "ff1cccb2-013e-4ec7-a466-475e69687d20",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: _So there are lots of reasons to share information about yourself. However, not everything about you is OK to share. We're going to watch a short video about sharing online. As we watch, think about what information is OK to share and what isn't._\n\n**Project** [Slide 6](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3ed1f0b992_10_0) and show the video **Private and Personal Information**. After the video, invite students to respond to the discussion question and prompt them to give examples of private and personal information. Clarify that **private information** is the most risky to share because it can be used to identify you individually. ([Slide 7](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_376))\n\n**Say**: _Now, we're going to play another little game. For each example that I say, discuss with your partner whether it is private or personal. To decide, ask yourself, \"Is this information that would also be true for many other people?\" If so, it is personal. If not, it is private._ ([Slide 8](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_501))\n\nRead aloud the first example, \"Age.\" Remind students to consider whether this is information that would be true of many others. If it is, then it is personal. If not, it is private. Give students one minute to discuss and decide.\n\n**Say**: _If you think this is private information, stand up. If you think it is personal, stay seated._\n\nAfter students stand or stay seated, invite students to explain why they chose the answer they did. Follow up by prompting them to refer back to the definitions of private and personal. If necessary, help students clarify that there are many people (in their school, in their city, even in the class) who are the same age as them.\n\n**Say**: _Everyone who is still seated, you are correct! This information is personal, not private._\n\nRepeat the game above for each of the examples:\n\n* home address (**private**)\n* email address (**private**)\n* date of birth (**private**)\n* favorite music (**personal**)\n* how many brothers and sisters you have (**personal**)\n* phone numbers (**private**)\n* credit card information (**private**)\n* favorite food (**personal**)\n* name of your pet (**personal**)\n* name of your school (**private**) (Explain that although school name is something that is true for many people, it is risky to share it with someone you don't know, and you should get permission from a trusted adult first.)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff1cccb2-013e-4ec7-a466-475e69687d20",
+        "lesson_activity.key": "d1c5ae68-dd15-4aec-aff6-44d0ea484781"
+      }
+    },
+    {
+      "key": "be2dab1f-0724-4a1e-9f7f-be03fcec0379",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute** the [Exit Ticket Student Handout](https://drive.google.com/open?id=1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA) to students.\n\n**Say**: _To close out, you're going to complete two short reflection questions about what we learned today. You'll have five minutes to write._ ([Slide 9](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_594))\n\n**Give** students five minutes to write their reflection. Invite volunteers to share with the class.\n\n**Collect** everyone's handout before they leave to assess their understanding of private versus personal information.\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/u/2/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy)."
+      },
+      "seeding_key": {
+        "activity_section.key": "be2dab1f-0724-4a1e-9f7f-be03fcec0379",
+        "lesson_activity.key": "776101b2-57fc-4032-b1b3-1ec318adfbb2"
+      }
+    },
+    {
+      "key": "ee3de92e-9de2-4905-b055-679352bded12",
+      "position": 1,
+      "properties": {
+        "description": "Here are additional resources you can provide students to enhance their learning:\r\n\r\n* [Family Activity](https://drive.google.com/open?id=1jzZbfj0Y1GJa6WWTHp2EEzr7t0m-Hof-qIb-QLiAcpA) \r\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)\r\n* Consider having students keep track of how many private or personal statements they get right. Offer the class a reward for reaching a total number of cumulative points. Alternatively, students could compete against each other for an individual reward."
+      },
+      "seeding_key": {
+        "activity_section.key": "ee3de92e-9de2-4905-b055-679352bded12",
+        "lesson_activity.key": "74025568-d2f7-4ad1-8196-55a2955dd2f8"
+      }
+    },
+    {
+      "key": "47519d14-c0a6-4741-b8b5-6860794fca1a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "47519d14-c0a6-4741-b8b5-6860794fca1a",
+        "lesson_activity.key": "522e566a-4230-4479-b810-bdac5c37634e"
       }
     },
     {
@@ -1907,139 +1963,6 @@
       }
     },
     {
-      "key": "b01367f6-8c61-4417-9d29-193fd67ddac0",
-      "position": 1,
-      "properties": {
-        "description": "* **cyberbullying**: using digital devices, sites, and apps to intimidate, harm, and upset someone\n* **digital citizen**: someone who uses technology responsibly to learn, create, and participate\n* **upstander**: a person who supports and stands up for someone else\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _Do you have a favorite superhero? If so, who is it and why? If not, why not? Take turns sharing with your partner._ ([Slide 4](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3e441b4e86_1_16))\n\nInvite students to share out. Follow up by asking students to name specific super powers from their favorite superhero. Point out that one thing that all superheroes have in common is that they use their powers to help other people.\n\n**Say**: _Today we're going to talk about how we can all be superheroes and help others. We're going to watch a video about being super digital citizens. As we watch, think about the question, \"What does a super digital citizen do?\"_\n\n**Show** the video [Super Digital Citizen](https://www.commonsense.org/education/videos/super-digital-citizen) on [Slide 5](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_18).\n\n**Invite** students to share out their responses. Their answers should be based on what the Super Digital Citizen helps Guts do:\n\n* _Changes his password to be secure._\n* _Protects his tablet with a case and carries it in his backpack so that it won't break._\n* _Asks permission from Heart first before sharing a photo of her online._\n\n**Ask**: _You might have noticed that Guts became a superhero too. How did he do that?_\n\nInvite students to respond. Explain that Guts became a superhero because he took steps to help himself and others be responsible online. Define **digital citizen** as _someone who uses technology responsibly to learn, create, and participate._ ([Slide 6](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_30))",
-        "name": "Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "b01367f6-8c61-4417-9d29-193fd67ddac0",
-        "lesson_activity.key": "457f5ed8-0041-4bd5-b6e6-800291ae5cf5"
-      }
-    },
-    {
-      "key": "9292ebdf-3b55-436b-a66d-ebb5ae87c34e",
-      "position": 1,
-      "properties": {
-        "description": "**Say**: _One situation a super digital citizen might see online is cyberbullying. **Cyberbullying** is when someone uses digital devices, sites, or apps to intimidate, harm, or upset someone._ ([Slide 7](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3e441b4e86_1_43))\n\nExplain that cyberbullying can take many forms, including:\n\n* Someone making fun of or pressuring someone else repeatedly\n* Comments, memes, private messages, or chatting\n* The person being bullied not knowing everyone who's doing the bullying (as people can hide their identity online)\n* A group of people ganging up on someone\n\n**Ask**: _So if you saw someone being cyberbullied, what's something you could do to stop it? Take turns sharing with your partner._\n\nInvite students to respond. Point out three ways that cyberbullying can be addressed:\n\n* Defending or supporting the person being bullied\n* Telling a trusted adult\n* Addressing it directly with the bully\n\n**Explain** to students that doing any of these things makes you an upstander. An **upstander** is _a person who supports and stands up for someone else._ ([Slide 8](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_124))\n\n**Distribute** the [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) to each student and have a student read the directions for Part 1 aloud. Allow students five minutes to complete the activity. ([Slide 9](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3dbf0be0a2_0_0))"
-      },
-      "seeding_key": {
-        "activity_section.key": "9292ebdf-3b55-436b-a66d-ebb5ae87c34e",
-        "lesson_activity.key": "0ead3881-08bc-4d6c-9fda-5bd889adbb5f"
-      }
-    },
-    {
-      "key": "4d7af415-953e-43ab-9a88-b282764926df",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute** colored pencils or markers and tell students: _You're going to create your own digital citizen superhero, who will help people like Guts to become super digital citizens._\n\n**Distribute** the [Digital Citizen Superhero Student Handout](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) and read the directions aloud. ([Slide 10](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g410938bbc1_132_0))\n\n**Optional**: Have students use [Marvel's Create Your Own Superhero](https://www.marvelhq.com/create-your-own-super-hero), save the image, and paste the image into the handout.\n\n**Allow** students 10 minutes to work on their superheroes. If time permits, have students share out their superheroes with the class, or have them on display for a gallery walk."
-      },
-      "seeding_key": {
-        "activity_section.key": "4d7af415-953e-43ab-9a88-b282764926df",
-        "lesson_activity.key": "069f8d26-8e31-484a-9e8c-3d67add0197d"
-      }
-    },
-    {
-      "key": "e6cb920e-45c4-44e9-8271-b7f213e02b3c",
-      "position": 1,
-      "properties": {
-        "description": "**Have** students go back to their [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) and go to Part 2. Have a student read the directions aloud before students create their comic strip stories. ([Slide 11](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3dbf0be0a2_1_0))\n\n**Optional**: Have students use a digital comic creation tool. See our recommendations: [Classroom-Friendly Websites and Apps for Making Comics](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
-      },
-      "seeding_key": {
-        "activity_section.key": "e6cb920e-45c4-44e9-8271-b7f213e02b3c",
-        "lesson_activity.key": "da7bb20b-3692-45ca-a939-6b44411eea77"
-      }
-    },
-    {
-      "key": "08c7cb73-c18b-4396-aa07-a290f6212431",
-      "position": 1,
-      "properties": {
-        "description": "Here are additional resources you can provide students to enhance their learning:\n\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n* Have students brainstorm and write an opinion piece on what the quote \"with great power comes great responsibility\" means in the digital world. How is having access to the internet a \"great power\"? What responsibilities do we have to ourselves and others? Students can post their work to a blog or your class page."
-      },
-      "seeding_key": {
-        "activity_section.key": "08c7cb73-c18b-4396-aa07-a290f6212431",
-        "lesson_activity.key": "02ff6b22-0825-41c1-9e77-721f5801fede"
-      }
-    },
-    {
-      "key": "3c23fa37-7254-47f3-b576-da07d0b605dd",
-      "position": 1,
-      "properties": {
-        "progression_name": "Be a Super Digital Citizen"
-      },
-      "seeding_key": {
-        "activity_section.key": "3c23fa37-7254-47f3-b576-da07d0b605dd",
-        "lesson_activity.key": "0696bab6-1e27-488e-85e3-2266ce48e16b"
-      }
-    },
-    {
-      "key": "8a089041-e523-46ab-99f6-80c9f1f22523",
-      "position": 1,
-      "properties": {
-        "description": "* **hardwired**: something you are born with\n* **personal information**: information about you that cannot be used to identify you because it is also true for many other people (e.g. your hair color or the city you live in)\n* **private information**: information about you that can be used to identify you because it is unique to you (e.g. your full name or your address)\n* **register (online)**: to enter your information in order to sign up and get access to a website or app\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [Share Jumper](https://www.digitalpassport.org/share-jumper.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Say**: _Today we're going to start with a little game. For each statement that I read, if it is true about you, stand up. If it isn't true, stay seated. After each statement, look around to see who else is standing or sitting._ ([Slide 4](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_283))\n\n**Read** the statements below to your class, allowing time for students to stand or sit after each one. Prompt all students to sit back down before moving on to the next statement.\n\n* _Stand up if you or your family speak another language besides English._\n* _Stand up if you have two or more siblings._\n* _Stand up if you have a pet._\n* _Stand up if you have ever been on YouTube._\n* _Stand up if you have ever shared something about yourself online._\n \n**Have** students all sit back down and ask: _What did you learn from doing that activity? Did you enjoy it? Why or why not?_\n\nInvite volunteers to share out. If necessary, follow up with students who share by asking to explain what they found fun or not fun about it.\n\n**Say**: _The purpose of that activity was to have some fun getting to know each other better. There are many situations where sharing information about yourself can be fun and positive. One of those situations is on the internet, where sharing your likes, opinions, and other personal information -- but not private information -- can be positive and fun._",
-        "name": "Key Vocabulary\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "8a089041-e523-46ab-99f6-80c9f1f22523",
-        "lesson_activity.key": "01746bcd-3c02-43f5-8a35-0a775acc2095"
-      }
-    },
-    {
-      "key": "59629eb7-2e23-4771-9373-7ac7917bde80",
-      "position": 1,
-      "properties": {
-        "description": "**Say**: _In today's lesson, we're going to talk about being online -- and ways that you can share things about yourself that are fun and that connect you with others. We're also going to talk about ways that you can protect yourself so that you don't share more than you should._\n\n**Project** \"Did You Know?\" on [Slide 5](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_93).\n\n**Ask**: _What do you observe in this slide? What's the main idea it's trying to show? Share your ideas with your partner._\n\nInvite students to share their responses. If necessary, clarify the meaning of **hardwired** as _something you're born with_, that sharing is something humans do naturally, and that there are many benefits to it.\n\n**Say**: _What is something about you that you might share with others that would give you one of these benefits? Take turns sharing your idea with your partner._\n\nInvite students to share out their answers. Follow up by asking them to explain which benefit the example would give them (feel good, learn, connect, or persuade). If the student isn't sure, open it up to the rest of the class. Examples may connect to more than one benefit."
-      },
-      "seeding_key": {
-        "activity_section.key": "59629eb7-2e23-4771-9373-7ac7917bde80",
-        "lesson_activity.key": "6114e1af-1c83-4f1f-add9-a97c2523b343"
-      }
-    },
-    {
-      "key": "ff1cccb2-013e-4ec7-a466-475e69687d20",
-      "position": 1,
-      "properties": {
-        "description": "**Say**: _So there are lots of reasons to share information about yourself. However, not everything about you is OK to share. We're going to watch a short video about sharing online. As we watch, think about what information is OK to share and what isn't._\n\n**Project** [Slide 6](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3ed1f0b992_10_0) and show the video **Private and Personal Information**. After the video, invite students to respond to the discussion question and prompt them to give examples of private and personal information. Clarify that **private information** is the most risky to share because it can be used to identify you individually. ([Slide 7](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_376))\n\n**Say**: _Now, we're going to play another little game. For each example that I say, discuss with your partner whether it is private or personal. To decide, ask yourself, \"Is this information that would also be true for many other people?\" If so, it is personal. If not, it is private._ ([Slide 8](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_501))\n\nRead aloud the first example, \"Age.\" Remind students to consider whether this is information that would be true of many others. If it is, then it is personal. If not, it is private. Give students one minute to discuss and decide.\n\n**Say**: _If you think this is private information, stand up. If you think it is personal, stay seated._\n\nAfter students stand or stay seated, invite students to explain why they chose the answer they did. Follow up by prompting them to refer back to the definitions of private and personal. If necessary, help students clarify that there are many people (in their school, in their city, even in the class) who are the same age as them.\n\n**Say**: _Everyone who is still seated, you are correct! This information is personal, not private._\n\nRepeat the game above for each of the examples:\n\n* home address (**private**)\n* email address (**private**)\n* date of birth (**private**)\n* favorite music (**personal**)\n* how many brothers and sisters you have (**personal**)\n* phone numbers (**private**)\n* credit card information (**private**)\n* favorite food (**personal**)\n* name of your pet (**personal**)\n* name of your school (**private**) (Explain that although school name is something that is true for many people, it is risky to share it with someone you don't know, and you should get permission from a trusted adult first.)"
-      },
-      "seeding_key": {
-        "activity_section.key": "ff1cccb2-013e-4ec7-a466-475e69687d20",
-        "lesson_activity.key": "d1c5ae68-dd15-4aec-aff6-44d0ea484781"
-      }
-    },
-    {
-      "key": "be2dab1f-0724-4a1e-9f7f-be03fcec0379",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute** the [Exit Ticket Student Handout](https://drive.google.com/open?id=1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA) to students.\n\n**Say**: _To close out, you're going to complete two short reflection questions about what we learned today. You'll have five minutes to write._ ([Slide 9](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_594))\n\n**Give** students five minutes to write their reflection. Invite volunteers to share with the class.\n\n**Collect** everyone's handout before they leave to assess their understanding of private versus personal information.\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/u/2/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy)."
-      },
-      "seeding_key": {
-        "activity_section.key": "be2dab1f-0724-4a1e-9f7f-be03fcec0379",
-        "lesson_activity.key": "776101b2-57fc-4032-b1b3-1ec318adfbb2"
-      }
-    },
-    {
-      "key": "ee3de92e-9de2-4905-b055-679352bded12",
-      "position": 1,
-      "properties": {
-        "description": "Here are additional resources you can provide students to enhance their learning:\r\n\r\n* [Family Activity](https://drive.google.com/open?id=1jzZbfj0Y1GJa6WWTHp2EEzr7t0m-Hof-qIb-QLiAcpA) \r\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)\r\n* Consider having students keep track of how many private or personal statements they get right. Offer the class a reward for reaching a total number of cumulative points. Alternatively, students could compete against each other for an individual reward."
-      },
-      "seeding_key": {
-        "activity_section.key": "ee3de92e-9de2-4905-b055-679352bded12",
-        "lesson_activity.key": "74025568-d2f7-4ad1-8196-55a2955dd2f8"
-      }
-    },
-    {
-      "key": "47519d14-c0a6-4741-b8b5-6860794fca1a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "47519d14-c0a6-4741-b8b5-6860794fca1a",
-        "lesson_activity.key": "522e566a-4230-4479-b810-bdac5c37634e"
-      }
-    },
-    {
       "key": "8489f43d-dff8-41c9-aeca-e699cb7e8adc",
       "position": 1,
       "properties": {
@@ -2146,142 +2069,6 @@
       "seeding_key": {
         "activity_section.key": "b95cd815-eab7-4a92-8fc1-13cee1a289fb",
         "lesson_activity.key": "3f920d9d-49c0-4a91-af81-7fbb5b9fc757"
-      }
-    },
-    {
-      "key": "6a862d4d-8036-499b-bdd6-a5d75dc0099e",
-      "position": 1,
-      "properties": {
-        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n**Watch:** Have students watch the one-minute ***Digital Sharing video**.\nYou may need to play it two or three times."
-      },
-      "seeding_key": {
-        "activity_section.key": "6a862d4d-8036-499b-bdd6-a5d75dc0099e",
-        "lesson_activity.key": "74d92853-37dc-4cd5-9d69-087420e81160"
-      }
-    },
-    {
-      "key": "179685a9-6ed2-454f-8a2b-76c4032f1d16",
-      "position": 2,
-      "properties": {
-        "description": "**Say**:  *write a character sketch about one or both of the characters in the video. Be as creative as you can. There are no wrong answers. Give these characters a life of their own, whatever you want it to be.* \n\nPrompt with questions:\n\n- *Who is your character?*\n- *What is his/her name?*\n- *Who are his/her friends?*\n- *How long have they known each other?*\n- *Who are the people in his/her family? What are they like?*\n- *What’s his/her backstory?*\n  - *Where does he/she live?* \n  - *Where did he/she used to live?* \n  - *What exciting thing might have happened to them back in kindergarten, ﬁrst grade, etc.?*\n- *What is he/she looking forward to?*\n- *What is he/she afraid of?*\n\n",
-        "name": "Write a Character Sketch \r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "These exercises may also be done orally as a class discussion before the copyright lesson. Write the story or character sketch on the board as students contribute ideas."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "179685a9-6ed2-454f-8a2b-76c4032f1d16",
-        "lesson_activity.key": "74d92853-37dc-4cd5-9d69-087420e81160"
-      }
-    },
-    {
-      "key": "90986348-020e-4b00-b92f-ba4160018feb",
-      "position": 1,
-      "properties": {
-        "name": "Digital Sharing",
-        "progression_name": "Digital Sharing - Unplugged Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "90986348-020e-4b00-b92f-ba4160018feb",
-        "lesson_activity.key": "3df49bdd-03d3-4d4e-aa6a-7df0588bb582"
-      }
-    },
-    {
-      "key": "e7f8dd5c-b1a2-4763-a8d1-b89d81669400",
-      "position": 1,
-      "properties": {
-        "description": "\n####Ethical Sharing\n\n**Activity:** Have all of your students stand up. Begin reading the list of ways to create content below. Instruct students to sit down as soon as they can answer “Yes” to one of the prompts.\n\n- *Have you ever made a video (on a camera, phone, iPad, or computer) and sent it to a family member or posted it online?*\n- *Have you taken a photo and sent to a family member or posted it online?*\n- *Have you created a piece of art to share with your family and friends?*\n- *Have you made up a song to make your friends laugh? Or a sad song to make them cry?*\n- *Have you written a poem for your mom or dad on their birthday?*\n\nKeep asking similar questions until the entire class is seated.\n\n**Discuss:** \n\n- *How did it feel to produce something creative?*\n- *How did you feel when you were able to share your creation with others?*\n- *How do you feel when you view or listen to other people’s creations?*\n\nEncourage all responses.\n\nHelp students feel the joy of creating something. Creating can be a lot of hard work, but it is one of the most rewarding things we do. Sharing what we create is fun, and it can encourage more creativity and art. As we get older, we have more and more opportunities to share our work and explore media and art that other people have created. We want to make sure we are always fair when using others’ art and creative work.\n\n**Say:** _Remember, copyright protects all kinds of creative work so that artists/creators can get paid for their eﬀort. This includes, original writing (stories), art, photographs, audio, images, music, song lyrics, even the doodle you drew on your napkin at lunch. It doesn't matter if it was created by a famous artist or by you. When you make an original work, you get to decide who can:_ \n\n- *make copies* \n- *distribute copies*\n- *display or perform the work in public*\n- *make spin‐oﬀs; we call these derivatives (for example, like a book being made into a movie)* \n\n*These rights are given to artists and creators to encourage them to make even more creative work.*\n\n**Think:** Have students think back to the art creation prompt where they first sat down. Inform them that they created an original work with legal protection. Congratulations! \n\n**Pair:**  \n\n- *How might you know if something is copyrighted?* \n  -  The circle © indicates copyright, but copyright protection exists even without the symbol. Creators have ownership over their work, unless they sell it to someone else.\n- *Where have you seen the copyright symbol?* \n  - At the front of books, in movies, on images, posters, etc.\n\n**Share:** Encourage students to share their answers with the class.\n \n**Demonstrate:** Show students how to draw a copyright symbol and write the year next to it. When you make something creative like this, it’s automatically protected by copyright, even without the copyright symbol. \n\n**Discuss:** \n\n- *How does it feel when you share your things with someone else?* \n- *What does it feel like when someone takes your things and shares them without your permission?*\n\n*The same principles of respect and fairness apply when we share our work or someone else’s work online.*"
-      },
-      "seeding_key": {
-        "activity_section.key": "e7f8dd5c-b1a2-4763-a8d1-b89d81669400",
-        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
-      }
-    },
-    {
-      "key": "5dd258d4-d5bc-4b6a-849e-1370cd676922",
-      "position": 2,
-      "properties": {
-        "description": "\n####To Share or Not to Share?\n\n**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.\n\n**Watch:** Have students watch the one-minute ***Digital Sharing Ethics** video.\n*You may need to play it two or three times.*\n\n**Discussion Goal:** \n###Not Okay to Share\n- *Have you ever transferred songs to your friend’s MP3 player? Is that OK?* \n    - If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.\n- *What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie?* \n    - No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.\n    -  *How else could you get an authorized (legal) copy of the movie for your phone?* \n        -  iTunes or Amazon sell movies legally.\n\n### Okay to Share\n\n- *I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair?* \n     - Yes, this is OK to share because I made it — I own the copyright.\n- *What about a song I wrote? Can I share that? . . . Who gets to decide?* \n     - “That’s right, I do.”\n- *What will happen when I share it?* \n     - Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”\n- *Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical?* \n     - *Yes.*\n     - *Why is this share OK?* \n         - Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” \n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "5dd258d4-d5bc-4b6a-849e-1370cd676922",
-        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
-      }
-    },
-    {
-      "key": "44cac68b-92bf-4f41-b0ff-780dde9f1243",
-      "position": 3,
-      "properties": {
-        "description": "As we watch the video, decide if the music is OK to share or not.\n\n**Discuss:** *What did you think of that? How do you think you would feel if you wrote a song and people shared it without asking for your permission? When we share digital ﬁles by:*\n\n- sending pictures or songs through email\n- copying songs from our MP3 player to our friend’s computer\n- copying a movie from a DVD to all our friends’ computers"
-      },
-      "seeding_key": {
-        "activity_section.key": "44cac68b-92bf-4f41-b0ff-780dde9f1243",
-        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
-      }
-    },
-    {
-      "key": "3f9da29a-6132-4d1b-937a-5732b48eeb94",
-      "position": 4,
-      "properties": {
-        "description": "*That's not just sharing, it's making new copies!*",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Demonstrate the following by handing a book to a student: \r\n\r\nSharing a digital ﬁle is diﬀerent from face‐to‐face sharing. If I hand you my book to share it with you, you have the book and I don’t—that’s sharing. If I hand you my iPod, so you can listen to my music, that is sharing. If I share a digital ﬁle with you—like a song or a movie or computer game—we both end up with the ﬁle. In that case, we made a copy. If I copy my songs for you to put on your iPod, that is not sharing—it’s copying. Making copies of copyrighted work hurts the artist/creators. In addition, P2P sharing and torrent sites can put your computer at risk for bad stuﬀ: malware, ads, and worse.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3f9da29a-6132-4d1b-937a-5732b48eeb94",
-        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
-      }
-    },
-    {
-      "key": "c5bc454e-bb85-498a-8e23-b16ba20289e5",
-      "position": 5,
-      "properties": {
-        "description": "**Discuss:** *If you were one of these characters in the video, what could you do to share fairly? What about other sharing situations? What other ethical considerations are there?*\n\nSome acceptable responses:\n\n- Send your friend a link to the artist’s YouTube channel where she can listen to the song.\n- Help your friend buy the song from an online store that you can trust because it’s used by a large online community, like iTunes or Amazon.  \n \n*Ask yourself: Who owns this? Do I have permission to share? Do I have a right to make a copy? Am I being fair to everyone involved?*"
-      },
-      "seeding_key": {
-        "activity_section.key": "c5bc454e-bb85-498a-8e23-b16ba20289e5",
-        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
-      }
-    },
-    {
-      "key": "26e345f8-d754-44a5-9197-e0554116562e",
-      "position": 1,
-      "properties": {
-        "description": "Remember, copyright is a protection given to writers and artists for a limited time to let them receive payment for their work. It’s intended to foster more creativity. As we share and use, we need to respect each other’s work and the laws of copyright. Just because we own a copy of something does not mean we have the right to make more copies to give or sell to other people. Copyright gives us some protection over how our art will be used and shared by others.",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "26e345f8-d754-44a5-9197-e0554116562e",
-        "lesson_activity.key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f"
-      }
-    },
-    {
-      "key": "07341863-700f-43c2-aaf3-8d1bac1d87b5",
-      "position": 2,
-      "properties": {
-        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Give an example of a way that you have seen other creators share or remix someone's work. Do you believe that was fair?  Why or why not?"
-      },
-      "seeding_key": {
-        "activity_section.key": "07341863-700f-43c2-aaf3-8d1bac1d87b5",
-        "lesson_activity.key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f"
-      }
-    },
-    {
-      "key": "6ef6c719-244f-449d-9d81-75283f9d48e4",
-      "position": 1,
-      "properties": {
-        "description": "Please be sure to visit [Copyright & Creativity ](https://copyrightandcreativity.org) to find more lessons on digital sharing and creative rights."
-      },
-      "seeding_key": {
-        "activity_section.key": "6ef6c719-244f-449d-9d81-75283f9d48e4",
-        "lesson_activity.key": "36227e91-065d-4acc-8155-f954f1fe1ffc"
       }
     },
     {
@@ -3423,7 +3210,7 @@
       "key": "5939ecdc-3ed6-484a-9053-c6fe4307b694",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_ \n * _What kinds of apps are there?_ \n * _Where do we use apps?_\n\n While discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\n**Say**: (Ensure that all students are on the same page regarding this topic by introducing key terms and concepts.) \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\n**Discuss**: Apps are everywhere! Ask students why they think apps have become so popular. Here are some example explanations:\n\n- Many people can more easily access or afford a mobile device (e.g., smartphone) than a larger computer with a keyboard, mouse, and so forth. \n- Apps can address a variety of needs. For example, if I need a ride somewhere, I might try a ride-sharing app and get there quickly. If I want to know what movies I should watch, there's probably an app that can help me decide. And of course, if I want to call or text someone on my phone, I use apps for those as well! \n\nIntroduce accessibility with the remarks below.\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_\n * _What kinds of apps are there?_ \n * _Where do we use apps?_\n\n**Discussion**: Students should understand that apps can address a variety of needs. For example, apps can be used to request rides, recommend movies, or communicate with friends and family. Many people have access to a mobile device (e.g., smartphone) which makes it possible to use apps just about anywhere.\n\nWhile discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\nEnsure that all students are on the same page regarding this topic by introducing key terms and concepts with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What are apps?\" slide \n\n**Say**: \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\nIntroduce accessibility with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What is accessibility?\" slide\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
         "name": "Context-Setting"
       },
       "seeding_key": {
@@ -3447,7 +3234,7 @@
       "key": "35fc9b88-53fd-44aa-9f29-faf30034de5e",
       "position": 2,
       "properties": {
-        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the ***Designing for Accessibility Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n[slides]\n\n#### Designing for Accessibility Scenarios\n\n*Slide 1: Meet Wei*\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n*Slide 2: Introducing Grammaphone!*\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n* Here is a screenshot of the home screen. What do you think about it? How do you think this app works? \n\n*Slide 3: Wei’s Problem*\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music-sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n*Slide 4: Meet Roger*\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. A few years ago, Roger’s hand had to be “amputated” (surgically removed) due to an accident. \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand,” which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n*Slide 5: Introducing Football Frenzy!*\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n* Here’s a screenshot of the game in action. Based on the interface, how do you think this game is played? \n\n*Slide 6: Roger’s Problem*\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so that you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n*Slide 7: I Wish...* \n\n* Neither of these apps was designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s make their wishes come true by redesigning these apps! \n\n[/slides]\n\n####App Redesign Activity (25 min)\n\nThe final scenario allows students to sketch a redesign of one app from the scenarios (\"Grammaphone\" for Wei or \"Football Frenzy\" for Roger). \n\nStudents should primarily focus their efforts on making their redesigned app more accessible for either of them, along with any other accessibility features they can think of. Students can design as many screens for the app as they wish, and they do not need to make their app look anything like the original examples.\n\nIf there is time, students may redesign apps for both characters.\n\n**Distribute**: Pass out crayons/pencils/etc. to each student as they open their reflection journals. \n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design addresses the need of the user in question."
+        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the ***Designing for Accessibility Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n#### Designing for Accessibility Scenarios\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 1: Meet Wei*\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 2: Introducing Grammaphone!*\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n\n**Discuss**: What do you think about this app? How do you think this app works?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 3: Wei and Grammaphone*\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music-sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 4: Meet Roger*\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. A few years ago, Roger’s hand had to be “amputated” (surgically removed) due to an accident. \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand,” which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 5: Introducing Football Frenzy!*\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n\n**Discuss**: What do you think about this app? How do you think this game is played?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 6: Roger and Football Frenzy*\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so that you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n*<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Slide 7: Designing for Accessibility* \n\n* Neither of these apps was designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s redesign these apps! \n\n####App Redesign Activity (25 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Your turn!” slide\n\nThe final scenario allows students to sketch a redesign of one app from the scenarios (\"Grammaphone\" for Wei or \"Football Frenzy\" for Roger). \n\nStudents should primarily focus their efforts on making their redesigned app more accessible for either of them, along with any other accessibility features they can think of. Students can design as many screens for the app as they wish, and they do not need to make their app look anything like the original examples.\n\nIf there is time, students may redesign apps for both characters.\n\n**Distribute**: Pass out crayons/pencils/etc. to each student as they open their reflection journals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Share Out” slide\n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design addresses the need of the user in question."
       },
       "seeding_key": {
         "activity_section.key": "35fc9b88-53fd-44aa-9f29-faf30034de5e",
@@ -3458,12 +3245,148 @@
       "key": "e1fe5c10-383e-402b-a4c2-1efbbb6641c1",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Discuss real-world examples of how apps and other technology can be made more accessible. Ask students how they think making something more accessible can also make it better for others. One example is wheelchair ramps near building entrances. These were originally made for people with wheelchairs, but they are also convenient for people with baby strollers, dollies, and other wheeled equipment.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Reflect” slide\n\n**Discuss**: Discuss real-world examples of how apps and other technology can be made more accessible. Ask students how they think making something more accessible can also make it better for others. One example is wheelchair ramps near building entrances. These were originally made for people with wheelchairs, but they are also convenient for people with baby strollers, dollies, and other wheeled equipment.",
         "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "e1fe5c10-383e-402b-a4c2-1efbbb6641c1",
         "lesson_activity.key": "52ef41bf-9fcf-4c7d-8fec-dbf7d244859b"
+      }
+    },
+    {
+      "key": "6a862d4d-8036-499b-bdd6-a5d75dc0099e",
+      "position": 1,
+      "properties": {
+        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n**Watch:** Have students watch the one-minute ***Digital Sharing video**.\nYou may need to play it two or three times."
+      },
+      "seeding_key": {
+        "activity_section.key": "6a862d4d-8036-499b-bdd6-a5d75dc0099e",
+        "lesson_activity.key": "74d92853-37dc-4cd5-9d69-087420e81160"
+      }
+    },
+    {
+      "key": "179685a9-6ed2-454f-8a2b-76c4032f1d16",
+      "position": 2,
+      "properties": {
+        "description": "**Say**:  *write a character sketch about one or both of the characters in the video. Be as creative as you can. There are no wrong answers. Give these characters a life of their own, whatever you want it to be.* \n\nPrompt with questions:\n\n- *Who is your character?*\n- *What is his/her name?*\n- *Who are his/her friends?*\n- *How long have they known each other?*\n- *Who are the people in his/her family? What are they like?*\n- *What’s his/her backstory?*\n  - *Where does he/she live?* \n  - *Where did he/she used to live?* \n  - *What exciting thing might have happened to them back in kindergarten, ﬁrst grade, etc.?*\n- *What is he/she looking forward to?*\n- *What is he/she afraid of?*\n\n",
+        "name": "Write a Character Sketch \r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These exercises may also be done orally as a class discussion before the copyright lesson. Write the story or character sketch on the board as students contribute ideas."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "179685a9-6ed2-454f-8a2b-76c4032f1d16",
+        "lesson_activity.key": "74d92853-37dc-4cd5-9d69-087420e81160"
+      }
+    },
+    {
+      "key": "90986348-020e-4b00-b92f-ba4160018feb",
+      "position": 1,
+      "properties": {
+        "name": "Digital Sharing",
+        "progression_name": "Digital Sharing - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "90986348-020e-4b00-b92f-ba4160018feb",
+        "lesson_activity.key": "3df49bdd-03d3-4d4e-aa6a-7df0588bb582"
+      }
+    },
+    {
+      "key": "e7f8dd5c-b1a2-4763-a8d1-b89d81669400",
+      "position": 1,
+      "properties": {
+        "description": "\n####Ethical Sharing\n\n**Activity:** Have all of your students stand up. Begin reading the list of ways to create content below. Instruct students to sit down as soon as they can answer “Yes” to one of the prompts.\n\n- *Have you ever made a video (on a camera, phone, iPad, or computer) and sent it to a family member or posted it online?*\n- *Have you taken a photo and sent to a family member or posted it online?*\n- *Have you created a piece of art to share with your family and friends?*\n- *Have you made up a song to make your friends laugh? Or a sad song to make them cry?*\n- *Have you written a poem for your mom or dad on their birthday?*\n\nKeep asking similar questions until the entire class is seated.\n\n**Discuss:** \n\n- *How did it feel to produce something creative?*\n- *How did you feel when you were able to share your creation with others?*\n- *How do you feel when you view or listen to other people’s creations?*\n\nEncourage all responses.\n\nHelp students feel the joy of creating something. Creating can be a lot of hard work, but it is one of the most rewarding things we do. Sharing what we create is fun, and it can encourage more creativity and art. As we get older, we have more and more opportunities to share our work and explore media and art that other people have created. We want to make sure we are always fair when using others’ art and creative work.\n\n**Say:** _Remember, copyright protects all kinds of creative work so that artists/creators can get paid for their eﬀort. This includes, original writing (stories), art, photographs, audio, images, music, song lyrics, even the doodle you drew on your napkin at lunch. It doesn't matter if it was created by a famous artist or by you. When you make an original work, you get to decide who can:_ \n\n- *make copies* \n- *distribute copies*\n- *display or perform the work in public*\n- *make spin‐oﬀs; we call these derivatives (for example, like a book being made into a movie)* \n\n*These rights are given to artists and creators to encourage them to make even more creative work.*\n\n**Think:** Have students think back to the art creation prompt where they first sat down. Inform them that they created an original work with legal protection. Congratulations! \n\n**Pair:**  \n\n- *How might you know if something is copyrighted?* \n  -  The circle © indicates copyright, but copyright protection exists even without the symbol. Creators have ownership over their work, unless they sell it to someone else.\n- *Where have you seen the copyright symbol?* \n  - At the front of books, in movies, on images, posters, etc.\n\n**Share:** Encourage students to share their answers with the class.\n \n**Demonstrate:** Show students how to draw a copyright symbol and write the year next to it. When you make something creative like this, it’s automatically protected by copyright, even without the copyright symbol. \n\n**Discuss:** \n\n- *How does it feel when you share your things with someone else?* \n- *What does it feel like when someone takes your things and shares them without your permission?*\n\n*The same principles of respect and fairness apply when we share our work or someone else’s work online.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7f8dd5c-b1a2-4763-a8d1-b89d81669400",
+        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
+      }
+    },
+    {
+      "key": "5dd258d4-d5bc-4b6a-849e-1370cd676922",
+      "position": 2,
+      "properties": {
+        "description": "\n####To Share or Not to Share?\n\n**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.\n\n**Watch:** Have students watch the one-minute ***Digital Sharing Ethics** video.\n*You may need to play it two or three times.*\n\n**Discussion Goal:** \n###Not Okay to Share\n- *Have you ever transferred songs to your friend’s MP3 player? Is that OK?* \n    - If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.\n- *What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie?* \n    - No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.\n    -  *How else could you get an authorized (legal) copy of the movie for your phone?* \n        -  iTunes or Amazon sell movies legally.\n\n### Okay to Share\n\n- *I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair?* \n     - Yes, this is OK to share because I made it — I own the copyright.\n- *What about a song I wrote? Can I share that? . . . Who gets to decide?* \n     - “That’s right, I do.”\n- *What will happen when I share it?* \n     - Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”\n- *Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical?* \n     - *Yes.*\n     - *Why is this share OK?* \n         - Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dd258d4-d5bc-4b6a-849e-1370cd676922",
+        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
+      }
+    },
+    {
+      "key": "44cac68b-92bf-4f41-b0ff-780dde9f1243",
+      "position": 3,
+      "properties": {
+        "description": "As we watch the video, decide if the music is OK to share or not.\n\n**Discuss:** *What did you think of that? How do you think you would feel if you wrote a song and people shared it without asking for your permission? When we share digital ﬁles by:*\n\n- sending pictures or songs through email\n- copying songs from our MP3 player to our friend’s computer\n- copying a movie from a DVD to all our friends’ computers"
+      },
+      "seeding_key": {
+        "activity_section.key": "44cac68b-92bf-4f41-b0ff-780dde9f1243",
+        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
+      }
+    },
+    {
+      "key": "3f9da29a-6132-4d1b-937a-5732b48eeb94",
+      "position": 4,
+      "properties": {
+        "description": "*That's not just sharing, it's making new copies!*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Demonstrate the following by handing a book to a student: \r\n\r\nSharing a digital ﬁle is diﬀerent from face‐to‐face sharing. If I hand you my book to share it with you, you have the book and I don’t—that’s sharing. If I hand you my iPod, so you can listen to my music, that is sharing. If I share a digital ﬁle with you—like a song or a movie or computer game—we both end up with the ﬁle. In that case, we made a copy. If I copy my songs for you to put on your iPod, that is not sharing—it’s copying. Making copies of copyrighted work hurts the artist/creators. In addition, P2P sharing and torrent sites can put your computer at risk for bad stuﬀ: malware, ads, and worse.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3f9da29a-6132-4d1b-937a-5732b48eeb94",
+        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
+      }
+    },
+    {
+      "key": "c5bc454e-bb85-498a-8e23-b16ba20289e5",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** *If you were one of these characters in the video, what could you do to share fairly? What about other sharing situations? What other ethical considerations are there?*\n\nSome acceptable responses:\n\n- Send your friend a link to the artist’s YouTube channel where she can listen to the song.\n- Help your friend buy the song from an online store that you can trust because it’s used by a large online community, like iTunes or Amazon.  \n \n*Ask yourself: Who owns this? Do I have permission to share? Do I have a right to make a copy? Am I being fair to everyone involved?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5bc454e-bb85-498a-8e23-b16ba20289e5",
+        "lesson_activity.key": "cf2cf265-ee91-467c-89f9-e183b94e93d3"
+      }
+    },
+    {
+      "key": "26e345f8-d754-44a5-9197-e0554116562e",
+      "position": 1,
+      "properties": {
+        "description": "Remember, copyright is a protection given to writers and artists for a limited time to let them receive payment for their work. It’s intended to foster more creativity. As we share and use, we need to respect each other’s work and the laws of copyright. Just because we own a copy of something does not mean we have the right to make more copies to give or sell to other people. Copyright gives us some protection over how our art will be used and shared by others.",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "26e345f8-d754-44a5-9197-e0554116562e",
+        "lesson_activity.key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f"
+      }
+    },
+    {
+      "key": "07341863-700f-43c2-aaf3-8d1bac1d87b5",
+      "position": 2,
+      "properties": {
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Give an example of a way that you have seen other creators share or remix someone's work. Do you believe that was fair?  Why or why not?"
+      },
+      "seeding_key": {
+        "activity_section.key": "07341863-700f-43c2-aaf3-8d1bac1d87b5",
+        "lesson_activity.key": "15ae43a1-06b0-4baa-b04e-8699ef3fb26f"
+      }
+    },
+    {
+      "key": "6ef6c719-244f-449d-9d81-75283f9d48e4",
+      "position": 1,
+      "properties": {
+        "description": "Please be sure to visit [Copyright & Creativity ](https://copyrightandcreativity.org) to find more lessons on digital sharing and creative rights."
+      },
+      "seeding_key": {
+        "activity_section.key": "6ef6c719-244f-449d-9d81-75283f9d48e4",
+        "lesson_activity.key": "36227e91-065d-4acc-8155-f954f1fe1ffc"
       }
     },
     {
@@ -3655,433 +3578,107 @@
         "activity_section.key": "b3a29f62-726b-481d-8dc7-d25eca19dc48",
         "lesson_activity.key": "669b4c4b-acd6-42be-a74b-326176efa14b"
       }
+    },
+    {
+      "key": "13024eaa-2a91-43af-8b4a-550f5682c6a1",
+      "position": 1,
+      "properties": {
+        "description": "**Think-Pair-Share:** Think of hobby, sport, or activity that you know how to do well. What does it take to do it well? Are there times when you need think about multiple things or perform different actions at the same time?",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "13024eaa-2a91-43af-8b4a-550f5682c6a1",
+        "lesson_activity.key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3"
+      }
+    },
+    {
+      "key": "ca1cfaa3-55dd-4565-ab27-8237e9754c51",
+      "position": 2,
+      "properties": {
+        "description": "* What parts of your body are you using? Does this change at different points?\n* Are there times when you need to stop one action before you can begin another? (For example, you must stop dribbling the basketball before you can shoot.)\n\n**Goal:** Help students think about times when they must keep track of multiple tasks or instructions simultaneously. The main activity will get students performing silly actions, either in sequence or simultaneously. This will eventually lead to connections about a new way to write programs, but you don't need to get the discussion there yet.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca1cfaa3-55dd-4565-ab27-8237e9754c51",
+        "lesson_activity.key": "1da600cd-fcd4-4ed1-b453-f07eedea90d3"
+      }
+    },
+    {
+      "key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8",
+      "position": 1,
+      "properties": {
+        "description": "Today we’re going to start with a quick game. In this game, I will be giving you all commands to follow and your job is to follow my instructions. The commands will always start with “begin” or “stop”. If I tell you to begin doing something, you need to start that behavior and keep it going until I tell you to stop. I might also tell you to “stop everything” which means you can end all of the behaviors I’ve given you so far. We’ll play 3 rounds and after each round I’ll ask you all a couple questions.",
+        "name": "Follow the Algorithm",
+        "progression_name": "Follow the Algorithm - Unplugged Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8",
+        "lesson_activity.key": "acd2af40-b43f-4c8c-bfd4-e5451300ab38"
+      }
+    },
+    {
+      "key": "29a71d6e-302b-47b5-b14c-79ab3309795a",
+      "position": 1,
+      "properties": {
+        "description": "#### Rules\n\n*All commands should be prefaced with either “begin” or “stop”.*\n\nWhen players are told to “begin” a behavior, they should continue it until told to “stop”. For example, players should not told be told to clap once, but might be told to “begin clapping”. Their clapping should continue until they are told to “stop clapping” even if they are given other new behaviors in between. \n\n*The leader can also call for the players to “stop everything”.* \n\nThis should result in everyone just standing at rest regardless of all previous commands.\n\nYou as the teacher should take on the role of the leader. You can try make up your own sequences, but here are some you can try. Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion.\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n**Debrief:** *What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?*\n\n#### Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n**Debrief:**\n\n*What kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?*\n\n#### Round 3 (Challenging)\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n**Discussion:** _What happens if two behaviors seem to conflict with each other?_\n\n_What should you do when told to clap your hands and flap your arms at the same time?_\n\n_How can you jump up and down while crouching?_\n\n_What happens if you need to tap your knees and your head at the same time?_\n\n_When you were told to spin in two opposite directions what did you see people do?_ \n\n_What would happen if you were told to spin left and right at the exact same time?_\n\nStudents should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out."
+      },
+      "seeding_key": {
+        "activity_section.key": "29a71d6e-302b-47b5-b14c-79ab3309795a",
+        "lesson_activity.key": "d9c996a9-9751-44af-887b-3caa47ce10e6"
+      }
+    },
+    {
+      "key": "6b3e28ed-cca9-4226-ae16-46d692a5705c",
+      "position": 2,
+      "properties": {
+        "description": "\n####Extension\n\nIf you want to make things even more complicated, you can consider changing the rules so that only some players follow some commands. For example, you could try commands like “All girls begin spinning to the left”, “All boys begin clapping your hands”, or “Everyone stop everything.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b3e28ed-cca9-4226-ae16-46d692a5705c",
+        "lesson_activity.key": "d9c996a9-9751-44af-887b-3caa47ce10e6"
+      }
+    },
+    {
+      "key": "b56443f5-f77b-49a5-8ca5-4c9eea6ca9b4",
+      "position": 1,
+      "properties": {
+        "description": "**Say:** *In this activity, you followed the step-by-step instructions that I gave you. We call this an* ***algorithm***.\n\nInvite students to think about other times in their lives when they use or follow algorithms. Examples include following a schedule or a daily routine.  Let students know that in the next lesson, they will be able to give an algorithm for their *computers* to follow. ",
+        "name": "What did we learn?"
+      },
+      "seeding_key": {
+        "activity_section.key": "b56443f5-f77b-49a5-8ca5-4c9eea6ca9b4",
+        "lesson_activity.key": "e92de163-da5e-489f-bec1-dad888b836d7"
+      }
+    },
+    {
+      "key": "29764c6d-53e6-422a-a177-856e9ca164e3",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:**\n\nThink back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options! "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "29764c6d-53e6-422a-a177-856e9ca164e3",
+        "lesson_activity.key": "e92de163-da5e-489f-bec1-dad888b836d7"
+      }
     }
   ],
   "script_levels": [
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Follow the Algorithm - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SimonSays-Unplugged2022"
-        ],
-        "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8"
-      },
-      "level_keys": [
-        "SimonSays-Unplugged2022"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Video: Introducing Sprite Lab"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseEF_video_IntroSpriteLab2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "14e8ba9a-beb7-4dfa-8f45-6b763221f4c1"
-      },
-      "level_keys": [
-        "CourseEF_video_IntroSpriteLab2022"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Prediction"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 1-validated2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "6387c7a5-11bc-4b51-9079-ba599124ce44"
-      },
-      "level_keys": [
-        "Fish Tank 1-validated2022"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 2-validated2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "ff7aa3e1-8328-41bf-b516-51ca5ea0a800"
-      },
-      "level_keys": [
-        "Fish Tank 2-validated2022"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 3-validated2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "ff7aa3e1-8328-41bf-b516-51ca5ea0a800"
-      },
-      "level_keys": [
-        "Fish Tank 3-validated2022"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 4-validated2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "ff7aa3e1-8328-41bf-b516-51ca5ea0a800"
-      },
-      "level_keys": [
-        "Fish Tank 4-validated2022"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Video: How to Make a Sprite"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseEF_video_MakeSprite2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "1a4debc6-59c9-4c5a-8811-8a3cadf8be7a"
-      },
-      "level_keys": [
-        "CourseEF_video_MakeSprite2022"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 5-validated2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "a5c4b601-4e45-4261-b7a6-9ffefd154aa2"
-      },
-      "level_keys": [
-        "Fish Tank 5-validated2022"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 6-validated2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "a5c4b601-4e45-4261-b7a6-9ffefd154aa2"
-      },
-      "level_keys": [
-        "Fish Tank 6-validated2022"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 7-validated2022"
-        ],
-        "lesson.key": "Swimming Fish with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "dce569eb-0a60-42a9-9e31-855a6b138f92"
-      },
-      "level_keys": [
-        "Fish Tank 7-validated2022"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Prediction"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party 1-validated2022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "b44dc656-cb97-49af-a262-774c217d00b7"
-      },
-      "level_keys": [
-        "Dance Party 1-validated2022"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Video: Sprites in Action"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CDEF_video_SpritesInAction2022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "8e1481cf-2c3b-4480-95d8-3eb9bdb82b10"
-      },
-      "level_keys": [
-        "CDEF_video_SpritesInAction2022"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party 22022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
-      },
-      "level_keys": [
-        "Dance Party 22022"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party 32022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
-      },
-      "level_keys": [
-        "Dance Party 32022"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party 42022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
-      },
-      "level_keys": [
-        "Dance Party 42022"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 6,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party 52022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
-      },
-      "level_keys": [
-        "Dance Party 52022"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party 62022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "adf2b08d-00e9-4ea4-b7c7-1ac4e06dcaad"
-      },
-      "level_keys": [
-        "Dance Party 62022"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party 72022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "adf2b08d-00e9-4ea4-b7c7-1ac4e06dcaad"
-      },
-      "level_keys": [
-        "Dance Party 72022"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance Party Freeplay2022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2022",
-        "activity_section.key": "cf5f67a3-22e0-4190-a961-0234d551b3d9"
-      },
-      "level_keys": [
-        "Dance Party Freeplay2022"
-      ]
-    },
     {
       "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_be_a_super_digital_citizen2022"
+        ],
         "progression": "Be a Super Digital Citizen"
       },
       "bonus": false,
@@ -4104,6 +3701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PrivatePersonalInformation-Unplugged2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4120,11 +3720,464 @@
       ]
     },
     {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab2022"
+        ],
+        "progression": "Video: Introducing Sprite Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "14e8ba9a-beb7-4dfa-8f45-6b763221f4c1"
+      },
+      "level_keys": [
+        "CourseEF_video_IntroSpriteLab2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 1-validated2022"
+        ],
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 1-validated2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "6387c7a5-11bc-4b51-9079-ba599124ce44"
+      },
+      "level_keys": [
+        "Fish Tank 1-validated2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 2-validated2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 2-validated2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "ff7aa3e1-8328-41bf-b516-51ca5ea0a800"
+      },
+      "level_keys": [
+        "Fish Tank 2-validated2022"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 3-validated2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 3-validated2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "ff7aa3e1-8328-41bf-b516-51ca5ea0a800"
+      },
+      "level_keys": [
+        "Fish Tank 3-validated2022"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 4-validated2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 4-validated2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "ff7aa3e1-8328-41bf-b516-51ca5ea0a800"
+      },
+      "level_keys": [
+        "Fish Tank 4-validated2022"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite2022"
+        ],
+        "progression": "Video: How to Make a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "1a4debc6-59c9-4c5a-8811-8a3cadf8be7a"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 5-validated2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 5-validated2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "a5c4b601-4e45-4261-b7a6-9ffefd154aa2"
+      },
+      "level_keys": [
+        "Fish Tank 5-validated2022"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 6-validated2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 6-validated2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "a5c4b601-4e45-4261-b7a6-9ffefd154aa2"
+      },
+      "level_keys": [
+        "Fish Tank 6-validated2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 7-validated2022"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 7-validated2022"
+        ],
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "dce569eb-0a60-42a9-9e31-855a6b138f92"
+      },
+      "level_keys": [
+        "Fish Tank 7-validated2022"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 1-validated2022"
+        ],
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 1-validated2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "b44dc656-cb97-49af-a262-774c217d00b7"
+      },
+      "level_keys": [
+        "Dance Party 1-validated2022"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CDEF_video_SpritesInAction2022"
+        ],
+        "progression": "Video: Sprites in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CDEF_video_SpritesInAction2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "8e1481cf-2c3b-4480-95d8-3eb9bdb82b10"
+      },
+      "level_keys": [
+        "CDEF_video_SpritesInAction2022"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 22022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 22022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
+      },
+      "level_keys": [
+        "Dance Party 22022"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 32022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 32022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
+      },
+      "level_keys": [
+        "Dance Party 32022"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 42022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 42022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
+      },
+      "level_keys": [
+        "Dance Party 42022"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 52022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 52022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "f3990627-011b-4185-8af7-4839010f6029"
+      },
+      "level_keys": [
+        "Dance Party 52022"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 62022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 62022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "adf2b08d-00e9-4ea4-b7c7-1ac4e06dcaad"
+      },
+      "level_keys": [
+        "Dance Party 62022"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 72022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 72022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "adf2b08d-00e9-4ea4-b7c7-1ac4e06dcaad"
+      },
+      "level_keys": [
+        "Dance Party 72022"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party Freeplay2022"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party Freeplay2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022",
+        "activity_section.key": "cf5f67a3-22e0-4190-a961-0234d551b3d9"
+      },
+      "level_keys": [
+        "Dance Party Freeplay2022"
+      ]
+    },
+    {
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_12022"
+        ],
         "progression": "Exploration: Rikki's Poster"
       },
       "bonus": false,
@@ -4133,7 +4186,7 @@
           "courseE_aboutme_12022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "c8351508-1d35-45ce-9f1e-1905c90c7df1"
       },
@@ -4147,6 +4200,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_22022"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4155,7 +4211,7 @@
           "courseE_aboutme_22022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       },
@@ -4169,6 +4225,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_32022"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4177,7 +4236,7 @@
           "courseE_aboutme_32022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       },
@@ -4191,6 +4250,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_42022"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4199,7 +4261,7 @@
           "courseE_aboutme_42022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       },
@@ -4213,6 +4275,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_52022"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4221,7 +4286,7 @@
           "courseE_aboutme_52022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       },
@@ -4235,6 +4300,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_62022"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4243,7 +4311,7 @@
           "courseE_aboutme_62022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       },
@@ -4252,33 +4320,14 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Digital Sharing - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "DigitalSharing-Unplugged2022"
-        ],
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022",
-        "activity_section.key": "90986348-020e-4b00-b92f-ba4160018feb"
-      },
-      "level_keys": [
-        "DigitalSharing-Unplugged2022"
-      ]
-    },
-    {
       "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_artist2022"
+        ],
         "progression": "Video: Artist Intro with JR Hildebrande"
       },
       "bonus": false,
@@ -4301,6 +4350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4323,6 +4375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4345,6 +4400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist2022"
+        ],
         "progression": "Video: Loops with the Artist"
       },
       "bonus": false,
@@ -4367,6 +4425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog32022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4389,6 +4450,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog42022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4412,6 +4476,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog72022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4434,6 +4501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops42022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4456,6 +4526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops52022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4478,6 +4551,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops62022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4501,6 +4577,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops82022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4523,6 +4602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge12022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4545,6 +4627,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge2a2022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4567,6 +4652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4589,6 +4677,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4611,6 +4702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoopsArtist2022"
+        ],
         "progression": "Video: Nested Loops"
       },
       "bonus": false,
@@ -4633,6 +4727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4655,6 +4752,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops32022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4677,6 +4777,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops42022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4699,6 +4802,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops52022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4721,6 +4827,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops72022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4743,6 +4852,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops82022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4766,6 +4878,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_artist_nestedLoops92022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4788,6 +4903,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops102022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4810,6 +4928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops9_predict12022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4832,6 +4953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoopsFP2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -4854,6 +4978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge12022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4876,6 +5003,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge22022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4898,6 +5028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project12022"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4920,6 +5053,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project22022"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4942,6 +5078,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project32022"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4964,6 +5103,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project42022"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4986,6 +5128,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project52022"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -5008,6 +5153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project1a2022"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -5030,6 +5178,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project2a2022"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -5052,6 +5203,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project3a2022"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -5074,6 +5228,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project4a2022"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -5096,6 +5253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Songwriting-Unplugged2022"
+        ],
         "progression": "Songwriting - Functions Unplugged Activity"
       },
       "bonus": false,
@@ -5118,6 +5278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid12022"
+        ],
         "progression": "Video: Minecraft - The Agent"
       },
       "bonus": false,
@@ -5140,6 +5303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5162,6 +5328,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5184,6 +5353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid22022"
+        ],
         "progression": "Video: Minecraft - Repeat Loops"
       },
       "bonus": false,
@@ -5206,6 +5378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5228,6 +5403,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5250,6 +5428,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5272,6 +5453,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5294,6 +5478,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5316,6 +5503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid32022"
+        ],
         "progression": "Video: Minecraft - Functions"
       },
       "bonus": false,
@@ -5338,6 +5528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Function intro Ryan2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5360,6 +5553,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5382,6 +5578,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5404,6 +5603,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5426,6 +5628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid42022"
+        ],
         "progression": "Video: Minecraft - Congratulations"
       },
       "bonus": false,
@@ -5448,6 +5653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x202022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5470,6 +5678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict12022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5492,6 +5703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5514,6 +5728,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions32022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5536,6 +5753,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions52022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5558,6 +5778,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions72022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5580,6 +5803,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5602,6 +5828,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8b2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5624,6 +5853,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8c2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5646,6 +5878,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions82022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5669,6 +5904,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseE_artist_functions92022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5691,6 +5929,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions102022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5713,6 +5954,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functionsProj2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5735,6 +5979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge12022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5757,6 +6004,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge22022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5779,6 +6029,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid12022"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Introduction"
       },
       "bonus": false,
@@ -5801,6 +6054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5823,6 +6079,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5845,6 +6104,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_32022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5867,6 +6129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid22022"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
       },
       "bonus": false,
@@ -5889,6 +6154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_42022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5911,6 +6179,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_52022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5933,6 +6204,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_62022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5955,6 +6229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid32022"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
       },
       "bonus": false,
@@ -5977,6 +6254,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_7a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5999,6 +6279,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_82022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6021,6 +6304,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_9b2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6043,6 +6329,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_102022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6065,6 +6354,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_112022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6087,6 +6379,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid42022"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
       },
       "bonus": false,
@@ -6109,6 +6404,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_122022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -6131,6 +6429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6153,6 +6454,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6175,6 +6479,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while32022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6197,6 +6504,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro2022"
+        ],
         "progression": "Video: While Loops with the Farmer"
       },
       "bonus": false,
@@ -6219,6 +6529,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict12022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -6241,6 +6554,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6263,6 +6579,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6285,6 +6604,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6307,6 +6629,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6329,6 +6654,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil2022"
+        ],
         "progression": "Video: Repeat Until Blocks"
       },
       "bonus": false,
@@ -6351,6 +6679,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6373,6 +6704,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6395,6 +6729,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6417,6 +6754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse2022"
+        ],
         "progression": "Video: \"If/Else\""
       },
       "bonus": false,
@@ -6440,6 +6780,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6462,6 +6805,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_while12022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6484,6 +6830,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvester_skinOverview_video2022"
+        ],
         "progression": "Video: The Harvester"
       },
       "bonus": false,
@@ -6506,6 +6855,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6528,6 +6880,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6550,6 +6905,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2b2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6572,6 +6930,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2ba2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6594,6 +6955,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6616,6 +6980,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6638,6 +7005,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions7a12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6660,6 +7030,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions8a12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6682,6 +7055,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions9a12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6705,6 +7081,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseE_farmer_functions10a12022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6727,6 +7106,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions132022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6749,6 +7131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions11_predict2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -6771,6 +7156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel2022"
+        ],
         "progression": "Designing for Accessibility"
       },
       "bonus": false,
@@ -6788,11 +7176,39 @@
       ]
     },
     {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "DigitalSharing-Unplugged2022"
+        ],
+        "progression": "Digital Sharing - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DigitalSharing-Unplugged2022"
+        ],
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022",
+        "activity_section.key": "90986348-020e-4b00-b92f-ba4160018feb"
+      },
+      "level_keys": [
+        "DigitalSharing-Unplugged2022"
+      ]
+    },
+    {
       "chapter": 143,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_EOC_examples2022"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -6815,6 +7231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_EOC2022"
+        ],
         "progression": "Create your project"
       },
       "bonus": false,
@@ -6830,6 +7249,31 @@
       "level_keys": [
         "courseE_EOC2022"
       ]
+    },
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SimonSays-Unplugged2022"
+        ],
+        "progression": "Follow the Algorithm - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SimonSays-Unplugged2022"
+        ],
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022",
+        "activity_section.key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8"
+      },
+      "level_keys": [
+        "SimonSays-Unplugged2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6840,7 +7284,7 @@
           "SimonSays-Unplugged2022"
         ],
         "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "csf_sprites",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "coursee-2022",
         "activity_section.key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8"
       }
@@ -7092,7 +7536,7 @@
           "courseE_aboutme_12022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "c8351508-1d35-45ce-9f1e-1905c90c7df1"
       }
@@ -7104,7 +7548,7 @@
           "courseE_aboutme_22022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       }
@@ -7116,7 +7560,7 @@
           "courseE_aboutme_32022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       }
@@ -7128,7 +7572,7 @@
           "courseE_aboutme_42022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       }
@@ -7140,7 +7584,7 @@
           "courseE_aboutme_52022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       }
@@ -7152,7 +7596,7 @@
           "courseE_aboutme_62022"
         ],
         "lesson.key": "Mini-Project: About Me",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
       }
@@ -7164,7 +7608,7 @@
           "DigitalSharing-Unplugged2022"
         ],
         "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "coursee-2022",
         "activity_section.key": "90986348-020e-4b00-b92f-ba4160018feb"
       }

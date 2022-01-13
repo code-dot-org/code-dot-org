@@ -7452,6 +7452,12 @@ cs:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -8244,8 +8250,6 @@ cs:
               description_teacher: V této jednotce studenti používali objekt „ArrayList“ k ukládání programových dat a naučili se rozlišovat, kdy používat jednorozměrná a dvourozměrná pole a kdy objekty typu „ArrayList“. Studenti prozkoumali výhody a funkčnost třídy „ArrayList“ a využili je k řešení problémů s číselnými a objektovými údaji. Studenti použili metody třídy „String“ k analýze a zpracování textu získaného od uživatele a ze souboru. V průběhu jednotky studenti pořizovali dokumentaci k programu pomocí jednořádkových komentářů, víceřádkových komentářů a komentářů Javadoc k vytvoření dokumentace API. Během postupu studenti identifikovali a zdokumentovali výchozí a následné podmínky objektů a metod. Nyní budou studenti hodnotit úspěšnost splnění výukových cílů jednotky a získané dovednosti prostřednictvím hodnocení s možností výběru z několika voleb.
             lesson-1:
               key: lekce-1
-              description_student: Projekty, které jste během kurzu vyvinuli, inspirovaly ve vaší komunitě spoustu kreativity! K předvedení všech kreativních příběhů, scénářů, textů písní, dopisů a básní bude proto uspořádán Sousedský literární festival. Projekt Sousedský literární festival je velký projekt, na kterém budete v průběhu jednotky pracovat, a strategie řízení projektu vám pomohou organizovat a strukturovat vaši práci. Budete zkoumat strategie psaní a strukturování kódu, aby ho jiní softwaroví odborníci dokázali snadno pochopit, a používat javový nástroj k vytváření dokumentace k programu.
-              description_teacher: Studentům je představen projekt Sousedský literární festival. Budou vyhodnocovat požadavky a příklady, aby dokázali identifikovat důležité otázky a klíčové vlastnosti. Před započetím práce na projektu si studenti rozšíří své znalosti o struktuře programu a komentování určením doporučených postupů a prozkoumáním využití nástroje Javadocs ke generování dokumentace k programu.
             lesson-2:
               key: lekce-2
               description_student: Navrhnete objekty „Integer“ a „Double“, které budou představovat primitivní hodnoty „int“ a „double“ jako referenční hodnoty. Pomocí metod ve třídách „Integer“ a „Double“ budete vracet hodnoty uložené v těchto objektech jako primitivní hodnoty. Před naplánováním úkolů, které musíte dokončit pro svůj projekt Sousedský literární festival, také prozkoumáte minimální a maximální hodnoty pro celá čísla, abyste se vyhnuli chybám přetečení.
@@ -8404,3 +8408,108 @@ cs:
               description_student: Pomoz Laurel, lovkyni pokladů, spočítat a přidat kroky potřebné k sesbírání drahokamů!
               description_teacher: "Tahle lekce staví na předchozích dovednostech včetně počítání a sčítání. Počítání s Laurel pomáhá dětem v mateřských školách a prvních třídách procvičit si počítání a sčítání tím, že použijí cykly a pomůžou Laurel, lovkyni pokladů, sesbírat drahokamy v bludišti. Použijí sérii kódovacích příkazů a provedou Laurel bludištěm, aby sesbírala drahokamy. Využijí blok „Repeat“, u kterého budou muset spočítat, kolik kroků má Laurel udělat – pak v bloku kódu zvolí správnou číslovku odpovídající tomuto počtu.\n\n#### Předchozí dovednosti\n\nTahle lekce není určená k tomu, aby dětem představila čísla, počítání a sčítání. Před absolvováním téhle lekce už by žáci měli mít tyto znalosti a dovednosti:\n\n-   Měli by znát čísla do 10 a umět počítat s využitím obrázků, prstů nebo manipulativů.\n-   Měli by umět sčítat předměty, obrázky, prsty nebo manipulativy až do součtu 10."
           title: Počítání s Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lekce
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Projekt Sousedský literární festival – 1. den
+            lesson-12:
+              name: Projekt Sousedský literární festival – 2. den
+            lesson-13:
+              name: Projekt Sousedský literární festival – 3. den
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulátor epidemie
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: lekce-10
+            lesson-6:
+              key: lekce-6
+            lesson-7:
+              key: lekce-7
+            lesson-8:
+              key: lekce-8
+            lesson-9:
+              key: lekce-9
+            lesson-11:
+              key: lekce-11
+            lesson-12:
+              key: lekce-12
+            lesson-13:
+              key: lekce-13
+            lesson-14:
+              key: lekce-14
+            lesson-15:
+              key: lekce-15
+            lesson-1:
+              key: lekce-1
+            lesson-2:
+              key: lekce-2
+            lesson-3:
+              key: lekce-3
+            lesson-4:
+              key: lekce-4
+            lesson-5:
+              key: lekce-5
+            lesson-16:
+              key: lekce-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: lekce-1
+            lesson-2:
+              key: lekce-2
+            lesson-3:
+              key: lekce-3
+            lesson-4:
+              key: lekce-4
+            lesson-5:
+              key: lekce-5
+            lesson-10:
+              key: lekce-10
+            lesson-6:
+              key: lekce-6
+            lesson-7:
+              key: lekce-7
+            lesson-8:
+              key: lekce-8
+            lesson-9:
+              key: lekce-9
+            lesson-11:
+              key: lekce-11
+            lesson-12:
+              key: lekce-12
+            lesson-13:
+              key: lekce-13
+            lesson-14:
+              key: lekce-14
+            lesson-15:
+              key: lekce-15
+            lesson-16:
+              key: lekce-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
