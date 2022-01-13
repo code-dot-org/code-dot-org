@@ -708,7 +708,8 @@ const STANDARD_INPUT_TYPES = {
   },
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const dropdown = new blockly.FieldDropdown(inputConfig.options);
+      const options = sanitizeOptions(inputConfig.options);
+      const dropdown = new blockly.FieldDropdown(options);
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(dropdown, inputConfig.name);
@@ -1323,4 +1324,18 @@ exports.installCustomBlocks = function({
   }
 
   return blocksByCategory;
+};
+
+/**
+ * Adds a second value to options array elements if a second one does not exist.
+ * The second value is used as the generated code for that option.
+ * Required for backwards compatibility with existing blocks that are missing the second value.
+ *
+ * @param  {string[][]| string[]} dropdownOptions
+ * @returns {string[][]} Sanitized array of dropdownOptions, ensuring that both a first and second value exist
+ */
+const sanitizeOptions = function(dropdownOptions) {
+  return dropdownOptions.map(option =>
+    option.length === 1 ? [option[0], option[0]] : option
+  );
 };
