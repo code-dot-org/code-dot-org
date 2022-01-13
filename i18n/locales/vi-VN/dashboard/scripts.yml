@@ -17,7 +17,7 @@ vi:
         cspexams_category_name: Kiểm tra các Quy tắc KHMT
         csp17_category_name: Các Quy tắc KHMT ('17-'18)
         hoc_category_name: Giờ của mã
-        math_category_name: thuật toán
+        math_category_name: Phép toán
         research_studies_category_name: Các nghiên cứu
         other_category_name: Khác
       name:
@@ -10929,6 +10929,12 @@ vi:
               display_name: Nội dung
             lessonGroup-5:
               display_name: Hộp cát
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -11795,8 +11801,6 @@ vi:
               description_teacher: Trong học phần này, học viên đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Học viên đã khám phá các lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Học viên đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, học viên đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, học viên đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, học viên thực hiện đánh giá việc đạt được các mục tiêu và kỹ năng của đơn vị học tập thông qua một bài đánh giá trắc nghiệm.
             lesson-1:
               key: lesson-1
-              description_student: Các dự án bạn đã phát triển trong suốt khóa học đã truyền cảm hứng cho rất nhiều sự sáng tạo trong cộng đồng! Neighborhood Lit Fest sẽ được tổ chức để giới thiệu những câu chuyện sáng tạo, kịch bản, lời bài hát, lá thư và bài thơ. Dự án Neighborhood Lit Fest là một dự án lớn mà bạn thực hiện trong toàn bộ học phần và các chiến lược quản lý dự án giúp tổ chức và cấu trúc công việc của bạn. Bạn khám phá các chiến lược viết và cấu trúc code để các kỹ sư phần mềm khác có thể dễ dàng hiểu và sử dụng công cụ Java để tạo tài liệu chương trình.
-              description_teacher: Học viên được giới thiệu về Dự án Neighborhood Lit Fest và đánh giá các yêu cầu và ví dụ để xác định các câu hỏi và các đặc điểm chính. Trước khi bắt đầu thực hiện dự án, học viên mở rộng hiểu biết của mình về cấu trúc chương trình và nhận xét bằng cách xác định các phương pháp hay nhất và khám phá việc sử dụng Javadocs để tạo tài liệu chương trình.
             lesson-2:
               key: lesson-2
               description_student: Bạn xây dựng các đối tượng `Integer` và`Double` để biểu diễn các giá trị nguyên thủy `int` và`double` làm giá trị tham chiếu. Sử dụng các phương thức trong các lớp `Integer` và`Double`, bạn trả về giá trị mà các đối tượng này lưu trữ dưới dạng giá trị nguyên thủy. Bạn cũng khám phá các giá trị tối thiểu và tối đa cho số nguyên để tránh lỗi tràn trước khi lập kế hoạch các nhiệm vụ mà bạn cần hoàn thành cho Dự án Neighborhood Lit Fest.
@@ -11961,3 +11965,104 @@ vi:
               description_student: Hãy giúp Laurel, thợ săn kho báu, đếm và thêm các bước để thu thập ngọc nhé!
               description_teacher: "Bài học này dựa trên các hoạt động trước đó liên quan đến đếm và biểu diễn phép cộng. Đếm cùng Laurel sẽ hỗ trợ học sinh mẫu giáo và lớp một thực hành phép đếm và phép cộng trong quá trình sử dụng vòng lặp để giúp Laurel, thợ săn kho báu, thu thập ngọc trên lưới mê cung. Các em sẽ sử dụng một loạt các lệnh lập trình để hướng dẫn Laurel đi qua lưới và thu thập ngọc, sử dụng khối “Lặp lại” yêu cầu các em đếm số bước mà Laurel phải đi – sau đó biểu diễn số đó bằng chữ số chính xác trong khối mã lệnh.\n\n#### Kỹ năng tiên quyết\n\nBài học này không nhằm mục đích giới thiệu cho học sinh về các chữ số, phép đếm hoặc phép cộng. Học sinh nên bắt đầu học bài này khi đã có sẵn kiến thức và kỹ năng để có thể:\n\n-   Nhận biết và đếm đến 10 bằng hình ảnh, ngón tay hoặc dụng cụ học tập.\n-   thêm các đồ vật, hình ảnh, ngón tay hoặc dụng cụ học tập để có tổng là 10."
           title: Đếm với Laurel
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Dự án Neighborhood Lit Fest - Ngày 1
+            lesson-12:
+              name: Dự án Neighborhood Lit Fest - Ngày 2
+            lesson-13:
+              name: Dự án Neighborhood Lit Fest - Ngày 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Trình mô phỏng dịch bệnh bùng phát
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: lesson-10
+            lesson-6:
+              key: lesson-6
+            lesson-7:
+              key: lesson-7
+            lesson-8:
+              key: lesson-8
+            lesson-9:
+              key: lesson-9
+            lesson-11:
+              key: lesson-11
+            lesson-12:
+              key: lesson-12
+            lesson-13:
+              key: lesson-13
+            lesson-14:
+              key: lesson-14
+            lesson-15:
+              key: lesson-15
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+            lesson-4:
+              key: lesson-4
+            lesson-5:
+              key: lesson-5
+            lesson-16:
+              key: lesson-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+            lesson-4:
+              key: lesson-4
+            lesson-5:
+              key: lesson-5
+            lesson-10:
+              key: lesson-10
+            lesson-6:
+              key: lesson-6
+            lesson-7:
+              key: lesson-7
+            lesson-8:
+              key: lesson-8
+            lesson-9:
+              key: lesson-9
+            lesson-11:
+              key: lesson-11
+            lesson-12:
+              key: lesson-12
+            lesson-13:
+              key: lesson-13
+            lesson-14:
+              key: lesson-14
+            lesson-15:
+              key: lesson-15
+            lesson-16:
+              key: lesson-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát

@@ -62,6 +62,52 @@ XML
   <category name="Variables" custom="VARIABLE"/>
 </xml>
 XML
+
+    @category_xml_fields = <<XML
+<xml>
+  <category name="Category1">
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+  </category>
+
+  <category name="Category2">
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+  </category>
+
+  <category name="Functions" custom="PROCEDURE"/>
+  <category name="Variables" custom="VARIABLE"/>
+</xml>
+XML
+
+    @toolbox_xml_fields = <<XML
+<xml>
+  <block type="category">
+    <field name="CATEGORY">Category1</field>
+  </block>
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+
+  <block type="category">
+    <field name="CATEGORY">Category2</field>
+  </block>
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+
+  <block type="custom_category">
+    <field name="CUSTOM">PROCEDURE</field>
+  </block>
+
+  <block type="custom_category">
+    <field name="CUSTOM">VARIABLE</field>
+  </block>
+</xml>
+XML
+
     @xml = <<XML
 <xml>
   <block type="simple_move_up"/>
@@ -91,16 +137,33 @@ XML
 XML
   end
 
+  test 'field_or_title' do
+    no_fields_or_titles = Nokogiri::XML('<xml><block type="block1"></block></xml>', &:noblanks)
+    assert_equal "field", Blockly.field_or_title(no_fields_or_titles)
+
+    fields = Nokogiri::XML('<xml><block type="block2"><field name="value">Example</field></block></xml>', &:noblanks)
+    assert_equal "field", Blockly.field_or_title(fields)
+
+    titles = Nokogiri::XML('<xml><block type="block3"><title name="value">Example</title></block></xml>', &:noblanks)
+    assert_equal "title", Blockly.field_or_title(titles)
+
+    both = Nokogiri::XML('<xml><block type="block4"><title name="value">Example</title><field name="value2">Example</field></block></xml>', &:noblanks)
+    exception = assert_raises(Exception) {Blockly.field_or_title(both)}
+    assert_equal("unexpected error: XML contains both field and title elements", exception.message)
+  end
+
   test 'count xml blocks' do
     assert_equal 4, Blockly.count_xml_blocks(@xml)
   end
 
   test 'convert toolbox to category' do
     assert_equal_xml @category_xml, Blockly.convert_toolbox_to_category(@toolbox_xml)
+    assert_equal_xml @category_xml_fields, Blockly.convert_toolbox_to_category(@toolbox_xml_fields)
   end
 
   test 'convert category to toolbox' do
     assert_equal_xml @toolbox_xml, Blockly.convert_category_to_toolbox(@category_xml)
+    assert_equal_xml @toolbox_xml_fields, Blockly.convert_category_to_toolbox(@category_xml_fields)
   end
 
   test 'blocks placed outside a category are placed in a default category' do

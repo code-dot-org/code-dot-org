@@ -9032,6 +9032,12 @@ it:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sandbox
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -9812,8 +9818,6 @@ it:
               description_teacher: In questa unità, gli studenti hanno usato `ArrayList's per memorizzare i dati del programma e distinguere tra quando usare array 1D e 2D e`ArrayList's. Gli studenti hanno analizzato i vantaggi e le funzionalità di una `ArrayList`, usandoli per risolvere problemi che coinvolgono dati numerici e oggetti. Gli studenti hanno usato i metodi della classe `Stringa` per analizzare ed elaborare il testo ottenuto dall'input dell'utente e dei file. Durante l'unità, gli studenti hanno scritto la documentazione del programma usando commenti a linea singola, commenti a più linee e commenti Javadoc per creare documentazione API. Nel processo, gli studenti hanno identificato e documentato le precondizioni e le postcondizioni di oggetti e metodi. Ora, gli studenti hanno valutato il raggiungimento degli obiettivi di apprendimento dell'unità e le competenze su una valutazione a scelta multipla.
             lesson-1:
               key: lezione-1
-              description_student: I progetti che hai sviluppato durante il corso hanno dato vita a molta creatività nella community! Si terrà un Neighborhood Lit Fest per presentare storie creative, sceneggiature, testi di canzoni, lettere e poesie. Il progetto Neighborhood Lit Fest è un grande progetto su cui si lavora per tutta l'unità, e le strategie di gestione del progetto aiutano ad organizzare e strutturare il lavoro. Si esplorano strategie per scrivere e strutturare il codice in modo che altri ingegneri del software possano facilmente capire e utilizzare uno strumento Java per creare la documentazione del programma.
-              description_teacher: Gli studenti vengono introdotti al progetto Neighborhood Lit Fest e valutano requisiti ed esempi per individuare domande e caratteristiche chiave. Prima di iniziare a lavorare sul progetto, gli studenti espandono la loro comprensione della struttura e del commento dei programmi individuando le migliori pratiche ed esplorando l'uso di Javadocs per generare la documentazione del programma.
             lesson-2:
               key: lezione-2
               description_student: Costruisci oggetti `Integer` e `Double` per rappresentare valori primitivi `int` e `double` come valori di riferimento. Usando i metodi nelle classi `Integer` e `Double`, restituisci i valori che questi oggetti memorizzano come valori primitivi. Scopri anche i valori minimi e massimi per i numeri interi per evitare errori di overflow prima di pianificare i compiti che devi completare per il tuo progetto Neighborhood Lit Fest.
@@ -9976,3 +9980,108 @@ it:
               description_student: Aiuta la collezionista e la cacciatrice di tesori, a contarte e aggiungere passaggi per raccogliere le gemme!
               description_teacher: "Questa lezione si basa sulle attivitià precedenti, coinvolgendo il conteggio e la rappresentazione dell'addizione. Contare con la collezionista supporterà gli studenti dell'asilo e delle scuole elementari a fare pratica con il conteggio e l'addizione mentre usano i cicli per aiutare la collezionista e la cacciatrice di tesori a raccogliere gemme in una griglia a forma di labirinto. Useranno una serie di comandi di programmazione, per guidare la collezionista su una griglia per raccogliere gemme usando il blocco \"Ripeti\", che chiede loro di contare quanti passi dovrebbe fare la collezionista e poi di rappresentare quel numero usando il numero corretto in un blocco di codice.\n\n#### Competenze richieste\n\nQuesta lezione non ha lo scopo di introdurre i numeri, il conteggio o l'addizione. Gli studenti devono seguire questa lezione con una conoscenza pregressa e le capacità per poter:\n\n-   riconoscere e contare i numeri fino a 10 usando le immagini, le dita o i materiali didattici.\n-   aggiungere oggetti, immagini, dita o materiali didattici che, se sommati, diano un risultato di 10."
           title: Conteggio con la collezionista
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lezione
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Progetto Neighborhood Lit Fest - Giorno 1
+            lesson-12:
+              name: Progetto Neighborhood Lit Fest - Giorno 2
+            lesson-13:
+              name: Progetto Neighborhood Lit Fest - Giorno 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulazione di epidemia
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: lezione-10
+            lesson-6:
+              key: lezione-6
+            lesson-7:
+              key: lezione-7
+            lesson-8:
+              key: lezione-8
+            lesson-9:
+              key: lezione-9
+            lesson-11:
+              key: lezione-11
+            lesson-12:
+              key: lezione-12
+            lesson-13:
+              key: lezione-13
+            lesson-14:
+              key: lezione-14
+            lesson-15:
+              key: lezione-16
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+            lesson-4:
+              key: lezione-4
+            lesson-5:
+              key: lezione-5
+            lesson-16:
+              key: lezione-15
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+            lesson-4:
+              key: lezione-4
+            lesson-5:
+              key: lezione-5
+            lesson-10:
+              key: lezione-10
+            lesson-6:
+              key: lezione-6
+            lesson-7:
+              key: lezione-7
+            lesson-8:
+              key: lezione-8
+            lesson-9:
+              key: lezione-9
+            lesson-11:
+              key: lezione-11
+            lesson-12:
+              key: lezione-12
+            lesson-13:
+              key: lezione-13
+            lesson-14:
+              key: lezione-14
+            lesson-15:
+              key: lezione-16
+            lesson-16:
+              key: lezione-15
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Sandbox

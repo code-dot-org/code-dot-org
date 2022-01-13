@@ -1,0 +1,6 @@
+{
+  "key": "whenPromptAnswered",
+  "name": "whenPromptAnswered",
+  "category": "Events",
+  "syntax": "whenPromptAnswered"
+}

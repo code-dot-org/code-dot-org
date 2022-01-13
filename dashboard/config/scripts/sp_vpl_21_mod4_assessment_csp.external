@@ -5,35 +5,53 @@ description 'description here'
 markdown <<MARKDOWN
 # Assessment
 
+<img src="https://images.code.org/64a8ba19002f179df164c593b27de959-image-1641273904503.24.12 PM.jpg" alt="A teacher and three students look on at the same journal together." width="300px" style="border-radius: 25px; float:right; margin: 0 0 0px 40px;">
+
 ## What is my role as the teacher? 
 
 ##### Your role as the teacher is to provide students with ongoing feedback in order to promote continuous growth. 
 
 ## How does the curriculum support assessment? 
 
-##### Frequent formal and informal assessment and feedback are critical to ensure that students are actively involved in their own learning and teachers have evidence that the class is making appropriate progress. We have incorporated opportunities for assessment and feedback throughout the CS Discoveries curriculum to support you in measuring student growth and informing the pace of your instruction. However, since schools have diverse grading systems, it is up to you to decide how to use the assessment resources for grading purposes.
+##### The course materials contain a number of assessment types and opportunities which can be used **formatively** (to check for understanding) or **summatively** (for evaluation). 
 
-## Lesson-level assessment
+##### For students, the goal of the assessments is to prepare them for the AP exam and performance task. For teachers, the goal is to use assessments to help guide instruction, give feedback to students, and make choices about what to emphasize in lessons.
 
-##### Opportunities for assessment within each lesson are listed out in the lesson plans themselves.  These opportunities may include sections of the activity guides, discussion and reflection questions, or online programming and quick check levels.  Guidance for how to use these opportunities to assess student progress is included in each lesson plan.
+## Assessment in the curriculum
 
-![Screenshot of an assessment level. A description box underneath reads, 'You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback for your students.'](https://images.code.org/75301032d5ad8904beefe6bdfb5524f2-image-1626709952308.51.41 AM.png)
+### **Projects**
 
-<img src="https://images.code.org/125b48193718f2bb9d42ed123808439b-image-1626715785383.27.57 PM.png" alt="Screenshot of the CS Discoveries 'Guide to Assessment' document." width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+##### Each unit, with the exception of Units 6 and 8, contains one project that takes more than one class period. These projects may be used as summative assessments in tandem with the multiple-choice assessment for the unit. Each project takes a different approach to assessing students’ ability to apply what they have learned from the unit. 
 
-## Chapter and unit level assessment
+<img src="https://images.code.org/3840c8eeef977c23f72db3ea4b8b310e-image-1641273495142.11.29 PM.png" alt="Screenshot of a submit button in AppLab" width="300px" style="float:right; margin: 0 0 0px 40px;">
 
+### **Submittable programming projects**
 
+##### When the curriculum calls for a programming project for assessment, the App Lab environment will show a “Submit” button below the typical “Run” button. When a student submits a project it is submitted with a timestamp and locked for teacher review. It also shows up in a special area of the teacher dashboard. The teacher can release the project back to the student as well.
 
-### End of chapter projects
+___
 
-##### End of chapter projects incorporate the skills and understandings students have developed in that chapter’s lessons. These projects are designed to assess unit-specific skills and the five student practices that thread through the entire course. There is broad guidance for the activity, but project implementation leaves room for students to put their personal stamp on the creation. 
+### **Fixed-response assessments**
 
-### Post-project tests
+<img src="https://images.code.org/d69bec58966adfc52378ed598d016cf5-image-1641273220382.13.32 PM.png" alt="Screenshot of two 'check your understanding' levels." width="300px" style="float:right; margin: 0 0 40px 40px;">
 
-##### Post-project tests are included at the end of every unit.  These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit.  These tests are aligned to the learning framework of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics.
+#### Lesson assessment items 
 
-### <a href="https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview" target="blank" rel="noopener noreferrer" >Click here</a> to read the full CS Discoveries Guide to Assessment. 
+##### You will find assessment items (multiple-choice, free-response text) embedded in individual lessons, typically as the last few “bubbles” for a lesson, indicated with an assessment icon. These are intended to be used as formative assessment items. Students can always see them and change their responses at any time.
 
+#### Unit assessments (lockable)
 
+##### You will find a 15-question multiple-choice assessment at the end of each Unit, with the exception of Unit 8.  These are intended to mimic AP-style questions. They look like their own lesson and have lock settings as well as the usual visibility settings. These can be used for formative or summative assessments.  Our suggestion is that if you use these for summative assessment, you use them in tandem with the project-based assessments for that unit to get a more complete picture of students’ skills and knowledge.
+
+<img src="https://images.code.org/ca39878c827a3f50677aaf2babd049a6-image-1641273351784.11.16 PM.png" alt="Screenshot of a locked assessment." style="margin: 20px 0px 20px 0px;">
+
+##### Lock settings enable or disable students from modifying their answers. For example, you may want to hide an assessment before students get to it, but after students take it, you might want it to remain visible but locked, while you review the answers.
+
+##### Read <a href="https://support.code.org/hc/en-us/articles/115001331951-How-do-I-unlock-assessments-tests-and-surveys-for-my-students-" target="blank" rel="noopener noreferrer"> this support article </a> for more information about unlocking assessments for students.
+
+___
+
+### **Worksheets and activity guides**
+
+##### Worksheets and activity guides are good opportunities for assessment. Worksheets or activity guides often ask students to write, answer questions, and respond to prompts. When available, answer keys for worksheets and activities are provided through the “teacher only” panel on Code Studio. 
 MARKDOWN

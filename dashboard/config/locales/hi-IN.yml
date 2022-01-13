@@ -215,6 +215,10 @@ hi:
     email_preference_yes: हां
     email_preference_no: नहीं
     email_preference_required: आपको ईमेल प्राथमिकता बतानी होगी।
+    share_teacher_email_reg_partner_question: क्या आप चाहते हैं कि हम आपके स्टेट में
+      [Code.org क्षेत्रीय पार्टनर](%{cdo_regional_partner_desc}) के साथ आपके संपर्क
+      को शेयर करें ताकि वे आपको लोकल प्रोफेशनल डेवलपमेंट, संसाधनों और इवेंट के बारे
+      में सूचित कर सकें?
     share_teacher_email_reg_partner_preference_yes: हां
     share_teacher_email_reg_partner_preference_no: नहीं
     share_teacher_email_reg_partner_preference_required: आपको ईमेल प्राथमिकता बतानी
@@ -451,6 +455,7 @@ hi:
       playlab: प्ले लैब
       playlab_k1: प्ले लैब (आरंभिक-पाठक)
       poetry: काव्य
+      poetry_hoc: कविता आर्ट
       scratch: Scratch
       sports: खेल
       spritelab: स्प्राइट लैब
@@ -473,6 +478,7 @@ hi:
       prizes_link: अधिक जानकारी
   teacher:
     answer: जवाब
+    dashboard: अध्यापक डैशबोर्ड
     for_teachers_only: केवल अध्यापकों के लिए
     title:
       one: 'आपका अध्यापक:'
@@ -1205,6 +1211,9 @@ hi:
       school: स्कूल
       school_name: स्कूल का नाम
       school_city: स्कूल का शहर
+      school_city_district: 'स्कूल का शहर/ जिला
+
+'
       school_country: स्कूल देश
       colombian_school_city: स्कूल का शहर
       colombian_chilean_school_name: स्कूल का नाम

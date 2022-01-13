@@ -901,7 +901,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_course: 'on',
       peer_reviews_to_complete: 1,
       curriculum_path: 'fake_curriculum_path',
-      family_name: 'coursea',
+      family_name: 'fake-family-z',
       version_year: '2020',
       pilot_experiment: 'fake-pilot-experiment',
       editor_experiment: 'fake-editor-experiment',
@@ -993,7 +993,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     unit.reload
 
-    assert_equal nil, unit.tts
+    assert_nil unit.tts
   end
 
   test 'published_state is set to nil for script within course' do

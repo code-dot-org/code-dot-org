@@ -5,14 +5,29 @@ pt:
       Green: Verde
       Red: Vermelho
       actor: ator
-      age: idade  
+      age: idade
       answer: resposta
       binary: binário
-      birds: pássaros
-      cats: Gatos
+      birds: aves
+      bit: bit
+      blue1: azul1
+      blue2: azul2
+      cat_score: gato_pontuação
+      cat_speed: gato_velocidade
+      cats: gatos
+      choice: opção
       color: cor
       counter: contador
-      dogs: Cães
+      counter2: contador2
+      direction: direção
+      dog_score: cachorro_pontuação
+      dog_speed: cachorro_velocidade
+      dogs: cachorros
+      dragons: dragões
+      energy: energia
+      gather: reunir
+      green1: verde1
+      green2: verde2
       height: altura
       honey: mel
       i: i
@@ -21,14 +36,19 @@ pt:
       level: nível
       name: nome
       nectar: néctar
+      planet: planeta
       points: pontos
       random: aleatório
       repeat: repita
       right: para a direita
       score: pontuação
+      shout: grito
+      sides: lados
       size: tamanho
       speed: velocidade
+      startX: startX
+      startY: startY
       variable: variável
       width: largura
-      wizard: feiticeiro
+      wizard: mago
       x: x
