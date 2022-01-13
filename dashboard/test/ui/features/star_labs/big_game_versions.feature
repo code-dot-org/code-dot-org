@@ -36,7 +36,7 @@ Feature: Big Game Versions
     And I wait for 3 seconds
     Then I press "versions-header"
     And I wait until element "button:contains(Restore this Version):eq(0)" is visible
-    And element "button.version-preview" is visible
+    And element "button.btn-info" is visible
     And I click selector "button:contains(Restore this Version):eq(0)"
     And I wait until element "#showVersionsModal" is gone
     And I wait for jquery to load

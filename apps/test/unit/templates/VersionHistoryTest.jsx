@@ -152,7 +152,7 @@ describe('VersionHistory', () => {
       expect(restoreSpy()).not.to.have.been.called;
 
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
@@ -162,7 +162,7 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
 
@@ -174,7 +174,7 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
       expect(utils.reload).not.to.have.been.called;
