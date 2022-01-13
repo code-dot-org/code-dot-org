@@ -24,6 +24,7 @@ import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -70,9 +71,7 @@ export function setupApp(appOptions) {
       // If user is project owner, or teacher viewing student work
       const isTeacher =
         getStore().getState().currentUser?.userType === 'teacher';
-      const isViewingStudent = !!new URLSearchParams(
-        window.location.search
-      ).get('user_id');
+      const isViewingStudent = !!queryParams('user_id');
       if (project.isEditable() || (isTeacher && isViewingStudent)) {
         $('#versions-header').show();
       }
