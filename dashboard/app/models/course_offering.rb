@@ -85,8 +85,8 @@ class CourseOffering < ApplicationRecord
     CourseOffering.all.select {|co| co.assignable?(user)}
   end
 
-  def self.assignable_course_offerings_info(user, locale = nil)
-    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale)}
+  def self.assignable_course_offerings_info(user, locale_code = nil)
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
   end
 
   def self.assignable_pl_course_offerings(user)
@@ -94,7 +94,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_pl_course_offerings_info(user, locale = nil)
-    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale)}
+    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
   end
 
   def assignable?(user)
@@ -106,11 +106,11 @@ class CourseOffering < ApplicationRecord
     false
   end
 
-  def summarize_for_assignment_dropdown(user, locale)
+  def summarize_for_assignment_dropdown(user, locale_code)
     {
       id: id,
       display_name: display_name,
-      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale)}
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
     }
   end
 end

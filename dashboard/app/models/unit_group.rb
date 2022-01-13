@@ -344,11 +344,6 @@ class UnitGroup < ApplicationRecord
     end
   end
 
-  # Only English-speaking locales are supported currently
-  def supported_for_locale(locale_str)
-    locale_str&.downcase&.start_with?('en')
-  end
-
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
