@@ -606,8 +606,7 @@ class Script < ApplicationRecord
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
       if unit_name
         # This creates a temporary script which is used to redirect the user. The audiences are set
-        # to instructor as teacher and student as participant because that will allow the redirect to
-        # happen for any course
+        # to allow the redirect to happen for any user
         return Script.new(
           redirect_to: unit_name,
           published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
@@ -636,8 +635,7 @@ class Script < ApplicationRecord
 
     unit_name ?
       # This creates a temporary script which is used to redirect the user. The audiences are set
-      # to instructor as teacher and student as participant because that will allow the redirect to
-      # happen for any course
+      # to allow the redirect to happen for any user
       Script.new(
         redirect_to: unit_name,
         published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
