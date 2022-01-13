@@ -137,24 +137,24 @@ class CourseVersion < ApplicationRecord
     end
   end
 
-  def recommended?(locale)
+  def recommended?(locale_code)
     return false unless stable?
     return true if course_offering.course_versions.length == 1
 
     family_name = course_offering.key
-    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale)
+    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale_code)
 
     latest_stable_version == content_root
   end
 
-  def summarize_for_assignment_dropdown(user, locale)
+  def summarize_for_assignment_dropdown(user, locale_code)
     {
       id: id,
       version_year: key,
       display_name: display_name,
       is_stable: stable?,
-      is_recommended: recommended?(locale),
-      locales: content_root_type == 'UnitGroup' ? [] : content_root.supported_locales,
+      is_recommended: recommended?(locale_code),
+      locales: content_root_type == 'UnitGroup' ? [] : content_root.supported_locale_names,
       units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
     }
   end

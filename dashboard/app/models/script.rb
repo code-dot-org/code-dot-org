@@ -612,7 +612,10 @@ class Script < ApplicationRecord
       next unless unit.stable?
       latest_version ||= unit
 
-      if  unit.supported_for_locale(locale_str)
+      # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
+      # than matching en-US specifically.
+      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
+      if is_supported
         latest_version = unit
         break
       end
@@ -715,7 +718,7 @@ class Script < ApplicationRecord
     # Match on version year if one is supplied.
     locale_str = locale&.to_s
     supported_stable_units = unit_versions.select do |unit|
-      is_supported = unit.supported_for_locale(locale_str)
+      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
         unit.stable? && is_supported && unit.version_year == version_year
       else
