@@ -47,8 +47,10 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   end
 
   if @country || @company
-    if possible_language && I18n.backend.translations[possible_language.to_sym]
-      @user_language = possible_language
+    if possible_language && I18n.backend.translations.key?(possible_language[0..1].to_sym)
+      # HOC uses two-letter language code. The full list of language codes is
+      # in the unique_language_s column in Pegasus.cdo_languages table.
+      @user_language = possible_language[0..1]
     else
       path = File.join([possible_language, path].reject(&:nil_or_empty?))
     end
@@ -97,12 +99,12 @@ def hoc_detect_country
   country_code
 end
 
+# Get browser language from HTTP_ACCEPT_LANGUAGE header, then return a two-letter
+# language code or nil if we don't have translation for that language.
 def hoc_detect_language
-  language = request.env['rack.locale']
-  return language if I18n.backend.translations[language.to_sym]
+  language = request.env['rack.locale'] || ''
   language_short = language[0..1]
-  return language_short if I18n.backend.translations[language_short.to_sym]
-  nil
+  return I18n.backend.translations.key?(language_short.to_sym) ? language_short : nil
 end
 
 # Called by pages on hourofcode.com to convert the current two-letter language (stored
