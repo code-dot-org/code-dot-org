@@ -58,10 +58,10 @@ export default class VersionRow extends React.Component {
         <button
           key={'restore-version-button'}
           type="button"
-          className="btn-info"
+          className="img-upload"
           onClick={this.props.onChoose}
         >
-          {msg.restoreThisVersion()}
+          {msg.restore()}
         </button>
       );
     }
@@ -76,8 +76,8 @@ export default class VersionRow extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button type="button" className="version-preview">
-            <i className="fa fa-eye" />
+          <button type="button" className="btn-info">
+            {msg.view()}
           </button>
         </a>
       );

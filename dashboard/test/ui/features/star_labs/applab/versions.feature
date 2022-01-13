@@ -24,9 +24,9 @@ Scenario: Script Level Versions
 
   When I press "versions-header"
   And I wait until element "button:contains(Restore this Version):eq(0)" is visible
-  And element "button.version-preview" is visible
+  And element "button.btn-info" is visible
   And I make all links open in the current tab
-  And I click selector "button.version-preview:eq(0)" to load a new page
+  And I click selector "button.btn-info:eq(0)" to load a new page
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment 1"
   And element "#workspace-header-span" contains text "View only"

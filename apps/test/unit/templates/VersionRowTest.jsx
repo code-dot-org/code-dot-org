@@ -23,14 +23,14 @@ describe('VersionRow', () => {
     expect(wrapper).to.not.have.className('highlight');
     expect(wrapper).to.containMatchingElement(
       <a target="_blank">
-        <button type="button" className="version-preview">
+        <button type="button" className="btn-info">
           <i className="fa fa-eye" />
         </button>
       </a>
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-info">
-        {msg.restoreThisVersion()}
+      <button type="button" className="img-upload">
+        {msg.restore()}
       </button>
     );
   });
@@ -47,14 +47,14 @@ describe('VersionRow', () => {
     expect(wrapper).to.have.className('highlight');
     expect(wrapper).to.not.containMatchingElement(
       <a target="_blank">
-        <button type="button" className="version-preview">
-          <i className="fa fa-eye" />
+        <button type="button" className="btn-info">
+          {msg.view()}
         </button>
       </a>
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-info">
-        {msg.restoreThisVersion()}
+      <button type="button" className="img-upload">
+        {msg.restore()}
       </button>
     );
   });
@@ -69,9 +69,12 @@ describe('VersionRow', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-default" disabled="disabled">
+      <div
+        key={'latest-version-message'}
+        style={{marginRight: '20px', fontSize: 18}}
+      >
         {msg.latestVersion()}
-      </button>
+      </div>
     );
   });
 
@@ -88,7 +91,7 @@ describe('VersionRow', () => {
     );
     expect(onChoose).not.to.have.been.called;
 
-    wrapper.find('.btn-info').simulate('click');
+    wrapper.find('.img-upload').simulate('click');
     expect(onChoose).to.have.been.calledOnce;
   });
 });
