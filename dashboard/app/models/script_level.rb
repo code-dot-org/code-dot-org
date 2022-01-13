@@ -144,6 +144,10 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
+  def final_level?
+    !has_another_level_to_go_to?
+  end
+
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson=nil,
