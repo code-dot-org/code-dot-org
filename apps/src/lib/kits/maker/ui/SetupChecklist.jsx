@@ -268,6 +268,17 @@ export default class SetupChecklist extends Component {
             onClick={this.redetect.bind(this)}
             disabled={this.state.isDetecting}
           />
+          {experiments.isEnabled('microbit') && (
+            <input
+              style={{marginLeft: 9, marginTop: -4}}
+              className="btn"
+              type="button"
+              value={applabI18n.makerSetupCalibrateCompass()}
+              onClick={() => window.alert('Look at your board.')}
+              disabled={this.state.isDetecting}
+              title={applabI18n.makerSetupCalibrateCompassDescription()}
+            />
+          )}
         </h2>
         <div className="setup-status">
           {this.renderPlatformSpecificSteps()}
