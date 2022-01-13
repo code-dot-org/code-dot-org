@@ -121,13 +121,6 @@ module Api::V1::Pd::Application
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
     end
 
-    test 'submitting without a program renders bad request on successful create if application is complete' do
-      sign_in @applicant
-      put :create, params: {form_data: {status: 'unreviewed'}}
-
-      assert_response :bad_request
-    end
-
     test 'does not update course hours nor autoscore on successful create if application status is incomplete' do
       Pd::Application::TeacherApplication.expects(:auto_score).never
       Pd::Application::TeacherApplication.expects(:queue_email).never
