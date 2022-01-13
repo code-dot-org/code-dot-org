@@ -2,7 +2,7 @@
   "category": "World",
   "config": {
     "name": "costumeImage",
-    "expression": "'image_' + VALUE",
+    "expression": "'image_' + COSTUME",
     "blockText": "{COSTUME}",
     "args": [
       {
