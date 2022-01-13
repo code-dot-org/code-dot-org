@@ -46,12 +46,15 @@ export default class VersionRow extends React.Component {
     let buttons = [];
     if (this.props.isLatest) {
       buttons.push(
-        <div
+        <button
           key={'latest-version-message'}
-          style={{marginRight: '20px', fontSize: 18}}
+          type="button"
+          className="btn-default"
+          disabled="disabled"
+          style={{cursor: 'default', background: 'none', border: 'none'}}
         >
           {msg.latestVersion()}
-        </div>
+        </button>
       );
     } else if (!this.props.isReadOnly) {
       buttons.push(
