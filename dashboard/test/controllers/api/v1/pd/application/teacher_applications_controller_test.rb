@@ -145,6 +145,14 @@ module Api::V1::Pd::Application
       assert_nil TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
     end
 
+    test 'can submit an empty form if application is incomplete' do
+      sign_in @applicant
+      put :create, params: {form_data: {status: 'incomplete'}}
+
+      assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
+      assert_response :created
+    end
+
     test 'updating an application with an error renders bad_request' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
