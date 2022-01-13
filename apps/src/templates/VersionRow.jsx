@@ -29,7 +29,11 @@ export default class VersionRow extends React.Component {
   getUrlAttributes() {
     const userId = queryParams('user_id');
     const viewAs = queryParams('viewAs');
+    const sectionId = queryParams('section_id');
     const params = {};
+    if (sectionId) {
+      params.section_id = sectionId;
+    }
     if (viewAs) {
       params.viewAs = viewAs;
     }
@@ -57,11 +61,14 @@ export default class VersionRow extends React.Component {
         </button>
       );
     } else if (!this.props.isReadOnly) {
+      const className = this.props.isSelectedVersion
+        ? 'btn-info'
+        : 'img-upload';
       buttons.push(
         <button
           key={'restore-version-button'}
           type="button"
-          className="img-upload"
+          className={className}
           onClick={this.props.onChoose}
         >
           {msg.restore()}
@@ -83,6 +90,18 @@ export default class VersionRow extends React.Component {
             {msg.view()}
           </button>
         </a>
+      );
+    } else {
+      buttons.push(
+        <button
+          key={'disabled-view-button'}
+          type="button"
+          className="btn-default"
+          disabled="disabled"
+          style={{cursor: 'default', color: 'white'}}
+        >
+          {msg.view()}
+        </button>
       );
     }
 

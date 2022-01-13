@@ -72,7 +72,7 @@ export function setupApp(appOptions) {
       const isTeacher =
         getStore().getState().currentUser?.userType === 'teacher';
       const isViewingStudent = !!queryParams('user_id');
-      if (project.isEditable() || (isTeacher && isViewingStudent)) {
+      if (project.isOwner() || (isTeacher && isViewingStudent)) {
         $('#versions-header').show();
       }
       $(document).trigger('appInitialized');
