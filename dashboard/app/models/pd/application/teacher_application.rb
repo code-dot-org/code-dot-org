@@ -86,10 +86,10 @@ module Pd::Application
 
     before_validation :set_course_from_program, unless: -> {program.nil?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     before_save :log_status, if: -> {status_changed?}
     before_create :set_status, if: -> {form_data_changed?}
 
@@ -103,10 +103,12 @@ module Pd::Application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info
     # 2. User doesn't have a specific school? overwrite with the custom school info.
+    # Will only update the school info if we have enough information for it
+    # An incomplete application may not have all the information we need to update
     def update_user_school_info!
       if school_id || user.school_info.try(&:school).nil?
-        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_school_info(school_info)
+        school_info = school_info_attr
+        user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info)) if school_info
       end
     end
 
@@ -269,6 +271,8 @@ module Pd::Application
       raw_school_id.to_i == -1 ? nil : raw_school_id
     end
 
+    # If we have enough information for the school attributes, returns either the school id or the school information
+    # Returns nil if we do not have enough information for the school (can happen on an incomplete application)
     def school_info_attr
       if school_id
         {
@@ -276,6 +280,7 @@ module Pd::Application
         }
       else
         hash = sanitize_form_data_hash
+        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
@@ -1157,11 +1162,10 @@ module Pd::Application
     def on_successful_create
       update_user_school_info!
 
-      form_data_hash = sanitize_form_data_hash
-      status = form_data_hash[:status] if form_data_hash[:status]
-
       unless status == 'incomplete'
         queue_email :confirmation, deliver_now: true
+
+        form_data_hash = sanitize_form_data_hash
 
         update_form_data_hash(
           {
