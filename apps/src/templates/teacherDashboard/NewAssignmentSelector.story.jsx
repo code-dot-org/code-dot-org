@@ -19,30 +19,31 @@ const courseOfferings = [
         is_stable: true,
         is_recommended: false,
         locales: [
-          'ar-SA',
-          'cs-CZ',
-          'de-DE',
-          'es-ES',
-          'es-MX',
-          'fr-FR',
-          'hi-IN',
-          'id-ID',
-          'it-IT',
-          'ja-JP',
-          'ko-KR',
-          'mn-MN',
-          'pl-PL',
-          'pt-BR',
-          'pt-PT',
-          'ro-RO',
-          'ru-RU',
-          'sk-SK',
-          'tr-TR',
-          'ur-PK',
-          'uz-UZ',
-          'vi-VN',
-          'zh-CN',
-          'zh-TW'
+          'العربية',
+          'Čeština',
+          'Deutsch',
+          'English',
+          'Español (España)',
+          'Español (LATAM)',
+          'Français',
+          'हिन्दी',
+          'Bahasa Indonesia',
+          'Italiano',
+          '日本語',
+          '한국어',
+          'Монгол хэл',
+          'Polski',
+          'Português (Brasil)',
+          'Português (Portugal)',
+          'Română',
+          'Pусский',
+          'Slovenčina',
+          'Türkçe',
+          'اردو',
+          'Oʻzbekcha',
+          'Tiếng Việt',
+          '简体字',
+          '繁體字'
         ],
         units: [{id: 94, name: 'Course A'}]
       },
@@ -52,7 +53,7 @@ const courseOfferings = [
         display_name: '2018',
         is_stable: true,
         is_recommended: false,
-        locales: ['it-IT', 'sk-SK'],
+        locales: ['English', 'Italiano', 'Slovenčina'],
         units: [{id: 95, name: 'Course A (2018)'}]
       },
       {
@@ -61,7 +62,7 @@ const courseOfferings = [
         display_name: '2019',
         is_stable: true,
         is_recommended: false,
-        locales: ['cs-CZ', 'sk-SK'],
+        locales: ['Čeština', 'English', 'Slovenčina'],
         units: [{id: 96, name: 'Course A (2019)'}]
       },
       {
@@ -70,7 +71,7 @@ const courseOfferings = [
         display_name: '2020',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: ['English'],
         units: [{id: 97, name: 'Course A (2020)'}]
       },
       {
@@ -79,7 +80,7 @@ const courseOfferings = [
         display_name: '2021',
         is_stable: true,
         is_recommended: false,
-        locales: [],
+        locales: ['English'],
         units: [{id: 551, name: 'Course A (2021)'}]
       }
     ]
