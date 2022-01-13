@@ -624,8 +624,8 @@ class UnitEditor extends React.Component {
             handleParticipantAudienceChange={e =>
               this.setState({participantAudience: e.target.value})
             }
-            cannotChangeParticipantType={
-              this.state.publishedState !== PublishedState.in_development
+            canChangeParticipantType={
+              this.state.publishedState === PublishedState.in_development
             }
           />
         )}

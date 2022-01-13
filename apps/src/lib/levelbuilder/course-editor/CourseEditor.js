@@ -332,8 +332,8 @@ class CourseEditor extends Component {
           handleParticipantAudienceChange={e =>
             this.setState({participantAudience: e.target.value})
           }
-          cannotChangeParticipantType={
-            publishedState !== PublishedState.in_development
+          canChangeParticipantType={
+            publishedState === PublishedState.in_development
           }
         />
 
