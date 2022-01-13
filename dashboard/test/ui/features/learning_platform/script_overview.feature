@@ -36,7 +36,7 @@ Feature: Script overview page
   Scenario: Assigning to section
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/s/csp1-2021"
+    And I am on "http://studio.code.org/s/csp3-2019"
     When I click selector ".uitest-assign-button" once I see it
     And I wait to see ".uitest-unassign-button"
     # Make sure unassign button is in the right state when the page loads
