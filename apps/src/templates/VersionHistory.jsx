@@ -203,7 +203,7 @@ export default class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                {this.props.isReadOnly && (
+                {!this.props.isReadOnly && (
                   <tr>
                     <td>
                       <p>{i18n.versionHistory_initialVersion_label()}</p>
