@@ -19,9 +19,10 @@ This document visualizes the entire I18n pipeline using data-flow diagrams.
 It starts with a high-level view of the pipeline (Level 0 and Level 1 diagram), then drills down to each of the pipeline's 4 main components (`sync-in`, `sync-up`, `sync-dow`, and `sync-out`). The detailed diagrams capture the inputs and outputs of those components and their sub-components. They show how data flows through our system and 3rd-party services.
 
 
-**Tips**:
 
+**Tips**:
 - The text in SVG file is searchable. Most SVG-viewer apps, including browsers, support searching. On Github, select the "Raw" file option to let your browser displays the SVG file.
+- The diagrams are created using _draw.io_ (also known as _diagrams.net_). The main diagram file is at `./i18n/diagrams/i18n_pipeline.drawio`. You can use either the [online version](https://app.diagrams.net/) or [offline version](https://www.diagrams.net/) of _draw.io_ to edit the diagram file.
 
 
 ## Overview - Level 0
