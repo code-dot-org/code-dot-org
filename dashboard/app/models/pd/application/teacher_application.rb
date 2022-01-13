@@ -84,13 +84,14 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
+    before_validation :set_course_from_program, unless: -> {program.nil?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_validation :set_course_from_program, unless: -> {program.nil?}
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     before_save :log_status, if: -> {status_changed?}
+    before_create :set_status, if: -> {form_data_changed?}
 
     serialized_attrs %w(
       pd_workshop_id
@@ -137,6 +138,11 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_status
+      hash = sanitize_form_data_hash
+      self.status = hash[:status] if hash[:status]
     end
 
     def save_partner
