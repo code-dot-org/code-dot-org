@@ -24,7 +24,7 @@
           LambdaFunctionAssociations:
             # Trigging upon origin-request ensures redirect is cached
             - EventType: origin-request
-              LambdaFunctionARN: !Ref <%=app%>WwwRedirectLambdaVersion1
+              LambdaFunctionARN: !Ref <%=app%>WwwRedirectLambdaVersion2
           ForwardedValues:
             QueryString: "false"
             Headers:
@@ -123,7 +123,7 @@
         Mode: Active
 
   # To make a new version, bump the NAME of this resource and all references
-  <%=app%>WwwRedirectLambdaVersion1:
+  <%=app%>WwwRedirectLambdaVersion2:
     Type: AWS::Lambda::Version
     Properties:
       FunctionName: !Ref <%=app%>WwwRedirectLambda
