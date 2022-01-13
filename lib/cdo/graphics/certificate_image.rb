@@ -180,7 +180,7 @@ end
 
 def hoc_course?(course)
   hoc_course = ScriptConstants.unit_in_category?(:hoc, course)
-  hoc_course ||= Tutorials.new(:tutorials).contents("").any? {|tutorial| tutorial[:code] == course}
+  hoc_course ||= CertificateImage.tutorial_codes.any? {|code| code == course}
   hoc_course
 end
 
@@ -243,4 +243,10 @@ end
 def certificate_image_url(opts = {})
   encoded = Base64.urlsafe_encode64(JSON.pretty_generate(opts))
   "http://#{CDO.canonical_hostname('code.org')}/v2/hoc/certificate/#{encoded}.jpg"
+end
+
+class CertificateImage
+  def self.tutorial_codes
+    @@tutorial_codes ||= DB[:tutorials].all.map {|t| t[:code]}
+  end
 end
