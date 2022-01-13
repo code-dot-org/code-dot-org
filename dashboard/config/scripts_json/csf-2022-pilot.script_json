@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-12 17:38:11 UTC",
+    "serialized_at": "2022-01-13 19:20:40 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1749,6 +1749,16 @@
       }
     },
     {
+      "key": "90882c84-cf50-477d-af40-835ba12296b5",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5",
+        "lesson_activity.key": "8f4d1714-6613-4473-a1ea-e3dcc07bf690"
+      }
+    },
+    {
       "key": "4e80d376-8968-479d-8bbe-f40aff808517",
       "position": 1,
       "properties": {
@@ -3227,6 +3237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3248,6 +3261,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3269,6 +3285,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3290,6 +3309,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3307,6 +3329,48 @@
     },
     {
       "chapter": 56,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_score"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      },
+      "level_keys": [
+        "courseF_clicker_score"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      },
+      "level_keys": [
+        "courseF_clicker_finish"
+      ]
+    },
+    {
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3331,7 +3395,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4015,6 +4079,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
         "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_score",
+        "script_level.level_keys": [
+          "courseF_clicker_score"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_finish",
+        "script_level.level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
       }
     },
     {

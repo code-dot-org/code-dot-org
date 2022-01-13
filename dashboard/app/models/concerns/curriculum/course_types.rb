@@ -15,11 +15,45 @@ module Curriculum::CourseTypes
     validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
     validate :cannot_have_same_audiences
+    validate :must_have_same_course_type_as_family
+  end
+
+  # All courses in the same family name must have the save instruction_type, instructor_audience, and participant audience
+  def must_have_same_course_type_as_family
+    all_family_courses = get_family_courses
+    return if all_family_courses.nil_or_empty?
+
+    return unless all_family_courses.length > 1
+    errors.add(:instructor_audience, 'must be the same for all courses in a family.') if all_family_courses.map(&:instructor_audience).any? {|audience| audience != instructor_audience}
+    errors.add(:participant_audience, 'must be the same for all courses in a family.') if all_family_courses.map(&:participant_audience).any? {|audience| audience != participant_audience}
+    errors.add(:instruction_type, 'must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).any? {|type| type != instruction_type}
+  end
+
+  # Get the family name for the course based on if its set on the UnitGroup or Unit
+  def get_course_family_name
+    is_a?(Script) && unit_group ? unit_group.family_name : family_name
+  end
+
+  # If course we are check is a unit_group or a unit that is in a unit_group check the family_name on the UnitGroup.
+  # If the course is a unit that is not in a unit_group check the unit for the family_name
+  def get_family_courses
+    family_name = get_course_family_name
+    return nil if family_name.nil_or_empty?
+
+    all_family_courses = nil
+
+    if is_a?(UnitGroup) || (is_a?(Script) && unit_group)
+      all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
+    elsif is_a?(Script)
+      all_family_courses = Script.get_family_from_cache(family_name)
+    end
+
+    all_family_courses
   end
 
   # Instructor and Participant Audience can not be equal unless they are nil
   def cannot_have_same_audiences
-    errors.add(:instructor_audience, 'You cannot have the same instructor and participant audiences.') if !instructor_audience.nil? && instructor_audience == participant_audience
+    errors.add(:instructor_audience, 'should be different from participant audiences.') if !instructor_audience.nil? && instructor_audience == participant_audience
   end
 
   # Checks if a user can be the instructor for the course. universal instructors and levelbuilders
