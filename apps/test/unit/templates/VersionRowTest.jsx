@@ -24,7 +24,7 @@ describe('VersionRow', () => {
     expect(wrapper).to.containMatchingElement(
       <a target="_blank">
         <button type="button" className="btn-info">
-          <i className="fa fa-eye" />
+          {msg.view()}
         </button>
       </a>
     );
@@ -69,12 +69,15 @@ describe('VersionRow', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <div
+      <button
         key={'latest-version-message'}
-        style={{marginRight: '20px', fontSize: 18}}
+        type="button"
+        className="btn-default"
+        disabled="disabled"
+        style={{cursor: 'default', background: 'none', border: 'none'}}
       >
         {msg.latestVersion()}
-      </div>
+      </button>
     );
   });
 
