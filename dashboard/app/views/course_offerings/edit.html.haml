@@ -1,0 +1,6 @@
+- course_offering = local_assigns[:course_offering]
+- course_offering_editor_data = {course_offering_summary: course_offering.summarize_for_edit}
+- content_for(:head) do
+  %script{ src: webpack_asset_path('js/course_offerings/edit.js'), data: {course_offering_editor: course_offering_editor_data.to_json}}
+= form_for(course_offering, {url: '/'}) do |f|
+  #course_offering_editor
