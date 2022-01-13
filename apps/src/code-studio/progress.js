@@ -2,10 +2,12 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import queryString from 'query-string';
 import clientState from './clientState';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
+import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenLessons} from './hiddenLessonRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
@@ -232,6 +234,27 @@ progress.initCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
+};
+
+/* Set our initial view type (Participant or Instructor) from current user's user_type
+ * or our query string. */
+progress.initViewAs = function(store, userType) {
+  // Default to Participant, unless current user is a teacher
+  let initialViewAs = ViewType.Participant;
+  if (userType === 'teacher') {
+    //TODO(dmcavoy): Update to check instructor
+    initialViewAs = ViewType.Instructor;
+  }
+
+  // If current user is not a student (ie, a teacher or signed out), allow the
+  // 'viewAs' query parameter to override;
+  if (userType !== 'student') {
+    //TODO(dmcavoy): Update to check participant
+    const query = queryString.parse(location.search);
+    initialViewAs = query.viewAs || initialViewAs;
+  }
+
+  store.dispatch(setViewType(initialViewAs));
 };
 
 progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {

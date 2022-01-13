@@ -26,8 +26,6 @@ import {
   pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import queryString from 'query-string';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import progress from '@cdo/apps/code-studio/progress';
 import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -86,7 +84,7 @@ function initPage() {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  initViewAs(store, scriptData.user_type);
+  progress.initViewAs(store, scriptData.user_type);
   initializeStoreWithSections(store, scriptData.sections, scriptData.section);
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
@@ -171,30 +169,3 @@ function initializeStoreWithSections(store, sections, currentSection) {
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(currentSection.id.toString()));
 }
-
-// Set our initial view type (Participant or Instructor) from current user's user_type
-function initViewAs(store, userType) {
-  // Default to Participant, unless current user is a teacher
-  let initialViewAs = ViewType.Participant;
-  if (userType === 'teacher') {
-    //TODO(dmcavoy): Update to check instructor
-    initialViewAs = ViewType.Instructor;
-  }
-
-  // If current user is not a student (ie, a teacher or signed out), allow the
-  // 'viewAs' query parameter to override;
-  if (userType !== 'student') {
-    //TODO(dmcavoy): Update to check participant
-    const query = queryString.parse(location.search);
-    initialViewAs = query.viewAs || initialViewAs;
-  }
-
-  store.dispatch(setViewType(initialViewAs));
-}
-
-// export private function(s) to expose to unit testing
-export const __testonly__ = IN_UNIT_TEST
-  ? {
-      initViewAs
-    }
-  : {};
