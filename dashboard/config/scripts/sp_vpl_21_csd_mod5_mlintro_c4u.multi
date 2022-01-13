@@ -2,16 +2,16 @@ name 'SP-VPL-21-CSD-mod5-MLintro-c4u'
 title 'Check for understanding'
 description ''
 question '**Which of the following responses indicates an understanding of how machine learning works?**'
-wrong 'There is probably a bug in the code. We should email Code.org.'
-wrong 'I think A.I. Bot is just randomly deciding what is a fish and what is not.'
-right 'Student B used 100 examples to train A.I. Bot. I only used 30.'
-wrong 'My first example was a piece of trash. Student B had a fish as the first example.'
+wrong '"There is probably a bug in the code. We should email Code.org."'
+wrong '"I think A.I. Bot is just randomly deciding what is a fish and what is not."'
+right '"Student B used 100 examples to train A.I. Bot. I only used 30."'
+wrong '"My first example was a piece of trash. Student B had a fish as the first example."'
 
 
 markdown <<MARKDOWN
-#### Student A and Student B are discussing their results after training A.I. Bot to recognize fish. They notice that one A.I. Bot incorrectly identified six pieces of trash as fish and the other A.I. Bot did not identify any trash as fish. 
+##### Student A and Student B are discussing their results after training A.I. Bot to recognize fish. They notice that one A.I. Bot incorrectly identified six pieces of trash as fish and the other A.I. Bot did not identify any trash as fish. 
 
-#### You ask, "**What is a possible explanation for why one A.I. Bot was more accurate than the other in telling the difference between trash and fish?".**
+##### You ask, "**What is a possible explanation for why one A.I. Bot was more accurate than the other in telling the difference between trash and fish?"**
 
 ## Student A's results
 

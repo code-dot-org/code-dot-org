@@ -138,7 +138,7 @@
           "student_overview": "Vytvor si interaktívne virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku život!"
         },
         "coursef-2021/lesson-2": {
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.][2]\n\nAko deti rastú, začnú prirodzene čoraz viac komunikovať online. No niektoré veci, ktoré uvidia, v nich môžu vyvolať pocit ublíženia, hnev či dokonca strach. Pomôžte žiakom budovať súcit k iným a naučiť sa stratégiám, ktoré môžu využiť, keď budú čeliť kyberšikane.",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAko deti rastú, začnú prirodzene čoraz viac komunikovať online. No niektoré veci, ktoré uvidia, v nich môžu vyvolať pocit ublíženia, hnev či dokonca strach. Pomôžte žiakom budovať súcit k iným a naučiť sa stratégiám, ktoré môžu využiť, keď budú čeliť kyberšikane.",
           "preparation": "-   Prečítajte si materiály s pokynmi.\n-   Vytlačte podkladové materiály pre žiakov.\n-   Pripravte dlhý motúz (alebo povraz) a papier pre triedu.",
           "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby žiakom ukázala, čo majú robiť, ak niekto používa urážlivý alebo nenávistný jazyk na internete.",
           "student_overview": "Šikana nikdy nie je v poriadku. Počas tejto lekcie sa naučíte, čo je OK povedať na internete a čo nie."
@@ -221,7 +221,7 @@
           "student_overview": "Na takéto veľké projekty treba veľa času a plánovania. Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť naplno!"
         },
         "courseb-2021/Digital Trails": {
-          "overview": " [\\[Common sense education](https://www.commonsense.org)][1]\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Prečítajte si viac.][2]\n\nZostáva to, čo robíme on-line, zapísané v on-line svete? Žiaci sa dozvedia, že informácie, o ktoré sa podelia on-line, zanechávajú digitálnu stopu. V závislosti od toho, ako s informáciami pracujú, môže byť ich stopa menšia alebo väčšia a môže im pomáhať, ale aj škodiť. Žiaci porovnajú rôzne stopy a budú kriticky premýšľať o tom, aký druh informácií chcú po sebe zanechať.",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Prečítajte si viac.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nZostáva to, čo robíme on-line, zapísané v on-line svete? Žiaci sa dozvedia, že informácie, o ktoré sa podelia on-line, zanechávajú digitálnu stopu. V závislosti od toho, ako s informáciami pracujú, môže byť ich stopa menšia alebo väčšia a môže im pomáhať, ale aj škodiť. Žiaci porovnajú rôzne stopy a budú kriticky premýšľať o tom, aký druh informácií chcú po sebe zanechať.",
           "preparation": "-   Prečítajte si materiály s pokynmi.\n-   Vytlačte podkladové materiály pre žiakov.",
           "purpose": "Organizácia Common Sense Education vytvorila túto lekciu s cieľom oboznámiť žiakov s \"digitálnou stopou\" a s tým, čo je vhodné mať vo svojej vlastnej stope."
         },
@@ -285,8 +285,8 @@
           "purpose": "V tejto lekcii majú žiaci poslednú príležitosť tvorivo v rámci kurzu využiť nové informatické zručnosti."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Learn more.][2]\n\nSila internetu umožňuje žiakom objavovať a navštevovať miesta, kam by sa osobne možno nedostali. Podobne ako pri skutočnom cestovaní po svete je však potrebné dbať na bezpečnosť aj na potulkách internetom. Na tomto virtuálnom školskom výlete si deti môžu vyskúšať, ako absolvovať online dobrodružstvá bezpečne.",
-          "preparation": "-   Prezrite si metodické materiály.\n-   Vytlačte pre každéo študenta pracovné listy.\n-   (Doplnkovo) Vytlačte plagát s básňou a vystavte ho v triede.",
+          "overview": "[![Common Sense Education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Zistite viac.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nSila internetu umožňuje žiakom objavovať a navštevovať miesta, kam by sa osobne možno nedostali. Podobne ako pri skutočnom cestovaní po svete je však potrebné dbať na bezpečnosť aj na potulkách internetom. Na tomto virtuálnom školskom výlete si deti môžu vyskúšať, ako absolvovať online dobrodružstvá bezpečne.",
+          "preparation": "-   Prezrite si metodické materiály.\n-   Vytlačte pre každého študenta pracovné listy.\n-   (Nepovinné) Vytlačte plagát s básňou a vystavte ho v triede.",
           "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby žiakom ukázala, ako sa bezpečne pohybovať po online svete.",
           "student_overview": "Naučte sa bezpečne pohybovať po online svete."
         },
@@ -352,7 +352,7 @@
           "purpose": "V tejto lekcii majú žiaci poslednú príležitosť tvorivo v rámci kurzu využiť nové informatické zručnosti."
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.][2]\n\nInternet je plný rôznych zaujímavých ľudí, ale niekedy sa niektorí z nich môžu k sebe správať zle. Pomocou tejto divadelnej hry pomôžte žiakom pochopiť, prečo je často jednoduchšie byť zlý na internete ako osobne, a čo spraviť s online zákernosťou, keď sa s ňou stretnú.",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternet je plný rôznych zaujímavých ľudí, ale niekedy sa niektorí z nich môžu k sebe správať zle. Pomocou tejto divadelnej hry pomôžte žiakom pochopiť, prečo je často jednoduchšie byť zlý na internete ako osobne, a čo spraviť s online zákernosťou, keď sa s ňou stretnú.",
           "preparation": "-   Preskúmajte výučbové materiály.\n-   Vytlačte materiály pre každého žiaka.\n-   Prineste si na hodinu plyšové zviera alebo hračku.",
           "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby žiakom ukázala, čo je zákernosť a čo by mali robiť, ak sa s ňou stretnú na internete."
         },
@@ -429,7 +429,7 @@
           "student_overview": "Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt."
         },
         "coursed-2021/lesson-5": {
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org).\n\nSilné a bezpečné heslá sú užitočné pre každého. Ako však vieme pomôcť deťom, aby si vytvárali lepšie heslá a zároveň si ich zapamätali? Využite tipy z tejto lekcie na to, aby ste deťom pomohli vytvoriť si bezpečné a ľahko zapamätateľné heslá.",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nSilné a bezpečné heslá sú užitočné pre každého. Ako však vieme pomôcť deťom, aby si vytvárali lepšie heslá a zároveň si ich zapamätali? Využite tipy z tejto lekcie na to, aby ste deťom pomohli vytvoriť si bezpečné a ľahko zapamätateľné heslá.",
           "preparation": "-   Prečítajte si materiály s pokynmi.\n-   Vytlačte podklady pre žiakov.\n-   Pripravte žiakom papiere na písanie alebo zápisníky.",
           "purpose": "Organizácia Common Sense Education túto lekciu vytvorila s cieľom ukázať žiakom, ako dokážu silné heslá ochrániť ich súkromie."
         },
@@ -764,13 +764,13 @@
           "student_overview": "Vytvorte interaktívny projekt, ktorý môžete zdieľať so svojimi spolužiakmi."
         },
         "coursee-2021/lesson-4": {
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.][2]\n\nOnline nástroje dávajú deťom nové možnosti, ale zároveň sa spájajú aj s veľkou zodpovednosťou. No vedia deti, čo majú robiť, keď sa stretnú s kyberšikanovaním? Ukážte žiakom, ako správne zakročiť a riešiť konflikty, aby sa nebáli ozvať a pomôcť iným, ktorí to potrebujú.",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline nástroje dávajú deťom nové možnosti, ale zároveň sa spájajú aj s veľkou zodpovednosťou. No vedia deti, čo majú robiť, keď sa stretnú s kyberšikanovaním? Ukážte žiakom, ako správne zakročiť a riešiť konflikty, aby sa nebáli ozvať a pomôcť iným, ktorí to potrebujú.",
           "preparation": "-   Prečítajte si materiály s pokynmi.\n-   Vytlačte podkladové materiály pre žiakov.\n-   Pripravte farebné ceruzky alebo fixky pre žiakov.",
           "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby žiakom ukázala, ako sa majú zachovať, keď sa stretnú s kyberšikanovaním.",
           "student_overview": "Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním."
         },
         "coursee-2021/Private and Personal Information": {
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.][2]\n\nPre žiakov je prirodzené zdieľať a spájať sa s inými. Ale so zdieľaním sa spájajú aj riziká. Ako môžeme deťom pomôcť budovať silné, pozitívne a bezpečné vzťahy online? Pomôžte žiakom zistiť, čo je osobné a čo by malo zostať súkromné.",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nPre žiakov je prirodzené zdieľať a spájať sa s inými. Ale so zdieľaním sa spájajú aj riziká. Ako môžeme deťom pomôcť budovať silné, pozitívne a bezpečné vzťahy online? Pomôžte žiakom zistiť, čo je osobné a čo by malo zostať súkromné.",
           "preparation": "-   Prečítajte si materiály s pokynmi.\n-   Vytlačte podkladové materiály pre žiakov.",
           "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby žiakom ukázala, aké informácie môžu bezpečne zdieľať online.",
           "student_overview": "Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné."

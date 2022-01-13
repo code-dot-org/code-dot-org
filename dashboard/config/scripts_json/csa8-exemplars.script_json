@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-05 21:38:44 UTC",
+    "serialized_at": "2022-01-09 00:19:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -947,6 +947,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -968,6 +971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -989,6 +995,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1010,6 +1019,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1031,6 +1043,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L4 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1048,6 +1063,90 @@
     },
     {
       "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L1 Placeholder"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
+      },
+      "level_keys": [
+        "CSA U8L9-L1 Placeholder"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L2 Placeholder"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
+      },
+      "level_keys": [
+        "CSA U8L9-L2 Placeholder"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L3 Exemplar"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
+      },
+      "level_keys": [
+        "CSA U8L9-L3 Exemplar"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L4 Placeholder"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
+      },
+      "level_keys": [
+        "CSA U8L9-L4 Placeholder"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1071,7 +1170,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1095,7 +1194,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1119,7 +1218,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1143,7 +1242,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1167,7 +1266,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1418,6 +1517,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-exemplars",
         "activity_section.key": "b6171e87-9b40-4d38-a306-14d3ef1b1fb3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L9-L1 Placeholder",
+        "script_level.level_keys": [
+          "CSA U8L9-L1 Placeholder"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L9-L2 Placeholder",
+        "script_level.level_keys": [
+          "CSA U8L9-L2 Placeholder"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L9-L3 Exemplar",
+        "script_level.level_keys": [
+          "CSA U8L9-L3 Exemplar"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L9-L4 Placeholder",
+        "script_level.level_keys": [
+          "CSA U8L9-L4 Placeholder"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "96ec7736-5d66-4e39-8e35-4a7627b9e505"
       }
     },
     {

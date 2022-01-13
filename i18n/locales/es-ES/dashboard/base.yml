@@ -407,6 +407,7 @@ es:
       playlab: 'Laboratorio de juegos'
       playlab_k1: 'Play Lab ( Pre-lector)'
       poetry: 'Poesía'
+      poetry_hoc: 'Arte del Poema'
       scratch: 'Scratch'
       sports: 'Deportes'
       spritelab: 'Laboratorio de sprites'
@@ -429,6 +430,7 @@ es:
       prizes_link: 'Más información '
   teacher:
     answer: Respuesta
+    dashboard: 'Panel del docente'
     for_teachers_only: Solo para docentes
     title:
       one: 'Tu profesor:'

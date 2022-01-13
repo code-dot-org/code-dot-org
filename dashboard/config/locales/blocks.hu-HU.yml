@@ -1797,12 +1797,15 @@ hu:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Virágok
-            '"hearts"': Szívek
+            '"brick"': tégla
+            '"fire"': tűz
+            '"flowers"': virágok
+            '"hearts"': szívek
             '"iceCream"': Fagyi
-            '"rainbow"': Szivárvány
-            '"stars"': Csillagok
-            '"waves"': Hullámok
+            '"leaves"': levelek
+            '"rainbow"': szivárvány
+            '"stars"': csillagok
+            '"waves"': hullámok
       Poetry_addLine:
         text: sor hozzáadása {LINE}
       Poetry_animateText:
@@ -1831,10 +1834,15 @@ hu:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Nyugodt
             '"sound://category_nature/steady_campfire_loop.mp3"': Tábortűz
             '"sound://category_nature/rain_loop.mp3"': Szitálás
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': erdő
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Kísérteties
             '"sound://category_background/inside_plane.mp3"': Zümmögés
             '"sound://category_loops/red_flag_loop1.mp3"': Küldetés
+            '"sound://category_nature/summer_night_loop.mp3"': éjszaka
+            '"sound://category_background/ocean_waves.mp3"': óceán
+            '"sound://category_background/rainforest_ambient_sound.mp3"': esőerdő
             '"sound://category_background/repitition.mp3"': Lovaglás
+            '"sound://category_background/wavering_wind.mp3"': alvó
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lassú
       Poetry_playSound:
         text: játszd le a {SOUND} hangot
@@ -1848,7 +1856,7 @@ hu:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Sikertelen
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Csapkod
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Ugrás
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Világos
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': fény
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Puff
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Beolvasás
             '"sound://category_background/typewriter.mp3"': Írógép
@@ -1864,30 +1872,31 @@ hu:
         text: háttér beállítása {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Színek
-            '"squiggles"': Kígyóvonalak
-            '"space"': Világűr
-            '"stars"': Csillagok
+            '"blooming"': Virágzó
+            '"bubbles"': Buborékok
+            '"clouds"': Felhős
+            '"confetti"': Konfetti
             '"darkCircles"': Elhalványulás
             '"fadeColors"': Fagyott
-            '"blooming"': Virágzó
+            '"hearts"': szívek
+            '"space"': Világűr
+            '"rain"': esős
             '"ripples"': Lüktetés
-            '"clouds"': Felhős
-            '"rain"': Eső
-            '"bubbles"': Buborékok
-            '"confetti"': Konfetti
-            '"hearts"': Színes szívek
+            '"colors"': Színek
+            '"stars"': Csillagok
+            '"squiggles"': Kígyóvonalak
           PALETTE:
-            '"rainbow"': Szivárvány
-            '"grayscale"': Szürkék
-            '"sky"': Égbolt
+            '"autumn"': Ősz
             '"sunrise"': Hajnal
             '"sunset"': Alkonyat
+            '"grayscale"': Szürkék
+            '"ocean"': óceán
+            '"rainbow"': szivárvány
+            '"roses"': Rózsák
+            '"sky"': Égbolt
             '"spring"': Tavasz
             '"summer"': Nyár
-            '"autumn"': Ősz
             '"winter"': Tél
-            '"roses"': Rózsák
       Poetry_setBackgroundImageAs:
         text: háttér beállítása {IMG}
       Poetry_setFont:
@@ -1895,23 +1904,23 @@ hu:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Kézírás
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Kézírás
       Poetry_setFontColor:
         text: szöveg színének beállítása {FILL}
       Poetry_setForegroundEffect:
         text: készítsen {EFFECT} effektet
         options:
           EFFECT:
-            '"rain"': Eső
             '"bubbles"': Buborékok
-            '"hearts"': Színes szívek
-            '"emojis"': Boldog emojik
             '"confetti"': Konfetti
+            '"hearts"': szívek
+            '"emojis"': Boldog emojik
+            '"rain"': esős
             '"starburst"': Csillagrobbanás
             '"glass"': Üvegtörés
             '"twinkling"': Csillogás
@@ -1927,11 +1936,11 @@ hu:
         options:
           EFFECT:
             '"fade"': elhalványulás
-            '"typewriter"': írógép
             '"flyLeft"': repülés balról
             '"flyRight"': repülés jobbról
             '"flyTop"': repülés felülről
             '"flyBottom"': repülés alulról
+            '"typewriter"': írógép
       Poetry_setTitle:
         text: cím beállítása {TITLE}
       Poetry_showText:
@@ -1940,24 +1949,16 @@ hu:
         text: "{ANIMATION_NAME} sprite elkezdki a {BEHAVIOR} viselkedést"
         options:
           BEHAVIOR:
-            fluttering: csapkodva
-            moving_north_and_looping: hurok északra
-            moving_south_and_looping: hurok délre
-            moving_east_and_looping: hurok keletre
-            moving_west_and_looping: hurok nyugatra
-            swimming_left_and_right: úszás
-            wobbling: kalimpálva
+            '"fluttering"': csapkodva
+            '"swimming_left_and_right"': úszás
+            '"wobbling"': kalimpálva
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} abbahagyja a {BEHAVIOR} viselkedést
         options:
           BEHAVIOR:
-            fluttering: csapkodva
-            moving_north_and_looping: hurok északra
-            moving_south_and_looping: hurok délre
-            moving_east_and_looping: hurok keletre
-            moving_west_and_looping: hurok nyugatra
-            swimming_left_and_right: úszás
-            wobbling: kalimpálva
+            '"fluttering"': csapkodva
+            '"swimming_left_and_right"': úszás
+            '"wobbling"': kalimpálva
             '"all"': "--összes viselkedés--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

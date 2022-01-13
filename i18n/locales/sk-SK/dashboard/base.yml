@@ -419,6 +419,7 @@ sk:
       prizes_link: 'viac info'
   teacher:
     answer: Odpoveď
+    dashboard: 'Nástenka učiteľa'
     for_teachers_only: Iba pre učiteľov
     title:
       one: 'Tvoj učiteľ:'
