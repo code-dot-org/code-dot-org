@@ -40,6 +40,13 @@ class DeleteAccountsHelper
       storage_encrypt_channel_id user.user_storage_id, storage_app_id
     end
 
+    # Clear any comments associated with specific versions of projects.
+    # At time of writing, this feature is in use only in Javalab when a student
+    # commits their code.
+    project_versions = ProjectVersion.where(storage_app_id: storage_app_ids)
+    project_versions.each {|version| version.update!(comment: nil)}
+    @log.puts "Cleared #{project_versions.count} ProjectVersion" if project_versions.count > 0
+
     # Clear potential PII from user's channels
     @pegasus_db[:storage_apps].
       where(id: storage_app_ids).
