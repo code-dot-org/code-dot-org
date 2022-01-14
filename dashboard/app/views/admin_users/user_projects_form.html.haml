@@ -1,6 +1,6 @@
 %h1 User Projects
 
-%p This page allows an admin to view recent progress for a user and delete progress for all levels in a script. All times in UTC.
+%p This page allows an admin to view active and deleted projects, and restore deleted projects for a user. All times in UTC.
 
 :ruby
   def format_time(datetime)
@@ -39,7 +39,6 @@
       %th Channel
       %th Updated At
       %th Published At
-      %th
     %tbody
       - @projects_list.each do |project|
         %tr
@@ -66,3 +65,8 @@
           %td= project["channel"]
           %td= format_time(project["updatedAt"]&.to_datetime)
           %td= format_time(project["publishedAt"]&.to_datetime)
+          %td
+            = form_tag url_for(action: 'user_project_restore_form'), method: 'put', class: 'form-inline', enforce_utf8: false do
+              = hidden_field_tag :user_id, @target_user.id
+              = hidden_field_tag :channel, project["channel"]
+              %button.btn{type: 'submit'}= "Restore"
