@@ -18,9 +18,9 @@ class CoursesControllerTest < ActionController::TestCase
 
     @pilot_facilitator = create :facilitator, pilot_experiment: 'my-pl-experiment'
     @pilot_pl_unit_group = create :unit_group, pilot_experiment: 'my-pl-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    @pilot_pl_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
+    @pilot_pl_section = create :section, user: @pilot_facilitator, unit_group: @pilot_pl_unit_group
     @pilot_participant = create :teacher
-    create(:follower, section: @pilot_section, student_user: @pilot_participant)
+    create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
 
@@ -31,6 +31,7 @@ class CoursesControllerTest < ActionController::TestCase
     @migrated_pl_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @pl_unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     create :unit_group_unit, unit_group: @pl_unit_group_migrated, script: @migrated_pl_unit, position: 1
+    @migrated_pl_unit.reload
 
     @unmigrated_unit = create :script, is_migrated: false, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @unit_group_unmigrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta

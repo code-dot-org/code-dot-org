@@ -255,16 +255,19 @@ class Ability
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
     can :read, UnitGroup do |unit_group|
+      puts "HERE 1"
       if unit_group.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit_group.pilot?
         unit_group.has_pilot_access?(user) && (unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user))
       else
+        puts "HERE 2"
         unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
       end
     end
 
     can :read, Script do |unit|
+      puts "HERE 3"
       if unit.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit.pilot?
