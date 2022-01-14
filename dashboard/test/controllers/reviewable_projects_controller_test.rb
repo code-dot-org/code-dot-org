@@ -20,6 +20,16 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     @another_student_follower = create :follower, student_user: @another_student, section: @section
   end
 
+  # Some of the factory created objects above (eg, followers)
+  # could also be stubbed out.
+  setup do
+    User.any_instance.stubs(:code_review_groups).returns([build(:code_review_group)])
+  end
+
+  teardown do
+    User.unstub(:code_review_groups)
+  end
+
   test 'signed out cannot create ReviewableProject' do
     post :create
     assert_redirected_to_sign_in
@@ -27,6 +37,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
   test 'student can mark their own project reviewable' do
     stub_storage_apps_calls
+    User.any_instance.stubs(:code_review_groups).returns([build(:code_review_group)])
 
     sign_in @project_owner
     post :create, params: {
@@ -66,6 +77,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
   test 'reviewable_status returns correct status for student when own project is not reviewable' do
     stub_storage_apps_calls
+    User.any_instance.stubs(:code_review_groups).returns([build(:code_review_group)])
 
     sign_in @project_owner
 
@@ -184,6 +196,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'student in code review group with project available for review gets list of peers' do
+    User.any_instance.unstub(:code_review_groups)
     code_review_group = create :code_review_group, section: @section
     create :code_review_group_member, follower: @another_student_follower, code_review_group: code_review_group
     create :code_review_group_member, follower:  @project_owner_follower, code_review_group: code_review_group
@@ -200,6 +213,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'student in code review group with only own project available for review gets empty list of peers' do
+    User.any_instance.unstub(:code_review_groups)
     code_review_group = create :code_review_group, section: @section
     create :code_review_group_member, follower: @project_owner_follower, code_review_group: code_review_group
 
@@ -215,6 +229,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'student not in code review group gets empty list of peers' do
+    User.any_instance.unstub(:code_review_groups)
     create :reviewable_project,
       user_id: @project_owner.id,
       level_id: @project_level_id,
