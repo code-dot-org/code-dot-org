@@ -689,7 +689,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
         useFilesApi: !!config.useFilesApi,
         selectedVersion: queryParams('version'),
-        isReadOnly: config.readonlyWorkspace
+        isReadOnly: !!config.readonlyWorkspace
       }),
       contentDiv
     );
