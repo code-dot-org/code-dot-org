@@ -22,7 +22,9 @@ describe('FeedbackUtils', () => {
         beforeEach(() => {
           options = {
             feedbackType: TestResults.FREE_PLAY,
-            level: {},
+            level: {
+              validationEnabled: true
+            },
             appStrings: {
               reinfFeedbackMsg: "You're finished!"
             }
@@ -47,7 +49,7 @@ describe('FeedbackUtils', () => {
           });
 
           it('returns final stage and appStrings.reinfFeedbackMsg if final level', () => {
-            options.response = {message: 'no more levels'};
+            options.level.lastLevelInLesson = true;
             assert.equal(
               feedbackUtils.getFeedbackMessage(options),
               `${finalStageMsg} ${options.appStrings.reinfFeedbackMsg}`
@@ -75,7 +77,7 @@ describe('FeedbackUtils', () => {
           });
 
           it('returns final stage message if final level', () => {
-            options.response = {message: 'no more levels'};
+            options.level.lastLevelInLesson = true;
             assert.equal(
               feedbackUtils.getFeedbackMessage(options),
               finalStageMsg
