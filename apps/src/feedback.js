@@ -702,7 +702,6 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
-  console.log('options', options);
   var message;
   // Some levels have solutions that can be validated for correctness
   // automatically by our system. Currently, level validation
@@ -908,6 +907,10 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       message = options.message;
     } else if (options.response?.share_failure) {
       message = msg.shareFailure();
+    } else {
+      message =
+        options.appStrings?.nextLevelMsg ||
+        msg.nextLevel({puzzleNumber: options.level.puzzle_number});
     }
   }
   return message;
