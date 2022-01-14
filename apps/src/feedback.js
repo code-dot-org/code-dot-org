@@ -702,6 +702,7 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
+  console.log('options', options);
   var message;
   // Some levels have solutions that can be validated for correctness
   // automatically by our system. Currently, level validation
