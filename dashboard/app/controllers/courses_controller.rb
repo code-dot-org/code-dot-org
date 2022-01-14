@@ -1,10 +1,10 @@
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
 
+  load_and_authorize_resource :unit_group, class: 'UnitGroup', except: [:index]
   before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource class: 'UnitGroup', except: [:index]
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
@@ -29,43 +29,28 @@ class CoursesController < ApplicationController
       return
     end
 
-    unit_group = UnitGroup.get_from_cache(params[:course_name])
+    @unit_group = UnitGroup.get_from_cache(params[:course_name])
+    return render :forbidden unless can?(:read, @unit_group)
 
-    if unit_group.present?
-      if unit_group.plc_course
+    if @unit_group.present?
+      if @unit_group.plc_course
         authorize! :show, Plc::UserCourseEnrollment
-        user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: unit_group.plc_course)]
+        user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
         render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
         return
       end
 
-      if unit_group.pilot?
-        authenticate_user!
-        unless unit_group.has_pilot_access?(current_user)
-          render :no_access
-          return
-        end
-      end
-
-      if unit_group.in_development?
-        authenticate_user!
-        unless current_user.permission?(UserPermission::LEVELBUILDER)
-          render :no_access
-          return
-        end
-      end
-
       # Attempt to redirect user if we think they ended up on the wrong course overview page.
-      override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
-      if !override_redirect && redirect_unit_group = redirect_unit_group(unit_group)
+      override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
+      if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
         redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
         return
       end
 
       sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
-      @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == unit_group.id})}
+      @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
 
-      render 'show', locals: {unit_group: unit_group, redirect_warning: params[:redirect_warning] == 'true'}
+      render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
     elsif UnitGroup.family_names.include?(params[:course_name])
       # csp and csd are each "course families", each containing multiple "course versions".
       # When the url of a course family is requested, redirect to a specific course version.

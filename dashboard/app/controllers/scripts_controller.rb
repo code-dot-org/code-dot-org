@@ -212,14 +212,7 @@ class ScriptsController < ApplicationController
   def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
-
-    if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
-      render :no_access
-    end
-
-    if current_user && @script.in_development? && !current_user.permission?(UserPermission::LEVELBUILDER)
-      render :no_access
-    end
+    render :forbidden unless can?(:read, @script)
   end
 
   def unit_params
