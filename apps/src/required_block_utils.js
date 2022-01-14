@@ -309,11 +309,9 @@ function attributesEquivalent(expected, given) {
  */
 function childrenEquivalent(expected, given, ignoreChildBlocks) {
   var filterFn = function(node) {
-    return (
-      ignoreChildBlocks &&
-      node.tagName !== 'next' &&
-      node.tagName !== 'statement'
-    );
+    // CDO Blockly returns tag names in all caps
+    var tagName = node.tagName && node.tagName.toLowerCase();
+    return ignoreChildBlocks && tagName !== 'next' && tagName !== 'statement';
   };
   var children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
   var children2 = Array.prototype.filter.call(given.childNodes, filterFn);
