@@ -289,7 +289,7 @@ class Ability
     end
 
     can [:vocab, :resources, :code, :standards], Script do |script|
-      !!script.is_migrated
+      !!script.is_migrated && (script.can_be_participant?(user) || script.can_be_instructor?(user))
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
@@ -297,7 +297,7 @@ class Ability
       if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif script.pilot?
-        script.has_pilot_access?(user)
+        script.has_pilot_access?(user) && (script.can_be_participant?(user) || script.can_be_instructor?(user))
       else
         script.can_be_participant?(user) || script.can_be_instructor?(user)
       end
