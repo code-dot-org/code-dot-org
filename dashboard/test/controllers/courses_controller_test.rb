@@ -16,11 +16,21 @@ class CoursesControllerTest < ActionController::TestCase
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
+    @pilot_facilitator = create :facilitator, pilot_experiment: 'my-pl-experiment'
+    @pilot_pl_unit_group = create :unit_group, pilot_experiment: 'my-pl-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pilot_pl_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
+    @pilot_participant = create :teacher
+    create(:follower, section: @pilot_section, student_user: @pilot_participant)
+
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
 
     @migrated_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
+
+    @migrated_pl_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @pl_unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group_unit, unit_group: @pl_unit_group_migrated, script: @migrated_pl_unit, position: 1
 
     @unmigrated_unit = create :script, is_migrated: false, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @unit_group_unmigrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
@@ -249,8 +259,21 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{course_name: @pilot_pl_unit_group.name}}, name: 'participant not in pilot section cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
                               params: -> {{course_name: @pilot_unit_group.name}},
                               name: 'teacher without pilot access cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :facilitator,
+                              params: -> {{course_name: @pilot_pl_unit_group.name}},
+                              name: 'instructor without pilot access cannot view pilot course'
   ) do
     assert response.body.include? no_access_msg
   end
@@ -262,8 +285,21 @@ class CoursesControllerTest < ActionController::TestCase
     refute response.body.include? no_access_msg
   end
 
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_facilitator},
+                              params: -> {{course_name: @pilot_pl_unit_group.name, section_id: @pilot_pl_section.id}},
+                              name: 'pilot instructor can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'pilot student can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_participant},
+                              params: -> {{course_name: @pilot_pl_unit_group.name}}, name: 'pilot participant can view pilot course'
   ) do
     refute response.body.include? no_access_msg
   end
@@ -542,15 +578,23 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal course_version, unit_group.course_version
   end
 
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :vocab, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :resources, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
   test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :standards, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
   test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :code, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
   test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
