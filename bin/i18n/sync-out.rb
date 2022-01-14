@@ -13,7 +13,6 @@ require 'fileutils'
 require 'json'
 require 'parallel'
 require 'tempfile'
-require 'tmpdir'
 require 'yaml'
 
 require_relative 'hoc_sync_utils'
