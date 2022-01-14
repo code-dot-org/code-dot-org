@@ -35,7 +35,7 @@ describe('VersionRow', () => {
     );
   });
 
-  it('renders just restore button for viewed version', () => {
+  it('renders restore button and disabled view button for selected version', () => {
     const wrapper = shallow(
       <VersionRow
         {...MINIMUM_PROPS}
@@ -45,15 +45,13 @@ describe('VersionRow', () => {
       />
     );
     expect(wrapper).to.have.className('highlight');
-    expect(wrapper).to.not.containMatchingElement(
-      <a target="_blank">
-        <button type="button" className="btn-info">
-          {msg.view()}
-        </button>
-      </a>
+    expect(wrapper).to.containMatchingElement(
+      <button type="button" className="btn-default">
+        {msg.view()}
+      </button>
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="img-upload">
+      <button type="button" className="btn-info">
         {msg.restore()}
       </button>
     );
