@@ -4727,11 +4727,19 @@ is-IS:
         - text: C
           feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
             það fjórum sinnum og myndar hring.
-        - feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
+        - text: Ekkert af þessu
+          feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
             það fjórum sinnum og myndar hring.
         questions:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega.  Hvaða mynd mun hann búa
             til eftir að smellt er á "Keyra"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
         - text: 'Býflugan mun alltaf færast að skýinu og reyna að ná blómasafa. '
@@ -4918,12 +4926,17 @@ is-IS:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Ekkert mun gerast.
-        - {}
-        - correct: true
+          feedback: Ekki rétt. Geimveran mun byrja að færast upp og niður á skjánum.
+        - text: Geimveran mun byrja að rása frá hægri til vinstri.
+          feedback: Ekki rétt. Geimveran mun byrja að færast upp og niður á skjánum.
+        - text: Geimveran mun byrja að færast upp og niður á skjánum.
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Geimveran mun hverfa upp af skjánum.
+          feedback: Ekki rétt. Bláa geimveran mun byrja að færast upp og niður á skjánum.
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast eftir að þú smellir
+            á geimveruna?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Hirðirinn mun tína tvö grasker.
@@ -4972,10 +4985,14 @@ is-IS:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Ekkert mun gerast.
-        - {}
-        - correct: true
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
+        - text: Fokurtin mun færast efst á skjáinn
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
+        - text: Fokurtin mun byrja að velta
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Fokurtin mun blikka á og af
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
@@ -5153,3 +5170,8 @@ is-IS:
         display_name: Lokaverkefni námskeiðs
       express_EOC_examples_2021:
         display_name: Verkefnadæmi
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # Fylgja algríminu
+
+          Leiktu einhvern leik og hugsaðu út í hvaða skipanir þarf að gefa svo rétt útkoma fáist.

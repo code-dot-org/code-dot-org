@@ -9,7 +9,7 @@ title: Hour of Codeボランティアの手引き
 
 ***
 
-## なぜボランティアをするのか
+## なぜボランティア活動が必要？
 過去にボランティアをした方のご意見
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
@@ -40,7 +40,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 ## 同僚をボランティアに誘ってみましょう
 友人や同僚に、Hour of Codeについて話してみてください。 Hour of Codeに登録した何千人もの教育者が、エンジニアのボランティアを探しています。[ボランティアの登録](https://code.org/volunteer/engineer)で登録するよう勧めてください。 上司の方に働きかけてみるのもいいかもしれません。 [このメール]({{ promote/sample_emails }})を上司や社長、CEOにも送り、みんなに関心を持ってもらいましょう。
 
-## 準備の仕方
+## 準備の仕方は？
 - 子どもたちの注意をクラスにひきつけ、Hour of Codeをやりたくなるような[動画を選びます]({{ promote/videos }})。
 - [Hour of Code ボランティアツールキット](/files/hoc-volunteer-toolkit.pdf) をみてみましょう。Hour of Codeの概要や進行表、備品、広告用の素材が含まれています。 ボランティアを始めるために必要なすべて物がそろっています。
 - セッション中にチュートリアルを行う場合は、少なくとも1つの[Hour of Code チュートリアル]({{ urls/learn }})を30分ほどかけて試してみてください。
@@ -55,13 +55,14 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 ### サンプルプログラム
 
-| 時刻     | 内容                                                                                                                                                                                                                                                                                                            |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 5 分    | [ひらめきを与えるビデオを見せる]({{ promote/videos }})。                                                                                                                                                                                                                                                                      |
-| 5 -10分 | Introduce yourself and learn more about the students: </ul><li>自分の仕事内容、仕事の好きなところ</li><li>誰に感銘を受けたのか</li><li>コンピューターサイエンスに関心を持ったきっかけ</li><li>コンピューターサイエンスを学ぶ際にメンターはいたかどうか</li><li>テクノロジーがみんなにとってどのように影響を与えるのかについて話す</li><br>子どもたちにも質問をする。質疑応答の時間も設ける。</br> <li> どんな仕事に興味があるか、どんな機器/ アプリが好きか、それらがどんな風に出来上がっていると考えているか </li><li> 子どもたちはどんなことを自分に質問したいか</ul> |
-| 30-60分 | **Code!** Walk around, answer questions, and guide them through tough puzzles. すぐに答えを教えるのではなく、どこで間違えたのかを子どもたちが自分で気づけるように質問して導いて上げましょう。さらに、子どもたち同士で聞き合ったり教えあったりできるように促してみましょう。 お互いに学び合えることは、学びの機会を最大限に活かすことに繋がります。                                                                                             |
-| 1-3分   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                               |
-| 終了後    | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! [code.org/yourschool](https://code.org/yourschool)をみて先生と一緒に学校の教員の現状について回答し、授業の中でコンピューターサイエンスを継続的に取り入れることを約束してもらいましょう。                                                                      |
+| 時刻     | 内容                                                                                                                                                                                                                                                                                                        |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 5 分    | [ひらめきを与えるビデオを見せる]({{ promote/videos }})。                                                                                                                                                                                                                                                                  |
+| 5 -10分 | Introduce yourself and learn more about the students: </ul><li>自分の仕事内容、仕事の好きなところ</li><li>何にまたは誰からの影響が強いのか？</li><li>コンピューターサイエンスに関心を持ったきっかけは？</li><li>指導者はいましたか？
+</li><li>テクノロジーがみんなにとってどのように影響を与えるのかについて話す</li><br>生徒に質問をし、質疑応答の時間も設けます。</br> <li> どんな仕事に興味があるか、どんな機器/ アプリが好きか、それらがどんな風に出来上がっていると考えているか </li><li> 子どもたちはどんなことを自分に質問したいか</ul> |
+| 30-60分 | **Code!** Walk around, answer questions, and guide them through tough puzzles. すぐに答えを教えるのではなく、どこで間違えたのかを子どもたちが自分で気づけるように質問して導いて上げましょう。さらに、子どもたち同士で聞き合ったり教えあったりできるように促してみましょう。 お互いに学び合えることは、学びの機会を最大限に活かすことに繋がります。                                                                                         |
+| 1-3分   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                           |
+| 終了後    | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! [code.org/yourschool](https://code.org/yourschool)をみて先生と一緒に学校の教員の現状について回答し、授業の中でコンピューターサイエンスを継続的に取り入れることを約束してもらいましょう。                                                                  |
 
 ### イベント後
 - 写真等の記録をCode.orgに@code.orgで共有しましょう

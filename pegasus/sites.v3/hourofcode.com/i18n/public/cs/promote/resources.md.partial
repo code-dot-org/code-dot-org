@@ -86,7 +86,7 @@ Je k dostání nová sada plakátů, na níž je Malala, Stephen Curry, Shakira 
 
 **Řádek předmětu:** Přidejte se ke mě a ke 100 milionům studentů na Hodinu programování <br />
 
-Počítače jsou všude, změnily každé odvětví na planetě. But only 51% of all high schools teach computer science. Dobrá zpráva je, že pracujeme na tom, abychom to změnili! Pokuď jste slyšeli o Hodině kódu dříve, mohli byste vědět, že se dostala do historie. Více než 100 miliónu studentů již vyzkoušelo Hodinu kódu.
+Počítače jsou všude, změnily každé odvětví na planetě. But only 51% of all high schools offer computer science. Dobrá zpráva je, že pracujeme na tom, abychom to změnili! Pokuď jste slyšeli o Hodině kódu dříve, mohli byste vědět, že se dostala do historie. Více než 100 miliónu studentů již vyzkoušelo Hodinu kódu.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Přes 100 partnerů se spojilo dohromady k podpoře tohoto hnutí. Každý Apple Store na světě už někdy pořádal Hodinu programování a vůdci jako Prezident Obama a kanadský ministerský předseda Justin Trudeau v rámci kampaně napsali své první řádky kódu.
 
@@ -112,7 +112,7 @@ V rozmezí {{ campaign_date/short }} bude deset procent studentů na světě sla
 
 Studenti budou vytvářet své vlastní aplikace nebo hry, které budou moci ukázat svým rodičům a také jim vytiskneme certifikáty hodiny programování, které si budou moci odnést domů. A je to legrace! Při praktických interaktivních aktivitách se studenti budou učit dovednosti v oboru výpočetního myšlení přístupným způsobem.
 
-Počítače jsou všude, změnily každé odvětví na planetě. But only 51% of all high schools teach computer science. Dobrá zpráva je, že pracujeme na tom, abychom to změnili! Jestliže jste už o Hodině programování někdy slyšeli, možná víte, že se dostala do historie - hodinu programování si vyzkoušelo více než 100 milionů studentů na světě. I takoví vůdci, jako prezident Obama a kanadský ministerský předseda Justin Trudeau napsali své první řádky kódu v rámci této kampaně.
+Počítače jsou všude, změnily každé odvětví na planetě. But only 51% of all high schools offer computer science. Dobrá zpráva je, že pracujeme na tom, abychom to změnili! Jestliže jste už o Hodině programování někdy slyšeli, možná víte, že se dostala do historie - hodinu programování si vyzkoušelo více než 100 milionů studentů na světě. I takoví vůdci, jako prezident Obama a kanadský ministerský předseda Justin Trudeau napsali své první řádky kódu v rámci této kampaně.
 
 Více o celé akci si můžete přečíst na http://hourofcode.com. Nebo nám dejte vědět, zda si nechcete rezervovat čas na rozhovor o tom, jak by se mohla zúčastnit škola [school name]. <br />
 
@@ -128,7 +128,7 @@ Vážení rodiče,
 
 Žijeme ve světě obklopeném technologiemi. A víme, že ať si naši studenti vyberou pro své budoucí povolání jakýkoli obor, jejich schopnost uspět bude čím dál tím víc záviset na porozumění tomu, jak fungují technologie.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 To je důvodem, proč se celá naše škola přidává k největší výukové akci v historii: Hodině programování v týdnu vzdělávání v oboru počítačových věd ({{ campaign_date/full }}). Více než 100 miliónu studentů celosvětově již vyzkoušelo Hodinu kódu. Naše Hodina programování činí prohlášení, že [NÁZEV ŠKOLY] je připravena vyučovat tyto základní dovednosti 21. století. Abychom mohli našim studentům přinášet další programovací aktivity, chceme z Hodiny kódu udělat obrovskou akci. Povzbuzuji vás k dobrovolnictví, kontaktujte místní média, sdílejte zprávy na sociálních médiích a zvašte hostování další Hodiny kódu ve vaší komunitě.
 
@@ -146,7 +146,7 @@ Podívejte se na podrobnosti na adrese http://hourofcode.com/{{ country_language
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Dobrou zprávou je, že jsme na cestě, jak to změnit.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Dobrou zprávou je, že jsme na cestě, jak to změnit.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Přes 100 partnerů se spojilo dohromady k podpoře tohoto hnutí. Každý Apple Store na světě už pořádal Hodinu programování. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -174,7 +174,7 @@ MIlý [Starosto/Hejtmane/Reprezentante/Senátore PŘÍJMENÍ]:
 
 Věděli jste, že výpočetní technika je ve Spojených státech amerických zdrojem příjmů č. 1? V celém národě se nabízí více než 500 000 neobsazených pracovních míst v práci s výpočetní technikou, avšak letos se k pracovní síle připojilo jen 42 969 nově promovaných studentů počítačové vědy.
 
-Počítačová věda je dnes základem všech průmyslových oborů, přesto ji většina škol nevyučuje. My na [SCHOOL NAME] se to snažíme změnit.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 To je důvodem, proč se celá naše škola přidává k největší výukové akci v historii: Hodině programování v týdnu vzdělávání v oboru počítačových věd ({{ campaign_date/full }}). Více než 100 miliónu studentů celosvětově již vyzkoušelo Hodinu kódu.
 

@@ -1640,7 +1640,6 @@ he:
             '"decorative"': קישוטים
             '"donuts"': דונאטס
             '"fire"': אש
-            '"flowers"': פרחים
             '"gilded"': זהב
             '"hearts"': לבבות
             '"iceCream"': גלידה
@@ -1705,7 +1704,6 @@ he:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': כישלון
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': התרגשות
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': קפיצה
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': אוֹר
             '"sound://category_poof/puzzle_game_poof_04.mp3"': פוף!
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': חיפוש
             '"sound://category_background/typewriter.mp3"': מכונת כתיבה
@@ -1719,31 +1717,31 @@ he:
         text: קבע רקע {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': צבעים
-            '"squiggles"': קווים מתפתלים
-            '"space"': חלל
-            '"stars"': כוכבים
+            '"blooming"': מלבלב
+            '"bubbles"': בועות
+            '"clouds"': מעונן
+            '"confetti"': קונפטי
             '"darkCircles"': מעומעם
             '"fadeColors"': קריר
-            '"blooming"': מלבלב
-            '"ripples"': אדוות
-            '"clouds"': מעונן
+            '"hearts"': לבבות
+            '"space"': חלל
             '"rain"': גשום
-            '"bubbles"': בועות
-            '"confetti"': קונפטי
-            '"hearts"': לבבות צבעוניים
+            '"ripples"': אדוות
+            '"colors"': צבעים
+            '"stars"': כוכבים
+            '"squiggles"': קווים מתפתלים
           PALETTE:
-            '"rainbow"': קשת
-            '"grayscale"': אפורים
-            '"sky"': שמיים
-            '"ocean"': אוקיינוס
+            '"autumn"': סתיו
             '"sunrise"': זריחה
             '"sunset"': דמדומים
+            '"grayscale"': אפורים
+            '"ocean"': אוקיינוס
+            '"rainbow"': קשת
+            '"roses"': ורדים
+            '"sky"': שמיים
             '"spring"': אביב
             '"summer"': קיץ
-            '"autumn"': סתיו
             '"winter"': חורף
-            '"roses"': ורדים
       Poetry_setBackgroundImageAs:
         text: הגדר רקע {IMG}
       Poetry_setFont:
@@ -1757,11 +1755,11 @@ he:
         text: בצע אפקט {EFFECT}
         options:
           EFFECT:
-            '"rain"': גשום
             '"bubbles"': בועות
-            '"hearts"': לבבות צבעוניים
-            '"emojis"': אמוג'י שמחים
             '"confetti"': קונפטי
+            '"hearts"': לבבות
+            '"emojis"': אמוג'י שמחים
+            '"rain"': גשום
             '"starburst"': כוכבים
             '"glass"': זכוכית מתנפצת
             '"twinkling"': הבהוב
@@ -1772,45 +1770,35 @@ he:
         options:
           EFFECT:
             '"fade"': דועך
-            '"typewriter"': מכונת כתיבה
             '"flyLeft"': טקסט צץ משמאל
             '"flyRight"': טקסט צץ מימין
             '"flyTop"': טקסט צץ מלמעלה
             '"flyBottom"': טקסט צץ מלמטה
+            '"typewriter"': מכונת כתיבה
       Poetry_startBehavior:
         text: 'דמות {ANIMATION_NAME} מתחילה {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: להתרגש
-            growing: לגדול
-            jittering: לרעוד
-            moving_north_and_looping: לנוע צפונה
-            moving_south_and_looping: לנוע דרומה
-            moving_east_and_looping: לנוע מזרחה
-            moving_west_and_looping: לנוע מערבה
-            shrinking: להתכווץ
-            spinning_left: להסתובב שמאלה
-            spinning_right: להסתובב ימינה
-            swimming_left_and_right: לשחות
-            wandering: לשוטט
-            wobbling: להתנדנד
+            '"fluttering"': להתרגש
+            '"growing"': לגדול
+            '"jittering"': לרעוד
+            '"shrinking"': להתכווץ
+            '"spinning_left"': להסתובב שמאלה
+            '"spinning_right"': להסתובב ימינה
+            '"wandering"': לשוטט
+            '"wobbling"': להתנדנד
       Poetry_stopBehavior:
         text: 'דמות {ANIMATION_NAME} מפסיקה {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: להתרגש
-            growing: לגדול
-            jittering: לרעוד
-            moving_north_and_looping: לנוע צפונה
-            moving_south_and_looping: לנוע דרומה
-            moving_east_and_looping: לנוע מזרחה
-            moving_west_and_looping: לנוע מערבה
-            shrinking: להתכווץ
-            spinning_left: להסתובב שמאלה
-            spinning_right: להסתובב ימינה
-            swimming_left_and_right: לשחות
-            wandering: לנדוד
-            wobbling: להתנדנד
+            '"fluttering"': להתרגש
+            '"growing"': לגדול
+            '"jittering"': לרעוד
+            '"shrinking"': להתכווץ
+            '"spinning_left"': להסתובב שמאלה
+            '"spinning_right"': להסתובב ימינה
+            '"wandering"': לשוטט
+            '"wobbling"': להתנדנד
       Poetry_whenLineShows:
         text: כאשר מופיעה שורה {N}
         options:
