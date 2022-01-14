@@ -41,7 +41,7 @@ rescue => e
 end
 
 # Return true iff the specified file in the specified locale had changes
-# as of the most recent sync down.
+# since the last successful sync-out.
 #
 # @param locale [String] the locale code to check. This can be either the
 #  four-letter code used internally (ie, "es-ES", "es-MX", "it-IT", etc), OR
@@ -53,19 +53,17 @@ end
 #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
 #  "/course_content/2018/coursea-2018.json", etc.
 def file_changed?(locale, file)
-  @change_datas ||= CROWDIN_PROJECTS.keys.map do |crowdin_project|
-    project = Crowdin::Project.new(crowdin_project, nil)
-    utils = Crowdin::Utils.new(project)
-    unless File.exist?(utils.changes_json)
+  @change_datas ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
+    unless File.exist?(project_options[:files_to_sync_out_json])
       raise <<~ERR
-        No "changes" json found at #{utils.changes_json}.
+        File not found #{project_options[:files_to_sync_out_json]}.
 
         We expect to find a file containing a list of files changed by the most
         recent sync down; if this file does not exist, it likely means that no
         sync down has been run on this machine, so there is nothing to sync out
       ERR
     end
-    JSON.load(File.read(utils.changes_json))
+    JSON.load File.read(project_options[:files_to_sync_out_json])
   end
 
   crowdin_code = Languages.get_code_by_locale(locale)

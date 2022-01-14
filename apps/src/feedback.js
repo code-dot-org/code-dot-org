@@ -183,7 +183,7 @@ FeedbackUtils.prototype.displayFeedback = function(
       continueText: options.continueText,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: this.isFinalLevel(options.response)
+      finalLevel: options.level.lastLevelInLesson
     })
   );
 
@@ -594,15 +594,6 @@ FeedbackUtils.saveThumbnail = function(image) {
     .then(() => project.saveIfSourcesChanged());
 };
 
-FeedbackUtils.isLastLevel = function() {
-  const lesson = getStore().getState().progress.lessons[0];
-  return (
-    lesson.levels[lesson.levels.length - 1].ids.indexOf(
-      window.appOptions.serverLevelId
-    ) !== -1
-  );
-};
-
 /**
  * Counts the number of blocks used.  Blocks are only counted if they are
  * not disabled, are deletable.
@@ -707,33 +698,24 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 
 /**
  * Generates an appropriate feedback message
- * The message will be one of the following, from highest to lowest precedence:
- * 0. Failure override message specified on level (options.level.failureMessageOverride)
- * 1. Message passed in by caller (options.message).
- * 2. Header message due to dashboard text check fail (options.response.share_failure).
- * 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
- *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
- * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
- *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * @param {FeedbackOptions} options
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
+  // Some levels have solutions that can be validated for correctness
+  // automatically by our system. Currently, level validation
+  // depends on different properties that vary by level type. Until
+  // validatability is more consistent across level types, we have to check
+  // multiple fields.
+  var validatedLevel =
+    options.level?.validationEnabled ||
+    options.level?.requiredBlocks ||
+    // Free-play levels aren't validated for correctness, but the system does
+    // check to see if they level blocks have been changed at all.
+    options.level?.freePlay;
 
-  // If a message was explicitly passed in, use that.
-  if (
-    options.feedbackType < TestResults.ALL_PASS &&
-    options.level &&
-    options.level.failureMessageOverride
-  ) {
-    message = options.level.failureMessageOverride;
-  } else if (options.message) {
-    message = options.message;
-  } else if (options.response && options.response.share_failure) {
-    message = msg.shareFailure();
-  } else {
-    // Otherwise, the message will depend on the test result.
+  if (!!validatedLevel) {
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
         logDialogActions('level_unchanged_failure', options, null);
@@ -874,9 +856,13 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.FREE_PLAY:
       case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
-        var finalLevel = this.isFinalLevel(options.response);
+        var finalLevel = options.level?.lastLevelInLesson;
+        // End of lesson in CSD/CSP/CSA
+        if (finalLevel && options.level?.showEndOfLessonMsgs) {
+          message = msg.endOfLesson();
+        }
         var lessonCompleted = null;
-        if (options.response && options.response.lesson_changing) {
+        if (options.response?.lesson_changing) {
           lessonCompleted = options.response.lesson_changing.previous.name;
         }
         var msgParams = {
@@ -885,12 +871,10 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
-          this.isFreePlay(options.feedbackType) &&
+          TestResults.FREE_PLAY === options.feedbackType &&
           !options.level.disableSharing
         ) {
-          var reinfFeedbackMsg =
-            (options.appStrings && options.appStrings.reinfFeedbackMsg) || '';
-
+          var reinfFeedbackMsg = options.appStrings?.reinfFeedbackMsg || '';
           if (options.level.disableFinalLessonMessage) {
             message = reinfFeedbackMsg;
           } else {
@@ -899,8 +883,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           }
         } else {
           var nextLevelMsg =
-            (options.appStrings && options.appStrings.nextLevelMsg) ||
-            msg.nextLevel(msgParams);
+            options.appStrings?.nextLevelMsg || msg.nextLevel(msgParams);
           message = finalLevel
             ? msg.finalStage(msgParams)
             : lessonCompleted
@@ -908,6 +891,26 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             : nextLevelMsg;
         }
         break;
+    }
+  } else {
+    if (
+      options.level?.lastLevelInLesson &&
+      options.level?.showEndOfLessonMsgs
+    ) {
+      message = msg.endOfLesson();
+    } else if (
+      options.feedbackType < TestResults.ALL_PASS &&
+      options.level?.failureMessageOverride
+    ) {
+      message = options.level.failureMessageOverride;
+    } else if (options.message) {
+      message = options.message;
+    } else if (options.response?.share_failure) {
+      message = msg.shareFailure();
+    } else {
+      message =
+        options.appStrings?.nextLevelMsg ||
+        msg.nextLevel({puzzleNumber: options.level.puzzle_number});
     }
   }
   return message;
@@ -1973,17 +1976,6 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function(node, filter) {
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
   const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
   return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
-};
-
-/**
- * Determine if this is the final level in a progression based on server response.
- * For details, see:
- * https://github.com/code-dot-org/code-dot-org/blob/a6d3762e5756e825fef15182042845d01c05f1e6/dashboard/app/helpers/script_levels_helper.rb#L30
- * @param {Object} response
- * @returns {boolean}
- */
-FeedbackUtils.prototype.isFinalLevel = function(response) {
-  return response?.message === 'no more levels';
 };
 
 /**

@@ -1,5 +1,6 @@
 {
-  "func": "leftEdge",
+  "key": "leftEdge",
+  "name": "leftEdge",
   "category": "Sprites",
-  "type": "readonlyproperty"
+  "syntax": "leftEdge"
 }

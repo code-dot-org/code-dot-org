@@ -1,7 +1,8 @@
 {
-  "func": "removeItem",
+  "key": "removeItem",
+  "name": "removeItem",
   "category": "Variables",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "list"
     },
@@ -9,9 +10,5 @@
       "name": "index"
     }
   ],
-  "params": [
-    "list",
-    "0"
-  ],
-  "dontMarshal": true
+  "syntax": "removeItem(list, index)"
 }

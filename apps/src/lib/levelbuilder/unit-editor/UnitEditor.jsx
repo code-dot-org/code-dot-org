@@ -93,7 +93,6 @@ class UnitEditor extends React.Component {
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
     initialUseLegacyLessonPlans: PropTypes.bool,
-    preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
     // from redux
@@ -122,6 +121,7 @@ class UnitEditor extends React.Component {
       lastSaved: null,
       ttsDialogOpen: false,
       familyName: this.props.initialFamilyName,
+      savedFamilyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
@@ -150,6 +150,7 @@ class UnitEditor extends React.Component {
       projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
+      savedVersionYear: this.props.initialVersionYear,
       isMakerUnit: this.props.initialIsMakerUnit,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
@@ -243,6 +244,32 @@ class UnitEditor extends React.Component {
           'Please provide a pilot experiment in order to save with published state as pilot.'
       });
       return;
+    } else if (
+      this.state.isCourse &&
+      ((this.state.versionYear !== '' && this.state.familyName === '') ||
+        (this.state.versionYear === '' && this.state.familyName !== ''))
+    ) {
+      this.setState({
+        isSaving: false,
+        error: 'Please set both version year and family name.'
+      });
+      return;
+    }
+
+    if (this.state.publishedState !== this.props.initialPublishedState) {
+      const msg =
+        'It looks like you are updating the published state. ' +
+        'Are you sure you want to update the published state? ' +
+        'Once you update the published state you can not go back to this published state. ' +
+        'For example once you set the published state to beta you can not go back to in development. ' +
+        'Also once a course as a published state of pilot it can not be fully launched (marked as preview or stable).';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
     }
 
     let dataToSave = {
@@ -322,7 +349,9 @@ class UnitEditor extends React.Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            lastUpdatedAt: data.updated_at
+            lastUpdatedAt: data.updated_at,
+            savedFamilyName: data.family_name,
+            savedVersionYear: data.version_year
           });
         }
       })
@@ -611,6 +640,9 @@ class UnitEditor extends React.Component {
             handleParticipantAudienceChange={e =>
               this.setState({participantAudience: e.target.value})
             }
+            canChangeParticipantType={
+              this.state.publishedState === PublishedState.in_development
+            }
           />
         )}
 
@@ -713,12 +745,14 @@ class UnitEditor extends React.Component {
                     isCourse={this.state.isCourse}
                     updateIsCourse={this.handleStandaloneUnitChange}
                     showIsCourseSelector
+                    initialPublishedState={this.props.initialPublishedState}
                     publishedState={this.state.publishedState}
                     updatePublishedState={publishedState =>
                       this.setState({publishedState})
                     }
                     preventCourseVersionChange={
-                      this.props.preventCourseVersionChange
+                      this.state.savedVersionYear !== '' ||
+                      this.state.savedFamilyName !== ''
                     }
                   />
                 </div>
@@ -855,7 +889,7 @@ class UnitEditor extends React.Component {
 
         <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
-            Has Resources for Verified Teachers
+            Has Resources for Verified Instructors
             <input
               type="checkbox"
               checked={this.state.hasVerifiedResources}
@@ -868,8 +902,9 @@ class UnitEditor extends React.Component {
             />
             <HelpTip>
               <p>
-                Check if this unit has resources for verified teachers, and we
-                want to notify non-verified teachers that this is the case.
+                Check if this unit has resources for verified instructors, and
+                we want to notify non-verified instructors that this is the
+                case.
               </p>
             </HelpTip>
           </label>

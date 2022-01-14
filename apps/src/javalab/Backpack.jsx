@@ -8,6 +8,7 @@ import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
 import {setSource} from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 
@@ -19,7 +20,7 @@ const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
  */
 class Backpack extends Component {
   static propTypes = {
-    isDarkMode: PropTypes.bool.isRequired,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     isDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
@@ -192,7 +193,7 @@ class Backpack extends Component {
   };
 
   render() {
-    const {isDarkMode, isDisabled} = this.props;
+    const {displayTheme, isDisabled} = this.props;
     const {
       dropdownOpen,
       backpackFilenames,
@@ -236,7 +237,7 @@ class Backpack extends Component {
             className="ignore-react-onclickoutside"
             style={{
               ...styles.dropdownContainer,
-              ...(isDarkMode && styles.dropdownDark)
+              ...(displayTheme === DisplayTheme.DARK && styles.dropdownDark)
             }}
           >
             {showFiles && (
@@ -252,7 +253,8 @@ class Backpack extends Component {
                       <div
                         style={{
                           ...styles.fileListItem,
-                          ...(isDarkMode && styles.fileListItemDark)
+                          ...(displayTheme === DisplayTheme.DARK &&
+                            styles.fileListItemDark)
                         }}
                         key={`backpack-file-${index}`}
                       >
@@ -305,7 +307,7 @@ class Backpack extends Component {
           handleConfirm={() => this.importFiles(selectedFiles)}
           handleClose={() => this.setState({openDialog: null})}
           message={fileImportMessage}
-          isDarkMode={isDarkMode}
+          displayTheme={displayTheme}
           confirmButtonText={javalabMsg.replace()}
           closeButtonText={javalabMsg.cancel()}
         />
@@ -313,7 +315,7 @@ class Backpack extends Component {
           isOpen={openDialog === Dialog.IMPORT_ERROR}
           handleConfirm={() => this.setState({openDialog: null})}
           message={fileImportMessage}
-          isDarkMode={isDarkMode}
+          displayTheme={displayTheme}
           confirmButtonText={msg.dialogOK()}
         />
       </>

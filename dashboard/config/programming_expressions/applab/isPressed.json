@@ -1,7 +1,6 @@
 {
-  "func": "isPressed",
+  "key": "isPressed",
+  "name": "isPressed",
   "category": "Circuit",
-  "modeOptionName": "*.isPressed",
-  "type": "readonlyproperty",
-  "tipPrefix": "[Button]."
+  "syntax": "isPressed"
 }

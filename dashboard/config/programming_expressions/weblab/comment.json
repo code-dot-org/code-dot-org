@@ -1,5 +1,6 @@
 {
-  "func": "comment",
+  "key": "comment",
+  "name": "comment",
   "category": "HTML Tags",
   "syntax": "<!-- Your comment here-->"
 }

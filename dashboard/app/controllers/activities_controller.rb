@@ -39,7 +39,7 @@ class ActivitiesController < ApplicationController
     # Keep this logic in sync with code-studio/reporting#sendReport on the client.
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     post_failed_run_milestone = Gatekeeper.allows('postFailedRunMilestone', where: {script_name: script_name}, default: true)
-    final_level = @script_level.try(:final_level?)
+    final_level = @script_level.try(:end_of_lesson?)
     # We should only expect milestone posts if:
     #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
     #  - this is the final level - we always post on final level
@@ -83,7 +83,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.lesson.lockable?
+    if current_user && !current_user.verified_instructor? && @script_level && @script_level.lesson.lockable?
       user_level = UserLevel.find_by(
         user_id: current_user.id,
         level_id: @script_level.level.id,
@@ -91,7 +91,7 @@ class ActivitiesController < ApplicationController
       )
       # For lockable lessons, the last script_level (which will be a LevelGroup) is the only one where
       # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
-      # so having no user_level is equivalent to bein glocked
+      # so having no user_level is equivalent to being locked
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?
       # we have a lockable lesson, and user_level is locked. disallow milestone requests
       if nonsubmitted_lockable || user_level.try(:show_as_locked?, @script_level.lesson) || user_level.try(:readonly_answers?)

@@ -1652,13 +1652,6 @@ StudioApp.prototype.displayFeedback = function(options) {
   this.onFeedback(options);
 };
 
-StudioApp.prototype.isFinalFreePlayLevel = function(feedbackType, response) {
-  return (
-    this.feedback_.isFinalLevel(response) &&
-    this.feedback_.isFreePlay(feedbackType)
-  );
-};
-
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
@@ -2278,8 +2271,12 @@ StudioApp.prototype.handleEditCode_ = function(config) {
     return;
   }
 
-  // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.getMakerAPIs()) {
+  // Remove maker API blocks from palette, unless project has maker enabled
+  // or level is in edit start mode and maker is enabled
+  if (
+    !project.getMakerAPIs() &&
+    !(config.isStartMode && config.level.makerlabEnabled)
+  ) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
       configCircuitPlayground.blocks.forEach(block => {
@@ -3298,6 +3295,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const combined = _.assign(
     {
       exampleSolutions: config.exampleSolutions,
+      isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
@@ -3329,7 +3327,6 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       is13Plus: config.is13Plus,
       isSignedIn: config.isSignedIn,
       userId: config.userId,
-      verifiedTeacher: config.verifiedTeacher,
       textToSpeechEnabled: config.textToSpeechEnabled,
       isK1: config.level.isK1,
       appType: config.app,

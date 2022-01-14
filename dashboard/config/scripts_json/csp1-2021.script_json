@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Student opportunity: $40,000 for college and a paid internship",
+          "details": "Details: Amazon Future Engineer is offering 100 qualifying high school seniors across the US $40K for tuition and a coding internship at Amazon. Applications are open to students who plan to study CS in college and close January 25, 2022. Click \"Learn more\" to see the full criteria.",
+          "link": "https://bit.ly/AFEScholarshipLB2022",
+          "type": "bullhorn",
+          "visibility": "Teacher and student"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -12,12 +21,11 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:08:40 UTC",
+    "serialized_at": "2022-01-07 15:48:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5819,7 +5827,7 @@
       "key": "bw-pixelation-tutorial-1",
       "properties": {
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/pixelation_bw.mp4",
+        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -5941,7 +5949,7 @@
       "key": "how-computers-work-data-and-binary",
       "properties": {
         "audience": "Student",
-        "download_url": "http://videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -6052,7 +6060,7 @@
       "key": "text-compression-widget-tutorial-1",
       "properties": {
         "audience": "Student",
-        "download_url": "https://www.dropbox.com/s/tobaibth28ibd4f/Text-compression-widget_Aloe_small_090815.mp4?dl=0",
+        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4",
         "type": "Video"
       },
       "seeding_key": {
