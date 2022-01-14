@@ -138,7 +138,7 @@ class AdminUsersController < ApplicationController
   # GET /admin/user_projects
   def user_projects_form
     user_identifier = params[:user_identifier]
-    # script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
+
     if user_identifier
       user_identifier.strip!
       @target_user = User.from_identifier(user_identifier)
@@ -149,6 +149,18 @@ class AdminUsersController < ApplicationController
       @projects_list = ProjectsList.fetch_personal_projects(@target_user.id)
       @deleted_projects_list = ProjectsList.fetch_deleted_personal_projects(@target_user.id)
     end
+  end
+
+  # PUT /admin/user_project
+  def user_project_restore_form
+    channel = params[:channel]
+
+    if channel
+      storage_apps = StorageApps.new(storage_id_for_user_id(params[:user_id]))
+      storage_apps.restore(channel)
+    end
+
+    redirect_to action: "user_projects_form", user_identifier: params[:user_id]
   end
 
   # GET /admin/delete_progress
