@@ -37,7 +37,6 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
   test 'student can mark their own project reviewable' do
     stub_storage_apps_calls
-    User.any_instance.stubs(:code_review_groups).returns([build(:code_review_group)])
 
     sign_in @project_owner
     post :create, params: {
@@ -77,7 +76,6 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
   test 'reviewable_status returns correct status for student when own project is not reviewable' do
     stub_storage_apps_calls
-    User.any_instance.stubs(:code_review_groups).returns([build(:code_review_group)])
 
     sign_in @project_owner
 
