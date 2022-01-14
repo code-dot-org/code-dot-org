@@ -50,7 +50,7 @@ class DeleteAccountsHelper
     # commits their code.
     project_versions = ProjectVersion.where(storage_app_id: storage_app_ids)
     project_versions.each {|version| version.update!(comment: nil)}
-    @log.puts "Cleared #{project_versions.count} ProjectVersion" if project_versions.count > 0
+    @log.puts "Cleared #{project_versions.count} ProjectVersion comments" if project_versions.count > 0
 
     # Clear S3 contents for user's channels
     @log.puts "Deleting S3 contents for #{channel_count} channels"
