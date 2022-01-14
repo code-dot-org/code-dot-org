@@ -1767,6 +1767,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
       assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id).count
       assert_nil ProjectVersion.where(storage_app_id: storage_app_id).first.comment
+      assert_logged "Cleared 1 ProjectVersion comments"
     end
   end
 
