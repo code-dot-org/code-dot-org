@@ -26,7 +26,7 @@ export default class VersionRow extends React.Component {
     return timestamp.toString();
   }
 
-  getUrlAttributes() {
+  getQueryParams() {
     const userId = queryParams('user_id');
     const viewAs = queryParams('viewAs');
     const sectionId = queryParams('section_id');
@@ -81,7 +81,7 @@ export default class VersionRow extends React.Component {
         <a
           key={'not-selected-version-button'}
           href={
-            location.origin + location.pathname + '?' + this.getUrlAttributes()
+            location.origin + location.pathname + '?' + this.getQueryParams()
           }
           target="_blank"
           rel="noopener noreferrer"

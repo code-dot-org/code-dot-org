@@ -68,7 +68,7 @@ export function setupApp(appOptions) {
       ) {
         $('#clear-puzzle-header').hide();
       }
-      // If user is project owner, or teacher viewing student work
+      // Only show version history if user is project owner, or teacher viewing student work
       const isTeacher =
         getStore().getState().currentUser?.userType === 'teacher';
       const isViewingStudent = !!queryParams('user_id');
