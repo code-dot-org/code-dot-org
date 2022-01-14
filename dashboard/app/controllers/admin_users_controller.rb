@@ -135,6 +135,22 @@ class AdminUsersController < ApplicationController
     end
   end
 
+  # GET /admin/user_projects
+  def user_projects_form
+    user_identifier = params[:user_identifier]
+    # script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
+    if user_identifier
+      user_identifier.strip!
+      @target_user = User.from_identifier(user_identifier)
+      flash[:alert] = 'User not found' unless @target_user
+    end
+
+    if @target_user
+      @projects_list = ProjectsList.fetch_personal_projects(@target_user.id)
+      @deleted_projects_list = ProjectsList.fetch_deleted_personal_projects(@target_user.id)
+    end
+  end
+
   # GET /admin/delete_progress
   # This page is linked from /admin/user_progress to confirm that the admin
   # wants to delete progress and to capture additional information. It expects
