@@ -1,4 +1,5 @@
 @no_ie
+@no_mobile
 Feature: Version History in Teacher View
 
 Scenario: Teacher can view student versions
