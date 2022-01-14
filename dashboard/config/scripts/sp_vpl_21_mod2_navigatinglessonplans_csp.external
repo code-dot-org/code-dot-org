@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/3775c0af7a5d8cc35e79881eafeab9d1-image-1641247311587.01.44 PM.png" alt="Screenshot showing the CS Principles course overview page with an orange arrow pointing to the 'Go to Unit' button for Unit 1." style="width: 450px; float: left; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/3775c0af7a5d8cc35e79881eafeab9d1-image-1641247311587.01.44 PM.png" alt="Screenshot showing the CS Principles course overview page with an orange arrow pointing to the 'Go to Unit' button for Unit 1." style="border:1px solid black; width: 450px; float: left; clear: both; margin: 0 20px 20px 0;">
 
 ## Course overview page
 
@@ -30,7 +30,7 @@ The course overview page contains a short description of each unit within the co
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/e7690405f88b6115edde5d22eb251cbb-image-1641247502230.04.40 PM.png"  alt="Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1" style="float: left; height: 249px; width:450px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/e7690405f88b6115edde5d22eb251cbb-image-1641247502230.04.40 PM.png"  alt="Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1" style="border:1px solid black; float: left; height: 249px; width:450px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## Unit overview page
@@ -39,7 +39,7 @@ The unit overview page contains a short description of each lesson within the un
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/0268703223ea75408b1315efa5f434ab-image-1641247548982.05.44 PM.png"  alt="Screenshot showing the Unit 1, Lesson 1 plan with an orange arrow demonstrating how to find other lessons in the unit." style="float: left; height: 234px; width: 450px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/0268703223ea75408b1315efa5f434ab-image-1641247548982.05.44 PM.png"  alt="Screenshot showing the Unit 1, Lesson 1 plan with an orange arrow demonstrating how to find other lessons in the unit." style="border:1px solid black; float: left; height: 234px; width: 450px; clear: both; margin: 0 20px 20px 0;">
 
 ## Lesson plans
 
