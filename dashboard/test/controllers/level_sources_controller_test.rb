@@ -166,6 +166,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:artist))
+
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/sharing_drawing.png')
+
     get :show, params: {id: level_source.id}
 
     assert_response :success
@@ -180,6 +183,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
   test 'playlab levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:playlab))
+
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/studio_sharing_drawing.png')
+
     get :show, params: {id: level_source.id}
 
     assert_response :success
