@@ -180,7 +180,7 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in teacher
     get :show, params: {course_name: 'pl-csp-2019'}
 
-    assert_redirected_to '/courses/csp-2017/?redirect_warning=true'
+    assert_redirected_to '/courses/pl-csp-2017/?redirect_warning=true'
   end
 
   test "show: redirect to latest stable version in course family for logged out user" do
@@ -305,6 +305,14 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   no_access_msg = "You don&#39;t have access to this course."
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @pl_unit_group_migrated.name}},
+                              name: 'signed out user cannot view pl course'
+
+  test_user_gets_response_for :show, response: :redirect, user: :student,
+                              params: -> {{course_name: @pl_unit_group_migrated.name}},
+                              name: 'student user cannot view pl course'
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
                               params: -> {{course_name: @pilot_unit_group.name}},
@@ -636,23 +644,23 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal course_version, unit_group.course_version
   end
 
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
-  test_user_gets_response_for :vocab, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'participant user can view vocab page'
+  test_user_gets_response_for :vocab, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'user who is not participant cannot view vocab page'
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
-  test_user_gets_response_for :resources, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'participant user can view resources page'
+  test_user_gets_response_for :resources, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'user who is not participant cannot view resources page'
   test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
-  test_user_gets_response_for :standards, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'participant user can view standards page'
+  test_user_gets_response_for :standards, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'user who is not participant cannot view standards page'
   test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}
-  test_user_gets_response_for :code, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'participant user can view code page'
+  test_user_gets_response_for :code, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'user who is not participant cannot view code page'
   test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
