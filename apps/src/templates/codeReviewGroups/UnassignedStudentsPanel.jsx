@@ -28,6 +28,8 @@ export default function UnassignedStudentsPanel({
         <StudentGroup
           droppableId={unassignedGroup.droppableId}
           members={unassignedGroup.members}
+          dropAreaStyle={styles.studentGroup}
+          showEmptyGroupPlaceholder={false}
         />
       </div>
     </div>
@@ -74,5 +76,8 @@ const styles = {
   },
   header: HEADER_STYLE,
   button: BUTTON_STYLE,
-  groupsContainer: GROUPS_CONTAINER_STYLE
+  groupsContainer: GROUPS_CONTAINER_STYLE,
+  studentGroup: {
+    height: 355
+  }
 };
