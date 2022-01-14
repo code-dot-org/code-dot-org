@@ -114,7 +114,7 @@ class LessonsControllerTest < ActionController::TestCase
         student_overview: 'student overview'
       }
     )
-    @pilot_section = create :section, user: @pilot_instructor, script: @pilot_pl_script
+    @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_script
     @pilot_participant = create :teacher
     create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
 
@@ -173,11 +173,11 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   # only participants or instructors can show pl lesson with lesson plan
-  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: nil, response: :forbidden
-  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :student, response: :forbidden
-  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :teacher, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :facilitator, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: nil, response: 404, name: 'signed out user cannot view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :student, response: 404, name: 'student user cannot view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher user can view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :facilitator, response: :success, name: 'facilitator user can view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder user can view pl lesson plan'
 
   # anyone can show lesson in a script that has login required
   test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: nil, response: :success, name: 'signed out user can view lesson on script where login is required'
@@ -192,8 +192,8 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on script where login is required'
 
   # only participants or instructors can show student lesson plan in a script that has login required
-  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_lesson.relative_position}}, user: nil, response: :forbidden, name: 'signed out user cannot view student lesson plan on pl script where login is required'
-  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_lesson.relative_position}}, user: :student, response: :forbidden, name: 'student cannot view student lesson plan on pl script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_lesson.relative_position}}, user: nil, response: 404, name: 'signed out user cannot view student lesson plan on pl script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_lesson.relative_position}}, user: :student, response: 404, name: 'student cannot view student lesson plan on pl script where login is required'
   test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view student lesson plan on pl script where login is required'
   test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_lesson.relative_position}}, user: :facilitator, response: :success, name: 'facilitator can view student lesson plan on pl script where login is required'
   test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on pl script where login is required'
