@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
-import {newAssignmentShape, assignmentCourseOfferingShape} from './shapes';
+import {
+  newAssignmentShape,
+  assignmentCourseOfferingShape,
+  sectionShape
+} from './shapes';
 import NewAssignmentVersionSelector from './NewAssignmentVersionSelector';
 
 const noUnitAssignment = {id: 0, name: ''};
@@ -25,6 +29,19 @@ export default function NewAssignmentSelector(props) {
     assigned.course_version
   );
   const [selectedUnit, setSelectedUnit] = useState(assigned.unit);
+
+  // TO DO
+  //highest year numbers first.
+
+  // Decide later feature
+
+  // This will be the
+  // course version  if one was specified by the user, otherwise we choose a
+  // default from the list of versions.
+
+  // If the user is setting up a new section and selects a course version with units as the
+  // primary assignment, default the secondary assignment to the first
+  // unit in the course.
 
   const updateSelectedUnit = unitId => {
     let newUnit = selectedCourseVersion.units.find(
@@ -96,10 +113,14 @@ export default function NewAssignmentSelector(props) {
           disabled={disabled}
         >
           <option key={0} value={0} />
-          {courseOfferings.map(courseOffering => (
-            <option key={courseOffering.id} value={courseOffering.id}>
-              {courseOffering.display_name}
-            </option>
+          {props.courseOfferingsByCategories.map(category => (
+            <optgroup key={category.name} label={category.name}>
+              {category.courseOfferings.map(courseOffering => (
+                <option key={courseOffering.id} value={courseOffering.id}>
+                  {courseOffering.display_name}
+                </option>
+              ))}
+            </optgroup>
           ))}
         </select>
       </span>
@@ -141,7 +162,10 @@ NewAssignmentSelector.propTypes = {
   assigned: PropTypes.objectOf(newAssignmentShape).isRequired,
   courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape).isRequired,
   dropdownStyle: PropTypes.object,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  section: sectionShape,
+  onChange: PropTypes.func,
+  courseOfferingsByCategories: PropTypes.object
 };
 
 const styles = {
