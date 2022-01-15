@@ -712,6 +712,9 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
     options.level?.validationEnabled ||
     options.level?.requiredBlocks?.length ||
     options.level?.recommendedBlocks?.length ||
+    options.level?.appSpecificFailError ||
+    options.level?.tooFewBlocksMsg ||
+    options.level?.validationCode ||
     // Free-play levels aren't validated for correctness, but the system does
     // check to see if they level blocks have been changed at all.
     options.level?.freePlay;
