@@ -91,7 +91,6 @@ module Pd::Application
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     before_save :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     before_save :log_status, if: -> {status_changed?}
-    before_create :set_status, if: -> {form_data_changed?}
 
     serialized_attrs %w(
       pd_workshop_id

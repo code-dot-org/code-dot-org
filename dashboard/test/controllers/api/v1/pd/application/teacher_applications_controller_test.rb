@@ -146,6 +146,25 @@ module Api::V1::Pd::Application
       assert_response :created
     end
 
+    test 'updating an application with empty, incomplete form correctly updates attributes' do
+      application = create TEACHER_APPLICATION_FACTORY, status: 'incomplete', user: @applicant
+      original_school_info = application.user.school_info
+
+      assert application.first_name
+      assert application.course
+
+      sign_in @applicant
+      no_form_content = {status: 'incomplete'}
+      put :update, params: {id: application.id, form_data: no_form_content}
+      application.reload
+
+      assert_nil application.first_name
+      assert_nil application.course
+      assert_equal original_school_info, application.user.school_info
+      assert_equal no_form_content.to_json, application.form_data
+      assert_response :ok
+    end
+
     test 'updating an application with an error renders bad_request' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
