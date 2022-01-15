@@ -149,8 +149,15 @@ module Api::V1::Pd::Application
     test 'updating an application with an error renders bad_request' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
-      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
 
+      errored_form_data = build(TEACHER_APPLICATION_HASH_FACTORY).merge(
+        {
+          "program": ""
+        }.stringify_keys
+      )
+      put :update, params: {id: application.id, form_data: errored_form_data}
+
+      application.reload
       assert_response :bad_request
     end
 
