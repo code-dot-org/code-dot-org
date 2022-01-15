@@ -4,8 +4,8 @@ class Api::V1::Pd::FormsController < ::ApplicationController
   end
 
   def create
-    form_data_hash = params.try(:[], :form_data) || {}
-    form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
+    form_data_hash = params.try(:[], :form_data)
+    form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4 if form_data_hash
 
     form = new_form
     form.form_data_hash = JSON.parse(form_data_json)
