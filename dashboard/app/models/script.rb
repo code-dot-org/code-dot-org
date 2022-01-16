@@ -625,12 +625,6 @@ class Script < ApplicationRecord
     unit_name ? Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) : nil
   end
 
-  # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
-  # than matching en-US specifically.
-  def supported_for_locale(locale_str)
-    supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
-  end
-
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
     FirehoseClient.instance.put_record(
       :analysis,
