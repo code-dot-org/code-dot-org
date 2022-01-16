@@ -225,6 +225,17 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test 'get assignable pl course offerings for facilitator should return pl offerings where facilitator can be instructor' do
     expected_course_offering_info = [
       {
+        id: @unit_group.course_version.course_offering.id,
+        display_name: @unit_group.course_version.course_offering.display_name,
+        course_versions: [
+          {
+            id: @unit_group.course_version.id,
+            display_name: @unit_group.course_version.display_name,
+            units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
+          }
+        ]
+      },
+      {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
         course_versions: [
@@ -242,6 +253,17 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'get assignable course offerings for facilitator should return all offerings where facilitator can be instructor' do
     expected_course_offering_info = [
+      {
+        id: @unit_group.course_version.course_offering.id,
+        display_name: @unit_group.course_version.course_offering.display_name,
+        course_versions: [
+          {
+            id: @unit_group.course_version.id,
+            display_name: @unit_group.course_version.display_name,
+            units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
+          }
+        ]
+      },
       {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
