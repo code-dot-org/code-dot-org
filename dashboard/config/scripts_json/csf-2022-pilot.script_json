@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-07 19:56:43 UTC",
+    "serialized_at": "2022-01-13 19:20:40 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1674,13 +1674,57 @@
       }
     },
     {
-      "key": "2e50e791-e9c5-491c-9335-8dd39584b7d9",
+      "key": "173ff7c2-66b0-4313-80a9-25ccac8b504d",
       "position": 1,
       "properties": {
-        "progression_name": "Lots of Sprites"
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "173ff7c2-66b0-4313-80a9-25ccac8b504d",
+        "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
+      }
+    },
+    {
+      "key": "487fac97-7c07-4efe-a1f4-e6e6f9655278",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Lots of Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "487fac97-7c07-4efe-a1f4-e6e6f9655278",
+        "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
+      }
+    },
+    {
+      "key": "2e50e791-e9c5-491c-9335-8dd39584b7d9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9",
+        "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
+      }
+    },
+    {
+      "key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f",
+        "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
+      }
+    },
+    {
+      "key": "fcdf2494-3c3e-4473-ac8d-75fed29003a5",
+      "position": 5,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcdf2494-3c3e-4473-ac8d-75fed29003a5",
         "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
       }
     },
@@ -1701,6 +1745,16 @@
       },
       "seeding_key": {
         "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666",
+        "lesson_activity.key": "8f4d1714-6613-4473-a1ea-e3dcc07bf690"
+      }
+    },
+    {
+      "key": "90882c84-cf50-477d-af40-835ba12296b5",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5",
         "lesson_activity.key": "8f4d1714-6613-4473-a1ea-e3dcc07bf690"
       }
     },
@@ -1908,6 +1962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab2022"
+        ],
         "progression": "Video: Introducing Sprite Lab"
       },
       "bonus": false,
@@ -1930,6 +1987,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_intro_apps2022"
+        ],
         "progression": "Exploration: Sample Apps"
       },
       "bonus": false,
@@ -1952,6 +2012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_predict2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1974,6 +2037,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2021-22022"
+        ],
         "progression": "Video: How to Make a Sprite"
       },
       "bonus": false,
@@ -1996,6 +2062,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_make2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2018,6 +2087,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_positioning2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2040,6 +2112,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_moreSprites2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2062,6 +2137,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_properties2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2084,6 +2162,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_behaviors2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2106,6 +2187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_practice2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2128,6 +2212,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_freeplay2022"
+        ],
         "progression": "Free Play: Make a Scene"
       },
       "bonus": false,
@@ -2150,6 +2237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_predict2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2172,6 +2262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events2022"
+        ],
         "progression": "Video: Sprites in Action"
       },
       "bonus": false,
@@ -2194,6 +2287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_review2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2216,6 +2312,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_time2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2238,6 +2337,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_key2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2260,6 +2362,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_stops2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2282,6 +2387,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_conflict2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2304,6 +2412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_practice2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2326,6 +2437,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_freeplay2022"
+        ],
         "progression": "Free Play: Make an Interactive Scene"
       },
       "bonus": false,
@@ -2348,6 +2462,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 12022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -2370,6 +2487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 22022"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -2392,6 +2512,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 32022"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -2414,6 +2537,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 52022"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -2436,6 +2562,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 62022"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -2458,6 +2587,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 72022"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -2480,6 +2612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 82022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2502,6 +2637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021_22022"
+        ],
         "progression": "Video: Unplugged Variables in Envelopes"
       },
       "bonus": false,
@@ -2524,6 +2662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_predict2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2546,6 +2687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts2022"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -2568,6 +2712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2590,6 +2737,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2612,6 +2762,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2634,6 +2787,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2656,6 +2812,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2678,6 +2837,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2700,6 +2862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2722,6 +2887,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_label_predict2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2744,6 +2912,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_samples2022"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -2766,6 +2937,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_stop2022"
+        ],
         "progression": "Planning"
       },
       "bonus": false,
@@ -2788,6 +2962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_projects2022"
+        ],
         "progression": "Mini-Project: User Input Programs"
       },
       "bonus": false,
@@ -2810,7 +2987,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "level_keys": [
+          "courseF_groups_predict"
+        ],
+        "progression": "Prediction"
       },
       "bonus": false,
       "seeding_key": {
@@ -2820,7 +3000,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "173ff7c2-66b0-4313-80a9-25ccac8b504d"
       },
       "level_keys": [
         "courseF_groups_predict"
@@ -2829,10 +3009,13 @@
     {
       "chapter": 43,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "level_keys": [
+          "courseF_groups_video"
+        ],
+        "progression": "Video: Lots of Sprites"
       },
       "bonus": false,
       "seeding_key": {
@@ -2842,7 +3025,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "487fac97-7c07-4efe-a1f4-e6e6f9655278"
       },
       "level_keys": [
         "courseF_groups_video"
@@ -2851,32 +3034,13 @@
     {
       "chapter": 44,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_size"
+        "level_keys": [
+          "courseF_groups_make"
         ],
-        "lesson.key": "Lots of Sprites",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
-      },
-      "level_keys": [
-        "courseF_groups_size"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2893,12 +3057,40 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "level_keys": [
+          "courseF_groups_size"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_size"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+      },
+      "level_keys": [
+        "courseF_groups_size"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_say"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2917,10 +3109,13 @@
     {
       "chapter": 47,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "level_keys": [
+          "courseF_groups_costume"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2939,10 +3134,13 @@
     {
       "chapter": 48,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "level_keys": [
+          "courseF_groups_behaviors"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2961,10 +3159,13 @@
     {
       "chapter": 49,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "level_keys": [
+          "courseF_groups_touch"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2983,10 +3184,13 @@
     {
       "chapter": 50,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "level_keys": [
+          "courseF_groups_practice"
+        ],
+        "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -2996,7 +3200,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f"
       },
       "level_keys": [
         "courseF_groups_practice"
@@ -3004,10 +3208,176 @@
     },
     {
       "chapter": 51,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_freeplay"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_freeplay"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "fcdf2494-3c3e-4473-ac8d-75fed29003a5"
+      },
+      "level_keys": [
+        "courseF_groups_freeplay"
+      ]
+    },
+    {
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_predict"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      },
+      "level_keys": [
+        "courseF_variables2_predict"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_set"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_set"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      },
+      "level_keys": [
+        "courseF_variables2_set"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_change"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_change"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      },
+      "level_keys": [
+        "courseF_variables2_change"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_click"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_click"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      },
+      "level_keys": [
+        "courseF_variables2_click"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_score"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      },
+      "level_keys": [
+        "courseF_clicker_score"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      },
+      "level_keys": [
+        "courseF_clicker_finish"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_EOC_examples2022"
+        ],
         "progression": "Example projects"
       },
       "bonus": false,
@@ -3025,11 +3395,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Project_SpriteLab2022"
+        ],
         "progression": "Create your project"
       },
       "bonus": false,
@@ -3549,7 +3922,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "173ff7c2-66b0-4313-80a9-25ccac8b504d"
       }
     },
     {
@@ -3557,6 +3930,18 @@
         "level.key": "courseF_groups_video",
         "script_level.level_keys": [
           "courseF_groups_video"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "487fac97-7c07-4efe-a1f4-e6e6f9655278"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_make",
+        "script_level.level_keys": [
+          "courseF_groups_make"
         ],
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
@@ -3569,18 +3954,6 @@
         "level.key": "courseF_groups_size",
         "script_level.level_keys": [
           "courseF_groups_size"
-        ],
-        "lesson.key": "Lots of Sprites",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_make",
-        "script_level.level_keys": [
-          "courseF_groups_make"
         ],
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
@@ -3645,7 +4018,91 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_freeplay",
+        "script_level.level_keys": [
+          "courseF_groups_freeplay"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "fcdf2494-3c3e-4473-ac8d-75fed29003a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_predict",
+        "script_level.level_keys": [
+          "courseF_variables2_predict"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_set",
+        "script_level.level_keys": [
+          "courseF_variables2_set"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_change",
+        "script_level.level_keys": [
+          "courseF_variables2_change"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_click",
+        "script_level.level_keys": [
+          "courseF_variables2_click"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_score",
+        "script_level.level_keys": [
+          "courseF_clicker_score"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_finish",
+        "script_level.level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
       }
     },
     {
