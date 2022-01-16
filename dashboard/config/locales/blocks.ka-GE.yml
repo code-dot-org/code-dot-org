@@ -829,15 +829,35 @@ ka:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"hearts"': გულები
             '"rainbow"': ცისარტყელა
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': წვიმა
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': ღამე
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ნელი
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ახტომა
       Poetry_setBackgroundEffect:
         options:
+          EFFECT:
+            '"clouds"': ღრუბლიანი
+            '"hearts"': გულები
+            '"rain"': წვიმა
           PALETTE:
             '"rainbow"': ცისარტყელა
+            '"winter"': ზამთარი
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': გულები
+            '"rain"': წვიმა
       Poetry_whenLineShows:
         options:
           N:

@@ -37,6 +37,7 @@ export default function CodeReviewGroup({
         droppableId={droppableId}
         members={members}
         key={droppableId}
+        showEmptyGroupPlaceholder={true}
       />
     </div>
   );

@@ -1157,26 +1157,40 @@ et:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"rainbow"': Vikerkaar
+            '"hearts"': südamed
+            '"rainbow"': vikerkaar
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': vihm
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': öö
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': aeglane
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hüppa
       Poetry_setBackground:
         text: määra taustavärv {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Värvid
-            '"rain"': Vihm
             '"bubbles"': Mullid
+            '"clouds"': pilvine
+            '"hearts"': südamed
+            '"rain"': vihm
+            '"colors"': Värvid
           PALETTE:
-            '"rainbow"': Vikerkaar
+            '"rainbow"': vikerkaar
+            '"winter"': talv
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Vihm
             '"bubbles"': Mullid
+            '"hearts"': südamed
+            '"rain"': vihm
       RyanLab_moveForward:
         text: liigu edasi
       RyanLab_turnLeft:

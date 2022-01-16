@@ -1,7 +1,7 @@
 {
   "abuseDetail": "Uveďte prosím podrobnosti týkajúce sa obsahu, ktorý nahlasujete",
   "abuseFormDetail": "Uveďte čo najviac podrobností ohľadom obsahu ktorý nahlasujete.",
-  "abuseFormAcknowledge": "Odoslaním týchto informácií potvrdzujete, že sa s nimi bude zaobchádzať v súlade s podmienkami [Zásad ochrany osobných údajov] ({privacy_url}) a [Zmluvných podmienok] ({tos_url}).",
+  "abuseFormAcknowledge": "Odoslaním týchto informácií potvrdzujete, že sa s nimi bude zaobchádzať v súlade s podmienkami [Zásad ochrany osobných údajov]({privacy_url}) a [Zmluvných podmienok]({tos_url}).",
   "abuseType": "Odpovedzte, prosím, ako tento obsah porušuje podmienky služby",
   "abuseTypeHarassment": "Hrozby, kyberšikana, obťažovanie",
   "abuseTypeInfringement": "Porušenie autorských práv",
