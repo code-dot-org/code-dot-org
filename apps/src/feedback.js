@@ -719,7 +719,6 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
-  console.log('options', options);
   var message;
 
   // If a message was explicitly passed in, use that.
