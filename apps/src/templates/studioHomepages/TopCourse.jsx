@@ -16,7 +16,8 @@ class TopCourse extends Component {
     assignableName: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
-    linkToLesson: PropTypes.string.isRequired
+    linkToLesson: PropTypes.string.isRequired,
+    isProfessionalLearningCourse: PropTypes.bool.isRequired
   };
 
   render() {
@@ -25,14 +26,19 @@ class TopCourse extends Component {
       lessonName,
       linkToOverview,
       linkToLesson,
-      isRtl
+      isRtl,
+      isProfessionalLearningCourse
     } = this.props;
     const localeStyle = isRtl ? styles.ltr : styles.rtl;
 
     return (
       <div style={styles.card}>
         <img
-          src={require('@cdo/static/small_purple_icons_fullwidth.png')}
+          src={
+            isProfessionalLearningCourse
+              ? require('@cdo/static/small_blue_icons_fullwidth.png')
+              : require('@cdo/static/small_purple_icons_fullwidth.png')
+          }
           style={styles.image}
           alt=""
         />

@@ -14,17 +14,28 @@ class CourseCard extends Component {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    isProfessionalLearningCourse: PropTypes.bool.isRequired
   };
 
   render() {
-    const {title, description, link, isRtl} = this.props;
+    const {
+      title,
+      description,
+      link,
+      isRtl,
+      isProfessionalLearningCourse
+    } = this.props;
     const icon = isRtl ? 'chevron-left' : 'chevron-right';
 
     return (
       <a href={link} style={styles.card}>
         <img
-          src={require('@cdo/static/small_purple_icons.png')}
+          src={
+            isProfessionalLearningCourse
+              ? require('@cdo/static/small_blue_icons_fullwidth.png')
+              : require('@cdo/static/small_purple_icons_fullwidth.png')
+          }
           style={styles.image}
           alt=""
         />
