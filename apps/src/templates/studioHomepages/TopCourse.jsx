@@ -17,7 +17,7 @@ class TopCourse extends Component {
     lessonName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
     linkToLesson: PropTypes.string.isRequired,
-    isProfessionalLearningCourse: PropTypes.bool.isRequired
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   render() {
