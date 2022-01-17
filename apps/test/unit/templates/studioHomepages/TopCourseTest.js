@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import Button from '@cdo/apps/templates/Button';
@@ -46,6 +46,42 @@ describe('TopCourse', () => {
           </div>
         </div>
       )
+    );
+  });
+
+  it('shows blue image when it is a professional learning course', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <TopCourse
+          assignableName={topCourse.assignableName}
+          lessonName={topCourse.lessonName}
+          linkToOverview={topCourse.linkToOverview}
+          linkToLesson={topCourse.linkToLesson}
+        />
+      </Provider>
+    );
+
+    assert.equal(
+      wrapper.find('img').props().src,
+      '@cdo/static/small_blue_icons_fullwidth.png'
+    );
+  });
+
+  it('shows purple image when it is a student facing course', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <TopCourse
+          assignableName={topCourse.assignableName}
+          lessonName={topCourse.lessonName}
+          linkToOverview={topCourse.linkToOverview}
+          linkToLesson={topCourse.linkToLesson}
+        />
+      </Provider>
+    );
+
+    assert.equal(
+      wrapper.find('img').props().src,
+      '@cdo/static/small_purple_icons_fullwidth.png'
     );
   });
 });
