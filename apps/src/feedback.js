@@ -710,7 +710,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   // multiple fields.
   var validatedLevel =
     options.level?.validationEnabled ||
-    options.level?.requiredBlocks.length ||
+    options.level?.requiredBlocks ||
     // Free-play levels aren't validated for correctness, but the system does
     // check to see if they level blocks have been changed at all.
     options.level?.freePlay;
