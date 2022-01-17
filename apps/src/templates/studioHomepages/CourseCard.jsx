@@ -15,7 +15,7 @@ class CourseCard extends Component {
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    isProfessionalLearningCourse: PropTypes.bool.isRequired
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   render() {
