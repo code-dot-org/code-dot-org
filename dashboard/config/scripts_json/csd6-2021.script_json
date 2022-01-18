@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-11-30 19:29:28 UTC",
+    "serialized_at": "2022-01-14 18:50:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10184,7 +10184,7 @@
       }
     },
     {
-      "name": "How Computers Word: Hardware & Software",
+      "name": "How Computers Work: Hardware & Software",
       "url": "https://www.youtube.com/watch?v=xnyFYiK2rSY",
       "key": "how_computers_word_hardware_software",
       "properties": {
