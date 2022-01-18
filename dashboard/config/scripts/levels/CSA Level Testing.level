@@ -2,20 +2,20 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "##Heading\r\nand some stuff\r\n\r\n###Another Heading\r\nand some more stuff\r\n\r\nA sentence that has a code segment `do this thing here`(#e7e8ea)\r\n\r\n```\r\na code segment\r\n```\r\n\r\n::: details [**Show Me How**]\r\n  - Find the section that says `do this thing here`(#e7e8ea)\r\n  \r\n  ```\r\n  a code segment\r\n  ```\r\n:::",
+    "long_instructions": "##Getting Started\r\n![](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\nImport `PainterPlus.java`(#e7e8ea) from your **Backpack**.\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](www.linktocurrentversionoffile.com).*\r\n\r\n###Another Heading\r\nand some more stuff\r\n\r\nA sentence that has a code segment `do this thing here`(#e7e8ea)\r\n\r\n```\r\na code segment\r\n```\r\n\r\n::: details [**Show Me How**]\r\nFind the section that says `do this thing here`(#e7e8ea)\r\n  \r\n  ```\r\n  a code segment\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-12-02T15:02:26.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2021-12-02 15:02:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-02 15:02:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-14 15:56:03 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-14 16:09:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-14 16:10:20 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-14 16:21:03 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
