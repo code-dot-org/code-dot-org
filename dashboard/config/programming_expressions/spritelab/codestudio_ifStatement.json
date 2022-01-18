@@ -2,5 +2,6 @@
   "key": "codestudio_ifStatement",
   "name": "controls_if_if",
   "category": "Logic",
+  "block_name": "controls_if_if",
   "syntax": "controls_if_if"
 }
