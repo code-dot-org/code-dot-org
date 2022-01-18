@@ -44,7 +44,6 @@ class UnitOverview extends React.Component {
     courseName: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
-    minimal: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
@@ -99,7 +98,6 @@ class UnitOverview extends React.Component {
       showAssignButton,
       userId,
       assignedSectionId,
-      minimal,
       showCalendar,
       weeklyInstructionalMinutes,
       unitCalendarLessons,
@@ -175,7 +173,7 @@ class UnitOverview extends React.Component {
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
           />
         </div>
-        <ProgressTable minimal={minimal} />
+        <ProgressTable minimal={false} />
         <ProgressLegend
           includeCsfColumn={!excludeCsfColumnInLegend}
           includeReviewStates={isCsdOrCsp}
