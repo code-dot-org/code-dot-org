@@ -29,17 +29,7 @@ const NEXT_BUTTON_TEXT = {
 
 class UnitOverviewTopRow extends React.Component {
   static propTypes = {
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectedSectionId: PropTypes.number,
     assignedSectionId: PropTypes.number,
-    currentCourseId: PropTypes.number,
-    professionalLearningCourse: PropTypes.bool,
-    unitProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
-    scriptId: PropTypes.number.isRequired,
-    scriptName: PropTypes.string.isRequired,
-    unitTitle: PropTypes.string.isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
@@ -49,7 +39,20 @@ class UnitOverviewTopRow extends React.Component {
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
-    scriptResourcesPdfUrl: PropTypes.string
+    scriptResourcesPdfUrl: PropTypes.string,
+
+    // redux provided
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    selectedSectionId: PropTypes.number,
+    professionalLearningCourse: PropTypes.bool,
+    hasPerLevelResults: PropTypes.bool.isRequired,
+    unitCompleted: PropTypes.bool.isRequired,
+    scriptId: PropTypes.number.isRequired,
+    scriptName: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
+    currentCourseId: PropTypes.number,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
@@ -100,7 +103,6 @@ class UnitOverviewTopRow extends React.Component {
       selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
-      unitProgress,
       scriptId,
       scriptName,
       unitTitle,
@@ -114,7 +116,9 @@ class UnitOverviewTopRow extends React.Component {
       showCalendar,
       unitCalendarLessons,
       weeklyInstructionalMinutes,
-      isMigrated
+      isMigrated,
+      unitCompleted,
+      hasPerLevelResults
     } = this.props;
 
     const useMigratedTeacherResources = isMigrated && !teacherResources.length;
@@ -126,6 +130,13 @@ class UnitOverviewTopRow extends React.Component {
     const buttonMarginStyle = isRtl
       ? styles.buttonMarginRTL
       : styles.buttonMarginLTR;
+
+    let unitProgress = NOT_STARTED;
+    if (unitCompleted) {
+      unitProgress = COMPLETED;
+    } else if (hasPerLevelResults) {
+      unitProgress = IN_PROGRESS;
+    }
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
@@ -259,11 +270,21 @@ const styles = {
 
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
-export default connect((state, ownProps) => ({
+export default connect(state => ({
+  selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
-    ownProps.scriptId,
-    ownProps.currentCourseId,
+    state.progress.scriptId,
+    state.progress.courseId,
     false
-  )
+  ),
+  professionalLearningCourse: state.progress.professionalLearningCourse,
+  hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
+  unitCompleted: !!state.progress.unitCompleted,
+  scriptId: state.progress.scriptId,
+  scriptName: state.progress.scriptName,
+  unitTitle: state.progress.unitTitle,
+  currentCourseId: state.progress.courseId,
+  viewAs: state.viewAs,
+  isRtl: state.isRtl
 }))(UnitOverviewTopRow);

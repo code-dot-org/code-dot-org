@@ -1894,6 +1894,7 @@
   "teacherTabStatsTextResponses": "Réponses écrites",
   "teachingGuide": "Guide d'enseignement",
   "teachingTip": "Conseil pédagogique",
+  "test": "Test",
   "text": "Texte",
   "textVariable": "texte",
   "textToSpeechProfanity": "Votre texte contient un langage inapproprié, il ne sera donc pas lu. Veuillez mettre à jour votre projet pour supprimer le {profanityCount, plural, one {word} other {words}} \"{profaneWords}\".",

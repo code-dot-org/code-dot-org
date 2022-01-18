@@ -9,7 +9,6 @@ import {
 import i18n from '@cdo/locale';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
-import experiments from '@cdo/apps/util/experiments';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows
@@ -70,17 +69,6 @@ describe('ManageStudentsTable', () => {
       transferStatus: {}
     };
 
-    // TO DO: remove these before and after each calls once
-    // code review groups has been fully released.
-    // Added permalink to this in https://codedotorg.atlassian.net/browse/CSA-1008
-    beforeEach(() => {
-      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, true);
-    });
-
-    afterEach(() => {
-      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
-    });
-
     it('does not render MoveStudents if loginType is google_classroom', () => {
       const wrapper = shallow(
         <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
@@ -102,15 +90,6 @@ describe('ManageStudentsTable', () => {
         <UnconnectedManageStudentsTable
           {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: false}}}
         />
-      );
-      expect(wrapper.find(CodeReviewGroupsDialog).exists()).to.be.false;
-    });
-
-    it('does not render Code Review Groups Dialog (and button) if code review comments experiment is not enabled', () => {
-      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
-
-      const wrapper = shallow(
-        <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
       );
       expect(wrapper.find(CodeReviewGroupsDialog).exists()).to.be.false;
     });

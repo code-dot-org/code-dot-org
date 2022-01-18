@@ -477,6 +477,7 @@ ga:
       prizes_link: tuilleadh eolais
   teacher:
     answer: Freagra
+    dashboard: Painéal na Múinteoirí
     for_teachers_only: Do Mhúinteoirí Amháin
     title:
       one: 'Do mhúinteoir:'

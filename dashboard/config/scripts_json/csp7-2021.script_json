@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Student opportunity: $40,000 for college and a paid internship",
+          "details": "Amazon Future Engineer is offering 100 qualifying high school seniors across the US $40K for tuition and a coding internship at Amazon. Applications are open to students who plan to study CS in college and close January 25, 2022. Click \"Learn more\" to see the full criteria.",
+          "link": "https://bit.ly/AFEScholarshipLB2022",
+          "type": "bullhorn",
+          "visibility": "Teacher and student"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +22,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 22:38:29 UTC",
+    "serialized_at": "2022-01-11 18:13:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,6 +58,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp7-2021"
       }
     }
@@ -277,6 +297,21 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp7-2021"
       }
     }
@@ -941,6 +976,18 @@
         "lesson_activity.key": "5314df05-6fb7-4e61-97c9-cd47d4b7c726",
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2021"
+      }
+    },
+    {
+      "key": "5f8dd1bb-d9b5-4f7c-b82e-97d5e86b758e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f8dd1bb-d9b5-4f7c-b82e-97d5e86b758e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp7-2021"
       }
     }
@@ -2394,6 +2441,23 @@
         "activity_section.key": "b05bab05-ef0f-49cb-8638-91636655706e",
         "lesson_activity.key": "5314df05-6fb7-4e61-97c9-cd47d4b7c726"
       }
+    },
+    {
+      "key": "092d5279-e386-4ec1-9618-6f73342188a7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "092d5279-e386-4ec1-9618-6f73342188a7",
+        "lesson_activity.key": "5f8dd1bb-d9b5-4f7c-b82e-97d5e86b758e"
+      }
     }
   ],
   "script_levels": [
@@ -3171,6 +3235,28 @@
       "level_keys": [
         "CSP Unit 7 AP-Style Assessment _2021"
       ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp7-2021",
+        "activity_section.key": "092d5279-e386-4ec1-9618-6f73342188a7"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3544,6 +3630,18 @@
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
         "activity_section.key": "b05bab05-ef0f-49cb-8638-91636655706e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp7-2021",
+        "activity_section.key": "092d5279-e386-4ec1-9618-6f73342188a7"
       }
     }
   ],

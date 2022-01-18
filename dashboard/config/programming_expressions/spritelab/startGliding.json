@@ -2,5 +2,6 @@
   "key": "startGliding",
   "name": "startGliding",
   "category": "Experimental",
+  "block_name": "gamelab_startGliding",
   "syntax": "startGliding"
 }

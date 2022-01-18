@@ -10,7 +10,7 @@ title: Ghidul Hour of Code pentru companii
 
 * * *
 
-Gândirea de calcul contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească. Dacă încep de timpuriu, aceștia vor avea o bază pentru succesul profesional într-o carieră potrivită pentru secolul XXI.
+Gândirea computationala contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească. Dacă încep de timpuriu, aceștia vor avea o bază pentru succesul profesional într-o carieră potrivită pentru secolul XXI.
 
 În timpul campaniei Hour of Code, compania ta poate contribui la creșterea gradului de conștientizare a mișcării de promovare a științei calculatoarelor. Fie că te oferi voluntar virtual, în persoană sau prin intermediul companiei tale, aceste eforturi pot avea un impact uriaș asupra modului în care tinerele femei și elevii din grupurile etnice și rasiale marginalizate văd știința calculatoarelor și propriul lor potențial.
 

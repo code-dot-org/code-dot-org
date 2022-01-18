@@ -2,7 +2,27 @@
   "pt-PT": {
     "data": {
       "bubble_choice_description": {
-        "courseD_bee_nestedLoops8_2021": "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."
+        "courseD_bee_nestedLoops8_2021": "Colete todo o néctar de cada flor\ne produza mel na colmeia. \r\n\r\nUse um laço aninhado. ",
+        "CourseF_outbreak5": "Ajude seus duendes a se aperfeiçoarem automaticamente com o passar do tempo!",
+        "CourseF_outbreak6": "Nem sempre um vírus é transmitido e as máscaras também não impedem inteiramente a transmissão. Melhore sua simulação, causando infecções com probabilidade aleatória.",
+        "CourseF_outbreak7": "Evite que seus sprites fiquem doentes, dando imunidade a eles.",
+        "CourseF_outbreak8": "Use seu projeto para compartilhar uma mensagem. O que você quer que as outras pessoas aprendam com isto?",
+        "courseC_artist_prog_challenge1_2021": "Desenhe quartos para cada um dos animais. ",
+        "courseD_bee_nestedLoops9_2021": "Faça todo o mel.",
+        "courseF_apps_card": "Este programa vai te fazer algumas perguntas e então criará uma mensagem de aniversário personalizada para você!",
+        "courseF_apps_chatbot": "Este robô vai te fazer perguntas e lembrar o que você digita! Digite as suas respostas e converse com o X-9!",
+        "courseF_apps_pet": "Arraste os objetos para o cachorro e veja ele reagir!",
+        "courseF_bee_variables_7a_2021": "Este enigma é um pouco diferente. O que você precisa para resolvê-lo?",
+        "helloworld_animals_costumes": "Aprenda a mudar a aparência das fadas.",
+        "helloworld_animals_sounds": "Aprenda a tocar sons.",
+        "helloworld_emoji_costumes": "Aprenda a mudar a aparência das fadas.",
+        "helloworld_emoji_sounds": "Aprenda a tocar sons.",
+        "helloworld_food_costumes": "Aprenda a mudar a aparência das fadas.",
+        "helloworld_food_sounds": "Aprenda a tocar sons.",
+        "helloworld_retro_costumes": "Aprenda a mudar a aparência das fadas.",
+        "helloworld_retro_sounds": "Aprenda a tocar sons.",
+        "international_outbreak_freeplay": "Continue jogando com os mesmos blocos que você já viu!",
+        "ramp_artist_loops8_2021": "Procure por um padrão e deixe esse código menos utilizando laços."
       }
     }
   }

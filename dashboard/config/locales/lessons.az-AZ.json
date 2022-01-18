@@ -63,7 +63,7 @@
           "student_overview": "Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[\\[sağlam düşüncə təhsili](https://www.commonsense.org)][1]\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.] [2]\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",
+          "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",
           "preparation": "-   Təlimat materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün vərəqələri çap edin.\n-   (İstəyə görə) Sinifdəki ekran üçün şeir afişası çap edin.",
           "purpose": "Sağlam Fikirli Təhsil (Common Sense Education) bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
           "student_overview": "Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin."
@@ -79,6 +79,9 @@
         },
         "coursea-2021/Events in Play Lab": {
           "student_overview": "Öz oyun və ya hekayənizi yaradın."
+        },
+        "coursed-2021/lesson-5": {
+          "purpose": "Sağlam Fikirli Təhsil (Common Sense Education) bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb."
         },
         "express-2021/lesson-2": {
           "student_overview": "Bu dərsdə siz proqramlar yazacaq və spritlər və davranışlar haqqında öyrənəcəksiniz."
@@ -106,6 +109,9 @@
         },
         "coursee-2021/Simon Says": {
           "student_overview": "Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün."
+        },
+        "coursee-2021/Private and Personal Information": {
+          "purpose": "Sağlam Fikirli Təhsil (Common Sense Education) bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb."
         }
       }
     }

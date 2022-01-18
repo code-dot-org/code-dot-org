@@ -167,6 +167,7 @@ ur:
     popup:
       prizes_link: مزید معلومات
   teacher:
+    dashboard: ٹیچر کا ڈیش بورڈ
     panel:
       student: Talib-e-ilm
       last_updated: 'آخری تازہ کاری:'

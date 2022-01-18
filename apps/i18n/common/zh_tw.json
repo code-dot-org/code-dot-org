@@ -1600,6 +1600,7 @@
   "retryProjectSaveDialogBody": "我們目前無法儲存你的專案。請檢查網路連線的狀況，然後點擊“重試”來繼續。",
   "retryProjectSaveDialogButton": "再試試",
   "retryProjectSavePending": "儲存中...",
+  "returnsHeader": "返回",
   "review": "檢視",
   "reviewCode": "觀看代碼",
   "reviewDocuments": "審閱文件",

@@ -9,6 +9,7 @@ is:
       answer: svar
       armlength: armlengd
       binary: tvíund
+      birds: fuglar
       bodylength: líkamslengd
       cats: allir kettir
       color: litur
@@ -24,11 +25,13 @@ is:
       name: heiti
       nectar: blómasafi
       nectars: blómasafar
+      planet: pláneta
       points: stig
       random: eitthvað
       repeat: endurtaka
       right: hægri
       score: stig
+      shout: hrópa
       sides: hliðar
       size: stærð
       speed: hraða

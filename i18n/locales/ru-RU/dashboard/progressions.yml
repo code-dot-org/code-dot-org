@@ -2,11 +2,15 @@ ru:
   data:
     progressions:
       '"If/Else" with the Bee': '«Если/Иначе» с Пчёлкой'
+      AI Machine Learning - Video: 'Искусственный интеллект: машинное обучение - видео'
+      'AI: Impact on Society - Video': 'Искусственный интеллект: воздействие на общество - видео'
+      'AI: Training Data & Bias - Video': 'Искусственный интеллект: обучающие данные и искажения - видео'
       Accelerometer Events: События акселерометра
       Adding Images: Добавление изображений
       Adding Screens: Добавление экранов
       Alien Defender: Война с чужими
       Animate Your Scene: Анимируйте свою сцену
+      App Lab Intro - Video: Введение в Лабораторию приложений - видео
       'App Project: Screen Design': 'Проектное решение для приложения: компоновка окна'
       Artist Intro with JR Hildebrand: Дж. Р. Хильдебранд представляет инструмент «Художник»
       Artist Intro with JR Hildebrande: Дж. Р. Хильдебранд представляет инструмент «Художник»
@@ -139,6 +143,7 @@ ru:
       HTML Tags: HTML тэги
       Headings: Заголовки
       Headings in HTML: Загловки в HTML
+      Hello World: Привет, мир
       How to Create a Simple Function: Как создать простую функцию
       How to Make a Sprite: Как создать спрайт?
       Hyperlinks: Гиперссылки
@@ -296,6 +301,7 @@ ru:
       Styling with Classes: Стилизация с помощью занятий
       Styling your Website: Стилизация своего веб-сайта
       Teach A.I. a new word: Обучите ИИ новому слову
+      Teach AI a New Word: Обучите ИИ новому слову
       'Technique: Frequency Analysis': 'Прием: Частотный анализ'
       Terminology Recap: Терминологическая справка
       Text Compression: Сжатие текста
