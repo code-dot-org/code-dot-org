@@ -57,13 +57,14 @@ describe('TopCourse', () => {
           lessonName={topCourse.lessonName}
           linkToOverview={topCourse.linkToOverview}
           linkToLesson={topCourse.linkToLesson}
+          isProfessionalLearningCourse={true}
         />
       </Provider>
     );
 
-    assert.equal(
+    assert.include(
       wrapper.find('img').props().src,
-      '@cdo/static/small_blue_icons_fullwidth.png'
+      'small_blue_icons_fullwidth'
     );
   });
 
@@ -79,9 +80,9 @@ describe('TopCourse', () => {
       </Provider>
     );
 
-    assert.equal(
+    assert.include(
       wrapper.find('img').props().src,
-      '@cdo/static/small_purple_icons_fullwidth.png'
+      'small_purple_icons_fullwidth'
     );
   });
 });

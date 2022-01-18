@@ -20,12 +20,14 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses courses={[]} topCourse={null} isTeacher />
       );
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <ContentContainer heading="My Courses">
-            <SetUpCourses isTeacher />
-          </ContentContainer>
-        </div>
+      expect(
+        wrapper.containsMatchingElement(
+          <div>
+            <ContentContainer heading="My Courses">
+              <SetUpCourses isTeacher />
+            </ContentContainer>
+          </div>
+        )
       );
       expect(wrapper.find('TopCourse').exists()).to.be.false;
       expect(wrapper.find('CourseCard').exists()).to.be.false;
@@ -46,18 +48,20 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses courses={[]} topCourse={topCourse} isTeacher />
       );
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <ContentContainer heading="My Courses">
-            <TopCourse
-              assignableName={topCourse.assignableName}
-              lessonName={topCourse.lessonName}
-              linkToOverview={topCourse.linkToOverview}
-              linkToLesson={topCourse.linkToLesson}
-            />
-            <SetUpCourses isTeacher hasCourse />
-          </ContentContainer>
-        </div>
+      expect(
+        wrapper.containsMatchingElement(
+          <div>
+            <ContentContainer heading="My Courses">
+              <TopCourse
+                assignableName={topCourse.assignableName}
+                lessonName={topCourse.lessonName}
+                linkToOverview={topCourse.linkToOverview}
+                linkToLesson={topCourse.linkToLesson}
+              />
+              <SetUpCourses isTeacher hasCourse />
+            </ContentContainer>
+          </div>
+        )
       );
       expect(wrapper.find('CourseCard').exists()).to.be.false;
       expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
@@ -67,34 +71,36 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses courses={courses} topCourse={topCourse} isTeacher />
       );
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <ContentContainer heading="My Courses">
-            <TopCourse
-              assignableName={topCourse.assignableName}
-              lessonName={topCourse.lessonName}
-              linkToOverview={topCourse.linkToOverview}
-              linkToLesson={topCourse.linkToLesson}
-            />
-            <div>
-              <div key={0}>
-                <CourseCard
-                  title={courses[0].title}
-                  description={courses[0].description}
-                  link={courses[0].link}
-                />
+      expect(
+        wrapper.containsMatchingElement(
+          <div>
+            <ContentContainer heading="My Courses">
+              <TopCourse
+                assignableName={topCourse.assignableName}
+                lessonName={topCourse.lessonName}
+                linkToOverview={topCourse.linkToOverview}
+                linkToLesson={topCourse.linkToLesson}
+              />
+              <div>
+                <div key={0}>
+                  <CourseCard
+                    title={courses[0].title}
+                    description={courses[0].description}
+                    link={courses[0].link}
+                  />
+                </div>
+                <div key={1}>
+                  <CourseCard
+                    title={courses[1].title}
+                    description={courses[1].description}
+                    link={courses[1].link}
+                  />
+                </div>
               </div>
-              <div key={1}>
-                <CourseCard
-                  title={courses[1].title}
-                  description={courses[1].description}
-                  link={courses[1].link}
-                />
-              </div>
-            </div>
-            <SetUpCourses isTeacher hasCourse />
-          </ContentContainer>
-        </div>
+              <SetUpCourses isTeacher hasCourse />
+            </ContentContainer>
+          </div>
+        )
       );
     });
 
@@ -102,49 +108,51 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses courses={moreCourses} topCourse={topCourse} isTeacher />
       );
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <ContentContainer heading="My Courses">
-            <TopCourse
-              assignableName={topCourse.assignableName}
-              lessonName={topCourse.lessonName}
-              linkToOverview={topCourse.linkToOverview}
-              linkToLesson={topCourse.linkToLesson}
-            />
-            <div>
-              <div key={0}>
-                <CourseCard
-                  title={moreCourses[0].title}
-                  description={moreCourses[0].description}
-                  link={moreCourses[0].link}
-                />
+      expect(
+        wrapper.containsMatchingElement(
+          <div>
+            <ContentContainer heading="My Courses">
+              <TopCourse
+                assignableName={topCourse.assignableName}
+                lessonName={topCourse.lessonName}
+                linkToOverview={topCourse.linkToOverview}
+                linkToLesson={topCourse.linkToLesson}
+              />
+              <div>
+                <div key={0}>
+                  <CourseCard
+                    title={moreCourses[0].title}
+                    description={moreCourses[0].description}
+                    link={moreCourses[0].link}
+                  />
+                </div>
+                <div key={1}>
+                  <CourseCard
+                    title={moreCourses[1].title}
+                    description={moreCourses[1].description}
+                    link={moreCourses[1].link}
+                  />
+                </div>
+                <div key={2}>
+                  <CourseCard
+                    title={moreCourses[2].title}
+                    description={moreCourses[2].description}
+                    link={moreCourses[2].link}
+                  />
+                </div>
+                <div key={3}>
+                  <CourseCard
+                    title={moreCourses[3].title}
+                    description={moreCourses[3].description}
+                    link={moreCourses[3].link}
+                  />
+                </div>
               </div>
-              <div key={1}>
-                <CourseCard
-                  title={moreCourses[1].title}
-                  description={moreCourses[1].description}
-                  link={moreCourses[1].link}
-                />
-              </div>
-              <div key={2}>
-                <CourseCard
-                  title={moreCourses[2].title}
-                  description={moreCourses[2].description}
-                  link={moreCourses[2].link}
-                />
-              </div>
-              <div key={3}>
-                <CourseCard
-                  title={moreCourses[3].title}
-                  description={moreCourses[3].description}
-                  link={moreCourses[3].link}
-                />
-              </div>
-            </div>
-            <SeeMoreCourses courses={moreCourses.slice(4)} />
-            <SetUpCourses isTeacher hasCourse />
-          </ContentContainer>
-        </div>
+              <SeeMoreCourses courses={moreCourses.slice(4)} />
+              <SetUpCourses isTeacher hasCourse />
+            </ContentContainer>
+          </div>
+        )
       );
     });
   });
@@ -152,7 +160,11 @@ describe('RecentCourses', () => {
   describe('PL Courses', () => {
     it('does not show SetUpCourses even when no courses with progress', () => {
       const wrapper = shallow(
-        <RecentCourses courses={[]} topCourse={null} isTeacher />
+        <RecentCourses
+          courses={[]}
+          topCourse={null}
+          isProfessionalLearningCourse={true}
+        />
       );
       assert.equal(wrapper.find('SetUpCourses').length, 0);
     });
@@ -166,7 +178,7 @@ describe('RecentCourses', () => {
         />
       );
       assert.equal(
-        wrapper.find('ContentContainer').props().heading,
+        wrapper.find('Connect(ContentContainer)').props().heading,
         'My Professional Learning Courses'
       );
     });
