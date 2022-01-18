@@ -2,5 +2,6 @@
   "key": "whenLeftArrow",
   "name": "whenLeftArrow",
   "category": "Unused",
+  "block_name": "gamelab_whenLeftArrow",
   "syntax": "whenLeftArrow"
 }
