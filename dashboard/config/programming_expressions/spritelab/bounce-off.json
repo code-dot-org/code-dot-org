@@ -2,5 +2,6 @@
   "key": "bounce-off",
   "name": "bounceOff",
   "category": "Sprites",
+  "block_name": "gamelab_bounceOff",
   "syntax": "bounceOff"
 }

@@ -2,5 +2,6 @@
   "key": "gamelab_showTitleScreen",
   "name": "showTitleScreen",
   "category": "World",
+  "block_name": "gamelab_showTitleScreen",
   "syntax": "showTitleScreen"
 }

@@ -53,21 +53,20 @@
     "validation_enabled": "true",
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
-    "short_instructions": "After enough time has passed, end this game by removing any remaining sprites and printing the player's final score.",
-    "long_instructions": "# End the game\r\n\r\nEventually, games come to an end. After enough time has passed, we can end this game by removing any remaining sprites and printing the player's final score.\r\n\r\n## Do This\r\n* Drag an `at seconds` block to your workspace. Choose the number of seconds that your game should last.\r\n* Under `at seconds`, use a `print` block to show the player's score.",
+    "short_instructions": "Use a variable to set the player's score at the beginning of the game and to give them points each time they click a sprite.",
+    "long_instructions": "# Remove clicked sprites\r\n\r\nIn this game, we will remove sprites when they are clicked. The user will click sprites quickly to score as many points as they can!\r\n\r\n## Do This\r\n* Drag a `when clicked` event block from the toolbox to your workspace.\r\n* Drag a `remove` block from the toolbox to your event block.\r\n* Open the event block. Drag `clicked sprite` block from inside to the `remove` block.\r\n* Press \"Run\" to test your game so far. Click the sprites to remove them.",
     "authored_hints": "[]",
     "hint_prompt_attempts_threshold": "1",
     "project_template_level_name": "courseF_clicker_template",
-    "validation_code": "if(validationProps){\r\n  //console.log(validationProps);\r\n}",
     "preload_asset_list": null
   },
   "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-01-13T13:52:24.000Z",
+  "created_at": "2022-01-13T21:10:23.000Z",
   "user_id": 63,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-13T13:52:24.397+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_finish\\\"\"],\"cloned_from\":\"courseF_clicker_finish\"},{\"changed_at\":\"2022-01-13 14:03:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"hide_share_and_remix\",\"free_play\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 15:12:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 15:16:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 15:17:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 15:40:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 15:46:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 15:51:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 20:33:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 20:40:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:17:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:31:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-13T21:10:23.865+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_variable\\\"\"],\"cloned_from\":\"courseF_clicker_variable\"},{\"changed_at\":\"2022-01-13 21:14:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"long_instructions\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:32:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -90,22 +89,6 @@
                 <field name="COLOUR">#3333ff</field>
               </block>
             </value>
-          </block>
-          <block type="gamelab_printText">
-            <value name="TEXT">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_textJoin">
-            <field name="TEXT1"/>
-          </block>
-          <block type="gamelab_textVariableJoin">
-            <field name="VAR">???</field>
-          </block>
-          <block type="text">
-            <field name="TEXT"/>
           </block>
         </category>
         <category name="Sprites">
@@ -133,14 +116,6 @@
           <block type="gamelab_destroy"/>
         </category>
         <category name="Events">
-          <block type="gamelab_atTime">
-            <field name="UNIT">"seconds"</field>
-            <value name="N">
-              <block type="math_number">
-                <field name="NUM">3</field>
-              </block>
-            </value>
-          </block>
           <block type="gamelab_spriteClicked">
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
@@ -166,9 +141,6 @@
                 <field name="NUM">1</field>
               </block>
             </value>
-          </block>
-          <block type="gamelab_textVariableJoin">
-            <field name="VAR">??</field>
           </block>
         </category>
       </xml>

@@ -2,5 +2,6 @@
   "key": "gamelab_destroy",
   "name": "destroy",
   "category": "Sprites",
+  "block_name": "gamelab_destroy",
   "syntax": "destroy"
 }
