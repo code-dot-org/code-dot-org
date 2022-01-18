@@ -12122,6 +12122,10 @@ fil:
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -12888,3 +12892,81 @@ fil:
               description_student: Tulungan si Laurel, ang treasure hunter na magbilang at magdagdag ng mga hakbang upang mangolekta ng mga hiyas!
               description_teacher: "Binubuo ng araling ito ang mga naunang aktibidad na kinasasangkutan ng pagbibilang at pagkatawan ng karagdagan. Sinusuportahan ng Counting with Laurel ang mga mag-aaral sa kindergarten at unang baitang na may kasanayan sa pagbilang at pagdaragdag habang gumagamit sila ng mga loop upang tulungan si Laurel, ang treasure hunter, na mangolekta ng mga hiyas sa isang maze grid. Gumagamit sila ng serye ng mga coding command para gabayan si Laurel sa isang grid upang mangolekta ng mga hiyas, gamit ang isang bloke na \"Ulitin\" na nangangailangan sa kanila na bilangin kung ilang hakbang ang dapat gawin ni Laurel- pagkatapos ay katawanin ang numerong iyon gamit ang tamang numeral sa loob ng isang bloke ng code.\n\n#### Mga Kinakailangang Kasanayan\n\nHindi nilayon ng araling ito na ipakilala sa mga mag-aaral ang mga numero, pagbibilang, o pagdaragdag. Dapat pumasok ang mga mag-aaral sa araling ito na may ilang dating kaalaman at mga kasanayan upang magawang:\n\n-   kilalanin at bilangin ang mga numero hanggang 10 gamit ang mga larawan, daliri, o manipulatives.\n-   magdagdag ng mga bagay, larawan, daliri, o manipulatives hanggang sa kabuuan ng 10."
           title: Nagbibilang kasama si Laurel
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulator ng Pagsiklab
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: aralin-10
+            lesson-6:
+              key: aralin-6
+            lesson-7:
+              key: aralin-7
+            lesson-8:
+              key: aralin-8
+            lesson-9:
+              key: aralin-9
+            lesson-11:
+              key: aralin-11
+            lesson-12:
+              key: aralin-12
+            lesson-13:
+              key: aralin-13
+            lesson-14:
+              key: aralin-14
+            lesson-15:
+              key: aralin-15
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+            lesson-4:
+              key: aralin-4
+            lesson-5:
+              key: aralin-5
+            lesson-16:
+              key: aralin-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+            lesson-4:
+              key: aralin-4
+            lesson-5:
+              key: aralin-5
+            lesson-10:
+              key: aralin-10
+            lesson-6:
+              key: aralin-6
+            lesson-7:
+              key: aralin-7
+            lesson-8:
+              key: aralin-8
+            lesson-9:
+              key: aralin-9
+            lesson-11:
+              key: aralin-11
+            lesson-12:
+              key: aralin-12
+            lesson-13:
+              key: aralin-13
+            lesson-14:
+              key: aralin-14
+            lesson-15:
+              key: aralin-15
+            lesson-16:
+              key: aralin-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin

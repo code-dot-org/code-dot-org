@@ -27379,6 +27379,13 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa8-pilot:
+          lessons:
+            lesson-15:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -27839,3 +27846,57 @@ uz:
             Exploring Box Plots and Histograms:
               name: Ma'lumotlar Vizualizatsiyasi
           title: Ma'lumotlar Vizualizatsiyasi
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Dars
+        csa6-exemplars:
+          lessons:
+            lesson-15:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        2022drafting:
+          lessons:
+            lesson-1:
+              name: Oʻzgaruvchilar bilan sanash
+            lesson-5:
+              name: Men haqimda Sprite Lab bilan
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csf-2022-pilot:
+          lessons:
+            lesson-2:
+              name: Oʻzgaruvchilar bilan sanash
+          title: Kompyuter fanlari asoslari 2019-2020 (Pilot)
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Baholash kuni
+            lesson-5:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Baholash kuni
+            lesson-15:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent

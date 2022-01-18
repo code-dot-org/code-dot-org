@@ -462,6 +462,7 @@ ko:
       prizes_link: 자세히
   teacher:
     answer: 응답
+    dashboard: 교사 대시보드
     for_teachers_only: 선생님 전용
     title:
       one: '선생님 : '

@@ -235,6 +235,7 @@ eu:
       prizes_link: informazio gehiago
   teacher:
     answer: Erantzuna
+    dashboard: Irakaslearen arbela
     for_teachers_only: Irakasleentzat soilik
     title:
       one: 'Zure irakaslea:'

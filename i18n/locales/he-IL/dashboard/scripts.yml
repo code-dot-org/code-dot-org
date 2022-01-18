@@ -4330,13 +4330,21 @@ he:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-16: {}
         csa7-pilot:
           lessons:
             Java Lab: {}
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
-        csa8-pilot: {}
+            lesson-16: {}
+        csa8-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
         csa9-pilot: {}
         k5-onlinepd-2021:
           lessons:
@@ -4464,10 +4472,7 @@ he:
             lesson-6: {}
         self-paced-pl-csd7-2021: {}
         self-paced-pl-csd8-2021: {}
-        self-paced-pl-csp1-2021:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
+        self-paced-pl-csp1-2021: {}
         self-paced-pl-csp2-2021: {}
         self-paced-pl-csp3-2021: {}
         self-paced-pl-csp4-2021: {}
@@ -4566,7 +4571,9 @@ he:
         poster-experiment:
           lessons:
             lesson-1: {}
-        tesspltest: {}
+        tesspltest:
+          lessons:
+            lesson-1: {}
         tesspl2: {}
         sb-pt-cont:
           lessons:
@@ -4878,6 +4885,7 @@ he:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-1: {}
         poem-art-2021:
           lessons:
             Poem Art:
@@ -4921,3 +4929,90 @@ he:
               name: תחרות איות
         explore-data-1-2021: {}
         counting-csc-2021: {}
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: שיעור
+        csa6-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: לנצח את הקורונה
+            lesson-5: {}
+        csa7-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        csf-2022-pilot:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+        csd6-pilot-2022: {}
+        csa8-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels: {}
+            Dani Test Lesson 2: {}
+        csa7-pilot-facilitator:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa8-pilot-facilitator:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa9-pilot-facilitator: {}

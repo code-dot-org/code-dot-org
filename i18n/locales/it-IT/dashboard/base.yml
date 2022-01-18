@@ -434,6 +434,7 @@ it:
       prizes_link: 'Più informazioni'
   teacher:
     answer: Rispondi
+    dashboard: 'Cruscotto dell''Insegnante'
     for_teachers_only: Per gli insegnanti
     title:
       one: 'Il tuo insegnante:'

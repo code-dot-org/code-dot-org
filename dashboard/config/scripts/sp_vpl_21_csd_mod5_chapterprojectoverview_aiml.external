@@ -3,28 +3,37 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit 7 projects
+# End of unit project: Design an AI App
 
-#### Unit 7 includes both a mini project and an end of unit project. Both projects provide students with the opportunity to apply their knowledge of how machine learning works to train machine learning models and use those models to create machine learning apps. 
+## Project overview
 
-## Mini project: Make a machine learning app
+##### To conclude this unit, students develop an AI app that addresses a social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
 
-##### In this one or two day mini-project, students apply their skills from the unit to create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+<hr style="clear:both">
 
-<div style="float: left; text-align:center;"><strong>Will you get dress coded?</strong><br /><a href="https://studio.code.org/projects/applab/-urKjXeuoibC3kFioMcc1CLLtV6eMbq-4EVx5-ydHwY" target="_new"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/27d80777e8f213040ed188b8453f3476-image-1639775981413.17.51 PM.png" width="250px"; alt="Image of dress code app"></a></div>
+<img src="https://images.code.org/fe7e8e6813fb783c0aaf35f17bce5d04-image-1641784249203.10.32 PM.png" style="float: left; height: 175px; clear: both; margin: 0 20px 20px 0;">
 
-<div style="float: left; text-align:center;"><strong>Procrastination calculator</strong><br /><a href="https://studio.code.org/projects/applab/D9hbf5AkDwietNvVFbYG4mwywWPGxCvkm4jWxOT-JzM/" target="_new"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/e5cf38c89b083ae9abcd597fb0e97ed3-image-1639774938746.02.03 PM.png" width="250px" alt="Immage of procrastination calculator app"></a></div>
-
-<div style="float: left; text-align:center;"><strong>Is it recyclable?</strong><br /><a href="https://studio.code.org/projects/applab/M5POG39wVU5n6rmVzyEwf5-k0rcFltzijK5Kr69JJSk/" target="_new"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/0d3974b019a67dd692cff29c6414a6de-image-1639776762100.32.24 PM.png" width="250px" alt="Image of recycling app"></a></div>
+<div style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">
 
 
-<div style="clear:both"/>
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">The AI unit allows students to be creative. When they actually have to create their apps, they have to think of ways in which they can solve problems in their society, and in the community, and in the world.
 
-## End of unit project: Design an AI App
+My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!
+</p>
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+</p>
+</div>
+<br>
 
-##### To conclude the unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+<hr style="clear:both"/>
 
-# Add three sample mini projects
 
+## Project resources
+
+* ##### <a href="https://studio.code.org/s/csd7-2021/lessons/21" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Project guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view" target="blank" rel="noopener noreferrer" >Project rubric</a> 
 
 MARKDOWN
