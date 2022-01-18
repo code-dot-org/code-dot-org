@@ -33,6 +33,16 @@ Feature: Script overview page
     # Make sure we only see student progress, not teacher progress.
     Then I verify progress for lesson 29 level 4 is "not_tried"
 
+  Scenario: Assigning to section
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally"
+    And I am on "http://studio.code.org/s/csp3-2019"
+    When I click selector ".uitest-assign-button" once I see it
+    And I wait to see ".uitest-unassign-button"
+    # Make sure unassign button is in the right state when the page loads
+    And I reload the page
+    And I wait to see ".uitest-unassign-button"
+
   Scenario: Script overview contents
     Given I create a student named "Jean"
     And I am on "http://studio.code.org/s/allthethings"

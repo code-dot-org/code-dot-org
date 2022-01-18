@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-01-12 19:52:22 UTC",
+    "serialized_at": "2022-01-13 22:36:14 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1700,7 +1700,7 @@
       "key": "7af8b468-66ad-4d3b-a9c3-2ff50362f027",
       "position": 1,
       "properties": {
-        "description": "Today students will learn how to work with sprites in Sprite Lab.\n\n**Discuss:** Let the students know that this character on the screen is a sprite.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own sprites to control.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to reflect on previous two lessons. Students should know the difference between personal and private information. Students should also understand how to be an upstander.\n* _How can we safely present ourselves online?_\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1709,21 +1709,10 @@
       }
     },
     {
-      "key": "9e95af15-f835-4b88-821b-7aafc9c0cdf2",
+      "key": "9a18adb7-3bfe-410d-89dc-79ccde9c3419",
       "position": 1,
       "properties": {
-        "description": "This demonstration and discussion can help students make the connection from the previous unplugged lesson \"Follow the Algorithm\" into the new Sprite Lab environment."
-      },
-      "seeding_key": {
-        "activity_section.key": "9e95af15-f835-4b88-821b-7aafc9c0cdf2",
-        "lesson_activity.key": "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847"
-      }
-    },
-    {
-      "key": "9a18adb7-3bfe-410d-89dc-79ccde9c3419",
-      "position": 2,
-      "properties": {
-        "description": "\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
+        "description": "Today students will learn how to work with sprites in Sprite Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\n**Discuss**: Let the students know that this character on the screen is a sprite. It is a graphic that is controlled by a program. In this lesson, students will have the opportunity to choose their own sprites to control.\n\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1738,9 +1727,9 @@
     },
     {
       "key": "f3f9ef44-d791-497c-83b3-5cc54a98e3f8",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the sprite to begin two behaviors at once?_\n- _Will the sprite ever stop these behaviors on its own?_\n- _If we want the sprite to stop a behavior when we click it, how might we do that?_\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
+        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the sprite to begin two behaviors at once?_\n- _Will the sprite ever stop these behaviors on its own?_\n- _If we want the sprite to stop a behavior when we click it, how might we do that?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "f3f9ef44-d791-497c-83b3-5cc54a98e3f8",
@@ -1751,7 +1740,7 @@
       "key": "8ad1b5bf-8e05-4fad-89fc-ef821c11b02f",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be programming their own Fish Tank. They’ll begin by learning how to put some sprites on the screen, then they will make them move. Finally, they’ll customize their fish tank to add whatever creatures and objects they want.",
+        "description": "**Goal:** Today, students will be programming their own Fish Tank. They’ll begin by learning how to put some sprites on the screen, then they will make them move. Finally, they’ll customize their fish tank to add whatever creatures and objects they want.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Introducing Sprite Lab” video\n",
         "name": "Swimming Fish with Sprite Lab"
       },
       "seeding_key": {
@@ -1791,6 +1780,7 @@
       "key": "6387c7a5-11bc-4b51-9079-ba599124ce44",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Predict” slide\n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -1802,6 +1792,7 @@
       "key": "ff7aa3e1-8328-41bf-b516-51ca5ea0a800",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-5 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1813,6 +1804,7 @@
       "key": "1a4debc6-59c9-4c5a-8811-8a3cadf8be7a",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How to Make a Sprite” video \n",
         "progression_name": "Video: How to Make a Sprite"
       },
       "seeding_key": {
@@ -1824,6 +1816,7 @@
       "key": "a5c4b601-4e45-4261-b7a6-9ffefd154aa2",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8 - Practice” slide\n",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1835,6 +1828,7 @@
       "key": "dce569eb-0a60-42a9-9e31-855a6b138f92",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1843,10 +1837,22 @@
       }
     },
     {
-      "key": "470b57f7-12df-47d0-acc3-63cb72051541",
+      "key": "d11b829e-adf4-4225-a091-b9ab50f9cfb5",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to make a scene that was more creative?\n - Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Follow the Algorithm” slide\n\n**Say**: We’re going to end with a quick game. In this game, I will be giving you all commands to follow and your job is to follow my instructions. The commands will always start with “begin” or “stop”. If I tell you to begin doing something, you need to start that behavior and keep it going until I tell you to stop. I might also tell you to “stop everything” which means you can end all of the behaviors I’ve given you so far. We’ll play 2 rounds and after each round I’ll ask you all a couple questions.\n\n#### Rules\n\n*All commands should be prefaced with either “begin” or “stop”.*\n\nWhen players are told to “begin” a behavior, they should continue it until told to “stop”. For example, players should not told be told to clap once, but might be told to “begin clapping”. Their clapping should continue until they are told to “stop clapping” even if they are given other new behaviors in between. \n\n*The leader can also call for the players to “stop everything”.* \n\nThis should result in everyone just standing at rest regardless of all previous commands.\n\nYou as the teacher should take on the role of the leader. You can try make up your own sequences, but here are some you can try. Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 1” slide\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:** *What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 2” slide\n\n#### Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:**\n\n*What kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?*",
+        "name": "Follow the Algorithm"
+      },
+      "seeding_key": {
+        "activity_section.key": "d11b829e-adf4-4225-a091-b9ab50f9cfb5",
+        "lesson_activity.key": "3826fff9-9484-4a83-9311-70c70d492e25"
+      }
+    },
+    {
+      "key": "470b57f7-12df-47d0-acc3-63cb72051541",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1858,11 +1864,28 @@
       "key": "f192ed10-d346-4fae-b286-a48298261572",
       "position": 1,
       "properties": {
-        "description": "Today students will visit events in programming.\n\n####A Series of Events\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.",
-        "name": "Introduction\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do we use sprites in our programs?_\n\n",
+        "name": "Introduction\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there wasn’t enough time to complete the Wrap Up activity from the previous Swimming Fish with Sprite Lab lesson, have students do the Follow the Algorithm activity now before starting A Series of Events.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f192ed10-d346-4fae-b286-a48298261572",
+        "lesson_activity.key": "6db0ff4e-ead4-45de-a39f-2ac300887a77"
+      }
+    },
+    {
+      "key": "c8b3f21b-551a-4971-afbd-6b5345a892f8",
+      "position": 2,
+      "properties": {
+        "description": "Today students will visit events in programming.\n\n####A Series of Events\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other."
+      },
+      "seeding_key": {
+        "activity_section.key": "c8b3f21b-551a-4971-afbd-6b5345a892f8",
         "lesson_activity.key": "6db0ff4e-ead4-45de-a39f-2ac300887a77"
       }
     },
@@ -1888,7 +1911,7 @@
       "key": "5fa177c3-caa1-4071-8de9-82e2f3173b84",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 – Predict” slide\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5fa177c3-caa1-4071-8de9-82e2f3173b84",
@@ -1910,6 +1933,7 @@
       "key": "8e1481cf-2c3b-4480-95d8-3eb9bdb82b10",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sprites in Action” video \n",
         "progression_name": "Video: Sprites in Action"
       },
       "seeding_key": {
@@ -1921,6 +1945,7 @@
       "key": "f3990627-011b-4185-8af7-4839010f6029",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-6 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1932,6 +1957,7 @@
       "key": "adf2b08d-00e9-4ea4-b7c7-1ac4e06dcaad",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1943,6 +1969,7 @@
       "key": "cf5f67a3-22e0-4190-a961-0234d551b3d9",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1954,7 +1981,7 @@
       "key": "768acc1d-54e1-4a7c-ab67-595668475ee7",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to have control over what your characters were able to do?\n - Did you change the program in any way to make it feel more like your own?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Did you change the program in any way to make it feel more like your own?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1966,7 +1993,7 @@
       "key": "8489f43d-dff8-41c9-aeca-e699cb7e8adc",
       "position": 1,
       "properties": {
-        "description": "Today students will apply what they've learned about personal and private information to design an interactive poster about themselves with SpriteLab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What information is safe to share online and what information is strictly private?_\n\nToday students will apply what they've learned about personal and private information to design an interactive poster about themselves with Sprite Lab.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1978,7 +2005,7 @@
       "key": "ac798921-b6f1-422f-b750-e8f823a3f18c",
       "position": 2,
       "properties": {
-        "description": "\n###Review of \"Personal and Private Information\"\n\nRemind students of information that is safe to share online and information that is strictly private.\n\n| SAFE - Personal Information  | UNSAFE - Private Information  |\n| ------------- | ------------- |\n| Your favorite food<br/>Your opinion <br/><i>(though it shoud be done respectfully)</i><br/>First name <br/><i>(with permission)</i>  | Mother's maiden name<br/>Social Security number<br/>Your date of birth<br/>Parents' credit card information<br/>Phone number  |\n\n<br/>\n\nDiscuss other examples of the two categories above."
+        "description": "\n###Review of \"Personal and Private Information\"\n\nRemind students of information that is safe to share online and information that is strictly private.\n\n| SAFE - Personal Information  | UNSAFE - Private Information  |\n| ------------- | ------------- |\n| Your favorite food<br/>Your opinion <br/><i>(though it should be done respectfully)</i><br/>First name <br/><i>(with permission)</i>  | Mother's maiden name<br/>Social Security number<br/>Your date of birth<br/>Parents' credit card information<br/>Phone number  |\n\n<br/>\n\nDiscuss other examples of the two categories above."
       },
       "seeding_key": {
         "activity_section.key": "ac798921-b6f1-422f-b750-e8f823a3f18c",
@@ -1989,7 +2016,7 @@
       "key": "e3d34b0d-b3a0-49a0-9ff0-6d7bf1679b1c",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own interactive posters with SpriteLab! They'll begin by working through a few examples centered on _\"Rikki\"_, a fictional girl who has already created  a poster to share. Then, after a quick introduction on creating custom sprite costumes, students will be free to create their posters to their liking.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show “Level 1 - Explore” slide\n\n**Goal:** Today, students will be creating their own interactive posters with SpriteLab! They'll begin by working through a few examples centered on _\"Rikki\"_, a fictional girl who has already created  a poster to share. Then, after a quick introduction on creating custom sprite costumes, students will be free to create their posters to their liking.",
         "name": "Interactive Poster About Me",
         "tips": [
           {
@@ -2007,7 +2034,7 @@
       "key": "5037f1fa-a631-490d-bb36-04d3fcc84121",
       "position": 2,
       "properties": {
-        "description": "**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new \"print\" block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Model” slide\n\n**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new \"print\" block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Brainstorm” slide\n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Mini-Project” slide\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
       },
       "seeding_key": {
         "activity_section.key": "5037f1fa-a631-490d-bb36-04d3fcc84121",
@@ -2040,7 +2067,7 @@
       "key": "163b611c-e2ba-4242-8842-33cb5c319a9b",
       "position": 1,
       "properties": {
-        "description": "Verify with students that no private information is shared in their interactive posters. If there is time, students can share verified posters in pairs or small groups. Otherwise, ask a few students to share their work with whole class.\n\nConclude by reiterating the importance of knowing the distinction between personal/private, and that it's still possible to have a lot of fun and be creative online without revealing unsafe information about yourself. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n\nVerify with students that no private information is shared in their interactive posters. If there is time, students can share verified posters in pairs or small groups. Otherwise, ask a few students to share their work with whole class.\n\nConclude by reiterating the importance of knowing the distinction between personal/private, and that it's still possible to have a lot of fun and be creative online without revealing unsafe information about yourself. ",
         "name": "Share Out"
       },
       "seeding_key": {
@@ -2052,7 +2079,7 @@
       "key": "f3d434b2-d9ce-4dce-b77b-2ed20f99734b",
       "position": 2,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What else would you like to add to your poster?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _What was today's lesson about?_\n* _What else would you like to add to your poster?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2075,7 +2102,7 @@
       "key": "d058a787-37d6-4c25-b5c0-c427b5bc9373",
       "position": 1,
       "properties": {
-        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!",
+        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How does this puzzle work?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2087,7 +2114,7 @@
       "key": "11131345-98a9-4474-8782-c0d97fe84206",
       "position": 1,
       "properties": {
-        "description": "Some students may discover where to add \"repeat\" loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.",
+        "description": "Some students may discover where to add \"repeat\" loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrande” video",
         "name": "Drawing with Loops",
         "progression_name": "Video: Artist Intro with JR Hildebrande"
       },
@@ -2100,6 +2127,7 @@
       "key": "d8046ff6-568f-4a94-a37c-3f32f63b19fe",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2111,6 +2139,7 @@
       "key": "69565308-7412-44cc-a895-b4162321caa9",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Loops with the Artist” video\n",
         "progression_name": "Video: Loops with the Artist"
       },
       "seeding_key": {
@@ -2122,6 +2151,7 @@
       "key": "56779577-ac08-415f-b1bd-9ba7abdcf29e",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-11 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2177,7 +2207,7 @@
       "key": "9bc82847-83ea-45a1-bbf6-219144c13563",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you would like to program? Can you come up with the code to create it?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n* _What was the coolest shape or figure you programmed today? Draw it out!_\n* _Can you write the code you used to create it?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2200,7 +2230,7 @@
       "key": "83e6c37d-1cc1-49b9-b208-79567063fb20",
       "position": 1,
       "properties": {
-        "description": "Review using \"Nested Loops in Maze\" from Course D. \n\nAsk the students how they felt about nested loops. \n\n - What did they like and dislike about them? \n - What are some advantages of using nested loops?\n\nTell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect**: Ask the students how they felt about nested loops. \n\n* _What did they like and dislike about them?_ \n* _What are some advantages of using nested loops?_\n\nTell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2212,7 +2242,7 @@
       "key": "1c8c1c88-3c2e-4c1b-bcf8-4e217730d0a6",
       "position": 1,
       "properties": {
-        "description": "Students might benefit from having a puzzle done as a class.\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pause & Think Online” video\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nStudents might benefit from having a puzzle done as a class.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
         "name": "Fancy Shapes Using Nested Loops",
         "tips": [
           {
@@ -2230,6 +2260,7 @@
       "key": "fe5271b2-e5f3-44f5-94d8-d4630bb9d37d",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-2 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2241,6 +2272,7 @@
       "key": "9c33a50c-2471-4797-b3c7-024447bf16ff",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Nested Loops” video\n",
         "progression_name": "Video: Nested Loops"
       },
       "seeding_key": {
@@ -2252,6 +2284,7 @@
       "key": "7571aba3-7786-43cb-91e3-4d1a3218c6cc",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Level 4-13 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2318,7 +2351,7 @@
       "key": "0b5c0d6e-7e98-4c6e-afe5-0ef4e99677b0",
       "position": 1,
       "properties": {
-        "description": "*What did you make today?*\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Share Out” slide.\n\n*What did you make today?*\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2330,7 +2363,7 @@
       "key": "2e538697-0729-4210-9cba-268ca191581e",
       "position": 2,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel during today's lesson?\n - Draw something you used nested loops to make.\n - How do nested loops help you code complex images?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Reflect” slide.\n\n**Reflect**:\nDraw something you used nested loops to make.\nHow do nested loops help you code complex images?\n\n**Reflect:**\n\n* _Draw something you used nested loops to make._\n* _How do nested loops help you code complex images?_"
       },
       "seeding_key": {
         "activity_section.key": "2e538697-0729-4210-9cba-268ca191581e",
@@ -3210,7 +3243,7 @@
       "key": "5939ecdc-3ed6-484a-9053-c6fe4307b694",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_\n * _What kinds of apps are there?_ \n * _Where do we use apps?_\n\n**Discussion**: Students should understand that apps can address a variety of needs. For example, apps can be used to request rides, recommend movies, or communicate with friends and family. Many people have access to a mobile device (e.g., smartphone) which makes it possible to use apps just about anywhere.\n\nWhile discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\nEnsure that all students are on the same page regarding this topic by introducing key terms and concepts with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What are apps?\" slide \n\n**Say**: \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\nIntroduce accessibility with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What is accessibility?\" slide\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_\n * _What kinds of apps exist?_ \n * _When do we use apps?_\n\n**Discussion**: Students should understand that apps can address a variety of needs. For example, apps can be used to request rides, recommend movies, or communicate with friends and family. Many people have access to a mobile device (e.g., smartphone) which makes it possible to use apps just about anywhere.\n\nWhile discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\nEnsure that all students are on the same page regarding this topic by introducing key terms and concepts with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What are apps?\" slide \n\n**Say**: \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\nIntroduce accessibility with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What is accessibility?\" slide\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
         "name": "Context-Setting"
       },
       "seeding_key": {
@@ -3245,7 +3278,7 @@
       "key": "e1fe5c10-383e-402b-a4c2-1efbbb6641c1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Reflect” slide\n\n**Discuss**: Discuss real-world examples of how apps and other technology can be made more accessible. Ask students how they think making something more accessible can also make it better for others. One example is wheelchair ramps near building entrances. These were originally made for people with wheelchairs, but they are also convenient for people with baby strollers, dollies, and other wheeled equipment.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Reflect” slide\n\n**Reflect**: \n* _What are real-world examples of how apps and other technology can be made more accessible?_\n* _How can making something more accessible also make it better for others?_\n\n\n**Discuss**: Discuss real-world examples of how apps and other technology can be made more accessible. Ask students how they think making something more accessible can also make it better for others. One example is wheelchair ramps near building entrances. These were originally made for people with wheelchairs, but they are also convenient for people with baby strollers, dollies, and other wheeled equipment.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3671,7 +3704,7 @@
   ],
   "script_levels": [
     {
-      "chapter": 20,
+      "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3696,7 +3729,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3720,7 +3753,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3745,7 +3778,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3770,7 +3803,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3795,7 +3828,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3820,7 +3853,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3845,7 +3878,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3870,7 +3903,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3895,7 +3928,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3920,7 +3953,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3945,7 +3978,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3970,7 +4003,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3995,7 +4028,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4020,7 +4053,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4045,7 +4078,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4070,7 +4103,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -4095,7 +4128,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4120,7 +4153,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4145,7 +4178,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4170,7 +4203,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4195,7 +4228,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4220,7 +4253,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4245,7 +4278,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4270,7 +4303,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4295,7 +4328,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4320,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4345,7 +4378,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4370,7 +4403,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4395,7 +4428,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4420,7 +4453,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4445,7 +4478,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4470,7 +4503,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4496,7 +4529,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4521,7 +4554,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4546,7 +4579,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4571,7 +4604,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4597,7 +4630,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4622,7 +4655,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -4647,7 +4680,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4672,7 +4705,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4697,7 +4730,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4722,7 +4755,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4747,7 +4780,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4772,7 +4805,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4797,7 +4830,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4822,7 +4855,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4847,7 +4880,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -4872,7 +4905,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4898,7 +4931,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4923,7 +4956,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4948,7 +4981,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -4973,7 +5006,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -4998,7 +5031,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -5023,7 +5056,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5048,7 +5081,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5073,7 +5106,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5098,7 +5131,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5123,7 +5156,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5148,7 +5181,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5173,7 +5206,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5198,7 +5231,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -5223,7 +5256,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -5248,7 +5281,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5273,7 +5306,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5298,7 +5331,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5323,7 +5356,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5348,7 +5381,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5373,7 +5406,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5398,7 +5431,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 70,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5423,7 +5456,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 71,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5448,7 +5481,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 72,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5473,7 +5506,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 73,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -5498,7 +5531,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 74,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5523,7 +5556,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 75,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5548,7 +5581,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 76,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -5573,7 +5606,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 77,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -5598,7 +5631,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 78,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -5623,7 +5656,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 79,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -5648,7 +5681,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 80,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -5673,7 +5706,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5698,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5723,7 +5756,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5748,7 +5781,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5773,7 +5806,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5798,7 +5831,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -5823,7 +5856,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 87,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -5848,7 +5881,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 88,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -5873,7 +5906,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 89,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -5898,7 +5931,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 90,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5924,7 +5957,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 91,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5949,7 +5982,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 92,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -5974,7 +6007,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 93,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -5999,7 +6032,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 94,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -6024,7 +6057,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6049,7 +6082,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6074,7 +6107,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6099,7 +6132,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6124,7 +6157,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6149,7 +6182,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6174,7 +6207,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6199,7 +6232,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -6224,7 +6257,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6249,7 +6282,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6274,7 +6307,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -6299,7 +6332,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 106,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -6324,7 +6357,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 107,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
@@ -6349,7 +6382,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 108,
       "position": 14,
       "activity_section_position": 5,
       "assessment": false,
@@ -6374,7 +6407,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 109,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6399,7 +6432,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 110,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -6424,7 +6457,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6449,7 +6482,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6474,7 +6507,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6499,7 +6532,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 114,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6524,7 +6557,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 115,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6549,7 +6582,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 116,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6574,7 +6607,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 117,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6599,7 +6632,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 118,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -6624,7 +6657,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 119,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -6649,7 +6682,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 120,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6674,7 +6707,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 121,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6699,7 +6732,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 122,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6724,7 +6757,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 123,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -6749,7 +6782,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 124,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6774,7 +6807,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 125,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6800,7 +6833,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 126,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -6825,7 +6858,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6850,7 +6883,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 128,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6875,7 +6908,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 129,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6900,7 +6933,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 130,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6925,7 +6958,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 131,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6950,7 +6983,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 132,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6975,7 +7008,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 133,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -7000,7 +7033,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 134,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -7025,7 +7058,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 135,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -7050,7 +7083,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 136,
       "position": 10,
       "activity_section_position": 9,
       "assessment": false,
@@ -7075,7 +7108,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 137,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7101,7 +7134,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 138,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7126,7 +7159,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 139,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7151,7 +7184,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 140,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7176,7 +7209,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 141,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7201,7 +7234,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 142,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7226,7 +7259,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 143,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7251,7 +7284,7 @@
       ]
     },
     {
-      "chapter": 1,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7279,14 +7312,26 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "SimonSays-Unplugged2022",
+        "level.key": "csf_be_a_super_digital_citizen2022",
         "script_level.level_keys": [
-          "SimonSays-Unplugged2022"
+          "csf_be_a_super_digital_citizen2022"
         ],
-        "lesson.key": "Follow the Algorithm",
-        "lesson_group.key": "lessonGroup-8",
+        "lesson.key": "Be A Super Digital Citizen",
+        "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2022",
-        "activity_section.key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8"
+        "activity_section.key": "3c23fa37-7254-47f3-b576-da07d0b605dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PrivatePersonalInformation-Unplugged2022",
+        "script_level.level_keys": [
+          "PrivatePersonalInformation-Unplugged2022"
+        ],
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2022",
+        "activity_section.key": "47519d14-c0a6-4741-b8b5-6860794fca1a"
       }
     },
     {
@@ -7507,30 +7552,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csf_be_a_super_digital_citizen2022",
-        "script_level.level_keys": [
-          "csf_be_a_super_digital_citizen2022"
-        ],
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022",
-        "activity_section.key": "3c23fa37-7254-47f3-b576-da07d0b605dd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PrivatePersonalInformation-Unplugged2022",
-        "script_level.level_keys": [
-          "PrivatePersonalInformation-Unplugged2022"
-        ],
-        "lesson.key": "Private and Personal Information",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2022",
-        "activity_section.key": "47519d14-c0a6-4741-b8b5-6860794fca1a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_aboutme_12022",
         "script_level.level_keys": [
           "courseE_aboutme_12022"
@@ -7599,18 +7620,6 @@
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022",
         "activity_section.key": "e56da37d-683e-4dc5-89f1-da5e039357d9"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "DigitalSharing-Unplugged2022",
-        "script_level.level_keys": [
-          "DigitalSharing-Unplugged2022"
-        ],
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "coursee-2022",
-        "activity_section.key": "90986348-020e-4b00-b92f-ba4160018feb"
       }
     },
     {
@@ -8983,6 +8992,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "DigitalSharing-Unplugged2022",
+        "script_level.level_keys": [
+          "DigitalSharing-Unplugged2022"
+        ],
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2022",
+        "activity_section.key": "90986348-020e-4b00-b92f-ba4160018feb"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseE_EOC_examples2022",
         "script_level.level_keys": [
           "courseE_EOC_examples2022"
@@ -9003,6 +9024,18 @@
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2022",
         "activity_section.key": "e43bfad4-b411-4e0d-a59c-2e4764fd9c65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SimonSays-Unplugged2022",
+        "script_level.level_keys": [
+          "SimonSays-Unplugged2022"
+        ],
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursee-2022",
+        "activity_section.key": "f9f4a015-1f7f-4552-b396-77c54dc1cdb8"
       }
     }
   ],
