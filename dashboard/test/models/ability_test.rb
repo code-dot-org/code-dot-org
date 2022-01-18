@@ -196,6 +196,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, Lesson)
     assert ability.can?(:manage, ScriptLevel)
+    assert ability.can?(:manage, CourseOffering)
   end
 
   test 'teachers can manage feedback for students in a section they own' do
