@@ -186,7 +186,7 @@ export const PaneButton = Radium(function(props) {
       const Icon = icon.type;
       return (
         <Icon {...icon.props} style={{...iconStyle, ...icon.props.style}}>
-          {icon.children}
+          {icon.props.children}
         </Icon>
       );
     }
