@@ -71,7 +71,12 @@ export default class RecentCourses extends Component {
               ))}
             </div>
           )}
-          {moreCourses.length > 0 && <SeeMoreCourses courses={moreCourses} />}
+          {moreCourses.length > 0 && (
+            <SeeMoreCourses
+              courses={moreCourses}
+              isProfessionalLearningCourse={isProfessionalLearningCourse}
+            />
+          )}
           {!isTeacher && hasFeedback && !isProfessionalLearningCourse && (
             <ViewFeedback />
           )}
