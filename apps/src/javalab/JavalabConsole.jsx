@@ -192,28 +192,17 @@ class JavalabConsole extends React.Component {
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneSection
-            className={'pane-header-section pane-header-section-left'}
+          <PaneButton
+            id="javalab-console-clear"
+            headerHasFocus
+            isRtl={false}
+            onClick={() => {
+              clearConsoleLogs();
+            }}
+            iconClass="fa fa-eraser"
+            label={javalabMsg.clearConsole()}
           />
-          <PaneSection
-            className={'pane-header-section pane-header-section-center'}
-          >
-            {javalabMsg.console()}
-          </PaneSection>
-          <PaneSection
-            className={'pane-header-section pane-header-section-right'}
-          >
-            <PaneButton
-              id="javalab-console-clear"
-              headerHasFocus
-              isRtl={false}
-              onClick={() => {
-                clearConsoleLogs();
-              }}
-              iconClass="fa fa-eraser"
-              label={javalabMsg.clearConsole()}
-            />
-          </PaneSection>
+          <PaneSection>{javalabMsg.console()}</PaneSection>
         </PaneHeader>
         <div style={styles.container}>
           <div
@@ -310,8 +299,7 @@ const styles = {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
-    width: '100%',
-    display: 'flex'
+    width: '100%'
   },
   log: {
     padding: 0,
