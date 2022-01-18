@@ -349,7 +349,8 @@ const styles = {
     maxWidth: '35%',
     maxHeight: '80%',
     minWidth: 150,
-    color: color.darkest_gray
+    color: color.darkest_gray,
+    marginLeft: 3
   },
   dropdown: {
     overflow: 'auto',
