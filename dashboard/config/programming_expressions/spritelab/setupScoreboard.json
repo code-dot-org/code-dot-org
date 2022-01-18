@@ -2,5 +2,6 @@
   "key": "setupScoreboard",
   "name": "setupScoreboard",
   "category": "Experimental",
+  "block_name": "gamelab_setupScoreboard",
   "syntax": "setupScoreboard"
 }
