@@ -2,5 +2,6 @@
   "key": "stopGliding",
   "name": "stopGliding",
   "category": "Experimental",
+  "block_name": "gamelab_stopGliding",
   "syntax": "stopGliding"
 }

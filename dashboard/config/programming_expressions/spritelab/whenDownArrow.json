@@ -2,5 +2,6 @@
   "key": "whenDownArrow",
   "name": "whenDownArrow",
   "category": "Unused",
+  "block_name": "gamelab_whenDownArrow",
   "syntax": "whenDownArrow"
 }

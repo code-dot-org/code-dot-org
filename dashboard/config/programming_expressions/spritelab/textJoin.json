@@ -2,5 +2,6 @@
   "key": "textJoin",
   "name": "textJoin",
   "category": "World",
+  "block_name": "gamelab_textJoin",
   "syntax": "textJoin"
 }
