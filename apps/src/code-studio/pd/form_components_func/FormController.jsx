@@ -326,7 +326,7 @@ const FormController = props => {
     setSubmitting(true);
 
     const handleSuccessfulSave = data => {
-      onSuccessfulSave();
+      onSuccessfulSave(data);
     };
 
     const handleRequestFailure = data => {
