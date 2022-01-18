@@ -535,9 +535,36 @@ km:
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': បេះដូង
+            '"rainbow"': ឥន្ទធនូ
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"rain"': ភ្លៀង
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': យប់
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': លោត
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': ពពក
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង
+          PALETTE:
+            '"rainbow"': ឥន្ទធនូ
+            '"winter"': រដូវរងារ
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
             '"rain"': ភ្លៀង
       RyanLab_moveForward:
         text: រំកិល​ទៅមុខ

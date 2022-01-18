@@ -6,18 +6,15 @@ markdown <<MARKDOWN
 # Debugging
 ##
 
-#### Introduction
-##
-
 <div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">
-Advice!
+When [students] say, "I don't know what to do, I'm stuck," say, "Where are you stuck? At what point are you stuck?" and then they walk you through the code. And at that point, you start to see things that maybe you may have not seen before, and another student will pop in and say "Well, actually, this is where the error is." And that's another great thing about teaching computer science! It's really fun, it's laid back, you just get to walk around and watch students teach each other. 
  </p>
 <p style="font-size: 70px; text-align: right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 70px; margin-top: -20px; ">
-Teacher Name (State)
+Anna Mora, Washington
 </p>
 
 </div>
@@ -27,10 +24,10 @@ Teacher Name (State)
 
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">Advice!</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">When it comes to debugging in the classroom, the absolute best thing you could do is to just be there with the student. You don't even have to say much, just ask them to talk through their code to you to give them a chance to look through what they wrote. But in a classroom full of students, that can be really difficult. So the other thing you can do is just give them a little bit of an anchor, you tell them, "Hey, I'd like you to look at maybe these four or five lines of code. And I'm going to do another lap around the room and we'll help out some other students, I will come back to you. And when I do if you don't have it figured out yet, we'll still work through this together." You give them that time, and they'll do something with it.</p>
 <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Teacher Name (State)
+Eamon Marchant, California
 </p>
 </div>
 <br>
@@ -38,15 +35,11 @@ Teacher Name (State)
 <div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">Advice!</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">In your CS classroom, be sure to really embrace mistakes, and make sure that students know that it's okay to make mistakes. It's normal, it's part of computer science! Make those mistakes, bang your head against the wall, and then figure it out to get that sense of complete satisfaction, that you were able to accomplish something. Really encourage your kids to embrace their mistakes and treat them as learning experiences. </p>
 
 <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Teacher Name (State)
+Eilene Klaka, Washington
 </p>
 </div>
-
-___
-
-## Question?
 MARKDOWN

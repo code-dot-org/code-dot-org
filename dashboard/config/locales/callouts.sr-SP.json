@@ -154,6 +154,144 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Кликни сијалицу када ти треба савет!"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Додај овај блок у свој програм!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Додај овај блок у свој програм!"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Нови блок!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Нови блок!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Нови блок!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Нови блок!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Нови блок!",
+          "new_block_4": "Нови блок!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Нови блок!",
+          "new_block_4": "Нови блок!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Додај овај блок у свој програм!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Додај овај блок у свој програм!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Додај овај блок у свој програм!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Додај свог плесача овде"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Нови блок!",
+          "dance_callout_11_b": "Нови блок!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Потражи овде блок \"све патке\" "
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Додај овај блок у свој програм!"
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Нови блок!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Нови блок!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Нови блок!",
+          "new_block_4": "Нови блок!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Додај овај блок у свој програм!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Додај овај блок у свој програм!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Додај овај блок у свој програм!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Додај свог плесача овде"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Нови блок!",
+          "dance_callout_11_b": "Нови блок!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Потражи овде блок \"све патке\" "
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Нови блок!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Нови блок!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Нови блок!",
+          "poetry_foreground": "Нови блок!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "Нови блок!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Нови блок!",
+          "poetry_music": "Нови блок!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Нови блок!",
+          "poetry_sprite_stops": "Нови блок!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Нови блок!",
+          "poetry_remove_sprite": "Нови блок!"
         }
       }
     }

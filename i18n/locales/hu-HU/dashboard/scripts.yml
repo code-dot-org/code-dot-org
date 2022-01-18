@@ -4199,6 +4199,12 @@ hu:
               display_name: Tartalom
             lessonGroup-5:
               display_name: Homokozó
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -4906,8 +4912,6 @@ hu:
               description_teacher: Ebben egységben a tanulók „ArrayList”-et használtak a programadatok tárolására, és különbséget tettek az 1D és 2D tömbök és az „ArrayList” között. A tanulók felfedezték az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A tanulók a „String” osztály metódusait használták a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során a tanulók programdokumentációt írtak egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során a tanulók azonosították és dokumentálták az objektumok és módszerek elő- és utófeltételeit. Most a tanulók egy feleletválasztós értékelés révén értékelik, milyen mértékben érték el az egység tanulási célkitűzéseit és a kitűzött készségeket.
             lesson-1:
               key: 1.  lecke
-              description_student: A tanfolyam során kidolgozott projektek óriási kreativitásra ösztönzik a közösséget! A Szomszédsági irodalmi fesztiválon kreatív történeteket, forgatókönyveket, dalszövegeket, leveleket és verseket mutatunk be. A Szomszédsági irodalmi fesztivál egy nagyszabású projekt, amelyen végig dolgoztok az egység során, és projektmenedzsment-stratégiák segítenek munkátok megszervezésében és strukturálásában. Felfedezitek kódírás és -strukturálás stratégiáit, hogy más szoftvermérnökök könnyen megértsék, és egy Java eszközzel programdokumentációt készíthessetek.
-              description_teacher: A tanulók megismerkednek a Szomszédsági irodalmi fesztivál projekttel, és értékelik a követelményeket és a példákat, hogy azonosítsák a kérdéseket és a legfontosabb jellemzőket. Mielőtt megkezdik a munkát a projekten, a tanulók bővítik ismereteiket a programszerkezetről és kommentálják azt a legjobb gyakorlatok azonosításával, és felfedezik, hogyan lehet használni a Javadocs-ot a programdokumentáció létrehozásához.
             lesson-2:
               key: 2.  lecke
               description_student: '"Integer" és "Double" objektumokat hozunk létre az "int" és a "double" primitív értékek referenciaértékként történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek használatával az objektumok primitív értékként tárolt értékeit kapjuk vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése érdekében meg kell határozni az egész számok minimális és maximális értékét.'
@@ -5066,3 +5070,104 @@ hu:
               description_student: Segíts Laurelnek, a kincsvadásznak drágaköveket gyűjteni, számold meg és add össze a lépéseket!
               description_teacher: "Ez a lecke a számolással és az összeadás ábrázolásával kapcsolatos korábbi ismeretetre épül. A Számolás Laurellel segítségével az óvodás és az első osztályos tanulók a számolást és az összeadást gyakorolják, miközben hurkok segítségével segítenek Laurelnek, a kincsvadásznak drágaköveket gyűjteni egy labirintusrácson keresztül. A tanulók kódolási parancsok sorozatával vezetik Laurelt a rácson keresztül, így segítenek drágaköveket gyűjteni, egy \"Ismétlés\" blokkot használnak, amely megköveteli tőlük, hogy megszámolják, hány lépést kell Laurelnek megtennie - majd ezt a számot a megfelelő számjeggyel ábrázolják egy kódblokkban.\n\n#### Előzetes készségek\n\nEnnek a leckének nem célja, hogy a tanulók megismerkedjenek a számokkal, a számolással vagy az összeadással. A tanulóknak bizonyos előzetes ismeretekkel és készségekkel kell érkezniük ehhez a leckéhez:\n\n-   ismerjék a számokat 10-ig, és számoljanak 10-ig képek, az ujjaik vagy más segédeszköz segítségével,\n-   tudjanak összeadni 10-ig tárgyak, képek, ujjak vagy segédeszközök segítségével."
           title: Számolás Laurer segítségével
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lecke
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+            lesson-12:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+            lesson-13:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó

@@ -38,6 +38,8 @@ pt:
         NetSim: Simulador de internet
         Custom: Artista
         CustomStudio: Laboratório
+        Gamelab: Laboratório de Jogos
+        Spritelab: Laboratório de Sprite
     trophy:
       name:
         Bronze: Bronze
@@ -108,8 +110,8 @@ pt:
           Dica: tens que descobrir até onde virar, clicando no número do bloco virar.'
         turtle_1_5: Agora, para praticar, desenha um triângulo e, em seguida, um quadrado
           para desenhar um envelope.
-        turtle_1_6: 'Você consegue descobrir como desenhar esse triângulo e esse quadrado?
-          Dica: faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
+        turtle_1_6: 'você consegue descobrir como desenhar esse triângulo e esse quadrado?
+          Dica: Faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
           de desenhar o quadrado.'
         turtle_1_7: Bem, vamos dificultar um pouco - vê se podes desenhar esses óculos
           verdes. Os quadrados são 100 pixeis de cada lado e são separados 50 pixeis.
@@ -201,16 +203,16 @@ pt:
           variáveis.'
         turtle_2_7: Aqui temos um programa para desenhar uma espiral, mas os blocos
           estão desativados para que eles não sejam executados. Faça um novo programa
-          usando um bloco "conte com" (na categoria Laços) e um bloco "contador" (na
-          categoria Variáveis) para desenhar a mesma espiral.
+          usando um bloco "Para" (na categoria Laços) e um bloco "contador" (na categoria
+          Variáveis) para desenhar a mesma espiral.
         turtle_2_7_5: Há uma nova função "desenhar um boneco de neve" (na categoria
           de Funções). Desenha dois bonecos de neve, de 250 e 100 de altura.
         turtle_2_8: Este é um pouco complicado. Usa a função "desenhar um boneco de
           neve" e o bloco novo "salto para a frente" (na categoria de Ações). Desenha
           3 bonecos de neve com cores diferentes, separados por 100 pixeis.
-        turtle_2_9: Use um laço "conte com" para desenhar uma família de bonecos de
-          neve, com alturas de 110, 100, 90, 80 e 70. Os bonecos de neve devem ser
-          separados por 60 pixels.
+        turtle_2_9: Use um laço "for" para desenhar uma família de bonecos de neve,
+          com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem estar separados
+          por 60 pixels.
         turtle_2_10: Aqui está algum código experimentar com diferentes espirais.  O
           que acontece se alterares a quantidade de vezes? Ou definir uma cor aleatória
           no ciclo? Desenha o que quiseres.
@@ -324,7 +326,7 @@ pt:
         jigsaw_8: Organiza os blocos para formar a imagem
         jigsaw_9: Organiza os blocos para formar a imagem
         jigsaw_10: Organiza os blocos para formar a imagem
-        jigsaw_11: Organiza os blocos para formar a imagem
+        jigsaw_11: Organize os blocos em ordem numérica
         jigsaw_12: Organiza os blocos para formar a imagem
         jigsaw_13: Resolva o desafio!
         mazestep_1: Descrição do labirinto aqui
@@ -333,57 +335,78 @@ pt:
         mazestep_4: Descrição do labirinto aqui
         mazestep_5: Descrição do labirinto aqui
         studio_c2_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
-        studio_c2_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer
-          o gato dizer alguma coisa?
-        studio_c2_3: Você consegue desenvolver um programa para fazer este cachorro
-          se mover em direção ao gato?
-        studio_c2_4: Você consegue desenvolver um programa que faça com que o cachorro
-          se mova em direção ao gato e que faça com que o gato diga "Olá" quando o
-          cachorro o alcançar?
-        studio_c2_5: Você pode escrever um programa para fazer o polvo dizer "olá"
-          quando clicarem nele?
-        studio_c2_6: Você pode desenvolver um programa que faça o pinguim se mover
-          usando as teclas com as setas para cima / para baixo / à esquerda / à direita,
-          para atingir todos os alvos?
-        studio_c2_7: O bloco "repita infinitamente" possibilita a execução contínua
-          do programa. Consegues usar blocos para mover esse dinossauro para cima
-          e para baixo repetidamente?
-        studio_c2_8: Você pode fazer com que o pinguim diga "Ai!" e reproduza um som
-          de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas
-          para fazer isso acontecer?
-        studio_c2_9: Você pode adicionar um bloco que some um ponto quando o pinguim
-          se encontra com o polvo, e então movê-lo até que você consiga o ponto?
-        studio_c2_10: Você pode adicionar blocos para mudar o plano de fundo e a velocidade
-          do pinguim, e então movê-lo com as setas até que você pontue?
-        studio_c2_11: Crie sua própria história. Quando tiver terminado, clique em
-          Concluir para que seus amigos possam vê-la em seus celulares.
+        studio_c2_2: |-
+          Você pode fazer o cachorro dizer alguma coisa e,
+          depois, fazer a gata dizer alguma coisa?
+        studio_c2_3: |-
+          Você consegue escrever um programa para fazer este
+          cachorro se mover até o gato?
+        studio_c2_4: |-
+          Você consegue escrever um programa que faça
+          o cachorro se mover até o gato e que faça o gato dizer "Olá" quando o cachorro o
+          alcançar?
+        studio_c2_5: |-
+          Você pode escrever um programa para fazer
+          o polvo dizer "Olá" quando clicarem nele?
+        studio_c2_6: |-
+          Você pode escrever um programa que faça Valfredo
+          se mover usando as as setas para cima / para baixo / à esquerda / à direita do teclado, para atingir todos os alvos?
+        studio_c2_7: |-
+          O bloco "repita infinitamente" permite
+          que você execute o código de maneira contínua. Você consegue conectar blocos para mover este dinossauro
+          para cima e para baixo repetidamente?
+        studio_c2_8: |-
+          Você pode fazer Valfredo dizer "Ai!"
+          e reproduzir um som de "batida" se ele encontrar o dinossauro, e então movê-lo com
+          as setas to teclado para fazer isso acontecer?
+        studio_c2_9: |-
+          Você pode adicionar um bloco para marcar um ponto
+          quando Valfredo se encontrar com o polvo, e então movê-lo com as setas do teclado até
+          marcar pontos?
+        studio_c2_10: |-
+          Você pode adicionar blocos para mudar o plano de fundo
+          e a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?
+        studio_c2_11: |-
+          Crie sua própria história. Quando terminar,
+          clique em "Concluir" para que seus amigos testem sua história em seus celulares.
         studio_c3_story_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
-        studio_c3_story_2: Você pode fazer o cachorro dizer alguma coisa e, depois,
-          fazer o gato dizer alguma coisa?
-        studio_c3_story_3: Você consegue desenvolver um programa para fazer este cachorro
-          se mover em direção ao gato?
-        studio_c3_story_4: Você consegue desenvolver um programa que faça com que
-          o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá"
-          quando o cachorro o alcançar?
-        studio_c3_story_5: Você pode adicionar um bloco para deixar o polvo feliz?
-        studio_c3_story_6: Crie sua própria história. Quando tiver terminado, clique
-          em Concluir para que seus amigos possam vê-la em seus celulares.
-        studio_c3_game_1: Você pode escrever um programa para fazer o polvo dizer
-          "olá" quando clicarem nele?
-        studio_c3_game_2: Você pode desenvolver um programa que faça o pinguim se
-          mover usando as teclas com as setas para cima / para baixo / à esquerda
-          / à direita, para atingir todos os alvos?
-        studio_c3_game_3: O bloco "repita infinitamente" possibilita a execução contínua
-          do programa. Consegues usar blocos para mover esse dinossauro para cima
-          e para baixo repetidamente?
-        studio_c3_game_4: Você pode fazer com que o pinguim diga "Ai!" e reproduza
-          um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as
-          setas para fazer isso acontecer?
-        studio_c3_game_5: Você pode adicionar um bloco que some um ponto quando o
-          pinguim se encontra com o polvo, e então movê-lo até que você consiga o
-          ponto?
-        studio_c3_game_6: Você pode adicionar blocos para mudar o plano de fundo e
-          a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
+        studio_c3_story_2: |-
+          Você pode fazer o cachorro dizer alguma coisa e,
+          depois, fazer a gata dizer alguma coisa?
+        studio_c3_story_3: |-
+          Você consegue escrever um programa para fazer este
+          cachorro se mover até o gato?
+        studio_c3_story_4: |-
+          Você consegue escrever um programa que faça
+          o cachorro se mover até o gato e que faça o gato dizer "Olá" quando o cachorro o
+          alcançar?
+        studio_c3_story_5: |-
+          Você pode adicionar um bloco para deixar o polvo
+          feliz?
+        studio_c3_story_6: |-
+          Crie sua própria história. Quando terminar,
+          clique em "Concluir" para que seus amigos testem sua história em seus celulares.
+        studio_c3_game_1: |-
+          Você pode escrever um programa para fazer
+          o polvo dizer "Olá" quando clicarem nele?
+        studio_c3_game_2: |-
+          Você pode escrever um programa que faça Valfredo
+          se mover usando as as setas para cima / para baixo / à esquerda / à direita do teclado, para atingir todos os alvos?
+        studio_c3_game_3: |-
+          O bloco "repita infinitamente" permite
+          que você execute o código de maneira contínua. Você consegue conectar blocos para mover este dinossauro
+          para cima e para baixo repetidamente?
+        studio_c3_game_4: |-
+          Você pode fazer Valfredo dizer "Ai!"
+          e reproduzir um som de "batida" se ele encontrar o dinossauro, e então movê-lo com
+          as setas to teclado para fazer isso acontecer?
+        studio_c3_game_5: |-
+          Você pode adicionar um bloco para marcar um ponto
+          quando Valfredo se encontrar com o polvo, e então movê-lo com as setas do teclado até
+          marcar pontos?
+        studio_c3_game_6: |-
+          Você pode adicionar blocos para mudar o plano de fundo
+          e a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?
         studio_c3_game_7: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_playlab_1: O pinguim quer dizer "olá", você consegue ajudá-lo?
@@ -414,9 +437,9 @@ pt:
         studio_iceage_hello1: Sid quer reunir todos para uma nova aventura. Você pode
           ajudá-lo a dizer "olá" arrastando o bloco "diga" para nossa área de trabalho
           e digitando "olá" dentro dele?
-        studio_iceage_hello2: Sid (personagem 1) encontrou Manny (actor 2) e quer
-          convidá-lo para a aventura. Ajude-os a cumprimentarem-se usando o bloco
-          "personagem diz" duas vezes.
+        studio_iceage_hello2: Sid (personagem 1) encontrou Manny (personagem 2) e
+          quer convidá-lo para uma aventura. Ajude-os a cumprimentarem-se usando o
+          bloco "personagem diz" duas vezes.
         studio_iceage_move_to_flag: O Scrat está procurando sua bolota! Ajude-o a
           andar os últimos 200 pixels usando o bloco "mova".
         studio_iceage_move_to_actor: Diego (personagem 1) está procurando por Manny
@@ -493,12 +516,17 @@ pt:
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
-        studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer
-          o gato dizer alguma coisa?
-        studio_k1_3: Você consegue desenvolver um programa para fazer este cachorro
-          se mover em direção ao gato?
-        studio_k1_4: Faça o cachorro se mover até o gato e dizer "olá" quando chegar.
-        studio_k1_5: Você pode adicionar um bloco para deixar o polvo feliz?
+        studio_k1_2: |-
+          Você pode fazer o cachorro dizer alguma coisa e,
+          depois, fazer a gata dizer alguma coisa?
+        studio_k1_3: |-
+          Você consegue escrever um programa para fazer este
+          cachorro se mover até o gato?
+        studio_k1_4: Faça o cachorro se mover até o gato e o gato dizer "olá" a ele
+          quando chegar.
+        studio_k1_5: |-
+          Você pode adicionar um bloco para deixar o polvo
+          feliz?
         studio_k1_6: Crie sua própria história! Movimente o gato e o cachorro, e faça
           com que eles conversem.
         maze_wordsearch_k_1: Faça eu me mover para formar a palavra EAST
@@ -622,11 +650,23 @@ pt:
         C4_unplugged_forloops: Ciclos "for"
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
+        CSF_a_b_artist_loops: Laços no Artista
+        CSF_artist_angles: Ângulos em Artista
+        CSF_collector_k1_blocks: 'Fundamentos de CS: O Coletor'
+        CSF_collector_repeat_loops: Laços Repita em Coletor
+        CSF_collector_text_blocks: 'Fundamentos de CS: O Coletor'
         CSF_create_functions: Criar Funções
-        CSF_debugging_k1_blocks: Depuração
-        CSF_debugging_text_blocks: Depuração
+        CSF_debugging_k1_blocks: Analisando
+        CSF_debugging_text_blocks: Analisando
+        CSF_EF_cs_matters: Questões de Ciência da Computação
+        CSF_maze_intro_k1_blocks: Introdução para o Code Studio
+        CSF_maze_intro_text_blocks: Introdução para o Code Studio
         CSF_my_robotic_friends: Meus amigos robóticos
         CSF_Power_of_Words: Poder das Palavras
+        CSF_Super_Digital_Citizen: Cidadão Super Digital
+        CSF_stevie_big_project: Stevie e o Grande Projeto
+        CSF_unspotted_bugs: Erros Não Reportados
+        CSF_zuck_loops_short: Laços Repita
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         frozen_functions: Introdução às Funções
@@ -637,25 +677,31 @@ pt:
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
-        csd_concept_how_computers_work: Apresentando Como os Computadores Funcionam
-        csd_concept_computer: 'Como os computadores funcionam: O que faz um computador,
-          um computador?'
-        csd_concept_circuits_logic: 'Como os computadores funcionam: Circuitos e Lógica'
-        csd_concept_memory_cpu_input_output: 'Como os computadores funcionam: Memória,
-          Processador, Entrada e Saída'
-        csd_concept_search: Como a Pesquisa Funciona
-        csd_external_waze_data: Por que muitos utilizadores estão obcecados com o
-          Waze?
+        csd_concept_how_computers_work: Introdução de Como Computadores Funcionam
+        csd_concept_computer: 'Como Computadores Funcionam: O que faz um computador,
+          ser um computador?'
+        csd_concept_binary_data: 'Como Computadores Funcionam: Binário e Dados'
+        csd_concept_circuits_logic: 'Como Computadores Funcionam: Circuitos e Lógica'
+        csd_concept_memory_cpu_input_output: 'Como Computadores Funcionam: CPU, Entrada
+          e Saída'
+        csd_concept_hardware_software: 'Como Computadores Funcionam: Hardware e Software'
+        csd_concept_search: Como funcionam as pesquisas
+        csd_external_amazon_data: Como grandes dados são usados em sistemas de recomendação
+          da Amazon para mudar as nossas vidas
+        csd_external_netflix_data: Como a Netflix faz sugestões para programas de
+          TV e filmes?
+        csd_external_waze_data: Por que tantos usuários são obcecados com Waze?
+        csd_gamelab_animation_tab: A Guia de Animação
         csd_gamelab_velocity: Velocidade
-        csd_weblab_intro_1: Introdução ao Web Lab - Parte 1
-        csd_weblab_intro_2: Introdução ao Web Lab - Parte 2
-        csd_weblab_css_1: Introdução ao CSS - Parte 1
-        csd_weblab_css_2: Introdução ao CSS - Parte 2
-        csd_weblab_intro_3: Introdução ao Web Lab - Parte 3
+        csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
+        csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
+        csd_weblab_css_1: Introdução para CSS - Parte 1
+        csd_weblab_css_2: Introdução para CSS - Parte 2
+        csd_weblab_intro_3: Introdução para o Laboratório Web - Parte 3
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com parâmetros
         csp_applab_loops: Ciclos
-        csp_cs_is_changing_everything: A Ciência da Computação está a Mudar Tudo.
+        csp_cs_is_changing_everything: Ciência da Computação está Mudando Tudo
         starwars_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
         starwars_typing: 'Star Wars: Construindo uma galáxia com código - JavaScript'
         starwars_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
@@ -675,46 +721,157 @@ pt:
         iceage_intro: Hora do Código com A Era do Gelo - Introdução
         iceage_events: Hora do Código com A Era do Gelo - Eventos
         iceage_repeat: Hora do Código com A Era do Gelo - Instruções de repetição
-        mc_2016_intro: Hora de Código Minecraft - Introdução
-        mc_2016_loops: Minecraft Hora de Código - Loops (Ciclos)
-        mc_2016_events: Minecraft Hora de Código - Eventos
-        mc_2016_spawn: Minecraft Hora de Código - Spawn (Gerar)
-        mc_2016_congrats: Minecraft Hora de Código - Parabéns
-        mc_2017_congratulations: Minecraft Hora de Código - Parabéns
-        hint_videos_d_11_3_first: 'Vídeos Sugestão: D.11.3 Primeiro'
-        hint_videos_d_11_3_last: 'Vídeos Sugestão: D.11.3 Último'
-        hint_videos_d_11_4_first: 'Vídeos Sugestão: D.11.4 Primeiro'
-        hint_videos_d_11_4_last: 'Vídeos Sugestão: D.11.4 Último'
-        hint_videos_d_11_5_first: 'Vídeos Sugestão: D.11.5 Primeiro'
-        hint_videos_d_11_5_last: 'Vídeos Sugestão: D.11.5 Último'
-        hint_videos_d_11_6_first: 'Vídeos Sugestão: D.11.6 Primeiro'
-        hint_videos_d_11_6_last: 'Vídeos Sugestão: D.11.6 Último'
-        hint_videos_d_11_7_first: 'Vídeos Sugestão: D.11.7 Primeiro'
-        hint_videos_d_11_7_last: 'Vídeos Sugestão: D.11.7 Último'
-        hint_videos_d_11_9_first: 'Vídeos Sugestão: D.11.9 Primeiro'
-        hint_videos_d_11_9_last: 'Vídeos Sugestão: D.11.9 Último'
-        hint_videos_d_11_11_first: 'Vídeos Sugestão: D.11.11 Primeiro'
-        hint_videos_d_11_11_last: 'Vídeos Sugestão: D.11.11 Último'
+        mc_2016_intro: Hora do Código Minecraft - Introdução
+        mc_2016_loops: Hora do Código Minecraft - Laços
+        mc_2016_events: Hora do Código Minecraft - Eventos
+        mc_2016_spawn: Hora do Código Minecraft - Invocar
+        mc_2016_congrats: Hora do Código Minecraft - Parabéns
+        applab_hoc_welcome: Aplicativo Laboratório Hora do Código - Seja bem-vindo
+        applab_hoc_setproperty: Aplicativo Laboratório Hora do Código - setProperty
+        applab_hoc_onevent: Aplicativo Laboratório Hora do Código - onEvent
+        applab_hoc_designmode: Aplicativo Laboratório Hora do Código - Modo Design
+        applab_hoc_share: LabApp Hora do Código - Compartilhar
+        mc_2017_agent_intro: Hora do Código Minecraft - O Agente
+        mc_2017_repeat: Hora do Código Minecraft - Laços Repita
+        mc_2017_functions: Hora do Código Minecraft - Funções
+        mc_2017_congratulations: Hora do Código Minecraft - Parabéns
+        mc_2017_puzzle_1: Hora do Código Minecraft - O Agente
+        mc_2017_puzzle_3: Hora do Código Minecraft - Laços Repita
+        mc_2017_puzzle_8: Hora do Código Minecraft - Funções
+        mc_2017_puzzle_12: Hora do Código Minecraft - Jogo Livre
+        hint_videos_d_11_3_first: 'Vídeo-dica: D.11.3 Primeiro'
+        hint_videos_d_11_3_last: 'Vídeo-dica: D.11.3 Último'
+        hint_videos_d_11_4_first: 'Vídeo-dica: D.11.4 Primeiro'
+        hint_videos_d_11_4_last: 'Vídeo-dica: D.11.4 Último'
+        hint_videos_d_11_5_first: 'Vídeo-dica: D.11.5 Primeiro'
+        hint_videos_d_11_5_last: 'Vídeo-dica: D.11.5 Último'
+        hint_videos_d_11_6_first: 'Vídeo-dica: D.11.6 Primeiro'
+        hint_videos_d_11_6_last: 'Vídeo-dica: D.11.6 Último'
+        hint_videos_d_11_7_first: 'Vídeo-dica: D.11.7 Primeiro'
+        hint_videos_d_11_7_last: 'Vídeo-dica: D.11.7 Último'
+        hint_videos_d_11_9_first: 'Vídeo-dica: D.11.9 Primeiro'
+        hint_videos_d_11_9_last: 'Vídeo-dica: D.11.9 Último'
+        hint_videos_d_11_11_first: 'Vídeo-dica: D.11.11 Primeiro'
+        hint_videos_d_11_11_last: 'Vídeo-dica: D.11.11 Último'
+        applab_intro_welcome: Laboratório de App - Como começar
+        applab_intro_events: Laboratório de Aplicativo - Faça-o Interativo
+        applab_intro_sounds: Laboratório de Aplicativo - Imagens e Sons
+        applab_intro_designmode: Laboratório de Aplicativo - Modo de Design
+        applab_intro_share: Laboratório de Aplicativo - Compartilhe seu Aplicativo
+        csd_applab_arrays: Introdução a Arrays
+        CSF_skinOverview_Harvester: A Colheitadeira
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_if_allskins: O bloco Se
-        CSF_ifelse_allskins: Usando os Blocos Se/Caso Contrário
-        CSF_ifelseifelse_allskins: Usando os blocos Se/Caso Contrário Se/Caso Contrário
+        CSF_bb8_loops_C-F: Laços com BB-8
+        CSF_harvester_skinOverview_K-1: A Colheitadeira
+        CSF_harvester_loops_K1: Laços com Colheitadeira
+        CSF_scrat_loops_K1: Laços na Era do gelo
+        CSF_scrat_loops_CF: Laços na Era do gelo
+        CSF_if_allskins: O Bloco Se
+        CSF_ifelse_allskins: Usando Blocos "Se/Senão"
+        CSF_ifelseifelse_allskins: Usando Blocos "Se/SenãoSe/Senão"
         CSF_loops_AB: Ciclos
-        csd_gamelab_conditional_statements: Declarações Condicionais
-        csd_gamelab_if_else: Declarações Se/Caso Contrário
-        CSF_StarWars_ProjectIntro: Introdução ao Projecto Star Wars
-        c_and_c_great_to_create: É Óptimo Criar e Jogar Limpo
-        c_and_c_digital_sharing: Partilha Digital
-        what_is_cs: O que é a Ciência da Computação?
+        csd_gamelab_booleans: Expressões Booleanas
+        csd_gamelab_conditional_statements: Instruções Condicionais
+        csd_gamelab_if_else: Declarações Se/Senão
+        CSF_SpriteLabIntro_CDEF: Este é o Laboratório de Sprites
+        CSF_Spritelab_MakeSprite_CDEF: Como fazer um no Laboratório de Sprite
+        CDEF_Video_SpritesInAction: Sprites em Ação
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites em Ação
+        CSF_StarWars_ProjectIntro: Introdução para o Projeto Star Wars
+        mc_2018_intro: 'Minecraft: Introdução à Viagem Aquática'
+        MC_2018_loops: 'Minecraft: Viagem Aquática Repita Até'
+        mc_2018_conditionals: 'Minecraft: Viagem Aquática Condicionais'
+        mc_2018_closing: 'Minecraft: Viagem Aquática Parabéns'
+        hoc_dance_warmup: Festa Dançante - Aquecimento
+        hoc_dance_events: Festa Dançante - Eventos
+        hoc_dance_properties: Festa Dançante - Propriedades
+        hoc_dance_congrats: Festa Dançante - Festejar!
+        c_and_c_great_to_create: É Ótimo Criar e Jogar Limpo
+        c_and_c_digital_sharing: Compartilhamento Digital
+        teaching_csf_how_it_works: 'Ensinando Fundamentos da CC: Como o Curso funciona'
+        elem_pd_2: Ciência da computação no Ensino Fundamental - Vídeo PD 2/2
+        what_is_cs: O que é ciência da computação?
+        repeat_block: Usando o Bloco Repita
+        lesson_planning: Planejamento de aula
+        opd_closing: 'Ensinando Fundamentos da CC: Fechamento e Próximos passos'
+        why_unplugged_lessons: Ficando "offline"
+        writing_first_program: Escrevendo seu primeiro programa de computador
+        conditionals_with_cards: Lição offline em Ação - Condicionais com Cartões
+        songwriting_with_functions: Lição offline em Ação - Composição de músicas
+          com funções
         what_is_an_event: O que é um evento?
+        teaching_cs_pair_programming: 'Ensinando Fundamentos da CC: Programação em
+          Pares'
+        teaching_problem_solving: 'Ensinando Fundamentos da CC: Ensinando Resolução
+          de Problemas'
+        csd_applab_designmode: 'Descobertas CS: App Lab - Modo Design'
         csd_pair_programming: Programação em duplas
+        csd_gamelab_functions: Chamando e Definindo Funções
         csd_applab_parameters: Funções com parâmetros
-        csd_debugging: Depuração
-        csp-pd-welcome: Bem-vindo(a) à Família!
-        csd_what_computers_do: O que é que os Computadores fazem?
+        csd_applab_loops: Loops em App Lab
+        csd_problem_solving_process: O Processo de Resolução de Problemas
+        CSF_Going_Places_Safely: Minha Vizinhança Online
+        CSF_SpriteLab_Intro_v2: Introdução ao Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
+        csd_debugging: Analisando
+        csd_applab_designmode_short: Modo de design do laboratório de aplicativos
+        csp-pd-welcome: Bem-vindo à familia!
+        CSF-Teaching-Problem-Solving: Resolução de problemas de ensino no CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Vídeo piloto
+          - Bloco de dados
+        u7-libraries-explanation: 'App Lab: Crie seus próprios blocos - Como usar
+          bibliotecas'
+        how-to-k5-workshops: 'Fundamentos de CS do Code.org: estudante testado, professor
+          aprovado'
+        why-should-teach-unplugged-activities: 'FAQ: Por que devo ensinar atividades
+          "desplugadas"?'
+        cs-principles-intro-to-objects: 'Princípios de CS: Introdução aos Objetos'
+        oceans_machine_learning: Máquina de aprendizado
+        oceans_training_data: Dados de treinamento
+        oceans_societal_implications: 'Vídeo: Impactos na Sociedade'
+        hoc_dance_congrats_2019: Festa Dançante - Festejar!
+        hoc_dance_warmup_2019: Festa Dançante - Aquecimento
+        hoc_dance_events_2019: Festa Dançante - Eventos
+        hoc_dance_measures_2019: Dance Party 2019 - Compassos
+        hoc_dance_properties_2019: Festa Dançante - Propriedades
+        csd_what_computers_do: O que os computadores fazem?
+        csf_my_online_neighborhood_2020: Minha Vizinhança Online
+        csf_follow_the_digital_trail: Siga o Trilha Digital
+        csf_private_and_personal_information: Informações Privadas e Pessoais
+        csd_what_computers_are: O que é um computador?
         playlab_2021: Introdução ao Laboratório
         playlab_2021_reader: Introdução ao Laboratório
+        PL_CSD_TeacherTips_Advise: Dicas de professores - Conselhos para novos professores
+        PL_CSD_TeacherTips_IntroToCSD: |2-
+
+          Dicas de professores - Introdução ao CS Discoveries
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Dicas de professores - O processo
+          de solução de problemas
+        PL_CSD_TeacherTips_PairProgramming: |2-
+
+          Dicas de professores - Programação em pares
+        PL_CSD_TeacherTips_Debugging: Dicas de professores - Depuração
+        PL_CSD_TeacherTips_LeadLearner: Dicas de professores - Aluno principal
+        poembot-playtest-intro: PoemBot Playtest – Introdução
+        poembot-playtest-sprites: PoemBot Playtest – Fadas
+        poembot-playtest-events: PoemBot Playtest – Eventos
+        hello_world_intro: Olá Mundo - Seja bem-vindo ao Laboratório das fadas
+        hello_world_events: Olá Mundo - Programação com eventos
+        hello_world_congrats: Olá Mundo - Faça o que você quiser
+        rough_poemart_intro: v1 Introdução à Arte de Poema
+        rough_poemart_events: v1Eventos de Arte de Poema
+        rough_poemart_imagery: v1 Imagens de Arte de Poema
+        rough_poemart_congrats: v1 Parabéns à Arte de Poema
+        poetry_module_variables: Variáveis - Codificação com Poesia
+        poetry_module_textandvariables: Texto e Variáveis - Codificação com Poesia
+        poetry_module_planningapp: Planejamento do seu aplicativo gerador de poemas
+          - Codificação com Poesia
+        poetry_module_multichoiceprompts: Prompts de Múltipla Escolha - Codificação
+          com Poesia
+        poetry_module_conditionals: Condicionais - Codificação com Poesia
+        poemart_intro: Introdução à Arte em Poemas
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

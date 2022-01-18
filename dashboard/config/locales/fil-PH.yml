@@ -512,6 +512,7 @@ fil:
       prizes_link: Para sa maraming kaalaman
   teacher:
     answer: Sagot
+    dashboard: Dashboard ng Guro
     for_teachers_only: Para sa mga Guro Lang
     title:
       one: 'Ang iyong guro:'

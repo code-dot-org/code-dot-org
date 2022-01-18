@@ -476,6 +476,7 @@ uk:
       prizes_link: Детальніше
   teacher:
     answer: Відповідь
+    dashboard: Панель вчителя
     for_teachers_only: Лише для вчителів
     title:
       one: 'Ваш вчитель:'

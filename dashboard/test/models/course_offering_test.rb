@@ -9,18 +9,18 @@ class CourseOfferingTest < ActiveSupport::TestCase
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
 
-    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher', family_name: 'family-1', version_year: '1991', published_state: 'stable')
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course')
+    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher2', family_name: 'family-1', version_year: '1991', published_state: 'stable')
+    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2')
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @unit_in_course.reload
     @unit_group.reload
     CourseOffering.add_course_offering(@unit_group)
 
-    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student', family_name: 'family-2', version_year: '1991', is_course: true, published_state: 'stable')
+    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student2', family_name: 'family-2', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_teacher_to_students)
-    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student2', family_name: 'family-2', version_year: '1992', is_course: true, published_state: 'stable')
+    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student3', family_name: 'family-2', version_year: '1992', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_teacher_to_students2)
-    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
+    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_facilitator_to_teacher)
   end
 
@@ -202,6 +202,18 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test 'get assignable course offerings for teacher should return offerings where teacher can be instructor' do
     expected_course_offering_info = [
       {
+        id: @unit_group.course_version.course_offering.id,
+        display_name: @unit_group.course_version.course_offering.display_name,
+        course_versions: [
+          {
+            id: @unit_group.course_version.id,
+            display_name: @unit_group.course_version.display_name,
+            units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
+          }
+        ]
+      },
+
+      {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
         course_versions: [
@@ -224,17 +236,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'get assignable pl course offerings for facilitator should return pl offerings where facilitator can be instructor' do
     expected_course_offering_info = [
-      {
-        id: @unit_group.course_version.course_offering.id,
-        display_name: @unit_group.course_version.course_offering.display_name,
-        course_versions: [
-          {
-            id: @unit_group.course_version.id,
-            display_name: @unit_group.course_version.display_name,
-            units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
-          }
-        ]
-      },
       {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
@@ -293,7 +294,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       }
     ]
 
-    assert_equal CourseOffering.assignable_pl_course_offerings_info(@facilitator), expected_course_offering_info
+    assert_equal CourseOffering.assignable_course_offerings_info(@facilitator), expected_course_offering_info
   end
 
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)

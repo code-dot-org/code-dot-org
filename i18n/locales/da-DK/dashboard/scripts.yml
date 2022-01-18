@@ -2707,3 +2707,7 @@ da:
           lessons:
             lesson-1:
               name: Stave-bien
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Udbrud Simulator
