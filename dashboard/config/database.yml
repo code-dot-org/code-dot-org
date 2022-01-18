@@ -62,7 +62,7 @@ environment_defaults: &environment_defaults
     password: <%= reader.password %>
     port: <%= reader.port || 3306 %>
     username: <%= reader.user %>
-	<% end %>
+  <% end %>
 
 development:
   <<: *environment_defaults
