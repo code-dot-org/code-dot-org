@@ -1,0 +1,318 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "parent_level_id": 21671,
+    "block_pool": "gamelab",
+    "include_shared_functions": "true",
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_toolbox": "true",
+    "validation_enabled": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "purplebunny",
+    "short_instructions": "After some time has passed, make more sprites for the player to collect. ",
+    "long_instructions": "# More Sprites\r\n\r\nAt this point, it probably doesn't take long to collect all the sprites in your game. After some time has passed, we'll make more sprites for the player to collect. \r\n\r\n## Do This\r\n\r\n* Add another `at seconds` event block to your workspace and choose an amount of time.\r\n* Use the `make new sprites` block to create a second group of sprites.\r\n  * Hint: You might also need to set the size of these sprites.\r\n  \r\n*Extra Challenge:* Use a different costume for the new sprites. You'll also need to add another `when touches` event that removes these sprites and scores points.\r\n",
+    "authored_hints": "[]",
+    "hint_prompt_attempts_threshold": "1",
+    "project_template_level_name": "courseF_collector_template",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
+    "callout_json": "[]",
+    "preload_asset_list": null
+  },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-01-14T20:40:43.000Z",
+  "user_id": 63,
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-01-14T20:40:43.405+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score\\\"\"],\"cloned_from\":\"courseF_collector_score\"},{\"changed_at\":\"2022-01-14 20:48:22 +0000\",\"changed\":[\"start_blocks\",\"short_instructions\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:51:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:53:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:01:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:06:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:08:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:15:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+  </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="gamelab_setBackgroundImageAs">
+            <field name="IMG">"grid_1"</field>
+          </block>
+          <block type="gamelab_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <field name="COLOUR">#3333ff</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_randomColor"/>
+          <block type="gamelab_playSound">
+            <field name="SOUND">Choose</field>
+          </block>
+          <block type="gamelab_showTitleScreen">
+            <value name="TITLE">
+              <block type="text">
+                <field name="TEXT"/>
+              </block>
+            </value>
+            <value name="SUBTITLE">
+              <block type="text">
+                <field name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideTitleScreen"/>
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="text">
+                <field name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_textJoin">
+            <field name="TEXT1"/>
+          </block>
+          <block type="gamelab_textVariableJoin">
+            <field name="VAR">???</field>
+          </block>
+          <block type="text">
+            <field name="TEXT"/>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <field name="ANIMATION_NAME">"bunny2_1"</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <field name="LOCATION">{"x":200,"y":200}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_makeNumSprites">
+            <field name="ANIMATION_NAME">"carrot_1"</field>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_allSpritesWithAnimation">
+            <field name="ANIMATION">"bunny2_1"</field>
+          </block>
+          <block type="gamelab_destroy"/>
+          <block type="gamelab_spriteSayTime">
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <field name="PROPERTY">"scale"</field>
+            <value name="VAL">
+              <block type="math_number">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_changePropBy">
+            <field name="PROPERTY">"scale"</field>
+            <value name="VAL">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <field name="PROPERTY">"speed"</field>
+            <value name="VAL">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveInDirection">
+            <field name="DIRECTION">"North"</field>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_turn">
+            <field name="DIRECTION">"right"</field>
+            <value name="N">
+              <block type="math_number">
+                <field name="NUM">90</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Behaviors ">
+          <block type="gamelab_addBehaviorSimple"/>
+          <block type="gamelab_removeBehaviorSimple"/>
+          <block type="gamelab_removeAllBehaviors"/>
+          <block type="gamelab_allSpritesWithAnimation">
+            <field name="ANIMATION">"bunny2_1"</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="driving with arrow keys">driving with arrow keys</field>
+          </block>
+          <block type="gamelab_draggable"/>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="wobbling">wobbling</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="jittering">jittering</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="fluttering">fluttering</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="patrolling">patrolling</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="spinning left">spinning left</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="spinning right">spinning right</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="wandering">wandering</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="patrolling">patrolling</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving east and looping">moving east and looping</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving west and looping">moving west and looping</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving north and looping">moving north and looping</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving south and looping">moving south and looping</field>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_atTime">
+            <field name="UNIT">"seconds"</field>
+            <value name="N">
+              <block type="math_number">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_keyPressed">
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
+          </block>
+          <block type="gamelab_checkTouching">
+            <field name="CONDITION">"when"</field>
+            <value name="SPRITE1">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"bunny2_1"</field>
+              </block>
+            </value>
+            <value name="SPRITE2">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"carrot_1"</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_set">
+            <field name="VAR">???</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_change">
+            <field name="VAR">???</field>
+            <value name="DELTA">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_textVariableJoin">
+            <field name="VAR">??</field>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
