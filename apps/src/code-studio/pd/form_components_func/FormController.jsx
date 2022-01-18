@@ -287,9 +287,12 @@ const FormController = props => {
    *
    * @returns {Object}
    */
-  const serializeFormData = () => {
+  const serializeFormData = formData => {
+    if (!formData) {
+      throw new Error(`formData cannot be undefined`);
+    }
     return {
-      form_data: data,
+      form_data: formData,
       ...serializeAdditionalData()
     };
   };
@@ -304,7 +307,7 @@ const FormController = props => {
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData())
+        data: JSON.stringify(serializeFormData(dataWithStatus))
       });
 
     return applicationId
