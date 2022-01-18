@@ -164,11 +164,11 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_equal "max-age=36000, public", response.headers["Cache-Control"]
   end
 
-  # This test will fail when run locally,
-  # the asset_url method returns http://test.host/sharing_drawing.png
-  # which is missing the /asset path when tests are run locally
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:artist))
+
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/sharing_drawing.png')
+
     get :show, params: {id: level_source.id}
 
     assert_response :success
@@ -181,11 +181,11 @@ class LevelSourcesControllerTest < ActionController::TestCase
     )
   end
 
-  # This test will fail when run locally,
-  # the asset_url method returns http://test.host/studio_sharing_drawing.png
-  # which is missing the /asset path when tests are run locally
   test 'playlab levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:playlab))
+
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/studio_sharing_drawing.png')
+
     get :show, params: {id: level_source.id}
 
     assert_response :success

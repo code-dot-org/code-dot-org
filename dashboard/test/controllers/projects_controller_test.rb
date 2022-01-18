@@ -131,18 +131,18 @@ class ProjectsControllerTest < ActionController::TestCase
     )
   end
 
-  # This test will fail when run locally,
-  # the asset_url method returns http://test.host/applab_sharing_drawing.png
-  # which is missing the /asset path when tests are run locally
   test 'applab project level has sharing meta tags' do
     applab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:applab][:name])
     # populate level with correct game
     applab_level.update(game: Game.create(app: Game::APPLAB))
-
     channel = 'fake-channel'
+
+    ProjectsController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/applab_sharing_drawing.png')
+
     get :show, params: {key: 'applab', channel_id: channel, share: true}
 
     assert_response :success
+
     assert_sharing_meta_tags(
       url: "http://test.host/projects/applab/#{channel}",
       image_url: 'http://test.host/assets/applab_sharing_drawing.png',
@@ -152,18 +152,19 @@ class ProjectsControllerTest < ActionController::TestCase
     )
   end
 
-  # This test will fail when run locally,
-  # the asset_url method returns http://test.host/studio_sharing_drawing.png
-  # which is missing the /asset path when tests are run locally
   test 'playlab project level has sharing meta tags' do
     playlab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:playlab][:name])
     # populate level with correct game
     playlab_level.update(game: Game.create(app: Game::PLAYLAB))
 
     channel = 'fake-channel'
+
+    ProjectsController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/studio_sharing_drawing.png')
+
     get :show, params: {key: 'playlab', channel_id: channel, share: true}
 
     assert_response :success
+
     assert_sharing_meta_tags(
       url: "http://test.host/projects/playlab/#{channel}",
       image_url: 'http://test.host/assets/studio_sharing_drawing.png',

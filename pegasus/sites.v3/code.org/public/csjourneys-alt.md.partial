@@ -32,7 +32,7 @@ social:
 <hr style="border: none;  height: 4px;  margin-bottom: 45px; background-image: url(../images/csjourneys/yellowdash.png); background-repeat: repeat-x;"/>
 
 
-<div class="col-33" style="padding-bottom:15px">
+<div class="col-50" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="csadventures" href="/csjourneys/csadventures" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="NASA Chandra X-Ray Observatory">
@@ -45,7 +45,7 @@ social:
 </div>
 </div>
 
-<div class="col-33" style="padding-bottom:15px">
+<div class="col-50" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
         <a class="linktag" id="myjourneychats" href="/csjourneys/myjourneychats" target="_blank">
           <img class="tutorial-tile-img" src="/images/csjourneys/myjourneychats2.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="My Journey Chats: Weekly Classroom Speakers">
@@ -57,6 +57,8 @@ social:
   </div>
 </div>
 </div>
+
+<div style="clear: both"></div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
@@ -70,9 +72,7 @@ social:
 </div>
 </div>
 
-<div style="clear: both"></div>
-
-<div class="col-50" style="padding-bottom:15px">
+<div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
     <a class="linktag" id="wit-rtc" href="/csjourneys/nextsteps" target="_blank">
       <img class="tutorial-tile-img" src="/images/csjourneys/explore-careers.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Explore Careers">
@@ -85,7 +85,7 @@ social:
 </div>
 </div>
 
-<div class="col-50" style="padding-bottom:15px">
+<div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
         <a class="linktag" id="beyond-resources" href="/beyond" target="_blank">
           <img class="tutorial-tile-img" src="/images/csjourneys/go-beyond.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Resources to empower students to take the next step">
