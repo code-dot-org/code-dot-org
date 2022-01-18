@@ -215,7 +215,7 @@ class Backpack extends Component {
       backpackFilenames.length === 0;
 
     const backpackIcon = (
-      <i style={{marginRight: 8}}>
+      <i style={{marginRight: 8, fontSize: 13}}>
         <img
           src="/blockly/media/javalab/backpack.png"
           alt="backpack icon"
