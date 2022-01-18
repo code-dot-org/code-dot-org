@@ -67,7 +67,7 @@ class Pd::Enrollment < ApplicationRecord
   validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
-  before_save :set_application_id if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+  before_save :set_application_id
   after_create :set_default_scholarship_info
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
   after_save :authorize_teacher_account
@@ -351,7 +351,7 @@ class Pd::Enrollment < ApplicationRecord
     self.user_id = nil
     self.school = nil
     self.school_info_id = nil
-    self.application_id = nil if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+    self.application_id = nil
     self.deleted_at = Time.now
     save!
   end

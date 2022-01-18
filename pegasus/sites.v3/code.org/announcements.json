@@ -1,16 +1,17 @@
 {
   "pages": {
-    "/projects": "home-learning-2020"
+    "/projects": "home-learning-2020",
+    "/home": "pl2022"
   },
 
   "banners": {
-    "thankyou": {
-      "image": "/images/marketing/hoc_thankyou.png",
-      "title": "Happy holidays and a big thank you from Code.org!",
-      "body": "From all of us at Code.org, thank you and have a fantastic holiday season! Check out awesome projects from students around the world.",
-      "buttonText": "View Projects",
-      "buttonUrl": "https://studio.code.org/projects/public",
-      "buttonId": "thankyou-details"
+    "pl2022": {
+      "image": "/images/marketing/pl-dash-jan.png",
+      "title": "Join Code.org's Professional Learning Program",
+      "body": "Our highly supportive program is designed to prepare any educator to teach computer science. Scholarships to attend free are available in many regions!",
+      "buttonText": "Learn More",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "pl2022-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

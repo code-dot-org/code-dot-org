@@ -851,6 +851,12 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal ' copy', new_level.name_suffix
   end
 
+  test 'doesnt clone with suffix deprecated blockly levels' do
+    old_level = create :level, name: 'blockly', level_num: 'blockly_level', start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix(' copy')
+    assert_equal old_level, new_level
+  end
+
   test 'clone with suffix replaces old suffix' do
     level_1 = create :level, name: 'my_level_1'
 

@@ -3321,3 +3321,7 @@ el:
           lessons:
             lesson-1:
               name: Η μέλισσα της ορθογραφίας
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Προσομοιωτής Επιδημικής Έξαρσης

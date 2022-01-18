@@ -20,7 +20,7 @@ export const SongTitlesToArtistTwitterHandle = {
   levelup_ciara: 'Ciara',
   macarena_losdelrio: 'LosDelRioMusic',
   migente_jbalvin: 'JBalvin',
-  needyounow_ladyantebellum: 'LadyAntebellum',
+  needyounow_ladya: 'LadyA',
   notearslefttocry_arianagrande: 'ArianaGrande',
   shapeofyou_edsheeran: 'EdSheeran',
   somebodylikeyou_keithurban: 'KeithUrban',
@@ -89,5 +89,6 @@ export const SongTitlesToArtistTwitterHandle = {
   heatwaves_glassanimals: 'GlassAnimals',
   levitating_dualipa: 'DUALIPA',
   stay_thekidlaroi: 'TheKidLaroi',
-  watermelonsugar_harrystyles: 'Harry_Styles'
+  watermelonsugar_harrystyles: 'Harry_Styles',
+  higherpower_coldplay: 'Coldplay'
 };

@@ -11,11 +11,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 21:37:59 UTC",
+    "serialized_at": "2022-01-08 16:03:40 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "universal_instructor",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "self-paced-pl-csd6-2021"
     }
@@ -66,12 +66,27 @@
       }
     },
     {
-      "key": "lesson-4",
-      "name": "Consider real world implications",
+      "key": "lesson-6",
+      "name": "Create machine learning apps",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Consider real world implications",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -83,10 +98,10 @@
     {
       "key": "lesson-5",
       "name": "Unit wrap up ",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -117,6 +132,18 @@
       "seeding_key": {
         "lesson_activity.key": "b72a39e0-51d1-4651-a6d8-7d72504bee99",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021"
+      }
+    },
+    {
+      "key": "abe20d4e-5350-4919-a9e8-b097eb38ab4d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abe20d4e-5350-4919-a9e8-b097eb38ab4d",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd6-2021"
       }
@@ -211,6 +238,27 @@
       "seeding_key": {
         "activity_section.key": "84dcc5d2-76b5-46a4-9eb3-e0b71701f04d",
         "lesson_activity.key": "b72a39e0-51d1-4651-a6d8-7d72504bee99"
+      }
+    },
+    {
+      "key": "d9a8d0e1-11f1-472f-978b-e47f03217f75",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore machine learning apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75",
+        "lesson_activity.key": "abe20d4e-5350-4919-a9e8-b097eb38ab4d"
+      }
+    },
+    {
+      "key": "4a341eeb-3e32-4e63-9694-014e5981df39",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4a341eeb-3e32-4e63-9694-014e5981df39",
+        "lesson_activity.key": "abe20d4e-5350-4919-a9e8-b097eb38ab4d"
       }
     },
     {
@@ -666,22 +714,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+          "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
         ],
         "progression": "Explore machine learning apps"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+          "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd6-2021",
-        "activity_section.key": "b73d1cc2-f199-4ffe-912a-03b84d18db83"
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
       },
       "level_keys": [
-        "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+        "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
       ]
     },
     {
@@ -691,27 +739,77 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
+          "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0-2021"
         ],
         "progression": "Explore machine learning apps"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
+          "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0-2021"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd6-2021",
-        "activity_section.key": "b73d1cc2-f199-4ffe-912a-03b84d18db83"
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
       },
       "level_keys": [
-        "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
+        "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0-2021"
       ]
     },
     {
       "chapter": 19,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+        ],
+        "progression": "Explore machine learning apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        ],
+        "progression": "Explore machine learning apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -735,8 +833,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 4,
+      "chapter": 22,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -760,20 +858,20 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 5,
+      "chapter": 23,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2"
         ],
         "progression": "AI and ethics"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
@@ -781,13 +879,38 @@
         "activity_section.key": "98bd3f2a-50c9-4880-b88f-fdd49fd2fb8e"
       },
       "level_keys": [
-        "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2"
       ]
     },
     {
-      "chapter": 22,
-      "position": 6,
+      "chapter": 24,
+      "position": 4,
       "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
+        ],
+        "progression": "AI and ethics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "98bd3f2a-50c9-4880-b88f-fdd49fd2fb8e"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -810,9 +933,9 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 7,
-      "activity_section_position": 5,
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -835,9 +958,9 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 8,
-      "activity_section_position": 6,
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -860,7 +983,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -885,7 +1008,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -910,11 +1033,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML"
+        ],
         "progression": "Unit projects"
       },
       "bonus": false,
@@ -932,7 +1058,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -957,7 +1083,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1177,26 +1303,50 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021",
-        "script_level.level_keys": [
-          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd6-2021",
-        "activity_section.key": "b73d1cc2-f199-4ffe-912a-03b84d18db83"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "SP-VPL-21-CSD-mod5-AppLabOverview-AIML",
         "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd6-2021",
-        "activity_section.key": "b73d1cc2-f199-4ffe-912a-03b84d18db83"
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0-2021",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0-2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "d9a8d0e1-11f1-472f-978b-e47f03217f75"
       }
     },
     {
@@ -1225,9 +1375,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021",
+        "level.key": "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2",
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "98bd3f2a-50c9-4880-b88f-fdd49fd2fb8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",

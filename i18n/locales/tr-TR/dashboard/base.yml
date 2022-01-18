@@ -428,6 +428,7 @@ tr:
       prizes_link: 'Daha fazla bilgi'
   teacher:
     answer: Cevap
+    dashboard: 'Öğretmen Panosu'
     for_teachers_only: Sadece Öğretmenler İçin
     title:
       one: 'Öğretmenin :'

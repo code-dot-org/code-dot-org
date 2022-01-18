@@ -1954,31 +1954,31 @@ in:
         text: crwdns2694127:0[EFFECT]crwdnd2694127:0[0]crwdnd2694127:0[PALETTE]crwdnd2694127:0[1]crwdne2694127:0
         options:
           EFFECT:
-            '"colors"': crwdns2694129:0crwdne2694129:0
-            '"squiggles"': crwdns2694131:0crwdne2694131:0
-            '"space"': crwdns2694133:0crwdne2694133:0
-            '"stars"': crwdns2694135:0crwdne2694135:0
+            '"blooming"': crwdns2694141:0crwdne2694141:0
+            '"bubbles"': crwdns2710351:0crwdne2710351:0
+            '"clouds"': crwdns2694145:0crwdne2694145:0
+            '"confetti"': crwdns2710353:0crwdne2710353:0
             '"darkCircles"': crwdns2694137:0crwdne2694137:0
             '"fadeColors"': crwdns2694139:0crwdne2694139:0
-            '"blooming"': crwdns2694141:0crwdne2694141:0
-            '"ripples"': crwdns2694143:0crwdne2694143:0
-            '"clouds"': crwdns2694145:0crwdne2694145:0
-            '"rain"': crwdns2710349:0crwdne2710349:0
-            '"bubbles"': crwdns2710351:0crwdne2710351:0
-            '"confetti"': crwdns2710353:0crwdne2710353:0
             '"hearts"': crwdns2710355:0crwdne2710355:0
+            '"space"': crwdns2694133:0crwdne2694133:0
+            '"rain"': crwdns2710349:0crwdne2710349:0
+            '"ripples"': crwdns2694143:0crwdne2694143:0
+            '"colors"': crwdns2694129:0crwdne2694129:0
+            '"stars"': crwdns2694135:0crwdne2694135:0
+            '"squiggles"': crwdns2694131:0crwdne2694131:0
           PALETTE:
-            '"rainbow"': crwdns2694165:0crwdne2694165:0
-            '"grayscale"': crwdns2694163:0crwdne2694163:0
-            '"sky"': crwdns2694147:0crwdne2694147:0
-            '"ocean"': crwdns2694149:0crwdne2694149:0
+            '"autumn"': crwdns2694159:0crwdne2694159:0
             '"sunrise"': crwdns2694151:0crwdne2694151:0
             '"sunset"': crwdns2694153:0crwdne2694153:0
+            '"grayscale"': crwdns2694163:0crwdne2694163:0
+            '"ocean"': crwdns2694149:0crwdne2694149:0
+            '"rainbow"': crwdns2694165:0crwdne2694165:0
+            '"roses"': crwdns2694167:0crwdne2694167:0
+            '"sky"': crwdns2694147:0crwdne2694147:0
             '"spring"': crwdns2694155:0crwdne2694155:0
             '"summer"': crwdns2694157:0crwdne2694157:0
-            '"autumn"': crwdns2694159:0crwdne2694159:0
             '"winter"': crwdns2694161:0crwdne2694161:0
-            '"roses"': crwdns2694167:0crwdne2694167:0
       Poetry_setBackgroundImageAs:
         text: crwdns2694169:0[IMG]crwdnd2694169:0[0]crwdne2694169:0
       Poetry_setFont:
@@ -1986,23 +1986,23 @@ in:
         options:
           FONT:
             '"Arial"': crwdns2694173:0crwdne2694173:0
+            '"Arial Black"': crwdns2694183:0crwdne2694183:0
+            '"Courier"': crwdns2694181:0crwdne2694181:0
+            '"Cursive"': crwdns2713337:0crwdne2713337:0
+            '"Impact"': crwdns2694185:0crwdne2694185:0
             '"Georgia"': crwdns2694175:0crwdne2694175:0
             '"Times"': crwdns2694179:0crwdne2694179:0
-            '"Courier"': crwdns2694181:0crwdne2694181:0
-            '"Arial Black"': crwdns2694183:0crwdne2694183:0
-            '"Impact"': crwdns2694185:0crwdne2694185:0
-            '"Cursive"': crwdns2713337:0crwdne2713337:0
       Poetry_setFontColor:
         text: crwdns2694191:0[FILL]crwdnd2694191:0[0]crwdne2694191:0
       Poetry_setForegroundEffect:
         text: crwdns2694193:0[EFFECT]crwdnd2694193:0[0]crwdne2694193:0
         options:
           EFFECT:
-            '"rain"': crwdns2694195:0crwdne2694195:0
             '"bubbles"': crwdns2694197:0crwdne2694197:0
+            '"confetti"': crwdns2694203:0crwdne2694203:0
             '"hearts"': crwdns2694199:0crwdne2694199:0
             '"emojis"': crwdns2694201:0crwdne2694201:0
-            '"confetti"': crwdns2694203:0crwdne2694203:0
+            '"rain"': crwdns2694195:0crwdne2694195:0
             '"starburst"': crwdns2694205:0crwdne2694205:0
             '"glass"': crwdns2694207:0crwdne2694207:0
             '"twinkling"': crwdns2694209:0crwdne2694209:0
@@ -2017,11 +2017,11 @@ in:
         options:
           EFFECT:
             '"fade"': crwdns2694253:0crwdne2694253:0
-            '"typewriter"': crwdns2694255:0crwdne2694255:0
             '"flyLeft"': crwdns2694257:0crwdne2694257:0
             '"flyRight"': crwdns2694259:0crwdne2694259:0
             '"flyTop"': crwdns2694261:0crwdne2694261:0
             '"flyBottom"': crwdns2694263:0crwdne2694263:0
+            '"typewriter"': crwdns2694255:0crwdne2694255:0
       Poetry_setTitle:
         text: crwdns2694265:0[TITLE]crwdnd2694265:0[0]crwdne2694265:0
       Poetry_showText:
@@ -2030,36 +2030,36 @@ in:
         text: crwdns2694269:0[ANIMATION_NAME]crwdnd2694269:0[0]crwdnd2694269:0[BEHAVIOR]crwdnd2694269:0[1]crwdne2694269:0
         options:
           BEHAVIOR:
-            fluttering: crwdns2694271:0crwdne2694271:0
-            growing: crwdns2694273:0crwdne2694273:0
-            jittering: crwdns2694275:0crwdne2694275:0
-            moving_north_and_looping: crwdns2694277:0crwdne2694277:0
-            moving_south_and_looping: crwdns2694279:0crwdne2694279:0
-            moving_east_and_looping: crwdns2694281:0crwdne2694281:0
-            moving_west_and_looping: crwdns2694283:0crwdne2694283:0
-            shrinking: crwdns2694285:0crwdne2694285:0
-            spinning_left: crwdns2694287:0crwdne2694287:0
-            spinning_right: crwdns2694289:0crwdne2694289:0
-            swimming_left_and_right: crwdns2694291:0crwdne2694291:0
-            wandering: crwdns2694293:0crwdne2694293:0
-            wobbling: crwdns2694295:0crwdne2694295:0
+            '"fluttering"': crwdns2857755:0crwdne2857755:0
+            '"growing"': crwdns2857757:0crwdne2857757:0
+            '"jittering"': crwdns2857759:0crwdne2857759:0
+            '"moving_north_and_looping"': crwdns2857761:0crwdne2857761:0
+            '"moving_south_and_looping"': crwdns2857763:0crwdne2857763:0
+            '"moving_east_and_looping"': crwdns2857765:0crwdne2857765:0
+            '"moving_west_and_looping"': crwdns2857767:0crwdne2857767:0
+            '"shrinking"': crwdns2857769:0crwdne2857769:0
+            '"spinning_left"': crwdns2857771:0crwdne2857771:0
+            '"spinning_right"': crwdns2857773:0crwdne2857773:0
+            '"swimming_left_and_right"': crwdns2857775:0crwdne2857775:0
+            '"wandering"': crwdns2857777:0crwdne2857777:0
+            '"wobbling"': crwdns2857779:0crwdne2857779:0
       Poetry_stopBehavior:
         text: crwdns2694297:0[ANIMATION_NAME]crwdnd2694297:0[0]crwdnd2694297:0[BEHAVIOR]crwdnd2694297:0[1]crwdne2694297:0
         options:
           BEHAVIOR:
-            fluttering: crwdns2694299:0crwdne2694299:0
-            growing: crwdns2694301:0crwdne2694301:0
-            jittering: crwdns2694303:0crwdne2694303:0
-            moving_north_and_looping: crwdns2694305:0crwdne2694305:0
-            moving_south_and_looping: crwdns2694307:0crwdne2694307:0
-            moving_east_and_looping: crwdns2694309:0crwdne2694309:0
-            moving_west_and_looping: crwdns2694311:0crwdne2694311:0
-            shrinking: crwdns2694313:0crwdne2694313:0
-            spinning_left: crwdns2694315:0crwdne2694315:0
-            spinning_right: crwdns2694317:0crwdne2694317:0
-            swimming_left_and_right: crwdns2694319:0crwdne2694319:0
-            wandering: crwdns2694321:0crwdne2694321:0
-            wobbling: crwdns2694323:0crwdne2694323:0
+            '"fluttering"': crwdns2857781:0crwdne2857781:0
+            '"growing"': crwdns2857783:0crwdne2857783:0
+            '"jittering"': crwdns2857785:0crwdne2857785:0
+            '"moving_north_and_looping"': crwdns2857787:0crwdne2857787:0
+            '"moving_south_and_looping"': crwdns2857789:0crwdne2857789:0
+            '"moving_east_and_looping"': crwdns2857791:0crwdne2857791:0
+            '"moving_west_and_looping"': crwdns2857793:0crwdne2857793:0
+            '"shrinking"': crwdns2857795:0crwdne2857795:0
+            '"spinning_left"': crwdns2857797:0crwdne2857797:0
+            '"spinning_right"': crwdns2857799:0crwdne2857799:0
+            '"swimming_left_and_right"': crwdns2857801:0crwdne2857801:0
+            '"wandering"': crwdns2857803:0crwdne2857803:0
+            '"wobbling"': crwdns2857805:0crwdne2857805:0
             '"all"': crwdns2694325:0crwdne2694325:0
       Poetry_stringValue:
         text: crwdns2694327:0[LEFT_QUOTE]crwdnd2694327:0[0]crwdnd2694327:0[TEXT]crwdnd2694327:0[1]crwdnd2694327:0[RIGHT_QUOTE]crwdnd2694327:0[2]crwdne2694327:0
