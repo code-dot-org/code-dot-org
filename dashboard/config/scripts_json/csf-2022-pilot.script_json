@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-13 21:46:52 UTC",
+    "serialized_at": "2022-01-14 21:51:12 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1774,9 +1774,21 @@
       "key": "4e80d376-8968-479d-8bbe-f40aff808517",
       "position": 1,
       "properties": {
+        "progression_name": "Mini-Project: Collector Game"
       },
       "seeding_key": {
         "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517",
+        "lesson_activity.key": "8305139a-d387-4518-8983-5679de1823ca"
+      }
+    },
+    {
+      "key": "d2b178cf-7e3e-405f-89dd-1c3926981b43",
+      "position": 2,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2b178cf-7e3e-405f-89dd-1c3926981b43",
         "lesson_activity.key": "8305139a-d387-4518-8983-5679de1823ca"
       }
     },
@@ -3483,6 +3495,116 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_start"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      },
+      "level_keys": [
+        "courseF_collector_start"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_player"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      },
+      "level_keys": [
+        "courseF_collector_player"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_remove"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      },
+      "level_keys": [
+        "courseF_collector_remove"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_score"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      },
+      "level_keys": [
+        "courseF_collector_score"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_more_sprites"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d2b178cf-7e3e-405f-89dd-1c3926981b43"
+      },
+      "level_keys": [
+        "courseF_collector_more_sprites"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "courseF_EOC_examples2022"
         ],
@@ -3503,7 +3625,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4259,6 +4381,66 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
         "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_start",
+        "script_level.level_keys": [
+          "courseF_collector_start"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_player",
+        "script_level.level_keys": [
+          "courseF_collector_player"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_remove",
+        "script_level.level_keys": [
+          "courseF_collector_remove"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_score",
+        "script_level.level_keys": [
+          "courseF_collector_score"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "4e80d376-8968-479d-8bbe-f40aff808517"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_more_sprites",
+        "script_level.level_keys": [
+          "courseF_collector_more_sprites"
+        ],
+        "lesson.key": "Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "d2b178cf-7e3e-405f-89dd-1c3926981b43"
       }
     },
     {
