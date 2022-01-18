@@ -6741,6 +6741,14 @@ az:
               display_name: Məzmun
           name: csa7-pilot
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            lesson-15:
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
           name: csa8-pilot
         csa9-pilot:
           name: csa9-pilot
@@ -7479,3 +7487,104 @@ az:
           lessons:
             lesson-1:
               key: dərs-1
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Dərs
+        csa6-exemplars:
+          lessons:
+            lesson-15:
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        2022drafting:
+          description_short: Daxili
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: dərs-10
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+              name: Qiymətləndirmə günü
+            lesson-16:
+              key: dərs-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-10:
+              key: dərs-10
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+              name: Qiymətləndirmə günü
+            lesson-16:
+              key: dərs-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun

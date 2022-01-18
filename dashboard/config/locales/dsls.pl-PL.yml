@@ -5662,10 +5662,10 @@ pl-PL:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Nic się nie wydarzy.
-          feedback: Niewłaściwie. Ufoludek zacznie się poruszać na ekranie w górę
+          feedback: Niepoprawnie. Ufoludek zacznie się poruszać na ekranie w górę
             i w dół.
         - text: Ufoludek rozpocznie patrolowanie od strony prawej do lewej.
-          feedback: Niewłaściwie. Ufoludek zacznie się poruszać na ekranie w górę
+          feedback: Niepoprawnie. Ufoludek zacznie się poruszać na ekranie w górę
             i w dół.
         - text: Ufoludek zacznie się poruszać na ekranie w górę i w dół.
           correct: true
@@ -5741,8 +5741,8 @@ pl-PL:
         - text: Duszek będzie się jednocześnie obracał wokół własnej osi i przemieszczał.
           correct: true
           feedback: Poprawnie! Oba zachowania będą zachodzić jednocześnie.
-        - text: Duszek najpierw będzie się obracać wokół własnej osi, a potem będzie
-            się przemieszczać.
+        - text: Duszek najpierw będzie się obracał wokół własnej osi, a potem będzie
+            się przemieszczał.
           feedback: Błąd. W Sprite Lab, połączone bloki będą się pojawiać jednocześnie,
             po każdym ostatni, zatem do obu zachowań dojdzie jednocześnie.
         questions:
@@ -5763,12 +5763,12 @@ pl-PL:
         - text: '"Już idzie jedna pizza!"'
           feedback: Niepoprawnie. Etykiety zmiennych nie pasują.
         - text: '"Już idzie jeden posiłek!"'
-          feedback: Niepoprawnie. Etykieta zmiennej nie jest wydrukowana.
+          feedback: Niepoprawnie. Etykieta zmiennej nigdy nie jest drukowana.
         - text: '"Już idzie jedno jedzenie!"'
           feedback: Niepoprawnie. Etykieta zmiennej nie jest wydrukowana.
         - text: '"Już idzie jedna porcja!"'
           correct: true
-          feedback: Poprawnie. Etykiety zmiennych nie pasują.
+          feedback: Poprawnie! Etykiety zmiennych nie pasują.
         - text: Nic się nie wydrukuje.
           feedback: Niepoprawnie. Zdarzenie i blok drukowania będą nadal działać.
         questions:
@@ -5785,7 +5785,7 @@ pl-PL:
         - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
           feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
             "skręć", aby to się wydarzyło. '
-        - text: Komputer podpowie użytkownikowi liczbę.
+        - text: Komputer poprosi użytkownika o liczbę.
           feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
             "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
         questions:
@@ -5818,24 +5818,25 @@ pl-PL:
             aż otrzymają polecenie, by się zatrzymać.
         - text: Oba samoloty będą się poruszać i nie zatrzymają się.
           correct: true
-          feedback: Dobrze! Przy pomocy tych "zachowań" nakazuje się samolotom rozpoczęcie
+          feedback: Poprawnie! Przy pomocy tych zachowań nakazuje się samolotom rozpoczęcie
             i kontynuację przemieszczania się.
         - text: Jeden samolot rozpocznie się poruszać, jako pierwszy, a drugi, jako
             drugi.
-          feedback: Błąd. Każdy blok kodu w Sprite Lab uruchamia się natychmiast p
-            kolejnym.
+          feedback: Niepoprawnie. Każdy blok kodu w Sprite Lab uruchamia się natychmiast
+            po kolejnym.
         - text: Samoloty się zderzą.
-          feedback: Błąd. Samoloty nie są umiejscowione tak, aby mogły się zetknąć.
+          feedback: Niepoprawnie. Samoloty nie są umiejscowione tak, aby mogły się
+            zetknąć.
         questions:
         - text: Przeczytaj kod, a potem zgadnij.
       courseF_variables_predict_multi:
         answers:
-        - text: Program wydrukuje "Cześć imię!"
+        - text: Program wydrukuje Cześć imię!
           feedback: Niepoprawnie. Blok imienia zastąpi to, co wpiszesz.
         - text: Program przywita się z tobą imieniem, które wpiszesz.
           correct: true
           feedback: Poprawnie! To, co wpisujesz, stosuje się w miejscu bloku imieniu.
-        - text: 'Duszek będzie zmieniać rozmiary.
+        - text: 'Duszek będzie zmieniał rozmiary.
 
 '
           feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
@@ -6002,7 +6003,7 @@ pl-PL:
       courseF_events_practice:
         description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
           Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia ze zdarzeniami!
-        display_name: Ćwiczenia w zakresie zdarzeń
+        display_name: Ćwiczenia ze zdarzeniami
         teacher_markdown: |+
           # Omówienie poziomu wyboru
           W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
@@ -6047,7 +6048,7 @@ pl-PL:
         display_name: " Ćwiczenie artysty"
       courseF_beeFor_practice:
         description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
-          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami "for"
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami "dla"
           i pszczółką!
         display_name: Ćwiczenie pszczółki
       courseF_beeVar_practice:
@@ -6089,7 +6090,7 @@ pl-PL:
           pustej przestrzeni. Zanim zaczniesz, zbadaj poniższe przykładowe projekty,
           aby przekonać się czego tworzeniem się interesujesz. Wciśnij \"Koniec"\,
           gdy będziesz gotowy do rozpoczęcia planowania swojego własnego programu.
-        display_name: Eksploracja - przykładowe programy
+        display_name: Eksploracja - Przykładowe programy
         teacher_markdown: "Omówienie poziomu wyboru # W ramach poziomów wyboru oferuje
           się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą
           wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić
@@ -6100,7 +6101,7 @@ pl-PL:
         markdown: |-
           # Podążaj za algorytmem
 
-          Zagraj w grę i pomyśl jakie komendy są potrzebne, aby uzyskać właściwy wynik.
+          Zagraj w grę i pomyśl, jakie komendy są potrzebne, aby uzyskać właściwy wynik.
       courseD_EOC_examples_2021:
         description: Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć
           trochę czasu na zapoznanie się z przykładowymi projektami.

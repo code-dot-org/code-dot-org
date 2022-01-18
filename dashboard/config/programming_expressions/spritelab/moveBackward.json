@@ -2,5 +2,6 @@
   "key": "moveBackward",
   "name": "moveBackward",
   "category": "Sprites",
+  "block_name": "gamelab_moveBackward",
   "syntax": "moveBackward"
 }

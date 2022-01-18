@@ -273,6 +273,7 @@ si:
       prizes_link: වැඩිදුර තොරතුරු
   teacher:
     answer: පිළිතුර
+    dashboard: ගුරු උපකරණ පුවරුව
     for_teachers_only: ගුරුවරුන්ට පමණි
     title:
       one: 'ඔබගේ ගුරුවරයා:'
