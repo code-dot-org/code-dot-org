@@ -22,11 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-<<<<<<< Updated upstream
-    "serialized_at": "2022-01-13 19:20:40 UTC",
-=======
     "serialized_at": "2022-01-14 21:51:12 UTC",
->>>>>>> Stashed changes
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1753,9 +1749,21 @@
       }
     },
     {
-      "key": "90882c84-cf50-477d-af40-835ba12296b5",
+      "key": "87cc9df9-3c2a-4e91-b439-20c3e2ae5294",
       "position": 2,
       "properties": {
+        "progression_name": "Exploration: Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "87cc9df9-3c2a-4e91-b439-20c3e2ae5294",
+        "lesson_activity.key": "8f4d1714-6613-4473-a1ea-e3dcc07bf690"
+      }
+    },
+    {
+      "key": "90882c84-cf50-477d-af40-835ba12296b5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mini-Project: Clicker Game"
       },
       "seeding_key": {
         "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5",
@@ -3349,6 +3357,98 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Exploration: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_explore"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "87cc9df9-3c2a-4e91-b439-20c3e2ae5294"
+      },
+      "level_keys": [
+        "courseF_clicker_explore"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_sprites"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      },
+      "level_keys": [
+        "courseF_clicker_sprites"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_remove"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      },
+      "level_keys": [
+        "courseF_clicker_remove"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_variable"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      },
+      "level_keys": [
+        "courseF_clicker_variable"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_score"
+        ],
+        "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -3365,11 +3465,15 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 6,
-      "activity_section_position": 2,
+      "chapter": 61,
+      "position": 10,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -3386,7 +3490,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3521,11 +3625,7 @@
       ]
     },
     {
-<<<<<<< Updated upstream
-      "chapter": 59,
-=======
       "chapter": 68,
->>>>>>> Stashed changes
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4209,6 +4309,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
         "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_explore",
+        "script_level.level_keys": [
+          "courseF_clicker_explore"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "87cc9df9-3c2a-4e91-b439-20c3e2ae5294"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_sprites",
+        "script_level.level_keys": [
+          "courseF_clicker_sprites"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_remove",
+        "script_level.level_keys": [
+          "courseF_clicker_remove"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_variable",
+        "script_level.level_keys": [
+          "courseF_clicker_variable"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "90882c84-cf50-477d-af40-835ba12296b5"
       }
     },
     {

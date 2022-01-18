@@ -19,11 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-<<<<<<< Updated upstream
-    "serialized_at": "2022-01-13 19:23:06 UTC",
-=======
     "serialized_at": "2022-01-18 17:16:10 UTC",
->>>>>>> Stashed changes
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1997,7 +1993,7 @@
       "key": "8489f43d-dff8-41c9-aeca-e699cb7e8adc",
       "position": 1,
       "properties": {
-        "description": "Today students will apply what they've learned about personal and private information to design an interactive poster about themselves with SpriteLab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What information is safe to share online and what information is strictly private?_\n\nToday students will apply what they've learned about personal and private information to design an interactive poster about themselves with Sprite Lab.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2009,7 +2005,7 @@
       "key": "ac798921-b6f1-422f-b750-e8f823a3f18c",
       "position": 2,
       "properties": {
-        "description": "\n###Review of \"Personal and Private Information\"\n\nRemind students of information that is safe to share online and information that is strictly private.\n\n| SAFE - Personal Information  | UNSAFE - Private Information  |\n| ------------- | ------------- |\n| Your favorite food<br/>Your opinion <br/><i>(though it shoud be done respectfully)</i><br/>First name <br/><i>(with permission)</i>  | Mother's maiden name<br/>Social Security number<br/>Your date of birth<br/>Parents' credit card information<br/>Phone number  |\n\n<br/>\n\nDiscuss other examples of the two categories above."
+        "description": "\n###Review of \"Personal and Private Information\"\n\nRemind students of information that is safe to share online and information that is strictly private.\n\n| SAFE - Personal Information  | UNSAFE - Private Information  |\n| ------------- | ------------- |\n| Your favorite food<br/>Your opinion <br/><i>(though it should be done respectfully)</i><br/>First name <br/><i>(with permission)</i>  | Mother's maiden name<br/>Social Security number<br/>Your date of birth<br/>Parents' credit card information<br/>Phone number  |\n\n<br/>\n\nDiscuss other examples of the two categories above."
       },
       "seeding_key": {
         "activity_section.key": "ac798921-b6f1-422f-b750-e8f823a3f18c",
@@ -2020,7 +2016,7 @@
       "key": "e3d34b0d-b3a0-49a0-9ff0-6d7bf1679b1c",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own interactive posters with SpriteLab! They'll begin by working through a few examples centered on _\"Rikki\"_, a fictional girl who has already created  a poster to share. Then, after a quick introduction on creating custom sprite costumes, students will be free to create their posters to their liking.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show “Level 1 - Explore” slide\n\n**Goal:** Today, students will be creating their own interactive posters with SpriteLab! They'll begin by working through a few examples centered on _\"Rikki\"_, a fictional girl who has already created  a poster to share. Then, after a quick introduction on creating custom sprite costumes, students will be free to create their posters to their liking.",
         "name": "Interactive Poster About Me",
         "tips": [
           {
@@ -2038,7 +2034,7 @@
       "key": "5037f1fa-a631-490d-bb36-04d3fcc84121",
       "position": 2,
       "properties": {
-        "description": "**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new \"print\" block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Model” slide\n\n**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new \"print\" block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Brainstorm” slide\n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Mini-Project” slide\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
       },
       "seeding_key": {
         "activity_section.key": "5037f1fa-a631-490d-bb36-04d3fcc84121",
@@ -2071,7 +2067,7 @@
       "key": "163b611c-e2ba-4242-8842-33cb5c319a9b",
       "position": 1,
       "properties": {
-        "description": "Verify with students that no private information is shared in their interactive posters. If there is time, students can share verified posters in pairs or small groups. Otherwise, ask a few students to share their work with whole class.\n\nConclude by reiterating the importance of knowing the distinction between personal/private, and that it's still possible to have a lot of fun and be creative online without revealing unsafe information about yourself. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n\nVerify with students that no private information is shared in their interactive posters. If there is time, students can share verified posters in pairs or small groups. Otherwise, ask a few students to share their work with whole class.\n\nConclude by reiterating the importance of knowing the distinction between personal/private, and that it's still possible to have a lot of fun and be creative online without revealing unsafe information about yourself. ",
         "name": "Share Out"
       },
       "seeding_key": {
@@ -2083,7 +2079,7 @@
       "key": "f3d434b2-d9ce-4dce-b77b-2ed20f99734b",
       "position": 2,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What else would you like to add to your poster?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _What was today's lesson about?_\n* _What else would you like to add to your poster?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2106,7 +2102,7 @@
       "key": "d058a787-37d6-4c25-b5c0-c427b5bc9373",
       "position": 1,
       "properties": {
-        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!",
+        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How does this puzzle work?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2118,7 +2114,7 @@
       "key": "11131345-98a9-4474-8782-c0d97fe84206",
       "position": 1,
       "properties": {
-        "description": "Some students may discover where to add \"repeat\" loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.",
+        "description": "Some students may discover where to add \"repeat\" loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrande” video",
         "name": "Drawing with Loops",
         "progression_name": "Video: Artist Intro with JR Hildebrande"
       },
@@ -2131,6 +2127,7 @@
       "key": "d8046ff6-568f-4a94-a37c-3f32f63b19fe",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2142,6 +2139,7 @@
       "key": "69565308-7412-44cc-a895-b4162321caa9",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Loops with the Artist” video\n",
         "progression_name": "Video: Loops with the Artist"
       },
       "seeding_key": {
@@ -2153,6 +2151,7 @@
       "key": "56779577-ac08-415f-b1bd-9ba7abdcf29e",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-11 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2208,7 +2207,7 @@
       "key": "9bc82847-83ea-45a1-bbf6-219144c13563",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you would like to program? Can you come up with the code to create it?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n* _What was the coolest shape or figure you programmed today? Draw it out!_\n* _Can you write the code you used to create it?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2231,7 +2230,7 @@
       "key": "83e6c37d-1cc1-49b9-b208-79567063fb20",
       "position": 1,
       "properties": {
-        "description": "Review using \"Nested Loops in Maze\" from Course D. \n\nAsk the students how they felt about nested loops. \n\n - What did they like and dislike about them? \n - What are some advantages of using nested loops?\n\nTell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect**: Ask the students how they felt about nested loops. \n\n* _What did they like and dislike about them?_ \n* _What are some advantages of using nested loops?_\n\nTell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2243,7 +2242,7 @@
       "key": "1c8c1c88-3c2e-4c1b-bcf8-4e217730d0a6",
       "position": 1,
       "properties": {
-        "description": "Students might benefit from having a puzzle done as a class.\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pause & Think Online” video\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nStudents might benefit from having a puzzle done as a class.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
         "name": "Fancy Shapes Using Nested Loops",
         "tips": [
           {
@@ -2261,6 +2260,7 @@
       "key": "fe5271b2-e5f3-44f5-94d8-d4630bb9d37d",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-2 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2272,6 +2272,7 @@
       "key": "9c33a50c-2471-4797-b3c7-024447bf16ff",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Nested Loops” video\n",
         "progression_name": "Video: Nested Loops"
       },
       "seeding_key": {
@@ -2283,6 +2284,7 @@
       "key": "7571aba3-7786-43cb-91e3-4d1a3218c6cc",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Level 4-13 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2349,7 +2351,7 @@
       "key": "0b5c0d6e-7e98-4c6e-afe5-0ef4e99677b0",
       "position": 1,
       "properties": {
-        "description": "*What did you make today?*\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Share Out” slide.\n\n*What did you make today?*\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2361,7 +2363,7 @@
       "key": "2e538697-0729-4210-9cba-268ca191581e",
       "position": 2,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel during today's lesson?\n - Draw something you used nested loops to make.\n - How do nested loops help you code complex images?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Reflect” slide.\n\n**Reflect**:\nDraw something you used nested loops to make.\nHow do nested loops help you code complex images?\n\n**Reflect:**\n\n* _Draw something you used nested loops to make._\n* _How do nested loops help you code complex images?_"
       },
       "seeding_key": {
         "activity_section.key": "2e538697-0729-4210-9cba-268ca191581e",
@@ -3269,7 +3271,7 @@
       "key": "5939ecdc-3ed6-484a-9053-c6fe4307b694",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_\n * _What kinds of apps are there?_ \n * _Where do we use apps?_\n\n**Discussion**: Students should understand that apps can address a variety of needs. For example, apps can be used to request rides, recommend movies, or communicate with friends and family. Many people have access to a mobile device (e.g., smartphone) which makes it possible to use apps just about anywhere.\n\nWhile discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\nEnsure that all students are on the same page regarding this topic by introducing key terms and concepts with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What are apps?\" slide \n\n**Say**: \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\nIntroduce accessibility with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What is accessibility?\" slide\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_\n * _What kinds of apps exist?_ \n * _When do we use apps?_\n\n**Discussion**: Students should understand that apps can address a variety of needs. For example, apps can be used to request rides, recommend movies, or communicate with friends and family. Many people have access to a mobile device (e.g., smartphone) which makes it possible to use apps just about anywhere.\n\nWhile discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\nEnsure that all students are on the same page regarding this topic by introducing key terms and concepts with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What are apps?\" slide \n\n**Say**: \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\nIntroduce accessibility with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What is accessibility?\" slide\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
         "name": "Context-Setting"
       },
       "seeding_key": {
