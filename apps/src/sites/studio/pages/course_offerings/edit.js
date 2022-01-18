@@ -14,7 +14,7 @@ function showCourseOfferingEditor() {
 
   ReactDOM.render(
     <CourseOfferingEditor
-      key={courseOfferingEditorData.key}
+      courseOfferingKey={courseOfferingEditorData.key}
       initialDisplayName={courseOfferingEditorData.displayName}
       initialCategory={courseOfferingEditorData.category}
       initialIsFeatured={courseOfferingEditorData.isFeatured}
