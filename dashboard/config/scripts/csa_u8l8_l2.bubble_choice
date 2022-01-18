@@ -1,6 +1,6 @@
 name 'CSA U8L8-L2'
 display_name 'Algorithms in Games'
-description 'level description here'
+description 'You have implemented standard algorithms that utilize array traversals to solve various problems. These same algorithms can be modified and implemented into games.'
 
 sublevels
 level 'CSA U8L8-L2a'

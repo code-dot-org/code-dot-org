@@ -1,6 +1,6 @@
 name 'CSA U8L1-L2'
 display_name 'Inclusive Playground Project Examples'
-description 'Examples of the Inclusive Playground Project'
+description 'Examples of the Inclusive Playground Project.'
 
 sublevels
 level 'CSA U8L1-L2a'
