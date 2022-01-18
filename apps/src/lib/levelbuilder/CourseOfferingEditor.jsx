@@ -23,14 +23,14 @@ export default function CourseOfferingEditor(props) {
     setIsSaving(true);
 
     let dataToSave = {
-      key: props.key,
+      key: props.courseOfferingKey,
       display_name: displayName,
       is_featured: featured,
       category: category
     };
 
     $.ajax({
-      url: `/course_offerings/${props.key}`,
+      url: `/course_offerings/${props.courseOfferingKey}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
@@ -52,7 +52,7 @@ export default function CourseOfferingEditor(props) {
 
   return (
     <div>
-      <h1>{'Editing Course Offering ' + props.key}</h1>
+      <h1>{`Editing Course Offering: ${props.courseOfferingKey}`}</h1>
       <label>
         Display Name
         <input
@@ -109,7 +109,7 @@ export default function CourseOfferingEditor(props) {
 }
 
 CourseOfferingEditor.propTypes = {
-  key: PropTypes.string,
+  courseOfferingKey: PropTypes.string,
   initialIsFeatured: PropTypes.bool,
   initialCategory: PropTypes.string,
   initialDisplayName: PropTypes.string

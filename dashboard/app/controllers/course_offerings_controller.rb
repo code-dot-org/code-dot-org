@@ -5,9 +5,8 @@ class CourseOfferingsController < ApplicationController
   before_action :authenticate_user!
 
   def edit
-    course_offering = CourseOffering.find_by!(key: params[:key])
-
-    render 'edit', locals: {course_offering: course_offering}
+    @course_offering = CourseOffering.find_by!(key: params[:key])
+    render :not_found unless @course_offering
   end
 
   def i18n_params
