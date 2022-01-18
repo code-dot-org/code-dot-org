@@ -297,6 +297,18 @@ const FormController = props => {
     };
   };
 
+  const handleRequestFailure = data => {
+    if (data?.responseJSON?.errors?.form_data) {
+      setErrors(data.responseJSON.errors.form_data);
+      setErrorHeader(i18n.formErrorsBelow());
+    } else {
+      // Otherwise, something unknown went wrong on the server
+      setGlobalError(true);
+      setErrorHeader(i18n.formServerError());
+    }
+    setSubmitting(false);
+  };
+
   const makeRequest = applicationStatus => {
     const dataWithStatus = {status: applicationStatus, ...data};
     setData(dataWithStatus);
@@ -327,18 +339,6 @@ const FormController = props => {
 
     const handleSuccessfulSave = data => {
       onSuccessfulSave(data);
-    };
-
-    const handleRequestFailure = data => {
-      if (data?.responseJSON?.errors?.form_data) {
-        setErrors(data.responseJSON.errors.form_data);
-        setErrorHeader(i18n.formErrorsBelow());
-      } else {
-        // Otherwise, something unknown went wrong on the server
-        setGlobalError(true);
-        setErrorHeader(i18n.formServerError());
-      }
-      setSubmitting(false);
     };
 
     makeRequest('incomplete')
@@ -377,18 +377,6 @@ const FormController = props => {
     const handleSuccessfulSubmit = data => {
       sessionStorage.removeItem(sessionStorageKey);
       onSuccessfulSubmit(data);
-    };
-
-    const handleRequestFailure = data => {
-      if (data?.responseJSON?.errors?.form_data) {
-        setErrors(data.responseJSON.errors.form_data);
-        setErrorHeader(i18n.formErrorsBelow());
-      } else {
-        // Otherwise, something unknown went wrong on the server
-        setGlobalError(true);
-        setErrorHeader(i18n.formServerError());
-      }
-      setSubmitting(false);
     };
 
     makeRequest('unreviewed')
