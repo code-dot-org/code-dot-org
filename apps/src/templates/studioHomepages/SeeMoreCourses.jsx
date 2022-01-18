@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
 export default class SeeMoreCourses extends Component {
   static propTypes = {
     courses: shapes.courses,
-    isProfessionalLearningCourse: PropTypes.bool.isRequired
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   state = {
