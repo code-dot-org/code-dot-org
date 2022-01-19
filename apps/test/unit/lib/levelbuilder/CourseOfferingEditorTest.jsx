@@ -130,7 +130,9 @@ describe('CourseOfferingEditor', () => {
 
       server.respond();
       wrapper.update();
-      expect(utils.navigateToHref).to.have.been.calledWith(`/`);
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        `/${window.location.search}`
+      );
 
       server.restore();
     });
