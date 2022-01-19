@@ -7,6 +7,7 @@ import {CIPHER, ALPHABET} from '../../constants';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const INSTRUCTIONS_LINK =
   'https://codeorg.zendesk.com/knowledge/articles/360004789872';
@@ -141,7 +142,13 @@ class AdvancedShareOptions extends React.Component {
           exporting: false,
           exportError: 'Failed to export project. Please try again later.'
         });
-      });
+    });
+    firehoseClient.putRecord({
+      study: 'applab',
+      study_group: 'share_options',
+      event: 'download_export',
+      data_string: exporting ? 'exported successfully' : 'export failed'
+    });
   };
 
   downloadExpoExport = async () => {
