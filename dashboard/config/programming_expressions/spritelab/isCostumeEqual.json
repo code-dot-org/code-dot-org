@@ -2,5 +2,6 @@
   "key": "isCostumeEqual",
   "name": "isCostumeEqual",
   "category": "Sprites",
+  "block_name": "gamelab_isCostumeEqual",
   "syntax": "isCostumeEqual"
 }
