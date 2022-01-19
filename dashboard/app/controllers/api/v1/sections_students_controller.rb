@@ -19,7 +19,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     render json: summaries
   end
 
-  use_database_pool completed_levels_count: :persistent
+  use_reader_connection_for_route(:completed_levels_count)
 
   # GET /sections/<section_id>/students/completed_levels_count
   def completed_levels_count

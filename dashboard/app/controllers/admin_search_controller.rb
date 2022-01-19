@@ -6,8 +6,7 @@ class AdminSearchController < ApplicationController
   before_action :require_admin
   check_authorization
 
-  include SeamlessDatabasePool::ControllerFilter
-  use_database_pool find_students: :persistent
+  use_reader_connection_for_route(:find_students)
 
   MAX_PAGE_SIZE = 50
   MAX_TOTAL_SIZE = 1000
