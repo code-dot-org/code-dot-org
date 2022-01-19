@@ -2,5 +2,6 @@
   "key": "gamelab_turn",
   "name": "turn",
   "category": "Sprites",
+  "block_name": "gamelab_turn",
   "syntax": "turn"
 }
