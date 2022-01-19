@@ -34,10 +34,32 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
+  clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
 rescue => e
   puts "Sync out failed from the error: #{e}"
   raise e
+end
+
+# Cleans up any files the sync-out is responsible for managing. When this function is done running,
+# the locale filesystem should be ready for a new i18n-sync cycle.
+# @param projects [Hash] The Crowdin project configurations used by the i18n-sync.
+def clean_up_sync_out(projects)
+  # Cycle through each project and move temp files to /tmp/i18n-sync
+  projects.each do |_project_identifier, project_options|
+    # Move *_files_to_sync_out.json to /tmp/i18n-sync/ because these files have been successfully
+    # synced and we don't want the next i18n-sync-out to redistribute the files.
+    files_to_sync_out_path = project_options[:files_to_sync_out_json]
+    if File.exist?(files_to_sync_out_path)
+      i18n_sync_tmp_dir = '/tmp/i18n-sync'
+      FileUtils.mkdir_p(i18n_sync_tmp_dir)
+      puts "Backing up temp file #{files_to_sync_out_path} to #{i18n_sync_tmp_dir}"
+      FileUtils.mv(files_to_sync_out_path, i18n_sync_tmp_dir)
+    else
+      # This will happen if a sync-down hasn't happened since the last successful sync-out.
+      puts "No temp file #{files_to_sync_out_path} found to backup."
+    end
+  end
 end
 
 # Return true iff the specified file in the specified locale had changes

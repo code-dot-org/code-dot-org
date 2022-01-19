@@ -24,7 +24,7 @@ Feature: Using the teacher homepage sections feature
     Then the section table should have 1 row
     And the section table row at index 0 has secondary assignment path "/s/csp3-a"
 
-  @no_firefox @no_safari @no_ie
+  @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
     Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"
