@@ -5,7 +5,7 @@
 # issues when viewing the levels in different languages.
 
 # Previous iterations of this oneoff script have been deleted
-# due to a flaw in `BEHAVIORAL_DEFINITION_NAMES`'s declaration
+# due to a flaw in `BEHAVIORAL_DEFINITION_NAMES`'s initialization
 # and should not be used/referenced. Refer to this files commit
 # history for more context.
 
