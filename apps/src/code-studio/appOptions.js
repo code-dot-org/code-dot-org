@@ -124,6 +124,7 @@
  * @property {array} referenceLinks
  * @property {boolean} isLastLevelInLesson
  * @property {boolean} isLastLevelInScript
+ * @property {boolean} showEndOfLessonMsgs
  */
 
 /**
