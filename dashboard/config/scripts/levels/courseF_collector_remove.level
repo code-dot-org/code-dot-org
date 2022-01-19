@@ -4,7 +4,9 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "variableLog",
+      "zTimerPrototype"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
@@ -64,15 +66,18 @@
       "downButton"
     ],
     "callout_json": "[]",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-01-14T18:57:07.000Z",
-  "user_id": 63,
   "published": true,
+  "created_at": "2022-01-14T18:57:07.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-14T18:57:07.893+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_player\\\"\"],\"cloned_from\":\"courseF_collector_player\"},{\"changed_at\":\"2022-01-14 19:25:24 +0000\",\"changed\":[\"name\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 19:27:21 +0000\",\"changed\":[\"start_blocks\",\"short_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 19:47:37 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 19:57:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:07:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:08:02 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:09:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:10:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-14T18:57:07.893+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_player\\\"\"],\"cloned_from\":\"courseF_collector_player\"},{\"changed_at\":\"2022-01-14 19:25:24 +0000\",\"changed\":[\"name\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 19:27:21 +0000\",\"changed\":[\"start_blocks\",\"short_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 19:47:37 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 19:57:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:07:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:08:02 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:09:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:10:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 15:43:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 15:44:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 15:44:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 15:46:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 15:59:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 17:58:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 17:59:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -92,7 +97,7 @@
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <field name="COLOUR">#3333ff</field>
+                <field name="COLOUR">#99ff99</field>
               </block>
             </value>
           </block>
@@ -126,13 +131,6 @@
             </value>
           </block>
           <block type="gamelab_destroy"/>
-          <block type="gamelab_spriteSayTime">
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">3</field>
-              </block>
-            </value>
-          </block>
           <block type="gamelab_setProp">
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
@@ -143,6 +141,31 @@
             <value name="VAL">
               <block type="math_number">
                 <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_spriteSayTime">
+            <value name="TEXT1">
+              <block type="variables_get">
+                <field name="VAR">???</field>
+              </block>
+            </value>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp" editable="false">
+            <field name="PROPERTY">"speed"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"bunny2_1"</field>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="gamelab_int10">
+                <field name="VALUE">1</field>
               </block>
             </value>
           </block>
@@ -159,36 +182,32 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_turn">
-            <field name="DIRECTION">"right"</field>
+        </category>
+        <category name="Behaviors ">
+          <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
                 <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
-            <value name="N">
-              <block type="math_number">
-                <field name="NUM">90</field>
+            <value name="BEHAVIOR">
+              <block type="gamelab_playerBehaviors">
+                <field name="BEHAVIOR">new Behavior(moving_with_arrow_keys, [])</field>
               </block>
             </value>
           </block>
-        </category>
-        <category name="Behaviors ">
-          <block type="gamelab_addBehaviorSimple"/>
-          <block type="gamelab_removeBehaviorSimple"/>
-          <block type="gamelab_removeAllBehaviors"/>
-          <block type="gamelab_allSpritesWithAnimation">
-            <field name="ANIMATION">"bunny2_1"</field>
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"carrot_1"</field>
+              </block>
+            </value>
+            <value name="BEHAVIOR">
+              <block type="gamelab_collectibleBehaviors">
+                <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
+              </block>
+            </value>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
-          </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="driving with arrow keys">driving with arrow keys</field>
-          </block>
-          <block type="gamelab_draggable"/>
         </category>
         <category name="Events">
           <block type="gamelab_keyPressed">
