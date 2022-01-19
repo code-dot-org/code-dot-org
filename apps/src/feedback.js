@@ -183,7 +183,7 @@ FeedbackUtils.prototype.displayFeedback = function(
       continueText: options.continueText,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: options.level.lastLevelInLesson
+      finalLevel: options.level.isLastLevelInLesson
     })
   );
 
@@ -864,7 +864,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.FREE_PLAY:
       case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
-        var finalLevel = options.level?.lastLevelInLesson;
+        var finalLevel = options.level?.isLastLevelInLesson;
         // End of lesson in CSD/CSP/CSA
         if (finalLevel && options.level?.showEndOfLessonMsgs) {
           message = msg.endOfLesson();
