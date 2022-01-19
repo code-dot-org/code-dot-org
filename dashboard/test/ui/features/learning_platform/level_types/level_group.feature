@@ -32,7 +32,6 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
 
-@no_ie
 Scenario: Match levels within level group
   Given I create a teacher-associated student named "Lilian"
   Given I am on "http://studio.code.org/s/allthethings/lessons/33/levels/1?noautoplay=true"
@@ -92,7 +91,6 @@ Scenario: Match levels within level group
   # no answers are draggable
   And element ".ui-draggable" is not visible
 
-@no_ie
 Scenario: Submit all answers, including match levels
   Given I am on "http://studio.code.org/s/allthethings/lessons/33/levels/1?noautoplay=true"
   And I wait to see ".submitButton"
