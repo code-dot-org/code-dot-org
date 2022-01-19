@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-01-18 17:16:22 UTC",
+    "serialized_at": "2022-01-19 16:13:08 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2711,7 +2711,7 @@
       "key": "9f597905-2575-40f5-bb3a-a66b45308a58",
       "position": 1,
       "properties": {
-        "description": "**Discuss:**\n- *What do we know about how a virus spreads?*\n- *What can cause a virus to spread through a town more quickly?*\n- *What can help slow the spread of a virus down?*\n\nThe goal of this discussion is for students to have an opportunity to activate prior knowledge and see their ideas on the board. This is also an opportunity to investigate some misconceptions about how viruses spread.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _What can cause a virus to spread through a town more quickly?_\n* _What can help slow the spread of a virus down?_\n\nThe goal of this discussion is for students to have an opportunity to activate prior knowledge and see their ideas on the board. This is also an opportunity to investigate some misconceptions about how viruses spread.\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2720,21 +2720,22 @@
       }
     },
     {
-      "key": "92a42503-18e8-464e-a8c0-037d74f45fb9",
-      "position": 2,
+      "key": "fa82d8be-c306-4bf9-b424-fe16a8b42907",
+      "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Welcome to Monster Town” slide",
+        "name": "Outbreak"
       },
       "seeding_key": {
-        "activity_section.key": "92a42503-18e8-464e-a8c0-037d74f45fb9",
-        "lesson_activity.key": "726dac56-444a-470f-af93-6d8e59b9c43a"
+        "activity_section.key": "fa82d8be-c306-4bf9-b424-fe16a8b42907",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
       }
     },
     {
       "key": "a523d114-145c-4d5e-9a16-43adbef29577",
-      "position": 1,
+      "position": 2,
       "properties": {
         "description": "*In today’s lesson, you’re going to “Monster Town” where a virus outbreak is about to happen. Dr. Monster needs your help to slow the spread of the virus.*\n\n*You will create an outbreak simulator in Sprite Lab, and then use it to understand how a virus can spread. You’ll also help all of the monsters get healthy again!*",
-        "name": "Outbreak",
         "progression_name": "Outbreak",
         "remarks": true
       },
@@ -2744,10 +2745,135 @@
       }
     },
     {
-      "key": "87a855f0-8839-45d6-89ba-559e1460711d",
-      "position": 2,
+      "key": "61e78445-b009-4ad0-95ca-3962e4760193",
+      "position": 3,
       "properties": {
-        "description": "**Do This:** Read *Welcome to Monster Town* as a class.\n",
+        "description": "**Do This:** Read *Welcome to Monster Town* as a class."
+      },
+      "seeding_key": {
+        "activity_section.key": "61e78445-b009-4ad0-95ca-3962e4760193",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "65421bf8-193f-4813-91ff-6db7cb485b64",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Welcome to Monster Town” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "65421bf8-193f-4813-91ff-6db7cb485b64",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "a6dec19d-89cd-465a-ae43-565be9ec26a8",
+      "position": 5,
+      "properties": {
+        "description": "*Monster Town was usually a happy and healthy place. The monsters of Monster town loved to wander around to visit their friends.*\n\n*One day, one of the monsters started feeling sick. The monster had caught a virus! A virus is a tiny germ that can make you sick. The other monsters were not too worried. They kept visiting their friends.*\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a6dec19d-89cd-465a-ae43-565be9ec26a8",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "52e63b00-cd9f-4111-b626-c26b86f60061",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next “Welcome to Monster Town” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "52e63b00-cd9f-4111-b626-c26b86f60061",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "23789ed4-4717-4592-b445-e8d67046e6c8",
+      "position": 7,
+      "properties": {
+        "description": "*Soon after, two more monsters got sick. It was the same virus! It seems they got the virus from their friend.*\n\n*The virus slowly spread to other monsters who were nearby. The healthy monsters began to worry that they were all going to get sick. The sick monsters began to worry that they were going to give the virus to everyone else.*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "23789ed4-4717-4592-b445-e8d67046e6c8",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "f17737f2-a550-4c2b-a334-d61864f6a506",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Stopping the Spread” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "f17737f2-a550-4c2b-a334-d61864f6a506",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "0e4b80a5-43d6-4858-ab92-24051c43c906",
+      "position": 9,
+      "properties": {
+        "description": "*Fortunately, after studying the virus, the neighbors of Monster Town made an important discovery. They realized that they were less likely to spread the virus if they wore masks over their mouths. With face masks on, sick monsters were less likely to give the virus to healthy monsters.*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0e4b80a5-43d6-4858-ab92-24051c43c906",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "8fe95952-29a5-4c69-be6e-c468784baccc",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “What Will Happen Next?” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "8fe95952-29a5-4c69-be6e-c468784baccc",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "c61c7575-88a5-448c-808a-17b703546f0b",
+      "position": 11,
+      "properties": {
+        "description": "*Today, you're going to write code to create and run your own simulation of the virus outbreak at Monster Town. A simulation is a computer model of a process or system. Learn to code and make predictions about what will happen to the neighbors of Monster Town.*\n\n* _How quickly will the virus spread?_\n* _Will everyone get sick?_\n* _How will face masks help?_\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c61c7575-88a5-448c-808a-17b703546f0b",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "86e1353f-0fc7-443e-857b-591e98a07ee8",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next “What Will Happen Next?” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "86e1353f-0fc7-443e-857b-591e98a07ee8",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "ec0fdd19-de99-4efa-95b1-1d3111e6a6ec",
+      "position": 13,
+      "properties": {
+        "description": "*When you're finished, share your simulation with others. Share your message about what you think we can do to help keep others healthy when a virus comes to town.*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ec0fdd19-de99-4efa-95b1-1d3111e6a6ec",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "87a855f0-8839-45d6-89ba-559e1460711d",
+      "position": 14,
+      "properties": {
         "progression_name": "Welcome to Monster Town"
       },
       "seeding_key": {
@@ -2757,9 +2883,9 @@
     },
     {
       "key": "21383ac9-29e4-457f-b6d7-4fcec7ae3f7e",
-      "position": 3,
+      "position": 15,
       "properties": {
-        "description": "**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "21383ac9-29e4-457f-b6d7-4fcec7ae3f7e",
@@ -2768,9 +2894,9 @@
     },
     {
       "key": "a080fd4c-0a46-4c8c-83c3-2b628fe0fa69",
-      "position": 4,
+      "position": 16,
       "properties": {
-        "description": "*Today, we will make a place like Monster Town come alive by writing some code. In this simulation, you’re going to use sprites to represent the different monsters. The sprites will have different costumes to tell us things like whether they are sick or healthy. You’ll also use behaviors to get the monsters moving. Finally, you’ll use events to change the costume of a sprite when two sprites touch on this screen. This will represent one monster passing the virus to another. You will make predictions about what will happen to the neighbors of Monster Town, and help them get healthy again!* ",
+        "description": "*Today, we will make a place like Monster Town come alive by writing some code.* \n\n*In this simulation, you’re going to use sprites to represent the different monsters. The sprites will have different costumes to tell us things like whether they are sick or healthy. You’ll also use behaviors to get the monsters moving.* \n\n*Finally, you’ll use events to change the costume of a sprite when two sprites touch on this screen. This will represent one monster passing the virus to another. You will make predictions about what will happen to the neighbors of Monster Town, and help them get healthy again!* ",
         "remarks": true
       },
       "seeding_key": {
@@ -2780,9 +2906,9 @@
     },
     {
       "key": "093456fa-f3d7-4747-8b81-61188e42c1d9",
-      "position": 5,
+      "position": 17,
       "properties": {
-        "description": "**Do This:** Show the “Outbreak Simulator: Introduction” video.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Introduction” video\n\n",
         "progression_name": "Video: Outbreak Simulator: Introduction",
         "tips": [
           {
@@ -2798,9 +2924,9 @@
     },
     {
       "key": "364fd5e2-742f-447a-ab75-95f8a819d5e5",
-      "position": 6,
+      "position": 18,
       "properties": {
-        "description": "**Do This:** Transition students to their computers, and have them begin following the instructions for each level in the skill building section. If students finish this section early, they can continue experimenting with their code in Level 7 until the class is ready to move on.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 3 - Creating a Simulation” slide\n\n**Do This:** Transition students to their computers, and have them begin following the instructions for each level in the skill building section. If students finish this section early, they can continue experimenting with their code in Level 7 until the class is ready to move on.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2810,8 +2936,9 @@
     },
     {
       "key": "dfab9c42-54fe-4be8-a79c-11dde122e374",
-      "position": 7,
+      "position": 19,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Events” video",
         "progression_name": "Video: Outbreak Simulator: Events"
       },
       "seeding_key": {
@@ -2821,8 +2948,9 @@
     },
     {
       "key": "f2e09234-ef3c-4c2b-83eb-2d053f8f4161",
-      "position": 8,
+      "position": 20,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 5-7 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2832,9 +2960,9 @@
     },
     {
       "key": "5aafc298-2f03-4b22-b21c-be1afd6d2e19",
-      "position": 9,
+      "position": 21,
       "properties": {
-        "description": "**Do This:** Bring the class back together to watch *Outbreak Simulator: Thinking Like a Scientist.* Use the ideas in level 9 to discuss the video and help frame the rest of the lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Think Like a Scientist” video\n\n**Do This:** Bring the class back together to watch *Outbreak Simulator: Thinking Like a Scientist.* Use the ideas in level 9 to discuss the video and help frame the rest of the lesson.",
         "progression_name": "Video: Outbreak Simulator: Thinking Like a Scientist"
       },
       "seeding_key": {
@@ -2843,8 +2971,123 @@
       }
     },
     {
+      "key": "63642504-d1f8-49da-9881-33adb5942d45",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 9 - Reset and Replay!” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "63642504-d1f8-49da-9881-33adb5942d45",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "c5e6577d-d9fc-4dc6-a6c0-5c6dcf4b47bf",
+      "position": 23,
+      "properties": {
+        "description": "*Even when you write the code yourself, it's impossible to know exactly what will happen when you press run. The monsters wander randomly, so you don't know if the virus will spread fast or slow. Whenever you change your code, make sure to run your simulation more than once. Things won't happen the same way twice!*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c5e6577d-d9fc-4dc6-a6c0-5c6dcf4b47bf",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "5d2cda01-3f8f-4a1f-9d89-7a76ff2f11b9",
+      "position": 24,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Collecting Data” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d2cda01-3f8f-4a1f-9d89-7a76ff2f11b9",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "b833795f-d196-4892-bd24-2193cde74760",
+      "position": 25,
+      "properties": {
+        "description": "*Try writing down your observations as you run your simulation. You can count the number of monsters that get sick or use a timer to see how fast things happen. For example, how long does it usually take for all monsters to get sick if none have masks?*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b833795f-d196-4892-bd24-2193cde74760",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "4ad05269-850e-46c1-91aa-92ad637c6a75",
+      "position": 26,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Making Predictions” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ad05269-850e-46c1-91aa-92ad637c6a75",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "6fe134ee-e3b0-4156-bf31-a993a967e169",
+      "position": 27,
+      "properties": {
+        "description": "*If you understand your model, you can use it to make predictions. You can even change how your simulation runs and guess what will happen differently. For example:*\n* _What would happen if there were twice as many monsters?_\n* _What would happen if the monsters moved at half the speed?_\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6fe134ee-e3b0-4156-bf31-a993a967e169",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "c4073c17-8b4e-42ed-8745-cc86e3fbd461",
+      "position": 28,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Is Monster Town like the real world?” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4073c17-8b4e-42ed-8745-cc86e3fbd461",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "14f39125-147c-4899-ab47-e18f6b045104",
+      "position": 29,
+      "properties": {
+        "description": "*There is a limit to how realistic any model can get.*\n* _What does your outbreak simulation have in common with real world virus outbreaks?_\n* _What are the differences? When you finish this activity, discuss these questions with teachers or your family!_\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14f39125-147c-4899-ab47-e18f6b045104",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "8bca8054-a930-4008-b448-9bcb0bcda11b",
+      "position": 30,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “What else can we model?” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "8bca8054-a930-4008-b448-9bcb0bcda11b",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
+      "key": "f40a0b3b-4faf-49d1-bd60-ff357261195b",
+      "position": 31,
+      "properties": {
+        "description": "*You have already created a working model of the outbreak at Monster Town. What are the things your simulation can't do or show that you wish it could? Press continue to keep going and learn to model even more:*\n* _Increasing the number of monsters in the simulation_\n* _Helping monsters recover from the virus_\n* _Probability, immunity, vaccines, and more!_\n\n*You can also share your simulation model with others, or share a message about what you think we can do to help keep others healthy when a virus comes to town.*\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f40a0b3b-4faf-49d1-bd60-ff357261195b",
+        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
+      }
+    },
+    {
       "key": "666e2edf-94d1-40d6-b2ee-bb09c5eef7c5",
-      "position": 10,
+      "position": 32,
       "properties": {
         "progression_name": "Learning from Simulations"
       },
@@ -2855,9 +3098,9 @@
     },
     {
       "key": "760328dc-0e3a-4869-aafe-cb7518c0b631",
-      "position": 11,
+      "position": 33,
       "properties": {
-        "description": "**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 10-12 - Mini-Project” slide\n\n**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
         "progression_name": "Mini-Project: Outbreak Simulator"
       },
       "seeding_key": {
@@ -2867,8 +3110,9 @@
     },
     {
       "key": "1caa4df8-4410-4b7f-9659-7c0c8d7dda2d",
-      "position": 12,
+      "position": 34,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Free Play” video\n",
         "progression_name": "Video: Outbreak Simulator: Free Play"
       },
       "seeding_key": {
@@ -2878,8 +3122,9 @@
     },
     {
       "key": "6812a3f1-ad9a-40e6-897c-1b7d909ea1e2",
-      "position": 13,
+      "position": 35,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 14 - Mini-Project” slide",
         "progression_name": "Mini-Project: Outbreak Simulator"
       },
       "seeding_key": {
@@ -2903,7 +3148,7 @@
       "key": "24348f4e-97fe-4a7b-a929-8f3f8d353ba5",
       "position": 2,
       "properties": {
-        "description": "**Discuss:**\n- How can simulations be helpful in the real world? \n- How can simulations help us understand the world around us? \n- How can simulations improve the way we test out ideas? \n\nThe goal of the discussion is for students to understand that simulations are a way to model complex systems in an interactive way. They should also see how simulations let people test out ideas quickly, cheaply and safely. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:**\n- How can simulations be helpful in the real world? \n- How can simulations improve the way we test out ideas? \n\nThe goal of the discussion is for students to understand that simulations are a way to model complex systems in an interactive way. They should also see how simulations let people test out ideas quickly, cheaply and safely. "
       },
       "seeding_key": {
         "activity_section.key": "24348f4e-97fe-4a7b-a929-8f3f8d353ba5",
@@ -2914,7 +3159,7 @@
       "key": "92a46377-d168-473c-98e5-c1cf9f52dbbb",
       "position": 3,
       "properties": {
-        "description": "\n\n\n**Prompts:**\n- How is this simulation like the real world? How is it different?\n- What would you want to change/add to your simulation?\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How is this simulation like the real world? How is it different?_\n* _What would you want to change/add to your simulation?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -5313,6 +5558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_intro_video"
+        ],
         "progression": "Video: Outbreak Simulator: Introduction"
       },
       "bonus": false,
@@ -5335,6 +5583,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5357,6 +5608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_events_video"
+        ],
         "progression": "Video: Outbreak Simulator: Events"
       },
       "bonus": false,
@@ -5454,6 +5708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_scientist_video"
+        ],
         "progression": "Video: Outbreak Simulator: Thinking Like a Scientist"
       },
       "bonus": false,
@@ -5576,6 +5833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_outro_video"
+        ],
         "progression": "Video: Outbreak Simulator: Free Play"
       },
       "bonus": false,
@@ -5598,6 +5858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak82022"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
