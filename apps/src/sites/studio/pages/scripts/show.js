@@ -16,7 +16,6 @@ import {
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
-import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import googlePlatformApi, {
   loadGooglePlatformApi
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
@@ -75,20 +74,6 @@ function initPage() {
           announcement.visibility
         )
       )
-    );
-  }
-
-  const url = window.location.search;
-  const urlParams = new URLSearchParams(url);
-  const endOfLessonNumber = urlParams.get('endOfLesson');
-
-  if (endOfLessonNumber) {
-    ReactDOM.render(
-      <EndOfLessonDialog
-        isDialogOpen={true}
-        lessonNumber={endOfLessonNumber}
-      />,
-      document.getElementById('end-of-lesson-dialog')
     );
   }
 
