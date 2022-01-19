@@ -193,6 +193,76 @@ describe('FormController', () => {
 
         expect(getData(DummyPage1)).to.eql({status: 'incomplete', ...testData});
       });
+
+      it('Disables the save button during save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+        form.findAll('Button')[1].props.onClick();
+        expect(form.findAll('Button')[1].props.disabled).to.be.true;
+      });
+
+      it('Re-enables the save button after successful save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          201,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({})
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
+
+      it('Re-enables the save button after unsuccessful save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          400,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({
+            errors: {form_data: ['an error']}
+          })
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
+
+      it('Shows saved message alert after saving is complete, and user can close it', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          201,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({})
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        const alert = form.findOne('Alert');
+        expect(alert.content()).to.contain(
+          'Your progress has been saved! Return to this page at any time to continue working on your application.'
+        );
+
+        alert.props.onDismiss();
+        expect(form.exists('Alert')).to.be.false;
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
     });
 
     describe('Page validation', () => {
