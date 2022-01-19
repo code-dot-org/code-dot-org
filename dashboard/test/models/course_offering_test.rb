@@ -207,8 +207,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
         course_versions: [
           {
             id: @unit_group.course_version.id,
-            display_name: @unit_group.course_version.display_name,
             version_year: @unit_group.course_version.version_year,
+            display_name: @unit_group.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -222,8 +222,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
         course_versions: [
           {
             id: @unit_teacher_to_students.course_version.id,
-            display_name: @unit_teacher_to_students.course_version.display_name,
             version_year: @unit_teacher_to_students.course_version.version_year,
+            display_name: @unit_teacher_to_students.course_version.display_name,
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
@@ -231,8 +231,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
           },
           {
             id: @unit_teacher_to_students2.course_version.id,
-            display_name: @unit_teacher_to_students2.course_version.display_name,
             version_year: @unit_teacher_to_students2.course_version.version_year,
+            display_name: @unit_teacher_to_students2.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -253,8 +253,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
         course_versions: [
           {
             id: @unit_facilitator_to_teacher.course_version.id,
-            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
+            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -275,8 +275,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
         course_versions: [
           {
             id: @unit_group.course_version.id,
-            display_name: @unit_group.course_version.display_name,
             version_year: @unit_group.course_version.version_year,
+            display_name: @unit_group.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -290,8 +290,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
         course_versions: [
           {
             id: @unit_teacher_to_students.course_version.id,
-            display_name: @unit_teacher_to_students.course_version.display_name,
             version_year: @unit_teacher_to_students.course_version.version_year,
+            display_name: @unit_teacher_to_students.course_version.display_name,
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
@@ -299,8 +299,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
           },
           {
             id: @unit_teacher_to_students2.course_version.id,
-            display_name: @unit_teacher_to_students2.course_version.display_name,
             version_year: @unit_teacher_to_students2.course_version.version_year,
+            display_name: @unit_teacher_to_students2.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -314,8 +314,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
         course_versions: [
           {
             id: @unit_facilitator_to_teacher.course_version.id,
-            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
+            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
