@@ -295,6 +295,7 @@ class Blockly < Level
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
       if should_localize?
+        set_unless_nil(level_options, 'sharedBlocks', shared_blocks(true))
         set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
 
         set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
@@ -364,7 +365,7 @@ class Blockly < Level
           toolbox_blocks ||
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
-        level_prop['sharedBlocks'] = shared_blocks
+        level_prop['sharedBlocks'] = shared_blocks(false)
         level_prop['sharedFunctions'] = shared_functions if JSONValue.value(include_shared_functions)
       end
 
@@ -775,8 +776,8 @@ class Blockly < Level
     level
   end
 
-  def shared_blocks
-    Block.for(type)
+  def shared_blocks(should_localize)
+    Block.for(should_localize, type)
   end
 
   # Default to getting shared_functions of same level type, but allows subclasses to override

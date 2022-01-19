@@ -3,7 +3,7 @@ class BlocksController < ApplicationController
   load_and_authorize_resource find_by: :name
 
   def index
-    @blocks = Block.load_and_cache_by_pool(params[:pool])
+    @blocks = Block.load_and_cache_by_pool(params[:pool], true)
   end
 
   def new

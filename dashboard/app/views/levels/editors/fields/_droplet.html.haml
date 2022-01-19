@@ -68,7 +68,7 @@
       solution_blocks: @level.respond_to?(:solution_blocks),
       uses_droplet: @level.uses_droplet?,
       original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
-      shared_blocks: @level.shared_blocks,
+      shared_blocks: @level.shared_blocks(false),
     }.to_json
   }
 %script{src: webpack_asset_path('js/levels/editors/fields/_droplet.js'),

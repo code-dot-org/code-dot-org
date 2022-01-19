@@ -37,8 +37,8 @@ class GamelabJr < Gamelab
     instructions_icon
   )
 
-  def shared_blocks
-    Block.for(*block_pools.presence || type)
+  def shared_blocks(should_localize)
+    Block.for(should_localize, *block_pools.presence || type)
   end
 
   def self.create_from_level_builder(params, level_params)

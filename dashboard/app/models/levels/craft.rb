@@ -27,8 +27,8 @@
 require "csv"
 
 class Craft < Blockly
-  def shared_blocks
-    Block.for('craft') if JSONValue.value(is_aquatic_level)
+  def shared_blocks(should_localize)
+    Block.for(should_localize, 'craft') if JSONValue.value(is_aquatic_level)
   end
 
   serialized_attrs(
