@@ -126,10 +126,7 @@ class UnitOverview extends React.Component {
     return (
       <div>
         {completedLessonNumber && (
-          <EndOfLessonDialog
-            isDialogOpen={true}
-            lessonNumber={completedLessonNumber}
-          />
+          <EndOfLessonDialog lessonNumber={completedLessonNumber} />
         )}
         <div>
           {showUnversionedRedirectWarningDialog && (
