@@ -158,22 +158,18 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    return render :forbidden unless can? :read, @script
     @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   def resources
-    return render :forbidden unless can? :read, @script
     @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   def code
-    return render :forbidden unless can? :read, @script
     @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   def standards
-    return render :forbidden unless can? :read, @script
     @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
@@ -236,7 +232,6 @@ class ScriptsController < ApplicationController
   def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
-    render :forbidden unless can?(:read, @script)
   end
 
   def unit_params
