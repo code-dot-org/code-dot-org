@@ -102,6 +102,7 @@ def main
       PARTICIPANT_AUDIENCE
       INSTRUCTOR_AUDIENCE
       CURRICULUM_UMBRELLA
+      COURSE_OFFERING_CATEGORIES
     ),
       source_module: SharedCourseConstants, transform_keys: false
     ),

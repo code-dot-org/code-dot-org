@@ -72,7 +72,7 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       is_featured: is_featured?,
-      category: category || 'Other',
+      category: category || SharedCourseConstants::COURSE_OFFERING_CATEGORIES.other,
       display_name: display_name
     }
   end

@@ -9,7 +9,6 @@ class CourseOfferingsController < ApplicationController
     render :not_found unless @course_offering
   end
 
-  # PATCH/PUT /lessons/1
   def update
     @course_offering = CourseOffering.find_by!(key: params[:key])
     @course_offering.update!(course_offering_params)
