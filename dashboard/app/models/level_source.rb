@@ -2,7 +2,7 @@
 #
 # Table name: level_sources
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           unsigned, not null, primary key
 #  level_id   :integer
 #  md5        :string(32)       not null
 #  data       :string(20000)    not null

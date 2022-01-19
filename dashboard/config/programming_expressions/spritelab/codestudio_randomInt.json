@@ -2,5 +2,6 @@
   "key": "codestudio_randomInt",
   "name": "math_random_int",
   "category": "Math",
+  "block_name": "math_random_int",
   "syntax": "math_random_int"
 }
