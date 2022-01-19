@@ -47,6 +47,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script_level)
     refute ability.can?(:read, @public_script_level, {login_required: "true"})
     refute ability.can?(:read, @login_required_script_level)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test "as student" do
@@ -74,6 +76,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @public_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test "as teacher" do
@@ -101,6 +105,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @public_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test "as admin" do
@@ -129,6 +135,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.cannot?(:read, @public_script_level)
     assert ability.cannot?(:read, @login_required_script_level)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test 'teachers read their Section' do
