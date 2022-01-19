@@ -9,23 +9,23 @@
     <block type="controls_if">
       <value name="IF0">
         <block type="gamelab_isKeyPressed">
-          <title name="KEY">"up"</title>
+          <field name="KEY">"up"</field>
         </block>
       </value>
       <statement name="DO0">
         <block type="gamelab_moveInDirection">
-          <title name="DIRECTION">"North"</title>
+          <field name="DIRECTION">"North"</field>
           <value name="SPRITE">
             <block type="sprite_parameter_get">
-              <title name="VAR">this sprite</title>
+              <field name="VAR">this sprite</field>
             </block>
           </value>
           <value name="DISTANCE">
             <block type="gamelab_getProp">
-              <title name="PROPERTY">"speed"</title>
+              <field name="PROPERTY">"speed"</field>
               <value name="SPRITE">
                 <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
+                  <field name="VAR">this sprite</field>
                 </block>
               </value>
             </block>
@@ -36,23 +36,23 @@
         <block type="controls_if">
           <value name="IF0">
             <block type="gamelab_isKeyPressed">
-              <title name="KEY">"down"</title>
+              <field name="KEY">"down"</field>
             </block>
           </value>
           <statement name="DO0">
             <block type="gamelab_moveInDirection">
-              <title name="DIRECTION">"South"</title>
+              <field name="DIRECTION">"South"</field>
               <value name="SPRITE">
                 <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
+                  <field name="VAR">this sprite</field>
                 </block>
               </value>
               <value name="DISTANCE">
                 <block type="gamelab_getProp">
-                  <title name="PROPERTY">"speed"</title>
+                  <field name="PROPERTY">"speed"</field>
                   <value name="SPRITE">
                     <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
+                      <field name="VAR">this sprite</field>
                     </block>
                   </value>
                 </block>
@@ -63,54 +63,74 @@
             <block type="controls_if">
               <value name="IF0">
                 <block type="gamelab_isKeyPressed">
-                  <title name="KEY">"left"</title>
+                  <field name="KEY">"left"</field>
                 </block>
               </value>
               <statement name="DO0">
                 <block type="gamelab_moveInDirection">
-                  <title name="DIRECTION">"West"</title>
+                  <field name="DIRECTION">"West"</field>
                   <value name="SPRITE">
                     <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
+                      <field name="VAR">this sprite</field>
                     </block>
                   </value>
                   <value name="DISTANCE">
                     <block type="gamelab_getProp">
-                      <title name="PROPERTY">"speed"</title>
+                      <field name="PROPERTY">"speed"</field>
                       <value name="SPRITE">
                         <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
+                          <field name="VAR">this sprite</field>
                         </block>
                       </value>
                     </block>
                   </value>
+                  <next>
+                    <block type="gamelab_mirrorSprite">
+                      <field name="DIRECTION">"left"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <field name="VAR">this sprite</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
                 </block>
               </statement>
               <next>
                 <block type="controls_if">
                   <value name="IF0">
                     <block type="gamelab_isKeyPressed">
-                      <title name="KEY">"right"</title>
+                      <field name="KEY">"right"</field>
                     </block>
                   </value>
                   <statement name="DO0">
                     <block type="gamelab_moveInDirection">
-                      <title name="DIRECTION">"East"</title>
+                      <field name="DIRECTION">"East"</field>
                       <value name="SPRITE">
                         <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
+                          <field name="VAR">this sprite</field>
                         </block>
                       </value>
                       <value name="DISTANCE">
                         <block type="gamelab_getProp">
-                          <title name="PROPERTY">"speed"</title>
+                          <field name="PROPERTY">"speed"</field>
                           <value name="SPRITE">
                             <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
+                              <field name="VAR">this sprite</field>
                             </block>
                           </value>
                         </block>
                       </value>
+                      <next>
+                        <block type="gamelab_mirrorSprite">
+                          <field name="DIRECTION">"right"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <field name="VAR">this sprite</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
                     </block>
                   </statement>
                 </block>
