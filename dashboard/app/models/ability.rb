@@ -267,7 +267,6 @@ class Ability
     end
 
     can :read, Script do |unit|
-      puts "HERE 3"
       if unit.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit.pilot?
