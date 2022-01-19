@@ -87,12 +87,17 @@ const FormController = props => {
     ...getInitialData()
   }));
   const [submitting, setSubmitting] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [showSavedMessage, setShowSavedMessage] = useState(false);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
   const [errorMessages, setErrorMessages] = useState({});
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
+  const [updatedApplicationId, setUpdatedApplicationId] = useState(
+    applicationId
+  );
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
     applicationId && allowPartialSaving
   );
@@ -307,6 +312,7 @@ const FormController = props => {
       setErrorHeader(i18n.formServerError());
     }
     setSubmitting(false);
+    setSaving(false);
   };
 
   const makeRequest = applicationStatus => {
@@ -322,8 +328,8 @@ const FormController = props => {
         data: JSON.stringify(serializeFormData(dataWithStatus))
       });
 
-    return applicationId
-      ? ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`)
+    return updatedApplicationId
+      ? ajaxRequest('PUT', `${apiEndpoint}/${updatedApplicationId}`)
       : ajaxRequest('POST', apiEndpoint);
   };
 
@@ -335,15 +341,19 @@ const FormController = props => {
     setErrors([]);
     setErrorHeader(null);
     setGlobalError(false);
-    setSubmitting(true);
+    setSaving(true);
 
     const handleSuccessfulSave = data => {
+      scrollToTop();
+      setShowSavedMessage(true);
+      setUpdatedApplicationId(data.id);
+      setSaving(false);
       onSuccessfulSave(data);
     };
 
     makeRequest('incomplete')
-      .done(handleSuccessfulSave)
-      .fail(handleRequestFailure);
+      .done(data => handleSuccessfulSave(data))
+      .fail(data => handleRequestFailure(data));
   };
 
   /**
@@ -380,8 +390,8 @@ const FormController = props => {
     };
 
     makeRequest('unreviewed')
-      .done(handleSuccessfulSubmit)
-      .fail(handleRequestFailure);
+      .done(data => handleSuccessfulSubmit(data))
+      .fail(data => handleRequestFailure(data));
   };
 
   /**
@@ -495,23 +505,38 @@ const FormController = props => {
   };
 
   /**
-   * @returns {Element|undefined}
+   * @returns {Element|false}
    */
-  const renderDataWasLoadedMessage = () => {
-    if (showDataWasLoadedMessage) {
-      return (
-        <Alert
-          onDismiss={() => setShowDataWasLoadedMessage(false)}
-          bsStyle="info"
-        >
-          <p>
-            We found an application you started! Your saved responses have been
-            loaded.
-          </p>
-        </Alert>
-      );
-    }
-  };
+  const renderDataWasLoadedMessage = () =>
+    showDataWasLoadedMessage && (
+      <Alert
+        onDismiss={() => setShowDataWasLoadedMessage(false)}
+        bsStyle="info"
+      >
+        <p>
+          We found an application you started! Your saved responses have been
+          loaded.
+        </p>
+      </Alert>
+    );
+
+  /**
+   * @returns {Element|false}
+   */
+  const renderMessageOnSave = () =>
+    showSavedMessage && (
+      <Alert
+        onDismiss={() => {
+          setShowSavedMessage(false);
+        }}
+        bsStyle="info"
+      >
+        <p>
+          Your progress has been saved! Return to this page at any time to
+          continue working on your application.
+        </p>
+      </Alert>
+    );
 
   /**
    * @returns {Element}
@@ -550,6 +575,7 @@ const FormController = props => {
       <Button
         className="btn-gray"
         style={styles.saveButton}
+        disabled={saving}
         key="save"
         id="save"
         onClick={handleSave}
@@ -581,6 +607,7 @@ const FormController = props => {
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
       {renderDataWasLoadedMessage()}
+      {renderMessageOnSave()}
       {renderCurrentPage()}
       {renderControlButtons()}
       {renderErrorFeedback()}
