@@ -3,7 +3,6 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "accelerometer.getOrientation": null,
       "soundSensor.value": null,
       "soundSensor.setScale": null,
       "soundSensor.threshold": null,
@@ -46,7 +45,6 @@
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -70,6 +68,7 @@
     "disable_if_else_editing": "false",
     "free_play": "false",
     "validation_enabled": "true",
+    "submittable": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
@@ -82,32 +81,33 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
+    "long_instructions": "# Sensors Practice",
+    "parent_level_id": 20595,
+    "name_suffix": "_2021",
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "ai_enabled": "false",
+    "reference_links": [
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+      "/docs/concepts/maker-toolkit/board-events/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/"
+    ],
+    "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "parent_level_id": 20562,
-    "name_suffix": "_2021",
-    "text_mode_at_start": "false",
-    "long_instructions": "# Accelerometer Practice",
-    "reference_links": [
-      "/docs/concepts/maker-toolkit/accelerometer-events/",
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/"
-    ],
-    "mini_rubric": "false",
-    "encrypted": "false",
-    "widget_mode": "false",
-    "libraries_enabled": "false",
-    "ai_enabled": "false",
-    "preload_asset_list": null
+    ]
   },
   "game_id": 41,
   "published": true,
-  "created_at": "2021-09-01T22:44:15.000Z",
+  "created_at": "2022-01-19T18:29:13.000Z",
   "level_num": "custom",
-  "user_id": 568,
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:44:15.351+00:00\",\"changed\":[\"cloned from \\\"CSD U6 stillness game predict code_2021\\\"\"],\"cloned_from\":\"CSD U6 stillness game predict code_2021\"},{\"changed_at\":\"2021-09-01 22:44:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 17:03:10 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-19 18:39:23 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"hide_view_data_button\",\"encrypted_examples\",\"long_instructions\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-19T18:29:13.045+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PE_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PE_2022\"},{\"changed_at\":\"2022-01-19 18:29:49 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
