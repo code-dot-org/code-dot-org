@@ -18,6 +18,7 @@ describe('FeedbackUtils', () => {
         const finalStageMsg = 'Final stage!';
         const nextStageMsg = 'Next stage!';
         const nextLevelMsg = 'Next level!';
+        const endOfLesson = 'End of lesson!';
 
         beforeEach(() => {
           options = {
@@ -31,6 +32,7 @@ describe('FeedbackUtils', () => {
           };
 
           sinon.stub(msg, 'finalStage').callsFake(() => finalStageMsg);
+          sinon.stub(msg, 'endOfLesson').callsFake(() => endOfLesson);
           sinon.stub(msg, 'nextStage').callsFake(() => nextStageMsg);
           sinon.stub(msg, 'nextLevel').callsFake(() => nextLevelMsg);
         });
@@ -63,6 +65,15 @@ describe('FeedbackUtils', () => {
             );
           });
 
+          it('returns end of lesson message if final level and level.showEndOfLessonMsgs is true', () => {
+            options.level.lastLevelInLesson = true;
+            options.level.showEndOfLessonMsgs = true;
+            assert.equal(
+              feedbackUtils.getFeedbackMessage(options),
+              endOfLesson
+            );
+          });
+
           it('returns appStrings.reinfFeedbackMsg if not final level', () => {
             assert.equal(
               feedbackUtils.getFeedbackMessage(options),
@@ -81,6 +92,15 @@ describe('FeedbackUtils', () => {
             assert.equal(
               feedbackUtils.getFeedbackMessage(options),
               finalStageMsg
+            );
+          });
+
+          it('returns final stage message if final level and level.showEndOfLessonMsgs is true', () => {
+            options.level.lastLevelInLesson = true;
+            options.level.showEndOfLessonMsgs = true;
+            assert.equal(
+              feedbackUtils.getFeedbackMessage(options),
+              endOfLesson
             );
           });
 
