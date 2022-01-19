@@ -23,6 +23,14 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
+    # Explicitly load defaults for Rails 5.2. New defaults for 6.0 are
+    # collected in `config/initializers/new_framework_defaults_6_0.rb`; once
+    # everything in that file matches the actual defaults for 6.0, that file
+    # can be removed and this can be updated to load those defaults.
+    #
+    # See https://guides.rubyonrails.org/configuring.html and https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#configure-framework-defaults
+    config.load_defaults 5.2
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
