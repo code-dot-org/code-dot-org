@@ -250,6 +250,7 @@ class Ability
     end
 
     can [:vocab, :resources, :code, :standards], UnitGroup do |unit_group|
+      puts "HERE 3"
       unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
     end
 
