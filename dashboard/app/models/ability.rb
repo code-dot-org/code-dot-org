@@ -409,6 +409,7 @@ class Ability
         Game,
         Level,
         UnitGroup,
+        CourseOffering,
         Script,
         Lesson,
         ScriptLevel,
