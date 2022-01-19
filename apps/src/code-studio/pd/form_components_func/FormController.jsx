@@ -532,7 +532,7 @@ const FormController = props => {
         bsStyle="info"
       >
         <p>
-          Your progress has been saved! Return to this page at any time to
+          Your progress has been saved. Return to this page at any time to
           continue working on your application.
         </p>
       </Alert>

@@ -253,7 +253,7 @@ describe('FormController', () => {
 
         const alert = form.findOne('Alert');
         expect(alert.content()).to.contain(
-          'Your progress has been saved! Return to this page at any time to continue working on your application.'
+          'Your progress has been saved. Return to this page at any time to continue working on your application.'
         );
 
         alert.props.onDismiss();
