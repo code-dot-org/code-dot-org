@@ -296,7 +296,7 @@
           <block type="gamelab_draggable"/>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">spinning right</title>
+            <title name="VAR" id="spinning right">spinning right</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
@@ -316,19 +316,19 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">moving north</title>
+            <title name="VAR" id="moving north">moving north</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">moving east</title>
+            <title name="VAR" id="moving east">moving east</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">moving south</title>
+            <title name="VAR" id="moving south">moving south</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">moving west</title>
+            <title name="VAR" id="moving west">moving west</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>

@@ -344,7 +344,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true" uservisible="false">
               <title name="DIRECTION">"East"</title>
@@ -365,7 +365,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true" uservisible="false">
               <title name="DIRECTION">"North"</title>
@@ -386,7 +386,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true" uservisible="false">
               <title name="DIRECTION">"South"</title>
@@ -407,7 +407,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true" uservisible="false">
               <title name="DIRECTION">"West"</title>
@@ -428,7 +428,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn" inline="true" uservisible="false">
               <title name="DIRECTION">"right"</title>

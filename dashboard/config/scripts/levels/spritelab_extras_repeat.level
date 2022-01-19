@@ -102,7 +102,7 @@
                   <value name="BEHAVIOR">
                     <block type="gamelab_behavior_get">
                       <mutation/>
-                      <title name="VAR">swimming left and right</title>
+                      <title name="VAR" id="swimming left and right">swimming left and right</title>
                     </block>
                   </value>
                 </block>

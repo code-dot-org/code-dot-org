@@ -378,7 +378,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true">
               <title name="DIRECTION">"East"</title>
@@ -399,7 +399,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true">
               <title name="DIRECTION">"North"</title>
@@ -420,7 +420,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true">
               <title name="DIRECTION">"South"</title>
@@ -441,7 +441,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true">
               <title name="DIRECTION">"West"</title>
@@ -462,7 +462,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn" inline="true">
               <title name="DIRECTION">"right"</title>
@@ -671,7 +671,7 @@
           </block>
           <block type="gamelab_draggable"/>
           <block type="gamelab_behavior_get">
-            <title name="VAR">spinning right</title>
+            <title name="VAR" id="spinning right">spinning right</title>
           </block>
           <block type="gamelab_behavior_get">
             <title name="VAR" id="growing">growing</title>
@@ -686,16 +686,16 @@
             <title name="VAR" id="patrolling">patrolling</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">moving north</title>
+            <title name="VAR" id="moving north">moving north</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">moving east</title>
+            <title name="VAR" id="moving east">moving east</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">moving south</title>
+            <title name="VAR" id="moving south">moving south</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">moving west</title>
+            <title name="VAR" id="moving west">moving west</title>
           </block>
           <block type="gamelab_behavior_get">
             <title name="VAR" id="wandering">wandering</title>
