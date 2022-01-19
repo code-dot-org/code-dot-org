@@ -10,7 +10,12 @@ import Student from './Student';
 // These are called "Droppables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function StudentGroup({droppableId, members}) {
+export default function StudentGroup({
+  droppableId,
+  members,
+  dropAreaStyle,
+  showEmptyGroupPlaceholder
+}) {
   // TO DO: add header with group name and trash icon to remove a group.
   // https://codedotorg.atlassian.net/browse/CSA-1027
   // This component is also used to render unassigned students (which don't need a header),
@@ -20,18 +25,24 @@ export default function StudentGroup({droppableId, members}) {
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
-          style={getListStyle(snapshot.isDraggingOver)}
+          style={{...getListStyle(snapshot.isDraggingOver), ...dropAreaStyle}}
           {...provided.droppableProps}
         >
-          {members.map((member, index) => (
-            <Student
-              followerId={member.followerId}
-              name={member.name}
-              index={index}
-              key={member.followerId}
-            />
-          ))}
-          {provided.placeholder}
+          {members && members.length > 0 ? (
+            <div style={styles.studentList}>
+              {members.map((member, index) => (
+                <Student
+                  followerId={member.followerId}
+                  name={member.name}
+                  index={index}
+                  key={member.followerId}
+                />
+              ))}
+              {provided.placeholder}
+            </div>
+          ) : (
+            showEmptyGroupPlaceholder && <div style={styles.emptyGroup} />
+          )}
         </div>
       )}
     </Droppable>
@@ -42,10 +53,23 @@ export default function StudentGroup({droppableId, members}) {
 // so that we can create new groups on the fly without any interaction with our backend.
 StudentGroup.propTypes = {
   droppableId: PropTypes.string.isRequired,
-  members: PropTypes.array.isRequired
+  members: PropTypes.array.isRequired,
+  dropAreaStyle: PropTypes.object,
+  showEmptyGroupPlaceholder: PropTypes.bool.isRequired
 };
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? color.lightest_gray : color.white,
-  border: `1px solid ${color.lighter_gray}`
+  background: isDraggingOver ? color.lightest_gray : color.white
 });
+
+const GRAY_BORDER = `1px solid ${color.lighter_gray}`;
+
+const styles = {
+  studentList: {
+    border: GRAY_BORDER
+  },
+  emptyGroup: {
+    paddingBottom: 53,
+    border: GRAY_BORDER
+  }
+};

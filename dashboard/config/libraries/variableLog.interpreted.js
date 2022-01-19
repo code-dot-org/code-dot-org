@@ -1,5 +1,8 @@
 var studentVarToken = false;
 var varLog={};
+if(!validationProps){
+  var validationProps ={};
+}
 
 function updateLog(){
   var start = Object.keys(window).indexOf("playSoundOptions")+1;

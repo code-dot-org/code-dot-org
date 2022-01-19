@@ -2,5 +2,6 @@
   "key": "setupSim",
   "name": "setupSim",
   "category": "Experimental",
+  "block_name": "gamelab_setupSim",
   "syntax": "setupSim"
 }
