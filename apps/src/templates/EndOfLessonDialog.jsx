@@ -5,21 +5,26 @@ import i18n from '@cdo/locale';
 import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
 
-function EndOfLessonDialog(props) {
-  const [isDialogOpen, setIsDialogOpen] = useState(props.isDialogOpen);
+function EndOfLessonDialog({lessonNumber}) {
+  const [isDialogOpen, setIsDialogOpen] = useState(true);
+
+  const handleClose = () => setIsDialogOpen(false);
 
   return (
-    <BaseDialog useUpdatedStyles isOpen={isDialogOpen} style={styles.dialog}>
-      <h2>
-        {i18n.endOfLessonDialogHeading({lessonNumber: props.lessonNumber})}
-      </h2>
+    <BaseDialog
+      useUpdatedStyles
+      isOpen={isDialogOpen}
+      handleClose={handleClose}
+      style={styles.dialog}
+    >
+      <h2>{i18n.endOfLessonDialogHeading({lessonNumber})}</h2>
       <div>{i18n.endOfLessonDialogDetails()}</div>
       <DialogFooter>
         <Button
           __useDeprecatedTag
           text={i18n.ok()}
           color={Button.ButtonColor.gray}
-          onClick={() => setIsDialogOpen(false)}
+          onClick={handleClose}
         />
       </DialogFooter>
     </BaseDialog>
@@ -27,7 +32,6 @@ function EndOfLessonDialog(props) {
 }
 
 EndOfLessonDialog.propTypes = {
-  isDialogOpen: PropTypes.bool.isRequired,
   lessonNumber: PropTypes.string.isRequired
 };
 
