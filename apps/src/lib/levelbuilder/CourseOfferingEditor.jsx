@@ -5,12 +5,31 @@ import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 
-const categories = ['Full Courses', 'CSF', 'HOC', 'Other'];
+const categories = [
+  'Full Courses',
+  'CS Fundamentals',
+  'CS Connections',
+  'AI/ML',
+  'Hour of Code',
+  'CS Fundamentals International',
+  'Math',
+  '20-hour',
+  'Other'
+];
+
+const useCourseOffering = initialCourseOffering => {
+  const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
+  const updateCourseOffering = (key, value) => {
+    setCourseOffering({...courseOffering, [key]: value});
+  };
+
+  return [courseOffering, updateCourseOffering];
+};
 
 export default function CourseOfferingEditor(props) {
-  const [featured, setFeatured] = useState(props.initialIsFeatured);
-  const [category, setCategory] = useState(props.initialCategory);
-  const [displayName, setDisplayName] = useState(props.initialDisplayName);
+  const [courseOffering, updateCourseOffering] = useCourseOffering(
+    props.initialCourseOffering
+  );
   const [error, setError] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState(null);
@@ -22,19 +41,12 @@ export default function CourseOfferingEditor(props) {
     setLastSaved(null);
     setIsSaving(true);
 
-    let dataToSave = {
-      key: props.courseOfferingKey,
-      display_name: displayName,
-      is_featured: featured,
-      category: category
-    };
-
     $.ajax({
-      url: `/course_offerings/${props.courseOfferingKey}`,
+      url: `/course_offerings/${courseOffering.key}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToSave)
+      data: JSON.stringify(courseOffering)
     })
       .done(data => {
         if (shouldCloseAfterSave) {
@@ -52,22 +64,22 @@ export default function CourseOfferingEditor(props) {
 
   return (
     <div>
-      <h1>{`Editing Course Offering: ${props.courseOfferingKey}`}</h1>
+      <h1>{`Editing Course Offering: ${courseOffering.key}`}</h1>
       <label>
         Display Name
         <input
           type="text"
-          defaultValue={displayName}
+          defaultValue={courseOffering.display_name}
           style={styles.input}
-          onChange={e => setDisplayName(e.target.value)}
+          onChange={e => updateCourseOffering('display_name', e.target.value)}
         />
       </label>
       <label>
         Category
         <select
-          value={category}
+          value={courseOffering.category}
           style={styles.dropdown}
-          onChange={e => setCategory(e.target.value)}
+          onChange={e => updateCourseOffering('category', e.target.value)}
         >
           {categories.map(category => (
             <option key={category} value={category}>
@@ -92,9 +104,9 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
         <input
           type="checkbox"
-          defaultChecked={featured}
+          defaultChecked={courseOffering.is_featured}
           style={styles.checkbox}
-          onChange={e => setFeatured(e.target.value)}
+          onChange={e => updateCourseOffering('is_featured', e.target.value)}
         />
       </label>
       <SaveBar
@@ -109,10 +121,12 @@ export default function CourseOfferingEditor(props) {
 }
 
 CourseOfferingEditor.propTypes = {
-  courseOfferingKey: PropTypes.string,
-  initialIsFeatured: PropTypes.bool,
-  initialCategory: PropTypes.string,
-  initialDisplayName: PropTypes.string
+  initialCourseOffering: PropTypes.shape({
+    key: PropTypes.string,
+    is_featured: PropTypes.bool,
+    category: PropTypes.string,
+    display_name: PropTypes.string
+  })
 };
 
 const styles = {

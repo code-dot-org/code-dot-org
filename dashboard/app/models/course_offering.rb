@@ -71,9 +71,9 @@ class CourseOffering < ApplicationRecord
   def summarize_for_edit
     {
       key: key,
-      isFeatured: is_featured?,
-      category: category,
-      displayName: display_name
+      is_featured: is_featured?,
+      category: category || 'Other',
+      display_name: display_name
     }
   end
 end

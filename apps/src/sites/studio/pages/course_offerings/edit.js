@@ -13,12 +13,7 @@ function showCourseOfferingEditor() {
   );
 
   ReactDOM.render(
-    <CourseOfferingEditor
-      courseOfferingKey={courseOfferingEditorData.key}
-      initialDisplayName={courseOfferingEditorData.displayName}
-      initialCategory={courseOfferingEditorData.category}
-      initialIsFeatured={courseOfferingEditorData.isFeatured}
-    />,
+    <CourseOfferingEditor initialCourseOffering={courseOfferingEditorData} />,
     document.getElementById('course_offering_editor')
   );
 }
