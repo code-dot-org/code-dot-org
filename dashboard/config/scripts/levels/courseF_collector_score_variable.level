@@ -5,8 +5,7 @@
     "show_debug_watch": "true",
     "helper_libraries": [
       "NativeSpriteLab",
-      "variableLog",
-      "zTimerPrototype"
+      "variableLog"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
@@ -54,8 +53,8 @@
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
-    "short_instructions": "After some time has passed, make more sprites for the player to collect. ",
-    "long_instructions": "# More Sprites\r\n\r\nAt this point, it probably doesn't take long to collect all the sprites in your game. After some time has passed, we'll make more sprites for the player to collect. \r\n\r\n## Do This\r\n\r\n* Add another `at seconds` event block to your workspace and choose an amount of time.\r\n* Use the `make new sprites` block to create a second group of sprites.\r\n  * Hint: You might also need to set the size or behaviors of these new sprites.\r\n  \r\n*Extra Challenge:* Use a different costume for the new sprites. You'll also need to add another `when touches` event that removes these sprites and scores points.\r\n",
+    "short_instructions": "Use a variable to set the score to 0. Give your \"player\" sprite a behavior to make it move. Make sure you can move your player sprite all around the play area.",
+    "long_instructions": "# Track the \"score\"\r\n\r\nThe next step is to create a variable to track the player's score.\r\n\r\n## Do This\r\n\r\n* Drag a `set` variable block to your workspace.\r\n* Choose a label for your score variable and set it to 0.\r\n\r\n*You won't be able to score any points yet, but that's okay!*",
     "authored_hints": "[]",
     "hint_prompt_attempts_threshold": "1",
     "project_template_level_name": "courseF_collector_template",
@@ -66,18 +65,15 @@
       "downButton"
     ],
     "callout_json": "[]",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-01-14T20:40:43.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-01-19T15:05:42.000Z",
   "user_id": 63,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-14T20:40:43.405+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score\\\"\"],\"cloned_from\":\"courseF_collector_score\"},{\"changed_at\":\"2022-01-14 20:48:22 +0000\",\"changed\":[\"start_blocks\",\"short_instructions\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:51:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 20:53:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:01:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:06:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:08:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-14 21:15:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 16:17:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 16:19:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 16:22:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 16:23:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 16:26:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-19T15:05:42.565+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_player\\\"\"],\"cloned_from\":\"courseF_collector_player\"},{\"changed_at\":\"2022-01-19 15:08:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 15:46:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 15:59:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -97,7 +93,7 @@
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <field name="COLOUR">#99ff99</field>
+                <field name="COLOUR">#3333ff</field>
               </block>
             </value>
           </block>
@@ -130,7 +126,6 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_destroy"/>
           <block type="gamelab_setProp">
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
@@ -202,27 +197,6 @@
             <field name="CONDITION">"when"</field>
             <field name="KEY">"up"</field>
           </block>
-          <block type="gamelab_atTime">
-            <field name="UNIT">"seconds"</field>
-            <value name="N">
-              <block type="math_number">
-                <field name="NUM">3</field>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_checkTouching">
-            <field name="CONDITION">"when"</field>
-            <value name="SPRITE1">
-              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"bunny2_1"</field>
-              </block>
-            </value>
-            <value name="SPRITE2">
-              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"carrot_1"</field>
-              </block>
-            </value>
-          </block>
         </category>
         <category name="Variables" custom="VARIABLE">
           <block type="variables_set">
@@ -230,14 +204,6 @@
             <value name="VALUE">
               <block type="math_number">
                 <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
-          <block type="math_change">
-            <field name="VAR">???</field>
-            <value name="DELTA">
-              <block type="math_number">
-                <field name="NUM">1</field>
               </block>
             </value>
           </block>
