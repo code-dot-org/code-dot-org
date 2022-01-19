@@ -90,7 +90,7 @@
                   </value>
                   <value name="BEHAVIOR">
                     <block type="gamelab_behavior_get">
-                      <title name="VAR">spinning right</title>
+                      <title name="VAR" id="spinning right">spinning right</title>
                     </block>
                   </value>
                 </block>
@@ -103,10 +103,10 @@
     <toolbox_blocks>
       <xml>
         <block type="gamelab_behavior_get">
-          <title name="VAR">spinning right</title>
+          <title name="VAR" id="spinning right">spinning right</title>
         </block>
         <block type="gamelab_behavior_get">
-          <title name="VAR">swimming left and right</title>
+          <title name="VAR" id="swimming left and right">swimming left and right</title>
         </block>
         <block type="gamelab_comment">
           <title name="COMMENT"/>

@@ -149,11 +149,11 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">spinning right</title>
+            <title name="VAR" id="spinning right">spinning right</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">swimming left and right</title>
+            <title name="VAR" id="swimming left and right">swimming left and right</title>
           </block>
         </category>
         <category name="Comments">
@@ -191,7 +191,7 @@
                       <value name="BEHAVIOR">
                         <block type="gamelab_behavior_get">
                           <mutation/>
-                          <title name="VAR">swimming left and right</title>
+                          <title name="VAR" id="swimming left and right">swimming left and right</title>
                         </block>
                       </value>
                       <next>
@@ -215,7 +215,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">swimming left and right</title>
+          <title name="NAME" id="swimming left and right">swimming left and right</title>
           <statement name="STACK">
             <block type="controls_if">
               <mutation elseif="1"/>
@@ -585,7 +585,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"East"</title>
@@ -606,7 +606,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"North"</title>
@@ -627,7 +627,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"South"</title>
@@ -648,7 +648,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"West"</title>
@@ -669,7 +669,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"right"</title>

@@ -128,10 +128,10 @@
         <category name="Behaviors">
           <block type="gamelab_addBehaviorSimple" inline="true"/>
           <block type="gamelab_behavior_get">
-            <title name="VAR">spinning right</title>
+            <title name="VAR" id="spinning right">spinning right</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">swimming left and right</title>
+            <title name="VAR" id="swimming left and right">swimming left and right</title>
           </block>
         </category>
         <category name="Comments">
