@@ -63,7 +63,7 @@
         uses_droplet: @level.uses_droplet?,
         input_output_table: @level.respond_to?(:input_output_table),
         original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
-        shared_blocks: @level.shared_blocks,
+        shared_blocks: @level.shared_blocks(false),
       }.to_json
     }
   %script{src: webpack_asset_path('js/levels/editors/fields/_blockly.js'),

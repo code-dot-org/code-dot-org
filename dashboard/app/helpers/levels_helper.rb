@@ -664,7 +664,7 @@ module LevelsHelper
     app_options[:isStartMode] = @is_start_mode || false
 
     if params[:blocks]
-      level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+      level_options[:sharedBlocks] = Block.for(true, *params[:blocks].split(','))
       level_options[:sharedFunctions] = nil # TODO: handle non-standard pools
     end
 

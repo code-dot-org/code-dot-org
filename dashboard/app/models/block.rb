@@ -27,22 +27,23 @@ class Block < ApplicationRecord
     @@all_pool_names ||= Block.distinct.pluck(:pool)
   end
 
-  def self.for(*types)
+  def self.for(should_localize, *types)
     types = types.to_set.add(DEFAULT_POOL)
-    types.map {|type| Block.load_and_cache_by_pool(type)}.flatten.compact
+    types.map {|type| Block.load_and_cache_by_pool(type, should_localize)}.flatten.compact
   end
 
-  def self.load_and_cache_by_pool(pool)
+  def self.load_and_cache_by_pool(pool, should_localize)
     if Script.should_cache? && !Block.all_pool_names.include?(pool)
       return nil
     end
 
-    Rails.cache.fetch("blocks/#{pool}/#{I18n.locale}", force: !Script.should_cache?) do
-      Block.where(pool: pool).map(&:block_options)
+    locale = should_localize ? I18n.locale : I18n.default_locale
+    Rails.cache.fetch("blocks/#{pool}/#{locale}", force: !Script.should_cache?) do
+      Block.where(pool: pool).map {|b| b.block_options(should_localize)}
     end
   end
 
-  def block_options
+  def block_options(should_localize)
     options = {
       name: name,
       pool: pool,
@@ -50,6 +51,9 @@ class Block < ApplicationRecord
       config: JSON.parse(config),
       helperCode: helper_code,
     }
+
+    return options unless should_localize
+
     block_text = options[:config]["blockText"]
     unless block_text.blank?
       block_text_translation = I18n.t(
@@ -58,7 +62,7 @@ class Block < ApplicationRecord
         default: nil,
         smart: true
       )
-      options[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
+      options[:config]["blockText"] = block_text_translation unless block_text_translation.blank?
     end
     arguments = options[:config]["args"]
     unless arguments.blank?
@@ -79,7 +83,7 @@ class Block < ApplicationRecord
             smart: true
           )
           # Update the key (the first element) with the new translated value
-          argument["options"][i][0] = option_translation unless option_translation.nil?
+          argument["options"][i][0] = option_translation unless option_translation.blank?
         end
       end
       options[:config]["args"] = arguments

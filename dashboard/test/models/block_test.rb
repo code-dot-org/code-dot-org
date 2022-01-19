@@ -13,14 +13,14 @@ class BlockTest < ActiveSupport::TestCase
 
   test 'Block writes to and loads back from file' do
     block = create :block
-    json_before = block.block_options
+    json_before = block.block_options(false)
     block.delete
     base_path = "config/blocks/#{block.pool}/#{block.name}"
 
     Block.load_record "#{base_path}.json"
 
     seeded_block = Block.find_by(name: block.name)
-    assert_equal json_before, seeded_block.block_options
+    assert_equal json_before, seeded_block.block_options(false)
     assert_equal block.pool, seeded_block.pool
     assert_equal block.helper_code, seeded_block.helper_code
 
@@ -29,14 +29,14 @@ class BlockTest < ActiveSupport::TestCase
 
   test 'Block writes to and loads back from file without helper code' do
     block = create :block, helper_code: nil
-    json_before = block.block_options
+    json_before = block.block_options(false)
     block.delete
     base_path = "config/blocks/#{block.pool}/#{block.name}"
 
     Block.load_record "#{base_path}.json"
 
     seeded_block = Block.find_by(name: block.name)
-    assert_equal json_before, seeded_block.block_options
+    assert_equal json_before, seeded_block.block_options(false)
     assert_equal block.pool, seeded_block.pool
     assert_nil seeded_block.helper_code
 
@@ -74,7 +74,7 @@ class BlockTest < ActiveSupport::TestCase
     block.name = block.name + '_the_great'
     block.save
 
-    assert Block.for(block.pool).any? {|b| b[:name] == block.name}
+    assert Block.for(false, block.pool).any? {|b| b[:name] == block.name}
     refute File.exist? old_file_path
     refute File.exist? old_js_path
   end
@@ -94,7 +94,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'always includes blocks from the default pool' do
-    assert Block.for.any? {|b| b[:pool] == Block::DEFAULT_POOL}
+    assert Block.for(false).any? {|b| b[:pool] == Block::DEFAULT_POOL}
   end
 
   test 'file_path works for unmodified and modified blocks' do
@@ -112,5 +112,259 @@ class BlockTest < ActiveSupport::TestCase
     block.pool = 'otherFakeLevelType'
     assert_equal original_path, block.file_path_was
     assert_equal Rails.root.join("config/blocks/otherFakeLevelType/#{new_name}.json"), block.file_path
+  end
+
+  test 'blocks are translated if should_localize is true' do
+    block_to_translate = create(
+      :block,
+      pool: "TestPool",
+      category: "Events",
+      config:
+      {
+        "color" => [140, 1, 0.74],
+        "func" => "atSelectColor",
+        "blockText" => "cat {TIMESTAMP} {COLOR}",
+        "args" => [
+          {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+          {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+        ],
+        "eventBlock" => true
+      }.to_json,
+      helper_code: nil
+    )
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          block_to_translate.name => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "rood",
+                "blue": "blauw",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    translated_block =
+      {
+        name: block_to_translate.name,
+        pool: "TestPool",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["rood", "red"], ["blauw", "blue"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }
+
+    localized_blocks = Block.for(true, 'TestPool')
+
+    assert_equal translated_block, localized_blocks.select {|b| b[:name] == block_to_translate.name}[0]
+
+    # ensure block wasn't altered
+    block_to_translate.reload
+    assert_equal "cat {TIMESTAMP} {COLOR}", JSON.parse(block_to_translate.config)['blockText']
+  end
+
+  test 'option that contains a period in the key is translated' do
+    block_to_translate = create(
+      :block,
+      pool: "TestPool",
+      category: "Events",
+      config:
+      {
+        "color" => [140, 1, 0.74],
+        "func" => "selectLevel",
+        "blockText" => "check the {LEVEL}",
+        "args" => [
+          {"name" => "LEVEL", "options" => [["Whole", "LEVELS.Whole"], ["Half", "LEVELS.Half"]]}
+        ],
+        "eventBlock" => true
+      }.to_json,
+      helper_code: nil
+    )
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          block_to_translate.name => {
+            "text" => "vérifier la {LEVEL}",
+            "options" => {
+              "LEVEL" => {
+                "LEVELS.Whole": "Entier",
+                "LEVELS.Half": "Moitié",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    translated_block =
+      {
+        name: block_to_translate.name,
+        pool: "TestPool",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "selectLevel",
+            "blockText" => "vérifier la {LEVEL}",
+            "args" => [
+              {"name" => "LEVEL", "options" => [["Entier", "LEVELS.Whole"], ["Moitié", "LEVELS.Half"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }
+
+    localized_blocks = Block.for(true, 'TestPool')
+
+    assert_equal translated_block, localized_blocks.select {|b| b[:name] == block_to_translate.name}[0]
+  end
+
+  test 'does not return a translated string if block text does not exist' do
+    block_to_translate = create(
+      :block,
+      pool: "TestPool",
+      category: "Events",
+      config:
+      {
+        "color" => [140, 1, 0.74],
+        "func" => "atSelectColor",
+        "args" => [
+          {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+          {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+        ],
+        "eventBlock" => true
+      }.to_json,
+      helper_code: nil
+    )
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          block_to_translate.name => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "rood",
+                "blue": "blauw",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    translated_block = [
+      {
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }
+    ]
+
+    localized_blocks = Block.for(true, 'TestPool')
+    localized_block = localized_blocks.select {|b| b[:name] == block_to_translate.name}[0]
+    assert_not_equal localized_block, translated_block
+  end
+
+  test 'does not return translated strings when I18n translation does not exist' do
+    block_to_translate = create(
+      :block,
+      pool: "TestPool",
+      category: "Events",
+      config:
+      {
+        "color" => [140, 1, 0.74],
+        "func" => "atSelectColor",
+        "blockText" => "cat {TIMESTAMP} {COLOR}",
+        "args" => [
+          {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+          {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+        ],
+        "eventBlock" => true
+      }.to_json,
+      helper_code: nil
+    )
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          block_to_translate.name => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "",
+                "blue": "",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    translated_block =
+      {
+        name: block_to_translate.name,
+        pool: "TestPool",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["", "red"], ["", "blue"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }
+
+    localized_blocks = Block.for(true, 'TestPool')
+
+    assert_not_equal translated_block, localized_blocks.select {|b| b[:name] == block_to_translate.name}[0]
   end
 end
