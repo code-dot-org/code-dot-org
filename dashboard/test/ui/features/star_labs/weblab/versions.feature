@@ -29,9 +29,9 @@ Scenario: Weblab Versions
   And I close the dialog
   And I wait for 3 seconds
   Then I press "versions-header"
-  And I wait until element "button:contains(Restore this Version):eq(0)" is visible
-  And element "button.version-preview" is visible
-  And I click selector "button:contains(Restore this Version):eq(0)"
+  And I wait until element "button:contains(Restore):eq(0)" is visible
+  And element "button.btn-info" is visible
+  And I click selector "button:contains(Restore):eq(0)"
   And I wait until element "#showVersionsModal" is gone
   And I wait for 3 seconds
   And I wait until element "#submitButton" is visible
@@ -43,5 +43,5 @@ Scenario: Weblab Versions
   # Instead, we simply verify that there are now 2 earlier versions that can be restored
   Then I press "versions-header"
   And I wait to see a dialog titled "Version History"
-  And I wait until element "button:contains(Restore this Version):eq(1)" is visible
+  And I wait until element "button:contains(Restore):eq(1)" is visible
   And I close the dialog
