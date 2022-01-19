@@ -122,8 +122,8 @@
  * @property {array} levelVideos
  * @property {string} mapReference
  * @property {array} referenceLinks
- * @property {array} lastLevelInLesson
- * @property {array} lastLevelInScript
+ * @property {boolean} isLastLevelInLesson
+ * @property {boolean} isLastLevelInScript
  */
 
 /**
