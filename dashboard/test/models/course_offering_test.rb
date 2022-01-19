@@ -208,11 +208,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
           {
             id: @unit_group.course_version.id,
             display_name: @unit_group.course_version.display_name,
+            version_year: @unit_group.course_version.version_year,
+            is_stable: true,
+            is_recommended: true,
+            locales: ["English"],
             units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
           }
         ]
       },
-
       {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
@@ -220,11 +223,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
           {
             id: @unit_teacher_to_students.course_version.id,
             display_name: @unit_teacher_to_students.course_version.display_name,
+            version_year: @unit_teacher_to_students.course_version.version_year,
+            is_stable: true,
+            is_recommended: false,
+            locales: ["English"],
             units: [{id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}]
           },
           {
             id: @unit_teacher_to_students2.course_version.id,
             display_name: @unit_teacher_to_students2.course_version.display_name,
+            version_year: @unit_teacher_to_students2.course_version.version_year,
+            is_stable: true,
+            is_recommended: true,
+            locales: ["English"],
             units: [{id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}]
           }
         ]
@@ -243,6 +254,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
           {
             id: @unit_facilitator_to_teacher.course_version.id,
             display_name: @unit_facilitator_to_teacher.course_version.display_name,
+            version_year: @unit_facilitator_to_teacher.course_version.version_year,
+            is_stable: true,
+            is_recommended: true,
+            locales: ["English"],
             units: [{id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}]
           }
         ]
@@ -261,6 +276,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
           {
             id: @unit_group.course_version.id,
             display_name: @unit_group.course_version.display_name,
+            version_year: @unit_group.course_version.version_year,
+            is_stable: true,
+            is_recommended: true,
+            locales: ["English"],
             units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
           }
         ]
@@ -272,11 +291,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
           {
             id: @unit_teacher_to_students.course_version.id,
             display_name: @unit_teacher_to_students.course_version.display_name,
+            version_year: @unit_teacher_to_students.course_version.version_year,
+            is_stable: true,
+            is_recommended: false,
+            locales: ["English"],
             units: [{id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}]
           },
           {
             id: @unit_teacher_to_students2.course_version.id,
             display_name: @unit_teacher_to_students2.course_version.display_name,
+            version_year: @unit_teacher_to_students2.course_version.version_year,
+            is_stable: true,
+            is_recommended: true,
+            locales: ["English"],
             units: [{id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}]
           }
         ]
@@ -288,6 +315,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
           {
             id: @unit_facilitator_to_teacher.course_version.id,
             display_name: @unit_facilitator_to_teacher.course_version.display_name,
+            version_year: @unit_facilitator_to_teacher.course_version.version_year,
+            is_stable: true,
+            is_recommended: true,
+            locales: ["English"],
             units: [{id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}]
           }
         ]
