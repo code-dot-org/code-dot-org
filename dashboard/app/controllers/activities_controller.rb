@@ -17,7 +17,7 @@ class ActivitiesController < ApplicationController
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
 
-  use_database_pool milestone: :persistent
+  use_reader_connection_for_route(:milestone)
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
