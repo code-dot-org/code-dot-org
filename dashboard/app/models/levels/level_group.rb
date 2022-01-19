@@ -170,13 +170,18 @@ class LevelGroup < DSLDefined
   # Perform a deep copy of this level by cloning all of its sublevels
   # using the same suffix, and write them to the new level definition file.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
-    new_name = "#{base_name}#{new_suffix}"
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    new_name = "#{base_name}#{suffix}"
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = super(new_suffix, editor_experiment: editor_experiment)
-    level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, new_suffix)
-    level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
-    level
+    begin
+      level = super(suffix, editor_experiment: editor_experiment)
+      level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, suffix)
+      level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
+      level
+    rescue Exception => e
+      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
+    end
   end
 
   # Clone the sublevels, adding the specified suffix to the level name. Also
