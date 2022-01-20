@@ -15,12 +15,20 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "es-ES",
+        "es-MX",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-11-29 20:24:13 UTC",
+    "serialized_at": "2022-01-20 17:35:36 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
