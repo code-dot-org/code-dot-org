@@ -50,9 +50,9 @@ window.levelbuilder.copyWorkspaceToClipboard = function() {
 };
 
 window.levelbuilder.copySelectedBlockToClipboard = function() {
-  if (Blockly.blockly_.selected) {
+  if (Blockly.selected) {
     const str = Blockly.Xml.domToPrettyText(
-      Blockly.Xml.blockToDom(Blockly.blockly_.selected)
+      Blockly.Xml.blockToDom(Blockly.selected)
     );
     copyToClipboard(str);
   }
