@@ -5,10 +5,13 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   // Aliasing Google's blockToDom() so that we can override it, but still be able
   // to call Google's blockToDom() in the override function.
   blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
-  blocklyWrapper.Xml.blockToDom = function(block) {
+  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
     const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
     if (!block.canDisconnectFromParent_) {
       blockXml.setAttribute('can_disconnect_from_parent', false);
+    }
+    if (ignoreChildBlocks) {
+      Blockly.Xml.deleteNext(blockXml);
     }
     return blockXml;
   };

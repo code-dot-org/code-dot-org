@@ -349,7 +349,6 @@ export default connect(
     loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress()),
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
-      updateQueryParam('version', '');
       isAsync ? dispatch(queryUserProgress(userId)) : reload();
     },
     setStudentsForCurrentSection: (sectionId, students) => {

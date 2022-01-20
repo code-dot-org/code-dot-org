@@ -74,13 +74,13 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-    <a class="linktag" id="wit-rtc" href="https://rewritingthecode.org/code/" target="_blank">
-      <img class="tutorial-tile-img" src="/images/csjourneys/rtc-panels.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monthly panels with Rewriting the Code">
+    <a class="linktag" id="wit-rtc" href="/csjourneys/nextsteps" target="_blank">
+      <img class="tutorial-tile-img" src="/images/csjourneys/explore-careers.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Explore Careers">
     </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>What's it like to take CS in college?</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey.</div>
-        <a class="linktag" id="wit-rtc" href="https://rewritingthecode.org/code/" target="_blank"><button>Learn more</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Women in Tech discussions with Rewriting the Code</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join us this spring for live talks designed to demystify next steps for young women interested in pursuing computer science careers.</div>
+        <a class="linktag" id="wit-rtc" href="/nextsteps" target="_blank"><button>Learn more</button></a>
     </div>
 </div>
 </div>
