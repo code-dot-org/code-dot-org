@@ -254,10 +254,6 @@ class Ability
       true
     end
 
-    can [:vocab, :resources, :code, :standards], Script do |script|
-      !!script.is_migrated
-    end
-
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
     can :read, UnitGroup do |unit_group|
       if unit_group.in_development?
@@ -291,6 +287,10 @@ class Ability
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
         user.persisted? || !login_required
       end
+    end
+
+    can [:vocab, :resources, :code, :standards], Script do |script|
+      !!script.is_migrated
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
@@ -369,12 +369,12 @@ class Ability
     end
 
     if user.persisted?
+      # TODO: should add editor experiment for Unit Group
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
         can :index, Level
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
-        can [:edit, :update], UnitGroup, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
