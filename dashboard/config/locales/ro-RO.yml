@@ -1428,3 +1428,4 @@ ro:
   behaviors:
     this_sprite: acest spirit
   unit_prefix: Unitate %{n}
+  teacher_feedback: Punctele de vedere ale profesorului

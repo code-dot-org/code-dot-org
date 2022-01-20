@@ -254,6 +254,14 @@
           "word": "Compresie fără pierderi",
           "definition": "un algoritm de comprimare a datelor care permite ca datele originale să fie reconstruite perfect din datele comprimate. Cel mai frecvent utilizat pentru compresia textului (de exemplu, compresia .zip)"
         },
+        "event/outbreak/unversioned": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modele și Simulări",
+          "definition": "un program care reproduce sau imită caracteristicile cheie ale unui eveniment din lumea reală pentru a-i investiga comportamentul fără cost, timp consumat sau pericolul derulării unui experiment în viața reală."
+        },
         "event/sports/unversioned": {
           "word": "Eveniment",
           "definition": "O acțiune care face ca ceva să se întâmple."
@@ -342,14 +350,6 @@
         "line/poem-art/unversioned": {
           "word": "Vers",
           "definition": "(poezie) - o subdiviziune a unui poem, care ocupă un rând, care se termină la marginea din dreapta a paginii."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Eveniment",
-          "definition": "O acțiune care face ca ceva să se întâmple."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modele și Simulări",
-          "definition": "un program care reproduce sau imită caracteristicile cheie ale unui eveniment din lumea reală pentru a-i investiga comportamentul fără cost, timp consumat sau pericolul derulării unui experiment în viața reală."
         },
         "sprite/coursef/2021": {
           "word": "Spiriduș",
