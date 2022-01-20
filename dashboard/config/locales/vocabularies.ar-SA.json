@@ -217,6 +217,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "الضغط بدون فقدان البيانات"
         },
+        "event/outbreak/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
         "event/sports/unversioned": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
@@ -303,10 +307,6 @@
         "line/poem-art/unversioned": {
           "word": "الخط",
           "definition": "(الشعر) - قسم منشق من القصيدة وهو منظم في صف ينتهي في هامش اليد اليمنى."
-        },
-        "event/outbreak/unversioned": {
-          "word": "الحدث",
-          "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "sprite/coursef/2021": {
           "word": "شبح"
