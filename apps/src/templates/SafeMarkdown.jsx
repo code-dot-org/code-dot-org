@@ -45,6 +45,7 @@ const blocklyTags = [
   'next',
   'statement',
   'title',
+  'field',
   'value',
   'xml'
 ];

@@ -762,9 +762,7 @@ input[type="radio"] {
   color: #7E5BA0;
   font-family: $gotham-extra-bold;
   font-weight: normal;
-
 }
-
 #show-code {
   margin-bottom: 5px;
 }
@@ -1125,7 +1123,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   td {
     vertical-align: middle;
   }
-  tr:nth-child(even){
+  tr.highlight{
     background-color: $lightest_purple;
   }
 

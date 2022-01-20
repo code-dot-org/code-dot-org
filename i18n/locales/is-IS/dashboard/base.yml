@@ -417,6 +417,7 @@ is:
       prizes_link: 'Nánar'
   teacher:
     answer: Svar
+    dashboard: 'Stjórnborð kennara'
     for_teachers_only: Aðeins fyrir kennara
     title:
       one: 'Kennari þinn:'

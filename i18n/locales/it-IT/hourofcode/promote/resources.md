@@ -125,7 +125,7 @@ title: Risorse
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta. But only 51% of all high schools teach computer science. La buona notizia è che intendiamo cambiare rotta! Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato un'Ora del Codice.
+      I computer sono ovunque e stanno cambiando ogni industria del pianeta. But only 51% of all high schools offer computer science. La buona notizia è che intendiamo cambiare rotta! Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato un'Ora del Codice.
     </p>
     
     <p>
@@ -178,7 +178,7 @@ title: Risorse
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta. But only 51% of all high schools teach computer science. La buona notizia è che intendiamo cambiare rotta! Se avete già sentito parlare dell'Ora del Codice, forse sapete che ha fatto storia - più di 100 milioni gli studenti nel mondo hanno provato un'Ora del Codice. Anche leader come il presidente Obama e il primo ministro canadese Justin Trudeau hanno scritto le loro prime righe di codice durante questa campagna.
+      I computer sono ovunque e stanno cambiando ogni industria del pianeta. But only 51% of all high schools offer computer science. La buona notizia è che intendiamo cambiare rotta! Se avete già sentito parlare dell'Ora del Codice, forse sapete che ha fatto storia - più di 100 milioni gli studenti nel mondo hanno provato un'Ora del Codice. Anche leader come il presidente Obama e il primo ministro canadese Justin Trudeau hanno scritto le loro prime righe di codice durante questa campagna.
     </p>
     
     <p>
@@ -211,7 +211,7 @@ title: Risorse
     </p>
     
     <p>
-      But only a fraction of us are learning <strong>how</strong> technology works. Only 51% of all high schools teach computer science.
+      But only a fraction of us are learning <strong>how</strong> technology works. Only 51% of all high schools offer computer science.
     </p>
     
     <p>
@@ -248,7 +248,7 @@ title: Risorse
     </p>
     
     <p>
-      Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Le ragazze e le minoranze sono molto poco rappresentate negli studi informatici e nelle aziende tecnologiche. La buona notizia è che intendiamo cambiare rotta.
+      Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Le ragazze e le minoranze sono molto poco rappresentate negli studi informatici e nelle aziende tecnologiche. La buona notizia è che intendiamo cambiare rotta.
     </p>
     
     <p>
@@ -305,7 +305,7 @@ title: Risorse
     </p>
     
     <p>
-      L'informatica è oggi fondamentale per ogni settore. Eppure la maggior parte delle scuole non la insegnano. Alla scuola [NOME DELLA SCUOLA], stiamo cercando di cambiare la situazione.
+      Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>

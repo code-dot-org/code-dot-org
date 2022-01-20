@@ -452,6 +452,31 @@ fa:
             '"down"': فلش سمت پایین
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': قلب
+            '"rainbow"': رنگین کمان
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': شب
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': پرش
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': ابری
+            '"hearts"': قلب
+          PALETTE:
+            '"rainbow"': رنگین کمان
+            '"winter"': زمستان
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': قلب
       RyanLab_moveForward:
         text: برو جلو
       RyanLab_turnLeft:
