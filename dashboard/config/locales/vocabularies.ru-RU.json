@@ -135,6 +135,9 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Сжатие без потерь"
         },
+        "event/outbreak/unversioned": {
+          "word": "Событие"
+        },
         "event/sports/unversioned": {
           "word": "Событие"
         },
@@ -195,9 +198,6 @@
         "line/poem-art/unversioned": {
           "word": "Строка",
           "definition": "(поэзия) — элемент стихотворения в виде линии, которая заканчиваеся на правом поле. "
-        },
-        "event/outbreak/unversioned": {
-          "word": "Событие"
         },
         "sprite/coursef/2021": {
           "word": "Спрайт (аним. изображения)",
