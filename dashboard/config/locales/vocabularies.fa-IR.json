@@ -254,6 +254,14 @@
           "word": "",
           "definition": ""
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/sports/unversioned": {
           "word": "",
           "definition": ""
@@ -343,14 +351,6 @@
           "definition": ""
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
           "word": "",
           "definition": ""
         },

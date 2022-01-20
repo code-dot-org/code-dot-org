@@ -139,6 +139,12 @@
           "purpose": "",
           "student_overview": ""
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "sports/Sports": {
           "overview": "",
           "preparation": "",
@@ -184,12 +190,6 @@
         "poem-art/lesson-1": {
           "overview": "",
           "preparation": "",
-          "student_overview": ""
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
           "student_overview": ""
         },
         "jigsaw/Jigsaw": {
