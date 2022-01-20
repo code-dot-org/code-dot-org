@@ -305,13 +305,18 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  no_access_msg = "You don&#39;t have access to this course."
+
   test_user_gets_response_for :show, response: :redirect, user: nil,
                               params: -> {{course_name: @pl_unit_group_migrated.name}},
                               name: 'signed out user cannot view pl course'
 
-  test_user_gets_response_for :show, response: :redirect, user: :student,
+  test_user_gets_response_for(:show, response: :success, user: :student,
                               params: -> {{course_name: @pl_unit_group_migrated.name}},
                               name: 'student user cannot view pl course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
                               params: -> {{course_name: @pilot_unit_group.name}},
@@ -319,53 +324,71 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for(:show, response: :success, user: :student,
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'student cannot view pilot course'
-  )
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
                               params: -> {{course_name: @pilot_pl_unit_group.name}}, name: 'participant not in pilot section cannot view pilot course'
-  )
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
                               params: -> {{course_name: @pilot_unit_group.name}},
                               name: 'teacher without pilot access cannot view pilot course'
-  )
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: :facilitator,
                               params: -> {{course_name: @pilot_pl_unit_group.name}},
                               name: 'instructor without pilot access cannot view pilot course'
-  )
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
                               params: -> {{course_name: @pilot_unit_group.name, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot course'
-  )
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_facilitator},
                               params: -> {{course_name: @pilot_pl_unit_group.name, section_id: @pilot_pl_section.id}},
                               name: 'pilot instructor can view pilot course'
-  )
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'pilot student can view pilot course'
-  )
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_participant},
                               params: -> {{course_name: @pilot_pl_unit_group.name}}, name: 'pilot participant can view pilot course'
-  )
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'levelbuilder can view pilot course'
-  )
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
                               params: -> {{course_name: @in_development_unit_group.name}},
                               name: 'signed out user cannot view in-development unit group'
 
-  test_user_gets_response_for(:show, response: :success, user: :student,
+  test_user_gets_response_for(:show, response: :forbidden, user: :student,
                               params: -> {{course_name: @in_development_unit_group.name}}, name: 'student cannot view in-development unit group'
   )
 
-  test_user_gets_response_for(:show, response: :success, user: :teacher,
+  test_user_gets_response_for(:show, response: :forbidden, user: :teacher,
                               params: -> {{course_name: @in_development_unit_group.name}},
                               name: 'teacher access cannot view in-development unit group'
   )

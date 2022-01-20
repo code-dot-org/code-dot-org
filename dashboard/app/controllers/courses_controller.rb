@@ -4,6 +4,7 @@ class CoursesController < ApplicationController
   before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
+  before_action :render_no_access, only: [:show, :vocab, :resources, :code, :standards]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'UnitGroup', except: [:index]
 
@@ -11,6 +12,14 @@ class CoursesController < ApplicationController
     @unit_group = UnitGroup.get_from_cache(params[:course_name])
     # the standards and show actions allow redirecting when given a family name so we do not want to raise in that case
     raise ActiveRecord::RecordNotFound unless @unit_group || (['standards', 'show'].include?(params[:action]) && UnitGroup.family_names.include?(params[:course_name]))
+  end
+
+  def render_no_access
+    if current_user && @unit_group
+      if  @unit_group.pilot? && !@unit_group.has_pilot_access?(current_user) && (@unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user))
+        render :no_access
+      end
+    end
   end
 
   def index
@@ -42,22 +51,6 @@ class CoursesController < ApplicationController
         user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
         render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
         return
-      end
-
-      if @unit_group.pilot?
-        authenticate_user!
-        unless @unit_group.has_pilot_access?(current_user)
-          render :no_access
-          return
-        end
-      end
-
-      if @unit_group.in_development?
-        authenticate_user!
-        unless current_user.permission?(UserPermission::LEVELBUILDER)
-          render :no_access
-          return
-        end
       end
 
       # Attempt to redirect user if we think they ended up on the wrong course overview page.
