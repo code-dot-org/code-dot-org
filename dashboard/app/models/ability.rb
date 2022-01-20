@@ -10,6 +10,8 @@ class Ability
   def initialize(user)
     user ||= User.new
 
+    alias_action :show_by_keys, to: :read
+
     # Abilities for all users, signed in or not signed in.
     can :read, :all
     cannot :read, [
