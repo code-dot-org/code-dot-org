@@ -26,7 +26,9 @@ class ScriptsController < ApplicationController
     end
 
     if !params[:section_id] && current_user&.last_section_id
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      query_string = request.query_string.empty? ? '' : "#{request.query_string}&"
+      section_id_query_string = "section_id=#{current_user.last_section_id}"
+      redirect_to "#{request.path}?" + query_string + section_id_query_string
       return
     end
 
