@@ -232,6 +232,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "無損壓縮"
         },
+        "event/outbreak/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
         "event/sports/unversioned": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
@@ -322,10 +326,6 @@
         "line/poem-art/unversioned": {
           "word": "詩歌行",
           "definition": "（詩歌）- 一篇詩歌的組成部分，採用單行格式，在右側結束。 "
-        },
-        "event/outbreak/unversioned": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
         },
         "behavior/coursef/2021": {
           "word": "行為"
