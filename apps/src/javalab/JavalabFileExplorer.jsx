@@ -99,7 +99,7 @@ const styles = {
     margin: 2
   },
   dropdown: {
-    maxHeight: 190,
+    maxHeight: 175,
     overflowY: 'scroll'
   },
   button: {

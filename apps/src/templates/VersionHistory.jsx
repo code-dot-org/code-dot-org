@@ -14,9 +14,7 @@ export default class VersionHistory extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
-    useFilesApi: PropTypes.bool.isRequired,
-    selectedVersion: PropTypes.string,
-    isReadOnly: PropTypes.bool.isRequired
+    useFilesApi: PropTypes.bool.isRequired
   };
 
   /**
@@ -185,12 +183,6 @@ export default class VersionHistory extends React.Component {
               versionId={version.versionId}
               lastModified={new Date(version.lastModified)}
               isLatest={version.isLatest}
-              isSelectedVersion={
-                this.props.selectedVersion
-                  ? version.versionId === this.props.selectedVersion
-                  : version.isLatest
-              }
-              isReadOnly={this.props.isReadOnly}
               onChoose={this.onChooseVersion.bind(this, version.versionId)}
             />
           );
@@ -203,23 +195,21 @@ export default class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                {!this.props.isReadOnly && (
-                  <tr>
-                    <td>
-                      <p>{i18n.versionHistory_initialVersion_label()}</p>
-                    </td>
-                    <td width="250" style={{textAlign: 'right'}}>
-                      <button
-                        type="button"
-                        className="btn-danger"
-                        onClick={this.onConfirmClearPuzzle}
-                        style={{float: 'right'}}
-                      >
-                        {i18n.versionHistory_clearProgress_confirm()}
-                      </button>
-                    </td>
-                  </tr>
-                )}
+                <tr>
+                  <td>
+                    <p>{i18n.versionHistory_initialVersion_label()}</p>
+                  </td>
+                  <td width="250" style={{textAlign: 'right'}}>
+                    <button
+                      type="button"
+                      className="btn-danger"
+                      onClick={this.onConfirmClearPuzzle}
+                      style={{float: 'right'}}
+                    >
+                      {i18n.versionHistory_clearProgress_confirm()}
+                    </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>

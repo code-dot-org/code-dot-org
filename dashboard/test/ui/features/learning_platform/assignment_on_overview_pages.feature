@@ -1,4 +1,5 @@
 @skip
+@no_ie
 @no_firefox
 @no_safari
 @no_mobile

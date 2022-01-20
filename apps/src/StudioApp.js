@@ -687,9 +687,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
-        useFilesApi: !!config.useFilesApi,
-        selectedVersion: queryParams('version'),
-        isReadOnly: !!config.readonlyWorkspace
+        useFilesApi: !!config.useFilesApi
       }),
       contentDiv
     );

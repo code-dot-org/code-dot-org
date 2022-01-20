@@ -1125,7 +1125,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   td {
     vertical-align: middle;
   }
-  tr.highlight{
+  tr:nth-child(even){
     background-color: $lightest_purple;
   }
 

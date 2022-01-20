@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
-import classnames from 'classnames';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import queryString from 'query-string';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -12,9 +9,7 @@ export default class VersionRow extends React.Component {
   static propTypes = {
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
-    isLatest: PropTypes.bool.isRequired,
-    isSelectedVersion: PropTypes.bool.isRequired,
-    isReadOnly: PropTypes.bool.isRequired,
+    isLatest: PropTypes.bool,
     onChoose: PropTypes.func
   };
 
@@ -26,92 +21,49 @@ export default class VersionRow extends React.Component {
     return timestamp.toString();
   }
 
-  getQueryParams() {
-    const userId = queryParams('user_id');
-    const viewAs = queryParams('viewAs');
-    const sectionId = queryParams('section_id');
-    const params = {};
-    if (sectionId) {
-      params.section_id = sectionId;
-    }
-    if (viewAs) {
-      params.viewAs = viewAs;
-    }
-    if (userId) {
-      params.user_id = userId;
-    }
-    if (!this.props.isLatest) {
-      params.version = this.props.versionId;
-    }
-    return queryString.stringify(params);
-  }
-
   render() {
-    let buttons = [];
+    let button;
     if (this.props.isLatest) {
-      buttons.push(
+      button = (
         <button
-          key={'latest-version-message'}
           type="button"
           className="btn-default"
           disabled="disabled"
-          style={{cursor: 'default', background: 'none', border: 'none'}}
+          style={{cursor: 'default'}}
         >
-          {msg.latestVersion()}
+          {msg.currentVersion()}
         </button>
       );
-    } else if (!this.props.isReadOnly) {
-      const className = this.props.isSelectedVersion
-        ? 'btn-info'
-        : 'img-upload';
-      buttons.push(
-        <button
-          key={'restore-version-button'}
-          type="button"
-          className={className}
-          onClick={this.props.onChoose}
-        >
-          {msg.restore()}
-        </button>
-      );
-    }
-
-    if (!this.props.isSelectedVersion) {
-      buttons.push(
+    } else {
+      button = [
         <a
-          key={'not-selected-version-button'}
+          key={0}
           href={
-            location.origin + location.pathname + '?' + this.getQueryParams()
+            location.origin +
+            location.pathname +
+            '?version=' +
+            this.props.versionId
           }
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button type="button" className="btn-info">
-            {msg.view()}
+          <button type="button" className="version-preview">
+            <i className="fa fa-eye" />
           </button>
-        </a>
-      );
-    } else {
-      buttons.push(
+        </a>,
         <button
-          key={'disabled-view-button'}
           type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default', color: 'white'}}
+          key={1}
+          className="btn-info"
+          onClick={this.props.onChoose}
         >
-          {msg.view()}
+          {msg.restoreThisVersion()}
         </button>
-      );
+      ];
     }
 
     return (
-      <tr
-        className={classnames({
-          versionRow: true,
-          highlight: this.props.isSelectedVersion
-        })}
-      >
+      <tr className="versionRow">
         <td>
           <p>
             {msg.versionHistory_versionLabel({
@@ -119,8 +71,8 @@ export default class VersionRow extends React.Component {
             })}
           </p>
         </td>
-        <td width="275" height="52" style={{textAlign: 'right'}}>
-          {buttons}
+        <td width="275" style={{textAlign: 'right'}}>
+          {button}
         </td>
       </tr>
     );
