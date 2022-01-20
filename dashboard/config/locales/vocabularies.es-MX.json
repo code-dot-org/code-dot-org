@@ -240,6 +240,14 @@
           "word": "Compresión sin pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
+        },
         "event/sports/unversioned": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
@@ -327,14 +335,6 @@
         "line/poem-art/unversioned": {
           "word": "Línea",
           "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
-        },
-        "event/outbreak/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modelos y Simulaciones",
-          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
         "sprite/coursef/2021": {
           "word": "Sprite",
