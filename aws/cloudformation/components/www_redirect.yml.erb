@@ -90,9 +90,6 @@
           // Append path
           newUrl += event.request.uri;
 
-          // Append query string
-          // - skipping because it's annoying to parse.
-
           return {
             statusCode: 302,
             statusDescription: '302 Redirect to root domain',
