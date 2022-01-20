@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
+import BlueHeader from '@cdo/static/small_blue_icons_fullwidth.png';
+import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
 
 /**
  * A card used on the homepage to display information about a particular course
@@ -31,11 +33,7 @@ class CourseCard extends Component {
     return (
       <a href={link} style={styles.card}>
         <img
-          src={
-            isProfessionalLearningCourse
-              ? require('@cdo/static/small_blue_icons_fullwidth.png')
-              : require('@cdo/static/small_purple_icons_fullwidth.png')
-          }
+          src={isProfessionalLearningCourse ? BlueHeader : PurpleHeader}
           style={styles.image}
           alt=""
         />

@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
+import BlueHeader from '@cdo/static/small_blue_icons_fullwidth.png';
+import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
 
 // While this is named TopCourse, it really refers to the most recent course
 // or script in which the student or teacher has progress.
@@ -34,11 +36,7 @@ class TopCourse extends Component {
     return (
       <div style={styles.card}>
         <img
-          src={
-            isProfessionalLearningCourse
-              ? require('@cdo/static/small_blue_icons_fullwidth.png')
-              : require('@cdo/static/small_purple_icons_fullwidth.png')
-          }
+          src={isProfessionalLearningCourse ? BlueHeader : PurpleHeader}
           style={styles.image}
           alt=""
         />
