@@ -277,8 +277,10 @@ export const commands = {
     sprites.forEach(sprite => {
       if (direction === 'right') {
         sprite.rotation += degrees;
+        sprite.direction += degrees;
       } else {
         sprite.rotation -= degrees;
+        sprite.direction -= degrees;
       }
     });
   }
