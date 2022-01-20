@@ -1387,3 +1387,4 @@ tr:
   behaviors:
     this_sprite: bu hareketli nesne
   unit_prefix: Birim %{n}
+  teacher_feedback: Öğretmen Geribildirimi

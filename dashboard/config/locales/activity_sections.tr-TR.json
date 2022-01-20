@@ -544,6 +544,32 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Metin Sıkıştırma"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Giriş"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Salgın",
+          "description": "_Bugünkü derste, bir virüs salgınının gerçekleşmek üzere olduğu “Canavar Şehri”ne gidiyorsunuz. Dr. Canavar'ın virüsün yayılmasını yavaşlatmak için yardımınıza ihtiyacı var._\n\n_Hareketli Nesne Laboratuvarında bir salgın simülatörü oluşturacak ve ardından bunu bir virüsün nasıl yayılabileceğini anlamak için kullanacaksınız. Ayrıca tüm canavarların tekrar sağlıklarına kavuşmalarına yardım edeceksiniz!_",
+          "progression_name": "Salgın"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "progression_name": "Canavar Şehri'ne Hoş Geldiniz"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "progression_name": "Beceri Oluşturma"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "progression_name": "Mini Proje: Salgın Simülatörü"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Ücretsiz Oyna"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim adamlarının sorunları çözmelerine, sorunun nasıl çözüleceğini tahmin etmelerine, yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olurlar. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur._"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Yansıma"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Giriş",
           "tips": [
@@ -4425,32 +4451,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "İki yapışkan notunuz var. Birinde, bugün kodlama hakkında öğrendiğiniz bir şeyi yazın.\nİkincisine, bugün şiir hakkında öğrendiğiniz bir şeyi yazın.\n\nBu soruyu cevaplamak için el kaldırarak tüm sınıfla paylaşalım: Bundan sonra kodlama ve bilgisayar bilimi hakkında başka neler öğrenebileceğinizi umuyorsunuz? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Giriş"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Salgın",
-          "description": "_Bugünkü derste, bir virüs salgınının gerçekleşmek üzere olduğu “Canavar Şehri”ne gidiyorsunuz. Dr. Canavar'ın virüsün yayılmasını yavaşlatmak için yardımınıza ihtiyacı var._\n\n_Hareketli Nesne Laboratuvarında bir salgın simülatörü oluşturacak ve ardından bunu bir virüsün nasıl yayılabileceğini anlamak için kullanacaksınız. Ayrıca tüm canavarların tekrar sağlıklarına kavuşmalarına yardım edeceksiniz!_",
-          "progression_name": "Salgın"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "progression_name": "Canavar Şehri'ne Hoş Geldiniz"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "progression_name": "Beceri Oluşturma"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "progression_name": "Mini Proje: Salgın Simülatörü"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Ücretsiz Oyna"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim adamlarının sorunları çözmelerine, sorunun nasıl çözüleceğini tahmin etmelerine, yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olurlar. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur._"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Yansıma"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
