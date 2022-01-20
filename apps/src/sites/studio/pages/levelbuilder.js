@@ -49,6 +49,15 @@ window.levelbuilder.copyWorkspaceToClipboard = function() {
   copyToClipboard(str);
 };
 
+window.levelbuilder.copySelectedBlockToClipboard = function() {
+  if (Blockly.blockly_.selected) {
+    const str = Blockly.Xml.domToPrettyText(
+      Blockly.Xml.blockToDom(Blockly.blockly_.selected)
+    );
+    copyToClipboard(str);
+  }
+};
+
 // TODO: Remove when global `CodeMirror` is no longer required.
 window.CodeMirror = codemirror;
 
