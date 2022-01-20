@@ -20,6 +20,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Sinal de Internet pobre ou nula",
   "filterPlatformNoComputers": "Ningunha computadora ou dispositivo",
+  "filterPlatformScreenReader": "Lector de pantalla",
   "filterTopics": "Temas",
   "filterTopicsScience": "Ciencia",
   "filterTopicsMath": "Matemáticas",
