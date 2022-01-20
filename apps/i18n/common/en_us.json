@@ -810,7 +810,7 @@
   "endOfLesson": "Congratulations! You've reached the end of the lesson.",
   "englishOnly": "English-only",
   "englishOnlyWarning": "Sorry! This lesson is not available in your language. The levels in this lesson use a mix of English words and characters that can’t be translated right now. You can move on to Lesson {nextStage}.",
-  "enterGroupName": "Enter a group name",
+  "enterGroupName": "Enter a group name (optional)",
   "enterSectionCode": "Enter section code",
   "enrollmentDescription": "Join your teacher's classroom by entering their section code below. Teachers will be able to see your course progress, projects, and reset your password in case you forget it.",
   "equalTo": "Equal to",

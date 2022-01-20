@@ -9,7 +9,7 @@ import {addDroppableIdToGroups} from '../codeReviewGroups/CodeReviewGroupsUtils'
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
-const DIALOG_WIDTH = 1000;
+const DIALOG_WIDTH = 934;
 
 const SUBMIT_STATES = {
   DEFAULT: 'default',
