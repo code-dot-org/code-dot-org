@@ -2,5 +2,19 @@
   "key": "World.height",
   "name": "World.height",
   "category": "World",
+  "content": "Returns the height of the World in pixels.\r\n\r\nThis is a read only property of the World. It cannot be changed.\r\n",
+  "examples": [
+    {
+      "name": "",
+      "description": "",
+      "code": "text(World.height, 0, 15);",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
+    }
+  ],
+  "return_value": "Returns the height of the World in pixels.",
+  "short_description": "Returns the height of the World in pixels.",
   "syntax": "World.height"
 }

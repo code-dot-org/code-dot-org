@@ -1,6 +1,7 @@
 {
   "key": "randomNumber_min_max",
-  "name": "randomNumber_min_max",
+  "name": "randomNumber min/max",
   "category": "Math",
+  "short_description": "Game Lab - randomNumber min/max",
   "syntax": "randomNumber(1, 10)"
 }

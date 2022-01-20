@@ -1,6 +1,7 @@
 {
   "key": "declareNoAssign_x",
-  "name": "declareNoAssign_x",
+  "name": "Declare a variable",
   "category": "Variables",
+  "short_description": "Game Lab - Declare a variable",
   "syntax": "var x;"
 }

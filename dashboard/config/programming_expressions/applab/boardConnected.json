@@ -2,5 +2,6 @@
   "key": "boardConnected",
   "name": "boardConnected",
   "category": "Maker",
+  "short_description": "App Lab - boardConnected",
   "syntax": "boardConnected"
 }

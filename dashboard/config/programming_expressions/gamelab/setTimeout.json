@@ -1,14 +1,7 @@
 {
   "key": "setTimeout",
-  "name": "setTimeout",
+  "name": "setTimeout()",
   "category": "Control",
-  "palette_params": [
-    {
-      "name": "callback"
-    },
-    {
-      "name": "ms"
-    }
-  ],
+  "short_description": "Game Lab - setTimeout()",
   "syntax": "setTimeout(callback, ms)"
 }

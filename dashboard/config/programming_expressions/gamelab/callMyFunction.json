@@ -1,6 +1,7 @@
 {
   "key": "callMyFunction",
-  "name": "callMyFunction",
+  "name": "Call a function",
   "category": "Functions",
+  "short_description": "Game Lab - Call a function",
   "syntax": "myFunction()"
 }

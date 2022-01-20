@@ -1,11 +1,7 @@
 {
   "key": "clearInterval",
-  "name": "clearInterval",
+  "name": "clearInterval()",
   "category": "Control",
-  "palette_params": [
-    {
-      "name": "__"
-    }
-  ],
+  "short_description": "Game Lab - clearInterval()",
   "syntax": "clearInterval(__)"
 }

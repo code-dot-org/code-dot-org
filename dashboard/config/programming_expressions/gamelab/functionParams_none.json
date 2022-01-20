@@ -1,6 +1,7 @@
 {
   "key": "functionParams_none",
-  "name": "functionParams_none",
+  "name": "Define a function",
   "category": "Functions",
+  "short_description": "Game Lab - Define a function",
   "syntax": "function myFunction() {\n  __;\n}"
 }

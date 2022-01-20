@@ -1,14 +1,7 @@
 {
   "key": "soundSensor.setScale",
-  "name": "soundSensor.setScale",
+  "name": "soundSensor.setScale()",
   "category": "Circuit",
-  "palette_params": [
-    {
-      "name": "low"
-    },
-    {
-      "name": "high"
-    }
-  ],
+  "short_description": "soundSensor.setScale(min, max)",
   "syntax": "soundSensor.setScale(low, high)"
 }

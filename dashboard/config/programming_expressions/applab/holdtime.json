@@ -1,6 +1,7 @@
 {
   "key": "holdtime",
-  "name": "holdtime",
+  "name": "buttonL.holdtime",
   "category": "Circuit",
+  "short_description": "Maker Toolkit - buttonL.holdtime",
   "syntax": "holdtime"
 }

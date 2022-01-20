@@ -1,14 +1,7 @@
 {
   "key": "analogWrite",
-  "name": "analogWrite",
+  "name": "analogWrite()",
   "category": "Maker",
-  "palette_params": [
-    {
-      "name": "pin"
-    },
-    {
-      "name": "value"
-    }
-  ],
+  "short_description": "Maker Toolkit - analogWrite()",
   "syntax": "analogWrite(pin, value)"
 }

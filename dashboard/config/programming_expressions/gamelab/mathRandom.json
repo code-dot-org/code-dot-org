@@ -1,6 +1,7 @@
 {
   "key": "mathRandom",
-  "name": "Math.random",
+  "name": "Math.random()",
   "category": "Math",
+  "short_description": "Game Lab - Math.random()",
   "syntax": "Math.random"
 }

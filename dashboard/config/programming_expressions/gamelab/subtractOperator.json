@@ -1,6 +1,7 @@
 {
   "key": "subtractOperator",
-  "name": "subtractOperator",
+  "name": "Subtract operator",
   "category": "Math",
+  "short_description": "Game Lab - Subtract operator",
   "syntax": "__ - __"
 }

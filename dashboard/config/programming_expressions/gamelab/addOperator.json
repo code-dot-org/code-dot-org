@@ -1,6 +1,7 @@
 {
   "key": "addOperator",
-  "name": "addOperator",
+  "name": "Add Operator",
   "category": "Math",
+  "short_description": "Game Lab - Add Operator",
   "syntax": "__ + __"
 }

@@ -1,6 +1,7 @@
 {
   "key": "toLowerCase",
-  "name": "toLowerCase",
+  "name": "str.toLowerCase()",
   "category": "Variables",
+  "short_description": "Game Lab - str.toLowerCase()",
   "syntax": "toLowerCase"
 }

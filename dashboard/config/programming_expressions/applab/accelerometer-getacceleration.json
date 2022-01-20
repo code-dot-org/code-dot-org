@@ -2,10 +2,6 @@
   "key": "accelerometer.getAcceleration",
   "name": "accelerometer.getAcceleration",
   "category": "Circuit",
-  "palette_params": [
-    {
-      "name": "orientationType"
-    }
-  ],
+  "short_description": "accelerometer.getAcceleration()",
   "syntax": "accelerometer.getAcceleration(orientationType)"
 }

@@ -1,6 +1,7 @@
 {
   "key": "ifBlock",
-  "name": "ifBlock",
+  "name": "If statement",
   "category": "Control",
+  "short_description": "Game Lab - If statement",
   "syntax": "if (__) {\n  __;\n}"
 }

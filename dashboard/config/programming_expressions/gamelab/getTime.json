@@ -1,6 +1,7 @@
 {
   "key": "getTime",
-  "name": "getTime",
+  "name": "getTime()",
   "category": "Control",
+  "short_description": "Game Lab - getTime()",
   "syntax": "getTime()"
 }

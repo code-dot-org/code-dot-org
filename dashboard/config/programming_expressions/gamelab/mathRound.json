@@ -1,6 +1,7 @@
 {
   "key": "mathRound",
-  "name": "Math.round",
+  "name": "Math.round()",
   "category": "Math",
+  "short_description": "Game Lab - Math.round()",
   "syntax": "Math.round"
 }

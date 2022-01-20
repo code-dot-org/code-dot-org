@@ -1,14 +1,7 @@
 {
   "key": "digitalWrite",
-  "name": "digitalWrite",
+  "name": "digitalWrite()",
   "category": "Maker",
-  "palette_params": [
-    {
-      "name": "pin"
-    },
-    {
-      "name": "value"
-    }
-  ],
+  "short_description": "Maker Toolkit - digitalWrite()",
   "syntax": "digitalWrite(pin, value)"
 }

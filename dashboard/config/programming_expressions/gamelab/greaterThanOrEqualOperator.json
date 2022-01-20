@@ -1,6 +1,7 @@
 {
   "key": "greaterThanOrEqualOperator",
-  "name": "greaterThanOrEqualOperator",
+  "name": "Greater than or equal operator",
   "category": "Math",
+  "short_description": "Game Lab - Greater than or equal operator",
   "syntax": "__ >= __"
 }

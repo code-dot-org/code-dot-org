@@ -1,6 +1,7 @@
 {
   "key": "inequalityOperator",
-  "name": "inequalityOperator",
+  "name": "Inequality operator",
   "category": "Math",
+  "short_description": "Game Lab - Inequality operator",
   "syntax": "__ != __"
 }

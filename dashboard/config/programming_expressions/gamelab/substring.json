@@ -1,14 +1,7 @@
 {
   "key": "substring",
-  "name": "substring",
+  "name": "str.substring()",
   "category": "Variables",
-  "palette_params": [
-    {
-      "name": "start"
-    },
-    {
-      "name": "end"
-    }
-  ],
+  "short_description": "Game Lab - str.substring()",
   "syntax": "substring(start, end)"
 }

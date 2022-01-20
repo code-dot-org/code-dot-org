@@ -1,6 +1,7 @@
 {
   "key": "comment",
-  "name": "comment",
+  "name": "Comment",
   "category": "Functions",
+  "short_description": "Game Lab - Comment",
   "syntax": "// Comment"
 }

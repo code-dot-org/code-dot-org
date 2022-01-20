@@ -1,6 +1,9 @@
 {
   "key": "text-align",
-  "name": "text-align",
+  "name": "Text Align",
   "category": "CSS Properties",
+  "content": "# Text Align",
+  "external_documentation": "http://www.w3schools.com/cssref/pr_text_text-align.asp",
+  "short_description": "Text Align",
   "syntax": "text-align: value;"
 }

@@ -1,6 +1,7 @@
 {
   "key": "forLoop_i_0_4",
-  "name": "forLoop_i_0_4",
+  "name": "For loop",
   "category": "Control",
+  "short_description": "Game Lab - For loop",
   "syntax": "for (var i = 0; i < 4; i++) {\n  __;\n}"
 }

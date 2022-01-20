@@ -1,6 +1,7 @@
 {
   "key": "functionParams_n",
-  "name": "functionParams_n",
+  "name": "Define a function with parameters",
   "category": "Functions",
+  "short_description": "Game Lab - Define a function with parameters",
   "syntax": "function myFunction(n) {\n  __;\n}"
 }

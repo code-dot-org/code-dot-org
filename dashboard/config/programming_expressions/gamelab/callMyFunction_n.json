@@ -1,6 +1,7 @@
 {
   "key": "callMyFunction_n",
-  "name": "callMyFunction_n",
+  "name": "Call a function with parameters",
   "category": "Functions",
+  "short_description": "Game Lab - Call a function with parameters",
   "syntax": "myFunction(n)"
 }

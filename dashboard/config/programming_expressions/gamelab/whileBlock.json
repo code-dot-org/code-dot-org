@@ -1,6 +1,7 @@
 {
   "key": "whileBlock",
-  "name": "whileBlock",
+  "name": "While loop",
   "category": "Control",
+  "short_description": "Game Lab - While loop",
   "syntax": "while (__) {\n  __;\n}"
 }

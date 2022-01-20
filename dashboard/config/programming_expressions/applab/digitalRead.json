@@ -1,11 +1,7 @@
 {
   "key": "digitalRead",
-  "name": "digitalRead",
+  "name": "digitalRead()",
   "category": "Maker",
-  "palette_params": [
-    {
-      "name": "pin"
-    }
-  ],
+  "short_description": "Maker Toolkit - digitalRead()",
   "syntax": "digitalRead(pin)"
 }
