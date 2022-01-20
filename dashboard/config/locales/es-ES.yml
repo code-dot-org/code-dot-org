@@ -404,7 +404,7 @@ es:
       finished_hoc: He terminado mi Hora de Código
       sign_in_to_save: Inicia sesión para guardar tu progreso
       my_dashboard: Mi Panel de Control
-      course_catalog: Catalogo de cursos
+      course_catalog: Catálogo de Cursos
       project_gallery: Proyectos
       sections: Secciones
       help_support: Ayuda y soporte
@@ -845,8 +845,8 @@ es:
       body: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos
         de programación. El curso está diseñado para su uso en aulas para los grados
         K-8, pero es divertido aprender en todas las edades.  '
-      body_short: Aprende ciencias de la computación básicas con una versión acelerada
-        de los cursos 2-4.
+      body_short: Aprende informática básica con una versión acelerada de los cursos
+        2 a 4.
     hoc2014:
       try_new_tutorial: Prueba nuestro nuevo tutorial de la Hora de Code en beta
       try_frozen: Artista con Anna y Elsa de "Frozen"
@@ -906,7 +906,7 @@ es:
         en tu aula. Ahora puedes enseñar los fundamentos de la ciencia de la computación,
         aunque no tengas computadoras en tu aula. Intenta utilizar estas lecciones
         como un curso independiente o como un complemento de otros cursos de computación.
-      body_short: Si no tienes computadoras, prueba estas lecciones sin conexión en
+      body_short: Si no tienes ordenadores, prueba estas lecciones sin conexión en
         tu aula.
     unplugged_conditionals:
       title: Condicionales
@@ -1374,7 +1374,7 @@ es:
         other: 'Otros:'
       workshop_course:
         csf_af: Fundamentos de Ciencias de la Computación (cursos A-F)
-        csf_express: Fundamentos de Ciencias de la Computación (Pre-Express o Express)
+        csf_express: Fundamentos de Ciencias de la Computación (Pre-Exprés o Exprés)
         csd: Descubrimientos de Ciencias de la Computación
         csp: Principios de Ciencias de la Computación
         not_applicable: No aplicable
@@ -1450,3 +1450,4 @@ es:
     this_sprite: Este sprite
   unit_prefix: Unidad %{n}
   code_org_logo_alt: Inicio de Code.org
+  teacher_feedback: Retroalimentación del docente

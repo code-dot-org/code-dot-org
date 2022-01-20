@@ -1073,6 +1073,46 @@
         "17878891-5c24-412b-b385-35b54fdaeb11": {
           "description": "**Mundo Real: Compresión Zip**\n\n-   Experimenta con la compresión utilizando archivos de texto con diferentes contenidos.  ¿Son los resultados para los archivos pequeños tan buenos como para los grandes? (En los Macs, en el Finder elije \"obtener información\" de un archivo para ver el número real de bytes totales en el archivo, ya que la pantalla del Finder mostrará 4KB para cualquier archivo que sea menor que eso).  \n-   Advertencia: los resultados pueden variar.  Zip funciona muy bien para el texto, pero puede que no comprima muy bien otros archivos porque ya están comprimidos o no tienen los mismos tipos de patrones incrustados que los documentos de texto.\n\n**Desafío:  Investigar el algoritmo LZW**\n\n-   La compresión .zip se basa en el Esquema de Compresión [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch).\n\n-   Si bien la idea detrás de la herramienta de compresión de texto es similar al algoritmo LZW (zip), rastrear el camino de la compresión y la descompresión es algo desafiante.  Aprender más sobre LZW y lo que ocurre en el curso de este algoritmo sería un excelente proyecto de extensión para algunas personas."
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introducción",
+          "description": "**Debatir:**\n\n-   ¿Qué sabemos sobre cómo se propaga un virus?\n-   ¿Qué puede hacer que un virus se propague más rápidamente por una ciudad?\n-   ¿Qué puede ayudar a frenar la propagación de un virus?\n\nEl objetivo de este debate es que los alumnos tengan la oportunidad de activar sus conocimientos previos y ver sus ideas en la pizarra. También es una oportunidad para investigar algunos conceptos erróneos sobre cómo se propagan los virus."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Brote",
+          "description": "_En la lección de hoy, vas a ir a \"Monster Town\", donde está a punto de producirse un brote de virus. El Dr. Monstruo necesita tu ayuda para frenar la propagación del virus._\n\n_Crearás una simulación de brote en el Laboratorio de Sprite y la utilizarás para entender cómo puede propagarse un virus. ¡También ayudarás a todos los monstruos a recuperar la salud!_",
+          "progression_name": "Brote"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Hacer esto:** Leer _Bienvenidos a Monster Town_ en grupo.",
+          "progression_name": "Bienvenido a Monster Town"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Hacer esto:** Repasar el vocabulario, **modelos y simulaciones** con los alumnos, basándose en la lección anterior. Una simulación es un modelo informático de un proceso o sistema."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Hoy, vamos a hacer que un lugar como Monster Town cobre vida escribiendo algo de código. En esta simulación, vas a utilizar sprites para representar a los diferentes monstruos. Los sprites tendrán diferentes disfraces para indicarnos cosas como si están enfermos o sanos. También utilizarás comportamientos para que los monstruos se muevan. Finalmente, usarás eventos para cambiar el disfraz de un sprite cuando dos sprites se toquen en esta pantalla. Esto representará que un monstruo le pasa el virus a otro. ¡Harás predicciones sobre lo que les ocurrirá a los vecinos de Monster Town, y les ayudarás a recuperar la salud!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Haz esto:** Lleva a los estudiantes a sus ordenadores y haz que empiecen a seguir las instrucciones de cada nivel en la sección de desarrollo de habilidades. Si los estudiantes terminan esta sección antes de tiempo, pueden seguir experimentando con su código en el nivel 6 hasta que la clase esté lista para continuar.",
+          "progression_name": "Desarrollo de Habilidades"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Haz esto:** Lleva a los alumnos de vuelta a sus ordenadores y haz que trabajen en los niveles restantes. Algunos de estos niveles ofrecen desafíos opcionales. Anima a los alumnos a leer las instrucciones con atención y a experimentar con sus simulaciones.",
+          "progression_name": "Miniproyecto: Simulador de Brotes"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Juego libre"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas, a predecir cómo resolver el problema y a probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría ser un brote de virus en Monster Town._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Comentar:**\n\n-   ¿Cómo pueden ser útiles las simulaciones en el mundo real? \n-   ¿Cómo pueden las simulaciones ayudarnos a entender el mundo que nos rodea? \n-   ¿Cómo pueden las simulaciones mejorar la forma en que probamos las ideas? \n\nEl objetivo del debate es que los alumnos comprendan que las simulaciones son una forma de modelar sistemas complejos de manera interactiva. También deben ver cómo las simulaciones permiten probar ideas de forma rápida, barata y segura. "
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflexión",
+          "description": "**Preguntas:**\n\n-   ¿En qué se parece esta simulación al mundo real? ¿En qué se diferencia?\n-   ¿Qué te gustaría cambiar o añadir a tu simulación?"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introducción",
           "description": "#### Preparando el Terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar antes del término \"código\"? ¿Qué significa?_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera.",
@@ -1432,7 +1472,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -6036,46 +6076,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Tienes dos notas adhesivas. En una, escribe una cosa que hayas aprendido hoy sobre codificación. \nEn la segunda, escribe una cosa que hayas aprendido hoy sobre la poesía. \n\nVamos a compartirlo con toda la clase levantando la mano para responder a esta pregunta: ¿Qué más esperas aprender sobre codificación e informática en el futuro? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introducción",
-          "description": "**Debatir:**\n\n-   ¿Qué sabemos sobre cómo se propaga un virus?\n-   ¿Qué puede hacer que un virus se propague más rápidamente por una ciudad?\n-   ¿Qué puede ayudar a frenar la propagación de un virus?\n\nEl objetivo de este debate es que los alumnos tengan la oportunidad de activar sus conocimientos previos y ver sus ideas en la pizarra. También es una oportunidad para investigar algunos conceptos erróneos sobre cómo se propagan los virus."
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Brote",
-          "description": "_En la lección de hoy, vas a ir a \"Monster Town\", donde está a punto de producirse un brote de virus. El Dr. Monstruo necesita tu ayuda para frenar la propagación del virus._\n\n_Crearás una simulación de brote en el Laboratorio de Sprite y la utilizarás para entender cómo puede propagarse un virus. ¡También ayudarás a todos los monstruos a recuperar la salud!_",
-          "progression_name": "Brote"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "**Hacer esto:** Leer _Bienvenidos a Monster Town_ en grupo.",
-          "progression_name": "Bienvenido a Monster Town"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Hacer esto:** Repasar el vocabulario, **modelos y simulaciones** con los alumnos, basándose en la lección anterior. Una simulación es un modelo informático de un proceso o sistema."
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Hoy, vamos a hacer que un lugar como Monster Town cobre vida escribiendo algo de código. En esta simulación, vas a utilizar sprites para representar a los diferentes monstruos. Los sprites tendrán diferentes disfraces para indicarnos cosas como si están enfermos o sanos. También utilizarás comportamientos para que los monstruos se muevan. Finalmente, usarás eventos para cambiar el disfraz de un sprite cuando dos sprites se toquen en esta pantalla. Esto representará que un monstruo le pasa el virus a otro. ¡Harás predicciones sobre lo que les ocurrirá a los vecinos de Monster Town, y les ayudarás a recuperar la salud!_"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Haz esto:** Lleva a los estudiantes a sus ordenadores y haz que empiecen a seguir las instrucciones de cada nivel en la sección de desarrollo de habilidades. Si los estudiantes terminan esta sección antes de tiempo, pueden seguir experimentando con su código en el nivel 6 hasta que la clase esté lista para continuar.",
-          "progression_name": "Desarrollo de Habilidades"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Haz esto:** Lleva a los alumnos de vuelta a sus ordenadores y haz que trabajen en los niveles restantes. Algunos de estos niveles ofrecen desafíos opcionales. Anima a los alumnos a leer las instrucciones con atención y a experimentar con sus simulaciones.",
-          "progression_name": "Miniproyecto: Simulador de Brotes"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Juego libre"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas, a predecir cómo resolver el problema y a probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría ser un brote de virus en Monster Town._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Comentar:**\n\n-   ¿Cómo pueden ser útiles las simulaciones en el mundo real? \n-   ¿Cómo pueden las simulaciones ayudarnos a entender el mundo que nos rodea? \n-   ¿Cómo pueden las simulaciones mejorar la forma en que probamos las ideas? \n\nEl objetivo del debate es que los alumnos comprendan que las simulaciones son una forma de modelar sistemas complejos de manera interactiva. También deben ver cómo las simulaciones permiten probar ideas de forma rápida, barata y segura. "
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexión",
-          "description": "**Preguntas:**\n\n-   ¿En qué se parece esta simulación al mundo real? ¿En qué se diferencia?\n-   ¿Qué te gustaría cambiar o añadir a tu simulación?"
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Preparando el terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _Hoy vamos a pasar una hora trabajando con algunos rompecabezas en línea y aprendiendo los comportamientos en el laboratorio de informática._\nEl objetivo de esta charla es enseñar a los alumnos qué deben esperar y cómo deben comportarse cuando entran en el laboratorio de informática."
