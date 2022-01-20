@@ -29,6 +29,7 @@ export default storybook => {
             lessonName="What to teach when in CSD"
             linkToOverview="studio.code.org/s/self-paced-pl-csd1-2021"
             linkToLesson={'studio.code.org/s/self-paced-pl-csd1-2021/lessons/1'}
+            isProfessionalLearningCourse={true}
           />
         )
       }
