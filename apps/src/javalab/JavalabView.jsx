@@ -248,9 +248,10 @@ class JavalabView extends React.Component {
                     disableTestButton={awaitingContainedResponse || !canTest}
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
-                    showTestButton={experiments.isEnabled(
-                      experiments.JAVALAB_UNIT_TESTS
-                    )}
+                    showTestButton={
+                      isEditingStartSources ||
+                      experiments.isEnabled(experiments.JAVALAB_UNIT_TESTS)
+                    }
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                   />
