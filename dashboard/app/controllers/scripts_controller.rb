@@ -6,6 +6,7 @@ class ScriptsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
+  before_action :render_no_access, only: [:show, :vocab, :resources, :code, :standards]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
 
@@ -232,6 +233,14 @@ class ScriptsController < ApplicationController
   def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
+  end
+
+  def render_no_access
+    if current_user
+      if  @script.pilot? && !@script.has_pilot_access?(current_user) && (@script.can_be_instructor?(current_user) || @script.can_be_participant?(current_user))
+        render :no_access
+      end
+    end
   end
 
   def unit_params
