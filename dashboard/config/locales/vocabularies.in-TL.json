@@ -254,6 +254,14 @@
           "word": "crwdns2700301:0crwdne2700301:0",
           "definition": "crwdns2700303:0crwdne2700303:0"
         },
+        "event/outbreak/unversioned": {
+          "word": "crwdns2700937:0crwdne2700937:0",
+          "definition": "crwdns2700939:0crwdne2700939:0"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "crwdns2700941:0crwdne2700941:0",
+          "definition": "crwdns2700943:0crwdne2700943:0"
+        },
         "event/sports/unversioned": {
           "word": "crwdns2700371:0crwdne2700371:0",
           "definition": "crwdns2700373:0crwdne2700373:0"
@@ -345,14 +353,6 @@
         "line/poem-art/unversioned": {
           "word": "crwdns2710945:0crwdne2710945:0",
           "definition": "crwdns2710947:0crwdne2710947:0"
-        },
-        "event/outbreak/unversioned": {
-          "word": "crwdns2700937:0crwdne2700937:0",
-          "definition": "crwdns2700939:0crwdne2700939:0"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "crwdns2700941:0crwdne2700941:0",
-          "definition": "crwdns2700943:0crwdne2700943:0"
         },
         "sprite/coursef/2021": {
           "word": "crwdns2701157:0crwdne2701157:0",
