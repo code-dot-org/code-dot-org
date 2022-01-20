@@ -7,7 +7,6 @@ import JavalabButton from './JavalabButton';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
-import {setSource} from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
@@ -427,12 +426,7 @@ const styles = {
 };
 
 export const UnconnectedBackpack = Backpack;
-export default connect(
-  state => ({
-    backpackApi: state.javalab.backpackApi,
-    sources: state.javalab.sources
-  }),
-  dispatch => ({
-    setSource: (filename, source) => dispatch(setSource(filename, source))
-  })
-)(onClickOutside(Radium(UnconnectedBackpack)));
+export default connect(state => ({
+  backpackApi: state.javalab.backpackApi,
+  sources: state.javalab.sources
+}))(onClickOutside(Radium(UnconnectedBackpack)));
