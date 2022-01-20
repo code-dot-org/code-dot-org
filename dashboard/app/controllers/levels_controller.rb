@@ -193,12 +193,15 @@ class LevelsController < ApplicationController
       toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
     end
 
+    validation = @level.respond_to?(:validation) ? @level.validation : nil
+
     level_view_options(
       @level.id,
       start_blocks: blocks_xml,
       toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
-      skip_instructions_popup: true
+      skip_instructions_popup: true,
+      validation: validation
     )
     view_options(full_width: true)
     @game = @level.game
@@ -268,6 +271,21 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
+  end
+
+  # POST /levels/:id/update_start_code
+  # Update start code for a level. If params contain validation and start_sources,
+  # set those directly to ensure encryption. Otherwise set via update_properties
+  def update_start_code
+    if !@level.respond_to?(:start_sources) || !@level.respond_to?(:validation)
+      return update_properties
+    end
+    @level.start_sources = params[:start_sources]
+    @level.validation = params[:validation]
+    @level.log_changes(current_user)
+    @level.save!
+
+    render json: {redirect: level_url(@level)}
   end
 
   # POST /levels
