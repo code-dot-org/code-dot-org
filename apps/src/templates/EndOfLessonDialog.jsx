@@ -1,11 +1,10 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import Button from './Button';
+import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import BaseDialog from './BaseDialog';
-import DialogFooter from './teacherDashboard/DialogFooter';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 function EndOfLessonDialog({lessonNumber, isSummaryView}) {
   const [isDialogOpen, setIsDialogOpen] = useState(true);
@@ -17,10 +16,10 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
 
   const scrollToCompletedLesson = () => {
     const completedLessonElementId = isSummaryView
-      ? `#summary-progress-row-${lessonNumber}`
-      : `#progress-lesson-${lessonNumber}`;
+      ? `summary-progress-row-${lessonNumber}`
+      : `progress-lesson-${lessonNumber}`;
 
-    $(completedLessonElementId)[0].scrollIntoView();
+    document.getElementById(completedLessonElementId).scrollIntoView();
   };
 
   return (
@@ -59,6 +58,8 @@ const styles = {
     marginTop: 20
   }
 };
+
+export const UnconnectedEndOfLessonDialog = EndOfLessonDialog;
 
 export default connect(state => ({
   isSummaryView: state.progress.isSummaryView
