@@ -134,7 +134,7 @@
           "2-3_Bee_Functions_6_a": "អ្នកមិនចាំបាច់ប្រើប្រាស់ការធ្វើច្រើនដងជាមួយអនុគមន៍នោះទេ ។ ព្យាយាមរផ្លសា់ទី ប្រើអនុគមន៍ រួចហើយផ្លាស់ទីនិងប្រើប្រាស់អនុគមន៍ម្តងទៀត ។"
         },
         "2-3 Bee Functions 8": {
-          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !",
@@ -528,10 +528,10 @@
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_a": "កម្មវិធីរបស់អ្នកគួរ:\n\n-   ប្រើមុខងារ\n-   ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល\n-   ប្រើមុខងារ",
           "courseD_artist_functions2_b": "អនុគមន៍ដែលអ្នកសរសេរមិនគួរមានកម្មវិធីទាំងមូលរបស់អ្នកទេ, គ្រាន់តែផ្នែកដែលគូរការ៉េមានជ្រុង ១០០ ភីកសែល។",
-          "courseD_artist_functions2_c": "ប្រើប្លុក`draw a square`ពណ៌បៃតង ដើម្បី \"ហៅ\" អនុគមន៍របស់អ្នក ក្រោមប្លុក `when run` ។ បើមិនដូច្នោះទេកូដនឹងមិនដំណើរការទេ។\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
+          "courseD_artist_functions2_c": "ប្រើប្លុក`draw a square`ពណ៌បៃតង ដើម្បី \"ហៅ\" អនុគមន៍របស់អ្នក ក្រោមប្លុក `when run` ។ បើមិនដូច្នោះទេកូដនឹងមិនដំណើរការទេ។\n\n[blockly block][0]"
         },
         "courseE_bee_functions6": {
-          "courseE_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)",
+          "courseE_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)",
           "courseE_bee_functions6_b": "ប្លុក`ផ្លាស់ទី`ក្នុងករណីនេះអាចជួយរំកិលខាងក្នុងអនុគមន៍, ប៉ុន្តែអ្នកមិនត្រូវការវានៅទីនោះទាំងអស់ទេ។"
         },
         "courseE_bee_functions7": {
@@ -548,7 +548,7 @@
           "courseE_bee_functions_challenge1_b": "ចងចាំថាត្រូវបង្កើតលេខកូដរបស់អ្នកនៅខាងក្នុងនៃប្លុកមុខងារបៃតង។"
         },
         "courseF_bee_functions6": {
-          "courseF_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+          "courseF_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
         },
         "courseF_bee_functions8a": {
           "courseF_bee_functions8a_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !"
@@ -860,7 +860,7 @@
           "courseD_bee_debugging_challenge1_c": "បន្ទាប់ពីឃ្មុំធ្វើឱ្យវាស្ថិតនៅជួរខាងក្រោម សូមឱ្យវាធ្វើម្តងទៀតនូវពាក្យបញ្ជាទាំងនេះ:\n\n-   ធ្វើឡើងវិញ ២ ដង:\n    -   ទៅមុខ\n    -   ធ្វើទឹកឃ្មុំ ៣\n-   រំកិលថយក្រោយ"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1391,7 +1391,7 @@
         },
         "courseD_collector_debugging_challenge2": {
           "courseD_collector_debugging_challenge2_a": "ចាប់ផ្តើមដោយការប្រមូលត្បូង **ពីរ** ពីគំនរ​​ **ពីរ**​ មុនគេ​នៃគំនរនីមួយៗ។\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nប្រើប្លុកទាំងនេះ។\n\n[បិទខ្ទប់] [១]",
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -2405,19 +2405,19 @@
           "alternate": "ប្លុកដែលអាចជំនួសមាននៅក្នុងប្លុក \"អ្នករាំ\"។"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-projects-5": {
           "courseE_playLab_scaffold4_a": "ប្រើ `ពិន្ទុ` ដើម្បីបន្ថែមចំណុចហើយ `ដកចំនុច` ដើម្បីដកមួយ។"
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_c": "នេះគឺជាលំនាំដែលសិល្បករនឹងធ្វើតាម\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
+          "courseF_artist_variables4_c": "នេះគឺជាលំនាំដែលសិល្បករនឹងធ្វើតាម\n[][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "កូដពាក់កណ្ដាលទី២របស់អ្នក គួរតែមើលទៅស្ទើរតែដូចគ្នាទៅនឹងកូដពាក់កណ្ដាលដំបូង លើកលែងតែអ្នកនឹងបត់ឆ្វេង លោត រួចបត់ស្ដាំ។",
           "courseF_artist_variables5_b": "កូដពាក់កណ្ដាលដំបូងរបស់អ្នក នឹងគូរត្រីកោណ៣ ហើយពាក់កណ្ដាលទី២ នឹងគូរត្រីកោណ៣ទៀត។",
           "courseF_artist_variables5_c": "ចាប់ផ្តើមដោយការចម្លងលេខកូដនៅពាក់កណ្តាលដំបូងនៃកម្មវិធីរបស់អ្នក បន្ទាប់មកផ្លាស់ប្តូរវាដើម្បីធ្វើឱ្យការរចនាត្រូវបានបង្ហាញ។ ",
-          "courseF_artist_variables5_d": "នេះគឺជាលំនាំដែលសិល្បកររបស់អ្នកនឹងធ្វើតាម។\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "នេះគឺជាលំនាំដែលសិល្បកររបស់អ្នកនឹងធ្វើតាម។\n[][0]"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
@@ -3139,7 +3139,7 @@
           "course_starWars_loops8_c": "សូមក្រលេកទៅមើលវិធីនេះ។\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_copy": {
-          "course_starWars_loops8_c": "សូមក្រលេកទៅមើលវិធីនេះ។\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "សូមក្រលេកទៅមើលវិធីនេះ។\n\n[][0]"
         },
         "courseE_bee_concept1": {
           "courseE_bee_concept1_b": "តើមានលំនាំណាដែល _repeat_ នៅទីនេះទេ?",
