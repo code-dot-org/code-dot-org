@@ -21,10 +21,10 @@
               OriginProtocolPolicy: match-viewer
         DefaultCacheBehavior:
           TargetOriginId: PrimaryOrigin
-          CachePolicyId: !Ref RedirectCachePolicy
+          CachePolicyId: !Ref <%=app%>RedirectCachePolicy
           FunctionAssociations:
             - EventType: viewer-request
-              FunctionARN: !Ref RedirectFunction
+              FunctionARN: !Ref <%=app%>RedirectFunction
           ViewerProtocolPolicy: allow-all
           # Use shared Realtime Log config
           RealtimeLogConfigArn: !ImportValue AccessLogs-Config
