@@ -12,10 +12,24 @@ export default storybook => {
           'Students and teachers will see their main course, the one in which they have the most recent progress as a larger version of a CourseCard with links to course overview and the specific lesson they most recently worked on.',
         story: () => (
           <TopCourse
-            assignableName="Course 1"
-            lessonName="Lesson 3: Learn to drag and drop"
-            linkToOverview="http://localhost-studio.code.org:3000/s/course1"
-            linkToLesson="http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1"
+            assignableName="CSP 1"
+            lessonName="Lesson 1: Intro to CSP"
+            linkToOverview="studio.code.org/s/csp1-2021"
+            linkToLesson="studio.code.org/s/csp1-2021/lessons/1"
+          />
+        )
+      },
+      {
+        name: 'TopCourse - Professional Learning Course',
+        description:
+          'Adults will see their main PL course, the one in which they have the most recent progress as a larger version of a CourseCard with links to course overview and the specific lesson they most recently worked on.',
+        story: () => (
+          <TopCourse
+            assignableName="Self Paced CSD 1"
+            lessonName="What to teach when in CSD"
+            linkToOverview="studio.code.org/s/self-paced-pl-csd1-2021"
+            linkToLesson={'studio.code.org/s/self-paced-pl-csd1-2021/lessons/1'}
+            isProfessionalLearningCourse={true}
           />
         )
       }

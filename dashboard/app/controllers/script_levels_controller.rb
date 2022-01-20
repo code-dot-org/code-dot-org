@@ -74,7 +74,7 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
-  use_database_pool show: :persistent
+  use_reader_connection_for_route(:show)
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
