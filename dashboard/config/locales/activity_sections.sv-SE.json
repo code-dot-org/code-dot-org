@@ -444,6 +444,16 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Text komprimering"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introduktion"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Utbrott",
+          "progression_name": "Utbrott"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Fri lek"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introduktion",
           "tips": [
@@ -902,16 +912,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Du har två fästisar. Skriv något du har lärt dig om kodning idag på den ena. \nSkriv något du har lärt dig om kodning idag på den andra.\n\nLåt oss dela med hela klassen genom att räcka upp handen och svara på den här frågan: Vad mer hoppas du att du kan lära dig om kodning och datavetenskap härnäst? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introduktion"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Utbrott",
-          "progression_name": "Utbrott"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Fri lek"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
