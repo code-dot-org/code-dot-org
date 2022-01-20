@@ -736,6 +736,34 @@ class LevelsControllerTest < ActionController::TestCase
     assert_match /JSON::ParserError/, JSON.parse(@response.body)['code_functions'].first
   end
 
+  test "update_start_code updates start sources and validation" do
+    level = create(:javalab)
+    post :update_start_code, params: {
+      id: level.id,
+        validation: {"Validation.java" => "{}"},
+        start_sources: {"MyClass.java" => "{}"}
+    }
+    assert_response :success
+    level = assigns(:level)
+    assert_not_nil level.validation
+    assert_not_nil level.start_sources
+  end
+
+  test "update_start_code works if level does not support validation" do
+    post :update_start_code, params: {
+      id: create(:applab).id,
+    }, body:
+           {
+             start_html: '<h1>foo</h1>',
+             start_blocks: 'console.log("hello world");',
+           }.to_json
+
+    assert_response :success
+    level = assigns(:level)
+    assert_equal '<h1>foo</h1>', level.properties['start_html']
+    assert_equal 'console.log("hello world");', level.properties['start_blocks']
+  end
+
   test "should destroy level" do
     assert_destroys(Level) do
       delete :destroy, params: {id: @level}
