@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Radium from 'radium';
 import {
   setSource,
+  sourceTextUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
@@ -63,6 +64,7 @@ class JavalabEditor extends React.Component {
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
+    sourceTextUpdated: PropTypes.func,
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
@@ -193,6 +195,9 @@ class JavalabEditor extends React.Component {
   }
 
   dispatchEditorChange = key => {
+    const {sourceTextUpdated} = this.props;
+    const {fileMetadata} = this.state;
+
     // tr is a code mirror transaction
     // see https://codemirror.net/6/docs/ref/#state.Transaction
     return tr => {
@@ -201,10 +206,7 @@ class JavalabEditor extends React.Component {
       this.editors[key].update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        this.props.setSource(
-          this.state.fileMetadata[key],
-          tr.newDoc.toString()
-        );
+        sourceTextUpdated(fileMetadata[key], tr.newDoc.toString());
         projectChanged();
       }
     };
@@ -811,6 +813,8 @@ export default connect(
       dispatch(sourceVisibilityUpdated(filename, isVisible)),
     sourceValidationUpdated: (filename, isValidation) =>
       dispatch(sourceValidationUpdated(filename, isValidation)),
+    sourceTextUpdated: (filename, text) =>
+      dispatch(sourceTextUpdated(filename, text)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename)),
