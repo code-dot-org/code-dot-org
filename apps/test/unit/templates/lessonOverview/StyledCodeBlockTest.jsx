@@ -73,6 +73,6 @@ describe('StyledCodeBlock', () => {
 
     const blockLink = wrapper.find('a');
     expect(blockLink.props().href).to.equal('/docs/spritelab/playSound');
-    expect(blockLink.find('div').length).to.equal(1);
+    expect(blockLink.find('#embedded-block-playSound').length).to.equal(1);
   });
 });
