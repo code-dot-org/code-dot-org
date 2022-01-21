@@ -32,13 +32,16 @@ export default function StyledCodeBlock({programmingExpression}) {
       );
       shrinkBlockSpaceContainer(blockSpace, true);
     }
-  }, [programmingExpression, blockRef]);
+  }, [programmingExpression, blockRef.current]);
 
   if (programmingExpression.blockName) {
     return (
       <div>
         <a href={programmingExpression.link}>
-          <div ref={blockRef} />
+          <div
+            id={`embedded-block-${programmingExpression.blockName}`}
+            ref={blockRef}
+          />
         </a>
       </div>
     );
