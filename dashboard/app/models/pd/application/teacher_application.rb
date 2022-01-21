@@ -84,7 +84,7 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
-    before_validation :set_course_from_program, unless: -> {program.nil?}
+    before_validation :set_course_from_program
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 

@@ -18,7 +18,6 @@ module Api::V1::Pd::Application
 
       @application.form_data_hash = JSON.parse(form_data_json)
       @application.set_status
-      @application.set_course_from_program
       @application.update_user_school_info!
 
       @application.on_completed_application unless @application.status == 'incomplete'
