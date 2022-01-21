@@ -26,14 +26,16 @@ export const commands = {
     if (unit === 'seconds') {
       return this.getAdjustedWorldTime() - this.timerResetTime || 0;
     } else if (unit === 'frames') {
-      return this.p5.World.frameCount || 0;
+      return this.p5.World.frameCount - this.timerResetFrames || 0;
     }
     return 0;
   },
 
   resetTimer() {
-    const current = this.getAdjustedWorldTime();
-    this.timerResetTime = current;
+    const currentTime = this.getAdjustedWorldTime();
+    this.timerResetTime = currentTime;
+    const currentFrames = this.p5.World.frameCount;
+    this.timerResetFrames = currentFrames;
   },
 
   hideTitleScreen() {
