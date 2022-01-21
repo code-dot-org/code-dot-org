@@ -15,12 +15,22 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-12-07 20:06:01 UTC",
+    "serialized_at": "2022-01-20 17:49:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9417,6 +9427,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Powered Minecart_2021"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9516,6 +9529,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Underground Iron_2021"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
