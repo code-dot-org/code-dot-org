@@ -33,14 +33,11 @@ module ProjectsList
     def fetch_personal_projects(user_id)
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
-
       PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
-
-      personal_projects_list
     end
 
     # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
