@@ -236,9 +236,10 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
-  def update_properties
+  def update_properties(ignored_keys: [])
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
+      next if ignored_keys.include?(key)
       @level.properties[key] = value
     end
 
@@ -274,18 +275,15 @@ class LevelsController < ApplicationController
   end
 
   # POST /levels/:id/update_start_code
-  # Update start code for a level. If params contain validation and start_sources,
-  # set those directly to ensure encryption. Otherwise set via update_properties
+  # Update start code for a level. If params contains "validation",
+  # set validation directly to ensure it is encrypted.
+  # Then set any remaining properties with update_properties.
   def update_start_code
-    if !@level.respond_to?(:start_sources) || !@level.respond_to?(:validation)
-      return update_properties
+    if @level.respond_to?(:validation)
+      @level.validation = params[:validation]
+      params.delete(:validation)
     end
-    @level.start_sources = params[:start_sources]
-    @level.validation = params[:validation]
-    @level.log_changes(current_user)
-    @level.save!
-
-    render json: {redirect: level_url(@level)}
+    return update_properties(ignored_keys: ["validation"])
   end
 
   # POST /levels
