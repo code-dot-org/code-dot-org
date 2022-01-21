@@ -32,10 +32,8 @@ export const commands = {
   },
 
   resetTimer() {
-    const currentTime = this.getAdjustedWorldTime();
-    this.timerResetTime = currentTime;
-    const currentFrames = this.p5.World.frameCount;
-    this.timerResetFrames = currentFrames;
+    this.timerResetTime = this.getAdjustedWorldTime();
+    this.timerResetFrames = this.p5.World.frameCount;
   },
 
   hideTitleScreen() {
