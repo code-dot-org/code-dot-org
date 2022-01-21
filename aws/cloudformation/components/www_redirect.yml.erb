@@ -24,7 +24,7 @@
           CachePolicyId: !Ref <%=app%>RedirectCachePolicy
           FunctionAssociations:
             - EventType: viewer-request
-              FunctionARN: !Ref <%=app%>RedirectFunction
+              FunctionARN: !Ref <%=app%>RedirectCloudfrontFunction
           ViewerProtocolPolicy: allow-all
           # Use shared Realtime Log config
           RealtimeLogConfigArn: !ImportValue AccessLogs-Config
@@ -75,10 +75,10 @@
           QueryStringsConfig: 
             QueryStringBehavior: all
 
-  <%=app%>RedirectFunction:
+  <%=app%>RedirectCloudfrontFunction:
     Type: AWS::CloudFront::Function
     Properties: 
-      Name: www_redirect
+      Name: !Sub "${AWS::StackName}-www-redirect"
       FunctionConfig: 
         Comment: Redirects a subdomain to the root domain
         Runtime: cloudfront-js-1.0
