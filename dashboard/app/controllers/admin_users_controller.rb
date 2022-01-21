@@ -146,8 +146,8 @@ class AdminUsersController < ApplicationController
     end
 
     if @target_user
-      @projects_list = ProjectsList.fetch_personal_projects(@target_user.id)
-      @deleted_projects_list = ProjectsList.fetch_deleted_personal_projects(@target_user.id)
+      @projects_list = ProjectsList.fetch_personal_projects(@target_user.id, true)
+      @deleted_projects_list = ProjectsList.fetch_personal_projects(@target_user.id, true, 'deleted')
     end
   end
 

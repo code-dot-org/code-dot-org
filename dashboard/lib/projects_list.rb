@@ -29,30 +29,24 @@ module ProjectsList
     # Look up every project associated with the provided user_id, excluding those that are hidden.
     # Return a set of metadata which can be used to display a table of personal projects in the UI.
     # @param user_id
+    # @param state [String] Defaults to 'active'
     # @return [Array<Hash>] An array with each entry representing a project.
-    def fetch_personal_projects(user_id)
+    def fetch_personal_projects(user_id, sort_by_updated = false, state = 'active')
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
-      PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
+
+      storage_apps_query = PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: state)
+
+      if sort_by_updated
+        storage_apps_query.order(Sequel.desc(:updated_at))
+      end
+
+      storage_apps_query.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
-      personal_projects_list
-    end
 
-    # Look up every project associated with the provided user_id, excluding those that are hidden.
-    # Return a set of metadata which can be used to display a table of personal projects in the UI.
-    # @param user_id
-    # @return [Array<Hash>] An array with each entry representing a project.
-    def fetch_deleted_personal_projects(user_id)
-      personal_projects_list = []
-      storage_id = storage_id_for_user_id(user_id)
-      PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'deleted').each do |project|
-        channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data_for_admin(project, channel_id)
-        personal_projects_list << project_data if project_data
-      end
       personal_projects_list
     end
 
@@ -279,22 +273,6 @@ module ProjectsList
         row_data[:libraryPublishedAt] = project_value['libraryPublishedAt']
         row_data[:sharedWith] = project_value['sharedWith'] ? project_value['sharedWith'] : []
       end
-
-      row_data.with_indifferent_access
-    end
-
-    def get_project_row_data_for_admin(project, channel_id)
-      project_value = project[:value] ? JSON.parse(project[:value]) : {}
-
-      row_data = {
-        channel: channel_id,
-        name: project_value['name'],
-        type: project_type(project_value['level']),
-        updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at],
-        hidden: project_value['hidden'],
-        state: project_value['state']
-      }
 
       row_data.with_indifferent_access
     end
