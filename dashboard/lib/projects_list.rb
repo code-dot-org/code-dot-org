@@ -38,6 +38,7 @@ module ProjectsList
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
+      personal_projects_list
     end
 
     # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
