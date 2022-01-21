@@ -311,10 +311,6 @@ class Script < ApplicationRecord
     @@text_to_speech_unit_ids ||= all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
-  def self.pre_reader_unit_ids
-    @@pre_reader_unit_ids ||= all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
-  end
-
   # Get the set of units that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
@@ -803,10 +799,6 @@ class Script < ApplicationRecord
     ScriptConstants.unit_in_category?(:flappy, name)
   end
 
-  def k5_draft_course?
-    ScriptConstants.unit_in_category?(:csf2_draft, name)
-  end
-
   def csf_international?
     ScriptConstants.unit_in_category?(:csf_international, name)
   end
@@ -874,16 +866,14 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSC')
   end
 
+  # TODO: (Dani) Update to use new course types framework.
+  # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
+  def middle_high?
+    csd? || csp? || csa?
+  end
+
   def hour_of_code?
     under_curriculum_umbrella?('HOC')
-  end
-
-  def beta?
-    Script.beta? name
-  end
-
-  def self.beta?(name)
-    name == Script::EDIT_CODE_NAME || ScriptConstants.unit_in_category?(:csf2_draft, name)
   end
 
   def get_script_level_by_id(script_level_id)
@@ -931,25 +921,6 @@ class Script < ApplicationRecord
       }
     end
     summarized_lesson_levels
-  end
-
-  def pre_reader_tts_level?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::PRE_READER_EXPRESS_NAME,
-      Script::COURSEA_2018_NAME,
-      Script::COURSEB_2018_NAME,
-      Script::PRE_READER_EXPRESS_2018_NAME,
-      Script::COURSEA_2019_NAME,
-      Script::COURSEB_2019_NAME,
-      Script::PRE_READER_EXPRESS_2019_NAME,
-      Script::COURSEA_2020_NAME,
-      Script::COURSEB_2020_NAME,
-      Script::PRE_READER_EXPRESS_2020_NAME,
-    ].include?(name)
   end
 
   def text_to_speech_enabled?
@@ -1177,7 +1148,6 @@ class Script < ApplicationRecord
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
         UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
-        destination_unit_group.write_serialization
         copied_unit.reload
       else
         copied_unit.is_course = true
@@ -1200,6 +1170,7 @@ class Script < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         copy_and_write_i18n(new_name, course_version)
         copied_unit.write_script_json
+        destination_unit_group.write_serialization if destination_unit_group
       end
 
       copied_unit
@@ -1454,7 +1425,6 @@ class Script < ApplicationRecord
       title: title_for_display,
       description: Services::MarkdownPreprocessor.process(localized_description),
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-      beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
       instructionType: get_instruction_type,
@@ -1464,7 +1434,6 @@ class Script < ApplicationRecord
       plc: old_professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
       csf: csf?,
       isCsd: csd?,
       isCsp: csp?,
@@ -1574,10 +1543,8 @@ class Script < ApplicationRecord
     {
       name: name,
       disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      is_csf: csf? || csc?, # TODO(dmcavoy): Remove once show_sign_in_callout launched
       show_sign_in_callout: csf? || csc?
     }
   end
@@ -2045,6 +2012,6 @@ class Script < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?(user)
-    (csd? || csp? || csa?) && user&.has_pilot_experiment?('end-of-lesson-redirects')
+    middle_high? && user&.has_pilot_experiment?('end-of-lesson-redirects')
   end
 end

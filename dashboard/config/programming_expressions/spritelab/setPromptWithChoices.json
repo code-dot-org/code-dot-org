@@ -1,0 +1,7 @@
+{
+  "key": "setPromptWithChoices",
+  "name": "setPromptWithChoices",
+  "category": "World",
+  "block_name": "gamelab_setPromptWithChoices",
+  "syntax": "setPromptWithChoices"
+}

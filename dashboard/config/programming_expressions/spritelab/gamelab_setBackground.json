@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_setBackground",
+  "name": "setBackground",
+  "category": "World",
+  "block_name": "gamelab_setBackground",
+  "syntax": "setBackground"
+}

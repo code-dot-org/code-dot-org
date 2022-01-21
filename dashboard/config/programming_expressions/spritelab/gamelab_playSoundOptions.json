@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_playSoundOptions",
+  "name": "playSoundOptions",
+  "category": "World",
+  "block_name": "gamelab_playSoundOptions",
+  "syntax": "playSoundOptions"
+}

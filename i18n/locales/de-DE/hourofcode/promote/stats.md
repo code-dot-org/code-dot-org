@@ -16,7 +16,7 @@ title: Kurzinfos und hilfreiche Statistiken
 
 #### Bringen Sie die Informatik in Ihre Schule. Beginnen Sie mit Hour of Code!
 
-Die Technologie verändert jede Branche auf der Erde, Informatik gehört zu jeder guten Allgemeinbildung. Aber nur die Hälfte aller Schulen unterrichtet Informatik! Die guten Nachrichten: Wir sind auf dem Weg, dies zu ändern! Falls Sie bereits letztes Jahr von der Hour-of-Code gehört haben, wissen Sie, dass sie Geschichte geschrieben hat. 100 Millionen Schülerinnen und Schüler haben inzwischen entdeckt, wie leicht und unterhaltsam Informatik sein kann, wenn sie an nur einer Hour of Code teilnehmen.
+Die Technologie verändert jede Branche auf der Erde, Informatik gehört zu jeder guten Allgemeinbildung. But just half of all schools offer computer science! Die guten Nachrichten: Wir sind auf dem Weg, dies zu ändern! Falls Sie bereits letztes Jahr von der Hour-of-Code gehört haben, wissen Sie, dass sie Geschichte geschrieben hat. 100 Millionen Schülerinnen und Schüler haben inzwischen entdeckt, wie leicht und unterhaltsam Informatik sein kann, wenn sie an nur einer Hour of Code teilnehmen.
 
 Hour of Code ist eine einstündige Einführung in die Informatik, entwickelt um hinter das Geheimnis der Programmierung zu schauen und sie zeigt, dass jeder die Grundlagen erlernen kann. Erfahren Sie mehr unter [http://HourOfCode.com](http://HourofCode.com), probieren Sie selbst eine Stunde aus oder veranstalten Sie eine Hour of Code, um andere in die Welt des Programmierens einzuführen!
 
@@ -30,7 +30,7 @@ Wir hoffen, dass es bei den Schülern das Interesse weckt weiterzulernen. Die Fo
 
 #### Warum ist das wichtig?
 
-Die Technologie verändert alle Branchen auf unserem Planeten. 2015 gab es in den USA 7 Millionen offene Stellen, einschließlich Kunst und Design, die Programmierfähigkeiten voraussetzen. Aber nur 53 Prozent der Schulen in den USA unterrichten Informatik. Es ist Zeit, sich für das 21. Jahrhundert fit zu machen. Was unsere Schüler auch sein werden, wenn sie erwachsen sind, ob sie Arzt, Unternehmer Politiker oder Künstler, sie werden Selbstvertrauen und einen Wettbewerbsvorteil haben, wenn sie wissen, wie Technologie geschaffen wird. <br /> <br />
+Die Technologie verändert alle Branchen auf unserem Planeten. 2015 gab es in den USA 7 Millionen offene Stellen, einschließlich Kunst und Design, die Programmierfähigkeiten voraussetzen. But 49 percent of schools in the U.S. don't offer computer science. Es ist Zeit, sich für das 21. Jahrhundert fit zu machen. Was unsere Schüler auch sein werden, wenn sie erwachsen sind, ob sie Arzt, Unternehmer Politiker oder Künstler, sie werden Selbstvertrauen und einen Wettbewerbsvorteil haben, wenn sie wissen, wie Technologie geschaffen wird. <br /> <br />
 
 #### Dieses Zitat können Sie in Ihren Materialien verwenden
 

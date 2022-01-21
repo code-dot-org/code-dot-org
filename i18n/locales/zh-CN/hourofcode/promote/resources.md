@@ -84,7 +84,7 @@ title: 资源
 
 ** 主题行: **加入我和超过1亿学生的一个《编程一小时》 <br />
 
-计算机无所不在，它正改变着世界上的工业。 但只有51%的高中教计算机科学。 好消息是我们正在改变此现状！ 如果你之前听说过编程一小时，你可能知道它创造了历史。 超过 1 亿学生尝试过编程一小时。
+计算机无所不在，它正改变着世界上的工业。 But only 51% of all high schools offer computer science. 好消息是我们正在改变此现状！ 如果你之前听说过编程一小时，你可能知道它创造了历史。 超过 1 亿学生尝试过编程一小时。
 
 因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都会举办一个《编程一小时》, 而且像奥巴马总统和加拿大总理贾斯廷·特鲁多这样的领导人写了他们的第一行编程作为竞选活动的一部分。
 
@@ -110,7 +110,7 @@ title: 资源
 
 学生将创建自己的应用程序或游戏, 他们可以显示给他们的父母, 我们也会打印《编程一小时》的证书, 他们可以带回家。 而且, 这很有趣! 通过互动、动手的活动，学生将以浅显易懂的方式学习计算思维技能。
 
-计算机无所不在，它正改变着世界上的工业。 但只有51%的高中教计算机科学。 好消息是我们正在改变此现状！ 如果您以前听过有关《编程一小时》的信息, 您可能知道它创造了历史-全世界有超过1亿的学生尝试了《编程一小时》。 作为活动的一部分，就连奥巴马总统和加拿大总理特鲁多这样的领导人也写下了第一行代码。
+计算机无所不在，它正改变着世界上的工业。 But only 51% of all high schools offer computer science. 好消息是我们正在改变此现状！ 如果您以前听过有关《编程一小时》的信息, 您可能知道它创造了历史-全世界有超过1亿的学生尝试了《编程一小时》。 作为活动的一部分，就连奥巴马总统和加拿大总理特鲁多这样的领导人也写下了第一行代码。
 
 你可以在http://hourofcode.com网站上阅读更多活动信息。如果你想安排一些时间来讨论[school name]如何参与，请让我们知道。<br />
 
@@ -126,7 +126,7 @@ title: 资源
 
 我们生活在一个被科技包围的世界。 同时我们也知道我们的学生长大后无论选进入什么领域，他们取得成功的能力都将越来越多地取决于他们对于科技如何运作的理解。
 
-但只有极小一部分人在学习科技**如何**运行。只有51%的高中教计算机科学。
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 这就是为什么在计算机科学教育期间{{ campaign_date/full }}，我们整个学校都加入到这个史上最大规模的学习活动：编程一小时。 全世界已经有超过1亿名学生体验了编程一小时。 我们的《编程一小时》声明[学校名称] 已经准备好教这些21世纪的基础技能。 为了持续带来更多的编程活动给同学们，我们希望把编程一小时可以办得更加盛大。 我鼓励你们志愿去接触当地媒体，在你的社交媒体频道上分享消息，并在小区尝试组织其他的编程一小时活动。
 
@@ -144,7 +144,7 @@ title: 资源
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-计算机无处不在，正在改变着地球上每一个行业，但我们只有51%的高中讲授计算机科学。 Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是，我们正在着手改变现状。
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是，我们正在着手改变现状。
 
 因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都有举办过《编程一小时》。 甚至连奥巴马总统也曾在竞选活动中写下了自己的第一行编码。
 
@@ -172,7 +172,7 @@ I look forward to being in touch. <br />
 
 您知道在美国电脑工作的收入是排名第一的吗？ 全美国有超过500,000个电脑工作空缺，但去年只有42,969个计算机科学专业毕业生进入劳动力市场。
 
-计算机科学是当今每个行业的基础。然而大多数学校并不教它。在[SCHOOL NAME]，我们正在试图改变这一状况。
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 这就是为什么在计算机科学教育期间{{ campaign_date/full }}，我们整个学校都加入到这个史上最大规模的学习活动：编程一小时。 全世界已经有超过1亿名学生体验了编程一小时。
 

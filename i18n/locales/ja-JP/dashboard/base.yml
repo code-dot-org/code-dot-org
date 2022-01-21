@@ -389,6 +389,7 @@ ja:
       prizes_link: '情報をもっと見る'
   teacher:
     answer: 答え
+    dashboard: '先生用のダッシュボード'
     for_teachers_only: 先生のみ
     title:
       one: 'あなたの先生：'

@@ -81,7 +81,7 @@ Lastly, when your child comes across difficulties it's okay to respond: - “I d
 
 Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
 
-## 4) お祝いを忘れずに！ 
+## 4) 認定をする！ 
 
 The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
 

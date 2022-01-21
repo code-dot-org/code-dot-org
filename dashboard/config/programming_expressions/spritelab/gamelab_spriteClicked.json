@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_spriteClicked",
+  "name": "spriteClicked",
+  "category": "Events",
+  "block_name": "gamelab_spriteClicked",
+  "syntax": "spriteClicked"
+}

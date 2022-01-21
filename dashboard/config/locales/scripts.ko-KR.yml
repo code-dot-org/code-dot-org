@@ -22851,6 +22851,17 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 샌드박스
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java 연구소
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -23948,13 +23959,6 @@ ko:
               key: Java 연구소
             lesson-1:
               key: 레슨-1
-              description_student: 코스를 진행하며 개발하신 프로젝트가 커뮤니티 내 수많은 창의적 활동에 영감이 되었습니다!
-                창의적인 이야기와 스크립트, 노래 가사, 편지, 시가 소개될 네이버후드 릿 페스트가 열릴 예정입니다. 릿 페스트 프로젝트는
-                단원 내내 작업할 대형 프로젝트이므로 프로젝트 관리 전략들이 작업을 준비하고 구성하는 데 도움이 됩니다. 다른 소프트웨어
-                엔지니어들이 Java 도구를 쉽게 이해하고 활용하며 프로그램 문서를 제작할 수 있도록 코드 작성 및 구조화 전략을 살펴봅니다.
-              description_teacher: 학생들에게 네이버후드 릿 페스트를 소개하고 질문과 핵심 기능 식별을 위한 예시와 요건을
-                평가합니다. 학생들은 프로젝트 작업을 시작하기 전에 모범 사례를 식별하고 Javadoc를 사용해 프로그램 문서를 생성하는
-                방법을 살펴보며 프로그램 구조와 주석에 대한 이해를 확장합니다.
             lesson-2:
               key: 레슨--2
               description_student: "‘Integer’ 객체와 ‘Double’ 객체를 생성하여 ‘int’와 ‘double’
@@ -24233,3 +24237,138 @@ ko:
                 기량을 갖춰야 합니다:\n\n-   이미지 또는 손가락, 수학 도구를 사용하여 10까지 인지 및 숫자 세기.\n-   합이
                 10이 되게 물체 또는 이미지, 손가락, 수학 도구 더하기."
           title: 라우렐과 함께 숫자 세기
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: 레슨
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: 네이버후드 릿 페스트 프로젝트 - 1일 차
+            lesson-12:
+              name: 네이버후드 릿 페스트 프로젝트 - 2일 차
+            lesson-13:
+              name: 네이버후드 릿 페스트 프로젝트 - 3일 차
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        2022drafting:
+          lessons:
+            lesson-1:
+              name: 변수를 이용하여 계산하기
+            lesson-4:
+              name: 발생 시뮬레이터
+            lesson-5:
+              name: 스프라이트 랩으로 자기 소개
+          description_short: 내부
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csf-2022-pilot:
+          lessons:
+            lesson-2:
+              name: 변수를 이용하여 계산하기
+          title: CS 기초 2021 파일럿
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+            lesson-10:
+              key: 레슨--10
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
+            lesson-15:
+              key: 레슨--15
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+              name: 평가일
+            lesson-16:
+              key: 레슨--16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+            lesson-10:
+              key: 레슨--10
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
+            lesson-15:
+              key: 레슨--15
+              name: 평가일
+            lesson-16:
+              key: 레슨--16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스

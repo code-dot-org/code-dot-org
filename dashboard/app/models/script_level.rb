@@ -144,10 +144,6 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def final_level?
-    !has_another_level_to_go_to?
-  end
-
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson=nil,
@@ -237,7 +233,7 @@ class ScriptLevel < ApplicationRecord
 
   def locked?(user)
     return false unless lesson.lockable?
-    return false if user.verified_teacher?
+    return false if user.verified_instructor?
 
     # All levels in a lesson key their lock state off of the last script_level
     # in the lesson, which is an assessment. Thus, to answer the question of
