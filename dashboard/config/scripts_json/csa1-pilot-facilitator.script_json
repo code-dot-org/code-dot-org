@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-05 18:40:44 UTC",
+    "serialized_at": "2022-01-21 22:04:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1861,7 +1861,7 @@
       "key": "d8e78b72-4ace-439b-82b6-d935e84f9ac6",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class, then have students run the code without the object. Talk through the error messages that are displayed in the Console window.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class, then have students run the code without the object. Talk through the error messages that are displayed in the Console window by explaining that a null reference to call a method or access an instance variable causes a NullPointerException to be thrown.",
         "progression_name": "Investigate the Painter",
         "tips": [
           {

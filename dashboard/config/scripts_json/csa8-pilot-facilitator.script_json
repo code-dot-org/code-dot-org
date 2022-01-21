@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-13 16:44:31 UTC",
+    "serialized_at": "2022-01-21 20:19:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4858,6 +4858,18 @@
       }
     },
     {
+      "name": "Binary Search",
+      "url": "https://docs.google.com/document/d/1pycNLXO3CCuwA57r9GYBUde3L5fSWxK7vxGxhSTnGuA/edit?usp=sharing",
+      "key": "binary_search",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "binary_search"
+      }
+    },
+    {
       "name": "Counting Executions with Code",
       "url": "https://docs.google.com/document/d/1vor07qxMHGJGMhgRSsyYAvojic71CN3DKZyUMPYd6x0/edit?usp=sharing",
       "key": "counting_executions_with_code",
@@ -5283,6 +5295,12 @@
       "seeding_key": {
         "lesson.key": "Implementing a Recursive Binary Search",
         "resource.key": "unit_8_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Implementing the Binary Search",
+        "resource.key": "binary_search"
       }
     },
     {
