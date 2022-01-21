@@ -1,5 +1,6 @@
 /* globals dashboard */
 
+import $ from 'jquery';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
@@ -179,9 +180,6 @@ function setUpGlobalData(store) {
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
         data.is_verified_instructor && store.dispatch(setVerified());
-        ensureHeaderSigninState(true, data.short_name);
-      } else {
-        ensureHeaderSigninState(false);
       }
     })
     .catch(err => {
@@ -190,24 +188,19 @@ function setUpGlobalData(store) {
 }
 setUpGlobalData(getStore());
 
-// Some of our cached pages can become cached by the browser with the
-// wrong sign-in state. This is a temporary patch to ensure that the header
-// displays the correct sign-in state for the user.
-function ensureHeaderSigninState(isSignedIn, shortName) {
-  const userMenu = document.querySelector('#header_user_menu');
-  const signinButton = document.querySelector('#signin_button');
+function refreshUserMenu() {
+  const showCreateMenu = $('.create_menu').length > 0;
 
-  if (isSignedIn && userMenu.style.display === 'none') {
-    userMenu.style.display = 'block';
-    signinButton.style.display = 'none';
-
-    const displayName = document.querySelector('#header_display_name');
-    displayName.textContent = shortName;
-  } else if (!isSignedIn && signinButton.style.display === 'none') {
-    userMenu.style.display = 'none';
-    signinButton.style.display = 'inline';
-  }
+  fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
+    credentials: 'same-origin'
+  })
+    .then(response => response.text())
+    .then(data => $('#sign_in_or_user').html(data))
+    .catch(err => {
+      console.log(err);
+    });
 }
+$(document).ready(refreshUserMenu);
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());
