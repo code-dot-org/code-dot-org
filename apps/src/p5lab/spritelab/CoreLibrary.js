@@ -200,7 +200,6 @@ export default class CoreLibrary {
    * Returns World.seconds adjusted to exclude time during which the app was paused
    */
   getAdjustedWorldTime() {
-    //console.log(`gAWT time is now ${this.timerResetTime}`);
     const current = new Date().getTime();
     return Math.round(
       (current - this.p5._startTime - this.totalPauseTime) / 1000
@@ -467,16 +466,10 @@ export default class CoreLibrary {
   }
 
   atTimeEvent(inputEvent) {
-    console.log(`reset time is ${this.timerResetTime}`);
-    console.log(`adjusted time is ${this.getAdjustedWorldTime(this.p5)}`);
     if (inputEvent.args.unit === 'seconds') {
       const previousTime = inputEvent.previousTime || 0;
       const worldTime =
         this.getAdjustedWorldTime(this.p5) - this.timerResetTime;
-      console.log(`worldTime is ${worldTime}`);
-      //const timerTime = this.timerResetTime;
-      //console.log(`timerTime is ${timerTime}`);
-      //console.log(timerTime);
       inputEvent.previousTime = worldTime;
       // There are many ticks per second, but we only want to fire the event once (on the first tick where
       // the time matches the event argument)
