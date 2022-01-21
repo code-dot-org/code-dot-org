@@ -23,7 +23,7 @@ function drawTimer(){
     textAlign(RIGHT, CENTER);
     strokeWeight(5);
     textSize(20);
-    text(World.seconds,timerX-20,timerY);
+    text(getTime("seconds"),timerX-20,timerY);
     pop();
   }
 }
