@@ -156,8 +156,7 @@ class AdminUsersController < ApplicationController
     channel = params[:channel]
 
     if channel
-      storage_apps = StorageApps.new(storage_id_for_user_id(params[:user_id]))
-      storage_apps.restore(channel)
+      StorageApps.new(storage_id_for_user_id(params[:user_id])).restore(channel)
     end
 
     redirect_to action: "user_projects_form", user_identifier: params[:user_id]
