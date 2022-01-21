@@ -13,7 +13,7 @@ social:
   "og:image:height": 630
 ---
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Internships and apprenticeships</h1>
+<h1><a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/></a><br/>Internships and apprenticeships</h1>
 <p>Get real-world experience with these internship and apprenticeship opportunities.</p>
 
 <ul>

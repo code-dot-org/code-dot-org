@@ -649,7 +649,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = true
-    assert_equal "/s/#{script_level.script.name}", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
+    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
   end
 
   # Bubble Choice parent levels mid-lesson redirect to next level.
@@ -693,7 +693,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student.stubs(:has_pilot_experiment?).returns true
     script_level = create_script_level_with_ancestors({})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
-    assert_equal "/s/#{script_level.script.name}", script_level.next_level_or_redirect_path_for_user(student)
+    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student)
   end
 
   # For script where show_unit_overview_between_lessons? == true
