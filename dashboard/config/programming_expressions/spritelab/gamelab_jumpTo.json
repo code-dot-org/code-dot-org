@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_jumpTo",
+  "name": "jumpTo",
+  "category": "Sprites",
+  "block_name": "gamelab_jumpTo",
+  "syntax": "jumpTo"
+}

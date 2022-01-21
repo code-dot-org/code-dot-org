@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_glideTo",
+  "name": "glideTo",
+  "category": "Sprites",
+  "block_name": "gamelab_glideTo",
+  "syntax": "glideTo"
+}

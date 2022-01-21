@@ -753,6 +753,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
+    instruction_type "teacher_led"
     participant_audience "student"
     instructor_audience "teacher"
 
@@ -836,7 +837,7 @@ FactoryGirl.define do
 
   factory :user_ml_model do
     user
-    model_id {Random.rand(111..999)}
+    model_id {SecureRandom.alphanumeric(12)}
     name {"Model name #{Random.rand(111..999)}"}
     metadata '{ "description": "Model details" }'
   end

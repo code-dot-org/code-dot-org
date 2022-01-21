@@ -650,6 +650,9 @@ class Level < ApplicationRecord
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
+    # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
+    return self if key.start_with?('blockly:')
+
     # Make sure we don't go over the 70 character limit.
     max_index = 70 - new_suffix.length - 1
     new_name = "#{base_name[0..max_index]}#{new_suffix}"
@@ -669,7 +672,8 @@ class Level < ApplicationRecord
     # Copy the level_concept_difficulty of the parent level to the new level
     new_lcd = level_concept_difficulty.dup
     level.level_concept_difficulty = new_lcd
-    level.save! if level.changed?
+    # trigger a save to rewrite the custom level file
+    level.save!
 
     level
   end

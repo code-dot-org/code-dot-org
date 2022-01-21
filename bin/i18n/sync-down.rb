@@ -28,7 +28,8 @@ def sync_down
       project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
       project = Crowdin::Project.new(project_identifier, api_key)
       options = {
-        etags_json: File.join(File.dirname(__FILE__), "crowdin", "#{project_identifier}_etags.json"),
+        etags_json: options[:etags_json],
+        files_to_sync_out_json: options[:files_to_sync_out_json],
         locales_dir: File.join(I18N_SOURCE_DIR, '..'),
         logger: logger
       }

@@ -2786,7 +2786,7 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair?
   end
 
-  test "authorized teacher" do
+  test "verified teacher" do
     # you can't just create your own authorized teacher account
     assert @teacher.teacher?
     refute @teacher.verified_teacher?
@@ -2801,10 +2801,6 @@ class UserTest < ActiveSupport::TestCase
     create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
     assert plc_teacher.teacher?
     assert plc_teacher.verified_teacher?
-
-    # admins should be authorized teachers too
-    assert @admin.teacher?
-    assert @admin.verified_teacher?
   end
 
   test "verified instructor" do

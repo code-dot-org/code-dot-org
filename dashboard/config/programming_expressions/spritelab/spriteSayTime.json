@@ -1,0 +1,7 @@
+{
+  "key": "spriteSayTime",
+  "name": "spriteSayTime",
+  "category": "Experimental",
+  "block_name": "gamelab_spriteSayTime",
+  "syntax": "spriteSayTime"
+}

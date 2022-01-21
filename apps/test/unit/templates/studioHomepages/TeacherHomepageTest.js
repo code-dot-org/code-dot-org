@@ -60,6 +60,14 @@ describe('TeacherHomepage', () => {
     assert(wrapper.find('NpsSurveyBlock').exists());
   });
 
+  it('renders a Finish Application call to action if showFinishTeacherApplication is true', () => {
+    const wrapper = setUp({showFinishTeacherApplication: true});
+    assert.equal(
+      wrapper.find('BorderedCallToAction').props().buttonText,
+      'Finish Application'
+    );
+  });
+
   it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',

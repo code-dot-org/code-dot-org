@@ -37,6 +37,7 @@ export default function CodeReviewGroup({
         droppableId={droppableId}
         members={members}
         key={droppableId}
+        showEmptyGroupPlaceholder={true}
       />
     </div>
   );
@@ -65,7 +66,8 @@ const styles = {
   nameInput: {
     padding: '5px 12px',
     borderRadius: 4,
-    border: `1px solid ${color.lighter_gray}`
+    border: `1px solid ${color.lighter_gray}`,
+    width: '210px'
   },
   deleteButtonContainer: {
     display: 'flex',

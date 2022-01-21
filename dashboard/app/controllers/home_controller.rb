@@ -5,6 +5,7 @@ require_dependency 'queries/script_activity'
 class HomeController < ApplicationController
   include UsersHelper
   include SurveyResultsHelper
+  include TeacherApplicationHelper
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -81,9 +82,16 @@ class HomeController < ApplicationController
 
   private
 
+  # Determine where student should be redirected upon logging in:
+  # true (redirect to script overview page) - if the user is a student && can access the script
+  #   they were most recently assigned && they either have no recorded recent progress, their most
+  #   recent progress was in the most recently assigned script, or they were assigned the script
+  #   more recently than their last progress in another section.
+  # false (redirect to student homepage) - otherwise.
   def should_redirect_to_script_overview?
     current_user.student? &&
     current_user.can_access_most_recently_assigned_script? &&
+    current_user.most_recent_assigned_script_in_live_section? &&
     (
       !current_user.user_script_with_most_recent_progress ||
       current_user.most_recent_progress_in_recently_assigned_script? ||
@@ -161,10 +169,10 @@ class HomeController < ApplicationController
       @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
+      @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
       @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
-      @homepage_data[:preReaderUnitIds] = Script.pre_reader_unit_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school

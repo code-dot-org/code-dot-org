@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_removeTint",
+  "name": "removeTint",
+  "category": "Sprites",
+  "block_name": "gamelab_removeTint",
+  "syntax": "removeTint"
+}

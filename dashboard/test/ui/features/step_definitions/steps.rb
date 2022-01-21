@@ -154,6 +154,15 @@ When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end
 
+And /^I add another version to the project$/ do
+  steps <<-STEPS
+    And I add code "// comment A" to ace editor
+    And I wait until element "#resetButton" is visible
+    And I press "resetButton"
+    And I click selector "#runButton" once I see it
+  STEPS
+end
+
 When /^I reset the puzzle to the starting version$/ do
   steps <<-STEPS
     Then I click selector "#versions-header"
@@ -535,6 +544,10 @@ end
 
 Then /^I should see title "([^"]*)"$/ do |title|
   expect(@browser.title).to eq(title)
+end
+
+Then /^I should see title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include(title)
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|

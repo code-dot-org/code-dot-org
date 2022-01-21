@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_025455) do
+ActiveRecord::Schema.define(version: 2021_12_19_004355) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -685,7 +685,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_025455) do
     t.index ["level_source_id"], name: "index_level_source_images_on_level_source_id"
   end
 
-  create_table "level_sources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "level_sources", id: :bigint, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "level_id"
     t.string "md5", limit: 32, null: false
     t.string "data", limit: 20000, null: false
@@ -908,6 +908,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_025455) do
     t.integer "school_info_id"
     t.datetime "deleted_at"
     t.text "properties"
+    t.integer "application_id"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true
     t.index ["email"], name: "index_pd_enrollments_on_email"
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id"
