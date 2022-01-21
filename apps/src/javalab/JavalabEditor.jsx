@@ -196,7 +196,6 @@ class JavalabEditor extends React.Component {
 
   dispatchEditorChange = key => {
     const {sourceTextUpdated} = this.props;
-    const {fileMetadata} = this.state;
 
     // tr is a code mirror transaction
     // see https://codemirror.net/6/docs/ref/#state.Transaction
@@ -206,7 +205,7 @@ class JavalabEditor extends React.Component {
       this.editors[key].update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        sourceTextUpdated(fileMetadata[key], tr.newDoc.toString());
+        sourceTextUpdated(this.state.fileMetadata[key], tr.newDoc.toString());
         projectChanged();
       }
     };
