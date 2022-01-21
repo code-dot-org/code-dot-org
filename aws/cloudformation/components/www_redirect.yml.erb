@@ -78,7 +78,7 @@
   <%=app%>RedirectFunction:
     Type: AWS::CloudFront::Function
     Properties: 
-      Name: www_redirect
+      Name: !Sub "${AWS::StackName}-www-redirect"
       FunctionConfig: 
         Comment: Redirects a subdomain to the root domain
         Runtime: cloudfront-js-1.0
