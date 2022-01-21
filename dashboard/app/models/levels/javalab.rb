@@ -158,15 +158,4 @@ class Javalab < Level
   def age_13_required?
     true
   end
-
-  # If validation was saved into the properties hash directly it will
-  # not be encrypted. If there is a validation field in the properties hash
-  # save it instead as self.validation, which will encrypt the field.
-  def ensure_validation_is_encrypted
-    if properties['validation']
-      unencrypted_validation = properties['validation']
-      self.validation = unencrypted_validation
-      properties.delete('validation')
-    end
-  end
 end
