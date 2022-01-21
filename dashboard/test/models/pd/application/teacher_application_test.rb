@@ -108,14 +108,7 @@ module Pd::Application
 
     test 'school_info_attr for custom school' do
       application = create :pd_teacher_application, form_data_hash: (
-      build :pd_teacher_application_hash,
-        :with_custom_school,
-        school_name: 'Code.org',
-        school_address: '1501 4th Ave',
-        school_city: 'Seattle',
-        school_state: 'Washington',
-        school_zip_code: '98101',
-        school_type: 'Public school'
+        build :pd_teacher_application_hash, :with_custom_school
       )
       assert_equal(
         {
@@ -135,7 +128,7 @@ module Pd::Application
       user = create :teacher, school_info: create(:school_info)
       application_school_info = create :school_info
       application = create :pd_teacher_application, user: user, form_data_hash: (
-      build :pd_teacher_application_hash, school: application_school_info.school
+        build :pd_teacher_application_hash, school: application_school_info.school
       )
 
       application.update_user_school_info!
@@ -146,7 +139,7 @@ module Pd::Application
       original_school_info = create :school_info
       user = create :teacher, school_info: original_school_info
       application = create :pd_teacher_application, user: user, form_data_hash: (
-      build :pd_teacher_application_hash, :with_custom_school
+        build :pd_teacher_application_hash, :with_custom_school
       )
 
       application.update_user_school_info!
@@ -176,8 +169,7 @@ module Pd::Application
       }
       %i(school_name school_address school_state school_zip_code school_type).each do |attribute|
         application = create :pd_teacher_application, user: user, form_data_hash: (
-          build :pd_teacher_application_hash, :with_no_school,
-            completed_custom_school_info.except(attribute)
+          build :pd_teacher_application_hash, :with_no_school, completed_custom_school_info.except(attribute)
         )
 
         application.update_user_school_info!
