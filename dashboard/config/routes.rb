@@ -867,9 +867,6 @@ Dashboard::Application.routes.draw do
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
-  get '/javabuilder_connection_test/csrf_token', to: 'javabuilder_connection_test#get_csrf_token'
-  post '/javabuilder_connection_test/log', to: 'javabuilder_connection_test#log'
-
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
       get 'sprite_upload'

@@ -26,7 +26,6 @@ import {
   unescapeFirebaseKey
 } from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
-import testJavabuilderWebsocketConnection from '@cdo/apps/util/testJavabuilderWebsocketConnection';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
@@ -813,13 +812,7 @@ Applab.init = function(config) {
           Applab.runButtonClick();
         });
       }
-    })
-    .then(
-      () =>
-        config.isJavabuilderConnectionTestEnabled &&
-        config.isSignedIn &&
-        testJavabuilderWebsocketConnection()
-    );
+    });
 
   if (IN_UNIT_TEST) {
     return loader.catch(() => {});
