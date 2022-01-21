@@ -302,6 +302,7 @@ class Backpack extends Component {
           </div>
         )}
         <JavalabDialog
+          className="ignore-react-onclickoutside"
           isOpen={openDialog === Dialog.IMPORT_WARNING}
           handleConfirm={() => this.importFiles(selectedFiles)}
           handleClose={() => this.setState({openDialog: null})}
@@ -311,6 +312,7 @@ class Backpack extends Component {
           closeButtonText={javalabMsg.cancel()}
         />
         <JavalabDialog
+          className="ignore-react-onclickoutside"
           isOpen={openDialog === Dialog.IMPORT_ERROR}
           handleConfirm={() => this.setState({openDialog: null})}
           message={fileImportMessage}

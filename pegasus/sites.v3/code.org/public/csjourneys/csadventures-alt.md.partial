@@ -24,7 +24,7 @@ social:
   <li><a href="#chats">Career chats</a></li>
 </ul>
 
-<a id="fieldtrips">
+<a id="trips">
 <h2>Virtual field trips</h2>
 
 <div class="col-33" style="padding-bottom:15px">
@@ -107,18 +107,18 @@ social:
 </div>
 </div>
 
-<div class="col-33" style="padding-bottom:15px; text-align:center">
-  <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-bottom: none; border-radius:15px 15px 0 0; text-align: center">
-    <h2 style="margin-top:10px; margin-bottom:10px">Teacher Guides</h2>
+<div class="col-33" style="padding-bottom:15px; padding-right:20px; text-align:center">
+  <div class="col-100" style="padding:25px; border: 1px solid #0094ca; border-bottom: none; border-radius:15px 15px 0 0; text-align: center">
+    <h2 style="margin-top:10px; margin-bottom:10px; color:#0094ca">Teacher Guides</h2>
     <p>To learn more about key takeaways for students and suggestions for planning, view the Teacher Guide that’s most appropriate to you.</p>
   </div>
-  <div class="col-50" style="padding:25px; border: 1px solid #7665a0">
-    <a class="linktag" id="chat-guide-k5" href="https://staging.code.org/files/csjourneys/classchats-guide-k5.pdf" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong><br>For K-5 Classrooms<br><br></strong></h3></a>
+  <div class="col-50" style="padding:25px; background-color: #7665a0; border: 1px solid #7665a0">
+    <a class="linktag" id="chat-guide-k5" href="https://staging.code.org/files/csjourneys/classchats-guide-k5.pdf" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong><br>For K-5 Classrooms<br><br></strong></h3></a>
   </div>
-  <div class="col-50" style="padding:25px; border: 1px solid #0094ca; border-left:none">
-    <a class="linktag" id="chat-guide-612" href="https://staging.code.org/files/csjourneys/classchats-guide-middlehigh.pdf" target="_blank"><h3 style="margin-top:0; color:#0094ca"><strong>For Middle and High School Classrooms</strong></h3></a>
+  <div class="col-50" style="padding:25px; background-color: #00adbc; border: 1px solid #00adbc; border-left:none">
+    <a class="linktag" id="chat-guide-612" href="https://staging.code.org/files/csjourneys/classchats-guide-middlehigh.pdf" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong>For Middle and High School Classrooms</strong></h3></a>
   </div>
-  <div class="col-100" style="padding:25px; padding-top:170px; padding-bottom:17px; border: 1px solid #00adbc; border-radius: 0 0 15px 15px; text-align: center">
+  <div class="col-100" style="padding:25px; padding-top:170px; padding-bottom:17px; border: 1px solid #0094ca; border-radius: 0 0 15px 15px; text-align: center">
     <p>To view recordings of past events, <a  class="linktag" id="pastchats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
   </div>
   <div style="clear: both"></div>
