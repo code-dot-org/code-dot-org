@@ -105,10 +105,10 @@ module Pd::Application
     # Will only update the school info if we have enough information for it
     # An incomplete application may not have all the information we need to update
     def update_user_school_info!
-      if school_id || user.school_info.try(&:school).nil?
-        school_info = school_info_attr
-        user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info)) if school_info
-      end
+      return unless school_id || user.school_info.try(&:school).nil?
+      school_info = school_info_attr
+      return unless school_info
+      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
     end
 
     def update_scholarship_status(scholarship_status)
