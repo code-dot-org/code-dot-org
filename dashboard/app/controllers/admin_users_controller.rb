@@ -118,13 +118,9 @@ class AdminUsersController < ApplicationController
 
   # GET /admin/user_progress
   def user_progress_form
-    user_identifier = params[:user_identifier]
     script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
-    if user_identifier
-      user_identifier.strip!
-      @target_user = User.from_identifier(user_identifier)
-      flash[:alert] = 'User not found' unless @target_user
-    end
+
+    set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
       @user_scripts = UserScript.
@@ -137,13 +133,7 @@ class AdminUsersController < ApplicationController
 
   # GET /admin/user_projects
   def user_projects_form
-    user_identifier = params[:user_identifier]
-
-    if user_identifier
-      user_identifier.strip!
-      @target_user = User.from_identifier(user_identifier)
-      flash[:alert] = 'User not found' unless @target_user
-    end
+    set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
       @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id)
@@ -334,5 +324,13 @@ class AdminUsersController < ApplicationController
   def page_size
     return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
     params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
+  end
+
+  def set_target_user_from_identifier(user_identifier)
+    if user_identifier
+      user_identifier.strip!
+      @target_user = User.from_identifier(user_identifier)
+      flash[:alert] = 'User not found' unless @target_user
+    end
   end
 end
