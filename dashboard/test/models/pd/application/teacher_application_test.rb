@@ -125,13 +125,16 @@ module Pd::Application
     end
 
     test 'update_user_school_info with specific school overwrites user school info' do
-      user = create :teacher, school_info: create(:school_info)
+      user = create :teacher
       application_school_info = create :school_info
+      original_user_school_info = user.school_info
+
       application = create :pd_teacher_application, user: user, form_data_hash: (
         build :pd_teacher_application_hash, school: application_school_info.school
       )
 
       application.update_user_school_info!
+      refute_equal original_user_school_info, user.school_info
       assert_equal application_school_info, user.school_info
     end
 
