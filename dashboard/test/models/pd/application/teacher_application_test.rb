@@ -165,14 +165,24 @@ module Pd::Application
       assert_not_nil user.school_info_id
     end
 
-    test 'update_user_school_info does nothing when user has no specific school and does not have enough info for new school' do
+    test 'update_user_school_info does nothing when user has no school info and does not have enough info for new school' do
       user = create :teacher, school_info: nil
-      application = create :pd_teacher_application, user: user, form_data_hash: (
-        build :pd_teacher_application_hash, :with_incomplete_school
-      )
+      completed_custom_school_info = {
+        school_name: 'Code.org',
+        school_address: '1501 4th Ave',
+        school_state: 'Washington',
+        school_zip_code: '98101',
+        school_type: 'Public school'
+      }
+      %i(school_name school_address school_state school_zip_code school_type).each do |attribute|
+        application = create :pd_teacher_application, user: user, form_data_hash: (
+          build :pd_teacher_application_hash, :with_no_school,
+            completed_custom_school_info.except(attribute)
+        )
 
-      application.update_user_school_info!
-      assert_nil user.school_info
+        application.update_user_school_info!
+        assert_nil user.school_info
+      end
     end
 
     test 'get_first_selected_workshop single local workshop' do
