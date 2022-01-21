@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:02:34.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -23,7 +19,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Do This\r\n\r\n* Add the `onEvent` blocks listed in Step 6 in your Planning Guide\r\n* Begin adding programming statements to each `onEvent` block\r\n* Keep in mind the requirements for the app:\r\n\t* Uses at least three screens\r\n\t* Includes examples of images, audio, and text\r\n\t* A clear and easy to navigate user interface\r\n\t* Clearly communicates information about your topic\r\n\t* Code is cleanly written and free of errors\r\n",
+    "long_instructions": "# Do This\r\n\r\n* Add the `onEvent` blocks listed in Step 5 in your Planning Guide\r\n* Begin adding programming statements to each `onEvent` block\r\n* Keep in mind the requirements for the app:\r\n\t* Uses at least three screens\r\n\t* Includes examples of images, audio, and text\r\n\t* A clear and easy to navigate user interface\r\n\t* Clearly communicates information about your topic\r\n\t* Code is cleanly written and free of errors\r\n",
     "mini_rubric": "false",
     "never_autoplay_video": "true",
     "hide_share_and_remix": "false",
@@ -52,11 +48,18 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "video_key": "csd_pair_programming",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:02:34.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:34.892+00:00\",\"changed\":[\"cloned from \\\"CSP U3 L4 Add Code_2021\\\"\"],\"cloned_from\":\"CSP U3 L4 Add Code_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:34.892+00:00\",\"changed\":[\"cloned from \\\"CSP U3 L4 Add Code_2021\\\"\"],\"cloned_from\":\"CSP U3 L4 Add Code_2021\"},{\"changed_at\":\"2022-01-21 18:28:00 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

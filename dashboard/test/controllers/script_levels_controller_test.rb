@@ -1170,6 +1170,64 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_includes response.body, fake_last_attempt
   end
 
+  test 'loads level in view only if viewing own work, channel backed level and version param is present' do
+    sign_in @teacher
+
+    user_storage_id = storage_id_for_user_id(@teacher.id)
+
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create :applab
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: 'FAKE_LAST_ATTEMPT')
+    )
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson,
+      id: script_level.position,
+      version: 'some-version'
+    }
+
+    assert assigns(:view_options)[:readonly_workspace]
+  end
+
+  test 'loads level not in readonly if viewing own work, level is channel backed and version param is empty' do
+    sign_in @teacher
+
+    user_storage_id = storage_id_for_user_id(@teacher.id)
+
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create :applab
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: 'FAKE_LAST_ATTEMPT')
+    )
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson,
+      id: script_level.position,
+      version: ''
+    }
+
+    refute assigns(:view_options)[:readonly_workspace]
+  end
+
   test 'loads applab if you are a project validator viewing a student and they have a channel id' do
     sign_in @project_validator
 

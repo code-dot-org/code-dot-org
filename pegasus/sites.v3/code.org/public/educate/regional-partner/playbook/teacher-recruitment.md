@@ -48,10 +48,10 @@ ________________
 ## Supporting Resources
 - [Fundraising opportunities](https://code.org/educate/regional-partner/playbook/funding)
 - [Teacher Application Process Doc](https://docs.google.com/document/d/1g_r3tBzdjRq5UI_xMnzWytqRPBvWJnsgBhXYSkSC5hw/edit) includes the teacher application questions and process FAQs
-   - Teacher application [rubric](https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view)
-   - Teacher application [mapped to rubric](https://docs.google.com/document/d/1Eyu-tMWGpn5Src0pAMjSb3oMnVmelLvBx6RwlVYMlZg/edit#heading=h.x1dlbddln9x4)
-   - Summer Workshop Doc - *coming soon*
-   - Teacher Welcome Kits - *coming soon*
-- [Teacher Recruitment Folder](https://drive.google.com/drive/folders/1LRbFgAVNjnLxWTQpYLkPPOuNr0EMWCa7) with resources from other partners shared during 2020-21 recruitment that you can leverage
+   - Teacher application [rubric](https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/edit)
+   - Teacher application [mapped to rubric](https://docs.google.com/document/d/1OHTzjHakxMqw9XPkQSbiSLilT0jIBw0C-IPSSmsfF_Y/edit)
+   - Summer Workshop [process doc](https://docs.google.com/document/d/1IETwhJmN1lVNo85wQ9d9fxgGxs5KlV7ZDhMj0Toq3eI/edit#)
+   - Teacher Welcome Kits [folder](https://drive.google.com/drive/folders/15hxKPVotCLTy7yzneEbDpWLIlaDf4aq4)
+
 
  
