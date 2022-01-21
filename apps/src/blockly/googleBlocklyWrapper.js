@@ -296,8 +296,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
         },
         null
       );
+      svg.setAttribute('transform', 'translate(0, 8)');
       container.appendChild(svg);
-      svg.appendChild(workspace.createDom());
+      const workspaceSvg = workspace.createDom();
+      if (options.inline) {
+        workspaceSvg.setAttribute('transform', 'translate(-16, -16)');
+      } else {
+        workspaceSvg.setAttribute('transform', 'translate(0, -16)');
+      }
+
+      svg.appendChild(workspaceSvg);
       Blockly.Xml.domToBlockSpace(workspace, xml);
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
