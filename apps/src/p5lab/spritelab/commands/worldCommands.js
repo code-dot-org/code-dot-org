@@ -33,10 +33,7 @@ export const commands = {
 
   resetTimer() {
     const current = this.getAdjustedWorldTime();
-    //console.log(`pause time was ${this.timerResetTime}`);
-    //console.log(`current time is ${current}`);
     this.timerResetTime = current;
-    console.log(`pause time is now ${this.timerResetTime}`);
   },
 
   hideTitleScreen() {
