@@ -154,14 +154,14 @@ module Pd::Application
     end
 
     test 'update_user_school_info with custom school updates user info when user does not have a specific school' do
-      original_school_info = create :school_info_us_other
-      user = create :teacher, school_info: original_school_info
+      user = create :teacher, school_info: nil
+      original_user_school_info_id = user.school_info_id
       application = create :pd_teacher_application, user: user, form_data_hash: (
-      build :pd_teacher_application_hash, :with_custom_school
+        build :pd_teacher_application_hash, :with_custom_school
       )
 
       application.update_user_school_info!
-      refute_equal original_school_info.id, user.school_info_id
+      refute_equal original_user_school_info_id, user.school_info_id
       assert_not_nil user.school_info_id
     end
 
