@@ -809,6 +809,15 @@ FactoryGirl.define do
       school_type 'Public school'
     end
 
+    trait :with_incomplete_school do
+      school(-1)
+      school_address '1501 4th Ave'
+      school_city 'Seattle'
+      school_state 'Washington'
+      school_zip_code '98101'
+      school_type 'Public school'
+    end
+
     trait :with_multiple_workshops do
       able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
 

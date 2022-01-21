@@ -142,7 +142,7 @@ module Pd::Application
       assert_equal application_school_info, user.school_info
     end
 
-    test 'update_user_school_info with custom school does nothing when the user already a specific school' do
+    test 'update_user_school_info with custom school does nothing when the user already has a specific school' do
       original_school_info = create :school_info
       user = create :teacher, school_info: original_school_info
       application = create :pd_teacher_application, user: user, form_data_hash: (
@@ -163,6 +163,16 @@ module Pd::Application
       application.update_user_school_info!
       refute_equal original_school_info.id, user.school_info_id
       assert_not_nil user.school_info_id
+    end
+
+    test 'update_user_school_info does nothing when user has no specific school and does not have enough info for new school' do
+      user = create :teacher, school_info: nil
+      application = create :pd_teacher_application, user: user, form_data_hash: (
+        build :pd_teacher_application_hash, :with_incomplete_school
+      )
+
+      application.update_user_school_info!
+      assert_nil user.school_info
     end
 
     test 'get_first_selected_workshop single local workshop' do
