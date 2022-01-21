@@ -1880,6 +1880,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert @hoc_unit.hour_of_code?
   end
 
+  test "middle_high?" do
+    assert @csd_unit.middle_high?
+    assert @csp_unit.middle_high?
+    assert @csa_unit.middle_high?
+
+    refute @csf_unit.middle_high?
+    refute @csc_unit.middle_high?
+    refute @hoc_unit.middle_high?
+  end
+
   test "has_standards_associations?" do
     assert @csf_unit_2019.has_standards_associations?
     refute @csp_unit.has_standards_associations?

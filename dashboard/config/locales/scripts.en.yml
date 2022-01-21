@@ -1299,6 +1299,8 @@ en:
               name: AI Lab
             Java Lab:
               name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-47:
               name: Example CSP Assessment
               description_student: 
