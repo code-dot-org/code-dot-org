@@ -24,11 +24,19 @@ export const commands = {
 
   getTime(unit) {
     if (unit === 'seconds') {
-      return this.getAdjustedWorldTime() || 0;
+      return this.getAdjustedWorldTime() - this.timerResetTime || 0;
     } else if (unit === 'frames') {
       return this.p5.World.frameCount || 0;
     }
     return 0;
+  },
+
+  resetTimer() {
+    const current = this.getAdjustedWorldTime();
+    //console.log(`pause time was ${this.timerResetTime}`);
+    //console.log(`current time is ${current}`);
+    this.timerResetTime = current;
+    console.log(`pause time is now ${this.timerResetTime}`);
   },
 
   hideTitleScreen() {
