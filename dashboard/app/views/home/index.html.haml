@@ -13,7 +13,8 @@
 
 -# Teacher modals
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
-  = render partial: 'layouts/terms_interstitial'
+  - current_user.update_user_tos_version_accept()
+  = render partial: 'layouts/implicit_new_user_terms_interstitial'
 - elsif SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user) || @force_school_info_confirmation_dialog
   - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
   = render partial: 'layouts/school_info_confirmation_dialog'

@@ -88,6 +88,11 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
   end
 
+  # GET /api/v1/users/<user_id>/tos_version
+  def get_tos_version
+    render json: @user.terms_of_service_version.nil? ? -1 : @user.terms_of_service_version.inspect
+  end
+
   # POST /api/v1/users/<user_id>/using_text_mode
   def post_using_text_mode
     @user.using_text_mode = !!params[:using_text_mode].try(:to_bool)
