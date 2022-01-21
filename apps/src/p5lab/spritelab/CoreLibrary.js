@@ -13,6 +13,7 @@ export default class CoreLibrary {
     this.userInputEventCallbacks = {};
     this.totalPauseTime = 0;
     this.timerResetTime = 0;
+    this.timerResetFrames = 0;
     this.numActivePrompts = 0;
     this.screenText = {};
     this.defaultSpriteSize = 100;
@@ -482,7 +483,8 @@ export default class CoreLibrary {
         return [{}];
       }
     } else if (inputEvent.args.unit === 'frames') {
-      if (this.p5.frameCount === inputEvent.args.n) {
+      const worldFrames = this.p5.frameCount - this.timerResetFrames;
+      if (worldFrames === inputEvent.args.n) {
         // Call callback with no extra args
         this.eventLog.push(`atTime: ${inputEvent.args.n}`);
         return [{}];
