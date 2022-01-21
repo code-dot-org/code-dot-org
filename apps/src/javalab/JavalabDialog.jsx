@@ -6,6 +6,7 @@ import {DisplayTheme} from './DisplayTheme';
 
 export default class JavalabDialog extends Component {
   static propTypes = {
+    className: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     handleConfirm: PropTypes.func,
@@ -18,6 +19,7 @@ export default class JavalabDialog extends Component {
 
   render() {
     const {
+      className,
       isOpen,
       handleClose,
       handleConfirm,
@@ -28,6 +30,7 @@ export default class JavalabDialog extends Component {
     } = this.props;
     return (
       <BaseDialog
+        bodyClassName={className}
         isOpen={isOpen}
         handleClose={handleClose}
         style={{
