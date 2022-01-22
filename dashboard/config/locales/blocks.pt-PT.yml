@@ -1001,6 +1001,23 @@ pt:
         text: quando {SPRITE} for clicado
       gamelab_clickedSpritePointer:
         text: clique {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando para a direita
+            new Behavior(spinning_left, []): girando para a esquerda
+            new Behavior(fluttering, []): tremulando
+            new Behavior(jittering, []): tremendo
+            new Behavior(wobbling, []): balançando
+            new Behavior(wandering, []): vagando
+            new Behavior(patrolling, []): patrulhando
+            new Behavior(moving_west_and_looping, []): movendo-se para o Oeste em
+              loop
+            new Behavior(moving_east_and_looping, []): movendo-se para o Leste em
+              loop
+            new Behavior(moving_north_and_looping, []): movendo-se para o Norte em
+              loop
+            new Behavior(moving_south_and_looping, []): movendo-se para o Sul em loop
       gamelab_comment:
         text: 'comentário: {COMMENT}'
       gamelab_costumeImage:
@@ -1051,6 +1068,19 @@ pt:
         text: esconder a tela do título
       gamelab_ifVarEquals:
         text: se {NUM} ={VAL} {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: O traje de {SPRITE} é {COSTUME}
       gamelab_isKeyPressed:
@@ -1245,6 +1275,13 @@ pt:
             "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_playSpeech:
         text: reproduzir fala {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): utilizando as setas
+            new Behavior(driving_with_arrow_keys, []): dirigindo com as teclas de
+              setas
+            draggable(): ser arrastável
       gamelab_pointInDirection:
         text: aponte {SPRITE} {DIRECTION}
         options:
