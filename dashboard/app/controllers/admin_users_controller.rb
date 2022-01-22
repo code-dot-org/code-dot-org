@@ -132,6 +132,7 @@ class AdminUsersController < ApplicationController
   end
 
   # GET /admin/user_projects
+  # This page takes an optional user_identifier param and renders a page with the users active and deleted projects
   def user_projects_form
     set_target_user_from_identifier(params[:user_identifier])
 
@@ -142,14 +143,16 @@ class AdminUsersController < ApplicationController
   end
 
   # PUT /admin/user_project
+  # This page takes a user_id and channel param and un-deletes the project and then refreshes the user_projects_form
   def user_project_restore_form
+    user_id = params[:user_id]
     channel = params[:channel]
 
-    if channel
-      StorageApps.new(storage_id_for_user_id(params[:user_id])).restore(channel)
+    if channel.present? && user_id.present?
+      StorageApps.new(storage_id_for_user_id(user_id)).restore(channel)
     end
 
-    redirect_to action: "user_projects_form", user_identifier: params[:user_id]
+    redirect_to action: "user_projects_form", user_identifier: user_id
   end
 
   # GET /admin/delete_progress
