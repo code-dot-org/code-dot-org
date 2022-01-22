@@ -2692,6 +2692,10 @@ lt:
               display_name: Sąrašai
             csp_loops:
               display_name: Kartojimas
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmai
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3001,6 +3005,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kintamieji
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3010,6 +3018,152 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Laimingieji žemėlapiai
+            'Programming: Happy Maps':
+              name: Laimingieji žemėlapiai
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Įvykiai
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csf_functions:
+              display_name: Komandų kūrimas
+            csf_variables:
+              display_name: Kintamieji
+            csf_for_loops:
+              display_name: Kartojimas
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Dvejetainiai skaičiai
+              key: Dvejetainiai skaičiai
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Kintamieji
+            csp_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csp_functions:
+              display_name: Komandų kūrimas
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Sąrašai
+            csp_loops:
+              display_name: Kartojimas
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Judėk, judėk
+              key: Judėk, judėk
+            Getting Loopy:
+              name: Kartojimo supratimas
+            'Loops: Getting Loopy':
+              name: Kartojimo supratimas
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Didelis įvykis
+            Binary Bracelets:
+              name: Dvejetainės apyrankės
+              key: Dvejetainės apyrankės
+            'Events: The Big Event':
+              name: Didelis įvykis
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programavimas ant languoto popieriaus
+            Relay Programming:
+              name: Programavimas komandoje
+              key: Programavimas komandoje
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+              key: Sąlyginiai sakiniai su kortomis
+            'Algorithms: Graph Paper Programming':
+              name: Programavimas ant languoto popieriaus
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Virtuali pilietybė
+            csf_events:
+              display_name: Įvykiai
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Dainų rašymas
+            'Functions: Songwriting':
+              name: Dainų rašymas
+            Conditionals:
+              key: Sąlyginiai sakiniai
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            ramp_up:
+              display_name: Kartojimas kartojime
+            csf_functions:
+              display_name: Komandų kūrimas
+            csf_nested_loops:
+              display_name: Sąlyginiai sakiniai
+        coursef-2022:
+          lessons:
+            The Internet:
+              name: Internetas
+            Internet:
+              key: Internetas
+              name: Internetas
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Virtuali pilietybė
+            lessonGroup-8:
+              display_name: Kintamieji
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa3-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
