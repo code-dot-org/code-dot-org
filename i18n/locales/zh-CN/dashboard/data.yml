@@ -554,9 +554,12 @@ zh-CN:
         poembot-pilot-prompts: 俳句机器人-带选择的提示[PILOT]
         poembot-pilot-text: 俳句机器人-存储文本[PILOT]
         poembot-pilot-haiku: 俳句机器人-显示你的俳句[PILOT]
+        csd_ml_intro_to_ai_lab: 人工智能实验室的介绍
         csd_ml_import_model: 导入AI模型
+        csf_lots_of_sprites: '精灵图实验室：许多精灵'
         playlab_2021: 游戏实验室的介绍
         playlab_2021_reader: 游戏实验室的介绍
+        csd_ml_intro_ai_lab_july2021: 人工智能实验室的介绍
         PL_CSD_TeacherTips_Advise: 教师提示 - 给新教师的建议
         PL_CSD_TeacherTips_IntroToCSD: 教师提示 - 计算机科学发现简介
         PL_CSD_TeacherTips_ProblemSolvingProcess: 教师提示 - 解决问题的流程
@@ -579,6 +582,10 @@ zh-CN:
         poetry_module_multichoiceprompts: 多选题提示 - 编程如写诗
         poetry_module_conditionals: 条件语句 - 编程如写诗
         poemart_intro: 诗歌艺术介绍
+        csd_u6_variables_part2: 变量 —— 第2部分
+        csd_ml_ethics_ai: '伦理与人工智能'
+        PL_overview_CSP: 什么是计算机科学原则？
+        PL_CSP_EIPMOverview: EIPM课程指南
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面
