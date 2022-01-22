@@ -965,6 +965,11 @@ ms:
         text: ketika {SPRITE} diklik
       gamelab_clickedSpritePointer:
         text: mengklik {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): bergerak ke utara dan gelung
+            new Behavior(moving_south_and_looping, []): bergerak ke selatan dan gelung
       gamelab_comment:
         text: 'komen: {COMMENT}'
       gamelab_costumeImage:
@@ -1014,6 +1019,19 @@ ms:
         text: |-
           jika {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "[SPRITE] [0] kostum adalah {COSTUME}"
       gamelab_isKeyPressed:
@@ -1190,6 +1208,11 @@ ms:
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_playSpeech:
         text: bermain ucapan {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): bergerak dengan kunci arah
+            draggable(): diseret
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
         options:
