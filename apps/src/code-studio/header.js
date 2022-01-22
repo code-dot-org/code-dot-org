@@ -139,6 +139,25 @@ header.buildProjectInfoOnly = function() {
   );
 };
 
+// When the page is cached, this function is called to retrieve and set the
+// sign-in button or user menu in the DOM.
+header.buildUserMenu = function() {
+  // Need to wait until the document is ready so we can accurately check to see
+  // if the create menu is present.
+  $(document).ready(() => {
+    const showCreateMenu = $('.create_menu').length > 0;
+
+    fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
+      credentials: 'same-origin'
+    })
+      .then(response => response.text())
+      .then(data => $('#sign_in_or_user').html(data))
+      .catch(err => {
+        console.log(err);
+      });
+  });
+};
+
 function setupReduxSubscribers(store) {
   let state = {};
   store.subscribe(() => {
@@ -187,20 +206,6 @@ function setUpGlobalData(store) {
     });
 }
 setUpGlobalData(getStore());
-
-function refreshUserMenu() {
-  const showCreateMenu = $('.create_menu').length > 0;
-
-  fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
-    credentials: 'same-origin'
-  })
-    .then(response => response.text())
-    .then(data => $('#sign_in_or_user').html(data))
-    .catch(err => {
-      console.log(err);
-    });
-}
-$(document).ready(refreshUserMenu);
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());
