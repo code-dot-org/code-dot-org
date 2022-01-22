@@ -353,6 +353,7 @@ is:
             '"right"': hægri röð
             '"x"': þvers-og-kruss
             '"plus"': plús
+            '"spiral"': spírall
             '"random"': eitthvað
       Dancelab_makeAnonymousDanceSprite:
         text: búa til {COSTUME} á stað {LOCATION}
@@ -462,6 +463,7 @@ is:
             '"right"': hægri röð
             '"x"': þvers-og-kruss
             '"plus"': plús
+            '"spiral"': spírall
             '"random"': eitthvað
       Dancelab_mixColors:
         text: blanda litum {COLOR1} og {COLOR2}
@@ -1031,6 +1033,19 @@ is:
         text: |-
           ef {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: búningur {SPRITE} er {COSTUME}
       gamelab_isKeyPressed:
@@ -1198,6 +1213,10 @@ is:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": harpa
             "'sound://category_retro/retro_game_ui_select_6.mp3'": velja
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): er hægt að draga
       gamelab_pointInDirection:
         text: beina {SPRITE} {DIRECTION}
         options:
