@@ -63,6 +63,7 @@ az:
   previous_page: Əvvəlki səhifə
   next_page: Növbəti səhifə
   next_resource: Növbəti resurs
+  done_with_module: Bu Tədris Modulu ilə tamamlandı
   cancel: "İmtina et"
   okay: "Oldu"
   or: "və ya"
@@ -336,6 +337,12 @@ az:
       professional_learning: "Peşəkar təhsil"
       documentation: "Təlimat və sənədlər"
       tutorials: "Dərsliklər"
+      app_lab_documentation: "Tətbiq Laboratoriyasının Sənədləri"
+      app_lab_tutorials: "Tətbiq Laboratoriyası Dərslikləri"
+      game_lab_documentation: "Oyun Laboratoriya sənədləri"
+      game_lab_tutorials: "Oyun Laboratoriya Dərslikləri"
+      sprite_lab_documentation: "Sprite Laboratoriyasının Sənədləri"
+      sprite_lab_tutorials: "Sprite Laboratoriyası Dərslikləri"
       web_lab_documentation: "Veb laboratoriyası sənədləri"
       educate_overview: "Təlimçi üçün xülasə"
       educate_elementary: "İbtidai məktəb"
@@ -408,11 +415,13 @@ az:
       poetry: 'Şeir'
       scratch: 'Cızıq'
       sports: 'İdman'
+      spritelab: 'Sprite Laboratoriyası'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blokları)'
       starwarsblocks_hour: 'Star Wars (Blokları)'
       loading: 'Yüklənir...'
       weblab: 'Veb Laboratoriyası'
+      view_all: 'Bütün layihələrə baxın...'
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: 'Sizin nəticələriniz'
@@ -673,6 +682,7 @@ az:
       audience: "13+ yaş"
       cta: "Öyrənin necə \n"
     hoc-encryption:
+      title: "Sadə Şifrələmə"
       body: "Şagirdlər şifrəli mesajlar yaratma və sındırma üsullarını öyrənəcəklər."
     weblab:
       title: "veb-laboratoriya (beta)"
@@ -696,10 +706,12 @@ az:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a səyahət."
     sports:
       title: "İdman"
       body: "Bir basketbol oyunu hazırlayın və ya qarışdırın və idmanlar boyunca uyğunlaşdırın."
     text-compression:
+      title: "Mətnin sıxılması"
       body: "Bu dərsdə şagirdlər qəlibləri simvollarla əvəz etməklə mətni qısaltmaq üçün Mətn Qısaltma Vasitəsindən istifadə edəcəklər."
     unplugged:
       title: "Sərbəst dərslər"
@@ -1119,3 +1131,4 @@ az:
     this_sprite: "bu sprayt (qrafik obyekt)"
   unit_prefix: "Vahid %{n}"
   code_org_logo_alt: "Code.org Evi"
+  teacher_feedback: "Müəllim rəyi"

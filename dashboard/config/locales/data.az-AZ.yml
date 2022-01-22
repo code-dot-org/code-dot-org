@@ -41,6 +41,7 @@ az:
         Custom: Rəssam
         CustomStudio: Oyun labı
         Gamelab: Oyun labaratoriyası
+        Spritelab: Sprite Laboratoriyası
     trophy:
       name:
         Bronze: Bürünc
@@ -872,6 +873,29 @@ az:
         hello_world_intro: Salam Dünya-Sprite laboratoriyasına xoş gəldiniz.
         hello_world_events: Salam Dünya - Hadisələrlə Proqramlaşdırma
         hello_world_congrats: Salam Dünya-İstədiyinizi edin
+        csp_global_vs_local: Qlobal və Yerli Dəyişənlərin Sazlanması
+        rough_poemart_intro: v1 Şeir İncəsənətinə Giriş
+        rough_poemart_events: v1 Şeir İncəsənət Tədbirləri
+        rough_poemart_imagery: v1 Şeir İncəsənət Görünüşü
+        rough_poemart_congrats: v1 Şeir Sənəti Təbriklər
+        poetry_module_variables: Dəyişənlər - Poeziya ilə kodlaşdırma
+        poetry_module_textandvariables: Mətn və Dəyişənlər - Poeziya ilə kodlaşdırma
+        poetry_module_planningapp: Şeir Generator Tətbiqinizi Planlaşdırma - Şeir
+          ilə Kodlaşdırma
+        poetry_module_multichoiceprompts: Çox Seçimli Təkliflər - Poeziya ilə Kodlaşdırma
+        poetry_module_conditionals: Şərtlər - Poeziya ilə kodlaşdırma
+        poemart_intro: Şeir sənətinin təqdimatı
+        poemart_events: Şeir İncəsənət Tədbirləri
+        poemart_imagery: Şeir İncəsənət Təsviri
+        poemart_celebration: Şeir sənəti bayramı
+        csd_u6_variables_part2: Dəyərlər
+        csd_ml_ethics_ai: Etika və AI
+        outbreak_intro: 'Epidemiya Simulyasiyası: Giriş'
+        outbreak_events: 'Baş vermə: Hadisələr'
+        outbreak_scientist: 'epidemiya simulyatoru: Alim kimi düşünmək'
+        outbreak_outro: 'Epidemiya Simulyatoru: Pulsuz Oyna'
+        PL_overview_CSP: Kompüter Elmləri Prinsipləri nədir?
+        PL_CSP_EIPMOverview: EIPM Dərsləri üçün bələdçi
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına

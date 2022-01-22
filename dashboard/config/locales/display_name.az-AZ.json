@@ -685,8 +685,8 @@
         "courseF_sprites_freeplay_aquatic": "Suda yaşayan",
         "courseF_sprites_moreSprites": "Spritlərin yerləşdirilməsi",
         "courseF_sprites_positioning": "Spritlərin yerləşdirilməsi",
-        "csd u5 recommender sample": "Nümunə tətbiq",
-        "csd u5 recommender sample_2019": "Nümunə tətbiq",
+        "csd u5 recommender sample": "Nümunə Tətbiqlər",
+        "csd u5 recommender sample_2019": "Nümunə Tətbiqlər",
         "helloworld_animals_sizes": "Ölçü",
         "helloworld_animals_sounds": "Səslər",
         "helloworld_emoji_sizes": "Ölçü",
@@ -743,7 +743,22 @@
         "courseF_sprites_make": "Spraytlar düzəltmək",
         "courseF_sprites_properties": "Sprite Xüsusiyyətləri",
         "courseF_sprites_ship": "Yelkənli Gəmini canlandırın",
-        "New Dance Lab Project": "Yeni Rəqs Partisi layihəsi"
+        "New Dance Lab Project": "Yeni Rəqs Partisi layihəsi",
+        "CSD LEDs Map_2019": "Circuit Playground: Giriş",
+        "CSD U2 publish video": "Veb saytınızın nəşri",
+        "CSD U3 Sprite Properties Map": "Sprite Xüsusiyyətləri",
+        "CSD U3 Sprite Properties Map_2018": "Sprite Xüsusiyyətləri",
+        "CSD U3 Sprite Properties Map_2019": "Sprite Xüsusiyyətləri",
+        "CSD U3 The Draw Loop Map": "Bərabərlik Döngüsü",
+        "CSD U3 The Draw Loop Map_2018": "Bərabərlik Döngüsü",
+        "CSD U3 The Draw Loop Map_2019": "Bərabərlik Döngüsü",
+        "CSD U4 - Design Mode Project": "Proqram Layihəsi: Ekran Dizaynı",
+        "CSD U4 - Design Mode Project_2018": "Proqram Layihəsi: Ekran Dizaynı",
+        "CSD U4 - Design Mode Project_2019": "Proqram Layihəsi: Ekran Dizaynı",
+        "Dance_Party_extras_every_beat": "Dörddəbir Qeydlər",
+        "Dance_Party_extras_every_beat_2019": "Dörddəbir Qeydlər",
+        "Dance_Party_extras_on_beat": "Bas, Orta və Tiz",
+        "Dance_Party_extras_on_beat_2019": "Bas, Orta və Tiz"
       }
     }
   }
