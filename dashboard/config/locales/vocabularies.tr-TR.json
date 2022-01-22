@@ -105,20 +105,32 @@
           "definition": "(şiir) - sağ kenarda biten bir satırda düzenlenmiş bir şiirin alt bölümü. "
         },
         "sprite/coursef/2021": {
-          "word": "Hareketli nesne"
+          "word": "Hareketli nesne",
+          "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
+        },
+        "user/coursef/2021": {
+          "word": "Kullanıcı",
+          "definition": "Yazılım ve donanım da dahil olmak üzere bir nesne kullanan biri."
         },
         "behavior/coursef/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritma"
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için adımların listesi."
         },
         "variable/coursef/2021": {
           "word": "Değişken",
           "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
         },
+        "prompt/coursef/2021": {
+          "word": "İstemi",
+          "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
+        },
         "input/coursef/2021": {
-          "word": "Girdi"
+          "word": "Girdi",
+          "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
         },
         "repeat/coursef/2021": {
           "word": "Tekrarla",
@@ -318,9 +330,17 @@
         "conditionals/coursed/2021": {
           "word": "Koşullar"
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocode",
+          "definition": "Algoritmadaki adımların düz bir dil açıklaması"
+        },
         "while_loop/coursed/2021": {
           "word": "Süresince Döngüsü",
           "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+        },
+        "until/coursed/2021": {
+          "word": "Kadar",
+          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
         },
         "algorithm/express/2021": {
           "word": "Algoritma",
@@ -342,10 +362,15 @@
           "definition": "Bir program oluşturma sanatı."
         },
         "behavior/express/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
         },
         "sprite/express/2021": {
-          "word": "Hareketli nesne"
+          "word": "Hareketli nesne",
+          "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
+        },
+        "code/express/2021": {
+          "definition": "kod yazmak veya bir bilgisayar için yönergeler yazmak için."
         },
         "repeat/express/2021": {
           "word": "Tekrarla",
@@ -362,12 +387,20 @@
           "word": "Süresince Döngüsü",
           "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
         },
+        "until/express/2021": {
+          "word": "Kadar",
+          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
+        },
         "function/express/2021": {
           "word": "Fonksiyon"
         },
         "variable/express/2021": {
           "word": "Değişken",
           "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "prompt/express/2021": {
+          "word": "çabuk",
+          "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
         },
         "for_loop/express/2021": {
           "word": "İçin Döngüsü",
@@ -429,10 +462,12 @@
           "definition": "Tekrar bir şey yapmak."
         },
         "behavior/coursee/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
         },
         "sprite/coursee/2021": {
-          "word": "Hareketli nesne"
+          "word": "Hareketli nesne",
+          "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
         },
         "copyright/coursee/2021": {
           "word": "Telif Hakkı"

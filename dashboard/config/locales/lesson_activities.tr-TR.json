@@ -143,6 +143,12 @@
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Özet"
         },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Isınmak"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Özet"
+        },
         "05180d31-d1ff-422e-8227-69f7d07884a6": {
           "name": "Isınmak"
         },
@@ -2633,12 +2639,6 @@
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Özet"
         },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Isınmak"
-        },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
-          "name": "Özet"
-        },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Seviyeler"
         },
@@ -2996,11 +2996,29 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Özet"
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Isınma: Aynı kelime. Farklı bir anlam."
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "İzle: Kelimelerin Gücü"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Soruşturma: Sorun Nedir?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "Sarma: Çizgiyi Geçme"
+        },
         "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
           "name": "Isınmak"
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Özet"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "5750d053-1daa-409c-9b83-bc4306ba4aef": {
           "name": "Isınmak"
@@ -3046,6 +3064,9 @@
         },
         "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
           "name": "Değerlendirme"
+        },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Isınmak"
@@ -3107,6 +3128,18 @@
         "25d5e16a-9db1-441d-a4c4-916612df574b": {
           "name": "Gün 5 & 6 - Projenizi Sunun"
         },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "İzle: Dijital Yolu Takip Edin"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Oyun: Hayvan Parçaları"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "İnceleme: Paylaşmak Tamam mı?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Sarma: Anı Duraklat ve Düşün"
+        },
         "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
           "name": "Isınmak"
         },
@@ -3121,6 +3154,9 @@
         },
         "ec7e4b2d-6d77-4493-a10c-6f62f3280d58": {
           "name": "Özet"
+        },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Isınmak"
@@ -3158,17 +3194,26 @@
         "1e93bc2c-4f03-4b43-8695-529bbfbe53dc": {
           "name": "Özet"
         },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Isınmak"
         },
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
           "name": " Isınma"
         },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Isınmak"
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Özet"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
           "name": "Isınmak"
@@ -3188,6 +3233,9 @@
         "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
           "name": "Değerlendirme"
         },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Isınmak"
         },
@@ -3203,11 +3251,26 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Özet"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "İzle: Çevrimiçi Mahallem"
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": "Oku: Güvenlik, Kurallar!"
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Keşfet: İnternet Saha Gezisi"
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "Anı Duraklat ve Düşün"
+        },
         "07c33815-2515-4a63-91f1-51db34b0a00e": {
           "name": "Isınmak"
         },
         "de46f4b1-acce-419e-9508-f9e6293b5ba8": {
           "name": "Özet"
+        },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Isınmak"
@@ -3230,6 +3293,9 @@
         "785c0d5e-8bb0-4e62-b57f-636eb000c961": {
           "name": "Özet"
         },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
           "name": "Isınmak"
         },
@@ -3251,6 +3317,9 @@
         "647827d3-b6a3-4697-9cb8-fec35c819d12": {
           "name": " Isınma"
         },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "6aab5f16-5596-4536-b404-f46152246d24": {
           "name": "Isınmak"
         },
@@ -3263,6 +3332,9 @@
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Özet"
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "e1843002-564c-4803-9eaa-44f48a8e4159": {
           "name": "Isınmak"
         },
@@ -3272,6 +3344,9 @@
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Isınmak"
         },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Köprüleme Etkinliği - Etkinlikler - Birini Seçin"
+        },
         "75370025-0071-498b-8e43-3e57a3ce5a78": {
           "name": "Özet"
         },
@@ -3280,6 +3355,18 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Özet"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Öğrenin: Anlık Nedir?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Gerçekleştir: Çevrimiçi ve Yüz Yüze"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Keşfet: STOP Meanness"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Sarma: Anı Duraklat ve Düşün"
         },
         "9d9055c3-143a-452e-9703-ef90cd9a9469": {
           "name": "Seviyeler"
@@ -3305,6 +3392,9 @@
         "d582f103-5fb1-4236-80df-100080cc01b9": {
           "name": "Özet"
         },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Isınmak"
         },
@@ -3314,6 +3404,9 @@
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Isınmak"
         },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Köprüleme Etkinliği "
+        },
         "8a35ec67-caeb-48fa-95bc-d2c3177f6cf9": {
           "name": "Özet"
         },
@@ -3322,6 +3415,9 @@
         },
         "5f64e89f-e102-47ee-b219-5e637db83913": {
           "name": "Özet"
+        },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Isınmak"
@@ -3347,11 +3443,17 @@
         "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
           "name": "Özet"
         },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Isınmak"
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Özet"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "8d10f0a0-909f-482c-a17f-3477280c7375": {
           "name": "Isınmak"
@@ -3368,6 +3470,9 @@
         "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
           "name": "Özet"
         },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Isınmak"
         },
@@ -3383,6 +3488,9 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Isınmak"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Ana Etkinlik "
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Özet"
         },
@@ -3395,6 +3503,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Özet"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Isınma: Pssst... Şifre nedir?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Değerlendirme: Uh-Oh! Eğer... O zaman..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Oluştur: Şifrenizi Güçlendirme"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Wrap Up: Parola İpuçları Notları"
+        },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Seviyeler"
         },
@@ -3403,6 +3523,9 @@
         },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Özet"
+        },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "İsteğe Bağlı Değerlendirme"
         },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Isınmak"
@@ -3422,6 +3545,9 @@
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Isınmak"
         },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Köprü Etkinlikleri - Birini Seçin"
+        },
         "7104b634-df9c-44bd-bc2d-fd226d3a1ee4": {
           "name": "Özet"
         },
@@ -3430,6 +3556,9 @@
         },
         "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
           "name": "Özet"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Isınmak"
@@ -3458,11 +3587,17 @@
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Özet"
         },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Isınma "
+        },
         "9939da92-62ec-4a09-a7be-8e2dd4693cff": {
           "name": "Özet"
         },
         "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
           "name": "Değerlendirme"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Isınmak"
@@ -3500,6 +3635,9 @@
         "160b0f38-c5d3-4b28-b797-981888824dcf": {
           "name": "Özet"
         },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Isınmak"
         },
@@ -3520,6 +3658,9 @@
         },
         "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
           "name": "Özet"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Isınmak"
@@ -3545,6 +3686,9 @@
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Özet"
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Isınmak"
         },
@@ -3562,6 +3706,9 @@
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Özet"
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
           "name": "Isınmak"
@@ -3767,6 +3914,9 @@
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Özet"
         },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "077242ad-8c8a-4b24-a139-a5e198abd405": {
           "name": "Isınma (Opsiyonel)"
         },
@@ -3778,6 +3928,9 @@
         },
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Özet"
+        },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
           "name": "Isınmak"
@@ -3791,6 +3944,9 @@
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Özet"
         },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Müfredat Çapraz Fırsat"
+        },
         "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
           "name": "Isınmak"
         },
@@ -3799,6 +3955,9 @@
         },
         "a0d784ef-8d53-486a-ac4c-eba8617be681": {
           "name": "Değerlendirme"
+        },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Müfredat Çapraz Fırsat"
         },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Isınmak"
