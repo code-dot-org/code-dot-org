@@ -999,6 +999,13 @@ ro:
         text: când {SPRITE} e apăsat
       gamelab_clickedSpritePointer:
         text: a făcut clic pe {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): mergând către nord și formarea
+              de bucle
+            new Behavior(moving_south_and_looping, []): mergând către sud și formarea
+              de bucle
       gamelab_comment:
         text: 'comentariu: {COMMENT}'
       gamelab_costumeImage:
@@ -1049,6 +1056,19 @@ ro:
         text: |-
           dacă {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} costum este {COSTUME}"
       gamelab_isKeyPressed:
@@ -1232,6 +1252,11 @@ ro:
             "'sound://category_digital/jump_7.mp3'": sari
       gamelab_playSpeech:
         text: reprodu discursul {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): mutare cu tastele săgeată
+            draggable(): fiind draggable
       gamelab_pointInDirection:
         text: îndreaptă {SPRITE} {DIRECTION}
         options:
