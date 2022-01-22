@@ -989,6 +989,14 @@ uz:
         text: "{SPRITE} bosilganda"
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): o'ng tarafga aylanish
+            new Behavior(spinning_left, []): chap tarafga aylanish
+            new Behavior(jittering, []): titrash
+            new Behavior(wandering, []): daydish
+            new Behavior(patrolling, []): patrullash
       gamelab_comment:
         text: 'izoh: {COMMENT}'
       gamelab_costumeImage:
@@ -1034,6 +1042,19 @@ uz:
         text: |-
           agar {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ning kostyumi {COSTUME}"
       gamelab_isKeyPressed:
@@ -1192,6 +1213,11 @@ uz:
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": it
             "'sound://category_digital/jump_7.mp3'": sakramoq
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): o'q tugmalari bilan harakatlantiring
+            draggable(): sudranuvchan
       gamelab_pointInDirection:
         text: " {SPRITE} ga {DIRECTION} berish"
         options:
