@@ -513,6 +513,19 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Tekstcompressie"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introductie"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Uitbraak",
+          "progression_name": "Uitbraak"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflectie"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introductie",
           "tips": [
@@ -1416,19 +1429,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Je hebt twee post-it’s. Schrijf op een daarvan wat je vandaag hebt geleerd over coderen. \nSchrijf op de tweede één ding dat je vandaag over poëzie hebt geleerd. \n\nLaten we het met de hele klas delen door je hand op te steken om deze vraag te beantwoorden: Wat hoop je nog meer te leren over coderen en informatica? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introductie"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Uitbraak",
-          "progression_name": "Uitbraak"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Vrije Speelruimte"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflectie"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
