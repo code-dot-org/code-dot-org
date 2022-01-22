@@ -544,6 +544,32 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Text-Kompression"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Einführung"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Ausbruch",
+          "description": "_Die Lektion heute spielt in “Monster Town”. In der Stadt steht ein Virenausbruch bevor. Dr. Monster braucht eure Hilfe, um die Ausbreitung des Virus zu verlangsamen._\n\n_Ihr erstellt im Sprite-Labor eine Ausbruchssimulation und nutzt die Simulation, um zu untersuchen, wie sich ein Virus ausbreiten kann. Ihr helft außerdem den Monstern, wieder gesund zu werden!_",
+          "progression_name": "Ausbruch"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "progression_name": "Willkommen in Monster Stadt"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "progression_name": "Aufbau von Fertigkeiten"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "progression_name": "Miniprojekt: Ausbruchssimulator"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Freies Spiel"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Mit Simulationen ist eine tolle Möglichkeit, Dinge zu erfahren, die man in der realen Welt nicht beobachten kann. Sie helfen den Wissenschaftlern Problem zu lösen und vorherzusagen, wie das Problem gelöst werden kann. Sie können Ideen sicher und effektiv testen. Deine Simulation ist eine Möglichkeit zu simulieren, wie ein Virenausbruch in Monster Town aussehen könnte._"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflektieren"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Einführung",
           "tips": [
@@ -4606,32 +4632,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Du hast zwei Notizzettel. Auf einen schreibst du etwas, was du heute über das Programmieren gelernt hast. \nAuf den zweiten schreibe etwas, was du heute über Gedichte gelernt habt. \n\nTeile deine heutige Erfahrung mit der ganzen Klasse, indem du die Hand hebst, um diese Frage zu beantworten: Was möchtest du als Nächstes über das Programmieren und die Informatik lernen? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Einführung"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Ausbruch",
-          "description": "_Die Lektion heute spielt in “Monster Town”. In der Stadt steht ein Virenausbruch bevor. Dr. Monster braucht eure Hilfe, um die Ausbreitung des Virus zu verlangsamen._\n\n_Ihr erstellt im Sprite-Labor eine Ausbruchssimulation und nutzt die Simulation, um zu untersuchen, wie sich ein Virus ausbreiten kann. Ihr helft außerdem den Monstern, wieder gesund zu werden!_",
-          "progression_name": "Ausbruch"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "progression_name": "Willkommen in Monster Stadt"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "progression_name": "Aufbau von Fertigkeiten"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "progression_name": "Miniprojekt: Ausbruchssimulator"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Freies Spiel"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Mit Simulationen ist eine tolle Möglichkeit, Dinge zu erfahren, die man in der realen Welt nicht beobachten kann. Sie helfen den Wissenschaftlern Problem zu lösen und vorherzusagen, wie das Problem gelöst werden kann. Sie können Ideen sicher und effektiv testen. Deine Simulation ist eine Möglichkeit zu simulieren, wie ein Virenausbruch in Monster Town aussehen könnte._"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflektieren"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
