@@ -2204,6 +2204,10 @@ lv:
               display_name: Saraksti
             csp_loops:
               display_name: Cikli
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2406,3 +2410,144 @@ lv:
           lessons:
             lesson-1:
               name: Burtošanas bite
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mainīgie
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Laimīgās kartes
+            'Programming: Happy Maps':
+              name: Laimīgās kartes
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_functions:
+              display_name: Funkcijas
+            csf_variables:
+              display_name: Mainīgie
+            csf_for_loops:
+              display_name: '"par" cikli'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Atkļūdošana
+              key: Atkļūdošana
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Mainīgie
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Saraksti
+            csp_loops:
+              display_name: Cikli
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Ej, ej
+              key: Ej, ej
+            Getting Loopy:
+              name: Kļūst ciklisks
+            'Loops: Getting Loopy':
+              name: Kļūst ciklisks
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Lielais notikums
+            Binary Bracelets:
+              name: Binārās aproces
+              key: Binārās aproces
+            'Events: The Big Event':
+              name: Lielais notikums
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
+            Relay Programming:
+              name: Releju programmēšana
+              key: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+              key: nosacījumi ar kārtēm
+            'Algorithms: Graph Paper Programming':
+              name: Rūtiņpapīra programmēšana
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            csf_conditionals:
+              display_name: Sazarojumi
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Dziesmu rakstīšana
+            'Functions: Songwriting':
+              name: Dziesmu rakstīšana
+            Conditionals:
+              key: Sazarojumi
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            ramp_up:
+              display_name: Cikls ciklā
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Sazarojumi
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+              key: Jautrība ar "For" Cikliem
+            The Internet:
+              name: Internets
+            Internet:
+              key: Internets
+              name: Internets
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitālā pilsonība
+            lessonGroup-8:
+              display_name: Mainīgie
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
