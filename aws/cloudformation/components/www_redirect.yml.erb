@@ -21,16 +21,10 @@
               OriginProtocolPolicy: match-viewer
         DefaultCacheBehavior:
           TargetOriginId: PrimaryOrigin
-          LambdaFunctionAssociations:
-            # Trigging upon origin-request ensures redirect is cached
-            - EventType: origin-request
-              LambdaFunctionARN: !Ref <%=app%>WwwRedirectLambdaVersion1
-          ForwardedValues:
-            QueryString: "false"
-            Headers:
-              - Origin
-            Cookies:
-              Forward: none
+          CachePolicyId: !Ref <%=app%>RedirectCachePolicy
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !Ref <%=app%>RedirectCloudfrontFunction
           ViewerProtocolPolicy: allow-all
           # Use shared Realtime Log config
           RealtimeLogConfigArn: !ImportValue AccessLogs-Config
@@ -80,6 +74,30 @@
               - Origin
           QueryStringsConfig: 
             QueryStringBehavior: all
+
+  <%=app%>RedirectCloudfrontFunction:
+    Type: AWS::CloudFront::Function
+    Properties: 
+      Name: !Sub "${AWS::StackName}-www-redirect"
+      FunctionConfig: 
+        Comment: Redirects a subdomain to the root domain
+        Runtime: cloudfront-js-1.0
+      AutoPublish: true
+      FunctionCode: !Sub |
+        function handler(event) {
+          var newUrl = 'https://<%=CDO.pegasus_hostname%>';
+
+          // Append path
+          newUrl += event.request.uri;
+
+          return {
+            statusCode: 302,
+            statusDescription: '302 Redirect to root domain',
+            headers:{
+              "location": { "value": newUrl }
+            }
+          };
+        };
 
   <%=app%>WwwRedirectLambda:
     Type: AWS::Lambda::Function
