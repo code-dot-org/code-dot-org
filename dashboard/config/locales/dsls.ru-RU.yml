@@ -10393,3 +10393,8 @@ ru-RU:
           ## Ресурсы
 
           * [Введение в переменные](https://youtu.be/G41G_PEWFjE) - Видео ([для загрузки](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Мое интернет-окружение
+
+          ## Как обеспечить свою безопасность в Интернете?

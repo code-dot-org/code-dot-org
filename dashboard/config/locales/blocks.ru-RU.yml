@@ -356,6 +356,7 @@ ru:
             '"right"': правый столбец
             '"x"': крест-накрест
             '"plus"': плюс
+            '"spiral"': спираль
             '"random"': случайный
       Dancelab_makeAnonymousDanceSprite:
         text: сделать новый {COSTUME} в {LOCATION}
@@ -465,6 +466,7 @@ ru:
             '"right"': правый столбец
             '"x"': крест-накрест
             '"plus"': плюс
+            '"spiral"': спираль
             '"random"': случайный
       Dancelab_mixColors:
         text: смешайте {COLOR1} и {COLOR2}
@@ -970,6 +972,22 @@ ru:
         text: Когда {SPRITE} Нажал
       gamelab_clickedSpritePointer:
         text: Нажал {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): вращение вправо
+            new Behavior(spinning_left, []): вращение влево
+            new Behavior(fluttering, []): дрожание
+            new Behavior(jittering, []): дрожание
+            new Behavior(wobbling, []): колебание
+            new Behavior(wandering, []): хождение
+            new Behavior(patrolling, []): патрулирование
+            new Behavior(moving_west_and_looping, []): движение на запад и зацикливание
+            new Behavior(moving_east_and_looping, []): движение на восток и зацикливание
+            new Behavior(moving_north_and_looping, []): движение на север и действие
+              в цикле
+            new Behavior(moving_south_and_looping, []): движение на юг и действие
+              в цикле
       gamelab_comment:
         text: 'комментарий: {COMMENT}'
       gamelab_costumeImage:
@@ -1022,6 +1040,19 @@ ru:
         text: |-
           если {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} костюм {COSTUME}"
       gamelab_isKeyPressed:
@@ -1181,6 +1212,12 @@ ru:
             "'sound://category_digital/jump_7.mp3'": прыгнуть
       gamelab_playSpeech:
         text: воспроизвести речь {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): перемещение клавишами со стрелками
+            new Behavior(driving_with_arrow_keys, []): передвижение клавишами со стрелками
+            draggable(): допускающий перетаскивание
       gamelab_pointInDirection:
         text: точка {SPRITE} {DIRECTION}
         options:
