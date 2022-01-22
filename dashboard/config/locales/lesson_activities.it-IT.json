@@ -266,6 +266,15 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Approfondimenti"
         },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Riscaldamento"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Attività principale"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Conclusione"
+        },
         "05180d31-d1ff-422e-8227-69f7d07884a6": {
           "name": "Riscaldamento"
         },
@@ -2795,15 +2804,6 @@
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Conclusione"
         },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Riscaldamento"
-        },
-        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
-          "name": "Attività principale"
-        },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
-          "name": "Conclusione"
-        },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Esercizi"
         },
@@ -3179,6 +3179,21 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Conclusione"
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Opportunità interdisciplinare"
+        },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Warm Up: Stessa parola. Significato diverso."
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "Guarda: Il potere delle parole"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Indagare: qual è il problema?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "Wrap Up: Attraversare la linea"
+        },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Approfondimenti"
         },
@@ -3190,6 +3205,9 @@
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Conclusione"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Opportunità interdisciplinare"
         },
         "5750d053-1daa-409c-9b83-bc4306ba4aef": {
           "name": "Riscaldamento"
@@ -3259,6 +3277,9 @@
         },
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
           "name": "Approfondimenti"
+        },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Opportunità interdisciplinare"
         },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Riscaldamento"
@@ -3344,6 +3365,18 @@
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Approfondimenti"
         },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Guarda: segui il percorso digitale"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Gioco: Animal Tracks"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Recensione: OK to Share?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Conclusione: pausa e momento di riflessione"
+        },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Approfondimenti"
         },
@@ -3373,6 +3406,9 @@
         },
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
           "name": "Approfondimenti"
+        },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Opportunità interdisciplinare"
         },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Riscaldamento"
@@ -3431,6 +3467,9 @@
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
           "name": "Approfondimenti"
         },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Opportunità interdisciplinare"
+        },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Riscaldamento"
         },
@@ -3440,6 +3479,9 @@
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
           "name": " Conclusione"
         },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Opportunità interdisciplinare"
+        },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Riscaldamento"
         },
@@ -3448,6 +3490,9 @@
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Conclusione"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Opportunità interdisciplinare"
         },
         "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
           "name": "Riscaldamento"
@@ -3473,6 +3518,9 @@
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
           "name": "Approfondimenti"
         },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Opportunità interdisciplinare"
+        },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Riscaldamento"
         },
@@ -3497,6 +3545,18 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Conclusione"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Guarda: Il mio quartiere online"
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": "Leggi: Sicurezza, governa!"
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Esplora: Internet Field Trip"
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "Pausa e pensa al momento"
+        },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
           "name": "Approfondimenti"
         },
@@ -3511,6 +3571,9 @@
         },
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
           "name": "Approfondimenti"
+        },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Opportunità interdisciplinare"
         },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Riscaldamento"
@@ -3551,6 +3614,9 @@
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
           "name": "Approfondimenti"
         },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Opportunità interdisciplinare"
+        },
         "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
           "name": "Riscaldamento"
         },
@@ -3587,6 +3653,9 @@
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Approfondimenti"
         },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Opportunità interdisciplinare"
+        },
         "6aab5f16-5596-4536-b404-f46152246d24": {
           "name": "Riscaldamento"
         },
@@ -3605,6 +3674,9 @@
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Conclusione"
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Opportunità interdisciplinare"
+        },
         "e1843002-564c-4803-9eaa-44f48a8e4159": {
           "name": "Riscaldamento"
         },
@@ -3619,6 +3691,9 @@
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Riscaldamento"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Attività ponte - Eventi - Scegli una"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Attività principale"
@@ -3637,6 +3712,18 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Conclusione"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Impara: cos'è la meschinità?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Esegui: online vs. faccia a faccia"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Esplora: STOP Meanness"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Conclusione: pausa e momento di riflessione"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Approfondimenti"
@@ -3671,6 +3758,9 @@
         "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
           "name": "Approfondimenti"
         },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Opportunità interdisciplinare"
+        },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Riscaldamento"
         },
@@ -3685,6 +3775,9 @@
         },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Riscaldamento"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Attività ponte "
         },
         "e0fe20d3-be99-4212-83f8-21599085fcad": {
           "name": "Attività principale"
@@ -3703,6 +3796,9 @@
         },
         "27034f13-f0bf-41c0-a198-385c740be6ab": {
           "name": "Approfondimenti"
+        },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Opportunità interdisciplinare"
         },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Riscaldamento"
@@ -3743,6 +3839,9 @@
         "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
           "name": "Approfondimenti"
         },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Opportunità interdisciplinare"
+        },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Riscaldamento"
         },
@@ -3751,6 +3850,9 @@
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Conclusione"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Opportunità interdisciplinare"
         },
         "8d10f0a0-909f-482c-a17f-3477280c7375": {
           "name": "Riscaldamento"
@@ -3779,6 +3881,9 @@
         "7c0129f4-ba20-475d-b304-a85ddd87507e": {
           "name": "Approfondimenti"
         },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Opportunità interdisciplinare"
+        },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Riscaldamento"
         },
@@ -3803,6 +3908,9 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Riscaldamento"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Attività principale "
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Conclusione"
         },
@@ -3821,6 +3929,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Conclusione"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Warm Up: Pssst... Cos'è una password?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Valuta: Uh-Oh! Se... Quindi..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Crea: potenzia la tua password"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Conclusione: note sui suggerimenti per la password"
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Approfondimenti"
         },
@@ -3835,6 +3955,9 @@
         },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Conclusione"
+        },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Verifica facoltativa"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Approfondimenti"
@@ -3866,6 +3989,9 @@
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Riscaldamento"
         },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Attività ponte: scegline una"
+        },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Attività principale"
         },
@@ -3883,6 +4009,9 @@
         },
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
           "name": "Approfondimenti"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Opportunità interdisciplinare"
         },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Riscaldamento"
@@ -3932,6 +4061,9 @@
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Conclusione"
         },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Warm Up "
+        },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Attività principale"
         },
@@ -3943,6 +4075,9 @@
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
           "name": "Approfondimenti"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Opportunità interdisciplinare"
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Riscaldamento"
@@ -4007,6 +4142,9 @@
         "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
           "name": "Approfondimenti"
         },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Opportunità interdisciplinare"
+        },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Riscaldamento"
         },
@@ -4042,6 +4180,9 @@
         },
         "1d75c580-140f-4796-9e75-5863162c676b": {
           "name": "Approfondimenti"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Opportunità interdisciplinare"
         },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Riscaldamento"
@@ -4079,6 +4220,9 @@
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Conclusione"
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Opportunità interdisciplinare"
+        },
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Riscaldamento"
         },
@@ -4108,6 +4252,9 @@
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Conclusione"
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Opportunità interdisciplinare"
         },
         "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
           "name": "Riscaldamento"
@@ -4445,6 +4592,9 @@
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Conclusione"
         },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Opportunità interdisciplinare"
+        },
         "077242ad-8c8a-4b24-a139-a5e198abd405": {
           "name": "Introduzione (facoltativa)"
         },
@@ -4465,6 +4615,9 @@
         },
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Conclusione"
+        },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Opportunità interdisciplinare"
         },
         "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
           "name": "Riscaldamento"
@@ -4487,6 +4640,9 @@
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Conclusione"
         },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Opportunità interdisciplinare"
+        },
         "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
           "name": "Riscaldamento"
         },
@@ -4501,6 +4657,9 @@
         },
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
           "name": "Approfondimenti"
+        },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Opportunità interdisciplinare"
         },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Riscaldamento"
