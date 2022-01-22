@@ -236,12 +236,12 @@ class ScriptsController < ApplicationController
   end
 
   def render_no_access
-    if current_user
-      unless @script.can_be_instructor?(current_user) || @script.can_be_participant?(current_user)
-        render :no_access
-        return
-      end
+    unless @script.can_be_instructor?(current_user) || @script.can_be_participant?(current_user)
+      render :no_access
+      return
+    end
 
+    if current_user
       if  @script.pilot? && !@script.has_pilot_access?(current_user)
         render :no_access
       end

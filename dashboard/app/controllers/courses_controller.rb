@@ -20,7 +20,10 @@ class CoursesController < ApplicationController
     return unit_group if unit_group
 
     # When the url of a course family is requested, redirect to a specific course version.
-    unit_group = UnitGroup.latest_stable_version(params[:course_name]) if UnitGroup.family_names.include?(params[:course_name])
+    if UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      redirect_to action: params[:action], course_name: unit_group.name
+    end
 
     unit_group
   end
@@ -31,12 +34,12 @@ class CoursesController < ApplicationController
   end
 
   def render_no_access
-    if current_user
-      unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
-        render :no_access
-        return
-      end
+    unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
+      render :no_access
+      return
+    end
 
+    if current_user
       if @unit_group.pilot? && !@unit_group.has_pilot_access?(current_user)
         render :no_access
         return
