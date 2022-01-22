@@ -354,6 +354,7 @@ ko:
             '"right"': 오른쪽 열
             '"x"': 교차
             '"plus"': 더하기
+            '"spiral"': 나선
             '"random"': random(랜덤)
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} 에 새 {COSTUME} 을(를) 만드세요"
@@ -463,6 +464,7 @@ ko:
             '"right"': 오른쪽 열
             '"x"': 교차
             '"plus"': 더하기
+            '"spiral"': 나선
             '"random"': random(랜덤)
       Dancelab_mixColors:
         text: "{COLOR1} 및 {COLOR2} 혼합"
@@ -995,6 +997,16 @@ ko:
         text: 때 {SPRITE} 클릭
       gamelab_clickedSpritePointer:
         text: 클릭 {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 오른쪽으로 회전
+            new Behavior(spinning_left, []): 왼쪽으로 회전
+            new Behavior(jittering, []): 지터링
+            new Behavior(wandering, []): 배회
+            new Behavior(patrolling, []): 순찰
+            new Behavior(moving_north_and_looping, []): 북쪽으로 이동 및  반복
+            new Behavior(moving_south_and_looping, []): 남쪽으로 이동 및  반복
       gamelab_comment:
         text: '코멘트: {COMMENT}'
       gamelab_costumeImage:
@@ -1046,6 +1058,19 @@ ko:
         text: |-
           만약 {NUM} ={VAL}이면
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} 복장은 {COSTUME} 입니다"
       gamelab_isKeyPressed:
@@ -1236,6 +1261,10 @@ ko:
             "'sound://category_digital/jump_7.mp3'": 점프
       gamelab_playSpeech:
         text: 스피치 {SOUND} 재생
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): 드래그 가능
       gamelab_pointInDirection:
         text: 지점 {SPRITE} {DIRECTION}
         options:
