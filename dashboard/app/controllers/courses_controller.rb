@@ -15,9 +15,24 @@ class CoursesController < ApplicationController
   end
 
   def render_no_access
-    if current_user && @unit_group
-      if  @unit_group.pilot? && !@unit_group.has_pilot_access?(current_user) && (@unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user))
+    authenticate_user!
+
+    unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
+      render :no_access
+      return
+    end
+
+    if @unit_group.pilot?
+      unless @unit_group.has_pilot_access?(current_user)
         render :no_access
+        return
+      end
+    end
+
+    if @unit_group.in_development?
+      unless current_user.permission?(UserPermission::LEVELBUILDER)
+        render :no_access
+        return
       end
     end
   end
