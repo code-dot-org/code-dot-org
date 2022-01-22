@@ -970,6 +970,13 @@ ur:
         text: جب {SPRITE} کلک کیا
       gamelab_clickedSpritePointer:
         text: کلک کیا {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): شمال کی طرف بڑھنا اور لوپ
+              کرنا
+            new Behavior(moving_south_and_looping, []): جنوب کی طرف بڑھنا اور لوپ
+              کرنا
       gamelab_comment:
         text: 'تبصرہ: {COMMENT}'
       gamelab_costumeImage:
@@ -1018,6 +1025,19 @@ ur:
         text: |-
           اگر {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} کا کاسٹیوم ہے {COSTUME}"
       gamelab_isKeyPressed:
@@ -1201,6 +1221,12 @@ ur:
             "'sound://category_digital/jump_7.mp3'": چھلانگ لگایں
       gamelab_playSpeech:
         text: کلام چلائیں {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): تیر یعنی arrow کے بٹنوں کے ساتھ
+              حرکت
+            draggable(): ڈریگگایبل ہونے کی وجہ سے
       gamelab_pointInDirection:
         text: نقطہ {SPRITE} {DIRECTION}
         options:
@@ -1725,6 +1751,8 @@ ur:
         options:
           BRUSH:
             '"brick"': اینٹ
+            '"fire"': آگ
+            '"flowers"': پھولیں
             '"iceCream"': آئس کریم
             '"rainbow"': دھنک
             '"stars"': ستاروں
@@ -1754,6 +1782,7 @@ ur:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': پرسکون
             '"sound://category_nature/steady_campfire_loop.mp3"': کیمپ فائر
             '"sound://category_nature/rain_loop.mp3"': بوندا باندی
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': جنگل
             '"sound://category_loops/faultering_desicion_loop1.mp3"': آسیب زدہ
             '"sound://category_background/inside_plane.mp3"': ہم
             '"sound://category_loops/red_flag_loop1.mp3"': مشن
