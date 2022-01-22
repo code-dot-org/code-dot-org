@@ -44,9 +44,9 @@ module ProjectsList
     # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
     # Return a set of metadata which can be used to display a table of personal projects in the admin UI.
     # @param user_id
-    # @param state [String] Defaults to 'active'
+    # @param state [String]
     # @return [Array<Hash>] An array with each entry representing a project.
-    def fetch_personal_projects_for_admin(user_id, state = 'active')
+    def fetch_personal_projects_for_admin(user_id, state)
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
 
