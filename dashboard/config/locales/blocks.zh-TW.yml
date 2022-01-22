@@ -1012,6 +1012,20 @@ zh-TW:
         text: 當角色 {SPRITE} 被點擊
       gamelab_clickedSpritePointer:
         text: 點擊 {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋轉
+            new Behavior(spinning_left, []): 向左旋轉
+            new Behavior(fluttering, []): 飄移
+            new Behavior(jittering, []): 抖動
+            new Behavior(wobbling, []): 搖晃
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡邏
+            new Behavior(moving_west_and_looping, []): 向西移動並循環
+            new Behavior(moving_east_and_looping, []): 向東移動並循環
+            new Behavior(moving_north_and_looping, []): 向北移動並迴圈
+            new Behavior(moving_south_and_looping, []): 向南移動並迴圈
       gamelab_comment:
         text: 註解：{COMMENT}
       gamelab_costumeImage:
@@ -1065,6 +1079,19 @@ zh-TW:
         text: |-
           如果{NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}服裝是{COSTUME}"
       gamelab_isKeyPressed:
@@ -1247,6 +1274,12 @@ zh-TW:
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_playSpeech:
         text: 游戲言語{SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 使用方向鍵移動
+            new Behavior(driving_with_arrow_keys, []): 用方向鍵駕駛
+            draggable(): 可拖曳
       gamelab_pointInDirection:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 度
         options:
