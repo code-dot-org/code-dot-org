@@ -2295,6 +2295,10 @@ eu:
               display_name: Zerrendak
             csp_loops:
               display_name: Itzuliak
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmoak
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2497,3 +2501,146 @@ eu:
           lessons:
             lesson-1:
               name: Letraz-letra
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Aldagaiak
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Mapa Zoriontsuak
+            'Programming: Happy Maps':
+              name: Mapa Zoriontsuak
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_functions:
+              display_name: Funtzioak
+            csf_variables:
+              display_name: Aldagaiak
+            csf_for_loops:
+              display_name: For begiztak
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Arazketa
+              key: Arazketa
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
+              display_name: Itzuliak
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Mugi ezazu, mugi ezazu!
+              key: Mugi ezazu, mugi ezazu!
+            Getting Loopy:
+              name: Iteratzen
+            'Loops: Getting Loopy':
+              name: Iteratzen
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Gertaera Handia
+            Binary Bracelets:
+              name: Eskumuturreko bitarrak
+              key: Eskumuturreko bitarrak
+            'Events: The Big Event':
+              name: Gertaera Handia
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+            csf_data:
+              display_name: Datu
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Paper grafiko programazioa
+            Relay Programming:
+              name: Txandaka programatzen
+              key: Txandaka programatzen
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+              key: Baldintzak Txartelekin
+            'Algorithms: Graph Paper Programming':
+              name: Paper grafiko programazioa
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Musika idazten
+            'Functions: Songwriting':
+              name: Musika idazten
+            Conditionals:
+              key: Baldintzak
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            ramp_up:
+              display_name: Kabiatutako begiztak
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Baldintzak
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Begizta jostarirako
+              key: Begizta jostarirako
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hiritartasun digitala
+            lessonGroup-8:
+              display_name: Aldagaiak
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
