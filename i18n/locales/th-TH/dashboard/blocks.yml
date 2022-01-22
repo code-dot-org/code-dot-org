@@ -999,6 +999,12 @@ th:
         text: เมื่อคลิก {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(wandering, []): เคลื่อนที่
+            new Behavior(moving_north_and_looping, []): เคลื่อนไปทางทิศเหนือแล้วลูป
+            new Behavior(moving_south_and_looping, []): เคลื่อนไปทางทิศใต้แล้วลูป
       gamelab_comment:
         text: 'แสดงความคิดเห็น: {COMMENT}'
       gamelab_costumeImage:
@@ -1049,6 +1055,19 @@ th:
         text: |-
           หาก {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: เครื่องแต่งกายของ {SPRITE} คือ {COSTUME}
       gamelab_isKeyPressed:
@@ -1227,6 +1246,11 @@ th:
             "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
       gamelab_playSpeech:
         text: เล่นเสียงพูด {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): เคลื่อนไหวด้วยปุ่มลูกศร
+            draggable(): ลากได้
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
         options:
