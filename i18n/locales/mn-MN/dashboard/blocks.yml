@@ -1014,6 +1014,19 @@ mn:
             '"seconds"': секундууд
       gamelab_hideTitleScreen:
         text: гарчигны дэлгэцийг нуух
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1157,6 +1170,10 @@ mn:
             "'sound://category_animals/dolphin.mp3'": далайн гахай
             "'sound://category_animals/dog.mp3'": нохой
             "'sound://category_digital/jump_7.mp3'": үсрэх
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): татаж болохуйц
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
         options:
