@@ -996,6 +996,11 @@ cs:
         text: po klepnutí na {SPRITE}
       gamelab_clickedSpritePointer:
         text: klik na {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): posuv na sever a zacyklení
+            new Behavior(moving_south_and_looping, []): posuv na jih a zacyklení
       gamelab_comment:
         text: 'komentář: {COMMENT}'
       gamelab_costumeImage:
@@ -1048,6 +1053,19 @@ cs:
         text: |-
           pokud {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} kostým je {COSTUME}"
       gamelab_isKeyPressed:
@@ -1234,6 +1252,11 @@ cs:
             "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_playSpeech:
         text: přehrát řeč {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): pohyb pomocí kláves se šipkami
+            draggable(): přetažení
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
