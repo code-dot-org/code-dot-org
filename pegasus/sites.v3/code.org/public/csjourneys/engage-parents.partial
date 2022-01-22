@@ -7,13 +7,13 @@ social:
   "og:description": "Resources for engaging parents in their children's CS Journeys"
   "twitter:title": "CS Journeys Resources: Engage parents"
   "twitter:description": "GResources for engaging parents in their children's CS Journeys"
-  "twitter:image": "/images/csjourneys/og-internships.jpg"
-  "og:image": "/images/csjourneys/og-internships.jpg"
+  "twitter:image": "/images/csjourneys/og-csjourneys-fall.png"
+  "og:image": "/images/csjourneys/og-csjourneys-fall.png"
   "og:image:width": 1200
   "og:image:height": 630
 ---
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Letters home</h1>
+<h1><a href="/csjourneys"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%; margin-bottom: 12px"/></a><br/>Letters home</h1>
 <p>Did you know students who hear from parents that they would be good at computer science are <a href="https://services.google.com/fh/files/misc/encouraging-students-toward-computer-science-learning-brief.pdf" target="_blank">2-3 times more likely</a> to be interested in learning it? Connect with parents and recruit their help in encouraging students to learn and continue on their computer science journey.</p>
 <p>Here’s some template language you can include in your emails and letters home.</p>
 
