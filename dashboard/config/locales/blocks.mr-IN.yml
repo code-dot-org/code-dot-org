@@ -868,6 +868,13 @@ mr:
         text: जेव्हा {SPRITE} क्लिक केले जाते
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): उत्तरेकडे जाणे आणि लुपिंग
+              करणे
+            new Behavior(moving_south_and_looping, []): दक्षिणेकडे जाणे आणि लुपिंग
+              करणे
       gamelab_comment:
         text: 'टिप्पणी: [COMMENT] [0]'
       gamelab_costumeImage:
@@ -920,6 +927,19 @@ mr:
         text: |-
           जर {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}  चा पोशाख {COSTUME} आहे"
       gamelab_isKeyPressed:
@@ -1089,6 +1109,10 @@ mr:
               बास
       gamelab_playSpeech:
         text: भाषण प्ले करा {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): ड्रॅग करण्यायोग्य
       gamelab_pointInDirection:
         text: पॉइंट {SPRITE} {DIRECTION}
         options:

@@ -135,6 +135,13 @@
         "program/starwarsblocks/unversioned": {
           "word": "प्रोग्रॅम"
         },
+        "event/outbreak/unversioned": {
+          "word": "इव्हेंट",
+          "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "मॉडेल आणि सिम्युलेशन"
+        },
         "event/sports/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
@@ -187,13 +194,6 @@
         },
         "program/poem-art/unversioned": {
           "word": "प्रोग्रॅम"
-        },
-        "event/outbreak/unversioned": {
-          "word": "इव्हेंट",
-          "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "मॉडेल आणि सिम्युलेशन"
         },
         "sprite/coursef/2021": {
           "word": "स्प्राईट",
