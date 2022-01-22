@@ -84,6 +84,12 @@
         "text-compression/Text Compression": {
           "student_overview": "À un moment donné, il arrive qu'on atteigne une certaine limite matérielle en termes de vitesse d'envoi des bits. Par conséquent, si nous voulons envoyer une grande quantité d'informations plus rapidement, nous devons trouver un moyen qui permet de reproduire les mêmes informations avec un nombre réduit de bits. Nous devons donc compresser les données.  "
         },
+        "outbreak/Outbreak": {
+          "overview": "Cette leçon conjugue le **renforcement des compétences** autour d'événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans le Labo Sprite. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. ",
+          "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Dans la leçon précédente, les élèves ont recueilli et interprété les données d'une simulation simple. Dans cette leçon, ils suivront des instructions afin de coder leur propre modèle de simulation. Les connaissances préalables des élèves au sujet des épidémies de virus dans le monde réel seront appliquées à un scénario fictif. ",
+          "student_overview": "Un virus est arrivé à Monstreville ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir. "
+        },
         "sports/Sports": {
           "overview": "Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des énigmes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.",
           "student_overview": "Tu souhaites jouer à des jeux vidéo à l'école ? Dans cette leçon, tu apprendras à créer le tien !"
@@ -115,12 +121,6 @@
         "poem-art/lesson-1": {
           "overview": "Dans cette leçon intégrée CS et ELA, les élèves animeront un poème avec un code pour illustrer l'ambiance d'un poème. Au cours de cette activité d'introduction au codage, ils liront et détecteront l'ambiance d'un poème. Puis, ils trouveront des effets et des images correspondants pour aider à illustrer l'ambiance du poème. Ils utiliseront ensuite des événements (code) pour illustrer un changement d'humeur ou animer l'introduction de nouvelles images dans un poème.\n\nCette leçon peut être complétée comme une autre leçon autonome d'une heure. Il existe également une option pour utiliser cette leçon comme première leçon du module de 5 leçons appelé [Codage avec poésie](http://code.org/poetry). À la fin du module Codage avec poésie, les élèves écriront leurs propres poèmes et créeront une application de génération de poèmes à partager avec leurs amis.\n\nLe codage avec poésie fait partie du programme CS Connections de Code.org, qui vise à intégrer CS dans d'autres domaines comme les mathématiques, l'ELA et les sciences avec un alignement sur les normes CCSS, NGSS et CSTA.  ",
           "preparation": "-   Revoyez et complétez vous-même le didacticiel en ligne : [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Testez d'abord les activités avant de demander à vos élèves de les terminer.\n\n-   Vérifiez votre technologie pour voir s’il y a quelque chose à réparer.\n\n-   Certains niveaux nécessitent du son pour jouer. Distribuez les écouteurs à l'avance.\n\n-   [Facultatif] 2 autocollants par élève pour l'évaluation."
-        },
-        "outbreak/Outbreak": {
-          "overview": "Cette leçon conjugue le **renforcement des compétences** autour d'événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans le Labo Sprite. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. ",
-          "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "purpose": "Dans la leçon précédente, les élèves ont recueilli et interprété les données d'une simulation simple. Dans cette leçon, ils suivront des instructions afin de coder leur propre modèle de simulation. Les connaissances préalables des élèves au sujet des épidémies de virus dans le monde réel seront appliquées à un scénario fictif. ",
-          "student_overview": "Un virus est arrivé à Monstreville ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir. "
         },
         "jigsaw/Jigsaw": {
           "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
@@ -637,6 +637,7 @@
         "express-2021/lesson-3": {
           "overview": "Dans cette leçon de **renforcement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche de « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les étudiants écriront des programmes qui répondent à des événements chronométrés et à des entrées utilisateur. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous travaillerez à travers les niveaux de programmation et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {

@@ -606,6 +606,46 @@
         "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
           "progression_name": "Widget : Compression de texte"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introduction",
+          "description": "**Discussion :**\n\n-   _Que sait-on au sujet de la propagation des virus ?_\n-   _Qu'est-ce qui peut accélérer la propagation d'un virus dans une ville ?_\n-   _Qu'est-ce qui peut aider à ralentir la propagation d'un virus ?_\n\nLe but de cette discussion est de donner l'occasion aux élèves de mobiliser leurs connaissances préalables et de voir leurs idées au tableau. C'est aussi l'occasion d'examiner certaines idées fausses sur la façon dont les virus se propagent. "
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Épidémie",
+          "description": "\\_Dans la leçon d’aujourd’hui, tu vas aller à « Monstreville », ville qui est sur le point d'être frappée par une épidémie. Le Dr Monstre a besoin de ton aide pour ralentir la propagation du virus.**\\_\\_\\_\\_**.\n\n_Tu devras créer un simulateur d’épidémie dans le Sprite Lab, et l’utiliser pour comprendre comment un virus peut se propager. Tu aideras aussi à soigner tous les monstres !_ \\_",
+          "progression_name": "Épidémie"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Faites ceci :** Lisez _Bienvenue à Monstreville_ en groupe.",
+          "progression_name": "Bienvenue à Monstreville"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Faites ceci :** Revoyez le vocabulaire, **les modèles et les simulations** avec les élèves, en vous appuyant sur la leçon précédente. Une simulation est le modèle informatique d'un processus ou d'un système. "
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Aujourd'hui, nous allons animer la ville de Monstreville en écrivant du code. Dans cette simulation, vous allez vous servir de sprites pour représenter les différents monstres. Les sprites auront des costumes différents pour nous indiquer, par exemple, s'ils sont malades ou en bonne santé. Vous utiliserez également des comportements pour faire se déplacer les monstres. Enfin, vous utiliserez des événements pour changer le costume d'un sprite lorsque deux sprites se toucheront sur cet écran. Cela signifiera qu'un monstre a transmis le virus à un autre monstre. Vous ferez des prédictions concernant ce qui arrivera aux habitants de Monstreville et vous les aiderez à guérir !_ "
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Faites ceci :** Faites passer les élèves à leurs ordinateurs et demandez-leur de commencer à suivre les instructions pour chaque niveau dans la section renforcement des compétences. S'ils ont fini avant, ils pourront continuer à jouer avec et peaufiner leur code dans le niveau 6 jusqu'à ce que toute la classe soit prête à passer à autre chose. ",
+          "progression_name": "Renforcement des compétences"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Faites ceci :** Remettez les élèves à leurs ordinateurs et demandez-leur de travailler sur les niveaux restants. Certains de ces niveaux proposent des défis facultatifs. Encouragez les élèves à lire attentivement les instructions et à jouer avec leurs simulations. ",
+          "progression_name": "Mini-projet : simulateur d'épidémie"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Activité libre"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Les simulations sont un excellent moyen d’apprendre des choses qui peuvent être difficiles à observer dans le monde réel. Elles aident les scientifiques à résoudre des problèmes, à les anticiper et à tester de nouvelles idées de manière sûre et efficace. Ta simulation est un moyen de savoir à quoi pourrait ressembler une épidémie de virus à Monstreville._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Discussion :**\n\n-   En quoi les simulations sont-elles utiles en vrai ?\n-   En quoi nous aident-elles à comprendre le monde qui nous entoure ?\n-   En quoi peuvent-elles améliorer la manière dont nous testons nos idées ?\n\nL'objectif de cette discussion est de faire comprendre aux élèves que les simulations sont un moyen de modéliser des systèmes complexes de manière interactive. Ils devraient également voir comment les simulations permettent aux gens de tester des idées rapidement, à moindre coût et en toute sécurité. "
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Réflexion",
+          "description": "**Invitations à la réflexion :**\n\n-   En quoi cette simulation ressemble-t-elle au monde réel ? En quoi est-elle différente ?\n-   Que voudriez-vous y changer/ajouter ?"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introduction",
           "tips": [
@@ -4623,46 +4663,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Vous avez deux autocollants. Sur un, écrivez ce que vous avez appris sur le codage aujourd'hui.\nSur le second, écrivez ce que vous avez appris sur la poésie aujourd'hui.\n\nPartageons avec toute la classe en levant la main pour répondre à cette question : qu'espérez-vous pouvoir apprendre d'autre sur le codage et l'informatique ensuite ?"
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introduction",
-          "description": "**Discussion :**\n\n-   _Que sait-on au sujet de la propagation des virus ?_\n-   _Qu'est-ce qui peut accélérer la propagation d'un virus dans une ville ?_\n-   _Qu'est-ce qui peut aider à ralentir la propagation d'un virus ?_\n\nLe but de cette discussion est de donner l'occasion aux élèves de mobiliser leurs connaissances préalables et de voir leurs idées au tableau. C'est aussi l'occasion d'examiner certaines idées fausses sur la façon dont les virus se propagent. "
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Épidémie",
-          "description": "\\_Dans la leçon d’aujourd’hui, tu vas aller à « Monstreville », ville qui est sur le point d'être frappée par une épidémie. Le Dr Monstre a besoin de ton aide pour ralentir la propagation du virus.**\\_\\_\\_\\_**.\n\n_Tu devras créer un simulateur d’épidémie dans le Sprite Lab, et l’utiliser pour comprendre comment un virus peut se propager. Tu aideras aussi à soigner tous les monstres !_ \\_",
-          "progression_name": "Épidémie"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "**Faites ceci :** Lisez _Bienvenue à Monstreville_ en groupe.",
-          "progression_name": "Bienvenue à Monstreville"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Faites ceci :** Revoyez le vocabulaire, **les modèles et les simulations** avec les élèves, en vous appuyant sur la leçon précédente. Une simulation est le modèle informatique d'un processus ou d'un système. "
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Aujourd'hui, nous allons animer la ville de Monstreville en écrivant du code. Dans cette simulation, vous allez vous servir de sprites pour représenter les différents monstres. Les sprites auront des costumes différents pour nous indiquer, par exemple, s'ils sont malades ou en bonne santé. Vous utiliserez également des comportements pour faire se déplacer les monstres. Enfin, vous utiliserez des événements pour changer le costume d'un sprite lorsque deux sprites se toucheront sur cet écran. Cela signifiera qu'un monstre a transmis le virus à un autre monstre. Vous ferez des prédictions concernant ce qui arrivera aux habitants de Monstreville et vous les aiderez à guérir !_ "
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Faites ceci :** Faites passer les élèves à leurs ordinateurs et demandez-leur de commencer à suivre les instructions pour chaque niveau dans la section renforcement des compétences. S'ils ont fini avant, ils pourront continuer à jouer avec et peaufiner leur code dans le niveau 6 jusqu'à ce que toute la classe soit prête à passer à autre chose. ",
-          "progression_name": "Renforcement des compétences"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Faites ceci :** Remettez les élèves à leurs ordinateurs et demandez-leur de travailler sur les niveaux restants. Certains de ces niveaux proposent des défis facultatifs. Encouragez les élèves à lire attentivement les instructions et à jouer avec leurs simulations. ",
-          "progression_name": "Mini-projet : simulateur d'épidémie"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Activité libre"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Les simulations sont un excellent moyen d’apprendre des choses qui peuvent être difficiles à observer dans le monde réel. Elles aident les scientifiques à résoudre des problèmes, à les anticiper et à tester de nouvelles idées de manière sûre et efficace. Ta simulation est un moyen de savoir à quoi pourrait ressembler une épidémie de virus à Monstreville._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Discussion :**\n\n-   En quoi les simulations sont-elles utiles en vrai ?\n-   En quoi nous aident-elles à comprendre le monde qui nous entoure ?\n-   En quoi peuvent-elles améliorer la manière dont nous testons nos idées ?\n\nL'objectif de cette discussion est de faire comprendre aux élèves que les simulations sont un moyen de modéliser des systèmes complexes de manière interactive. Ils devraient également voir comment les simulations permettent aux gens de tester des idées rapidement, à moindre coût et en toute sécurité. "
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Réflexion",
-          "description": "**Invitations à la réflexion :**\n\n-   En quoi cette simulation ressemble-t-elle au monde réel ? En quoi est-elle différente ?\n-   Que voudriez-vous y changer/ajouter ?"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

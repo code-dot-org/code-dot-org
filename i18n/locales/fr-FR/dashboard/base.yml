@@ -1116,3 +1116,4 @@ fr:
   behaviors:
     this_sprite: "ce sprite"
   unit_prefix: "Unité %{n}"
+  teacher_feedback: "FeedBack enseignants"

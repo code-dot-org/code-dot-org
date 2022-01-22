@@ -266,6 +266,15 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Apprentissage accru"
         },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Séance d'échauffement"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Activité principale"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Conclusion"
+        },
         "05180d31-d1ff-422e-8227-69f7d07884a6": {
           "name": "Warm-up (Séance d’échauffement)"
         },
@@ -2793,15 +2802,6 @@
           "name": "Activité principale"
         },
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
-          "name": "Conclusion"
-        },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Séance d'échauffement"
-        },
-        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
-          "name": "Activité principale"
-        },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
           "name": "Conclusion"
         },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
