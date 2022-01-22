@@ -998,6 +998,11 @@ fil:
         text: Kapag {SPRITE} nag-click
       gamelab_clickedSpritePointer:
         text: nag-click {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): gumagalaw sa hilaga at umiikot
+            new Behavior(moving_south_and_looping, []): gumagalaw sa timog at umiikot
       gamelab_comment:
         text: komento {COMMENT}
       gamelab_costumeImage:
@@ -1050,6 +1055,19 @@ fil:
         text: |-
           kung {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ang costume ay {COSTUME}"
       gamelab_isKeyPressed:
@@ -1234,6 +1252,12 @@ fil:
             "'sound://category_digital/jump_7.mp3'": talon
       gamelab_playSpeech:
         text: i-play ang salita {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): gumagalaw gamit ang mga arrow
+              key
+            draggable(): pagiging draggable
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
         options:
