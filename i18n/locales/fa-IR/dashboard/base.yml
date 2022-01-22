@@ -16,8 +16,14 @@ fa:
       not_saved: 'لطفا خطاهای زیر را درست کنید:'
       too_young: 'این مطلب محدودیت‌های سنی دارد و برای دانش‌آموزان کوچک‌تر در دسترس نیست.'
       teacher_must_accept_terms: 'این مطلب محدودیت‌های سنی دارد و برای دانش‌آموزان کوچک‌تر در دسترس نیست. از معلم خود بخواه شرایط جدید استفاده از خدمات را قبول کند تا دسترسی به این مطلب به تو داده شود. معلم تو می‌تواند با وارد شدن به «استودیوی کد» و کلیک روی دکمه‌ی «بررسی شرایط بروز شده» که بالای صفحه‌ی اول استودیوی کد است این کار را انجام دهد.'
+      pair_programmer: 'شما در حال حاضر در حال برنامه نویسی با دانش آموزی هستید که به این محتوا دسترسی ندارد. برای دسترسی به این محتوا، برنامه‌نویسی جفتی را متوقف کنید و دوباره امتحان کنید.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "نامعتبر است. توجه داشته باشید که هر پیوند فقط یک بار می تواند برای بازنشانی رمز عبور خود استفاده شود و فقط آخرین پیوند ارسال شده کار می کند."
       messages:
         blank: "%s لازم است"
         blank_plural: "ضروری هستند"
@@ -26,7 +32,11 @@ fa:
     attributes:
       user:
         name: 'نمایش نام'
+        name_example: 'نام نمایشی (به عنوان مثال Cool Coder یا Jane S.)'
         email: 'ایمیل'
+        parent_email: 'ایمیل والدین/سرپرست'
+        personal_email: "آدرس ایمیل شخصی <a href=\"%{url}\">(اگر آدرس ایمیل ندارید اینجا را کلیک کنید)</a>"
+        personal_email_markdown: "آدرس ایمیل شخصی [(اگر آدرس ایمیل ندارید اینجا را کلیک کنید)](%{url})"
         username: 'نام کاربری'
         password: 'کلمه عبور'
         password_confirmation: 'تکرار کلمه عبور'
@@ -35,6 +45,12 @@ fa:
         age: 'سن'
         gender: 'جنسیت'
         edit_header: 'ویرایش اطلاعات کاربری'
+        finish_sign_up_header: 'ساخت اکانت خود را تمام کنید'
+        finish_sign_up_subheader: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای <strong>%{email}</strong> به پایان برسد.'
+        finish_sign_up_subheader_markdown: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای **%{email}** به پایان برسد.'
+        finish_sign_up_subheader_provider: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org با <strong>%{provider}</strong> برای <strong>%{email}</strong> تکمیل شود.'
+        finish_sign_up_subheader_provider_markdown: 'اطلاعات زیر را تکمیل کنید تا ایجاد یک حساب Code.org با **%{provider}** برای **%{email}** به پایان برسد.'
+        reset_password_token: "پیوند بازنشانی رمز عبوری که دنبال کرده اید"
         error:
           future: نمیتوان در آینده بود
   beta: "بتا"
@@ -47,13 +63,17 @@ fa:
   previous_page: صفحه‌ی قبل
   next_page: صفحه بعد
   next_resource: منبع بعدی
+  done_with_module: با این ماژول آموزشی تمام شد
   cancel: "لغو"
   okay: "باشه"
   or: "یا"
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
   join_section:
     code:
+      title: 'به بخشی در Code.org بپیوندید'
       placeholder: "انتخاب کد (ABCDEF)"
+      instructions: "لطفاً کد 6 حرفی را که معلمتان با شما به اشتراک گذاشته است (به عنوان مثال: \"ABCDEF\") وارد کنید تا به بخش آنها بپیوندید."
+      instructions_short: "کد بخش 6 حرفی خود را وارد کنید"
       submit: 'پیوستن'
   add_hint_form:
     placeholder: 'لطفا پیشنهادتان را اینجا وارد کنید'
@@ -66,6 +86,7 @@ fa:
   courses: 'مراحل'
   courses_page:
     title_student: "در استودیو ی کد یاد بگیرید"
+    title_teacher: "آموزش علوم کامپیوتر"
   unplugged_activity: 'فعالیت کلاسی'
   of: "از"
   more: "بیشتر"
@@ -79,8 +100,11 @@ fa:
   prize: 'جایزه'
   more_info: 'اطلاعات بیشتر'
   auth:
+    continue_with: 'با %{provider} ادامه دهید'
     sign_in_with: 'ورود از طریق %{provider}'
     signed_in: 'وارد شدید!'
+    signed_out_markdown: '### شما از [Code.org] (%{url}) خارج شده اید.'
+    sign_out_of_markdown: '#### شما از %{provider} برای ورود به سیستم استفاده کردید. [اینجا را کلیک کنید](%{url}) تا از %{provider} خارج شوید.'
     already_signedup: 'قبلا ثبت نام کرده‌اید؟'
     notyet_signedup: "تا به حال شرکت نکرده‌اید؟"
     google_oauth2: 'حساب Google'
@@ -88,7 +112,9 @@ fa:
     facebook: 'فیس‌بوک'
     windowslive: 'حساب مایکروسافت'
     microsoft_v2_auth: 'حساب مایکروسافت'
+    powerschool: 'مدرسه برق'
     forgot_password: 'کلمه عبور خود را فراموش کرده اید؟'
+    migration_success: 'موفقیت! شما برای تجربه حساب کاربری جدید ما ، بروز شده اید.'
     need_confirmation: "دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟"
     need_unlock: "دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟"
   signup_form:
@@ -315,6 +341,7 @@ fa:
     delete_text_teacher_note: "لطفا توجه داشته باشید: حذف کردن حساب شما حساب های دانش آموزهایتان را حدف نخواهدکرد."
     delete_confirm: 'آیا مطمئنید که میخواهید حسابتان را حذف کنید؟'
     update_email: "بروزرسانی"
+    parent_guardian_email_label: "ایمیل والدین/سرپرست"
     remove_parent_email_label: "حذف کن"
     none: "هیچکدام"
   user_level:
