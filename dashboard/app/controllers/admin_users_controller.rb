@@ -137,7 +137,7 @@ class AdminUsersController < ApplicationController
     set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
-      @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id)
+      @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'active')
       @deleted_projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'deleted')
     end
   end
