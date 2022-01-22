@@ -625,7 +625,7 @@ es:
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Loops en Artista
-        CSF_artist_angles: Ángulos en Artist
+        CSF_artist_angles: Ángulos en Artista
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
           Recolector'
         CSF_collector_repeat_loops: Bucles de repetición del Recolector
@@ -732,7 +732,7 @@ es:
         iceage_intro: Hora de Code Era del Hielo - Introducción
         iceage_events: Hora de Code Era del Hielo - Eventos
         iceage_repeat: Hora de Code Era del Hielo - Repetir comando
-        mc_2016_intro: Hora de Code de Minecraft - Introducción
+        mc_2016_intro: Hora del Código de Minecraft - Introducción
         mc_2016_loops: Hora del Código de Minecraft - Bucles
         mc_2016_events: Hora del Código de Minecraft - Eventos
         mc_2016_spawn: Hora del Código de Minecraft - Generar
@@ -744,14 +744,14 @@ es:
         applab_hoc_designmode: Hora del Código del Laboratorio de aplicaciones - Modo
           de diseño
         applab_hoc_share: Hora del Código del Laboratorio de aplicaciones - Compartir
-        mc_2017_agent_intro: Hora del Código de Minecraft - El agente
+        mc_2017_agent_intro: Hora del Código de Minecraft - El Agente
         mc_2017_repeat: Hora del Código de Minecraft - Bucles repetir
         mc_2017_functions: Hora del Código de Minecraft - Funciones
         mc_2017_congratulations: Hora del Código de Minecraft - Felicitaciones
-        mc_2017_puzzle_1: Hora del Código de Minecraft - El agente
+        mc_2017_puzzle_1: Hora del Código de Minecraft - El Agente
         mc_2017_puzzle_3: Hora del Código de Minecraft - Bucles repetir
         mc_2017_puzzle_8: Hora del Código de Minecraft - Funciones
-        mc_2017_puzzle_12: Hora del Código de Minecraft - Juego libre
+        mc_2017_puzzle_12: Hora del Código de Minecraft - Juego Libre
         hint_videos_d_11_3_first: 'Videos sugeridos: D.11.3 Primero'
         hint_videos_d_11_3_last: 'Videos sugeridos: D.11.3 Último'
         hint_videos_d_11_4_first: 'Videos sugeridos: D.11.4 Primero'

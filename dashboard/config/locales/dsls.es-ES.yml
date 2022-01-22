@@ -1983,18 +1983,17 @@ es-ES:
         markdown: |
           # Resumen
 
-          Esta lección sin conexión explora el comportamiento subyacente de las variables. La clase usa tarjetas de notas y cadenas para simular variables dentro de un programa y, así, implementar algunos programas cortos. Una vez que se sienten cómodos con esta sintaxis, los estudiantes utilizan el mismo proceso con las propiedades del sprite y realizan un seguimiento del progreso de un sprite en la pantalla.
-
+          Esta lección sin conexión explora el comportamiento subyacente de las variables. Usando tarjetas de notas y cuerda para simular variables dentro de un programa, la clase ejecuta algunos programas cortos. Una vez que se han familiarizado con esta sintaxis, la clase utiliza el mismo proceso con las propiedades de los sprites, siguiendo el progreso de un sprite a través de la pantalla.
           ## Vocabulario
 
-          * **Expresión**: cualquier unidad válida de código que resuelve un valor.
-          * **Variable**: un marcador de posición para una pieza de información que puede cambiar.
+          * **Expresión** - Cualquier unidad de código válida que resuelva un valor.
+          * **Variable** - Un marcador de posición para una pieza de información que puede cambiar.
 
 
           ## Recursos
 
-          * [Variables Unplugged - Activity Guide](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
-          * [Variables Unplugged Board - Manipulative](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+          * [Variables Sin Conexión - Guía de Actividades](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
+          * [Tablero de Variables Sin Conexión - Manipulativo](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
         teacher_markdown: "* [Variables desenchufadas](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY)
           - Tecla guía de actividad ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf)
           | [DOCX] (https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))"

@@ -28,7 +28,7 @@ es:
           - unplug5-es-ES
       Unplug6:
         title: Condicionales
-        desc: En la clase se realizará un juego. Después de introducir la idea de condicionales, sentencias “si” y bucles, la clase puede practicar en conjunto el uso de un programa ya escrito; solo necesitarán un mazo de tarjetas y suerte.
+        desc: Este es un juego de clase.  Después de introducir la idea de las condicionales, las sentencias if y los bucles, los alumnos pueden practicar juntos utilizando un programa previamente escrito, una baraja de cartas y la suerte del sorteo.
         pdfs:
           - unplug6-es-ES
       Unplug7:
@@ -156,22 +156,22 @@ es:
         title: Bucles desconectados
         desc: '¡En esta lección aprenderás sobre bucles!'
       courseB_unplugged_MRF:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: '¡En esta lección ''programarás'' a tus amigos!'
       courseB_unplugged_loopyMRF:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: '"Programarás" a tus amigos como en "Mis amigos robóticos", ¡pero esta vez, con bucles!'
       courseC_Unplugged_ScreenOutTheMean:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       courseD_unplugged_digitalCitizenship:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Información privada y personal '
         desc: '¡Hoy aprenderás la diferencia entre información privada e información personal!'
       courseF_unplugged_powerOfWords:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       deeper learning description:
         desc: 'traducción pendiente: en-US.data.unplugged.desc'
@@ -209,7 +209,7 @@ es:
         title: Programación de Relevos
         desc: Los estudiantes corren una carrera de relevos, donde aceleran por el camino para escribir un algoritmo basado en una imagen "Grafica en papel de programación". Ellos sólo pueden escribir una instrucción a la vez y si hay algún error en algún lugar, deben borrar todo hasta ese punto.
       courseD_unplugged_conditionalsCards:
-        title: Condicionales con tarjetas
+        title: Condicionales con Cartas
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
       courseD_unplugged_binaryImages:
         title: Imágenes binarias
@@ -263,10 +263,10 @@ es:
         title: Programación en papel cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       Conditionals_2018:
         title: Condicionales
@@ -325,7 +325,7 @@ es:
         title: Programación de Relevos
         desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa ser un ciudadano digital.
       BinaryImages_2019:
         title: Imágenes binarias
@@ -349,7 +349,7 @@ es:
         title: Bucleandose
         desc: Esta lección introduce el concepto de programación de los bucles (instrucciones repetidas) a través de una actividad de baile. Los estudiantes aprenderán una simple coreografía, después se les pedirá que la repitan.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Actividad fuera de línea
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       BigEvent_2019:
         title: El Gran Evento
