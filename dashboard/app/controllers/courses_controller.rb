@@ -139,26 +139,18 @@ class CoursesController < ApplicationController
   end
 
   def vocab
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
   def resources
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
   def code
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
   def standards
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
