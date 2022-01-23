@@ -72,7 +72,7 @@ class ScriptsController < ApplicationController
 
     @script_data = @script.summarize(true, current_user).merge(additional_script_data)
 
-    if @script.old_professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
+    if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
     end
   end
@@ -159,19 +159,19 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def resources
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def code
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def standards
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def get_rollup_resources
