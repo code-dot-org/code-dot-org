@@ -35,19 +35,16 @@ class CoursesController < ApplicationController
 
   def render_no_access
     unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
-      render :no_access
-      return
+      return render :no_access
     end
 
     if current_user
       if @unit_group.pilot? && !@unit_group.has_pilot_access?(current_user)
-        render :no_access
-        return
+        return render :no_access
       end
 
       if @unit_group.in_development? && !current_user.permission?(UserPermission::LEVELBUILDER)
-        render :no_access
-        return
+        return render :no_access
       end
     end
   end
@@ -138,25 +135,25 @@ class CoursesController < ApplicationController
 
   def vocab
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
+    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def resources
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
+    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def code
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
+    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def standards
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
+    return render :forbidden unless @unit_group.default_units[0].is_migrated?
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
