@@ -654,7 +654,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal course_version, unit_group.course_version
   end
 
-  no_access_msg = "You don&#39;t have access to this unit."
+  no_access_msg = "You don&#39;t have access to this course."
 
   test_user_gets_response_for(:vocab, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view vocab page for pl course') do
     refute response.body.include? no_access_msg
