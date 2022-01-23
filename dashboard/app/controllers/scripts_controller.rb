@@ -237,6 +237,7 @@ class ScriptsController < ApplicationController
 
   def render_no_access
     unless @script.can_be_instructor?(current_user) || @script.can_be_participant?(current_user)
+      authenticate_user!
       return render :no_access
     end
 
