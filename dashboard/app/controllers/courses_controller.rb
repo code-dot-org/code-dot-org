@@ -35,6 +35,7 @@ class CoursesController < ApplicationController
 
   def render_no_access
     unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
+      authenticate_user!
       return render :no_access
     end
 
