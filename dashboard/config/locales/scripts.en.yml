@@ -25567,7 +25567,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod2:
           lessons:
@@ -29834,7 +29834,7 @@ en:
             Parameters and Return Investigate:
               name: Parameters and Return Investigate
               description_student: 'Investigate and modify sample apps that use parameters and return values. '
-              description_teacher: 'In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. '
+              description_teacher: 'In this lesson, students work with partners to investigate two different apps that use parameters and return values. '
               key: Parameters and Return Investigate
             Parameters and Return Practice:
               name: Parameters and Return Practice

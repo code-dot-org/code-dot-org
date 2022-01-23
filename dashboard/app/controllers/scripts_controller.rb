@@ -27,7 +27,7 @@ class ScriptsController < ApplicationController
     end
 
     if !params[:section_id] && current_user&.last_section_id
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      redirect_to request.query_parameters.merge({"section_id" => current_user&.last_section_id})
       return
     end
 

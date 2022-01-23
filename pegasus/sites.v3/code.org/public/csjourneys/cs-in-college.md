@@ -7,8 +7,8 @@ social:
   "og:description": "Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey."
   "twitter:title": "What's It Like to Take CS in College?"
   "twitter:description": "Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey."
-  "twitter:image": "/images/csjourneys/og-nextsteps.png"
-  "og:image": "/images/csjourneys/og-nextsteps.png"
+  "twitter:image": "/images/csjourneys/og-rtc.png"
+  "og:image": "/images/csjourneys/og-rtc.png"
   "og:image:width": 1200
   "og:image:height": 630
 ---
@@ -43,47 +43,14 @@ social:
   <p>This first discussion is all about transitions! Learn how Computer Science 101 is different than taking CS in high school. Get the inside scoop on what lectures and projects are like, who to seek help from and when (TAs and office hours), and the importance of finding/building community.</p>
   <a href="https://us02web.zoom.us/webinar/register/WN_k58ui58bRfGJHbRlQtucSA" target="_blank"><button style="margin-bottom:20px">Register</button></a>
   <p>Featuring:</p>
-  <div class="col-20" style="text-align:center">
-    <img src="/images/csjourneys/jack-jobes.jpg" style="border-radius:50%; width:55%" alt="Jack Jobes">
-    <p style="margin-top:10px"><strong>Luna Chen</strong>
-    <br>
-    Freshman
-    <br>
-    <a href="https://www.washington.edu/" target="_blank">University of Washington</a></p>
-  </div>
-  <div class="col-20" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/gabe-saruhashi.png" style="border-radius:50%; width:55%" alt="Gabe Saruhashi">
-    <p style="margin-top:10px"><strong>Grace Coleman</strong>
-    <br>
-    Sophomore
-    <br>
-    <a href="https://www.unc.edu/" target="_blank">University of North Carolina-Chapel Hill</a></p>
-  </div>
-  <div class="col-20" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/zene-sekou.jpg" style="border-radius:50%; width:55%" alt="Zene Sekou">
-    <p style="margin-top:10px"><strong>Tajbiha Faisal</strong>
-    <br>
-    Freshman
-    <br>
-    <a href="https://www.vassar.edu/" target="_blank">Vassar College</a></p>
-  </div>
-  <div class="col-20" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/gabe-saruhashi.png" style="border-radius:50%; width:55%" alt="Gabe Saruhashi">
-    <p style="margin-top:10px"><strong>Chae Hyun Kim</strong>
-    <br>
-    Sophomore
-    <br>
-    <a href="https://www.gatech.edu/" target="_blank">Georgia Tech</a></p>
-  </div>
-  <div class="col-20" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/gabe-saruhashi.png" style="border-radius:50%; width:55%" alt="Gabe Saruhashi">
-    <p style="margin-top:10px"><strong>Margaret Wang</strong>
-    <br>
-    Freshman
-    <br>
-    <a href="https://web.mit.edu/" target="_blank">Massachusetts Institute of Technology (MIT)</a></p>
-  </div>
-<div style="clear: both"></div>
-<a href="#top">Back to top</a>
-
+  <ul>
+    <li>Luna Chen, Freshman at <a href="https://www.washington.edu/" target="_blank">University of Washington</a></li>
+    <li>Grace Coleman, Sophomore at <a href="https://www.unc.edu/" target="_blank">University of North Carolina-Chapel Hill</a></li>
+    <li>Tajbiha Faisal, Freshman at <a href="https://www.vassar.edu/" target="_blank">Vassar College</a></li>
+    <li>Chae Hyun Kim, Sophomore at <a href="https://www.gatech.edu/" target="_blank">Georgia Tech</a></li>
+    <li>Margaret Wang, Freshman at <a href="https://web.mit.edu/" target="_blank">Massachusetts Institute of Technology (MIT)</a></li>
+  </ul>
+  <br>
+  <a href="#top">Back to top</a>
+</div>
 <div style="clear:both"></div>
