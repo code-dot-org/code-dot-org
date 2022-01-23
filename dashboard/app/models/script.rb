@@ -218,7 +218,7 @@ class Script < ApplicationRecord
           published_state: get_published_state,
           instruction_type: get_instruction_type,
           instructor_audience: get_instructor_audience,
-          participant_type: get_participant_audience
+          participant_audience: get_participant_audience
         )
         unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
         unit_group.save!
