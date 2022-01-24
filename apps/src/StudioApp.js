@@ -687,7 +687,9 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
-        useFilesApi: !!config.useFilesApi
+        useFilesApi: !!config.useFilesApi,
+        selectedVersion: queryParams('version'),
+        isReadOnly: !!config.readonlyWorkspace
       }),
       contentDiv
     );
@@ -1650,13 +1652,6 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
 
   this.onFeedback(options);
-};
-
-StudioApp.prototype.isFinalFreePlayLevel = function(feedbackType, response) {
-  return (
-    this.feedback_.isFinalLevel(response) &&
-    this.feedback_.isFreePlay(feedbackType)
-  );
 };
 
 /**

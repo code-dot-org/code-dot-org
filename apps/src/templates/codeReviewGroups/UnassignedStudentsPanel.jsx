@@ -10,12 +10,10 @@ export default function UnassignedStudentsPanel({
   unassignedGroup,
   onUnassignAllClick
 }) {
-  // TO DO: implement unassigning students and style
-  // https://codedotorg.atlassian.net/browse/CSA-1028
   return (
     <div style={styles.unassignedStudentsPanel}>
       <div style={styles.header}>
-        <span>{i18n.unassignedStudents()}</span>
+        <span style={styles.headerTitle}>{i18n.unassignedStudents()}</span>
         <JavalabButton
           onClick={onUnassignAllClick}
           icon={<FontAwesome icon="times" className="fa" />}
@@ -46,11 +44,15 @@ export const HEADER_STYLE = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '5px 10px 5px 5px',
+  padding: '5px 10px',
   border: `1px solid ${color.lighter_gray}`,
   background: color.lightest_gray,
   fontFamily: '"Gotham 5r", sans-serif',
   fontSize: 14
+};
+
+export const HEADER_TITLE_STYLE = {
+  margin: '5px'
 };
 
 export const BUTTON_STYLE = {
@@ -75,6 +77,7 @@ const styles = {
     width: 400
   },
   header: HEADER_STYLE,
+  headerTitle: HEADER_TITLE_STYLE,
   button: BUTTON_STYLE,
   groupsContainer: GROUPS_CONTAINER_STYLE,
   studentGroup: {

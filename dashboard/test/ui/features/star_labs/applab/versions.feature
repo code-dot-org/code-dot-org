@@ -23,10 +23,10 @@ Scenario: Script Level Versions
   And element ".project_updated_at" eventually contains text "Saved"
 
   When I press "versions-header"
-  And I wait until element "button:contains(Restore this Version):eq(0)" is visible
-  And element "button.version-preview" is visible
+  And I wait until element "button:contains(Restore):eq(0)" is visible
+  And element "button.btn-info" is visible
   And I make all links open in the current tab
-  And I click selector "button.version-preview:eq(0)" to load a new page
+  And I click selector "button.btn-info:eq(0)" to load a new page
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment 1"
   And element "#workspace-header-span" contains text "View only"
@@ -46,7 +46,7 @@ Scenario: Project Load and Reload
   When I reload the page
   And I wait for the page to fully load
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
   And I save the text from ".versionRow:nth-child(1) p"
 
   # There is currently no guarantee that Version History will initially be
@@ -54,7 +54,7 @@ Scenario: Project Load and Reload
   # test runs in the test environment. Therefore, just check that we have no
   # version that was updated within the last 90 seconds, which will show as
   # "less than a minute ago" or "about a minute ago".
-  Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version)" is not visible
+  Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore)" is not visible
 
   When I close the dialog
   # This run may nor may not trigger a save, because sometimes serializing
@@ -66,12 +66,12 @@ Scenario: Project Load and Reload
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
 
   Then ".versionRow:nth-child(2) p" contains the saved text
-  And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
+  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
 
-  And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
+  And element "#showVersionsModal tr:contains(a minute ago):contains(Restore):eq(1)" is not visible
 
 @no_ie
 @no_mobile
@@ -88,7 +88,7 @@ Scenario: Project Version Checkpoints
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
   Then I save the text from ".versionRow:nth-child(1) p"
 
   When I close the dialog
@@ -100,11 +100,11 @@ Scenario: Project Version Checkpoints
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
-  And I wait until element "button:contains(Current Version)" is visible
+  And I wait until element "div:contains(Latest Version)" is visible
   # The version containing "comment A" is saved as a checkpoint, because the
   # project version interval time period had passed.
   Then ".versionRow:nth-child(2) p" contains the saved text
-  And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
+  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
 
 # Skip on IE due to blocked pop-ups
 @no_mobile @no_ie

@@ -117,7 +117,13 @@ describe('requiredBlockUtils', function() {
     var blockRequired = parseElement(
       '<block type="block_with_3_titles"><title name="A">1</title><title name="B">2</title></block>'
     );
-    assert(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+    assert(
+      requiredBlockUtils.elementsEquivalent(
+        blockRequired,
+        blockUser,
+        true /* ignoreChildBlocks */
+      )
+    );
   });
 
   it('can recognize non-matching blocks with mismatched ignorarable attributes', function() {
@@ -128,7 +134,11 @@ describe('requiredBlockUtils', function() {
       '<block type="block_with_3_titles" inputcount="2"><title name="A">1</title><title name="B">2</title></block>'
     );
     assert.isFalse(
-      requiredBlockUtils.elementsEquivalent(blockRequired, blockUser)
+      requiredBlockUtils.elementsEquivalent(
+        blockRequired,
+        blockUser,
+        true /* ignoreChildBlocks */
+      )
     );
   });
 
@@ -139,7 +149,13 @@ describe('requiredBlockUtils', function() {
     var blockRequired = parseElement(
       '<block type="block_with_3_titles" inputcount="???"><title name="A">1</title><title name="B">2</title></block>'
     );
-    assert(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+    assert(
+      requiredBlockUtils.elementsEquivalent(
+        blockRequired,
+        blockUser,
+        true /* ignoreChildBlocks */
+      )
+    );
   });
 
   it('can recognize matching blocks with unspecified children', function() {
@@ -149,7 +165,13 @@ describe('requiredBlockUtils', function() {
     var blockRequired = parseElement(
       '<block type="block_with_3_titles" inputcount="???"></block>'
     );
-    assert(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+    assert(
+      requiredBlockUtils.elementsEquivalent(
+        blockRequired,
+        blockUser,
+        true /* ignoreChildBlocks */
+      )
+    );
   });
 
   it('can recognize non-matching blocks with specified children', function() {
@@ -160,7 +182,11 @@ describe('requiredBlockUtils', function() {
       '<block type="block_with_3_titles" inputcount="2"><title name="A">2</title><title name="B">2</title></block>'
     );
     assert.isFalse(
-      requiredBlockUtils.elementsEquivalent(blockRequired, blockUser)
+      requiredBlockUtils.elementsEquivalent(
+        blockRequired,
+        blockUser,
+        true /* ignoreChildBlocks */
+      )
     );
   });
 
@@ -172,7 +198,11 @@ describe('requiredBlockUtils', function() {
       '<block type="block_with_3_titles" inputcount="2"><title name="A">2</title><title name="B">2</title></block>'
     );
     assert.isFalse(
-      requiredBlockUtils.elementsEquivalent(blockRequired, blockUser)
+      requiredBlockUtils.elementsEquivalent(
+        blockRequired,
+        blockUser,
+        true /* ignoreChildBlocks */
+      )
     );
   });
 });
