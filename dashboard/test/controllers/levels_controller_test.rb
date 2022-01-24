@@ -4,6 +4,8 @@ require 'webmock/minitest'
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -736,17 +738,27 @@ class LevelsControllerTest < ActionController::TestCase
     assert_match /JSON::ParserError/, JSON.parse(@response.body)['code_functions'].first
   end
 
-  test "update_start_code updates start sources and validation" do
+  test "update_start_code encrypts validation" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     level = create(:javalab)
     post :update_start_code, params: {
-      id: level.id,
-        validation: {"Validation.java" => "{}"},
-        start_sources: {"MyClass.java" => "{}"}
-    }
+      id: level.id
+    }, body:
+        {
+          validation: {"Validation.java" => "{}"},
+          start_sources: {"MyClass.java" => "{}"}
+        }.to_json
+
     assert_response :success
     level = assigns(:level)
-    assert_not_nil level.validation
-    assert_not_nil level.start_sources
+
+    # this property is encrypted, not plaintext
+    assert_nil level.properties['validation']
+    assert level.validation
+    assert level.properties['encrypted_validation']
+
+    # this property is plaintext
+    assert level.properties['start_sources']
   end
 
   test "update_start_code works if level does not support validation" do
