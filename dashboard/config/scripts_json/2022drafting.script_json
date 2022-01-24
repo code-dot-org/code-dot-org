@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "drafting",
-    "serialized_at": "2022-01-21 22:33:32 UTC",
+    "serialized_at": "2022-01-24 13:29:03 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -58,9 +58,21 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-7",
       "user_facing": true,
       "position": 4,
+      "properties": {
+        "display_name": "Course E Sprites (Deprecated)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
       "properties": {
         "display_name": "Course F Variables (Deprecated)"
       },
@@ -72,7 +84,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Course F For Loops (Deprecated)"
       },
@@ -174,12 +186,53 @@
       }
     },
     {
-      "key": "Drawing with Loops",
-      "name": "Drawing with Loops",
+      "key": "Follow the Algorithm",
+      "name": "Follow the Algorithm",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson is designed to prepare students to think about one of the core programming concepts in Sprite Lab, behaviors. ",
+        "student_overview": "Play a game and think about what commands are needed to get the right result.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "Alien Dance Party with Sprite Lab",
+      "name": "Alien Dance Party with Sprite Lab",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
+        "student_overview": "Create an interactive project that can be shared with classmates."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "Drawing with Loops",
+      "name": "Drawing with Loops",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.",
@@ -196,10 +249,10 @@
     {
       "key": "Using Variables with the Artist",
       "name": "Using Variables with the Artist",
-      "absolute_position": 8,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.",
@@ -216,10 +269,10 @@
     {
       "key": "Programming with the Bee",
       "name": "Programming with the Bee",
-      "absolute_position": 9,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will be encouraged to figure out how minor changes in loops will affect their program.",
@@ -236,10 +289,10 @@
     {
       "key": "Variables with the Bee",
       "name": "Variables with the Bee",
-      "absolute_position": 10,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.",
@@ -256,10 +309,10 @@
     {
       "key": "For Loop Fun",
       "name": "For Loop Fun",
-      "absolute_position": 11,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use loops with a powerful, new structure.",
@@ -277,10 +330,10 @@
     {
       "key": "For Loops with Bee",
       "name": "For Loops with Bee",
-      "absolute_position": 12,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. ",
@@ -297,10 +350,10 @@
     {
       "key": "For Loops with Artist",
       "name": "For Loops with Artist",
-      "absolute_position": 13,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.",
@@ -361,6 +414,102 @@
         "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "f45993bc-3c54-4146-8c8a-4905ef47794c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f45993bc-3c54-4146-8c8a-4905ef47794c",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "e1d710f8-d723-43c9-914f-3b2d1db30326",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1d710f8-d723-43c9-914f-3b2d1db30326",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "f28d541b-51c8-4a9d-b4d1-76b29ad3a95c",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f28d541b-51c8-4a9d-b4d1-76b29ad3a95c",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "85c4e04a-2743-4869-bd7d-b74b33b46eb8",
+      "position": 4,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85c4e04a-2743-4869-bd7d-b74b33b46eb8",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "50428f43-1938-4c3e-b6d9-449314d89cad",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50428f43-1938-4c3e-b6d9-449314d89cad",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "a1f261e3-967a-46f8-83e8-0a563714b4ea",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "c574080c-205c-4c45-ad45-c630fc0fca69",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c574080c-205c-4c45-ad45-c630fc0fca69",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "2022drafting"
       }
     },
@@ -864,6 +1013,224 @@
       "seeding_key": {
         "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c",
         "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd"
+      }
+    },
+    {
+      "key": "d0a7647f-b353-49f5-97c4-ed44d0efeaa7",
+      "position": 1,
+      "properties": {
+        "description": "**Think-Pair-Share:** Think of hobby, sport, or activity that you know how to do well. What does it take to do it well? Are there times when you need think about multiple things or perform different actions at the same time?",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0a7647f-b353-49f5-97c4-ed44d0efeaa7",
+        "lesson_activity.key": "f45993bc-3c54-4146-8c8a-4905ef47794c"
+      }
+    },
+    {
+      "key": "3392d2fa-d4e6-42e3-aaf5-ddff37a1c313",
+      "position": 2,
+      "properties": {
+        "description": "* What parts of your body are you using? Does this change at different points?\n* Are there times when you need to stop one action before you can begin another? (For example, you must stop dribbling the basketball before you can shoot.)\n\n**Goal:** Help students think about times when they must keep track of multiple tasks or instructions simultaneously. The main activity will get students performing silly actions, either in sequence or simultaneously. This will eventually lead to connections about a new way to write programs, but you don't need to get the discussion there yet.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3392d2fa-d4e6-42e3-aaf5-ddff37a1c313",
+        "lesson_activity.key": "f45993bc-3c54-4146-8c8a-4905ef47794c"
+      }
+    },
+    {
+      "key": "32881ece-c98b-4f99-8f33-2d45874a07db",
+      "position": 1,
+      "properties": {
+        "description": "Today we’re going to start with a quick game. In this game, I will be giving you all commands to follow and your job is to follow my instructions. The commands will always start with “begin” or “stop”. If I tell you to begin doing something, you need to start that behavior and keep it going until I tell you to stop. I might also tell you to “stop everything” which means you can end all of the behaviors I’ve given you so far. We’ll play 3 rounds and after each round I’ll ask you all a couple questions.",
+        "name": "Follow the Algorithm",
+        "progression_name": "Follow the Algorithm - Unplugged Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "32881ece-c98b-4f99-8f33-2d45874a07db",
+        "lesson_activity.key": "e1d710f8-d723-43c9-914f-3b2d1db30326"
+      }
+    },
+    {
+      "key": "82d48065-e14f-4801-86f5-52d435c870d0",
+      "position": 1,
+      "properties": {
+        "description": "#### Rules\n\n*All commands should be prefaced with either “begin” or “stop”.*\n\nWhen players are told to “begin” a behavior, they should continue it until told to “stop”. For example, players should not told be told to clap once, but might be told to “begin clapping”. Their clapping should continue until they are told to “stop clapping” even if they are given other new behaviors in between. \n\n*The leader can also call for the players to “stop everything”.* \n\nThis should result in everyone just standing at rest regardless of all previous commands.\n\nYou as the teacher should take on the role of the leader. You can try make up your own sequences, but here are some you can try. Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion.\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n**Debrief:** *What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?*\n\n#### Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n**Debrief:**\n\n*What kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?*\n\n#### Round 3 (Challenging)\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n**Discussion:** _What happens if two behaviors seem to conflict with each other?_\n\n_What should you do when told to clap your hands and flap your arms at the same time?_\n\n_How can you jump up and down while crouching?_\n\n_What happens if you need to tap your knees and your head at the same time?_\n\n_When you were told to spin in two opposite directions what did you see people do?_ \n\n_What would happen if you were told to spin left and right at the exact same time?_\n\nStudents should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out."
+      },
+      "seeding_key": {
+        "activity_section.key": "82d48065-e14f-4801-86f5-52d435c870d0",
+        "lesson_activity.key": "f28d541b-51c8-4a9d-b4d1-76b29ad3a95c"
+      }
+    },
+    {
+      "key": "f70ee5c3-3f75-4284-be88-d66f42f07ca0",
+      "position": 2,
+      "properties": {
+        "description": "\n####Extension\n\nIf you want to make things even more complicated, you can consider changing the rules so that only some players follow some commands. For example, you could try commands like “All girls begin spinning to the left”, “All boys begin clapping your hands”, or “Everyone stop everything.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "f70ee5c3-3f75-4284-be88-d66f42f07ca0",
+        "lesson_activity.key": "f28d541b-51c8-4a9d-b4d1-76b29ad3a95c"
+      }
+    },
+    {
+      "key": "a6d03796-9aa1-4168-b54b-60a7ec18bebe",
+      "position": 1,
+      "properties": {
+        "description": "**Say:** *In this activity, you followed the step-by-step instructions that I gave you. We call this an* ***algorithm***.\n\nInvite students to think about other times in their lives when they use or follow algorithms. Examples include following a schedule or a daily routine.  Let students know that in the next lesson, they will be able to give an algorithm for their *computers* to follow. ",
+        "name": "What did we learn?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6d03796-9aa1-4168-b54b-60a7ec18bebe",
+        "lesson_activity.key": "85c4e04a-2743-4869-bd7d-b74b33b46eb8"
+      }
+    },
+    {
+      "key": "0c138b78-a179-493d-b7fa-ccbf1363d67a",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:**\n\nThink back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options! "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0c138b78-a179-493d-b7fa-ccbf1363d67a",
+        "lesson_activity.key": "85c4e04a-2743-4869-bd7d-b74b33b46eb8"
+      }
+    },
+    {
+      "key": "6169507a-b6d3-4075-af85-301d8e7ac5e7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do we use sprites in our programs?_\n\n",
+        "name": "Introduction\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there wasn’t enough time to complete the Wrap Up activity from the previous Swimming Fish with Sprite Lab lesson, have students do the Follow the Algorithm activity now before starting A Series of Events.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6169507a-b6d3-4075-af85-301d8e7ac5e7",
+        "lesson_activity.key": "50428f43-1938-4c3e-b6d9-449314d89cad"
+      }
+    },
+    {
+      "key": "3d8b6f93-6d11-4b3b-9428-ae66d6dd6b77",
+      "position": 2,
+      "properties": {
+        "description": "Today students will visit events in programming.\n\n####A Series of Events\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other."
+      },
+      "seeding_key": {
+        "activity_section.key": "3d8b6f93-6d11-4b3b-9428-ae66d6dd6b77",
+        "lesson_activity.key": "50428f43-1938-4c3e-b6d9-449314d89cad"
+      }
+    },
+    {
+      "key": "c93609e2-50ad-4b1c-b67d-0a502ff4c767",
+      "position": 1,
+      "properties": {
+        "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an event is initiated.",
+        "name": "Alien Dance Party with Sprite Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c93609e2-50ad-4b1c-b67d-0a502ff4c767",
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea"
+      }
+    },
+    {
+      "key": "ac6927ff-2a81-42c5-8e4e-92ce739a99a9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 – Predict” slide\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac6927ff-2a81-42c5-8e4e-92ce739a99a9",
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea"
+      }
+    },
+    {
+      "key": "a503087d-2e58-4d0b-b07d-490397da92c4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "a503087d-2e58-4d0b-b07d-490397da92c4",
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea"
+      }
+    },
+    {
+      "key": "cf95c5ae-8833-47a8-a134-edc80bb3d8c2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sprites in Action” video \n",
+        "progression_name": "Video: Sprites in Action"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf95c5ae-8833-47a8-a134-edc80bb3d8c2",
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea"
+      }
+    },
+    {
+      "key": "b88c5d6b-d058-443b-8d04-d855bb836069",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-6 - Skill Building” slide\n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069",
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea"
+      }
+    },
+    {
+      "key": "2ef70f40-2c26-453e-a878-c10b20cf1952",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8 - Skill Building” slide\n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952",
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea"
+      }
+    },
+    {
+      "key": "0b81cb53-5ebb-488b-9513-4450d869b58e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b81cb53-5ebb-488b-9513-4450d869b58e",
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea"
+      }
+    },
+    {
+      "key": "6a8091a2-9463-4b55-bd36-c8def279d2ff",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Did you change the program in any way to make it feel more like your own?_\n",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a8091a2-9463-4b55-bd36-c8def279d2ff",
+        "lesson_activity.key": "c574080c-205c-4c45-ad45-c630fc0fca69"
       }
     },
     {
@@ -2058,6 +2425,229 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Follow the Algorithm - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SimonSays-Unplugged2022"
+        ],
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "32881ece-c98b-4f99-8f33-2d45874a07db"
+      },
+      "level_keys": [
+        "SimonSays-Unplugged2022"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 1-validated2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "a503087d-2e58-4d0b-b07d-490397da92c4"
+      },
+      "level_keys": [
+        "Dance Party 1-validated2022"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Sprites in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CDEF_video_SpritesInAction2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "cf95c5ae-8833-47a8-a134-edc80bb3d8c2"
+      },
+      "level_keys": [
+        "CDEF_video_SpritesInAction2022"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 22022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      },
+      "level_keys": [
+        "Dance Party 22022"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 32022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      },
+      "level_keys": [
+        "Dance Party 32022"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 42022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      },
+      "level_keys": [
+        "Dance Party 42022"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 52022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      },
+      "level_keys": [
+        "Dance Party 52022"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 62022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
+      },
+      "level_keys": [
+        "Dance Party 62022"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 72022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
+      },
+      "level_keys": [
+        "Dance Party 72022"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party Freeplay2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "0b81cb53-5ebb-488b-9513-4450d869b58e"
+      },
+      "level_keys": [
+        "Dance Party Freeplay2022"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_artist2022"
+        ],
         "progression": "Video: Artist Intro with JR Hildebrande"
       },
       "bonus": false,
@@ -2075,11 +2665,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2097,11 +2690,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2119,11 +2715,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist2022"
+        ],
         "progression": "Video: Loops with the Artist"
       },
       "bonus": false,
@@ -2141,11 +2740,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog32022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2163,11 +2765,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog42022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2185,11 +2790,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_practice2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2207,11 +2815,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_variables3a_predict12022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2229,11 +2840,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_video_artistVariables2022"
+        ],
         "progression": "Video: Variables in Artist"
       },
       "bonus": false,
@@ -2251,11 +2865,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_variables72022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2273,11 +2890,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_variables82022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2295,11 +2915,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_variables92022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2317,11 +2940,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_variables102022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2339,11 +2965,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_variablesFP2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2361,11 +2990,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2383,11 +3015,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2405,11 +3040,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2427,11 +3065,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops12022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2449,11 +3090,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_practice2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2471,11 +3115,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_0a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2493,11 +3140,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_1a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2515,11 +3165,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_2a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2537,11 +3190,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_3aa2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2559,11 +3215,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_3a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2581,11 +3240,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_4a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2603,11 +3265,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_5a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2625,11 +3290,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_beeVar_practice2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2647,11 +3315,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ForLoopFun-Unplugged2022"
+        ],
         "progression": "For Loop Fun - Unplugged Activity"
       },
       "bonus": false,
@@ -2669,11 +3340,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for12022"
+        ],
         "progression": "Review"
       },
       "bonus": false,
@@ -2691,11 +3365,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for22022"
+        ],
         "progression": "Review"
       },
       "bonus": false,
@@ -2713,11 +3390,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for2a2022"
+        ],
         "progression": "Exploration: For Loops"
       },
       "bonus": false,
@@ -2735,11 +3415,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_video_forBee2022"
+        ],
         "progression": "Video: For Loops"
       },
       "bonus": false,
@@ -2757,11 +3440,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for3_predict12022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2779,11 +3465,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for42022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2801,11 +3490,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for62022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2823,11 +3515,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for72022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2845,11 +3540,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_beeFor_practice2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2867,11 +3565,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for_challenge12022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2889,11 +3590,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_for_challenge22022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2911,11 +3615,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_video_forArtist2022"
+        ],
         "progression": "Video: For Loops"
       },
       "bonus": false,
@@ -2933,11 +3640,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for12022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -2955,11 +3665,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for5a2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2977,11 +3690,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for62022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2999,11 +3715,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for72022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3021,11 +3740,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for82022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3043,11 +3765,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for92022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3065,11 +3790,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for102022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3087,11 +3815,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for_challenge12022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3109,11 +3840,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_artist_for_challenge22022"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3382,6 +4116,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "2022drafting",
         "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SimonSays-Unplugged2022",
+        "script_level.level_keys": [
+          "SimonSays-Unplugged2022"
+        ],
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "32881ece-c98b-4f99-8f33-2d45874a07db"
       }
     },
     {
@@ -3971,9 +4717,129 @@
         "script.name": "2022drafting",
         "activity_section.key": "020a10b0-7a37-4e77-abfb-206d05abc419"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 1-validated2022",
+        "script_level.level_keys": [
+          "Dance Party 1-validated2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "a503087d-2e58-4d0b-b07d-490397da92c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CDEF_video_SpritesInAction2022",
+        "script_level.level_keys": [
+          "CDEF_video_SpritesInAction2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "cf95c5ae-8833-47a8-a134-edc80bb3d8c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 22022",
+        "script_level.level_keys": [
+          "Dance Party 22022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 32022",
+        "script_level.level_keys": [
+          "Dance Party 32022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 42022",
+        "script_level.level_keys": [
+          "Dance Party 42022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 52022",
+        "script_level.level_keys": [
+          "Dance Party 52022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 62022",
+        "script_level.level_keys": [
+          "Dance Party 62022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 72022",
+        "script_level.level_keys": [
+          "Dance Party 72022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party Freeplay2022",
+        "script_level.level_keys": [
+          "Dance Party Freeplay2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "0b81cb53-5ebb-488b-9513-4450d869b58e"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "Follow the Algorithm",
+      "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
+      "key": "follow_the_algorithm",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "follow_the_algorithm"
+      }
+    },
     {
       "name": "For Loop Fun",
       "url": "https://youtu.be/mX857v5B4gE",
@@ -4064,6 +4930,18 @@
       }
     },
     {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "unplugged_blocks_courses_c-f_",
@@ -4077,6 +4955,18 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "resource.key": "follow_the_algorithm"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "For Loop Fun",
@@ -4134,6 +5024,36 @@
   ],
   "vocabularies": [
     {
+      "key": "algorithm",
+      "word": "algorithm",
+      "definition": "A list of steps to finish a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
       "key": "for_loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
@@ -4177,6 +5097,12 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Drawing with Loops",
         "vocabulary.key": "loop"
       }
@@ -4185,6 +5111,18 @@
       "seeding_key": {
         "lesson.key": "Drawing with Loops",
         "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -4355,6 +5293,26 @@
       }
     },
     {
+      "key": "8096f186-7901-47a2-ba4b-afe3eb50fb6c",
+      "properties": {
+        "description": "Create an interactive animation using sprites, behaviors, and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "objective.key": "8096f186-7901-47a2-ba4b-afe3eb50fb6c"
+      }
+    },
+    {
+      "key": "8c29137b-048a-4848-8e1c-33086cbb5a01",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "objective.key": "8c29137b-048a-4848-8e1c-33086cbb5a01"
+      }
+    },
+    {
       "key": "a8678c73-d1d0-4762-97c4-f44199ca12bc",
       "properties": {
         "description": "Utilize variables in place of repetitive values inside of a program."
@@ -4372,6 +5330,16 @@
       "seeding_key": {
         "lesson.key": "For Loops with Artist",
         "objective.key": "ca76fc9e-7b93-41fb-968e-9c267c51caeb"
+      }
+    },
+    {
+      "key": "f0e4d7fe-e464-4936-936b-6c303823fdb8",
+      "properties": {
+        "description": "begin to make connections about a new way to write programs"
+      },
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "objective.key": "f0e4d7fe-e464-4936-936b-6c303823fdb8"
       }
     },
     {
@@ -4398,9 +5366,23 @@
   "lessons_standards": [
     {
       "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Drawing with Loops",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     },
     {
