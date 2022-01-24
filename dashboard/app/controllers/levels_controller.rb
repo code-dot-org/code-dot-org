@@ -59,8 +59,6 @@ class LevelsController < ApplicationController
     Weblab
   ]
 
-  use_reader_connection_for_route(:get_rubric)
-
   # GET /levels
   # GET /levels.json
   def index
@@ -149,6 +147,8 @@ class LevelsController < ApplicationController
     fb = FirebaseHelper.new('shared')
     @dataset_library_manifest = fb.get_library_manifest
   end
+
+  use_reader_connection_for_route(:get_rubric)
 
   # GET /levels/:id/get_rubric
   # Get all the information for the mini rubric
