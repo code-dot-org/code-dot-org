@@ -212,6 +212,7 @@ class Script < ApplicationRecord
         unit_group.instruction_type = get_instruction_type if unit_group.instruction_type != get_instruction_type
         unit_group.participant_audience = get_participant_audience if unit_group.participant_audience != get_participant_audience
         unit_group.instructor_audience = get_instructor_audience if unit_group.instructor_audience != get_instructor_audience
+        unit_group.save! if unit_group.changed?
       else
         unit_group = UnitGroup.new(
           name: professional_learning_course,
