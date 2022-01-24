@@ -4749,10 +4749,10 @@ codemirror-spell-checker:
   dependencies:
     typo-js "*"
 
-codemirror@5.5:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.5.0.tgz#0fa0e3a02ad51db4c280142e15970df9edaf9900"
-  integrity sha1-D6DjoCrVHbTCgBQuFZcN+e2vmQA=
+codemirror@5.65:
+  version "5.65.1"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.65.1.tgz#5988a812c974c467f964bcc1a00c944e373de502"
+  integrity sha512-s6aac+DD+4O2u1aBmdxhB7yz2XU7tG3snOyQ05Kxifahz7hoxnfxIRHxiCSEv3TUC38dIVH8G+lZH9UWSfGQxA==
 
 coffeescript@~1.10.0:
   version "1.10.0"
