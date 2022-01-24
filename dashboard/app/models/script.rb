@@ -203,6 +203,16 @@ class Script < ApplicationRecord
     !professional_learning_course.nil?
   end
 
+  def must_share_settings_for_scripts_in_same_plc_course
+    if old_professional_learning_course?
+      plc_course_scripts = all_scripts.select {|s| s.professional_learning_course == professional_learning_course}
+      errors.add(:published_state, 'must be the same for all scripts in same plc course.') if plc_course_scripts.map(&:published_state).any? {|state| state != published_state}
+      errors.add(:instructor_audience, 'must be the same for all scripts in same plc course.') if plc_course_scripts.map(&:instructor_audience).any? {|audience| audience != instructor_audience}
+      errors.add(:participant_audience, 'must be the same for all scripts in same plc course.') if plc_course_scripts.map(&:participant_audience).any? {|audience| audience != participant_audience}
+      errors.add(:instruction_type, 'must be the same for all scripts in same plc course.') if plc_course_scripts.map(&:instruction_type).any? {|type| type != instruction_type}
+    end
+  end
+
   def generate_plc_objects
     if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
