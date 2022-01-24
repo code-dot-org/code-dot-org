@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-01-06T20:25:38.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -57,7 +53,7 @@
     "encrypted": "false",
     "mini_toolbox": "true",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"5a4258fa-c1a8-4898-a44e-c7d7419ebfa4\",\r\n    \"5c292f95-929d-48f3-9432-0f00a8c77934\",\r\n    \"a54f4f7d-6764-4345-abaa-b651abdca33e\",\r\n    \"64c242da-16c3-4261-9c57-936ce1f90aad\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"5a4258fa-c1a8-4898-a44e-c7d7419ebfa4\": {\r\n      \"name\": \"healthy\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fspritelab%2FCdlNOvtih6CV7QUekCCPH7e11tMwCGQh%2Fcategory_characters%2Fpurple_monster.png\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"CdlNOvtih6CV7QUekCCPH7e11tMwCGQh\",\r\n      \"categories\": [\r\n        \"characters\"\r\n      ]\r\n    },\r\n    \"5c292f95-929d-48f3-9432-0f00a8c77934\": {\r\n      \"name\": \"sick\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fv3%252Fanimations%252FVMkrxJPPGixIsTbGRHNrmw%252F5c292f95-929d-48f3-9432-0f00a8c77934.png%253Fversion%253D7pTy7xkAeI5qrU9scI3nWmKb7CzBMlfU\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"7pTy7xkAeI5qrU9scI3nWmKb7CzBMlfU\"\r\n    },\r\n    \"a54f4f7d-6764-4345-abaa-b651abdca33e\": {\r\n      \"name\": \"healthy_mask\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2F1alB-zQ8FPOdcMCQ8JPl2RP80uKiLDna7JAYAYRze7A%2Fa54f4f7d-6764-4345-abaa-b651abdca33e.png%3Fversion%3D6x.8TVua7c1V7jHF1sg5T3.LfPLdT7PU\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"6x.8TVua7c1V7jHF1sg5T3.LfPLdT7PU\"\r\n    },\r\n    \"64c242da-16c3-4261-9c57-936ce1f90aad\": {\r\n      \"name\": \"sick_mask\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2F1alB-zQ8FPOdcMCQ8JPl2RP80uKiLDna7JAYAYRze7A%2F64c242da-16c3-4261-9c57-936ce1f90aad.png%3Fversion%3DYm9Z9V3PzU8puG_vRfdn2fsPcYtbd4.2\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"Ym9Z9V3PzU8puG_vRfdn2fsPcYtbd4.2\"\r\n    }\r\n  }\r\n}",
-    "long_instructions": "<img src=\"https://images.code.org/a157874032e8f71cf921ba32f082e5b4-image-1602518140122.2020-10-12 11_55_12.gif\" style=\"float:right; padding:10px\">\r\n\r\n# Stopping the Outbreak with Masks\r\n*One way to slow down an outbreak is to wear a mask. Monsters with face masks will be unable to get the virus or give it to others. To make something happen when a type of monster is clicked, you can use a new type of* \"event\" *block.*\r\n\r\n## Do This\r\n\r\n1. Use a `when clicked` block with the `change costume` block to give healthy monsters a mask when they are clicked. Repeat this for sick monsters.\r\n\r\n2. Press `Run` and begin rapidly clicking the monsters. Try to slow or stop the outbreak by putting a mask on all the monsters.\r\n\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/a157874032e8f71cf921ba32f082e5b4-image-1602518140122.2020-10-12 11_55_12.gif\" style=\"float:right; padding:10px\">\r\n\r\n# Stopping the Outbreak with Masks\r\n*One way to slow down an outbreak is to wear a mask. Monsters with face masks will be unable to get the virus or give it to others.\r\n\r\n## Do This\r\n\r\n1. Use a `when clicked` block with the `change costume` block to give healthy monsters a mask when they are clicked. Repeat this for sick monsters.\r\n\r\n2. Press `Run` and begin rapidly clicking the monsters. Try to slow or stop the outbreak by putting a mask on all the monsters.\r\n\r\n",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To give the monsters masks, use the `change costume` block with a `when clicked` event:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\"><title name=\\\"CONDITION\\\">\\\"when\\\"</title><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><title name=\\\"ANIMATION\\\">\\\"healthy\\\"</title></block></value><next><block type=\\\"gamelab_setAnimation\\\"><title name=\\\"ANIMATION\\\">\\\"healthy_mask\\\"</title></block></next></block></xml>\\n\\nBe sure to drag in the small red `clicked` block as well!\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4e192ae911fa44f4c48f4dceff95d8a3/outbreak3.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"The new code for this level should look like this:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\"><title name=\\\"CONDITION\\\">\\\"when\\\"</title><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><title name=\\\"ANIMATION\\\">\\\"healthy\\\"</title></block></value><next><block type=\\\"gamelab_setAnimation\\\"><title name=\\\"ANIMATION\\\">\\\"healthy_mask\\\"</title><value name=\\\"THIS\\\"><block type=\\\"gamelab_clickedSpritePointer\\\"></block></value></block></next></block><block type=\\\"gamelab_spriteClicked\\\"><title name=\\\"CONDITION\\\">\\\"when\\\"</title><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><title name=\\\"ANIMATION\\\">\\\"sick\\\"</title></block></value><next><block type=\\\"gamelab_setAnimation\\\"><title name=\\\"ANIMATION\\\">\\\"sick_mask\\\"</title><value name=\\\"THIS\\\"><block type=\\\"gamelab_clickedSpritePointer\\\"></block></value></block></next></block></xml>\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/512f16484c993d5ad4dbe535dcc20748/outbreak3.mp3\"}]",
     "display_name": "Virus Simulation",
     "validation_enabled": "false",
@@ -67,11 +63,22 @@
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "drmonster",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-01-06T20:25:38.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:38.852+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak3\\\"\"],\"cloned_from\":\"CourseF_outbreak3\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:38.852+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak3\\\"\"],\"cloned_from\":\"CourseF_outbreak3\"},{\"changed_at\":\"2022-01-24 14:43:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
