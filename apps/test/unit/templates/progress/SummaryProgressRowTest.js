@@ -11,14 +11,19 @@ import {
 describe('SummaryProgressRow', () => {
   const baseProps = {
     dark: false,
-    lesson: fakeLesson('Maze', 1),
-    lessonNumber: 3,
+    lesson: fakeLesson('Maze', 1, false, 3),
     levels: fakeLevels(4),
     lessonIsVisible: () => true,
     lessonIsLockedForUser: () => false,
     lessonIsLockedForAllStudents: () => false,
     lockableAuthorized: false
   };
+
+  // This ID is used by the EndOfLessonDialog to scroll the recently completed lesson into view
+  it('renders with the expected ID', () => {
+    const wrapper = shallow(<SummaryProgressRow {...baseProps} />);
+    assert.equal(wrapper.props().id, 'summary-progress-row-3');
+  });
 
   it('renders with dashed border and not faded when instructor viewing hidden lesson', () => {
     const wrapper = shallow(
