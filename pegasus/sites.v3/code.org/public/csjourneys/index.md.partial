@@ -53,6 +53,7 @@ social:
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Career chats with professionals</strong></h3>
         <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Join us for live weekly chats with a diverse group of computing professionals from Spotify, Oculus, MeowWolf, Snapchat, and more!</div>
+        <br>
         <a class="linktag" id="myjourneychats" href="/csjourneys/csadventures#chats" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
