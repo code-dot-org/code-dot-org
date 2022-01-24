@@ -1,0 +1,57 @@
+---
+title: Cookie Policy
+theme: responsive
+---
+
+<link href="/css/cookies.css" rel="stylesheet" />
+
+<a id="top"></a>
+<h1>Code.org Cookie Policy</h1>
+
+<strong>Date Last Updated:</strong> 01/07/2022
+<p class="cookies-intro">When you visit our website it may ask your browser to store a small piece of data (text file) called a cookie on your device to remember specific information, such as your language preference or login status.  We may use both session cookies and persistent cookies. A session cookie disappears automatically after the User closes their browser. A persistent cookie remains after the browser is closed and may be used by the browser on subsequent visits to the Services.  Cookies set by us and called first-party cookies. We also use third-party cookies, which are cookies from a domain other than the domain of the website you are visiting.  We use cookies and related technologies as follows:</p>
+
+<h2>Strictly Necessary Cookies</h2>
+
+<p>Some cookies are necessary for our website to function and cannot be switched off in our systems.  They are usually only set in response to actions made by you that amount to a request for services.   You can set your browser to block or alert you about these cookies, but that may cause some parts of the site to not work properly.  These cookies do not store any personally identifiable information.</p>
+Performance/Analytics Cookies
+
+<p>These cookies allow us to count and assess visits and traffic sources so we can measure and improve the performance of our site. They help us assess which pages are the most and least popular and see how users move around the site and use the curriculum. If these cookies are disabled, we will not know when a user like yourself has visited our site or be able to monitor the site’s performance.</p>
+<h2>Functional Cookies</h2>
+<p>These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.
+<h2>Social Media Cookies</h2>
+<p>These cookies are set by social media services that we have added to the site to enable you to share content with your friends and networks. They are capable of tracking your browser across other sites and building up a profile of your interests. This may impact the content and messages you see on other websites you visit. If you do not allow these cookies you may not be able to use or see these sharing tools.</p>
+
+<h2>Marketing Cookies</h2>
+
+We may use marketing cookies to assess when a user interacts with marketing communications, such as a marketing email or a marketing-based landing page on our website.  Collected information is used to evaluate the effectiveness of our email campaigns or to provide better understanding of how our outreach is working so we can improve our communications and provide the most relevant information to our users.   </p> 
+<h2>How To Control and Delete Cookies</h2>
+
+<h3>Consent Tool</h3>
+<p>
+    The consent tool on our site can be utilized to customize your cookie preferences.  The consent tool specifically controls the performance/analytics, functional, social media, and  marketing cookies set by using our primary public websites (code.org and hourofcode.com).  Strictly necessary cookies cannot be disabled, nor can the tool be used to block cookies on third party websites linked from our website.<br>
+    <div class="cookies-consent-tool">
+        You can access the Cookie Consent tool anytime by clicking here: <button id="ot-sdk-btn" class="ot-sdk-show-settings cookies-settings-btn">Cookies Settings</button>
+    </div>
+</p>
+
+<h3>Using Your Browser</h3>
+<p>
+    Many of the cookies used on our website and through emails can be enabled or disabled through through your browser. To disable cookies through your browser, follow the instructions usually located within the “Help,” “Tools” or “Edit” menus in your browser. Please note that disabling a cookie or category of cookies does not delete the cookie from your browser unless manually completed through your browser function.  The following provides information on how to manage cookies on several popular browsers:
+    <ul>
+        <li><a href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en">Google Chrome</a></li>
+        <li><a href="https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy">Microsoft Edge</a></li>
+        <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">Mozilla Firefox</a></li>
+        <li><a href="https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies">Microsoft Internet Explorer</a></li>
+        <li><a href="https://www.opera.com/help/tutorials/security/privacy/">Opera</a></li>
+        <li><a href="https://support.apple.com/en-gb/safari">Apple Safari</a></li>
+    </ul>
+    To find information relating to other browsers, visit the browser developer's website.
+</p>
+<br /><br />
+<p>To find out more about cookies, including how to see what cookies have been set, visit www.aboutcookies.org or www.allaboutcookies.org.</p>
+<p>To opt out of being tracked by Google Analytics across all websites, visit <a href="http://tools.google.com/dlpage/gaoptout">http://tools.google.com/dlpage/gaoptout</a>.</p>
+
+<h2>Questions?</h2>
+
+<p>For more information, you may contact us at <a href="mailto:privacy@code.org">privacy@code.org</a>.</p>
