@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-01-06T20:25:40.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -65,17 +61,28 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"5a4258fa-c1a8-4898-a44e-c7d7419ebfa4\",\r\n    \"5c292f95-929d-48f3-9432-0f00a8c77934\",\r\n    \"a54f4f7d-6764-4345-abaa-b651abdca33e\",\r\n    \"64c242da-16c3-4261-9c57-936ce1f90aad\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"5a4258fa-c1a8-4898-a44e-c7d7419ebfa4\": {\r\n      \"name\": \"healthy\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fmedia%253Fu%253Dhttps%25253A%25252F%25252Flevelbuilder-studio.code.org%25252Fmedia%25253Fu%25253Dhttps%2525253A%2525252F%2525252Flevelbuilder-studio.code.org%2525252Fmedia%2525253Fu%2525253Dhttps%252525253A%252525252F%252525252Fstudio.code.org%252525252Fapi%252525252Fv1%252525252Fanimation-library%252525252Fspritelab%252525252FCdlNOvtih6CV7QUekCCPH7e11tMwCGQh%252525252Fcategory_characters%252525252Fpurple_monster.png\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"CdlNOvtih6CV7QUekCCPH7e11tMwCGQh\",\r\n      \"categories\": [\r\n        \"characters\"\r\n      ]\r\n    },\r\n    \"5c292f95-929d-48f3-9432-0f00a8c77934\": {\r\n      \"name\": \"sick\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fmedia%253Fu%253Dhttps%25253A%25252F%25252Flevelbuilder-studio.code.org%25252Fmedia%25253Fu%25253Dhttps%2525253A%2525252F%2525252Flevelbuilder-studio.code.org%2525252Fmedia%2525253Fu%2525253Dhttps%252525253A%252525252F%252525252Fstudio.code.org%252525252Fmedia%252525253Fu%252525253Dhttps%25252525253A%25252525252F%25252525252Flevelbuilder-studio.code.org%25252525252Fv3%25252525252Fanimations%25252525252FVMkrxJPPGixIsTbGRHNrmw%25252525252F5c292f95-929d-48f3-9432-0f00a8c77934.png%25252525253Fversion%25252525253D7pTy7xkAeI5qrU9scI3nWmKb7CzBMlfU\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"7pTy7xkAeI5qrU9scI3nWmKb7CzBMlfU\"\r\n    },\r\n    \"a54f4f7d-6764-4345-abaa-b651abdca33e\": {\r\n      \"name\": \"healthy_mask\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fmedia%253Fu%253Dhttps%25253A%25252F%25252Flevelbuilder-studio.code.org%25252Fmedia%25253Fu%25253Dhttps%2525253A%2525252F%2525252Flevelbuilder-studio.code.org%2525252Fmedia%2525253Fu%2525253Dhttps%252525253A%252525252F%252525252Fstudio.code.org%252525252Fv3%252525252Fanimations%252525252F1alB-zQ8FPOdcMCQ8JPl2RP80uKiLDna7JAYAYRze7A%252525252Fa54f4f7d-6764-4345-abaa-b651abdca33e.png%252525253Fversion%252525253D6x.8TVua7c1V7jHF1sg5T3.LfPLdT7PU\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"6x.8TVua7c1V7jHF1sg5T3.LfPLdT7PU\"\r\n    },\r\n    \"64c242da-16c3-4261-9c57-936ce1f90aad\": {\r\n      \"name\": \"sick_mask\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fmedia%253Fu%253Dhttps%25253A%25252F%25252Flevelbuilder-studio.code.org%25252Fmedia%25253Fu%25253Dhttps%2525253A%2525252F%2525252Flevelbuilder-studio.code.org%2525252Fmedia%2525253Fu%2525253Dhttps%252525253A%252525252F%252525252Fstudio.code.org%252525252Fv3%252525252Fanimations%252525252F1alB-zQ8FPOdcMCQ8JPl2RP80uKiLDna7JAYAYRze7A%252525252F64c242da-16c3-4261-9c57-936ce1f90aad.png%252525253Fversion%252525253DYm9Z9V3PzU8puG_vRfdn2fsPcYtbd4.2\",\r\n      \"frameSize\": {\r\n        \"x\": 280,\r\n        \"y\": 290\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"Ym9Z9V3PzU8puG_vRfdn2fsPcYtbd4.2\"\r\n    }\r\n  }\r\n}",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"## Vaccines\\nYou can simulate giving monsters a vaccine when you click on them. To do this, use the `change costume` block with this event:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n      <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n      <value name=\\\"SPRITE\\\">\\n        <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n          <title name=\\\"ANIMATION\\\">\\\"healthy_mask\\\"</title>\\n        </block>\\n      </value>\\n    </block></xml>\",\"hint_id\":\"whenclicked\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f2be1ca5e50a815afa49338facb37ef8/outbreak7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Feeling stuck? You can always reset your code by clicking `Version History` below then choosing to \\\"Start Over\\\".\",\"hint_id\":\"verionhistory\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/52dce71260a75e5b44e7638bfa6946fd/outbreak7.mp3\"}]",
     "project_template_level_name": "outbreak_template2022",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_callout\",\r\n  \"callout_text\": \"Click to make a new costume\",\r\n  \"element_id\": \"#animationMode\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_tab\",\r\n  \"callout_text\": \"Click here to add costumes to your project.\",\r\n  \"element_id\": \"[id=\\\"animationMode\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "short_instructions": "Create a new costume for monsters with immunity to the virus and use it in your simulation.",
     "hide_pause_button": "false",
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "drmonster",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-01-06T20:25:40.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:40.592+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak7\\\"\"],\"cloned_from\":\"CourseF_outbreak7\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:40.592+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak7\\\"\"],\"cloned_from\":\"CourseF_outbreak7\"},{\"changed_at\":\"2022-01-24 15:32:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -1138,7 +1145,7 @@
             </value>
           </block>
         </category>
-        <category name="Logic">
+        <category name="Conditionals">
           <block type="gamelab_withPercentChanceDropdown">
             <title name="NUM" config="90,75,25,10">90</title>
           </block>

@@ -13,7 +13,7 @@ social:
   "og:image:width": 1200
   "og:image:height": 630
 ---
-<link href="/css/tools.css" rel="stylesheet">
+<link href="/css/csjourneys.css" rel="stylesheet">
 
 <a id="top"></a>
 
@@ -21,9 +21,9 @@ social:
   <h3 style="margin-top:45px; color:#00adbc"><strong>Make engaging, real-world connections with CS Journeys</strong></h3>
   <p>Connecting what students are learning to the real world not only enables them to better understand and recall concepts but also excites and inspires them to continue learning.</p>
   <p>Code.org has created easy-to-use resources designed to help you illuminate real-world connections and give students opportunities to explore different career pathways.</p>
-  <p>View the <a href="https://staging.code.org/files/csjourneys/csjourneys-teacherguide.pdf" target="_blank">Teacher Guide</a> to learn more about the CS Journeys program.</p>
+  <p>View the <a href="https://code.org/files/csjourneys/csjourneys-teacherguide.pdf" target="_blank">Teacher Guide</a> to learn how to engage your students in CS Journeys.</p>
 </div>
-<div class="col-33" style="margin-top:45px">
+<div class="col-33" style="margin-top:45px; border: 1px solid #e7e8ea">
   {{ csjourneys }}
 </div>
 
@@ -53,6 +53,7 @@ social:
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Career chats with professionals</strong></h3>
         <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Join us for live weekly chats with a diverse group of computing professionals from Spotify, Oculus, MeowWolf, Snapchat, and more!</div>
+        <br>
         <a class="linktag" id="myjourneychats" href="/csjourneys/csadventures#chats" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
