@@ -713,14 +713,4 @@ class UnitGroup < ApplicationRecord
       default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
   end
-
-  # Look through all of the objects with the specified family name which have
-  # a stable published_state, and return the one with the latest version year.
-  def self.latest_stable(family_name)
-    raise unless family_name.present?
-    all_courses.
-      select {|c| c.family_name == family_name && c.stable?}.
-      sort_by(&:version_year).
-      last
-  end
 end

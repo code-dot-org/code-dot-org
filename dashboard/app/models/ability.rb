@@ -250,8 +250,13 @@ class Ability
       end
     end
 
-    can [:vocab, :resources, :code, :standards], UnitGroup do
-      true
+    can [:vocab, :resources, :code, :standards], UnitGroup do |unit_group|
+      # Assumes if one unit in a unit group is migrated they all are
+      !!unit_group.default_units[0].is_migrated
+    end
+
+    can [:vocab, :resources, :code, :standards], Script do |script|
+      !!script.is_migrated
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
@@ -287,10 +292,6 @@ class Ability
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
         user.persisted? || !login_required
       end
-    end
-
-    can [:vocab, :resources, :code, :standards], Script do |script|
-      !!script.is_migrated
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
