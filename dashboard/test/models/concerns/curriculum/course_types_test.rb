@@ -289,4 +289,13 @@ class CourseTypesTests < ActiveSupport::TestCase
       solo_unit_in_family_name.save!
     end
   end
+
+  # A unit without a family is in a unit group
+  test 'should not raise error when changing unit wihtout family' do
+    unit_without_family_name = create :script, name: 'solo-family-name', family_name: nil
+    assert_nothing_raised do
+      unit_without_family_name.participant_audience = SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      unit_without_family_name.save!
+    end
+  end
 end
