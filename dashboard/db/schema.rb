@@ -1393,6 +1393,16 @@ ActiveRecord::Schema.define(version: 2021_12_19_004355) do
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
   end
 
+  create_table "reference_guides", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "display_name"
+    t.string "key", null: false
+    t.integer "course_version_id", null: false
+    t.text "content"
+    t.integer "position", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "regional_partner_program_managers", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "program_manager_id", null: false
     t.integer "regional_partner_id", null: false
