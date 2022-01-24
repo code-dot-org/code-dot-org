@@ -665,6 +665,7 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view vocab page for student facing course') do
     refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   test_user_gets_response_for(:resources, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view resources page for pl course') do
     refute response.body.include? no_access_msg
@@ -675,6 +676,7 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view resources page for student facing course') do
     refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   test_user_gets_response_for(:standards, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view standards page for pl course') do
     refute response.body.include? no_access_msg
@@ -685,6 +687,7 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view standards page for student facing course') do
     refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   test_user_gets_response_for(:code, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view code page for pl course') do
     refute response.body.include? no_access_msg
@@ -695,6 +698,7 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view code page for student facing course') do
     refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   # tests for edit
 
