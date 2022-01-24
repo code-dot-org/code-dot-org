@@ -43,20 +43,6 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One tour per week</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
-        <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="mbari-trip" href="https://montereybayaquarium.thinkific.com/courses/exploring-the-deep-bit-by-bit" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/mbari-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monterey Bay Aquarium self-paced virtual tour">
       </a>
@@ -70,11 +56,25 @@ social:
 <p style="padding-left:15px; padding-right:15px"><i>Note that students need to create an account with Monterey Bay Aquarium to access the experience.</i></p>
 </div>
 
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One tour per week</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
+        <p style="margin-top:12px"><strong>Returning in February</strong></p>
+  </div>
+</div>
+</div>
+
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="chats">
 <h2 style="margin-top:25px">My Journey Chats</h2>
-<p>In these weekly conversations, give your students the opportunity to hear from a diverse group of people using computer science to bring music to our lives, create exciting new virtual reality worlds, and more! Conversations last 20-30 minutes, and recordings will be made available a day or two after each event. To view recordings of past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
+<p>In these weekly conversations, give your students the opportunity to hear from a diverse group of people using computer science to bring music to our lives, create exciting new virtual reality worlds, and more! Conversations last 20-30 minutes, with live closed captioning available. Recordings will be made available a day or two after each event. To view recordings of past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
 <p><strong>Note that clicking any of the "View details" buttons below will take you to Eventbrite.com.</strong></p>
 <br>
 
@@ -134,8 +134,8 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wed, February 16 at 1 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Building virtual reality worlds with Oculus</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn how product, design and engineering come together in the world of virtual reality with Tanya Parker, a product manager at Oculus. <i>For grades K-5</i>.</div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Building virtual reality worlds with Meta Quest</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn how product, design and engineering come together in the world of virtual reality with Tanya Parker, a product manager at Meta Quest. <i>For grades K-5</i>.</div>
         <a class="linktag" id="oculus-chat" href="https://www.eventbrite.com/e/247512044187" target="_blank"><button>View details</button></a>
   </div>
 </div>
@@ -170,3 +170,5 @@ social:
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
+
+<p>To view all the Spring 2022 My Journey chats, <a href="https://www.eventbrite.com/o/codeorg-33962316631" target="_blank">click here</a>. (Note this link will take you to Eventbrite.com)</p>
