@@ -2,7 +2,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   authorize_resource
   load_resource only: :create
 
-  use_reader_connection_for_route(:get_feedbacks)
+  use_reader_connection_for_route(:get_feedback_from_teacher)
 
   # Use student_id, level_id, and teacher_id to lookup the feedback for a student on a particular level and provide the
   # most recent feedback left by that teacher
@@ -23,6 +23,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       render json: @feedback.summarize(true)
     end
   end
+
+  use_reader_connection_for_route(:get_feedbacks)
 
   # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that
   # student on that level
