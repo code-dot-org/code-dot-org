@@ -109,9 +109,13 @@ exports.makeTestsFromBuilderRequiredBlocks = function(customRequiredBlocks) {
 function testFromBlock(node) {
   return {
     test: function(userBlock) {
-      // Encode userBlock while ignoring child statements
-      var userElement = Blockly.Xml.blockToDom(userBlock, true);
-      return elementsEquivalent(node, userElement);
+      var userElement = Blockly.Xml.blockToDom(userBlock);
+      // Check for equivalence while ignoring child blocks
+      return elementsEquivalent(
+        node,
+        userElement,
+        true /* ignoreChildBlocks */
+      );
     },
     blockDisplayXML: xml.serialize(node)
   };
@@ -213,7 +217,7 @@ function testsFromFunctionalCall(node, blocksXml) {
  * We consider them equivalent if they have the same tagName, attributes,
  * and children
  */
-export function elementsEquivalent(expected, given) {
+export function elementsEquivalent(expected, given, ignoreChildBlocks) {
   if (!(expected instanceof Element && given instanceof Element)) {
     // if we expect ???, allow match with anything
     if (expected instanceof Text && expected.textContent === '???') {
@@ -244,7 +248,7 @@ export function elementsEquivalent(expected, given) {
     return false;
   }
 
-  if (!childrenEquivalent(expected, given)) {
+  if (!childrenEquivalent(expected, given, ignoreChildBlocks)) {
     return false;
   }
 
@@ -303,9 +307,15 @@ function attributesEquivalent(expected, given) {
 /**
  * Checks whether the children of two different elements are equivalent
  */
-function childrenEquivalent(expected, given) {
-  var children1 = expected.childNodes;
-  var children2 = given.childNodes;
+function childrenEquivalent(expected, given, ignoreChildBlocks) {
+  var filterFn = function(node) {
+    // CDO Blockly returns tag names in all caps
+    var tagName = node.tagName && node.tagName.toLowerCase();
+    return ignoreChildBlocks && tagName !== 'next' && tagName !== 'statement';
+  };
+  var children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
+  var children2 = Array.prototype.filter.call(given.childNodes, filterFn);
+
   if (expected.getAttribute('inputcount') === '???') {
     // If required block ignores inputcount, allow arbitrary children
     return true;
@@ -314,7 +324,7 @@ function childrenEquivalent(expected, given) {
     return false;
   }
   for (var i = 0; i < children1.length; i++) {
-    if (!elementsEquivalent(children1[i], children2[i])) {
+    if (!elementsEquivalent(children1[i], children2[i], ignoreChildBlocks)) {
       return false;
     }
   }
