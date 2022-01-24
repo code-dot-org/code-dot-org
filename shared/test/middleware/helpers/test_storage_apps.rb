@@ -164,7 +164,7 @@ class StorageAppsTest < Minitest::Test
     end
 
     # Restore project
-    assert_equal true, storage_apps.delete(new_project_channel_id)
+    assert_equal true, storage_apps.restore(new_project_channel_id)
 
     # Can get restored project
     storage_apps.get(new_project_channel_id)
