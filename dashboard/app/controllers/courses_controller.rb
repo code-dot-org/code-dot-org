@@ -94,22 +94,18 @@ class CoursesController < ApplicationController
   end
 
   def vocab
-    return render :forbidden unless can? :read, @unit_group
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def resources
-    return render :forbidden unless can? :read, @unit_group
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def code
-    return render :forbidden unless can? :read, @unit_group
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def standards
-    return render :forbidden unless can? :read, @unit_group
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
