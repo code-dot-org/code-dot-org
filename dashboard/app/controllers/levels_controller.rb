@@ -279,9 +279,9 @@ class LevelsController < ApplicationController
   # set validation directly to ensure it is encrypted.
   # Then set any remaining properties with update_properties.
   def update_start_code
+    changes = JSON.parse(request.body.read)
     if @level.respond_to?(:validation)
-      @level.validation = params[:validation]
-      params.delete(:validation)
+      @level.validation = changes["validation"]
     end
     return update_properties(ignored_keys: ["validation"])
   end
