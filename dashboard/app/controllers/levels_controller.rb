@@ -59,6 +59,8 @@ class LevelsController < ApplicationController
     Weblab
   ]
 
+  use_reader_connection_for_route(:get_rubric)
+
   # GET /levels
   # GET /levels.json
   def index
