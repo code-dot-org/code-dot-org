@@ -22,6 +22,8 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -119,8 +121,13 @@ class UnitOverview extends React.Component {
     const showUnversionedRedirectWarningDialog =
       showUnversionedRedirectWarning && !this.state.showRedirectDialog;
 
+    const completedLessonNumber = queryParams('completedLessonNumber');
+
     return (
       <div>
+        {completedLessonNumber && (
+          <EndOfLessonDialog lessonNumber={completedLessonNumber} />
+        )}
         <div>
           {showUnversionedRedirectWarningDialog && (
             <UnversionedScriptRedirectDialog />

@@ -16,68 +16,6 @@ import {
   lessonIsVisible
 } from './progressHelpers';
 
-export const styles = {
-  lightRow: {
-    backgroundColor: color.table_light_row
-  },
-  darkRow: {
-    backgroundColor: color.table_dark_row
-  },
-  dashedBorder: {
-    borderStyle: 'dashed',
-    borderWidth: 2
-  },
-  col1: {
-    width: 200,
-    minWidth: 200,
-    maxWidth: 200,
-    lineHeight: '52px',
-    color: color.charcoal,
-    letterSpacing: -0.11,
-    whiteSpace: 'nowrap',
-    paddingLeft: 20,
-    paddingRight: 20,
-    borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
-    borderRightStyle: 'solid'
-  },
-  col2: {
-    position: 'relative',
-    width: '100%',
-    paddingLeft: 20,
-    paddingRight: 20
-  },
-  // When we set our opacity on the row element instead of on individual tds,
-  // there are weird interactions with our tooltips in Chrome, and borders end
-  // up disappearing.
-  fadedCol: {
-    opacity: 0.6
-  },
-  colText: {
-    color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
-  },
-  icon: {
-    marginRight: 5,
-    fontSize: 12,
-    color: color.cyan
-  },
-  unlockedIcon: {
-    color: color.orange
-  },
-  focusAreaMargin: {
-    // Our focus area indicator is absolutely positioned. Add a margin when it's
-    // there so that it wont overlap dots.
-    marginRight: 130
-  },
-  opaque: {
-    opacity: 1
-  }
-};
-
 class SummaryProgressRow extends React.Component {
   static propTypes = {
     dark: PropTypes.bool.isRequired,
@@ -117,6 +55,7 @@ class SummaryProgressRow extends React.Component {
     const lockedTooltipId = _.uniqueId();
     return (
       <tr
+        id={`summary-progress-row-${lesson.lessonNumber}`}
         className="uitest-summary-progress-row"
         style={{
           ...(!dark && styles.lightRow),
@@ -197,6 +136,68 @@ class SummaryProgressRow extends React.Component {
     );
   }
 }
+
+export const styles = {
+  lightRow: {
+    backgroundColor: color.table_light_row
+  },
+  darkRow: {
+    backgroundColor: color.table_dark_row
+  },
+  dashedBorder: {
+    borderStyle: 'dashed',
+    borderWidth: 2
+  },
+  col1: {
+    width: 200,
+    minWidth: 200,
+    maxWidth: 200,
+    lineHeight: '52px',
+    color: color.charcoal,
+    letterSpacing: -0.11,
+    whiteSpace: 'nowrap',
+    paddingLeft: 20,
+    paddingRight: 20,
+    borderRightWidth: 1,
+    borderRightColor: color.border_light_gray,
+    borderRightStyle: 'solid'
+  },
+  col2: {
+    position: 'relative',
+    width: '100%',
+    paddingLeft: 20,
+    paddingRight: 20
+  },
+  // When we set our opacity on the row element instead of on individual tds,
+  // there are weird interactions with our tooltips in Chrome, and borders end
+  // up disappearing.
+  fadedCol: {
+    opacity: 0.6
+  },
+  colText: {
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 12,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  icon: {
+    marginRight: 5,
+    fontSize: 12,
+    color: color.cyan
+  },
+  unlockedIcon: {
+    color: color.orange
+  },
+  focusAreaMargin: {
+    // Our focus area indicator is absolutely positioned. Add a margin when it's
+    // there so that it wont overlap dots.
+    marginRight: 130
+  },
+  opaque: {
+    opacity: 1
+  }
+};
 
 export const UnconnectedSummaryProgressRow = SummaryProgressRow;
 export default connect(state => ({
