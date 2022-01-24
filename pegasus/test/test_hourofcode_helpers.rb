@@ -46,10 +46,10 @@ class HourOfCodeHelpersTest < Minitest::Test
     response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
     assert_equal 'http://hourofcode.com/fr/xyz', response.headers['Location']
 
-    header 'ACCEPT_LANGUAGE', 'es'
-    # French geo, Spanish browser language
+    header 'ACCEPT_LANGUAGE', 'it'
+    # French geo, Italian browser language
     response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
-    assert_equal 'http://hourofcode.com/fr/es/xyz', response.headers['Location']
+    assert_equal 'http://hourofcode.com/fr/it/xyz', response.headers['Location']
   end
 
   # Ensure redirect goes to original (spoofable) IP-address location,
