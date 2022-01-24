@@ -172,6 +172,7 @@ class Script < ApplicationRecord
   include SerializedProperties
 
   after_save :generate_plc_objects
+  validate :scripts_in_same_plc_course
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
@@ -203,7 +204,7 @@ class Script < ApplicationRecord
     !professional_learning_course.nil?
   end
 
-  def must_share_settings_for_scripts_in_same_plc_course
+  def units_in_same_plc_course_must_share_settings
     if old_professional_learning_course?
       plc_course_scripts = all_scripts.select {|s| s.professional_learning_course == professional_learning_course}
       errors.add(:published_state, 'must be the same for all scripts in same plc course.') if plc_course_scripts.map(&:published_state).any? {|state| state != published_state}
