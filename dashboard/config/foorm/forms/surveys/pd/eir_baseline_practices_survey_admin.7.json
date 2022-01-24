@@ -1,20 +1,25 @@
 {
   "title": "Code.org Baseline Practices Survey",
-  "description": "Administrator Questionnaire",
+  "description": "Administrator Questionnaire v.7",
   "logoPosition": "right",
   "pages": [
     {
-      "name": "page1",
+      "name": "title_and_consent_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "title_and_consent_language",
+          "html": "<h1>Administrator Questionnaire</h1><p>As part of the Equity in AP Computer Science Principles study, we are asking you to complete this survey that tells us about your thoughts and beliefs about computer science as well as the state of computer science education at your school.</p><p>Participation is voluntary and you may stop at any time without penalty. It generally takes between 20 and 30 minutes to complete this survey, depending on your responses.</p><p>All of your responses will be confidential and reported out only in the aggregate.</p><p>If you have questions about the evaluation or the survey, you may contact <strong>Nara Nayar</strong> at <a href='mailto:nnayar@air.org'>nnayar@air.org</a> or (202) 403-5391. If you have any questions about your rights as a research participant, you may contact AIR’s Institutional Review Board at <a href='mailto:IRB@air.org'>IRB@air.org</a>, or toll free at 1-800-634-0797.</p><p>If you have understood this information and agree to have your survey responses used for this study, please click below to continue to the survey. If you do not want to participate in the study, please exit now.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Computer_science_at_your_school",
       "elements": [
         {
           "type": "html",
           "name": "section_cs_school",
-          "html": "<h1>Computer Science Courses Currently Offered at Your School"
-        },
-        {
-          "type": "html",
-          "name": "section_cs_school_intro",
-          "html": "<h3> We would like to know about Computer Science courses currently offered at your school. <br> <br> <b> Please refer to this definition of Computer Science courses to answer the questions in this survey: </b> <br> <p> <b> Computer Science </b> focuses on understanding why and how computers work. Students study the impact of technology on society, and aims to develop coding and hardware and software design skills. <br> <br> Computer Science courses do not aim to teach students how to use computers or computer applications like word processing software. "
+          "html": "<h1>Computer Science Courses Currently Offered at Your School</h1><p><strong>Please refer to this definition of Computer Science courses to answer the questions in this survey:</strong></p><blockquote><strong>Computer Science</strong> courses focus on understanding why and how computers work. Students study the impact of technology on society, and aim to develop coding and hardware and software design skills.<br><br>Computer Science courses <strong>do not</strong> aim to teach students how to use computers or computer applications like word processing software.</blockquote> "
         },
         {
           "type": "radiogroup",
@@ -42,7 +47,7 @@
         {
           "type": "matrix",
           "name": "available_courses",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
           "title": "Which of the following computer science courses are available to students in this school? (Check one in each row.)\n",
           "columns": [
             {
@@ -96,7 +101,7 @@
         {
           "type": "checkbox",
           "name": "contents_cs_course",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
           "title": "What content is covered in computer science courses at your school (from introductory to advanced)? (Check all that apply.)",
           "choices": [
             {
@@ -185,7 +190,7 @@
         {
           "type": "checkbox",
           "name": "take_cs_programming",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
           "title": "Can students at your school get credit by taking computer science courses that teach programming through any of these other options? (Check all that apply.)",
           "choices": [
             {
@@ -216,7 +221,7 @@
         {
           "type": "text",
           "name": "number_students",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {take_cs_programming} <> ['none']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {take_cs_programming} <> ['none']  or {cs_offering} empty",
           "title": "Approximately how many students in grades 9-12 in this school will take a computer science course this year that includes programming or has programming as a prerequisite? (Please enter a number.)",
           "isRequired": true,
           "requiredErrorText": "Please enter a number greater than 0.",
@@ -236,7 +241,7 @@
         {
           "type": "radiogroup",
           "name": "grad_requirement",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
           "title": "In order to graduate from this high school, how many years of computer science are grades 9-12 students required to take? (Check one.) ",
           "choices": [
             {
@@ -270,7 +275,7 @@
         {
           "type": "matrix",
           "name": "count_toward_requirement",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
           "title": "Can computer science courses count towards students' high school graduation requirements in each of the following subject areas? (Check one in each row.) \n",
           "columns": [
             {
@@ -300,19 +305,19 @@
         {
           "type": "html",
           "name": "section_APCS_plans",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']  or {cs_offering} empty",
           "html": "<h1>Details on Offering AP Computer Science Principles at Your School"
         },
         {
           "type": "html",
           "name": "section_APCS_plans_intro",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']  or {cs_offering} empty",
           "html": "<h3>Please share more details about your plans for offering AP Computer Science Principles courses."
         },
         {
           "type": "checkbox",
           "name": "grade_levels_csp",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']  or {cs_offering} empty",
           "title": "In my school, AP Computer Science Principles is or will be taught to students in the following grade levels. (Check all that apply.)",
           "choices": [
             {
@@ -339,7 +344,7 @@
         {
           "type": "radiogroup",
           "name": "required_course_status",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']  or {cs_offering} empty",
           "title": "Is AP Computer Science Principles (or will it be) offered as a required or elective course at your school? (Check one.)",
           "choices": [
             {
@@ -359,7 +364,7 @@
         {
           "type": "radiogroup",
           "name": "csp_prerequisites",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']  or {cs_offering} empty",
           "title": "Does AP Computer Science Principles have (or will it have) prerequisites or other entrance criteria at your school? (Check one.)",
           "choices": [
             {
@@ -379,7 +384,7 @@
         {
           "type": "radiogroup",
           "name": "section_time_minutes",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']  or {cs_offering} empty",
           "title": "On average, how many MINUTES PER WEEK does (or will) a typical section of AP Computer Science Principles meet? (Check one.)",
           "choices": [
             {
@@ -420,7 +425,7 @@
         {
           "type": "radiogroup",
           "name": "course_length_weeks",
-          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']",
+          "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] and {available_courses.apcsp} anyof ['yes', 'planning_to']  or {cs_offering} empty",
           "title": "Approximately how many WEEKS does (or will) a typical section of AP Computer Science Principles run? (Check one.)",
           "choices": [
             {
@@ -532,7 +537,7 @@
         {
           "type": "radiogroup",
           "name": "school_facilities_1",
-          "visibleIf": "{cs_offering} = 'Y'",
+          "visibleIf": "{cs_offering} = 'Y'  or {cs_offering} empty",
           "title": "Do you have the resources you need to set up a computer science section?",
           "choices": [
             {
@@ -552,7 +557,7 @@
         {
           "type": "checkbox",
           "name": "school_facilities_2",
-          "visibleIf": "{cs_offering} = 'Y' and {school_facilities_1} = 'N'",
+          "visibleIf": "({cs_offering} = 'Y' and {school_facilities_1} = 'N') or {cs_offering} empty",
           "title": "Which resources are scarce? (Check all that apply.)",
           "choices": [
             {
@@ -576,7 +581,7 @@
         {
           "type": "radiogroup",
           "name": "school_facilities_3",
-          "visibleIf": "{cs_offering} = 'Y'",
+          "visibleIf": "{cs_offering} = 'Y'  or {cs_offering} empty",
           "title": "In your school, are multiple computer science courses taught in the same room simultaneously? (Check one.)",
           "choices": [
             {
@@ -648,7 +653,7 @@
         {
           "type": "radiogroup",
           "name": "pd_workshops",
-          "visibleIf": "{cs_offering} = 'Y'",
+          "visibleIf": "{cs_offering} = 'Y'  or {cs_offering} empty",
           "title": "In the last three years, has your school and/or district offered teacher professional development WORKSHOPS specifically focused on computer science or computer science teaching, possibly in conjunction with other organizations (e.g., other school districts/dioceses, college or universities, museums, professional associations, commercial vendors)? (Check one.) \n",
           "choices": [
             {
@@ -668,7 +673,7 @@
         {
           "type": "radiogroup",
           "name": "pd_teacher_study_groups",
-          "visibleIf": "{cs_offering} = 'Y'",
+          "visibleIf": "{cs_offering} = 'Y'  or {cs_offering} empty",
           "title": "In the last three years, has your school and/or district offered teacher STUDY GROUPS where teachers meet on a regular basis to discuss teaching and learning of computer science, and possibly other content areas as well (sometimes referred to as Professional Learning Communities, PLCs, or lesson study)? (Check one.)",
           "choices": [
             {
@@ -688,7 +693,7 @@
         {
           "type": "radiogroup",
           "name": "pd_one_on_one_coaching",
-          "visibleIf": "{cs_offering} = 'Y'",
+          "visibleIf": "{cs_offering} = 'Y'  or {cs_offering} empty",
           "title": "Do any teachers in your school have access to one-on-one coaching focused on improving their computer science instruction (including voluntary and/or required coaching)? (Check one.) ",
           "choices": [
             {
@@ -704,7 +709,12 @@
               "text": "Not sure"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "community",
+      "elements": [
         {
           "type": "html",
           "name": "section_cs_community",
@@ -895,7 +905,12 @@
           "hasNone": true,
           "colCount": 2,
           "maxSelectedChoices": 12
-        },
+        }
+      ]
+    },
+    {
+      "name": "should_look_like",
+      "elements": [
         {
           "type": "html",
           "name": "section_cs_beliefs",
@@ -1314,7 +1329,12 @@
               "text": "Develop students’ digital citizenship skills"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "demographics",
+      "elements": [
         {
           "type": "html",
           "name": "section_demographics",
@@ -1607,9 +1627,7 @@
           "noneText": "Prefer not to answer",
           "maxSelectedChoices": 7
         }
-      ],
-      "title": "Administrator Questionnaire",
-      "description": "{enter consent information here}"
+      ]
     }
   ],
   "published": true
