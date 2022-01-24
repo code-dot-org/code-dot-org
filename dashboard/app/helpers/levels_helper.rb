@@ -367,10 +367,6 @@ module LevelsHelper
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
-    if @level.is_a?(Applab)
-      @app_options[:isJavabuilderConnectionTestEnabled] = DCDO.get('javabuilder_connection_test_enabled', false)
-    end
-
     @app_options
   end
 
