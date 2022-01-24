@@ -2,5 +2,6 @@
   "key": "gamelab_randomLocation",
   "name": "randomLocation",
   "category": "Location",
+  "block_name": "gamelab_randomLocation",
   "syntax": "randomLocation"
 }

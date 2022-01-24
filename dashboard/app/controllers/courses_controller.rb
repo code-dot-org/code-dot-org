@@ -3,8 +3,56 @@ class CoursesController < ApplicationController
 
   before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
+  check_authorization except: [:index]
+  before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
+  before_action :render_no_access, only: [:show, :vocab, :resources, :code, :standards]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'UnitGroup', except: [:index]
+
+  def get_unit_group
+    course_name = params[:course_name]
+
+    unit_group =
+      params[:action] == "edit" ?
+        UnitGroup.get_without_cache(course_name) :
+        UnitGroup.get_from_cache(course_name)
+
+    return unit_group if unit_group
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      redirect_to action: params[:action], course_name: unit_group.name
+    end
+
+    unit_group
+  end
+
+  def set_unit_group
+    @unit_group = get_unit_group
+    raise ActiveRecord::RecordNotFound unless @unit_group
+  end
+
+  def render_no_access
+    unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
+      authenticate_user!
+      return render :no_access
+    end
+
+    if @unit_group.pilot?
+      authenticate_user!
+      unless @unit_group.has_pilot_access?(current_user)
+        return render :no_access
+      end
+    end
+
+    if @unit_group.in_development?
+      authenticate_user!
+      unless current_user.permission?(UserPermission::LEVELBUILDER)
+        return render :no_access
+      end
+    end
+  end
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
@@ -29,152 +77,98 @@ class CoursesController < ApplicationController
       return
     end
 
-    unit_group = UnitGroup.get_from_cache(params[:course_name])
-
-    if unit_group.present?
-      if unit_group.plc_course
-        authorize! :show, Plc::UserCourseEnrollment
-        user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: unit_group.plc_course)]
-        render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
-        return
-      end
-
-      if unit_group.pilot?
-        authenticate_user!
-        unless unit_group.has_pilot_access?(current_user)
-          render :no_access
-          return
-        end
-      end
-
-      if unit_group.in_development?
-        authenticate_user!
-        unless current_user.permission?(UserPermission::LEVELBUILDER)
-          render :no_access
-          return
-        end
-      end
-
-      # Attempt to redirect user if we think they ended up on the wrong course overview page.
-      override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
-      if !override_redirect && redirect_unit_group = redirect_unit_group(unit_group)
-        redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
-        return
-      end
-
-      sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
-      @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == unit_group.id})}
-
-      render 'show', locals: {unit_group: unit_group, redirect_warning: params[:redirect_warning] == 'true'}
-    elsif UnitGroup.family_names.include?(params[:course_name])
-      # csp and csd are each "course families", each containing multiple "course versions".
-      # When the url of a course family is requested, redirect to a specific course version.
-      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
-      redirect_to "#{course_path(redirect_to_course)}#{redirect_query_string}"
+    if @unit_group.plc_course
+      authorize! :show, Plc::UserCourseEnrollment
+      user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
+      render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
       return
-    else
-      raise ActiveRecord::RecordNotFound
     end
+
+    # Attempt to redirect user if we think they ended up on the wrong course overview page.
+    override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
+    if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
+      redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
+      return
+    end
+
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
+
+    render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
   def new
   end
 
   def create
-    unit_group = UnitGroup.new(
+    @unit_group = UnitGroup.new(
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
       has_numbered_units: true
     )
-    if unit_group.save
-      unit_group.write_serialization
-      redirect_to action: :edit, course_name: unit_group.name
+    if @unit_group.save
+      @unit_group.write_serialization
+      redirect_to action: :edit, course_name: @unit_group.name
     else
-      render 'new', locals: {unit_group: unit_group}
+      render 'new', locals: {unit_group: @unit_group}
     end
   end
 
   def update
-    unit_group = UnitGroup.find_by_name!(params[:course_name])
-    unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
-    unit_group.update(course_params)
-    unit_group.write_serialization
-    CourseOffering.add_course_offering(unit_group)
-    unit_group.reload
+    @unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
+    @unit_group.update(course_params)
+    @unit_group.write_serialization
+    CourseOffering.add_course_offering(@unit_group)
+    @unit_group.reload
 
-    unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_unit?
-    if unit_group.has_migrated_unit? && unit_group.course_version
-      unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
-      unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
+    @unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless @unit_group.has_migrated_unit?
+    if @unit_group.has_migrated_unit? && @unit_group.course_version
+      @unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
+      @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
 
-    unit_group.reload
-    render json: unit_group.summarize
+    @unit_group.reload
+    render json: @unit_group.summarize
   end
 
   def edit
-    unit_group = UnitGroup.find_by_name!(params[:course_name])
-
     # We don't support an edit experience for plc courses
-    raise ActiveRecord::ReadOnlyRecord if unit_group.try(:plc_course)
-    render 'edit', locals: {unit_group: unit_group}
+    raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
+    render 'edit', locals: {unit_group: @unit_group}
   end
 
   def vocab
-    unit_group = UnitGroup.get_from_cache(params[:course_name])
-    raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
-    @course_summary = unit_group.summarize_for_rollup(@current_user)
+    @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
   def resources
-    unit_group = UnitGroup.get_from_cache(params[:course_name])
-    raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
-    @course_summary = unit_group.summarize_for_rollup(@current_user)
+    @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
   def code
-    unit_group = UnitGroup.get_from_cache(params[:course_name])
-    raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
-    @course_summary = unit_group.summarize_for_rollup(@current_user)
+    @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
   def standards
-    unit_group = UnitGroup.get_from_cache(params[:course_name])
-    if !unit_group.present? && UnitGroup.family_names.include?(params[:course_name])
-      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
-      redirect_to standards_course_path(redirect_to_course)
-      return
-    end
-    raise ActiveRecord::RecordNotFound unless unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_units[0].is_migrated
-    @course_summary = unit_group.summarize_for_rollup(@current_user)
+    @course_summary = @unit_group.summarize_for_rollup(current_user)
   end
 
   def get_rollup_resources
-    unit_group = UnitGroup.get_from_cache(params[:course_name])
-    course_version = unit_group.course_version
+    course_version = @unit_group.course_version
     return render status: 400, json: {error: 'Course does not have course version'} unless course_version
     rollup_pages = []
-    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.programming_expressions.empty?}}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(unit_group), course_version_id: course_version.id))
+    if @unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.programming_expressions.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(@unit_group), course_version_id: course_version.id))
     end
-    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.resources.empty?}}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_course_path(unit_group), course_version_id: course_version.id))
+    if @unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.resources.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_course_path(@unit_group), course_version_id: course_version.id))
     end
-    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.standards.empty?}}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_course_path(unit_group), course_version_id: course_version.id))
+    if @unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.standards.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_course_path(@unit_group), course_version_id: course_version.id))
     end
-    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.vocabularies.empty?}}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_course_path(unit_group), course_version_id: course_version.id))
+    if @unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.vocabularies.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_course_path(@unit_group), course_version_id: course_version.id))
     end
     rollup_pages.each do |r|
       r.is_rollup = true

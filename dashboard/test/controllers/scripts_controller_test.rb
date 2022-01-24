@@ -9,7 +9,12 @@ class ScriptsControllerTest < ActionController::TestCase
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
 
+    @pl_coursez_2017 = create :script, name: 'pl-coursez-2017', family_name: 'pl-coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_coursez_2018 = create :script, name: 'pl-coursez-2018', family_name: 'pl-coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_coursez_2019 = create :script, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+
     @migrated_unit = create :script
+    @migrated_pl_unit = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @unmigrated_unit = create :script, is_migrated: false
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -190,10 +195,22 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "show: do not redirect when showing latest stable version in family for participant" do
+    sign_in create(:teacher)
+    get :show, params: {id: @pl_coursez_2018.name}
+    assert_response :success
+  end
+
   test "show: redirect from older version to latest stable version in family for student" do
     sign_in create(:student)
     get :show, params: {id: @coursez_2017.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from older version to latest stable version in family for participant" do
+    sign_in create(:teacher)
+    get :show, params: {id: @pl_coursez_2017.name}
+    assert_redirected_to "/s/#{@pl_coursez_2018.name}?redirect_warning=true"
   end
 
   test "show: redirect from older version to latest stable version in family for logged out user" do
@@ -205,6 +222,12 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:student)
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to latest stable version in family for participant" do
+    sign_in create(:teacher)
+    get :show, params: {id: @pl_coursez_2019.name}
+    assert_redirected_to "/s/#{@pl_coursez_2018.name}?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version in family for logged out user" do
@@ -222,6 +245,16 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{@coursez_2017.name}?redirect_warning=true"
   end
 
+  test "show: redirect from new unstable version to assigned version for participant" do
+    participant_pl_coursez_2017 = create :teacher
+    section_pl_coursez_2017 = create :section, script: @pl_coursez_2017
+    section_pl_coursez_2017.add_student(participant_pl_coursez_2017)
+
+    sign_in participant_pl_coursez_2017
+    get :show, params: {id: @pl_coursez_2019.name}
+    assert_redirected_to "/s/#{@pl_coursez_2017.name}?redirect_warning=true"
+  end
+
   # There are tests on can_view_version? in script_test.rb which verify that it returns true if a student is assigned
   # or has made progress in a different version from the latest stable version. This test verifies that ultimately
   # the student is not redirected if true is returned.
@@ -232,9 +265,22 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: do not redirect participant to latest stable version in family if they can view the unit version" do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    sign_in create(:teacher)
+    get :show, params: {id: @pl_coursez_2017.name}
+    assert_response :ok
+  end
+
   test "show: do not redirect teacher to latest stable version in family" do
     sign_in create(:teacher)
     get :show, params: {id: @coursez_2017.name}
+    assert_response :ok
+  end
+
+  test "show: do not redirect instructor to latest stable version in family" do
+    sign_in create(:facilitator)
+    get :show, params: {id: @pl_coursez_2017.name}
     assert_response :ok
   end
 
@@ -1439,6 +1485,12 @@ class ScriptsControllerTest < ActionController::TestCase
       @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
       @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
       @pilot_student = create(:follower, section: @pilot_section).student_user
+
+      @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
+      @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_unit
+      @pilot_pl_participant = create :facilitator
+      create(:follower, section: @pilot_pl_section, student_user: @pilot_pl_participant)
     end
 
     no_access_msg = "You don&#39;t have access to this unit."
@@ -1447,8 +1499,18 @@ class ScriptsControllerTest < ActionController::TestCase
       params: -> {{id: @pilot_unit.name}},
       name: 'signed out user cannot view pilot unit'
 
+    test_user_gets_response_for :show, response: :redirect, user: nil,
+                                params: -> {{id: @pilot_pl_unit.name}},
+                                name: 'signed out user cannot view pilot pl unit'
+
     test_user_gets_response_for(:show, response: :success, user: :student,
       params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: :teacher,
+                                params: -> {{id: @pilot_pl_unit.name}}, name: 'participant user not in pilot section cannot view pilot unit'
     ) do
       assert response.body.include? no_access_msg
     end
@@ -1460,6 +1522,13 @@ class ScriptsControllerTest < ActionController::TestCase
       assert response.body.include? no_access_msg
     end
 
+    test_user_gets_response_for(:show, response: :success, user: :facilitator,
+                                params: -> {{id: @pilot_pl_unit.name}},
+                                name: 'instructor without pilot access cannot view pilot unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
+
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
       params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
       name: 'pilot teacher can view pilot unit'
@@ -1467,8 +1536,21 @@ class ScriptsControllerTest < ActionController::TestCase
       refute response.body.include? no_access_msg
     end
 
+    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_instructor},
+                                params: -> {{id: @pilot_pl_unit.name, section_id: @pilot_pl_section.id}},
+                                name: 'pilot instructor can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
+
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
       params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_pl_participant},
+                                params: -> {{id: @pilot_pl_unit.name}}, name: 'pilot participant can view pilot unit'
     ) do
       refute response.body.include? no_access_msg
     end
@@ -1534,16 +1616,73 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test 'should redirect to latest stable version in unit family for participant without progress or assignment' do
+    sign_in create(:teacher)
+
+    pl_dogs1 = create :script, name: 'pl-dogs1', family_name: 'ui-test-versioned-pl-script', version_year: '1901', is_course: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    CourseOffering.add_course_offering(pl_dogs1)
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: 'ui-test-versioned-pl-script'}
+    end
+
+    pl_dogs1.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    get :show, params: {id: 'ui-test-versioned-pl-script'}
+    assert_redirected_to "/s/pl-dogs1"
+
+    create :script, name: 'pl-dogs2', family_name: 'ui-test-versioned-pl-script', version_year: '1902', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    get :show, params: {id: 'ui-test-versioned-pl-script'}
+    assert_redirected_to "/s/pl-dogs2"
+
+    create :script, name: 'pl-dogs3', family_name: 'ui-test-versioned-pl-script', version_year: '1899', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    get :show, params: {id: 'ui-test-versioned-pl-script'}
+    assert_redirected_to "/s/pl-dogs2"
+  end
+
+  no_access_msg = "You don&#39;t have access to this unit."
+
+  test_user_gets_response_for(:vocab, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view vocab page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:vocab, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view vocab page for pl course') do
+    assert response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view vocab page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:resources, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view resources page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:resources, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view resources page for pl course') do
+    assert response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view resources page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:standards, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view standards page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:standards, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view standards page for pl course') do
+    assert response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view standards page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:code, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view code page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:code, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view code page for pl course') do
+    assert response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view code page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
   test "view all instructions page for migrated unit" do

@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-12 18:55:00 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-01-13 16:44:44 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -2681,7 +2681,7 @@
       "key": "74965320-c5a7-475c-9580-8d600d8311c3",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "74965320-c5a7-475c-9580-8d600d8311c3",
@@ -2790,7 +2790,7 @@
       "key": "c379b025-b249-4021-b313-1e455e60eaae",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss secure coding practices.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Coding Practices handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Coding Practices handout.",
+        "description": "**Do This:** Discuss secure coding practices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Input Validation\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Authentication and Password Management\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Session Management\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Access Control\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Error Handling and Logging\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Data Protection\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Communication Security\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> General Coding Practices\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Coding Practices handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Coding Practices handout.",
         "progression_name": "Secure Coding Practices"
       },
       "seeding_key": {

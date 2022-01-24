@@ -22,6 +22,8 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -44,7 +46,6 @@ class UnitOverview extends React.Component {
     courseName: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
-    minimal: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
@@ -99,7 +100,6 @@ class UnitOverview extends React.Component {
       showAssignButton,
       userId,
       assignedSectionId,
-      minimal,
       showCalendar,
       weeklyInstructionalMinutes,
       unitCalendarLessons,
@@ -121,8 +121,13 @@ class UnitOverview extends React.Component {
     const showUnversionedRedirectWarningDialog =
       showUnversionedRedirectWarning && !this.state.showRedirectDialog;
 
+    const completedLessonNumber = queryParams('completedLessonNumber');
+
     return (
       <div>
+        {completedLessonNumber && (
+          <EndOfLessonDialog lessonNumber={completedLessonNumber} />
+        )}
         <div>
           {showUnversionedRedirectWarningDialog && (
             <UnversionedScriptRedirectDialog />
@@ -175,7 +180,7 @@ class UnitOverview extends React.Component {
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
           />
         </div>
-        <ProgressTable minimal={minimal} />
+        <ProgressTable minimal={false} />
         <ProgressLegend
           includeCsfColumn={!excludeCsfColumnInLegend}
           includeReviewStates={isCsdOrCsp}

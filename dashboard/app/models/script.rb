@@ -206,8 +206,20 @@ class Script < ApplicationRecord
   def generate_plc_objects
     if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
-      unless unit_group
-        unit_group = UnitGroup.new(name: professional_learning_course)
+      if unit_group
+        # Check if anything needs to be updated on the PL course
+        unit_group.published_state = get_published_state if unit_group.published_state != get_published_state
+        unit_group.instruction_type = get_instruction_type if unit_group.instruction_type != get_instruction_type
+        unit_group.participant_audience = get_participant_audience if unit_group.participant_audience != get_participant_audience
+        unit_group.instructor_audience = get_instructor_audience if unit_group.instructor_audience != get_instructor_audience
+      else
+        unit_group = UnitGroup.new(
+          name: professional_learning_course,
+          published_state: get_published_state,
+          instruction_type: get_instruction_type,
+          instructor_audience: get_instructor_audience,
+          participant_audience: get_participant_audience
+        )
         unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
         unit_group.save!
       end
@@ -606,8 +618,7 @@ class Script < ApplicationRecord
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
       if unit_name
         # This creates a temporary script which is used to redirect the user. The audiences are set
-        # to instructor as teacher and student as participant because that will allow the redirect to
-        # happen for any course
+        # to allow the redirect to happen for any user
         return Script.new(
           redirect_to: unit_name,
           published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
@@ -636,8 +647,7 @@ class Script < ApplicationRecord
 
     unit_name ?
       # This creates a temporary script which is used to redirect the user. The audiences are set
-      # to instructor as teacher and student as participant because that will allow the redirect to
-      # happen for any course
+      # to allow the redirect to happen for any user
       Script.new(
         redirect_to: unit_name,
         published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
@@ -889,6 +899,12 @@ class Script < ApplicationRecord
 
   def csc?
     under_curriculum_umbrella?('CSC')
+  end
+
+  # TODO: (Dani) Update to use new course types framework.
+  # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
+  def middle_high?
+    csd? || csp? || csa?
   end
 
   def hour_of_code?
@@ -2031,6 +2047,6 @@ class Script < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?(user)
-    (csd? || csp? || csa?) && user&.has_pilot_experiment?('end-of-lesson-redirects')
+    middle_high? && user&.has_pilot_experiment?('end-of-lesson-redirects')
   end
 end

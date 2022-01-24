@@ -1299,6 +1299,8 @@ en:
               name: AI Lab
             Java Lab:
               name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-47:
               name: Example CSP Assessment
               description_student: 
@@ -23756,13 +23758,13 @@ en:
           description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also create a Verified Teachers Account to view answer keys and exemplars - [click here](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to learn more about becoming a Verified Teacher.
-
             This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about recommendations for introducing students to App Lab before this unit.
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/s/self-paced-pl-csd5-2021). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            **For Teachers:** [Click here](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview#heading=h.c7x6ho8ek6yz) to learn more about this unit and view lesson plans. You can also access lesson plans from this page if you create a Code.org teacher account.
+            **For Teachers:** [Click here](https://studio.code.org/s/aiml-2021?viewAs=Teacher) to see lesson plans and teacher resources for this unit.
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1 - Understanding Machine Learning
@@ -23959,9 +23961,11 @@ en:
             **Implementation guidance for Unit 7**
 
             - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit assumes students have seen App Lab from Unit 4: The Design Process before starting the unit. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about the App Lab expectations in this unit, and ways to introduce App Lab to students before starting the unit.
+            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about recommendations for introducing students to App Lab before this unit.
             - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) for more information
             - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/s/self-paced-pl-csd5-2021). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
         kodea-pd-2021:
           title: CSF Online PD - Kodea
@@ -25563,7 +25567,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod2:
           lessons:
@@ -26895,8 +26899,16 @@ en:
           description: ''
           student_description: ''
         tesstest921:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Testing CSA Clone
           lesson_groups: {}
+          name: tesstest921
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         hello-world-animals:
           lessons:
             lesson-1:
@@ -29822,7 +29834,7 @@ en:
             Parameters and Return Investigate:
               name: Parameters and Return Investigate
               description_student: 'Investigate and modify sample apps that use parameters and return values. '
-              description_teacher: 'In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. '
+              description_teacher: 'In this lesson, students work with partners to investigate two different apps that use parameters and return values. '
               key: Parameters and Return Investigate
             Parameters and Return Practice:
               name: Parameters and Return Practice
@@ -30736,6 +30748,74 @@ en:
               display_name: Show What You Know
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pre-express-2022:
+          lessons: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+          name: pre-express-2022
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-2022:
+          lessons:
+            lesson-1:
+              name: Neighborhood Store Management Project – Day 1
+            lesson-2:
+              name: Neighborhood Store Management Project – Day 2
+            lesson-3:
+              name: Neighborhood Store Management Project – Day 3
+            lesson-4:
+              name: FRQ Practice
+            lesson-5:
+              name: Unit 2 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa2-2022
+          title: Giving Objects State ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa3-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 3 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa3-2022
+          title: Expanding Program Data ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        tessplayground:
+          lessons:
+            Conditionals and Debugging:
+              name: Conditionals and Debugging
+              description_student: Now that you know how to call methods, you help the `Painter` make decisions about how to interact with The Neighborhood using methods that give information. You identify syntax and logic errors as well as debugging strategies to use throughout the year.
+              description_teacher: 'Students modify programs using three Boolean methods: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Students use Boolean methods and `if` statements to apply conditional logic in their programs. Students develop debugging strategies by identifying syntax and logic errors in their code.'
+          lesson_groups: {}
+          name: tessplayground
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

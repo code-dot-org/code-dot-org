@@ -10,12 +10,22 @@
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-11-29 20:32:43 UTC",
+    "serialized_at": "2022-01-20 17:42:56 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

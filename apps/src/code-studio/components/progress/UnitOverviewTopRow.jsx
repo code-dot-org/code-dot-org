@@ -270,12 +270,12 @@ const styles = {
 
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
-export default connect((state, ownProps) => ({
+export default connect(state => ({
   selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
-    ownProps.scriptId,
-    ownProps.currentCourseId,
+    state.progress.scriptId,
+    state.progress.courseId,
     false
   ),
   professionalLearningCourse: state.progress.professionalLearningCourse,

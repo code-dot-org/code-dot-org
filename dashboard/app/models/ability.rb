@@ -14,6 +14,7 @@ class Ability
     can :read, :all
     cannot :read, [
       TeacherFeedback,
+      UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
@@ -289,7 +290,7 @@ class Ability
     end
 
     can [:vocab, :resources, :code, :standards], Script do |script|
-      !!script.is_migrated
+      !!script.is_migrated && (script.can_be_participant?(user) || script.can_be_instructor?(user))
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
@@ -297,7 +298,7 @@ class Ability
       if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif script.pilot?
-        script.has_pilot_access?(user)
+        script.has_pilot_access?(user) && (script.can_be_participant?(user) || script.can_be_instructor?(user))
       else
         script.can_be_participant?(user) || script.can_be_instructor?(user)
       end
@@ -368,6 +369,7 @@ class Ability
     end
 
     if user.persisted?
+      # TODO: should add editor experiment for Unit Group
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
         can :index, Level
