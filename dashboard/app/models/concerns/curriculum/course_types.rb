@@ -29,13 +29,9 @@ module Curriculum::CourseTypes
     errors.add(:instruction_type, 'must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).any? {|type| type != instruction_type}
   end
 
-  # Get the family name for the course based on if its set on the UnitGroup or Unit
-  def get_course_family_name
-    is_a?(Script) && unit_group ? unit_group.family_name : family_name
-  end
-
-  # If course we are check is a unit_group or a unit that is in a unit_group check the family_name on the UnitGroup.
+  # If course we are check is a unit_group.
   # If the course is a unit that is not in a unit_group check the unit for the family_name
+  # If unit that is in a unit_group then family name should be nil and we should not need to check anything
   def get_family_courses
     return nil if family_name.nil_or_empty?
 
