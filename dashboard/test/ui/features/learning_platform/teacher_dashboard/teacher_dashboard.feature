@@ -222,8 +222,6 @@ Feature: Using the teacher dashboard
     Then I wait until element "#flashes" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
-  # Omit IE because it does not respond to press keys step for React forms
-  @no_ie
   Scenario: Attempt to join an invalid section through the homepage
     Given I am a teacher and go home
     And I wait until element "div.ui-test-join-section" is visible
@@ -232,7 +230,6 @@ Feature: Using the teacher dashboard
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "Section INVALID doesn't exist"
 
-  @no_ie
   Scenario: Attempt to join a section you own from teacher dashboard provides notification
     Given I am a teacher
     And I create a new section and go home

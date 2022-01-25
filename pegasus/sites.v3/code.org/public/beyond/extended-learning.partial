@@ -13,7 +13,7 @@ social:
   "twitter:image": "/images/csjourneys/og-courses.jpg"
 ---
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Online courses</h1>
+<h1><a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/></a><br/>Online courses</h1>
 <p>Extend your learning with these online courses. Learn Python, JavaScript, and other programming languages. Learn about artificial intelligence (AI), robotics, and data science. The options below feature both beginner and advanced courses.</p>
 
 <ul>

@@ -29,7 +29,7 @@ function varWatchers(varLog){
   for(var key in varLog){
     var index = Object.keys(varLog).indexOf(key);
     var x = 5;
-    var y = 5;
+    var y = 32;
     watcher(key, varLog[key], index, x, y);
   }
 }
