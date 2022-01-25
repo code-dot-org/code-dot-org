@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
+import JavalabDropdown from './components/JavalabDropdown';
 
 /**
  * A button that drops down to a set of clickable links, and closes itself if
@@ -68,6 +69,18 @@ export class JavalabSettings extends Component {
 
     return (
       <div style={styles.main}>
+        {dropdownOpen && (
+          <JavalabDropdown style={styles.dropdown}>
+            {React.Children.map(this.props.children, (child, index) => (
+              <a
+                {...child.props}
+                onClick={event => this.onClickChild(event, child.props)}
+                key={index}
+                style={child.props.style}
+              />
+            ))}
+          </JavalabDropdown>
+        )}
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
           text={i18n.settings()}
@@ -75,23 +88,6 @@ export class JavalabSettings extends Component {
           onClick={this.toggleDropdown}
           isHorizontal
         />
-
-        {dropdownOpen && (
-          <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
-            {React.Children.map(this.props.children, (child, index) => (
-              <a
-                {...child.props}
-                onClick={event => this.onClickChild(event, child.props)}
-                key={index}
-                style={{
-                  ...styles.anchor,
-                  ...(index > 0 && styles.nonFirstAnchor),
-                  ...child.props.style
-                }}
-              />
-            ))}
-          </div>
-        )}
       </div>
     );
   }
@@ -126,28 +122,7 @@ const styles = {
     }
   },
   dropdown: {
-    border: `1px solid ${color.charcoal}`,
-    position: 'absolute',
-    // A hack to make sure this renders in front of later absolutely-positioned elements
-    // (e.g., the instructions panel).
-    zIndex: 100,
-    bottom: 50
-  },
-  anchor: {
-    padding: 10,
-    color: color.charcoal,
-    backgroundColor: color.white,
-    fontFamily: '"Gotham 5r", sans-serif',
-    display: 'block',
-    textDecoration: 'none',
-    lineHeight: '20px',
-    transition: 'background-color .2s ease-out',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-      cursor: 'pointer'
-    }
-  },
-  nonFirstAnchor: {
-    borderTop: `1px solid ${color.charcoal}`
+    bottom: 40,
+    marginLeft: 5
   }
 };

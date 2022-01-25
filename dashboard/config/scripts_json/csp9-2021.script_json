@@ -13,12 +13,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 22:52:17 UTC",
+    "serialized_at": "2022-01-11 18:21:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -38,6 +37,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2021"
       }
     }
@@ -241,6 +252,21 @@
       "seeding_key": {
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2021"
       }
     }
@@ -812,6 +838,18 @@
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2",
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "ca127741-cc41-4175-8af2-6accbd74018c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ca127741-cc41-4175-8af2-6accbd74018c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2021"
       }
     }
@@ -2332,6 +2370,23 @@
         "activity_section.key": "86943e09-9f9c-4d9a-8a72-2b1d222ea784",
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2"
       }
+    },
+    {
+      "key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e",
+        "lesson_activity.key": "ca127741-cc41-4175-8af2-6accbd74018c"
+      }
     }
   ],
   "script_levels": [
@@ -3008,6 +3063,28 @@
       "level_keys": [
         "CSP Unit 9 AP-Style Assessment _2021"
       ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2021",
+        "activity_section.key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3333,6 +3410,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
         "activity_section.key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2021",
+        "activity_section.key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e"
       }
     }
   ],

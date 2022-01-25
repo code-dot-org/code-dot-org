@@ -13,11 +13,13 @@
           "visibility": "Teacher-only"
         }
       ],
+      "is_course": true,
       "is_migrated": true,
-      "professional_learning_course": "K5 Support"
+      "professional_learning_course": "K5 Support",
+      "version_year": "2018"
     },
     "new_name": null,
-    "family_name": null,
+    "family_name": "k5-onlinepd",
     "serialized_at": "2021-11-22 19:55:41 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",

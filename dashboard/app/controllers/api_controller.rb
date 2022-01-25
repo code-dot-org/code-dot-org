@@ -204,7 +204,7 @@ class ApiController < ApplicationController
     render json: {}
   end
 
-  use_database_pool lockable_state: :persistent
+  use_reader_connection_for_route(:lockable_state)
 
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
@@ -231,7 +231,7 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  use_database_pool section_progress: :persistent
+  use_reader_connection_for_route(:section_progress)
 
   def section_progress
     prevent_caching
@@ -308,7 +308,7 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  use_database_pool section_level_progress: :persistent
+  use_reader_connection_for_route(:section_level_progress)
 
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
@@ -426,7 +426,7 @@ class ApiController < ApplicationController
     render json: standards
   end
 
-  use_database_pool user_progress: :persistent
+  use_reader_connection_for_route(:user_progress)
 
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
@@ -452,7 +452,7 @@ class ApiController < ApplicationController
     end
   end
 
-  use_database_pool user_app_options: :persistent
+  use_reader_connection_for_route(:user_app_options)
 
   # Returns app_options values that are user-specific. This is used on cached
   # levels.

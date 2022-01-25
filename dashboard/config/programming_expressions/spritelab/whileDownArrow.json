@@ -2,5 +2,6 @@
   "key": "whileDownArrow",
   "name": "whileDownArrow",
   "category": "Unused",
+  "block_name": "gamelab_whileDownArrow",
   "syntax": "whileDownArrow"
 }

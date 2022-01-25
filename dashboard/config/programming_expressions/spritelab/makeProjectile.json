@@ -2,5 +2,6 @@
   "key": "makeProjectile",
   "name": "makeProjectile",
   "category": "Experimental",
+  "block_name": "gamelab_makeProjectile",
   "syntax": "makeProjectile"
 }

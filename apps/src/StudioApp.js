@@ -687,7 +687,9 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
-        useFilesApi: !!config.useFilesApi
+        useFilesApi: !!config.useFilesApi,
+        selectedVersion: queryParams('version'),
+        isReadOnly: !!config.readonlyWorkspace
       }),
       contentDiv
     );
@@ -1652,13 +1654,6 @@ StudioApp.prototype.displayFeedback = function(options) {
   this.onFeedback(options);
 };
 
-StudioApp.prototype.isFinalFreePlayLevel = function(feedbackType, response) {
-  return (
-    this.feedback_.isFinalLevel(response) &&
-    this.feedback_.isFreePlay(feedbackType)
-  );
-};
-
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
@@ -2278,8 +2273,12 @@ StudioApp.prototype.handleEditCode_ = function(config) {
     return;
   }
 
-  // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.getMakerAPIs()) {
+  // Remove maker API blocks from palette, unless project has maker enabled
+  // or level is in edit start mode and maker is enabled
+  if (
+    !project.getMakerAPIs() &&
+    !(config.isStartMode && config.level.makerlabEnabled)
+  ) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
       configCircuitPlayground.blocks.forEach(block => {

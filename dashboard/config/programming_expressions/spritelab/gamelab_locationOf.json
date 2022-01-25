@@ -2,5 +2,6 @@
   "key": "gamelab_locationOf",
   "name": "locationOf",
   "category": "Sprites",
+  "block_name": "gamelab_locationOf",
   "syntax": "locationOf"
 }

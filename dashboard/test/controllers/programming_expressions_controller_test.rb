@@ -37,6 +37,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       id: programming_expression.id,
       key: programming_expression.key,
       name: 'new name',
+      blockName: 'gamelab_location_picker',
       category: 'world',
       videoKey: 'video-key',
       imageUrl: 'image.code.org/foo',
@@ -53,6 +54,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     programming_expression.reload
 
     assert_equal 'new name', programming_expression.name
+    assert_equal 'gamelab_location_picker', programming_expression.block_name
     assert_equal 'world', programming_expression.category
     assert_equal 'video-key', programming_expression.video_key
     assert_equal 'image.code.org/foo', programming_expression.image_url

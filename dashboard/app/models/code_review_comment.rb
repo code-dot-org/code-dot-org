@@ -55,6 +55,10 @@ class CodeReviewComment < ApplicationRecord
   end
 
   def compute_is_from_teacher
+    # Only should happen if we hard delete the commenter's account
+    # via the delete accounts helper.
+    return false if commenter.nil?
+
     self.is_from_teacher = commenter.teacher? ? true : false
   end
 end

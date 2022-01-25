@@ -866,6 +866,12 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSC')
   end
 
+  # TODO: (Dani) Update to use new course types framework.
+  # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
+  def middle_high?
+    csd? || csp? || csa?
+  end
+
   def hour_of_code?
     under_curriculum_umbrella?('HOC')
   end
@@ -1142,7 +1148,6 @@ class Script < ApplicationRecord
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
         UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
-        destination_unit_group.write_serialization
         copied_unit.reload
       else
         copied_unit.is_course = true
@@ -1165,6 +1170,7 @@ class Script < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         copy_and_write_i18n(new_name, course_version)
         copied_unit.write_script_json
+        destination_unit_group.write_serialization if destination_unit_group
       end
 
       copied_unit
@@ -2006,6 +2012,6 @@ class Script < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?(user)
-    (csd? || csp? || csa?) && user&.has_pilot_experiment?('end-of-lesson-redirects')
+    middle_high? && user&.has_pilot_experiment?('end-of-lesson-redirects')
   end
 end

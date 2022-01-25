@@ -3,44 +3,24 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to AI and machine learning
+# Lessons 2 - 4
 
-#### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works. 
+##### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
 
-## Role of the teacher 
+## Key terms used throughout the AI and Machine Learning unit
 
-##### Lessons 1 - 5 are designed to help students build foundational knowledge about how machine learning works before moving into AI Lab where students will create machine learning models of their own. These lessons, and all lessons within the AI and Machine Learning unit, are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace. 
-
-## Purpose of offline activities 
-
-##### The lessons within Unit 7 are a mix between online and offline activities. The offline activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
-
-## Key terms used throughout Unit 7
-
+* ##### **Model** - a computer program designed to make a decision.
 * ##### **Features** - the inputs that a model uses to make decisions.
 * ##### **Label** - the output you are trying to decide or predict with a model.
-* ##### **Model** - a computer program designed to make a decision.
 * ##### **Training** - giving examples to a model so it can learn.
 
-## Overview of Lessons 1 - 4 
+## Purpose of unplugged activities 
 
-<details>
-<summary><strong>Lesson 1: Introduction to Machine Learning</strong></summary>
+##### The lessons within the AI and Machine Learning unit are a mix between online and unplugged activities. The unplugged activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
 
-<img src="https://images.code.org/f4302117de331dd83e94c497dd711c1e-image-1636126730503.37.01 AM.png" alt="Image of a fish" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+## Overview of Lessons 2 - 4 
 
-**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?
-
-**Lesson Overview:**
-
-In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.
-
-**Students will be able to:** 
-* Apply the Problem Solving Process to train a computer to solve a problem.
-
-</details>
-
-<div style="clear:both"/>
+##### Click the dropdown arrows below to view lesson overviews.
 
 <details>
 <summary><strong>Lesson 2: Types of Machine Learning</strong></summary>

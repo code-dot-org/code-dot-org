@@ -41,7 +41,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     @script_level_prev = create(:script_level, script: @script)
     @script_level = create(:script_level, script: @script)
     @script_level_next = create(:script_level, script: @script)
-    create(:lesson_group, lessons: [@script_level_prev.lesson, @script_level.lesson, @script_level_next.lesson], script: @script)
+
+    @lesson = create(:lesson)
+    @lesson.script_levels << @script_level_prev
+    @lesson.script_levels << @script_level
+    @lesson.script_levels << @script_level_next
+
+    create(:lesson_group, lessons: [@lesson], script: @script)
     @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
