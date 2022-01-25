@@ -13,6 +13,7 @@ class I18nHocRoutesTest < Minitest::Test
     header 'Host', 'hourofcode.com'
     languages = DB[:cdo_languages].select(:unique_language_s).where(supported_hoc_b: 1)
     subpages = load_hoc_subpages
+    load_all_hoc_translations
 
     languages.collect {|x| x[:unique_language_s]}.each do |lang|
       # Tests the homepage
@@ -48,5 +49,10 @@ class I18nHocRoutesTest < Minitest::Test
     Dir.glob(pegasus_dir('sites.v3/hourofcode.com/public/', '**/*.md')).map do |path|
       path[/public(.*)\.md/, 1]
     end
+  end
+
+  def load_all_hoc_translations
+    files = Dir[pegasus_dir('sites.v3/hourofcode.com/i18n/*.yml')]
+    I18n.backend.load_translations files
   end
 end
