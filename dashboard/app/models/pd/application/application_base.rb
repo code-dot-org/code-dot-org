@@ -51,12 +51,20 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
+    belongs_to :user
+    belongs_to :regional_partner
 
     after_initialize -> {self.status = :unreviewed}, if: :new_record?
-    before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
+    validate :status_is_valid_for_application_type
+    validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+    validates_inclusion_of :application_type, in: APPLICATION_TYPES
+    validates_inclusion_of :application_year, in: APPLICATION_YEARS
+    validates_presence_of :type
+    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
     before_save :update_accepted_date, if: :status_changed?
+    before_create -> {self.status = :unreviewed}
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     after_destroy :delete_unsent_email
 
@@ -168,7 +176,6 @@ module Pd::Application
     # This is equivalent to
     #   validates_inclusion_of :status, in: statuses
     # but it will work with derived classes that override statuses
-    validate :status_is_valid_for_application_type
     def status_is_valid_for_application_type
       unless status.nil? || self.class.statuses.include?(status)
         errors.add(:status, 'is not included in the list.')
@@ -188,15 +195,6 @@ module Pd::Application
       csf: Pd::Workshop::COURSE_CSF,
       csa: Pd::Workshop::COURSE_CSA
     }
-
-    belongs_to :user
-    belongs_to :regional_partner
-
-    validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
-    validates_inclusion_of :application_type, in: APPLICATION_TYPES
-    validates_inclusion_of :application_year, in: APPLICATION_YEARS
-    validates_presence_of :type
-    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
 
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"
