@@ -20,6 +20,7 @@ import {queryParams} from '../code-studio/utils';
 class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
+    displayOldVersionBanner: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -216,6 +217,9 @@ class CodeWorkspace extends React.Component {
             {i18n.levelNotStartedWarning()}
           </div>
         )}
+        {this.props.displayOldVersionBanner && (
+          <div style={styles.oldVersionWarning}>{i18n.oldVersionWarning()}</div>
+        )}
         {props.showDebugger && (
           <JsDebugger
             onSlideShut={this.onDebuggerSlide}
@@ -240,6 +244,15 @@ const styles = {
   runningIcon: {
     color: color.dark_charcoal
   },
+  oldVersionWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    textAlign: 'right',
+    height: 20,
+    padding: 5,
+    opacity: 0.7,
+    position: 'relative'
+  },
   studentNotStartedWarning: {
     zIndex: 99,
     backgroundColor: color.lightest_red,
@@ -253,6 +266,7 @@ const styles = {
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(state => ({
   displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
+  displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
