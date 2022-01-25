@@ -3314,6 +3314,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
       displayNotStartedBanner: this.displayNotStartedBanner(config),
+      displayOldVersionBanner: !!queryParams('version'),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
