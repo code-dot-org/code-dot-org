@@ -54,16 +54,17 @@ module Pd::Application
     belongs_to :user
     belongs_to :regional_partner
 
-    after_initialize -> {self.status = :unreviewed}, if: :new_record?
     before_validation :set_type_and_year
+    before_validation -> {self.status = :unreviewed}, if: :new_record?
+
     validate :status_is_valid_for_application_type
+    validates_presence_of :type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
     validates_inclusion_of :application_type, in: APPLICATION_TYPES
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
-    validates_presence_of :type
-    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+
     before_save :update_accepted_date, if: :status_changed?
-    before_create -> {self.status = :unreviewed}
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     after_destroy :delete_unsent_email
 
