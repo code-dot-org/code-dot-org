@@ -421,6 +421,7 @@ hu:
       prizes_link: 'További információk'
   teacher:
     answer: Válasz
+    dashboard: 'Tanári nyitólap'
     for_teachers_only: Csak tanároknak
     title:
       one: 'A tanárod:'

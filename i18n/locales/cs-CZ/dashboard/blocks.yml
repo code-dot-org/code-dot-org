@@ -1791,12 +1791,11 @@ cs:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Květiny
-            '"hearts"': Srdce
+            '"brick"': cihla
+            '"hearts"': srdce
             '"iceCream"': Zmrzlina
-            '"rainbow"': Duha
-            '"stars"': Hvězdy
-            '"waves"': Vlny
+            '"rainbow"': duha
+            '"stars"': hvězdy
       Poetry_addLine:
         text: přidat řádek {LINE}
       Poetry_animateText:
@@ -1827,6 +1826,7 @@ cs:
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Tajemno
             '"sound://category_background/inside_plane.mp3"': Hučení
             '"sound://category_loops/red_flag_loop1.mp3"': Mise
+            '"sound://category_nature/summer_night_loop.mp3"': noc
             '"sound://category_background/repitition.mp3"': Jízda
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Pomalost
       Poetry_playSound:
@@ -1841,7 +1841,6 @@ cs:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Neúspěch
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Vibrace
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Skok
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Světlo
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Vžum
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Sken
             '"sound://category_background/typewriter.mp3"': Psací stroj
@@ -1857,30 +1856,30 @@ cs:
         text: nastavit pozadí na {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Barvy
-            '"squiggles"': Klikyháky
-            '"space"': Vesmír
-            '"stars"': Hvězdy
+            '"blooming"': Kvetoucí
+            '"bubbles"': Bubliny
+            '"clouds"': Oblačno
+            '"confetti"': Konfety
             '"darkCircles"': Pohasínání
             '"fadeColors"': Zmrzlé
-            '"blooming"': Kvetoucí
+            '"hearts"': srdce
+            '"space"': Vesmír
+            '"rain"': déšť
             '"ripples"': Vlny
-            '"clouds"': Oblačno
-            '"rain"': Déšť
-            '"bubbles"': Bubliny
-            '"confetti"': Konfety
-            '"hearts"': Barevná srdíčka
+            '"colors"': Barvy
+            '"stars"': Hvězdy
+            '"squiggles"': Klikyháky
           PALETTE:
-            '"rainbow"': Duha
-            '"grayscale"': Odstíny šedé
-            '"sky"': Nebe
+            '"autumn"': Podzim
             '"sunrise"': Svítání
             '"sunset"': Soumrak
+            '"grayscale"': Odstíny šedé
+            '"rainbow"': duha
+            '"roses"': Růže
+            '"sky"': Nebe
             '"spring"': Jaro
             '"summer"': Léto
-            '"autumn"': Podzim
             '"winter"': Zima
-            '"roses"': Růže
       Poetry_setBackgroundImageAs:
         text: nastav pozadí na {IMG}
       Poetry_setFont:
@@ -1888,23 +1887,23 @@ cs:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Rukopis
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Rukopis
       Poetry_setFontColor:
         text: nastavit barvu textu {FILL}
       Poetry_setForegroundEffect:
         text: proveď efekt {EFFECT}
         options:
           EFFECT:
-            '"rain"': Déšť
             '"bubbles"': Bubliny
-            '"hearts"': Barevná srdíčka
-            '"emojis"': Šťastné emotikony
             '"confetti"': Konfety
+            '"hearts"': srdce
+            '"emojis"': Šťastné emotikony
+            '"rain"': déšť
             '"starburst"': Výbuch hvězdy
             '"glass"': Tříštění skla
             '"twinkling"': Zablikání
@@ -1919,31 +1918,21 @@ cs:
         options:
           EFFECT:
             '"fade"': vyblednutí
-            '"typewriter"': psací stroj
             '"flyLeft"': přelet zleva
             '"flyRight"': přelet zprava
             '"flyTop"': přelet shora
             '"flyBottom"': přelet zespodu
+            '"typewriter"': psací stroj
       Poetry_setTitle:
         text: nastavit název {TITLE}
       Poetry_showText:
         text: zobrazit text
       Poetry_startBehavior:
         text: 'sprajt {ANIMATION_NAME} začne {BEHAVIOR} '
-        options:
-          BEHAVIOR:
-            moving_north_and_looping: zacyklení při pohybu na sever
-            moving_south_and_looping: zacyklení při pohybu na jih
-            moving_east_and_looping: zacyklení při pohybu na východ
-            moving_west_and_looping: zacyklení při pohybu na západ
       Poetry_stopBehavior:
         text: 'sprajt {ANIMATION_NAME} zastaví {BEHAVIOR} '
         options:
           BEHAVIOR:
-            moving_north_and_looping: zacyklení při pohybu na sever
-            moving_south_and_looping: zacyklení při pohybu na jih
-            moving_east_and_looping: zacyklení při pohybu na východ
-            moving_west_and_looping: zacyklení při pohybu na západ
             '"all"': "--všechna chování--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

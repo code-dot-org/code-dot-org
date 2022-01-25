@@ -144,10 +144,6 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def final_level?
-    !has_another_level_to_go_to?
-  end
-
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson=nil,
@@ -195,7 +191,7 @@ class ScriptLevel < ApplicationRecord
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
         else
-          script_path(script)
+          script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
         level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)

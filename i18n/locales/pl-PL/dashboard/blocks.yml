@@ -1853,17 +1853,17 @@ pl:
             '"decorative"': Dekoracyjny
             '"donuts"': Pączki
             '"fire"': Ogień
-            '"flowers"': Kwiaty
+            '"flowers"': kwiaty
             '"gilded"': Pozłacany
-            '"hearts"': Serca
+            '"hearts"': serca
             '"iceCream"': Lody
             '"leaves"': Liście
             '"metal"': Metalowa ramka
             '"pawPrints"': Odciski łap
-            '"rainbow"': Tęcza
-            '"stars"': Gwiazdy
+            '"rainbow"': tęcza
+            '"stars"': gwiazdy
             '"swirls"': Wiry
-            '"waves"': Fale
+            '"waves"': fale
             '"wood"': Drewniana ramka
             '"zigzag"': Zig-Zag
       Poetry_addLine:
@@ -1905,7 +1905,7 @@ pl:
             '"sound://category_background/inside_plane.mp3"': Szum
             '"sound://category_loops/red_flag_loop1.mp3"': Misja
             '"sound://category_nature/summer_night_loop.mp3"': Noc
-            '"sound://category_background/ocean_waves.mp3"': Ocean
+            '"sound://category_background/ocean_waves.mp3"': ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Deszczowy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Deszczowy las
             '"sound://category_background/repitition.mp3"': Jazda konna
@@ -1917,18 +1917,18 @@ pl:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Dzwon
-            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_digital/boing_2.mp3"': Dźwięk odbicia
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bąbelki
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Gadać
-            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Siadać
-            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Nieudane
-            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepotanie
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Spuszczenie powietrza
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Porażka
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepot
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Skok
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Jasne
-            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puszysty
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': światło
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Dźwięk niewielkiego wybuchu
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Skan
             '"sound://category_background/typewriter.mp3"': Maszyna do pisania
-            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Wibrujący
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Drgania
             '"sound://category_achievements/peaceful_win_1.mp3"': Zwycięstwo
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wir
             '"sound://category_achievements/peaceful_win_6.mp3"': Dzwonki wietrzne
@@ -1940,31 +1940,31 @@ pl:
         text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Kolory
-            '"squiggles"': Pokręcone linie
-            '"space"': Przestrzeń
-            '"stars"': Gwiazdy
+            '"blooming"': Rozkwiecony
+            '"bubbles"': Bąbelki
+            '"clouds"': Pochmurno
+            '"confetti"': Konfetti
             '"darkCircles"': Zblakły
             '"fadeColors"': Oszroniony
-            '"blooming"': Rozkwiecony
+            '"hearts"': serca
+            '"space"': Przestrzeń
+            '"rain"': deszcz
             '"ripples"': Fale
-            '"clouds"': Pochmurno
-            '"rain"': Deszcz
-            '"bubbles"': Bąbelki
-            '"confetti"': Konfetti
-            '"hearts"': Kolorowe Serca
+            '"colors"': Kolory
+            '"stars"': Gwiazdy
+            '"squiggles"': Pokręcone linie
           PALETTE:
-            '"rainbow"': Tęcza
-            '"grayscale"': Szarości
-            '"sky"': Niebo
-            '"ocean"': Ocean
+            '"autumn"': Jesień
             '"sunrise"': Świt
             '"sunset"': Zmierzch
+            '"grayscale"': Szarości
+            '"ocean"': Ocean
+            '"rainbow"': tęcza
+            '"roses"': Róże
+            '"sky"': Niebo
             '"spring"': Wiosna
             '"summer"': Lato
-            '"autumn"': Jesień
             '"winter"': Zima
-            '"roses"': Róże
       Poetry_setBackgroundImageAs:
         text: ustaw tło na {IMG}
       Poetry_setFont:
@@ -1972,23 +1972,23 @@ pl:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Pismo odręczne
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Pismo odręczne
       Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
       Poetry_setForegroundEffect:
         text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
-            '"rain"': Deszcz
             '"bubbles"': Bąbelki
-            '"hearts"': Kolorowe Serca
-            '"emojis"': Szczęśliwe emotikony
             '"confetti"': Konfetti
+            '"hearts"': serca
+            '"emojis"': Szczęśliwe emotikony
+            '"rain"': deszcz
             '"starburst"': Rozprysk
             '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
@@ -2003,11 +2003,11 @@ pl:
         options:
           EFFECT:
             '"fade"': znikać
-            '"typewriter"': maszyna do pisania
             '"flyLeft"': lecieć z lewa
             '"flyRight"': lecieć z prawa
             '"flyTop"': lecieć z góry
             '"flyBottom"': lecieć z dołu
+            '"typewriter"': maszyna do pisania
       Poetry_setTitle:
         text: ustaw tytuł {TITLE}
       Poetry_showText:
@@ -2016,36 +2016,28 @@ pl:
         text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: trzepotanie
-            growing: rośnięcie
-            jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
-            shrinking: zwężenie
-            spinning_left: obracanie się w lewo
-            spinning_right: obracanie się w prawo
-            swimming_left_and_right: pływanie
-            wandering: wędrowanie
-            wobbling: chybotanie
+            '"fluttering"': trzepotanie
+            '"growing"': rośnięcie
+            '"jittering"': trzęsienie się
+            '"shrinking"': zwężenie
+            '"spinning_left"': obracanie się w lewo
+            '"spinning_right"': obracanie się w prawo
+            '"swimming_left_and_right"': pływanie
+            '"wandering"': wędrowanie
+            '"wobbling"': chybotanie
       Poetry_stopBehavior:
         text: 'duszek {ANIMATION_NAME} zatrzymuje {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: trzepotanie
-            growing: rośnięcie
-            jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
-            shrinking: zwężenie
-            spinning_left: obracanie się w lewo
-            spinning_right: obracanie się w prawo
-            swimming_left_and_right: pływanie
-            wandering: wędrowanie
-            wobbling: chybotanie
+            '"fluttering"': trzepotanie
+            '"growing"': rośnięcie
+            '"jittering"': trzęsienie się
+            '"shrinking"': zwężenie
+            '"spinning_left"': obracanie się w lewo
+            '"spinning_right"': obracanie się w prawo
+            '"swimming_left_and_right"': pływanie
+            '"wandering"': wędrowanie
+            '"wobbling"': chybotanie
             '"all"': "--wszystkie zachowania--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

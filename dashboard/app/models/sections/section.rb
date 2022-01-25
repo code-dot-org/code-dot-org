@@ -128,6 +128,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   CSA = 'csa'.freeze
+  CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -455,7 +456,7 @@ class Section < ApplicationRecord
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?
-    script&.csa? || unit_group&.family_name == CSA
+    script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
   def reset_code_review_groups(new_groups)

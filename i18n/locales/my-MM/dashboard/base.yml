@@ -63,6 +63,7 @@ my:
       playlab_k1: 'Play Lab(Pre-reader)'
       weblab: 'Web Lab'
   teacher:
+    dashboard: 'ဆရာ့ကျောက်သင်ပုန်း'
     panel:
       answer_viewer: 'ဆရာအဖွဲ့'
   user:

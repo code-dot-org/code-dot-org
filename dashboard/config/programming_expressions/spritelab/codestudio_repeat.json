@@ -2,5 +2,6 @@
   "key": "codestudio_repeat",
   "name": "controls_repeat",
   "category": "Loops",
+  "block_name": "controls_repeat",
   "syntax": "controls_repeat"
 }

@@ -952,6 +952,11 @@ fr:
         text: configuration
       Dancelab_whenSetupSong:
         text: 'configurer {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} set me à {BEHAVIOR}
       gamelab_addTarget:
@@ -1491,6 +1496,7 @@ fr:
             "{x: 300, y: 100}": en haut à droite
             "{x: 100, y: 300}": en bas à gauche
             "{x: 300, y: 300}": en bas à droite
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_eval:
         text: evaluer {CODE}
       Mikelab_getNext:
@@ -1534,6 +1540,7 @@ fr:
             "{x: 300, y: 100}": en haut à droite
             "{x: 100, y: 300}": en bas à gauche
             "{x: 300, y: 300}": en bas à droite
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: supprimer {SELECT} {COSTUME}
         options:
@@ -1650,6 +1657,15 @@ fr:
         text: "{LOCATION}"
       Mikelab_poemTextJoin:
         text: "{TEXT1} {VAR} {TEXT2}"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"Balancing on the"'
+            '"A chubby cat "': '"A chubby cat"'
+            '"The "': '"The "'
+          TEXT2:
+            '" fence"': '" fence"'
+            '""': '""'
+            '" breeze blows"': '" breeze blows"'
       Mikelab_randomColor:
         text: couleur aléatoire
       Mikelab_removeBehaviorSimple:
@@ -1690,6 +1706,13 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+      Mikelab_setupLevel:
+        text: |-
+          niveau de configuration avec
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
       Mikelab_setupOutbreak:
         text: |-
           Configuration de l'épidémie
@@ -1705,6 +1728,7 @@ fr:
       Mikelab_showText:
         options:
           PREPOSITION:
+            '"above"': ci-dessus
             '"below"': ci-dessous
       Mikelab_sprite:
         text: nouveau {COSTUME} lutin à {LOCATION}
@@ -1719,6 +1743,7 @@ fr:
             "{x: 300, y: 100}": en haut à droite
             "{x: 100, y: 300}": en bas à gauche
             "{x: 300, y: 300}": en bas à droite
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: quand on clique sur {SPRITE}
       Mikelab_whenKeyPressed:
@@ -1729,6 +1754,7 @@ fr:
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
+            '"space"': barre d'espace
             '"w"': O
             '"a"': A
             '"s"': S
@@ -1740,6 +1766,7 @@ fr:
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
+            '"space"': barre d'espace
             '"w"': O
             '"a"': A
             '"s"': S
@@ -1759,6 +1786,7 @@ fr:
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
+            '"space"': barre d'espace
       Mikelab_xLocationOf:
         text: coordonnées x de {SPRITE}
       Mikelab_yLocationOf:
@@ -1781,17 +1809,24 @@ fr:
         text: dispose les monstres en quadrillage
       Outbreak_layoutRandom:
         text: dispose les monstres au hasard
+      Outbreak_setSpeed:
+        text: régler la vitesse du monstre sur {VAL}
+      Outbreak_setupOutbreak:
+        text: installer Monster Town avec{COUNT}monstres
       Outbreak_stopMoving:
         text: les monstres ne bougent plus
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Fleurs
-            '"hearts"': Cœurs
+            '"brick"': brique
+            '"fire"': feu
+            '"flowers"': fleurs
+            '"hearts"': cœurs
             '"iceCream"': Crème glacée
-            '"rainbow"': Arc-en-ciel
-            '"stars"': Étoiles
-            '"waves"': Vagues
+            '"leaves"': feuilles
+            '"rainbow"': arc-en-ciel
+            '"stars"': étoiles
+            '"waves"': vagues
       Poetry_addLine:
         text: ajouter une ligne {LINE}
       Poetry_animateText:
@@ -1820,10 +1855,15 @@ fr:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calmer
             '"sound://category_nature/steady_campfire_loop.mp3"': Feu de camp
             '"sound://category_nature/rain_loop.mp3"': Bruine
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': forêt
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Hanté
             '"sound://category_background/inside_plane.mp3"': Hum
             '"sound://category_loops/red_flag_loop1.mp3"': Mission
+            '"sound://category_nature/summer_night_loop.mp3"': nuit
+            '"sound://category_background/ocean_waves.mp3"': océan
+            '"sound://category_background/rainforest_ambient_sound.mp3"': forêt tropicale
             '"sound://category_background/repitition.mp3"': Diriger/Conduire
+            '"sound://category_background/wavering_wind.mp3"': fatigué
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lent
       Poetry_playSound:
         text: jouer le son {SOUND}
@@ -1837,7 +1877,7 @@ fr:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Échouer
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Battement
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Sauter
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lumière
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': lumière
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Pouf
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scanner
             '"sound://category_background/typewriter.mp3"': Machine à écrire
@@ -1853,30 +1893,31 @@ fr:
         text: Définir l'arrière-plan sur {EFFECT} {PALETTE}.
         options:
           EFFECT:
-            '"colors"': Couleurs
-            '"squiggles"': Gribouillis
-            '"space"': Espace
-            '"stars"': Étoiles
+            '"blooming"': Fleuri
+            '"bubbles"': Bulles
+            '"clouds"': Nuageux
+            '"confetti"': Confettis
             '"darkCircles"': Décoloration
             '"fadeColors"': Dépoli
-            '"blooming"': Fleuri
+            '"hearts"': cœurs
+            '"space"': Espace
+            '"rain"': pluie
             '"ripples"': Ondulations
-            '"clouds"': Nuageux
-            '"rain"': Pluie
-            '"bubbles"': Bulles
-            '"confetti"': Confettis
-            '"hearts"': Cœurs colorés
+            '"colors"': Couleurs
+            '"stars"': Étoiles
+            '"squiggles"': Gribouillis
           PALETTE:
-            '"rainbow"': Arc-en-ciel
-            '"grayscale"': Gris
-            '"sky"': Ciel
+            '"autumn"': Automne
             '"sunrise"': L'aube
             '"sunset"': Crépuscule
+            '"grayscale"': Gris
+            '"ocean"': océan
+            '"rainbow"': arc-en-ciel
+            '"roses"': Les roses
+            '"sky"': Ciel
             '"spring"': Printemps
             '"summer"': Été
-            '"autumn"': Automne
             '"winter"': Hiver
-            '"roses"': Les roses
       Poetry_setBackgroundImageAs:
         text: établir {IMG} comme arrière-plan
       Poetry_setFont:
@@ -1884,23 +1925,23 @@ fr:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Effet
             '"Georgia"': Géorgie
             '"Times"': Heures
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Effet
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: définir la couleur du texte {FILL}
       Poetry_setForegroundEffect:
         text: Appliquer {EFFECT} effet
         options:
           EFFECT:
-            '"rain"': Pluie
             '"bubbles"': Bulles
-            '"hearts"': Cœurs colorés
-            '"emojis"': Emojis joyeux
             '"confetti"': Confettis
+            '"hearts"': cœurs
+            '"emojis"': Emojis joyeux
+            '"rain"': pluie
             '"starburst"': Starburst
             '"glass"': Verre brisé
             '"twinkling"': Scintillant
@@ -1915,11 +1956,11 @@ fr:
         options:
           EFFECT:
             '"fade"': fondu
-            '"typewriter"': machine à écrire
             '"flyLeft"': voler à partir de la gauche
             '"flyRight"': voler à partir de la droite
             '"flyTop"': voler à partir du haut
             '"flyBottom"': voler à partir du bas
+            '"typewriter"': machine à écrire
       Poetry_setTitle:
         text: Saisir le titre {TITLE}
       Poetry_showText:
@@ -1928,36 +1969,28 @@ fr:
         text: 'Le lutin {ANIMATION_NAME} commence {BEHAVIOR}. '
         options:
           BEHAVIOR:
-            fluttering: flotter
-            growing: agrandir
-            jittering: gigoter
-            moving_north_and_looping: tourner en boucle et aller vers le nord
-            moving_south_and_looping: tourner en boucle et aller vers le sud
-            moving_east_and_looping: tourner en boucle et aller vers l'est
-            moving_west_and_looping: tourner en boucle et aller vers l'ouest
-            shrinking: contracter
-            spinning_left: tournoyer à gauche
-            spinning_right: tournoyer à droite
-            swimming_left_and_right: natation
-            wandering: se balader
-            wobbling: vaciller
+            '"fluttering"': flotter
+            '"growing"': agrandir
+            '"jittering"': gigoter
+            '"shrinking"': contracter
+            '"spinning_left"': tournoyer à gauche
+            '"spinning_right"': tournoyer à droite
+            '"swimming_left_and_right"': natation
+            '"wandering"': se balader
+            '"wobbling"': vaciller
       Poetry_stopBehavior:
         text: 'Le lutin {ANIMATION_NAME} arrête {BEHAVIOR}. '
         options:
           BEHAVIOR:
-            fluttering: flotter
-            growing: agrandir
-            jittering: gigoter
-            moving_north_and_looping: tourner en boucle et aller vers le nord
-            moving_south_and_looping: tourner en boucle et aller vers le sud
-            moving_east_and_looping: tourner en boucle et aller vers l'est
-            moving_west_and_looping: tourner en boucle et aller vers l'ouest
-            shrinking: contracter
-            spinning_left: tournoyer à gauche
-            spinning_right: tournoyer à droite
-            swimming_left_and_right: natation
-            wandering: se balader
-            wobbling: vaciller
+            '"fluttering"': flotter
+            '"growing"': agrandir
+            '"jittering"': gigoter
+            '"shrinking"': contracter
+            '"spinning_left"': tournoyer à gauche
+            '"spinning_right"': tournoyer à droite
+            '"swimming_left_and_right"': natation
+            '"wandering"': se balader
+            '"wobbling"': vaciller
             '"all"': "--tous les comportements--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
@@ -2014,36 +2047,85 @@ fr:
           PROPERTY:
             "'shapeColor'": couleur
       aalab_layoutSprites:
+        text: monstres de mise en page en tant que {FORMAT}
         options:
           FORMAT:
             '"grid"': grille
             '"border"': frontière
             '"row"': ligne
             '"random"': aléatoire
+      aalab_levelFailure:
+        text: élève {STATE} avec {KEY}
+        options:
+          STATE:
+            '0': réussit
+            '3': échoue
+      aalab_setSpeed:
+        text: régler la vitesse du monstre sur {VAL}
+      aalab_setupSim:
+        text: installer Monster Town avec{COUNT}monstres
       aalab_someGraduallyStartIntervention:
+        text: "{PORTION} monstres {RATE} commencent {BEHAVIOR}"
         options:
           PORTION:
             '1': tout
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': la plupart
+            '0.5': la moitié
+            '0.25': peu
+          RATE:
+            '"immediately"': immédiatement
+            '"quickly"': vite
+            '"gradually"': graduellement
+            '"slowly"': lentement
           BEHAVIOR:
             '"wandering"': se balader au hasard
+            '"congregating"': se rassembler
+            '"quarantining"': mise en quarantaine en cas de maladie
+            '"avoiding"': distanciation sociale
+            '"none"': rester immobile
       aalab_someStartIntervention:
+        text: "{PORTION} monstres commencent {BEHAVIOR}"
         options:
           PORTION:
             '1': tout
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': la plupart
+            '0.5': la moitié
+            '0.25': peu
           BEHAVIOR:
             '"wandering"': se balader au hasard
+            '"congregating"': se rassembler
+            '"quarantining"': mise en quarantaine en cas de maladie
+            '"avoiding"': distanciation sociale
+            '"none"': rester immobile
       aalab_spriteSayChoices:
         text: "{SPRITE} dit {SPEECH}"
+        options:
+          SPEECH:
+            '"I have spoken."': J'ai parlé.
+            '"Bounty hunting is a complicated profession."': Chasseur de primes est un métier compliqué.
+            '"I will initiate self-destruct."': Je vais commencer l'autodestruction.
+            '"This is the way."': Comme ça.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': Les gens sont différents, mais c'est pas la peine de chercher à les comprendre, il faut juste les respecter.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': Pas besoin d'un miroir pour être beau. Il suffit de l'être à l'intérieur.
+            '"Sometimes life is scary and dark. That is why we must find the light."': Parfois, la vie est effrayante et sombre. C'est pourquoi il faut chercher la lumière.
+            '"Everything small is just a smaller version of something big."': Tout ce qui est petit n'est qu'une version plus petite de quelque chose de grand.
+            '"Suckin’ at something is the first step to being sorta good at something."': Être nul dans quelque chose est la première étape pour être en quelque sorte bon dans quelque chose.
+            '"Life happens wherever you are, whether you make it or not."': La vie suit son cours, où que vous soyez, que vous suiviez ou non.
+            '"You can’t knock me down!"': Vous ne m'aurez pas !
+            '"Roar!"': Rugissement !
+            '"My first girlfriend turned into the moon."': Ma première copine s'est transformée en lune.
+            '"True humility is the only antidote to shame."': La vraie humilité est le seul antidote à la honte.
+            '"You are stronger and wiser and freer than you have ever been."': Vous êtes plus fort, plus sage et plus libre que vous ne l'avez jamais été.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': Il faut réessayer à chaque fois. C'est pas parce qu'on a peur d'échouer qu'il faut arrêter.
       aalab_startIntervention:
+        text: monstres commencent {BEHAVIOR}
         options:
           BEHAVIOR:
             wandering: se balader au hasard
+            '"congregating"': se rassembler
+            '"quarantining"': mise en quarantaine en cas de maladie
+            '"avoiding"': distanciation sociale
+            '"none"': rester immobile
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:
@@ -2171,3 +2253,5 @@ fr:
             left: gauche ↺
       validation_validatedBackground:
         text: établir {IMG} comme arrière-plan
+      validation_validatedSound:
+        text: Jouer le son {SOUND}

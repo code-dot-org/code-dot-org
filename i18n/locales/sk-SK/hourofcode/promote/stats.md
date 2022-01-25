@@ -16,7 +16,7 @@ title: Stručné popisy a užitočné štatistiky
 
 #### Zaveďte na svojej škole informatiku. Začnite učiť pomocou Hodiny kódu!
 
-S nástupom technológií, ktoré menia každé odvetvie na svete, sa počítačová zručnosť stala súčasťou všeobecných znalostí. Avšak len na menej než polovici škôl sa učí informatika! Dobrou správou je, že sme na ceste tento stav zmeniť. Ak ste minulý rok počuli o Hodine Kódu, možno už viete, že zmenila históriu. 100 miliónov študentov už objavilo, ako dostupná a zábavná môže informatika byť len vďaka jednej Hodine Kódu.
+S nástupom technológií, ktoré menia každé odvetvie na svete, sa počítačová zručnosť stala súčasťou všeobecných znalostí. But just half of all schools offer computer science! Dobrou správou je, že sme na ceste tento stav zmeniť. Ak ste minulý rok počuli o Hodine Kódu, možno už viete, že zmenila históriu. 100 miliónov študentov už objavilo, ako dostupná a zábavná môže informatika byť len vďaka jednej Hodine Kódu.
 
 Hodina Kódu je jednohodinový úvod do informatiky, navrhnutý s cieľom demystifikovať kód a ukázať, že základy programovania sa môže naučiť každý. Viac informácií nájdete na lokalite [http://HourOfCode.com](http://HourofCode.com), kde si takúto hodinu môžete sami vyskúšať alebo zorganizovať podujatie o Hodine kódu, v ktorom uvediete ostatných do sveta informatiky.
 
@@ -30,7 +30,7 @@ Veríme, že vzbudí záujem študentov a motivuje ich k učeniu sa. Výskumy ta
 
 #### Prečo je to dôležité?
 
-Technológia mení každé odvetvie na tejto planéte. V roku 2015 bolo len v Spojených Štátoch otvorených 7 miliónov pracovných pozícií - vrátane umenia a dizajnu, ktoré vyžadujú znalosť programovania. V 53 percentách škôl v Spojených štátoch sa ale informatika neučí. Je čas zmeniť to a prejsť do 21. storočia. Vieme, že bez ohľadu na to, akým smerom sa budú študenti uberať v dospelosti, či pôjdu do medicíny, politiky, podnikania alebo umenia, znalosť technológií a ich budovania im dodá sebavedomie a konkurenčnú výhodu. <br /> <br />
+Technológia mení každé odvetvie na tejto planéte. V roku 2015 bolo len v Spojených Štátoch otvorených 7 miliónov pracovných pozícií - vrátane umenia a dizajnu, ktoré vyžadujú znalosť programovania. But 49 percent of schools in the U.S. don't offer computer science. Je čas zmeniť to a prejsť do 21. storočia. Vieme, že bez ohľadu na to, akým smerom sa budú študenti uberať v dospelosti, či pôjdu do medicíny, politiky, podnikania alebo umenia, znalosť technológií a ich budovania im dodá sebavedomie a konkurenčnú výhodu. <br /> <br />
 
 #### Citát, ktorý môžete využiť vo svojich materiáloch
 

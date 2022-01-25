@@ -2597,6 +2597,10 @@ ne:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2693,3 +2697,23 @@ ne:
           lessons:
             lesson-1:
               name: Spelling Bee
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content

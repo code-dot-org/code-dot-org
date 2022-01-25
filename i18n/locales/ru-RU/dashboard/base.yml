@@ -185,7 +185,7 @@ ru:
     email_preference_yes: "Да"
     email_preference_no: "Нет"
     email_preference_required: "Необходимо указать предпочтение электронной почте."
-    share_teacher_email_reg_partner_question: "Не хотели чтобы мы поделились вашей контактной информацией с [Code.org regional partner](%{cdo_regional_partner_desc}) чтобы мы могли уведомлять вас о профессиональной разработке, ресурсах, и мероприятиях?"
+    share_teacher_email_reg_partner_question: "Не хотели чтобы мы поделились вашей контактной информацией с [Code.org regional partner](%{cdo_regional_partner_desc}), чтобы мы могли уведомлять вас о профессиональной разработке, ресурсах, и мероприятиях?"
     share_teacher_email_reg_partner_preference_yes: "Да"
     share_teacher_email_reg_partner_preference_no: "Нет"
     share_teacher_email_reg_partner_preference_required: "Необходимо указать предпочтение электронной почте."
@@ -433,6 +433,7 @@ ru:
       prizes_link: 'Дополнительная информация'
   teacher:
     answer: Ответ
+    dashboard: 'Панель управления учителя'
     for_teachers_only: Только для учителей
     title:
       one: 'Ваш учитель:'

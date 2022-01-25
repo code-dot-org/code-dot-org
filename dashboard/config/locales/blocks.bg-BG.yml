@@ -1089,35 +1089,68 @@ bg:
             '"down"': стрелка надолу
             '"left"': лява стрелка
             '"right"': стрелка надясно
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"brick"': тухла
+            '"fire"': пожар
+            '"flowers"': цветя
+            '"hearts"': сърца
+            '"leaves"': листа
+            '"rainbow"': дъга
+            '"stars"': звезди
+            '"waves"': вълни
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': пръсва
             '"rain"': дъжд
             '"spiral"': спирала
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': лагерен огън
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': гора
+            '"sound://category_nature/summer_night_loop.mp3"': нощ
+            '"sound://category_background/ocean_waves.mp3"': океан
+            '"sound://category_background/rainforest_ambient_sound.mp3"': тропическите
+              гори
+            '"sound://category_background/wavering_wind.mp3"': сънлив
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': бавно
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Прекъсване
+            '"sound://category_bell/long_bell_notification.mp3"': камбана
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': балонче
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': скок
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': светлина
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Цветове
-            '"rain"': Дъжд
             '"bubbles"': Балончета
+            '"clouds"': облачен
+            '"hearts"': сърца
+            '"rain"': дъжд
+            '"colors"': Цветове
+          PALETTE:
+            '"ocean"': океан
+            '"rainbow"': дъга
+            '"spring"': пролет
+            '"winter"': зима
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Дъжд
             '"bubbles"': Балончета
+            '"hearts"': сърца
+            '"rain"': дъжд
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            swimming_left_and_right: плуване
+            '"swimming_left_and_right"': плуване
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            swimming_left_and_right: плуване
+            '"swimming_left_and_right"': плуване
       Poetry_whenLineShows:
         options:
           N:

@@ -2,5 +2,6 @@
   "key": "gamelab_removeBehaviorSimple",
   "name": "removeBehaviorSimple",
   "category": "Behaviors",
+  "block_name": "gamelab_removeBehaviorSimple",
   "syntax": "removeBehaviorSimple"
 }

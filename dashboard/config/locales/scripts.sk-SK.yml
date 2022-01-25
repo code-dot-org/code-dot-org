@@ -13018,6 +13018,15 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -14037,21 +14046,6 @@ sk:
               key: Java Lab
             lesson-1:
               key: lekcia-1
-              description_student: Projekty, ktoré ste vypracovali počas kurzu, podnietili
-                v komunite veľa kreativity! Uskutoční sa oblastný festival literatúry,
-                ktorý predstaví kreatívne príbehy, scenáre, texty piesní, listy a
-                básne. Projekt oblastného festivalu literatúry je rozsiahly projekt,
-                na ktorom sa pracuje počas celého modulu a stratégie projektového
-                manažmentu vám pomôžu zorganizovať a štruktúrovať vašu prácu. Objavte
-                stratégie písania a tvorenia štruktúry kódu, aby iní softvéroví inžinieri
-                mohli ľahko pochopiť a použiť nástroj Java na vytvorenie dokumentácie
-                programu.
-              description_teacher: Žiaci sa oboznámia s projektom oblastného festivalu
-                literatúry a vyhodnotia požiadavky a príklady, aby identifikovali
-                otázky a kľúčové črty. Pred začatím práce na projekte si žiaci rozšíria
-                svoje chápanie programovej štruktúry a komentovania identifikáciou
-                osvedčených postupov a skúmaním použitia Javadocs na generovanie programovej
-                dokumentácie.
             lesson-2:
               key: lekcia-2
               description_student: Objekty „Integer“ a „Double“ vytvoríte tak, aby
@@ -14422,3 +14416,116 @@ sk:
                 -   Mali by poznať čísla do 10 a vedieť počítať s využitím obrázkov, prstov alebo manipulatívov.
                 -   Mali by vedieť sčítať predmety, obrázky, prsty alebo manipulatívy do súčtu 10.
           title: Počítanie s Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lekcia
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Projekt oblastného festivalu literatúry – 1. deň
+            lesson-12:
+              name: Projekt oblastného festivalu literatúry – 2. deň
+            lesson-13:
+              name: Projekt oblastného festivalu literatúry – 3. deň
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulácia nákazy
+            lesson-5:
+              name: '"O mne" so Sprite Labom'
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: lekcia-10
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-16:
+              key: lekcia-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-10:
+              key: lekcia-10
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-16:
+              key: lekcia-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox

@@ -254,7 +254,6 @@ export function itImplementsTheMakerBoardInterface(
         // Check the basic button shape
         expect(button).to.be.an.instanceOf(EventEmitter);
         expect(button).to.have.property('isPressed');
-        expect(button).to.have.property('holdtime');
       });
     });
 

@@ -107,7 +107,7 @@ vi:
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
       Dancelab_changePropBy:
-        text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
+        text: thay đổi {PROPERTY} {SPRITE} bởi {VAL}
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -506,7 +506,7 @@ vi:
             '"rave"': Đen và trắng
             '"cool"': Xanh
             '"electronic"': ไฟฟ้า
-            '"iceCream"': ไอศกรีม
+            '"iceCream"': Kem
             '"default"': Sáng
             '"neon"': Đèn Neon
             '"tropical"': Nhiệt đới
@@ -526,7 +526,7 @@ vi:
             '"diamonds"': Kim cương
             '"disco_ball"': Bóng Disco
             '"fireworks"': พลุ
-            '"flowers"': ดอกไม้
+            '"flowers"': Bông hoa
             '"growing_stars"': Ngôi sao lớn dần
             '"swirl"': Thôi miên
             '"kaleidoscope"': Kính vạn hoa
@@ -547,7 +547,7 @@ vi:
             '"rave"': Đen và trắng
             '"cool"': Xanh
             '"electronic"': ไฟฟ้า
-            '"iceCream"': ไอศกรีม
+            '"iceCream"': Kem
             '"default"': Sáng
             '"neon"': Đèn Neon
             '"tropical"': Nhiệt đới
@@ -858,7 +858,7 @@ vi:
             '"ripples"': Gợn sóng
             '"ripples_random"': Gợn sóng ngẫu nhiên
             '"quads"': Góc
-            '"flowers"': ดอกไม้
+            '"flowers"': Bông hoa
             '"popsicles"': Kem que
             '"squiggles"': Nét nguệch ngoạc
             '"growing_stars"': Ngôi sao lớn dần
@@ -974,7 +974,7 @@ vi:
       gamelab_bounceOff:
         text: "{SPRITE} bật khỏi {TARGET}"
       gamelab_changePropBy:
-        text: thay đổi {SPRITE} {PROPERTY} thành {VAL}
+        text: thay đổi {SPRITE} {PROPERTY} bởi {VAL}
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -1333,7 +1333,7 @@ vi:
       gamelab_showTitleScreen:
         text: Hiển thị màn hình tiêu đề {BREAK} tiêu đề {TITLE} văn bản {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} nhấp"
+        text: "{CONDITION} {SPRITE} được nhấp chuột"
         options:
           CONDITION:
             '"when"': khi nào
@@ -1461,6 +1461,7 @@ vi:
       Mikelab_beginDataCollection:
         text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
       Mikelab_changePropBy:
+        text: thay đổi {PROPERTY} của {SPRITE} bởi {VAL}
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -1776,15 +1777,18 @@ vi:
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
       Poetry_addFrame:
+        text: đặt khung thành {BRUSH}
         options:
           BRUSH:
-            '"flowers"': ดอกไม้
-            '"hearts"': Trái tim
-            '"iceCream"': ไอศกรีม
-            '"rainbow"': Cầu vồng
-            '"stars"': Sao
+            '"brick"': gạch
+            '"hearts"': trái tim
+            '"iceCream"': Kem
+            '"rainbow"': cầu vồng
+            '"stars"': sao
       Poetry_addLine:
         text: thêm dòng {LINE}
+      Poetry_addTextHighlight:
+        text: tô sáng chữ {COLOR}
       Poetry_animateText:
         text: tạo chuyển động cho văn bản
       Poetry_destroy:
@@ -1804,6 +1808,7 @@ vi:
       Poetry_makeNumSprites:
         text: tạo {NUM} nhân vật {ANIMATION_NAME} mới
       Poetry_playMusic:
+        text: phát nhạc {SOUND}
         options:
           SOUND:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Yên tĩnh
@@ -1812,6 +1817,7 @@ vi:
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Ma ám
             '"sound://category_background/inside_plane.mp3"': Vo ve
             '"sound://category_loops/red_flag_loop1.mp3"': Nhiệm vụ
+            '"sound://category_nature/summer_night_loop.mp3"': đêm
             '"sound://category_background/repitition.mp3"': Cưỡi
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Chậm
       Poetry_playSound:
@@ -1826,7 +1832,6 @@ vi:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Thất bại
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Chớp cánh
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Nhảy cao
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Sáng
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Bỗng chốc
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Quét
             '"sound://category_background/typewriter.mp3"': Máy đánh chữ
@@ -1842,30 +1847,30 @@ vi:
         text: đặt nền thành {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Màu sắc
-            '"squiggles"': Nét nguệch ngoạc
-            '"space"': Không gian
-            '"stars"': Sao
+            '"blooming"': Nở hoa
+            '"bubbles"': Bong bóng
+            '"clouds"': Mù mịt
+            '"confetti"': Hoa giấy
             '"darkCircles"': Mờ dần
             '"fadeColors"': Đóng băng
-            '"blooming"': Nở hoa
+            '"hearts"': trái tim
+            '"space"': Không gian
+            '"rain"': mưa
             '"ripples"': Gợn sóng
-            '"clouds"': Mù mịt
-            '"rain"': Mưa
-            '"bubbles"': Bong bóng
-            '"confetti"': Hoa giấy
-            '"hearts"': Trái tim sặc sỡ
+            '"colors"': Màu sắc
+            '"stars"': Sao
+            '"squiggles"': Nét nguệch ngoạc
           PALETTE:
-            '"rainbow"': Cầu vồng
-            '"grayscale"': Xám
-            '"sky"': Bầu trời
+            '"autumn"': Mùa thu
             '"sunrise"': Bình minh
             '"sunset"': Hoàng hôn
+            '"grayscale"': Xám
+            '"rainbow"': cầu vồng
+            '"roses"': Hoa hồng
+            '"sky"': Bầu trời
             '"spring"': Mùa xuân
             '"summer"': Mùa hạ
-            '"autumn"': Mùa thu
             '"winter"': Mùa đông
-            '"roses"': Hoa hồng
       Poetry_setBackgroundImageAs:
         text: đặt hình nền thành {IMG}
       Poetry_setFont:
@@ -1873,23 +1878,23 @@ vi:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Chữ viết tay
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Chữ viết tay
       Poetry_setFontColor:
         text: đặt màu chữ {FILL}
       Poetry_setForegroundEffect:
         text: làm hiệu ứng {EFFECT}
         options:
           EFFECT:
-            '"rain"': Mưa
             '"bubbles"': Bong bóng
-            '"hearts"': Trái tim sặc sỡ
-            '"emojis"': Biểu tượng cảm xúc vui vẻ
             '"confetti"': Hoa giấy
+            '"hearts"': trái tim
+            '"emojis"': Biểu tượng cảm xúc vui vẻ
+            '"rain"': mưa
             '"starburst"': Lóe sáng
             '"glass"': Kính vỡ
             '"twinkling"': Lấp lánh
@@ -1904,11 +1909,11 @@ vi:
         options:
           EFFECT:
             '"fade"': mờ dần
-            '"typewriter"': máy đánh chữ
             '"flyLeft"': bay từ bên trái
             '"flyRight"': bay từ bên phải
             '"flyTop"': bay từ trên xuống
             '"flyBottom"': bay từ dưới lên
+            '"typewriter"': máy đánh chữ
       Poetry_setTitle:
         text: đặt tiêu đề {TITLE}
       Poetry_showText:
@@ -1917,34 +1922,26 @@ vi:
         text: nhân vật {ANIMATION_NAME} bắt đầu {BEHAVIOR}
         options:
           BEHAVIOR:
-            fluttering: rung rinh
-            growing: phóng to
-            jittering: phập phồng
-            moving_north_and_looping: vòng qua phía bắc
-            moving_south_and_looping: vòng qua phía nam
-            moving_east_and_looping: vòng qua phía đông
-            moving_west_and_looping: vòng qua phía tây
-            shrinking: thu nhỏ
-            spinning_left: xoay trái
-            spinning_right: xoay phải
-            wandering: lang thang
-            wobbling: nhúc nhích
+            '"fluttering"': rung rinh
+            '"growing"': phóng to
+            '"jittering"': phập phồng
+            '"shrinking"': thu nhỏ
+            '"spinning_left"': xoay trái
+            '"spinning_right"': xoay phải
+            '"wandering"': lang thang
+            '"wobbling"': nhúc nhích
       Poetry_stopBehavior:
         text: nhân vật {ANIMATION_NAME} dừng {BEHAVIOR}
         options:
           BEHAVIOR:
-            fluttering: rung rinh
-            growing: phóng to
-            jittering: phập phồng
-            moving_north_and_looping: vòng qua phía bắc
-            moving_south_and_looping: vòng qua phía nam
-            moving_east_and_looping: vòng qua phía đông
-            moving_west_and_looping: vòng qua phía tây
-            shrinking: thu nhỏ
-            spinning_left: xoay trái
-            spinning_right: xoay phải
-            wandering: lang thang
-            wobbling: nhúc nhích
+            '"fluttering"': rung rinh
+            '"growing"': phóng to
+            '"jittering"': phập phồng
+            '"shrinking"': thu nhỏ
+            '"spinning_left"': xoay trái
+            '"spinning_right"': xoay phải
+            '"wandering"': lang thang
+            '"wobbling"': nhúc nhích
             '"all"': "--tất cả hành vi--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

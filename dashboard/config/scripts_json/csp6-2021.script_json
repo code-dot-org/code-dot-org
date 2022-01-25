@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Student opportunity: $40,000 for college and a paid internship",
+          "details": "Amazon Future Engineer is offering 100 qualifying high school seniors across the US $40K for tuition and a coding internship at Amazon. Applications are open to students who plan to study CS in college and close January 25, 2022. Click \"Learn more\" to see the full criteria.",
+          "link": "https://bit.ly/AFEScholarshipLB2022",
+          "type": "bullhorn",
+          "visibility": "Teacher and student"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +22,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 22:21:33 UTC",
+    "serialized_at": "2022-01-11 18:10:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,11 +41,23 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 6: Algorithms",
+        "display_name": "Algorithms",
         "description": "### Unit Philosophy and Pedagogy\n\n\n* **A Break from Programming:** This unit is intentionally designed as a short respite from programming. After three units and a major hackathon project, it is a great opportunity to get away from screens for a while before the final programming push that leads to the Create PT.\n\n* **Just Enough Math:** This unit includes some mathematical concepts which enrich students' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.\n\n\n### Major Assessment and Projects\n\nThis unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.\n* CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.9 Developing Algorithms\n* 3.11 Binary Search\n* 3.17 Algorithmic Efficiency\n* 3.18 Undecidable Problems\n* 4.3 Parallel and Distributed Computing"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp6-2021"
       }
     }
@@ -164,6 +184,21 @@
       "seeding_key": {
         "lesson.key": "Lesson 6: Assessment Day",
         "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp6-2021"
       }
     }
@@ -554,6 +589,18 @@
         "lesson_activity.key": "dceaaa4f-bef1-4a1d-a534-c4d6ce0c35d1",
         "lesson.key": "Lesson 6: Assessment Day",
         "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "ac894ed7-56d7-4f99-82b8-bd6acff2ed45",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac894ed7-56d7-4f99-82b8-bd6acff2ed45",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp6-2021"
       }
     }
@@ -1872,6 +1919,23 @@
         "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
         "lesson_activity.key": "dceaaa4f-bef1-4a1d-a534-c4d6ce0c35d1"
       }
+    },
+    {
+      "key": "0cfb9742-a565-4468-a5ff-e306f5635a52",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0cfb9742-a565-4468-a5ff-e306f5635a52",
+        "lesson_activity.key": "ac894ed7-56d7-4f99-82b8-bd6acff2ed45"
+      }
     }
   ],
   "script_levels": [
@@ -2199,6 +2263,28 @@
       "level_keys": [
         "CSP Unit 6 AP-Style Assessment _2021"
       ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2021",
+        "activity_section.key": "0cfb9742-a565-4468-a5ff-e306f5635a52"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2356,6 +2442,18 @@
         "lesson_group.key": "csp_unit6_2020",
         "script.name": "csp6-2021",
         "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2021",
+        "activity_section.key": "0cfb9742-a565-4468-a5ff-e306f5635a52"
       }
     }
   ],

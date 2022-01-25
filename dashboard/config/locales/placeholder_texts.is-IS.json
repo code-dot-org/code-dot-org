@@ -251,11 +251,13 @@
           "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
         },
         "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
+          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hæ!"
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "fiskur",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "annað"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "annað",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "lífvera"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Þú sigrar!"
@@ -298,6 +300,13 @@
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
           "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "Þetta er ég! Rikka! Mér finnst gaman að kóða, vera með Thuy, og borða ís!",
+          "810896b14fc6615f0c76628b9b6a727e": "Þetta er besti vinur minn Thuy! Hún er mjög góð í íþróttum!",
+          "8e985f60f328934accd78e7649584840": "Ís er uppáhaldsnammið mitt!",
+          "31ba97bb501bb1f5b448221be09bad32": "Þetta er hundurinn minn Lollipop! Ég ætti að kenna henni að kóða!",
+          "6f97975a0bda0c9219915161149cbb26": "Þetta er tölvan mín! Ég er ALLTAF að kóða í henni!"
         }
       }
     }

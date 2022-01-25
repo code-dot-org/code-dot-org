@@ -63,7 +63,7 @@ describe('TeacherHomepage', () => {
   it('renders a Finish Application call to action if showFinishTeacherApplication is true', () => {
     const wrapper = setUp({showFinishTeacherApplication: true});
     assert.equal(
-      wrapper.find('Connect(SetUpMessage)').props().buttonText,
+      wrapper.find('BorderedCallToAction').props().buttonText,
       'Finish Application'
     );
   });

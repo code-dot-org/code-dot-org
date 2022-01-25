@@ -4829,7 +4829,8 @@
           "description": "_Przeglądaj co najmniej 3 programy Sprite Lab w Code.org. Dla każdego programu zostanie wyświetlona lista widocznych kształtek i opisać wybory dokonane jako użytkownik._\n\n\\*\\*Zrób to: \\*\\* \n\n-   Podaj każdej osobie (lub grupie) fizyczną lub cyfrową kopię arkusza **\\\\ \\*Exploring Apps**. \n\n-   Skieruj studentów do poziomu 2 w Code Studio (Exploration: przykładowe aplikacje). \n\n-   Rozważ modelowanie jednej aplikacji z klasą, zanim uczniowie wykonają zadanie niezależnie.",
           "tips": [
             "Jeśli po raz pierwszy uczestnicy kursu korzystają z Code.org, poświęć trochę czasu na pomoc uczniom w zrozumieniu, jak przejść do strony internetowej i zalogować się na swoje konta."
-          ]
+          ],
+          "progression_name": "Eksploracja: Przykładowe aplikacje"
         },
         "f321b39c-8051-4fc9-9e40-24f25216f88c": {
           "name": "Podziel się",
@@ -4885,7 +4886,8 @@
           "description": "#### Free Play (10 min)\n\n\\*\\*Przejście: \\*\\* Studenci powinni przejść do ostatecznego poziomu lekcji, gdzie będą mogli stworzyć własny projekt.",
           "tips": [
             "Poziomy Free Play mają być szybką okazją dla uczniów do kreatywnego zastosowania tego, czego się nauczyli. Studenci powinni eksperymentować z własnymi pomysłami i mogą być zachęcani do dzielenia się i współpracy ze sobą."
-          ]
+          ],
+          "progression_name": "Czas na zabawę: Utwórz scenę"
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
           "name": "Refleksja",
@@ -4926,7 +4928,8 @@
           "description": "#### Free Play (10 min)\n\n\\*\\*Przejście: \\*\\* Uczniowie powinni przejść do ostatniego poziomu lekcji, gdzie będą mogli zobaczyć te same opcje gry, co poprzednie lekcje. Zachęcaj uczniów do dodawania wydarzeń do swoich projektów od ostatniego razu lub rozpoczynania nowego projektu.",
           "tips": [
             "Wybór darmowej gry w tej lekcji odzwierciedla te z poprzedniej lekcji. W rzeczywistości każdy kod studencki z ostatniej lekcji zostanie przeniesiony na dzisiaj. Główną różnicą jest to, że teraz uczniowie mają dodatkowe bloki w swoich narzędziach, których powinni używać, aby uczynić ich programy bardziej interesującymi lub złożonymi. "
-          ]
+          ],
+          "progression_name": "Czas na zabawę: Utwórz interaktywną scenę"
         },
         "47bca048-39fb-4014-a480-e21d163469db": {
           "name": "Refleksja",
@@ -5004,7 +5007,8 @@
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
           "name": "Utwórz własną historię (20 min.)",
-          "description": "Dzisiaj będziesz pracować z grupą, aby utworzyć własną historię o pustej przestrzeni. "
+          "description": "Dzisiaj będziesz pracować z grupą, aby utworzyć własną historię o pustej przestrzeni. ",
+          "progression_name": "Film: Zmienne w kopertach bez komputera"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "description": "**Zrób to: \\*\\* Przekaż instrukcję**\\\\ \\*arkusz studenta\\*\\* i przejdźmy do instrukcji. ",
@@ -5048,7 +5052,8 @@
           "description": "#### Wideo (5 minut)\n\nWyświetl wideo do całej klasy. ",
           "tips": [
             "Podobnie jak w przypadku, gdy uczniowie piszą lub komunikują się ustnie, ważne jest, aby ustawić oczekiwania dotyczące właściwego używania słów w tej aktywności. Studenci powinni zrozumieć, że są odpowiedzialni za kod, który piszą, w tym za każdy tekst wyświetlany na ekranie. Tekst powinien być pełen szacunku, a także bezpieczny. Uczniowie mogą ćwiczyć nieudostępnianie danych osobowych w swoich programach, zwłaszcza jeśli chcą dzielić się z innymi osobami.\nNależy pamiętać, że wszelkie informacje wpisane w monicie Lab Sprite nie są zapisywane długoterminowo. Słowa i wiadomości wpisane przez użytkowników tych aplikacji znikną po zresetowaniu aplikacji."
-          ]
+          ],
+          "progression_name": "Film:  Tekst i monity"
         },
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "description": "#### Budowa umiejętności i praktyka (20 minut)\n\n\\*\\*Przejście: \\*\\* Niech uczniowie przeniosą się do komputera i zalogują się. Działania te są odpowiednie do samodzielnego uczenia się lub programowania par.\n\nUczniowie powinni ukończyć poziomy budowania umiejętności, a następnie poświęcić czas na wybór spośród różnych działań w praktyce.",
@@ -5083,7 +5088,8 @@
           "description": "### Exploration\n\n\\*\\*Zrób to: \\*\\* Niech uczniowie zbadają przykładowe programy na poziomie 1. Można to zrobić jako cała klasa z dyskusją, z parami dzielącymi urządzenie, a nawet indywidualnie. Dla każdego z programów, uczniowie myślą o tym, jak to działa, kto by go używał, i wszelkie pomysły, które daje im o tym, co mogą zrobić sami. Dobrą strategią jest to, aby uczniowie czytali kod programu na głos, po jednej linijce na raz, a potem rozmawiali o tym, do czego służy.",
           "tips": [
             "Jeśli masz krótki czas lub chcesz zminimalizować przejścia, ukończ tę część lekcji jako dyskusję grupową. Możesz przypomnieć studentom, że mogą ponownie odwiedzić te programy później, jeśli mają pytanie o to, jak coś działa.\n\nJeśli sam przeszedłeś całą lekcję, możesz również pokazać im swój własny gotowy program inspiracji!"
-          ]
+          ],
+          "progression_name": "Eksploracja: Przykładowe programy"
         },
         "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
           "name": "Programy wprowadzania danych przez użytkownika",
@@ -5196,7 +5202,8 @@
           "description": "#### For One and All\n\n-   Wskaż, że istnieją pewne pętle, które zdarzają się bardzo często, na przykład pętle, gdzie trzeba śledzić ile razy przeszedłeś przez\n    -   Czasami nie chcesz zaczynać od jednego\n    -   Czasami, nie chcesz liczyć przez nich\n    -   „Dla pętli” daje potężny sposób, aby utrzymać licznik, który zaczyna się, kiedy chcesz, kończy się, kiedy chcesz, i zwiększa się o dowolny krok rozmiar, który chcesz\n\nTutaj, to może skakać prosto do próbki gry.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
         },
         "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
-          "name": "Zabawa z pętlą \"dla\""
+          "name": "Zabawa z pętlą \"dla\"",
+          "progression_name": "Zabawa z pętlą — Aktywność bez komputera"
         },
         "95417529-72b3-4c15-95d1-7bd479743269": {
           "description": "Czasami chcemy powtarzać rzeczy pewną liczbę razy, ale chcemy śledzić wartości tak jak my. W tym miejscu przydaje się pętla „za”. Kiedy używasz pętli „za”, wiesz od samego początku, jaka jest wartość początkowa, jaka jest wartość końcowa i ile wartość zmienia się za każdym razem przez pętlę.\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
@@ -5254,6 +5261,9 @@
         },
         "1668a313-16da-49db-9713-13d7ad33889e": {
           "progression_name": "Przejrzyj"
+        },
+        "aec92f2d-9b44-43b4-a418-3aebaf5af709": {
+          "progression_name": "Eksploracja: Pętle \"dla\""
         },
         "297e5651-8422-476e-b1db-3d893b7e0bc8": {
           "progression_name": "Przewidywanie"
@@ -5390,7 +5400,8 @@
           "progression_name": "Trenuj AI, by czyścił ocean"
         },
         "d717b4b4-f900-425a-9d8d-d2d5866b3470": {
-          "description": "\\*\\*Szybkie udostępniania: \\*\\* \\_Jak dobrze A.I. zrobiła? Jak myślisz, jak zdecydował, co włączyć do oceanu? \\_\n\n### Korzystanie z danych szkoleniowych\n\n\\*\\*Zrób to: \\*\\* Pokaż film z danymi szkoleniowymi i odchylenia.\n\n\\*\\*Pytaj: \\*\\* \\_Jak myślisz, Twoje dane treningowe wpływają na wyniki uzyskane przez A.I.? \\_\n\n\\*\\*Dyskutuj: \\*\\* W małych grupach uczniowie dzielą się swoimi odpowiedziami. Rozsyłaj pokój i słuchaj pomysłów studenckich. To może być po pełnej dyskusji klasy, lub uczniowie mogą przejść z powrotem do samouczka.\n\n\\*\\*Cel: \\*\\* Zdobądź uczniów do refleksji nad dotychczasowym doświadczeniem. Ważne jest w tym momencie, aby zdali sobie sprawę, że etykietowanie, które robią, jest faktycznie programowanie komputera. Przykładami, które pokazują A.I., są „dane szkoleniowe”."
+          "description": "\\*\\*Szybkie udostępniania: \\*\\* \\_Jak dobrze A.I. zrobiła? Jak myślisz, jak zdecydował, co włączyć do oceanu? \\_\n\n### Korzystanie z danych szkoleniowych\n\n\\*\\*Zrób to: \\*\\* Pokaż film z danymi szkoleniowymi i odchylenia.\n\n\\*\\*Pytaj: \\*\\* \\_Jak myślisz, Twoje dane treningowe wpływają na wyniki uzyskane przez A.I.? \\_\n\n\\*\\*Dyskutuj: \\*\\* W małych grupach uczniowie dzielą się swoimi odpowiedziami. Rozsyłaj pokój i słuchaj pomysłów studenckich. To może być po pełnej dyskusji klasy, lub uczniowie mogą przejść z powrotem do samouczka.\n\n\\*\\*Cel: \\*\\* Zdobądź uczniów do refleksji nad dotychczasowym doświadczeniem. Ważne jest w tym momencie, aby zdali sobie sprawę, że etykietowanie, które robią, jest faktycznie programowanie komputera. Przykładami, które pokazują A.I., są „dane szkoleniowe”.",
+          "progression_name": "Film: Dane treningowe i stronniczość"
         },
         "86495854-e877-4aea-b9d6-2669b1d2d43b": {
           "description": "W drugiej połowie zajęć studenci nauczą SI o wybranym przez siebie słowie, pokazując przykłady tego typu ryb. Tak jak poprzednio, A.I nie zaczyna od żadnych danych szkoleniowych dotyczących tych etykiet. Mimo że słowa na tym poziomie są dość obiektywne, możliwe jest, że uczniowie skończą z różnymi wynikami w oparciu o dane szkoleniowe. Niektórzy uczniowie mogą nawet celowo szkolić SI niepoprawnie, aby zobaczyć, co się dzieje. Jeśli uczniowie zastanawiają się nad tym, jak działa **uczenie maszynowe**, należy to zachęcać!",
@@ -5548,7 +5559,8 @@
         },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
           "name": "Słownik kluczowy: ",
-          "description": "-   **ślad cyfrowy**: zapis tego, co robisz online, w tym odwiedzane witryny i rzeczy, które udostępniasz\n-   **stałe**: coś, co trwa wiecznie\n-   **informacje prywatne**: informacje o Tobie, które mogą być wykorzystane do identyfikacji osoby są\n-   **trail**: ścieżka lub ścieżka\n\n**Przed lekcją**: Wytnij [Cyfrowe Kwadraty Trail](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit)z góry, utrzymując kwadraty dla każdego zwierzęcia w dwóch oddzielnych palach.\n\n**Say**: \\_Dzisiaj obejrzymy film zatytułowany „Follow the Digital Trail”. Czy ktoś z was słyszał wcześniej o słowie „szlak”?\n\nZaproś uczniów do odpowiedzi i zdefiniuj ścieżkę jako ścieżkę \\_a lub ścieżkę, którą ktoś może śledzić. ([Slajd 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))"
+          "description": "-   **ślad cyfrowy**: zapis tego, co robisz online, w tym odwiedzane witryny i rzeczy, które udostępniasz\n-   **stałe**: coś, co trwa wiecznie\n-   **informacje prywatne**: informacje o Tobie, które mogą być wykorzystane do identyfikacji osoby są\n-   **trail**: ścieżka lub ścieżka\n\n**Przed lekcją**: Wytnij [Cyfrowe Kwadraty Trail](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit)z góry, utrzymując kwadraty dla każdego zwierzęcia w dwóch oddzielnych palach.\n\n**Say**: \\_Dzisiaj obejrzymy film zatytułowany „Follow the Digital Trail”. Czy ktoś z was słyszał wcześniej o słowie „szlak”?\n\nZaproś uczniów do odpowiedzi i zdefiniuj ścieżkę jako ścieżkę \\_a lub ścieżkę, którą ktoś może śledzić. ([Slajd 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
+          "progression_name": "Film: Śledź cyfrowy szlak"
         },
         "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
           "description": "**Pokaż** film [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail)na [Slajd 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). Jak oglądają, uczniowie zwracają szczególną uwagę na rodzaje informacji, które są i nie są w porządku, aby udostępniać online.\n\n**Say**: \\_W filmie Feet mówił o cyfrowym śladie. Co to jest cyfrowy ślad? \\_\n\nZaproś uczniów do odpowiedzi. Wyjaśnij, że **ślad cyfrowy** jest rekordem (lub śladem) tego, co robisz online, w tym odwiedzanych witryn i dzielenia się rzeczami. ([Slide 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))\n\n**Ask**: \\_Jakie informacje mówi Feet, aby nie udostępniać online? \\_\n\nPo tym, jak uczniowie mieli okazję udostępnić projekt [Slajd 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192)i przejrzeć: _Private information_ takie jak imię i nazwisko, adres, numer telefonu, wiek, urodziny, nazwę szkoły.\\_\n\nDefiniuj **informacje prywatne** jako \\_information o Tobie, które mogą być użyte do identyfikacji, kim jesteś. ([Slajd 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Zapyt**: \\_Jakie informacje Feet uważa, że jest w porządku udostępniać online? \\_\n\nPo tym, jak uczniowie mieli okazję się podzielić, projekt [Slajd 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27)i przejrzeć: _Personal Information_ takich jak \\_hobby, ulubione rzeczy. \\_"
@@ -5726,6 +5738,9 @@
         "c99faf85-9a98-4efe-8843-65d04bed20f6": {
           "description": "\\*\\*Krążenie: \\*\\* Podczas zajęć online rola nauczyciela jest przede wszystkim zachętą i wsparciem. Oprócz pomysłów wymienionych w ostatniej lekcji, kilka pomysłów na to, jak to zrobić, to: \n\n-   Przypomnij studentom, aby skorzystali z procesu debugowania przed podejściem.\n-   Niech uczniowie opisują problem, który widzą. Co to ma robić? Co to robi? Co ci to mówi?\n-   Przypomnij sfrustrowanym uczniom, że frustracja jest krokiem na drodze do nauki i że wytrwałość się opłaci.\n-   Jeśli uczeń nadal utknie po tym wszystkim, zadaj wiodące pytania, aby student dostrzec błąd na własną rękę.\n\n\\*\\*Przejście: \\*\\* Niech uczniowie chwycą swój dziennik refleksji i poświęcą chwilę na zapoznanie się z lekcjami dla siebie."
         },
+        "0f52c6dc-5602-4905-a924-f7756676f53f": {
+          "progression_name": "Film: Kombajn"
+        },
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -5751,6 +5766,9 @@
         },
         "f1742404-d822-4885-a44e-f05f9bc991f3": {
           "description": "Dzisiaj będziemy pracować nad znalezieniem sposobów na ułatwienie wydawania wielu instrukcji, zwłaszcza gdy te instrukcje się powtarzają. Będzie to naprawdę przydatne, gdy wrócimy do komputerów i będziemy musieli napisać wiele instrukcji w naszych programach."
+        },
+        "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
+          "progression_name": "Film: Zapętlanie"
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Poznając pętle"
@@ -5805,6 +5823,9 @@
         "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
           "progression_name": "Budowanie umiejętności"
         },
+        "a58a0e8a-e277-4309-92c4-990cc99c53b4": {
+          "progression_name": "Film: Bloki powtarzania"
+        },
         "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -5835,8 +5856,14 @@
           "name": "Demonstracja nauczyciela",
           "description": "Uwzględniliśmy poziom przewidywania wielokrotnego wyboru, który może być trudny dla osób niebędących czytelnikami. Poziomy te są opcjonalne, aby przejrzeć z klasą, aby pomóc przygotować się do zagadek, które nadejdą. Alternatywnie, można je wykorzystać po ukończeniu etapu jako przegląd zajęć.\n\nPoziom przewidywania:\n\n-   [Kurs B, pętle w kolektorze](https://studio.code.org/levels/8746)"
         },
+        "fe653971-9c18-44ee-adbc-727e8978b387": {
+          "progression_name": "Film: Kolekcjoner"
+        },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "9bffbabf-f624-49e2-b54b-52317b420600": {
+          "progression_name": "Film: Stosowanie bloku powtórzeń"
         },
         "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
           "progression_name": "Budowanie umiejętności"
@@ -5873,8 +5900,14 @@
         "6e4b782c-58b7-4079-bec6-7fe157198276": {
           "description": "Zawarliśmy kilka poziomów przewidywania wielokrotnego wyboru, które są trudne dla osób niebędących czytelnikami. Poziomy te są opcjonalne, aby przejrzeć z klasą, aby pomóc przygotować się do zagadek, które nadejdą. Alternatywnie, można je wykorzystać po ukończeniu etapu jako przegląd zajęć. \n\n\\*\\*Poziom przewidywania: \\*\\* - [Kurs B, Pętle w artyście](https://studio.code.org/levels/8745)"
         },
+        "6bf24dc0-0251-49fc-b9d2-04603cbb7a06": {
+          "progression_name": "Film: Artysta w Code Studio"
+        },
         "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "efc2a144-0a89-4201-966f-4b4287b12177": {
+          "progression_name": "Film: Bloki powtarzania z Artystą "
         },
         "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
           "progression_name": "Budowanie umiejętności"
@@ -5928,7 +5961,8 @@
           "description": "#### Seria wydarzeń\n\n**Dyskusje**: Przygotuj swoją klasę, aby odpowiedzieć na pytanie:\n\t\n\n-   _\"Zadam ci pytanie. Chcę, żebyś podniósł rękę, jeśli chcesz, żebym zadzwonił do ciebie po odpowiedź. „_\n    -   Zadaj proste pytanie, na które większość uczniów powinna być w stanie odpowiedzieć, takie jak:\n        -   \\_Ile mam kciuków?\n        -   Co jest większe, ptak czy koń?\n    -   Zaproś studenta, który podniósł rękę i niech udziela odpowiedzi.\n    -   Po zakończeniu tego wyświetlacza zapytaj klasę, skąd wiedziałeś, że uczeń chciał, żebyś do nich zadzwonił.\n        -   Twoja klasa prawdopodobnie wspomnieć o podniesieniu ręki.\n    -   Wyjaśnij wszystkim, że kiedy uczniowie podnoszą rękę, jest to „wydarzenie”, które powoduje, że wiesz, że chcą być wezwani. \n\n-   Zapytaj klasę, czy mogą myśleć o innych zdarzeniach, które dają sygnały.\n    -   Być może będziesz musiał przypomnieć im, że nie mówisz o wydarzeniu takim jak przyjęcie urodzinowe lub wycieczka w terenie.\n    -   Jeśli mają kłopoty, możesz przypomnieć im, że zdarzenie jest akcją, która powoduje, że coś się dzieje.\n        -   A co z budzikiem? Co to ma się stać?\n        -   Co z naciśnięciem „Start” na kuchence mikrofalowej? A co to robi?\n        -   Co z naciśnięciem przycisku zasilania na pilocie telewizyjnym?\n\n-   \\_Dzisiaj będziemy tworzyć programy z wydarzeniami. \\_"
         },
         "8e55b7ee-6a8f-41e7-8d5d-9d1465d7fadb": {
-          "name": "Wielkie wydarzenie"
+          "name": "Wielkie wydarzenie",
+          "progression_name": "Film: Wielkie wydarzenie - Aktywność bez komputera"
         },
         "27dbb342-eff9-45e6-b918-88663a10f8a6": {
           "tips": [
@@ -6103,7 +6137,8 @@
           ]
         },
         "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
-          "name": "Programowanie Happy Maps"
+          "name": "Programowanie Happy Maps",
+          "progression_name": "Film: Wesołe Mapy — Aktywność bez komputera"
         },
         "7beae8bf-6b0e-41da-9397-06b0c9fb0b52": {
           "description": "W tym ćwiczeniu klasa otrzyma karty map, które mają wstępnie zdefiniowaną przestrzeń początkową (flurb) i przestrzeń końcową (owoce). Uczniowie będą musieli uzyskać flurbs do owoców na każdej karcie, używając dostarczonych strzałek.\n\n\\*\\*Model: \\*\\* Wybierz jedną z map pośrednich w arkuszu Happy Maps Card (np. #3). Wyświetl go dla klasy i wspólnie pracuj nad układanką.\n\nNiech uczniowie spojrzą na zagadkę, a następnie pomyślą, że para-dzielimy się swoim rozwiązaniem, w jaki sposób dostaną flurb do owoców.\n\n\\*\\*Pomyśl: \\*\\* Ten flurb musi zrobić dwa kroki, aby dostać się do owoców. Współpracuj z partnerem łokciowym, aby zdecydować, co myślisz, że te dwa kroki są.\n\n\\*\\*Para: \\*\\* Niech uczniowie rozmawiają z sąsiadami przez około 90 sekund.\n\n\\*\\*Udostępnij: \\*\\* Poproś kilku uczniów o opisanie ich algorytmu na zajęciach. Przesuń palcem wzdłuż wyświetlanej mapy, gdy uczestnicy kursu przeczytają swoje kroki. Gdy masz rozwiązanie, zapytaj, czy ktoś inny wpadł na inny pomysł, który również działa. \n\nTeraz podziel się z uczniami, że magiczny krok zmiany algorytmu w program dzieje się, gdy kod jest zapisywany za pomocą symboli. Czy uczestnicy kursu widzą na wyświetlaczu jakieś symbole?\n\n\\*\\*Pomyśl: \\*\\* Rzuć wyzwanie uczniom, aby zakodowali algorytm, który wymyślili wcześniej w symbole, i zapisali te symbole w swoich dziennikach (lub na kartce papieru).\n\n\\*\\*Para: \\*\\* Gdy uczniowie zapiszą swoje symbole, poproś ich o zamianę z partnerem, aby sprawdzić, czy mogą postępować zgodnie ze swoimi instrukcjami.\n\n\\*\\*Podziel się: \\*\\* Poproś ochotników, aby przyszli narysować swoje strzały na planszy. Jeśli oryginalny kod nie działa, poświęć trochę czasu na debugowanie jako klasa. Uczniowie powinni zapoznać się z ideą „debugowania” z poprzednich lekcji, więc pamiętaj, aby korzystać ze słownictwa, aby uzyskać im komfort.\n\nGdy kod zostanie pomyślnie napisany na tablicy, pogratulować klasom pisania ich pierwszego programu razem!"
@@ -6213,7 +6248,8 @@
           "description": "Zapytaj uczniów, jak się czuli o ostatniej lekcji. \n\n-   \\_Które zagadki były zbyt trudne lub zbyt łatwe? \\_ \n-   \\_Które zagadki były frustrujące lub dużo zabawy?\n-   Gdyby nauczyli lekcji przyjacielowi, którą część lekcji chcieliby przejrzeć?\n\nSkorzystaj z tych pytań, aby uzyskać krótki przegląd programowania i debugowania. Jeśli uważasz, że klasa może z niej skorzystać, możesz przejść przez słowa słownictwa i definicje z ostatniej lekcji.\n\nJeśli czujesz się komfortowo, podaj także krótkie wprowadzenie do _BB-8_ z _Star Wars_. Wielu uczniów może już znać sympatycznego robota, ale wprowadzenie z pewnością zbuduje emocje."
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
-          "name": "Programowanie z Reyem i BB-8"
+          "name": "Programowanie z Reyem i BB-8",
+          "progression_name": "Film: Programowanie z Rey i BB-8"
         },
         "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
           "progression_name": "Budowanie umiejętności"
@@ -6288,6 +6324,9 @@
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
           "progression_name": "Budowanie umiejętności"
         },
+        "c559cd76-a16e-4361-97c0-f4f4fcdb92b6": {
+          "progression_name": "Film: Pętle epoki lodowcowej"
+        },
         "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -6331,8 +6370,14 @@
         "1bbb191d-3177-490d-99ad-5a0e10e21985": {
           "description": "Poziomy przewidywania:\n\n-   [Kurs A, Pętle w kolektorze #1](https://studio.code.org/levels/8728)\n-   [Kurs A, pętle w kolektorze #2](https://studio.code.org/levels/8727)"
         },
+        "74314f07-5f4d-4cd4-8d82-8208d5ce529e": {
+          "progression_name": "Film: Kolekcjoner"
+        },
         "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "801526d2-4615-4e46-90c1-5e3c08dfe223": {
+          "progression_name": "Film: Stosowanie bloku powtórzeń"
         },
         "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
           "progression_name": "Budowanie umiejętności"
@@ -6363,6 +6408,9 @@
         },
         "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
           "description": "Zawarliśmy kilka poziomów przewidywania wielokrotnego wyboru, które są trudne dla osób niebędących czytelnikami. Poziomy te są opcjonalne, aby przejrzeć z klasą, aby pomóc przygotować się do zagadek, które nadejdą. Alternatywnie, można je wykorzystać po ukończeniu etapu jako przegląd zajęć.\n\nPoziomy prognozy:\n\n-   [Kurs A, pętle w artyście](https://studio.code.org/levels/8726)"
+        },
+        "6d5074a8-2f60-46de-b974-532be01603c4": {
+          "progression_name": "Film: Artysta w Code Studio"
         },
         "d060bb00-33a3-4049-925e-56db3f7508f7": {
           "progression_name": "Budowanie umiejętności"
@@ -6674,6 +6722,9 @@
           "name": "Zbieranie skarbów z Laurel",
           "description": "_Laurel the Adventurer_ chce zebrać jak najwięcej skarbów, jak tylko może. Poinstruuj uczniów, aby przemierzać zagadkę, aby zebrać wszystko, co mogą. Niektóre poziomy będą wymagać, aby odebrać tylko jeden kawałek skarbu, ale inni będą wymagać, aby odebrać każdy kawałek skarbu. Zwróć uwagę na instrukcje, aby wiedzieć, co robić!"
         },
+        "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
+          "progression_name": "Film: Kolekcjoner"
+        },
         "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -6781,13 +6832,17 @@
           "description": "Podciągnij puzzle online i wybierz puzzle do zrobienia przed klasą. Zalecamy puzzle 10 ze względu na jego wzór klatki schodowej. Poproś uczniów, aby napisali program do rozwiązania zagadki na papierze. Niech uczniowie okrążą powtarzające się kawałki i etykietują z liczbą powtórzeń, tak samo jak w „My Loopy Robotic Friends”."
         },
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
-          "name": "Pętle z Rey i BB-8"
+          "name": "Pętle z Rey i BB-8",
+          "progression_name": "Film: Programowanie z Rey i BB-8"
         },
         "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
           "progression_name": "Budowanie umiejętności"
         },
         "cc9ef036-2cca-4863-b922-284a995c38b7": {
           "progression_name": "Przewidywanie"
+        },
+        "adc69f16-8ed9-4265-b368-4a8e99c56aa5": {
+          "progression_name": "Film: Bloki powtarzania z BB-8"
         },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
           "progression_name": "Budowanie umiejętności"
@@ -6822,7 +6877,8 @@
           "description": "W tym momencie uczniowie wykorzystali tylko pętle w zagadkach labiryntu. Te zagadki skupiały się na zapętlaniu instrukcji ruchu. Ten etap będzie korzystać z pętli, aby odebrać wiele elementów w tym samym miejscu.\n\n\\*\\*Zapytaj: \\*\\*\n\n-   \\_Jakie są inne elementy naszych programów, które mogą korzystać z pętli? \\_\n-   \\_Zagadki Harvester mogą mieć wiele przedmiotów w jednym miejscu. Jak możemy użyć pętli, aby podnieść dowolną liczbę z nich tylko dwoma blokami? \\_"
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
-          "name": "Żniwa z użyciem pętli"
+          "name": "Żniwa z użyciem pętli",
+          "progression_name": "Film: Kombajn"
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "description": "Gdy uczniowie używają pętli do powtarzania akcji (np. zbioru dyń), zachęcają ich do myślenia o ruchach przed i po tej akcji. Czy te działania mogą również zostać wprowadzone do pętli?",
@@ -6862,7 +6918,8 @@
           ]
         },
         "0e769463-817e-4432-be93-87047256d015": {
-          "description": "#### Mini-projekt: Projekt naklejki"
+          "description": "#### Mini-projekt: Projekt naklejki",
+          "progression_name": "Mini-projekt: Sztuka naklejek"
         },
         "9af30f82-82cd-4807-9609-900519e17c43": {
           "progression_name": "Czas na zabawę"
@@ -7087,6 +7144,9 @@
             "Podczas kodowania uczniowie będą doświadczać wielu prób i błędów. Ich projekty prawdopodobnie staną się obciętymi wersjami ich pierwotnego zakresu. Przypomnij studentom, że ten rodzaj kompromisu jest powszechny w projektowaniu oprogramowania. Jest w porządku, jeśli nie uda im się zbudować w każdej funkcji, którą zaplanowali!"
           ]
         },
+        "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
+          "progression_name": "Eksploracja: Przykładowe projekty"
+        },
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Projekt"
         },
@@ -7217,7 +7277,8 @@
           "description": "**Dystrybuuj: \\*\\* Aby upewnić się, że uczniowie rozumieją ideę znajdowania i naprawiania błędów (debugowanie) rozdawali \\*\\*\\\\ \\*arkusz** i każą studentom wykonać zadanie w parach.  \n\n_Optional:_ Jeśli chcesz szybciej przenieść aktywność wzdłuż, nie krępuj się, aby ukończyć je jako klasę.\n\n\\*\\*Przejście: \\*\\* Teraz nadszedł czas, aby zagrać w grę!"
         },
         "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
-          "name": "Sztafeta programowania"
+          "name": "Sztafeta programowania",
+          "progression_name": "Programowanie przekaźników — Aktywność bez komputera"
         },
         "c6c65318-513e-41d1-9250-8402d6154e40": {
           "description": "Z myślą o programowaniu papieru grafowego, nadszedł czas, aby podzielić się na zespoły i przygotować się do prowadzenia działalności jako przekaźnik!  \n\n**Ustawianie: \\*\\* Przygotuj pakiet aktywności**, drukując jeden egzemplarz dla każdego zespołu 4-5 uczniów. Wytnij lub złóż każdą stronę wzdłuż środkowej linii kropkowanej."
@@ -7315,7 +7376,8 @@
         },
         "3f3c741a-dfe0-4288-80b7-338162743216": {
           "name": "Zbuduj grę Star Wars",
-          "description": "#### Online Puzzle\n\nStudenci prawdopodobnie będą bardzo podekscytowani, aby stworzyć własną grę _Star Wars_ na końcu tego zestawu zagadek. Jeśli jest czas, poproś ich, aby zaplanowali, co chcą zrobić ta gra. Planowanie i przygotowanie pomogą uczniom lepiej rozpoznać kluczowe pojęcia, których ta lekcja próbuje nauczyć. Zachęcaj uczniów do dzielenia się i remiksowania gier po zakończeniu tej lekcji."
+          "description": "#### Online Puzzle\n\nStudenci prawdopodobnie będą bardzo podekscytowani, aby stworzyć własną grę _Star Wars_ na końcu tego zestawu zagadek. Jeśli jest czas, poproś ich, aby zaplanowali, co chcą zrobić ta gra. Planowanie i przygotowanie pomogą uczniom lepiej rozpoznać kluczowe pojęcia, których ta lekcja próbuje nauczyć. Zachęcaj uczniów do dzielenia się i remiksowania gier po zakończeniu tej lekcji.",
+          "progression_name": "Film: Projekt Gwiezdne Wojny"
         },
         "72b1888f-765e-42c0-bccc-0e32a5724f40": {
           "progression_name": "Budowanie umiejętności"
@@ -7415,6 +7477,9 @@
         },
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
+          "progression_name": "Film: Stosowanie bloku powtórzeń"
         },
         "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
           "progression_name": "Budowanie umiejętności"
@@ -7659,6 +7724,9 @@
           "description": "#### Online Puzzle\n\nZbieranie koncepcji nie jest łatwe, ale ten zestaw lekcji ma pomóc uczniom dostrzec niekończące się możliwości kodowania podczas korzystania z warunków. Jeśli uczniowie walczą w ogóle ze zrozumieniem podobieństw lub różnic między pętlami „while” i „until” pętli, niech starają się myśleć o tym, jak będą używać podobnych wypowiedzi w swoim prawdziwym życiu.",
           "progression_name": "Budowanie umiejętności"
         },
+        "b7917167-64a0-4090-b00a-1159a7235352": {
+          "progression_name": "Film: Instrukcje powtarzaj aż"
+        },
         "6ba7d996-6da1-49e6-a73a-924609f4e472": {
           "progression_name": "Przewidywanie"
         },
@@ -7802,6 +7870,9 @@
           "name": "Zbieranie skarbów z Laurel",
           "description": "_Laurel the Adventurer_ chce zebrać jak najwięcej skarbów, jak tylko może. Poinstruuj uczniów, aby przemierzać zagadkę, aby zebrać wszystko, co mogą. Niektóre poziomy będą wymagać, aby odebrać tylko jeden kawałek skarbu, ale inni będą wymagać, aby odebrać każdy kawałek skarbu. Zwróć uwagę na instrukcje, aby wiedzieć, co robić!"
         },
+        "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
+          "progression_name": "Film: Kolekcjoner"
+        },
         "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -7932,7 +8003,8 @@
           "progression_name": "Ćwiczenia"
         },
         "676dfae2-cb99-4395-a262-f61ed61a3d28": {
-          "description": "#### Free Play (10 min)\n\n\\*\\*Przejście: \\*\\* Studenci powinni przejść do ostatecznego poziomu lekcji, gdzie będą mogli stworzyć własny projekt."
+          "description": "#### Free Play (10 min)\n\n\\*\\*Przejście: \\*\\* Studenci powinni przejść do ostatecznego poziomu lekcji, gdzie będą mogli stworzyć własny projekt.",
+          "progression_name": "Czas na zabawę: Utwórz scenę"
         },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
           "name": "Refleksja",
@@ -7970,7 +8042,8 @@
           "progression_name": "Ćwiczenia"
         },
         "482633ae-1c8c-4ca2-b44b-ba150352c610": {
-          "description": "#### Free Play (10 min)\n\n\\*\\*Przejście: \\*\\* Uczniowie powinni przejść do ostatniego poziomu lekcji, gdzie będą mogli zobaczyć te same opcje gry, co poprzednie lekcje. Zachęcaj uczniów do dodawania wydarzeń do swoich projektów od ostatniego razu lub rozpoczynania nowego projektu."
+          "description": "#### Free Play (10 min)\n\n\\*\\*Przejście: \\*\\* Uczniowie powinni przejść do ostatniego poziomu lekcji, gdzie będą mogli zobaczyć te same opcje gry, co poprzednie lekcje. Zachęcaj uczniów do dodawania wydarzeń do swoich projektów od ostatniego razu lub rozpoczynania nowego projektu.",
+          "progression_name": "Czas na zabawę: Utwórz interaktywną scenę"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
           "name": "Refleksja",
@@ -8079,13 +8152,17 @@
           "description": "Jeśli czujesz się komfortowo, podaj wprowadzenie do _BB-8_ z _Star Wars_. Wiele dzieci może być zaznajomionych z sympatycznego robota, ale wprowadzenie z pewnością zbuduje emocje.\n\nPodciągnij puzzle online i wybierz puzzle do zrobienia przed klasą. Zalecamy puzzle 10 ze względu na jego wzór klatki schodowej. Poproś uczniów, aby napisali program do rozwiązania zagadki na papierze. Niech uczniowie okrążą powtarzające się kawałki i etykietą z liczbą powtórzeń."
         },
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
-          "name": "Pętle z Rey i BB-8"
+          "name": "Pętle z Rey i BB-8",
+          "progression_name": "Film: Programowanie z Rey i BB-8"
         },
         "0602dbde-3014-45cc-86b7-b36ec9ca04af": {
           "progression_name": "Ćwiczenia"
         },
         "63ea23b9-ceb6-4e5a-b795-000673bca7d9": {
           "progression_name": "Przewidywanie"
+        },
+        "d7c1115e-9c85-40fc-a0f8-10f6c715a292": {
+          "progression_name": "Film: Bloki powtarzania z BB-8"
         },
         "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
           "progression_name": "Budowanie umiejętności"
@@ -8301,16 +8378,26 @@
         },
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
           "name": "Wyrażenia warunkowe w Minecrafcie: Wodna podróż",
-          "description": "Uczniowie są na prawdziwą ucztę z tą lekcją. Prawdopodobnie większość twoich uczniów słyszała o _Minecraft_, ale podaj krótkie wprowadzenie dla tych, którzy mogą nie wiedzieć.\n\n_Minecraft_ to gra w kostek. Możesz grać jako _Alex_ lub _Steve_ jak pracować przez labirynty. Musisz zbierać przedmioty i odkrywać w świecie złożonym z kostek rzeczy.\n\nZademonstruj jedną z zagadek do klasy. Gdy wszystkie pytania zostały rozwiązane, studenci przejść do komputerów i pozwolić im rozpocząć programowanie pary."
+          "description": "Uczniowie są na prawdziwą ucztę z tą lekcją. Prawdopodobnie większość twoich uczniów słyszała o _Minecraft_, ale podaj krótkie wprowadzenie dla tych, którzy mogą nie wiedzieć.\n\n_Minecraft_ to gra w kostek. Możesz grać jako _Alex_ lub _Steve_ jak pracować przez labirynty. Musisz zbierać przedmioty i odkrywać w świecie złożonym z kostek rzeczy.\n\nZademonstruj jedną z zagadek do klasy. Gdy wszystkie pytania zostały rozwiązane, studenci przejść do komputerów i pozwolić im rozpocząć programowanie pary.",
+          "progression_name": "Film: Minecraft - Wodna Podróż - Wprowadzenie"
         },
         "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
           "progression_name": "Budowanie umiejętności"
         },
+        "662c896c-c495-45ba-9fdd-2b0f1f575804": {
+          "progression_name": "Film: Minecraft - Wodna Podróż - Powtarzaj aż"
+        },
         "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
           "progression_name": "Budowanie umiejętności"
         },
+        "95865f7b-83c4-47e1-af6f-af1800541434": {
+          "progression_name": "Film: Minecraft - Wodna Podróż - Warunki"
+        },
         "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "8b0a5467-42bc-4347-a75e-e9047751ce56": {
+          "progression_name": "Film: Minecraft: Wodna Podróż - Gratulacje"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Czas na zabawę"
@@ -8333,6 +8420,9 @@
           "name": "Pętle \"dopóki\" w labiryncie",
           "description": "Zbieranie koncepcji nie jest łatwe, ale ten zestaw poziomów ma pomóc uczniom dostrzec niekończące się możliwości kodowania podczas korzystania z warunków. Jeśli uczniowie walczą w ogóle ze zrozumieniem podobieństw lub różnic między while pętli i aż pętle, niech starają się myśleć o tym, jak będą używać podobnych stwierdzeń w ich prawdziwym życiu.",
           "progression_name": "Budowanie umiejętności"
+        },
+        "2860b3ce-f715-47f5-87e7-dac20f46d6ca": {
+          "progression_name": "Film: Instrukcje powtarzaj aż"
         },
         "a45d0ea2-26ce-41c6-9128-3833b39cb233": {
           "progression_name": "Przewidywanie"
@@ -8359,7 +8449,8 @@
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "name": "Żniwa z wyrażeniami warunkowymi",
-          "description": "Uczniowie będą nadal pracować z if/else, while pętli i dopóki pętle. Te zagadki są jednak nieco trudniejsze, więc zachęcaj uczniów do pozostania z nimi, dopóki nie będą mogli opisać, co musi się zdarzyć dla każdego programu."
+          "description": "Uczniowie będą nadal pracować z if/else, while pętli i dopóki pętle. Te zagadki są jednak nieco trudniejsze, więc zachęcaj uczniów do pozostania z nimi, dopóki nie będą mogli opisać, co musi się zdarzyć dla każdego programu.",
+          "progression_name": "Film: Żniwa z warunkami"
         },
         "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
           "progression_name": "Budowanie umiejętności"
@@ -8466,6 +8557,9 @@
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "Ćwiczenia"
         },
+        "71b53163-3232-430a-8938-6d5970ebab4b": {
+          "progression_name": "Film: Jak utworzyć prost funkcję"
+        },
         "5619c140-6a05-4901-a98c-98b0ab9e1424": {
           "progression_name": "Ćwiczenia"
         },
@@ -8570,6 +8664,9 @@
         },
         "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
           "progression_name": "Przejrzyj"
+        },
+        "7d22dea9-9b88-47a4-a697-1c836bf6f2e5": {
+          "progression_name": "Eksploracja: Pętle \"dla\""
         },
         "600fa08b-d08b-4e28-96a5-e1e2b6b5c908": {
           "progression_name": "Przewidywanie"
@@ -8765,7 +8862,8 @@
           "description": "Skorzystaj z tych pytań dotyczących ostatniej lekcji, „Programowanie z Angry Birds”, aby utworzyć krótki przegląd programowania i debugowania. \n\n-   Które zagadki były zbyt trudne lub zbyt łatwe? \n-   Które zagadki były frustrujące lub dużo zabawy?\n-   Gdyby nauczyli lekcji przyjacielowi, która część lekcji chcieliby przejrzeć?\n\nJeśli czujesz się komfortowo, podaj krótkie wprowadzenie do _BB-8_ z _Star Wars_. Wielu uczniów może już znać sympatycznego robota, ale wprowadzenie z pewnością zbuduje emocje."
         },
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
-          "name": "Programowanie z Reyem i BB-8"
+          "name": "Programowanie z Reyem i BB-8",
+          "progression_name": "Film: Programowanie z Rey i BB-8"
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
           "progression_name": "Budowanie umiejętności"
@@ -8795,6 +8893,9 @@
           "tips": [
             "Pokaż studentom _right_ sposób, aby pomóc kolegom z klasy przez:\n\n-   Nie siedź na krześle\n-   Nie używaj ich klawiatury\n-   Nie dotykaj myszy\n-   Upewnij się, że kolega z klasy może opisać rozwiązanie przed odejściem"
           ]
+        },
+        "45d59019-4dd4-4a32-b08c-fd79528eab76": {
+          "progression_name": "Film: Kombajn"
         },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
           "progression_name": "Budowanie umiejętności"
@@ -8842,6 +8943,9 @@
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
           "progression_name": "Budowanie umiejętności"
         },
+        "eb340c7e-d71e-49fb-aaf8-73205f85d432": {
+          "progression_name": "Film: Pętle epoki lodowcowej"
+        },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -8876,8 +8980,14 @@
           "name": "Łamigłówki online",
           "description": "Gdy uczniowie pracują nad zagadkami, zobacz, czy potrafią dowiedzieć się, ile bloków używają z pętlą vs. bez pętli."
         },
+        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
+          "progression_name": "Film: Kolekcjoner"
+        },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "dead7fa5-406d-419c-a084-3a913cbd2499": {
+          "progression_name": "Film: Stosowanie bloku powtórzeń"
         },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
           "progression_name": "Budowanie umiejętności"
@@ -8910,6 +9020,9 @@
         },
         "bbc61306-32dd-4de2-9a6b-35b47408093f": {
           "description": "Zawarliśmy kilka poziomów przewidywania wielokrotnego wyboru, które są trudne dla osób niebędących czytelnikami. Poziomy te są opcjonalne, aby przejrzeć z klasą, aby pomóc przygotować się do zagadek, które nadejdą. Alternatywnie, można je wykorzystać po ukończeniu etapu jako przegląd zajęć.\n\nPoziomy prognozy:\n\n-   [Pętle w artyście](https://studio.code.org/levels/8726)"
+        },
+        "7ccc621e-43b3-4402-a0cc-c626dfa1ea79": {
+          "progression_name": "Film: Artysta w Code Studio"
         },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
           "progression_name": "Budowanie umiejętności"
@@ -9040,7 +9153,8 @@
           "description": "-   Jakich części ciała używasz? Czy to się zmienia w różnych punktach?\n-   Czy są chwile, kiedy trzeba zatrzymać jedną akcję, zanim będzie można rozpocząć inną? (Na przykład, musisz przestać dryblować koszykówkę, zanim będziesz mógł strzelać.)\n\n\\*\\*Cel: \\*\\* Pomóż uczniom myśleć o czasach, kiedy muszą śledzić wiele zadań lub instrukcji jednocześnie. Główna aktywność pozwoli studentom wykonywać głupie czynności, w kolejności lub jednocześnie. Doprowadzi to do powiązań o nowym sposobie pisania programów, ale nie musisz tam jeszcze prowadzić dyskusji."
         },
         "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
-          "description": "Dzisiaj zaczniemy od szybkiej gry. W tej grze, będę ci dawać wszystkie polecenia do naśladowania, a twoim zadaniem jest przestrzegać moich instrukcji. Polecenia zawsze zaczynają się od „start” lub „stop”. Jeśli powiem ci, żebyś zaczął coś robić, musisz zacząć to zachowanie i kontynuować, dopóki nie powiem ci, żebyś przestał. Mogę również powiedzieć, żebyś „zatrzymał wszystko”, co oznacza, że możesz zakończyć wszystkie zachowania, które ci dałem do tej pory. Zagramy 3 rundy i po każdej rundzie zadam wam kilka pytań."
+          "description": "Dzisiaj zaczniemy od szybkiej gry. W tej grze, będę ci dawać wszystkie polecenia do naśladowania, a twoim zadaniem jest przestrzegać moich instrukcji. Polecenia zawsze zaczynają się od „start” lub „stop”. Jeśli powiem ci, żebyś zaczął coś robić, musisz zacząć to zachowanie i kontynuować, dopóki nie powiem ci, żebyś przestał. Mogę również powiedzieć, żebyś „zatrzymał wszystko”, co oznacza, że możesz zakończyć wszystkie zachowania, które ci dałem do tej pory. Zagramy 3 rundy i po każdej rundzie zadam wam kilka pytań.",
+          "progression_name": "Postępuj zgodnie z algorytmem — Aktywność bez komputera"
         },
         "8a86be08-902a-47c7-8ed7-4aa78767ce45": {
           "name": "Czego nauczyliśmy się?"
@@ -9149,7 +9263,8 @@
           ]
         },
         "bba24018-1d90-4a18-b596-eaab2e50567e": {
-          "name": "Udostępnianie cyfrowe"
+          "name": "Udostępnianie cyfrowe",
+          "progression_name": "Udostępnianie cyfrowe — Aktywność bez komputera"
         },
         "7d8c55c5-c431-4f24-8823-f9c8e13bc085": {
           "tips": [
@@ -9257,7 +9372,8 @@
           ]
         },
         "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d": {
-          "name": "Pisanie piosenek"
+          "name": "Pisanie piosenek",
+          "progression_name": "Pisanie piosenek — Funkcje, aktywność bez komputera"
         },
         "dfc4f2ab-d9c6-454e-b3a6-8696815b4fdc": {
           "tips": [
@@ -9346,16 +9462,26 @@
           "description": "Zbierz klasę razem i poproś dwóch ochotników, aby podążali prosto w pewnym kierunku w klasie. Jeśli napotykają krzesło nie na miejscu, muszą nad nim przeskoczyć. Jeśli dotrą do ściany, muszą usiąść.\n\nGdy wszyscy uczniowie usiądzą, zapytaj, jak zaprogramowałbyś robota, aby reagował na ścianę lub krzesło. Przypomnij uczniom, że nie możesz po prostu powiedzieć „Krok nad krzesłem”, chyba że wiesz, że jest krzesło i nie zawsze będziesz wiedział, że jest krzesło. Pomocne może być przetłumaczenie zadania na instrukcje takie jak: \n\n-   podczas gdy przed nami jest ścieżka  \n    -   idź do przodu\n    -   jeśli jest krzesło, krok nad nim\n-   usiądź\n\nPrzekaż uczniom, że podczas tej lekcji będą korzystać z warunków warunkowych. Podaj definicję:\n\n-   **Warunek**: Oświadczenie, że program sprawdza, czy jest to prawda, czy fałsz. Jeśli to prawda, podejmowane są działania. W przeciwnym razie operacja zostanie zignorowana.\n-   **Warunki**: Oświadczenia, które działają tylko pod pewnymi warunkami.\n\nOtwórz dyskusję o tym, kiedy możesz użyć warunkowego w kodzie."
         },
         "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
-          "name": "Wyrażenia warunkowe w Minecrafcie: Wodna podróż"
+          "name": "Wyrażenia warunkowe w Minecrafcie: Wodna podróż",
+          "progression_name": "Film: Minecraft - Wodna Podróż - Wprowadzenie"
         },
         "ace06bbe-f40f-4333-806c-928527edede6": {
           "progression_name": "Budowanie umiejętności"
         },
+        "f51b34f8-e3c0-47f3-a4e6-b387df09189d": {
+          "progression_name": "Film: Minecraft - Wodna Podróż - Powtarzaj aż"
+        },
         "735452ce-870a-4728-8b1b-00a77c5bffbb": {
           "progression_name": "Budowanie umiejętności"
         },
+        "b20028da-bf4a-4238-a59f-a02ebdcf8488": {
+          "progression_name": "Film: Minecraft - Wodna Podróż - Warunki"
+        },
         "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "df9a0219-fbb3-4a3a-9895-431aea978687": {
+          "progression_name": "Film: Minecraft: Wodna Podróż - Gratulacje"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Czas na zabawę"
@@ -9386,6 +9512,9 @@
         "af239dc4-fc39-4765-a761-8d1979ef5e11": {
           "progression_name": "Budowanie umiejętności"
         },
+        "c978158c-f26f-4fe2-ac61-4f383a2fe748": {
+          "progression_name": "Film: Bloki powtarzaj aż"
+        },
         "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -9405,7 +9534,8 @@
           "name": "Wstęp"
         },
         "24e49944-567b-4a1a-8f14-8e60585cb81f": {
-          "name": "Zagadki online"
+          "name": "Zagadki online",
+          "progression_name": "Film: Kombajn"
         },
         "6da14073-1ba0-4603-989b-5b9c9758c047": {
           "progression_name": "Budowanie umiejętności"

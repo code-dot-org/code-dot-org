@@ -491,6 +491,7 @@ ar:
       prizes_link: المزيد من المعلومات
   teacher:
     answer: أجب
+    dashboard: لَوْحَة التَحَكُّم
     for_teachers_only: للمعلمين فقط
     title:
       one: 'المعلم الخاص بك:'

@@ -186,6 +186,7 @@ zh-TW:
     email_preference_yes: "是"
     email_preference_no: "否"
     email_preference_required: "你必須指定一個信箱地址。"
+    share_teacher_email_reg_partner_question: "您是否希望我們與您所在州的[Code.org區域合作夥伴](%{cdo_regional_partner_desc})共用您的聯絡資料，以便他們向您告知當地的專業開發、資源和活動？"
     share_teacher_email_reg_partner_preference_yes: "是"
     share_teacher_email_reg_partner_preference_no: "否"
     share_teacher_email_reg_partner_preference_required: "你必須指定一個信箱地址。"
@@ -412,6 +413,7 @@ zh-TW:
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab （學齡前）'
       poetry: '詩歌'
+      poetry_hoc: '詩歌藝術'
       scratch: 'Scratch'
       sports: '運動'
       spritelab: 'Sprite Lab'
@@ -434,6 +436,7 @@ zh-TW:
       prizes_link: '更多的資訊'
   teacher:
     answer: 答案
+    dashboard: '教師控制台'
     for_teachers_only: 僅限教師
     title:
       one: '你的老師：'
@@ -1000,6 +1003,7 @@ zh-TW:
       school: '學校'
       school_name: '學校名稱'
       school_city: '學校所在城市'
+      school_city_district: '學校城市/區'
       school_country: '學校所屬國家'
       colombian_school_city: '學校所在城市'
       colombian_school_municipality: '學校當局'

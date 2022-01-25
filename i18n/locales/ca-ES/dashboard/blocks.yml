@@ -990,31 +990,37 @@ ca:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"hearts"': Cors
+            '"hearts"': cors
             '"rainbow"': Arc de Sant Martí
-            '"stars"': Estrelles
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': nit
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': lent
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Llum
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': salt
       Poetry_setBackground:
         text: definir el color de fons {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
+            '"bubbles"': Bombolles
+            '"clouds"': ennuvolat
+            '"confetti"': Confeti
+            '"hearts"': cors
             '"space"': Espai
             '"stars"': Estrelles
-            '"rain"': Pluja
-            '"bubbles"': Bombolles
-            '"confetti"': Confeti
           PALETTE:
             '"rainbow"': Arc de Sant Martí
+            '"winter"': l'hivern
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Pluja
             '"bubbles"': Bombolles
             '"confetti"': Confeti
+            '"hearts"': cors
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:

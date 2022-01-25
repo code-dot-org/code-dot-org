@@ -1848,17 +1848,17 @@ es:
             '"decorative"': Decorativas
             '"donuts"': Donut
             '"fire"': Fuego
-            '"flowers"': Flores
+            '"flowers"': flores
             '"gilded"': Mutados
-            '"hearts"': Corazones
+            '"hearts"': corazones
             '"iceCream"': Helado
             '"leaves"': Hojas
             '"metal"': Marco de metal
             '"pawPrints"': Huellas
-            '"rainbow"': Arcoíris
-            '"stars"': Estrellas
+            '"rainbow"': arco iris
+            '"stars"': estrellas
             '"swirls"': Espiral
-            '"waves"': Olas
+            '"waves"': olas
             '"wood"': Marco de madera
             '"zigzag"': Zig Zag
       Poetry_addLine:
@@ -1900,7 +1900,7 @@ es:
             '"sound://category_background/inside_plane.mp3"': Zumbido
             '"sound://category_loops/red_flag_loop1.mp3"': Misión
             '"sound://category_nature/summer_night_loop.mp3"': Noche
-            '"sound://category_background/ocean_waves.mp3"': Océano
+            '"sound://category_background/ocean_waves.mp3"': océano
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
             '"sound://category_background/repitition.mp3"': Montar
@@ -1912,7 +1912,7 @@ es:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Campana
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Interrumpir
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': interrumpir
             '"sound://category_digital/boing_2.mp3"': Boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbuja
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Charla
@@ -1920,7 +1920,7 @@ es:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Error
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Alboroto
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Saltar
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Luz
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': luz
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Aletazo
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Buscar
             '"sound://category_background/typewriter.mp3"': Máquina de escribir
@@ -1936,31 +1936,31 @@ es:
         text: establecer fondo a {EFFECT} de {PALETTE}
         options:
           EFFECT:
-            '"colors"': Colores
-            '"squiggles"': Garabatos
-            '"space"': Espacio
-            '"stars"': Estrellas
+            '"blooming"': Florecimiento
+            '"bubbles"': Burbujas
+            '"clouds"': Nublado
+            '"confetti"': Confeti
             '"darkCircles"': Desvaneciendo
             '"fadeColors"': Escarchado
-            '"blooming"': Florecimiento
+            '"hearts"': corazones
+            '"space"': Espacio
+            '"rain"': lluvia
             '"ripples"': Ondas
-            '"clouds"': Nublado
-            '"rain"': Lluvia
-            '"bubbles"': Burbujas
-            '"confetti"': Confeti
-            '"hearts"': Corazones coloridos
+            '"colors"': Colores
+            '"stars"': Estrellas
+            '"squiggles"': Garabatos
           PALETTE:
-            '"rainbow"': Arcoíris
-            '"grayscale"': Gris
-            '"sky"': Cielo
-            '"ocean"': Océano
+            '"autumn"': Otoño
             '"sunrise"': Amanecer
             '"sunset"': Atardecer
+            '"grayscale"': Gris
+            '"ocean"': Océano
+            '"rainbow"': arco iris
+            '"roses"': Rosas
+            '"sky"': Cielo
             '"spring"': Primavera
             '"summer"': Verano
-            '"autumn"': Otoño
             '"winter"': Invierno
-            '"roses"': Rosas
       Poetry_setBackgroundImageAs:
         text: establecer fondo a {IMG}
       Poetry_setFont:
@@ -1968,23 +1968,23 @@ es:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Fuentes caligráficas
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Fuentes caligráficas
       Poetry_setFontColor:
         text: establecer color de texto {FILL}
       Poetry_setForegroundEffect:
         text: hacer efecto de {EFFECT}
         options:
           EFFECT:
-            '"rain"': Lluvia
             '"bubbles"': Burbujas
-            '"hearts"': Corazones coloridos
-            '"emojis"': Emoji Feliz
             '"confetti"': Confeti
+            '"hearts"': corazones
+            '"emojis"': Emoji Feliz
+            '"rain"': lluvia
             '"starburst"': Explosión de estrellas
             '"glass"': Rompiendo vidrio
             '"twinkling"': Parpadeante
@@ -1999,11 +1999,11 @@ es:
         options:
           EFFECT:
             '"fade"': desparacer
-            '"typewriter"': máquina de escribir
             '"flyLeft"': deslizar desde la izquierda
             '"flyRight"': deslizar desde la derecha
             '"flyTop"': deslizar desde arriba
             '"flyBottom"': deslizar desde abajo
+            '"typewriter"': máquina de escribir
       Poetry_setTitle:
         text: establecer título {TITLE}
       Poetry_showText:
@@ -2012,36 +2012,36 @@ es:
         text: 'sprite {ANIMATION_NAME} comienza a {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: revoloteando
-            growing: creciente
-            jittering: nerviosismo
-            moving_north_and_looping: moverse al norte
-            moving_south_and_looping: moverse al sur
-            moving_east_and_looping: moverse al este
-            moving_west_and_looping: moverse al oeste
-            shrinking: reducción
-            spinning_left: girando a la izquierda
-            spinning_right: girando a la derecha
-            swimming_left_and_right: natación
-            wandering: vagando
-            wobbling: tambaleándose
+            '"fluttering"': revoloteando
+            '"growing"': creciente
+            '"jittering"': nerviosismo
+            '"moving_north_and_looping"': bucle al norte
+            '"moving_south_and_looping"': bucle al sur
+            '"moving_east_and_looping"': bucle al este
+            '"moving_west_and_looping"': bucle al oeste
+            '"shrinking"': reducción
+            '"spinning_left"': girando a la izquierda
+            '"spinning_right"': girando a la derecha
+            '"swimming_left_and_right"': natación
+            '"wandering"': vagando
+            '"wobbling"': tambaleándose
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} para de {BEHAVIOR}
         options:
           BEHAVIOR:
-            fluttering: revoloteando
-            growing: creciente
-            jittering: nerviosismo
-            moving_north_and_looping: moverse al norte
-            moving_south_and_looping: moverse al sur
-            moving_east_and_looping: moverse al este
-            moving_west_and_looping: moverse al oeste
-            shrinking: reducción
-            spinning_left: girando a la izquierda
-            spinning_right: girando a la derecha
-            swimming_left_and_right: natación
-            wandering: vagando
-            wobbling: tambaleándose
+            '"fluttering"': revoloteando
+            '"growing"': creciente
+            '"jittering"': nerviosismo
+            '"moving_north_and_looping"': bucle al norte
+            '"moving_south_and_looping"': bucle al sur
+            '"moving_east_and_looping"': bucle al este
+            '"moving_west_and_looping"': bucle al oeste
+            '"shrinking"': reducción
+            '"spinning_left"': girando a la izquierda
+            '"spinning_right"': girando a la derecha
+            '"swimming_left_and_right"': natación
+            '"wandering"': vagando
+            '"wobbling"': tambaleándose
             '"all"': "--cada comportamiento--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

@@ -6,9 +6,9 @@ title: Ghid Hour of Code pentru activități extrașcolare
 
 # Cum să predați o Oră de Programare în after-school-uri și cluburi
 
-### Alătură-te mișcării și prezintă-le elevilor știința calculatoarelor, folosind acești pași.
+### Alătură-te mișcării și prezintă-le elevilor tehnologia informatiei si computerelor, folosind acești pași.
 
-Gândirea de calcul contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească. Dacă încep de timpuriu, aceștia vor avea o bază pentru succesul profesional într-o carieră potrivită pentru secolul XXI.
+Gândirea computationala contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească. Dacă încep de timpuriu, aceștia vor avea o bază pentru succesul profesional într-o carieră potrivită pentru secolul XXI.
 
 Evenimentul Hour of Code este o modalitate simplă și distractivă de a le prezenta elevilor universul științei calculatoarelor (de multe ori prima introducere de acest fel). Dacă ai nevoie de ajutor suplimentar, poți găsi un [voluntar local]({{ urls/volunteer_local }}) care să te ajute să organizezi un eveniment Hour of Code în orele organizate după cursuri și în clubul pentru activități extrașcolare.
 

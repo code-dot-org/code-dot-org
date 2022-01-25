@@ -84,7 +84,7 @@
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Crea una animación interactiva mediante sprites y eventos."
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
         },
         "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
           "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
@@ -120,7 +120,7 @@
           "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
         },
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Crea una animación interactiva mediante sprites y eventos."
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
         },
         "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
           "description": "Definir \"codificación\" e \"informática\""
@@ -144,7 +144,7 @@
           "description": "Explica los puntos débiles y los fallos de seguridad de los cifrados de sustitución"
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Crea una animación interactiva mediante sprites y eventos."
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
         },
         "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
           "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
@@ -189,7 +189,7 @@
           "description": "Continúa construyendo proyectos completos en el Laboratorio de Aplicaciones utilizando los recursos proporcionados en la página code.org/applab."
         },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Crea una animación interactiva mediante sprites y eventos."
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
         },
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
@@ -297,7 +297,7 @@
           "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Crea una animación interactiva mediante sprites y eventos."
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Desarrollar programas que respondan a eventos cronometrados."
@@ -309,10 +309,10 @@
           "description": "Representar el lenguaje figurado y literal en un texto."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Reconoce lo que se espera cuando los estudiantes entran en el laboratorio de informática."
+          "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de computadora, un trackpad o una pantalla táctil."
+          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
         },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Describir la importancia del usuario en el proceso de diseño."
@@ -342,7 +342,7 @@
           "description": "Programar soluciones a los problemas que surgen al diseñar una mascota virtual, entre ellos, cómo alimentarla."
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Decida qué tipo de declaraciones están bien decir en línea y cuáles no."
+          "description": "Decida qué tipos de declaraciones están bien decir en línea y cuáles no."
         },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Declare una variable"
@@ -351,25 +351,25 @@
           "description": "Asignar un valor a una variable"
         },
         "41ddf297-8c92-42c1-8157-97ba0660483d": {
-          "description": "Llame a una variable varias veces en un programa."
+          "description": "Llama a una variable varias veces en un programa."
         },
         "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
-          "description": "Determinar la relación entre cómo se define, almacena y recupera una variable cuando presionamos “Ejecutar” en un programa."
+          "description": "Determine la relación entre cómo se define, almacena y recupera una variable cuando pulsamos «Ejecutar» en un programa."
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Usar variables para contener palabras y frases."
         },
         "66e1fe88-3957-437f-a065-66909844fcd1": {
-          "description": "Utilizar variables en conjunto con las indicaciones."
+          "description": "Utilice variables junto con las indicaciones."
         },
         "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
           "description": "Usar variables para contener palabras y frases."
         },
         "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
-          "description": "Utilizar variables en conjunto con las indicaciones."
+          "description": "Utilice variables junto con las indicaciones."
         },
         "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
-          "description": "Crear un programa informático interactivo que responda a la entrada del usuario."
+          "description": "Cree un programa informático interactivo que responda a las entradas del usuario."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
@@ -396,37 +396,37 @@
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "059b2997-3d05-4186-8450-066fceeb8c5b": {
-          "description": "Identifica las áreas donde pueden usar variables para modificar cantidades durante el tiempo de ejecución."
+          "description": "Identificar áreas en las que pueden utilizar variables para modificar cantidades durante el tiempo de ejecución. "
         },
         "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
-          "description": "Examina el código para encontrar lugares donde las variables pueden ser sustituidas por valores específicos."
+          "description": "Examine el código para encontrar lugares en los que las variables se pueden sustituir por valores específicos."
         },
         "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": "Determinar el valor inicial, el valor de parada y el valor de paso para un “for loop”."
+          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un «bucle for»."
         },
         "1e676bcd-e312-4827-88ce-d6befc87d61c": {
-          "description": "Ilustrar los valores de contador golpeados cada vez a través de un “for loop” durante el tiempo de ejecución."
+          "description": "Ilustra los valores de contador que se alcanzan cada vez a través de un «bucle for» durante el tiempo de ejecución."
         },
         "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
-          "description": "Determinar el valor inicial, el valor de parada y el valor de paso para un bucle for."
+          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un bucle for."
         },
         "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
-          "description": "Reconocer cuándo usar un bucle for y cuándo usar otros bucles como los loops repeat y while."
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
         },
         "68c038c1-990a-4009-ad61-619ba6ea71af": {
-          "description": "Utilice para bucles para cambiar bucle varias veces con diferentes valores."
+          "description": "Utilice bucles for para cambiar el bucle varias veces con valores diferentes."
         },
         "7ad09074-8899-4330-bb54-6a00c5164299": {
-          "description": "Reconocer cuándo usar un bucle for y cuándo usar otros bucles como los loops repeat y while."
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
         },
         "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
-          "description": "Utilizar una simulación por computadora para recopilar datos sobre un modelo"
+          "description": "Utilizar una simulación por ordenador para recopilar datos sobre un modelo"
         },
         "519c1444-230e-4182-a4eb-09414a7d09fb": {
-          "description": "Crear gráfico de doble línea para comparar datos sobre dos fuentes diferentes"
+          "description": "Crear un gráfico de doble línea para comparar datos sobre dos fuentes diferentes"
         },
         "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": "Hacer y probar una predicción modificando variables de simulación"
+          "description": "Realizar y probar una predicción modificando variables de simulación"
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Discute el papel que juega la inteligencia artificial en sus vidas."
@@ -459,34 +459,34 @@
           "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
-          "description": "Aprende que la información que comparten en línea deja una huella digital o “rastro”."
+          "description": "Aprender que la información que comparten en línea deja una huella digital o \"rastro\"."
         },
         "5efa6c72-000c-40a0-ace0-55f47117305b": {
-          "description": "Explora qué información está bien para ser compartida en línea."
+          "description": "Explorar qué información está bien que se comparta en línea."
         },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
-          "description": "Definir una lista de pasos (algoritmo) para conseguir a un amigo desde su posición inicial hasta su meta"
+          "description": "Definir una lista de pasos (algoritmo) para llevar a un amigo desde su posición inicial hasta su objetivo"
         },
         "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
-          "description": "Traducir una lista de pasos en una serie de acciones físicas"
+          "description": "Transformar una lista de pasos en una serie de acciones físicas"
         },
         "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
           "description": "Identificar y corregir errores en la ejecución de un algoritmo"
         },
         "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
-          "description": "Modelar conductas adecuadas de laboratorio de cómputos"
+          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
         },
         "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
-          "description": "Experimente con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
+          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
         },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
           "description": "Traducir movimientos en una serie de comandos."
         },
         "bffe609e-4319-4507-b643-b2a2ab2507b9": {
-          "description": "Construir un programa reorganizando movimientos secuenciales."
+          "description": "Construir un programa reorganizando los movimientos secuenciales."
         },
         "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
-          "description": "Construir un programa de computadora a partir de un conjunto de instrucciones escritas."
+          "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas."
         },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "Traducir movimientos en una serie de comandos."
@@ -531,13 +531,13 @@
           "description": "Crear un programa que repita secuencias simples para dibujar formas complejas."
         },
         "11d46ade-3342-4157-932b-ce46acd1e6b4": {
-          "description": "Enumerar varios ejemplos diferentes de aplicaciones para smartphones."
+          "description": "Enumera varios ejemplos diferentes de aplicaciones para teléfonos inteligentes."
         },
         "595564b5-94b4-4104-9613-05eadc30663e": {
-          "description": "Recomendar tecnología a otros en función de sus necesidades únicas. "
+          "description": "Recomendar la tecnología a otras personas en función de sus necesidades particulares. "
         },
         "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
-          "description": "Aplicar empatía y creatividad al diseño de la tecnología para los demás. "
+          "description": "Aplicar la empatía y la creatividad al diseñar tecnología para los demás. "
         },
         "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
           "description": "Repetir los comandos dados por un instructor."
@@ -558,25 +558,25 @@
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
         "8023306a-d106-4097-8205-5bc1e92ffade": {
-          "description": "Aplicar conceptos de ciencias de la computación en un proyecto de composición abierta."
+          "description": "Aplicar los conceptos de la informática en un proyecto abierto."
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
         },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Descubre que el Internet puede servir para visitar lugares lejanos y aprender cosas nuevas."
+          "description": "Descubre que Internet puede servir para visitar lugares lejanos y aprender cosas nuevas."
         },
         "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
           "description": "Compara cómo la seguridad en línea es similar a la seguridad en el mundo real."
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
-          "description": "Explica las normas para navegar de forma segura por el Internet."
+          "description": "Explica las normas para viajar con seguridad por Internet."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
-          "description": "Reconoce lo que se espera cuando los estudiantes entran en el laboratorio de informática."
+          "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
         },
         "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
-          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de computadora, un trackpad o una pantalla táctil."
+          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Convertir un algoritmo en un programa"
@@ -585,16 +585,16 @@
           "description": "Decodificar y ejecutar un programa creado por otra persona"
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
-          "description": "Identificar y corregir bugs o errores en instrucciones en secuencia"
+          "description": "Identificar y solucionar fallos o errores en las instrucciones secuenciadas"
         },
         "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
-          "description": "Modelar conductas adecuadas de laboratorio de cómputos"
+          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
         },
         "6df3d067-06bb-4e95-856f-ef980543a15e": {
-          "description": "Experimente con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
+          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
-          "description": "Crear un programa mediante la reorganización de movimientos secuenciales"
+          "description": "Construir un programa reorganizando los movimientos secuenciales"
         },
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
           "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas"
@@ -606,7 +606,7 @@
           "description": "Secuenciar comandos en un orden lógico."
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Reconocer problemas o \"bugs\" en un programa y desarrollar un plan para resolverlos."
+          "description": "Reconocer los problemas o \"errores \" en un programa y desarrollar un plan para resolverlos."
         },
         "407c5a4d-9337-4218-92d5-018597e41e19": {
           "description": "Identificar código repetitivo y sintetizar varias acciones en un solo bucle."
@@ -654,22 +654,22 @@
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
         "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
-          "description": "Aplicar conceptos de ciencias de la computación en un proyecto de composición abierta."
+          "description": "Aplicar los conceptos de la informática en un proyecto abierto."
         },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
         },
         "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
-          "description": "Entender cómo puede ser la mezquindad en línea y cómo puede hacer sentir a la gente."
+          "description": "Entender cómo puede ser la maldad en línea y cómo puede hacer sentir a la gente."
         },
         "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
-          "description": "Identificar formas de responder a palabras medias en línea, utilizando S-T-O-P."
+          "description": "Identificar maneras de responder a las palabras mezquinas en línea, utilizando S-T-O-P."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
           "description": "Prestar atención a la precisión a la hora de crear instrucciones"
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
-          "description": "Identificar y corregir bugs o errores en instrucciones en secuencia"
+          "description": "Identificar y solucionar fallos o errores en las instrucciones secuenciadas"
         },
         "560e14ee-7390-4244-aee5-a0c2737112e5": {
           "description": "Traducir movimientos en una serie de comandos."
@@ -756,13 +756,13 @@
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
         },
         "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
-          "description": "Recopilar y registrar datos sobre cantidades de objetos reales, o caracteres en una pantalla"
+          "description": "Recopilar y registrar datos sobre cantidades de objetos reales, o personajes en una pantalla"
         },
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": "Crear un gráfico de barras y un gráfico circular para representar datos simples."
+          "description": "Crear un gráfico de barras y un gráfico circular para representar datos sencillos."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Hacer comparaciones entre visualizaciones de datos hechas por otros y utilizarlas para hacer una predicción."
+          "description": "Haz comparaciones entre las visualizaciones de datos realizadas por otros y utilízalas para hacer una predicción."
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "Codificar letras en código binario."
@@ -774,16 +774,16 @@
           "description": "Relacionar la idea de almacenar cartas en papel con la idea de almacenar información en una computadora."
         },
         "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
-          "description": "Utilizar un diseño planificado como plano para la creación."
+          "description": "Utiliza un diseño planificado como un plano para la creación."
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
         },
         "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
-          "description": "Definir el término “contraseña” y describir el propósito de una contraseña."
+          "description": "Define el término \"contraseña\" y describe el propósito de una contraseña."
         },
         "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
-          "description": "Practica crear una contraseña memorable y fuerte."
+          "description": "Practica la creación de una contraseña memorizable y fuerte."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "Replantear una secuencia de pasos como un programa codificado"
@@ -807,7 +807,7 @@
           "description": "Verificar el trabajo realizado por los compañeros de equipo."
         },
         "8dba466d-d809-49c6-8f60-218c27964411": {
-          "description": "Identifican signos de frustración "
+          "description": "Identificar signos de frustración "
         },
         "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
           "description": "Leer y comprender el código dado."
@@ -930,7 +930,7 @@
           "description": "Dividir formas complejas en partes simples."
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
-          "description": "Define \"sprite\" como un personaje u objeto en la pantalla que se puede mover y cambiar."
+          "description": "Define «sprite» como un personaje u objeto de la pantalla que se puede mover y cambiar."
         },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
           "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
@@ -951,10 +951,10 @@
           "description": "Desarrollar programas que respondan a las entradas de los usuarios."
         },
         "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
-          "description": "Crea una mascota virtual interactiva utilizando eventos, comportamientos, variables y arte personalizado."
+          "description": "Crea una mascota virtual interactiva usando eventos, comportamientos, variables y arte personalizado."
         },
         "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
-          "description": "Programa soluciones a los problemas que surgen al diseñar una mascota virtual, como alimentarla o controlar su felicidad."
+          "description": "Programe soluciones a los problemas que surgen al diseñar una mascota virtual, como alimentarla o controlar su felicidad."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Desarrollar programas que respondan a eventos cronometrados"
@@ -1056,7 +1056,7 @@
           "description": "Acciones Utilice variables para contener palabras y frases."
         },
         "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
-          "description": "Utilizar variables en conjunto con las indicaciones."
+          "description": "Utilice variables junto con las indicaciones."
         },
         "16854174-125c-4c79-9a42-064ef84535e3": {
           "description": "Asignar valores a las variables existentes."
@@ -1068,43 +1068,43 @@
           "description": "Usar variables para cambiar valores dentro de un bucle."
         },
         "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
-          "description": "Identifica las áreas donde pueden usar variables para modificar cantidades durante el tiempo de ejecución."
+          "description": "Identificar áreas en las que pueden utilizar variables para modificar cantidades durante el tiempo de ejecución. "
         },
         "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
-          "description": "Examina el código para encontrar lugares donde las variables pueden ser sustituidas por valores específicos."
+          "description": "Examine el código para encontrar lugares en los que las variables se pueden sustituir por valores específicos."
         },
         "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
-          "description": "Determinar el valor inicial, el valor de parada y el valor de paso para un bucle for."
+          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un bucle for."
         },
         "3abab07c-e404-45d4-ab89-f92a34c68356": {
-          "description": "Reconocer cuándo usar un bucle for y cuándo usar otros bucles como los loops repeat y while."
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
         },
         "1b705c64-cbba-4dfe-8d47-549eb6754326": {
-          "description": "Utilice para bucles para cambiar bucle varias veces con diferentes valores."
+          "description": "Utilice bucles for para cambiar el bucle varias veces con valores diferentes."
         },
         "a5169230-8faf-4492-bc49-ca11dca864fa": {
-          "description": "Reconocer cuándo usar un bucle for y cuándo usar otros bucles como los loops repeat y while."
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
         },
         "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
-          "description": "Reconoce lo que se espera cuando los estudiantes entran en el laboratorio de informática."
+          "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
         },
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
-          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de computadora, un trackpad o una pantalla táctil."
+          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
         },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
-          "description": "Modelar conductas adecuadas de laboratorio de cómputos"
+          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
         },
         "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
-          "description": "Experimente con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
+          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
         },
         "a5a52414-42a7-4b32-897b-819a70572328": {
           "description": "Traducir movimientos en una serie de comandos."
         },
         "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
-          "description": "Crear un programa mediante la reorganización de movimientos secuenciales"
+          "description": "Construir un programa reorganizando los movimientos secuenciales"
         },
         "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
           "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas"
@@ -1113,7 +1113,7 @@
           "description": "Secuenciar comandos en un orden lógico."
         },
         "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
-          "description": "Reconocer problemas o \"bugs\" en un programa y desarrollar un plan para resolverlos."
+          "description": "Reconocer los problemas o \"errores \" en un programa y desarrollar un plan para resolverlos."
         },
         "620da514-ad6e-4049-a9d3-d189a79af01e": {
           "description": "Traducir movimientos en una serie de comandos."
@@ -1173,7 +1173,7 @@
           "description": "empezar a hacer conexiones sobre una nueva forma de escribir programas"
         },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
-          "description": "Define \"sprite\" como un personaje u objeto en la pantalla que se puede mover y cambiar."
+          "description": "Define «sprite» como un personaje u objeto de la pantalla que se puede mover y cambiar."
         },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."

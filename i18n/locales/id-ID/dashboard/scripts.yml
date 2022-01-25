@@ -18076,6 +18076,15 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Sandbox
+        csa8-pilot:
+          lessons:
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -18874,8 +18883,20 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Demo dan Sumber Daya
+          name: csa-u8-dev
+          title: CSA Unit 8 Pengembangan
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Seni Puisi
+          name: seni-puisi
+          title: Seni Puisi
         poetry:
           lessons:
+            lesson-1:
+              name: Seni Puisi
+            lesson-2:
+              name: Buat Kode Puisimu Sendiri
             lesson-4:
               name: Membuat Aplikasi Pembuat Puisi
             lesson-5:
@@ -18994,8 +19015,6 @@ id:
               description_teacher: Dalam unit ini, murid menggunakan `ArrayList` untuk menyimpan data program dan membedakan antara kapan harus menggunakan larik 1D dan larik 2D dengan `ArrayList`. Murid mengeksplorasi manfaat dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan data angka dan data objek. Murid menggunakan metode dalam kelas `String` untuk menganalisis dan memproses teks yang diperoleh dari pengguna dan input file. Di sepanjang unit ini, murid menulis dokumentasi program menggunakan komentar satu baris, komentar beberapa baris, dan komentar Javadoc untuk membuat dokumentasi API. Dalam prosesnya, murid mengidentifikasi dan mendokumentasikan prakondisi dan pascakondisi objek dan metode. Sekarang, murid mengevaluasi pencapaian tujuan pembelajaran unit dan kecakapan dalam penilaian pilihan ganda.
             lesson-1:
               key: pelajaran ke-1
-              description_student: Proyek yang Anda kembangkan sepanjang kursus telah melecut banyak kreativitas dalam komunitas! Neighborhood Lit Fest akan diadakan untuk memamerkan berbagai cerita, skrip, lirik lagu, surat, dan puisi kreatif. Neighborhood Lit Fest Project adalah sebuah proyek besar yang Anda kerjakan di sepanjang unit dan strategi manajemen proyek membantu mengatur dan menyusun pekerjaan Anda. Anda mengeksplorasi strategi untuk menulis dan menyusun code agar teknisi perangkat lunak lain dapat dengan mudah memahami dan menggunakan alat Java untuk membuat dokumentasi program.
-              description_teacher: Murid diperkenalkan dengan Neighborhood Lit Fest Project lalu mengevaluasi persyaratan dan contoh untuk mengidentifikasi pertanyaan dan fitur utama. Sebelum mengerjakan proyek, murid memperluas pemahaman tentang struktur program dan memberi komentar dengan mengidentifikasi praktik terbaik serta mengeksplorasi penggunaan Javadocs untuk membuat dokumentasi program.
             lesson-2:
               key: pelajaran ke-2
               description_student: Anda membuat objek `Integer` dan `Double` untuk merepresentasikan nilai primitif `int` dan `double` sebagai nilai referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`, Anda mengembalikan nilai yang disimpan oleh dua objek ini sebagai nilai primitif. Anda juga mengeksplorasi nilai minimum dan maksimum untuk integer guna menghindari kesalahan parah sebelum merencanakan tugas yang perlu Anda selesaikan untuk Neighborhood Lit Fest Project.
@@ -19069,24 +19088,32 @@ id:
         poem-art-2021:
           lessons:
             Poem Art:
+              name: Seni Puisi
               description_teacher: |-
                 Dalam pelajaran terpadu ilmu komputer (CS) dan seni bahasa (ELA) ini, siswa akan membuat animasi puisi dengan kode untuk menggambarkan mood sebuah puisi. Siswa akan membaca dan mengenali mood sebuah puisi. Mereka lalu akan mencari efek dan gambar yang sesuai untuk menggambarkan mood puisi tersebut. Terakhir, siswa akan menggunakan event (kode) untuk menggambarkan perubahan mood atau menganimasikan masuknya gambar baru dalam sebuah puisi.
 
                 Pelajaran ini dapat diselesaikan sebagai pelajaran mandiri 1 jam. Ada juga opsi untuk menggunakan pelajaran ini sebagai pelajaran pertama dari modul multi pelajaran yang disebut [Coding dengan Puisi](http://studio.code.org/s/poetry-2021).
             lesson-1:
               key: pelajaran ke-1
+              name: Seni Puisi
+          title: Seni Puisi
         poetry-2021:
           lessons:
             Poem Art:
+              name: Seni Puisi
               description_teacher: Dalam pelajaran terpadu ilmu komputer (CS) dan seni bahasa (ELA) untuk pembuat kode baru ini, siswa akan menganimasikan puisi dengan kode untuk menggambarkan mood puisi. Siswa akan membaca dan mengenali mood sebuah puisi. Mereka lalu akan mencari efek dan gambar yang sesuai untuk membantu menggambarkan mood puisi tersebut. Terakhir, siswa akan menggunakan event (kode) untuk menggambarkan perubahan mood atau menganimasikan masuknya gambar baru dalam sebuah puisi.
+            Code Your Own Poem:
+              name: Buat Kode Puisimu Sendiri
             Build a Poem Generator:
               name: Membuat Aplikasi Pembuat Puisi
             Choosing Words Carefully:
               name: Memilih Kata-kata dengan Teliti
             lesson-1:
               key: pelajaran ke-1
+              name: Seni Puisi
             lesson-2:
               key: pelajaran ke-2
+              name: Buat Kode Puisimu Sendiri
             lesson-3:
               key: pelajaran ke- 3
             lesson-4:
@@ -19152,3 +19179,124 @@ id:
               description_student: Bantu Laurel, si pemburu harta karun, menghitung dan menambahkan langkah untuk mengumpulkan permata!
               description_teacher: "Pelajaran ini dibangun dari kegiatan sebelumnya yang melibatkan menghitung dan merepresentasikan neenjumlahan. Menghitung bersama Laurel mendukung siswa di taman kanak-kanak dan kelas satu dengan latihan berhitung dan menjumlahkan saat mereka menggunakan loop untuk membantu Laurel, si pemburu harta karun, mengumpulkan permata melintasi kisi-kisi labirin. Mereka menggunakan serangkaian perintah coding untuk memandu Laurel melintasi kisi-kisi untuk mengumpulkan permata, memanfaatkan blok \"Ulangi\" yang mengharuskan mereka menghitung berapa banyak langkah yang harus diambil Laurel- lalu merepresentasikan jumlah tersebut menggunakan angka yang benar dalam satu blok kode.\n\n#### Prasyarat Keahlian\n\nPelajaran ini tidak dimaksudkan untuk mengenalkan siswa pada angka, berhitung, atau menjumlahkan. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan sebelumnya agar dapat:\n\n-   mengenali dan menghitung angka hingga 10 dengan menggunakan gambar, jari, atau manipulatif.\n-   menambahkan objek, gambar, jari, atau manipulatif hingga jumlah 10."
           title: Menghitung bersama Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Pelajaran
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Neighborhood Lit Fest Project - Hari 1
+            lesson-12:
+              name: Neighborhood Lit Fest Project - Hari 2
+            lesson-13:
+              name: Neighborhood Lit Fest Project - Hari 3
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulator Wabah
+            lesson-5:
+              name: Tentang Saya dengan Sprite Lab
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
+            lesson-15:
+              key: pelajaran ke-15
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+              name: Hari Penilaian
+            lesson-16:
+              key: pelajaran ke-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
+            lesson-15:
+              key: pelajaran ke-15
+              name: Hari Penilaian
+            lesson-16:
+              key: pelajaran ke-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox

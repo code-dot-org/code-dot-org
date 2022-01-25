@@ -26355,6 +26355,15 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Área restrita
+        csa8-pilot:
+          lessons:
+            lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -27571,21 +27580,6 @@ pt:
                 aprendizagem da unidade em uma avaliação de múltipla escolha.
             lesson-1:
               key: lição 1
-              description_student: Os projetos que você desenvolveu ao longo do curso
-                inspiraram muita criatividade na comunidade! Um Festival Iluminado
-                da Vizinhança será realizado para mostrar histórias criativas, roteiros,
-                letras de músicas, cartas e poemas. O Projeto Festival Iluminado da
-                Vizinhança é um grande projeto que você trabalha em toda a unidade;
-                as estratégias de gerenciamento de projetos ajudam a organizar e estruturar
-                o seu trabalho. Você explora estratégias para escrever e estruturar
-                códigos para que outros engenheiros de software possam facilmente
-                entender e usar uma ferramenta Java para criar a documentação do programa.
-              description_teacher: Os alunos são apresentados ao Projeto Festival
-                Iluminado da Vizinhança e avaliam os requisitos e exemplos para identificar
-                as dúvidas e as principais funcionalidades. Antes de iniciar os trabalhos
-                no projeto, os alunos ampliam a sua compreensão da estrutura do programa
-                e fazem comentários, identificando as melhores práticas e explorando
-                o uso de Javadocs para gerar a documentação do programa.
             lesson-2:
               key: lição 2
               description_student: Você constrói objetos “Integer” e “Double” para
@@ -28016,3 +28010,124 @@ pt:
                 10, utilizando os dedos, objetos ou materiais manipuláveis. \n– somar
                 objetos, dedos ou materiais manipuláveis "
           title: Contando com Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lição
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Neighborhood Lit Fest Project - Day 1
+            lesson-12:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 2
+            lesson-13:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 3
+            lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulador de Epidemia
+            lesson-5:
+              name: Sobre mim com o Sprite Lab
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Dia de Avaliação
+            lesson-10:
+              key: lição 10
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
+            lesson-15:
+              key: lição 15
+            lesson-1:
+              key: lição 1
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+              name: Dia de Avaliação
+            lesson-16:
+              key: lição 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Dia de Avaliação
+            lesson-1:
+              key: lição 1
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+            lesson-10:
+              key: lição 10
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
+            lesson-15:
+              key: lição 15
+              name: Dia de Avaliação
+            lesson-16:
+              key: lição 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita

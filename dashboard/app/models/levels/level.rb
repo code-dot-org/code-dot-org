@@ -650,28 +650,37 @@ class Level < ApplicationRecord
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
+    # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
+    return self if key.start_with?('blockly:')
+
     # Make sure we don't go over the 70 character limit.
-    max_index = 70 - new_suffix.length - 1
-    new_name = "#{base_name[0..max_index]}#{new_suffix}"
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    max_index = 70 - suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{suffix}"
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = clone_with_name(new_name, editor_experiment: editor_experiment)
+    begin
+      level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
-    update_params = {name_suffix: new_suffix}
-    update_params[:editor_experiment] = editor_experiment if editor_experiment
+      update_params = {name_suffix: suffix}
+      update_params[:editor_experiment] = editor_experiment if editor_experiment
 
-    child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
-    update_params.merge!(child_params_to_update)
+      child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+      update_params.merge!(child_params_to_update)
 
-    level.update!(update_params)
+      level.update!(update_params)
 
-    # Copy the level_concept_difficulty of the parent level to the new level
-    new_lcd = level_concept_difficulty.dup
-    level.level_concept_difficulty = new_lcd
-    level.save! if level.changed?
+      # Copy the level_concept_difficulty of the parent level to the new level
+      new_lcd = level_concept_difficulty.dup
+      level.level_concept_difficulty = new_lcd
+      # trigger a save to rewrite the custom level file
+      level.save!
 
-    level
+      level
+    rescue Exception => e
+      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
+    end
   end
 
   def age_13_required?

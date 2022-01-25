@@ -1698,7 +1698,8 @@
           "moving west and looping": "aller vers l'Ouest et tourner en boucles",
           "moving east and looping": "aller vers l'Est et tourner en boucles",
           "moving north and looping": "aller vers le Nord et tourner en boucles",
-          "moving south and looping": "aller vers le Sud et tourner en boucles"
+          "moving south and looping": "aller vers le Sud et tourner en boucles",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "helloworld_emoji_events": {
           "moving forward": "avancer",
@@ -1814,7 +1815,8 @@
           "moving west and looping": "aller vers l'Ouest et tourner en boucles",
           "moving east and looping": "aller vers l'Est et tourner en boucles",
           "moving north and looping": "aller vers le Nord et tourner en boucles",
-          "moving south and looping": "aller vers le Sud et tourner en boucles"
+          "moving south and looping": "aller vers le Sud et tourner en boucles",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "helloworld_food_behaviors": {
           "moving with arrow keys": "se déplacer avec les touches de direction",
@@ -1835,7 +1837,8 @@
           "moving west and looping": "aller vers l'Ouest et tourner en boucles",
           "moving east and looping": "aller vers l'Est et tourner en boucles",
           "moving north and looping": "aller vers le Nord et tourner en boucles",
-          "moving south and looping": "aller vers le Sud et tourner en boucles"
+          "moving south and looping": "aller vers le Sud et tourner en boucles",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "helloworld_food_sounds": {
           "moving with arrow keys": "se déplacer avec les touches de direction",
@@ -1856,7 +1859,8 @@
           "moving west and looping": "aller vers l'Ouest et tourner en boucles",
           "moving east and looping": "aller vers l'Est et tourner en boucles",
           "moving north and looping": "aller vers le Nord et tourner en boucles",
-          "moving south and looping": "aller vers le Sud et tourner en boucles"
+          "moving south and looping": "aller vers le Sud et tourner en boucles",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "se déplacer en utilisant les touches de direction",
@@ -2028,7 +2032,8 @@
           "moving west and looping": "aller vers l'Ouest et tourner en boucles",
           "moving east and looping": "aller vers l'Est et tourner en boucles",
           "moving north and looping": "aller vers le Nord et tourner en boucles",
-          "moving south and looping": "aller vers le Sud et tourner en boucles"
+          "moving south and looping": "aller vers le Sud et tourner en boucles",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "CourseE_Project_SpriteLab": {
           "wandering": "se balader",
@@ -2041,7 +2046,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "CourseE_Project_SpriteLab_2019": {
           "wandering": "se balader",
@@ -2054,7 +2060,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "CourseE_Project_SpriteLab_2020": {
           "wandering": "se balader",
@@ -2067,7 +2074,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "CourseE_hoops": {
           "wandering": "se balader",
@@ -2080,7 +2088,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "CourseF_Project_SpriteLab": {
           "wandering": "se balader",
@@ -2093,7 +2102,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "CourseF_Project_SpriteLab_2019": {
           "moving east": "se déplacer vers l'est",
@@ -2106,7 +2116,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "wandering": "se balader"
+          "wandering": "se balader",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "CourseF_Project_SpriteLab_2020": {
           "moving east": "se déplacer vers l'est",
@@ -2119,7 +2130,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "wandering": "se balader"
+          "wandering": "se balader",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 2": {
           "shrinking": "contracter",
@@ -2132,7 +2144,8 @@
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
           "spinning right": "tournoyer à droite",
-          "spinning left": "tournoyer à gauche"
+          "spinning left": "tournoyer à gauche",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 2_2019": {
           "spinning left": "tournoyer à gauche",
@@ -2145,7 +2158,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 2_2020": {
           "spinning left": "tournoyer à gauche",
@@ -2158,7 +2172,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 3_2019": {
           "spinning left": "tournoyer à gauche",
@@ -2171,7 +2186,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 3_2020": {
           "spinning left": "tournoyer à gauche",
@@ -2184,7 +2200,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 4_2019": {
           "spinning left": "tournoyer à gauche",
@@ -2197,7 +2214,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 4_2020": {
           "spinning left": "tournoyer à gauche",
@@ -2210,7 +2228,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 5_2019": {
           "spinning left": "tournoyer à gauche",
@@ -2223,7 +2242,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 5_2020": {
           "spinning left": "tournoyer à gauche",
@@ -2236,7 +2256,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 6": {
           "jittering": "gigoter",
@@ -2248,7 +2269,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 6_2019": {
           "jittering": "gigoter",
@@ -2260,7 +2282,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 6_2020": {
           "jittering": "gigoter",
@@ -2272,7 +2295,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 7_2019": {
           "jittering": "gigoter",
@@ -2284,7 +2308,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party 7_2020": {
           "jittering": "gigoter",
@@ -2296,7 +2321,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Dance Party Freeplay": {
           "jittering": "gigoter",
@@ -2308,7 +2334,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 2-validated_2019": {
           "shrinking": "contracter",
@@ -2320,7 +2347,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 2-validated_2020": {
           "shrinking": "contracter",
@@ -2332,7 +2360,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 3-validated_2019": {
           "shrinking": "contracter",
@@ -2344,7 +2373,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 3-validated_2020": {
           "shrinking": "contracter",
@@ -2356,7 +2386,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 4-validated_2019": {
           "shrinking": "contracter",
@@ -2368,7 +2399,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 4-validated_2020": {
           "shrinking": "contracter",
@@ -2380,7 +2412,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 5-validated_2019": {
           "shrinking": "contracter",
@@ -2392,7 +2425,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 5-validated_2020": {
           "shrinking": "contracter",
@@ -2404,7 +2438,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 6-validated_2019": {
           "shrinking": "contracter",
@@ -2416,7 +2451,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Fish Tank 6-validated_2020": {
           "shrinking": "contracter",
@@ -2428,7 +2464,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "OPD-K5-spritelab-2": {
           "shrinking": "contracter",
@@ -2440,7 +2477,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "OPD-K5-spritelab-3": {
           "shrinking": "contracter",
@@ -2452,7 +2490,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "OPD-K5-spritelab-4": {
           "shrinking": "contracter",
@@ -2464,7 +2503,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "OPD-K5-spritelab-6": {
           "shrinking": "contracter",
@@ -2476,7 +2516,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "OPD-K5-spritelab-7": {
           "shrinking": "contracter",
@@ -2488,7 +2529,8 @@
           "moving north": "aller vers le Nord",
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
-          "spinning right": "tournoyer à droite"
+          "spinning right": "tournoyer à droite",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 1_2019": {
           "wandering": "se balader",
@@ -2501,7 +2543,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "growing": "agrandir",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 1_2020": {
           "wandering": "se balader",
@@ -2514,7 +2557,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "growing": "agrandir",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 2": {
           "shrinking": "contracter",
@@ -2527,7 +2571,8 @@
           "moving south": "aller vers le Sud",
           "moving west": "aller vers l'Ouest",
           "spinning right": "tournoyer à droite",
-          "spinning left": "tournoyer à gauche"
+          "spinning left": "tournoyer à gauche",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 2_2019": {
           "wandering": "se balader",
@@ -2540,7 +2585,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 2_2020": {
           "wandering": "se balader",
@@ -2553,7 +2599,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 3_2019": {
           "wandering": "se balader",
@@ -2566,7 +2613,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 3_2020": {
           "wandering": "se balader",
@@ -2579,7 +2627,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 4": {
           "shrinking": "contracter",
@@ -2604,7 +2653,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 4_2020": {
           "wandering": "se balader",
@@ -2617,7 +2667,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "Virtual Pet 5": {
           "shrinking": "contracter",
@@ -2666,7 +2717,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 1_2020": {
           "wandering": "se balader",
@@ -2679,7 +2731,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 2": {
           "wandering": "se balader",
@@ -2692,7 +2745,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 2_2020": {
           "wandering": "se balader",
@@ -2705,7 +2759,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 3": {
           "wandering": "se balader",
@@ -2718,7 +2773,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 3_2020": {
           "wandering": "se balader",
@@ -2731,7 +2787,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 3a": {
           "spinning right": "tournoyer à droite",
@@ -2744,7 +2801,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 3a_2020": {
           "spinning right": "tournoyer à droite",
@@ -2757,7 +2815,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 4": {
           "wandering": "se balader",
@@ -2770,7 +2829,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 4_2020": {
           "wandering": "se balader",
@@ -2783,7 +2843,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 6": {
           "spinning left": "tournoyer à gauche",
@@ -2796,7 +2857,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 6_2020": {
           "spinning left": "tournoyer à gauche",
@@ -2809,7 +2871,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 7": {
           "moving north": "aller vers le Nord",
@@ -2822,7 +2885,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "behaviors 7_2020": {
           "moving north": "aller vers le Nord",
@@ -2835,7 +2899,8 @@
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
           "patrolling": "patrouiller",
-          "moving east": "se déplacer vers l'est"
+          "moving east": "se déplacer vers l'est",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_Dogger_2": {
           "wandering": "se balader",
@@ -2848,7 +2913,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_1": {
           "wandering": "se balader",
@@ -2861,7 +2927,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_1_2020": {
           "wandering": "se balader",
@@ -2874,7 +2941,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_2": {
           "wandering": "se balader",
@@ -2887,7 +2955,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_2_2020": {
           "wandering": "se balader",
@@ -2900,7 +2969,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_3": {
           "wandering": "se balader",
@@ -2913,7 +2983,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_3_2020": {
           "wandering": "se balader",
@@ -2926,7 +2997,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_4": {
           "wandering": "se balader",
@@ -2939,7 +3011,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_4_2020": {
           "wandering": "se balader",
@@ -2952,7 +3025,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_5": {
           "wandering": "se balader",
@@ -2965,7 +3039,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseE_aboutme_5_2020": {
           "wandering": "se balader",
@@ -2978,7 +3053,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseF_project_1": {
           "wandering": "se balader",
@@ -2991,7 +3067,8 @@
           "moving north": "aller vers le Nord",
           "jittering": "gigoter",
           "moving west": "aller vers l'Ouest",
-          "patrolling": "patrouiller"
+          "patrolling": "patrouiller",
+          "swimming left and right": "nager à gauche et à droite "
         },
         "courseF_sprites_freeplay_food": {
           "moving west and looping": "aller vers l'Ouest et tourner en boucles",

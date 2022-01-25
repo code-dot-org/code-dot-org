@@ -1776,12 +1776,10 @@ sv:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Blommor
-            '"hearts"': Hjärtan
+            '"hearts"': hjärtan
             '"iceCream"': Glass
-            '"rainbow"': Regnbåge
-            '"stars"': Stjärnor
-            '"waves"': Vågor
+            '"rainbow"': regnbåge
+            '"stars"': stjärnor
       Poetry_glideTo:
         text: "{SPRITE} glid till {LOCATION}"
       Poetry_makeBurst:
@@ -1803,6 +1801,7 @@ sv:
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Hemsökt
             '"sound://category_background/inside_plane.mp3"': Gnola
             '"sound://category_loops/red_flag_loop1.mp3"': Uppdrag
+            '"sound://category_nature/summer_night_loop.mp3"': natt
             '"sound://category_background/repitition.mp3"': Ridning
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Långsam
       Poetry_playSound:
@@ -1810,6 +1809,7 @@ sv:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Klocka
+            '"sound://category_digital/boing_2.mp3"': boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubbla
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Prat
             '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Tömma
@@ -1817,7 +1817,6 @@ sv:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Misslyckas
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fladdra
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Hoppa
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ljus
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Poff
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Avsöka
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Livfull
@@ -1829,17 +1828,19 @@ sv:
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Färger
-            '"squiggles"': Krumelurer
-            '"space"': Mellanslag
-            '"stars"': Stjärnor
-            '"ripples"': Krusningar
-            '"rain"': Regn
             '"bubbles"': Bubblor
+            '"clouds"': molnigt
             '"confetti"': Konfetti
-            '"hearts"': Färgglada hjärtan
+            '"hearts"': hjärtan
+            '"space"': Mellanslag
+            '"rain"': regn
+            '"ripples"': Krusningar
+            '"colors"': Färger
+            '"stars"': Stjärnor
+            '"squiggles"': Krumelurer
           PALETTE:
-            '"rainbow"': Regnbåge
+            '"rainbow"': regnbåge
+            '"winter"': vinter
       Poetry_setBackgroundImageAs:
         text: ställa in bakgrunden till {IMG}
       Poetry_setFont:
@@ -1847,21 +1848,21 @@ sv:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Skrivstil
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Skrivstil
       Poetry_setFontColor:
         text: ställ in textfärg  {FILL}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Regn
             '"bubbles"': Bubblor
-            '"hearts"': Färgglada hjärtan
             '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
             '"starburst"': Stjärnfall
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"

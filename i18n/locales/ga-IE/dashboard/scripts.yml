@@ -4308,6 +4308,10 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -4482,3 +4486,31 @@ ga:
           lessons:
             lesson-1:
               name: Comórtas Litrithe
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Ceacht
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        2022drafting:
+          lessons:
+            lesson-5:
+              name: Maidir Liomsa i Saotharlann na Sprideanna
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar

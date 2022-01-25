@@ -1584,11 +1584,14 @@ az:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Güllər
-            '"hearts"': Ürəklər
+            '"brick"': kərpic
+            '"fire"': yanğın
+            '"flowers"': güllər
+            '"hearts"': ürəklər
             '"iceCream"': Dondurma
-            '"rainbow"': Göy qurşağı
-            '"stars"': Ulduzlar
+            '"leaves"': yarpaqlar
+            '"rainbow"': göy qurşağı
+            '"stars"': ulduzlar
             '"waves"': dalğalar
       Poetry_animateText:
         text: mətni animasiya et
@@ -1604,12 +1607,21 @@ az:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': tonqal
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': meşə
+            '"sound://category_nature/summer_night_loop.mp3"': gecə
             '"sound://category_background/ocean_waves.mp3"': okean
+            '"sound://category_background/rainforest_ambient_sound.mp3"': yağış meşələri
+            '"sound://category_background/wavering_wind.mp3"': yuxulu
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': yavaş
       Poetry_playSound:
         text: oynat
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Işıq
+            '"sound://category_bell/long_bell_notification.mp3"': zəng
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': köpük
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': atıl
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': işıq
             '"sound://category_background/typewriter.mp3"': yazı maşını
       Poetry_setAuthor:
         text: müəllifi təyin et {AUTHOR}
@@ -1617,50 +1629,50 @@ az:
         text: arxafon effekti təyin et
         options:
           EFFECT:
-            '"colors"': Rənglər
-            '"squiggles"': dalğalı
-            '"space"': Boşluq
-            '"stars"': Ulduzlar
+            '"blooming"': Çiçəkləmə
+            '"bubbles"': Köpük
+            '"clouds"': Buludlu
+            '"confetti"': konfeti (rəngli bəzəklər)
             '"darkCircles"': |-
               çökmə
               yoxa çıxma
             '"fadeColors"': donmuş
-            '"blooming"': Çiçəkləmə
+            '"hearts"': ürəklər
+            '"space"': Boşluq
+            '"rain"': yağış
             '"ripples"': Dalğalanma
-            '"clouds"': Buludlu
-            '"rain"': Yağış
-            '"bubbles"': Köpük
-            '"confetti"': konfeti (rəngli bəzəklər)
-            '"hearts"': rəngli ürəklər
+            '"colors"': Rənglər
+            '"stars"': Ulduzlar
+            '"squiggles"': dalğalı
           PALETTE:
-            '"rainbow"': Göy qurşağı
-            '"grayscale"': Boz
-            '"sky"': Səma
-            '"ocean"': okean
+            '"autumn"': Payız
             '"sunrise"': Şəfəq
             '"sunset"': Alacakaranlıq
+            '"grayscale"': Boz
+            '"ocean"': okean
+            '"rainbow"': göy qurşağı
+            '"roses"': Rozalar
+            '"sky"': Səma
             '"spring"': Yaz
             '"summer"': Yay
-            '"autumn"': Payız
             '"winter"': Qış
-            '"roses"': Rozalar
       Poetry_setFont:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Qara
+            '"Courier"': Kuryer
+            '"Impact"': Təsir
             '"Georgia"': Gürcüstan
             '"Times"': Vaxtlar
-            '"Courier"': Kuryer
-            '"Arial Black"': Arial Qara
-            '"Impact"': Təsir
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Yağış
             '"bubbles"': Köpük
-            '"hearts"': rəngli ürəklər
-            '"emojis"': Xoşbəxt Emojilər
             '"confetti"': konfeti (rəngli bəzəklər)
+            '"hearts"': ürəklər
+            '"emojis"': Xoşbəxt Emojilər
+            '"rain"': yağış
             '"starburst"': Ulduz partlaması
             '"glass"': Şüşə sındırmaq
       Poetry_setTextEffect:
@@ -1668,11 +1680,11 @@ az:
         options:
           EFFECT:
             '"fade"': yoxa çıxmaq
-            '"typewriter"': yazı maşını
             '"flyLeft"': soldan uç
             '"flyRight"': sağdan uç
             '"flyTop"': yuxarıdan uç
             '"flyBottom"': aşağıdan uç
+            '"typewriter"': yazı maşını
       Poetry_setTitle:
         text: başlıq təyin et
       Poetry_showText:
@@ -1680,43 +1692,35 @@ az:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            fluttering: çırpınan
-            growing: böyüyən
-            jittering: |-
+            '"fluttering"': çırpınan
+            '"growing"': böyüyən
+            '"jittering"': |-
               titrəmək
               (hər hansı cihazın titrəməsi)
-            moving_north_and_looping: şimala hərəkət
-            moving_south_and_looping: cənuba hərəkət
-            moving_east_and_looping: şərqə hərəkət
-            moving_west_and_looping: qərbə hərəkət
-            shrinking: |-
+            '"shrinking"': |-
               kiçilmək
               (ölçüdə və ya miqdarda kiçik olmaq)
-            spinning_left: sola fırlanır
-            spinning_right: sağa fırlanır
-            swimming_left_and_right: üzmə
-            wandering: gəzən
-            wobbling: titrəmə(titrəmək)
+            '"spinning_left"': sola fırlanır
+            '"spinning_right"': sağa fırlanır
+            '"swimming_left_and_right"': üzmə
+            '"wandering"': gəzən
+            '"wobbling"': titrəmə(titrəmək)
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            fluttering: çırpınan
-            growing: böyüyən
-            jittering: |-
+            '"fluttering"': çırpınan
+            '"growing"': böyüyən
+            '"jittering"': |-
               titrəmək
               (hər hansı cihazın titrəməsi)
-            moving_north_and_looping: şimala hərəkət
-            moving_south_and_looping: cənuba hərəkət
-            moving_east_and_looping: şərqə hərəkət
-            moving_west_and_looping: qərbə hərəkət
-            shrinking: |-
+            '"shrinking"': |-
               kiçilmək
               (ölçüdə və ya miqdarda kiçik olmaq)
-            spinning_left: sola fırlanır
-            spinning_right: sağa fırlanır
-            swimming_left_and_right: üzmə
-            wandering: gəzən
-            wobbling: titrəmə(titrəmək)
+            '"spinning_left"': sola fırlanır
+            '"spinning_right"': sağa fırlanır
+            '"swimming_left_and_right"': üzmə
+            '"wandering"': gəzən
+            '"wobbling"': titrəmə(titrəmək)
             '"all"': bütün davranışlar
       Poetry_whenLineShows:
         options:

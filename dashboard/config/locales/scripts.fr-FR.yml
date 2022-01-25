@@ -2856,6 +2856,7 @@ fr:
             App Presentation:
               name: Présentation de l'Application
         CSDU1-Draft:
+          description_short: Résolution de problèmes
           lessons:
             Exploring Apps:
               name: Explorer les Applications
@@ -23632,6 +23633,8 @@ fr:
             csd3_2:
               display_name: 'Chapitre 2 : Construction de Jeux'
           lessons:
+            Example Projects:
+              name: Exemples de projets
             Velocity:
               name: Vitesse
             Collision Detection:
@@ -25894,6 +25897,7 @@ fr:
                 pour créer leurs propres comportements personnalisés.
             Virtual Pet:
               key: Animal domestique virtuel
+              name: 'Mini-projet : animal de compagnie virtuel '
               description_student: Dans cette leçon, les élèves créeront un Animal
                 de Compagnie Virtuel interactif dont l'apparence et le comportements
                 correspondront à leurs souhaits. Les élèves utiliseront l'outil «
@@ -27520,6 +27524,17 @@ fr:
               display_name: Contenu
             lessonGroup-5:
               display_name: Le jeu Sandbox
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -27804,6 +27819,10 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Test
         tesspltest:
           lessons:
             lesson-2:
@@ -28264,6 +28283,7 @@ fr:
             lesson-8:
               name: 'Mini-projet : Applications mobiles'
             lesson-9:
+              name: Couleurs des LED
               description_teacher: |-
                 -   utilisez les événements d'écran pour changer la couleur des LED sur votre circuit imprimé.
                 -   utilisez les fonctions on(), off(), pulse(), toggle() et blink() de la LED
@@ -28760,23 +28780,6 @@ fr:
               key: Java Lab
             lesson-1:
               key: leçon n° 1
-              description_student: Les projets que vous avez développés tout au long
-                du cours ont inspiré beaucoup de créativité à la communauté ! Un festival
-                d'éclairage de quartier sera organisé pour présenter des histoires
-                créatives, des scripts, des paroles de chansons, des lettres et des
-                poèmes. Le projet Neighbourhood Lit Fest est un grand projet sur lequel
-                vous travaillez tout au long de l'unité, et les stratégies de gestion
-                de projet aident à organiser et structurer votre travail. Vous explorez
-                des stratégies d'écriture et de structuration du code pour que d'autres
-                ingénieurs logiciels puissent facilement comprendre et utiliser un
-                outil Java pour créer la documentation du programme.
-              description_teacher: Les étudiants sont initiés au projet Neighbourhood
-                Lit Fest et évaluent les exigences et les exemples pour identifier
-                les questions et les caractéristiques clés. Avant de commencer à travailler
-                sur le projet, les étudiants approfondissent leur compréhension de
-                la structure du programme et des commentaires, en identifiant les
-                meilleures pratiques et en explorant l'utilisation de Javadocs pour
-                générer la documentation du programme.
             lesson-2:
               key: leçon n°2
               description_student: Vous construisez des objets « Integer » et « Double
@@ -29120,6 +29123,7 @@ fr:
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
+              name: Données de visualisation
               description_student: 'Créer des diagrammes à barres et des histogrammes
                 en utilisant l''outil de visualisation des données d''App Lab. '
               description_teacher: |-
@@ -29149,6 +29153,7 @@ fr:
 
                 -   Savoir interpréter un diagramme à barres, en comprenant ce que représentent les valeurs sur les axes x et y.
                 -   Savoir lire un histogramme et comprendre ce que représente la plage de valeurs.
+          title: Données de visualisation
         counting-csc-2021:
           lessons:
             Counting with Laurel:
@@ -29179,3 +29184,130 @@ fr:
                 — Reconnaître et compter les nombres jusqu'à 10 en utilisant des images, les doigts ou des objets qu'ils pourront manipuler pour effectuer des calculs.
                 — D'ajouter des objets, des images, des doigts ou du matériel de manipulation pour atteindre une somme de 10.
           title: Compter avec Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Leçon
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Projet de fête d'éclairage de quartier - Jour 1
+            lesson-12:
+              name: Projet de fête d'éclairage de quartier - Jour 2
+            lesson-13:
+              name: Projet de fête d'éclairage de quartier - Jour 3
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulateur d'épidémie
+            lesson-5:
+              name: À propos de Moi avec le Labo des Lutins
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: leçon n°10
+            lesson-6:
+              key: leçon n°6
+            lesson-7:
+              key: leçon n°7
+            lesson-8:
+              key: leçon n° 8
+            lesson-9:
+              key: leçon n°9
+            lesson-11:
+              key: leçon n°11
+            lesson-12:
+              key: leçon n°12
+            lesson-13:
+              key: leçon n°13
+            lesson-14:
+              key: leçon n°14
+            lesson-15:
+              key: leçon n°15
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+            lesson-4:
+              key: leçon n°4
+            lesson-5:
+              key: leçon n°5
+              name: Journée d'Évaluation
+            lesson-16:
+              key: leçon n°16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+            lesson-4:
+              key: leçon n°4
+            lesson-5:
+              key: leçon n°5
+            lesson-10:
+              key: leçon n°10
+            lesson-6:
+              key: leçon n°6
+            lesson-7:
+              key: leçon n°7
+            lesson-8:
+              key: leçon n° 8
+            lesson-9:
+              key: leçon n°9
+            lesson-11:
+              key: leçon n°11
+            lesson-12:
+              key: leçon n°12
+            lesson-13:
+              key: leçon n°13
+            lesson-14:
+              key: leçon n°14
+            lesson-15:
+              key: leçon n°15
+              name: Journée d'Évaluation
+            lesson-16:
+              key: leçon n°16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox

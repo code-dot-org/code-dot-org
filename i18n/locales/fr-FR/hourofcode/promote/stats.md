@@ -16,7 +16,7 @@ title: Présentation et statistiques utiles
 
 #### Amenez l'informatique dans votre école. Commencez par une Heure de Code!
 
-Comme la technologie est en train de changer tous les secteurs de la planète, la connaissance de l'informatique fait maintenant partie d’un socle de compétences bien équilibré. Mais moins de la moitié de toutes les écoles enseignent l'informatique ! La bonne nouvelle, c'est que nous sommes en train de changer cela. Si vous avez entendu parler de l'Heure de Code dernièrement, vous savez peut-être que cela a été un événement historique. 100 millions d’élèves ont depuis découvert à quel point l'informatique peut être accessible et drôle en faisant simplement une Heure de Code.
+Comme la technologie est en train de changer tous les secteurs de la planète, la connaissance de l'informatique fait maintenant partie d’un socle de compétences bien équilibré. But just half of all schools offer computer science! La bonne nouvelle, c'est que nous sommes en train de changer cela. Si vous avez entendu parler de l'Heure de Code dernièrement, vous savez peut-être que cela a été un événement historique. 100 millions d’élèves ont depuis découvert à quel point l'informatique peut être accessible et drôle en faisant simplement une Heure de Code.
 
 L'Heure de Code est une introduction d'une heure à l'informatique, conçue pour démystifier la programmation et montrer que n'importe qui peut en apprendre les bases. Pour en savoir plus, rendez-vous sur <http://HourofCode.com> ; essayez une heure vous-même, ou bien organisez une Heure de Code pour faire découvrir le monde de l'informatique à d'autres !
 
@@ -30,7 +30,7 @@ Nous espérons que cette initiative suscitera l'intérêt des élèves et qu'ils
 
 #### Pourquoi est-ce important ?
 
-La technologie est en train de transformer tous les secteurs de la planète. En 2015, 7 millions d'offres d'emplois aux USA se situaient dans des métiers qui demandaient des capacités de programmation, y compris dans les secteurs de l'art et du design. Mais 53 % des écoles n'enseignent pas l'informatique. Il est temps que l'on rattrape le XXIème siècle. On sait bien que quelque soit la filière que nos élèves choisiront plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artiste, le fait de savoir programmer leur donnera la confiance et le savoir-faire pour maîtriser les technologies et représente un avantage clair. <br /> <br />
+La technologie est en train de transformer tous les secteurs de la planète. En 2015, 7 millions d'offres d'emplois aux USA se situaient dans des métiers qui demandaient des capacités de programmation, y compris dans les secteurs de l'art et du design. But 49 percent of schools in the U.S. don't offer computer science. Il est temps que l'on rattrape le XXIème siècle. On sait bien que quelque soit la filière que nos élèves choisiront plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artiste, le fait de savoir programmer leur donnera la confiance et le savoir-faire pour maîtriser les technologies et représente un avantage clair. <br /> <br />
 
 #### Une citation dont vous pouvez vous servir :
 

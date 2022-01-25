@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-03 21:58:00 UTC",
+    "serialized_at": "2022-01-06 21:01:16 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -57,8 +57,8 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Counting with Variables",
+      "key": "lesson-2",
+      "name": "Lots of Sprites",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -66,14 +66,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "2022drafting"
       }
     },
     {
-      "key": "lesson-2",
-      "name": "Lots of Sprites",
+      "key": "lesson-1",
+      "name": "Counting with Variables",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -81,7 +81,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "2022drafting"
       }
@@ -149,6 +149,18 @@
   ],
   "lesson_activities": [
     {
+      "key": "2393409f-eb9d-486f-8884-256b8df1479b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2393409f-eb9d-486f-8884-256b8df1479b",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting"
+      }
+    },
+    {
       "key": "4e565ab1-f5dd-4aaa-afb6-86fd6b98fc50",
       "position": 1,
       "properties": {
@@ -186,6 +198,16 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "3b105187-4168-4644-b260-917998ac9d70",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70",
+        "lesson_activity.key": "2393409f-eb9d-486f-8884-256b8df1479b"
+      }
+    },
     {
       "key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3",
       "position": 1,
@@ -324,6 +346,69 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting",
+        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
+      },
+      "level_keys": [
+        "courseF_groups_predict"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting",
+        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
+      },
+      "level_keys": [
+        "courseF_groups_video"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_size"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting",
+        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
+      },
+      "level_keys": [
+        "courseF_groups_size"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "courseE_aboutme_1_2021_say"
         ]
@@ -343,7 +428,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -367,7 +452,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -392,7 +477,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -417,7 +502,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -442,7 +527,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -467,7 +552,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -492,7 +577,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -517,7 +602,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -542,7 +627,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -567,7 +652,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -592,7 +677,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -617,7 +702,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -642,7 +727,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -667,7 +752,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -692,7 +777,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -717,11 +802,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Toolbox_SpriteLab_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -736,9 +824,66 @@
       "level_keys": [
         "CourseF_Toolbox_SpriteLab_2022"
       ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_Starter_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      },
+      "level_keys": [
+        "CourseF_Starter_SpriteLab_2022"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_predict",
+        "script_level.level_keys": [
+          "courseF_groups_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting",
+        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_video",
+        "script_level.level_keys": [
+          "courseF_groups_video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting",
+        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_size",
+        "script_level.level_keys": [
+          "courseF_groups_size"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting",
+        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "courseE_aboutme_1_2021_say",
@@ -936,6 +1081,18 @@
         "level.key": "CourseF_Toolbox_SpriteLab_2022",
         "script_level.level_keys": [
           "CourseF_Toolbox_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_Starter_SpriteLab_2022",
+        "script_level.level_keys": [
+          "CourseF_Starter_SpriteLab_2022"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-4",

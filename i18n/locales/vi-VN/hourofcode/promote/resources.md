@@ -84,7 +84,7 @@ Bộ poster mới có sự góp mặt của Malala, Stephen Curry, Shakira và n
 
 **Dòng tiêu đề:** Hãy cùng tôi và hơn 100 triệu học sinh tham gia Giờ lập trình <br />
 
-Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools teach computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã nghe nói về Hour of Code trước đây, bạn có thể biết nó đã làm nên lịch sử. Hơn 100 triệu sinh viên đã cố gắng Hour of Code.
+Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools offer computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã nghe nói về Hour of Code trước đây, bạn có thể biết nó đã làm nên lịch sử. Hơn 100 triệu sinh viên đã cố gắng Hour of Code.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Tất cả Cửa hàng Apple trên thế giới đều đã tổ chức Giờ lập trình và những nhà lãnh đạo như Tổng thống Obama và Thủ tướng Canada Justin Trudeau đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch.
 
@@ -110,7 +110,7 @@ Trong {{ campaign_date/short }}, 10% học sinh trên khắp thế giới sẽ �
 
 Học sinh sẽ tự tạo ứng dụng và game để khoe với cha mẹ. Chúng tôi cũng sẽ in chứng chỉ Giờ lập trình để các em mang về nhà. Sự kiện này sẽ rất vui đấy! Với các hoạt động thực hành tương tác, học sinh sẽ tìm hiểu các kỹ năng tư duy máy tính bằng phương pháp dễ tiếp cận.
 
-Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools teach computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã từng nghe tới Giờ lập trình trước đây, có thể bạn biết rằng sự kiện này đã làm nên lịch sử - hơn 100 triệu học sinh trên toàn thế giới đã tham gia Giờ lập trình. Ngay cả các nhà lãnh đạo như Tổng thống Obama và Thủ tưởng Canada Justin Trudeau cũng đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch này.
+Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools offer computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã từng nghe tới Giờ lập trình trước đây, có thể bạn biết rằng sự kiện này đã làm nên lịch sử - hơn 100 triệu học sinh trên toàn thế giới đã tham gia Giờ lập trình. Ngay cả các nhà lãnh đạo như Tổng thống Obama và Thủ tưởng Canada Justin Trudeau cũng đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch này.
 
 Bạn có thể đọc thêm về sự kiện tại http://hourofcode.com. Ngoài ra, hãy cho chúng tôi biết nếu bạn muốn lên lịch hẹn để trò chuyện về cách tham gia của [tên trường].<br />
 
@@ -126,7 +126,7 @@ Các bậc phụ huynh thân mến,
 
 Chúng ta đang được sống trong thế giới của công nghệ. Và chúng ta đều hiểu rằng dù khi lớn lên những đứa trẻ của chúng ta có chọn đi theo chuyên ngành nào thì khả năng thành công của chúng sẽ cao hơn nếu các em có những hiểu biết cơ bản về của công nghệ.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code. Giờ lập trình của chúng ta sẽ gửi đi thông điệp rằng [TÊN TRƯỜNG] đã sẵn sàng giảng dạy những kỹ năng căn bản của thế kỷ 21 này. Để tiếp tục mang hoạt động lập trình đến con em của các bạn, chúng tôi muốn làm cho sự kiện Giờ Lập trình với quy mô lớn hơn. Tôi khuyến khích các bạn hãy tham gia tình nguyện, liên hệ với phương tiện truyền thông địa phương, chia sẻ tin tức trên kênh phương tiện truyền thông xã hội của các bạn và xem xét việc tổ chức thêm sự kiện Giờ Lập Trình ở cộng đồng.
 
@@ -144,7 +144,7 @@ Xem chi tiết tại http://hourofcode.com/{{ country_language }} và giúp qu�
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Tất cả Apple Store trên thế giới đều tổ chức Giờ lập trình. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -172,7 +172,7 @@ I look forward to being in touch. <br />
 
 Ông/bà có biết rằng máy tính là nguồn #1 của lương tại Mỹ.? Có hơn 500.000 tính toán công việc mở trên toàn quốc, nhưng năm ngoái chỉ 42,969 máy tính khoa học sinh viên tốt nghiệp vào lực lượng lao động.
 
-Khoa học máy tính là nền tảng của mọi ngành công nghiệp hiện nay, nhưng hầu hết các trường học không dạy môn này. Tại [TÊN TRƯỜNG], chúng tôi đang cố gắng thay đổi thực trạng đó.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code.
 

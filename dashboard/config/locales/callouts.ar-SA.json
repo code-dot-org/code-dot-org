@@ -1764,6 +1764,61 @@
           "poetry_background": "ابحث عن كتل للكود هنا.",
           "pause_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر.",
           "run_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "؟"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "باستخدام هذا، يمكنك إبطاء سرعة تشغيل برنامجك."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_pet": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "انقر هنا لتفتح فئة \"السلوكيات\"."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "انقر هنا لتفتح فئة \"الكائنات\"."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "انقر هنا لتفتح فئة \"المواقع\"."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "ابحث عن قطعة برمجية جديدة هنا."
         }
       }
     }
