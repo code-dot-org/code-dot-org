@@ -1181,7 +1181,7 @@ class Script < ApplicationRecord
     rescue => e
       filepath_to_delete = Script.script_json_filepath(new_name)
       File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
-      puts "Error: #{e.message}"
+      raise e, "Error: #{e.message}"
     end
   end
 
