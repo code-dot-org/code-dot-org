@@ -12,8 +12,10 @@ export default class CoreLibrary {
     this.behaviors = [];
     this.userInputEventCallbacks = {};
     this.totalPauseTime = 0;
-    this.timerResetTime = 0;
-    this.timerResetFrames = 0;
+    this.timerReset = {
+      seconds: 0,
+      frames: 0
+    };
     this.numActivePrompts = 0;
     this.screenText = {};
     this.defaultSpriteSize = 100;
@@ -470,7 +472,7 @@ export default class CoreLibrary {
     if (inputEvent.args.unit === 'seconds') {
       const previousTime = inputEvent.previousTime || 0;
       const worldTime =
-        this.getAdjustedWorldTime(this.p5) - this.timerResetTime;
+        this.getAdjustedWorldTime(this.p5) - this.timerReset.seconds;
       inputEvent.previousTime = worldTime;
       // There are many ticks per second, but we only want to fire the event once (on the first tick where
       // the time matches the event argument)
@@ -483,7 +485,7 @@ export default class CoreLibrary {
         return [{}];
       }
     } else if (inputEvent.args.unit === 'frames') {
-      const worldFrames = this.p5.frameCount - this.timerResetFrames;
+      const worldFrames = this.p5.frameCount - this.timerReset.frames;
       if (worldFrames === inputEvent.args.n) {
         // Call callback with no extra args
         this.eventLog.push(`atTime: ${inputEvent.args.n}`);
