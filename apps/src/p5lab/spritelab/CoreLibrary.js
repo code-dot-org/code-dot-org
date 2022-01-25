@@ -12,7 +12,7 @@ export default class CoreLibrary {
     this.behaviors = [];
     this.userInputEventCallbacks = {};
     this.totalPauseTime = 0;
-    this.timerReset = {
+    this.timerResetTime = {
       seconds: 0,
       frames: 0
     };
@@ -207,6 +207,20 @@ export default class CoreLibrary {
     return Math.round(
       (current - this.p5._startTime - this.totalPauseTime) / 1000
     );
+  }
+
+  /**
+   * Returns time (in seconds) since last resetTimer(), excluding time during which the app was paused
+   */
+  getSecondsSinceReset() {
+    return this.getAdjustedWorldTime(this.p5) - this.timerResetTime.seconds;
+  }
+
+  /**
+   * Returns time (in frames) since last resetTimer()
+   */
+  getFramesSinceReset() {
+    return this.p5.frameCount - this.timerResetTime.frames;
   }
 
   /**
@@ -471,8 +485,7 @@ export default class CoreLibrary {
   atTimeEvent(inputEvent) {
     if (inputEvent.args.unit === 'seconds') {
       const previousTime = inputEvent.previousTime || 0;
-      const worldTime =
-        this.getAdjustedWorldTime(this.p5) - this.timerReset.seconds;
+      const worldTime = this.getSecondsSinceReset();
       inputEvent.previousTime = worldTime;
       // There are many ticks per second, but we only want to fire the event once (on the first tick where
       // the time matches the event argument)
@@ -485,7 +498,7 @@ export default class CoreLibrary {
         return [{}];
       }
     } else if (inputEvent.args.unit === 'frames') {
-      const worldFrames = this.p5.frameCount - this.timerReset.frames;
+      const worldFrames = this.getFramesSinceReset();
       if (worldFrames === inputEvent.args.n) {
         // Call callback with no extra args
         this.eventLog.push(`atTime: ${inputEvent.args.n}`);
