@@ -5,7 +5,7 @@ import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {prepareBlocklyForEmbedding} from '@cdo/apps/block_utils';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
 $(document).ready(() => {
   prepareBlockly();

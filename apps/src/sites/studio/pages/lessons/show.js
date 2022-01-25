@@ -19,7 +19,7 @@ import {
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
-import {prepareBlocklyForEmbedding} from '@cdo/apps/block_utils';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
 $(document).ready(function() {
   prepareBlockly();
