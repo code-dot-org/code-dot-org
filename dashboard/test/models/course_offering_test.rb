@@ -168,7 +168,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course_offering.valid?
   end
 
-  test "course offerings seed from files correctly" do
+  test "can serialize and seed course offerings" do
     course_offering = create :course_offering, key: 'course-offering-1'
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
@@ -176,8 +176,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     File.stubs(:read).returns(serialization.to_json)
 
-    new_course_offering_id = CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
-    new_course_offering = CourseOffering.find_by(id: new_course_offering_id)
+    new_course_offering_key = CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
+    new_course_offering = CourseOffering.find_by(key: new_course_offering_key)
     assert_equal previous_course_offering.attributes.except('id', 'created_at', 'updated_at'),
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
