@@ -2132,6 +2132,14 @@ class ScriptTest < ActiveSupport::TestCase
       refute_nil cloned_unit.get_course_version
     end
 
+    test 'clone raises exception if script name has already been taken' do
+      create :script, name: 'my-name'
+      raise = assert_raises do
+        @standalone_unit.clone_migrated_unit('my-name', version_year: '2022')
+      end
+      assert_equal 'Script name has already been taken', raise.message
+    end
+
     test 'clone raises exception if destination_unit_group does not have a course version' do
       versionless_unit_group = create :unit_group
       assert_nil versionless_unit_group.course_version
