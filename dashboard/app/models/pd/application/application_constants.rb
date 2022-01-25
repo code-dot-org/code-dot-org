@@ -14,6 +14,13 @@ module Pd::Application
     INCOMPLETE = 'Incomplete'.freeze
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'.freeze
 
+    COURSE_NAME_MAP = {
+      csp: Pd::Workshop::COURSE_CSP,
+      csd: Pd::Workshop::COURSE_CSD,
+      csf: Pd::Workshop::COURSE_CSF,
+      csa: Pd::Workshop::COURSE_CSA
+    }
+
     COMMON_OPTIONS = {
       title: %w(Mr. Mrs. Ms. Mx. Dr.),
 
