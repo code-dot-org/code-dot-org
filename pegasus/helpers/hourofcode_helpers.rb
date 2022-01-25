@@ -47,10 +47,13 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   end
 
   if @country || @company
-    if possible_language && I18n.backend.translations.key?(possible_language[0..1].to_sym)
+    # Checking entire possible_language string first. We do not want to
+    # unintentionally interpret a path as a language.
+    if possible_language && I18n.backend.translations.key?(possible_language.to_sym)
       # HOC uses two-letter language code. The full list of language codes is
       # in the unique_language_s column in Pegasus.cdo_languages table.
-      @user_language = possible_language[0..1]
+      short_language = possible_language[0..1]
+      @user_language = short_language if I18n.backend.translations.key?(short_language.to_sym)
     else
       path = File.join([possible_language, path].reject(&:nil_or_empty?))
     end
