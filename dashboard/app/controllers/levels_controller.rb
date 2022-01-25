@@ -148,6 +148,8 @@ class LevelsController < ApplicationController
     @dataset_library_manifest = fb.get_library_manifest
   end
 
+  use_reader_connection_for_route(:get_rubric)
+
   # GET /levels/:id/get_rubric
   # Get all the information for the mini rubric
   def get_rubric

@@ -24,10 +24,6 @@ def sites_v3_dir(*paths)
   pegasus_dir('sites.v3', *paths)
 end
 
-def hoc_dir(*paths)
-  pegasus_dir('sites.v3', 'hourofcode.com', *paths)
-end
-
 def src_dir(*paths)
   pegasus_dir('src', *paths)
 end
@@ -53,20 +49,11 @@ def load_pegasus_settings
   I18n.backend = CDO.i18n_backend
   I18n.backend.class.send(:include, I18n::Backend::Fallbacks)
   I18n.fallbacks = I18n::Locale::Fallbacks.new(['en-US'])
-
-  # We don't load all translations in dev and test environment.
-  # Loading translations from files is slow, more than 60s sometimes. That can
-  # cause unrelated eyes tests to fail because of command timeout.
-  if (rack_env?(:development) || rack_env?(:test)) && !CDO.load_locales
+  if rack_env?(:development) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
     I18n.load_path += Dir[cache_dir('i18n/es-ES.yml')]
-    I18n.load_path += Dir[hoc_dir('i18n/en.yml')]
-    I18n.load_path += Dir[hoc_dir('i18n/es.yml')]
-    I18n.load_path += Dir[hoc_dir('i18n/fr.yml')]
-    I18n.load_path += Dir[hoc_dir('i18n/pt.yml')]
   else
     I18n.load_path += Dir[cache_dir('i18n/*.yml')]
-    I18n.load_path += Dir[hoc_dir('i18n/*.yml')]
   end
   I18n.enforce_available_locales = false
   I18n.backend.load_translations
