@@ -247,10 +247,10 @@ const styles = {
   oldVersionWarning: {
     zIndex: 99,
     backgroundColor: color.lightest_red,
-    textAlign: 'right',
+    textAlign: 'center',
     height: 20,
     padding: 5,
-    opacity: 0.7,
+    opacity: 0.8,
     position: 'relative'
   },
   studentNotStartedWarning: {
