@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Student opportunity: $40,000 for college and a paid internship",
-          "details": "Amazon Future Engineer is offering 100 qualifying high school seniors across the US $40K for tuition and a coding internship at Amazon. Applications are open to students who plan to study CS in college and close January 25, 2022. Click \"Learn more\" to see the full criteria.",
-          "link": "https://bit.ly/AFEScholarshipLB2022",
-          "type": "bullhorn",
-          "visibility": "Teacher and student"
-        }
-      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -26,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 18:13:59 UTC",
+    "serialized_at": "2022-01-25 15:12:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3242,6 +3233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
