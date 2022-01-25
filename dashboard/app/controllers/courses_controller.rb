@@ -9,51 +9,6 @@ class CoursesController < ApplicationController
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'UnitGroup', except: [:index]
 
-  def get_unit_group
-    course_name = params[:course_name]
-
-    unit_group =
-      params[:action] == "edit" ?
-        UnitGroup.get_without_cache(course_name) :
-        UnitGroup.get_from_cache(course_name)
-
-    return unit_group if unit_group
-
-    # When the url of a course family is requested, redirect to a specific course version.
-    if UnitGroup.family_names.include?(params[:course_name])
-      unit_group = UnitGroup.latest_stable_version(params[:course_name])
-      redirect_to action: params[:action], course_name: unit_group.name
-    end
-
-    unit_group
-  end
-
-  def set_unit_group
-    @unit_group = get_unit_group
-    raise ActiveRecord::RecordNotFound unless @unit_group
-  end
-
-  def render_no_access
-    unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
-      authenticate_user!
-      return render :no_access
-    end
-
-    if @unit_group.pilot?
-      authenticate_user!
-      unless @unit_group.has_pilot_access?(current_user)
-        return render :no_access
-      end
-    end
-
-    if @unit_group.in_development?
-      authenticate_user!
-      unless current_user.permission?(UserPermission::LEVELBUILDER)
-        return render :no_access
-      end
-    end
-  end
-
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
     respond_to do |format|
@@ -139,19 +94,23 @@ class CoursesController < ApplicationController
   end
 
   def vocab
-    @course_summary = @unit_group.summarize_for_rollup(current_user)
+    return render :forbidden unless can?(:vocab, @unit_group)
+    @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def resources
-    @course_summary = @unit_group.summarize_for_rollup(current_user)
+    return render :forbidden unless can?(:resources, @unit_group)
+    @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def code
-    @course_summary = @unit_group.summarize_for_rollup(current_user)
+    return render :forbidden unless can?(:code, @unit_group)
+    @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def standards
-    @course_summary = @unit_group.summarize_for_rollup(current_user)
+    return render :forbidden unless can?(:standards, @unit_group)
+    @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def get_rollup_resources
@@ -188,6 +147,51 @@ class CoursesController < ApplicationController
   end
 
   private
+
+  def get_unit_group
+    course_name = params[:course_name]
+
+    unit_group =
+      params[:action] == "edit" ?
+        UnitGroup.get_without_cache(course_name) :
+        UnitGroup.get_from_cache(course_name)
+
+    return unit_group if unit_group
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      redirect_to action: params[:action], course_name: unit_group.name
+    end
+
+    unit_group
+  end
+
+  def set_unit_group
+    @unit_group = get_unit_group
+    raise ActiveRecord::RecordNotFound unless @unit_group
+  end
+
+  def render_no_access
+    unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
+      authenticate_user!
+      return render :no_access
+    end
+
+    if @unit_group.pilot?
+      authenticate_user!
+      unless @unit_group.has_pilot_access?(current_user)
+        return render :no_access
+      end
+    end
+
+    if @unit_group.in_development?
+      authenticate_user!
+      unless current_user.permission?(UserPermission::LEVELBUILDER)
+        return render :no_access
+      end
+    end
+  end
 
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
