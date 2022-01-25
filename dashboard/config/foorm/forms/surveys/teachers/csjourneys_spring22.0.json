@@ -147,7 +147,7 @@
         {
           "type": "radiogroup",
           "name": "middlehigh_after",
-          "visibleIf": "{grade_band} = '6-12'",
+          "visibleIf": "{grade_band} = '6_12'",
           "title": "After this experience, my students were interested in pursuing additional computer science learning experiences or career opportunities.",
           "isRequired": true,
           "choices": [
@@ -176,7 +176,7 @@
         {
           "type": "radiogroup",
           "name": "question1",
-          "visibleIf": "{grade_band} = '6-12'",
+          "visibleIf": "{grade_band} = '6_12'",
           "title": "Before this experience, my students were interested in pursuing additional computer science learning experiences or career opportunities.",
           "isRequired": true,
           "choices": [
