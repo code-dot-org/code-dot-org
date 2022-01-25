@@ -42,6 +42,7 @@ class CourseOffering < ApplicationRecord
       raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
 
       offering = CourseOffering.find_or_create_by!(key: content_root.family_name, display_name: content_root.family_name)
+      offering.write_serialization
     else
       offering = nil
     end
