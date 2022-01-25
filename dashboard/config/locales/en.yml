@@ -306,6 +306,7 @@ en:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
       restricted_section: "We couldn't add you to section %{section_code} because it is locked. Please contact your teacher for help."
       full_section: "We couldn't add you to section %{section_code} because there are already %{section_capacity} students in it. Please contact your teacher for help."
+      not_participant_type: "We couldn't add you to section %{section_code} because you do not meet the participant type for the section."
     mail:
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
