@@ -256,8 +256,7 @@ class Level < ApplicationRecord
   end
 
   def should_write_custom_level_file?
-    changed = saved_changes? || (level_concept_difficulty && level_concept_difficulty.saved_changes?)
-    changed && write_to_file? && published
+    write_to_file? && published
   end
 
   def write_custom_level_file
