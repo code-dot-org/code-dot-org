@@ -20,9 +20,9 @@
   "properties": {
     "announcements": [
       {
-        "notice": "Student opportunity: $40,000 for college and a paid internship",
-        "details": "Amazon Future Engineer is offering 100 qualifying high school seniors across the US $40K for tuition and a coding internship at Amazon. Applications are open to students who plan to study CS in college and close January 25, 2022. Click \"Learn more\" to see the full criteria.",
-        "link": "https://bit.ly/AFEScholarshipLB2022",
+        "notice": "Studying CS in college as a young woman!",
+        "details": "Young women in high school can learn firsthand from undergraduate women pursuing CS as they share their experiences in this monthly panel hosted by Code.org and Rewriting the Code.  First discussion happens Wednesday evening, January 26th.  Click \"Learn more\" for details and to register!",
+        "link": "https://bit.ly/rewritethecodeLB2022",
         "type": "bullhorn",
         "visibility": "Teacher and student"
       }

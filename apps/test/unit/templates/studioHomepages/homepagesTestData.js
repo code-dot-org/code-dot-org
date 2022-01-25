@@ -147,3 +147,10 @@ export const topCourse = {
   linkToLesson:
     'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
 };
+
+export const topPLCourse = {
+  assignableName: 'PL Course 1',
+  lessonName: 'Learning how to teacher',
+  linkToOverview: 'http://studio.code.org/s/vpl-csp-2021',
+  linkToLesson: 'http://studio.code.org/s/vpl-csp-2021/lessons/3/levels/1'
+};

@@ -1299,6 +1299,8 @@ en:
               name: AI Lab
             Java Lab:
               name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-47:
               name: Example CSP Assessment
               description_student: 
@@ -25565,7 +25567,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod2:
           lessons:
@@ -26897,8 +26899,16 @@ en:
           description: ''
           student_description: ''
         tesstest921:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Testing CSA Clone
           lesson_groups: {}
+          name: tesstest921
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         hello-world-animals:
           lessons:
             lesson-1:
@@ -29824,7 +29834,7 @@ en:
             Parameters and Return Investigate:
               name: Parameters and Return Investigate
               description_student: 'Investigate and modify sample apps that use parameters and return values. '
-              description_teacher: 'In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. '
+              description_teacher: 'In this lesson, students work with partners to investigate two different apps that use parameters and return values. '
               key: Parameters and Return Investigate
             Parameters and Return Practice:
               name: Parameters and Return Practice
@@ -30793,6 +30803,19 @@ en:
               display_name: Show What You Know
           name: csa3-2022
           title: Expanding Program Data ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        tessplayground:
+          lessons:
+            Conditionals and Debugging:
+              name: Conditionals and Debugging
+              description_student: Now that you know how to call methods, you help the `Painter` make decisions about how to interact with The Neighborhood using methods that give information. You identify syntax and logic errors as well as debugging strategies to use throughout the year.
+              description_teacher: 'Students modify programs using three Boolean methods: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Students use Boolean methods and `if` statements to apply conditional logic in their programs. Students develop debugging strategies by identifying syntax and logic errors in their code.'
+          lesson_groups: {}
+          name: tessplayground
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

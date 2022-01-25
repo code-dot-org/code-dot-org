@@ -15,6 +15,7 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       CourseOffering,
+      UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
@@ -370,6 +371,7 @@ class Ability
     end
 
     if user.persisted?
+      # TODO: should add editor experiment for Unit Group
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
         can :index, Level

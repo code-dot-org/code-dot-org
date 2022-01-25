@@ -57,7 +57,8 @@ describe('VersionHistory', () => {
       props: {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
-        useFilesApi: false
+        useFilesApi: false,
+        isReadOnly: false
       },
       finishVersionHistoryLoad: () => {
         sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
@@ -87,7 +88,8 @@ describe('VersionHistory', () => {
       props: {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
-        useFilesApi: true
+        useFilesApi: true,
+        isReadOnly: false
       },
       finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](
@@ -150,7 +152,7 @@ describe('VersionHistory', () => {
       expect(restoreSpy()).not.to.have.been.called;
 
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
@@ -160,7 +162,7 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
 
@@ -172,7 +174,7 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
       expect(utils.reload).not.to.have.been.called;

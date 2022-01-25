@@ -3,6 +3,7 @@ require 'test_helper'
 class AbilityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
+    @public_unit_group = create(:unit_group)
     @public_script = create(:script).tap do |script|
       @public_script_level = create(:script_level, script: script)
     end
@@ -13,6 +14,12 @@ class AbilityTest < ActiveSupport::TestCase
 
     @login_required_migrated_script = create(:script, login_required: true, is_migrated: true).tap do |script|
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true)
+    end
+
+    @in_development_unit_group = create(:unit_group, published_state: 'in_development')
+    @in_development_script = create(:script, published_state: 'in_development').tap do |script|
+      @in_development_lesson = create(:lesson, script: script, has_lesson_plan: true)
+      @in_development_script_level = create(:script_level, script: script)
     end
   end
 
@@ -38,6 +45,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
+    refute ability.can?(:read, @in_development_script)
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
 
@@ -47,6 +55,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script_level)
     refute ability.can?(:read, @public_script_level, {login_required: "true"})
     refute ability.can?(:read, @login_required_script_level)
+
+    assert ability.can?(:read, @public_unit_group)
+    refute ability.can?(:read, @in_development_unit_group)
 
     refute ability.can?(:read, CourseOffering)
   end
@@ -67,6 +78,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
+    refute ability.can?(:read, @in_development_script)
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
 
@@ -76,6 +88,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @public_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
+
+    assert ability.can?(:read, @public_unit_group)
+    refute ability.can?(:read, @in_development_unit_group)
 
     refute ability.can?(:read, CourseOffering)
   end
@@ -96,6 +111,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
+    refute ability.can?(:read, @in_development_script)
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
 
@@ -105,6 +121,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @public_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
+
+    assert ability.can?(:read, @public_unit_group)
+    refute ability.can?(:read, @in_development_unit_group)
 
     refute ability.can?(:read, CourseOffering)
   end
@@ -127,6 +146,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, Script.find_by_name('ECSPD'))
     assert ability.cannot?(:read, Script.find_by_name('flappy'))
 
+    assert ability.cannot?(:read, @in_development_script)
     assert ability.cannot?(:read, @public_script)
     assert ability.cannot?(:read, @login_required_script)
 
@@ -136,7 +156,31 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @public_script_level)
     assert ability.cannot?(:read, @login_required_script_level)
 
+    assert ability.cannot?(:read, @public_unit_group)
+    assert ability.cannot?(:read, @in_development_unit_group)
+
     refute ability.can?(:read, CourseOffering)
+  end
+
+  test "as levelbuilder" do
+    ability = Ability.new(create(:levelbuilder))
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @in_development_script)
+    assert ability.can?(:read, @public_script)
+    assert ability.can?(:read, @login_required_script)
+
+    assert ability.can?(:read, @login_required_migrated_lesson)
+    assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @public_script_level, {login_required: "true"})
+    assert ability.can?(:read, @login_required_script_level)
+
+    assert ability.can?(:read, @public_unit_group)
+    assert ability.can?(:read, @in_development_unit_group)
   end
 
   test 'teachers read their Section' do
@@ -191,6 +235,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:manage, Script)
     refute ability.can?(:manage, Lesson)
     refute ability.can?(:manage, ScriptLevel)
+    refute ability.can?(:manage, UnitGroup)
   end
 
   test 'levelbuilders can manage appropriate objects in levelbuilder mode' do
@@ -204,6 +249,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, Lesson)
     assert ability.can?(:manage, ScriptLevel)
+    assert ability.can?(:manage, UnitGroup)
     assert ability.can?(:manage, CourseOffering)
   end
 
