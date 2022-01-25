@@ -60,4 +60,48 @@ class CourseOffering < ApplicationRecord
       CourseOffering.find_by_key(key)
     end
   end
+
+  def serialize
+    {
+      id: id,
+      key: key,
+      display_name: display_name
+    }
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    file_path = Rails.root.join("config/course_offerings/#{key}.json")
+    object_to_serialize = serialize
+    dirname = File.dirname(file_path)
+    unless File.directory?(dirname)
+      FileUtils.mkdir_p(dirname)
+    end
+    File.write(file_path, JSON.pretty_generate(object_to_serialize))
+  end
+
+  def self.seed_all
+    removed_records = all.pluck(:id)
+    Dir.glob(Rails.root.join("config/course_offerings/*.json")).each do |path|
+      puts path
+      removed_records -= [CourseOffering.seed_record(path)]
+    end
+    where(id: removed_records).destroy_all
+  end
+
+  def self.properties_from_file(content)
+    config = JSON.parse(content)
+    {
+      id: config['id'],
+      key: config['key'],
+      display_name: config['display_name']
+    }
+  end
+
+  def self.seed_record(file_path)
+    properties = properties_from_file(File.read(file_path))
+    course_offering = CourseOffering.find_or_initialize_by(id: properties[:id])
+    course_offering.update! properties
+    course_offering.id
+  end
 end
