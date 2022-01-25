@@ -71,7 +71,7 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       display_name: display_name
-    }
+    }.merge(properties&.sort.to_h)
   end
 
   def write_serialization
@@ -95,16 +95,12 @@ class CourseOffering < ApplicationRecord
 
   def self.properties_from_file(content)
     config = JSON.parse(content)
-    {
-      id: config['id'],
-      key: config['key'],
-      display_name: config['display_name']
-    }
+    config.symbolize_keys
   end
 
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
-    course_offering = CourseOffering.find_or_initialize_by(id: properties[:id])
+    course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
     course_offering.key
   end
