@@ -18,8 +18,8 @@ module Pd::Application
           'Application type is not included in the list',
           'Application year is not included in the list',
           'Type is required'
-        ],
-        application.errors.full_messages
+        ].sort,
+        application.errors.full_messages.sort
       )
     end
 
