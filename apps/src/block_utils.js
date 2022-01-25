@@ -1,18 +1,6 @@
 import _ from 'lodash';
 import xml from './xml';
 
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {registerReducers} from '@cdo/apps/redux';
-import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import animationList, {
-  setInitialAnimationList
-} from '@cdo/apps/p5lab/redux/animationList';
-import {
-  valueTypeTabShapeMap,
-  exampleSprites
-} from '@cdo/apps/p5lab/spritelab/constants';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
-
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
 
@@ -1350,33 +1338,4 @@ const sanitizeOptions = function(dropdownOptions) {
   return dropdownOptions.map(option =>
     option.length === 1 ? [option[0], option[0]] : option
   );
-};
-
-/**
- * Prepares the blockly environment to allow for embedding blocks in divs
- * Note that this function dispatches to redux
- *
- * @param {object[]} list of blocks that can be embedded
- */
-exports.prepareBlocklyForEmbedding = function(customBlocksConfig) {
-  if (!customBlocksConfig) {
-    return;
-  }
-  Blockly.assetUrl = assetUrl;
-  Blockly.typeHints = true;
-  Blockly.Css.inject(document);
-
-  // Spritelab-specific logic but not harmful to other labs.
-  registerReducers({
-    animationList
-  });
-  const store = getStore();
-  store.dispatch(setInitialAnimationList(exampleSprites));
-  Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
-
-  exports.installCustomBlocks({
-    blockly: Blockly,
-    blockDefinitions: customBlocksConfig,
-    customInputTypes
-  });
 };
