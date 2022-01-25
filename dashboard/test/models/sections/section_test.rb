@@ -270,7 +270,7 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'add_student returns failure for if user does not meet participant_type for section' do
+  test 'add_student returns failure if user does not meet participant_type for section' do
     section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     assert_does_not_create(Follower) do
       add_student_return = section_with_teacher_participants.add_student @student
