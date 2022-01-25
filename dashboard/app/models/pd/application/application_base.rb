@@ -55,7 +55,6 @@ module Pd::Application
     belongs_to :regional_partner
 
     after_initialize -> {self.status = :unreviewed}, if: :new_record?
-    after_initialize :set_type_and_year
     before_validation :set_type_and_year
     validate :status_is_valid_for_application_type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
