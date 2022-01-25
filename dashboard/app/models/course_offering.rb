@@ -86,10 +86,8 @@ class CourseOffering < ApplicationRecord
   def serialize
     {
       key: key,
-      display_name: display_name,
-      is_featured: is_featured?,
-      category: category
-    }
+      display_name: display_name
+    }.merge(properties&.sort.to_h)
   end
 
   def write_serialization
