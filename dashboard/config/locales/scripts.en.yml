@@ -24584,6 +24584,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csd8-2021:
           lessons: {}
           lesson_groups: {}
@@ -24592,6 +24593,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp1-2021:
           lessons:
             lesson-1:
@@ -25467,7 +25469,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod1:
           lessons:
