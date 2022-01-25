@@ -164,7 +164,7 @@ export default class CoreLibrary {
     this.removeSpeechBubblesForSprite(sprite);
 
     const id = createUuid();
-    const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
+    const removeAt = seconds ? this.getUnpausedWorldTime() + seconds : null;
     // Note: renderFrame is used by validation code.
     this.speechBubbles.push({
       id,
@@ -184,7 +184,7 @@ export default class CoreLibrary {
 
   removeExpiredSpeechBubbles() {
     this.speechBubbles = this.speechBubbles.filter(
-      ({removeAt}) => !removeAt || removeAt > this.getAdjustedWorldTime()
+      ({removeAt}) => !removeAt || removeAt > this.getUnpausedWorldTime()
     );
   }
 
@@ -202,7 +202,7 @@ export default class CoreLibrary {
   /**
    * Returns World.seconds adjusted to exclude time during which the app was paused
    */
-  getAdjustedWorldTime() {
+  getUnpausedWorldTime() {
     const current = new Date().getTime();
     return Math.round(
       (current - this.p5._startTime - this.totalPauseTime) / 1000
@@ -213,7 +213,7 @@ export default class CoreLibrary {
    * Returns time (in seconds) since last resetTimer(), excluding time during which the app was paused
    */
   getSecondsSinceReset() {
-    return this.getAdjustedWorldTime(this.p5) - this.timerResetTime.seconds;
+    return this.getUnpausedWorldTime(this.p5) - this.timerResetTime.seconds;
   }
 
   /**
@@ -511,7 +511,7 @@ export default class CoreLibrary {
 
   collectDataEvent(inputEvent) {
     const previous = inputEvent.previous || 0;
-    const worldTime = this.getAdjustedWorldTime(this.p5);
+    const worldTime = this.getUnpausedWorldTime(this.p5);
     inputEvent.previous = worldTime;
 
     // Only log data once per second

@@ -24,7 +24,7 @@ export const commands = {
 
   getTime(unit) {
     if (unit === 'seconds') {
-      return this.getAdjustedWorldTime() - this.timerResetTime.seconds || 0;
+      return this.getUnpausedWorldTime() - this.timerResetTime.seconds || 0;
     } else if (unit === 'frames') {
       return this.p5.World.frameCount - this.timerResetTime.frames || 0;
     }
@@ -32,7 +32,7 @@ export const commands = {
   },
 
   resetTimer() {
-    this.timerResetTime.seconds = this.getAdjustedWorldTime();
+    this.timerResetTime.seconds = this.getUnpausedWorldTime();
     this.timerResetTime.frames = this.currentFrame();
   },
 
