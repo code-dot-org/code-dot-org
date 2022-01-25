@@ -208,18 +208,18 @@ class Script < ApplicationRecord
       unit_group = UnitGroup.find_by_name(professional_learning_course)
       if unit_group
         # Check if anything needs to be updated on the PL course
-        unit_group.published_state = get_published_state if unit_group.published_state != get_published_state
-        unit_group.instruction_type = get_instruction_type if unit_group.instruction_type != get_instruction_type
-        unit_group.participant_audience = get_participant_audience if unit_group.participant_audience != get_participant_audience
-        unit_group.instructor_audience = get_instructor_audience if unit_group.instructor_audience != get_instructor_audience
+        unit_group.published_state = published_state
+        unit_group.instruction_type = instruction_type
+        unit_group.participant_audience = participant_audience
+        unit_group.instructor_audience = instructor_audience
         unit_group.save! if unit_group.changed?
       else
         unit_group = UnitGroup.new(
           name: professional_learning_course,
-          published_state: get_published_state,
-          instruction_type: get_instruction_type,
-          instructor_audience: get_instructor_audience,
-          participant_audience: get_participant_audience
+          published_state: published_state,
+          instruction_type: instruction_type,
+          instructor_audience: instructor_audience,
+          participant_audience: participant_audience
         )
         unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
         unit_group.save!
