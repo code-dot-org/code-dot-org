@@ -96,8 +96,9 @@ class AdminSearchController < ApplicationController
   def show_pilot
     @pilot_name = params[:pilot_name]
     return head :bad_request unless Pilot.exists?(name: @pilot_name)
-    user_ids =  SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
+    user_ids = SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
     @emails = User.where(id: user_ids).pluck(:email)
+    @join_url = Pilot.find_by(name: @pilot_name).allow_joining_via_url ? "http://studio.code.org/experiments/set_single_user_experiment/#{@pilot_name}" : nil
   end
 
   # Parses newline separated emails, ignores commas and whitespace
