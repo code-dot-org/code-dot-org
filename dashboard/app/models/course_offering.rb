@@ -86,7 +86,9 @@ class CourseOffering < ApplicationRecord
   def serialize
     {
       key: key,
-      display_name: display_name
+      display_name: display_name,
+      is_featured: is_featured?,
+      category: category
     }
   end
 
@@ -112,9 +114,10 @@ class CourseOffering < ApplicationRecord
   def self.properties_from_file(content)
     config = JSON.parse(content)
     {
-      id: config['id'],
       key: config['key'],
-      display_name: config['display_name']
+      display_name: config['display_name'],
+      is_featured: config['is_featured'],
+      category: config['category']
     }
   end
 
