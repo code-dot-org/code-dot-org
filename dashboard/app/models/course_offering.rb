@@ -42,7 +42,9 @@ class CourseOffering < ApplicationRecord
       raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
 
       offering = CourseOffering.find_or_create_by!(key: content_root.family_name, display_name: content_root.family_name)
-      offering.write_serialization
+      if Rails.application.config.levelbuilder_mode
+        offering.write_serialization
+      end
     else
       offering = nil
     end
@@ -81,13 +83,12 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
-  def self.seed_all
-    removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/course_offerings/*.json")).each do |path|
-      puts path
+  def self.seed_all(glob="config/course_offerings/*.json")
+    removed_records = all.pluck(:key)
+    Dir.glob(Rails.root.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
-    where(id: removed_records).destroy_all
+    where(key: removed_records).destroy_all
   end
 
   def self.properties_from_file(content)
@@ -103,6 +104,6 @@ class CourseOffering < ApplicationRecord
     properties = properties_from_file(File.read(file_path))
     course_offering = CourseOffering.find_or_initialize_by(id: properties[:id])
     course_offering.update! properties
-    course_offering.id
+    course_offering.key
   end
 end

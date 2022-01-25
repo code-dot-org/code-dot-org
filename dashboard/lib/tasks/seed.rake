@@ -285,6 +285,10 @@ namespace :seed do
     end
   end
 
+  timed_task course_offerings: :environment do
+    CourseOffering.seed_all
+  end
+
   # Seeds Standards
   timed_task standards: :environment do
     Framework.seed_all
