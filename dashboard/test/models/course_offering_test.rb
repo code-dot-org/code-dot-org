@@ -168,6 +168,20 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course_offering.valid?
   end
 
+  test "course offerings seed from files correctly" do
+    course_offering = create :course_offering, key: 'course-offering-1'
+    serialization = course_offering.serialize
+    previous_course_offering = course_offering.freeze
+    course_offering.destroy!
+
+    File.stubs(:read).returns(serialization.to_json)
+
+    new_course_offering_id = CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
+    new_course_offering = CourseOffering.find_by(id: new_course_offering_id)
+    assert_equal previous_course_offering.attributes.except('id', 'created_at', 'updated_at'),
+      new_course_offering.attributes.except('id', 'created_at', 'updated_at')
+  end
+
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)
     create :course_offering do |offering|
       create_list :course_version, num_versions, content_root_trait, course_offering: offering
