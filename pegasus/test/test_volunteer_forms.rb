@@ -8,9 +8,9 @@ class VolunteerFormsTest < Minitest::Test
     old_locale = I18n.locale
     I18n.locale = 'en-US'
     en_experiences = VolunteerEngineerSubmission2015.experiences
-    I18n.locale = 'es-ES'
-    es_experiences = VolunteerEngineerSubmission2015.experiences
+    I18n.locale = 'ro-RO'
+    ro_experiences = VolunteerEngineerSubmission2015.experiences
     I18n.locale = old_locale
-    refute_equal en_experiences['unspecified'], es_experiences['unspecified']
+    refute_equal en_experiences['unspecified'], ro_experiences['unspecified']
   end
 end
