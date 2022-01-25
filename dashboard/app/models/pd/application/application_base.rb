@@ -75,6 +75,13 @@ module Pd::Application
       notes_5
     )
 
+    enum course: %w(
+      csf
+      csd
+      csp
+      csa
+    ).index_by(&:to_sym).freeze
+
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
@@ -181,20 +188,6 @@ module Pd::Application
         errors.add(:status, 'is not included in the list.')
       end
     end
-
-    enum course: %w(
-      csf
-      csd
-      csp
-      csa
-    ).index_by(&:to_sym).freeze
-
-    COURSE_NAME_MAP = {
-      csp: Pd::Workshop::COURSE_CSP,
-      csd: Pd::Workshop::COURSE_CSD,
-      csf: Pd::Workshop::COURSE_CSF,
-      csa: Pd::Workshop::COURSE_CSA
-    }
 
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"
