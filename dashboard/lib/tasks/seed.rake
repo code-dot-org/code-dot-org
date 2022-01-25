@@ -172,6 +172,7 @@ namespace :seed do
     :standards,
     :shared_blockly_functions,
     :libraries,
+    :course_offerings
   ].freeze
 
   # Do the minimum amount of work to seed a single script or glob, without
