@@ -213,12 +213,14 @@ class CodeWorkspace extends React.Component {
           />
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
-          <div style={styles.studentNotStartedWarning}>
+          <div id="notStartedBanner" style={styles.studentNotStartedWarning}>
             {i18n.levelNotStartedWarning()}
           </div>
         )}
         {this.props.displayOldVersionBanner && (
-          <div style={styles.oldVersionWarning}>{i18n.oldVersionWarning()}</div>
+          <div id="oldVersionBanner" style={styles.oldVersionWarning}>
+            {i18n.oldVersionWarning()}
+          </div>
         )}
         {props.showDebugger && (
           <JsDebugger
