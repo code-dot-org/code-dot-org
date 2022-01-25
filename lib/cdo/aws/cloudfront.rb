@@ -131,11 +131,15 @@ module AWS
 
     # Returns a CloudFront DistributionConfig in CloudFormation syntax.
     # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
+    # `origin` is the domain name of the backend origin (ex. "origin-autoscale-prod.code.org")
+    # `aliases` is a list of domain names (ex. ["autoscale-prod-studio.code.org","studio.code.org"])
     def self.distribution_config(app, origin, aliases, ssl_cert=nil)
       # Add root-domain aliases to production environment stack.
       aliases += CONFIG[app][:aliases] if rack_env?(:production)
 
       behaviors, cloudfront, config = get_app_config(app)
+      origins = get_origins_config(app, origin)
+
       {
         Aliases: aliases,
         CacheBehaviors: behaviors,
@@ -170,46 +174,7 @@ module AWS
           IncludeCookies: false,
           Prefix: cloudfront[:log][:prefix]
         },
-        Origins: [
-          *HTTP_CACHE.keys.map do |app_name|
-            proxy = (app == :hourofcode) ? :pegasus : app
-            {
-              Id: app_name == proxy ? 'cdo' : app_name,
-              CustomOriginConfig: {
-                OriginProtocolPolicy: 'match-viewer',
-                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
-              },
-              DomainName: origin,
-              OriginPath: '',
-              OriginShield: {
-                Enabled: true,
-                OriginShieldRegion: {Ref: 'AWS::Region'}
-              },
-              OriginCustomHeaders: app_name == proxy ? [] : [
-                {
-                  HeaderName: 'X-Cdo-Backend',
-                  HeaderValue: app_name
-                }
-              ]
-            }
-          end,
-          {
-            Id: 'cdo-assets',
-            DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
-            OriginPath: "/#{CDO.assets_bucket_prefix}",
-            S3OriginConfig: {
-              OriginAccessIdentity: ''
-            },
-          },
-          {
-            Id: 'cdo-restricted',
-            DomainName: "cdo-restricted.s3.amazonaws.com",
-            OriginPath: '',
-            S3OriginConfig: {
-              OriginAccessIdentity: 'origin-access-identity/cloudfront/E17G1PR1YAN7F4'
-            },
-          },
-        ],
+        Origins: origins,
         PriceClass: 'PriceClass_All',
         Restrictions: {
           GeoRestriction: {
@@ -321,6 +286,73 @@ module AWS
         resource,
         policy: policy
       )
+    end
+
+    # There are some code.org endpoints served by the Dashboard app server, and
+    # likewise some studio.code.org endpoints that need to be served by the
+    # Pegasus server. This function generates an extra 'Origin' in addition to 'cdo',
+    # which the distribution can use as a proxy target. The only difference in the
+    # second origin is that it sets a custom HTTP request header
+    # "X-Cdo-Backend" to pegasus/dashboard, which nginx then uses as an override
+    # when selecting the proper backend app. This implements the 'proxy'
+    # http-cache-config behavior previously accomplished with Varnish.
+    #
+    # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
+    # `origin` is the domain name of the backend origin (ex. "origin-autoscale-prod.code.org")
+    def self.get_origins_config(app, origin)
+      raise 'missing CDO.cloudfront_secret_header_value' unless CDO.cloudfront_secret_header_value
+
+      return [
+        *HTTP_CACHE.keys.map do |app_name|
+          # TODO: is `:hourofcode` an option? We're inside a `(Dashboard Pegasus).each do |app|`
+          # block from cloud_formation_stack.yml.erb. Can this code be removed?
+          origin_app = (app == :hourofcode) ? :pegasus : app
+
+          {
+            Id: app_name == origin_app ? 'cdo' : app_name,
+            CustomOriginConfig: {
+              OriginProtocolPolicy: 'match-viewer',
+              OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
+            },
+            DomainName: origin,
+            OriginPath: '',
+            OriginShield: {
+              Enabled: true,
+              OriginShieldRegion: {Ref: 'AWS::Region'}
+            },
+            OriginCustomHeaders: [
+              # Header to be used by load balancers only accept cloudfront-originating traffic.
+              {
+                HeaderName: 'X-Cdo-Cloudfront-Allow',
+                HeaderValue: "{{resolve:secretsmanager:#{rack_env}/cdo/cloudfront_secret_header_value}}"
+              },
+              # Header for cross-app origin
+              *(if app_name != origin_app
+                  {
+                    HeaderName: 'X-Cdo-Backend',
+                    HeaderValue: app_name
+                  }
+                end)
+            ],
+          }
+        end,
+        {
+          Id: 'cdo-assets',
+          DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
+          OriginPath: "/#{CDO.assets_bucket_prefix}",
+          S3OriginConfig: {
+            OriginAccessIdentity: ''
+          },
+        },
+        {
+          Id: 'cdo-restricted',
+          DomainName: "cdo-restricted.s3.amazonaws.com",
+          OriginPath: '',
+          S3OriginConfig: {
+            OriginAccessIdentity: 'origin-access-identity/cloudfront/E17G1PR1YAN7F4'
+          },
+        },
+      ]
     end
   end
 end

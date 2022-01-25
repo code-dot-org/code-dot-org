@@ -1,5 +1,7 @@
 # Varnish
 
+_Note: On 2021-09-22 we switched from Varnish to a pure Cloudfront/Nginx solution. See [42614](https://github.com/code-dot-org/code-dot-org/pull/42614) and [42441](https://github.com/code-dot-org/code-dot-org/pull/42441). This is controlled via "cookbooks/cdo-varnish/attributes/default.rb"._
+
 Varnish's primary responsibility is offloading as much static traffic off of our front-end Ruby servers as possible because Varnish is order(s) of magnitude faster at serving static content. Varnish is so fast because it's compiled. Plus, we use it with the entire cache in RAM which makes it *really* fast. In this role, it's useful to think of Varnish as **equivilent to a CDN** and Varnish instances as **units of bandwidth** within that CDN.
 
 We use Varnish to **route traffic**. For example we have a rule that sends all [learn.code.org](http://learn.code.org/) to the Dashboard application while [code.org](http://code.org/), [csedweek.org](http://csedweek.org/), etc. requests are sent to the Pegasus application. Routing rules are written in a C-like configuration languge that Varnish compiles to native code making them extremely fast. It is useful to think of Varnish as an **intelligent programmable router**. 
