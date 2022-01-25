@@ -9,6 +9,8 @@ class ScriptsController < ApplicationController
   before_action :set_redirect_override, only: [:show]
   authorize_resource
 
+  use_reader_connection_for_route(:show)
+
   def show
     if @script.redirect_to?
       redirect_path = script_path(Script.get_from_cache(@script.redirect_to))
