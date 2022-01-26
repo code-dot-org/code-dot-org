@@ -116,3 +116,36 @@ export function multilineText(
   lines.forEach((line, i) => p5.text(line, x, y + i * size));
   p5.pop();
 }
+
+/**
+ * Draw a validation bar - a P5 shape comprised of a rectangle
+ * at the bottom of the canvas.
+ *
+ * @param {P5} p5
+ * @param {Number} width
+ * @param {String} state
+ * @returns {Object}
+ */
+export function validationBar(
+  p5,
+  width,
+  state,
+  {x = 0, y = 390, height = 10} = {}
+) {
+  let color = 'black';
+  switch (state) {
+    case 'fail':
+      color = 'rgb(118,102,160)';
+      break;
+    case 'pass':
+    case 'bonus':
+      color = 'rgb(0,173,188)';
+      break;
+  }
+  p5.push();
+  p5.noStroke();
+  p5.fill(color);
+  p5.beginShape();
+  p5.rect(x, y, width, height);
+  p5.pop();
+}

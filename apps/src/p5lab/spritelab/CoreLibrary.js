@@ -20,6 +20,12 @@ export default class CoreLibrary {
     this.eventLog = [];
     this.speechBubbles = [];
     this.soundLog = [];
+    this.criteria = [];
+    this.validationTimes = {
+      early: 30,
+      wait: 150,
+      delay: 0
+    };
 
     this.commands = {
       executeDrawLoopAndCallbacks() {

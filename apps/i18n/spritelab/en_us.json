@@ -177,6 +177,7 @@
   "spriteNotClicked": "Make sure that you click on each sprite and that you have the right events in your workspace. \n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title></block></xml>",
   "spriteNotClickedWithBlockXML": "Make sure that you click on the sprite and that you have the right event in your workspace. \n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml>",
   "spritesNeedUniqueCostumes": "Make sure all sprites have different costumes.",
+  "spritesNeedSameCostumes": "Make sure all sprites have the same costume.",
   "spritesNotTouch": "Make sure your sprites touch at some point.",
   "startBehaviorWhenClicked": "Your new sprite needs to start a behavior when it is clicked.",
   "starterSprites": "It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.",
