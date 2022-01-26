@@ -182,3 +182,8 @@ export const ExecutionType = {
   // Compile and run tests
   TEST: 'TEST'
 };
+
+export const ContentManagerType = {
+  // Javabuilder assets fetched via dashboard
+  DASHBOARD: 'dashboard'
+};
