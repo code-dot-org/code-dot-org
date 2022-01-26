@@ -19,16 +19,7 @@ import {
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
-import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import animationList, {
-  setInitialAnimationList
-} from '@cdo/apps/p5lab/redux/animationList';
-import {
-  valueTypeTabShapeMap,
-  exampleSprites
-} from '@cdo/apps/p5lab/spritelab/constants';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
 $(document).ready(function() {
   prepareBlockly();
@@ -42,23 +33,7 @@ function prepareBlockly() {
   if (!customBlocksConfig) {
     return;
   }
-  Blockly.assetUrl = assetUrl;
-  Blockly.typeHints = true;
-  Blockly.Css.inject(document);
-
-  // Spritelab-specific logic but not harmful to other labs.
-  registerReducers({
-    animationList
-  });
-  const store = getStore();
-  store.dispatch(setInitialAnimationList(exampleSprites));
-  Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
-
-  installCustomBlocks({
-    blockly: Blockly,
-    blockDefinitions: customBlocksConfig,
-    customInputTypes
-  });
+  prepareBlocklyForEmbedding(customBlocksConfig);
 }
 
 /**

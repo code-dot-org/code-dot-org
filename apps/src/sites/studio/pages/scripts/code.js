@@ -4,18 +4,8 @@ import ReactDOM from 'react-dom';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
-import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import animationList, {
-  setInitialAnimationList
-} from '@cdo/apps/p5lab/redux/animationList';
-import {
-  valueTypeTabShapeMap,
-  exampleSprites
-} from '@cdo/apps/p5lab/spritelab/constants';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import {installCustomBlocks} from '@cdo/apps/block_utils';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {registerReducers} from '@cdo/apps/redux';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
 $(document).ready(() => {
   prepareBlockly();
@@ -27,23 +17,7 @@ function prepareBlockly() {
   if (!customBlocksConfig) {
     return;
   }
-  Blockly.assetUrl = assetUrl;
-  Blockly.typeHints = true;
-  Blockly.Css.inject(document);
-
-  // Spritelab-specific logic but not harmful to other labs.
-  registerReducers({
-    animationList
-  });
-  const store = getStore();
-  store.dispatch(setInitialAnimationList(exampleSprites));
-  Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
-
-  installCustomBlocks({
-    blockly: Blockly,
-    blockDefinitions: customBlocksConfig,
-    customInputTypes
-  });
+  prepareBlocklyForEmbedding(customBlocksConfig);
 }
 
 function initPage() {
