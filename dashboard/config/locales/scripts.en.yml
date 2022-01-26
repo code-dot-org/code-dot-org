@@ -24584,6 +24584,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csd8-2021:
           lessons: {}
           lesson_groups: {}
@@ -24592,6 +24593,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp1-2021:
           lessons:
             lesson-1:
@@ -25467,7 +25469,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod1:
           lessons:
@@ -25567,7 +25569,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod2:
           lessons:
@@ -28040,6 +28042,46 @@ en:
               name: Toolboxes
               description_student: 
               description_teacher: 
+            Drawing with Loops:
+              name: Drawing with Loops
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.
+            Using Variables with the Artist:
+              name: Using Variables with the Artist
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
+            Programming with the Bee:
+              name: Programming with the Bee
+              description_student: This lesson will teach you what happens when you place a loop inside another loop.
+              description_teacher: In this **skill-building** lesson, students will be encouraged to figure out how minor changes in loops will affect their program.
+            Variables with the Bee:
+              name: Variables with the Bee
+              description_student: This bee loves variables!
+              description_teacher: This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.
+            For Loop Fun:
+              name: For Loop Fun
+              description_student: You're going to have loads of fun learning about "for" loops!
+              description_teacher: In this **skill-building** lesson, students will use loops with a powerful, new structure.
+            For Loops with Bee:
+              name: For Loops with Bee
+              description_student: In these puzzles you will be guiding a bee to nectar and honey using for loops!
+              description_teacher: 'This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. '
+            For Loops with Artist:
+              name: For Loops with Artist
+              description_student: Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures.
+              description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
+            Follow the Algorithm:
+              name: Follow the Algorithm
+              description_student: Play a game and think about what commands are needed to get the right result.
+              description_teacher: In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.
+            'Hello World: Food':
+              name: 'Hello World: Food'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.
           lesson_groups:
             lessonGroup-2:
               display_name: Variables, Pt 2
@@ -28047,6 +28089,14 @@ en:
               display_name: Modified Lessons
             lessonGroup-4:
               display_name: Toolboxes, etc.
+            lessonGroup-5:
+              display_name: Course F Variables (Deprecated)
+            lessonGroup-6:
+              display_name: Course F For Loops (Deprecated)
+            lessonGroup-7:
+              display_name: Course E Sprites (Deprecated)
+            lessonGroup-8:
+              display_name: Hour of Code
           name: 2022drafting
           title: Planning Script for CSF 2022
           description_audience: ''
@@ -29001,6 +29051,7 @@ en:
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -29834,7 +29885,7 @@ en:
             Parameters and Return Investigate:
               name: Parameters and Return Investigate
               description_student: 'Investigate and modify sample apps that use parameters and return values. '
-              description_teacher: 'In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. '
+              description_teacher: 'In this lesson, students work with partners to investigate two different apps that use parameters and return values. '
               key: Parameters and Return Investigate
             Parameters and Return Practice:
               name: Parameters and Return Practice
@@ -30456,6 +30507,10 @@ en:
               name: Designing for Accessibility
               description_student: 'Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
               description_teacher: 'In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+            'Hello World: Food':
+              name: 'Hello World: Food'
+              description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
+              description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups:
             csf_sprites:
               display_name: Sprites
