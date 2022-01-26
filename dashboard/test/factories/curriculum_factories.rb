@@ -3,20 +3,20 @@
 # Table name: reference_guides
 #
 #  id                :bigint           not null, primary key
-#  name              :string(255)
-#  slug              :string(255)
-#  course_version_id :integer
+#  display_name      :string(255)
+#  key               :string(255)      not null
+#  course_version_id :integer          not null
 #  content           :text(65535)
-#  order             :integer
+#  position          :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #
 FactoryGirl.define do
   factory :reference_guide do
-    name "reference guide"
-    slug "category/reference-guide"
+    display_name "reference guide"
+    key "category/reference-guide"
     course_version_id 1
     content "Some text is here\r\nand here also"
-    order 1
+    position 1
   end
 end

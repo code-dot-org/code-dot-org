@@ -31,6 +31,8 @@ def parse_options
   OpenStruct.new.tap do |options|
     options.local = false
     options.dry_run = false
+    options.course_offering = 'csp'
+    options.course_version = '2022'
 
     opt_parser = OptionParser.new do |opts|
       opts.banner = <<~BANNER
@@ -39,6 +41,14 @@ def parse_options
       BANNER
 
       opts.separator ""
+
+      opts.on('-c', '--course-offering course_offering', 'Specify course offering key. Default: csd') do |course_offering|
+        options.course_offering = course_offering
+      end
+
+      opts.on('-v', '--course-version course_version', 'Specify course version key. Default: 2022') do |course_version|
+        options.course_version = course_version
+      end
 
       opts.on('-l', '--local', 'Use local curriculum builder running on localhost:8000.') do
         options.local = true
@@ -52,7 +62,7 @@ def parse_options
         $quiet = true
       end
 
-      opts.on('-v', '--verbose', 'Use verbose debug logging.') do
+      opts.on('-b', '--verbose', 'Use verbose debug logging.') do
         $verbose = true
       end
 
@@ -73,8 +83,18 @@ def main(options)
   map_stack = ['concepts']
   updated_reference_guide_count = 0
 
+  course_version = CourseOffering.where(key: options.course_offering).last.
+    course_versions.where(key: options.course_version).last
+
+  puts "Confirm course version (y/n):"
+  puts course_version.to_json
+  return unless gets.chomp == "y"
+
   until map_stack.empty?
     map_to_fetch = map_stack.pop
+
+    # skip the Data Library category (to be imported separately as Data Docs)
+    next if map_to_fetch.start_with?('concepts/data-library')
 
     puts "Fetching #{map_to_fetch}"
 
@@ -88,18 +108,17 @@ def main(options)
 
     next if options.dry_run
 
-    # <CourseVersion id: 107, key: "2022", display_name: "2022"...
-    default_course_version = CourseVersion.find_by(id: 107)
-
     reference_guide = ReferenceGuide.find_or_initialize_by(
       {
-        name: map['title'],
-        slug: map['slug'],
+        display_name: map['title'],
+        key: map['slug'],
         content: map['content'],
+        position: map['order'],
       }
     )
-    reference_guide.course_version = default_course_version
-    reference_guide.save! if reference_guide.changed?
+
+    reference_guide.course_version = course_version
+    reference_guide.save!
     reference_guide.write_serialization
   end
 
