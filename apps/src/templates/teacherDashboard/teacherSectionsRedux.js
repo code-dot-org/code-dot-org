@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {IMPORT_ROSTER_SUCCESS} from '@cdo/apps/code-studio/rosterRedux';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -26,18 +27,6 @@ const PENDING_NEW_SECTION_ID = -1;
 
 /** @const {string} Empty string used to indicate no section selected */
 export const NO_SECTION = '';
-
-/** @const {Object} Map oauth section type to relative "list rosters" URL. */
-const urlByProvider = {
-  [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
-  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms'
-};
-
-/** @const {Object} Map oauth section type to relative import URL. */
-const importUrlByProvider = {
-  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
-  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom'
-};
 
 //
 // Action keys
@@ -77,29 +66,12 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
-/** Sets a section's roster provider, which must be of type OAuthSectionTypes */
-const SET_ROSTER_PROVIDER = 'teacherSections/SET_ROSTER_PROVIDER';
-/** Opens the third-party roster UI */
-const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
-/** Reports available rosters have been loaded */
-const IMPORT_ROSTER_FLOW_LIST_LOADED =
-  'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
-/** Reports loading available rosters has failed */
-const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED =
-  'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED';
-/** Closes the third-party roster UI, purging available rosters */
-const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
-/** Reports request to import a roster has started */
-const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
-/** Reports request to import a roster has succeeded */
-const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
-
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
   EDIT_SECTION_REQUEST,
   EDIT_SECTION_SUCCESS,
-  IMPORT_ROSTER_FLOW_BEGIN,
-  IMPORT_ROSTER_FLOW_LIST_LOADED,
+  // IMPORT_ROSTER_FLOW_BEGIN,
+  // IMPORT_ROSTER_FLOW_LIST_LOADED,
   PENDING_NEW_SECTION_ID,
   USER_EDITABLE_SECTION_PROPS
 };
@@ -119,10 +91,6 @@ export const setTextToSpeechUnitIds = ids => ({
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
-});
-export const setRosterProvider = rosterProvider => ({
-  type: SET_ROSTER_PROVIDER,
-  rosterProvider
 });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
@@ -419,90 +387,6 @@ function fetchJSON(url, params) {
 }
 
 /**
- * Start the process of importing a section from a third-party provider
- * (like Google Classroom or Clever) by opening the RosterDialog and
- * loading the list of classrooms available for import.
- */
-export const beginImportRosterFlow = () => (dispatch, getState) => {
-  const state = getState();
-  const provider = getRoot(state).rosterProvider;
-  if (!provider) {
-    return Promise.reject(
-      new Error('Unable to begin import roster flow without a provider')
-    );
-  }
-
-  if (isRosterDialogOpen(state)) {
-    return Promise.resolve();
-  }
-
-  dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
-  return new Promise((resolve, reject) => {
-    $.ajax(urlByProvider[provider])
-      .success(response => {
-        dispatch({
-          type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-          classrooms: response.courses || []
-        });
-        resolve();
-      })
-      .fail(result => {
-        const message = result.responseJSON
-          ? result.responseJSON.error
-          : 'Unknown error.';
-        dispatch({
-          type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
-          status: result.status,
-          message
-        });
-        reject(new Error(message));
-      });
-  });
-};
-
-/** Abandon the import process, closing the RosterDialog. */
-export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
-
-/**
- * Start the process of importing a section from Google Classroom by opening
- * the RosterDialog and loading the list of classrooms available for import.
- */
-export const beginGoogleImportRosterFlow = () => dispatch => {
-  dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
-  dispatch(beginImportRosterFlow());
-};
-
-/**
- * Import the course with the given courseId from a third-party provider
- * (like Google Classroom or Clever), creating a new section. If the course
- * in question has already been imported, update the existing section already
- * associated with it.
- * @param {string} courseId
- * @param {string} courseName
- * @return {function():Promise}
- */
-export const importOrUpdateRoster = (courseId, courseName) => (
-  dispatch,
-  getState
-) => {
-  const state = getState();
-  const provider = getRoot(state).rosterProvider;
-  const importSectionUrl = importUrlByProvider[provider];
-  let sectionId;
-
-  dispatch({type: IMPORT_ROSTER_REQUEST});
-  return fetchJSON(importSectionUrl, {courseId, courseName})
-    .then(newSection => (sectionId = newSection.id))
-    .then(() => dispatch(asyncLoadSectionData()))
-    .then(() =>
-      dispatch({
-        type: IMPORT_ROSTER_SUCCESS,
-        sectionId
-      })
-    );
-};
-
-/**
  * Initial state of this redux module.
  * Should represent the overall state shape with reasonable default values.
  */
@@ -536,15 +420,6 @@ const initialState = {
   textToSpeechUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
-  // Whether the roster dialog (used to import sections from google/clever) is open.
-  isRosterDialogOpen: false,
-  // Track a section's roster provider. Must be of type OAuthSectionTypes.
-  rosterProvider: null,
-  // Set of oauth classrooms available for import from a third-party source.
-  // Not populated until the RosterDialog is opened.
-  classrooms: null,
-  // Error that occurred while loading oauth classrooms
-  loadError: null,
   // The page where the action is occurring
   pageType: '',
   // DCDO Flag - show/hide Lock Section field
@@ -984,66 +859,9 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_ROSTER_PROVIDER) {
-    // No-op if this action is called with a non-OAuth section type,
-    // since this action is triggered on every section load.
-    if (OAuthSectionTypes[action.rosterProvider]) {
-      return {
-        ...state,
-        rosterProvider: action.rosterProvider
-      };
-    }
-  }
-
-  //
-  // Roster import action types
-  //
-
-  if (action.type === IMPORT_ROSTER_FLOW_BEGIN) {
-    return {
-      ...state,
-      isRosterDialogOpen: true,
-      classrooms: null
-    };
-  }
-
-  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOADED) {
-    return {
-      ...state,
-      classrooms: action.classrooms.slice()
-    };
-  }
-
-  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED) {
-    return {
-      ...state,
-      loadError: {
-        status: action.status,
-        message: action.message
-      }
-    };
-  }
-
-  if (action.type === IMPORT_ROSTER_FLOW_CANCEL) {
-    return {
-      ...state,
-      isRosterDialogOpen: false,
-      rosterProvider: null,
-      classrooms: null
-    };
-  }
-
-  if (action.type === IMPORT_ROSTER_REQUEST) {
-    return {
-      ...state,
-      classrooms: null
-    };
-  }
-
   if (action.type === IMPORT_ROSTER_SUCCESS) {
     return {
       ...state,
-      isRosterDialogOpen: false,
       sectionBeingEdited: {
         ...state.sections[action.sectionId],
         // explicitly unhide section after importing
@@ -1071,27 +889,12 @@ function getRoot(state) {
   return state.teacherSections; // Global knowledge eww.
 }
 
-export function isRosterDialogOpen(state) {
-  return getRoot(state).isRosterDialogOpen;
-}
-
-export function rosterProvider(state) {
-  return getRoot(state).rosterProvider;
-}
-
 export function sectionCode(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).code;
 }
 
 export function sectionName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).name;
-}
-
-export function sectionProvider(state, sectionId) {
-  if (isSectionProviderManaged(state, sectionId)) {
-    return rosterProvider(state);
-  }
-  return null;
 }
 
 export function isSectionProviderManaged(state, sectionId) {

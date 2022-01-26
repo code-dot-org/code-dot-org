@@ -5,11 +5,11 @@ import i18n from '@cdo/locale';
 import * as utils from '../../utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {
-  importOrUpdateRoster,
   sectionCode,
-  sectionProvider,
+  isSectionProviderManaged,
   sectionName
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
+import {importOrUpdateRoster} from '@cdo/apps/code-studio/rosterRedux';
 import Button from '../../templates/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -115,7 +115,9 @@ export default connect(
   (state, props) => ({
     sectionCode: sectionCode(state, props.sectionId),
     sectionName: sectionName(state, props.sectionId),
-    sectionProvider: sectionProvider(state, props.sectionId)
+    sectionProvider: isSectionProviderManaged(state, props.sectionId)
+      ? state.roster.rosterProvider
+      : null
   }),
   {
     updateRoster: importOrUpdateRoster
