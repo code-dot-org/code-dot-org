@@ -206,21 +206,8 @@ class Script < ApplicationRecord
   def generate_plc_objects
     if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
-      if unit_group
-        # Check if anything needs to be updated on the PL course
-        unit_group.published_state = published_state
-        unit_group.instruction_type = instruction_type
-        unit_group.participant_audience = participant_audience
-        unit_group.instructor_audience = instructor_audience
-        unit_group.save! if unit_group.changed?
-      else
-        unit_group = UnitGroup.new(
-          name: professional_learning_course,
-          published_state: published_state,
-          instruction_type: instruction_type,
-          instructor_audience: instructor_audience,
-          participant_audience: participant_audience
-        )
+      unless unit_group
+        unit_group = UnitGroup.new(name: professional_learning_course)
         unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
         unit_group.save!
       end
@@ -2024,7 +2011,7 @@ class Script < ApplicationRecord
 
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
-  def show_unit_overview_between_lessons?(user)
-    middle_high? && user&.has_pilot_experiment?('end-of-lesson-redirects')
+  def show_unit_overview_between_lessons?
+    middle_high?
   end
 end
