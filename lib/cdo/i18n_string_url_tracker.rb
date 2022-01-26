@@ -58,9 +58,12 @@ class I18nStringUrlTracker
   end
 
   # Records the given string_key and URL so we can analyze later what strings are present on what pages.
-  # @param string_key [String] The key used to review the translated string from our i18n system.
   # @param url [String] The url which required the translation of the given string_key.
   # @param source [String] Context about where the string lives e.g. 'ruby', 'maze', 'turtle', etc
+  # @param string_key [String] The key used to locate the desired string.
+  # @param scope [Array] Array of strings representing the hierarchy leading up to the string_key.
+  # @param separator [String] The separator string used by I18n to concatenate the string_key hierarchy
+  #        into a single normalized string.
   def log(url, source, string_key, scope, separator)
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
     # Skip URLs we are not interested in.
@@ -131,11 +134,11 @@ class I18nStringUrlTracker
     # If the DCDO flag has changed since data was buffered, we want to clear the buffer and not log/flush the data.
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
 
-    # log every <url>:<normalized_key>:[source, string_key, scope, separator] combination to Firehose
+    # log every <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> combination to Firehose
     buffer&.each_key do |url|
       buffer[url].each_key do |normalized_key|
         buffer[url][normalized_key].each do |values|
-          # record the <url>:<normalized_key>:[source, string_key, scope, separator] association.
+          # record the <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> association.
           FirehoseClient.instance.put_record(
             :i18n,
             {url: url, normalized_key: normalized_key, source: values[0], string_key: values[1], scope: values[2], separator: values[3]}
