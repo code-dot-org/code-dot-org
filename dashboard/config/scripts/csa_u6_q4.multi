@@ -4,8 +4,8 @@ height 'auto'
 wrong ‘`/* Precondition: index > word.length() */`’
 wrong ‘`/* Precondition: index >= word.length() */`’
 wrong '`/* Precondition: 0 < index < word.length() - 1 */`'
-right ‘`/* Precondition: 0 <= index <= word.length() - 1 */`’
-wrong ‘`/* Precondition: 0 <= index <= word.length() */`’
+wrong ‘`/* Precondition: 0 <= index <= word.length() - 1 */`’
+right ‘`/* Precondition: 0 <= index <= word.length() */`’
 
 
 
