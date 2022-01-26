@@ -44,7 +44,6 @@ class ReferenceGuide < ApplicationRecord
   def self.seed_all
     removed_records = all.pluck(:id)
     Dir.glob(Rails.root.join("config/reference_guides/**/*.json")).each do |path|
-      puts path
       removed_records -= [ReferenceGuide.seed_record(path)]
     end
     where(id: removed_records).destroy_all
