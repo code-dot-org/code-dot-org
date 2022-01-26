@@ -158,6 +158,18 @@ class Script < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
+  # Use after_save instead of validates in order to let seeding complete without checking this
+  # Since we seed scripts first, they do not yet know if they are in a unit_group and this leads
+  # to this check failing during the seed process
+  after_save :check_course_type_settings
+
+  def check_course_type_settings
+    errors.add(:published_state, 'must be set on the unit or passed down from the course.') unless get_published_state
+    errors.add(:instructor_audience, 'must be set for standalone unit or passed down from the course for a unit in a course.') unless get_instructor_audience
+    errors.add(:participant_audience, 'must be set for standalone unit or passed down from the course for a unit in a course.') unless get_participant_audience
+    errors.add(:instruction_type, 'must be set for standalone unit or passed down from the course for a unit in a course.') unless get_instruction_type
+  end
+
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
     new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
     raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
