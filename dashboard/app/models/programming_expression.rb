@@ -208,7 +208,13 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def summarize_for_lesson_show
-    {name: name, color: color, syntax: syntax, link: documentation_path}
+    {
+      name: name,
+      blockName: block_name,
+      color: color,
+      syntax: syntax,
+      link: documentation_path
+    }
   end
 
   def get_blocks

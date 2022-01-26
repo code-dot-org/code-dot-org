@@ -2,7 +2,7 @@ import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 import {SAMPLE_INTERVAL} from './MicroBitConstants';
 import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
-export const ACCEL_EVENT_ID = 27;
+export const ACCEL_EVENT_ID = 13;
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
   constructor(SerialPort) {
