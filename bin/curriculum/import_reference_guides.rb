@@ -42,7 +42,7 @@ def parse_options
 
       opts.separator ""
 
-      opts.on('-c', '--course-offering course_offering', 'Specify course offering key. Default: csd') do |course_offering|
+      opts.on('-c', '--course-offering course_offering', 'Specify course offering key. Default: csp') do |course_offering|
         options.course_offering = course_offering
       end
 
@@ -110,14 +110,14 @@ def main(options)
 
     reference_guide = ReferenceGuide.find_or_initialize_by(
       {
-        display_name: map['title'],
         key: map['slug'],
-        content: map['content'],
-        position: map['order'],
+        course_version_id: course_version.id
       }
     )
 
-    reference_guide.course_version = course_version
+    reference_guide.display_name = map['title']
+    reference_guide.content = map['content']
+    reference_guide.position = map['order']
     reference_guide.save!
     reference_guide.write_serialization
   end
