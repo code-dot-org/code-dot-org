@@ -57,7 +57,6 @@ module Pd::Application
     before_validation :set_type_and_year
     before_validation -> {self.status = (sanitize_form_data_hash && sanitize_form_data_hash[:status] || :unreviewed)},
       if: -> {form_data_changed? || new_record?}
-    before_validation :generate_application_guid, if: -> {application_guid.blank?}
 
     validate :status_is_valid_for_application_type
     validates_presence_of :type
@@ -67,6 +66,7 @@ module Pd::Application
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
 
     before_save :update_accepted_date, if: :status_changed?
+    before_create :generate_application_guid, if: -> {application_guid.blank?}
     after_destroy :delete_unsent_email
 
     serialized_attrs %w(
