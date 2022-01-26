@@ -29,7 +29,9 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
       handleClose={handleClose}
       style={styles.dialog}
     >
-      <h2>{i18n.endOfLessonDialogHeading({lessonNumber})}</h2>
+      <h2 id="uitest-end-of-lesson-header">
+        {i18n.endOfLessonDialogHeading({lessonNumber})}
+      </h2>
       <div>{i18n.endOfLessonDialogDetails()}</div>
       <DialogFooter rightAlign={true}>
         <Button
