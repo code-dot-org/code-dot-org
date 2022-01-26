@@ -390,16 +390,6 @@ module Pd::Application
       )
     end
 
-    # [MEG] TODO: Test this functionality in the controller
-    test 'incomplete application is valid but does not queue an email nor score it' do
-      application = create :pd_teacher_application, :incomplete
-      assert application.valid?
-
-      application.expects(:queue_email).never
-      application.expects(:auto_score!).never
-      application.on_successful_create
-    end
-
     test 'setting an auto-email status queues up an email' do
       application = create :pd_teacher_application
       assert_empty application.emails
