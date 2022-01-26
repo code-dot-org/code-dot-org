@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-01-25 19:26:48 UTC",
+    "serialized_at": "2022-01-26 15:28:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1094,7 +1094,7 @@
       "position": 4,
       "properties": {
         "duration": 45,
-        "name": "Day 4 - Revise Your Project"
+        "name": "Day 4 - Feedback and Edits"
       },
       "seeding_key": {
         "lesson_activity.key": "7080414a-314a-4867-ab9c-43929f0adc17",
@@ -2473,7 +2473,7 @@
       "key": "fc6f7082-c538-47ed-9870-a60f6064043b",
       "position": 1,
       "properties": {
-        "description": "**Prompt**: If you were a scientist, when might you want to simulate an experiment on a computer instead of in real life? Encourage students to consider experiments that might be dangerous or difficult to reproduce in real life.\n\n**Say**: _Today we're going to run a simulation to gather data about an experiment, just like scientists do._",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _If you were a scientist, when might you want to simulate an experiment on a computer instead of in real life?_ \n\nEncourage students to consider experiments that might be dangerous or difficult to reproduce in real life.\n\n**Say**: _Today we're going to run a simulation to gather data about an experiment, just like scientists do._",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2485,7 +2485,7 @@
       "key": "4790873a-6b65-4352-b762-7fea452f78a5",
       "position": 1,
       "properties": {
-        "description": "**Distribute**: Pass out the lesson ***worksheet** along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* Are the graphs the same or different? Why do you think that is?\n* Do you see any patterns?\n* What do you think you'd see if you ran this simulation 5 more times?\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n*Note that students can change the sprites in their simulation to other animals and food if they wish.*\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
+        "description": "**Distribute**: Pass out the lesson ***worksheet** along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 1 - Collecting Data” slide\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 2 - Line Graph” slide\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* _Are the graphs the same or different? Why do you think that is?_\n* _What do you think you'd see if you ran this simulation 5 more times?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 3 - Modify and Predict” slide\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n*Note that students can change the sprites in their simulation to other animals and food if they wish.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 4 - Collecting More Data” slide\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 5 - Visualize Your Data” slide\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
         "name": "Simulation Experiments",
         "progression_name": "Run a simulation"
       },
@@ -2509,7 +2509,7 @@
       "key": "b2df5811-0d02-494c-b4db-f15483e39ed6",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Ask students to discuss how their modification and prediction came out, first with a neighbor and then as a whole class. Encourage students to consider _why_ they made the modifications they did and how that change connected to their predictions.\n\n**Discussion Goal:** The simulation used in this lesson is purposefully broad and kind of silly. Through this discussion, students should start to connect the predictions and variable changes with actual scientific hypotheses. From there you can encourage students to think about computational modeling or more authentic scenarios or experiments.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss**: \n* _How did your modification and prediction turn out?_\n* _What modifications did you make and why did you choose those?_ \n* _How did this change connect to your predictions?_ \n\n**Discussion Goal:** The simulation used in this lesson is purposefully broad and kind of silly. Through this discussion, students should start to connect the predictions and variable changes with actual scientific hypotheses. From there you can encourage students to think about computational modeling or more authentic scenarios or experiments.",
         "name": "Reflection\r"
       },
       "seeding_key": {
@@ -2521,7 +2521,7 @@
       "key": "31ab8465-4ef9-45e8-9404-174dc6e417a8",
       "position": 2,
       "properties": {
-        "description": "**Journal**: What is one interesting thing that you might simulate using a computer? What kinds of variables would you want to control in that experiment?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _What is one interesting thing that you might simulate using a computer?_\n* _What kinds of variables would you want to control in that experiment?_"
       },
       "seeding_key": {
         "activity_section.key": "31ab8465-4ef9-45e8-9404-174dc6e417a8",
@@ -2532,7 +2532,7 @@
       "key": "35b95b78-349e-4616-9edb-5cc824236caf",
       "position": 1,
       "properties": {
-        "description": "Throughout the main activity of this lesson, students are running and modifying a simulation that they did not program from scratch themselves. Students can actually program the simulation with blocks of code that they have seen in previous lessons.\n\nIn the last level of the lesson, students can explore this code and begin thinking about how to program a simulation themselves.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Extension - Customize” slide\n\nThroughout the main activity of this lesson, students are running and modifying a simulation that they did not program from scratch themselves. Students can actually program the simulation with blocks of code that they have seen in previous lessons.\n\nIn the last level of the lesson, students can explore this code and begin thinking about how to program a simulation themselves.",
         "name": "Customize the simulation",
         "progression_name": "Customize"
       },
@@ -3005,7 +3005,7 @@
       "key": "0d41a7b4-2d87-4ac6-85a1-4ddfb5f0c934",
       "position": 1,
       "properties": {
-        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.",
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n* _Do you think technology can predict your actions or interests? Explain why or why not._\n",
         "name": "Build Excitement!\r"
       },
       "seeding_key": {
@@ -3017,7 +3017,7 @@
       "key": "486eb290-9ab3-4990-b996-e67babdb41e2",
       "position": 1,
       "properties": {
-        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n",
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “AI: What is Machine Learning?” video\n",
         "name": "AI For Oceans",
         "progression_name": "Video: AI: What is Machine Learning?",
         "tips": [
@@ -3036,7 +3036,7 @@
       "key": "f3a3fbc2-6868-4aef-ad10-980d9f36dd61",
       "position": 2,
       "properties": {
-        "description": "### Training AI\nStudents can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "description": "### Training AI\nStudents can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2-4 - Train AI to Clean the Ocean” slide",
         "progression_name": "Train AI to Clean the Ocean",
         "tips": [
           {
@@ -3054,7 +3054,7 @@
       "key": "8ae1f11f-96fe-4760-af97-b58449d4f4fb",
       "position": 3,
       "properties": {
-        "description": "**Quick Share-out:** _How well did A.I. do? How do you think it decided what to include in the ocean?_\n\n### Using Training Data\n\n\n**Do this:** Show the Training Data & Bias video.\n\n**Prompt:** _How do you think your training data influence the results that A.I. produced?_\n\n**Discuss:** In small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n\n",
+        "description": "**Quick Share-out:** _How well did A.I. do? How do you think it decided what to include in the ocean?_\n\n### Using Training Data\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:** _How do you think your training data influences the results that A.I. produced?_\n\nIn small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Training Data & Bias” video",
         "progression_name": "Video: Training Data & Bias"
       },
       "seeding_key": {
@@ -3066,7 +3066,7 @@
       "key": "411ba656-1f26-485c-bb50-800f3530f484",
       "position": 4,
       "properties": {
-        "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how **machine learning** works, it should be encouraged!",
+        "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how **machine learning** works, it should be encouraged!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 6 - Using Training Data” slide",
         "progression_name": "Using Training Data",
         "tips": [
           {
@@ -3084,7 +3084,7 @@
       "key": "77d3136e-dbfa-43a2-9f94-34a92e92ede4",
       "position": 5,
       "properties": {
-        "description": "### Impacts on Society\n\n*Do this:* Show the Impacts on Society video.\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.*\n\n**Say:** *Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n**Prompt:** *Could training data actually create problems? How?*\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n\n**Say:** *Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*\n\n",
+        "description": "### Impacts on Society\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Social Impact of AI” video\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.*\n\n*Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n\n",
         "progression_name": "Video: Impacts on Society"
       },
       "seeding_key": {
@@ -3096,7 +3096,7 @@
       "key": "d8a889fe-6191-4740-ad13-fa73dc50c870",
       "position": 6,
       "properties": {
-        "description": "### Teach A.I. a new word\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _Could training data actually create problems? How?_\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n\n**Say:** *Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*\n\n### Teach A.I. a new word\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 8 - Teach A.I. a New Word” slide\n",
         "progression_name": "Teach A.I. a new word"
       },
       "seeding_key": {
@@ -3124,7 +3124,7 @@
       "key": "b48bfa6d-3e81-4d64-b93f-fada01504555",
       "position": 2,
       "properties": {
-        "description": "**Quick Share-out:** _Where have you seen or experienced artificial intelligence in your lives?_\nExamples from the video include: \n\n* email filters\n* auto-complete text\n* video recommendation systems\n* voice recognition\n* translation apps\n* digital assistants\n* image recognition\n\n**Prompt:** _Based on what you saw in the video, what is **machine learning**?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Share Out” slide\n\n**Quick Share-out:** _Where have you seen or experienced artificial intelligence in your lives?_\nExamples from the video include: \n\n* email filters\n* auto-complete text\n* video recommendation systems\n* voice recognition\n* translation apps\n* digital assistants\n* image recognition\n\n**Prompt:** _Based on what you saw in the video, what is **machine learning**?_"
       },
       "seeding_key": {
         "activity_section.key": "b48bfa6d-3e81-4d64-b93f-fada01504555",
@@ -3157,7 +3157,7 @@
       "key": "2906611b-e92e-4fa5-b7f0-20110d7497cb",
       "position": 1,
       "properties": {
-        "description": "**Open question:** How could artificial intelligence be used to solve a problem in the world?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** How could artificial intelligence be used to solve a problem in the world?\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3166,20 +3166,8 @@
       }
     },
     {
-      "key": "90b7861d-cb6c-4058-9577-530d44062406",
-      "position": 1,
-      "properties": {
-        "description": "Snapshot Safari has placed hundreds of hidden cameras across southern Africa, capturing millions of images of beautiful and rare animals. Students can help protect the endangered Cape Mountain Zebra by classifying the different animals in these images.  You can read about the project [here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) or click below to give it a try!\n\n[Snapshot Mountain Zebra - Zooniverse](\nhttps://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)",
-        "name": "Help Classify Animals at Mountain Zebra National Park"
-      },
-      "seeding_key": {
-        "activity_section.key": "90b7861d-cb6c-4058-9577-530d44062406",
-        "lesson_activity.key": "43c124ef-eaa8-45d6-b521-904cf6ab5518"
-      }
-    },
-    {
       "key": "7744832d-5d09-4bce-ba44-c48b0a8c4a29",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "You can share these stories with your class to help them see how AI will impact the future.\n\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)",
         "name": "A.I. in Current Events"
@@ -3193,7 +3181,7 @@
       "key": "428b7e6e-321d-4b39-a555-41f9c8a02bc5",
       "position": 1,
       "properties": {
-        "description": "\n####Vocabulary:\n\nThis lesson has several new and important words:\n\n - **IP Address** - *Say it with me: I-P Add-ress.*\n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - *Say it with me: D-N-S.* \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - *Say it with me: U-R-L.* \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - *Say it with me: In-ter-net.* \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - *Say it with me: Ser-vers.* \n\nComputers that exist only to provide things to others",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How does the Internet help connect us to other people?_\n\n####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n\nThis lesson has several new and important words:\n\n - **IP Address** - *Say it with me: I-P Add-ress.*\n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - *Say it with me: D-N-S.* \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - *Say it with me: U-R-L.* \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - *Say it with me: In-ter-net.* \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - *Say it with me: Ser-vers.* \n\nComputers that exist only to provide things to others",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3248,7 +3236,7 @@
       "key": "b786c2f0-38ab-45c8-a5f6-d465f50c64f4",
       "position": 5,
       "properties": {
-        "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- **Ask:** _What is the internet?_\n\t- _Is the internet a public place or a private place?_\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- _How does information get from place to place?_\n- _Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?_\n\t- _What do I do as a user?_\n\t- _What do you think happens inside the internet?_\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those packets. Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\n_Where do you think those packets are headed?_\n\n- Even if you're sending messages to another person, they first have to go to at least one server.\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi.\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- *Can you figure out why?*\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- *Can you figure out why not?*\n\t- (Radio waves bounce all over the place and can get lost.)"
+        "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- **Ask:** _What is the internet?_\n\t- _Is the internet a public place or a private place?_\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- _How does information get from place to place?_\n- _Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?_\n\t- _What do I do as a user?_\n\t- _What do you think happens inside the internet?_\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Packets” slide\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those packets. Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Servers” slide\n\n_Where do you think those packets are headed?_\n\n- Even if you're sending messages to another person, they first have to go to at least one server.\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses” slide \n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “DSL, Cable, Fiber Optic, or WiFi” slide\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi.\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- *Can you figure out why?*\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- *Can you figure out why not?*\n\t- (Radio waves bounce all over the place and can get lost.)"
       },
       "seeding_key": {
         "activity_section.key": "b786c2f0-38ab-45c8-a5f6-d465f50c64f4",
@@ -3275,7 +3263,7 @@
       "key": "3e0d26b1-1d67-4f8c-82dd-7d7fe0934b12",
       "position": 7,
       "properties": {
-        "description": "So, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\n\nWith that said, let's try to understand what the DNS does by making a little DNS table ourselves.\n\nPull out a piece of paper and draw a grid similar to that in the internet activity:\n\nSample of DNS Table:\n\n| #  | URL  | IP Address |\n| ------------- | ------------- | ------------- |\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\n| 2  |   |   |\n| 3  |   |   |\n| 4  |   |   |\n| 5  |   |   |\n\n\n<br/>First, we need to fill in this table.\n\n- Survey the class for their favorite websites and write the URLs in the left column\n- Use a site like ***get-site-ip.com** to find the IP addresses for those sites and write them in the corresponding rows of the right column.\n\nNow let's take this DNS Table and pretend to send messages through the internet!"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses & DNS” video\n\nSo, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Create a DNS Table” slide\n\nWith that said, let's try to understand what the DNS does by making a little DNS table ourselves.\n\nPull out a piece of paper and draw a grid similar to that in the internet activity:\n\nSample of DNS Table:\n\n| #  | URL  | IP Address |\n| ------------- | ------------- | ------------- |\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\n| 2  |   |   |\n| 3  |   |   |\n| 4  |   |   |\n| 5  |   |   |\n\n\n<br/>First, we need to fill in this table.\n\n- Survey the class for their favorite websites and write the URLs in the left column\n- Use a site like ***get-site-ip.com** to find the IP addresses for those sites and write them in the corresponding rows of the right column.\n\nNow let's take this DNS Table and pretend to send messages through the internet!"
       },
       "seeding_key": {
         "activity_section.key": "3e0d26b1-1d67-4f8c-82dd-7d7fe0934b12",
@@ -3286,6 +3274,7 @@
       "key": "7cb7f017-c5b0-4efa-a09b-bdbe67686409",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Internet” video\n",
         "name": "The Internet",
         "progression_name": "The Internet - Unplugged Activity"
       },
@@ -3298,7 +3287,7 @@
       "key": "b90c292b-c98e-4dd3-8af1-a08d2012b5a7",
       "position": 1,
       "properties": {
-        "description": "**Directions:**\n\n- Create your own DNS table, similar to what is shown above.\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like www.get-site-ip.com.\n- Divide into groups of 3 to 5.\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\n\t- The Message Writer\n\t- The Internet\n\t- The Server (carries the IP address)\n\t- The Return Internet (optional)\n\t- The Message Receiver (optional)\n- Each group will draw an ***IP Address Cards and Delivery Type Card** to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\n- The Message Writer will craft a note to send to the server.\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\n\n**Rules:**\n\n- The Internet must rip the message into exactly four packets.\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\n\n**Info:**\n\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “The Internet Activity” slide\n\n**The Internet Activity:**\n\n- Create your own DNS table, similar to what is shown above.\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like www.get-site-ip.com.\n- Divide into groups of 3 to 5.\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\n\t- The Message Writer\n\t- The Internet\n\t- The Server (carries the IP address)\n\t- The Return Internet (optional)\n\t- The Message Receiver (optional)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Directions” slide\n\n**Directions:**\n\n- Each group will draw an ***IP Address Cards and Delivery Type Card** to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\n- The Message Writer will craft a note to send to the server.\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Rules” slide\n\n**Rules:**\n\n- The Internet must rip the message into exactly four packets.\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Info” slide\n\n**Info:**\n\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times."
       },
       "seeding_key": {
         "activity_section.key": "b90c292b-c98e-4dd3-8af1-a08d2012b5a7",
@@ -3325,7 +3314,7 @@
       "key": "84641086-fd2b-41ad-b21c-22338ff30f5a",
       "position": 3,
       "properties": {
-        "description": "To play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\n\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\n- Have the everyone else line up across from their server at the other side of the room.\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:\n\n![](https://code.org/curriculum/course3/18/layout.png)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show Student Materials slide\n\nTo play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\n\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\n- Have the everyone else line up across from their server at the other side of the room.\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:\n\n![](https://code.org/curriculum/course3/18/layout.png)"
       },
       "seeding_key": {
         "activity_section.key": "84641086-fd2b-41ad-b21c-22338ff30f5a",
@@ -3353,7 +3342,7 @@
       "key": "1adb32ea-175e-4a6f-b0b7-f0f2b75c8c3f",
       "position": 2,
       "properties": {
-        "description": "\n####Flash Chat: What did we learn?\n\n- What kind of connection would you rather have (Wi-Fi, DSL/Cable, or Fiber Optic)? Why?\n- Why might it take your message a long time to get somewhere?"
+        "description": "\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Flash Chat” slide\n\n\n- What kind of connection would you rather have (Wi-Fi, DSL/Cable, or Fiber Optic)? Why?\n- Why might it take your message a long time to get somewhere?"
       },
       "seeding_key": {
         "activity_section.key": "1adb32ea-175e-4a6f-b0b7-f0f2b75c8c3f",
@@ -3364,7 +3353,7 @@
       "key": "9a4b718e-55f7-45bd-9123-4fac99df4fa8",
       "position": 3,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What's something you learned about the internet today?\n - Why is learning about the internet important?"
+        "description": "\n####Reflect\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:**\n* _What's something you learned about the internet today?_\n"
       },
       "seeding_key": {
         "activity_section.key": "9a4b718e-55f7-45bd-9123-4fac99df4fa8",
@@ -3375,7 +3364,7 @@
       "key": "0a412cac-6815-41bf-8c13-58d2b8a7d4b1",
       "position": 1,
       "properties": {
-        "description": "Hand out the ***assessment** worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Internet Assessment” slide\n\nHand out the ***assessment** worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "0a412cac-6815-41bf-8c13-58d2b8a7d4b1",
@@ -3386,7 +3375,7 @@
       "key": "dbe1c511-97c4-46c5-9e58-c2e538d694a5",
       "position": 1,
       "properties": {
-        "description": "\n\n\nGoal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n\nToday, you'll start the final lesson of the unit, in which you will design and code your own project. \n\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide"
       },
       "seeding_key": {
         "activity_section.key": "dbe1c511-97c4-46c5-9e58-c2e538d694a5",
@@ -3419,7 +3408,7 @@
       "key": "d5d03e32-0bce-40c1-b7cd-25ed836d69a4",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Final Project Design Worksheet** and the ***Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \n\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 2: Define and Prepare” slide\n\n**Goal:** Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project Rubric” slide\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Final Project Design Worksheet** and the ***Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \n\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -3447,7 +3436,8 @@
       "key": "34b0e505-9537-4f80-bfca-2ae09cd2a79c",
       "position": 3,
       "properties": {
-        "description": "\nNow that the class has their ***Final Project Design Worksheet** in hand, they should start filling out the questions under **Day 1**.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Define and Prepare” slide\n\nNow that the class has their ***Final Project Guide** in hand, they should start filling out the questions under the **Define and Prepare** section.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions.",
+        "name": "Handout - Define and Prepare:"
       },
       "seeding_key": {
         "activity_section.key": "34b0e505-9537-4f80-bfca-2ae09cd2a79c",
@@ -3458,7 +3448,7 @@
       "key": "e94370ed-d629-4ac9-acbf-76cdaf4feb49",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will use this day to build an initial version of their project.\n\nEquipped with their ***Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their ***Final Project Design Worksheets** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\n**Goal:** Students will use this day to build an initial version of their project.\n\nEquipped with their ***Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nRemind the class forget to fill out the **Try** section of their ***Final Project Guide**  as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3470,8 +3460,8 @@
       "key": "3d814afc-3dee-4010-ae83-ad34ac668ae9",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Reflect:\n\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
-        "name": "Reflect and Try Again\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 4: Feedback and Edits” slide\n\n**Goal:** Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Feedback:\n\nFor feedback, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
+        "name": "Feedback and Edits "
       },
       "seeding_key": {
         "activity_section.key": "3d814afc-3dee-4010-ae83-ad34ac668ae9",
@@ -3498,7 +3488,7 @@
       "key": "06675763-0837-4208-b019-226f3dbcb8ce",
       "position": 3,
       "properties": {
-        "description": "#### Try Again:\r\n\r\nWith their new reflections in hand, students can head back to their machines to make a handful of edits.  With just 10 minutes left, they will likely have to select only the most important feedback to incorporate."
+        "description": "#### Edits:\n\nWith their new reflections in hand, students can head back to their machines to make a handful of edits.  With just 10 minutes left, they will likely have to select only the most important feedback to incorporate."
       },
       "seeding_key": {
         "activity_section.key": "06675763-0837-4208-b019-226f3dbcb8ce",
@@ -3509,7 +3499,7 @@
       "key": "c50f1282-0dec-4858-8617-62c5477a5140",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will create and present their projects in an approved manner (written, oral, or using multimedia).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 5 & 6: Present and Reflect” slide\n\n**Goal:** Students will create and present their projects in an approved manner (written, oral, or using multimedia).",
         "duration": "45",
         "name": "Presentations - Day 5"
       },
@@ -3554,6 +3544,18 @@
       },
       "seeding_key": {
         "activity_section.key": "8636c756-f691-4848-8dd1-b4ff333fa4b8",
+        "lesson_activity.key": "1b44f407-6993-417b-8930-6e3aeba28143"
+      }
+    },
+    {
+      "key": "bf919545-af59-4d9f-a51e-c37073c37877",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n* _What did you learn in creating this project?_\n* _What was the most challenging part about this experience? How did you overcome that challenge?_\n\nStudents will reflect on their work by completing the final **Reflect** section of their ***Final Project Guide** packets.\n",
+        "name": "Reflect "
+      },
+      "seeding_key": {
+        "activity_section.key": "bf919545-af59-4d9f-a51e-c37073c37877",
         "lesson_activity.key": "1b44f407-6993-417b-8930-6e3aeba28143"
       }
     },
