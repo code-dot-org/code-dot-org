@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-26 19:50:39 UTC",
+    "serialized_at": "2022-01-26 20:09:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3548,8 +3548,20 @@
       }
     },
     {
-      "key": "df3d2c80-f14d-482c-aa4a-7b86cc1cedf9",
+      "key": "22836880-7961-4ae4-bdd4-9c7ba3dbb0e2",
       "position": 7,
+      "properties": {
+        "description": "When we wrote our `toString()` method to print the values stored in the instance variables, we concatenated those primitive values with a `String` object. This causes implicit conversion of these values to `String` objects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "22836880-7961-4ae4-bdd4-9c7ba3dbb0e2",
+        "lesson_activity.key": "db41289d-0d0a-4930-8c00-16633dcc791f"
+      }
+    },
+    {
+      "key": "df3d2c80-f14d-482c-aa4a-7b86cc1cedf9",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** After students have written their `toString()` method and refactored `printInfo()`, remind students how to print information to the console using the `System.out.print()` Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 2 on Code Studio to test their implementations."
       },
@@ -3560,7 +3572,7 @@
     },
     {
       "key": "fae897c2-c4a6-4256-872c-e3e03315d126",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce formatted output using escape sequences.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define escape sequences.\n* Have students predict the output before clicking through the animated slides to reveal the answer.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with a quote\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with new lines\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with backslashes"
       },
@@ -3571,7 +3583,7 @@
     },
     {
       "key": "a9f8dfd6-6047-442d-8bb2-4e1ebea87e1f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students refactor `toString()` and `printInfo()` to include formatting. Have students proceed to Level 4 to complete the Check for Understanding.",
         "progression_name": "Formatting toString()"
@@ -3583,7 +3595,7 @@
     },
     {
       "key": "ef13e97c-121c-4fef-8578-db78f7e588a9",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "While `printInfo()` always prints the string, `toString()` creates the string. This subtle difference is something we can leverage to write DRY code: When writing `toString()` methods for objects with a “has-a” relationship, we can call the `toString()` of objects stored as instance variables when writing the class’s own `toString()`.",
         "remarks": true
@@ -3595,7 +3607,7 @@
     },
     {
       "key": "2150a0ab-24e6-4b40-b58d-0699f2a4ea8d",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write a `toString()` method for `FoodTruck`, which calls the `toString()` of the `Dessert`.",
         "progression_name": "FoodTruck toString()"
@@ -3607,7 +3619,7 @@
     },
     {
       "key": "d5f2f788-53c5-4390-8955-b3f18ca6313a",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the alternate approach to Level 5. Instead of calling `toString()` of the `Dessert`, when an object is concatenated with a `String`, the object’s `toString()` is implicitly called."
       },
