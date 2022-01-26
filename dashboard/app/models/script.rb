@@ -209,7 +209,7 @@ class Script < ApplicationRecord
 
       new_published_state = published_state ? published_state : SharedCourseConstants::PUBLISHED_STATE.beta
       new_instruction_type = instruction_type ? instruction_type : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      new_instructor_audience = instructor_audience ? instructor_audience : SharedCourseConstants::INSTRUCTION_TYPE.plc_reviewer
+      new_instructor_audience = instructor_audience ? instructor_audience : SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
       new_participant_audience = participant_audience ? participant_audience : SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
 
       if unit_group
