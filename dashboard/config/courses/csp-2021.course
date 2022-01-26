@@ -18,15 +18,6 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "announcements": [
-      {
-        "notice": "Studying CS in college as a young woman!",
-        "details": "Young women in high school can learn firsthand from undergraduate women pursuing CS as they share their experiences in this monthly panel hosted by Code.org and Rewriting the Code.  First discussion happens Wednesday evening, January 26th.  Click \"Learn more\" for details and to register!",
-        "link": "https://bit.ly/rewritethecodeLB2022",
-        "type": "bullhorn",
-        "visibility": "Teacher and student"
-      }
-    ],
     "family_name": "csp",
     "has_numbered_units": true,
     "version_year": "2021"

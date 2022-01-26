@@ -305,6 +305,7 @@ function checkSpriteSay(eventLog, prevEventLogLength){
   if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
+      var spriteIds = getSpriteIdsInUse();
       for (var spriteId in spriteIds) {
         if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite

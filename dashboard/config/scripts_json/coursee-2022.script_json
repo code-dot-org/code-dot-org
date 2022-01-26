@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-01-24 14:03:42 UTC",
+    "serialized_at": "2022-01-25 17:31:51 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -206,7 +206,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.\n",
-        "preparation": " - (Optional) Print copies of the ***planning guide** for students, or distribute digital copies.\n - Consider making an example project yourself to share with the class. \n - Make sure every student has a reflection journal.",
+        "preparation": " - (Optional) Print copies of the **planning guide** for students, or distribute digital copies.\n - Consider making an example project yourself to share with the class. \n - Make sure every student has a reflection journal.",
         "purpose": "This lesson is meant to make the previous lesson on personal and private information personally relevant for students. With SAFE (personal) and UNSAFE (private) examples in mind, students practice safe self-expression on the web, using SpriteLab to fashion their own sprite costumes and generate text.",
         "student_overview": "Creating an interactive poster, but think carefully about what information is safe to share online."
       },
@@ -1610,7 +1610,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to reflect on previous two lessons. Students should know the difference between personal and private information. Students should also understand how to be an upstander.\n* _How can we safely present ourselves online?_\n",
-        "name": "Introduction\r"
+        "name": "Introduction\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7af8b468-66ad-4d3b-a9c3-2ff50362f027",
@@ -1746,20 +1752,8 @@
       }
     },
     {
-      "key": "d11b829e-adf4-4225-a091-b9ab50f9cfb5",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Follow the Algorithm” slide\n\n**Say**: We’re going to end with a quick game. In this game, I will be giving you all commands to follow and your job is to follow my instructions. The commands will always start with “begin” or “stop”. If I tell you to begin doing something, you need to start that behavior and keep it going until I tell you to stop. I might also tell you to “stop everything” which means you can end all of the behaviors I’ve given you so far. We’ll play 2 rounds and after each round I’ll ask you all a couple questions.\n\n#### Rules\n\n*All commands should be prefaced with either “begin” or “stop”.*\n\nWhen players are told to “begin” a behavior, they should continue it until told to “stop”. For example, players should not told be told to clap once, but might be told to “begin clapping”. Their clapping should continue until they are told to “stop clapping” even if they are given other new behaviors in between. \n\n*The leader can also call for the players to “stop everything”.* \n\nThis should result in everyone just standing at rest regardless of all previous commands.\n\nYou as the teacher should take on the role of the leader. You can try make up your own sequences, but here are some you can try. Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 1” slide\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:** *What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 2” slide\n\n#### Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:**\n\n*What kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?*",
-        "name": "Follow the Algorithm"
-      },
-      "seeding_key": {
-        "activity_section.key": "d11b829e-adf4-4225-a091-b9ab50f9cfb5",
-        "lesson_activity.key": "3826fff9-9484-4a83-9311-70c70d492e25"
-      }
-    },
-    {
       "key": "470b57f7-12df-47d0-acc3-63cb72051541",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?_",
         "name": "Reflection"
@@ -1885,7 +1879,7 @@
       "key": "5037f1fa-a631-490d-bb36-04d3fcc84121",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Model” slide\n\n**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new \"print\" block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Brainstorm” slide\n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Mini-Project” slide\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Model” slide\n\n**Model:** Show students the first two or three levels from today's online activity. Demonstrate how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Brainstorm” slide\n\n**Distribute:** (Optional) pass out copies of the **planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Mini-Project” slide\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class **Pause and Think Online** - Video."
       },
       "seeding_key": {
         "activity_section.key": "5037f1fa-a631-490d-bb36-04d3fcc84121",
@@ -3773,6 +3767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_say"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3795,6 +3792,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3817,6 +3817,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_multi"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3839,6 +3842,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3861,6 +3867,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_events"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3883,6 +3892,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3905,6 +3917,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3927,6 +3942,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3949,6 +3967,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3971,6 +3992,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -3993,6 +4017,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_freeplay"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,

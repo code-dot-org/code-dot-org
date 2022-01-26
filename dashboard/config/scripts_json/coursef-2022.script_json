@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-01-21 22:57:54 UTC",
+    "serialized_at": "2022-01-25 19:26:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1205,7 +1205,13 @@
       "key": "fe657a2c-475c-429c-943b-ee00ced47311",
       "position": 2,
       "properties": {
-        "description": "**Do This:**  Using the lesson slides or a whiteboard, show students a T-chart labeled “Favorite apps and games” on the left and “Why we like them” on the right. After modeling with one example, have students suggest their own additions to the list. As students explain why they like a particular app, restate their ideas and focus on *choices*, and times when the user gets to *choose* how they play or use it. Move on when students are seeing the connection that people prefer to be able to make choices.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _What is your favorite game or app?_\n* _What choices do you get to make while using it?_\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options!\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fe657a2c-475c-429c-943b-ee00ced47311",
@@ -1213,8 +1219,19 @@
       }
     },
     {
-      "key": "cded4c01-1aa0-4a11-8264-e33b263d619a",
+      "key": "2a745cfc-130d-40b2-a8ef-7872868b743c",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next slide\n\n**Do This:**  Using the lesson slides or a whiteboard, show students a T-chart labeled “Favorite apps and games” on the left and “Why we like them” on the right. After modeling with one example, have students suggest their own additions to the list. As students explain why they like a particular app, restate their ideas and focus on *choices*, and times when the user gets to *choose* how they play or use it. Move on when students are seeing the connection that people prefer to be able to make choices."
+      },
+      "seeding_key": {
+        "activity_section.key": "2a745cfc-130d-40b2-a8ef-7872868b743c",
+        "lesson_activity.key": "37c1790c-e4c7-4ea1-96f4-6b10205d37b2"
+      }
+    },
+    {
+      "key": "cded4c01-1aa0-4a11-8264-e33b263d619a",
+      "position": 4,
       "properties": {
         "description": "When apps and games are made, they are designed with a user in mind. The user is you, or whoever will be using and playing with the app. Creators have ideas about how their apps should be used, but it is up to the user to make the choices!\nToday we are going to explore how (and why) app and game makers let us make choices.",
         "remarks": true
@@ -1226,9 +1243,9 @@
     },
     {
       "key": "6e762e8e-4b37-45e4-bcb3-a53a7d535f63",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "**Do This:** Show the User Choices slide, found in the Resources section above.\n\n**Discuss:** For each app or game you see, what choice do you think the app maker is giving the user?\n\n**Goal:** Students should be of the discussion is for students to be discussing ideas not just about what the apps are about, but the specific choices that the user gets to make. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “User Choices” slide\n\n**Discuss:** For each app, ask students what choice the app developers are giving to the user. Why would they include that choice?\n\n**Goal:** In their discussion, students should be including specific choices that the user gets to make, as well as what the apps are about. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1243,7 +1260,7 @@
     },
     {
       "key": "e5814403-e13e-40fb-9878-930491734f7f",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "We can see that in all of these apps, the user gets to make choices about how they use it. These choices might motivate more people to want to use the app.",
         "remarks": true
@@ -1254,21 +1271,10 @@
       }
     },
     {
-      "key": "e41a2c01-db62-4f12-9d73-d6f238268f82",
-      "position": 6,
-      "properties": {
-        "description": "**Reflect:** What is your favorite game or app? What choices do you get to make while using it?"
-      },
-      "seeding_key": {
-        "activity_section.key": "e41a2c01-db62-4f12-9d73-d6f238268f82",
-        "lesson_activity.key": "37c1790c-e4c7-4ea1-96f4-6b10205d37b2"
-      }
-    },
-    {
       "key": "803f6684-6c07-4bb6-b6a4-f471366aebac",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Play the ***Introducing Sprite Lab** video.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Introducing Sprite Lab” video.",
         "duration": "5",
         "name": "Introducing Sprite Lab",
         "progression_name": "Video: Introducing Sprite Lab"
@@ -1291,12 +1297,35 @@
       }
     },
     {
-      "key": "53bf3068-b014-442a-b189-130434722212",
+      "key": "872a073e-5655-47bd-a4e6-19ea470965f6",
       "position": 3,
       "properties": {
-        "description": "_Explore at least 3 Sprite Lab programs on Code.org. For each program, you will list the sprites you see and describe the choices you made as the user._\n\n**Do this:** \n- Provide each individual (or group) with a physical or digital copy of the ***Exploring Apps** worksheet. \n- Direct students to level 2 on Code Studio (Exploration: Sample Apps). \n\n- Consider modeling one app with the class before having students complete the task independently.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sprite Lab Exploration” slide\n\nToday, students will look at some sample programs that were created using Sprite Lab. They will try interactive apps, games, and simulations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample Programs” slide",
         "duration": "15",
-        "name": "Exploring Apps",
+        "name": "Exploring Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "872a073e-5655-47bd-a4e6-19ea470965f6",
+        "lesson_activity.key": "6664ef23-d57c-499a-bc00-4897a81b4a7d"
+      }
+    },
+    {
+      "key": "d42bab91-b996-492e-bea8-dd942bce4123",
+      "position": 4,
+      "properties": {
+        "description": "_Explore at least 3 Sprite Lab programs on Code.org. For each program, you will list the sprites you see and describe the choices you made as the user._",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d42bab91-b996-492e-bea8-dd942bce4123",
+        "lesson_activity.key": "6664ef23-d57c-499a-bc00-4897a81b4a7d"
+      }
+    },
+    {
+      "key": "53bf3068-b014-442a-b189-130434722212",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Explore” slide\n\n**Do this:** \n- Provide each individual (or group) with a physical or digital copy of the ***Exploring Apps** worksheet. \n- Direct students to level 2 on Code Studio (Exploration: Sample Apps). \n\n- Consider modeling one app with the class before having students complete the task independently.\n",
         "progression_name": "Exploration: Sample Apps",
         "tips": [
           {
@@ -1312,9 +1341,9 @@
     },
     {
       "key": "bc9c50a0-0522-4d0e-a5c6-daa18a89b7cb",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "description": "\n**Discuss:** What were the most interesting choices you were able to make with these apps? Was there ever a time you wished you could change something in the app but were not given the choice?\n\n**Goal:** Students should be able to name specific choices they made, but should also discuss why they think the creator gave us that choice. Choices to highlight include the words you type in (e.g. Chat Bot), the type of sprites that are used (e.g. Collector Game), or the way you interact with something. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n\n**Discuss:** What were the most interesting choices you were able to make with these apps? Was there ever a time you wished you could change something in the app but were not given the choice?\n\n**Goal:** Students should be able to name specific choices they made, but should also discuss why they think the creator gave us that choice. Choices to highlight include the words you type in (e.g. Chat Bot), the type of sprites that are used (e.g. Collector Game), or the way you interact with something. ",
         "duration": "5",
         "name": "Share Out"
       },
@@ -1325,9 +1354,9 @@
     },
     {
       "key": "b6de318c-4241-4074-acda-19a582191e87",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "**Prompt:** Think about an app you have used, and come up with a way to make it better by giving the user more choices.\n\nAs time allows, have students consider the prompt above through one or more of the following methods:\n* Have volunteers offer ideas in a whole-group discussion.\n* Engage in a small discussion with pairs or small groups.\n* Have students create a sketch or poster with their ideas.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Propose an Improvement” slide\n\n**Prompt:** Think about an app you have used, and come up with a way to make it better by giving the user more choices.\n\nAs time allows, have students consider the prompt above through one or more of the following methods:\n* Have volunteers offer ideas in a whole-group discussion.\n* Engage in a small discussion with pairs or small groups.\n* Have students create a sketch or poster with their ideas.",
         "duration": "5",
         "name": "Propose an Improvement"
       },
@@ -1337,11 +1366,22 @@
       }
     },
     {
-      "key": "ce50fd5d-89d2-4ff3-bd78-a8f66e131d4c",
+      "key": "f2dde1bc-6a04-4b62-895b-5a43926f986a",
       "position": 1,
       "properties": {
-        "description": "Today we learned about some of the ways app creators give us choices as the user. We also learned about Sprites. Sprites are graphics on the screen with different properties, like size, rotation, and location. Sprites also have a costume that determines how they appear.",
-        "name": "Reflection",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show “Wrap-Up Sprite” slide",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2dde1bc-6a04-4b62-895b-5a43926f986a",
+        "lesson_activity.key": "bd6b0416-0a9d-46d4-b5ee-660dd4fa259b"
+      }
+    },
+    {
+      "key": "ce50fd5d-89d2-4ff3-bd78-a8f66e131d4c",
+      "position": 2,
+      "properties": {
+        "description": "Today we learned about some of the ways app creators give us choices as the user. We also learned about Sprites. Sprites are graphics on the screen with different properties, like size, rotation, and location. ",
         "remarks": true
       },
       "seeding_key": {
@@ -1350,16 +1390,33 @@
       }
     },
     {
-      "key": "42bea81c-f7e1-46d0-a8f0-0c557651732d",
-      "position": 2,
+      "key": "21660537-1064-4f86-bb41-112b19dde1ce",
+      "position": 3,
       "properties": {
-        "description": "**Prompts: (Choose one)**\n- What’s an example of a choice you’d like to be able to make in the games or apps you use?\n- What kind of app or game would you like to create?\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options! "
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show “Wrap-Up Sprite Costume” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "21660537-1064-4f86-bb41-112b19dde1ce",
+        "lesson_activity.key": "bd6b0416-0a9d-46d4-b5ee-660dd4fa259b"
+      }
+    },
+    {
+      "key": "fb969b8d-e3b5-4ae5-b95a-d824195206a9",
+      "position": 4,
+      "properties": {
+        "description": "Sprites also have a costume that determines how they appear.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fb969b8d-e3b5-4ae5-b95a-d824195206a9",
+        "lesson_activity.key": "bd6b0416-0a9d-46d4-b5ee-660dd4fa259b"
+      }
+    },
+    {
+      "key": "42bea81c-f7e1-46d0-a8f0-0c557651732d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect**:\n* _What’s an example of a choice you’d like to be able to make in the games or apps you use?_\n* _What kind of app or game would you like to create?_\n"
       },
       "seeding_key": {
         "activity_section.key": "42bea81c-f7e1-46d0-a8f0-0c557651732d",
@@ -1394,7 +1451,7 @@
       "key": "193e445d-6cec-4bc3-bfd0-9524b864bd64",
       "position": 3,
       "properties": {
-        "description": "**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this sprite scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Ant and Dragonfly Scene” slide\n\n**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** \n* _How would you describe this sprite scene?_\n* _If you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Instructions” slide\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n* _What is the same or different about our instructions and this code?_\n"
       },
       "seeding_key": {
         "activity_section.key": "193e445d-6cec-4bc3-bfd0-9524b864bd64",
@@ -1405,7 +1462,7 @@
       "key": "7d1f861d-fd6b-4565-b60e-1eacf2969f84",
       "position": 1,
       "properties": {
-        "description": "####Prediction (3 mins)\n\n**Do This:**  Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "description": "####Prediction (3 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Predict” slide\n\n**Do This:**  Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
         "name": "Making Sprites",
         "progression_name": "Prediction",
         "tips": [
@@ -1424,7 +1481,7 @@
       "key": "398a0b49-4f68-49af-b033-31c3324faf6a",
       "position": 2,
       "properties": {
-        "description": "**Do This:**  Play the video, “How to Make a Sprite”",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “How to Make a Sprite” video\n",
         "progression_name": "Video: How to Make a Sprite"
       },
       "seeding_key": {
@@ -1436,7 +1493,7 @@
       "key": "c6e2d2c6-5245-4678-8712-261d1ca0bfc3",
       "position": 3,
       "properties": {
-        "description": "####Skill Building and Practice (20 mins)\n\n**Transition:** Have students move to their computer and sign in. \n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "description": "####Skill Building and Practice (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 3-7 - Skill Building” slide\n\n**Transition:** Have students move to their computer and sign in. \n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -1454,6 +1511,7 @@
       "key": "e2ce52a3-fb1a-400b-b923-8853940749d7",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Practice (Choice)” slide.\n\nThese puzzles are available for extra practice. Students should complete one or more puzzles of their choice.",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1465,7 +1523,7 @@
       "key": "8ff45ed6-06ae-4047-b9ff-34b0c1e8d901",
       "position": 5,
       "properties": {
-        "description": "####Free Play (10 mins)\n\n**Transition:** Students should now skip to the final level in the lesson where they will be able to make their own project.",
+        "description": "####Free Play (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n\n**Transition:** Students should now skip to the final level in the lesson where they will be able to make their own project. Each choice here provides students with a different collection of sprite costumes to use. Students should pick one to start. ",
         "progression_name": "Free Play: Make a Scene",
         "tips": [
           {
@@ -1483,9 +1541,8 @@
       "key": "5e1d361c-4925-48b4-b00a-d92b6d5e612d",
       "position": 1,
       "properties": {
-        "description": "Today you learned how to write code to create programs in Sprite Lab. \n\n**Program** - An algorithm that has been coded into something that can be run by a machine.\n\n**Algorithm** - A list of steps to complete a task.",
-        "name": "Reflection",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "5e1d361c-4925-48b4-b00a-d92b6d5e612d",
@@ -1493,10 +1550,23 @@
       }
     },
     {
-      "key": "7613a586-15db-4675-9453-17fc920521e8",
+      "key": "14059e50-3b52-4236-963a-0a20385f7f95",
       "position": 2,
       "properties": {
-        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\nWhat advice would you have for a friend who is interested in creating their own programs in Sprite Lab?\n\n"
+        "description": "Today you learned how to write code to create programs in Sprite Lab. \n\n**Program** - An algorithm that has been coded into something that can be run by a machine.\n\n**Algorithm** - A list of steps to complete a task.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14059e50-3b52-4236-963a-0a20385f7f95",
+        "lesson_activity.key": "72b43692-65aa-4f97-8559-0025506a2724"
+      }
+    },
+    {
+      "key": "7613a586-15db-4675-9453-17fc920521e8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Reflect:**\n* _What advice would you have for a friend who is interested in creating their own programs in Sprite Lab?_\n\n",
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "7613a586-15db-4675-9453-17fc920521e8",
@@ -1515,11 +1585,22 @@
       }
     },
     {
-      "key": "231225d8-caef-4ac4-aef9-eded57a4b6bd",
+      "key": "99b5cf49-c49b-4215-adee-309dcf132c9b",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Follow the Algorithm” slide\n",
+        "name": "Follow the Algorithm"
+      },
+      "seeding_key": {
+        "activity_section.key": "99b5cf49-c49b-4215-adee-309dcf132c9b",
+        "lesson_activity.key": "d078afbb-41ef-4f2f-a70b-823fea48018c"
+      }
+    },
+    {
+      "key": "231225d8-caef-4ac4-aef9-eded57a4b6bd",
+      "position": 3,
+      "properties": {
         "description": "Today we’re going to start with a quick game. In this game, I will be giving you all commands to follow and your job is to follow the **algorithm**. The commands will always start with “begin” or “stop”. If I tell you to begin doing something, you need to start that behavior and keep it going until I tell you to stop. I might also tell you to “stop everything” which means you can end all of the behaviors I’ve given you so far. We’ll play 3 rounds and after each round I’ll ask you all a couple questions.\n",
-        "name": "Follow the Algorithm",
         "remarks": true,
         "tips": [
           {
@@ -1535,9 +1616,9 @@
     },
     {
       "key": "f808ce8b-e41c-4097-be8f-603be6723e0b",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n**Discussion:** _What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?_\n\nStudents should understand that multiple behaviors can happen simultaneously.\n\n####Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n**Discussion:**\n\n_What kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?_\n\nStudents should understand that each behavior needs to be stopped individually. They need to keep track of each one separately.\n\n####Challenging\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n**Discussion:** _What happens if two behaviors seem to conflict with each other?_\n\n_What should you do when told to clap your hands and flap your arms at the same time?_\n\n_How can you jump up and down while crouching?_\n\n_What happens if you need to tap your knees and your head at the same time?_\n\n_When you were told to spin in two opposite directions what did you see people do?_ \n\n_What would happen if you were told to spin left and right at the exact same time?_\n\nStudents should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 1 - Basic” slide\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:** \n* _What happened when you were told to clap but you were already marching in place?_ \n* _What happens if you are told to begin two different behaviors at once?_\n\nStudents should understand that multiple behaviors can happen simultaneously.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 2 - Intermediate” slide\n\n####Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:**\n* _What kinds of instructions caused people to make mistakes?_\n* _What strategies do you think are helpful for making sure you follow instructions correctly?_\n* _Why is it important to keep track of each behavior separately?_\n\nStudents should understand that each behavior needs to be stopped individually. They need to keep track of each one separately.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 3 - Challenging” slide\n\n####Round 3 (Challenging):\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n* _What happens if two behaviors seem to conflict with each other?_\n\n**Discussion Goal:** Students should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out.\n\n**Additional prompts:**\n\n_What should you do when told to clap your hands and flap your arms at the same time?_\n\n_How can you jump up and down while crouching?_\n\n_What happens if you need to tap your knees and your head at the same time?_\n\n_When you were told to spin in two opposite directions what did you see people do?_ \n\n_What would happen if you were told to spin left and right at the exact same time?_"
       },
       "seeding_key": {
         "activity_section.key": "f808ce8b-e41c-4097-be8f-603be6723e0b",
@@ -1548,7 +1629,7 @@
       "key": "60c9780b-5aa1-4070-8456-edc1880652a1",
       "position": 1,
       "properties": {
-        "description": "####Prediction (2 mins)\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n\n",
+        "description": "####Prediction (2 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Predict” slide\n\n**Do This:** This level should be completed as a class. Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n\n",
         "name": "Sprites in Action",
         "progression_name": "Prediction"
       },
@@ -1561,7 +1642,7 @@
       "key": "c2e66362-c396-4387-97d3-72ce29515ce9",
       "position": 2,
       "properties": {
-        "description": "####Video: Sprites in Action (3 mins)\n\n**Do This:** Play the video, “Sprites in Action”",
+        "description": "####Video: Sprites in Action (3 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sprites in Action” video\n",
         "progression_name": "Video: Sprites in Action"
       },
       "seeding_key": {
@@ -1573,7 +1654,7 @@
       "key": "39035408-7036-47d5-9bc6-a856a377c652",
       "position": 3,
       "properties": {
-        "description": "####Skill Building and Practice (20 mins)\n\n**Transition:** Have students move to their computer and sign in. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "description": "####Skill Building and Practice (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - 7 - Skill Building” slide\n\n**Transition:** Have students move to their computer and sign in. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1585,6 +1666,7 @@
       "key": "4d42090d-581a-450e-892f-7ad9ac994d64",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Practice” slide \n",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1596,7 +1678,7 @@
       "key": "c7e4748b-0e08-437c-9420-dfea97f3a0f8",
       "position": 5,
       "properties": {
-        "description": "####Free Play (10 mins)\n\n**Transition:** Students should now skip to the final level in the lesson where they will see the same free play choices as the previous lessons. Encourage students to add events to their projects from last time, or begin a new project.\n\n",
+        "description": "####Free Play (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n\n**Transition:** Students should now skip to the final level in the lesson where they will see the same free play choices as the previous lessons. Encourage students to add events to their projects from last time, or begin a new project.\n\n",
         "progression_name": "Free Play: Make an Interactive Scene",
         "tips": [
           {
@@ -1614,9 +1696,8 @@
       "key": "abdb077a-7083-4f44-8497-afaf51e53443",
       "position": 1,
       "properties": {
-        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - *An action that causes something to happen.*",
-        "name": "Reflection",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap-Up” slide",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "abdb077a-7083-4f44-8497-afaf51e53443",
@@ -1624,10 +1705,23 @@
       }
     },
     {
-      "key": "54bba65d-a075-4ada-8079-b7512f29117d",
+      "key": "34e84c70-0726-4116-97a2-d91bd65fa0ee",
       "position": 2,
       "properties": {
-        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:** \nArrow keys are one way to make a program more interactive. What other ways could we give a user control over what happens in an app or game?\n\n"
+        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - *An action that causes something to happen.*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "34e84c70-0726-4116-97a2-d91bd65fa0ee",
+        "lesson_activity.key": "f9b548ce-d843-4dc9-a36d-634228674b65"
+      }
+    },
+    {
+      "key": "54bba65d-a075-4ada-8079-b7512f29117d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \nArrow keys are one way to make a program more interactive. \n* _What other ways could we give a user control over what happens in an app or game?_\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.",
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "54bba65d-a075-4ada-8079-b7512f29117d",
@@ -1638,7 +1732,7 @@
       "key": "4e19d062-0c5b-4eb6-aa93-6504fc2f4631",
       "position": 1,
       "properties": {
-        "description": "Revisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n**Review:** Ask students questions about events and behaviors. \n\n- Do you remember what an event is?\n\n- Do you remember what a behavior is?\n- Can you remember some of the behaviors you have used ? What do they do?\n    - \"patrolling\"\n    - \"jittering\"\n    - \"spinning right/left\" \n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** Ask students questions about events and behaviors. \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used ? What do they do?_\n    - \"patrolling\"\n    - \"jittering\"\n    - \"spinning right/left\" \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\nRevisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1701,6 +1795,7 @@
       "key": "07c4f45e-00e8-40f4-95fc-c1dfa4334e6f",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 3-6 - Create a Virtual Pet” slide\n",
         "progression_name": "Mini-Project: Create a Virtual Pet"
       },
       "seeding_key": {
@@ -1712,6 +1807,7 @@
       "key": "0d112ee6-4abf-401d-881e-257a7db77c31",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 7 - Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1723,7 +1819,7 @@
       "key": "d56d78ff-2000-46b1-aba3-a8285b299a89",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:**\n* _What was today's lesson about?_\n* _What other options would you like to be able to have your pet do?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1743,10 +1839,22 @@
       }
     },
     {
-      "key": "ff68a0b9-e16b-4767-bbc2-16c66b7f48f7",
+      "key": "38b1691c-927b-42a8-8f03-33dd6f8196a9",
       "position": 1,
       "properties": {
-        "description": "**Do this:** Display the lesson slides for the class.\n\nAsk students to think about how we organize and store things. Do students ever keep things in boxes? Are those boxes labeled? Why? If students do not have this experience, ask them to imagine helping you pack up the classroom for the summer.\n\nInform students that today we will be playing a word game, similar to Mad Libs®, where you will be prompted for words that will then be placed into a silly story."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How are things stored?” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "38b1691c-927b-42a8-8f03-33dd6f8196a9",
+        "lesson_activity.key": "28c00291-9d46-489c-951c-947da63fe902"
+      }
+    },
+    {
+      "key": "ff68a0b9-e16b-4767-bbc2-16c66b7f48f7",
+      "position": 2,
+      "properties": {
+        "description": "One way to store things is with labeled containers.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ff68a0b9-e16b-4767-bbc2-16c66b7f48f7",
@@ -1754,10 +1862,21 @@
       }
     },
     {
-      "key": "a799dff2-63b7-40da-bb76-7abf1bffa0e9",
-      "position": 2,
+      "key": "a0b827fc-18a4-464f-9228-4d6ab26a3f2a",
+      "position": 3,
       "properties": {
-        "description": "**Do this:** Show the first blank space story (Favorite Meal) on the board using the lesson slides. \n\n**Prompt:** _How do you think this blank space story works? What do you notice about the labels for each blank space?_\n\nIt’s important that students understand one person typically provides the words designated by each label without seeing the story first. Students may notice that each space has a unique label.\n\n####Favorite Meal\n\n**Do This:** Prepare the first three envelopes for demonstration. If using the slides, advance the animation to show the three purple boxes. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories” slide\n\nAsk students to think about how we organize and store things. Do students ever keep things in boxes? Are those boxes labeled? Why? If students do not have this experience, ask them to imagine helping you pack up the classroom for the summer. What if instead of objects, you needed to store information? \n\nInform students that today we will be playing a word game, similar to Mad Libs®, where you will be prompted for words that will then be placed into a silly story."
+      },
+      "seeding_key": {
+        "activity_section.key": "a0b827fc-18a4-464f-9228-4d6ab26a3f2a",
+        "lesson_activity.key": "28c00291-9d46-489c-951c-947da63fe902"
+      }
+    },
+    {
+      "key": "a799dff2-63b7-40da-bb76-7abf1bffa0e9",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Story: Favorite Meal” slide\n\n**Do this:** Show the first blank space story (Favorite Meal) on the board using the lesson slides. \n\n**Prompt:** _How do you think this blank space story works? What do you notice about the labels for each blank space?_\n\nIt’s important that students understand one person typically provides the words designated by each label without seeing the story first. Students may notice that each space has a unique label.\n\n**Do This:** Prepare the first three envelopes for demonstration. If using the slides, advance the animation to show the three purple boxes. \n\n",
         "name": "Favorite Meal"
       },
       "seeding_key": {
@@ -1767,7 +1886,7 @@
     },
     {
       "key": "10da200c-8919-4007-b42d-c06435bbb899",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "\nIn a moment, I’ll have volunteers to help us fill in the blanks. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n",
         "remarks": true
@@ -1779,7 +1898,7 @@
     },
     {
       "key": "6b69cb45-318b-4356-86bb-d76ca5659241",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "**Do This:** Facilitate handing out and collecting the envelopes marked “object”, “liquid”, and “number”. Once collected, keep the envelopes closed and begin reading the story. Only when you reach each blank, open the envelope and read the value stored.\n\n"
       },
@@ -1790,9 +1909,9 @@
     },
     {
       "key": "4f9d6a34-1d60-46f7-889e-9daf2ce34a6a",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You will request and store the information from the \"users\" and then work out how to put the story together. To involve more students and have them act out this model, assign roles:\n\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n\n_Users:_ Submit the words needed to complete the story.\n\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief\n\n**Discuss:** How is writing a blank space story different from writing a normal story?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Story: Party Games” slide\n\n**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You will request and store the information from the \"users\" and then work out how to put the story together. To involve more students and have them act out this model, assign roles:\n\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n\n_Users:_ Submit the words needed to complete the story.\n\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _How is writing a blank space story different from writing a normal story?_\n\n**Discuss:** How is writing a blank space story different from writing a normal story?",
         "name": "Party Games"
       },
       "seeding_key": {
@@ -1801,13 +1920,34 @@
       }
     },
     {
-      "key": "974e09a4-c5cc-4cc6-9dac-babff5c5679c",
+      "key": "34fca026-2e5d-4b45-886a-dc0523d712b4",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unplugged Variables in Envelopes” video\n",
+        "name": "Create Your Own Story (20 mins)"
+      },
+      "seeding_key": {
+        "activity_section.key": "34fca026-2e5d-4b45-886a-dc0523d712b4",
+        "lesson_activity.key": "10d71f4d-1bbc-4110-8ebf-bf36bc070401"
+      }
+    },
+    {
+      "key": "39ee804b-4ee5-46b0-9544-46d62fce11cf",
+      "position": 2,
+      "properties": {
         "description": "In today’s activity, you’ll work with a group to create your own blank space story. ",
-        "name": "Create Your Own Story (20 mins)",
-        "progression_name": "Video: Unplugged Variables in Envelopes",
         "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "39ee804b-4ee5-46b0-9544-46d62fce11cf",
+        "lesson_activity.key": "10d71f4d-1bbc-4110-8ebf-bf36bc070401"
+      }
+    },
+    {
+      "key": "974e09a4-c5cc-4cc6-9dac-babff5c5679c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: Unplugged Variables in Envelopes"
       },
       "seeding_key": {
         "activity_section.key": "974e09a4-c5cc-4cc6-9dac-babff5c5679c",
@@ -1816,9 +1956,9 @@
     },
     {
       "key": "8ad2d88f-d85f-4f31-93c9-c4fb224f5027",
-      "position": 2,
+      "position": 4,
       "properties": {
-        "description": "**Do This:** Pass out the ***student worksheet** and go over the instructions. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Create Your Own Story” slide\n\n**Do This:** Pass out the ***student worksheet** and go over the instructions. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1835,7 +1975,7 @@
       "key": "2540b41e-8164-4d95-95ac-96bbd0427cf3",
       "position": 1,
       "properties": {
-        "description": "####Share Your Stories (10 mins)\n**Do This:** Pair up two groups and have them take turns sharing their stories. \n\nIf you have enough time and materials, give students their own envelopes to label and exchange. This will help students build the right mental model for how this exchange works when they transition back to programming.\n",
+        "description": "####Share Your Stories (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Your Stories” slide\n\n**Do This:** Pair up two groups and have them take turns sharing their stories. \n\nIf you have enough time and materials, give students their own envelopes to label and exchange. This will help students build the right mental model for how this exchange works when they transition back to programming.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1852,7 +1992,7 @@
       "key": "84cf8dca-9bfe-4739-8ab4-b775abbff060",
       "position": 1,
       "properties": {
-        "description": "**Do this:** Summarize the rules of blank space stories once more with the class.\n\n*The blank spaces in these stories work like containers for information. Each container also has a label.  In computer science, when you create a label for a piece of information in your program, it's called a* ***variable***.\n\n**Do this:** Show the lesson slide with the three sample app images.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up” slide\n\n**Do this:** Summarize the rules of blank space stories once more with the class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n",
         "name": "Introducing Variables"
       },
       "seeding_key": {
@@ -1861,11 +2001,45 @@
       }
     },
     {
-      "key": "2611b5d9-6935-43bf-b958-f2b143597a50",
+      "key": "279b9b2c-56ea-4ccb-b49f-eecab453b6ff",
       "position": 2,
       "properties": {
-        "description": "*These apps are all asking the user to provide some information. How does this relate to today's activity?*\n\n*Information is stored in the computer's memory with variables. Each variable has a label that tells us what kind of information to expect. When the computer needs that information later, it looks for the label of the variable.*\n\n*Whether you're storing objects in a box, words in an envelope, or information in a variable, it's important to use good labels, so you don't get confused later.*\n\n*When a user types into a prompt, it’s like the computer stores the information in a container. The variable label tells us what kind of information to expect.*\n",
+        "description": "\n*The blank spaces in these stories work like containers for information. Each container also has a label.  In computer science, when you create a label for a piece of information in your program, it's called a* ***variable***.",
         "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "279b9b2c-56ea-4ccb-b49f-eecab453b6ff",
+        "lesson_activity.key": "358ee0cc-4d06-42c0-bd5f-3a029c1428d8"
+      }
+    },
+    {
+      "key": "cab34071-7b4d-4896-b5fc-f3cfd371fe99",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up three app images” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "cab34071-7b4d-4896-b5fc-f3cfd371fe99",
+        "lesson_activity.key": "358ee0cc-4d06-42c0-bd5f-3a029c1428d8"
+      }
+    },
+    {
+      "key": "5221a45d-0ff4-4706-a562-5c10ba9bec0d",
+      "position": 4,
+      "properties": {
+        "description": "*These apps are all asking the user to provide some information. How does this relate to today's activity?*\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5221a45d-0ff4-4706-a562-5c10ba9bec0d",
+        "lesson_activity.key": "358ee0cc-4d06-42c0-bd5f-3a029c1428d8"
+      }
+    },
+    {
+      "key": "2611b5d9-6935-43bf-b958-f2b143597a50",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up Variables” slide\n\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2611b5d9-6935-43bf-b958-f2b143597a50",
@@ -1873,10 +2047,56 @@
       }
     },
     {
-      "key": "36a56c9e-b225-446e-ba23-8b80ef9e538c",
-      "position": 3,
+      "key": "367d5fa0-1fc6-47eb-82a4-10272a19d395",
+      "position": 6,
       "properties": {
-        "description": "**Prompt:**\n* How do you think blank space stories relate to learning computer science?\n\n\n\n",
+        "description": "\n*Information is stored in the computer's memory with variables. Each variable has a label that tells us what kind of information to expect. When the computer needs that information later, it looks for the label of the variable.*\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "367d5fa0-1fc6-47eb-82a4-10272a19d395",
+        "lesson_activity.key": "358ee0cc-4d06-42c0-bd5f-3a029c1428d8"
+      }
+    },
+    {
+      "key": "853ca603-3172-44da-95f4-1b4e7ceba0a5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Blank Space Stories Wrap-Up Variables” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "853ca603-3172-44da-95f4-1b4e7ceba0a5",
+        "lesson_activity.key": "358ee0cc-4d06-42c0-bd5f-3a029c1428d8"
+      }
+    },
+    {
+      "key": "eeaafc96-35a7-4806-9eca-50036ab4c1dd",
+      "position": 8,
+      "properties": {
+        "description": "*Whether you're storing objects in a box, words in an envelope, or information in a variable, it's important to use good labels, so you don't get confused later.*\n\n*When a user types into a prompt, it’s like the computer stores the information in a container. The variable label tells us what kind of information to expect.*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eeaafc96-35a7-4806-9eca-50036ab4c1dd",
+        "lesson_activity.key": "358ee0cc-4d06-42c0-bd5f-3a029c1428d8"
+      }
+    },
+    {
+      "key": "ba94d6b9-70e9-4dcb-8dfa-8f4d6df7b131",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up summary” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba94d6b9-70e9-4dcb-8dfa-8f4d6df7b131",
+        "lesson_activity.key": "358ee0cc-4d06-42c0-bd5f-3a029c1428d8"
+      }
+    },
+    {
+      "key": "36a56c9e-b225-446e-ba23-8b80ef9e538c",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How do you think blank space stories relate to learning computer science?_\n\n\n\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1899,7 +2119,7 @@
       "key": "5a9e0899-a7ba-4cf6-b5ac-55bdb00e070b",
       "position": 1,
       "properties": {
-        "description": "\n**Do This:** Remind students what they did last class or ask them to share. \n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  ",
+        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How did we use variables in our \nBlank Space Stories?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -1923,7 +2143,7 @@
       "key": "38b61785-02da-4546-ac6e-dfd58d3b8df0",
       "position": 1,
       "properties": {
-        "description": "####Prediction (5 mins)\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "description": "####Prediction (5 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide \n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
         "name": "Text and Prompts",
         "progression_name": "Prediction"
       },
@@ -1936,7 +2156,7 @@
       "key": "984569cb-bbec-4b20-be24-7f1c31d3773c",
       "position": 2,
       "properties": {
-        "description": "####Video (5 minutes)\n\nDisplay the video to the whole class. ",
+        "description": "####Video (5 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sprite Lab: Text and Prompts” video\n",
         "progression_name": "Video: Text and Prompts",
         "tips": [
           {
@@ -1954,7 +2174,7 @@
       "key": "852ff05f-cb5d-4deb-bc8c-3de3186fc840",
       "position": 3,
       "properties": {
-        "description": "####Skill Building and Practice (20 mins)\n\n**Transition:** Have students move to their computer and sign in. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "description": "####Skill Building and Practice (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-8 - Skill Building” slide \n\n**Transition:** Have students move to their computer and sign in. All students should complete all levels in this section in order. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -1972,6 +2192,7 @@
       "key": "48b86ae8-d677-407a-a694-76494092a771",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice (Choice)” slide\n",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1983,7 +2204,7 @@
       "key": "318e16c2-4e17-40c9-9bf2-09edab290bdb",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do This:** Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap-Up Summary” slide\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -2007,7 +2228,7 @@
       "key": "25320194-274e-4858-a15d-0c788dacfb17",
       "position": 3,
       "properties": {
-        "description": "Pick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n\n**Prompts:**\n- How is a variable like a box? How is it different?\n\n- Why do programmers need variables?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nPick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n**Reflect:**\n* _How is a variable like a box? How is it different?_\n* _Why do programmers need variables?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2019,7 +2240,7 @@
       "key": "24e7fa10-2938-4fc4-9bf6-f0395fd15936",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Using the lesson slides, review the concepts that students have explore so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How do sprites, behaviors, events, and text work?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\n**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them. You can also edit this code with your class in this standalone [\"sandbox\"](https://studio.code.org/levels/27300) level.",
         "name": "Review",
         "progression_name": "Prediction",
         "tips": [
@@ -2038,7 +2259,7 @@
       "key": "c6f86dec-7eee-488b-962e-252ecee9724d",
       "position": 2,
       "properties": {
-        "description": "###Exploration\n**Do This:** Have students explore the sample programs in level 1. This can be done as a whole class with discussion, with pairs sharing a device, or even individually. For each of the programs, have students think about how it works, who would use it, and any ideas it gives them about what they could make themselves. A good strategy here is to have students read the program’s code out loud, one line at a time, then talk about what it is for.",
+        "description": "###Exploration\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Exporation: Sample Programs” slide\n\n**Do This:** Have students explore the sample programs in level 1. This can be done as a whole class with discussion, with pairs sharing a device, or even individually. For each of the programs, have students think about how it works, who would use it, and any ideas it gives them about what they could make themselves. A good strategy here is to have students read the program’s code out loud, one line at a time, then talk about what it is for.",
         "progression_name": "Exploration: Sample Programs",
         "tips": [
           {
@@ -2053,13 +2274,139 @@
       }
     },
     {
-      "key": "d7a4764b-ce9c-4d27-af00-66c83c2724d3",
+      "key": "36159a4d-c7dc-4dae-bc78-388e5b6eca2f",
       "position": 1,
       "properties": {
-        "description": "###Planning (10 mins)\nWe have already had a chance to build a variety of programs in Sprite Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software.",
+        "description": "We have already had a chance to build a variety of programs in Sprite Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software.",
         "name": "User Input Programs",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "36159a4d-c7dc-4dae-bc78-388e5b6eca2f",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "25d96d98-657a-49e3-bb26-bae041d2f0db",
+      "position": 2,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Program Planning” slide\n\n\n",
+        "name": "Planning (10 mins)"
+      },
+      "seeding_key": {
+        "activity_section.key": "25d96d98-657a-49e3-bb26-bae041d2f0db",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "4caf05d7-b442-4ad8-9980-f7db4f17e04b",
+      "position": 3,
+      "properties": {
+        "description": "Before writing any code, you will create a plan for your program.\n\nYour completed plan should include:\n- The type of project you're building.\n- A list of questions you will ask the user.\n- Any other text you will display.\n- A description or drawing of the sprites you will need (and their behaviors).",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4caf05d7-b442-4ad8-9980-f7db4f17e04b",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "544011db-1c8d-4001-a296-5db1be2b341f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 1 - Choose a Project Type” slide \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "544011db-1c8d-4001-a296-5db1be2b341f",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "d29eac77-aa24-46df-991f-7676cd3cc723",
+      "position": 5,
+      "properties": {
+        "description": "You will be choosing between three basic project types with different instructions. Each choice begins with different costumes but you can also add more any time.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d29eac77-aa24-46df-991f-7676cd3cc723",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "efbd13ff-938a-4bf9-aaee-29b54c4e858e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 2 - Plan Your Text and Variables” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "efbd13ff-938a-4bf9-aaee-29b54c4e858e",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "9269d5ef-cb2d-4dcd-81fc-6fd132229aa6",
+      "position": 7,
+      "properties": {
+        "description": "This is an example of what you might write if you choose the “chatbot” option. For each word that comes from the user, circle it and then decide on the variable labels you will use in your program.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9269d5ef-cb2d-4dcd-81fc-6fd132229aa6",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "cc145f9f-b302-4a3b-a032-7d641a3d6ee8",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 3 - Plan Your Prompts” slide \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc145f9f-b302-4a3b-a032-7d641a3d6ee8",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "f1956cae-f36f-4e77-bc4c-b2f402da091c",
+      "position": 9,
+      "properties": {
+        "description": "For each variable in your program, write a simple prompt (or question) that will tell the user what they need to do.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f1956cae-f36f-4e77-bc4c-b2f402da091c",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "3de9b933-abac-43ee-b5aa-99c35f10a3ef",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 4 - Sketch Your Scene” slide \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3de9b933-abac-43ee-b5aa-99c35f10a3ef",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "c47b261f-251b-4955-bcaf-773d5bae9f74",
+      "position": 11,
+      "properties": {
+        "description": "Create a two-panel storyboard for your program. Spend some time thinking about how you want your sprites to appear or move, both before and after the prompts are answered.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c47b261f-251b-4955-bcaf-773d5bae9f74",
+        "lesson_activity.key": "fef8b559-e04e-4230-8784-f55b3f4abc2e"
+      }
+    },
+    {
+      "key": "d7a4764b-ce9c-4d27-af00-66c83c2724d3",
+      "position": 12,
+      "properties": {
         "progression_name": "Planning",
-        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
@@ -2074,9 +2421,9 @@
     },
     {
       "key": "3dc9ddd6-edc7-4c2a-961f-cb47184cc7b5",
-      "position": 2,
+      "position": 13,
       "properties": {
-        "description": "###Mini-Project (20 mins)\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.",
+        "description": "###Mini-Project (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - On Code Studio…” slide \n\nFor each of the project choices, there are two sub-levels. To begin, pick one of the levels marked \"Part 1\". Once you finish that level, return here and select \"Part 2\" of the same project. \n\nThe first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a \"free play\" which is intended to allow students to make any changes to their code that they like.\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.",
         "progression_name": "Mini-Project: User Input Programs",
         "tips": [
           {
@@ -2094,7 +2441,7 @@
       "key": "a1ce6107-a7bc-4df3-aa37-b089c735c4a3",
       "position": 1,
       "properties": {
-        "description": "**Do This:**  To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n- **Public Demo:**  Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement.\n- **Pair Playtesting:**  Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting.\n- **Gallery Walk:**  Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Showcase” slide\n\n**Do This:**  To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n- **Public Demo:**  Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement.\n- **Pair Playtesting:**  Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting.\n- **Gallery Walk:**  Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.\n",
         "name": "Showcase"
       },
       "seeding_key": {
@@ -6621,7 +6968,7 @@
     {
       "key": "behavior",
       "word": "Behavior",
-      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "definition": "An action in Sprite Lab that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
