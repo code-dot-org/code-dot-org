@@ -89,7 +89,7 @@ function getMakerBlocks(boardType) {
       parent: api,
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'mode'],
-      params: ['"D13"', '"output"'],
+      params: ['13', '"output"'],
       dropdown: {1: ['"output"', '"input"', '"analog"']}
     },
     {
@@ -97,7 +97,7 @@ function getMakerBlocks(boardType) {
       parent: api,
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'value'],
-      params: ['"D13"', '1'],
+      params: ['13', '1'],
       dropdown: {1: ['1', '0']}
     },
     {
