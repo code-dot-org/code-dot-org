@@ -9,11 +9,13 @@ import PadAndCenter from './PadAndCenter';
 import {sectionShape} from './shapes';
 import {
   isAddingSection,
-  beginImportRosterFlow,
-  setRosterProvider,
   editSectionProperties,
   cancelEditingSection
 } from './teacherSectionsRedux';
+import {
+  setRosterProvider,
+  beginImportRosterFlow
+} from '@cdo/apps/code-studio/rosterRedux';
 
 /**
  * UI for a teacher to add a new class section.  For editing a section see

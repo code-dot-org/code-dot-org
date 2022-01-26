@@ -11,13 +11,13 @@ import manageStudents, {
 import teacherSections, {
   setSections,
   selectSection,
-  setRosterProvider,
   setValidAssignments,
   setValidGrades,
   setTextToSpeechUnitIds,
   setLessonExtrasUnitIds,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {setRosterProvider} from '@cdo/apps/code-studio/rosterRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';

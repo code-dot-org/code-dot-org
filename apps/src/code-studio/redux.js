@@ -16,6 +16,7 @@ import verifiedInstructor from './verifiedInstructorRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import roster from '@cdo/apps/code-studio/rosterRedux';
 
 registerReducers({
   header,
@@ -33,7 +34,8 @@ registerReducers({
   projects,
   verifiedInstructor,
   currentUser,
-  arrowDisplay
+  arrowDisplay,
+  roster
 });
 
 export {getStore};

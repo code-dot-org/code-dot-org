@@ -8,9 +8,8 @@ import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
   cancelImportRosterFlow,
-  importOrUpdateRoster,
-  isRosterDialogOpen
-} from './teacherSectionsRedux';
+  importOrUpdateRoster
+} from '@cdo/apps/code-studio/rosterRedux';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
 const ctaButtonStyle = {
@@ -280,10 +279,10 @@ const styles = {
 export const UnconnectedRosterDialog = RosterDialog;
 export default connect(
   state => ({
-    isOpen: isRosterDialogOpen(state),
-    classrooms: state.teacherSections.classrooms,
-    loadError: state.teacherSections.loadError,
-    rosterProvider: state.teacherSections.rosterProvider
+    isOpen: state.roster.isRosterDialogOpen,
+    classrooms: state.roster.classrooms,
+    loadError: state.roster.loadError,
+    rosterProvider: state.roster.rosterProvider
   }),
   {
     handleImport: importOrUpdateRoster,

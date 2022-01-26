@@ -16,7 +16,7 @@ import NpsSurveyBlock from './NpsSurveyBlock';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
-import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
+import {beginGoogleImportRosterFlow} from '@cdo/apps/code-studio/rosterRedux';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
 
