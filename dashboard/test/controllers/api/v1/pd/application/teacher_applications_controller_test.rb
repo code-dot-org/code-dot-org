@@ -61,7 +61,7 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
-    test 'do not send principal approval email on successful create if RP has selective principal approval' do
+    test 'does not send principal approval email on successful create if RP has selective principal approval' do
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
@@ -121,29 +121,62 @@ module Api::V1::Pd::Application
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
     end
 
-    # [MEG] TODO: verify update of params with fewer (and no) params
-    test 'updating an application modifies form data' do
-      sign_in @applicant
-      @updated_form_data = build(TEACHER_APPLICATION_HASH_FACTORY).merge(
-        {
-          "firstName": "Harry",
-          "program": "Computer Science Discoveries (appropriate for 6th - 10th grade)",
-          "csdWhichGrades": ["8"]
-        }.stringify_keys
+    test 'does not update course hours nor autoscore on successful create if application status is incomplete' do
+      Pd::Application::TeacherApplication.expects(:auto_score).never
+      Pd::Application::TeacherApplication.expects(:queue_email).never
+
+      application_hash = build(
+        TEACHER_APPLICATION_HASH_FACTORY,
+        cs_how_many_minutes: 45,
+        cs_how_many_days_per_week: 5,
+        cs_how_many_weeks_per_year: 30
       )
 
-      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
-      put :update, params: {id: application.id, form_data: @updated_form_data}
+      sign_in @applicant
+      put :create, params: {form_data: application_hash.merge({status: 'incomplete'})}
+
+      assert_nil TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
+    end
+
+    test 'can submit an empty form if application is incomplete' do
+      sign_in @applicant
+      put :create, params: {form_data: {status: 'incomplete'}}
+
+      assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
+      assert_response :created
+    end
+
+    test 'updating an application with empty, incomplete form correctly updates attributes' do
+      application = create TEACHER_APPLICATION_FACTORY, status: 'incomplete', user: @applicant
+      original_school_info = application.user.school_info
+
+      assert application.first_name
+      assert application.course
+
+      sign_in @applicant
+      no_form_content = {status: 'incomplete'}
+      put :update, params: {id: application.id, form_data: no_form_content}
       application.reload
-      assert_equal @updated_form_data, application.form_data_hash
+
+      assert_nil application.first_name
+      assert_nil application.course
+      assert_equal original_school_info, application.user.school_info
+      assert_equal no_form_content.to_json, application.form_data
       assert_response :ok
     end
 
     test 'updating an application with an error renders bad_request' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
-      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
 
+      errored_form_data = build(TEACHER_APPLICATION_HASH_FACTORY).merge(
+        {
+          "program": ""
+        }.stringify_keys
+      )
+      put :update, params: {id: application.id, form_data: errored_form_data}
+
+      application.reload
       assert_response :bad_request
     end
 

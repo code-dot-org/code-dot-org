@@ -84,12 +84,12 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
+    before_validation :set_course_from_program
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_validation :set_course_from_program, unless: -> {program.nil?}
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     before_save :log_status, if: -> {status_changed?}
 
     serialized_attrs %w(
@@ -102,11 +102,13 @@ module Pd::Application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info
     # 2. User doesn't have a specific school? overwrite with the custom school info.
+    # Will only update the school info if we have enough information for it
+    # An incomplete application may not have all the information we need to update
     def update_user_school_info!
-      if school_id || user.school_info.try(&:school).nil?
-        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_school_info(school_info)
-      end
+      return unless school_id || user.school_info.try(&:school).nil?
+      school_info = school_info_attr
+      return unless school_info
+      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
     end
 
     def update_scholarship_status(scholarship_status)
@@ -137,6 +139,11 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_status
+      hash = sanitize_form_data_hash
+      self.status = hash[:status] if hash[:status]
     end
 
     def save_partner
@@ -263,6 +270,8 @@ module Pd::Application
       raw_school_id.to_i == -1 ? nil : raw_school_id
     end
 
+    # If we have enough information for the school attributes, returns either the school id or the school information
+    # Returns nil if we do not have enough information for the school (can happen on an incomplete application)
     def school_info_attr
       if school_id
         {
@@ -270,6 +279,7 @@ module Pd::Application
         }
       else
         hash = sanitize_form_data_hash
+        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
@@ -1146,12 +1156,14 @@ module Pd::Application
       0
     end
 
-    # Called after the application is created. Do any manipulation needed for the form data
-    # hash here, as well as send emails
-    # [MEG] TODO: should only do a lot of this on a completed submitted application
     def on_successful_create
       update_user_school_info!
-      queue_email :confirmation, deliver_now: true unless status == 'incomplete'
+      on_completed_application unless status == 'incomplete'
+      save
+    end
+
+    def on_completed_application
+      queue_email :confirmation, deliver_now: true
 
       form_data_hash = sanitize_form_data_hash
 
@@ -1165,13 +1177,10 @@ module Pd::Application
         }
       )
 
-      auto_score! unless status == 'incomplete'
-      save
+      auto_score!
 
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        unless status == 'incomplete'
-          queue_email :principal_approval, deliver_now: true
-        end
+        queue_email :principal_approval, deliver_now: true
       end
     end
 

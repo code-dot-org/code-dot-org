@@ -110,6 +110,7 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
+    validate :status_is_valid_for_application_type
     before_save :update_accepted_date, if: :status_changed?
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     after_destroy :delete_unsent_email
@@ -222,7 +223,6 @@ module Pd::Application
     # This is equivalent to
     #   validates_inclusion_of :status, in: statuses
     # but it will work with derived classes that override statuses
-    validate :status_is_valid_for_application_type
     def status_is_valid_for_application_type
       unless status.nil? || self.class.statuses.include?(status)
         errors.add(:status, 'is not included in the list.')
