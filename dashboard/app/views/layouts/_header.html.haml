@@ -156,9 +156,3 @@
 - elsif level
   :javascript
     dashboard.header.buildProjectInfoOnly()
-
--# If the page is cached, the sign-in button / user menu must be loaded separately
--# by the client.
-- if @public_caching
-  :javascript
-    dashboard.header.buildUserMenu()
