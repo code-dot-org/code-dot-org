@@ -30,7 +30,8 @@ module Pd::Application
     end
 
     test 'default status is unreviewed' do
-      application = create TEACHER_APPLICATION_FACTORY
+      application = ApplicationBase.new
+      application.save
 
       assert_equal 'unreviewed', application.status
       assert application.unreviewed?
