@@ -16,14 +16,14 @@ function drawTimer(){
     ellipse(timerX, timerY, 25, 25);
     fill("black");
     noStroke();
-    var angle=World.seconds%60*6;
+    var angle=getTime("seconds")%60*6;
     angle-=90;
     arc(timerX,timerY,18,18,270,angle+10);
     stroke("white");
     textAlign(RIGHT, CENTER);
     strokeWeight(5);
     textSize(20);
-    text(World.seconds,timerX-20,timerY);
+    text(getTime("seconds"),timerX-20,timerY);
     pop();
   }
 }

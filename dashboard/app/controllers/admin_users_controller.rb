@@ -118,13 +118,9 @@ class AdminUsersController < ApplicationController
 
   # GET /admin/user_progress
   def user_progress_form
-    user_identifier = params[:user_identifier]
     script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
-    if user_identifier
-      user_identifier.strip!
-      @target_user = User.from_identifier(user_identifier)
-      flash[:alert] = 'User not found' unless @target_user
-    end
+
+    set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
       @user_scripts = UserScript.
@@ -133,6 +129,30 @@ class AdminUsersController < ApplicationController
         limit(100).
         offset(script_offset)
     end
+  end
+
+  # GET /admin/user_projects
+  # This page takes an optional user_identifier param and renders a page with the users active and deleted projects
+  def user_projects_form
+    set_target_user_from_identifier(params[:user_identifier])
+
+    if @target_user
+      @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'active')
+      @deleted_projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'deleted')
+    end
+  end
+
+  # PUT /admin/user_project
+  # This page takes a user_id and channel param and un-deletes the project and then refreshes the user_projects_form
+  def user_project_restore_form
+    user_id = params[:user_id]
+    channel = params[:channel]
+
+    if channel.present? && user_id.present?
+      StorageApps.new(storage_id_for_user_id(user_id)).restore(channel)
+    end
+
+    redirect_to action: "user_projects_form", user_identifier: user_id
   end
 
   # GET /admin/delete_progress
@@ -307,5 +327,13 @@ class AdminUsersController < ApplicationController
   def page_size
     return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
     params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
+  end
+
+  def set_target_user_from_identifier(user_identifier)
+    if user_identifier
+      user_identifier.strip!
+      @target_user = User.from_identifier(user_identifier)
+      flash[:alert] = 'User not found' unless @target_user
+    end
   end
 end
