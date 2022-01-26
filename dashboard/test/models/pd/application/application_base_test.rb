@@ -36,6 +36,15 @@ module Pd::Application
       assert application.unreviewed?
     end
 
+    test 'form data overwrites default status' do
+      application = create TEACHER_APPLICATION_FACTORY, form_data: {status: 'incomplete'}.to_json
+      application.update_status_timestamp_change_log(nil)
+
+      assert application.incomplete?
+      assert_equal application.sanitize_status_timestamp_change_log.length, 1
+      assert application.sanitize_status_timestamp_change_log[0].value?('incomplete')
+    end
+
     test 'can update status' do
       application = create FACILITATOR_APPLICATION_FACTORY
       assert application.unreviewed?

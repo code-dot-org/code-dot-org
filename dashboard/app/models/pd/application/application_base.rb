@@ -55,7 +55,8 @@ module Pd::Application
     belongs_to :regional_partner
 
     before_validation :set_type_and_year
-    before_validation -> {self.status = :unreviewed}, if: :new_record?
+    before_validation -> {self.status = (sanitize_form_data_hash && sanitize_form_data_hash[:status] || :unreviewed)},
+      if: -> {form_data_changed? || new_record?}
 
     validate :status_is_valid_for_application_type
     validates_presence_of :type
@@ -89,7 +90,7 @@ module Pd::Application
       self.application_type = nil
     end
 
-    %w(accepted pending unreviewed waitlisted).each do |attribute|
+    %w(accepted incomplete pending unreviewed waitlisted).each do |attribute|
       define_method(:"#{attribute}?") do
         status == attribute
       end
