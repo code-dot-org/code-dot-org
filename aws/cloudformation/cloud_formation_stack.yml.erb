@@ -160,8 +160,11 @@ Resources:
       Port: 80
       Protocol: HTTP
       DefaultActions:
-      - Type: forward
-        TargetGroupArn: !Ref ALBTargetGroup
+      - Type: fixed-response
+        FixedResponseConfig:
+          ContentType: text/plain
+          MessageBody: Access Denied
+          StatusCode: 403
 
   HTTPSListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
@@ -173,8 +176,28 @@ Resources:
       - CertificateArn: <%=certificate_arn%>
       SslPolicy: ELBSecurityPolicy-2016-08
       DefaultActions:
-      - Type: forward
-        TargetGroupArn: !Ref ALBTargetGroup
+      - Type: fixed-response
+        FixedResponseConfig:
+          ContentType: text/plain
+          MessageBody: Access Denied
+          StatusCode: 403
+
+  # Create a rule for each listener to allow traffic with the cloudfront header
+  <%- %w(HTTPListener HTTPSListener).each do |listener| -%>
+  CloudFrontOnly<%=listener%>Rule:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      ListenerArn: !Ref <%=listener%>
+      Actions:
+        - Type: forward
+          TargetGroupArn: !Ref ALBTargetGroup
+      Conditions:
+        - Field: http-header
+          HttpHeaderConfig:
+            HttpHeaderName: X-Cdo-Cloudfront-Allow
+            Values:
+              - '{{resolve:secretsmanager:<%=environment%>/cdo/cloudfront_secret_header_value}}'
+  <%- end -%>
 
   ALBTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
