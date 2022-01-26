@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-01-25 17:31:51 UTC",
+    "serialized_at": "2022-01-26 20:51:34 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -179,7 +179,7 @@
     },
     {
       "key": "Hello World: Food",
-      "name": "Hello World: Food",
+      "name": "Hello World",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1767,7 +1767,7 @@
       "key": "66c1f19a-bfc9-4569-8b6c-c0eb3b6336ae",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n",
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do we use sprites in our programs?_\n\n",
         "name": "Setting the Stage"
       },
       "seeding_key": {
@@ -1776,8 +1776,43 @@
       }
     },
     {
-      "key": "0dfd76e3-4d45-4581-b98f-141d1fcfc804",
+      "key": "c348bc71-c908-4f5f-8ebe-b5dcd92cd4dc",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide",
+        "name": "A Series of Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "c348bc71-c908-4f5f-8ebe-b5dcd92cd4dc",
+        "lesson_activity.key": "a18d4bd3-bd12-49fd-9ce0-be5a87553023"
+      }
+    },
+    {
+      "key": "6ab89428-3831-40d4-982b-7516657f1fed",
+      "position": 3,
+      "properties": {
+        "description": "*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6ab89428-3831-40d4-982b-7516657f1fed",
+        "lesson_activity.key": "a18d4bd3-bd12-49fd-9ce0-be5a87553023"
+      }
+    },
+    {
+      "key": "fc9b73f1-5742-4de6-ba32-d70445934ec1",
+      "position": 4,
+      "properties": {
+        "description": "Today, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other."
+      },
+      "seeding_key": {
+        "activity_section.key": "fc9b73f1-5742-4de6-ba32-d70445934ec1",
+        "lesson_activity.key": "a18d4bd3-bd12-49fd-9ce0-be5a87553023"
+      }
+    },
+    {
+      "key": "0dfd76e3-4d45-4581-b98f-141d1fcfc804",
+      "position": 5,
       "properties": {
         "description": "*In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.*\n\n*Today you’ll be writing \"code\", which just means a set of instructions that a computer can understand. When you write a story, you need to think carefully about the words you use. When you write code, you’ll need to think carefully about the instructions you are giving to your computer.*\n",
         "remarks": true
@@ -1803,6 +1838,7 @@
       "key": "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide\n",
         "name": "Hello World",
         "progression_name": "Hello World"
       },
@@ -1826,7 +1862,7 @@
       "key": "ebbcd2fa-1991-41d3-a054-232b53cf8f17",
       "position": 1,
       "properties": {
-        "description": "####Debrief\nAsk students to reflect on the day’s activities. What did they learn about coding? Sprites? Events?\n\nHow do they feel about computer science and coding after spending one hour exploring?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
