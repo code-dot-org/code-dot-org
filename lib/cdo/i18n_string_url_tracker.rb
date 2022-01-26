@@ -61,13 +61,17 @@ class I18nStringUrlTracker
   # @param string_key [String] The key used to review the translated string from our i18n system.
   # @param url [String] The url which required the translation of the given string_key.
   # @param source [String] Context about where the string lives e.g. 'ruby', 'maze', 'turtle', etc
-  def log(normalized_key, url, source, string_key, scope, separator)
+  def log(url, source, string_key, scope, separator)
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
     # Skip URLs we are not interested in.
     return unless allowed(url)
 
     url = normalize_url(url)
     return unless string_key && url && source
+
+    # We use -> as the separator in the normalized_key for ease of searching in Crowdin, and to prevent keys
+    # that include a . from getting split in two.
+    normalized_key = I18n.normalize_keys(nil, string_key, scope, ' -> ').join(' -> ')
 
     # Reverse the URL encoding on special characters so the human readable characters are logged.
     logged_url = CGI.unescape(url)

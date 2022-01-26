@@ -151,10 +151,7 @@ module Cdo
         # sufficient, then refactor the SmartTranslate module so we can use `get_valid_separator` here.
         separator = options[:separator] || ::I18n.default_separator
         # We don't pass in a locale because we want the union of all string keys across all locales.
-        # We use -> as the separator in the normalized_key for ease of searching in Crowdin, and to prevent keys
-        # that include a . from getting split in two.
-        normalized_key = ::I18n.normalize_keys(nil, key, scope, ' -> ').join(' -> ')
-        I18nStringUrlTracker.instance.log(normalized_key, url, 'ruby', key, scope, separator) if normalized_key && url
+        I18nStringUrlTracker.instance.log(url, 'ruby', key, scope, separator) if key && url
         result
       end
     end
