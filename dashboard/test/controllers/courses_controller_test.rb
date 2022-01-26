@@ -130,6 +130,17 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csd-2019'
   end
 
+  test "get_unit_group for family name with no stable versions does not redirect" do
+    Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
+    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
+    offering = create :course_offering, key: 'csd'
+    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {course_name: 'csd'}
+    end
+  end
+
   test 'redirect to latest standards in course family' do
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
     Rails.cache.delete("valid_courses/all")
