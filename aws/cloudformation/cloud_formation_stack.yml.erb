@@ -132,7 +132,7 @@ Resources:
 %>
 <% end -%>
 <% if load_balancer -%>
-  # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
+  # TODO hourofcode.com and load balancers should be added to this template.
   <%- raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
 
   ALB:
@@ -238,7 +238,7 @@ Resources:
 <% end -%>
 
 # Route53 (DNS) and CloudFront (CDN) resources:
-# TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+# TODO hourofcode.com DNS/CDN resources should be added to this template.
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
