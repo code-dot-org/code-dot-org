@@ -64,7 +64,9 @@ class I18nStringUrlTracker
   # @param scope [Array] Array of strings representing the hierarchy leading up to the string_key.
   # @param separator [String] The separator string used by I18n to concatenate the string_key hierarchy
   #        into a single normalized string.
-  def log(url, source, string_key, scope, separator)
+  def log(url, source, string_key, scope = nil, separator = nil)
+    scope ||= []
+    separator ||= I18n.default_separator
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
     # Skip URLs we are not interested in.
     return unless allowed(url)

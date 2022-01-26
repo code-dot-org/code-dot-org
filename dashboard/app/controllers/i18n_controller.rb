@@ -29,7 +29,7 @@ class I18nController < ApplicationController
     # We don't expect these strings to have a scope or unique separator.
     # If that changes, this endpoint will need to be updated to account for that.
     string_keys.each do |string_key|
-      I18nStringUrlTracker.instance.log(url, source, string_key, [], '.')
+      I18nStringUrlTracker.instance.log(url, source, string_key)
     end
 
     head :ok
