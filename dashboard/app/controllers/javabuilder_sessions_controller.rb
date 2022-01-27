@@ -17,7 +17,7 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
-    use_content_manager = params[:useContentManager]
+    use_dashboard_sources = params[:useDashboardSources]
     mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
     if !channel_id || !project_version || !project_url || !execution_type || !mini_app_type
@@ -48,7 +48,7 @@ class JavabuilderSessionsController < ApplicationController
       level_id: level_id,
       execution_type: execution_type,
       mini_app_type: mini_app_type,
-      use_content_manager: use_content_manager,
+      use_dashboard_sources: use_dashboard_sources,
       options: options
     }
 
