@@ -92,7 +92,7 @@ export default class SetupChecklist extends Component {
 
       // What type of board is this?
       .then(() => {
-        this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+        this.setState({boardTypeDetected: BOARD_TYPE.OTHER});
         if (experiments.isEnabled('microbit')) {
           console.log('Board detected: ' + setupChecker.detectBoardType());
         }
@@ -231,13 +231,34 @@ export default class SetupChecklist extends Component {
         firmataURL:
           'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit'
       });
-    } else {
+    } else if (
+      this.state.boardTypeDetected === BOARD_TYPE.EXPRESS ||
+      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+    ) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
         firmataURLExpress:
           'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd',
         firmataURLClassic:
           'https://learn.adafruit.com/circuit-playground-firmata/overview'
       });
+    } else {
+      if (experiments.isEnabled('microbit')) {
+        firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
+          firmataURLExpress:
+            'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd',
+          firmataURLClassic:
+            'https://learn.adafruit.com/circuit-playground-firmata/overview',
+          firmataURLMB:
+            'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit'
+        });
+      } else {
+        firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
+          firmataURLExpress:
+            'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd',
+          firmataURLClassic:
+            'https://learn.adafruit.com/circuit-playground-firmata/overview'
+        });
+      }
     }
     return (
       <div style={styles.suggestionHeader}>
