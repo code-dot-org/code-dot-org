@@ -404,6 +404,18 @@ class FilesApi < Sinatra::Base
       return bad_request if share_failure && share_failure[:type] != "address"
     end
 
+    # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
+    if 'sources' == endpoint
+      body_json = JSON.parse(body)
+      source = body_json["source"]
+      html = body_json["html"]
+
+      source_is_valid = source && source.force_encoding("UTF-8").valid_encoding?
+      html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true # HTML only exists for AppLab projects
+
+      return bad_request unless source_is_valid && html_is_valid
+    end
+
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
 
