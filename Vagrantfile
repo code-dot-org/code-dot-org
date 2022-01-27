@@ -40,7 +40,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     aptitude update
     aptitude upgrade
-    DEBIAN_FRONTEND=noninteractive aptitude install -q -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev
+    DEBIAN_FRONTEND=noninteractive aptitude install -q -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl ruby2.0 ruby2.0-dev
     ln -sf /usr/bin/ruby2.0 /usr/bin/ruby
     ln -sf /usr/bin/gem2.0 /usr/bin/gem
   SHELL
