@@ -26,6 +26,13 @@ const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 
+const MICROBIT_FIRMATA_URL =
+  'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
+const EXPRESS_FIRMATA_URL =
+  'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
+const CLASSIC_FIRMATA_URL =
+  'https://learn.adafruit.com/circuit-playground-firmata/overview';
+
 const initialState = {
   isDetecting: false,
   caughtError: null,
@@ -228,35 +235,28 @@ export default class SetupChecklist extends Component {
     let firmataMarkdown;
     if (this.state.boardTypeDetected === BOARD_TYPE.MICROBIT) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataMB({
-        firmataURL:
-          'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit'
+        firmataURL: MICROBIT_FIRMATA_URL
       });
     } else if (
       this.state.boardTypeDetected === BOARD_TYPE.EXPRESS ||
       this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
     ) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
-        firmataURLExpress:
-          'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd',
-        firmataURLClassic:
-          'https://learn.adafruit.com/circuit-playground-firmata/overview'
+        firmataURLExpress: EXPRESS_FIRMATA_URL,
+        firmataURLClassic: CLASSIC_FIRMATA_URL
       });
     } else {
+      // Board Type is Other/Unknown
       if (experiments.isEnabled('microbit')) {
         firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
-          firmataURLExpress:
-            'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd',
-          firmataURLClassic:
-            'https://learn.adafruit.com/circuit-playground-firmata/overview',
-          firmataURLMB:
-            'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit'
+          firmataURLExpress: EXPRESS_FIRMATA_URL,
+          firmataURLClassic: CLASSIC_FIRMATA_URL,
+          firmataURLMB: MICROBIT_FIRMATA_URL
         });
       } else {
         firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
-          firmataURLExpress:
-            'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd',
-          firmataURLClassic:
-            'https://learn.adafruit.com/circuit-playground-firmata/overview'
+          firmataURLExpress: EXPRESS_FIRMATA_URL,
+          firmataURLClassic: CLASSIC_FIRMATA_URL
         });
       }
     }
