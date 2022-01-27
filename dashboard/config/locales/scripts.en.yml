@@ -30508,7 +30508,7 @@ en:
               description_student: 'Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
               description_teacher: 'In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
             'Hello World: Food':
-              name: 'Hello World: Food'
+              name: Hello World
               description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
               description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups:
