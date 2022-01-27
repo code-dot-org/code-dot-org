@@ -2,8 +2,7 @@ import {
   WebSocketMessageType,
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
-  ExecutionType,
-  ContentManagerType
+  ExecutionType
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -59,7 +58,7 @@ export default class JavabuilderConnection {
         levelId: this.levelId,
         options: this.options,
         executionType: this.executionType,
-        contentManagerType: ContentManagerType.DASHBOARD,
+        useContentManager: false,
         miniAppType: this.miniAppType
       }
     })
