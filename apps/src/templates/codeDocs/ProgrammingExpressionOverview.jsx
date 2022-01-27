@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import Example from './Example';
 import ParametersTable from './ParametersTable';
+import NavigationBar from './NavigationBar';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import i18n from '@cdo/locale';
 import {
@@ -77,6 +78,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
 
   return (
     <div>
+      <NavigationBar />
       <div>{getTitle()}</div>
       <div>
         <strong>{`${i18n.category()}:`}</strong>
