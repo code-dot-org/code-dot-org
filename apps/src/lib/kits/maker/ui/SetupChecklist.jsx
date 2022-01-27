@@ -240,7 +240,7 @@ export default class SetupChecklist extends Component {
       });
     }
     return (
-      <div>
+      <div style={styles.suggestionHeader}>
         <SafeMarkdown markdown={firmataMarkdown} />
       </div>
     );
@@ -329,3 +329,9 @@ function promiseWaitFor(ms) {
     setTimeout(resolve, ms);
   });
 }
+
+const styles = {
+  suggestionHeader: {
+    marginTop: 15
+  }
+};
