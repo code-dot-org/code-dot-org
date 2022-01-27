@@ -58,7 +58,7 @@ export default class JavabuilderConnection {
         levelId: this.levelId,
         options: this.options,
         executionType: this.executionType,
-        useContentManager: false,
+        useDashboardSources: true,
         miniAppType: this.miniAppType
       }
     })
