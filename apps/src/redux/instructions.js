@@ -28,7 +28,8 @@ const SET_DYNAMIC_INSTRUCTIONS_KEY =
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 const SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK =
   'instructions/SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK';
-const SET_TTS_AUTOPLAY_ENABLED = 'instructions/SET_TTS_AUTOPLAY_ENABLED';
+const SET_TTS_AUTOPLAY_ENABLED_FOR_PARTICIPANT =
+  'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_PARTICIPANT';
 
 /**
  * Some scenarios:
@@ -63,7 +64,9 @@ const instructionsInitialState = {
   maxAvailableHeight: Infinity,
   allowResize: true,
   hasAuthoredHints: false,
-  ttsAutoplayEnabled: false,
+  // represents if the user is in any unarchived section where tts autoplay is enabled
+  // logic defined in script_levels_controller#show
+  ttsAutoplayEnabledForParticipant: false,
   overlayVisible: false,
   levelVideos: [],
   mapReference: undefined,
@@ -161,9 +164,9 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === SET_TTS_AUTOPLAY_ENABLED) {
+  if (action.type === SET_TTS_AUTOPLAY_ENABLED_FOR_PARTICIPANT) {
     return Object.assign({}, state, {
-      ttsAutoplayEnabled: action.ttsAutoplayEnabled
+      ttsAutoplayEnabledForParticipant: action.ttsAutoplayEnabledForParticipant
     });
   }
 
@@ -274,9 +277,9 @@ export const setHasAuthoredHints = hasAuthoredHints => ({
   hasAuthoredHints
 });
 
-export const setTtsAutoplayEnabled = ttsAutoplayEnabled => ({
-  type: SET_TTS_AUTOPLAY_ENABLED,
-  ttsAutoplayEnabled
+export const setTtsAutoplayEnabledForParticipant = ttsAutoplayEnabledForParticipant => ({
+  type: SET_TTS_AUTOPLAY_ENABLED_FOR_PARTICIPANT,
+  ttsAutoplayEnabledForParticipant
 });
 
 export const setFeedback = feedback => ({
