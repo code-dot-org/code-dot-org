@@ -29,8 +29,6 @@ const TeacherApplication = props => {
   } = props;
 
   const getInitialData = () => {
-    // [MEG] TODO: Show savedFormData whenever it is present
-    // to avoid weirdness if changing allowPartialSaving states
     const dataOnPageLoad = savedFormData && JSON.parse(savedFormData);
 
     // Extract school info saved in sessionStorage, if any
