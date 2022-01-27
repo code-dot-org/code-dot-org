@@ -164,10 +164,12 @@ class Script < ApplicationRecord
   after_save :check_course_type_settings
 
   def check_course_type_settings
-    errors.add(:published_state, 'must be set on the unit or passed down from the course.') unless get_published_state
-    errors.add(:instructor_audience, 'must be set for standalone unit or passed down from the course for a unit in a course.') unless get_instructor_audience
-    errors.add(:participant_audience, 'must be set for standalone unit or passed down from the course for a unit in a course.') unless get_participant_audience
-    errors.add(:instruction_type, 'must be set for standalone unit or passed down from the course for a unit in a course.') unless get_instruction_type
+    if unit_group.nil?
+      raise 'Published state must be set on the unit if its not in a course.' if published_state.nil?
+      raise 'Instructor audience must be set on the unit if its not in a course.' if instructor_audience.nil?
+      raise 'Participant audience must be set on the unit if its not in a course.' if participant_audience.nil?
+      raise 'Instruction type must be set on the unit if its not in a course.' if instruction_type.nil?
+    end
   end
 
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
