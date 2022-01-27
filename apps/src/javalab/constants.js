@@ -117,7 +117,9 @@ export const MediaExceptionType = makeEnum('IMAGE_LOAD_ERROR');
 
 export const TheaterExceptionType = makeEnum(
   'DUPLICATE_PLAY_COMMAND',
-  'INVALID_SHAPE'
+  'INVALID_SHAPE',
+  'VIDEO_TOO_LONG',
+  'VIDEO_TOO_LARGE'
 );
 
 export const PlaygroundExceptionType = {

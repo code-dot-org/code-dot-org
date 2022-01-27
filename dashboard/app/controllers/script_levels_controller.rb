@@ -74,7 +74,7 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
-  use_database_pool show: :persistent
+  use_reader_connection_for_route(:show)
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
@@ -534,7 +534,8 @@ class ScriptLevelsController < ApplicationController
       authenticity_token: form_authenticity_token,
       disallowed_html_tags: disallowed_html_tags
     )
-    readonly_view_options if @level.channel_backed? && params[:version]
+
+    readonly_view_options if @level.channel_backed? && params[:version].present?
 
     # Add video generation URL for only the last level of Dance
     # If we eventually want to add video generation for other levels or level

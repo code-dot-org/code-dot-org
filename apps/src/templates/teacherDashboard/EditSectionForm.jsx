@@ -24,8 +24,6 @@ import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-import experiments from '@cdo/apps/util/experiments';
-
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
  */
@@ -181,11 +179,6 @@ class EditSectionForm extends Component {
     const showLoginTypeField =
       !isNewSection && changeableLoginTypes.includes(section.loginType);
 
-    // These are server-side experiments, which are passed down to the client
-    const showCodeReviewEnabledCheckbox =
-      experiments.isEnabled('csa-pilot') ||
-      experiments.isEnabled('csa-pilot-facilitators');
-
     if (!section) {
       return null;
     }
@@ -233,15 +226,6 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {showCodeReviewEnabledCheckbox && (
-            <CodeReviewField
-              value={section.codeReviewEnabled}
-              onChange={codeReviewEnabled =>
-                editSectionProperties({codeReviewEnabled})
-              }
-              disabled={isSaveInProgress}
-            />
-          )}
           {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
@@ -463,15 +447,6 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
   </div>
 );
 PairProgrammingField.propTypes = FieldProps;
-
-const CodeReviewField = ({value, onChange, disabled}) => (
-  <div>
-    <FieldName>{i18n.enablePeerFeedback()}</FieldName>
-    <FieldDescription>{i18n.enablePeerFeedbackDescription()}</FieldDescription>
-    <YesNoDropdown value={value} onChange={onChange} disabled={disabled} />
-  </div>
-);
-CodeReviewField.propTypes = FieldProps;
 
 const RestrictAccessField = ({value, onChange, disabled, loginType}) => {
   const {clever, google_classroom} = SectionLoginType;

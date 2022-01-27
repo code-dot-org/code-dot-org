@@ -22,6 +22,7 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
+import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -44,7 +45,6 @@ class UnitOverview extends React.Component {
     courseName: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
-    minimal: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
@@ -53,6 +53,7 @@ class UnitOverview extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
+    completedLessonNumber: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -99,7 +100,6 @@ class UnitOverview extends React.Component {
       showAssignButton,
       userId,
       assignedSectionId,
-      minimal,
       showCalendar,
       weeklyInstructionalMinutes,
       unitCalendarLessons,
@@ -107,7 +107,8 @@ class UnitOverview extends React.Component {
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
       showUnversionedRedirectWarning,
-      isCsdOrCsp
+      isCsdOrCsp,
+      completedLessonNumber
     } = this.props;
 
     const displayRedirectDialog =
@@ -123,6 +124,9 @@ class UnitOverview extends React.Component {
 
     return (
       <div>
+        {completedLessonNumber && (
+          <EndOfLessonDialog lessonNumber={completedLessonNumber} />
+        )}
         <div>
           {showUnversionedRedirectWarningDialog && (
             <UnversionedScriptRedirectDialog />
@@ -175,7 +179,7 @@ class UnitOverview extends React.Component {
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
           />
         </div>
-        <ProgressTable minimal={minimal} />
+        <ProgressTable minimal={false} />
         <ProgressLegend
           includeCsfColumn={!excludeCsfColumnInLegend}
           includeReviewStates={isCsdOrCsp}

@@ -2,5 +2,6 @@
   "key": "atTime",
   "name": "atTime",
   "category": "Events",
+  "block_name": "gamelab_atTime",
   "syntax": "atTime"
 }
