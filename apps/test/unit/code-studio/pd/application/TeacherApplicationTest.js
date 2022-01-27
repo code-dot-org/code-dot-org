@@ -124,7 +124,7 @@ describe('TeacherApplication', () => {
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
     });
-    it('does not include saved form data if partial saving is not allowed', () => {
+    it('includes saved form data even if partial saving is not allowed', () => {
       teacherApplication.mergeProps({
         savedFormData,
         schoolId,
@@ -133,6 +133,7 @@ describe('TeacherApplication', () => {
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal({
+        ...parsedData,
         school: schoolId
       });
     });
