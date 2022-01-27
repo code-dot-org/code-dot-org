@@ -8,7 +8,7 @@ class AdminHocController < ApplicationController
   check_authorization
 
   def students_served
-    MultipleDatabasesTransitionHelper.use_persistent_read_connection do
+    MultipleDatabasesTransitionHelper.use_reader_connection do
       @data = Properties.get(:hoc_metrics)
     end
   end
