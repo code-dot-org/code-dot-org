@@ -22,7 +22,6 @@ const TeacherApplication = props => {
   const {
     // [MEG] TODO: remove allowPartialSaving prop when experiment is complete (TeacherApps will always have this option)
     // instead, pass in allowPartialSaving prop to FormController
-    allowPartialSaving,
     savedFormData,
     accountEmail,
     userId,
@@ -32,8 +31,7 @@ const TeacherApplication = props => {
   const getInitialData = () => {
     // [MEG] TODO: Show savedFormData whenever it is present
     // to avoid weirdness if changing allowPartialSaving states
-    const dataOnPageLoad =
-      allowPartialSaving && savedFormData && JSON.parse(savedFormData);
+    const dataOnPageLoad = savedFormData && JSON.parse(savedFormData);
 
     // Extract school info saved in sessionStorage, if any
     const reloadedSchoolId = JSON.parse(
