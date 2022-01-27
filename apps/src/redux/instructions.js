@@ -28,6 +28,7 @@ const SET_DYNAMIC_INSTRUCTIONS_KEY =
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 const SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK =
   'instructions/SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK';
+const SET_TTS_AUTOPLAY_ENABLED = 'instructions/SET_TTS_AUTOPLAY_ENABLED';
 
 /**
  * Some scenarios:
@@ -62,6 +63,7 @@ const instructionsInitialState = {
   maxAvailableHeight: Infinity,
   allowResize: true,
   hasAuthoredHints: false,
+  ttsAutoplayEnabled: false,
   overlayVisible: false,
   levelVideos: [],
   mapReference: undefined,
@@ -156,6 +158,12 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   if (action.type === SET_HAS_AUTHORED_HINTS) {
     return Object.assign({}, state, {
       hasAuthoredHints: action.hasAuthoredHints
+    });
+  }
+
+  if (action.type === SET_TTS_AUTOPLAY_ENABLED) {
+    return Object.assign({}, state, {
+      ttsAutoplayEnabled: action.ttsAutoplayEnabled
     });
   }
 
@@ -264,6 +272,11 @@ export const setAllowInstructionsResize = allowResize => ({
 export const setHasAuthoredHints = hasAuthoredHints => ({
   type: SET_HAS_AUTHORED_HINTS,
   hasAuthoredHints
+});
+
+export const setTtsAutoplayEnabled = ttsAutoplayEnabled => ({
+  type: SET_TTS_AUTOPLAY_ENABLED,
+  ttsAutoplayEnabled
 });
 
 export const setFeedback = feedback => ({
