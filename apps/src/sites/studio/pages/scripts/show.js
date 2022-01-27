@@ -103,6 +103,8 @@ function initPage() {
   $('.user-stats-block').prepend(mountPoint);
 
   const completedLessonNumber = queryParams('completedLessonNumber');
+  // This query param is immediately removed so that it is not included in the links
+  // rendered on this page
   updateQueryParam('completedLessonNumber', undefined);
 
   ReactDOM.render(
