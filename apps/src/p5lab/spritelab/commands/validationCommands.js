@@ -82,7 +82,7 @@ export const commands = {
     this.validationTimes.delay = frames;
   },
 
-  setCriteria(predicate, feedback) {
+  addCriteria(predicate, feedback) {
     if (typeof predicate === 'function' && typeof feedback === 'string') {
       this.criteria.push(new criteria(predicate, feedback));
     }
@@ -99,6 +99,7 @@ export const commands = {
     if (this.currentFrame() <= this.validationTimes.wait) {
       commands.checkAllCriteria(this.criteria);
     } else {
+      //If wait time is over, determine if student passes or fails
       var results = {};
       if (state === 'fail') {
         results = {
