@@ -155,16 +155,18 @@ class SourcesTest < FilesApiTestBase
   def test_404_on_version_not_found
     filename = MAIN_JSON
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    file_data = '{"src":"first"}'
     delete_all_source_versions(filename)
 
     # Upload a file
-    @api.put_object(filename, 'first', file_headers)
+    @api.put_object(filename, file_data, file_headers)
     assert successful?
     v1 = JSON.parse(last_response.body)['versionId']
 
     # Overwrite the first version
     # (This operation deletes the first version)
-    @api.put_object_version(filename, v1, 'second', file_headers)
+    new_file_data = '{"src":"second"}'
+    @api.put_object_version(filename, v1, new_file_data, file_headers)
     assert successful?
     v2 = JSON.parse(last_response.body)['versionId']
 
@@ -304,7 +306,7 @@ class SourcesTest < FilesApiTestBase
     Timecop.freeze
 
     filename = 'main.json'
-    file_data = 'version 1'
+    file_data = '{"src":"version 1"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -316,7 +318,7 @@ class SourcesTest < FilesApiTestBase
 
     Timecop.travel 1
 
-    file_data = 'version 2'
+    file_data = '{"src":"version 2"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -333,7 +335,7 @@ class SourcesTest < FilesApiTestBase
         stream == :analysis
     end
 
-    file_data = 'version 3'
+    file_data = '{"src":"version 3"}'
     @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
     assert conflict?
 
