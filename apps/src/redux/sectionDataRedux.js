@@ -31,7 +31,6 @@ export const sectionDataPropType = PropTypes.shape({
  * Action type constants
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
-export const SET_CODE_REVIEW_ENABLED = 'sectionData/SET_CODE_REVIEW_ENABLED';
 export const SET_CODE_REVIEW_EXPIRES_AT =
   'sectionData/SET_CODE_REVIEW_EXPIRES_AT';
 
@@ -59,11 +58,6 @@ export const setSection = section => {
   return {type: SET_SECTION, section: filteredSectionData};
 };
 
-export const setCodeReviewEnabled = codeReviewEnabled => ({
-  type: SET_CODE_REVIEW_ENABLED,
-  codeReviewEnabled
-});
-
 export const setCodeReviewExpiresAt = codeReviewExpiresAt => ({
   type: SET_CODE_REVIEW_EXPIRES_AT,
   codeReviewExpiresAt
@@ -87,16 +81,6 @@ export default function sectionData(state = initialState, action) {
     return {
       ...initialState,
       section: action.section
-    };
-  }
-
-  if (action.type === SET_CODE_REVIEW_ENABLED) {
-    return {
-      ...state,
-      section: {
-        ...state.section,
-        codeReviewEnabled: action.codeReviewEnabled
-      }
     };
   }
 
