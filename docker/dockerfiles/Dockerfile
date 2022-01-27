@@ -102,9 +102,6 @@ RUN chown -R mysql:mysql /var/lib/mysql \
 RUN apt-get update && apt-get -y install parallel libmagickwand-dev imagemagick
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel
 
-RUN curl -sSL -o /tmp/pdftk-java_3.0.9-1_all.deb https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb \
-  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/pdftk-java_3.0.9-1_all.deb || apt-get -fy install \
-  && rm -rf /tmp/pdftk-java_3.0.9-1_all.deb
 RUN apt-get update
 RUN apt-get install -y libicu-dev enscript moreutils libmysqlclient-dev libsqlite3-dev
 RUN wget https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb \
