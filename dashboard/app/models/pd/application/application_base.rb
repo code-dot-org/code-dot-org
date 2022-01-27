@@ -54,7 +54,11 @@ module Pd::Application
     belongs_to :user
     belongs_to :regional_partner
 
-    before_validation :set_type_and_year
+    after_initialize :set_type_and_year
+
+    # Set the status only if (a) the application is new, or (b) the applicant updates form_data.
+    # Avoid setting the status when an RP or admin changes the application status, which only happens
+    # from the application dashboard, not from changing form_data.
     before_validation -> {self.status = (sanitize_form_data_hash && sanitize_form_data_hash[:status] || :unreviewed)},
       if: -> {form_data_changed? || new_record?}
 
@@ -65,7 +69,10 @@ module Pd::Application
     validates_inclusion_of :application_type, in: APPLICATION_TYPES
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
 
+    # An application either has an "incomplete" or "unreviewed" state when created.
+    # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
     before_save :update_accepted_date, if: :status_changed?
+
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     after_destroy :delete_unsent_email
 
