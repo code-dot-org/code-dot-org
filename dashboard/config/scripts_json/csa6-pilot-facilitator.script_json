@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 13:50:37 UTC",
+    "serialized_at": "2022-01-26 20:04:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2539,7 +2539,7 @@
       "key": "7d15e331-ec26-4499-96c8-07eeaa992439",
       "position": 11,
       "properties": {
-        "description": "Using this `substring()` method, we can find individual words to determine their parts of speech.",
+        "description": "Using this `substring()` method, we can find individual words to determine their parts of speech. Since `String` objects are immutable, this `substring()` method and other `String` class methods do not change the `String` object itself.",
         "remarks": true
       },
       "seeding_key": {
