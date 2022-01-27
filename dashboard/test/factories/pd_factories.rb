@@ -809,6 +809,10 @@ FactoryGirl.define do
       school_type 'Public school'
     end
 
+    trait :incomplete do
+      status 'incomplete'
+    end
+
     trait :with_multiple_workshops do
       able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
 
