@@ -63,8 +63,7 @@ Expected '#{dependency[:name]}' to be installed.
         # Require dependencies on linux which our servers use
         assert found, missing_dependency_message
       else
-        # Skip these tests if we are on OSX and missing dependencies;
-        # There's a known problem installing pdftk on OSX right now (see SETUP.md)
+        # Skip these tests if we are on OSX and missing dependencies
         unless found
           puts missing_dependency_message
           skip missing_dependency_message

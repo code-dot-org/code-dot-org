@@ -123,7 +123,7 @@ Or you can just use this shortcut (after you've installed chromedriver):
 
 Pegasus tests depend on the `pegasus_test` database.  If you have database-related errors, you can recreate and reseed the test database with `RAILS_ENV=test rake test:reset_dependencies`.  This will take about four minutes.
 
-Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
+Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `enscript` installed.
 
 To run one test file in pegasus, run `rake test TEST=<path-to-test-file>` (e.g. `rake test TEST=test/test_dev_routes.rb`).
 

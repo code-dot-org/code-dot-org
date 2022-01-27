@@ -51,10 +51,9 @@ For Dropbox folder access, ask Brendan or anyone with Dropbox `Pegasus Staging` 
 
 # Local testing dependencies
 
-* Ubuntu: `sudo aptitude install pdftk enscript`
+* Ubuntu: `sudo aptitude install enscript`
 * OS X:
   ```
-  brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb
   brew install enscript
   ```
 
