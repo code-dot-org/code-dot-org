@@ -366,6 +366,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForParticipant
+    ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel
   };
 })(StatelessInlineAudio);

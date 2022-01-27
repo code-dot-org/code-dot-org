@@ -9,7 +9,7 @@ import sectionData, {
 } from '@cdo/apps/redux/sectionDataRedux';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import instructions, {
-  setTtsAutoplayEnabledForParticipant
+  setTtsAutoplayEnabledForLevel
 } from '@cdo/apps/redux/instructions';
 
 $(document).ready(initPage);
@@ -22,7 +22,7 @@ function initPage() {
   // this is the common js entry point for level pages
   // which is why ttsAutoplay is set here
   const ttsAutoplayEnabled = config.tts_autoplay_enabled;
-  getStore().dispatch(setTtsAutoplayEnabledForParticipant(ttsAutoplayEnabled));
+  getStore().dispatch(setTtsAutoplayEnabledForLevel(ttsAutoplayEnabled));
   const codeReviewEnabled = config.code_review_enabled;
   getStore().dispatch(setCodeReviewEnabled(codeReviewEnabled));
 
