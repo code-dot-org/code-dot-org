@@ -22317,6 +22317,8 @@ en:
           lessons:
             new lesson:
               name: lesson display name
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: new lesson 1
           lesson_groups:
