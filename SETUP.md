@@ -121,19 +121,11 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
       export optflags="-Wno-error=implicit-function-declaration"; export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"; export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"; export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" | rbenv install 2.5.0
       ```
 
-10. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
+10. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
 
-    ```sh
-    curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
-    brew install ./pdftk.rb
-    rm ./pdftk.rb
-    ```
+11. [Check your rmagick version](#rmagick)
 
-11. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
-
-12. [Check your rmagick version](#rmagick)
-
-13. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
+12. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
@@ -151,13 +143,13 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
        nvm use && nvm alias default $(cat ./.nvmrc)
        ```
 
-14. Install **yarn** via `npm install -g yarn@1.22.5`
+13. Install **yarn** via `npm install -g yarn@1.22.5`
 
-15. Install **OpenSSL**
+14. Install **OpenSSL**
     1. Run `brew install openssl`
     2. Following the instructions in the output, run a form of `exportLIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
-16. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+15. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
 Return to the [Overview](#overview) to continue installation. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
@@ -206,17 +198,6 @@ Return to the [Overview](#overview) to continue installation. Note that there ar
     </details>
 1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel tidy-html5`
-    <details>
-      <summary>Troubleshoot: pdftk errors</summary>
-
-      * If it complains about pdftk, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
-    </details>
-    <details>
-      <summary>Troubleshoot: old version of <code>&lt;package&gt;</code></summary>
-
-      * If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
-    </details>
 1. Set up MySQL
     1. Force link 5.7 version: `brew link mysql@5.7 --force`
     1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -276,12 +257,8 @@ Return to the [Overview](#overview) to continue installation. Note that there ar
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
-
-    * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
-        * Ubuntu 18.04: `sudo snap install pdftk`. 
-        * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
    
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
@@ -328,7 +305,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 
 Windows Subsystem for Linux (WSL) allows you to run a GNU/Linux environment directly on Windows without the overhead of a virtual machine. This is the easiest way to get Ruby and other prerequisites running on Windows.
 
-It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 in the past resulted in errors with mysql and pdftk installation. In order to use WSL 2, you must be running Windows 10, updated to version 2004, Build 19041 or higher. If your Windows update service doesn't give you the update automatically, you can download it [from the Windows download page](https://www.microsoft.com/en-us/software-download/windows10).
+It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 in the past resulted in errors with mysql installation. In order to use WSL 2, you must be running Windows 10, updated to version 2004, Build 19041 or higher. If your Windows update service doesn't give you the update automatically, you can download it [from the Windows download page](https://www.microsoft.com/en-us/software-download/windows10).
 
 1. Enable WSL ([unabridged WSL instructions here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). You should run Powershell as Administrator for the following commands:
     1. `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
