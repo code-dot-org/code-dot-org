@@ -5,7 +5,7 @@ import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   setHasAuthoredHints,
   setInstructionsConstants,
-  setTtsAutoplayEnabled
+  setTtsAutoplayEnabledForParticipant
 } from '@cdo/apps/redux/instructions';
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
@@ -111,7 +111,7 @@ const createCommonStore = function(options = {}) {
 
   store.dispatch(setPageConstants(pageConstants));
   store.dispatch(setInstructionsConstants(instructionsConstants));
-  store.dispatch(setTtsAutoplayEnabled(false));
+  store.dispatch(setTtsAutoplayEnabledForParticipant(false));
 
   return store;
 };
