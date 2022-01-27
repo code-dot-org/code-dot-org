@@ -74,17 +74,4 @@ module PDF
       raise "Ghostscript error: non-zero status of #{status}"
     end
   end
-
-  # Numbers PDFs using
-  #   1. pdftk to get a page count
-  #   2. enscript and ps2pdf to generate and place a page count header
-  # Based off of response from http://stackoverflow.com/a/9033109/136134
-  # "Center bottom" of page margin differs slightly between OS X and Ubuntu.
-  #    OS X:   --margin=0:298:800:0
-  #    Ubuntu: --margin=0:298:750:0
-  def self.number_pdf(input, output)
-    margin = RUBY_PLATFORM.include?('linux') ? '0:298:750:0' : '0:298:800:0'
-    page_count = `pdftk "#{input}" dump_data | grep "NumberOfPages" | cut -d":" -f2`.strip
-    bash "enscript --quiet -L1 --margin=#{margin} --header-font \"Helvetica@15\" --header='|| $%' --output - < <(for i in $(seq \"#{page_count}\"); do echo; done) | ps2pdf - | pdftk \"#{input}\" multistamp - output #{output}"
-  end
 end
