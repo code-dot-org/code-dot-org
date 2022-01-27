@@ -171,7 +171,7 @@
           "student_overview": "Projekte dieser Größenordnung erfordern Zeit und viel Planung. Lasen Sie sich inspirieren, machen Sie einen Plan und lassen Sie Ihrer Kreativität freien Lauf!"
         },
         "courseb-2021/Digital Trails": {
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.][2]\n[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.][2]\n\nBleibt das, was du online tust, immer online? SchülerInnen lernen, dass die Informationen, die sie online teilen, einen digitalen Fußabdruck oder eine \"Spur\" hinterlassen. Je nachdem, wie sie damit umgehen, kann diese Spur groß oder klein, schädlich oder hilfreich sein. Die SchülerInnen vergleichen verschiedene Spuren und diskutieren kritisch, welche Art von Informationen sie hinterlassen möchten.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nBleibt das, was du online tust, immer online? SchülerInnen lernen, dass die Informationen, die sie online teilen, einen digitalen Fußabdruck oder eine \"Spur\" hinterlassen. Je nachdem, wie sie damit umgehen, kann diese Spur groß oder klein, schädlich oder hilfreich sein. Die SchülerInnen vergleichen verschiedene Spuren und diskutieren kritisch, welche Art von Informationen sie hinterlassen möchten.",
           "preparation": "-   Wiederholen Sie das Lehrmaterial.\n-   Drucken Sie Arbeitsblätter für jede/n SchülerIn aus.",
           "purpose": "Common Sense Education hat diese Lektion entwickelt, um SchülerInnen Wissen über den \"digitalen Fußabdruck\" zu vermitteln und darüber, welche Informationen zu ihrem eigenen Fußabdruck gehören sollten.",
           "student_overview": "Erfahren Sie mehr über Ihren digitalen Fußabdruck und wie Sie Websites sicher besuchen können."
@@ -228,7 +228,7 @@
           "purpose": "Diese Lektion gibt den SchülerInnen eine letzte Gelegenheit, ihre neuen Informatikkenntnisse kreativ einzusetzen."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.][2]\n\nDurch das Internet können SchülerInnen Orte erleben und besuchen, die sie vielleicht nicht persönlich sehen können. Aber genau wie beim Reisen in der realen Welt ist es wichtig, auch online sicher zu sein. Auf dieser virtuellen Exkursion können Kinder üben, bei Online-Abenteuern sicher zu sein.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nDurch das Internet können SchülerInnen Orte erleben und besuchen, die sie vielleicht nicht persönlich sehen können. Aber genau wie beim Reisen in der realen Welt ist es wichtig, auch online sicher zu sein. Auf dieser virtuellen Exkursion können Kinder üben, bei Online-Abenteuern sicher zu sein.",
           "preparation": "-   Gehen Sie die Unterrichtsmaterialien durch. \n-   Drucken Sie Arbeitsblätter alle SchülerInnen aus.\n-   (Optional) Drucken Sie ein Gedichtposter für das Klassenzimmer aus.",
           "purpose": "Common Sense Education hat diese Lektion entwickelt, um SchülerInnen zu erklären, wie sie sich sicher im Internet bewegen können.",
           "student_overview": "Lerne, wie du sicher online gehen kannst."
@@ -370,6 +370,7 @@
           "student_overview": "Freuen Sie sich auf eine ganze Menge Programmierung! Es ist an der Zeit, mit der Erstellung Ihres Projekts zu beginnen."
         },
         "coursed-2021/lesson-5": {
+          "purpose": "Common Sense Education hat diese Lektion entwickelt, um SchülerInnen zu erklären, wie sie sich sicher im Internet bewegen können.",
           "student_overview": "In dieser Lektion erfahren Sie, wie Passwörter Ihre Informationen schützen und wie man ein gutes Passwort erstellt."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
@@ -602,6 +603,7 @@
         },
         "coursee-2021/Private and Personal Information": {
           "preparation": "-   Wiederholen Sie das Lehrmaterial.\n-   Drucken Sie Arbeitsblätter für jede/n SchülerIn aus.",
+          "purpose": "Common Sense Education hat diese Lektion entwickelt, um SchülerInnen zu erklären, wie sie sich sicher im Internet bewegen können.",
           "student_overview": "Das Internet macht Spaß und ist aufregend, aber es ist auch wichtig, auf die eigene Sicherheit zu achten. In dieser Lektion lernen Sie den Unterschied zwischen Informationen, die sicher ausgetauscht werden können, und Informationen, die privater Natur sind."
         },
         "coursee-2021/About Me": {

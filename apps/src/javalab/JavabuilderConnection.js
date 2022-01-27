@@ -105,11 +105,6 @@ export default class JavabuilderConnection {
         message = javalabMsg.running();
         lineBreakCount = 2;
         break;
-      // TODO: Remove this case once Javabuilder stops sending these messages
-      case StatusMessageType.GENERATING_RESULTS:
-        message = javalabMsg.generatingResults();
-        lineBreakCount = 1;
-        break;
       case StatusMessageType.GENERATING_PROGRESS:
         message = javalabMsg.generatingProgress({
           progressTime: detail.progressTime

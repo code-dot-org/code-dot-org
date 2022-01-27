@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Teacher Account Required to Use Course Beginning in February 2022",
+          "details": "If you are not already a verified teacher, click here to complete the form to become a verified teacher.",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,11 +20,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-07 16:30:38 UTC",
+    "serialized_at": "2022-01-25 01:58:37 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "universal_instructor",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "self-paced-pl-csd6-2021"
     }
@@ -863,6 +872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2"
+        ],
         "progression": "AI and ethics"
       },
       "bonus": false,
@@ -883,6 +895,31 @@
       "chapter": 24,
       "position": 4,
       "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
+        ],
+        "progression": "AI and ethics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "98bd3f2a-50c9-4880-b88f-fdd49fd2fb8e"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -905,9 +942,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -930,9 +967,9 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -955,7 +992,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -980,7 +1017,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1005,7 +1042,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1030,7 +1067,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1055,7 +1092,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1350,6 +1387,18 @@
         "level.key": "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2",
         "script_level.level_keys": [
           "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "98bd3f2a-50c9-4880-b88f-fdd49fd2fb8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3-2021"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",

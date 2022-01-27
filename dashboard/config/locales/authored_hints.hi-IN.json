@@ -8746,7 +8746,7 @@
         },
         "poetry_hoc_events1": {
           "do_effect_hint": "यह नया `इफेक्ट डालें` ब्लॉक एक बार एक नया इफ़ेक्ट जोड़ देगा। \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\nआप इफ़ेक्ट को लंबे समय तक बनाए रखने के लिए एक से अधिक `इफ़ेक्ट डालें` एक दूसरे के ऊपर डाल सकते हैं। \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
-          "background_effect_hint": "आप इस तरह दिखने वाले कोड के साथ इवेंट ब्लॉक के तहत अन्य इफ़ेक्ट जोड़ सकते हैं: \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
+          "background_effect_hint": "आप इस तरह दिखने वाले <xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml> कोड के साथ इवेंट ब्लॉक के तहत अन्य इफ़ेक्ट जोड़ सकते हैं: ",
           "more_events_hint": "आप अपने प्रोग्राम में एक से अधिक ईवेंट का इस्तेमाल कर सकते हैं। कविता में नई पंक्तियों का मिलान करने के लिए अलग-अलग इफ़ेक्ट वाली दो इवेंट का इस्तेमाल करने का प्रयास करें। \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
@@ -8761,6 +8761,9 @@
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "एजेंट से कुछ पुल बनवाने का प्रयास करें ताकि एलेक्स या स्टीव मानचित्र के किनारों से आगे घूम पाएं।"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "पिज़्ज़ा को कुछ कहने के लिए, कोड के ब्लॉक इस तरह से कनेक्ट करें:"
         }
       }
     }

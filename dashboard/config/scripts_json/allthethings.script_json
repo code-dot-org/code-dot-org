@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-09 19:11:13 UTC",
+    "serialized_at": "2022-01-13 00:21:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3969,6 +3969,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab free play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5641,11 +5644,35 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 157,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab Prompter"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "0ee3a474-4b22-4c52-874a-32bb0ff17112"
+      },
+      "level_keys": [
+        "Allthethings Java Lab Prompter"
+      ]
+    },
+    {
+      "chapter": 158,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "allthethings-example-csp-assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6963,19 +6990,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 2",
-        "script_level.level_keys": [
-          "2-3 Maze 2",
-          "2-3 Maze 5"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "2-3 Maze 5",
         "script_level.level_keys": [
           "2-3 Maze 2",
@@ -6989,7 +7003,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 6",
+        "level.key": "2-3 Maze 2",
+        "script_level.level_keys": [
+          "2-3 Maze 2",
+          "2-3 Maze 5"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Maze 3",
         "script_level.level_keys": [
           "2-3 Maze 3",
           "2-3 Maze 6"
@@ -7002,7 +7029,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 3",
+        "level.key": "2-3 Maze 6",
         "script_level.level_keys": [
           "2-3 Maze 3",
           "2-3 Maze 6"
@@ -7654,6 +7681,18 @@
         "level.key": "Allthethings Java Lab submittable",
         "script_level.level_keys": [
           "Allthethings Java Lab submittable"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "0ee3a474-4b22-4c52-874a-32bb0ff17112"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab Prompter",
+        "script_level.level_keys": [
+          "Allthethings Java Lab Prompter"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",

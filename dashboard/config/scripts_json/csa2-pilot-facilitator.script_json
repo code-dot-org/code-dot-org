@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:11 UTC",
+    "serialized_at": "2022-01-26 19:50:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1727,8 +1727,20 @@
       }
     },
     {
-      "key": "a8d8f606-2dc0-4f40-b8b1-697de2de577d",
+      "key": "7c3cc275-9387-4511-9bba-b907c40fe466",
       "position": 11,
+      "properties": {
+        "description": "When we call the constructor to create a `Painter` object, the constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, flow of control is returned to the point immediately following where the method or constructor was called. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3cc275-9387-4511-9bba-b907c40fe466",
+        "lesson_activity.key": "046137f0-f0ea-4d22-8776-d383da52c3b8"
+      }
+    },
+    {
+      "key": "a8d8f606-2dc0-4f40-b8b1-697de2de577d",
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio. Students create a `Dessert` object and use Scanner to get user input for values for the instance variables.",
         "progression_name": "Creating a Dessert Object",

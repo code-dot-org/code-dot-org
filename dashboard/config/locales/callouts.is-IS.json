@@ -1750,7 +1750,8 @@
           "hello_world_new": "Nýr kubbur!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nýr kubbur!"
+          "hello_world_new": "Nýr kubbur!",
+          "hello_world_new_block": "Nýr kubbur!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nýr kubbur!"
@@ -1817,6 +1818,9 @@
         },
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Hér getur þú látið forritið þitt keyra hægar."
         }
       }
     }

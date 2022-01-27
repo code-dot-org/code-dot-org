@@ -1486,6 +1486,9 @@ sr:
               display_name: Кондиционали
             csp_functions:
               display_name: Функције
+        dance-extras:
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -1577,6 +1580,10 @@ sr:
           lessons:
             'null':
               name: ништа
+        dance-extras-gallery:
+          title: Настави плес
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1863,6 +1870,9 @@ sr:
               name: Променљиве
             For Loops:
               name: Бројачке петље
+        dance-extras-2019:
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
         csp4-preview:
           lesson_groups:
             csp_variables:

@@ -2702,7 +2702,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_animals_behaviors": {
           "wandering": "徘徊",
@@ -2721,7 +2723,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_animals_costumes": {
           "moving east": "向東移動",
@@ -2772,7 +2776,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_emoji_backgrounds": {
           "shrinking": "縮小",
@@ -2791,7 +2797,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "徘徊",
@@ -2810,7 +2818,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_emoji_costumes": {
           "moving east": "向東移動",
@@ -2861,7 +2871,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_food_backgrounds": {
           "shrinking": "縮小",
@@ -2880,7 +2892,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_food_costumes": {
           "moving east": "向東移動",
@@ -2931,7 +2945,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_retro_backgrounds": {
           "shrinking": "縮小",
@@ -2950,7 +2966,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_retro_behaviors": {
           "wandering": "徘徊",
@@ -2969,7 +2987,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_retro_costumes": {
           "moving east": "向東移動",
@@ -3020,7 +3040,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "helloworld_food_behaviors": {
           "wandering": "徘徊",
@@ -3039,7 +3061,9 @@
           "fluttering": "飄移",
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
-          "moving east and looping": "向東移動並循環"
+          "moving east and looping": "向東移動並循環",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south and looping": "向南移動並迴圈"
         },
         "poetry_hoc_spriteSizes": {
           "wandering": "徘徊",

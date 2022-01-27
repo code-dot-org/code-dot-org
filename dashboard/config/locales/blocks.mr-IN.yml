@@ -1534,10 +1534,10 @@ mr:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"hearts"': ह्रदय
+            '"brick"': विट
+            '"fire"': आग
+            '"flowers"': फुले
             '"iceCream"': आईसक्रीम
-            '"rainbow"': इंद्रधनुष्य
-            '"stars"': तारे
       Poetry_addLine:
         text: ओळ जोडा {LINE}
       Poetry_animateText:
@@ -1557,11 +1557,18 @@ mr:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       Poetry_makeNumSprites:
         text: "{NUM} नवीन {ANIMATION_NAME} स्प्राइट्स तयार करा"
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': कॅम्प फायर (शेकोटी)
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': संथ
       Poetry_playSound:
         text: आवाज प्ले करा {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': प्रकाश
+            '"sound://category_bell/long_bell_notification.mp3"': घंटा
+            '"sound://category_digital/boing_2.mp3"': बोइंग
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': बुडबुडा
             '"sound://category_background/typewriter.mp3"': टायपरायटर
       Poetry_setAuthor:
         text: लेखक {AUTHOR} सेट करा
@@ -1571,27 +1578,25 @@ mr:
         text: "{EFFECT} {PALETTE} वर बॅकग्राउंड  सेट करा"
         options:
           EFFECT:
-            '"colors"': रंग
-            '"space"': स्पेस
-            '"stars"': तारे
+            '"blooming"': ब्लुमिंग
+            '"bubbles"': फुगे
+            '"clouds"': ढगाळ
+            '"confetti"': कॉन्फेटी
             '"darkCircles"': फेडिंग / लुप्त होणे
             '"fadeColors"': फ्रॉस्टेड
-            '"blooming"': ब्लुमिंग
-            '"clouds"': ढगाळ
-            '"rain"': पाऊस
-            '"bubbles"': फुगे
-            '"confetti"': कॉन्फेटी
+            '"space"': स्पेस
+            '"colors"': रंग
+            '"stars"': तारे
           PALETTE:
-            '"rainbow"': इंद्रधनुष्य
-            '"grayscale"': ग्रे
-            '"sky"': आकाश
+            '"autumn"': ऑटम / शरद ऋतू
             '"sunrise"': पहाट
             '"sunset"': संध्याकाळ
+            '"grayscale"': ग्रे
+            '"roses"': गुलाब
+            '"sky"': आकाश
             '"spring"': स्प्रिंग / वसंत ऋतू
             '"summer"': समर / उन्हाळा
-            '"autumn"': ऑटम / शरद ऋतू
             '"winter"': विंटर / हिवाळा
-            '"roses"': गुलाब
       Poetry_setBackgroundImageAs:
         text: "{IMG} वर पार्श्वभूमी सेट करा"
       Poetry_setFont:
@@ -1599,22 +1604,21 @@ mr:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': हस्तलेखन
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': हस्तलेखन
       Poetry_setFontColor:
         text: टेक्स्ट कलर सेट करा {FILL}
       Poetry_setForegroundEffect:
         text: "{EFFECT} इफेक्ट करा"
         options:
           EFFECT:
-            '"rain"': पाऊस
             '"bubbles"': फुगे
-            '"emojis"': हॅपी इमोजी
             '"confetti"': कॉन्फेटी
+            '"emojis"': हॅपी इमोजी
             '"glass"': तुटलेल्या काचा
             '"twinkling"': ट्विंकलिंग
       Poetry_setPrompt:
@@ -1631,31 +1635,21 @@ mr:
         options:
           EFFECT:
             '"fade"': फिकट
-            '"typewriter"': टाइपरायटर
             '"flyLeft"': डावीकडून उडणे
             '"flyRight"': उजवीकडून उडणे
             '"flyTop"': वरून उडणे
             '"flyBottom"': तळापासून उडणे
+            '"typewriter"': टाइपरायटर
       Poetry_setTitle:
         text: शीर्षक सेट करा {TITLE}
       Poetry_showText:
         text: मजकूर दाखवा
       Poetry_startBehavior:
         text: स्प्राइट {ANIMATION_NAME} ने {BEHAVIOR} सुरू केले
-        options:
-          BEHAVIOR:
-            moving_north_and_looping: उत्तरेकडे लूपिंग
-            moving_south_and_looping: दक्षिणेकडे लूपिंग
-            moving_east_and_looping: पूर्वेकडे लूपिंग
-            moving_west_and_looping: पश्चिमेकडे लूपिंग
       Poetry_stopBehavior:
         text: 'स्प्राइट {ANIMATION_NAME} {BEHAVIOR} थांबवते '
         options:
           BEHAVIOR:
-            moving_north_and_looping: उत्तरेकडे लूपिंग
-            moving_south_and_looping: दक्षिणेकडे लूपिंग
-            moving_east_and_looping: पूर्वेकडे लूपिंग
-            moving_west_and_looping: पश्चिमेकडे लूपिंग
             '"all"': "--सर्व वर्तन---"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

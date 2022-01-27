@@ -100,8 +100,6 @@ class YourSchool extends Component {
               width="100%"
             />
           )}
-        <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
-        <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
         {this.props.showProfessionalLearningBanner && (
           <ProfessionalLearningApplyBanner
             nominated={false}
@@ -110,6 +108,8 @@ class YourSchool extends Component {
             teacherApplicationMode={this.props.teacherApplicationMode}
           />
         )}
+        <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
+        <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">

@@ -1779,12 +1779,15 @@ sk:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Kvety
-            '"hearts"': Srdiečka
+            '"brick"': tehla
+            '"fire"': oheň
+            '"flowers"': kvety
+            '"hearts"': srdcia
             '"iceCream"': Zmrzlina
-            '"rainbow"': Dúha
-            '"stars"': Hviezdy
-            '"waves"': Vlny
+            '"leaves"': listy
+            '"rainbow"': dúha
+            '"stars"': hviezdy
+            '"waves"': vlny
       Poetry_addLine:
         text: pridať riadok {LINE}
       Poetry_animateText:
@@ -1813,10 +1816,15 @@ sk:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calm
             '"sound://category_nature/steady_campfire_loop.mp3"': Campfire
             '"sound://category_nature/rain_loop.mp3"': Drizzle
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': les
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Haunted
             '"sound://category_background/inside_plane.mp3"': Hum
             '"sound://category_loops/red_flag_loop1.mp3"': Mission
+            '"sound://category_nature/summer_night_loop.mp3"': noc
+            '"sound://category_background/ocean_waves.mp3"': oceán
+            '"sound://category_background/rainforest_ambient_sound.mp3"': dažďový les
             '"sound://category_background/repitition.mp3"': Riding
+            '"sound://category_background/wavering_wind.mp3"': ospalý
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Slow
       Poetry_playSound:
         text: playSound {SOUND}
@@ -1830,7 +1838,7 @@ sk:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fail
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Flutter
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Jump
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Svetlý
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': svetlo
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
             '"sound://category_background/typewriter.mp3"': Písací stroj
@@ -1846,30 +1854,31 @@ sk:
         text: nastaviť pozadie na {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Farby
-            '"squiggles"': Haky - baky
-            '"space"': Vesmír
-            '"stars"': Hviezdy
+            '"blooming"': Zakvitnuté
+            '"bubbles"': Bubliny
+            '"clouds"': Zamračené
+            '"confetti"': Konfety
             '"darkCircles"': Blednutie
             '"fadeColors"': Zamrznuté
-            '"blooming"': Zakvitnuté
+            '"hearts"': srdcia
+            '"space"': Vesmír
+            '"rain"': dážď
             '"ripples"': Vlnky
-            '"clouds"': Zamračené
-            '"rain"': Dážď
-            '"bubbles"': Bubliny
-            '"confetti"': Konfety
-            '"hearts"': Farebné srdcia
+            '"colors"': Farby
+            '"stars"': Hviezdy
+            '"squiggles"': Haky - baky
           PALETTE:
-            '"rainbow"': Dúha
-            '"grayscale"': Odtiene šedej
-            '"sky"': Obloha
+            '"autumn"': Jeseň
             '"sunrise"': Svitanie
             '"sunset"': Súmrak
+            '"grayscale"': Odtiene šedej
+            '"ocean"': oceán
+            '"rainbow"': dúha
+            '"roses"': Ruže
+            '"sky"': Obloha
             '"spring"': Jar
             '"summer"': Leto
-            '"autumn"': Jeseň
             '"winter"': Zima
-            '"roses"': Ruže
       Poetry_setBackgroundImageAs:
         text: nastav pozadie na {IMG}
       Poetry_setFont:
@@ -1877,23 +1886,23 @@ sk:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Ručné písmo
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Ručné písmo
       Poetry_setFontColor:
         text: nastaviť farbu textu {FILL}
       Poetry_setForegroundEffect:
         text: vykonaj efekt {EFFECT}
         options:
           EFFECT:
-            '"rain"': Dážď
             '"bubbles"': Bubliny
-            '"hearts"': Farebné srdcia
-            '"emojis"': Veselé emodži
             '"confetti"': Konfety
+            '"hearts"': srdcia
+            '"emojis"': Veselé emodži
+            '"rain"': dážď
             '"starburst"': Žiara
             '"glass"': Rozbíjanie skla
             '"twinkling"': Blikanie
@@ -1908,11 +1917,11 @@ sk:
         options:
           EFFECT:
             '"fade"': zblednúť
-            '"typewriter"': písací stroj
             '"flyLeft"': prelet zľava
             '"flyRight"': prelet sprava
             '"flyTop"': prelet zhora
             '"flyBottom"': prelet zdola
+            '"typewriter"': písací stroj
       Poetry_setTitle:
         text: nastaviť názov {TITLE}
       Poetry_showText:
@@ -1921,36 +1930,28 @@ sk:
         text: 'postavička {ANIMATION_NAME} začína {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: chvenie
-            growing: rásť
-            jittering: chvieť sa
-            moving_north_and_looping: cyklenie smerom na sever
-            moving_south_and_looping: cyklenie smerom na juh
-            moving_east_and_looping: cyklenie smerom na východ
-            moving_west_and_looping: cyklenie smerom na západ
-            shrinking: zmenšovať sa
-            spinning_left: točenie vľavo
-            spinning_right: točenie vpravo
-            swimming_left_and_right: plávanie
-            wandering: túlať sa
-            wobbling: kolísanie
+            '"fluttering"': chvenie
+            '"growing"': rásť
+            '"jittering"': chvieť sa
+            '"shrinking"': zmenšovať sa
+            '"spinning_left"': točenie vľavo
+            '"spinning_right"': točenie vpravo
+            '"swimming_left_and_right"': plávanie
+            '"wandering"': túlať sa
+            '"wobbling"': kolísanie
       Poetry_stopBehavior:
         text: 'postavička {ANIMATION_NAME} prestáva {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: chvenie
-            growing: rásť
-            jittering: chvieť sa
-            moving_north_and_looping: cyklenie smerom na sever
-            moving_south_and_looping: cyklenie smerom na juh
-            moving_east_and_looping: cyklenie smerom na východ
-            moving_west_and_looping: cyklenie smerom na západ
-            shrinking: zmenšovať sa
-            spinning_left: točenie vľavo
-            spinning_right: točenie vpravo
-            swimming_left_and_right: plávanie
-            wandering: túlať sa
-            wobbling: kolísanie
+            '"fluttering"': chvenie
+            '"growing"': rásť
+            '"jittering"': chvieť sa
+            '"shrinking"': zmenšovať sa
+            '"spinning_left"': točenie vľavo
+            '"spinning_right"': točenie vpravo
+            '"swimming_left_and_right"': plávanie
+            '"wandering"': túlať sa
+            '"wobbling"': kolísanie
             '"all"': "--všetky správania--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

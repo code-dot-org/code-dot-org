@@ -2218,8 +2218,8 @@ id-ID:
     Anda bisa mencoba melihat halaman, akan tetapi functionality mungkin tidak bekerja.
   flappy_shortcode: kepakkan
   header_home: Beranda
-  header_my_dashboard: Dasbor saya
-  header_courses: Kursus
+  header_my_dashboard: Dashboard Saya
+  header_courses: Nama Kursus
   header_course_catalog: Katalog Kursus
   header_project_gallery: Proyek
   header_sections: Bagian

@@ -2732,6 +2732,10 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2855,3 +2859,23 @@ si:
           lessons:
             lesson-1:
               name: අක්ෂර වින්‍යාස බඹරා
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය

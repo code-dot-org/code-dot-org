@@ -10036,6 +10036,12 @@ cs:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -11138,21 +11144,6 @@ cs:
                 výběru z několika voleb.
             lesson-1:
               key: lekce-1
-              description_student: Projekty, které jste během kurzu vyvinuli, inspirovaly
-                ve vaší komunitě spoustu kreativity! K předvedení všech kreativních
-                příběhů, scénářů, textů písní, dopisů a básní bude proto uspořádán
-                Sousedský literární festival. Projekt Sousedský literární festival
-                je velký projekt, na kterém budete v průběhu jednotky pracovat, a
-                strategie řízení projektu vám pomohou organizovat a strukturovat vaši
-                práci. Budete zkoumat strategie psaní a strukturování kódu, aby ho
-                jiní softwaroví odborníci dokázali snadno pochopit, a používat javový
-                nástroj k vytváření dokumentace k programu.
-              description_teacher: Studentům je představen projekt Sousedský literární
-                festival. Budou vyhodnocovat požadavky a příklady, aby dokázali identifikovat
-                důležité otázky a klíčové vlastnosti. Před započetím práce na projektu
-                si studenti rozšíří své znalosti o struktuře programu a komentování
-                určením doporučených postupů a prozkoumáním využití nástroje Javadocs
-                ke generování dokumentace k programu.
             lesson-2:
               key: lekce-2
               description_student: Navrhnete objekty „Integer“ a „Double“, které budou
@@ -11515,3 +11506,108 @@ cs:
                 -   Měli by znát čísla do 10 a umět počítat s využitím obrázků, prstů nebo manipulativů.
                 -   Měli by umět sčítat předměty, obrázky, prsty nebo manipulativy až do součtu 10.
           title: Počítání s Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lekce
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Projekt Sousedský literární festival – 1. den
+            lesson-12:
+              name: Projekt Sousedský literární festival – 2. den
+            lesson-13:
+              name: Projekt Sousedský literární festival – 3. den
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulátor epidemie
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: lekce-10
+            lesson-6:
+              key: lekce-6
+            lesson-7:
+              key: lekce-7
+            lesson-8:
+              key: lekce-8
+            lesson-9:
+              key: lekce-9
+            lesson-11:
+              key: lekce-11
+            lesson-12:
+              key: lekce-12
+            lesson-13:
+              key: lekce-13
+            lesson-14:
+              key: lekce-14
+            lesson-15:
+              key: lekce-15
+            lesson-1:
+              key: lekce-1
+            lesson-2:
+              key: lekce-2
+            lesson-3:
+              key: lekce-3
+            lesson-4:
+              key: lekce-4
+            lesson-5:
+              key: lekce-5
+            lesson-16:
+              key: lekce-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: lekce-1
+            lesson-2:
+              key: lekce-2
+            lesson-3:
+              key: lekce-3
+            lesson-4:
+              key: lekce-4
+            lesson-5:
+              key: lekce-5
+            lesson-10:
+              key: lekce-10
+            lesson-6:
+              key: lekce-6
+            lesson-7:
+              key: lekce-7
+            lesson-8:
+              key: lekce-8
+            lesson-9:
+              key: lekce-9
+            lesson-11:
+              key: lekce-11
+            lesson-12:
+              key: lekce-12
+            lesson-13:
+              key: lekce-13
+            lesson-14:
+              key: lekce-14
+            lesson-15:
+              key: lekce-15
+            lesson-16:
+              key: lekce-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox

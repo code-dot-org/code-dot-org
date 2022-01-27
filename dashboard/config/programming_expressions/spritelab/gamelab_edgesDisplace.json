@@ -2,5 +2,6 @@
   "key": "gamelab_edgesDisplace",
   "name": "edgesDisplace",
   "category": "Sprites",
+  "block_name": "gamelab_edgesDisplace",
   "syntax": "edgesDisplace"
 }

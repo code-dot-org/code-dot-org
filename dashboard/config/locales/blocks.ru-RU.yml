@@ -1344,7 +1344,7 @@ ru:
       gamelab_tumbling:
         text: акробатика
       gamelab_turn:
-        text: Свою очередь {SPRITE} {DIRECTION} {N} Градусов
+        text: повернуть на {SPRITE} {DIRECTION} {N} градусов
         options:
           DIRECTION:
             '"right"': вправо
@@ -1365,6 +1365,7 @@ ru:
             '"right"': вправо
             '"space"': космос
             '"a"': a
+            '"w"': w
       gamelab_whenLeftArrow:
         text: когда стрелка влево нажата
       gamelab_whenPromptAnswered:
@@ -1394,12 +1395,12 @@ ru:
       gamelab_whileRightArrow:
         text: пока стрелка вправо нажата
       gamelab_whileTouching:
-        text: А {SPRITE1} трогательно {SPRITE2}
+        text: Пока {SPRITE1} касается {SPRITE2}
       gamelab_whileUpArrow:
         text: пока стрелка вверх нажата
       gamelab_withPercentChance:
         text: |-
-          если {NUM}% шанса
+          если {NUM}% вероятность
           {STATEMENT}
       gamelab_withPercentChanceDropdown:
         text: |2-
@@ -1792,12 +1793,19 @@ ru:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Цветы
-            '"hearts"': Сердечки
+            '"brick"': кирпич
+            '"fire"': огонь
+            '"flowers"': цветы
+            '"hearts"': сердца
             '"iceCream"': Мороженое
-            '"rainbow"': Радуга
+            '"leaves"': листья
+            '"rainbow"': радуга
             '"stars"': Звезды
-            '"waves"': Волны
+            '"waves"': волны
+      Poetry_addLine:
+        text: добавить строку {LINE}
+      Poetry_destroy:
+        text: удалить {ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
       Poetry_makeBurst:
@@ -1818,10 +1826,16 @@ ru:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Спокойствие
             '"sound://category_nature/steady_campfire_loop.mp3"': Костер
             '"sound://category_nature/rain_loop.mp3"': Роса
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': лес
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Очарование
             '"sound://category_background/inside_plane.mp3"': Гул
             '"sound://category_loops/red_flag_loop1.mp3"': Миссия
+            '"sound://category_nature/summer_night_loop.mp3"': ночь
+            '"sound://category_background/ocean_waves.mp3"': океан
+            '"sound://category_background/rainforest_ambient_sound.mp3"': тропический
+              лес
             '"sound://category_background/repitition.mp3"': Верхом
+            '"sound://category_background/wavering_wind.mp3"': сонный
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Медленно
       Poetry_playSound:
         text: playSound {SOUND}
@@ -1835,28 +1849,46 @@ ru:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Неудача
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Дрожание
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Прыжок
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Свет
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': свет
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Перина
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Изучение
+            '"sound://category_background/typewriter.mp3"': Пишущая машинка
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Яркий
             '"sound://category_achievements/peaceful_win_1.mp3"': Выигрыш
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Вихрь
             '"sound://category_achievements/peaceful_win_6.mp3"': '"Китайские колокольчики"'
+      Poetry_setAuthor:
+        text: указать автора {AUTHOR}
       Poetry_setBackground:
         text: задать цвет фона {COLOR}
       Poetry_setBackgroundEffect:
+        text: Установить фон {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Цвета
-            '"space"': Космос
-            '"stars"': Звезды
-            '"ripples"': Круги на воде
-            '"rain"': Дождь
+            '"blooming"': Цветение
             '"bubbles"': Пузыри
+            '"clouds"': Облачно
             '"confetti"': Конфетти
-            '"hearts"': Цветные сердечки
+            '"darkCircles"': Затухание
+            '"fadeColors"': Заморожен
+            '"hearts"': сердца
+            '"space"': Космос
+            '"rain"': дождь
+            '"ripples"': Круги на воде
+            '"colors"': Цвета
+            '"stars"': Звезды
           PALETTE:
-            '"rainbow"': Радуга
+            '"autumn"': Осень
+            '"sunrise"': Рассвет
+            '"sunset"': Сумерки
+            '"grayscale"': Серые
+            '"ocean"': океан
+            '"rainbow"': радуга
+            '"roses"': Розы
+            '"sky"': Небо
+            '"spring"': Весна
+            '"summer"': Лето
+            '"winter"': Зима
       Poetry_setBackgroundImageAs:
         text: установить фон для {IMG}
       Poetry_setFont:
@@ -1864,46 +1896,65 @@ ru:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: выбрать цвет текста {FILL}
       Poetry_setForegroundEffect:
+        text: выполнить эффект  {EFFECT}
         options:
           EFFECT:
-            '"rain"': Дождь
             '"bubbles"': Пузыри
-            '"hearts"': Цветные сердечки
             '"confetti"': Конфетти
+            '"hearts"': сердца
+            '"emojis"': Счастливые эмодзи
+            '"rain"': дождь
             '"starburst"': Вспышка звёздообразования
+            '"glass"': Разбивающееся стекло
+            '"twinkling"': Мерцание
+      Poetry_setPrompt:
+        text: запросить у пользователя {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} переменную
+          {VAR}
+      Poetry_setPromptWithChoices:
+        text: запросить у пользователя {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} переменную
+          {VAR} с вариантами выбора {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: задать размер  {SPRITE} в значение {VAL}
+      Poetry_setTextEffect:
+        text: задать эффект текста {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': затухание
+            '"typewriter"': пишущая машинка
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            fluttering: дрожание
-            growing: рост
-            jittering: дрожание
-            shrinking: сжимание
-            spinning_left: вращение влево
-            spinning_right: вращение вправо
-            swimming_left_and_right: плавание
-            wandering: хождение
-            wobbling: колебание
+            '"fluttering"': дрожание
+            '"growing"': рост
+            '"jittering"': дрожание
+            '"shrinking"': сжимание
+            '"spinning_left"': вращение влево
+            '"spinning_right"': вращение вправо
+            '"swimming_left_and_right"': плавание
+            '"wandering"': хождение
+            '"wobbling"': колебание
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            fluttering: дрожание
-            growing: рост
-            jittering: дрожание
-            shrinking: сжимание
-            spinning_left: вращение влево
-            spinning_right: вращение вправо
-            swimming_left_and_right: плавание
-            wandering: хождение
-            wobbling: колебание
+            '"fluttering"': дрожание
+            '"growing"': рост
+            '"jittering"': дрожание
+            '"shrinking"': сжимание
+            '"spinning_left"': вращение влево
+            '"spinning_right"': вращение вправо
+            '"swimming_left_and_right"': плавание
+            '"wandering"': хождение
+            '"wobbling"': колебание
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:

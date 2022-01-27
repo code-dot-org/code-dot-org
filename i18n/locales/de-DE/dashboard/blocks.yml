@@ -1840,9 +1840,12 @@ de:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': Ziegelstein
+            '"fire"': Feuer
             '"flowers"': Blumen
             '"hearts"': Herzen
             '"iceCream"': Eiscreme
+            '"leaves"': Blätter
             '"rainbow"': Regenbogen
             '"stars"': Sterne
             '"waves"': Wellen
@@ -1874,17 +1877,21 @@ de:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Stille
             '"sound://category_nature/steady_campfire_loop.mp3"': Lagerfeuer
             '"sound://category_nature/rain_loop.mp3"': Nieselregen
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Wald
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Gespenstisch
             '"sound://category_background/inside_plane.mp3"': Brummen
             '"sound://category_loops/red_flag_loop1.mp3"': Mission
+            '"sound://category_nature/summer_night_loop.mp3"': Nacht
+            '"sound://category_background/ocean_waves.mp3"': Meer
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Regenwald
             '"sound://category_background/repitition.mp3"': Reiten
+            '"sound://category_background/wavering_wind.mp3"': schläfrig
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Langsam
       Poetry_playSound:
         text: spieleTon {SOUND}
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Glocke
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Pause
             '"sound://category_digital/boing_2.mp3"': Boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Blase
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Geplapper
@@ -1892,7 +1899,7 @@ de:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Misserfolg
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Flattern
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Springen
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Hell
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Licht
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Hopp
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
             '"sound://category_background/typewriter.mp3"': Schreibmaschine
@@ -1908,30 +1915,31 @@ de:
         text: lege Hintergrund auf {EFFECT} {PALETTE} fest
         options:
           EFFECT:
-            '"colors"': Farben
-            '"squiggles"': Schnörkel
-            '"space"': Leerzeichen
-            '"stars"': Sterne
+            '"blooming"': Blumenkranz
+            '"bubbles"': Blasen
+            '"clouds"': Bewölkt
+            '"confetti"': Konfetti
             '"darkCircles"': Verblassen
             '"fadeColors"': Gefrostet
-            '"blooming"': Blumenkranz
-            '"ripples"': Welligkeit
-            '"clouds"': Bewölkt
+            '"hearts"': Herzen
+            '"space"': Leerzeichen
             '"rain"': Regen
-            '"bubbles"': Blasen
-            '"confetti"': Konfetti
-            '"hearts"': Farbenfrohe Herzen
+            '"ripples"': Welligkeit
+            '"colors"': Farben
+            '"stars"': Sterne
+            '"squiggles"': Schnörkel
           PALETTE:
-            '"rainbow"': Regenbogen
-            '"grayscale"': Grau
-            '"sky"': Himmel
+            '"autumn"': Herbst
             '"sunrise"': Morgen
             '"sunset"': Abend
+            '"grayscale"': Grau
+            '"ocean"': Meer
+            '"rainbow"': Regenbogen
+            '"roses"': Rosen
+            '"sky"': Himmel
             '"spring"': Frühling
             '"summer"': Sommer
-            '"autumn"': Herbst
             '"winter"': Winter
-            '"roses"': Rosen
       Poetry_setBackgroundImageAs:
         text: setze Hintergund auf {IMG}
       Poetry_setFont:
@@ -1939,23 +1947,23 @@ de:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Zierbuchstaben
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Zierbuchstaben
       Poetry_setFontColor:
         text: Textfarbe {FILL} festlegen
       Poetry_setForegroundEffect:
         text: führe {EFFECT} aus
         options:
           EFFECT:
-            '"rain"': Regen
             '"bubbles"': Blasen
-            '"hearts"': Farbenfrohe Herzen
-            '"emojis"': Fröhliche Emojis
             '"confetti"': Konfetti
+            '"hearts"': Herzen
+            '"emojis"': Fröhliche Emojis
+            '"rain"': Regen
             '"starburst"': Starburst
             '"glass"': Zerbrochenes Glas
             '"twinkling"': Zwinkern
@@ -1970,11 +1978,11 @@ de:
         options:
           EFFECT:
             '"fade"': ausblenden
-            '"typewriter"': Schreibmaschine
             '"flyLeft"': fliege von rechts
             '"flyRight"': fliege von rechts
             '"flyTop"': fliege von oben
             '"flyBottom"': fliege von unten
+            '"typewriter"': Schreibmaschine
       Poetry_setTitle:
         text: lege Titel {TITLE} fest
       Poetry_showText:
@@ -1983,36 +1991,28 @@ de:
         text: 'Sprite {ANIMATION_NAME} beginnt {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: flattern
-            growing: wachsen
-            jittering: zittern
-            moving_north_and_looping: macht eine Schleife nach Norden
-            moving_south_and_looping: macht eine Schleife nach Süden
-            moving_east_and_looping: macht Schleife nach Osten
-            moving_west_and_looping: macht Schleife nach Westen
-            shrinking: schrumpfen
-            spinning_left: nach links drehen
-            spinning_right: nach rechts drehen
-            swimming_left_and_right: Schwimmen
-            wandering: wandern
-            wobbling: wackelnd
+            '"fluttering"': flattern
+            '"growing"': wachsen
+            '"jittering"': zittern
+            '"shrinking"': schrumpfen
+            '"spinning_left"': nach links drehen
+            '"spinning_right"': nach rechts drehen
+            '"swimming_left_and_right"': Schwimmen
+            '"wandering"': wandern
+            '"wobbling"': wackelnd
       Poetry_stopBehavior:
         text: 'Sprite {ANIMATION_NAME} stoppt {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: flattern
-            growing: wachsen
-            jittering: zittern
-            moving_north_and_looping: macht eine Schleife nach Norden
-            moving_south_and_looping: macht eine Schleife nach Süden
-            moving_east_and_looping: macht Schleife nach Osten
-            moving_west_and_looping: macht Schleife nach Westen
-            shrinking: schrumpfen
-            spinning_left: nach links drehen
-            spinning_right: nach rechts drehen
-            swimming_left_and_right: Schwimmen
-            wandering: wandern
-            wobbling: wackelnd
+            '"fluttering"': flattern
+            '"growing"': wachsen
+            '"jittering"': zittern
+            '"shrinking"': schrumpfen
+            '"spinning_left"': nach links drehen
+            '"spinning_right"': nach rechts drehen
+            '"swimming_left_and_right"': Schwimmen
+            '"wandering"': wandern
+            '"wobbling"': wackelnd
             '"all"': "--alle Verhaltensweisen--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

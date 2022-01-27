@@ -2,6 +2,7 @@
 fr:
   data:
     variable_names:
+      "???": "???"
       Actor_1_Counter: Acteur_1_Compteur
       Actor_2_Counter: Acteur_2_Compteur
       Blue: Bleu
@@ -9,34 +10,90 @@ fr:
       Red: Rouge
       actor: acteur
       age: age
+      animal1score: animal1score
+      animal1speed: animal1vitesse
+      animal2score: animal2score
+      animal2speed: animal2vitesse
       answer: réponse
+      armlength: armlength
       binary: binaire
       birds: Oiseaux
+      bit: bit
+      blue1: bleu1
+      blue2: bleu2
+      bodylength: longueurcorps
+      buttonHeight: boutonHauteur
+      buttonMargin: boutonMarge
+      buttonWidth: boutonLargeur
+      cat_score: chat_score
+      cat_speed: chat_vitesse
       cats: tous les chats
+      centerToPadLeft: centreVersPavéGauche
+      choice: choix
+      circ: cercl
+      codeName: codeNom
       color: couleur
+      controllerHeight: controleurHauteur
+      controllerWidth: controleurLargeur
       counter: compteur
       counter2: compteur2
+      currentActor: ActeurActuel
+      direction: direction
+      dog_score: chien_score
+      dog_speed: chien_vitesse
       dogs: tous les chiens
+      dragons: dragons
+      enemy_speed: ennemi_vitesse
       energy: l'Énergie
+      firstName: prénom
+      footlength: longueurpied
+      gather: rassembler
+      green1: vert1
+      green2: vert2
+      guess: deviner
       height: hauteur
       honey: miel
       i: i
       left: vers la gauche
+      legangle: angledejambe
+      leglength: longueurjambe
       length: longueur
       level: niveau
+      marginX: margeX
+      marginY: margeY
+      meal: repas
+      myName: monNom
       name: nom
       nectar: nectar
+      nectars: nectars
+      padYOffset: padYOffset
       planet: planète
+      player_score: joueur_score
       points: points
+      punchLine: punchLine
       random: aléatoire
+      red1: rouge1
+      red2: rouge2
       repeat: répéter
+      repetitions: répétitions
       right: vers la droite
       score: score
+      score1: score1
+      score2: score2
+      screenHeight: écranHauteur
+      screenWidth: écranLargeur
+      set sides: mettre des côtés
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       shout: hurler
       sides: côtés
       size: taille
       speed: vitesse
+      startX: startX
+      startY: startY
       variable: variable
       width: largeur
       wizard: assistant
       x: x
+      your var 1: votre var 1
+      your var 2: votre var 2

@@ -518,6 +518,7 @@ de:
       prizes_link: Mehr Informationen
   teacher:
     answer: Antwort
+    dashboard: Lehrer-Dashboard
     for_teachers_only: Nur für Lehrer
     title:
       one: 'Dein Lehrer:'

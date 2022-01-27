@@ -4665,6 +4665,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -4844,3 +4848,27 @@ nn:
           lessons:
             lesson-1:
               name: Stavekonkurranse
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Leksjon
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald

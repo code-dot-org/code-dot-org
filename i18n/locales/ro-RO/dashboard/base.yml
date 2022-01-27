@@ -424,6 +424,7 @@ ro:
       prizes_link: 'Mai multe informaţii'
   teacher:
     answer: Răspuns
+    dashboard: 'Tabloul de bord al profesorilor'
     for_teachers_only: Doar pentru profesori
     title:
       one: 'Profesorul tău:'

@@ -53,6 +53,7 @@ id:
       name: nama
       nectar: madu
       nectars: Madu
+      planet: planet
       player_score: Nilai_pemain
       points: poin
       random: acak

@@ -363,6 +363,7 @@ el:
       prizes_link: 'Περισσότερες πληροφορίες'
   teacher:
     answer: Απάντηση
+    dashboard: 'πίνακας Δασκάλου'
     for_teachers_only: Μόνο για εκπαιδευτικούς
     title:
       one: 'Ο δάσκαλος σας:'

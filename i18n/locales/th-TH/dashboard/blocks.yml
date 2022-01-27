@@ -227,7 +227,7 @@ th:
             measures: ห้องดนตรี
             seconds: ขั้นคู่สอง
       Dancelab_everyVerseChorus:
-        text: 'ทุก [หน่วย] [0] '
+        text: ทุก {UNIT}
         options:
           UNIT:
             '"verse"': ท่อนร้อง
@@ -251,7 +251,7 @@ th:
             '"y"': ตำแหน่งแนวตั้ง
             '"tint"': ระดับอ่อนสี
       Dancelab_getTime:
-        text: "[หน่วย] [0] ล่วงผ่าน"
+        text: "{UNIT} ล่วงผ่าน"
         options:
           UNIT:
             '"measures"': ห้องดนตรี
@@ -958,7 +958,7 @@ th:
       Dancelab_whenSetup2:
         text: การตั้งค่า
       gamelab_addBehaviorSimple:
-        text: "[SPRITE]เทพเจ้าเริ่มต้น[0] {BEHAVIOR}"
+        text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
       gamelab_addTarget:
         text: "{SPRITE} เข้าไปสู่เป้าหมาย {TARGET} ถึง {OPT}"
         options:
@@ -1432,9 +1432,11 @@ th:
       gamelab_whileUpArrow:
         text: ในขณะที่ลูกศรขึ้นกด
       gamelab_withPercentChance:
-        text: หากมีโอกาส {NUM}% {STATEMENT}
+        text: |-
+          หากมีโอกาส {NUM}%
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
-        text: โอกาส {NUM} ครั้ง {STATEMENT}
+        text: "โอกาส {NUM} ครั้ง \n{STATEMENT}"
         options:
           NUM:
             '10': ต่ำมาก
@@ -1447,7 +1449,7 @@ th:
       gamelab_yLocationOf:
         text: พิกัด y ของ {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: "[SPRITE]เทพเจ้าเริ่มต้น[0] {BEHAVIOR}"
+        text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
       Mikelab_addTrainingData:
         text: 'เพิ่มข้อมูลการฝึกอบรม: {NAME}{LOCATION}'
         options:
@@ -1764,12 +1766,12 @@ th:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': อิฐ
             '"flowers"': ดอกไม้
             '"hearts"': หัวใจ
             '"iceCream"': ไอศกรีม
-            '"rainbow"': สายรุ้ง
+            '"rainbow"': รุ้งกินน้ำ
             '"stars"': ดาว
-            '"waves"': คลื่น
       Poetry_addLine:
         text: เพิ่มบรรทัด {LINE}
       Poetry_animateText:
@@ -1799,6 +1801,7 @@ th:
             '"sound://category_loops/faultering_desicion_loop1.mp3"': หลอน
             '"sound://category_background/inside_plane.mp3"': ฮัม
             '"sound://category_loops/red_flag_loop1.mp3"': ภารกิจ
+            '"sound://category_nature/summer_night_loop.mp3"': กลางคืน
             '"sound://category_background/repitition.mp3"': ขี่
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': ช้า
       Poetry_playSound:
@@ -1813,7 +1816,6 @@ th:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ล้มเหลว
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': กระพือปีก
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': กระโดด
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': อ่อน
             '"sound://category_poof/puzzle_game_poof_04.mp3"': กะเทย
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': สแกน
             '"sound://category_background/typewriter.mp3"': พิมพ์ดีด
@@ -1829,30 +1831,30 @@ th:
         text: ตั้งค่าพื้นหลังเป็น {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': สี
-            '"squiggles"': เส้นขะยุกขะยิก
-            '"space"': พื้นที่
-            '"stars"': ดาว
+            '"blooming"': เบ่งบาน
+            '"bubbles"': ฟองสบู่
+            '"clouds"': อึมครึม
+            '"confetti"': กระดาษสี
             '"darkCircles"': การจางหาย
             '"fadeColors"': เป็นฝ้า
-            '"blooming"': เบ่งบาน
+            '"hearts"': หัวใจ
+            '"space"': พื้นที่
+            '"rain"': มีฝน
             '"ripples"': ระลอกคลื่น
-            '"clouds"': อึมครึม
-            '"rain"': ฝน
-            '"bubbles"': ฟองสบู่
-            '"confetti"': กระดาษสี
-            '"hearts"': หัวใจหลากสี
+            '"colors"': สี
+            '"stars"': ดาว
+            '"squiggles"': เส้นขะยุกขะยิก
           PALETTE:
-            '"rainbow"': สายรุ้ง
-            '"grayscale"': ขาวดำ
-            '"sky"': ท้องฟ้า
+            '"autumn"': ฤดูใบไม้ร่วง
             '"sunrise"': รุ่งอรุณ
             '"sunset"': อัสดง
+            '"grayscale"': ขาวดำ
+            '"rainbow"': รุ้งกินน้ำ
+            '"roses"': ดอกกุหลาบ
+            '"sky"': ท้องฟ้า
             '"spring"': ฤดูใบไม้ผลิ
             '"summer"': ฤดูร้อน
-            '"autumn"': ฤดูใบไม้ร่วง
             '"winter"': ฤดูหนาว
-            '"roses"': ดอกกุหลาบ
       Poetry_setBackgroundImageAs:
         text: ตั้งค่าพื้นหลังเป็น {IMG}
       Poetry_setFont:
@@ -1860,23 +1862,23 @@ th:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: ตั้งสีข้อความ {FILL}
       Poetry_setForegroundEffect:
         text: ใช้เอฟเฟกต์ {EFFECT}
         options:
           EFFECT:
-            '"rain"': ฝน
             '"bubbles"': ฟองสบู่
-            '"hearts"': หัวใจหลากสี
-            '"emojis"': อีโมจิมีความสุข
             '"confetti"': กระดาษสี
+            '"hearts"': หัวใจ
+            '"emojis"': อีโมจิมีความสุข
+            '"rain"': มีฝน
             '"starburst"': ดาวกระจาย
             '"glass"': กระจกแตก
             '"twinkling"': ระยิบระยับ
@@ -1891,11 +1893,11 @@ th:
         options:
           EFFECT:
             '"fade"': จางหาย
-            '"typewriter"': พิมพ์ดีด
             '"flyLeft"': ลอยจากด้านซ้าย
             '"flyRight"': ลอยจากด้านขวา
             '"flyTop"': ลอยจากด้านบน
             '"flyBottom"': ลอยจากด้านล่าง
+            '"typewriter"': พิมพ์ดีด
       Poetry_setTitle:
         text: ตั้งชื่อ {TITLE}
       Poetry_showText:
@@ -1904,20 +1906,12 @@ th:
         text: 'สไปร์ท {ANIMATION_NAME} เริ่ม {BEHAVIOR} '
         options:
           BEHAVIOR:
-            moving_north_and_looping: ลูปไปทางเหนือ
-            moving_south_and_looping: ลูปไปทางใต้
-            moving_east_and_looping: ลูปไปทางตะวันออก
-            moving_west_and_looping: ลูปไปทางตะวันตก
-            wandering: เคลื่อนที่
+            '"wandering"': เคลื่อนที่
       Poetry_stopBehavior:
         text: 'สไปร์ท {ANIMATION_NAME} หยุด {BEHAVIOR} '
         options:
           BEHAVIOR:
-            moving_north_and_looping: ลูปไปทางเหนือ
-            moving_south_and_looping: ลูปไปทางใต้
-            moving_east_and_looping: ลูปไปทางตะวันออก
-            moving_west_and_looping: ลูปไปทางตะวันตก
-            wandering: เคลื่อนที่
+            '"wandering"': เคลื่อนที่
             '"all"': "--ทุกพฤติกรรม--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

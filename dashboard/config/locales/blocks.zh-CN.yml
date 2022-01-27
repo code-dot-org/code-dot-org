@@ -1812,14 +1812,25 @@ zh-CN:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': 花朵
+            '"brick"': 砖块
+            '"fire"': 燃烧
+            '"flowers"': 花
             '"hearts"': 心
             '"iceCream"': 冰淇淋
+            '"leaves"': 离开
             '"rainbow"': 彩虹
-            '"stars"': 星星
+            '"stars"': 星球
             '"waves"': 波浪
+      Poetry_addLine:
+        text: 添加行{LINE}
+      Poetry_animateText:
+        text: 动画文本
+      Poetry_destroy:
+        text: 移除{ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
+      Poetry_hideText:
+        text: 隐藏文本
       Poetry_makeBurst:
         text: 使用{NUM} {ANIMATION_NAME}精灵图，创建{EFFECT}效果
         options:
@@ -1836,9 +1847,13 @@ zh-CN:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 平静
             '"sound://category_nature/steady_campfire_loop.mp3"': 篝火
             '"sound://category_nature/rain_loop.mp3"': 细雨
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 森林
             '"sound://category_loops/faultering_desicion_loop1.mp3"': 闹鬼
             '"sound://category_background/inside_plane.mp3"': 嗯？
             '"sound://category_loops/red_flag_loop1.mp3"': 使命
+            '"sound://category_nature/summer_night_loop.mp3"': 夜
+            '"sound://category_background/ocean_waves.mp3"': 大海
+            '"sound://category_background/rainforest_ambient_sound.mp3"': 雨林
             '"sound://category_background/repitition.mp3"': 骑术
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': 缓慢
       Poetry_playSound:
@@ -1853,29 +1868,46 @@ zh-CN:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失败
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': 飘扬
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': 跳跃
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
             '"sound://category_poof/puzzle_game_poof_04.mp3"': 噗！
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': 扫描
+            '"sound://category_background/typewriter.mp3"': 打字机
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': 活力
             '"sound://category_achievements/peaceful_win_1.mp3"': 成功
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 漩涡
             '"sound://category_achievements/peaceful_win_6.mp3"': 风铃
+      Poetry_setAuthor:
+        text: 设置作者{AUTHOR}
       Poetry_setBackground:
         text: 设置背景颜色为 {COLOR}
       Poetry_setBackgroundEffect:
+        text: 设置背景到{EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': 颜色
-            '"squiggles"': 花体
-            '"space"': 空间
-            '"stars"': 星星
-            '"ripples"': 波纹
-            '"rain"': 下雨
+            '"blooming"': 开花
             '"bubbles"': 气泡
+            '"clouds"': 多云
             '"confetti"': 彩纸屑
-            '"hearts"': 五彩心
+            '"darkCircles"': 淡入淡出
+            '"fadeColors"': 结霜
+            '"hearts"': 心
+            '"space"': 空间
+            '"rain"': 下雨
+            '"ripples"': 波纹
+            '"colors"': 颜色
+            '"stars"': 星星
+            '"squiggles"': 花体
           PALETTE:
+            '"autumn"': 秋天
+            '"sunrise"': 黎明
+            '"sunset"': 黄昏
+            '"grayscale"': 灰色
+            '"ocean"': 大海
             '"rainbow"': 彩虹
+            '"roses"': 玫瑰
+            '"sky"': 天空
+            '"spring"': 春天
+            '"summer"': 夏天
+            '"winter"': 冬天
       Poetry_setBackgroundImageAs:
         text: 设置背景为 {IMG}
       Poetry_setFont:
@@ -1883,49 +1915,82 @@ zh-CN:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': 手写
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': 手写
       Poetry_setFontColor:
         text: 设置文本颜色{FILL}
       Poetry_setForegroundEffect:
+        text: 制作{EFFECT}效果
         options:
           EFFECT:
-            '"rain"': 下雨
             '"bubbles"': 气泡
-            '"hearts"': 五彩心
             '"confetti"': 彩纸屑
+            '"hearts"': 心
+            '"emojis"': 快乐表情
+            '"rain"': 下雨
             '"starburst"': 星爆
+            '"glass"': 破碎玻璃
+            '"twinkling"': 闪烁
+      Poetry_setPrompt:
+        text: 提示用户{LEFT_QUOTE}{NAME}{RIGHT_QUOTE}，针对变量{VAR}
+      Poetry_setPromptWithChoices:
+        text: 提示用户{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}，针对变量{VAR}，选择{LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A}
+          {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: 设置{SPRITE}大小到{VAL}
+      Poetry_setTextEffect:
+        text: 设置文本效果{EFFECT}
+        options:
+          EFFECT:
+            '"fade"': 淡入淡出
+            '"flyLeft"': 从左边飞
+            '"flyRight"': 从右边飞
+            '"flyTop"': 从顶部飞
+            '"flyBottom"': 从底部飞
+            '"typewriter"': 打字机
+      Poetry_setTitle:
+        text: 设置标题{TITLE}
+      Poetry_showText:
+        text: 显示文本
       Poetry_startBehavior:
+        text: '精灵图{ANIMATION_NAME}开始{BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: 飘动
-            growing: 生长
-            jittering: 抖动
-            shrinking: 收缩
-            spinning_left: 向左旋转
-            spinning_right: 向右旋转
-            swimming_left_and_right: 游泳
-            wandering: 徘徊
-            wobbling: 摇摆
+            '"fluttering"': 飘动
+            '"growing"': 生长
+            '"jittering"': 抖动
+            '"shrinking"': 收缩
+            '"spinning_left"': 向左旋转
+            '"spinning_right"': 向右旋转
+            '"swimming_left_and_right"': 游泳
+            '"wandering"': 徘徊
+            '"wobbling"': 摇摆
       Poetry_stopBehavior:
+        text: '精灵图{ANIMATION_NAME}停止{BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: 飘动
-            growing: 生长
-            jittering: 抖动
-            shrinking: 收缩
-            spinning_left: 向左旋转
-            spinning_right: 向右旋转
-            swimming_left_and_right: 游泳
-            wandering: 徘徊
-            wobbling: 摇摆
+            '"fluttering"': 飘动
+            '"growing"': 生长
+            '"jittering"': 抖动
+            '"shrinking"': 收缩
+            '"spinning_left"': 向左旋转
+            '"spinning_right"': 向右旋转
+            '"swimming_left_and_right"': 游泳
+            '"wandering"': 徘徊
+            '"wobbling"': 摇摆
+            '"all"': "--所有行为--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: 当行{N}显示时
         options:
           N:
             '0': "？？？"
