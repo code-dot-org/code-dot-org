@@ -734,7 +734,10 @@ Applab.init = function(config) {
     }
 
     console.log('in init, in config.level.makerLabEnabled');
-    window.addEventListener('beforeunload', makerToolkit.disconnect());
+    window.addEventListener('beforeunload', function test() {
+      console.log('in event listener function');
+      makerToolkit.disconnect();
+    });
   } else {
     // Combine all maker blocks for both CP and MB since all maker blocks, regardless
     // of board type, should be disabled in this branch
