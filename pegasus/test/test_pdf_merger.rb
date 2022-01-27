@@ -44,12 +44,6 @@ class PDFMergerTest < Minitest::Test
         ubuntu: 'sudo apt-get install ghostscript'
       },
       {
-        name: 'pdftk',
-        url: 'https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/',
-        osx: 'brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb',
-        ubuntu: 'sudo apt-get install pdftk'
-      },
-      {
         name: 'enscript',
         url: 'https://www.gnu.org/software/enscript/',
         osx: 'brew install enscript',
@@ -125,17 +119,6 @@ Expected '#{dependency[:name]}' to be installed.
     merge_file_pdfs(@local_collate_file, @local_collate_output_file)
     assert File.exist?(@local_collate_output_file), "Expected file #{@local_collate_output_file} to exist."
     assert_equal 28, PDF::Reader.new(@local_collate_output_file).pages.size
-  end
-
-  def test_merge_with_numbers
-    assert_local_dependencies
-    refute File.exist?(@numbered_collate_output_file), "Expected file #{@numbered_collate_output_file} not to exist."
-    merge_file_pdfs(@numbered_collate_file, @temp_generated_unnumbered_pdf)
-    PDF.number_pdf(@temp_generated_unnumbered_pdf, @numbered_collate_output_file)
-    assert File.exist?(@numbered_collate_output_file), "Expected file #{@numbered_collate_output_file} to exist."
-    pages = PDF::Reader.new(@numbered_collate_output_file).pages
-    assert_equal 28, pages.size, "Has #{pages.size} pages, should have 28."
-    assert_includes pages[27].text, '28'
   end
 
   def teardown
