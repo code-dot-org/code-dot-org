@@ -22,7 +22,6 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 
 /**
@@ -54,6 +53,7 @@ class UnitOverview extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
+    completedLessonNumber: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -107,7 +107,8 @@ class UnitOverview extends React.Component {
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
       showUnversionedRedirectWarning,
-      isCsdOrCsp
+      isCsdOrCsp,
+      completedLessonNumber
     } = this.props;
 
     const displayRedirectDialog =
@@ -120,8 +121,6 @@ class UnitOverview extends React.Component {
 
     const showUnversionedRedirectWarningDialog =
       showUnversionedRedirectWarning && !this.state.showRedirectDialog;
-
-    const completedLessonNumber = queryParams('completedLessonNumber');
 
     return (
       <div>

@@ -1105,6 +1105,17 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'stable', unit_group.published_state
   end
 
+  test 'generate plc objects will use defaults if script has null values' do
+    unit = create(:script, professional_learning_course: 'my-plc-course', published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
+
+    unit_group = unit.plc_course_unit.plc_course.unit_group
+
+    assert_equal 'plc_reviewer', unit_group.instructor_audience
+    assert_equal 'facilitator', unit_group.participant_audience
+    assert_equal 'teacher_led', unit_group.instruction_type
+    assert_equal 'beta', unit_group.published_state
+  end
+
   test 'unit name format validation' do
     assert_raises ActiveRecord::RecordInvalid do
       create :script, name: 'abc 123'
