@@ -132,7 +132,7 @@ export function connect({interpreter, onDisconnect}) {
  * Throw away reference to the currentBoard, so that next time we run
  * we make a new board.
  */
-function disconnect() {
+export function disconnect() {
   console.log('in toolkit.js disconnect()');
   if (!redux.isEnabled(getStore().getState())) {
     return;
