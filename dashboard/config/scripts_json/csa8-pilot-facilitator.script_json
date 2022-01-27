@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-21 20:19:07 UTC",
+    "serialized_at": "2022-01-27 17:03:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2827,6 +2827,17 @@
       },
       "seeding_key": {
         "activity_section.key": "2de4096d-8c16-47d4-b44f-ed47a3bccfa3",
+        "lesson_activity.key": "63b59918-0637-4df5-86c0-575de643388b"
+      }
+    },
+    {
+      "key": "95fe95f6-c6f4-4239-a98d-d9d2e432c9c3",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What would you say are the risks to privacy from collecting and storing personal data on computer systems?\n\n**Discussion Goal:** Students share ideas about personal information being leaked online or accessed by someone without authorization. Students may share examples of events and issues that have occurred in the real world."
+      },
+      "seeding_key": {
+        "activity_section.key": "95fe95f6-c6f4-4239-a98d-d9d2e432c9c3",
         "lesson_activity.key": "63b59918-0637-4df5-86c0-575de643388b"
       }
     },
