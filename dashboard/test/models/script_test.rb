@@ -1105,17 +1105,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'stable', unit_group.published_state
   end
 
-  test 'generate plc objects will use defaults if script has null values' do
-    unit = create(:script, professional_learning_course: 'my-plc-course', published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
-
-    unit_group = unit.plc_course_unit.plc_course.unit_group
-
-    assert_equal 'plc_reviewer', unit_group.instructor_audience
-    assert_equal 'facilitator', unit_group.participant_audience
-    assert_equal 'teacher_led', unit_group.instruction_type
-    assert_equal 'beta', unit_group.published_state
-  end
-
   test 'unit name format validation' do
     assert_raises ActiveRecord::RecordInvalid do
       create :script, name: 'abc 123'
@@ -2187,6 +2176,46 @@ class ScriptTest < ActiveSupport::TestCase
         @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
       end
     end
+  end
+
+  test 'should raise error if participant audience is nil for standalone unit' do
+    unit = create(:script)
+    error = assert_raises do
+      unit.participant_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Participant audience must be set on the unit if its not in a course.'
+  end
+
+  test 'should raise error if instructor audience is nil for standalone unit' do
+    unit = create(:script)
+    error = assert_raises do
+      unit.instructor_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instructor audience must be set on the unit if its not in a course.'
+  end
+
+  test 'should raise error if published state is nil for standalone unit' do
+    unit = create(:script)
+    error = assert_raises do
+      unit.published_state = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Published state must be set on the unit if its not in a course.'
+  end
+
+  test 'should raise error if instruction type is nil for standalone unit' do
+    unit = create(:script)
+    error = assert_raises do
+      unit.instruction_type = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instruction type must be set on the unit if its not in a course.'
   end
 
   private

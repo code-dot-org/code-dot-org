@@ -238,9 +238,21 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil)
       end
       unit_group_unit.update!(position: index + 1)
+
+      # Never want a unit in a unit group to have these fields be set
+      unit.reload
+      unit.update!(instruction_type: nil, participant_audience: nil, instructor_audience: nil)
+    end
+
+    # Only set newly added units published state to null because
+    # a unit in a unit group can have a published state set to determine
+    # if its at a different level of visibility than the course as whole
+    brand_new_units = new_units_objects - default_unit_group_units.map(&:script)
+    brand_new_units.each do |unit|
+      unit.reload
+      unit.update!(published_state: nil)
     end
 
     alternate_units.each do |hash|
