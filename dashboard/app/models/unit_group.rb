@@ -262,7 +262,12 @@ class UnitGroup < ApplicationRecord
 
     units_to_remove.each do |unit|
       # Units that are not in a unit group need to have these fields set in order to determine course type and visibility of course
-      unit.update!(published_state: published_state, instruction_type: instruction_type, participant_audience: participant_audience, instructor_audience: instructor_audience)
+      unit.update!(
+        published_state: (unit.published_state ? unit.published_state : published_state),
+        instruction_type: instruction_type,
+        participant_audience: participant_audience,
+        instructor_audience: instructor_audience
+      )
 
       UnitGroupUnit.where(unit_group: self, script: unit).destroy_all
     end

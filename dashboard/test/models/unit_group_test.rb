@@ -456,6 +456,47 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit2.instructor_audience
       assert_nil unit2.participant_audience
     end
+
+    test "units with published state set independent of the unit group maintain that published state when removed" do
+      unit_group = create :unit_group
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_nil unit1.published_state
+      assert_nil unit1.instruction_type
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+
+      assert_nil unit2.published_state
+      assert_nil unit2.instruction_type
+      assert_nil unit2.instructor_audience
+      assert_nil unit2.participant_audience
+
+      unit2.published_state = SharedCourseConstants::PUBLISHED_STATE.in_development
+      unit2.save!
+
+      assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
+
+      unit_group.update_scripts(['unit1'])
+
+      unit_group.reload
+      unit2.reload
+
+      refute_equal unit_group.published_state, unit2.published_state
+      assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
+      assert_equal unit_group.instruction_type, unit2.instruction_type
+      refute_nil unit2.instruction_type
+      assert_equal unit_group.instructor_audience, unit2.instructor_audience
+      refute_nil unit2.instructor_audience
+      assert_equal unit_group.participant_audience, unit2.participant_audience
+      refute_nil unit2.participant_audience
+    end
   end
 
   test "summarize" do
