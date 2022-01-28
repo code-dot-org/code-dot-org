@@ -58,4 +58,21 @@ describe('StyledCodeBlock', () => {
       '[`playSound`](/docs/applab/playSound)'
     );
   });
+
+  it('embeds block if blockName is provided', () => {
+    const wrapper = shallow(
+      <StyledCodeBlock
+        programmingExpression={{
+          syntax: 'playSound',
+          color: null,
+          link: '/docs/spritelab/playSound',
+          blockName: 'playSound'
+        }}
+      />
+    );
+
+    const blockLink = wrapper.find('a');
+    expect(blockLink.props().href).to.equal('/docs/spritelab/playSound');
+    expect(blockLink.find('#embedded-block-playSound').length).to.equal(1);
+  });
 });

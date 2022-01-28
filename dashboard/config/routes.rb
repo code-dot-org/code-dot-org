@@ -262,6 +262,7 @@ Dashboard::Application.routes.draw do
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
+      post 'update_start_code'
     end
   end
 
@@ -767,6 +768,7 @@ Dashboard::Application.routes.draw do
       get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
+      get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 

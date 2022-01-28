@@ -30,6 +30,7 @@ import progress from '@cdo/apps/code-studio/progress';
 import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
+import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -101,6 +102,11 @@ function initPage() {
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
 
+  const completedLessonNumber = queryParams('completedLessonNumber');
+  // This query param is immediately removed so that it is not included in the links
+  // rendered on this page
+  updateQueryParam('completedLessonNumber', undefined);
+
   ReactDOM.render(
     <Provider store={store}>
       <UnitOverview
@@ -133,6 +139,7 @@ function initPage() {
           scriptData.show_unversioned_redirect_warning
         }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
+        completedLessonNumber={completedLessonNumber}
       />
     </Provider>,
     mountPoint
