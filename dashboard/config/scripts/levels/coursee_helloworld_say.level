@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-01-27T18:08:01.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -68,13 +72,10 @@
     "video_key": "hello_world_intro",
     "skip_autosave": true,
     "encrypted_examples": "Wao2CB+999XcuWgtwhzMiapqj3NBqk4XREhbUIAzevPrHpFjG9wRcTMxBkel\nFfs7cEhGmbjXv7PwAEqUNGguYQ==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-01-27T18:08:01.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-01-27T18:08:01.264+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_say\\\"\"],\"cloned_from\":\"helloworld_food_say\"},{\"changed_at\":\"2022-01-27 18:10:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {

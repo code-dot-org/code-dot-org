@@ -68,11 +68,15 @@
     "encrypted_examples": "wgftaQW7FKU8HcBRvjfvs4j6pmq1vQDHTXj0VTBi0aO8kTWMRWG6wWZt1xAp\n/iZRsQ1GlgCjLi+CHMTTFPiatXYkqzRarIJweCjMoFzI86YwS5qYCQApulfp\nIDq080WKu9yNjAnlejHyNL8jE5ajVA==\n",
     "hide_pause_button": "false",
     "short_instructions": "Make a ship sprite and have it sail across the water.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:41.063+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_ship\\\"\"],\"cloned_from\":\"courseF_sprites_ship\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:41.063+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_ship\\\"\"],\"cloned_from\":\"courseF_sprites_ship\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>
