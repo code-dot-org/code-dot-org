@@ -127,6 +127,9 @@ module Crowdin
         etags[code].merge! downloaded_files
         File.write @etags_json, JSON.pretty_generate(etags)
       end
+      # Makes sure these files get written even if nothing was downloaded.
+      File.write @files_to_sync_out_json, JSON.pretty_generate(files_to_sync_out)
+      File.write @files_to_download_json, JSON.pretty_generate(files_to_download)
     end
   end
 end
