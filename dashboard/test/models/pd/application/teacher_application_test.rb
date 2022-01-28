@@ -818,21 +818,21 @@ module Pd::Application
     end
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
-      statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
+      workshop_required_statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
       workshop = create :workshop
       application = create :pd_teacher_application, {
         regional_partner: partner
       }
 
-      statuses.each do |status|
+      workshop_required_statuses.each do |status|
         application.status = status
         refute application.valid?
         assert_equal ["#{status} requires workshop to be assigned"], application.errors.messages[:status]
       end
 
       application.pd_workshop_id = workshop.id
-      statuses.each do |status|
+      workshop_required_statuses.each do |status|
         application.status = status
         assert application.valid?
       end
