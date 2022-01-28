@@ -1219,65 +1219,73 @@ fil-PH:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2101,9 +2109,10 @@ fil-PH:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
