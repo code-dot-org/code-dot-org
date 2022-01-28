@@ -101,6 +101,8 @@ const FormController = props => {
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
     applicationId && allowPartialSaving
   );
+  const applicationStatusOnSave = 'incomplete';
+  const applicationStatusOnSubmit = 'unreviewed';
 
   // do this once on mount only
   useEffect(() => {
@@ -351,7 +353,7 @@ const FormController = props => {
       onSuccessfulSave(data);
     };
 
-    makeRequest('incomplete')
+    makeRequest(applicationStatusOnSave)
       .done(data => handleSuccessfulSave(data))
       .fail(data => handleRequestFailure(data));
   };
@@ -389,7 +391,7 @@ const FormController = props => {
       onSuccessfulSubmit(data);
     };
 
-    makeRequest('unreviewed')
+    makeRequest(applicationStatusOnSubmit)
       .done(data => handleSuccessfulSubmit(data))
       .fail(data => handleRequestFailure(data));
   };
