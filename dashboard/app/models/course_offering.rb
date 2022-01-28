@@ -74,7 +74,7 @@ class CourseOffering < ApplicationRecord
       is_featured: is_featured?,
       category: category,
       display_name: display_name
-    }.merge(properties&.sort.to_h)
+    }
   end
 
   def serialize
