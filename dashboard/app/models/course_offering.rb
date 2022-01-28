@@ -17,8 +17,6 @@
 #
 
 class CourseOffering < ApplicationRecord
-  include SerializedProperties
-
   has_many :course_versions
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -26,11 +24,6 @@ class CourseOffering < ApplicationRecord
   validates_format_of :key,
     with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
-
-  serialized_attrs %w(
-    is_featured
-    category
-  )
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -80,7 +73,7 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       is_featured: is_featured?,
-      category: category || SharedCourseConstants::COURSE_OFFERING_CATEGORIES.other,
+      category: category,
       display_name: display_name
     }.merge(properties&.sort.to_h)
   end
@@ -89,7 +82,7 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       display_name: display_name
-    }.merge(properties&.sort.to_h)
+    }
   end
 
   def write_serialization
