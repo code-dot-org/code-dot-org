@@ -262,6 +262,7 @@ Dashboard::Application.routes.draw do
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
+      post 'update_start_code'
     end
   end
 
@@ -466,6 +467,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
   get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
+  get '/admin/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
+  put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
   get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
   post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
   get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
@@ -763,6 +766,7 @@ Dashboard::Application.routes.draw do
       get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
+      get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
@@ -866,9 +870,6 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
-
-  get '/javabuilder_connection_test/csrf_token', to: 'javabuilder_connection_test#get_csrf_token'
-  post '/javabuilder_connection_test/log', to: 'javabuilder_connection_test#log'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do

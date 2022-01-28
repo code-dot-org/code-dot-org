@@ -6,13 +6,18 @@ import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/Expandable
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
 $(document).ready(() => {
   registerReducers({
     instructionsDialog
   });
-  const store = getStore();
+  const customBlocksConfig = getScriptData('customBlocksConfig');
+  if (customBlocksConfig) {
+    prepareBlocklyForEmbedding(customBlocksConfig);
+  }
 
+  const store = getStore();
   const programmingExpression = getScriptData('programmingExpression');
   ReactDOM.render(
     <Provider store={store}>

@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Bonjour tout le monde
 theme: responsive
 set_dir: true
 social:
@@ -14,24 +14,24 @@ social:
   twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
 ---
 
-# Hello World!
+# Bonjour Tout Le Monde!
 
-Dans Computer Science 101, le premier programme créé par de nombreux élèves est un programme simple qui génère une ligne de texte emblématique : "Hello World!" Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps. Choose from four fun themes to code interactive characters in a world you create!
+Dans L'informatique 101, le premier programme créé par de nombreux élèves est un programme simple qui génère une ligne de texte emblématique : "Bonjour Tout Le Monde!" Dites bonjour au monde de l'informatique avec cette activité d'introduction qui donne aux étudiants les compétences de base en matière de la programmation et la confiance nécessaire pour créer des applications. Choisis entre quatre activités amusantes pour programmer des personnages interactifs dans un monde que tu a créé !
 
-# Choose your Hello World theme
+# Choisis le thème de ton application
 
-{{ spritelab_module, title: "Food", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
-{{ spritelab_module, title: "Animals", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
-{{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "Cuisine", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "Animaux", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "Rétro", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Infos enseignant", title: "Comment continuer à apprendre après Hello World", description: "Hello World est la première étape idéale pour les salles de classe avant d'essayer les projets ouverts de notre nouveau programme, CS Connections ! After learning some coding basics, students will be able to progress to CS Connections' cross-curricular projects.", button_text: "Learn more", url: "/educate/csc" }}
+{{ teacher_info, heading: "Infos enseignant", title: "Comment continuer à apprendre après Hello World", description: "Hello World est la première étape idéale pour les salles de classe avant d'essayer les projets ouverts de notre nouveau programme, CS Connections! After learning some coding basics, students will be able to progress to CS Connections' cross-curricular projects.", button_text: "Learn more", url: "/educate/csc" }}
 
 ## Réalisations des meilleurs participants
 
-{{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Cuisine", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
 {{ featured_project, title: "Emoji", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
-{{ featured_project, title: "Animals", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Animaux", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
 {{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}

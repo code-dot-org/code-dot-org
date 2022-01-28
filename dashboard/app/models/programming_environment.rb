@@ -15,13 +15,14 @@
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
-  validates_uniqueness_of :name
+  validates_uniqueness_of :name, case_sensitive: false
 
   has_many :programming_expressions
 
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
     editor_type
+    block_pool_name
     title
     description
     image_url
@@ -29,10 +30,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   def self.properties_from_file(content)
     environment_config = JSON.parse(content)
-    {
-      name: environment_config['name'],
-      editor_type: environment_config['editorType']
-    }
+    environment_config.symbolize_keys
   end
 
   def self.seed_all(glob="config/programming_environments/*.json")
@@ -48,6 +46,17 @@ class ProgrammingEnvironment < ApplicationRecord
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
     environment.update! properties
     environment.name
+  end
+
+  def serialize
+    {name: name}.merge(properties.sort.to_h)
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+
+    file_path = Rails.root.join("config/programming_environments/#{name.parameterize}.json")
+    File.write(file_path, JSON.pretty_generate(serialize))
   end
 
   def summarize_for_lesson_edit

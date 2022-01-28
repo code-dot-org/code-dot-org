@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:12 UTC",
+    "serialized_at": "2022-01-27 18:29:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1956,7 +1956,7 @@
       "key": "f6914fd0-43bd-4443-a257-4cee63f1bea6",
       "position": 4,
       "properties": {
-        "description": "What we just acted out was an example of a concept called polymorphism. An `Instrument` could be a `Guitar` or a `Flute`, allowing it to take on different forms and perform the `play()` action in different ways.\n\nWe see examples of polymorphism all around us, and it is useful for creating and working with lists of more generic types, or superclasses, that contain specific versions of objects, or their subclasses.",
+        "description": "What we just acted out was an example of a concept called polymorphism. An `Instrument` could be a `Guitar` or a `Flute`, allowing it to take on different forms and perform the `play()` action in different ways.\n\nWe see examples of polymorphism all around us, and it is useful for creating and working with lists of more generic types, or superclasses, that contain specific versions of objects, or their subclasses.\n\nIt is also useful for when we write methods using objects as parameters. We can specify the parameter of a method to be of the superclass type, so that it accepts all of the subclass types as well.",
         "remarks": true
       },
       "seeding_key": {
@@ -2046,7 +2046,7 @@
       "key": "9b2d16e3-857d-4c3b-be97-731801d01fdd",
       "position": 11,
       "properties": {
-        "description": "We can traverse this array of objects in the same way that we traverse arrays of primitive values.\n\nSince each element in the array is an object, we can call their methods as we traverse the array.",
+        "description": "We can traverse this array of objects in the same way that we traverse arrays of primitive values. Since each element in the array is an object, we can call their methods as we traverse the array.\n\nWhen the program is compiled, the methods in or inherited by the declared type determine the correctness of the method call. Then, the method in the actual object type is executed for the method call.",
         "remarks": true
       },
       "seeding_key": {

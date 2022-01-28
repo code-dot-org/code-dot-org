@@ -2,5 +2,6 @@
   "key": "whenPromptAnswered",
   "name": "whenPromptAnswered",
   "category": "Events",
+  "block_name": "gamelab_whenPromptAnswered",
   "syntax": "whenPromptAnswered"
 }

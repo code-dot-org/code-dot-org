@@ -24,7 +24,7 @@ Feature: Using the teacher homepage sections feature
     Then the section table should have 1 row
     And the section table row at index 0 has secondary assignment path "/s/csp3-a"
 
-  @no_firefox @no_safari @no_ie
+  @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
     Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"
@@ -83,20 +83,20 @@ Feature: Using the teacher homepage sections feature
 
     # Test that the overview pages add the newer section id to the url
 
-    When I am on "http://studio.code.org/courses/csp-2018"
+    When I am on "http://studio.code.org/courses/csp-2019"
     And I wait until element ".uitest-CourseScript" is visible
     Then the url contains the section id
 
-    When I am on "http://studio.code.org/s/csp1-2018"
+    When I am on "http://studio.code.org/s/csp1-2019"
     And I wait until element "#script-title" is visible
     Then the url contains the section id
 
-    When I am on "http://studio.code.org/s/coursea-2018"
+    When I am on "http://studio.code.org/s/coursea-2019"
     And I wait until element "#script-title" is visible
     Then the url contains the section id
 
     # loading non-existent section succeeds, with no section selected
-    When I am on "http://studio.code.org/s/coursea-2018?section_id=99999"
+    When I am on "http://studio.code.org/s/coursea-2019?section_id=99999"
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
@@ -157,16 +157,16 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#assignment-version-year" is visible
     And element "#assignment-version-year" has value "2017"
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains(2018)" once I see it
+    And I click selector ".assignment-version-title:contains(2019)" once I see it
     And I press the first ".uitest-saveButton" element
     And I wait for the dialog to close
     Then I should see the section table
-    And the section table row at index 0 has primary assignment path "/s/coursea-2018"
+    And the section table row at index 0 has primary assignment path "/s/coursea-2019"
 
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet ('18-'19)"
+    And I create a new section with course "Computer Science Principles", version "'19-'20" and unit "CSP Unit 1 - The Internet ('19-'20)"
     Then the section table should have 1 rows
 
     # save the older section id, from the last row of the table
@@ -178,7 +178,7 @@ Feature: Using the teacher homepage sections feature
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
-    And check that the URL contains "/courses/csp-2018"
+    And check that the URL contains "/courses/csp-2019"
 
     And element "#uitest-version-selector" is visible
     And I click selector "#assignment-version-year" once I see it

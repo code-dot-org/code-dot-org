@@ -13,12 +13,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 22:43:25 UTC",
+    "serialized_at": "2022-01-12 19:06:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -29,13 +28,26 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Create PT"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp8-2021"
       }
     }
@@ -57,7 +69,7 @@
       },
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -75,7 +87,7 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -94,7 +106,7 @@
       },
       "seeding_key": {
         "lesson.key": "Create PT - Make a Plan",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -115,7 +127,22 @@
       },
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp8-2021"
       }
     }
@@ -130,7 +157,7 @@
       "seeding_key": {
         "lesson_activity.key": "de2b2a76-367e-46f5-b6a7-3041ea80ab5c",
         "lesson.key": "Create PT - Review the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -144,7 +171,7 @@
       "seeding_key": {
         "lesson_activity.key": "504c2d5f-fc17-4fe8-bc19-815d98352fea",
         "lesson.key": "Create PT - Review the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -158,7 +185,7 @@
       "seeding_key": {
         "lesson_activity.key": "14d8bd81-4fab-494f-93a3-5dc58a2f6639",
         "lesson.key": "Create PT - Review the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -172,7 +199,7 @@
       "seeding_key": {
         "lesson_activity.key": "8bb6a656-e228-4bf1-86f2-eca2630cc837",
         "lesson.key": "Create PT - Review the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -185,7 +212,7 @@
       "seeding_key": {
         "lesson_activity.key": "f7f75c69-84e4-4d5c-a2cb-980f0dced2b3",
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -199,7 +226,7 @@
       "seeding_key": {
         "lesson_activity.key": "d83a5921-3b68-4a8d-874f-d03c0141ffcd",
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -213,7 +240,7 @@
       "seeding_key": {
         "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb",
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -227,7 +254,7 @@
       "seeding_key": {
         "lesson_activity.key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0",
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -240,7 +267,7 @@
       "seeding_key": {
         "lesson_activity.key": "6a6d5cb4-5b62-441d-a0cc-2a352563fa12",
         "lesson.key": "Create PT - Make a Plan",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -254,7 +281,7 @@
       "seeding_key": {
         "lesson_activity.key": "6e25a224-243e-456f-97bc-7522985d375e",
         "lesson.key": "Create PT - Make a Plan",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -268,7 +295,7 @@
       "seeding_key": {
         "lesson_activity.key": "147366ad-a736-4b77-a4e8-39a6e5be61e1",
         "lesson.key": "Create PT - Make a Plan",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -282,7 +309,7 @@
       "seeding_key": {
         "lesson_activity.key": "5ddbc8d6-bf86-4ebc-8464-b69831a640cd",
         "lesson.key": "Create PT - Make a Plan",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -295,7 +322,7 @@
       "seeding_key": {
         "lesson_activity.key": "56ae7ec4-d3e1-4a0e-bd79-36058eeebb68",
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -308,7 +335,7 @@
       "seeding_key": {
         "lesson_activity.key": "7bec0439-6c37-442f-9cf9-81ba020ae3d0",
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -322,7 +349,7 @@
       "seeding_key": {
         "lesson_activity.key": "21b1acb6-49f6-4b3f-8b00-d7491b2c82b5",
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -336,7 +363,7 @@
       "seeding_key": {
         "lesson_activity.key": "c5767ca4-fa97-4376-987f-4a7d9e8ba233",
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021"
       }
     },
@@ -349,7 +376,19 @@
       "seeding_key": {
         "lesson_activity.key": "cc45198a-31cf-417b-b4a4-169866bea19d",
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "1c975e39-3c24-41da-9590-c6e58593d2cd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c975e39-3c24-41da-9590-c6e58593d2cd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp8-2021"
       }
     }
@@ -982,6 +1021,23 @@
         "activity_section.key": "34f439e3-78bf-42c2-9487-8d15cc20ea8a",
         "lesson_activity.key": "cc45198a-31cf-417b-b4a4-169866bea19d"
       }
+    },
+    {
+      "key": "6b5fa318-b631-4d4c-859a-bc25bb5082ce",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b5fa318-b631-4d4c-859a-bc25bb5082ce",
+        "lesson_activity.key": "1c975e39-3c24-41da-9590-c6e58593d2cd"
+      }
     }
   ],
   "script_levels": [
@@ -1002,7 +1058,7 @@
           "csp-pt-tech-setup-and-tools_2021"
         ],
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021",
         "activity_section.key": "969dafe8-ae3a-4e29-83f0-ef855f36a128"
       },
@@ -1027,12 +1083,37 @@
           "Create PT Workspace 2020_2021"
         ],
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021",
         "activity_section.key": "6f7b3c76-1ad4-4d76-8014-7b73149fd7d9"
       },
       "level_keys": [
         "Create PT Workspace 2020_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp8-2021",
+        "activity_section.key": "6b5fa318-b631-4d4c-859a-bc25bb5082ce"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
       ]
     }
   ],
@@ -1044,7 +1125,7 @@
           "csp-pt-tech-setup-and-tools_2021"
         ],
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021",
         "activity_section.key": "969dafe8-ae3a-4e29-83f0-ef855f36a128"
       }
@@ -1056,9 +1137,21 @@
           "Create PT Workspace 2020_2021"
         ],
         "lesson.key": "Create PT - Complete the Task",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2021",
         "activity_section.key": "6f7b3c76-1ad4-4d76-8014-7b73149fd7d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp8-2021",
+        "activity_section.key": "6b5fa318-b631-4d4c-859a-bc25bb5082ce"
       }
     }
   ],
@@ -1098,8 +1191,8 @@
       }
     },
     {
-      "name": "APCSP CT 20-21 Scoring Guidelines",
-      "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
+      "name": "APCSP CT 21-22 Scoring Guidelines",
+      "url": "https://apcentral.collegeboard.org/pdf/ap21-sg-computer-science-principles.pdf",
       "key": "apcsp_ct_20-21_scoring_guidelines",
       "properties": {
         "audience": "Student",
@@ -1110,7 +1203,7 @@
       }
     },
     {
-      "name": "APCSP CT 20-21 Task Instructions",
+      "name": "APCSP Create Task Instructions",
       "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
       "key": "apcsp_ct_20-21_task_instructions",
       "properties": {

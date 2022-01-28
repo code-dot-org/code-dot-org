@@ -1138,22 +1138,23 @@ var projects = (module.exports = {
         function(err, response) {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
-              this.showSaveError_(
+              this.showSaveError_();
+              this.logError_(
                 'unauthorized-save-sources-reload',
                 saveSourcesErrorCount,
                 err.message
-              );
-              utils.reload();
+              ).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
-              this.showSaveError_(
+              this.showSaveError_();
+              this.logError_(
                 'conflict-save-sources-reload',
                 saveSourcesErrorCount,
                 err.message
-              );
-              utils.reload();
+              ).finally(() => utils.reload());
             } else {
               saveSourcesErrorCount++;
-              this.showSaveError_(
+              this.showSaveError_();
+              this.logError_(
                 'save-sources-error',
                 saveSourcesErrorCount,
                 err.message
@@ -1161,8 +1162,8 @@ var projects = (module.exports = {
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
-              return;
             }
+            return;
           } else if (saveSourcesErrorCount > 0) {
             // If the previous errors occurred due to network problems, we may not
             // have been able to report them. Try to report them once more, now that
@@ -1372,16 +1373,15 @@ var projects = (module.exports = {
     name = name || appOptions.level.name;
     return name;
   },
-  showSaveError_(errorType, errorCount, errorText) {
+  showSaveError_() {
     header.showProjectSaveError();
-    this.logError_(errorType, errorCount, errorText);
   },
   logError_: function(errorType, errorCount, errorText) {
     // Share URLs only make sense for standalone app types.
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    firehoseClient.putRecord(
+    return firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
         study_group: 'v4',
@@ -1408,11 +1408,8 @@ var projects = (module.exports = {
     const {shouldNavigate} = options;
     if (err) {
       saveChannelErrorCount++;
-      this.showSaveError_(
-        'save-channel-error',
-        saveChannelErrorCount,
-        err + ''
-      );
+      this.showSaveError_();
+      this.logError_('save-channel-error', saveChannelErrorCount, err + '');
       if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
         header.showTryAgainDialog();
       }

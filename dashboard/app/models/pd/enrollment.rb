@@ -67,7 +67,7 @@ class Pd::Enrollment < ApplicationRecord
   validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
-  before_save :set_application_id if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+  before_save :set_application_id
   after_create :set_default_scholarship_info
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
   after_save :authorize_teacher_account
@@ -329,13 +329,13 @@ class Pd::Enrollment < ApplicationRecord
   # workshop id
   # @return [Integer, nil] application id or nil if cannot find any application
   def set_application_id
-    course_match = ->(application) {Pd::Application::ApplicationBase::COURSE_NAME_MAP.dig(application.try(:course).to_sym) == workshop.try(:course)}
+    course_match = ->(application) {Pd::Application::ApplicationBase::COURSE_NAME_MAP.dig(application.try(:course)&.to_sym) == workshop.try(:course)}
     pd_match = ->(application) {application.try(:pd_workshop_id) == pd_workshop_id}
 
     application_id = nil
     # Finds application from the school year of the workshop. Assumes workshops start after 6/1
     # because workshop.school_year assumes 6/1 is the start of the school year
-    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: workshop.school_year).each do |application|
+    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: workshop&.school_year).each do |application|
       application_id = application.id if course_match.call(application) || pd_match.call(application)
       break if application_id
     end
@@ -351,7 +351,7 @@ class Pd::Enrollment < ApplicationRecord
     self.user_id = nil
     self.school = nil
     self.school_info_id = nil
-    self.application_id = nil if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+    self.application_id = nil
     self.deleted_at = Time.now
     save!
   end

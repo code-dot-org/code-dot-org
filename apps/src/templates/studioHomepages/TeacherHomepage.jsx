@@ -17,7 +17,7 @@ import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
-import SetUpMessage from '@cdo/apps/templates/studioHomepages/SetUpMessage';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
 
 export const UnconnectedTeacherHomepage = ({
@@ -176,7 +176,7 @@ export const UnconnectedTeacherHomepage = ({
         )}
         {!showAnnouncement && <br />}
         {showFinishTeacherApplication && (
-          <SetUpMessage
+          <BorderedCallToAction
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
