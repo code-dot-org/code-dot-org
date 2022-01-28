@@ -340,6 +340,12 @@
           },
           "draw a house": {
             "name": "วาดรูปบ้าน"
+          },
+          "sun": {
+            "name": "ดวงอาทิตย์"
+          },
+          "square": {
+            "name": "จัตุรัส"
           }
         },
         "Geometric Sun_2018": {
@@ -348,6 +354,12 @@
           },
           "draw a house": {
             "name": "วาดรูปบ้าน"
+          },
+          "sun": {
+            "name": "ดวงอาทิตย์"
+          },
+          "square": {
+            "name": "จัตุรัส"
           }
         },
         "InspirationalArtwork": {
