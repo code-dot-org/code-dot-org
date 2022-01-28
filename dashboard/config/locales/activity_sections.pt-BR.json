@@ -565,6 +565,25 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Compressão de texto"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introdução"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemia",
+          "progression_name": "Epidemia"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "progression_name": "Seja bem-vindo à Monster Town"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "progression_name": "Desenvolvimento de Habilidades"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Atividade livre"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflexão"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introdução",
           "tips": [
@@ -5158,25 +5177,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Você tem duas notas adesivas. Em uma delas, escreva algo que você aprendeu sobre codificação hoje.  Na outra, escreva algo que aprendeu sobre poesia hoje.   Vamos compartilhar com toda a classe levantando a mão para responder a esta pergunta: Agora, o que mais você espera que pode aprender sobre codificação e ciência da computação?"
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introdução"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Epidemia",
-          "progression_name": "Epidemia"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "progression_name": "Seja bem-vindo à Monster Town"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "progression_name": "Desenvolvimento de Habilidades"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Atividade livre"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexão"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
