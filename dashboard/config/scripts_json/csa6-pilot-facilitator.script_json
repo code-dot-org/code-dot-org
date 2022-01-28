@@ -2,9 +2,10 @@
   "script": {
     "name": "csa6-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-27 21:39:40 UTC",
+    "serialized_at": "2022-01-28 19:41:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6180,6 +6181,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa6-pilot-facilitator/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa6-pilot-facilitator/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa6-pilot-facilitator/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
+    {
       "name": "Dr. Seuss Book Written by A.I.",
       "url": "https://youtu.be/DckBBDU6V4k",
       "key": "dr_seuss_book_written_by_a_i_",
@@ -6819,7 +6853,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 
