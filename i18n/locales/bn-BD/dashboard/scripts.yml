@@ -1623,6 +1623,10 @@ bn:
               display_name: তালিকা
             csp_loops:
               display_name: চক্র
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: অ্যালগরিদম
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -1791,3 +1795,125 @@ bn:
           lessons:
             lesson-1:
               name: বানান মৌমাছি
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: এক ঘন্টার কোড
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: চলকগুলো
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: আনন্দের মানচিত্র
+            'Programming: Happy Maps':
+              name: আনন্দের মানচিত্র
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
+        csp1-2022:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
+              display_name: চক্র
+        courseb-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: বড় ঘটনা
+            'Events: The Big Event':
+              name: বড় ঘটনা
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: ছক-কাগজে প্রোগ্রামিং
+            Relay Programming:
+              name: রিলে-স্যুইচ প্রোগ্রামিং
+              key: রিলে-স্যুইচ প্রোগ্রামিং
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত
+              key: কার্ড সঙ্গে শর্ত
+            'Algorithms: Graph Paper Programming':
+              name: ছক-কাগজে প্রোগ্রামিং
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: গান লিখা
+            'Functions: Songwriting':
+              name: গান লিখা
+            Conditionals:
+              key: শর্তযুক্ত
+          lesson_groups:
+            ramp_up:
+              display_name: নেষ্টেড লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: শর্তযুক্ত
+        coursef-2022:
+          lessons:
+            The Internet:
+              name: ইন্টারনেট
+            Internet:
+              key: ইন্টারনেট
+              name: ইন্টারনেট
+          lesson_groups:
+            lessonGroup-8:
+              display_name: চলকগুলো
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
