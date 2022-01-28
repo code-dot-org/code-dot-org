@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Radium from 'radium';
 import {
   setSource,
+  sourceTextUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
@@ -63,6 +64,7 @@ class JavalabEditor extends React.Component {
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
+    sourceTextUpdated: PropTypes.func,
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
@@ -193,6 +195,8 @@ class JavalabEditor extends React.Component {
   }
 
   dispatchEditorChange = key => {
+    const {sourceTextUpdated} = this.props;
+
     // tr is a code mirror transaction
     // see https://codemirror.net/6/docs/ref/#state.Transaction
     return tr => {
@@ -201,10 +205,7 @@ class JavalabEditor extends React.Component {
       this.editors[key].update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        this.props.setSource(
-          this.state.fileMetadata[key],
-          tr.newDoc.toString()
-        );
+        sourceTextUpdated(this.state.fileMetadata[key], tr.newDoc.toString());
         projectChanged();
       }
     };
@@ -565,58 +566,48 @@ class JavalabEditor extends React.Component {
             isOpen={versionHistoryOpen}
           />
         )}
-        <PaneHeader hasFocus style={{display: 'flex'}}>
-          <PaneSection
-            className={'pane-header-section pane-header-section-left'}
-          >
-            <PaneButton
-              id="javalab-editor-create-file"
-              iconClass="fa fa-plus-circle"
-              onClick={() => this.setState({openDialog: Dialog.CREATE_FILE})}
-              headerHasFocus
-              isRtl={false}
-              label={javalabMsg.newFile()}
-              leftJustified
+        <PaneHeader hasFocus>
+          <PaneButton
+            id="javalab-editor-create-file"
+            iconClass="fa fa-plus-circle"
+            onClick={() => this.setState({openDialog: Dialog.CREATE_FILE})}
+            headerHasFocus
+            isRtl={false}
+            label={javalabMsg.newFile()}
+            leftJustified
+            isDisabled={isReadOnlyWorkspace}
+          />
+          <PaneSection style={styles.backpackSection}>
+            <Backpack
+              id={'javalab-editor-backpack'}
+              displayTheme={displayTheme}
               isDisabled={isReadOnlyWorkspace}
+              onImport={this.onImportFile}
             />
-            <PaneSection style={styles.backpackSection}>
-              <Backpack
-                id={'javalab-editor-backpack'}
-                displayTheme={displayTheme}
-                isDisabled={isReadOnlyWorkspace}
-                onImport={this.onImportFile}
-              />
-            </PaneSection>
           </PaneSection>
-          <PaneSection
-            className={'pane-header-section pane-header-section-center'}
-          >
+          <PaneButton
+            id="data-mode-versions-header"
+            iconClass="fa fa-clock-o"
+            label={msg.showVersionsHeader()}
+            headerHasFocus
+            isRtl={false}
+            onClick={() => this.handleVersionHistory()}
+            isDisabled={isReadOnlyWorkspace}
+          />
+          <PaneButton
+            id="javalab-editor-save"
+            iconClass="fa fa-check-circle"
+            onClick={this.onOpenCommitDialog}
+            headerHasFocus
+            isRtl={false}
+            label={javalabMsg.commitCode()}
+            isDisabled={isReadOnlyWorkspace}
+          />
+          <PaneSection>
             {showProjectTemplateWorkspaceIcon && (
               <ProjectTemplateWorkspaceIcon />
             )}
             {this.editorHeaderText()}
-          </PaneSection>
-          <PaneSection
-            className={'pane-header-section pane-header-section-right'}
-          >
-            <PaneButton
-              id="javalab-editor-save"
-              iconClass="fa fa-check-circle"
-              onClick={this.onOpenCommitDialog}
-              headerHasFocus
-              isRtl={false}
-              label={javalabMsg.commitCode()}
-              isDisabled={isReadOnlyWorkspace}
-            />
-            <PaneButton
-              id="data-mode-versions-header"
-              iconClass="fa fa-clock-o"
-              label={msg.showVersionsHeader()}
-              headerHasFocus
-              isRtl={false}
-              onClick={() => this.handleVersionHistory()}
-              isDisabled={isReadOnlyWorkspace}
-            />
           </PaneSection>
         </PaneHeader>
         <Tab.Container
@@ -821,6 +812,8 @@ export default connect(
       dispatch(sourceVisibilityUpdated(filename, isVisible)),
     sourceValidationUpdated: (filename, isValidation) =>
       dispatch(sourceValidationUpdated(filename, isValidation)),
+    sourceTextUpdated: (filename, text) =>
+      dispatch(sourceTextUpdated(filename, text)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename)),
