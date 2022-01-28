@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_19_004355) do
+ActiveRecord::Schema.define(version: 2022_01_28_220317) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1341,6 +1341,17 @@ ActiveRecord::Schema.define(version: 2021_12_19_004355) do
     t.datetime "updated_at", null: false
     t.index ["plc_course_id"], name: "index_plc_user_course_enrollments_on_plc_course_id"
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
+  end
+
+  create_table "programming_environment_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "programming_environment_id", null: false
+    t.string "key", null: false
+    t.string "name"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key", "programming_environment_id"], name: "index_programming_environment_categories_on_key_and_env_id", unique: true
+    t.index ["programming_environment_id"], name: "index_programming_environment_categories_on_environment_id"
   end
 
   create_table "programming_environments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
