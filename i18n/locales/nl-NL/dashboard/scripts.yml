@@ -5288,6 +5288,9 @@ nl:
             Parallel and Distributed Algorithms:
               key: Parallelle en Gedistribueerde algoritmes
               name: Parallelle en Gedistribueerde algoritmes
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmen
         csp7-2021:
           lessons:
             Parameters and Return Explore:
@@ -5322,10 +5325,19 @@ nl:
               display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
+            lessonGroup-3:
+              display_name: Vragenlijst
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vragenlijst
         csp9-2021:
           lessons:
             Machine Learning and Bias:
               key: Machinaal leren en vooringenomenheid (bias)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vragenlijst
         csp10-2021:
           lessons:
             Project - Innovation Simulation Part 1:
@@ -5360,6 +5372,9 @@ nl:
               key: 'Project: Innovatiesimulatie Deel 6'
             'Project: Innovation Simulation Part 7':
               key: 'Project: Innovatiesimulatie Deel 7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vragenlijst
         coursea-2021:
           description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
@@ -6658,11 +6673,22 @@ nl:
           lessons:
             lesson-4:
               name: Uitbraaksimulator
+            For Loop Fun:
+              name: For Lus fun
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Uur Code
           description_short: Intern
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Variabelen
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -6745,3 +6771,438 @@ nl:
               display_name: Content
             lessonGroup-5:
               display_name: Sandbox
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Vrolijke Routes
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
+            lesson-1:
+              key: Les 1
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
+          description_short: Een inleiding tot informatica voor pre-readers.
+          description_audience: 'Leeftijden: 4-7'
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Dansfeest
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
+            lesson-1:
+              key: Les 1
+              name: Dansfeest
+            lesson-4:
+              key: Les 4
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_functions:
+              display_name: Functies
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+          description_audience: 'Leeftijden: 9-18'
+        csp1-2022:
+          lessons:
+            Welcome to CSP:
+              name: Welkom bij CSP
+              key: Welkom bij CSP
+            Representing Information:
+              name: Het voorstellen van informatie
+              key: Het voorstellen van informatie
+            Circle Square Patterns:
+              name: Cirkel-Vierkant-Patronen
+              key: Cirkel-Vierkant-Patronen
+            Binary Numbers:
+              name: Binaire getallen
+              key: Binaire getallen
+            Overflow and Rounding:
+              name: Overflow en Afronding
+              key: Overflow en Afronding
+            Representing Text:
+              name: Het voorstellen van tekst
+              key: Het voorstellen van tekst
+            Black and White Images:
+              name: Zwart-witafbeeldingen
+              key: Zwart-witafbeeldingen
+            Color Images:
+              name: Kleurenafbeeldingen
+              key: Kleurenafbeeldingen
+            Lossless Compression:
+              name: Lossless Compressie
+              key: Lossless Compressie
+            Lossy Compression:
+              name: Lossy Compressie
+              key: Lossy Compressie
+            Intellectual Property:
+              name: Intellectuele Eigendom
+              key: Intellectuele Eigendom
+            Project - Digital Information Dilemmas Part 1:
+              key: Project - Digitale informatie dilemma's Deel 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Project - Digitale informatie dilemma's Deel 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp2-2022:
+          lessons:
+            Welcome to the Internet:
+              name: Welkom bij het Internet
+              key: Welkom bij het Internet
+            Building a Network:
+              name: Het bouwen van een netwerk
+              key: Het bouwen van een netwerk
+            The Need for Addressing:
+              name: De Nood aan Adressering
+              key: De Nood aan Adressering
+            Routers and Redundancy:
+              name: Routers en Redundantie
+              key: Routers en Redundantie
+            Packets:
+              name: Paketten
+              key: Paketten
+            DNS and HTTP:
+              key: DNS en HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Project - Internetdilemma's Deel 1
+            Project - Internet Dilemmas Part 2:
+              key: Project - Internetdilemma's Deel 2
+        csp3-2022:
+          lessons:
+            Introduction to Apps:
+              name: Inleiding tot Apps
+              key: Inleiding tot Apps
+            Intro to Programming:
+              name: Inleiding tot programmeren
+              key: Inleiding tot programmeren
+            Debugging:
+              name: Foutopsporing
+              key: Foutopsporing
+            Project - Designing an App Part 1:
+              key: Project - Ontwerp een app Deel 1
+            Project - Designing an App Part 2:
+              key: Project - Ontwerp een app Deel 2
+            Project - Designing an App Part 3:
+              key: Project - Ontwerp een app Deel 3
+            Project - Designing an App Part 4:
+              key: Project - Ontwerp een app Deel 4
+            Project - Designing an App Part 5:
+              key: Project - Ontwerp een app Deel 5
+        csp4-2022:
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+              key: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+              key: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+              key: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+              key: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+              key: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+              key: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+              key: Voorwaardelijke instructies oefenen
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+              key: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+              key: Functies oefenen
+            Functions Make:
+              name: Functies Maak
+              key: Functies Maak
+            Conditional Make:
+              key: Voorwaardelijke instructies Maak
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+            csp_project:
+              display_name: Project
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Lijsten
+            csp_loops:
+              display_name: Lussen
+            csp_project:
+              display_name: Project
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: verplaats het, verplaats het
+              key: verplaats het, verplaats het
+            Getting Loopy:
+              name: Rondjes lopen
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
+            lesson-1:
+              key: Les 1
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
+          description_audience: 'Leeftijden: 5-8'
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: De grote gebeurtenis
+            Binary Bracelets:
+              name: Binaire armbanden
+              key: Binaire armbanden
+            'Events: The Big Event':
+              name: De grote gebeurtenis
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
+          description_short: Leer de basisprincipes van informatica en creëer je eigen kunst, verhalen en games.
+          description_audience: 'Leeftijden: 6-10'
+        csp6-2022:
+          lessons:
+            Algorithms Solve Problems:
+              name: Algoritmes lossen problemen op
+              key: Algoritmes lossen problemen op
+            Algorithm Efficiency:
+              name: Efficiëntie van algoritmes
+              key: Efficiëntie van algoritmes
+            Unreasonable Time:
+              name: Onredelijke tijd
+              key: Onredelijke tijd
+            The Limits of Algorithms:
+              name: De limieten van algoritmes
+              key: De limieten van algoritmes
+            Parallel and Distributed Algorithms:
+              name: Parallelle en Gedistribueerde algoritmes
+              key: Parallelle en Gedistribueerde algoritmes
+        csp7-2022:
+          lessons:
+            Parameters and Return Explore:
+              name: Parameters en "return" ontdekken
+              key: Parameters en "return" ontdekken
+            Parameters and Return Investigate:
+              name: Parameters en "return" onderzoeken
+              key: Parameters en "return" onderzoeken
+            Parameters and Return Practice:
+              name: Parameters en "return" oefeningen
+              key: Parameters en "return" oefeningen
+            Parameters and Return Make:
+              name: Parameters en "return" Maak
+              key: Parameters en "return" Maak
+            Libraries Explore:
+              name: Bibliotheken ontdekken
+              key: Bibliotheken ontdekken
+            Libraries Investigate:
+              name: Bibliotheken Onderzoeken
+              key: Bibliotheken Onderzoeken
+            Libraries Practice:
+              name: Bibliotheken oefeningen
+              key: Bibliotheken oefeningen
+            Project - Make a Library Part 1:
+              key: Project - Maak een bibliotheek Deel 1
+            Project - Make a Library Part 2:
+              key: Project - Maak een bibliotheek Deel 2
+            Project - Make a Library Part 3:
+              key: Project - Maak een bibliotheek Deel 3
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
+            csp_libraries:
+              display_name: Bibliotheken
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: Les 4
+        csp9-2022:
+          lessons:
+            Machine Learning and Bias:
+              key: Machinaal leren en vooringenomenheid (bias)
+            lesson-10:
+              key: Les 10
+        csp10-2022:
+          lessons:
+            Data Policies and Privacy:
+              name: Gegevensbeleid en Privacy
+              key: Gegevensbeleid en Privacy
+            The Value of Privacy:
+              name: De waarde van privacy
+              key: De waarde van privacy
+            Security Risks Part 1:
+              name: Veiligheidsrisico's Deel 1
+              key: Veiligheidsrisico's Deel 1
+            Security Risks Part 2:
+              name: Veiligheidsrisico's Deel 2
+              key: Veiligheidsrisico's Deel 2
+            Protecting Data Part 1:
+              name: Het beschermen van data Deel 1
+              key: Het beschermen van data Deel 1
+            Protecting Data Part 2:
+              name: Het beschermen van data Deel 2
+              key: Het beschermen van data Deel 2
+            Project - Innovation Simulation Part 1:
+              key: Project - Innovatiesimulatie Deel 1
+            Project - Innovation Simulation Part 2:
+              key: Project - Innovatiesimulatie Deel 2
+            Project - Innovation Simulation Part 3:
+              key: Project - Innovatiesimulatie Deel 3
+            'Project: Innovation Simulation Part 4':
+              key: 'Project: Innovatiesimulatie Deel 4'
+            'Project: Innovation Simulation Part 5':
+              key: 'Project: Innovatiesimulatie Deel 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Project: Innovatiesimulatie Deel 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Project: Innovatiesimulatie Deel 7'
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier
+            Relay Programming:
+              name: Estafette Programmeren
+              key: Estafette Programmeren
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+              key: Bouw een Star Wars Spel!
+            Dance Party:
+              name: Dansfeest
+              key: Dansfeest
+            Conditionals with Cards:
+              name: Statements met Kaarten
+              key: Statements met Kaarten
+            lesson-5:
+              key: Les 5
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
+            lesson-6:
+              key: Les 6
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaal Burgerschap
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+          description_audience: 'Leeftijden: 7-11'
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+            lesson-4:
+              key: Les 4
+            About Me:
+              key: Over mij
+            'Functions: Songwriting':
+              name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.
+            Conditionals:
+              key: Voorwaardelijke instructies
+            lesson-1:
+              key: Les 1
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            ramp_up:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
+            csf_nested_loops:
+              display_name: Voorwaardelijke instructies
+          description_audience: 'Leeftijden: 8-12'
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: For Lus fun
+              key: For Lus fun
+            Outbreak:
+              name: Uitbraak
+            The Internet:
+              name: Het Internet
+            lesson-6:
+              key: Les 6
+            lesson-7:
+              key: Les 7
+            lesson-8:
+              key: Les 8
+            lesson-2:
+              key: Les 2
+            lesson-9:
+              key: Les 9
+            lesson-10:
+              key: Les 10
+            lesson-11:
+              key: Les 11
+            lesson-5:
+              key: Les 5
+            AI for Oceans:
+              key: AI voor oceanen
+            Internet:
+              key: Internet
+              name: Het Internet
+          lesson_groups:
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-7:
+              display_name: Digitaal Burgerschap
+            lessonGroup-8:
+              display_name: Variabelen
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+          description_audience: 'Leeftijden: 9-13'
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content

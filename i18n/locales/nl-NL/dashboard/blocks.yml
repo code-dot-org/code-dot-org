@@ -983,6 +983,11 @@ nl:
         text: wanneer {SPRITE} klikte
       gamelab_clickedSpritePointer:
         text: geklikt {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): Naar het noorden bewegen en lussen
+            new Behavior(moving_south_and_looping, []): Naar het zuiden bewegen en lussen
       gamelab_comment:
         text: 'commentaar: {COMMENT}'
       gamelab_costumeImage:
@@ -1033,6 +1038,19 @@ nl:
         text: |-
           als {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} kostuum is {COSTUME}"
       gamelab_isKeyPressed:
@@ -1213,6 +1231,11 @@ nl:
             "'sound://category_digital/jump_7.mp3'": spring
       gamelab_playSpeech:
         text: Spraak afspelen {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): bewegen met de pijtjestoetsen
+            draggable(): slepbaar
       gamelab_pointInDirection:
         text: punt {SPRITE} {DIRECTION}
         options:
