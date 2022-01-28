@@ -925,6 +925,19 @@ se:
             '"frames"': govat
       gamelab_hideTitleScreen:
         text: čiega šearpma bajilčállaga
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         text: go {KEY} lea deaddiluvvon
         options:
@@ -1039,6 +1052,10 @@ se:
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": Strandstreifen
             "'sound://category_animals/bear.mp3'": guovža
             "'sound://category_animals/dolphin.mp3'": delfiidna
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): maid sáhttá gaikut
       gamelab_pointInDirection:
         text: čujut {SPRITE} {DIRECTION}
         options:
