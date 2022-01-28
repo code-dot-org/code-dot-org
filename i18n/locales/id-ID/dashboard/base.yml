@@ -1130,3 +1130,4 @@ id:
     this_sprite: "Sprite ini"
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Home Code.org"
+  teacher_feedback: "Umpan Balik Guru"
