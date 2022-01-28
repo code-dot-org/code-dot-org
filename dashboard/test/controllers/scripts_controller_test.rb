@@ -392,7 +392,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
       instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      instructor_audience: 'teacher', # SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
     }
     assert_redirected_to edit_script_path id: unit_name
@@ -1097,8 +1097,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     unit = create :script
-
-    course.update_scripts([unit.name])
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
 
     stub_file_writes(unit.name)
 
@@ -1112,8 +1111,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     unit = create :script
-
-    course.update_scripts([unit.name])
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
 
     stub_file_writes(unit.name)
 

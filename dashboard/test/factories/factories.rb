@@ -24,6 +24,9 @@ FactoryGirl.define do
   end
 
   factory :unit_group_unit do
+    after(:create) do |unit_group_unit|
+      unit_group_unit.unit_group.update_scripts(unit_group_unit.unit_group.default_units.map(&:name))
+    end
   end
 
   factory :unit_group do

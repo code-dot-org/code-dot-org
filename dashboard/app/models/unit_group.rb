@@ -244,6 +244,10 @@ class UnitGroup < ApplicationRecord
       # Never want a unit in a unit group to have these fields be set
       unit.reload
       unit.update!(instruction_type: nil, participant_audience: nil, instructor_audience: nil)
+
+      if unit.published_state == published_state
+        unit.update!(published_state: nil)
+      end
     end
 
     # Only set newly added units published state to null because
