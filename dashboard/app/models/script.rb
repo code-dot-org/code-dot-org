@@ -1125,7 +1125,7 @@ class Script < ApplicationRecord
   end
 
   def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
-    raise 'Script name has already been taken' if Script.find_by_name(new_name) || File.exist?(new_name)
+    raise 'Script name has already been taken' if Script.find_by_name(new_name) || File.exist?(Script.script_json_filepath(new_name))
 
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
