@@ -2,7 +2,7 @@
   "script": {
     "name": "csa4-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "announcements": [
         {
@@ -14,6 +14,7 @@
         }
       ],
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -23,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-26 21:27:51 UTC",
+    "serialized_at": "2022-01-28 19:41:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6613,6 +6614,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa4-pilot-facilitator/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa4-pilot-facilitator/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa4-pilot-facilitator/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "Around the World Printouts",
       "url": "https://docs.google.com/document/d/1FMlneQD0SY65y9atWPYPz2fN63wboyhUiTx8csrU_Vw/edit?usp=sharing",
       "key": "around_the_world_printouts",
@@ -7378,7 +7412,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

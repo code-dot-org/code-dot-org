@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-01-06T20:22:37.000Z",
+  "level_num": "custom",
+  "user_id": 833,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -49,13 +53,10 @@
     "mini_toolbox": "false",
     "hide_pause_button": "true",
     "instructions_icon": "rikki",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-01-06T20:22:37.000Z",
-  "level_num": "custom",
-  "user_id": 833,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:37.284+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_2_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_2_2021\"},{\"changed_at\":\"2022-01-24 18:21:09 +0000\",\"changed\":[\"solution_blocks\",\"helper_libraries\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 18:27:12 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-25 15:27:39 +0000\",\"changed\":[\"solution_blocks\",\"callout_json\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-25 16:39:39 +0000\",\"changed\":[\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {

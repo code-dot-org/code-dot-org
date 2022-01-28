@@ -49,11 +49,17 @@
     "display_name": "Math Blocks",
     "bubble_choice_description": "Let's combine variables with a little math!",
     "thumbnail_url": "https://images.code.org/917f8f09d687e24c8d6008047b5dfb6b-image-1615822935255.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:17.240+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for9_2021\\\"\"],\"cloned_from\":\"courseF_bee_for9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:17.240+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for9_2021\\\"\"],\"cloned_from\":\"courseF_bee_for9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "for_loops": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
