@@ -14,7 +14,7 @@ class ArrowButtons extends React.Component {
 
   render() {
     const {visible, disabled} = this.props;
-    const style = visible ? styleOptions.visible : styleOptions.hidden;
+    const style = visible ? styles.visible : styles.hidden;
     return (
       <div style={style} id="soft-buttons">
         <button
@@ -54,7 +54,7 @@ class ArrowButtons extends React.Component {
   }
 }
 
-const styleOptions = {
+const styles = {
   hidden: {display: 'none'},
   visible: {display: 'inline-block'}
 };
