@@ -1126,3 +1126,4 @@ es-MX:
     this_sprite: "este sprite"
   unit_prefix: "Unidad %{n}"
   code_org_logo_alt: "Inicio de Code.org"
+  teacher_feedback: "Retroalimentación del docente"
