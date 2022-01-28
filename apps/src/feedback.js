@@ -183,7 +183,7 @@ FeedbackUtils.prototype.displayFeedback = function(
       continueText: options.continueText,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: options.level.lastLevelInLesson
+      finalLevel: options.level.isLastLevelInLesson
     })
   );
 
@@ -698,24 +698,32 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 
 /**
  * Generates an appropriate feedback message
+ * The message will be one of the following, from highest to lowest precedence:
+ * 0. Failure override message specified on level (options.level.failureMessageOverride)
+ * 1. Message passed in by caller (options.message).
+ * 2. Header message due to dashboard text check fail (options.response.share_failure).
+ * 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+ *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
+ * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+ *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * @param {FeedbackOptions} options
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
-  // Some levels have solutions that can be validated for correctness
-  // automatically by our system. Currently, level validation
-  // depends on different properties that vary by level type. Until
-  // validatability is more consistent across level types, we have to check
-  // multiple fields.
-  var validatedLevel =
-    options.level?.validationEnabled ||
-    options.level?.requiredBlocks ||
-    // Free-play levels aren't validated for correctness, but the system does
-    // check to see if they level blocks have been changed at all.
-    options.level?.freePlay;
 
-  if (!!validatedLevel) {
+  // If a message was explicitly passed in, use that.
+  if (
+    options.feedbackType < TestResults.ALL_PASS &&
+    options.level?.failureMessageOverride
+  ) {
+    message = options.level.failureMessageOverride;
+  } else if (options.message) {
+    message = options.message;
+  } else if (options.response?.share_failure) {
+    message = msg.shareFailure();
+  } else {
+    // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
         logDialogActions('level_unchanged_failure', options, null);
@@ -856,10 +864,11 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.FREE_PLAY:
       case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
-        var finalLevel = options.level?.lastLevelInLesson;
+        var finalLevel = options.level?.isLastLevelInLesson;
         // End of lesson in CSD/CSP/CSA
         if (finalLevel && options.level?.showEndOfLessonMsgs) {
           message = msg.endOfLesson();
+          break;
         }
         var lessonCompleted = null;
         if (options.response?.lesson_changing) {
@@ -891,22 +900,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             : nextLevelMsg;
         }
         break;
-    }
-  } else {
-    if (
-      options.level?.lastLevelInLesson &&
-      options.level?.showEndOfLessonMsgs
-    ) {
-      message = msg.endOfLesson();
-    } else if (
-      options.feedbackType < TestResults.ALL_PASS &&
-      options.level?.failureMessageOverride
-    ) {
-      message = options.level.failureMessageOverride;
-    } else if (options.message) {
-      message = options.message;
-    } else if (options.response?.share_failure) {
-      message = msg.shareFailure();
     }
   }
   return message;

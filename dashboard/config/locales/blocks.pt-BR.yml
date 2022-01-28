@@ -1178,7 +1178,7 @@ pt:
       gamelab_mouseLocation:
         text: posição do mouse
       gamelab_moveBackward:
-        text: mover [SPRITE] [0] [DISTANCE] [1] pixels para trás
+        text: mover {SPRITE} {DISTANCE} pixels para trás
       gamelab_moveForward:
         text: mover {SPRITE} {DISTANCE} pixels pra frente
       gamelab_moveInDirection:
@@ -1413,7 +1413,7 @@ pt:
             '"right"': para direita
             '"left"': para esquerda
       gamelab_updateTitleWithColor:
-        text: mostra a tela do título [BREAK] [0] título [TITLE] [1] cor [COLOR] [2]
+        text: mostra a tela do título {BREAK} título {TITLE} cor {COLOR}
       gamelab_whenAllPromptsAnswered:
         text: quando todos os prompts forem respondidos
       gamelab_whenDownArrow:

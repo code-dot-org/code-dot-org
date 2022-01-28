@@ -21,6 +21,7 @@ var ALLOWED_KEYS = new Set([
   'isReadOnlyWorkspace',
   'isCodeReviewing',
   'displayNotStartedBanner',
+  'displayOldVersionBanner',
   'isShareView',
   'isProjectLevel',
   'isSubmittable',

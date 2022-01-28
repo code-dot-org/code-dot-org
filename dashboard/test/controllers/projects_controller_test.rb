@@ -135,15 +135,17 @@ class ProjectsControllerTest < ActionController::TestCase
     applab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:applab][:name])
     # populate level with correct game
     applab_level.update(game: Game.create(app: Game::APPLAB))
-
     channel = 'fake-channel'
+
+    ProjectsController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/applab_sharing_drawing.png')
+
     get :show, params: {key: 'applab', channel_id: channel, share: true}
 
     assert_response :success
 
-    # TODO: maureen add check for image_url: 'http://test.host/assets/applab_sharing_drawing.png'
     assert_sharing_meta_tags(
       url: "http://test.host/projects/applab/#{channel}",
+      image_url: 'http://test.host/assets/applab_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true
@@ -156,12 +158,16 @@ class ProjectsControllerTest < ActionController::TestCase
     playlab_level.update(game: Game.create(app: Game::PLAYLAB))
 
     channel = 'fake-channel'
+
+    ProjectsController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/studio_sharing_drawing.png')
+
     get :show, params: {key: 'playlab', channel_id: channel, share: true}
 
     assert_response :success
-    # TODO: maureen add check for image_url: 'http://test.host/assets/studio_sharing_drawing.png'
+
     assert_sharing_meta_tags(
       url: "http://test.host/projects/playlab/#{channel}",
+      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true

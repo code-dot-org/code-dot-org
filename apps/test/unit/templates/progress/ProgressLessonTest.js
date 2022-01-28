@@ -10,15 +10,15 @@ import {
 import color from '@cdo/apps/util/color';
 
 describe('ProgressLesson', () => {
+  const lessonNumber = 3;
   const defaultProps = {
-    currentLessonId: 1,
     lesson: {
-      ...fakeLesson('lesson1', 1),
+      ...fakeLesson('lesson1', 1, false, lessonNumber),
       description_teacher: 'Teacher description here',
       description_student: 'Student description here'
     },
     levels: fakeLevels(3),
-    lessonNumber: 3,
+    currentLessonId: 1,
     viewAs: ViewType.Instructor,
     isVisible: true,
     hiddenForStudents: false,
@@ -29,6 +29,12 @@ describe('ProgressLesson', () => {
     isMiniView: false,
     lockStatusLoaded: true
   };
+
+  // This ID is used by the EndOfLessonDialog to scroll the recently completed lesson into view
+  it('renders with ID = progress-lesson-<lessonNumber>', () => {
+    const wrapper = shallow(<ProgressLesson {...defaultProps} />);
+    assert.equal(wrapper.props().id, 'progress-lesson-3');
+  });
 
   it('renders with gray background when not hidden', () => {
     const wrapper = shallow(<ProgressLesson {...defaultProps} />);

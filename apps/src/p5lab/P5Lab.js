@@ -1568,7 +1568,7 @@ export default class P5Lab {
     let msg = this.getMsg();
 
     // Allow P5Labs to decide what string should be rendered in the feedback dialog.
-    const isFinalFreePlayLevel = level.freePlay && level.lastLevelInLesson;
+    const isFinalFreePlayLevel = level.freePlay && level.isLastLevelInLesson;
     const reinfFeedbackMsg = this.getReinfFeedbackMsg(isFinalFreePlayLevel);
 
     const isSignedIn =
