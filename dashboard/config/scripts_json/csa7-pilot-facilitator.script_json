@@ -2,9 +2,10 @@
   "script": {
     "name": "csa7-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-27 21:17:46 UTC",
+    "serialized_at": "2022-01-28 19:27:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5485,6 +5486,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa7-pilot-facilitator/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa7-pilot-facilitator/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa7-pilot-facilitator/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
+      }
+    },
+    {
       "name": "Coloring Page",
       "url": "https://docs.google.com/document/u/4/d/1SyXIy-SRNvXGlUTJVs-wg-5bfHKUf0zPxk-luiBqxi8/edit",
       "key": "coloring_page",
@@ -6172,7 +6206,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 
