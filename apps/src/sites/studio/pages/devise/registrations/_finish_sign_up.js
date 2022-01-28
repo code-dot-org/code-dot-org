@@ -49,8 +49,6 @@ let userInOptimizelyVariant = experiments.isEnabled(
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
 
-  sessionStorage.setItem('inClearerUserTypeOptExpLS', 'false');
-
   // Track whether user is in the Clearer User Type Buttons Optimizely experiment
   const inClearerUserTypeOptExp =
     sessionStorage.getItem('inClearerUserTypeOptExpLS') === 'true';
