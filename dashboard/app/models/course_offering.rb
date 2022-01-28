@@ -8,6 +8,8 @@
 #  properties   :text(65535)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  category     :string(255)      default("other"), not null
+#  is_featured  :boolean          default(FALSE), not null
 #
 # Indexes
 #
