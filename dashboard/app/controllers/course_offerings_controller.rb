@@ -14,8 +14,7 @@ class CourseOfferingsController < ApplicationController
     @course_offering.update!(course_offering_params)
 
     if Rails.application.config.levelbuilder_mode
-      # write course offering data to file
-      # update translation data?
+      @course_offering.write_serialization
     end
 
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
