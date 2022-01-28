@@ -210,6 +210,20 @@ export const getValidation = state => {
   return validation;
 };
 
+export const getSourcesAndValidation = state => {
+  // we need to copy sources and not send over the object itself, there is probably a
+  // cleaner way to do this.
+  let sources = {};
+  for (let key in state.javalab.sources) {
+    sources[key] = {
+      text: state.javalab.sources[key].text,
+      isVisible: state.javalab.sources[key].isVisible,
+      isValidation: state.javalab.sources[key].isValidation
+    };
+  }
+  return sources;
+};
+
 export const setRenderedHeight = height => ({
   type: EDITOR_HEIGHT_UPDATED,
   height
