@@ -377,6 +377,8 @@ pl:
             '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
+            '"spiral"': spirala
+            '"infinity"': nieskończona linia
             '"random"': losowy
       Dancelab_makeAnonymousDanceSprite:
         text: utwórz nowy {COSTUME} w {LOCATION}
@@ -486,6 +488,8 @@ pl:
             '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
+            '"spiral"': spirala
+            '"infinity"': nieskończona linia
             '"random"': losowy
       Dancelab_mixColors:
         text: zmieszaj {COLOR1} z {COLOR2}
@@ -547,6 +551,7 @@ pl:
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
             '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Wyższa moc
             '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
@@ -1013,6 +1018,8 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunek ruchu
             '"speed"': prędkość
+      gamelab_changeVarBy:
+        text: zastąp {VARIABLE} przez {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
         options:
@@ -1023,6 +1030,25 @@ pl:
         text: kiedy {SPRITE} kliknął
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(wobbling, []): chybotanie
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(patrolling, []): patrolowanie
+            new Behavior(moving_west_and_looping, []): przechodząc na zachód i powtarzając
+              w pętli
+            new Behavior(moving_east_and_looping, []): przechodząc na wschód i powtarzając
+              w pętli
+            new Behavior(moving_north_and_looping, []): poruszanie się na północ i
+              w pętli
+            new Behavior(moving_south_and_looping, []): poruszanie się na południe
+              i w pętli
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
       gamelab_costumeImage:
@@ -1075,6 +1101,20 @@ pl:
         text: |-
           jeśli {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: kostium {SPRITE} jest {COSTUME}
       gamelab_isKeyPressed:
@@ -1270,6 +1310,15 @@ pl:
             "'sound://category_digital/jump_7.mp3'": skocz
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
+              strzałek
+            new Behavior(driving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
+              strzałek
+            draggable(): będąc przeciągalnym
       gamelab_pointInDirection:
         text: punkt {SPRITE} {DIRECTION}
         options:
@@ -1294,6 +1343,8 @@ pl:
         text: usuń kolor z {THIS}
       gamelab_repeatForever:
         text: powtarzaj w nieskończoność
+      gamelab_resetTimer:
+        text: zresetuj czasomierz
       gamelab_setAnimation:
         text: zmień {THIS} kostium na {ANIMATION}
       gamelab_setBackground:
@@ -1389,7 +1440,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -1774,7 +1825,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
@@ -2051,6 +2102,10 @@ pl:
             '"fluttering"': trzepotanie
             '"growing"': rośnięcie
             '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
             '"shrinking"': zwężenie
             '"spinning_left"': obracanie się w lewo
             '"spinning_right"': obracanie się w prawo
@@ -2064,6 +2119,10 @@ pl:
             '"fluttering"': trzepotanie
             '"growing"': rośnięcie
             '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
             '"shrinking"': zwężenie
             '"spinning_left"': obracanie się w lewo
             '"spinning_right"': obracanie się w prawo
