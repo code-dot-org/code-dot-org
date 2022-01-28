@@ -35,7 +35,6 @@ experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
 experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 experiments.JAVALAB_UNIT_TESTS = 'javalabUnitTests';
 

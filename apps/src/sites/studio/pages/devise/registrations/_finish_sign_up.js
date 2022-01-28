@@ -48,23 +48,39 @@ let userInOptimizelyVariant = experiments.isEnabled(
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
+
+  sessionStorage.setItem('inClearerUserTypeOptExpLS', 'false');
+
+  // Track whether user is in the Clearer User Type Buttons Optimizely experiment
+  const inClearerUserTypeOptExp =
+    sessionStorage.getItem('inClearerUserTypeOptExpLS') === 'true';
+
+  // Track user type
+  let user_type = $('#user_user_type').val();
+
   init();
 
   function init() {
     // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
-    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
+    if (inClearerUserTypeOptExp) {
       // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style.cssText =
         'display:none;';
+      document.getElementById('select-user-type-variant').style.cssText =
+        'display:flex;';
+      document.getElementById('signup-select-user-type-label').style.cssText =
+        'width:135px;';
     } else {
       // Otherwise (also the default), keep original dropdown
       document.getElementById('select-user-type-variant').style.cssText =
         'display:none;';
+      document.getElementById('select-user-type-original').style.cssText =
+        'display:flex;';
       document.getElementById('signup-select-user-type-label').style.cssText =
         'width:220px;';
     }
     // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
-    setUserType(getUserType());
+    setUserType(user_type);
     renderSchoolInfo();
     renderParentSignUpSection();
   }
@@ -80,7 +96,7 @@ $(document).ready(() => {
     }
 
     // Optimizely-related code for new sign-up user-type buttons (start)
-    optimizelyCountUserTypeSelection(getUserType());
+    optimizelyCountUserTypeSelection(user_type);
     // Optimizely-related code for new sign-up user-type buttons (end)
 
     // Optimizely-related code for teacher opting to share email with regional partner (start)
@@ -89,7 +105,7 @@ $(document).ready(() => {
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
-    if (getUserType() === 'teacher') {
+    if (user_type === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
@@ -115,7 +131,8 @@ $(document).ready(() => {
   $('#user_parent_email_preference_opt_in_required').change(function() {
     // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
     // allows the parent sign up section of the form.
-    if (getUserType() === '') {
+    if (user_type === '') {
+      user_type = 'student';
       $('#user_user_type')
         .val('student')
         .change();
@@ -134,34 +151,10 @@ $(document).ready(() => {
     }
   }
 
-  // Keep if sign-up user type experiment favors variant (start)
-  // Event listeners for changing the user type
-  document.addEventListener('selectUserTypeTeacher', e => {
-    $('#user_user_type').val('teacher');
-    styleSelectedUserTypeButton('teacher');
-    setUserType('teacher');
-  });
-  document.addEventListener('selectUserTypeStudent', e => {
-    $('#user_user_type').val('student');
-    styleSelectedUserTypeButton('student');
-    setUserType('student');
-  });
-
-  function styleSelectedUserTypeButton(value) {
-    if (value === 'teacher') {
-      teacherButton.classList.add('select-user-type-button-selected');
-      studentButton.classList.remove('select-user-type-button-selected');
-    } else if (value === 'student') {
-      studentButton.classList.add('select-user-type-button-selected');
-      teacherButton.classList.remove('select-user-type-button-selected');
-    }
-  }
-  // Keep if sign-up user type experiment favors variant (end)
-
-  // Optimizely-related code for new sign-up user-type buttons
-  function optimizelyCountUserTypeSelection(userType) {
+  // Optimizely metric for seeing which user type new users select
+  function optimizelyCountUserTypeSelection(selected_user_type) {
     window['optimizely'] = window['optimizely'] || [];
-    window['optimizely'].push({type: 'event', eventName: userType});
+    window['optimizely'].push({type: 'event', eventName: selected_user_type});
   }
 
   // Optimizely-related code for sharing email with regional partners experiment
@@ -176,22 +169,39 @@ $(document).ready(() => {
     setUserType(value);
   });
 
-  function getUserType() {
-    var value = $('#user_user_type')[0].value;
-    styleSelectedUserTypeButton(value);
-    return value;
-  }
+  // Event listeners for changing the user type
+  document.addEventListener('selectUserTypeTeacher', e => {
+    $('#user_user_type')
+      .val('teacher')
+      .change();
+  });
+  document.addEventListener('selectUserTypeStudent', e => {
+    $('#user_user_type')
+      .val('student')
+      .change();
+  });
 
-  function setUserType(userType) {
-    if (userType) {
-      trackUserType(userType);
-    }
-
-    if (userType === 'teacher') {
-      switchToTeacher();
-    } else {
-      // Show student fields by default.
+  function setUserType(new_user_type) {
+    if (new_user_type === '') {
+      // Display student fields by default
       switchToStudent();
+    } else {
+      // Show fields according to the selected user type
+      // Firehose event to track user type
+      trackUserType(new_user_type);
+
+      // Visually switch to new user type
+      if (inClearerUserTypeOptExp) {
+        styleSelectedUserTypeButton(new_user_type);
+      }
+      if (new_user_type === 'teacher') {
+        switchToTeacher();
+      } else {
+        switchToStudent();
+      }
+
+      // Set new user type
+      user_type = new_user_type;
     }
   }
 
@@ -205,6 +215,16 @@ $(document).ready(() => {
     fadeInFields(STUDENT_ONLY_FIELDS);
     hideFields(TEACHER_ONLY_FIELDS);
     toggleVisShareEmailRegPartner(false);
+  }
+
+  function styleSelectedUserTypeButton(user_type_to_style) {
+    if (user_type_to_style === 'teacher') {
+      teacherButton.classList.add('select-user-type-button-selected');
+      studentButton.classList.remove('select-user-type-button-selected');
+    } else if (user_type_to_style === 'student') {
+      studentButton.classList.add('select-user-type-button-selected');
+      teacherButton.classList.remove('select-user-type-button-selected');
+    }
   }
 
   function trackUserType(type) {
