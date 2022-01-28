@@ -318,7 +318,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit1.instructor_audience
       assert_nil unit1.participant_audience
 
-      unit2.update!(instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.student)
+      unit2.update!(instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
 
       unit_group.update_scripts(['unit1', 'unit2'])
 
@@ -413,6 +413,48 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group.default_unit_group_units.length
       assert_equal 1, unit_group.default_unit_group_units[0].position
       assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
+    end
+
+    test "removed units have their published state instruction type participant audience and instructor audience reset" do
+      unit_group = create :unit_group
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_nil unit1.published_state
+      assert_nil unit1.instruction_type
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+
+      assert_nil unit2.published_state
+      assert_nil unit2.instruction_type
+      assert_nil unit2.instructor_audience
+      assert_nil unit2.participant_audience
+
+      unit_group.update_scripts(['unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_equal unit_group.published_state, unit1.published_state
+      refute_nil unit1.published_state
+      assert_equal unit_group.instruction_type, unit1.instruction_type
+      refute_nil unit1.instruction_type
+      assert_equal unit_group.instructor_audience, unit1.instructor_audience
+      refute_nil unit1.instructor_audience
+      assert_equal unit_group.participant_audience, unit1.participant_audience
+      refute_nil unit1.participant_audience
+
+      assert_nil unit2.published_state
+      assert_nil unit2.instruction_type
+      assert_nil unit2.instructor_audience
+      assert_nil unit2.participant_audience
     end
   end
 
