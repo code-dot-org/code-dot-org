@@ -32,13 +32,6 @@ class CoursesController < ApplicationController
       return
     end
 
-    if @unit_group.plc_course
-      authorize! :show, Plc::UserCourseEnrollment
-      user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
-      render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
-      return
-    end
-
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
@@ -114,6 +107,8 @@ class CoursesController < ApplicationController
   end
 
   def get_rollup_resources
+    return render :forbidden if @unit_group.plc_course
+
     course_version = @unit_group.course_version
     return render status: 400, json: {error: 'Course does not have course version'} unless course_version
     rollup_pages = []
@@ -173,6 +168,13 @@ class CoursesController < ApplicationController
   end
 
   def render_no_access
+    if params[:action] == "show" && @unit_group.plc_course
+      authorize! :show, Plc::UserCourseEnrollment
+      user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
+      render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
+      return
+    end
+
     if @unit_group.pilot?
       authenticate_user!
       unless @unit_group.has_pilot_access?(current_user)
