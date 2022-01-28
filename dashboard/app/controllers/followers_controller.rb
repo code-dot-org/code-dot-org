@@ -46,6 +46,8 @@ class FollowersController < ApplicationController
           # Check for an exiting user, and redirect to course if found
           if is_existing_follower
             redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
+          elsif !@section.can_join_section_as_participant?(@user)
+            redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
           # Check if section is restricted, and redirect with restricted error if true
           elsif @section.restricted?
             redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
