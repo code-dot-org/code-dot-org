@@ -14,9 +14,9 @@ class ArrowButtons extends React.Component {
 
   render() {
     const {visible, disabled} = this.props;
-    const className = !visible && 'hidden';
+    const style = visible ? styleOptions.visible : styleOptions.hidden;
     return (
-      <div className={className} id="soft-buttons">
+      <div style={style} id="soft-buttons">
         <button
           type="button"
           id="leftButton"
@@ -53,6 +53,11 @@ class ArrowButtons extends React.Component {
     );
   }
 }
+
+const styleOptions = {
+  hidden: {display: 'none'},
+  visible: {display: 'inline-block'}
+};
 
 export default connect(state => ({
   visible: state.arrowDisplay.buttonsAreVisible,
