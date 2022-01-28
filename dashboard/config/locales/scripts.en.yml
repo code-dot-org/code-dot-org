@@ -22317,6 +22317,8 @@ en:
           lessons:
             new lesson:
               name: lesson display name
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: new lesson 1
           lesson_groups:
@@ -26168,7 +26170,18 @@ en:
             lessonGroup-4:
               display_name: Sandbox
           title: Giving Objects State
-          description: In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
+          description: |-
+            In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa2-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 1
+            * Personal Progress Check 5
+            * Personal Progress Check 9
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
           description_short: ''
           description_audience: ''
@@ -26341,7 +26354,17 @@ en:
             lessonGroup-5:
               display_name: Sandbox
           title: Expanding Program Data
-          description: In this unit, students create one-dimensional arrays to store primitive values and object references. Students represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
+          description: |-
+            In this unit, students create one-dimensional arrays to store primitive values and object references. Students represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa3-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 4
+            * Personal Progress Check 6
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you create one-dimensional arrays to store primitive values and object references. You represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
           description_short: ''
           description_audience: ''
@@ -26500,7 +26523,16 @@ en:
             lessonGroup-5:
               display_name: Unit 4 Pilot Survey
           title: Expanding Program Logic
-          description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
+          description: |-
+            In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa4-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 3
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           description_short: ''
           description_audience: ''
@@ -26668,7 +26700,16 @@ en:
             lessonGroup-5:
               display_name: Pilot Survey
           title: Giving Objects Organization
-          description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
+          description: |-
+            In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa5-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 8
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
           description_short: ''
           description_audience: ''
@@ -27621,7 +27662,17 @@ en:
             lessonGroup-5:
               display_name: Sandbox
           title: Expanding Program Capabilities
-          description: In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+          description: |-
+            In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 2
+            * Personal Progress Check 7
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
           description_short: ''
           description_audience: ''
@@ -28711,7 +28762,16 @@ en:
             lessonGroup-5:
               display_name: Sandbox
           title: Giving Objects Life
-          description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+          description: |-
+            In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa8-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 10
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
