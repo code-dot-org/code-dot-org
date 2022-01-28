@@ -16781,6 +16781,8 @@ ja:
             'Lesson 18: Assessment Day':
               key: 'レッスン18: 評価日'
               name: 評価日
+            lesson-1:
+              name: CS原則 のコース後アンケート
           lesson_groups:
             csp_lists:
               display_name: リスト
@@ -16790,6 +16792,8 @@ ja:
               display_name: トラバーサル
             csp_project:
               display_name: プロジェクト
+            lessonGroup-5:
+              display_name: コース終了後アンケート
         csp6-2021:
           lessons:
             Algorithms Solve Problems:
@@ -16810,9 +16814,13 @@ ja:
             'Lesson 6: Assessment Day':
               key: 'レッスン6: 評価日'
               name: 評価日
+            lesson-1:
+              name: CS原則 のコース後アンケート
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'ユニット6: アルゴリズム'
+              display_name: アルゴリズム
+            lessonGroup-2:
+              display_name: コース終了後アンケート
         csp7-2021:
           lessons:
             Parameters and Return Explore:
@@ -16848,11 +16856,15 @@ ja:
             'Lesson 11: Assessment Day':
               key: 'レッスン11: 評価日'
               name: 評価日
+            lesson-1:
+              name: CS原則 のコース後アンケート
           lesson_groups:
             csp_parameters_return_values:
               display_name: パラメータと戻り値
             csp_libraries:
               display_name: ライブラリ
+            lessonGroup-3:
+              display_name: アンケート
         csp8-2021:
           lessons:
             Create PT - Review the Task:
@@ -16862,6 +16874,13 @@ ja:
             Create PT - Complete the Task:
               key: PTの作成 - タスクの完了
               name: PTの作成-タスクの完了（12時間）
+            lesson-1:
+              name: CS原則 のコース後アンケート
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PTを作成
+            lessonGroup-3:
+              display_name: アンケート
         csp9-2021:
           lessons:
             Learning From Data:
@@ -16887,9 +16906,13 @@ ja:
             'Lesson 9: Assessment Day':
               key: 'レッスン9: 評価日'
               name: 評価日
+            lesson-1:
+              name: CS原則 のコース後アンケート
           lesson_groups:
             csp_unit9_2020:
               display_name: 'ユニット9: データ'
+            lessonGroup-2:
+              display_name: アンケート
         csp10-2021:
           lessons:
             Project - Innovation Simulation Part 1:
@@ -16933,9 +16956,13 @@ ja:
             'Lesson 14: Unit Assessment Day':
               key: 'レッスン14: ユニット評価日'
               name: 評価日
+            lesson-1:
+              name: CS原則 のコース後アンケート
           lesson_groups:
             csp_unit10_2020:
               display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
+            lessonGroup-2:
+              display_name: アンケート
         coursea-2021:
           title: コース A (2021)
           description_short: 低学年向けコンピューター サイエンス入門
@@ -18457,6 +18484,8 @@ ja:
               name: 物理コンピューティング
         self-paced-pl-csd6-2021:
           lessons:
+            lesson-4:
+              name: データと社会
             lesson-6:
               name: データと社会
         outbreak-module:
@@ -19395,6 +19424,44 @@ ja:
           lessons:
             lesson-5:
               name: スプライトラボについて
+            Drawing with Loops:
+              name: ループを使った描画
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+              description_teacher: この**スキル構築**レッスンは、焦点をブライトラボからアーティストに移します。これは、生徒がコースの残りの部分で探索する新しいツールとなります。
+            Using Variables with the Artist:
+              description_student: このレッスンでは、プログラムを実行する際に変化する変数を使って絵を描きます。
+              description_teacher: この**スキル構築**レッスンでは、アーティスト環境の変数を使って、反復的なデザインを行う方法ついて学びます。生徒は、変数をどう使うと、プログラムをど簡単に記述し、読みやすくできるかを学びます。ガイド付きパズルを行った後、生徒はじゆうあそびレベルで終了します。そこで学んだことを示し、独自のデザインを作成します。
+            Programming with the Bee:
+              name: 迷路で学ぶ入れ子のループ
+              description_student: ループ内のループ内のループ。これはどういう意味でしょうか？このレッスンでは、ループを別のループ内に配置するとどうなるかを学びます。
+              description_teacher: この**スキル構築**レッスンでは、ループのわずかな変更がプログラムにどのような影響を与えるかを理解するように生徒に促します。
+            Variables with the Bee:
+              name: みつばちと学ぶ変数の変更
+              description_student: このみつばちは変数が大好きです！
+              description_teacher: このレッスンでは、プログラムの実行中に値を変更できるようにすることで、変数でプログラムを強化する方法を説明します。
+            For Loop Fun:
+              name: Forループを楽しむ
+              description_student: "「for」ループを楽しく学習しましょう！"
+              description_teacher: この**スキル構築**レッスンでは、生徒は強力な新しい構造のループを使用します。
+            For Loops with Bee:
+              name: みつばちと学ぶForループ
+              description_student: ブンブンブン。このパズルでは、「for」ループを使ってみつばちをミツとハチミツに導きます。
+              description_teacher: この**スキル構築**レッスンでは、「for」ループと増分変数を使って、より複雑なパズルを解くことに焦点を当てています。
+            For Loops with Artist:
+              name: アーティストと学ぶForループ
+              description_student: 次の傑作を作る準備をしてください。ここでは、「for」ループを使って、驚くような画像を作成します。
+              description_teacher: このレッスンでは、生徒は「for」ループの練習を続けますが、今回はアーティストと一緒に行います。生生徒はパズルを完成させて、複雑なデザインとユニークなアートを作成します。
+            Follow the Algorithm:
+              name: Follow the Algorithm
+              description_student: ゲームをプレイして、正しい結果を得るために必要なコマンドについて考えます。
+              description_teacher: このレッスンでは、ゲームをプレイして、正しい結果を出すためにどのようにコマンドを与えたらいいかを生徒に考えてもらいます。これにより、今後のレッスンで、学んだことをスプライトラボに簡単に引き継ぐことができます。
+            Alien Dance Party with Sprite Lab:
+              name: スプライトラボでのエイリアンダンスパーティー
+              description_student: クラスメートと共有できるインタラクティブなプロジェクトを作成しましょう。
+              description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code（アワー オブ コード）
         csa7-exemplars:
           lessons:
             lesson-15:
@@ -19402,6 +19469,52 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: スプライトラボの紹介
+              description_student: アプリやツールでどのような使用方法が選択肢としてユーザーに与えられているのか、ということに焦点を当てて、生活におけるコンピュータやテクノロジーの役割について説明します。
+            Making Sprites:
+              name: スプライトを作る
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒はプログラムを作成し、スプライトラボの中心となる2つの概念、スプライトと行動について学びます。
+            Sprites in Action:
+              name: 実行中のスプライト
+              description_student: プログラミングの各レベルをこなしてから、最後に自由形式の「じゆうあそび」タスクを行います。このタスクでは、好きなものを作れます。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒は、時限式イベントとユーザー入力に応答するプログラムを作成します。
+            'Mini-Project: Virtual Pet':
+              name: " バーチャルペット"
+              description_student: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+              description_teacher: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+            Blank Space Stories:
+              name: ブランクスペースストーリー
+              description_student: このアクティビティでは、コンピュータがユーザーが入力したものをどのように取得して保存するか理解するため、ブランクを埋めるストーリー（Mad
+                Libs®と同様）を使用して、後でそれをプログラムで実行します。
+              description_teacher: この**コンテキスト設定**レッスンでは、コンピュータがユーザーが入力したものをどのように取得して保存するか理解するためのコンテキストとして、ブランクを埋めるストーリー（Mad
+                Libs®と同様）を使用して、後でそれをプログラムで実行します。
+            Text and Prompts:
+              name: テキストとプロンプト
+              description_student: このレッスンでは、スプライトラボで変数を使って練習します。
+              description_teacher: この**スキル構築**レッスンでは、スプライトラボで変数を使った実践を行います。
+            'Mini-Project: User Input Programs':
+              name: ミニプロジェクト：ユーザーインプットプログラム
+              description_student: 変数を使用した新しいスキルを、3つのオープンエンドプロジェクトの1つに適用します。
+              description_teacher: 生徒は、変数を使用して新しいスキルを3つのオープンエンドの**ミニプロジェクト**の1つに適用します。サンプルプログラムを探索して、自分のプロジェクトの計画を作成し、それをゼロからプログラムします。
+            Simulating Experiments:
+              name: 実験のシミュレーション
+              description_student: コンピュータでシミュレーションを実行し、変数を変更して実験しましょう。
+              description_teacher: 生徒はスプライトラボで簡単なシミュレーションを実行することにより、コンピューティングをどのように使うと傾向やパターンを特定するデータを収集できるかを体験します。シミュレーションを複数回実行した後、生徒はシミュレーションで変数を変更すると結果にどのように影響するかについて予測し、その仮説をテストする機会があります。
+            End of Course Project:
+              description_student: 大きなプロジェクトには時間と綿密な計画が必要です。あなたのインスピレーションを見つけ、計画を立て、創造性を解き放ちましょう！
+              description_teacher: この**プロジェクト**レッスンでは、新しいプロジェクトの設計、開発、披露のプロセスを生徒に説明します。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: スプライト
+            lessonGroup-3:
+              display_name: 変数（へんすう）
+            lessonGroup-4:
+              display_name: コース最後のプロジェクト
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -19499,3 +19612,1493 @@ ja:
               display_name: 内容
             lessonGroup-5:
               display_name: サンド ボックス
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: オンラインネイバーフッドの安全
+              description_student: オンラインで安全にいろいろな場所に行く方法を学びます。
+              key: オンラインネイバーフッドの安全
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+              description_student: クリックしてドラッグし、パズルを完成させましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒がコンピュータラボに向かうときに、何を期待できるのかを伝えます。コンピュータラボのマナーを紹介する簡単な説明から始め、次に、コンピュータを使ってオンライン
+                パズルを完成させてもらいます。
+              key: ドラッグ＆ドロップ
+            Happy Maps:
+              name: ハッピーマップ
+              description_student: フルブが果物にたどり着くための指示を書きましょう。
+              description_teacher: このオフラインレッスンは、チームで一緒に「フラブ」を果物にたどり着かせるという単純なタスクに取り組みます。生徒は、指示を示された記号に変換する作業をしながら、正確な指示を書く練習をします。プログラムに問題が発生した場合は、生徒は協力してバグを発見し、ソリューションを構築します。
+            Sequencing with Scrat:
+              name: スクラッチと学ぶシーケンス
+              description_student: どんぐりにたどり着けるようにスクラッチをプログラムします。
+              description_teacher: この**スキル構築**レッスンでは、生徒は鳥を迷路の片側から反対側の豚のいるところまで移動させるためのシーケンスアルゴリズムを開発します。
+                これを行うには、線形のシーケンスでコードブロックを積み上げます。
+              key: スクラッチと学ぶシーケンス
+            Programming with Scrat:
+              name: スクラッチと学ぶプログラミング
+              description_student: スクラッチがどんぐりにたどりつくのを助けるプログラムを書いてください。
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きシーケンスアルゴリズムを開発します。
+            Programming with Rey and BB-8:
+              name: レイとBB-8と学ぶプログラミング
+              description_student: BB-8がスクラップを集めるのを手伝ってください。
+              description_teacher: この**スキル構築**レッスンでは、新しく学んだプログラミングスキルをより複雑な方法で使って、BB-8がトリッキーなコースをナビゲートできるようにします。
+              key: レイとBB-8と学ぶプログラミング
+            Happy Loops:
+              name: くりかえし：ハッピー ループ
+              description_student: ループを使ってフラブがより大きな問題を解決するのを助けましょう。
+              description_teacher: このアクティビティでは、ハッピーマップを再度取り上げます。今回は、生徒は自分のプログラムで大きくてより時間がかかるパズルを解き、長いプログラムを簡単に書くことができる構造の有用性を学びます。
+            Loops with Scrat:
+              name: スクラッチと学ぶループ
+              description_student: ループを使ってスクラッチがより多くの地面をカバーできるようにします。
+              description_teacher: この**スキル構築**レッスンでは、リスがドングリに到達するのを助けることを目標とするプログラミングパズルでループを練習します。
+            Loops with Laurel:
+              name: くりかえし あつめる
+              description_student: 冒険家ローレルが地中の宝物を見つけるのを手伝ってあげましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒はループの概念を学び続けます。 ここでは、生徒はループを使用して、洞窟に宝物を集めます。
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
+              description_student: ループとパターンを使って画像を完成させましょう。
+              description_teacher: ループに戻って、生徒は一連の簡単な指示をループすることで画像を描く方法を学びます。前のオンラインレッスンでは、ループを使って迷路を進み、宝物を収集しました。ここでは、ループでパターンを作成します。この段階の最後に、生徒はループを使って自分の画像を作成する機会があります。
+              key: アーティストくりかえし
+            The Big Event Jr.:
+              name: ビッグイベントジュニア
+              description_student: 先生が巨大なリモコンのボタンを押したら、移動して叫びましょう。
+              description_teacher: イベントは、事前に作成したアルゴリズムに多様性を加える優れた方法です。プログラムに、ユーザーが希望したタイミングでユーザーの指示に応答してもらいたいことがあります。イベントはそれが行えるようにします。
+            'Mini-Project: On the Move with Play Lab':
+              description_student: 独自のゲームやストーリーを作成しましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってストーリーを作りましょう！
+            End of Course Project:
+              name: コース最後のプロジェクト
+              description_student: "「アーティスト」でストーリーを語りましょう！"
+              description_teacher: この**プロジェクト**のレッスンでは、アーティストでシーケンスとループについて学んだことを適用します。
+            'Programming: Happy Maps':
+              key: プログラミング：ハッピー マップ
+              name: ハッピーマップ
+              description_student: フルブが果物にたどり着くための指示を書きましょう。
+              description_teacher: このオフラインレッスンは、チームで一緒に「フラブ」を果物にたどり着かせるという単純なタスクに取り組みます。生徒は、指示を示された記号に変換する作業をしながら、正確な指示を書く練習をします。プログラムに問題が発生した場合は、生徒は協力してバグを発見し、ソリューションを構築します。
+            Programming in Ice Age:
+              key: アイスエイジで学ぶプログラミング
+              name: スクラッチと学ぶプログラミング
+              description_student: スクラッチがどんぐりにたどりつくのを助けるプログラムを書いてください。
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きシーケンスアルゴリズムを開発します。
+            'Loops: Happy Loops':
+              key: くりかえし：ハッピー ループ
+              name: くりかえし：ハッピー ループ
+              description_student: ループを使ってフラブがより大きな問題を解決するのを助けましょう。
+              description_teacher: このアクティビティでは、ハッピーマップを再度取り上げます。今回は、生徒は自分のプログラムで大きくてより時間がかかるパズルを解き、長いプログラムを簡単に書くことができる構造の有用性を学びます。
+            Loops in Ice Age:
+              key: アイス・エイジのループ
+              name: スクラッチと学ぶループ
+              description_student: ループを使ってスクラッチがより多くの地面をカバーできるようにします。
+              description_teacher: この**スキル構築**レッスンでは、リスがドングリに到達するのを助けることを目標とするプログラミングパズルでループを練習します。
+            Loops in Collector:
+              key: くりかえし あつめる
+              name: くりかえし あつめる
+              description_student: 冒険家ローレルが地中の宝物を見つけるのを手伝ってあげましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒はループの概念を学び続けます。 ここでは、生徒はループを使用して、洞窟に宝物を集めます。
+            'Events: The Big Event':
+              key: 'イベント: おおきなイベント'
+              name: ビッグイベントジュニア
+              description_student: 先生が巨大なリモコンのボタンを押したら、移動して叫びましょう。
+              description_teacher: イベントは、事前に作成したアルゴリズムに多様性を加える優れた方法です。プログラムに、ユーザーが希望したタイミングでユーザーの指示に応答してもらいたいことがあります。イベントはそれが行えるようにします。
+            Events in Play Lab:
+              key: プレイ ラボのイベント
+              description_student: 独自のゲームやストーリーを作成しましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってストーリーを作りましょう！
+            lesson-1:
+              key: レッスン1
+              name: コース最後のプロジェクト
+              description_student: "「アーティスト」でストーリーを語りましょう！"
+              description_teacher: この**プロジェクト**のレッスンでは、アーティストでシーケンスとループについて学んだことを適用します。
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+            lessonGroup-5:
+              display_name: コース最後のプロジェクト
+          title: コース A (2021)
+          student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 低学年向けコンピューター サイエンス入門
+          description_audience: 4-7 才
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: めいろ のプログラミング
+              description_student: アングリーバードでシーケンスとアルゴリズムについて学びましょう。
+              description_teacher: アングリーバードゲームのキャラクターを使って、生徒はトリを迷路の片側から反対側のブタに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、トリをまっすぐ移動、左折、または右折させます。
+              key: めいろ のプログラミング
+            Debugging in Maze:
+              name: 迷路で学ぶデバッグ
+              description_student: パズルで問題を見つけ、デバッグスキルを練習しましょう。
+              description_teacher: デバッグはプログラミングの学習に不可欠な要素です。このレッスンでは、誤って解かれたパズルに取り組みます。ループが不正確だったり、ブロックが欠落していたり、ブロックが余分だったり、ブロックが機能しないなどのエラーを特定するには、既存のプログラムを順に検証する必要があります。
+            Collecting Treasure with Laurel:
+              name: ローレルと行う宝物の収集
+              key: ローレルと行う宝物の収集
+            Creating Art with Code:
+              name: プログラムでアートを作成
+              description_student: "「アーティスト」をプログラミングして美しい画像を作成しましょう。"
+              description_teacher: このレッスンでは、生徒がアーティストを制御して、画面上で絵を完成させます。このアーティストステージでは、「100ピクセルずつ前進」や「90度右に回転」などの新しいブロックを使って、より複雑な画像を作成していきます。
+              key: プログラムでアートを作成
+            Swimming Fish in Sprite Lab:
+              name: スプライトラボで泳ぐ魚
+              description_student: スプライトを作成および編集する方法を学びます。
+              description_teacher: このレッスンでは、スプライトラボの中心となる2つの概念、スプライトとビヘイビアについて学びます。スプライトは、生徒が移動、変更、操作できる画面上のキャラクターまたはオブジェクトです。ビヘイビアは、スプライトが停止するまで継続的に実行するアクションです。
+              key: スプライトラボで泳ぐ魚
+            Making Sprites:
+              name: スプライトを作る
+              description_student: このレッスンでは、プログラムを作成し、スプライトと行動について学習します。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒はプログラムを作成し、スプライトラボの中心となる2つの概念、スプライトと行動について学びます。
+            Sprites in Action:
+              name: 実行中のスプライト
+              description_student: プログラミングの各レベルをこなしてから、最後に自由形式の「じゆうあそび」タスクを行います。このタスクでは、好きなものを作れます。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒は、時限式イベントとユーザー入力に応答するプログラムを作成します。
+            Virtual Pet with Sprite Lab:
+              name: スプライトラボでのバーチャルペット
+              description_student: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+              description_teacher: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+              key: スプライトラボでのバーチャルペット
+            Dance Party:
+              name: ダンスパーティー
+              description_student: お祝いの時間です！このレッスンでは、独自のインタラクティブなダンスパーティーをプログラムします。
+              description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
+            Loops with Rey and BB-8:
+              name: レイとBB-8と学ぶループ
+              description_student: ループを使ってBB-8が迷路を通り抜けるのを助けてあげましょう！
+              key: レイとBB-8と学ぶループ
+            'Mini-Project: Sticker Art':
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+              description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
+            Nested Loops in Maze:
+              name: 迷路で学ぶ入れ子のループ
+              description_student: ループ内のループ内のループ。これはどういう意味でしょうか？このレッスンでは、入れ子のループを作成するとどうなるかを学びます。
+              description_teacher: このオンラインアクティビティでは、ループの理解をまったく新しいレベルに引き上げる機会があります。みつばちや植物対ゾンビで遊んで、生徒はループを別のループの内側に記述する方法を学びます。また、どちらかのループにわずかな変更を加えただけでも、[実行]
+                をクリックしたときにプログラムにどのような影響を与えるかを把握できるようにします。
+              key: 迷路で学ぶ入れ子のループ
+            Snowflakes with Anna and Elsa:
+              name: スノーフレークとアナとエルサ
+              description_student: アナとエルサは優れたアイススケートスキルを持っていますが、氷のパターンを作成するにはあなたの助けが必要です。入れ子のループを使って、何かすごくいかしたものを作成しましょう。
+              description_teacher: 生徒はループを重ねる方法を理解したので、非常に多くの美しいものを作成できます。このレッスンでは、生徒は一連の演習を行い、アナとエルサの優れたアイススケートスキルを使って、ポートフォリオに対応した独自のイメージを作成できるようにします。
+              key: スノーフレークとアナとエルサ
+            Looking Ahead with Minecraft:
+              name: マインクラフトで先を見る
+              description_student: 溶岩を避けて！ここでは、マインクラフトの世界で条件文について学習し始めます。
+              description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
+            If/Else with Bee:
+              name: みつばちと学ぶIf/Else
+              description_student: 条件文を理解したところで、ハチミツとミツを収集するときに条件文を使うようにみつばちをプログラムしましょう。
+              description_teacher: ここまで、生徒は実行するたびにまったく同じ操作を実行するプログラムを作成してきました。これは信頼性は高くても、柔軟性があまりありません。このレッスンでは、クラスで条件文を使ったプログラミングを開始し、プログラムが遭遇した特定の条件に応じて対応を異にするプログラムを作成します。
+              key: みつばちと学ぶIf/Else
+            While Loops in Farmer:
+              name: ファーマーの「while」ループ
+              description_student: ループはプログラミングで非常に役立ちます。このレッスンでは、新しい種類のループ、whileループについて説明します！
+              description_teacher: この**スキル構築**のレッスンでは、生徒はファーマーで穴を埋めて土を掘る作業を行いますが、穴のサイズや土の山の高さはわかりません。これらのパズルを解くために、新しい種類のループを使用することになります。
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'マインクラフトの条件文: ボヤージュ アクアティック'
+              description_student: ここでは、マインクラフトの世界で条件文について学習します。
+              description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
+              key: 'マインクラフトの条件文: ボヤージュ アクアティック'
+            Until Loops in Maze:
+              name: 迷路で学ぶUntilループ
+              description_student: "「until」ループを使用すると、驚くべきことができます！"
+              description_teacher: このレッスンでは、「until」ループについて学習します。生徒は、主人公が停止する目的の地点に「到達する」までアクションを繰り返すプログラムを作成します。
+              key: 迷路で学ぶUntilループ
+            Harvesting with Conditionals:
+              name: 条件文を用いる収獲
+              description_student: 各条件文をいつ使用するかが常に明確であるとは限りません。このレッスンは、何をすべきかを決める練習をするのに役立ちます。
+              description_teacher: 生徒は「while」ループ、「until」ループ、および「if/else」文を練習します。これらのブロックはすべて条件文を使用します。
+                3つすべてを練習することで、生徒は複雑で柔軟なプログラムを書く方法を学びます。
+              key: 条件文を用いる収獲
+            Functions in Minecraft:
+              name: マインクラフトで学ぶ関数
+              description_student: 最も効率的なプログラムで関数を使用するにはどうしたらいいか、考えられますか？
+              description_teacher: 生徒たちは、この楽しくインタラクティブなマインクラフトアドベンチャーで関数がどのように役立つかを学習します！
+              key: マインクラフトで学ぶ関数
+            Functions with Artist:
+              name: アーティストと学ぶ関数
+              description_student: 関数で複雑な図面をより簡単に作成！
+              description_teacher: 生徒は、アーティストで関数の使い方を学び、壮大な画像を作成および変更します。より複雑なパターンについては、関数を別の関数の中から呼び出すことにより、入れ子の関数について学びます。
+              key: アーティストと学ぶ関数
+            Functions with Harvester:
+              name: ファーマーと学ぶ関数
+              description_student: ファーマーの収穫を手伝う際、関数が大きな手助けをしてくれます。
+              description_teacher: 生徒は、アーティストで印象的なデザインを作成し、ミツバチのゲームで迷路をナビゲートすることを練習しましたが、今日は、ファーマーのゲームで作物を収穫するための関数を用います。このレッスンでは、関数を「while」ループと「if/else」文と組み合わせることで、関数の新しい使用法を学びます。
+              key: ファーマーと学ぶ関数
+            Text and Prompts:
+              name: テキストとプロンプト
+              description_student: このレッスンでは、スプライトラボで変数を使って練習します。
+              description_teacher: この**スキル構築**レッスンでは、スプライトラボで変数を使った実践を行います。
+            Using Variables with the Artist:
+              description_student: このレッスンでは、プログラムを実行する際に変化する変数を使って絵を描きます。
+              description_teacher: この**スキル構築**レッスンでは、アーティスト環境の変数を使って、反復的なデザインを行う方法ついて学びます。生徒は、変数をどう使うと、プログラムをど簡単に記述し、読みやすくできるかを学びます。ガイド付きパズルを行った後、生徒はじゆうあそびレベルで終了します。そこで学んだことを示し、独自のデザインを作成します。
+            Variables with the Bee:
+              name: みつばちと学ぶ変数の変更
+              description_student: このみつばちは変数が大好きです！
+              description_teacher: このレッスンでは、プログラムの実行中に値を変更できるようにすることで、変数でプログラムを強化する方法を説明します。
+            For Loops with Bee:
+              name: みつばちと学ぶForループ
+              description_student: ブンブンブン。このパズルでは、「for」ループを使ってみつばちをミツとハチミツに導きます。
+              description_teacher: この**スキル構築**レッスンでは、「for」ループと増分変数を使って、より複雑なパズルを解くことに焦点を当てています。
+              key: みつばちと学ぶForループ
+            For Loops with Artist:
+              name: アーティストと学ぶForループ
+              description_student: 次の傑作を作る準備をしてください。ここでは、「for」ループを使って、驚くような画像を作成します。
+              description_teacher: このレッスンでは、生徒は「for」ループの練習を続けますが、今回はアーティストと一緒に行います。生生徒はパズルを完成させて、複雑なデザインとユニークなアートを作成します。
+              key: アーティストと学ぶForループ
+            End of Course Project:
+              name: コース最後のプロジェクト
+              description_student: プログラミングをたくさん行う準備をしましょう！プロジェクトの構築を開始する時が来ました。
+              description_teacher: この**プロジェクト**レッスンでは、新しいプロジェクトの設計、開発、披露のプロセスを生徒に説明します。
+              key: コース最後のプロジェクト
+            Debugging with Scrat:
+              key: スクラットと学ぶデバッグ
+              name: 迷路で学ぶデバッグ
+              description_student: パズルで問題を見つけ、デバッグスキルを練習しましょう。
+              description_teacher: デバッグはプログラミングの学習に不可欠な要素です。このレッスンでは、誤って解かれたパズルに取り組みます。ループが不正確だったり、ブロックが欠落していたり、ブロックが余分だったり、ブロックが機能しないなどのエラーを特定するには、既存のプログラムを順に検証する必要があります。
+            lesson-2:
+              key: レッスン2
+              name: スプライトを作る
+              description_student: このレッスンでは、プログラムを作成し、スプライトと行動について学習します。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒はプログラムを作成し、スプライトラボの中心となる2つの概念、スプライトと行動について学びます。
+            lesson-3:
+              key: レッスン3
+              name: 実行中のスプライト
+              description_student: プログラミングの各レベルをこなしてから、最後に自由形式の「じゆうあそび」タスクを行います。このタスクでは、好きなものを作れます。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒は、時限式イベントとユーザー入力に応答するプログラムを作成します。
+            lesson-1:
+              key: レッスン1
+              name: ダンスパーティー
+              description_student: お祝いの時間です！このレッスンでは、独自のインタラクティブなダンスパーティーをプログラムします。
+              description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
+            Sticker Art with Loops:
+              key: アーティストくりかえし
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+              description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
+            'Looking Ahead with Minecraft ':
+              key: マインクラフトで先を見る
+              name: マインクラフトで先を見る
+              description_student: 溶岩を避けて！ここでは、マインクラフトの世界で条件文について学習し始めます。
+              description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
+            While Loops with the Farmer:
+              key: 農夫と学ぶWhileループ
+              name: ファーマーの「while」ループ
+              description_student: ループはプログラミングで非常に役立ちます。このレッスンでは、新しい種類のループ、whileループについて説明します！
+              description_teacher: この**スキル構築**のレッスンでは、生徒はファーマーで穴を埋めて土を掘る作業を行いますが、穴のサイズや土の山の高さはわかりません。これらのパズルを解くために、新しい種類のループを使用することになります。
+            lesson-4:
+              key: レッスン4
+              name: テキストとプロンプト
+              description_student: このレッスンでは、スプライトラボで変数を使って練習します。
+              description_teacher: この**スキル構築**レッスンでは、スプライトラボで変数を使った実践を行います。
+            Variables with Artist:
+              key: アーティストと学ぶ変数
+              description_student: このレッスンでは、プログラムを実行する際に変化する変数を使って絵を描きます。
+              description_teacher: この**スキル構築**レッスンでは、アーティスト環境の変数を使って、反復的なデザインを行う方法ついて学びます。生徒は、変数をどう使うと、プログラムをど簡単に記述し、読みやすくできるかを学びます。ガイド付きパズルを行った後、生徒はじゆうあそびレベルで終了します。そこで学んだことを示し、独自のデザインを作成します。
+            Changing Variables with Bee:
+              key: みつばちと学ぶ変数の変更
+              name: みつばちと学ぶ変数の変更
+              description_student: このみつばちは変数が大好きです！
+              description_teacher: このレッスンでは、プログラムの実行中に値を変更できるようにすることで、変数でプログラムを強化する方法を説明します。
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_sprites:
+              display_name: スプライト
+            lessonGroup-9:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_functions:
+              display_name: 関数(かんすう)
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター
+            プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。
+          description_audience: '年齢: 9～18才'
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS原則の事前アンケート
+              key: CS原則の事前アンケート
+            Welcome to CSP:
+              name: CSPへようこそ
+              key: CSPへようこそ
+            Representing Information:
+              name: 情報の表現
+              key: 情報の表現
+            Circle Square Patterns:
+              name: サークルスクエアパターン
+              key: サークルスクエアパターン
+            Binary Numbers:
+              name: 2進数
+              key: 2進数
+            Overflow and Rounding:
+              name: オーバーフローと四捨五入
+              key: オーバーフローと四捨五入
+            Representing Text:
+              name: テキストの表現
+              key: テキストの表現
+            Black and White Images:
+              name: 白黒画像
+              key: 白黒画像
+            Color Images:
+              name: カラー画像
+              key: カラー画像
+            Lossless Compression:
+              name: 可逆圧縮
+              key: 可逆圧縮
+            Lossy Compression:
+              name: 不可逆圧縮
+              key: 不可逆圧縮
+            Intellectual Property:
+              name: 知的財産
+              key: 知的財産
+            Project   Digital Information Dilemmas Part 1:
+              name: プロジェクト  デジタル情報ジレンマ パート1
+            Project   Digital Information Dilemmas Part 2:
+              name: プロジェクト  デジタル情報ジレンマ パート2
+            Assessment Day:
+              name: 評価日
+            Project - Digital Information Dilemmas Part 1:
+              key: プロジェクト - デジタル情報ジレンマ パート1
+              name: プロジェクト  デジタル情報ジレンマ パート1
+            Project - Digital Information Dilemmas Part 2:
+              key: プロジェクト - デジタル情報ジレンマ パート2
+              name: プロジェクト  デジタル情報ジレンマ パート2
+            'Lesson 14: Assessment Day':
+              key: 'レッスン14: 評価日'
+              name: 評価日
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csp_unit1_2020:
+              display_name: 'ユニット1: デジタル情報'
+        csp2-2022:
+          lessons:
+            Welcome to the Internet:
+              name: インターネットへようこそ
+              key: インターネットへようこそ
+            Building a Network:
+              name: ネットワークの構築
+              key: ネットワークの構築
+            The Need for Addressing:
+              name: 対処の必要性
+              key: 対処の必要性
+            Routers and Redundancy:
+              name: ルーターと冗長性
+              key: ルーターと冗長性
+            Packets:
+              name: パケット
+              key: パケット
+            Project   Internet Dilemmas Part 1:
+              name: プロジェクト  インターネットのジレンマ パート1
+            Project   Internet Dilemmas Part 2:
+              name: プロジェクト  インターネットのジレンマ パート2
+            Assessment Day:
+              name: 評価日
+            DNS and HTTP:
+              key: DNSとHTTP
+            Project - Internet Dilemmas Part 1:
+              key: プロジェクト - インターネットのジレンマ パート1
+              name: プロジェクト  インターネットのジレンマ パート1
+            Project - Internet Dilemmas Part 2:
+              key: プロジェクト - インターネットのジレンマ パート2
+              name: プロジェクト  インターネットのジレンマ パート2
+            'Lesson 9: Assessment Day':
+              key: 'レッスン9: 評価日'
+              name: 評価日
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'ユニット2: インターネット'
+        csp3-2022:
+          lessons:
+            Introduction to Apps:
+              name: アプリの紹介
+              key: アプリの紹介
+            The Need for Programming Languages:
+              name: プログラミング言語の必要性
+              key: プログラミング言語の必要性
+            Intro to Programming:
+              name: プログラミング入門
+              key: プログラミング入門
+            Debugging:
+              name: デバッギング
+              key: デバッギング
+            Project   Designing an App Part 4:
+              name: プロジェクト  アプリの設計 パート4
+            Project   Designing an App Part 5:
+              name: プロジェクト  アプリの設計 パート5
+            Assessment Day:
+              name: 評価日
+            Project - Designing an App Part 1:
+              key: プロジェクト - アプリの設計 パート1
+            Project - Designing an App Part 2:
+              key: プロジェクト - アプリの設計 パート2
+            Project - Designing an App Part 3:
+              key: プロジェクト - アプリの設計 パート3
+            Project - Designing an App Part 4:
+              key: プロジェクト - アプリの設計 パート4
+              name: プロジェクト  アプリの設計 パート4
+            Project - Designing an App Part 5:
+              key: プロジェクト - アプリの設計 パート5
+              name: プロジェクト  アプリの設計 パート5
+            'Lesson 11: Assessment Day':
+              key: 'レッスン11: 評価日'
+              name: 評価日
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'ユニット3: アプリ設計入門'
+        csp4-2022:
+          lessons:
+            Variables Explore:
+              name: 変数 探索
+              key: 変数 探索
+            Variables Investigate:
+              name: 変数 調査
+              key: 変数 調査
+            Variables Practice:
+              name: 変数 練習
+              key: 変数 練習
+            Variables Make:
+              name: 変数 作成
+              key: 変数 作成
+            Conditionals Explore:
+              name: 条件文 探索
+              key: 条件文 探索
+            Conditionals Investigate:
+              name: 条件文 調査
+              key: 条件文 調査
+            Conditionals Practice:
+              name: 条件文 練習
+              key: 条件文 練習
+            Conditionals Make:
+              name: 条件文の作成
+            Functions Explore / Investigate:
+              name: 関数 探索/調査
+              key: 関数 探索/調査
+            Functions Practice:
+              name: 関数 練習
+              key: 関数 練習
+            Functions Make:
+              name: 関数 作成
+              key: 関数 作成
+            Project   Decision Maker App Part 1:
+              name: プロジェクト  意思決定アプリ  パート1
+            Project   Decision Maker App Part 2:
+              name: プロジェクト  意思決定アプリ  パート2
+            Project   Decision Maker App Part 3:
+              name: プロジェクト  意思決定アプリ  パート3
+            Assessment Day:
+              name: 評価日
+            Conditional Make:
+              key: 条件文 作成
+              name: 条件文の作成
+            Project - Decision Maker App Part 1:
+              key: プロジェクト - 意思決定アプリ パート1
+              name: プロジェクト  意思決定アプリ  パート1
+            Project - Decision Maker App Part 2:
+              key: プロジェクト - 意思決定アプリ パート2
+              name: プロジェクト  意思決定アプリ  パート2
+            Project - Decision Maker App Part 3:
+              key: プロジェクト - 意思決定アプリ パート3
+              name: プロジェクト  意思決定アプリ  パート3
+            'Lesson 15: Assessment Day':
+              key: 'レッスン15: 評価日'
+              name: 評価日
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
+        csp5-2022:
+          lessons:
+            Lists Explore:
+              name: リスト 探索
+              key: リスト 探索
+            Lists Investigate:
+              name: リスト 調査
+              key: リスト 調査
+            Lists Practice:
+              name: リスト 練習
+              key: リスト 練習
+            Lists Make:
+              name: リスト 作成
+              key: リスト 作成
+            Loops Explore:
+              name: ループ 探検
+              key: ループ 探検
+            Loops Investigate:
+              name: ループ調査
+              key: ループ調査
+            Loops Practice:
+              name: ループ練習
+              key: ループ練習
+            Loops Make:
+              name: ループの作成
+              key: ループの作成
+            Traversals Explore:
+              name: トラバーサル 探索
+              key: トラバーサル 探索
+            Traversals Investigate:
+              name: トラバーサル 調査
+              key: トラバーサル 調査
+            Traversals Practice:
+              name: トラバーサル 練習
+              key: トラバーサル 練習
+            Traversals Make:
+              name: トラバーサル 作成
+              key: トラバーサル 作成
+            Assessment Day:
+              name: 評価日
+            Semester Hackathon Part 1:
+              key: セメスターハッカソン パート1
+            Semester Hackathon Part 2:
+              key: セメスターハッカソン パート2
+            Semester Hackathon Part 3:
+              key: セメスターハッカソン パート3
+            Semester Hackathon Part 4:
+              key: セメスターハッカソン パート4
+            Semester Hackathon Part 5:
+              key: セメスターハッカソン パート5
+            'Lesson 18: Assessment Day':
+              key: 'レッスン18: 評価日'
+              name: 評価日
+          lesson_groups:
+            csp_lists:
+              display_name: リスト
+            csp_loops:
+              display_name: くりかえし
+            csp_traversals:
+              display_name: トラバーサル
+            csp_project:
+              display_name: プロジェクト
+        courseb-2022:
+          lessons:
+            Digital Trails:
+              name: デジタルトレイル
+              description_student: デジタルフットプリントと、ウェブサイトにアクセスするときに安全を確保する方法について学びましょう。
+              key: デジタルトレイル
+            Move It, Move It:
+              name: 動かせ！動かせ！
+              description_student: クラスメートがある場所から他の場所へと慎重に歩むようにプログラムしましょう。
+              description_teacher: このレッスンは、このコースの過程で取り組むプログラミングの演習に向けて準備するのに役立ちます。小さなチームになって、生徒は身体の動きを使ってクラスメートをプログラムし、目標が達成されるまである場所から他の場所へと慎重に進ませます。
+              key: 動かせ！動かせ！
+            Sequencing with Angry Birds:
+              name: アングリーバードと学ぶシーケンス
+              description_student: 赤いアングリーバードがいたずら好きなブタに到達するのを手伝ってあげましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒は鳥を迷路の片側から反対側の豚のいるところまで移動させるためのシーケンスアルゴリズムを開発します。
+                これを行うには、線形のシーケンスでコードブロックを積み上げます。
+            Programming with Angry Birds:
+              name: めいろ のプログラミング
+              description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きシーケンスアルゴリズムを開発します。
+            Programming with Harvester:
+              name: ハーベスターと学ぶプログラミング
+              description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
+              description_teacher: 生徒は、学習したプログラミングの概念をファーマーの収穫に適用します。ここでは、キャラクターをゴールに到達させるだけでなく、新しいブロックを使ってトウモロコシを収穫する必要があります。生徒は引き続き順序アルゴリズムスキルを開発し、デバッグプロセスを使い始めます。
+            Getting Loopy:
+              name: ルーピーをゲット
+              description_student: このレッスンでは、繰り返しループを使用してダンスパーティーを行います。
+              description_teacher: 長くて面白いプログラムを書き始めると、プログラムには多くの繰り返しが含まれることがよくあります。このレッスンでは、ループを使って、ダンスで繰り返される動きのパターンを見つけることで、繰り返しの多い指示をより簡単に伝達する方法について学習します。
+            Loops with Harvester:
+              name: ハーベスターと学ぶループ
+              description_student: ループを使って、ファーマーの収穫を手伝ってあげましょう！
+              description_teacher: この**スキル構築**のレッスンでは、生徒はファーマーがループを使用して作物を収穫するのを手伝います。
+            Loops with Laurel:
+              name: くりかえし あつめる
+              description_student: "「冒険家ローレル」をプログラムして、洞窟で宝物を集めましょう。"
+              description_teacher: この**スキル構築**レッスンでは、引き続きループの概念を学習します。ここでは、冒険家ローレルが、ループを使って洞窟に宝物を収集します。
+            Drawing Gardens with Loops:
+              name: アーティストくりかえし
+              description_student: パターンとループを使って画像を完成させましょう。
+              description_teacher: この**スキル構築**のレッスンでは、生徒は簡単な一連の指示をループして画像を描くことを学びます。
+                ここでは、生徒はループを使用してパターンを作成します。
+            The Right App:
+              description_student: 自分のスマートフォンアプリをスケッチします。
+              description_teacher: このレッスンでは、コンピュータサイエンスが実生活の人々を助けることができることを生徒に認識してもらいます。まず、生徒は、架空のスマートフォンユーザーに自分を重ね、その人のニーズに対応する「適切なアプリ」を見つけるのを手伝います。次に、生徒は共感と創造性を発揮して、もう1人のユーザーのニーズに対応する独自のスマートフォンアプリをスケッチします。
+            The Big Event Jr.:
+              name: ビッグイベントジュニア
+              description_student: 先生が巨大なリモコンのボタンを押したら、移動したり、叫んだりしましょう。
+              description_teacher: イベントは、事前に作成したアルゴリズムに多様性を加える優れた方法です。プログラムに、ユーザーが希望したタイミングでユーザーの指示に応答してもらいたいことがあります。イベントはそれが行えるようにします。
+            'Mini-Project: A Royal Battle with Events':
+              description_student: イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってゲームを作りましょう！
+            End of Course Project:
+              name: コース最後のプロジェクト
+              description_student: 自分だけのストーリーやゲームを作りましょう！
+              description_teacher: この**プロジェクト**のレッスンでは、プレイラボを使用したオープンエンドプロジェクトでシーケンスとイベントについて学んだことを適用します。
+            Sequencing in Maze:
+              key: 迷路で学ぶシーケンス
+              name: アングリーバードと学ぶシーケンス
+              description_student: 赤いアングリーバードがいたずら好きなブタに到達するのを手伝ってあげましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒は鳥を迷路の片側から反対側の豚のいるところまで移動させるためのシーケンスアルゴリズムを開発します。
+                これを行うには、線形のシーケンスでコードブロックを積み上げます。
+            Programming in Maze:
+              key: めいろ のプログラミング
+              name: めいろ のプログラミング
+              description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きシーケンスアルゴリズムを開発します。
+            Programming in Harvester:
+              key: 農夫と学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
+              description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
+              description_teacher: 生徒は、学習したプログラミングの概念をファーマーの収穫に適用します。ここでは、キャラクターをゴールに到達させるだけでなく、新しいブロックを使ってトウモロコシを収穫する必要があります。生徒は引き続き順序アルゴリズムスキルを開発し、デバッグプロセスを使い始めます。
+            'Loops: Getting Loopy':
+              key: 'ループ: ルーピーをゲット'
+              name: ルーピーをゲット
+              description_student: このレッスンでは、繰り返しループを使用してダンスパーティーを行います。
+              description_teacher: 長くて面白いプログラムを書き始めると、プログラムには多くの繰り返しが含まれることがよくあります。このレッスンでは、ループを使って、ダンスで繰り返される動きのパターンを見つけることで、繰り返しの多い指示をより簡単に伝達する方法について学習します。
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: ハーベスターと学ぶループ
+              description_student: ループを使って、ファーマーの収穫を手伝ってあげましょう！
+              description_teacher: この**スキル構築**のレッスンでは、生徒はファーマーがループを使用して作物を収穫するのを手伝います。
+            Loops in Collector:
+              key: くりかえし あつめる
+              name: くりかえし あつめる
+              description_student: "「冒険家ローレル」をプログラムして、洞窟で宝物を集めましょう。"
+              description_teacher: この**スキル構築**レッスンでは、引き続きループの概念を学習します。ここでは、冒険家ローレルが、ループを使って洞窟に宝物を収集します。
+            Loops in Artist:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+              description_student: パターンとループを使って画像を完成させましょう。
+              description_teacher: この**スキル構築**のレッスンでは、生徒は簡単な一連の指示をループして画像を描くことを学びます。
+                ここでは、生徒はループを使用してパターンを作成します。
+            'Events: The Big Event':
+              key: 'イベント: おおきなイベント'
+              name: ビッグイベントジュニア
+              description_student: 先生が巨大なリモコンのボタンを押したら、移動したり、叫んだりしましょう。
+              description_teacher: イベントは、事前に作成したアルゴリズムに多様性を加える優れた方法です。プログラムに、ユーザーが希望したタイミングでユーザーの指示に応答してもらいたいことがあります。イベントはそれが行えるようにします。
+            Events in Play Lab:
+              key: プレイ ラボのイベント
+              description_student: イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってゲームを作りましょう！
+            lesson-1:
+              key: レッスン1
+              name: コース最後のプロジェクト
+              description_student: 自分だけのストーリーやゲームを作りましょう！
+              description_teacher: この**プロジェクト**のレッスンでは、プレイラボを使用したオープンエンドプロジェクトでシーケンスとイベントについて学んだことを適用します。
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_impacts:
+              display_name: コンピューティングの影響
+            csf_events:
+              display_name: イベント
+            lessonGroup-6:
+              display_name: コース最後のプロジェクト
+          student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
+          description_audience: 5-8 才
+        coursec-2022:
+          lessons:
+            Putting a STOP to Online Meanness:
+              name: ネットの迷惑行為を防止する
+              description_student: このレッスンでは、意地悪な行為と、それをネット上で目撃した場合の対処方法について学習します。
+              key: ネットの迷惑行為を防止する
+            My Robotic Friends Jr.:
+              name: 私のロボットの友だち
+              description_student: このレッスンでは、クラスメートをロボットのように扱い、積み重ねたカップのパターンを構築するようにプログラムします。
+              description_teacher: コードの代わりに一連の記号を使って、さまざまなパターンでカップを積み重ねるように「ロボット」に指示するアルゴリズムを設計します。生徒は交代でロボットとして参加し、仲間が定義したアルゴリズムにのみ応答します。このセグメントでは、シンボルとアクションの間のつながり、アルゴリズムとプログラムの違い、およびデバッグの貴重なスキルを学習します。
+            Programming with Angry Birds:
+              name: めいろ のプログラミング
+              description_student: アングリーバードでシーケンスとアルゴリズムについて学びましょう。
+              description_teacher: アングリーバードゲームのキャラクターを使って、生徒はトリを迷路の片側から反対側のブタに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、トリをまっすぐ移動、左折、または右折させます。
+            Debugging in Maze:
+              name: 迷路で学ぶデバッグ
+              description_student: パズルで問題を見つけ、デバッグスキルを練習しましょう。
+              description_teacher: デバッグはプログラミングの学習に不可欠な要素です。このレッスンでは、誤って解かれたパズルに取り組みます。ループが不正確だったり、ブロックが欠落していたり、ブロックが余分だったり、ブロックが機能しないなどのエラーを特定するには、既存のプログラムを順に検証する必要があります。
+              key: 迷路で学ぶデバッグ
+            Collecting Treasure with Laurel:
+              name: ローレルと行う宝物の収集
+              description_student: 冒険家ローレルがたくさんの宝石を集めるのに役立つアルゴリズムを書いてあげましょう！
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きアルゴリズムとデバッグについての理解を深めていきます。_冒険家ローレル_という新しいキャラクターを使って、生徒はシーケンスアルゴリズムを作成して、_ローレル_が道を歩いているときに宝物を手に入れられるようにします。
+            Creating Art with Code:
+              name: プログラムでアートを作成
+              description_student: "「アーティスト」をプログラミングして美しい画像を作成しましょう。"
+              description_teacher: このレッスンでは、生徒がアーティストを制御して、画面上で絵を完成させます。このアーティストステージでは、「100ピクセルずつ前進」や「90度右に回転」などの新しいブロックを使って、より複雑な画像を作成していきます。
+            My Loopy Robotic Friends Jr.:
+              name: ルーピー ロボティック フレンズ ジュニア
+              description_student: このレッスンでは、クラスメートを再度プログラムしますが、ループを使用すると、より大きく複雑な問題を解決できます。
+              description_teacher: 最初の「ロボットのお友だち」アクティビティを踏み台にして、生徒はより大きく複雑なデザインに取り組みます。「ロボット」をプログラムしてこのような大きなデザインを完成させるには、ループで置き換えることができる命令の繰り返しのパターンを見極める必要があります。
+            Loops with Rey and BB-8:
+              name: レイとBB-8と学ぶループ
+              description_student: ループを使ってBB-8が迷路を通り抜けるのを助けてあげましょう！
+              description_teacher: "「ルーピーをゲット」の指示をここでも繰り返すというコンセプトに基づいて、このステージではループを使って、BB-8が以前よりも効率的に迷路を通過できるようにします。"
+              key: レイとBB-8と学ぶループ
+            Harvesting Crops with Loops:
+              name: ループで作物を収穫する
+              description_student: ループを使ってファーマーが野菜を収穫するのを助けてあげましょう！
+              description_teacher: この**スキル構築**レッスンでは、ハーベスターが大きく成長している複数の野菜を収獲するのに役立つ新しいアクションをくり返します。
+            'Mini-Project: Sticker Art':
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+            The Big Event:
+              name: ビッグイベント
+              description_student: 楽しいゲームをプレイして、イベントについて学びましょう。
+              description_teacher: 生徒はこれから、事前に記述されたアルゴリズムに柔軟性をもたらす優れた方法であるイベントについて学びます。時に、ユーザーが望んだその時にプログラムがユーザーに応答してもらいたいことがあります。イベントは、プログラムをより面白くインタラクティブにすることができます。
+            Build a Flappy Game:
+              name: フラッピーゲームを構築する
+              description_student: 自分で好きなようにフラッピーバードゲームを作って、友だちと共有しましょう！
+              description_teacher: この特別なステージでは、イベントハンドラーを使ってマウスクリックとオブジェクトの衝突を検出することにより、生徒は独自のフラッピーバードゲームを作成します。レベルの最後に、生徒はビジュアルやルールを変更してゲームをカスタマイズできます。
+              key: フラッピーゲームを構築する
+            'Mini-Project: Chase Game':
+              description_student: プレイラボでクリエイティブになってゲームを作りましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってゲームを作りましょう！
+            Picturing Data:
+              name: データで予測
+              description_student: データは、生徒が自分の世界を理解し、興味深い質問に答えるのに役立ちます。このレッスンでは、生徒はプレイラボプロジェクトからデータを収集し、さまざまな種類のグラフを使って視覚化します。
+              description_teacher: データは、生徒が自分の世界を理解し、興味深い質問に答えるのに役立ちます。このレッスンでは、生徒はプレイラボプロジェクトからデータを収集し、さまざまな種類のグラフを使って視覚化します。
+              key: データで予測
+            Binary Bracelets:
+              name: バイナリ ブレスレット
+              description_student: 自分だけのバイナリブレスレットを作成し、コンピュータがどのように情報を記憶するかを学びましょう！
+              description_teacher: バイナリはコンピュータの世界では非常に重要です。今日のコンピュータの大半は、あらゆる種類の情報をバイナリ形式で格納しています。このレッスンは、実際の生活から何かを取り出し、それをどのようにしたら一連のオンとオフに変換できるかを示します。
+              key: バイナリ ブレスレット
+            End of Course Project:
+              name: コース最後のプロジェクト
+              description_student: プログラミングをたくさん行う準備をしましょう！プロジェクトの構築を開始する時が来ました。
+              description_teacher: このキャップストーンレッスンでは、生徒が自分のプレイラボプロジェクトを設計、開発、展示するプロセスを紹介します。このプロセスを円滑に進めるために、紙で計画を立てることからウェブサイトでプログラミングするまで段階的な構造を示し、生徒がそれに従って作業できるようにします。さらに、先生がフィナーレを飾るのに役立つアイデアを提供します！
+            'Programming: My Robotic Friends':
+              key: 'プログラミング: ロボティック フレンド'
+              name: 私のロボットの友だち
+              description_student: このレッスンでは、クラスメートをロボットのように扱い、積み重ねたカップのパターンを構築するようにプログラムします。
+              description_teacher: コードの代わりに一連の記号を使って、さまざまなパターンでカップを積み重ねるように「ロボット」に指示するアルゴリズムを設計します。生徒は交代でロボットとして参加し、仲間が定義したアルゴリズムにのみ応答します。このセグメントでは、シンボルとアクションの間のつながり、アルゴリズムとプログラムの違い、およびデバッグの貴重なスキルを学習します。
+            Programming in Maze:
+              key: めいろ のプログラミング
+              name: めいろ のプログラミング
+              description_student: アングリーバードでシーケンスとアルゴリズムについて学びましょう。
+              description_teacher: アングリーバードゲームのキャラクターを使って、生徒はトリを迷路の片側から反対側のブタに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、トリをまっすぐ移動、左折、または右折させます。
+            Programming in Collector:
+              key: コレクターで学ぶプログラミング
+              name: ローレルと行う宝物の収集
+              description_student: 冒険家ローレルがたくさんの宝石を集めるのに役立つアルゴリズムを書いてあげましょう！
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きアルゴリズムとデバッグについての理解を深めていきます。_冒険家ローレル_という新しいキャラクターを使って、生徒はシーケンスアルゴリズムを作成して、_ローレル_が道を歩いているときに宝物を手に入れられるようにします。
+            Programming in Artist:
+              key: アーティストと学ぶプログラミング
+              name: プログラムでアートを作成
+              description_student: "「アーティスト」をプログラミングして美しい画像を作成しましょう。"
+              description_teacher: このレッスンでは、生徒がアーティストを制御して、画面上で絵を完成させます。このアーティストステージでは、「100ピクセルずつ前進」や「90度右に回転」などの新しいブロックを使って、より複雑な画像を作成していきます。
+            'Loops: My Loopy Robotic Friends':
+              key: 'ループ: ルーピー ロボティック フレンド'
+              name: ルーピー ロボティック フレンズ ジュニア
+              description_student: このレッスンでは、クラスメートを再度プログラムしますが、ループを使用すると、より大きく複雑な問題を解決できます。
+              description_teacher: 最初の「ロボットのお友だち」アクティビティを踏み台にして、生徒はより大きく複雑なデザインに取り組みます。「ロボット」をプログラムしてこのような大きなデザインを完成させるには、ループで置き換えることができる命令の繰り返しのパターンを見極める必要があります。
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: ループで作物を収穫する
+              description_student: ループを使ってファーマーが野菜を収穫するのを助けてあげましょう！
+              description_teacher: この**スキル構築**レッスンでは、ハーベスターが大きく成長している複数の野菜を収獲するのに役立つ新しいアクションをくり返します。
+            Sticker Art with Loops:
+              key: アーティストくりかえし
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+            'Events: The Big Event':
+              key: 'イベント: おおきなイベント'
+              name: ビッグイベント
+              description_student: 楽しいゲームをプレイして、イベントについて学びましょう。
+              description_teacher: 生徒はこれから、事前に記述されたアルゴリズムに柔軟性をもたらす優れた方法であるイベントについて学びます。時に、ユーザーが望んだその時にプログラムがユーザーに応答してもらいたいことがあります。イベントは、プログラムをより面白くインタラクティブにすることができます。
+            Events in Play Lab:
+              key: プレイ ラボのイベント
+              description_student: プレイラボでクリエイティブになってゲームを作りましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってゲームを作りましょう！
+            'End of Course Project: Create a Play Lab Game':
+              name: コース最後のプロジェクト
+              description_student: プログラミングをたくさん行う準備をしましょう！プロジェクトの構築を開始する時が来ました。
+              description_teacher: このキャップストーンレッスンでは、生徒が自分のプレイラボプロジェクトを設計、開発、展示するプロセスを紹介します。このプロセスを円滑に進めるために、紙で計画を立てることからウェブサイトでプログラミングするまで段階的な構造を示し、生徒がそれに従って作業できるようにします。さらに、先生がフィナーレを飾るのに役立つアイデアを提供します！
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+            csf_data:
+              display_name: データ
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          student_description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 6～10才'
+        csp6-2022:
+          lessons:
+            Algorithms Solve Problems:
+              name: アルゴリズムが問題を解決する
+              key: アルゴリズムが問題を解決する
+            Algorithm Efficiency:
+              name: アルゴリズムの効率性
+              key: アルゴリズムの効率性
+            Unreasonable Time:
+              name: 不合理な時間
+              key: 不合理な時間
+            The Limits of Algorithms:
+              name: アルゴリズムの限界
+              key: アルゴリズムの限界
+            Parallel and Distributed Algorithms:
+              name: 並列分散アルゴリズム
+              key: 並列分散アルゴリズム
+            Assessment Day:
+              name: 評価日
+            'Lesson 6: Assessment Day':
+              key: 'レッスン6: 評価日'
+              name: 評価日
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'ユニット6: アルゴリズム'
+        csp7-2022:
+          lessons:
+            Parameters and Return Explore:
+              name: パラメータと戻り値 探索
+              key: パラメータと戻り値 探索
+            Parameters and Return Investigate:
+              name: パラメータと戻り値 調査
+              key: パラメータと戻り値 調査
+            Parameters and Return Practice:
+              name: パラメータと戻り値 練習
+              key: パラメータと戻り値 練習
+            Parameters and Return Make:
+              name: パラメータと戻り値 作成
+              key: パラメータと戻り値 作成
+            Libraries Explore:
+              name: ライブラリ 探索
+              key: ライブラリ 探索
+            Libraries Investigate:
+              name: ライブラリ 調査
+              key: ライブラリ 調査
+            Libraries Practice:
+              name: ライブラリ 練習
+              key: ライブラリ 練習
+            Project   Make a Library Part 1:
+              name: プロジェクト  ライブラリの作成 パート1
+            Project   Make a Library Part 2:
+              name: プロジェクト  ライブラリの作成 パート2
+            Project   Make a Library Part 3:
+              name: プロジェクト  ライブラリの作成 パート3
+            Assessment Day:
+              name: 評価日
+            Project - Make a Library Part 1:
+              key: プロジェクト - ライブラリの作成 パート1
+              name: プロジェクト  ライブラリの作成 パート1
+            Project - Make a Library Part 2:
+              key: プロジェクト - ライブラリの作成 パート2
+              name: プロジェクト  ライブラリの作成 パート2
+            Project - Make a Library Part 3:
+              key: プロジェクト - ライブラリの作成 パート3
+              name: プロジェクト  ライブラリの作成 パート3
+            'Lesson 11: Assessment Day':
+              key: 'レッスン11: 評価日'
+              name: 評価日
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: パラメータと戻り値
+            csp_libraries:
+              display_name: ライブラリ
+        csp8-2022:
+          lessons:
+            Create PT - Complete the Task (12 hrs):
+              name: PTの作成-タスクの完了（12時間）
+            Create PT - Review the Task:
+              key: PTの作成 - タスクの確認
+            lesson-4:
+              key: レッスン4
+            Create PT - Make a Plan:
+              key: PTの作成 - 計画の立案
+            Create PT - Complete the Task:
+              key: PTの作成 - タスクの完了
+              name: PTの作成-タスクの完了（12時間）
+        csp9-2022:
+          lessons:
+            Exploring One Column:
+              name: 1列の探索
+              key: 1列の探索
+            Filtering and Cleaning Data:
+              name: データのフィルタリングとクリーニング
+              key: データのフィルタリングとクリーニング
+            Exploring Two Columns:
+              name: 2列の探索
+              key: 2列の探索
+            Machine Learning:
+              name: 機械学習
+            Assessment Day:
+              name: 評価日
+            Learning From Data:
+              key: データから学ぶ
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: ビッグデータ、クラウドソーシング、機械学習
+            Machine Learning and Bias:
+              key: 機械学習とバイアス
+              name: 機械学習
+            lesson-10:
+              key: レッスン10
+            Project - Tell a Data Story - Part 1:
+              key: プロジェクト - データストーリーを伝える - パート1
+            Project - Tell a Data Story - Part 2:
+              key: プロジェクト - データストーリーを伝える - パート2
+            'Lesson 9: Assessment Day':
+              key: 'レッスン9: 評価日'
+              name: 評価日
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'ユニット9: データ'
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 2:
+              name: プロジェクト  イノベーションシミュレーション パート2
+            Data Policies and Privacy:
+              name: データポリシーとプライバシー
+              key: データポリシーとプライバシー
+            The Value of Privacy:
+              name: プライバシーの価値
+              key: プライバシーの価値
+            Project   Innovation Simulation Part 3:
+              name: プロジェクト  イノベーションシミュレーション パート3
+            Security Risks Part 1:
+              name: セキュリティリスク パート1
+              key: セキュリティリスク パート1
+            Security Risks Part 2:
+              name: セキュリティリスク パート2
+              key: セキュリティリスク パート2
+            Project   Innovation Simulation Part 4:
+              name: プロジェクト  イノベーションシミュレーション パート4
+            Protecting Data Part 1:
+              name: データの保護 パート1
+              key: データの保護 パート1
+            Protecting Data Part 2:
+              name: データの保護 パート2
+              key: データの保護 パート2
+            Project   Innovation Simulation Part 5:
+              name: プロジェクト  イノベーションシミュレーション パート5
+            Project   Innovation Simulation Part 6:
+              name: プロジェクト  イノベーションシミュレーション パート6
+            Project   Innovation Simulation Part 7:
+              name: プロジェクト  イノベーションシミュレーション パート7
+            Assessment Day:
+              name: 評価日
+            Project - Innovation Simulation Part 1:
+              key: プロジェクト - イノベーションシミュレーション パート1
+            Project - Innovation Simulation Part 2:
+              key: プロジェクト - イノベーションシミュレーション パート2
+              name: プロジェクト  イノベーションシミュレーション パート2
+            Project - Innovation Simulation Part 3:
+              key: プロジェクト - イノベーションシミュレーション パート3
+              name: プロジェクト  イノベーションシミュレーション パート3
+            'Project: Innovation Simulation Part 4':
+              key: 'プロジェクト: イノベーションシミュレーションパート4'
+              name: プロジェクト  イノベーションシミュレーション パート4
+            'Project: Innovation Simulation Part 5':
+              key: 'プロジェクト: イノベーションシミュレーションパート5'
+              name: プロジェクト  イノベーションシミュレーション パート5
+            'Project: Innovation Simulation Part 6':
+              key: 'プロジェクト: イノベーションシミュレーションパート6'
+              name: プロジェクト  イノベーションシミュレーション パート6
+            'Project: Innovation Simulation Part 7':
+              key: 'プロジェクト: イノベーションシミュレーションパート7'
+              name: プロジェクト  イノベーションシミュレーション パート7
+            'Lesson 14: Unit Assessment Day':
+              key: 'レッスン14: ユニット評価日'
+              name: 評価日
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              name: パスワードの強化
+              description_student: このレッスンでは、パスワードがどのように情報を保護するか、また適切なパスワードはどのように作成したらよいかについて学習します。
+            Graph Paper Programming:
+              name: グラフ用紙のプログラミング
+              description_student: このレッスンでは、クラスメートが絵を描くようにプログラムします。
+              description_teacher: プログラミングでお互いに絵を描くことによって、生徒はプログラミングのコアコンセプトを楽しく、理解しやすい方法で経験する機会があります。クラスは、生徒にシンボルを使って、お互いにグラフ用紙上の正方形に色付けして目の前の画像を再現するように指示するところから始まります。もし時間があれば、生徒が自分で画像を作成してレッスンを締めくくってもいいでしょう。
+            Introduction to Online Puzzles:
+              name: オンラインパズル入門
+              description_student: このレッスンでは、このコースに必要なスキルを練習できます。
+              description_teacher: この**スキル構築**レッスンでは、生徒は迷路パズルで_シーケンス_とデバッグのスキルを練習します。
+              key: オンラインパズル入門
+            Relay Programming:
+              name: プログラミングをリレーする
+              description_student: コースの最初にプログラムで絵を描いことを覚えていますか？このレッスンでは、チームと協力してこれとよく似た作業を行います。
+              description_teacher: この**コンテキスト設定**は、デバッグと粘り強さについての短いレッスンから始まります。その後すぐに、生徒はチームに分かれ、一度に1つの命令を受けて一緒にプログラムを作成する時間との戦いに入ります。
+              key: プログラミングをリレーする
+            Debugging with Laurel:
+              name: ローレルと学ぶデバッグ
+              description_student: プログラミング中に問題が発生したことはありませんか？このレッスンでは、デバッグの秘密について学びます。デバッグは、プログラム内の問題を見つけて修正するプロセスです。
+              description_teacher: このオンラインアクティビティでは、「コレクター」環境でデバッグを練習します。生徒は、プログラムを読んだり編集したりする練習をして、簡単なアルゴリズム、ループ、入れ子のループでパズルを修正します。
+            Events in Bounce:
+              name: バウンスで学ぶイベント
+              description_student: 学校でビデオゲームをプレイできたらと夢見たことはありませんか？このレッスンでは、ゲームを自作できます！
+              description_teacher: この**コンテキスト設定**/**スキル構築**レッスンでは、生徒はイベントとは何か、コンピュータがビデオゲームなどのプログラムでイベントをどのように使用するかを学びます。生徒は、さまざまな速度と音でカスタマイズできるゲームを作成します。
+              key: バウンスで学ぶイベント
+            Build a Star Wars Game:
+              name: スター・ウォーズゲームを構築する
+              description_student: このレッスンで独自のスター・ウォーズゲームを構築しながら、フォースを感じてください。
+              description_teacher: このレッスンでは、イベントを使ってオンラインで共有できるゲームを作成する練習をします。 R2-D2や他のスター・ウォーズのキャラクターが登場し、イベントの案内を一通り受けてから、スペースが与えられて独自のゲームを作成します。
+              key: スター・ウォーズゲームを構築する
+            Dance Party:
+              name: ダンスパーティー
+              description_student: お祝いの時間です！このレッスンでは、独自のインタラクティブなダンスパーティーをプログラムします。
+              description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
+              key: ダンスパーティー
+            Loops in Ice Age:
+              name: アイス・エイジのループ
+              description_student: このレッスンでは、繰り返しブロックを使って、スクラッチがドングリにできるだけ効率的に到達できるようにします。
+              description_teacher: ループを使用することの簡単なおさらい (または紹介) として、このステージでは、「繰り返し」ブロックを使ってスクラッチをドングリに効率的に到達させます。
+              key: アイス・エイジのループ
+            Drawing Shapes with Loops:
+              name: アーティストくりかえし
+              description_student: このレッスンでは、ループを使って、アーティストでクールな画像を簡単に作成できます。
+              description_teacher: このレッスンは以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティはデバッグ演習を兼ねており、問題解決をさらに実践できます。
+            Nested Loops in Maze:
+              name: 迷路で学ぶ入れ子のループ
+              description_student: ループ内のループ内のループ。これはどういう意味でしょうか？このレッスンでは、入れ子のループを作成するとどうなるかを学びます。
+              description_teacher: このオンラインアクティビティでは、ループの理解をまったく新しいレベルに引き上げる機会があります。みつばちや植物対ゾンビで遊んで、生徒はループを別のループの内側に記述する方法を学びます。また、どちらかのループにわずかな変更を加えただけでも、[実行]
+                をクリックしたときにプログラムにどのような影響を与えるかを把握できるようにします。
+            Conditionals with Cards:
+              name: カードと条件
+              description_student: 特定の条件下でのみポイントを獲得するゲームをプレイしましょう！
+              key: カードと条件
+            Looking Ahead with Minecraft:
+              name: マインクラフトで先を見る
+              description_student: 溶岩を避けて！ここでは、マインクラフトの世界で条件文について学習し始めます。
+              description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
+            If/Else with Bee:
+              name: みつばちと学ぶIf/Else
+              description_student: 条件文を理解したところで、ハチミツとミツを収集するときに条件文を使うようにみつばちをプログラムしましょう。
+              description_teacher: ここまで、生徒は実行するたびにまったく同じ操作を実行するプログラムを作成してきました。これは信頼性は高くても、柔軟性があまりありません。このレッスンでは、クラスで条件文を使ったプログラミングを開始し、プログラムが遭遇した特定の条件に応じて対応を異にするプログラムを作成します。
+            While Loops in Farmer:
+              name: ファーマーの「while」ループ
+              description_student: ループはプログラミングで非常に役立ちます。このレッスンでは、新しい種類のループ、whileループについて説明します！
+              description_teacher: この**スキル構築**のレッスンでは、生徒はファーマーで穴を埋めて土を掘る作業を行いますが、穴のサイズや土の山の高さはわかりません。これらのパズルを解くために、新しい種類のループを使用することになります。
+              key: ファーマーの「while」ループ
+            Until Loops in Maze:
+              name: 迷路で学ぶUntilループ
+              description_student: "「until」ループを使用すると、驚くべきことができます！"
+              description_teacher: このレッスンでは、「until」ループについて学習します。生徒は、主人公が停止する目的の地点に「到達する」までアクションを繰り返すプログラムを作成します。
+              key: 迷路で学ぶUntilループ
+            End of Course Project:
+              name: コース最後のプロジェクト
+              description_student: プログラミングをたくさん行う準備をしましょう！プロジェクトの構築を開始する時が来ました。
+              description_teacher: この**プロジェクト**レッスンでは、新しいプロジェクトの設計、開発、披露のプロセスを生徒に説明します。
+              key: コース最後のプロジェクト
+            lesson-5:
+              key: レッスン5
+              name: パスワードの強化
+              description_student: このレッスンでは、パスワードがどのように情報を保護するか、また適切なパスワードはどのように作成したらよいかについて学習します。
+            'Algorithms: Graph Paper Programming':
+              key: 'アルゴリズム: グラフ用紙プログラミング'
+              name: グラフ用紙のプログラミング
+              description_student: このレッスンでは、クラスメートが絵を描くようにプログラムします。
+              description_teacher: プログラミングでお互いに絵を描くことによって、生徒はプログラミングのコアコンセプトを楽しく、理解しやすい方法で経験する機会があります。クラスは、生徒にシンボルを使って、お互いにグラフ用紙上の正方形に色付けして目の前の画像を再現するように指示するところから始まります。もし時間があれば、生徒が自分で画像を作成してレッスンを締めくくってもいいでしょう。
+            Debugging in Collector:
+              key: コレクターでのデバッグ
+              name: ローレルと学ぶデバッグ
+              description_student: プログラミング中に問題が発生したことはありませんか？このレッスンでは、デバッグの秘密について学びます。デバッグは、プログラム内の問題を見つけて修正するプロセスです。
+              description_teacher: このオンラインアクティビティでは、「コレクター」環境でデバッグを練習します。生徒は、プログラムを読んだり編集したりする練習をして、簡単なアルゴリズム、ループ、入れ子のループでパズルを修正します。
+            Loops in Artist:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+              description_student: このレッスンでは、ループを使って、アーティストでクールな画像を簡単に作成できます。
+              description_teacher: このレッスンは以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティはデバッグ演習を兼ねており、問題解決をさらに実践できます。
+            Nested Loops in Bee:
+              key: みつばちでの入れ子のループ
+              name: 迷路で学ぶ入れ子のループ
+              description_student: ループ内のループ内のループ。これはどういう意味でしょうか？このレッスンでは、入れ子のループを作成するとどうなるかを学びます。
+              description_teacher: このオンラインアクティビティでは、ループの理解をまったく新しいレベルに引き上げる機会があります。みつばちや植物対ゾンビで遊んで、生徒はループを別のループの内側に記述する方法を学びます。また、どちらかのループにわずかな変更を加えただけでも、[実行]
+                をクリックしたときにプログラムにどのような影響を与えるかを把握できるようにします。
+            lesson-6:
+              key: レッスン6
+              name: マインクラフトで先を見る
+              description_student: 溶岩を避けて！ここでは、マインクラフトの世界で条件文について学習し始めます。
+              description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
+            Conditionals in Bee:
+              key: みつばちと学ぶ条件文
+              name: みつばちと学ぶIf/Else
+              description_student: 条件文を理解したところで、ハチミツとミツを収集するときに条件文を使うようにみつばちをプログラムしましょう。
+              description_teacher: ここまで、生徒は実行するたびにまったく同じ操作を実行するプログラムを作成してきました。これは信頼性は高くても、柔軟性があまりありません。このレッスンでは、クラスで条件文を使ったプログラミングを開始し、プログラムが遭遇した特定の条件に応じて対応を異にするプログラムを作成します。
+          lesson_groups:
+            lessonGroup-6:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_events:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          title: コース D (2021)
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          description_audience: '年齢: 7～11才'
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              name: Follow the Algorithm
+              description_student: ゲームをプレイして、正しい結果を得るために必要なコマンドについて考えます。
+              description_teacher: このレッスンでは、ゲームをプレイして、正しい結果を出すためにどのようにコマンドを与えたらいいかを生徒に考えてもらいます。これにより、今後のレッスンで、学んだことをスプライトラボに簡単に引き継ぐことができます。
+            Swimming Fish with Sprite Lab:
+              name: スプライトラボで泳ぐ魚
+              description_student: スプライトを作成および編集する方法を学びます。
+              description_teacher: このレッスンでは、スプライトラボの中心となる2つの概念、スプライトとビヘイビアについて学びます。スプライトは、生徒が移動、変更、操作できる画面上のキャラクターまたはオブジェクトです。ビヘイビアは、スプライトが停止するまで継続的に実行するアクションです。
+            Alien Dance Party with Sprite Lab:
+              name: スプライトラボでのエイリアンダンスパーティー
+              description_student: クラスメートと共有できるインタラクティブなプロジェクトを作成しましょう。
+              description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
+              key: スプライトラボでのエイリアンダンスパーティー
+            Be A Super Digital Citizen:
+              name: スーパーデジタルシティズンになる
+              description_student: ネットいじめを見たときに、立派な態度がとれる方法を学びます。
+            Private and Personal Information:
+              description_student: インターネットは楽しくて刺激的ですが、安全を確保することも重要です。このレッスンでは、安全に共有できる情報と非公開の情報の違いを学びます。
+            'Mini-Project: About Me':
+              name: スプライトラボについて
+              description_student: スプライトラボでインタラクティブなポスターを作成することにより、生徒は個人情報やプライベート情報をウェブ上で共有することについて理解したことを応用します。
+            Digital Sharing:
+              name: デジタル共有
+              description_student: このレッスンでは、所有権と著作権の課題と利点について学びます。
+              description_teacher: この**探索**レッスンでは、特にインターネット環境で 所有権と著作権を尊重することの課題と利点について学びます。
+              key: デジタル共有
+            Drawing with Loops:
+              name: ループを使った描画
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+              description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
+            Fancy Shapes using Nested Loops:
+              name: 入れ子のループを使った奇抜な形状
+              description_student: 入れ子のループについてさらに学習します！今回は、入れ子のループを使って素晴らしい絵を描きます。
+              description_teacher: この**スキル構築**レッスンでは、アーティストを使用して複雑なデザインを作成します。レッスンの最後で、生徒は独自のデザインを作成します。
+            'Mini-Project: Design a Snowflake':
+              description_student: アナとエルサは優れたアイススケートスキルを持っていますが、氷のパターンを作成するにはあなたの助けが必要です。入れ子のループを使って、何かすごくいかしたものを作成しましょう。
+            Songwriting:
+              name: 作詞作曲
+              description_student: ロックスターでさえプログラミングのスキルが必要です。このレッスンでは、曲の歌詞を用いた関数について学習します。
+              description_teacher: コンピュータサイエンスの世界で最も素晴らしい構造の1つは関数です。関数 (プロシージャと呼ばれることもあります)
+                は、大きなプログラムの中で繰り返し使用できるミニプログラムです。このレッスンでは、まとまったコードを関数に合わせることがなぜ役立つのかを生徒が直感的に理解するのに役立ちます。
+            Functions in Minecraft:
+              name: マインクラフトで学ぶ関数
+              description_student: 最も効率的なプログラムで関数を使用するにはどうしたらいいか、考えられますか？
+              description_teacher: 生徒たちは、この楽しくインタラクティブなマインクラフトアドベンチャーで関数がどのように役立つかを学習します！
+              key: マインクラフトで学ぶ関数
+            Functions with Artist:
+              name: アーティストと学ぶ関数
+              description_student: 関数で複雑な図面をより簡単に作成！
+              description_teacher: 生徒は、アーティストで関数の使い方を学び、壮大な画像を作成および変更します。より複雑なパターンについては、関数を別の関数の中から呼び出すことにより、入れ子の関数について学びます。
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'マインクラフトの条件文: ボヤージュ アクアティック'
+              description_student: ここでは、マインクラフトの世界で条件文について学習します。
+              description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
+              key: 'マインクラフトの条件文: ボヤージュ アクアティック'
+            Conditionals with the Farmer:
+              name: ファーマーと学ぶ条件文
+              description_student: ファーマーが作物を植えるために畑を耕すのを手伝って、条件についてもっと学びましょう！
+              description_teacher: この**スキル構築**レッスンでは、作物を植えるために畑を準備する必要があるファーマーを中心に、新しいタイプのプログラミングパズルに焦点を当てています。
+            Functions with Harvester:
+              name: ファーマーと学ぶ関数
+              description_student: ファーマーの収穫を手伝う際、関数が大きな手助けをしてくれます。
+              description_teacher: この**スキル構築**レッスンでは、生徒は_ハーベスター_で作物を収穫するための関数を備えた条件文を使用します。
+            Designing for Accessibility:
+              name: アクセシビリティのための設計
+              description_student: '架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。 '
+              description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
+            End of Course Project:
+              name: コース最後のプロジェクト
+              description_student: 大きなプロジェクトには時間と綿密な計画が必要です。あなたのインスピレーションを見つけ、計画を立て、創造性を解き放ちましょう！
+              description_teacher: 次の4つのレッスンでは、生徒はプログラミングスキルをキャップストーンプロジェクトで使用する機会があります。このプロジェクトでは、個人がプログラミングの経験を積み、仲間や家族と共有する見本を作成することができます。レッスンは複数回または数週週にわたって体験してもらうことを意図しています。その中で、ブレーンストーミングの探求、設計プロセスの学習、最終的な作品の構築および発表を行います。探求ステージでは、生徒はアーティストとプレイラボで事前に作成されたプロジェクトの例でプレイして、インスピレーションを得ることができます。次に、生徒は設計プロセスと、それを自分のプロジェクトに実装する方法について学びます。その後、アーティスト、スプライトラボ、または使い慣れたその他のインターフェイスで独自のプロジェクトを作成するためのスペースが与えられます
+                (これはおそらくプロジェクトで最長のステージです)。最後に、生徒は完成した作品を仲間に発表することができます。
+              key: コース最後のプロジェクト
+            Simon Says:
+              key: サイモンは言う
+              name: Follow the Algorithm
+              description_student: ゲームをプレイして、正しい結果を得るために必要なコマンドについて考えます。
+              description_teacher: このレッスンでは、ゲームをプレイして、正しい結果を出すためにどのようにコマンドを与えたらいいかを生徒に考えてもらいます。これにより、今後のレッスンで、学んだことをスプライトラボに簡単に引き継ぐことができます。
+            Learning Sprites with Sprite Lab:
+              key: スプライトラボで学ぶスプライト
+              name: スプライトラボで泳ぐ魚
+              description_student: スプライトを作成および編集する方法を学びます。
+              description_teacher: このレッスンでは、スプライトラボの中心となる2つの概念、スプライトとビヘイビアについて学びます。スプライトは、生徒が移動、変更、操作できる画面上のキャラクターまたはオブジェクトです。ビヘイビアは、スプライトが停止するまで継続的に実行するアクションです。
+            lesson-4:
+              key: レッスン4
+              name: スーパーデジタルシティズンになる
+              description_student: ネットいじめを見たときに、立派な態度がとれる方法を学びます。
+            About Me:
+              key: 私について
+              name: スプライトラボについて
+              description_student: スプライトラボでインタラクティブなポスターを作成することにより、生徒は個人情報やプライベート情報をウェブ上で共有することについて理解したことを応用します。
+            Programming and Loops with the Artist:
+              key: アーティストと学ぶプログラミングとループ
+              name: ループを使った描画
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+              description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
+            Nested Loops in Artist:
+              key: アーティストと学ぶ入れ子のループ
+              name: 入れ子のループを使った奇抜な形状
+              description_student: 入れ子のループについてさらに学習します！今回は、入れ子のループを使って素晴らしい絵を描きます。
+              description_teacher: この**スキル構築**レッスンでは、アーティストを使用して複雑なデザインを作成します。レッスンの最後で、生徒は独自のデザインを作成します。
+            Nested Loops in Frozen:
+              key: フローズンで学ぶ入れ子のループ
+              description_student: アナとエルサは優れたアイススケートスキルを持っていますが、氷のパターンを作成するにはあなたの助けが必要です。入れ子のループを使って、何かすごくいかしたものを作成しましょう。
+            'Functions: Songwriting':
+              key: '関数: 作曲'
+              name: 作詞作曲
+              description_student: ロックスターでさえプログラミングのスキルが必要です。このレッスンでは、曲の歌詞を用いた関数について学習します。
+              description_teacher: コンピュータサイエンスの世界で最も素晴らしい構造の1つは関数です。関数 (プロシージャと呼ばれることもあります)
+                は、大きなプログラムの中で繰り返し使用できるミニプログラムです。このレッスンでは、まとまったコードを関数に合わせることがなぜ役立つのかを生徒が直感的に理解するのに役立ちます。
+            Functions in Artist:
+              key: アーティストと学ぶ関数
+              name: アーティストと学ぶ関数
+              description_student: 関数で複雑な図面をより簡単に作成！
+              description_teacher: 生徒は、アーティストで関数の使い方を学び、壮大な画像を作成および変更します。より複雑なパターンについては、関数を別の関数の中から呼び出すことにより、入れ子の関数について学びます。
+            Conditionals:
+              key: 条件
+              name: ファーマーと学ぶ条件文
+              description_student: ファーマーが作物を植えるために畑を耕すのを手伝って、条件についてもっと学びましょう！
+              description_teacher: この**スキル構築**レッスンでは、作物を植えるために畑を準備する必要があるファーマーを中心に、新しいタイプのプログラミングパズルに焦点を当てています。
+            Functions in Harvester:
+              key: 農夫と学ぶ関数
+              name: ファーマーと学ぶ関数
+              description_student: ファーマーの収穫を手伝う際、関数が大きな手助けをしてくれます。
+              description_teacher: この**スキル構築**レッスンでは、生徒は_ハーベスター_で作物を収穫するための関数を備えた条件文を使用します。
+            lesson-1:
+              key: レッスン1
+              name: アクセシビリティのための設計
+              description_student: '架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。 '
+              description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
+          lesson_groups:
+            csf_sprites:
+              display_name: スプライト
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            ramp_up:
+              display_name: 入れ子のループ
+            csf_functions:
+              display_name: 関数(かんすう)
+            csf_nested_loops:
+              display_name: 条件
+            lessonGroup-7:
+              display_name: コンピューティングの影響
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          description_audience: '年齢: 8～12才'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: スプライトラボの紹介
+              description_student: アプリやツールでどのような使用方法が選択肢としてユーザーに与えられているのか、ということに焦点を当てて、生活におけるコンピュータやテクノロジーの役割について説明します。
+            Making Sprites:
+              name: スプライトを作る
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒はプログラムを作成し、スプライトラボの中心となる2つの概念、スプライトと行動について学びます。
+            Sprites in Action:
+              name: 実行中のスプライト
+              description_student: プログラミングの各レベルをこなしてから、最後に自由形式の「じゆうあそび」タスクを行います。このタスクでは、好きなものを作れます。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒は、時限式イベントとユーザー入力に応答するプログラムを作成します。
+            'Mini-Project: Virtual Pet':
+              name: " バーチャルペット"
+              description_student: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+              description_teacher: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+            The Power of Words:
+              name: 言葉の力
+              description_student: いじめは決して許されません。このレッスンでは、オンラインで何を言ってよいか、何を言ってはいけないかについて説明します。
+            Blank Space Stories:
+              name: ブランクスペースストーリー
+              description_student: このアクティビティでは、コンピュータがユーザーが入力したものをどのように取得して保存するか理解するため、ブランクを埋めるストーリー（Mad
+                Libs®と同様）を使用して、後でそれをプログラムで実行します。
+              description_teacher: この**コンテキスト設定**レッスンでは、コンピュータがユーザーが入力したものをどのように取得して保存するか理解するためのコンテキストとして、ブランクを埋めるストーリー（Mad
+                Libs®と同様）を使用して、後でそれをプログラムで実行します。
+            Text and Prompts:
+              name: テキストとプロンプト
+              description_student: このレッスンでは、スプライトラボで変数を使って練習します。
+              description_teacher: この**スキル構築**レッスンでは、スプライトラボで変数を使った実践を行います。
+            'Mini-Project: User Input Programs':
+              name: ミニプロジェクト：ユーザーインプットプログラム
+              description_student: 変数を使用した新しいスキルを、3つのオープンエンドプロジェクトの1つに適用します。
+              description_teacher: 生徒は、変数を使用して新しいスキルを3つのオープンエンドの**ミニプロジェクト**の1つに適用します。サンプルプログラムを探索して、自分のプロジェクトの計画を作成し、それをゼロからプログラムします。
+            Drawing with Loops:
+              name: ループを使った描画
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+              description_teacher: この**スキル構築**レッスンは、焦点をブライトラボからアーティストに移します。これは、生徒がコースの残りの部分で探索する新しいツールとなります。
+            Using Variables with the Artist:
+              description_student: このレッスンでは、プログラムを実行する際に変化する変数を使って絵を描きます。
+              description_teacher: この**スキル構築**レッスンでは、アーティスト環境の変数を使って、反復的なデザインを行う方法ついて学びます。生徒は、変数をどう使うと、プログラムをど簡単に記述し、読みやすくできるかを学びます。ガイド付きパズルを行った後、生徒はじゆうあそびレベルで終了します。そこで学んだことを示し、独自のデザインを作成します。
+            Programming with the Bee:
+              name: 迷路で学ぶ入れ子のループ
+              description_student: ループ内のループ内のループ。これはどういう意味でしょうか？このレッスンでは、ループを別のループ内に配置するとどうなるかを学びます。
+              description_teacher: この**スキル構築**レッスンでは、ループのわずかな変更がプログラムにどのような影響を与えるかを理解するように生徒に促します。
+            Variables with the Bee:
+              name: みつばちと学ぶ変数の変更
+              description_student: このみつばちは変数が大好きです！
+              description_teacher: このレッスンでは、プログラムの実行中に値を変更できるようにすることで、変数でプログラムを強化する方法を説明します。
+            For Loop Fun:
+              name: Forループを楽しむ
+              description_student: "「for」ループを楽しく学習しましょう！"
+              description_teacher: この**スキル構築**レッスンでは、生徒は強力な新しい構造のループを使用します。
+              key: Forループを楽しむ
+            For Loops with Bee:
+              name: みつばちと学ぶForループ
+              description_student: ブンブンブン。このパズルでは、「for」ループを使ってみつばちをミツとハチミツに導きます。
+              description_teacher: この**スキル構築**レッスンでは、「for」ループと増分変数を使って、より複雑なパズルを解くことに焦点を当てています。
+            For Loops with Artist:
+              name: アーティストと学ぶForループ
+              description_student: 次の傑作を作る準備をしてください。ここでは、「for」ループを使って、驚くような画像を作成します。
+              description_teacher: このレッスンでは、生徒は「for」ループの練習を続けますが、今回はアーティストと一緒に行います。生生徒はパズルを完成させて、複雑なデザインとユニークなアートを作成します。
+            Simulating Experiments:
+              name: 実験のシミュレーション
+              description_student: コンピュータでシミュレーションを実行し、変数を変更して実験しましょう。
+              description_teacher: 生徒はスプライトラボで簡単なシミュレーションを実行することにより、コンピューティングをどのように使うと傾向やパターンを特定するデータを収集できるかを体験します。シミュレーションを複数回実行した後、生徒はシミュレーションで変数を変更すると結果にどのように影響するかについて予測し、その仮説をテストする機会があります。
+              key: 実験のシミュレーション
+            Outbreak:
+              name: 大流行
+              description_student: モンスタータウンにウイルスが広がっています！ ウイルスシミュレーターを作成し、モンスターが健康を取り戻す手助けをする方法を学びます。
+              description_teacher: このレッスンでは、イベントに関する**スキル構築**と**ミニプロジェクト**を組み合わせて、スプライトラボで独自のコンピュータシミュレーションを作成します。生徒にシミュレーションをじっくり調べてもらい、ウイルスがどれだけ早く広がるか、スピードを弱めるには何ができるかを理解してもらいます。
+            AI For Oceans:
+              name: 海洋のためのAI
+              description_student: 物体を「魚」または「魚ではない」のいずれかに分類して、海からゴミを取り除くことに挑戦します。次に、トレーニングデータセットを拡張して、水中にいる他の海の生き物も含めます。アクティビティの2番目のセクションでは、ランダムに生成された魚の画像に適用する独自のラベルを選びます。このトレーニングデータは機械学習モデルに使用され、これにより、新しい画像に独自のラベルがつけられます。
+              description_teacher: この**探索**のレッスンでは、生徒は魚やその他の物体を分類して、機械学習モデルをトレーニングします。
+            The Internet:
+              name: インターネット
+              description_student: 情報がインターネット上をどのように移動するのか疑問に思ったことはありませんか？魔法を使っているわけではありません！このレッスンでは、インターネットの仕組みの基本を学びます。
+              description_teacher: 多くの人が毎日インターネットを使っていますが、それがどのように機能するかを知っている人はあまりいません。このレッスンでは、接続、URL、IPアドレス、DNSについて学びながら、インターネットの流れを疑似体験します。
+            End of Course Project:
+              name: コース最後のプロジェクト
+              description_student: 大きなプロジェクトには時間と綿密な計画が必要です。あなたのインスピレーションを見つけ、計画を立て、創造性を解き放ちましょう！
+              description_teacher: この**プロジェクト**レッスンでは、新しいプロジェクトの設計、開発、披露のプロセスを生徒に説明します。
+              key: コース最後のプロジェクト
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+              name: スプライトを作る
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒はプログラムを作成し、スプライトラボの中心となる2つの概念、スプライトと行動について学びます。
+            lesson-8:
+              key: レッスン8
+              name: 実行中のスプライト
+              description_student: プログラミングの各レベルをこなしてから、最後に自由形式の「じゆうあそび」タスクを行います。このタスクでは、好きなものを作れます。
+              description_teacher: この**スキル構築**レッスンでは、生徒はコンピュータで一連のプログラミングレベルを実行し、最後に、好きなものを構築できる自由形式の「じゆうあそび」タスクを完了します。
+                生徒は、時限式イベントとユーザー入力に応答するプログラムを作成します。
+            Virtual Pet:
+              key: バーチャルペット
+              name: " バーチャルペット"
+              description_student: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+              description_teacher: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
+            lesson-2:
+              key: レッスン2
+              name: 言葉の力
+              description_student: いじめは決して許されません。このレッスンでは、オンラインで何を言ってよいか、何を言ってはいけないかについて説明します。
+            lesson-9:
+              key: レッスン9
+              name: ブランクスペースストーリー
+              description_student: このアクティビティでは、コンピュータがユーザーが入力したものをどのように取得して保存するか理解するため、ブランクを埋めるストーリー（Mad
+                Libs®と同様）を使用して、後でそれをプログラムで実行します。
+              description_teacher: この**コンテキスト設定**レッスンでは、コンピュータがユーザーが入力したものをどのように取得して保存するか理解するためのコンテキストとして、ブランクを埋めるストーリー（Mad
+                Libs®と同様）を使用して、後でそれをプログラムで実行します。
+            lesson-10:
+              key: レッスン10
+              name: テキストとプロンプト
+              description_student: このレッスンでは、スプライトラボで変数を使って練習します。
+              description_teacher: この**スキル構築**レッスンでは、スプライトラボで変数を使った実践を行います。
+            lesson-11:
+              key: レッスン11
+              name: ミニプロジェクト：ユーザーインプットプログラム
+              description_student: 変数を使用した新しいスキルを、3つのオープンエンドプロジェクトの1つに適用します。
+              description_teacher: 生徒は、変数を使用して新しいスキルを3つのオープンエンドの**ミニプロジェクト**の1つに適用します。サンプルプログラムを探索して、自分のプロジェクトの計画を作成し、それをゼロからプログラムします。
+            Loops with the Artist:
+              key: アーティストで学ぶループ
+              name: ループを使った描画
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
+              description_teacher: この**スキル構築**レッスンは、焦点をブライトラボからアーティストに移します。これは、生徒がコースの残りの部分で探索する新しいツールとなります。
+            Variables that Change in Artist:
+              key: アーティストと学ぶ変化する変数
+              description_student: このレッスンでは、プログラムを実行する際に変化する変数を使って絵を描きます。
+              description_teacher: この**スキル構築**レッスンでは、アーティスト環境の変数を使って、反復的なデザインを行う方法ついて学びます。生徒は、変数をどう使うと、プログラムをど簡単に記述し、読みやすくできるかを学びます。ガイド付きパズルを行った後、生徒はじゆうあそびレベルで終了します。そこで学んだことを示し、独自のデザインを作成します。
+            Nested Loops in the Maze:
+              key: 迷路で学ぶ入れ子のループ
+              name: 迷路で学ぶ入れ子のループ
+              description_student: ループ内のループ内のループ。これはどういう意味でしょうか？このレッスンでは、ループを別のループ内に配置するとどうなるかを学びます。
+              description_teacher: この**スキル構築**レッスンでは、ループのわずかな変更がプログラムにどのような影響を与えるかを理解するように生徒に促します。
+            Variables that Change in Bee:
+              key: みつばちと学ぶ変化する変数
+              name: みつばちと学ぶ変数の変更
+              description_student: このみつばちは変数が大好きです！
+              description_teacher: このレッスンでは、プログラムの実行中に値を変更できるようにすることで、変数でプログラムを強化する方法を説明します。
+            For Loops in Bee:
+              key: みつばちと学ぶループ
+              name: みつばちと学ぶForループ
+              description_student: ブンブンブン。このパズルでは、「for」ループを使ってみつばちをミツとハチミツに導きます。
+              description_teacher: この**スキル構築**レッスンでは、「for」ループと増分変数を使って、より複雑なパズルを解くことに焦点を当てています。
+            For Loops in Artist:
+              key: アーティストと学ぶループ
+              name: アーティストと学ぶForループ
+              description_student: 次の傑作を作る準備をしてください。ここでは、「for」ループを使って、驚くような画像を作成します。
+              description_teacher: このレッスンでは、生徒は「for」ループの練習を続けますが、今回はアーティストと一緒に行います。生生徒はパズルを完成させて、複雑なデザインとユニークなアートを作成します。
+            lesson-5:
+              key: レッスン5
+            AI for Oceans:
+              key: 海洋のためのAI
+              name: 海洋のためのAI
+              description_student: 物体を「魚」または「魚ではない」のいずれかに分類して、海からゴミを取り除くことに挑戦します。次に、トレーニングデータセットを拡張して、水中にいる他の海の生き物も含めます。アクティビティの2番目のセクションでは、ランダムに生成された魚の画像に適用する独自のラベルを選びます。このトレーニングデータは機械学習モデルに使用され、これにより、新しい画像に独自のラベルがつけられます。
+              description_teacher: この**探索**のレッスンでは、生徒は魚やその他の物体を分類して、機械学習モデルをトレーニングします。
+            Internet:
+              key: インターネット
+              name: インターネット
+              description_student: 情報がインターネット上をどのように移動するのか疑問に思ったことはありませんか？魔法を使っているわけではありません！このレッスンでは、インターネットの仕組みの基本を学びます。
+              description_teacher: 多くの人が毎日インターネットを使っていますが、それがどのように機能するかを知っている人はあまりいません。このレッスンでは、接続、URL、IPアドレス、DNSについて学びながら、インターネットの流れを疑似体験します。
+          lesson_groups:
+            ramp_up:
+              display_name: スプライト
+            lessonGroup-7:
+              display_name: デジタル シティズンシップ
+            lessonGroup-8:
+              display_name: 変数（へんすう）
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 9～13才'
+        csp-post-survey-2021:
+          title: CS原則 のコース後アンケート
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        pre-express-2022:
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        csa2-2022:
+          lessons:
+            lesson-5:
+              name: ユニット2 評価
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
