@@ -1015,6 +1015,19 @@ el:
             '"seconds"': δευτερόλεπτα
       gamelab_hideTitleScreen:
         text: κρύψε την οθόνη τίτλων
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1165,6 +1178,11 @@ el:
             "'sound://category_animals/dog.mp3'": σκύλος
             "'sound://category_animals/tiger.mp3'": τίγρης
             "'sound://category_digital/jump_7.mp3'": πήδα
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
+            draggable(): είναι συρόμενο
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
         options:
