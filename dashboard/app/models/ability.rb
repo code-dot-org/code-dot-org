@@ -252,7 +252,7 @@ class Ability
 
     can [:vocab, :resources, :code, :standards], UnitGroup do |unit_group|
       # Assumes if one unit in a unit group is migrated they all are
-      !!unit_group.default_units[0].is_migrated && (unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user))
+      !!unit_group.default_units[0].is_migrated && (unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)) && !unit_group.plc_course
     end
 
     can [:vocab, :resources, :code, :standards], Script do |script|
