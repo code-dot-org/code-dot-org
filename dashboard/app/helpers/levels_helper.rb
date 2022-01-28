@@ -367,10 +367,6 @@ module LevelsHelper
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
-    if @level.is_a?(Applab)
-      @app_options[:isJavabuilderConnectionTestEnabled] = DCDO.get('javabuilder_connection_test_enabled', false)
-    end
-
     @app_options
   end
 
@@ -584,9 +580,9 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
-    level_options['lastLevelInLesson'] = script_level.end_of_lesson? if script_level
-    level_options['lastLevelInScript'] = script_level.end_of_script? if script_level
-    level_options['showEndOfLessonMsgs'] = script.middle_high? if script
+    level_options['isLastLevelInLesson'] = script_level.end_of_lesson? if script_level
+    level_options['isLastLevelInScript'] = script_level.end_of_script? if script_level
+    level_options['showEndOfLessonMsgs'] = script.show_unit_overview_between_lessons? if script
 
     # Edit blocks-dependent options
     if level_view_options(@level.id)[:edit_blocks]

@@ -687,7 +687,9 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
-        useFilesApi: !!config.useFilesApi
+        useFilesApi: !!config.useFilesApi,
+        selectedVersion: queryParams('version'),
+        isReadOnly: !!config.readonlyWorkspace
       }),
       contentDiv
     );
@@ -3312,6 +3314,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
       displayNotStartedBanner: this.displayNotStartedBanner(config),
+      displayOldVersionBanner: !!queryParams('version'),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,

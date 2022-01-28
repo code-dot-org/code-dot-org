@@ -281,10 +281,10 @@ reporting.sendReport = function(report) {
       postMilestone = true;
       break;
     case PostMilestoneMode.successful_runs_and_final_level_only:
-      postMilestone = report.pass || appOptions.level.lastLevelInLesson;
+      postMilestone = report.pass || appOptions.level.isLastLevelInScript;
       break;
     case PostMilestoneMode.final_level_only:
-      postMilestone = appOptions.level.lastLevelInLesson;
+      postMilestone = appOptions.level.isLastLevelInScript;
       break;
     default:
       console.error('Unexpected postMilestoneMode ' + postMilestoneMode);

@@ -27,7 +27,7 @@
 class Javalab < Level
   serialized_attrs %w(
     start_sources
-    validation
+    encrypted_validation
     hide_share_and_remix
     is_project_level
     submittable

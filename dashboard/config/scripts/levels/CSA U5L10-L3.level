@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Create a mini-concert showcasing some of the filters you have created.\r\n\r\n1. Import at least four filters that you created (`MirroredImage`, `ColorEditor`, `GrayscaleImage`, `ReversedImage`, `ShiftedImage`, and `SepiaImage`) AND `ImageEditor.java` from your **Backpack**.\r\n\r\n2. In `FiltersConcert.java`,\r\n\r\n   a. Create instance variables for your filter objects.\r\n   \r\n   b. Initialize each filter object using the appropriate `TheaterControl` method.\r\n   \r\n   c. Call each filter object's effect method in `playConcert()`.\r\n   \r\n   d. Create a 1D `Image` array with your filter objects. Traverse the array to draw each image on the stage. Be sure to add a `pause()` between each image!\r\n   \r\n3. In `MyConcert.java`,\r\n\r\n   a. Modify the `imageFiles` to use images of your choice or images provided to you in the Asset Manager.\r\n   \r\n   b. Create a `FiltersConcert` object and call its `playConcert()` method.",
+    "long_instructions": "Create a mini-concert showcasing some of the filters you have created.\r\n\r\n1. Import at least four filters that you created (`MirroredImage`, `ColorEditor`, `GrayscaleImage`, `ReversedImage`, `ShiftedImage`, and `SepiaImage`) AND `ImageEffect.java` from your **Backpack**.\r\n\r\n2. In `FiltersConcert.java`,\r\n\r\n   a. Create instance variables for your filter objects.\r\n   \r\n   b. Initialize each filter object using the appropriate `TheaterControl` method.\r\n   \r\n   c. Call each filter object's effect method in `playConcert()`.\r\n   \r\n   d. Create a 1D `Image` array with your filter objects. Traverse the array to draw each image on the stage. Be sure to add a `pause()` between each image!\r\n   \r\n3. In `MyConcert.java`,\r\n\r\n   a. Modify the `imageFiles` to use images of your choice or images provided to you in the Asset Manager.\r\n   \r\n   b. Create a `FiltersConcert` object and call its `playConcert()` method.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -33,13 +33,16 @@
       "demo09.jpg": "cc475619-ee1c-4e7f-abc8-5503e8c6b618.jpg",
       "demo10.jpg": "e9ed105f-4b4c-43b7-8cdb-c23ae51861e9.jpg"
     },
-    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263P+Kni1kY+RTnc+/E65\niPHIM433tCzD44wlclU29x8C0gAH3NPelRb7exoC/wFODmg=\n"
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263P+Kni1kY+RTnc+/E65\niPHIM433tCzD44wlclU29x8C0gAH3NPelRb7exoC/wFODmg=\n",
+    "reference_links": [
+      "https://docs.google.com/document/d/e/2PACX-1vSbu1JcuqFt8sFJWEUsd2dMmvRhzkNMD30gPiMpFYNZJEPEOzflNVGWqEL36VjpDKVcYY2NDyVi4gZl/pub"
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-09-29T21:02:28.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-29 21:02:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 14:41:23 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:30:17 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:31:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:35:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:39:10 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-29 21:02:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 14:41:23 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:30:17 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:31:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:35:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-17 16:39:10 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2022-01-12 15:19:35 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-14 20:05:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

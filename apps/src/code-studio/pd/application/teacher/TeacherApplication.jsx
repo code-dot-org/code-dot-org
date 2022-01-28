@@ -22,7 +22,6 @@ const TeacherApplication = props => {
   const {
     // [MEG] TODO: remove allowPartialSaving prop when experiment is complete (TeacherApps will always have this option)
     // instead, pass in allowPartialSaving prop to FormController
-    allowPartialSaving,
     savedFormData,
     accountEmail,
     userId,
@@ -30,8 +29,7 @@ const TeacherApplication = props => {
   } = props;
 
   const getInitialData = () => {
-    const dataOnPageLoad =
-      allowPartialSaving && savedFormData && JSON.parse(savedFormData);
+    const dataOnPageLoad = savedFormData && JSON.parse(savedFormData);
 
     // Extract school info saved in sessionStorage, if any
     const reloadedSchoolId = JSON.parse(
@@ -70,12 +68,6 @@ const TeacherApplication = props => {
     window.location.reload(true);
   };
 
-  const onSuccessfulSave = () => {
-    // [MEG] TODO: Figure out what should happen on save
-    // Right now, reload page to render in_progress page (to verify)
-    window.location.reload(true);
-  };
-
   // [MEG] TODO: Should a different GA link be sent if they're working on a saved application?
   const onSetPage = newPage => {
     const nominated = queryString.parse(window.location.search).nominated;
@@ -100,7 +92,6 @@ const TeacherApplication = props => {
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
-      onSuccessfulSave={onSuccessfulSave}
       sessionStorageKey={sessionStorageKey}
       submitButtonText={submitButtonText}
       validateOnSubmitOnly={true}

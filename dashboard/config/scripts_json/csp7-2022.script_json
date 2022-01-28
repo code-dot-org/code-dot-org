@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 01:13:32 UTC",
+    "serialized_at": "2022-01-21 18:59:16 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -84,7 +84,7 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. ",
+        "overview": "In this lesson, students work with partners to investigate two different apps that use parameters and return values. ",
         "preparation": "* Review the two apps that students will investigate in the lesson and make sure you understand the goals of the discussion prompts ",
         "purpose": "As with all Investigate lessons, this is an opportunity for students to dig into programs that use a new concept, in this case parameters and return, in the context of working apps. Encourage students to read the code carefully, discuss their findings with classmates, make connections to the Explore activity from the day before, and start making simple modifications to the program. Students will not leave this lesson as experts in writing programs with parameters and return, but they should understand the high level context and know they can refer back to the code in these investigate projects when they need help getting unstuck in the coming Practice and Make lessons.",
         "student_overview": "Investigate and modify sample apps that use parameters and return values. "
@@ -2402,6 +2402,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L1 CFU Return2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2424,6 +2427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Investigate Rock2022"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2446,6 +2452,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Poetry App2022"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2468,6 +2477,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L2 CSP CFU Param and Return2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2490,6 +2502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 12022"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2512,6 +2527,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 22022"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2534,6 +2552,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 42022"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2556,6 +2577,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 32022"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2578,6 +2602,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 52022"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2600,6 +2627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Calculator App2022"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2622,6 +2652,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 22022"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2644,6 +2677,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 32022"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2666,6 +2702,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U73 CFU Param Return AP2022"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2688,6 +2727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App2022"
+        ],
         "progression": "Try the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2710,6 +2752,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App Project2022"
+        ],
         "progression": "Make the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2732,6 +2777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Libraries in App Lab2022"
+        ],
         "progression": "Libraries in App Lab"
       },
       "bonus": false,
@@ -2754,6 +2802,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 L04 Exit Ticket2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2776,6 +2827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 States App Investigation2022"
+        ],
         "progression": "States App"
       },
       "bonus": false,
@@ -2798,6 +2852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 Pigify App Investigation2022"
+        ],
         "progression": "Pigify App"
       },
       "bonus": false,
@@ -2820,6 +2877,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L6 CSP CFU Libraries2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2842,6 +2902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 32022"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2864,6 +2927,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 52022"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2886,6 +2952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 22022"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2908,6 +2977,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 12022"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2930,6 +3002,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 42022"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2952,6 +3027,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U77 CFU Libraries AP2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2974,6 +3052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 12022"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -2996,6 +3077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 22022"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -3018,6 +3102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Test a Library2022"
+        ],
         "progression": "Test a Classmate's Library"
       },
       "bonus": false,
@@ -3040,6 +3127,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 32022"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -3062,6 +3152,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 7 AP-Style Assessment 2022"
+        ],
         "progression": "Unit 7 Exam"
       },
       "bonus": false,

@@ -2,5 +2,6 @@
   "key": "gamelab_randomColor",
   "name": "randomColor",
   "category": "World",
+  "block_name": "gamelab_randomColor",
   "syntax": "randomColor"
 }

@@ -69,8 +69,14 @@ export default class StudentSections extends Component {
         paddingBottom: 10
       },
       hiddenSectionLabel: {
+        fontSize: 18,
+        paddingBottom: 10,
+        color: color.charcoal
+      },
+      hiddenSectionDesc: {
         fontSize: 14,
-        paddingBottom: 5,
+        lineHeight: '22px',
+        paddingBottom: 10,
         color: color.charcoal
       }
     };
@@ -123,6 +129,9 @@ export default class StudentSections extends Component {
               <div>
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.archivedSections()}
+                </div>
+                <div style={styles.hiddenSectionDesc}>
+                  {i18n.archivedSectionsStudentDescription()}
                 </div>
                 <SectionsAsStudentTable
                   sections={archivedSections}

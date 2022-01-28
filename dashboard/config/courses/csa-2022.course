@@ -1,7 +1,9 @@
 {
   "name": "csa-2022",
   "script_names": [
-    "csa1-2022"
+    "csa1-2022",
+    "csa2-2022",
+    "csa3-2022"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
