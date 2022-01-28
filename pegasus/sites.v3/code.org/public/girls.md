@@ -187,10 +187,10 @@ Students have positive attitudes about science careers when they’re able to se
 [/breakoutquote]
 
 <h3>For more ideas, check out these helpful links:</h3>
-- [10 ways to recruit girls to CS](https://www.ncwit.org/resources/top-10-ways-recruiting-high-school-women-your-computing-classes/top-10-ways-recruiting)
+- [10 ways to recruit young women to CS in high school](https://ncwit.org/resource/top10recruithighschool/)
 - [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
 - [Outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
-- [Fact sheet for participation by women](http://www.ncwit.org/infographic/3435)
+- [7 ways to eliminate the barriers to young women's participation in CS](https://ncwit.org/blog/seven-ways-you-can-help-eliminate-the-barriers-to-young-womens-participation-in-computing/)
 
 <a id="notes"></a>
 *Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), Google, and other organizations dedicated to growing participation of women in technology. 

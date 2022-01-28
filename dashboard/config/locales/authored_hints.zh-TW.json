@@ -1817,17 +1817,17 @@
         },
         "courseA_harvester_loops5a": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5a_2019": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5a_2020": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5b": {
@@ -7379,7 +7379,7 @@
         },
         "courseE_bee_functions2": {
           "courseE_bee_functions2_a": "已為您編寫好函式，但您需要在每朵花上調用。",
-          "courseE_bee_functions2_b": "<xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> 積木呼叫現有的函式。",
+          "courseE_bee_functions2_b": "\\[<xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> 積木呼叫現有的函式。",
           "courseE_bee_functions2_c": "你需要前進並採集 2 次花蜜才能通過這關。"
         },
         "courseE_bee_functions3": {
@@ -8904,7 +8904,7 @@
         },
         "courseA_harvester_loops5a_2021": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5b_2021": {

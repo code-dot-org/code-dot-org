@@ -1790,12 +1790,10 @@ fil:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Mga Bulaklak
-            '"hearts"': Mga Puso
+            '"hearts"': mga puso
             '"iceCream"': Sorbetes
-            '"rainbow"': Bahaghari
-            '"stars"': Mga Bituin
-            '"waves"': Mga Alon
+            '"rainbow"': bahaghari
+            '"stars"': mga bituin
       Poetry_addLine:
         text: magdagdag ng linya {LINE}
       Poetry_animateText:
@@ -1816,11 +1814,18 @@ fil:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       Poetry_makeNumSprites:
         text: gumawa ng {NUM} bagong {ANIMATION_NAME} mga tiyanak
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': campfire
+            '"sound://category_nature/summer_night_loop.mp3"': gabi
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': mabagal
       Poetry_playSound:
         text: Ang ... {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ilaw
+            '"sound://category_digital/boing_2.mp3"': boing
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': talon
             '"sound://category_background/typewriter.mp3"': Makinilya
       Poetry_setAuthor:
         text: itakda ang may-akda {AUTHOR}
@@ -1830,29 +1835,29 @@ fil:
         text: itakda ang background sa {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Mga Kulay
-            '"squiggles"': Squiggles
-            '"stars"': Mga Bituin
+            '"blooming"': Namumulaklak
+            '"bubbles"': Bubbles
+            '"clouds"': Maulap
+            '"confetti"': Confetti
             '"darkCircles"': Kumukupas
             '"fadeColors"': Nagyelo
-            '"blooming"': Namumulaklak
+            '"hearts"': mga puso
+            '"rain"': ulan
             '"ripples"': Ripples
-            '"clouds"': Maulap
-            '"rain"': Ulan
-            '"bubbles"': Bubbles
-            '"confetti"': Confetti
-            '"hearts"': Makulay na mga Puso
+            '"colors"': Mga Kulay
+            '"stars"': Mga Bituin
+            '"squiggles"': Squiggles
           PALETTE:
-            '"rainbow"': Bahaghari
-            '"grayscale"': Abuhin
-            '"sky"': Langit
+            '"autumn"': Taglagas
             '"sunrise"': Madaling araw
             '"sunset"': Takipsilim
+            '"grayscale"': Abuhin
+            '"rainbow"': bahaghari
+            '"roses"': Rosas
+            '"sky"': Langit
             '"spring"': Tagsibol
             '"summer"': Tag-init
-            '"autumn"': Taglagas
             '"winter"': Taglamig
-            '"roses"': Rosas
       Poetry_setBackgroundImageAs:
         text: Itakda ang background sa {IMG}
       Poetry_setFont:
@@ -1860,23 +1865,23 @@ fil:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: itakda ang kulay ng text {FILL}
       Poetry_setForegroundEffect:
         text: gawin ang {EFFECT} effect
         options:
           EFFECT:
-            '"rain"': Ulan
             '"bubbles"': Bubbles
-            '"hearts"': Makulay na mga Puso
-            '"emojis"': Maligayang Emojis
             '"confetti"': Confetti
+            '"hearts"': mga puso
+            '"emojis"': Maligayang Emojis
+            '"rain"': ulan
             '"starburst"': Starburst
             '"glass"': Nakakabasag na Salamin
             '"twinkling"': Kumikislap
@@ -1884,7 +1889,7 @@ fil:
         text: udyukan ang user {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} sa variable {VAR}
       Poetry_setPromptWithChoices:
         text: udyukan ang user {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} sa variable {VAR} na
-          may mga pagpipiliang {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} [LEFT_QUOTE_B][ 7]{B}{RIGHT_QUOTE_B}
+          may mga pagpipiliang {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
           {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
       Poetry_setSize:
         text: itakda ang laki ng {SPRITE} sa {VAL}
@@ -1893,31 +1898,21 @@ fil:
         options:
           EFFECT:
             '"fade"': kumupas
-            '"typewriter"': makinilya
             '"flyLeft"': lumipad mula sa kaliwa
             '"flyRight"': lumipad mula sa kanan
             '"flyTop"': lumipad mula sa itaas
             '"flyBottom"': lumipad mula sa ibaba
+            '"typewriter"': makinilya
       Poetry_setTitle:
         text: itakda ang pamagat {TITLE}
       Poetry_showText:
         text: ipakita ang text
       Poetry_startBehavior:
         text: Ang tiyanak {ANIMATION_NAME} ay nagsisimula sa {BEHAVIOR}
-        options:
-          BEHAVIOR:
-            moving_north_and_looping: umiikot sa hilaga
-            moving_south_and_looping: umiikot sa timog
-            moving_east_and_looping: umiikot sa silangan
-            moving_west_and_looping: umiikot sa kanluran
       Poetry_stopBehavior:
         text: huminto ang tiyanak {ANIMATION_NAME} sa {BEHAVIOR}
         options:
           BEHAVIOR:
-            moving_north_and_looping: umiikot sa hilaga
-            moving_south_and_looping: umiikot sa timog
-            moving_east_and_looping: umiikot sa silangan
-            moving_west_and_looping: umiikot sa kanluran
             '"all"': "--lahat ng ugali--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

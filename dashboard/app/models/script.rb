@@ -206,8 +206,27 @@ class Script < ApplicationRecord
   def generate_plc_objects
     if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
-      unless unit_group
-        unit_group = UnitGroup.new(name: professional_learning_course)
+
+      new_published_state = published_state ? published_state : SharedCourseConstants::PUBLISHED_STATE.beta
+      new_instruction_type = instruction_type ? instruction_type : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      new_instructor_audience = instructor_audience ? instructor_audience : SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+      new_participant_audience = participant_audience ? participant_audience : SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+
+      if unit_group
+        # Check if anything needs to be updated on the PL course
+        unit_group.published_state = new_published_state
+        unit_group.instruction_type = new_instruction_type
+        unit_group.participant_audience = new_participant_audience
+        unit_group.instructor_audience = new_instructor_audience
+        unit_group.save! if unit_group.changed?
+      else
+        unit_group = UnitGroup.new(
+          name: professional_learning_course,
+          published_state: new_published_state,
+          instruction_type: new_instruction_type,
+          instructor_audience: new_instructor_audience,
+          participant_audience: new_participant_audience
+        )
         unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
         unit_group.save!
       end
@@ -866,6 +885,12 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSC')
   end
 
+  # TODO: (Dani) Update to use new course types framework.
+  # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
+  def middle_high?
+    csd? || csp? || csa?
+  end
+
   def hour_of_code?
     under_curriculum_umbrella?('HOC')
   end
@@ -1142,7 +1167,6 @@ class Script < ApplicationRecord
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
         UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
-        destination_unit_group.write_serialization
         copied_unit.reload
       else
         copied_unit.is_course = true
@@ -1165,6 +1189,7 @@ class Script < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         copy_and_write_i18n(new_name, course_version)
         copied_unit.write_script_json
+        destination_unit_group.write_serialization if destination_unit_group
       end
 
       copied_unit
@@ -2005,7 +2030,7 @@ class Script < ApplicationRecord
 
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
-  def show_unit_overview_between_lessons?(user)
-    (csd? || csp? || csa?) && user&.has_pilot_experiment?('end-of-lesson-redirects')
+  def show_unit_overview_between_lessons?
+    middle_high?
   end
 end

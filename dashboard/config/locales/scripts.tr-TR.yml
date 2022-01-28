@@ -26407,6 +26407,44 @@ tr:
                 yöntemini kullanarak, Balonları Patlat oyununa 'Balon' nesnelerini
                 karşılaştırmak ve kalan geçerli hamle olup olmadığını belirlemek için
                 eklemeler yapar.
+            lesson-8:
+              description_student: Bir Boole ifadesinin sonucuna dayalı olarak alternatif
+                eylemler uygulamak için "if/else" ifadelerini gözden geçireceksiniz.
+                Mahalle'deki bir diziden rastgele öğelere erişmek için 'Math.random()'
+                ile 'if/else' ifadelerini kullanma alıştırması yapacaksınız. 'if/else'
+                ifadelerini kullanarak, Balonları Patlat oyununda bir oyuncunun hamlesinin
+                geçerliliğini kontrol edeceksiniz.
+              description_teacher: Öğrenciler, bir Boole ifadesinin sonucuna dayalı
+                olarak alternatif eylemler uygulamak için 'if/else' ifadelerini gözden
+                geçirecekler. Öğrenciler, Mahalle'deki bir diziden rastgele öğelere
+                erişmek için 'Math.random()' ile 'if/else' ifadelerini kullanarak
+                alıştırma yapar. Öğrenciler, 'if/else' ifadelerini kullanarak Balonları
+                Patlat oyununda bir oyuncunun hamlesinin geçerliliğini kontrol edecekler.
+            lesson-9:
+              description_student: Bazen doğru sonucu belirlemek için birden fazla
+                koşulu kontrol etmemiz gerekir. Mahalle'de, 'Ressam' adına problemleri
+                çözmek için 'if/else-if/else' ifadelerini kullanmayı öğreneceksiniz.
+                Ardından, oyunun durumunu kontrol etmek ve oyuncunun kazanıp kazanmadığını
+                belirlemek için Balonları Patlat oyununda 'if/else-if/else' ifadelerini
+                uygulayacaksınız.
+              description_teacher: Öğrenciler, istenen belirli bir sonucu seçmek için
+                birden fazla koşulu değerlendirmek için 'if/else-if/else' ifadelerini
+                kullanacaklar. Oyunun durumunu kontrol etmek ve oyuncunun kazanıp
+                kazanmadığını belirlemek için öğrenciler, çoklu seçim ifadeleri kullanacaklar
+                ve oyunun durumunu kontrol edip uygun sonucu seçecekler.
+            lesson-10:
+              description_student: Birden çok koşul içeren sorunları keşfedecek ve
+                çözümlerinizde iç içe "if" ifadelerini kullanmayı öğreneceksiniz.
+                Koşullu ifadelerde yeni mantıksal operatörler kullanarak ifadeler
+                yazacak ve bu operatörlerin sonuç üzerindeki etkisini belirleyeceksiniz.
+                Ardından, iç içe "if" deyimlerini ve mantıksal operatörleri kullanarak
+                Balonları Patlat oyununuzun oynanabilirliğini ve işlevselliğini geliştireceksiniz.
+              description_teacher: Öğrenciler, birden çok koşul içeren problemleri
+                keşfedecek ve çözümler geliştirmek için iç içe "if" ifadeleri yazacaklar.
+                Öğrenciler, koşullu ifadelerde mantıksal operatörleri kullanarak ifadeler
+                yazıp mantıksal operatörlerin sonuca etkisini belirleyecekler. İç
+                içe 'if' ifadeleri ve mantıksal operatörler daha sonra, oyun oynamayı
+                ve genel işlevselliği geliştirmek için Balonları Patlat oyununda uygulanacak.
             lesson-15:
               name: Değerlendirme Günü
           lesson_groups:
@@ -26627,6 +26665,15 @@ tr:
         csa7-pilot:
           lessons:
             lesson-5:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot:
+          lessons:
+            lesson-15:
               name: Değerlendirme Günü
           lesson_groups:
             lessonGroup-2:
@@ -27211,6 +27258,44 @@ tr:
                 yöntemini kullanarak, Balonları Patlat oyununa 'Balon' nesnelerini
                 karşılaştırmak ve kalan geçerli hamle olup olmadığını belirlemek için
                 eklemeler yapar.
+            Providing an Alternate Path of Execution:
+              description_student: Bir Boole ifadesinin sonucuna dayalı olarak alternatif
+                eylemler uygulamak için "if/else" ifadelerini gözden geçireceksiniz.
+                Mahalle'deki bir diziden rastgele öğelere erişmek için 'Math.random()'
+                ile 'if/else' ifadelerini kullanma alıştırması yapacaksınız. 'if/else'
+                ifadelerini kullanarak, Balonları Patlat oyununda bir oyuncunun hamlesinin
+                geçerliliğini kontrol edeceksiniz.
+              description_teacher: Öğrenciler, bir Boole ifadesinin sonucuna dayalı
+                olarak alternatif eylemler uygulamak için 'if/else' ifadelerini gözden
+                geçirecekler. Öğrenciler, Mahalle'deki bir diziden rastgele öğelere
+                erişmek için 'Math.random()' ile 'if/else' ifadelerini kullanarak
+                alıştırma yapar. Öğrenciler, 'if/else' ifadelerini kullanarak Balonları
+                Patlat oyununda bir oyuncunun hamlesinin geçerliliğini kontrol edecekler.
+            Testing Multiple Conditions:
+              description_student: Bazen doğru sonucu belirlemek için birden fazla
+                koşulu kontrol etmemiz gerekir. Mahalle'de, 'Ressam' adına problemleri
+                çözmek için 'if/else-if/else' ifadelerini kullanmayı öğreneceksiniz.
+                Ardından, oyunun durumunu kontrol etmek ve oyuncunun kazanıp kazanmadığını
+                belirlemek için Balonları Patlat oyununda 'if/else-if/else' ifadelerini
+                uygulayacaksınız.
+              description_teacher: Öğrenciler, istenen belirli bir sonucu seçmek için
+                birden fazla koşulu değerlendirmek için 'if/else-if/else' ifadelerini
+                kullanacaklar. Oyunun durumunu kontrol etmek ve oyuncunun kazanıp
+                kazanmadığını belirlemek için öğrenciler, çoklu seçim ifadeleri kullanacaklar
+                ve oyunun durumunu kontrol edip uygun sonucu seçecekler.
+            Using Logical Operators:
+              description_student: Birden çok koşul içeren sorunları keşfedecek ve
+                çözümlerinizde iç içe "if" ifadelerini kullanmayı öğreneceksiniz.
+                Koşullu ifadelerde yeni mantıksal operatörler kullanarak ifadeler
+                yazacak ve bu operatörlerin sonuç üzerindeki etkisini belirleyeceksiniz.
+                Ardından, iç içe "if" deyimlerini ve mantıksal operatörleri kullanarak
+                Balonları Patlat oyununuzun oynanabilirliğini ve işlevselliğini geliştireceksiniz.
+              description_teacher: Öğrenciler, birden çok koşul içeren problemleri
+                keşfedecek ve çözümler geliştirmek için iç içe "if" ifadeleri yazacaklar.
+                Öğrenciler, koşullu ifadelerde mantıksal operatörleri kullanarak ifadeler
+                yazıp mantıksal operatörlerin sonuca etkisini belirleyecekler. İç
+                içe 'if' ifadeleri ve mantıksal operatörler daha sonra, oyun oynamayı
+                ve genel işlevselliği geliştirmek için Balonları Patlat oyununda uygulanacak.
             Assessment Day:
               name: Değerlendirme Günü
             lesson-1:
@@ -27249,6 +27334,7 @@ tr:
               display_name: İçerik
             lessonGroup-4:
               display_name: Sandbox
+          name: bba4-pilot-yardımcı
         csa5-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -27289,6 +27375,7 @@ tr:
               display_name: İçerik
             lessonGroup-4:
               display_name: Sandbox
+          name: bba5-pilot-yardımcı
         poetry-hoc:
           lessons:
             lesson-1:
@@ -27802,21 +27889,6 @@ tr:
                 bir değerlendirmede değerlendirirler.
             lesson-1:
               key: ders-1
-              description_student: Kurs boyunca geliştirdiğiniz projeler, toplulukta
-                çok fazla yaratıcılığa ilham verdi! Yaratıcı hikâyeler, senaryolar,
-                şarkı sözleri, mektuplar ve şiirler sergilemek için bir Mahalle Aydınlanma
-                Festivali düzenlenecek. Mahalle Aydınlanma Festivali Projesi, ünite
-                genelinde üzerinde çalıştığınız büyük bir projedir ve proje yönetimi
-                stratejileri, işinizi organize etmenize ve yapılandırmanıza yardımcı
-                olur. Diğer yazılım mühendislerinin program belgeleri oluşturmak için
-                bir Java aracını kolayca anlayabilmesi ve kullanabilmesi için kod
-                yazma ve yapılandırma stratejilerini keşfedersiniz.
-              description_teacher: Öğrenciler, Mahalle Aydınlanma Festivali Projesi
-                ile tanıştırılır ve soruları ve temel özellikleri belirlemek için
-                gereksinimleri ve örnekleri değerlendirir. Proje üzerinde çalışmaya
-                başlamadan önce, öğrenciler en iyi uygulamaları belirleyerek ve program
-                dokümantasyonu oluşturmak için Javadocs kullanımını keşfederek program
-                yapısı ve yorum yapma anlayışlarını genişletirler.
             lesson-2:
               key: ders-2
               description_student: '"Tamsayı" ve "Çift" temel değerlerini referans
@@ -28188,3 +28260,125 @@ tr:
                 -   görüntüleri, parmakları veya manipülatifleri kullanarak 10'a kadar sayıları tanıma ve sayma.
                 -   toplam 10'a kadar nesneler, resimler, parmaklar veya manipülatifler ekleme.
           title: Laurel ile Sayma
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Ders
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Mahalle Aydınlanma Festivali Projesi - 1. Gün
+            lesson-12:
+              name: Mahalle Aydınlanma Festivali Projesi - 2. Gün
+            lesson-13:
+              name: Mahalle Aydınlanma Festivali Projesi - 3. Gün
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Salgın Simülatörü
+            lesson-5:
+              name: Ben ve Hareketli Nesne Laboratuvarı Hakkında
+          description_short: Dahili
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-10:
+              key: ders-10
+            lesson-6:
+              key: ders-6
+            lesson-7:
+              key: ders-7
+            lesson-8:
+              key: ders-8
+            lesson-9:
+              key: ders-9
+            lesson-11:
+              key: ders-11
+            lesson-12:
+              key: ders-12
+            lesson-13:
+              key: ders-13
+            lesson-14:
+              key: ders-14
+            lesson-15:
+              key: ders-15
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+            lesson-4:
+              key: ders-4
+            lesson-5:
+              key: ders-5
+              name: Değerlendirme Günü
+            lesson-16:
+              key: ders-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+            lesson-4:
+              key: ders-4
+            lesson-5:
+              key: ders-5
+            lesson-10:
+              key: ders-10
+            lesson-6:
+              key: ders-6
+            lesson-7:
+              key: ders-7
+            lesson-8:
+              key: ders-8
+            lesson-9:
+              key: ders-9
+            lesson-11:
+              key: ders-11
+            lesson-12:
+              key: ders-12
+            lesson-13:
+              key: ders-13
+            lesson-14:
+              key: ders-14
+            lesson-15:
+              key: ders-15
+              name: Değerlendirme Günü
+            lesson-16:
+              key: ders-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox

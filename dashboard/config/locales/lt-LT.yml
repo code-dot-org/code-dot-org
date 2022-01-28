@@ -300,6 +300,7 @@ lt:
       prizes_link: daugiau informacijos
   teacher:
     answer: Atsakymas
+    dashboard: Mokytojo prietaisų skydelis
     for_teachers_only: Tik mokytojams
     title:
       one: 'Tavo mokytojas:'

@@ -3730,6 +3730,10 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -4091,20 +4095,6 @@ sv:
                 förvillkor och eftervillkor för objekt och metoder. Nu utvärderar
                 de hur väl de har uppnått studieenhetens lärandemål och färdigheter
                 i en utvärdering med flervalsalternativ.
-            lesson-1:
-              description_student: De projekt du har utvecklat under kursen har inspirerat
-                till mycket kreativitet i samhället! En kvartersfest kommer att hållas
-                för att visa upp kreativa berättelser, manus, sångtexter, brev och
-                dikter. Kvartersfesten är ett stort projekt som du arbetar med i hela
-                studieenheten, och projektledningsstrategier hjälper till att organisera
-                och strukturera ditt arbete. Du utforskar strategier för att skriva
-                och strukturera kod så att andra mjukvaruingenjörer enkelt kan förstå
-                och använda ett Java-verktyg för att skapa programdokumentation.
-              description_teacher: Eleverna introduceras till kvartersfestprojektet
-                och utvärderar krav och exempel för att identifiera frågor och nyckelfunktioner.
-                Innan de börjar arbeta med projektet fördjupar eleverna sin förståelse
-                av programstruktur och kommenterar genom att identifiera bästa praxis
-                och utforska användningen av Javadocs för att generera programdokumentation.
             lesson-2:
               description_student: Du konstruerar ”heltal” och ”dubbla” objekt som
                 representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
@@ -4302,3 +4292,34 @@ sv:
           lessons:
             lesson-1:
               name: Stavnings-bi
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Kvartersfestprojekt – Dag 1
+            lesson-12:
+              name: Kvartersfestprojekt – Dag 2
+            lesson-13:
+              name: Kvartersfestprojekt – Dag 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Utbrottssimulator
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll

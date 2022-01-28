@@ -1746,12 +1746,14 @@ nl:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Bloemen
-            '"hearts"': Hartjes
+            '"brick"': baksteen
+            '"fire"': vuur
+            '"flowers"': bloemen
+            '"hearts"': hartjes
             '"iceCream"': Ijsco
-            '"rainbow"': Regenboog
-            '"stars"': Sterren
-            '"waves"': Golven
+            '"leaves"': bladeren
+            '"rainbow"': regenboog
+            '"stars"': sterren
       Poetry_addLine:
         text: De regel {LINE} toevoegen
       Poetry_animateText:
@@ -1778,9 +1780,12 @@ nl:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Kalm
             '"sound://category_nature/steady_campfire_loop.mp3"': Kampvuur
             '"sound://category_nature/rain_loop.mp3"': Motregen
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': bos
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Spookachtig
             '"sound://category_background/inside_plane.mp3"': Gezoem
             '"sound://category_loops/red_flag_loop1.mp3"': Missie
+            '"sound://category_nature/summer_night_loop.mp3"': nacht
+            '"sound://category_background/ocean_waves.mp3"': oceaan
             '"sound://category_background/repitition.mp3"': Rijden
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Langzaam
       Poetry_playSound:
@@ -1795,7 +1800,6 @@ nl:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Mislukking
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fladderen
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Springen
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Licht
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Poef
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
             '"sound://category_background/typewriter.mp3"': Schrijfmachine
@@ -1811,30 +1815,31 @@ nl:
         text: Achtergrond instellen op {EFFECT}{PALETTE}
         options:
           EFFECT:
-            '"colors"': Kleuren
-            '"squiggles"': Kronkels
-            '"space"': Ruimte
-            '"stars"': Sterren
+            '"blooming"': Bloeiend
+            '"bubbles"': Bubbels
+            '"clouds"': Bewolkt
+            '"confetti"': Confetti
             '"darkCircles"': Vervagen
             '"fadeColors"': Berijpt
-            '"blooming"': Bloeiend
+            '"hearts"': hartjes
+            '"space"': Ruimte
+            '"rain"': regen
             '"ripples"': Rimpelingen
-            '"clouds"': Bewolkt
-            '"rain"': Regen
-            '"bubbles"': Bubbels
-            '"confetti"': Confetti
-            '"hearts"': Kleurrijke Harten
+            '"colors"': Kleuren
+            '"stars"': Sterren
+            '"squiggles"': Kronkels
           PALETTE:
-            '"rainbow"': Regenboog
-            '"grayscale"': Grijstinten
-            '"sky"': Hemel
+            '"autumn"': Herfst
             '"sunrise"': Dageraad
             '"sunset"': Schemering
+            '"grayscale"': Grijstinten
+            '"ocean"': oceaan
+            '"rainbow"': regenboog
+            '"roses"': Rozen
+            '"sky"': Hemel
             '"spring"': Lente
             '"summer"': Zomer
-            '"autumn"': Herfst
             '"winter"': Winter
-            '"roses"': Rozen
       Poetry_setBackgroundImageAs:
         text: set achtergrond naar {IMG}
       Poetry_setFont:
@@ -1842,23 +1847,23 @@ nl:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: tekstkleur {FILL} instellen
       Poetry_setForegroundEffect:
         text: Effect {EFFECT} uitvoeren
         options:
           EFFECT:
-            '"rain"': Regen
             '"bubbles"': Bubbels
-            '"hearts"': Kleurrijke Harten
-            '"emojis"': Vrolijke emojis
             '"confetti"': Confetti
+            '"hearts"': hartjes
+            '"emojis"': Vrolijke emojis
+            '"rain"': regen
             '"starburst"': Sterrenvorming
             '"glass"': Brekend glas
             '"twinkling"': Fonkeling
@@ -1873,31 +1878,21 @@ nl:
         options:
           EFFECT:
             '"fade"': Vervagen
-            '"typewriter"': schrijfmachine
             '"flyLeft"': Vlieg van links
             '"flyRight"': Vlieg van rechts
             '"flyTop"': Vlieg van boven
             '"flyBottom"': Vlieg van onderen
+            '"typewriter"': schrijfmachine
       Poetry_setTitle:
         text: Titel {TITLE} instellen
       Poetry_showText:
         text: Tekst weergeven
       Poetry_startBehavior:
         text: Sprite {ANIMATION_NAME} begint met {BEHAVIOR}
-        options:
-          BEHAVIOR:
-            moving_north_and_looping: looping noord
-            moving_south_and_looping: looping zuid
-            moving_east_and_looping: looping oost
-            moving_west_and_looping: looping west
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} stopt met {BEHAVIOR}
         options:
           BEHAVIOR:
-            moving_north_and_looping: looping noord
-            moving_south_and_looping: looping zuid
-            moving_east_and_looping: looping oost
-            moving_west_and_looping: looping west
             '"all"': "--al het gedrag--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

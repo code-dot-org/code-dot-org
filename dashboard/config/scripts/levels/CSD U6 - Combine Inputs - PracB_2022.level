@@ -73,7 +73,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Combine Inputs Practice",
+    "long_instructions": "# Intensity\r\n\r\nCreate an app that lets you change the intensity of your LEDs using a slider. The user can press the left button to turn on the lights and the right button to turn them off. Then they can use a slider to adjust the intensity\r\n\r\n# Do This\r\n\r\n* Inside the event block, get the intensity value from the slider\r\n* Set all of the LEDs to the new intensity value\r\n* Run your program, moving the slider to see how the LEDs speed changes automatically.",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
@@ -93,18 +93,17 @@
       "/docs/concepts/maker-toolkit/producing-output/",
       "/docs/concepts/maker-toolkit/board-events/"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "onEvent(\"intensitySlider\", \"change\", function() {\n  \n});\nonBoardEvent(buttonR, \"press\", function() {\n  colorLeds[0].off();\n  colorLeds[1].off();\n  colorLeds[2].off();\n  colorLeds[3].off();\n  colorLeds[4].off();\n  colorLeds[5].off();\n  colorLeds[6].off();\n  colorLeds[7].off();\n  colorLeds[8].off();\n  colorLeds[9].off();\n});\n\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\">\n  <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 29px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 225px; height: 40px; position: absolute; left: 55px; top: 45px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"title\">LED Control</label>\n  <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 19px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 240px; height: 115px; position: absolute; left: 45px; top: 270px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"instructions\">Choose the light intensity&nbsp;with the slider, which will update the lights. Turn the lights off with the right button</label>\n    \n  <input type=\"range\" value=\"50\" min=\"0\" max=\"100\" step=\"10\" id=\"intensitySlider\" style=\"margin: 0px; padding: 0px; width: 150px; height: 24px; position: absolute; left: 85px; top: 150px;\">\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 40px; height: 18px; position: absolute; left: 25px; top: 150px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"short\">dim</label>\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 55px; height: 20px; position: absolute; left: 255px; top: 155px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"long\">bright</label>\n    \n  </div></div>",
+    "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2021-12-19T00:52:30.000Z",
   "level_num": "custom",
   "user_id": 1,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-19T00:52:30.859+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracA_2022\"},{\"changed_at\":\"2021-12-19 00:52:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-19T00:52:30.859+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracA_2022\"},{\"changed_at\":\"2021-12-19 00:52:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 22:49:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 22:51:35 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 22:52:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

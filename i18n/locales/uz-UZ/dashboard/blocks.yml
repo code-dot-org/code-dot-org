@@ -1644,12 +1644,15 @@ uz:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Gullar
-            '"hearts"': Yuraklar
+            '"brick"': g‘isht
+            '"fire"': olov
+            '"flowers"': gullar
+            '"hearts"': yurak
             '"iceCream"': Muzqaymoq
-            '"rainbow"': Kamalak
-            '"stars"': Yulduzlar
-            '"waves"': Toʻlqinlar
+            '"leaves"': barglar
+            '"rainbow"': kamalak
+            '"stars"': yulduzlar
+            '"waves"': toʻlqinlar
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1658,57 +1661,71 @@ uz:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       Poetry_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': o'rmon
+            '"sound://category_nature/summer_night_loop.mp3"': qorong‘u
+            '"sound://category_background/ocean_waves.mp3"': okean
+            '"sound://category_background/rainforest_ambient_sound.mp3"': nam o'rmon
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': sekin
       Poetry_playSound:
         text: " {SOUND} ijro etish"
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Chiroq
+            '"sound://category_bell/long_bell_notification.mp3"': qo‘ng‘iroq
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': pufakchalar
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': sakramoq
       Poetry_setBackground:
         text: orqa fonni {COLOR} ga o'rnatish
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Ranglar
-            '"squiggles"': Siqilish (burmalar)
-            '"space"': Qoinot
-            '"stars"': Yulduzlar
-            '"ripples"': To‘lqinlar
-            '"rain"': Yomg'ir
             '"bubbles"': Pufakchalar
+            '"clouds"': bulutli
             '"confetti"': Konfetti
-            '"hearts"': Rangli yuraklar
+            '"hearts"': yurak
+            '"space"': Qoinot
+            '"rain"': yomg‘ir
+            '"ripples"': To‘lqinlar
+            '"colors"': Ranglar
+            '"stars"': Yulduzlar
+            '"squiggles"': Siqilish (burmalar)
           PALETTE:
-            '"rainbow"': Kamalak
+            '"ocean"': okean
+            '"rainbow"': kamalak
+            '"spring"': bahor
+            '"winter"': qish
       Poetry_setBackgroundImageAs:
         text: orqa fonni {IMG} ga o'zgartirish
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Yomg'ir
             '"bubbles"': Pufakchalar
-            '"hearts"': Rangli yuraklar
             '"confetti"': Konfetti
+            '"hearts"': yurak
+            '"rain"': yomg‘ir
             '"starburst"': Yulduzlar to'plami
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            growing: o'sish
-            jittering: titrash
-            shrinking: kichrayish
-            spinning_left: chap tarafga aylanish
-            spinning_right: o'ng tarafga aylanish
-            swimming_left_and_right: suzmoqda
-            wandering: daydish
+            '"growing"': o'sish
+            '"jittering"': titrash
+            '"shrinking"': kichrayish
+            '"spinning_left"': chap tarafga aylanish
+            '"spinning_right"': o'ng tarafga aylanish
+            '"swimming_left_and_right"': suzmoqda
+            '"wandering"': daydish
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            growing: o'sish
-            jittering: titrash
-            shrinking: kichrayish
-            spinning_left: chap tarafga aylanish
-            spinning_right: o'ng tarafga aylanish
-            swimming_left_and_right: suzmoqda
-            wandering: daydish
+            '"growing"': o'sish
+            '"jittering"': titrash
+            '"shrinking"': kichrayish
+            '"spinning_left"': chap tarafga aylanish
+            '"spinning_right"': o'ng tarafga aylanish
+            '"swimming_left_and_right"': suzmoqda
+            '"wandering"': daydish
       Poetry_whenLineShows:
         options:
           'N':

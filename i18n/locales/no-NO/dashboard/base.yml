@@ -386,6 +386,7 @@
       prizes_link: 'Mer info'
   teacher:
     answer: Svar
+    dashboard: 'Lærersider'
     for_teachers_only: Kun for lærere
     title:
       one: 'Din lærer:'

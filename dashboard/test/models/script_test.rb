@@ -1067,14 +1067,53 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 42, unit.peer_reviews_to_complete
 
     course_unit = unit.plc_course_unit
+    unit_group = unit.plc_course_unit.plc_course.unit_group
     assert_equal 'PLC Test', course_unit.unit_name
     assert_equal 'PLC test fixture script', course_unit.unit_description
+
+    assert_equal 'plc_reviewer', unit_group.instructor_audience
+    assert_equal 'facilitator', unit_group.participant_audience
+    assert_equal 'teacher_led', unit_group.instruction_type
+    assert_equal 'beta', unit_group.published_state
 
     lm = unit.lessons.first.plc_learning_module
     assert_equal 'Sample Module', lm.name
     assert_equal 1, course_unit.plc_learning_modules.count
     assert_equal lm, course_unit.plc_learning_modules.first
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
+  end
+
+  test 'updating plc unit updates its unit group' do
+    Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
+    unit = Script.seed_from_json_file('test-plc')
+
+    unit_group = unit.plc_course_unit.plc_course.unit_group
+
+    assert_equal 'plc_reviewer', unit_group.instructor_audience
+    assert_equal 'facilitator', unit_group.participant_audience
+    assert_equal 'teacher_led', unit_group.instruction_type
+    assert_equal 'beta', unit_group.published_state
+
+    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'stable')
+
+    unit.reload
+    unit_group = unit.plc_course_unit.plc_course.unit_group
+
+    assert_equal 'universal_instructor', unit_group.instructor_audience
+    assert_equal 'teacher', unit_group.participant_audience
+    assert_equal 'self_paced', unit_group.instruction_type
+    assert_equal 'stable', unit_group.published_state
+  end
+
+  test 'generate plc objects will use defaults if script has null values' do
+    unit = create(:script, professional_learning_course: 'my-plc-course', published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
+
+    unit_group = unit.plc_course_unit.plc_course.unit_group
+
+    assert_equal 'plc_reviewer', unit_group.instructor_audience
+    assert_equal 'facilitator', unit_group.participant_audience
+    assert_equal 'teacher_led', unit_group.instruction_type
+    assert_equal 'beta', unit_group.published_state
   end
 
   test 'unit name format validation' do
@@ -1827,6 +1866,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert @hoc_unit.hour_of_code?
   end
 
+  test "middle_high?" do
+    assert @csd_unit.middle_high?
+    assert @csp_unit.middle_high?
+    assert @csa_unit.middle_high?
+
+    refute @csf_unit.middle_high?
+    refute @csc_unit.middle_high?
+    refute @hoc_unit.middle_high?
+  end
+
   test "has_standards_associations?" do
     assert @csf_unit_2019.has_standards_associations?
     refute @csp_unit.has_standards_associations?
@@ -2040,7 +2089,9 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a standalone unit into a unit group' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
       UnitGroup.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name

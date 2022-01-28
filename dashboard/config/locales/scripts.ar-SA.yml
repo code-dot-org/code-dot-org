@@ -24718,6 +24718,7 @@ ar:
               description_teacher: هنا، سيستخدم الطلاب مختبر النقوش المتحركة لإنشاء
                 سلوكياتهم المخصصة.
             Virtual Pet:
+              key: الحيوان الأليف الافتراضي
               description_student: في هذا الدرس، سينشئ الطلاب حيوانًا افتراضيًا تفاعليًا
                 يبدو ويتصرف بالطريقة التي يرغبون بها. سيستخدم الطلاب أداة "ازياء"
                 مختبر النقوش المتحركة لتخصيص مظهر حيوانهم الأليف. سيستخدمون بعد ذلك
@@ -26027,6 +26028,17 @@ ar:
               display_name: محتوى
             lessonGroup-5:
               display_name: صندوق الاختبارات
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: مختبر Java
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: صندوق الاختبارات
         k5-onlinepd-2021:
           student_description: تعرف على كيفية تدريس علم الحاسوب باستخدام أساسيات علم
             الحاسوب في Code.org من خلال هذه الدورة التدريبية المجانية عبر الإنترنت!
@@ -27166,18 +27178,6 @@ ar:
               key: مختبر Java
             lesson-1:
               key: الدرس 1
-              description_student: إن المشاريع التي قمت بتطويرها طوال مدة الدورة الدراسية
-                حققت الكثير من الإبداع في المجتمع! سيتم استبقاء A Neighborhood Lit
-                Fest لتعرض قصصًا ونصوصًا وكلمات أغاني وخطابات وقصائد إبداعية. إن مشروع
-                Neighborhood Lit Fest هو مشروع ضخم عملتَ عليه على مدار الوحدة واستراتيجيات
-                إدارة المشروع تساعد على تنظيم وهيكلة عملك. تستكشف استراتيجيات لكتابة
-                وهيكلة الكود فيستطيع مهندسو البرمجيات الآخرون فهم واستخدام أداة Java
-                لإنشاء وثائق للبرنامج.
-              description_teacher: يتم تعريف الدارسين بمشروع Neighborhood Lit Fest
-                وتقييم المتطلبات والنماذج لتحديد الأسئلة والسمات الرئيسية. قبل البدء
-                في العمل على المشروع، يقوم الدارسون بتوسيع فهمهم لهيكل البرنامج والتعليق
-                من خلال تحديد أفضل الممارسات واستكشاف استخدام Javadocs لتوليد وثائق
-                للبرنامج.
             lesson-2:
               key: الدرس 2
               description_student: تنشئ "عددًا صحيحًا" و"زوجيًّأ" لتمثيل القيمة المبدئية
@@ -27507,3 +27507,130 @@ ar:
                 -   معرفة الأرقام وعدها حتى الرقم 10 باستخدام الصور أو الأصابع أو الأدوات اليدوية.
                 -   جمع الأشياء أو الصور أو الأصابع أو الوسائل اليدوية للوصول إلى الرقم 10.
           title: العد مع لوريل
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: الدرس
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: مشروع Neighborhood Lit Fest - اليوم 1
+            lesson-12:
+              name: مشروع Neighborhood Lit Fest - اليوم 2
+            lesson-13:
+              name: مشروع Neighborhood Lit Fest - اليوم 3
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: محاكي الانتشار
+            lesson-5:
+              name: نبذة عني مع مختبر النقوش المتحركة
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
+              key: مختبر Java
+            lesson-10:
+              key: الدرس 10
+            lesson-6:
+              key: الدرس 6
+            lesson-7:
+              key: الدرس 7
+            lesson-8:
+              key: الدرس 8
+            lesson-9:
+              key: الدرس 9
+            lesson-11:
+              key: الدرس 11
+            lesson-12:
+              key: الدرس 12
+            lesson-13:
+              key: الدرس 13
+            lesson-14:
+              key: الدرس 14
+            lesson-15:
+              key: الدرس 15
+            lesson-1:
+              key: الدرس 1
+            lesson-2:
+              key: الدرس 2
+            lesson-3:
+              key: الدرس 3
+            lesson-4:
+              key: الدرس 4
+            lesson-5:
+              key: الدرس 5
+              name: يوم التقييم
+            lesson-16:
+              key: الدرس 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: صندوق الاختبارات
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
+              key: مختبر Java
+            lesson-1:
+              key: الدرس 1
+            lesson-2:
+              key: الدرس 2
+            lesson-3:
+              key: الدرس 3
+            lesson-4:
+              key: الدرس 4
+            lesson-5:
+              key: الدرس 5
+            lesson-10:
+              key: الدرس 10
+            lesson-6:
+              key: الدرس 6
+            lesson-7:
+              key: الدرس 7
+            lesson-8:
+              key: الدرس 8
+            lesson-9:
+              key: الدرس 9
+            lesson-11:
+              key: الدرس 11
+            lesson-12:
+              key: الدرس 12
+            lesson-13:
+              key: الدرس 13
+            lesson-14:
+              key: الدرس 14
+            lesson-15:
+              key: الدرس 15
+              name: يوم التقييم
+            lesson-16:
+              key: الدرس 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: صندوق الاختبارات

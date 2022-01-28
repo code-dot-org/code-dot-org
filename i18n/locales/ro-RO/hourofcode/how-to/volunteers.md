@@ -10,7 +10,7 @@ title: Ghidul Hour of Code pentru voluntari
 
 * * *
 
-Gândirea de calcul contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească.
+Gândirea computationala contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească.
 
 Hour of Code este o introducere de o oră în domeniul științei calculatoarelor, concepută pentru a demistifica „programarea”, pentru a arăta că oricine poate învăța elementele de bază și pentru a crește participarea în domeniul științei calculatoarelor. Poți contribui la creșterea gradului de conștientizare a mișcării pentru știința calculatoarelor și te poți oferi voluntar pentru a inspira mai mulți elevi să studieze știința calculatoarelor, în special tinere femei și elevi din grupuri etnice și rasiale marginalizate.
 

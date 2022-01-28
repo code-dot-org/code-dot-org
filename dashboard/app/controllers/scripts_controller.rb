@@ -9,6 +9,8 @@ class ScriptsController < ApplicationController
   before_action :set_redirect_override, only: [:show]
   authorize_resource
 
+  use_reader_connection_for_route(:show)
+
   def show
     if @script.redirect_to?
       redirect_path = script_path(Script.get_from_cache(@script.redirect_to))
@@ -26,7 +28,7 @@ class ScriptsController < ApplicationController
     end
 
     if !params[:section_id] && current_user&.last_section_id
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      redirect_to request.query_parameters.merge({"section_id" => current_user&.last_section_id})
       return
     end
 
@@ -50,6 +52,30 @@ class ScriptsController < ApplicationController
 
     @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
     session[:show_unversioned_redirect_warning] = false
+
+    additional_script_data = {
+      course_name: @script.unit_group&.name,
+      course_id: @script.unit_group&.id,
+      show_redirect_warning: @show_redirect_warning,
+      redirect_script_url: @redirect_unit_url,
+      show_unversioned_redirect_warning: !!@show_unversioned_redirect_warning,
+      section: @section,
+      user_type: current_user&.user_type,
+      user_id: current_user&.id,
+      user_providers: current_user&.providers,
+      is_verified_instructor: current_user&.verified_instructor?,
+      locale: Script.locale_english_name_map[request.locale],
+      locale_code: request.locale,
+      course_link: @script.course_link(params[:section_id]),
+      course_title: @script.course_title || I18n.t('view_all_units'),
+      sections: @sections_with_assigned_info
+    }
+
+    @script_data = @script.summarize(true, current_user).merge(additional_script_data)
+
+    if @script.old_professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
+      @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
+    end
   end
 
   def index

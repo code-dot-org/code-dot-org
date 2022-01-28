@@ -4,6 +4,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    File.stubs(:write)
     @levelbuilder = create :levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
   end
@@ -33,6 +34,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     programming_environment = create :programming_environment
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_environment.name}.json"}.once
     post :update, params: {
       name: programming_environment.name,
       title: 'title',

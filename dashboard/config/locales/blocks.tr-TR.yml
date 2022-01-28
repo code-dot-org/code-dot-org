@@ -1758,12 +1758,15 @@ tr:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': tuğla
+            '"fire"': ateş
             '"flowers"': Çiçekler
-            '"hearts"': Kalpler
+            '"hearts"': kalpler
             '"iceCream"': Dondurma
-            '"rainbow"': Gökkuşağı
-            '"stars"': Yıldızlar
-            '"waves"': Dalgalar
+            '"leaves"': yapraklar
+            '"rainbow"': gökkuşağı
+            '"stars"': yıldızlar
+            '"waves"': dalga
       Poetry_addLine:
         text: satır ekle {LINE}
       Poetry_animateText:
@@ -1792,22 +1795,29 @@ tr:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Sakin
             '"sound://category_nature/steady_campfire_loop.mp3"': Kamp ateşi
             '"sound://category_nature/rain_loop.mp3"': Çiseleyen yağmur
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Orman
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Lanetli
             '"sound://category_background/inside_plane.mp3"': Uğultu
             '"sound://category_loops/red_flag_loop1.mp3"': Misyon
+            '"sound://category_nature/summer_night_loop.mp3"': gece
+            '"sound://category_background/ocean_waves.mp3"': okyanus
+            '"sound://category_background/rainforest_ambient_sound.mp3"': yağmur ormanı
             '"sound://category_background/repitition.mp3"': Binme
+            '"sound://category_background/wavering_wind.mp3"': uykulu
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Yavaş
       Poetry_playSound:
         text: playSound {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': zil
+            '"sound://category_digital/boing_2.mp3"': boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Kabarcık
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Sohbet
             '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Söndürme
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Başarısız olma
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Çarpıntı
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Zıplama
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Aydınlık
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': aydınlık
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Puf
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Tarama
             '"sound://category_background/typewriter.mp3"': Daktilo
@@ -1823,30 +1833,31 @@ tr:
         text: arka planı {EFFECT} {PALETTE} olarak ayarla
         options:
           EFFECT:
-            '"colors"': Renkler
-            '"squiggles"': Karalamalar
-            '"space"': Uzay
-            '"stars"': Yıldızlar
+            '"blooming"': Çiçeklenme
+            '"bubbles"': Baloncuklar
+            '"clouds"': Bulutlu
+            '"confetti"': Konfeti
             '"darkCircles"': Solma
             '"fadeColors"': Buzlu
-            '"blooming"': Çiçeklenme
+            '"hearts"': kalpler
+            '"space"': Uzay
+            '"rain"': yağmur
             '"ripples"': Dalgaları
-            '"clouds"': Bulutlu
-            '"rain"': Yağmur
-            '"bubbles"': Baloncuklar
-            '"confetti"': Konfeti
-            '"hearts"': Renkli Kalpler
+            '"colors"': Renkler
+            '"stars"': Yıldızlar
+            '"squiggles"': Karalamalar
           PALETTE:
-            '"rainbow"': Gökkuşağı
-            '"grayscale"': Gri tonlama
-            '"sky"': Gökyüzü
+            '"autumn"': Güz
             '"sunrise"': Şafak
             '"sunset"': Alacakaranlık
+            '"grayscale"': Gri tonlama
+            '"ocean"': okyanus
+            '"rainbow"': gökkuşağı
+            '"roses"': Gül
+            '"sky"': Gökyüzü
             '"spring"': Bahar
             '"summer"': Yaz
-            '"autumn"': Güz
             '"winter"': Kış
-            '"roses"': Gül
       Poetry_setBackgroundImageAs:
         text: arka planı {IMG} olarak ayarlayın
       Poetry_setFont:
@@ -1854,23 +1865,23 @@ tr:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': El yazısı
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': El yazısı
       Poetry_setFontColor:
         text: metin rengini ayarlar {FILL}
       Poetry_setForegroundEffect:
         text: "{EFFECT} efekti yap"
         options:
           EFFECT:
-            '"rain"': Yağmur
             '"bubbles"': Baloncuklar
-            '"hearts"': Renkli Kalpler
-            '"emojis"': Mutlu Emojiler
             '"confetti"': Konfeti
+            '"hearts"': kalpler
+            '"emojis"': Mutlu Emojiler
+            '"rain"': yağmur
             '"glass"': Parçalanan Cam
             '"twinkling"': Parıldama
       Poetry_setPrompt:
@@ -1887,32 +1898,33 @@ tr:
         options:
           EFFECT:
             '"fade"': soldur
+            '"typewriter"': Daktilo
       Poetry_showText:
         text: metni göster
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            fluttering: fluttering
-            growing: büyüme
-            jittering: kararsızlık
-            shrinking: küçülme
-            spinning_left: sola dönme
-            spinning_right: sağa dönme
-            swimming_left_and_right: yüzme
-            wandering: gezinme
-            wobbling: sallanma
+            '"fluttering"': fluttering
+            '"growing"': büyüme
+            '"jittering"': kararsızlık
+            '"shrinking"': küçülme
+            '"spinning_left"': sola dönme
+            '"spinning_right"': sağa dönme
+            '"swimming_left_and_right"': yüzme
+            '"wandering"': gezinme
+            '"wobbling"': sallanma
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            fluttering: fluttering
-            growing: büyüme
-            jittering: kararsızlık
-            shrinking: küçülme
-            spinning_left: sola dönme
-            spinning_right: sağa dönme
-            swimming_left_and_right: yüzme
-            wandering: gezinme
-            wobbling: sallanma
+            '"fluttering"': fluttering
+            '"growing"': büyüme
+            '"jittering"': kararsızlık
+            '"shrinking"': küçülme
+            '"spinning_left"': sola dönme
+            '"spinning_right"': sağa dönme
+            '"swimming_left_and_right"': yüzme
+            '"wandering"': gezinme
+            '"wobbling"': sallanma
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:

@@ -302,6 +302,7 @@ sq:
       prizes_link: 'Më shumë informacion'
   teacher:
     answer: Përgjigje
+    dashboard: 'Dërrasa e zezë '
     for_teachers_only: Vetëm për mësuesit
     title:
       one: 'Mësuesi yt:'

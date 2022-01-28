@@ -2,5 +2,6 @@
   "key": "gamelab_whenTouching",
   "name": "whenTouching",
   "category": "Unused",
+  "block_name": "gamelab_whenTouching",
   "syntax": "whenTouching"
 }

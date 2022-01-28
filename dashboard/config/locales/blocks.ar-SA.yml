@@ -1827,12 +1827,14 @@ ar:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': لبنة
+            '"fire"': نار
             '"flowers"': زهور
             '"hearts"': قلوب
             '"iceCream"': آيس كريم
-            '"rainbow"': ألوان
+            '"leaves"': أوراق
+            '"rainbow"': قوس قزح
             '"stars"': نجوم
-            '"waves"': أمواج
       Poetry_addLine:
         text: إضافة سطر {LINE}
       Poetry_animateText:
@@ -1860,9 +1862,11 @@ ar:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': اهدأ
             '"sound://category_nature/steady_campfire_loop.mp3"': نار المعسكر
             '"sound://category_nature/rain_loop.mp3"': رذاذ
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': غابة
             '"sound://category_loops/faultering_desicion_loop1.mp3"': مسكون بالأشباح
             '"sound://category_background/inside_plane.mp3"': دندنة
             '"sound://category_loops/red_flag_loop1.mp3"': المهمة
+            '"sound://category_nature/summer_night_loop.mp3"': ليل
             '"sound://category_background/repitition.mp3"': ركوب
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': بطيء
       Poetry_playSound:
@@ -1893,30 +1897,30 @@ ar:
         text: ضبط الخلفية {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': ألوان
-            '"squiggles"': سكويغلز
-            '"space"': الفضاء
-            '"stars"': نجوم
+            '"blooming"': مزهر
+            '"bubbles"': فقاعات
+            '"clouds"': غائم
+            '"confetti"': قصاصات من الورق
             '"darkCircles"': خافت
             '"fadeColors"': ثلجي
-            '"blooming"': مزهر
-            '"ripples"': تموجات
-            '"clouds"': غائم
+            '"hearts"': قلوب
+            '"space"': الفضاء
             '"rain"': مطر
-            '"bubbles"': فقاعات
-            '"confetti"': قصاصات من الورق
-            '"hearts"': قلوب ملونة
+            '"ripples"': تموجات
+            '"colors"': ألوان
+            '"stars"': نجوم
+            '"squiggles"': سكويغلز
           PALETTE:
-            '"rainbow"': ألوان
-            '"grayscale"': رمادي
-            '"sky"': سماوي
+            '"autumn"': الخريف
             '"sunrise"': الفجر
             '"sunset"': الغسق
+            '"grayscale"': رمادي
+            '"rainbow"': قوس قزح
+            '"roses"': الورود
+            '"sky"': سماوي
             '"spring"': الربيع
             '"summer"': الصيف
-            '"autumn"': الخريف
             '"winter"': الشتاء
-            '"roses"': الورود
       Poetry_setBackgroundImageAs:
         text: تعيين الخلفية إلى {IMG}
       Poetry_setFont:
@@ -1924,23 +1928,23 @@ ar:
         options:
           FONT:
             '"Arial"': هوائي
+            '"Arial Black"': هوائي أسود
+            '"Courier"': الساعي
+            '"Cursive"': الكتابة اليدوية
+            '"Impact"': التأثير
             '"Georgia"': جورجيا
             '"Times"': المرات
-            '"Courier"': الساعي
-            '"Arial Black"': هوائي أسود
-            '"Impact"': التأثير
-            '"Cursive"': الكتابة اليدوية
       Poetry_setFontColor:
         text: ضبط لون النص {FILL}
       Poetry_setForegroundEffect:
         text: عمل {EFFECT} تأثير
         options:
           EFFECT:
-            '"rain"': مطر
             '"bubbles"': فقاعات
-            '"hearts"': قلوب ملونة
-            '"emojis"': رموز تعبيرية سعيدة
             '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب
+            '"emojis"': رموز تعبيرية سعيدة
+            '"rain"': مطر
             '"starburst"': النجمي
             '"glass"': زجاج محطم
             '"twinkling"': وميض
@@ -1956,11 +1960,11 @@ ar:
         options:
           EFFECT:
             '"fade"': باهت
-            '"typewriter"': آلة كاتبة
             '"flyLeft"': تحليق من اليسار
             '"flyRight"': تحليق من اليمين
             '"flyTop"': تحليق من الأعلى
             '"flyBottom"': تحليق من الأسفل
+            '"typewriter"': آلة كاتبة
       Poetry_setTitle:
         text: تحديد العنوان {TITLE}
       Poetry_showText:
@@ -1969,30 +1973,22 @@ ar:
         text: 'النقش المتحرك {ANIMATION_NAME} يبدا {BEHAVIOR} '
         options:
           BEHAVIOR:
-            growing: النمو
-            jittering: الاهتزاز
-            moving_north_and_looping: الدوران ناحية الشمال
-            moving_south_and_looping: الدوران ناحية الجنوب
-            moving_east_and_looping: الدوران ناحية الشرق
-            moving_west_and_looping: الدوران ناحية الغرب
-            shrinking: الانقباض
-            spinning_left: الدوران ناحية اليسار
-            spinning_right: الدوران ناحية اليمين
-            wandering: التحرك
+            '"growing"': النمو
+            '"jittering"': الاهتزاز
+            '"shrinking"': الانقباض
+            '"spinning_left"': الدوران ناحية اليسار
+            '"spinning_right"': الدوران ناحية اليمين
+            '"wandering"': التحرك
       Poetry_stopBehavior:
         text: 'النقش المتحرك {ANIMATION_NAME} يتوقف {BEHAVIOR} '
         options:
           BEHAVIOR:
-            growing: النمو
-            jittering: الاهتزاز
-            moving_north_and_looping: الدوران ناحية الشمال
-            moving_south_and_looping: الدوران ناحية الجنوب
-            moving_east_and_looping: الدوران ناحية الشرق
-            moving_west_and_looping: الدوران ناحية الغرب
-            shrinking: الانقباض
-            spinning_left: الدوران ناحية اليسار
-            spinning_right: الدوران ناحية اليمين
-            wandering: التحرك
+            '"growing"': النمو
+            '"jittering"': الاهتزاز
+            '"shrinking"': الانقباض
+            '"spinning_left"': الدوران ناحية اليسار
+            '"spinning_right"': الدوران ناحية اليمين
+            '"wandering"': التحرك
             '"all"': "--جميع السلوكيات--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

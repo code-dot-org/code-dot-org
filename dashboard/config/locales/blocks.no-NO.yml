@@ -1379,38 +1379,48 @@
       Poetry_addFrame:
         options:
           BRUSH:
-            '"hearts"': Hjerter
+            '"hearts"': hjerter
             '"iceCream"': Iskrem
-            '"rainbow"': Regnbue
-            '"stars"': Stjerner
+            '"rainbow"': regnbue
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': regn
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': natt
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': sakte
       Poetry_playSound:
         text: spillLyd {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lys
+            '"sound://category_bell/long_bell_notification.mp3"': Bjelle
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bobble
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Hopp
       Poetry_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Farger
-            '"space"': Verdensrom
-            '"stars"': Stjerner
-            '"rain"': Regn
             '"bubbles"': Bobler
+            '"clouds"': overskyet
             '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"space"': Verdensrom
+            '"rain"': regn
+            '"colors"': Farger
+            '"stars"': Stjerner
           PALETTE:
-            '"rainbow"': Regnbue
+            '"rainbow"': regnbue
+            '"winter"': vinter
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Regn
             '"bubbles"': Bobler
             '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
       Poetry_whenLineShows:
         options:
           N:

@@ -2,5 +2,6 @@
   "key": "countByAnimation",
   "name": "countByAnimation",
   "category": "Sprites",
+  "block_name": "gamelab_countByAnimation",
   "syntax": "countByAnimation"
 }

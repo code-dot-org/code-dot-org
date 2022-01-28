@@ -1107,10 +1107,7 @@ te:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"hearts"': హార్ట్స్
             '"iceCream"': ఐస్ క్రీమ్
-            '"rainbow"': రెయిన్‌బో
-            '"stars"': స్టార్స్
       Poetry_playMusic:
         options:
           SOUND:
@@ -1133,7 +1130,6 @@ te:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ఫెయిల్
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': ఫ్లట్టర్
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': జంప్
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': లైట్
             '"sound://category_poof/puzzle_game_poof_04.mp3"': పూఫ్
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': స్కాన్
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': వైబ్రేంట్
@@ -1145,18 +1141,14 @@ te:
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': రంగులు
-            '"space"': స్పేస్
-            '"stars"': స్టార్స్
-            '"rain"': రెయిన్
             '"bubbles"': బబ్బుల్స్
             '"confetti"': కన్ఫెట్టీ
-          PALETTE:
-            '"rainbow"': రెయిన్‌బో
+            '"space"': స్పేస్
+            '"colors"': రంగులు
+            '"stars"': స్టార్స్
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': రెయిన్
             '"bubbles"': బబ్బుల్స్
             '"confetti"': కన్ఫెట్టీ
       Poetry_whenLineShows:

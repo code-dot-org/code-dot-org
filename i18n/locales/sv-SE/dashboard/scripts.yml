@@ -3492,6 +3492,10 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3714,9 +3718,6 @@ sv:
             Assessment Day:
               description_student: I den här studieenheten använde du ”matrislistor” för att lagra programdata och skilja på när du ska använda 1D- och 2D-matriser respektive ”matrislistor”. Du utforskade fördelarna och funktionaliteten med en ”matrislistor”, och använde dessa för att lösa problem som involverar numeriska data och objektdata. Du använde metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen från användar- och filindata. Under hela studieenheten skrev du programdokumentation med kommentarer på en enskild rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade och dokumenterade du förvillkor och eftervillkor för objekt och metoder. Nu utvärderar du hur väl du har uppnått studieenhetens lärandemål och färdigheter i en utvärdering med flervalsalternativ.
               description_teacher: I den här studieenheten använde eleverna ”matrislistor” för att lagra programdata och skilja på när de ska använda 1D- och 2D-matriser respektive ”matrislistor”. Eleverna utforskade fördelarna och funktionaliteten med en ”matrislistor”, och använde dessa för att lösa problem som involverar numeriska data och objektdata. De använde metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen från användar- och filindata. Under hela studieenheten skrev eleverna programdokumentation med kommentarer på en enskild rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade och dokumenterade eleverna förvillkor och eftervillkor för objekt och metoder. Nu utvärderar de hur väl de har uppnått studieenhetens lärandemål och färdigheter i en utvärdering med flervalsalternativ.
-            lesson-1:
-              description_student: De projekt du har utvecklat under kursen har inspirerat till mycket kreativitet i samhället! En kvartersfest kommer att hållas för att visa upp kreativa berättelser, manus, sångtexter, brev och dikter. Kvartersfesten är ett stort projekt som du arbetar med i hela studieenheten, och projektledningsstrategier hjälper till att organisera och strukturera ditt arbete. Du utforskar strategier för att skriva och strukturera kod så att andra mjukvaruingenjörer enkelt kan förstå och använda ett Java-verktyg för att skapa programdokumentation.
-              description_teacher: Eleverna introduceras till kvartersfestprojektet och utvärderar krav och exempel för att identifiera frågor och nyckelfunktioner. Innan de börjar arbeta med projektet fördjupar eleverna sin förståelse av programstruktur och kommenterar genom att identifiera bästa praxis och utforska användningen av Javadocs för att generera programdokumentation.
             lesson-2:
               description_student: Du konstruerar ”heltal” och ”dubbla” objekt som representerar ”hela” och ”dubbla” primitiva värden som referensvärden. Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar du värdena som dessa objekt lagrar som primitiva värden. Du utforskar även de lägsta och högsta värdena för heltal för att undvika spillfel innan du planerar de uppgifter du behöver slutföra för ditt kvartersfestprojekt.
               description_teacher: Eleverna konstruerar ”heltal” och ”dubbla” objekt som representerar ”hela” och ”dubbla” primitiva värden som referensvärden. Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar studenterna värdena som dessa objekt lagrar som primitiva värden. Studenterna utforskar även de lägsta och högsta värdena för heltal för att undvika spillfel innan de planerar de uppgifter de behöver slutföra för sitt kvartersfestprojekt.
@@ -3784,3 +3785,34 @@ sv:
           lessons:
             lesson-1:
               name: Stavnings-bi
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Kvartersfestprojekt – Dag 1
+            lesson-12:
+              name: Kvartersfestprojekt – Dag 2
+            lesson-13:
+              name: Kvartersfestprojekt – Dag 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Utbrottssimulator
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll

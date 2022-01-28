@@ -931,38 +931,27 @@ dv:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': ފްލާވަރ - މައު
-            '"hearts"': ހާރޓްސް
             '"iceCream"': އައިސްކްރީމް
-            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
-            '"stars"': ސްޓަރ - ތަރި
-            '"waves"': ވޭވްސް
-      Poetry_playSound:
+      Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ލައިޓް - އަލި
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ލަސް
       Poetry_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': ކުލަ
-            '"squiggles"': ސްކުއިގްލްސް
-            '"space"': ސްޕޭސް
-            '"stars"': ސްޓަރ - ތަރި
-            '"ripples"': ރިޕްލްސް
-            '"rain"': ރެއިން - ވިއްސާރަ
             '"bubbles"': ބަބްލްސް
             '"confetti"': ކޮންފެޓީ
-            '"hearts"': ކުލަކުލައިގެ ހިތް
-          PALETTE:
-            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"space"': ސްޕޭސް
+            '"ripples"': ރިޕްލްސް
+            '"colors"': ކުލަ
+            '"stars"': ސްޓަރ - ތަރި
+            '"squiggles"': ސްކުއިގްލްސް
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': ރެއިން - ވިއްސާރަ
             '"bubbles"': ބަބްލްސް
-            '"hearts"': ކުލަކުލައިގެ ހިތް
             '"confetti"': ކޮންފެޓީ
             '"starburst"': ސްޓަރ ބަރސްޓް
       Poetry_whenLineShows:

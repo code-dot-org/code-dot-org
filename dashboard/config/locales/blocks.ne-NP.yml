@@ -691,6 +691,31 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': hearts
+            '"rainbow"': इन्द्रणी
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': राति
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': jump
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': बादल लागेको
+            '"hearts"': hearts
+          PALETTE:
+            '"rainbow"': इन्द्रणी
+            '"winter"': चिसो
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

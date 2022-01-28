@@ -2,5 +2,6 @@
   "key": "codestudio_string",
   "name": "text",
   "category": "Text",
+  "block_name": "text",
   "syntax": "text"
 }

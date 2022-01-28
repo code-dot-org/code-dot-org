@@ -1356,43 +1356,47 @@ mi:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Putiputi
-            '"hearts"': Ngā Manawa
+            '"hearts"': ngā manawa
             '"iceCream"': Aihikirīmi
-            '"rainbow"': Āniwaniwa
-            '"stars"': Ngā Whetū
-            '"waves"': Ngaru
+            '"rainbow"': kahukura
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': ua
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': pō
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': pōturi
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Rama
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': peke
       Poetry_setBackground:
         text: kowhiri te tae papamuri {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Tae
-            '"squiggles"': Ngā Koropikopiko
-            '"space"': Tuarangi
-            '"stars"': Ngā Whetū
-            '"ripples"': Ngā Pungarungaru
-            '"rain"': Ua
             '"bubbles"': Ngā mirumiru
+            '"clouds"': kāpuapua
             '"confetti"': Pepa tae iti
-            '"hearts"': Manawa Tae
+            '"hearts"': ngā manawa
+            '"space"': Tuarangi
+            '"rain"': ua
+            '"ripples"': Ngā Pungarungaru
+            '"colors"': Tae
+            '"stars"': Ngā Whetū
+            '"squiggles"': Ngā Koropikopiko
           PALETTE:
-            '"rainbow"': Āniwaniwa
+            '"rainbow"': kahukura
+            '"winter"': hōtoke
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Ua
             '"bubbles"': Ngā mirumiru
-            '"hearts"': Manawa Tae
             '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
             '"starburst"': Pāpahu Whetū
       Poetry_whenLineShows:
         options:

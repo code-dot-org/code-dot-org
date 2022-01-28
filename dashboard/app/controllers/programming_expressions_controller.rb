@@ -78,6 +78,7 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,
+      :block_name,
       :category,
       :video_key,
       :image_url,

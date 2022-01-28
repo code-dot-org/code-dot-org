@@ -419,6 +419,7 @@ nl:
       prizes_link: 'Meer info'
   teacher:
     answer: Antwoord
+    dashboard: 'Dashboard Leerkrachten'
     for_teachers_only: Alleen Voor Leraren
     title:
       one: 'Je leraar:'

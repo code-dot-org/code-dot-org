@@ -2,5 +2,6 @@
   "key": "codestudio_arithmeticOperator",
   "name": "math_arithmetic",
   "category": "Math",
+  "block_name": "math_arithmetic",
   "syntax": "math_arithmetic"
 }

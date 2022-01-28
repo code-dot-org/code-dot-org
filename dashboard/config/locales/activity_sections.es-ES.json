@@ -181,6 +181,7 @@
           "description": "**Leer poesía juntos:** Leer [algunos poemas](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Arte del Poema",
           "description": "#### Apoyo general\n\nAl final de esta actividad, los alumnos tendrán un poema animado que represente su interpretación visual del poema que eligieron. Esta lección está diseñada para que los alumnos tengan la oportunidad de jugar con su código y encontrar los efectos visuales que más les gusten. \n\nMientras dan vueltas por la sala, anima a los alumnos a:\n\n-   **Tómate tu tiempo:** La mayoría de los niveles requieren que los estudiantes encuentren los efectos perfectos que coincidan con su interpretación del estado de ánimo del poema. Es muy recomendable que se queden en un nivel y jueguen con su código. \n\n-   **Encuentra un poema que te guste:** El poema que se muestra para un estudiante en un nuevo nivel es sólo una sugerencia. Hay un menú desplegable con poemas precargados en la parte superior del espacio de juego. Pide a los alumnos que lean algunos y encuentren uno que les llame la atención. A continuación, pueden empezar a animar el poema que han elegido con el código. \n\n-   **Muestra un nivel completado:** Cualquier esfera de nivel que esté completamente verde significa que el estudiante ha completado con éxito todos los requisitos de ese nivel. Pide al alumno que haga clic en una esfera verde para mostrar lo que ha creado. \n\nPara los momentos en que un estudiante se siente atascado: \n\n-   **Lee las instrucciones:** Las instrucciones son puntos con viñetas sobre cómo completar el nivel. Si un estudiante se siente atascado, pídele que te lea las instrucciones en voz alta y dile que repita lo que dicen las instrucciones con sus propias palabras. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Los alumnos también pueden hacer clic en este icono de texto a voz para escuchar las instrucciones leídas en voz alta.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Busca pistas**: La mayoría de los niveles incluyen al menos una pista con detalles más explícitos sobre cómo superar el nivel. \n-   **Celebra los errores:** Tener un error en tu código es una parte natural del proceso de codificación. Si el programa no está haciendo lo que esperaban, pídele al alumno que primero te diga lo que quiere que suceda, haz clic en ejecutar para observar lo que realmente está sucediendo, y luego encuentra el lugar en su código que causó la discrepancia. Recuerda celebrar el hecho de haber encontrado y solucionado errores. Encontrar un error significa que los estudiantes están haciendo un gran trabajo construyendo un programa más complejo. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
@@ -424,6 +425,10 @@
           "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
         },
@@ -609,6 +614,10 @@
           "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
+        },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
         },
@@ -716,6 +725,25 @@
         "66d1a328-68c1-4006-b013-4d42e91c7360": {
           "description": "-   Pide a los estudiantes que hagan clic en la siguiente esfera para ver la versión de análisis de frecuencia del widget. (Debería parecerse a la pantalla que se muestra a continuación)\n\n**Objetivo:** deja que los estudiantes exploren durante **5-10** minutos para ver si pueden descubrir lo que la herramienta les muestra y les permite hacer.  \n\nLas tareas previstas para los estudiantes en code studio son:\n\n-   Averiguar qué ocurre en esta nueva versión de la herramienta\n-   ¿Qué información se les presenta?\n-   Averiguar lo que la herramienta les permite hacer\n-   Como siempre: no puedes romperla.  Así que haz clic en las cosas, hurga en ellas.\n-   Si lo descubres, podrás descifrar un mensaje codificado con una sustitución aleatoria.\n\n![](csp/U4L05-freqanalysis-screencap.png)\n\n-   **Después de un tiempo de exploración reagrupa** para aclarar qué es la herramienta y cómo funciona.\n\n-   Si es necesario, señala a los alumnos que el siguiente nivel de Code Studio (el que sigue a la herramienta de análisis de frecuencias) explica un poco cómo funciona el análisis de frecuencias y sugiere algunas estrategias para empezar. \n\n**Da a los estudiantes unos 15-20 minutos para descifrar uno de los mensajes.**\n\n-   Si terminan hay más para probar.  \n-   Los estudiantes pueden introducir sus propios mensajes, hacer una sustitución aleatoria para encriptarlo, luego copiar/pegar la versión encriptada y ver si un amigo puede descifrarla. \n-   Es posible llegar a ser bastante competente en el descifrado de estos mensajes con la herramienta."
         },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": "Descifrar un Código César"
+        },
+        "eaccf571-0358-4756-b0c7-2349901065d4": {
+          "progression_name": "Resumen de Terminología"
+        },
+        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
+          "progression_name": "Nuevo Desafío Introducción"
+        },
+        "9ad445d9-3385-460d-97f8-396f069b456d": {
+          "progression_name": "Craqueo de Sustitución Aleatorio"
+        },
+        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
+          "progression_name": "Técnica: Análisis de Frecuencia"
+        },
+        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
+          "name": "Vídeo - Cifrado y Claves Públicas",
+          "progression_name": "Vídeo - Cifrado y Claves Públicas"
+        },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
             "El vídeo reitera una serie de puntos que surgieron en esta lección.\n\nPara terminar, asegúrate de que los alumnos:\n\n**Entienden la relación entre las claves criptográficas y las contraseñas.**\n\n-   Una _clave_ es una entrada para un algoritmo de cifrado.  Una contraseña es básicamente lo mismo.\n\n**Comprenden por qué usar contraseñas más largas hace que sean más difíciles de adivinar.**\n\n-   Las contraseñas más largas aumentan el número de claves posibles, lo que hace que sea **difícilmente** adivinar cuál es la clave.\t"
@@ -750,6 +778,10 @@
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+        },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
@@ -940,6 +972,10 @@
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
@@ -1143,6 +1179,7 @@
           "description": "Pide a los alumnos que se sienten cerca de ti. Ahora diles que se pongan todos de pie.\n\nDile a los alumnos que lo que acabas de hacer es declarar un evento y una acción. Cuando dices que se sienten, es un evento. La acción que responde a este evento es que la clase se siente. Lo mismo ocurre cuando pides a la clase que se levante. Los eventos y las acciones son fácilmente identificables en nuestras vidas.\n\nAlgunos otros acontecimientos y acciones son\n\n-   Tener hambre y comer\n-   Golpearse el dedo del pie y gritar \"¡Ay!\"\n-   Meter la pelota de baloncesto en la canasta y anotar un punto para tu equipo.\n\nPide a la clase que proponga un par de acontecimientos más. Diles que van a hacer un juego en el que el programa tendrá acciones asociadas a los eventos que codifiquen."
         },
         "41a58fa3-ee0d-46ca-be76-89def06d2062": {
+          "name": "Codifica tu propio Juego de Baloncesto",
           "description": "Desafía a tus alumnos a completar esta actividad [Codifica tu Propio Juego de Baloncesto](https://studio.code.org/s/basketball/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Codifica tu Propio Juego de Baloncesto](https://studio.code.org/s/basketball/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
@@ -1377,7 +1414,8 @@
           "description": "**Debatir:** Comenzando en pequeños grupos y pasando luego a toda la clase, los alumnos comparten sus respuestas.  El objetivo de esta deliberación es llevar a los estudiantes al contexto de la inteligencia artificial en el mundo real.\n\n**Comenta:** _Algunas formas de abordar el sesgo son utilizar un conjunto más grande o más inclusivo de datos de entrenamiento. En la parte final de la actividad vas a enseñar a la inteligencia artificial una palabra que podría interpretarse de diferentes maneras._"
         },
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
-          "description": "#### Nivel 8 - Enseñar a la Inteligencia Artificial una Nueva Palabra\n\nAquí, como antes, los alumnos utilizarán datos de entrenamiento para enseñar a la Inteligencia Artificial a reconocer diferentes tipos de peces. Las palabras de esta lista son intencionadamente más subjetivas que las que los alumnos han visto hasta ahora. Anima a los alumnos a decidir por sí mismos qué hace que un pez parezca \"enfadado\" o \"divertido\". Dos alumnos pueden elegir la misma etiqueta y obtener resultados muy diferentes en función de los rasgos de los peces en los que se hayan centrado. Anima a los alumnos a debatir sus conclusiones entre ellos o a volver a elegir nuevas palabras. Cada estudiante se basará en sus propias opiniones para entrenar a la Inteligencia Artificial, lo que significa que la Inteligencia Artificial aprenderá con los mismos prejuicios que tienen los estudiantes. Cuando los alumnos empiecen a ver el papel que juega su opinión, pídeles que reflexionen sobre si esto es bueno o malo, y cómo se podría solucionar.\n\n**Pregunta abierta:** _¿Cuál es un problema que te preocupa y que la inteligencia artificial podría ayudarte a resolver?_"
+          "description": "#### Nivel 8 - Enseñar a la Inteligencia Artificial una Nueva Palabra\n\nAquí, como antes, los alumnos utilizarán datos de entrenamiento para enseñar a la Inteligencia Artificial a reconocer diferentes tipos de peces. Las palabras de esta lista son intencionadamente más subjetivas que las que los alumnos han visto hasta ahora. Anima a los alumnos a decidir por sí mismos qué hace que un pez parezca \"enfadado\" o \"divertido\". Dos alumnos pueden elegir la misma etiqueta y obtener resultados muy diferentes en función de los rasgos de los peces en los que se hayan centrado. Anima a los alumnos a debatir sus conclusiones entre ellos o a volver a elegir nuevas palabras. Cada estudiante se basará en sus propias opiniones para entrenar a la Inteligencia Artificial, lo que significa que la Inteligencia Artificial aprenderá con los mismos prejuicios que tienen los estudiantes. Cuando los alumnos empiecen a ver el papel que juega su opinión, pídeles que reflexionen sobre si esto es bueno o malo, y cómo se podría solucionar.\n\n**Pregunta abierta:** _¿Cuál es un problema que te preocupa y que la inteligencia artificial podría ayudarte a resolver?_",
+          "progression_name": "Enseñar a la Inteligencia Artificial una Nueva Palabra"
         },
         "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
           "description": "[Print certificates](https://code.org/certificates?script=oceans) para que los alumnos celebren sus logros.\n\nAl final de la lección, anima a los alumnos a visitar [Code.org/learn](http://Code.org/learn), donde podrán obtener ideas para continuar su aventura con la informática."
@@ -1422,6 +1460,9 @@
           "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas][0].  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Hola Mundo"
+        },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
@@ -1431,6 +1472,9 @@
         },
         "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
           "progression_name": "Construir una Interfaz de Usuario con el Modo de Diseño"
+        },
+        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
+          "progression_name": "Eligiendo Buenas Identificaciones"
         },
         "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
           "progression_name": "Responder a las contribuciones de los usuarios"
@@ -1444,12 +1488,40 @@
         "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
           "progression_name": "Usando Getters y Setters"
         },
+        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
+          "progression_name": "getText vs getNumber"
+        },
         "432cf1e5-be20-4ba1-a6b5-617481522694": {
           "progression_name": "obtenerNúmero"
+        },
+        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
+          "progression_name": "setProperty"
         },
         "f090c505-7c09-4e19-bcf4-b219f24eae45": {
           "name": "Propiedades del Elemento \"Pantalla de Usuario\"",
           "progression_name": "Propiedades del Elemento \"Pantalla de Usuario\""
+        },
+        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
+          "progression_name": "Ejemplo de Escape Room"
+        },
+        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
+          "progression_name": "Resumen: Modo de diseño"
+        },
+        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
+          "progression_name": "Resumen: Imágenes"
+        },
+        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
+          "progression_name": "Resumen: onEvent"
+        },
+        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
+          "progression_name": "Resumen: setPosition"
+        },
+        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
+          "progression_name": "Resumen: Sentencias If"
+        },
+        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
+          "name": "Aplicación Final Escape Room ",
+          "progression_name": "Aplicación Final Escape Room "
         },
         "8861ee5b-45f9-4428-a2f7-344e940b4430": {
           "progression_name": "Video: asuntos de las Ciencias de la Computación"
@@ -1844,6 +1916,9 @@
         "74c2ffd9-d39f-40f6-b86a-b3b22f0430d3": {
           "progression_name": "Juego de muestra"
         },
+        "0f38f023-d475-4389-bcce-150972b6e1b7": {
+          "progression_name": "Planifica tu Proyecto"
+        },
         "464831b9-b4dd-4ced-a50a-6b4204d3c843": {
           "progression_name": "Animaciones Multiframe"
         },
@@ -1885,6 +1960,9 @@
         "dc433b08-56bf-4f84-8a15-0646cf34b298": {
           "progression_name": "Resumen de la lección"
         },
+        "d6752180-35a9-4d1f-b5f6-234cea717d67": {
+          "progression_name": "Diseña tu Juego"
+        },
         "d004ae7c-e575-44e3-903d-e65e7d543e9b": {
           "progression_name": "Proyecto - Ejecución en Segundo plano y Variables"
         },
@@ -1904,6 +1982,10 @@
         },
         "3713a54a-d7a0-43e5-9e78-6fd2938d98eb": {
           "progression_name": "Resumen de la lección"
+        },
+        "4982d155-a371-46b1-a85b-e31a7a715f2c": {
+          "name": "Investigación en Innovación",
+          "progression_name": "Investigación en Innovación"
         },
         "96dd6f2e-0a60-40fc-b9b7-40773ccc4039": {
           "progression_name": "Resumen de la lección"
@@ -2019,6 +2101,9 @@
         "90e014bf-0211-4fa7-afab-c8754efde892": {
           "progression_name": "Programa de muestra"
         },
+        "3d7eccb7-d5a1-47bf-a9eb-44cefb698b4a": {
+          "progression_name": "Planifica tu Proyecto"
+        },
         "7a41f30c-554f-4cb4-a10d-8aa3ddfd37d2": {
           "progression_name": "Diseño de pantalla"
         },
@@ -2037,6 +2122,9 @@
         },
         "62402722-68ea-46f9-a126-f91cdef4edf5": {
           "progression_name": "Demo - Capturar error"
+        },
+        "93ae73de-b840-4ca3-aa1d-72407d108a3f": {
+          "progression_name": "Planifica tu Proyecto"
         },
         "a0fb0b5a-6467-404c-927d-a34a13cef6de": {
           "progression_name": "Diseño de pantalla"
@@ -2166,6 +2254,9 @@
         "9970bff6-49d5-4c0d-9ce6-4dfd66cdc24a": {
           "progression_name": "Resumen de la lección"
         },
+        "1f9a7737-aeb5-4e67-b973-f7ffc56f7c55": {
+          "progression_name": "Diseña tu Prototipo"
+        },
         "6c74246c-0b89-4ae5-9ded-fefb997392d7": {
           "progression_name": "Pantalla de Usuario"
         },
@@ -2240,6 +2331,10 @@
         "84094cea-b1f9-4ed8-8a56-6111ed7b3f64": {
           "progression_name": "Resumen de la lección"
         },
+        "8ef900e1-c2c4-444b-8af7-53168ac829e1": {
+          "name": "Resolución de Problemas",
+          "progression_name": "Resolución de Problemas"
+        },
         "f0220f3d-8a24-434d-890e-db4ece0db768": {
           "progression_name": "Resumen de la lección"
         },
@@ -2253,6 +2348,10 @@
         },
         "053cd782-5fe7-4438-b780-a79fb441d383": {
           "progression_name": "Resumen de la lección"
+        },
+        "9608412e-93a7-49c2-bb11-95906561502f": {
+          "name": "Encuesta de Pasteles",
+          "progression_name": "Encuesta de Pasteles"
         },
         "0b21869f-fed5-4d9a-ae12-336c623bf20f": {
           "name": "Resumen de la lección",
@@ -2318,6 +2417,9 @@
         "37c289c0-8359-41dd-a93c-ffc4ebbddc3d": {
           "progression_name": "Resumen de la lección"
         },
+        "c94f593e-4b76-4a2c-9e24-5b06f8c91a47": {
+          "progression_name": "Ejemplos de Tipos de Aplicaciones"
+        },
         "75c655ea-684c-41b8-a9a6-5004023d49a7": {
           "name": "Aplicaciones de demostración",
           "progression_name": "Aplicaciones de demostración"
@@ -2343,6 +2445,9 @@
         },
         "c9aeae9b-309e-464f-a6b9-7ed39e5f3833": {
           "progression_name": "Terminar una pantalla"
+        },
+        "0f071b2f-3a55-4d67-a3a9-1770c5c1456a": {
+          "progression_name": "Diseña una Pantalla para tu Aplicación"
         },
         "aae0a3cd-a0e4-4945-b7fb-f9b4e54cc9c4": {
           "name": "Proyecto de aplicación: diseño de pantalla",
@@ -2392,8 +2497,16 @@
         "a8669b83-40c9-4ca2-b06a-c9c8a84d3ce6": {
           "progression_name": "Resumen de la lección"
         },
+        "205ad491-68ca-460c-93f5-8384b6f44d70": {
+          "name": "Top de Sitios Web",
+          "progression_name": "Top de Sitios Web"
+        },
         "c7d20caa-7535-4a80-aa80-d366665477b9": {
           "progression_name": "Resumen de la lección"
+        },
+        "fc25253c-af43-45ae-8a3a-26330b2135c3": {
+          "name": "Ejemplos de Sitios Web Personales",
+          "progression_name": "Ejemplos de Sitios Web Personales"
         },
         "0b825c84-5262-4bcd-87b1-ee718df381fa": {
           "progression_name": "Resumen de la lección"
@@ -2429,12 +2542,19 @@
         "cb58c4fe-0f83-42a9-ab3b-96dbdcb676fb": {
           "progression_name": "Títulos en HTML"
         },
+        "f7cd8199-4745-4421-937f-e99bfc44e9f6": {
+          "progression_name": "Proceso de Resolución de Problemas de Programación"
+        },
         "119ae877-c310-40c1-b609-1219caf3ce6f": {
           "name": "Tu Sitio Web Personal",
           "progression_name": "Tu Sitio Web Personal"
         },
         "c3f41c2b-e482-413f-9e6f-8c5c2c131f50": {
           "progression_name": "Resumen de la lección"
+        },
+        "88de5450-db07-4123-9f95-38f890e20d4d": {
+          "name": "Investigador Social",
+          "progression_name": "Investigador Social"
         },
         "c097d94c-9bcd-4dae-9377-8317a715350b": {
           "progression_name": "Resumen de la lección"
@@ -2489,6 +2609,9 @@
         },
         "19d5e312-e51e-47f3-9d90-6d1a9c79245f": {
           "progression_name": "Enlaces entre páginas"
+        },
+        "737a9d39-005b-43b5-bd74-4580674f8165": {
+          "progression_name": "Guía de Proyecto"
         },
         "308a55cf-4781-4887-b674-69824882ad64": {
           "progression_name": "Proyecto de Sitio Web"
@@ -3880,6 +4003,9 @@
         "2f731ea3-9491-42f0-aebe-4d8bfb9f8af4": {
           "progression_name": "Juego de muestra"
         },
+        "58eb3ec4-5481-4ed1-b5ca-42c555e2c823": {
+          "progression_name": "Planifica tu Proyecto"
+        },
         "d629a7bc-1321-4196-a016-a953dc0f8201": {
           "progression_name": "Animaciones Multiframe"
         },
@@ -3916,6 +4042,9 @@
         },
         "87acf7e3-8fa0-4952-a0e4-734aac023056": {
           "progression_name": "Resumen de la lección"
+        },
+        "08623cca-a2db-4167-8536-264afced0f82": {
+          "progression_name": "Diseña tu Juego"
         },
         "1958e1d6-72f8-4f47-8ce6-70ec51ac3004": {
           "progression_name": "Proyecto - Ejecución en Segundo plano y Variables"
@@ -4025,6 +4154,9 @@
         "e38ff572-805c-4b0d-8cf6-103f7d71e9cd": {
           "progression_name": "Programa de muestra"
         },
+        "d60814f2-fc93-4ef3-a999-07ce0fc4dea1": {
+          "progression_name": "Planifica tu Proyecto"
+        },
         "afd0e25a-5902-4b4a-87f9-d204f727c570": {
           "progression_name": "Diseño de pantalla"
         },
@@ -4043,6 +4175,9 @@
         },
         "c8b0b613-ef61-4298-bc04-a9c37482c193": {
           "progression_name": "Demo - Capturar error"
+        },
+        "31886f50-3b56-4924-890d-239f39524bb2": {
+          "progression_name": "Planifica tu Proyecto"
         },
         "abe489d2-ece4-47a3-9851-fcc0dd70cbe6": {
           "progression_name": "Diseño de pantalla"
@@ -4179,6 +4314,9 @@
         "2a2384f0-4484-4c89-ab53-0ad76e3ea3d6": {
           "progression_name": "Resumen de la lección"
         },
+        "3136b3b2-33f8-4a93-bd62-30de52ede84c": {
+          "progression_name": "Diseña tu Prototipo"
+        },
         "db6e7fb0-c3b2-447c-87c2-9ae8aaf3bf3a": {
           "progression_name": "Pantalla de Usuario"
         },
@@ -4226,6 +4364,9 @@
         "b1fd42fb-ce26-4f73-a86e-c28d04369c4e": {
           "progression_name": "Resumen de la lección"
         },
+        "278a92f7-2ba4-4bb6-9cbd-0b1a1b1c7a51": {
+          "progression_name": "Ejemplos de Tipos de Aplicaciones"
+        },
         "b5785efd-9e8a-48d7-a5a4-8af4fb5cc2b1": {
           "name": "Aplicaciones de demostración",
           "progression_name": "Aplicaciones de demostración"
@@ -4251,6 +4392,9 @@
         },
         "66fe6772-18ed-429c-927a-b9a919198b60": {
           "progression_name": "Elementos del modo de diseño"
+        },
+        "aeb5b7a3-d7e7-42e4-bc39-c447897cad40": {
+          "progression_name": "Diseña una Pantalla para tu Aplicación"
         },
         "9271144d-1d13-473d-99ba-96efd4b022ea": {
           "name": "Proyecto de aplicación: diseño de pantalla",
@@ -4348,6 +4492,10 @@
         "ab754ae8-ecf8-4997-91c7-2b0223eab31e": {
           "progression_name": "Resumen de la lección"
         },
+        "0b9ac5aa-89ec-4e55-b443-994f8d459487": {
+          "name": "Resolución de Problemas",
+          "progression_name": "Resolución de Problemas"
+        },
         "5e7a9580-cd1c-4700-a7d9-084b7b7eea02": {
           "progression_name": "Resumen de la lección"
         },
@@ -4361,6 +4509,10 @@
         },
         "7f64afe2-30a0-47d0-8c46-2a6451d392d7": {
           "progression_name": "Resumen de la lección"
+        },
+        "50c39425-3842-4145-a778-7b2c59de2164": {
+          "name": "Encuesta de Pasteles",
+          "progression_name": "Encuesta de Pasteles"
         },
         "ed2725a9-55f8-4cc0-8004-c096461fd666": {
           "name": "Resumen de la lección",
@@ -4444,12 +4596,19 @@
         "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5": {
           "progression_name": "Títulos en HTML"
         },
+        "73085527-63a6-4397-85ee-cd5351ba8bf0": {
+          "progression_name": "Proceso de Resolución de Problemas de Programación"
+        },
         "153d29d2-5ef0-416c-b01c-ddea76493073": {
           "name": "Tu Sitio Web Personal",
           "progression_name": "Tu Sitio Web Personal"
         },
         "4a6905c1-5b88-4beb-af1a-9b5d90235006": {
           "progression_name": "Resumen de la lección"
+        },
+        "ed1c64a1-b450-4f4d-b509-3bc5dfe85c3a": {
+          "name": "Investigador Social",
+          "progression_name": "Investigador Social"
         },
         "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48": {
           "progression_name": "Resumen de la lección"
@@ -4504,6 +4663,9 @@
         },
         "90332559-0ced-42cf-b103-e30e0fc60e83": {
           "progression_name": "Hipervínculos"
+        },
+        "a64ebebb-2737-43a0-b4d8-f7971096b3e0": {
+          "progression_name": "Guía de Proyecto"
         },
         "174b4817-ee38-47a4-be7c-dbf4c4d752ea": {
           "progression_name": "Proyecto de Sitio Web"
@@ -4595,9 +4757,40 @@
         "da39537c-01a9-4613-bc81-c20b9baf0747": {
           "progression_name": "Proyectos de final de curso"
         },
+        "357faa9a-f0a7-4f25-ad8e-44986113a58e": {
+          "progression_name": "InspirationalArtwork"
+        },
+        "373389ef-39f0-432b-a812-bf884b581644": {
+          "progression_name": "FoodFight"
+        },
+        "e864376e-6189-4e40-aeeb-cf14a6959773": {
+          "progression_name": "Adivina el Número"
+        },
+        "2a4fff7a-2742-430a-a17d-971c6f2db713": {
+          "name": "Elige tu Propia Aventura",
+          "progression_name": "Elige tu Propia Aventura"
+        },
         "a66e8ec0-572b-44e2-9069-dd3bdddcded2": {
           "name": "Empieza a planificar tu proyecto",
           "progression_name": "Empieza a planificar tu proyecto"
+        },
+        "3e46807c-bd15-43b1-937f-defdb5fd6c35": {
+          "progression_name": "Curso F: Proyecto de Artista"
+        },
+        "e4e7b917-90a1-41c2-80d6-8986855a99d3": {
+          "name": "Curso F: Proyecto en Laboratorio de Juegos",
+          "progression_name": "Curso F: Proyecto en Laboratorio de Juegos"
+        },
+        "e52dc608-4bbb-4074-95ea-73a135d6c7a3": {
+          "progression_name": "Curso F: Proyecto de Artista - Revisión"
+        },
+        "7097cfbe-a3c3-433d-9481-b9850fc6fb7f": {
+          "name": "Curso F: Proyecto en Laboratorio de Juegos - Revisión",
+          "progression_name": "Curso F: Proyecto en Laboratorio de Juegos - Revisión"
+        },
+        "e6e6a6fe-4dbd-4a8d-a42c-e9d7df871b50": {
+          "name": "Prepara tu presentación",
+          "progression_name": "Prepara tu presentación"
         },
         "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
           "progression_name": "Proyectos de final de curso"
@@ -4611,20 +4804,62 @@
         "f147a0c8-7d8f-4acd-a8d7-feb39d52e0ab": {
           "progression_name": "Defensor alienígena"
         },
+        "32a51e92-3a93-420b-bd49-f21f36867c89": {
+          "name": "Encuentra el Asistente",
+          "progression_name": "Encuentra el Asistente"
+        },
         "4db4c162-d334-4c10-99d1-cdd9aa2bdbb8": {
           "name": "Empieza a planificar tu proyecto",
           "progression_name": "Empieza a planificar tu proyecto"
+        },
+        "d3394e13-b9ef-4395-8873-711308f134d2": {
+          "progression_name": "Curso E: Proyecto en Laboratorio de Juegos"
         },
         "a78fef77-4dfa-4b0a-9034-948d959a70a9": {
           "name": "Proyecto de Artista del Curso E",
           "progression_name": "Proyecto de Artista del Curso E"
         },
+        "4d8a8f77-c0d4-42d9-ab75-9273ed99562c": {
+          "name": "Prepara tu presentación",
+          "progression_name": "Prepara tu presentación"
+        },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "Proyectos de final de curso"
+        },
+        "53425b1d-2f48-4630-8200-e5b9e276dbe3": {
+          "progression_name": "InspirationalArtwork"
+        },
+        "02801c1c-0447-4bf9-b47f-d9deabdeab3d": {
+          "progression_name": "FoodFight"
+        },
+        "f95bf194-f262-4523-9260-a440078013b5": {
+          "progression_name": "Adivina el Número"
+        },
+        "74f741d0-5df0-4813-a002-03d78ee8e56d": {
+          "name": "Elige tu Propia Aventura",
+          "progression_name": "Elige tu Propia Aventura"
         },
         "ed74084a-54be-443d-a9c8-d998da62ce9a": {
           "name": "Empieza a planificar tu proyecto",
           "progression_name": "Empieza a planificar tu proyecto"
+        },
+        "aaecdd68-26fd-47df-a470-f8519163ca38": {
+          "progression_name": "Curso F: Proyecto de Artista"
+        },
+        "24c9e448-a709-4d7f-9c00-8ec34ca7fd86": {
+          "name": "Curso F: Proyecto en Laboratorio de Juegos",
+          "progression_name": "Curso F: Proyecto en Laboratorio de Juegos"
+        },
+        "c1cc4a9a-7944-444f-8286-a57955c768b8": {
+          "progression_name": "Curso F: Proyecto de Artista - Revisión"
+        },
+        "2423f0a7-e415-4f4c-83d0-a6ff79c67ff3": {
+          "name": "Curso F: Proyecto en Laboratorio de Juegos - Revisión",
+          "progression_name": "Curso F: Proyecto en Laboratorio de Juegos - Revisión"
+        },
+        "5ccce1a2-deb4-444d-ae0b-2aab8d25f5d9": {
+          "name": "Prepara tu presentación",
+          "progression_name": "Prepara tu presentación"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Resumen de la lección"
@@ -4871,6 +5106,9 @@
         "10190642-0377-4c55-8765-98079f117209": {
           "progression_name": "Resumen de la lección"
         },
+        "f83be689-77ef-49ee-9088-630893d4d087": {
+          "progression_name": "CSD U3 Ejemplo de Tarjeta Interactiva"
+        },
         "83a1fd2c-8a1e-470d-8036-d1cd88d0ef0f": {
           "progression_name": "Trabajo del proyecto"
         },
@@ -4976,6 +5214,9 @@
         "46103cd2-4b16-40b6-8d34-4d6b489b0997": {
           "progression_name": "Juego de muestra"
         },
+        "d3c8806b-af64-4d22-bf9c-bb0833e8090a": {
+          "progression_name": "Planifica tu Proyecto"
+        },
         "875e0e8b-955a-4e86-b112-ec188da3f859": {
           "progression_name": "Animaciones Multiframe"
         },
@@ -4988,6 +5229,9 @@
         },
         "9c5d42f3-e87b-4daf-b59a-6347e1db3ef2": {
           "progression_name": "Muestra del juego de salto de plataformas"
+        },
+        "c0b2cd82-e34b-4bbb-8b26-75b03b5635c9": {
+          "progression_name": "CSD U3 presentación de la plataforma"
         },
         "576b2ab7-9aa4-4fe8-a151-12dbb21757d3": {
           "progression_name": "Plataforma de Salto - Antecedentes y variables"
@@ -5013,6 +5257,9 @@
         },
         "16b79375-6e47-4ee4-8365-b12e696ff9ae": {
           "progression_name": "Resumen de la lección"
+        },
+        "f21f60a0-e07b-48b7-a2e9-78a0e2dd183d": {
+          "progression_name": "Diseña tu Juego"
         },
         "3f841276-73d0-468e-9e93-873549d759db": {
           "progression_name": "Proyecto - Ejecución en Segundo plano y Variables"
@@ -5147,6 +5394,9 @@
         "a9308f2f-a6fb-4a3a-b4be-6beda7bd9bb9": {
           "progression_name": "Programa de muestra"
         },
+        "4814cffc-6d24-4288-80fe-7747c340b1d0": {
+          "progression_name": "Planifica tu Proyecto"
+        },
         "38a9ebbc-121a-48e8-b924-09d0468fa8e2": {
           "progression_name": "Diseño de pantalla"
         },
@@ -5165,6 +5415,9 @@
         },
         "0d5acbc8-85f9-4394-b143-e814e96ccf19": {
           "progression_name": "Demo - Capturar error"
+        },
+        "c1f0a8cd-135b-452f-9c9a-ac38cbe0bca0": {
+          "progression_name": "Planifica tu Proyecto"
         },
         "cd1e167a-ff9b-4183-aaaf-2fc3cb4ca719": {
           "progression_name": "Diseño de pantalla"
@@ -5232,6 +5485,9 @@
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
           "progression_name": "Bucles Para"
         },
+        "e8c311fc-2914-40b2-92c0-d15195772399": {
+          "progression_name": "CSD: Bucles For"
+        },
         "2b5209d7-f495-4e26-b2af-8b639c085bca": {
           "progression_name": "Bucles Para"
         },
@@ -5296,6 +5552,9 @@
         "aed682ed-9861-4d1d-a9f5-21ee3c69d68d": {
           "progression_name": "Resumen de la lección"
         },
+        "b1a2acc2-c14c-46e0-a26d-5a58d5771f98": {
+          "progression_name": "Diseña tu Prototipo"
+        },
         "a7b965db-8b29-4d31-9094-5ddf16a16dc8": {
           "progression_name": "Pantalla de Usuario"
         },
@@ -5311,6 +5570,10 @@
         },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "Resumen de la lección"
+        },
+        "114b3fc3-3b32-4fb0-808b-aa1649d75999": {
+          "name": "Ejemplos de Sitios Web Personales",
+          "progression_name": "Ejemplos de Sitios Web Personales"
         },
         "a35f53b0-111a-45f1-bfdb-73526ec7ffe5": {
           "progression_name": "Resumen de la lección"
@@ -5346,12 +5609,19 @@
         "a3ffb577-3bba-4e37-8327-23c0ef4ec42b": {
           "progression_name": "Títulos en HTML"
         },
+        "dc573c13-539d-4a16-a222-f64103330c3f": {
+          "progression_name": "Proceso de Resolución de Problemas de Programación"
+        },
         "d5facfa9-5ab2-48cc-bce2-07f35f1d3fba": {
           "name": "Tu Sitio Web Personal",
           "progression_name": "Tu Sitio Web Personal"
         },
         "79b3bea8-73e0-4378-badf-b239d4889c59": {
           "progression_name": "Resumen de la lección"
+        },
+        "d710e35d-c4c2-4876-ad44-f97a105ab942": {
+          "name": "Investigador Social",
+          "progression_name": "Investigador Social"
         },
         "606fd2c3-61a9-4e80-aa77-f524f735061b": {
           "progression_name": "Resumen de la lección"
@@ -5406,6 +5676,9 @@
         },
         "c5b718bd-fff4-43a3-b507-2d4584fd69e4": {
           "progression_name": "Enlaces entre páginas"
+        },
+        "cb0106eb-31ae-4c7c-bb6c-00ae7a829cfa": {
+          "progression_name": "Guía de Proyecto"
         },
         "5b3e0fbb-5198-4d7c-af25-62102d190e8c": {
           "progression_name": "Proyecto de Sitio Web"
@@ -5586,6 +5859,10 @@
         "11c25022-a283-488e-9952-4d58bd243a7e": {
           "progression_name": "Vista previa"
         },
+        "20b2a6ec-52cb-4968-b4d8-cc8ef920d6cb": {
+          "name": "Resolución de Problemas",
+          "progression_name": "Resolución de Problemas"
+        },
         "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
           "progression_name": "Vista previa"
         },
@@ -5599,6 +5876,17 @@
         },
         "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
           "progression_name": "Vista previa"
+        },
+        "6ac2bf23-0b34-4e13-8023-c8c436048d54": {
+          "name": "Encuesta de Pasteles",
+          "progression_name": "Encuesta de Pasteles"
+        },
+        "45dd29f0-3c44-4c1c-b881-ec8b1dc8e1cf": {
+          "name": "Resumen del Nivel",
+          "progression_name": "Resumen del Nivel"
+        },
+        "b62f56a9-77ac-4198-9f78-add3df2dc0c3": {
+          "progression_name": "Resumen del Nivel"
         },
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "Reflexión",
@@ -5642,6 +5930,9 @@
         "6f8f6475-93f8-4c8d-91e0-258ecf76ac6f": {
           "progression_name": "Resumen de la lección"
         },
+        "7e52b764-7b7d-47c6-9291-8a61a9f5cd22": {
+          "progression_name": "Ejemplos de Tipos de Aplicaciones"
+        },
         "858107cb-9f3a-4a39-a845-057b8c45b744": {
           "name": "Aplicaciones de demostración",
           "progression_name": "Aplicaciones de demostración"
@@ -5667,6 +5958,9 @@
         },
         "ad8ad0ce-2019-4cf1-acca-0dde36b01d55": {
           "progression_name": "Terminar una pantalla"
+        },
+        "616b0860-b4f6-4565-a269-a1b7539a834b": {
+          "progression_name": "Diseña una Pantalla para tu Aplicación"
         },
         "023b14b7-4298-426c-bbc3-2d60a52f08c1": {
           "name": "Proyecto de aplicación: diseño de pantalla",
@@ -5728,6 +6022,7 @@
           "description": "**Leer poesía juntos:** Leer [algunos poemas](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Arte del Poema",
           "description": "#### Apoyo general\n\nAl final de esta actividad, los alumnos tendrán un poema animado que represente su interpretación visual del poema que eligieron. Esta lección está diseñada para que los alumnos tengan la oportunidad de jugar con su código y encontrar los efectos visuales que más les gusten. \n\nMientras dan vueltas por la sala, anima a los alumnos a:\n\n-   **Tómate tu tiempo:** La mayoría de los niveles requieren que los estudiantes encuentren los efectos perfectos que coincidan con su interpretación del estado de ánimo del poema. Es muy recomendable que se queden en un nivel y jueguen con su código. \n\n-   **Encuentra un poema que te guste:** El poema que se muestra para un estudiante en un nuevo nivel es sólo una sugerencia. Hay un menú desplegable con poemas precargados en la parte superior del espacio de juego. Pide a los alumnos que lean algunos y encuentren uno que les llame la atención. A continuación, pueden empezar a animar el poema que han elegido con el código. \n\n-   **Muestra un nivel completado:** Cualquier esfera de nivel que esté completamente verde significa que el estudiante ha completado con éxito todos los requisitos de ese nivel. Pide al alumno que haga clic en una esfera verde para mostrar lo que ha creado. \n\nPara los momentos en que un estudiante se siente atascado: \n\n-   **Lee las instrucciones:** Las instrucciones son puntos con viñetas sobre cómo completar el nivel. Si un estudiante se siente atascado, pídele que te lea las instrucciones en voz alta y dile que repita lo que dicen las instrucciones con sus propias palabras. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Los alumnos también pueden hacer clic en este icono de texto a voz para escuchar las instrucciones leídas en voz alta.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Busca pistas**: La mayoría de los niveles incluyen al menos una pista con detalles más explícitos sobre cómo superar el nivel. \n-   **Celebra los errores:** Tener un error en tu código es una parte natural del proceso de codificación. Si el programa no está haciendo lo que esperaban, pídele al alumno que primero te diga lo que quiere que suceda, haz clic en ejecutar para observar lo que realmente está sucediendo, y luego encuentra el lugar en su código que causó la discrepancia. Recuerda celebrar el hecho de haber encontrado y solucionado errores. Encontrar un error significa que los estudiantes están haciendo un gran trabajo construyendo un programa más complejo. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {

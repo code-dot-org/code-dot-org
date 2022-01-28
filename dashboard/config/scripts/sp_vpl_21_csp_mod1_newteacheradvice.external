@@ -13,11 +13,11 @@ markdown <<MARKDOWN
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">
-Advice!
+Leverage Code.org and all the materials that they give you. They give you a ton of stuff! They give you slide decks, a full curriculum, lesson plans that include information about what to say, even between the different transitions in the lesson. And they're all structured in such a great way with the warm up, activity, and a wrap up. You might still have to customize the things to make them your own. But it is so much easier to start with Code.org than to start from scratch.
  </p>
 <p style="font-size: 70px; text-align: right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 70px; margin-top: -20px; ">
-Teacher Name (State)
+Eilene Klaka, Washington
 </p>
 
 </div>
@@ -27,10 +27,10 @@ Teacher Name (State)
 
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">Advice!</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">Typically, if you teach [CS Principles] multiple periods, the first period will be a little clunky. But even the second or third time you teach the lesson, it goes really smoothly, and you get a lot more comfortable. So sit with the discomfort, but trust that the lesson is going to work out in the end. And at the end of the lesson, you and the students will be like, "Oh, this makes sense!"</p>
 <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Teacher Name (State)
+Anna Mora, Washington
 </p>
 </div>
 <br>
@@ -38,15 +38,11 @@ Teacher Name (State)
 <div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">Advice!</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">If you happen to be like me, teaching a block schedule, the best thing that I found to do is to condense one or two lessons into one wherever you need to. And as a result, you may need to skip a warm up or skip a wrap up. But once you've gotten the activities in the lesson, so that the students can experience both of them before the end of the block, that's the key.</p>
 
 <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Teacher Name (State)
+Terence Stone, Maryland
 </p>
 </div>
-
-___
-
-## What are you most looking forward to about teaching CS Principles? 
 MARKDOWN

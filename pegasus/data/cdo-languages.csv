@@ -37,6 +37,7 @@ it,it,it,it-IT,Italiano,Italian,TRUE,TRUE,it,Italian,FALSE,TRUE,TRUE,TRUE,FALSE
 ja,ja,ja,ja-JP,日本語,Japanese,TRUE,TRUE,ja,Japanese,TRUE,TRUE,TRUE,TRUE,FALSE
 ka,ka,ka,ka-GE,ქართული,Georgian,TRUE,TRUE,ka,Georgian,TRUE,TRUE,FALSE,TRUE,TRUE
 kk,kk,kk,kk-KZ,Қазақша,Kazakh,TRUE,TRUE,kk,Kazakh,FALSE,FALSE,FALSE,FALSE,TRUE
+kn,kn,kn,kn-IN,ಕನ್ನಡ,Kannada,FALSE,FALSE,kn,Kannada,TRUE,FALSE,FALSE,TRUE,TRUE
 km,km,km,km-KH,ភាសាខ្មែរ,Khmer,TRUE,TRUE,km,Khmer,TRUE,TRUE,FALSE,TRUE,FALSE
 ko,ko,ko,ko-KR,한국어,Korean,TRUE,TRUE,ko,Korean,FALSE,FALSE,TRUE,FALSE,TRUE
 ku,ku,ku,ku-IQ,Kurdí,Kurdish,FALSE,FALSE,ku,Kurdish,FALSE,TRUE,FALSE,TRUE,FALSE
@@ -49,7 +50,7 @@ mn,mn,mn,mn-MN,Монгол хэл,Mongolian,TRUE,FALSE,mn,Mongolian,FALSE,FALSE
 mr,mr,mr,mr-IN,मराठी,Marathi,TRUE,TRUE,mr,Marathi,FALSE,FALSE,FALSE,FALSE,FALSE
 ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay,FALSE,FALSE,FALSE,FALSE,FALSE
 mt,mt,mt,mt-MT,Malti,Maltese,FALSE,FALSE,mt,Maltese,FALSE,FALSE,FALSE,FALSE,FALSE
-my,my,my,my-MM,ဗမာစာ,Burmese,TRUE,FALSE,my,Burmese,FALSE,FALSE,FALSE,FALSE,FALSE
+my,my,my,my-MM,ဗမာစာ,Burmese,TRUE,FALSE,my,Burmese,FALSE,FALSE,FALSE,TRUE,TRUE
 ne,ne,ne,ne-NP,नेपाली,Nepali,FALSE,TRUE,ne-NP,Nepali,TRUE,TRUE,FALSE,FALSE,FALSE
 nl,nl,nl,nl-NL,Nederlands,Dutch,TRUE,TRUE,nl,Dutch,TRUE,TRUE,FALSE,TRUE,TRUE
 nn,nn,nn,nn-NO,Norsk (Nynorsk),Norwegian (Nynorsk),TRUE,TRUE,nn-NO,Norwegian Nynorsk,TRUE,TRUE,TRUE,TRUE,FALSE

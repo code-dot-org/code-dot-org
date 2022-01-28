@@ -98,6 +98,7 @@ ky:
     popup:
       prizes_link: кененирээк
   teacher:
+    dashboard: Мугалимдин тактасы
     panel:
       section: Секция
   user:
