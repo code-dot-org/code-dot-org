@@ -76,11 +76,17 @@
     "project_template_level_name": "courseF_text_choice_template2022",
     "encrypted_examples": "HlnzoQVplrIN7jMuFz9IdEVi99VJJEzJ0G+o+H97NuY7AhKSoe/IZaA6Qjnm\nd4dVHKMN/jf4nzuQveuaBN+llLeCghfsE2St8HbTlXLGheYyL3Cq32Mwg064\nXXt5lA87BBDSyorHlEHuPu00v9aEHQ==\n",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.890+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_freeplay\\\"\"],\"cloned_from\":\"courseF_text_choice_freeplay\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.890+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_freeplay\\\"\"],\"cloned_from\":\"courseF_text_choice_freeplay\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
