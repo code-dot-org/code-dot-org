@@ -69,11 +69,15 @@
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "drmonster",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:39.027+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak4\\\"\"],\"cloned_from\":\"CourseF_outbreak4\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:39.027+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak4\\\"\"],\"cloned_from\":\"CourseF_outbreak4\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

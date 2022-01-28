@@ -48,11 +48,16 @@
     "bubble_choice_description": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
     "show_type_hints": "false",
     "thumbnail_url": "https://images.code.org/bddc60892dd6cdb2de9638f4cca8cbf7-image-1615582133445.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:26.688+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops8_2021\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops8_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:26.688+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops8_2021\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops8_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -68,11 +68,15 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Make a sprite, then change its size and give it a behavior.",
     "instructions_icon": "star",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:49.548+00:00\",\"changed\":[\"cloned from \\\"courseF_events_review\\\"\"],\"cloned_from\":\"courseF_events_review\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:49.548+00:00\",\"changed\":[\"cloned from \\\"courseF_events_review\\\"\"],\"cloned_from\":\"courseF_events_review\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
