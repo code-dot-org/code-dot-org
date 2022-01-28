@@ -407,6 +407,8 @@ Javalab.prototype.onContinue = function(submit) {
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
   if (this.isStartMode) {
+    // If we are in start mode, get both sources and validation so that
+    // levelbuilders can run validation code.
     return getSourcesAndValidation(storeState);
   }
   return getSources(storeState);
