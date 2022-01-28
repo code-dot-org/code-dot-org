@@ -152,6 +152,9 @@ export default class JavabuilderConnection {
       case WebSocketMessageType.SYSTEM_OUT:
         this.onOutputMessage(data.value);
         break;
+      case WebSocketMessageType.TEST_RESULT:
+        this.onOutputMessage(data.value);
+        break;
       case WebSocketMessageType.NEIGHBORHOOD:
       case WebSocketMessageType.THEATER:
       case WebSocketMessageType.PLAYGROUND:
