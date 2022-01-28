@@ -622,11 +622,16 @@ az-AZ:
         - {}
         - {}
         questions:
+        - text: 'Köpək spritinin fırlanması pişik spritinin fırlanmasından azdır?
+
+'
         - {}
         - {}
         - {}
         - {}
-        - {}
+        content1: 'Boolean ifadəsini ingiliscə təsvirə uyğunlaşdırın.
+
+'
       CSD U3 - conditionals - Matching_2018:
         answers:
         - {}
@@ -635,11 +640,16 @@ az-AZ:
         - {}
         - {}
         questions:
+        - text: 'Köpək spritinin fırlanması pişik spritinin fırlanmasından azdır?
+
+'
         - {}
         - {}
         - {}
         - {}
-        - {}
+        content1: 'Boolean ifadəsini ingiliscə təsvirə uyğunlaşdırın.
+
+'
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
         - {}
@@ -648,11 +658,16 @@ az-AZ:
         - {}
         - {}
         questions:
+        - text: 'Köpək spritinin fırlanması pişik spritinin fırlanmasından azdır?
+
+'
         - {}
         - {}
         - {}
         - {}
-        - {}
+        content1: 'Boolean ifadəsini ingiliscə təsvirə uyğunlaşdırın.
+
+'
       CSD U3 Boolean MC:
         answers:
         - text: |-
@@ -1346,42 +1361,60 @@ az-AZ:
             problem var?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
+        - text: Quş donuzdan bir addım geridə qalacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
+            nə olacaq? '
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
+        - text: Quş donuzdan bir addım geridə qalacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
+            nə olacaq? '
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
+        - text: Quş donuzdan bir addım geridə qalacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
+            nə olacaq? '
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - {}
+        - text: Quş donuzdan bir addım geridə qalacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
+            nə olacaq? '
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 hərəkət etməyəcək.
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: Düzgün!
+        - text: BB-8 yalnız bir yerə hərəkət edəcək
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+          feedback: Düzgün!
         - text: Bilmirəm
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
@@ -1390,8 +1423,10 @@ az-AZ:
         answers:
         - text: BB-8 hərəkət etməyəcək.
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: Düzgün!
+        - text: BB-8 yalnız bir yerə hərəkət edəcək
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+          feedback: Düzgün!
         - text: Bilmirəm
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
@@ -1400,8 +1435,10 @@ az-AZ:
         answers:
         - text: BB-8 hərəkət etməyəcək.
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: Düzgün!
+        - text: BB-8 yalnız bir yerə hərəkət edəcək
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+          feedback: Düzgün!
         - text: Bilmirəm
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
@@ -1410,45 +1447,79 @@ az-AZ:
         answers:
         - text: BB-8 hərəkət etməyəcək.
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: Düzgün!
+        - text: BB-8 yalnız bir yerə hərəkət edəcək
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+          feedback: Düzgün!
         - text: Bilmirəm
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
         - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        - text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+          feedback: Düzgün!
+        - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
         - text: Bilmirəm.
+          feedback: Birinci dövrə BB-8-ə yalnız 2 boşluq irəliləməyə imkan verir,
+            o zaman 3 boşluq irəliləməlidir.
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
             nə baş verəcək? '
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        - text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+          feedback: Düzgün!
+        - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
         - text: Bilmirəm.
+          feedback: Birinci dövrə BB-8-ə yalnız 2 boşluq irəliləməyə imkan verir,
+            o zaman 3 boşluq irəliləməlidir.
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
             nə baş verəcək? '
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        - text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+          feedback: Düzgün!
+        - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
         - text: Bilmirəm.
+          feedback: Birinci dövrə BB-8-ə yalnız 2 boşluq irəliləməyə imkan verir,
+            o zaman 3 boşluq irəliləməlidir.
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
             nə baş verəcək? '
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        - text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+          feedback: Düzgün!
+        - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
         - text: Bilmirəm.
+          feedback: Birinci dövrə BB-8-ə yalnız 2 boşluq irəliləməyə imkan verir,
+            o zaman 3 boşluq irəliləməlidir.
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
             nə baş verəcək? '
@@ -1938,36 +2009,61 @@ az-AZ:
             miqdarı dəyişdi. "Çalıştır" düyməsini basdıqda nə olacaq?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - feedback: Yanlış. Biçerdöver qarğıdalıya çatana qədər "yoxla və götür" demir.
-        - feedback: Yanlış. Biçerdöver qarğıdalıya çatana qədər "yoxla və götür" demir.
-        - feedback: Yanlış. Biçerdöver yalnız bir dönüş edir və qarğıdalıda bitir.
-        - feedback: Düzgün!
+        - text: Kombayn iki balqabaq yığacaq.
+          feedback: Yanlış. Biçerdöver qarğıdalıya çatana qədər "yoxla və götür" demir.
+        - text: Kombayn bütün balqabaqları yığacaq.
+          feedback: Yanlış. Biçerdöver qarğıdalıya çatana qədər "yoxla və götür" demir.
+        - text: Kombayn kahı yığacaq.
+          feedback: Yanlış. Biçerdöver yalnız bir dönüş edir və qarğıdalıda bitir.
+        - text: Kombayn qarğıdalı yığacaq.
+          feedback: Düzgün!
         questions:
-        - {}
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Kombayn iki balqabaq yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn bütün balqabaqları yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn kahı yığacaq.
+          feedback: Düzgün!
+        - text: Kombayn qarğıdalı yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
         questions:
-        - {}
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Kombayn iki balqabaq yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn bütün balqabaqları yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn kahı yığacaq.
+          feedback: Düzgün!
+        - text: Kombayn qarğıdalı yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
         questions:
-        - {}
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Kombayn iki balqabaq yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn bütün balqabaqları yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn kahı yığacaq.
+          feedback: Düzgün!
+        - text: Kombayn qarğıdalı yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
         questions:
-        - {}
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -2223,42 +2319,66 @@ az-AZ:
           İstifadəçi hansı mətni daxil etsə, sonra soruş blokunun sonunda göstərilən dəyişənə qeyd olunur. Bu vəziyyətdə, "ad" dəyişənidir.
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Rəssam tapmacanı düzgün həll edəcək.
+          feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+        - text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+          feedback: Düzgün!
+        - text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+          feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+        - text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+          feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
         questions:
-        - {}
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Rəssam tapmacanı düzgün həll edəcək.
+          feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+        - text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+          feedback: Düzgün!
+        - text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+          feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+        - text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+          feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
         questions:
-        - {}
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Rəssam tapmacanı düzgün həll edəcək.
+          feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+        - text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+          feedback: Düzgün!
+        - text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+          feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+        - text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+          feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
         questions:
-        - {}
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Rəssam tapmacanı düzgün həll edəcək.
+          feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+        - text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+          feedback: Düzgün!
+        - text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+          feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+        - text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+          feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
         questions:
-        - {}
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
           feedback: Düzgün!
         - text: Laurel bütün xəzinəni toplayacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Bilmirəm.
           feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
@@ -2267,9 +2387,13 @@ az-AZ:
       grade2_multi_collector_A_predict1_2018:
         answers:
         - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
           feedback: Düzgün!
         - text: Laurel bütün xəzinəni toplayacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Bilmirəm.
           feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
@@ -2277,9 +2401,13 @@ az-AZ:
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
           feedback: Düzgün!
         - text: Laurel bütün xəzinəni toplayacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Bilmirəm.
           feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
@@ -2287,9 +2415,13 @@ az-AZ:
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
           feedback: Düzgün!
         - text: Laurel bütün xəzinəni toplayacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Bilmirəm.
           feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
@@ -2515,7 +2647,8 @@ az-AZ:
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         - text: BB-8 yalnız bir yerə hərəkət edəcək
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - correct: true
+        - text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+          correct: true
           feedback: Düzgün!
         - text: BB-8 cəmi 3 boşluq hərəkət edəcək.
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
@@ -2523,12 +2656,18 @@ az-AZ:
         - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        - text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+          correct: true
           feedback: Düzgün!
+        - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
         - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
             yalnız 2 boşluq irəli getməsinə imkan verir.
-        - {}
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
             nə baş verəcək? '
@@ -2629,7 +2768,10 @@ az-AZ:
           correct: true
           feedback: Düzgün!
         - text: Laurel bütün xəzinəni toplayacaq.
-        - {}
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         questions:
         - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
       CSD U1 Test:
@@ -2675,7 +2817,7 @@ az-AZ:
         teacher_markdown: "* [Veb saytların məqsədi - Nümunə] (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)
           ([PDF] (https://docs.google.com/document/d / 1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A
           / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pc6vbbvvbbvvbbvvbbvvbbvvbbvvb)"
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 L12 Overview:
         markdown: |-
           # Baxış
@@ -2721,7 +2863,7 @@ az-AZ:
           ## Resurslar
 
           * [Şəxsi Veb səhifə Eskiz - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 L3 Overview:
         markdown: |-
           # Baxış
@@ -2742,7 +2884,7 @@ az-AZ:
           * ** [Paraqraf] (// studio.code.org/docs/weblab/P/)** - `<p> </p>`
           * ** [Body] (// studio.code.org/docs/weblab/body/)** - "<body> </body>"
           * ** [Head] (// studio.code.org/docs/weblab/head/)** - "<head> </head>"
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 L4 Overview:
         markdown: |-
           # Baxış
@@ -2755,7 +2897,7 @@ az-AZ:
           ## Təqdim olunan Kod
 
           * ** [Başlıq] (// studio.code.org/docs/weblab/h/)** - "<h1> </h1>"
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 L5 Overview:
         markdown: |-
           # Baxış
@@ -2773,7 +2915,7 @@ az-AZ:
         teacher_markdown: |-
           * [Məxfiliyiniz nə vaxt vacibdir?] (Https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Fəaliyyət Bələdçisi Nümunə ([PDF] (https://docs.google.com / 1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD47xx))
           * [Sosial Sleuth] (https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Fəaliyyət Bələdçisi ([PDF] (https://docs.google.com/document/d/1wbCYX6 -R0xSSOVU-DNA / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 L6 Overview:
         markdown: |-
           # Baxış
@@ -2786,7 +2928,7 @@ az-AZ:
           * ** [Sıralanmamış Siyahı] (// studio.code.org/docs/weblab/ul/)** - "<ul> </ul>"
           * ** [Siyahı Maddəsi] (// studio.code.org/docs/weblab/li/)** - `<li> </li>`
           * ** [Sifariş Siyahısı] (// studio.code.org/docs/weblab/ol/)** - "<ol> </ol>"
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 L7 Overview:
         markdown: |-
           # Baxış
@@ -2825,7 +2967,7 @@ az-AZ:
           ## Təqdim olunan Kod
 
           * ** [Şərh] (// studio.code.org/docs/weblab/comment/)** - `<! - ->`
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 Lesson 9 Overview:
         markdown: |-
           # Baxış
@@ -3291,7 +3433,7 @@ az-AZ:
 
 
           ### Kodunu açmağa kömək etmək üçün hansı məlumatlara ehtiyacınız var?
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U4L01 SFLP:
         markdown: Bu dərsdə istifadəçinin ehtiyaclarına qarşı empatinin,  necə dizayn
           prosesinin kritik bir komponenti olduğunu öyrənəcəksiniz. Sonra bir neçə
@@ -3308,7 +3450,7 @@ az-AZ:
           * [Verilən Təfsir] (https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Fəaliyyət Kılavuzu
           * [Verilənləri şərh etmək] (https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Mənbə
         teacher_markdown: "* Verilənlərin təfsiri - Nümunə ([PDF] (https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD-U5-SFLP ASCII and Binary Representation:
         markdown: |-
           # Baxış
@@ -3720,13 +3862,20 @@ az-AZ:
             sonra nə olacaq? '
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Kombayn iki balqabaq yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn bütün balqabaqları yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn kahı yığacaq.
+          correct: true
           feedback: Düzgün!
-        - {}
+        - text: Kombayn qarğıdalı yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
         questions:
-        - {}
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
       courseE_prediction_artistFunction1_2021:
         answers:
         - {}
@@ -3802,13 +3951,18 @@ az-AZ:
           | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
       coursee_prediction_artistfunction2_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Rəssam tapmacanı düzgün həll edəcək.
+          feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+        - text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+          correct: true
           feedback: Düzgün!
-        - {}
-        - {}
+        - text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+          feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+        - text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+          feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
         questions:
-        - {}
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       csd-post-survey-2018-markdown-with-link-to-survey:
         markdown: |-
           # CS Kəşfləri Kurs Sonrası Anket
@@ -3876,15 +4030,15 @@ az-AZ:
       outbreak_freeplay_choice:
         display_name: Azad Oyna
       Begin planning your project:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Begin planning your project_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Begin planning your project_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Begin planning your project_2018_2019_2020:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U2 Design Project:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Səhifənizi Başlayın
 
@@ -3916,7 +4070,7 @@ az-AZ:
 
           Erkən bitirən tələbələr səhifəyə yeni məzmun əlavə etməyə və ya onlarda olan məzmuna yenidən baxmağa təşviq edilə bilər.
       CSD U2 Design Project_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Səhifənizi Başlayın
 
@@ -3948,7 +4102,7 @@ az-AZ:
 
           Erkən bitirən tələbələr səhifəyə yeni məzmun əlavə etməyə və ya onlarda olan məzmuna yenidən baxmağa təşviq edilə bilər.
       CSD U2 Design Project_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Səhifənizi Başlayın
 
@@ -3980,7 +4134,7 @@ az-AZ:
 
           Erkən bitirən tələbələr səhifəyə yeni məzmun əlavə etməyə və ya onlarda olan məzmuna yenidən baxmağa təşviq edilə bilər.
       CSD U2 expand project:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Veb saytınızı genişləndirmək
 
@@ -4006,7 +4160,7 @@ az-AZ:
           lövhədə göstərilə bilər ki, siz sinif olaraq onların üzərindən keçə biləsiniz.
           Şagirdlərə nümunə veb səhifələrini göstərmək üçün üzərinə klikləyin.
       CSD U2 expand project_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Veb saytınızı genişləndirmək
 
@@ -4032,7 +4186,7 @@ az-AZ:
           lövhədə göstərilə bilər ki, siz sinif olaraq onların üzərindən keçə biləsiniz.
           Şagirdlərə nümunə veb səhifələrini göstərmək üçün üzərinə klikləyin.
       CSD U2 expand project_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Veb saytınızı genişləndirmək
 
@@ -4058,7 +4212,7 @@ az-AZ:
           lövhədə göstərilə bilər ki, siz sinif olaraq onların üzərindən keçə biləsiniz.
           Şagirdlərə nümunə veb səhifələrini göstərmək üçün üzərinə klikləyin.
       CSD U2 project guide:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Şəxsi Vebsaytınız
 
@@ -4084,7 +4238,7 @@ az-AZ:
 
           Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
       CSD U2 project guide_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Şəxsi Vebsaytınız
 
@@ -4110,7 +4264,7 @@ az-AZ:
 
           Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
       CSD U2 project guide_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # Şəxsi Vebsaytınız
 
@@ -4136,39 +4290,125 @@ az-AZ:
 
           Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
       CSD U3 Card Examples_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U3 Card Examples_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U3 combining rep_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          ### Bu ikili sətri deşifrə edə bilərsinizmi?
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?
       CSD U3 combining rep_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          ### Bu ikili sətri deşifrə edə bilərsinizmi?
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?
       CSD U3 game intro:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U3 game intro_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U3 game intro_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U3 platform intro:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U3 platform intro_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U3 platform intro_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U5 Encryption 1:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # İkili sətirlərin dekodlanması
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Kodlaşdırma sistemi:
+
+          ! []
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
+          Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
+          biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
+          nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
       CSD U5 Encryption 1_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # İkili sətirlərin dekodlanması
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Kodlaşdırma sistemi:
+
+          ! []
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
+          Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
+          biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
+          nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
       CSD U5 Encryption 1_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # İkili sətirlərin dekodlanması
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Kodlaşdırma sistemi:
+
+          ! []
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
+          Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
+          biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
+          nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
       CSD U5 Encryption 2:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # İkili sətirlərin dekodlanması
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Bu ikili sətri deşifrə edə bilərsinizmi?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
       CSD U5 Encryption 2_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # İkili sətirlərin dekodlanması
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Bu ikili sətri deşifrə edə bilərsinizmi?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
       CSD U5 Encryption 2_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # İkili sətirlərin dekodlanması
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Bu ikili sətri deşifrə edə bilərsinizmi?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
       CSD U5 crosstab warmup:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           Bu sorğuda insanlar tort dadını və buzlanma ləzzətini seçməlidirlər.
 
@@ -4191,7 +4431,7 @@ az-AZ:
 
           Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
       CSD U5 crosstab warmup_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           Bu sorğuda insanlar tort dadını və buzlanma ləzzətini seçməlidirlər.
 
@@ -4214,7 +4454,7 @@ az-AZ:
 
           Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
       CSD U5 crosstab warmup_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           Bu sorğuda insanlar tort dadını və buzlanma ləzzətini seçməlidirlər.
 
@@ -4237,19 +4477,85 @@ az-AZ:
 
           Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
       CSD U5 data visualization:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          ## Ən Yaxşı Sinif Heyvanı
+          ### Ən yaxşı sinif ev heyvanı üçün səsvermənin nəticələrini göstərməyin üç müxtəlif yolu var.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d637760953.https://images.code.org/7e14d63776095000000000000000000000000000000002 //images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
       CSD U5 data visualization_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          ## Ən Yaxşı Sinif Heyvanı
+          ### Ən yaxşı sinif ev heyvanı üçün səsvermənin nəticələrini göstərməyin üç müxtəlif yolu var.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d637760953.https://images.code.org/7e14d63776095000000000000000000000000000000002 //images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
       CSD U5 data visualization_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          ## Ən Yaxşı Sinif Heyvanı
+          ### Ən yaxşı sinif ev heyvanı üçün səsvermənin nəticələrini göstərməyin üç müxtəlif yolu var.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d637760953.https://images.code.org/7e14d63776095000000000000000000000000000000002 //images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
       CSD U5 student record:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        teacher_markdown: |-
+          [/key]
+          **Bayt 0:** Şagird 9-cu sinifdədir.
+
+          **Bayt 1:** Tələbənin 15 yaşı var.
+
+          **Bayt 2** Tələbənin ilk hərfi "J"dir.
+
+          **Bayt 3** İkinci başlanğıc "H"-dir.
+
+          [/key]
+
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
       CSD U5 student record_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        teacher_markdown: |-
+          [/key]
+          **Bayt 0:** Şagird 9-cu sinifdədir.
+
+          **Bayt 1:** Tələbənin 15 yaşı var.
+
+          **Bayt 2** Tələbənin ilk hərfi "J"dir.
+
+          **Bayt 3** İkinci başlanğıc "H"-dir.
+
+          [/key]
+
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
       CSD U5 student record_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        teacher_markdown: |-
+          [/key]
+          **Bayt 0:** Şagird 9-cu sinifdədir.
+
+          **Bayt 1:** Tələbənin 15 yaşı var.
+
+          **Bayt 2** Tələbənin ilk hərfi "J"dir.
+
+          **Bayt 3** İkinci başlanğıc "H"-dir.
+
+          [/key]
+
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
       CSD U6 LED create intro:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # LED Proqramları
 
@@ -4257,7 +4563,7 @@ az-AZ:
 
           Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
       CSD U6 LED create intro_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # LED Proqramları
 
@@ -4265,7 +4571,7 @@ az-AZ:
 
           Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
       CSD U6 LED create intro_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
         markdown: |-
           # LED Proqramları
 
@@ -4273,15 +4579,15 @@ az-AZ:
 
           Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
       CSD U6 final intro:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U6 final intro_2018:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U6 final intro_2018_2019:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CourseF_outbreak_story:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CourseF_outbreak_story2:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Example App Types_2018:
         markdown: "# Tətbiq növlərinə nümunə\n\nAşağıdakı səviyyələrdə bir neçə fərqli
           tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər
@@ -4315,102 +4621,184 @@ az-AZ:
           əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji
           sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. "
       Internet Simulator Setup:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Internet Simulator Setup 2:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Internet Simulator Setup 3:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Multi-Screen Apps:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       New Challenge Introduction:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: "### Yeni Çağırış: Təsadüfi Əvəzetmə Şifrəsini sındırın...yeni vidcet
+          ilə\n\nBütün əlifbanı dəyişmək əvəzinə əlifbanın hər hərfini təsadüfi fərqli
+          əlifba hərfinə uyğunlaşdırsaq necə? Bu **təsadüfi əvəzetmə şifrəsi adlanır.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nİndi
+          sadə əlifba sırası ilə kodlaşdırılan məxfi mesaj əvəzinə siz **təsadüfi
+          əvəzetmə** ilə kodlanmış mesajlarla qarşılaşacaqsınız.\n\n\n\nBunu sındırmaq
+          daha çətindir və daha mürəkkəb alət tələb edir, ona görə də...\n\nDavam
+          et düyməsini kliklədikdə siz çoxlu müxtəlif materialları göstərən **şifrələmə
+          alətinin **yeni, daha təkmil versiyasını görəcəksiniz.\n\nAncaq bunun nə
+          etdiyi bir az sirrdir!\n\n### Tapşırıq:\n\n * Alətin bu yeni versiyasında
+          nə baş verdiyini anlayın\n * Sizə hansı məlumatlar təqdim olunur?\n * Alətin
+          sizə nə imkan verdiyini anlayın\n * Həmişə olduğu kimi: onu poza bilməzsən.
+          Odur ki, əşyaların üzərinə klikləyin, soxun.\n * Bunu başa düşsəniz, təsadüfi
+          əvəzetmə ilə kodlanmış mesajı sındıra bilərsiniz.\n \n### İpucu\n\n* Bilirdinizmi
+          ki, **E** ingilis dilində ən çox istifadə olunan hərfdir?\n\n### Yenidən
+          toplaşın və müzakirə edin\n Onunla bir müddət oynadıqdan sonra tapdıqlarınızı
+          müzakirə etmək və nə baş verdiyini və alətdən istifadə edə biləcəyiniz müxtəlif
+          yolları bildiyinizi yoxlamaq üçün kimsə ilə - tərəfdaş, kiçik qrup, bütün
+          sinif - bir araya gəlməlisiniz."
       OPD-K5 Reviewing Reflections:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 Stage3aGo:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 Stage3aGo_copy:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 Stage3aGo_dani:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 conditionals introduced:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 debugging:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 diving deeper intro:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 events introduced:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 for loops:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 for loops intro:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 for loops introduction:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 functions introduced:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 journaling:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 lesson implementation planning:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 lesson plans:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 loops introduced:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 project:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 projects introduction:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 role_of_teacher:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 sequencing introduced:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 sprite lab:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 sprite lab introduction:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 sprite lab unplugged:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 sprite lab video:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 types of lessons:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 using lesson plans:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 variables:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 variables introduction:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 variables unplugged:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5 where to next:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       OPD-K5-projects-1:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Prepare for your presentation:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       Songwriting-Unplugged_2021:
         markdown: |-
           # Mahnı yazmaq
 
           Funksiyaların təyin edilməsi və çağırılması haqqında öyrənmək üçün mahnıda xor anlayışından istifadə et.
       'Technique: Frequency Analysis':
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # Cracking Əvəzetmə Şifrələri
+
+          Təsadüfi əvəzetmə şifrəsini sındırmaq üçün ən yaxşı texnika **tezlik analizi** kimi tanınır.
+
+          Parafraz: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+
+          * **Tezlik təhlili** müəyyən hərflərin digərləri ilə müqayisədə ingilis dilində *tez-tez* görünməsinə əsaslanan texnikadır.
+          * Məsələn, ingilis dili mətninin bir hissəsini nəzərə alsaq, *E*, *T*, *A* və *O* ən çox yayılmışdır, *Z*, *Q* və *X* isə nadirdir. Eynilə, *TH*, *ER*, *ON* və *AN* bir-birinin yanında baş verən ən çox yayılmış hərf cütləridir.
+          * Əslində, hərflərin paylanması ingilis mətninin demək olar ki, bütün * nümunələri üçün təxminən eynidir.
+
+
+          Əvvəlki səhifədəki vidcetin versiyası **tezlik təhlili vasitəsilə əvəzetmə şifrəsini sındırmaqda sizə kömək etmək üçün nəzərdə tutulub.
+
+          Şifrələnmiş mesajdakı hərflərin tezliyini səciyyəvi bir İngilis nəsrindəki hərflərin tezliyi ilə müqayisə edərək, bəzi məktubların nə ola biləcəyini daraltmağa başlaya bilərsiniz.
+
+          Alət sizə şifrələnmiş mətndəki hərflərin tezliyinin (narıncı) adi ingilis dilindən (mavi) tezliklərlə necə müqayisə olunduğunu göstərir.
+
+          ### İpucu: Hardan başlamaq lazımdır?
+
+          1. Qısa sözləri tapın və əvvəlcə onları "sındırın". Bir hərfdən ibarət neçə söz bilirsiniz? ("a"). Çox yayılmış 3 hərfli söz "the"dir.
+          2. Bunu etdikdən sonra ən çox yayılmış hərflərdən bəziləri üçün əvəzediciləriniz var. Bu qismən yerləşdirmələrlə başqa sözlərə baxmaq və yaxşı təxminlər etmək üçün intuisiyadan istifadə etməyi bacarmalısınız.
+          3. Yalnız bir ovuc çətin döyüş məktubu tapdıqdan sonra, qalanları tez yıxılacaq.
+          4. Hərflərin tezliklərinin müqayisəsi məntiqli təxminlər etmək üçün yaxşı fikir verir.
+
+          ### Bunu sınayın:
+          Aşağıdakı animasiya kiminsə işə başladığını göstərir. Budur, cəhd etdilər
+
+          * Əvvəlcə simvolları tezliyə görə sıralayın.
+          * `the` sözünə uyğunlaşa bilən simvollar qrupunu müəyyən edin.
+          Bu yaxşı başlanğıcdır!
+
+          ![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+          ## Təsadüfi əvəzetmə yaxşıdır?
+          * Bir az məşq etdikdən sonra təsadüfi əvəzetmə şifrəsini sındırmaq sizə nə qədər vaxt aparır?
+          * Bu yaxşıdır ya yox?
       Terminology Recap:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # Fasilə və təkrar
+
+          **Sezar şifrəsi** ilə şifrələnmiş mesajları, xüsusən hesablama aləti ilə sındırmaq çox asandır. İndi siz əlifba keçid şifrəsini sındırmaq üçün bir az məşq etmisiniz (olduqca asan, hə?) gəlin, daha çətin bir şeyə cəhd edək.
+
+          **Terminologiyanın xülasəsi:**
+
+          * **Şifrələmə** - məxfi saxlamaq üçün mesajların kodlaşdırılması prosesi, ona görə də onu yalnız "səlahiyyətli" tərəflər oxuya bilər.
+          * **Deşifrə** - şifrələməni tərsinə çevirən, gizli mesajı götürən və orijinal düz mətni təkrarlayan proses
+          * **Şifrə** - şifrələməni həyata keçirən texnika (və ya alqoritm) üçün ümumi termin
+          * **Sezar şifrəsi** - əlifbanı müəyyən sayda simvolla dəyişdirən şifrələmə üsulu.
+          * **Şifrələmənin sınması** - Şifrənin bütün xüsusiyyətlərini bilmədən *gizli mesajı deşifrə etməyə cəhd etdiyiniz zaman, siz şifrələməni **sındırmağa** çalışırsınız.
+
+
+          **Növbəti Çağırışa** baxmaq üçün Davam et üzərinə klikləyin...
       courseF_variables_stop:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       csf_be_a_super_digital_citizen:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       csf_be_a_super_digital_citizen_2021:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       csf_password_power-up:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       csf_password_power-up_2021:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
+        markdown: |-
+          # Şifrənizi Gücləndirin
+
+          ## Xatırlamaq üçün Şifrə Məsləhətləri
+
+          * Unudulmaz **ifadə** ilə başlayın.
+          * Şifrənizi yalnız **valideynləriniz** bilməlidir.
+          * Heç vaxt parolunuzda heç bir **şəxsi** şəxsiyyət məlumatından istifadə etməyin.
+          * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
+          * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       csf_putting_a_stop_to_online_meanness_2021:
-        content1: Təsvir burada
+        content1: Burada təsvir edin
       CSD U4L06 SFLP:
         markdown: Bu vaxta qədər müəyyən dərəcədə bizdən uzaq olan istifadəçilər üçün
           dizayn hazırlamağa çalışdıq. İstər beyin fırtınası, istər profil, istərsə
@@ -4927,3 +5315,121 @@ az-AZ:
         description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
           çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
         display_name: Sprite-lar təcrübəsi
+      CSD Physical Computing Post-Project Test:
+        title: Layihədən sonrakı Fiziki Hesablama Testi
+      courseD_project_exemplars_2020_2021:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseE_project_exemplars_2019:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseE_project_exemplars_2019_2020:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseExpress_project_exemplars_2019_2020:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_algorithms_end:
+        content1: Test Markdown Dərslik Səhifəsi
+        markdown: |-
+          # **Siz indicə "alqoritmləri" öyrəndiniz!**
+
+
+
+          ### **Alqoritm tapşırığı başa çatdırmaq üçün sadəcə addımların siyahısıdır**. Alqoritmlərin əyləncəli tərəfi ondan ibarətdir ki, siz addım-addım nə olacağına qərar verirsiniz.
+
+          ### Maşın üçün alqoritm yazdığınız zaman buna **proqram** deyilir.
+
+          ---
+
+          ## **Bilməli Söz**
+
+          * ### **Alqoritm** - Tapşırığı tamamlamaq üçün addımların siyahısı
+
+          * ### **Proqram** - Maşın tərəfindən idarə oluna bilən bir şeyə kodlaşdırılmış alqoritm
+      courseF_markdown_algorithms_intro:
+        content1: Test Markdown Dərslik Səhifəsi
+        markdown: |-
+          # **Bu dərsdə...**
+
+          ### Heç kimə nə edəcəyini dəqiq demək istəmisinizmi? Həmişə səni dinləyirlər?
+
+          ### Bu gün siz maşına addım-addım nə edəcəyini söyləyəcəksiniz və o, qulaq asacaq!
+
+          ---
+
+          ## **Bilmək üçün bloklar**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_conditionals_end:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_conditionals_intro:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_debugging_end:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_debugging_intro:
+        content1: Test Markdown Dərslik Səhifəsi
+        markdown: |-
+          #Bu dərsdə...
+
+          ### Səhvlər haqqında düşünəndə ağlına nə gəlir?
+
+          ### İnsanların çoxu böcəklər haqqında düşünəndə ürpertici sürünən şeylər haqqında düşünürlər. Kompüter elmində səhvlər canlı deyil, lakin yenə də çətin ola bilər.
+
+          ### Bu dərsdəki tapmacalar artıq sizin üçün həll olunub! Ancaq o qədər də sürətli deyil - onlar hələ işləmirlər. Bütün bunların arxasında səhvlər varmı?
+
+          ---
+
+          ## Bilmək üçün bloklar
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_forloops_end:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_forloops_end_2019:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_forloops_end_2019_2020:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_forloops_intro:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_forloops_intro_2019:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_loops_end:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_loops_intro:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_nestedloops_end:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_nestedloops_intro:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_variables_end:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_variables_end_2019:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_variables_end_2019_2020:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_variables_intro:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_variables_intro_2019:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_markdown_variables_intro_2019_2020:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_project_exemplars_2019:
+        content1: Test Markdown Dərslik Səhifəsi
+      courseF_project_exemplars_2019_2020:
+        content1: Test Markdown Dərslik Səhifəsi
+      csd-post-survey-intro-2019:
+        markdown: |-
+          # CS Discoveries Kursdan Sonra Sorğu
+
+          **Sizin məlumatınız və rəyiniz bizim üçün vacibdir!** Biz ondan istifadə edirik:
+
+          * təcrübənizi anlayın
+          * kursda təkmilləşdirmələr edin
+
+          CS Discoveries-i daha da yaxşılaşdırmaq üçün vaxt ayırdığınız üçün təşəkkür edirik!
