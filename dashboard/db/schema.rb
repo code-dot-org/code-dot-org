@@ -391,7 +391,6 @@ ActiveRecord::Schema.define(version: 2022_01_28_193930) do
   create_table "course_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.string "display_name", null: false
-    t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category", default: "other", null: false
