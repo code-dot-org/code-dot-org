@@ -18,7 +18,8 @@ import javalab, {
   setDisableFinishButton,
   setIsTesting,
   openPhotoPrompter,
-  closePhotoPrompter
+  closePhotoPrompter,
+  getSourcesAndValidation
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -405,6 +406,9 @@ Javalab.prototype.onContinue = function(submit) {
 
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
+  if (this.isStartMode) {
+    return getSourcesAndValidation(storeState);
+  }
   return getSources(storeState);
 };
 
