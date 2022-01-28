@@ -884,7 +884,10 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
-    stub_file_writes(unit.name)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit.name}.script", "#{Rails.root}/config/scripts_json/#{unit.name}.script_json", "#{Rails.root}/config/course_offerings/fake-family-z.json"]
+    File.stubs(:write).with do |filename, _|
+      filenames_to_stub.include?(filename)
+    end
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
