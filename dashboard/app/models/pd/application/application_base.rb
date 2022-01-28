@@ -97,20 +97,10 @@ module Pd::Application
       self.application_type = nil
     end
 
-    def accepted?
-      status == 'accepted'
-    end
-
-    def unreviewed?
-      status == 'unreviewed'
-    end
-
-    def pending?
-      status == 'pending'
-    end
-
-    def waitlisted?
-      status == 'waitlisted'
+    %w(accepted incomplete pending unreviewed waitlisted).each do |attribute|
+      define_method(:"#{attribute}?") do
+        status == attribute
+      end
     end
 
     def update_accepted_date
