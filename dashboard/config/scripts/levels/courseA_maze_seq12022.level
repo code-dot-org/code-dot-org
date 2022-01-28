@@ -41,11 +41,15 @@
     "mini_rubric": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This should be an angry birds style \"freeplay\"",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:30.410+00:00\",\"changed\":[\"cloned from \\\"courseA_maze_seq1_2021\\\"\"],\"cloned_from\":\"courseA_maze_seq1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:30.410+00:00\",\"changed\":[\"cloned from \\\"courseA_maze_seq1_2021\\\"\"],\"cloned_from\":\"courseA_maze_seq1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
