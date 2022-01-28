@@ -97,6 +97,7 @@ module Pd::Application
       self.application_type = nil
     end
 
+    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted?
     %w(accepted incomplete pending unreviewed waitlisted).each do |attribute|
       define_method(:"#{attribute}?") do
         status == attribute
