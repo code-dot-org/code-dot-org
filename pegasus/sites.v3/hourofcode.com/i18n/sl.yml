@@ -232,8 +232,8 @@ sl:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -962,6 +962,7 @@ sl:
   footer_menu_support: Podpora
   footer_menu_terms: Pogoji
   footer_menu_privacy: Politika zasebnosti
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Ura za kodo
   learn_banner_blurb: Preizkusite eno urni tečaj narejen za vse starosti in na voljo
     v 45 jezikih. Pridruži se miljonom učencem in učiteljem v več kot 180 državah

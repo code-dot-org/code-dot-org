@@ -7,22 +7,22 @@ nav: how_to_nav
 {{ signup_button }}
 
 # Guía para voluntarios
-### ¡Haz la diferencia en el aula hoy!
+### ¡Marca la diferencia en un aula hoy mismo!
 
 ***
 
 ## ¿Por qué ser voluntario?
-Vea algunos testimonios de los últimos voluntarios:
+Consulta algunos testimonios de antiguos voluntarios:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- "ME ENCANTÓ ver lo emocionados que estaban los niños. Fue increíble que los docentes notaran cómo algunos de los estudiantes, que no tenían un buen nivel académico, sobresalían a la hora de pensar como desarrolladores y ayudar a otros a aprender, lo que les daba un lugar donde sentirse seguros".
+- "Lo mejor de mi experiencia fue que toda la clase eran mujeres y personas de color. Es un buen síntoma para el futuro de nuestra industria tener la oportunidad de llegar a estos niños y entusiasmarlos".
+- "Disfruté especialmente motivando a las chicas jóvenes en la tecnología. Sentí que estaba ayudando a la próxima generación en mi localidad".
+- "ME ENCANTÓ ver lo emocionados que estaban los niños. Una de las cosas más interesantes fue que los profesores se dieron cuenta de que algunos de los alumnos que no rendían tan bien a nivel académico, destacaban pensando como desarrolladores y ayudando a los demás a aprender, lo que les permitía sentirse seguros de sí mismos."
 
 ## Cualquiera puede ser voluntario
 ### Voluntarios y oradores en tecnología:
 ¿Tienes alguna conexión con las ciencias de la computación o la tecnología? Si trabajas en ingeniería de software; si desempeñas un rol, ya sea como ingeniero o de otro tipo, en una empresa de tecnología, o si has realizado cursos sobre ciencias de la computación, ¡puedes ayudar a inspirar a los estudiantes! Muchos estudiantes nunca han conocido a alguien que trabaja en la industria de la tecnología y a nuestros docentes les encanta que puedan conectarse con profesionales y estudiantes universitarios.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+Puedes ser un experto invitado en un aula o ayudar a un profesor a dirigir la actividad. Visita un aula local para estimular a los alumnos a seguir aprendiendo informática.
 <br>
 <br>
 
@@ -37,7 +37,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 ### ¿Cómo puedes comenzar?
 
 1. [Envía este correo electrónico]({{ promote/help_schools }}) al docente de tu hijo o hija para ofrecerle ayuda durante la Hora del Código.
-2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
+2. Puedes ofrecerte como anfitrión de un evento extraescolar de la Hora del Código en una escuela local. [Utiliza esta guía práctica]({{ urls/how_to_guide }}) para ayudarte a planificar.
 
 ## Convence a compañeros de trabajo para que sean voluntarios
 Cuéntele a sus amigos y colegas acerca de la Hora de Código. Miles de maestros están buscando voluntarios, así que pídales [inscribirse como voluntarios](https://code.org/volunteer). Sugiérale a su jefe que se involucre. [Envía este correo electrónico]({{ promote/sample_emails }}) a tu gerente o director general para que todos estén al tanto.
