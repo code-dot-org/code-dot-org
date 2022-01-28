@@ -423,6 +423,46 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Pemampatan Teks"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Pengenalan",
+          "description": "**Bincangkan:**\n\n-   _Apa yang kita tahu tentang cara virus merebak?_\n-   _Apakah yang boleh menyebabkan virus merebak melalui bandar dengan lebih cepat?_\n-   _Apakah yang boleh membantu memperlahankan penyebaran virus?_\n\nMatlamat perbincangan ini memberi pelajar peluang untuk mengaktifkan pengetahuan sedia ada dan melihat idea mereka di papan tulis. Ini juga merupakan peluang untuk menyiasat beberapa salah tanggapan tentang cara virus merebak."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Wabak",
+          "description": "_Dalam pelajaran hari ini, anda akan ke \"Bandar Raksasa\" di mana wabak virus akan berlaku. Dr. Monster memerlukan bantuan anda untuk memperlahan penyebaran virus._\n\n_Anda akan mencipta simulator wabak dalam Sprite Lab, dan kemudian menggunakannya untuk memahami cara virus boleh merebak. Anda juga akan membantu semua raksasa menjadi sihat semula!_",
+          "progression_name": "Wabak"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Lakukan Ini:** Baca _Selamat Datang ke Monster Town_ sebagai kelas.",
+          "progression_name": "Inilah Bandar Raksasa"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Lakukan Ini:** Semak perbendaharaan kata, **model dan simulasi** dengan pelajar, dengan membina pelajaran sebelumnya. Simulasi ialah model komputer bagi proses atau sistem."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Hari ini, kami akan menjadikan tempat seperti Bandar Raksasa menjadi hidup dengan menulis beberapa kod. Dalam simulasi ini, anda akan menggunakan sprite untuk mewakili raksasa yang berbeza. Sprite akan mempunyai pakaian yang berbeza untuk memberitahu kami perkara seperti sama ada mereka sakit atau sihat. Anda juga akan menggunakan gelagat untuk menggerakkan raksasa. Akhir sekali, anda akan menggunakan acara untuk menukar kostum sprite apabila dua sprite menyentuh skrin ini. Ini akan mewakili satu raksasa yang menyebarkan virus kepada yang lain. Anda akan membuat ramalan tentang apa yang akan berlaku kepada jiran Bandar Raksasa, dan membantu mereka kembali sihat!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Lakukan Ini:** Peralihan pelajar ke komputer mereka, dan minta mereka mula mengikut arahan untuk setiap peringkat dalam bahagian pembinaan kemahiran. Jika pelajar menghabiskan bahagian ini lebih awal, mereka boleh meneruskan percubaan dengan kod mereka di Tahap 6 sehingga kelas bersedia untuk meneruskan.",
+          "progression_name": "Pembinaan Kemahiran"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Lakukan ini:** Peralihan pelajar kembali ke komputer mereka, dan minta mereka bekerja melalui tahap yang tinggal. Beberapa tahap ini menawarkan cabaran pilihan. Galakkan pelajar membaca arahan dengan teliti dan bereksperimen dengan simulasi mereka.",
+          "progression_name": "Projek Mini: Simulator Wabak"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Permainan Bebas"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simulasi ialah cara terbaik untuk mempelajari perkara yang sukar untuk diperhatikan di dunia sebenar. Mereka membantu saintis menyelesaikan masalah, meramalkan cara menyelesaikan masalah dan menguji idea baharu dengan selamat dan cekap. Simulasi anda ialah cara untuk menunjukkan rupa wabak virus di Bandar Raksasa._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Bincangkan:**\n\n-   Bagaimanakah simulasi boleh membantu dalam dunia sebenar?\n-   Bagaimanakah simulasi boleh membantu kita memahami dunia di sekeliling kita?\n-   Bagaimanakah simulasi boleh meningkatkan cara kita menguji idea?\n\nMatlamat perbincangan adalah untuk pelajar memahami bahawa simulasi adalah cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga harus melihat bagaimana simulasi membolehkan orang ramai menguji idea dengan cepat, murah dan selamat."
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Refleksi",
+          "description": "**Gesaan:**\n\n-   Bagaimanakah simulasi ini seperti dunia sebenar? Bagaimana ia berbeza?\n-   Apakah yang anda mahu ubah/tambah pada simulasi anda?"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "tips": [
             null
@@ -725,46 +765,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Anda mempunyai dua nota pelekat. Pada satu nota, tuliskan satu perkara yang anda pelajari tentang pengekodan hari ini.Pada nota kedua, tuliskan satu perkara yang anda pelajari tentang puisi hari ini. Mari berkongsi bersama seluruh kelas dengan mengangkat tangan anda untuk menjawab soalan ini: Apakah yang anda harapkan untuk belajar tentang pengekodan dan sains komputer lagi dalam pelajaran seterusnya?"
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Pengenalan",
-          "description": "**Bincangkan:**\n\n-   _Apa yang kita tahu tentang cara virus merebak?_\n-   _Apakah yang boleh menyebabkan virus merebak melalui bandar dengan lebih cepat?_\n-   _Apakah yang boleh membantu memperlahankan penyebaran virus?_\n\nMatlamat perbincangan ini memberi pelajar peluang untuk mengaktifkan pengetahuan sedia ada dan melihat idea mereka di papan tulis. Ini juga merupakan peluang untuk menyiasat beberapa salah tanggapan tentang cara virus merebak."
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Wabak",
-          "description": "_Dalam pelajaran hari ini, anda akan ke \"Bandar Raksasa\" di mana wabak virus akan berlaku. Dr. Monster memerlukan bantuan anda untuk memperlahan penyebaran virus._\n\n_Anda akan mencipta simulator wabak dalam Sprite Lab, dan kemudian menggunakannya untuk memahami cara virus boleh merebak. Anda juga akan membantu semua raksasa menjadi sihat semula!_",
-          "progression_name": "Wabak"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "**Lakukan Ini:** Baca _Selamat Datang ke Monster Town_ sebagai kelas.",
-          "progression_name": "Inilah Bandar Raksasa"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Lakukan Ini:** Semak perbendaharaan kata, **model dan simulasi** dengan pelajar, dengan membina pelajaran sebelumnya. Simulasi ialah model komputer bagi proses atau sistem."
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Hari ini, kami akan menjadikan tempat seperti Bandar Raksasa menjadi hidup dengan menulis beberapa kod. Dalam simulasi ini, anda akan menggunakan sprite untuk mewakili raksasa yang berbeza. Sprite akan mempunyai pakaian yang berbeza untuk memberitahu kami perkara seperti sama ada mereka sakit atau sihat. Anda juga akan menggunakan gelagat untuk menggerakkan raksasa. Akhir sekali, anda akan menggunakan acara untuk menukar kostum sprite apabila dua sprite menyentuh skrin ini. Ini akan mewakili satu raksasa yang menyebarkan virus kepada yang lain. Anda akan membuat ramalan tentang apa yang akan berlaku kepada jiran Bandar Raksasa, dan membantu mereka kembali sihat!_"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Lakukan Ini:** Peralihan pelajar ke komputer mereka, dan minta mereka mula mengikut arahan untuk setiap peringkat dalam bahagian pembinaan kemahiran. Jika pelajar menghabiskan bahagian ini lebih awal, mereka boleh meneruskan percubaan dengan kod mereka di Tahap 6 sehingga kelas bersedia untuk meneruskan.",
-          "progression_name": "Pembinaan Kemahiran"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Lakukan ini:** Peralihan pelajar kembali ke komputer mereka, dan minta mereka bekerja melalui tahap yang tinggal. Beberapa tahap ini menawarkan cabaran pilihan. Galakkan pelajar membaca arahan dengan teliti dan bereksperimen dengan simulasi mereka.",
-          "progression_name": "Projek Mini: Simulator Wabak"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Permainan Bebas"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Simulasi ialah cara terbaik untuk mempelajari perkara yang sukar untuk diperhatikan di dunia sebenar. Mereka membantu saintis menyelesaikan masalah, meramalkan cara menyelesaikan masalah dan menguji idea baharu dengan selamat dan cekap. Simulasi anda ialah cara untuk menunjukkan rupa wabak virus di Bandar Raksasa._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Bincangkan:**\n\n-   Bagaimanakah simulasi boleh membantu dalam dunia sebenar?\n-   Bagaimanakah simulasi boleh membantu kita memahami dunia di sekeliling kita?\n-   Bagaimanakah simulasi boleh meningkatkan cara kita menguji idea?\n\nMatlamat perbincangan adalah untuk pelajar memahami bahawa simulasi adalah cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga harus melihat bagaimana simulasi membolehkan orang ramai menguji idea dengan cepat, murah dan selamat."
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Refleksi",
-          "description": "**Gesaan:**\n\n-   Bagaimanakah simulasi ini seperti dunia sebenar? Bagaimana ia berbeza?\n-   Apakah yang anda mahu ubah/tambah pada simulasi anda?"
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Menetapkan Peringkat\n\nSelamat datang pelajar ke kelas dan memperkenalkan aktiviti hari ini secara ringkas.\n\nKatakanlah: _Hari ini kita akan menghabiskan satu jam bekerja dengan beberapa teka-teki dalam talian dan mempelajari adab makmal komputer._\nMatlamat perbincangan ini adalah untuk mengajar pelajar apa yang diharapkan dan cara untuk bertindak apabila mereka memasuki makmal komputer."
