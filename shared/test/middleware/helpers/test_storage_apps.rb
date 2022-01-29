@@ -148,6 +148,28 @@ class StorageAppsTest < Minitest::Test
     assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
   end
 
+  def test_restore
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    # Create a new project
+    new_project_channel_id = storage_apps.create({projectType: 'applab'}, ip: 123)
+
+    # Delete the project
+    assert_equal true, storage_apps.delete(new_project_channel_id)
+
+    # Should not be able to fetch deleted project
+    assert_raises StorageApps::NotFound do
+      storage_apps.get(new_project_channel_id)
+    end
+
+    # Restore project
+    assert_equal true, storage_apps.restore(new_project_channel_id)
+
+    # Can get restored project
+    storage_apps.get(new_project_channel_id)
+  end
+
   def test_buffer_abuse_score
     signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
     storage_apps = StorageApps.new(signedin_storage_id)

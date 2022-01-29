@@ -70,11 +70,15 @@
     "hide_pause_button": "false",
     "short_instructions": "Make the cloud move across the screen. Make the sun spin. Make the butterfly wander around.",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:41.261+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_clouds\\\"\"],\"cloned_from\":\"courseF_sprites_clouds\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:41.261+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_clouds\\\"\"],\"cloned_from\":\"courseF_sprites_clouds\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>
