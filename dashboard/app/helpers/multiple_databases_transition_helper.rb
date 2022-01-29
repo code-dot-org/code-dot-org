@@ -41,14 +41,14 @@ module MultipleDatabasesTransitionHelper
     end
   end
 
-  # Provide a new `use_persistent_read` method to replace our existing use of
-  # the same. ActiveRecord itself has some new logic to provide similar
-  # functionality, as does ProxySQL, so it could well be that we don't actually
-  # need this at all post-transition. More investigation needed for this TODO
-  # to be resolved.
-  def self.use_persistent_read_connection
+  # Provide a new `use_reader_connection` method to replace our existing use of
+  # `use_persistent_read_connection` with the entirely-equivalent ActiveRecord
+  # implementation.
+  def self.use_reader_connection
     if MultipleDatabasesTransitionHelper.transitioned?
-      # TODO
+      ActiveRecord::Base.connected_to(role: :reading) do
+        yield
+      end
     else
       SeamlessDatabasePool.use_persistent_read_connection do
         yield

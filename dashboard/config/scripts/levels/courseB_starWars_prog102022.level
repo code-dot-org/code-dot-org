@@ -50,11 +50,16 @@
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/c8f3479ab264a1e9578cd919ef615c19=levelbuilder/38420.png",
     "include_shared_functions": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:41.463+00:00\",\"changed\":[\"cloned from \\\"courseB_starWars_prog10_2021\\\"\"],\"cloned_from\":\"courseB_starWars_prog10_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:41.463+00:00\",\"changed\":[\"cloned from \\\"courseB_starWars_prog10_2021\\\"\"],\"cloned_from\":\"courseB_starWars_prog10_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
