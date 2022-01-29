@@ -46,11 +46,16 @@
     "encrypted_examples": "SYuemiudTgQDIg5cxWlAovX6wp3D3Q5HM9ZzjhNlrYb5BEzK1fgHLqMw6rGy\nvcYAiKkxz8RzcDk1G5rspODqlw4uPzRoqRgBxgjgQ+QKOv9ownqcuTM9H2DW\nUcQxyOE4QVgeYyPnuy1KVkL8jcHS/OoD8maybSJ/6melolFy24WeTiZf22i3\noI+x04Phe4IKgwRJDT10hWeDPdrOFIwr3Q==\n",
     "mini_rubric": "false",
     "teacher_markdown": "This lesson extra is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:55.318+00:00\",\"changed\":[\"cloned from \\\"courseA_artist_loops_challenge1_2021\\\"\"],\"cloned_from\":\"courseA_artist_loops_challenge1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:55.318+00:00\",\"changed\":[\"cloned from \\\"courseA_artist_loops_challenge1_2021\\\"\"],\"cloned_from\":\"courseA_artist_loops_challenge1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

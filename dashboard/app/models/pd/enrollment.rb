@@ -374,7 +374,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def authorize_teacher_account
-    user.permission = UserPermission::AUTHORIZED_TEACHER if user && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
+    user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
   end
 
   private_class_method def self.filter_for_pegasus_survey_completion(enrollments, select_completed)

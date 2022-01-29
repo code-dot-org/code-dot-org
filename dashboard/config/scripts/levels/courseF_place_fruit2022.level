@@ -67,11 +67,15 @@
     "encrypted_examples": "CSf1ydZ8CN5Er4yUXYEOpFXmQEVPkrcpXdb6qEqH5iQtLKshxPt3giVBQTBD\nscD0u7t5mh7EAOeLsD7ZWrSgow==\n",
     "hide_pause_button": "false",
     "short_instructions": "Change the size of the sprites so the banana is bigger than the strawberries.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.878+00:00\",\"changed\":[\"cloned from \\\"courseF_place_fruit\\\"\"],\"cloned_from\":\"courseF_place_fruit\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.878+00:00\",\"changed\":[\"cloned from \\\"courseF_place_fruit\\\"\"],\"cloned_from\":\"courseF_place_fruit\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

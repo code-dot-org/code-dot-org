@@ -179,6 +179,92 @@ describe('FormController', () => {
       expect(form.exists('Alert')).to.be.false;
     });
 
+    describe('Saving', () => {
+      it('Adds application status as incomplete to data', () => {
+        const testData = {
+          field1: 'value 1',
+          field2: 'value 2'
+        };
+
+        form = isolateComponent(
+          <FormController {...defaultProps} getInitialData={() => testData} />
+        );
+        form.findAll('Button')[1].props.onClick();
+
+        expect(getData(DummyPage1)).to.eql({status: 'incomplete', ...testData});
+      });
+
+      it('Disables the save button during save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+        form.findAll('Button')[1].props.onClick();
+        expect(form.findAll('Button')[1].props.disabled).to.be.true;
+      });
+
+      it('Re-enables the save button after successful save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          201,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({})
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
+
+      it('Re-enables the save button after unsuccessful save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          400,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({
+            errors: {form_data: ['an error']}
+          })
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
+
+      it('Shows saved message alert after saving is complete, and user can close it', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          201,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({})
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        const alert = form.findOne('Alert');
+        expect(alert.content()).to.contain(
+          'Your progress has been saved. Return to this page at any time to continue working on your application.'
+        );
+
+        alert.props.onDismiss();
+        expect(form.exists('Alert')).to.be.false;
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
+    });
+
     describe('Page validation', () => {
       it('Does not navigate when the current page has errors', () => {
         // create errors
@@ -213,6 +299,7 @@ describe('FormController', () => {
           );
           setPage(2);
         };
+
         const setUpValidWithApplicationId = applicationId =>
           setupValid(applicationId);
 
@@ -285,6 +372,24 @@ describe('FormController', () => {
 
           expect(getErrors(DummyPage3)).to.eql(['an error']);
           expect(form.findOne('#submit').props.disabled).to.be.false;
+        });
+
+        it('Adds application status as unreviewed on submit', () => {
+          const testData = {
+            field1: 'value 1',
+            field2: 'value 2'
+          };
+
+          form = isolateComponent(
+            <FormController {...defaultProps} getInitialData={() => testData} />
+          );
+          setPage(2);
+          triggerSubmit();
+
+          expect(getData(DummyPage3)).to.eql({
+            status: 'unreviewed',
+            ...testData
+          });
         });
 
         it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {

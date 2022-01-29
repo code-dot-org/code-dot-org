@@ -16,17 +16,10 @@ HOC_COUNTRIES = hoc_load_countries
 #
 # Can be called with markdown: true to render the string as (HTML-safe)
 # markdown, or with markdown: :inline to render as inline markdown.
-def hoc_s(id, markdown: false, locals: nil)
+def hoc_s(id, markdown: false, locals: {})
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
-  string = I18n.t(id, locale: language)
-
-  # manually implement a very simple version of string interpolation
-  if locals.present?
-    locals.each do |key, value|
-      string.gsub!(/%{#{key}}/, value)
-    end
-  end
+  string = I18n.t(id, locals.merge({locale: language}))
 
   if markdown
     type = markdown == :inline ? :inline_md : :safe_md
