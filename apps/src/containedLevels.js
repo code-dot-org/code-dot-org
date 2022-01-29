@@ -133,7 +133,7 @@ export function initializeContainedLevel() {
     const disabledRunButtonHandler = e => {
       $(window).trigger('attemptedRunButtonClick');
     };
-    $('#runButtonWrapper').bind('click', disabledRunButtonHandler);
+    $('#runButton').bind('click', disabledRunButtonHandler);
 
     callouts.addCallouts([
       {
@@ -165,7 +165,7 @@ export function initializeContainedLevel() {
       stepButton.prop('disabled', !validResult);
       if (validResult) {
         runButton.qtip('hide');
-        $('#runButtonWrapper').unbind('click', disabledRunButtonHandler);
+        $('#runButton').unbind('click', disabledRunButtonHandler);
       }
       getStore().dispatch(setAwaitingContainedResponse(!validResult));
     });

@@ -837,18 +837,32 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 'Blue', new_level.properties['answers'].last['text']
     assert new_level.encrypted, 'clone_with_name preserves encrypted flag'
 
-    new_level = old_level.clone_with_suffix(' copy')
-    assert_equal 'old multi level copy', new_level.name
+    new_level = old_level.clone_with_suffix('_copy')
+    assert_equal 'old multi level_copy', new_level.name
     assert_equal 3, new_level.properties['answers'].length
     assert new_level.encrypted, 'clone_with_suffix preserves encrypted flag'
   end
 
   test 'can clone with suffix' do
     old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
-    new_level = old_level.clone_with_suffix(' copy')
-    assert_equal 'level copy', new_level.name
+    new_level = old_level.clone_with_suffix('_copy')
+    assert_equal 'level_copy', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
-    assert_equal ' copy', new_level.name_suffix
+    assert_equal '_copy', new_level.name_suffix
+  end
+
+  test 'underscore is prepended to suffix on clone_with_suffix' do
+    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix('copy')
+    assert_equal 'level_copy', new_level.name
+    assert_equal '<xml>foo</xml>', new_level.start_blocks
+    assert_equal '_copy', new_level.name_suffix
+  end
+
+  test 'doesnt clone with suffix deprecated blockly levels' do
+    old_level = create :level, name: 'blockly', level_num: 'blockly_level', start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix('_copy')
+    assert_equal old_level, new_level
   end
 
   test 'clone with suffix replaces old suffix' do
@@ -871,7 +885,7 @@ class LevelTest < ActiveSupport::TestCase
     tricky_suffix = '!(."'
 
     level_2 = level_1.clone_with_suffix(tricky_suffix)
-    assert_equal "your_level_1#{tricky_suffix}", level_2.name
+    assert_equal "your_level_1_#{tricky_suffix}", level_2.name
 
     level_3 = level_2.clone_with_suffix('_3')
     assert_equal 'your_level_1_3', level_3.name
@@ -898,20 +912,20 @@ class LevelTest < ActiveSupport::TestCase
     level_2 = create :level, name: 'level 2'
     level_2.project_template_level_name = template_level.name
 
-    level_1_copy = level_1.clone_with_suffix(' copy')
-    level_2_copy = level_2.clone_with_suffix(' copy')
+    level_1_copy = level_1.clone_with_suffix('_copy')
+    level_2_copy = level_2.clone_with_suffix('_copy')
 
-    template_level_copy = Level.find_by_name('template level copy')
-    assert_equal ' copy', template_level_copy.name_suffix
+    template_level_copy = Level.find_by_name('template level_copy')
+    assert_equal '_copy', template_level_copy.name_suffix
     assert_equal '<xml>template</xml>', template_level_copy.start_blocks
 
     assert_equal template_level_copy, level_1_copy.project_template_level
-    assert_equal 'level 1 copy', level_1_copy.name
-    assert_equal ' copy', level_1_copy.name_suffix
+    assert_equal 'level 1_copy', level_1_copy.name
+    assert_equal '_copy', level_1_copy.name_suffix
 
     assert_equal template_level_copy, level_2_copy.project_template_level
-    assert_equal 'level 2 copy', level_2_copy.name
-    assert_equal ' copy', level_2_copy.name_suffix
+    assert_equal 'level 2_copy', level_2_copy.name
+    assert_equal '_copy', level_2_copy.name_suffix
   end
 
   test 'clone with suffix copies contained levels' do
@@ -922,11 +936,11 @@ class LevelTest < ActiveSupport::TestCase
 
     level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
-    level_1_copy = level_1.clone_with_suffix(' copy')
+    level_1_copy = level_1.clone_with_suffix('_copy')
 
     refute_nil level_1_copy.contained_levels
     assert_equal 1, level_1_copy.contained_levels.size
-    contained_level_1_copy = Level.find_by_name('contained level 1 copy')
+    contained_level_1_copy = Level.find_by_name('contained level 1_copy')
     assert_equal 'FreeResponse', contained_level_1_copy.type
     assert_equal contained_level_1_copy, level_1_copy.contained_levels.first
 
@@ -937,8 +951,8 @@ class LevelTest < ActiveSupport::TestCase
       contained_level_1.name,
       contained_level_2.name
     ]
-    level_2_copy = level_2.clone_with_suffix(' copy')
-    contained_level_2_copy = Level.find_by_name('contained level 2 copy')
+    level_2_copy = level_2.clone_with_suffix('_copy')
+    contained_level_2_copy = Level.find_by_name('contained level 2_copy')
     refute_nil level_2_copy.contained_levels
     assert_equal 2, level_2_copy.contained_levels.size
     assert_equal contained_level_1_copy, level_2_copy.contained_levels.first
@@ -955,7 +969,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 3, level_1.level_concept_difficulty.sequencing
     assert_equal 5, level_1.level_concept_difficulty.debugging
 
-    level_1_copy = level_1.clone_with_suffix(' copy')
+    level_1_copy = level_1.clone_with_suffix('_copy')
 
     refute_nil level_1_copy.level_concept_difficulty
     assert_equal 3, level_1_copy.level_concept_difficulty.sequencing
@@ -964,8 +978,8 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'clone with suffix sets editor experiment' do
     old_level = create :level, name: 'old level'
-    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
-    assert_equal 'old level copy', new_level.name
+    new_level = old_level.clone_with_suffix('_copy', editor_experiment: 'level-editors')
+    assert_equal 'old level_copy', new_level.name
     assert_equal 'level-editors', new_level.editor_experiment, 'clone_with_suffix adds editor experiment'
   end
 
@@ -980,7 +994,7 @@ class LevelTest < ActiveSupport::TestCase
     DSL
 
     expected_new_dsl_text = <<~DSL
-      name 'old multi level copy'
+      name 'old multi level_copy'
       editor_experiment 'level-editors'
       title 'Multiple Choice'
       question 'What is your favorite color?'
@@ -997,8 +1011,8 @@ class LevelTest < ActiveSupport::TestCase
     old_level = create :multi, name: 'old multi level'
     old_level.stubs(:dsl_text).returns(old_dsl_text)
 
-    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
-    assert_equal 'old multi level copy', new_level.name
+    new_level = old_level.clone_with_suffix('_copy', editor_experiment: 'level-editors')
+    assert_equal 'old multi level_copy', new_level.name
     assert_equal 'level-editors', new_level.editor_experiment
   end
 
@@ -1014,7 +1028,7 @@ class LevelTest < ActiveSupport::TestCase
     DSL
 
     expected_new_dsl_text = <<~DSL
-      name 'old multi level copy'
+      name 'old multi level_copy'
       editor_experiment 'new-level-editors'
       title 'Multiple Choice'
       question 'What is your favorite color?'
@@ -1031,8 +1045,8 @@ class LevelTest < ActiveSupport::TestCase
     old_level = create :multi, name: 'old multi level'
     old_level.stubs(:dsl_text).returns(old_dsl_text)
 
-    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'new-level-editors')
-    assert_equal 'old multi level copy', new_level.name
+    new_level = old_level.clone_with_suffix('_copy', editor_experiment: 'new-level-editors')
+    assert_equal 'old multi level_copy', new_level.name
     assert_equal 'new-level-editors', new_level.editor_experiment
   end
 

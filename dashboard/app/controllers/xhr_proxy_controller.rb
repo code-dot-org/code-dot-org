@@ -63,6 +63,7 @@ class XhrProxyController < ApplicationController
     api.zippopotam.us
     bible-api.com
     code.org
+    codeorg-api.com
     covidtracking.com
     cryptonator.com
     data.austintexas.gov
@@ -86,6 +87,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    newsapi.org
     noaa.gov
     numbersapi.com
     opentdb.com
@@ -99,7 +101,6 @@ class XhrProxyController < ApplicationController
     restcountries.eu
     roblox.com
     runescape.com
-    script.google.com
     sessionserver.mojang.com
     spreadsheets.google.com
     stats.minecraftservers.org
@@ -113,6 +114,7 @@ class XhrProxyController < ApplicationController
     wikipedia.org
     worldclockapi.com
     worldtimeapi.org
+    xeno-canto.org
   ).freeze
 
   # How long the content is allowed to be cached

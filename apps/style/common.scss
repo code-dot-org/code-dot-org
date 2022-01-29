@@ -255,30 +255,33 @@ button.arrow:disabled {
   &.soft-buttons-compact {
     margin: 0;
     button {
-      margin: 0 4px 0 0;
+      margin: 0;
+      margin-inline-end: 4px;
     }
+  }
+  :last-child{
+    margin-inline-end: 0px;
+  }
+  @supports not (gap: 0 9px) {
+    padding-inline-end: 9px;
   }
 }
 
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
-  min-width: 51px;
 }
 .soft-buttons-2 {
   display: table-cell;
   vertical-align: top;
-  min-width: 102px;
 }
 .soft-buttons-3 {
   display: table-cell;
   vertical-align: top;
-  min-width: 153px;
 }
 .soft-buttons-4 {
   display: table-cell;
   vertical-align: top;
-  min-width: 204px;
 }
 
 /* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
@@ -498,7 +501,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include karel-counter(32px, 2px);
 
   #soft-buttons {
-    margin: 5px -8px 0 0;
+    margin: 5px 0 0 0;
     button {
       margin: 0 4px 0 0;
     }
@@ -670,6 +673,11 @@ input[type="radio"] {
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 9px;
 }
 
 #gameButtons:after{
@@ -754,9 +762,7 @@ input[type="radio"] {
   color: #7E5BA0;
   font-family: $gotham-extra-bold;
   font-weight: normal;
-
 }
-
 #show-code {
   margin-bottom: 5px;
 }
@@ -1117,7 +1123,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   td {
     vertical-align: middle;
   }
-  tr:nth-child(even){
+  tr.highlight{
     background-color: $lightest_purple;
   }
 

@@ -45,6 +45,13 @@ class DeleteAccountsHelper
       where(id: storage_app_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
+    # Clear any comments associated with specific versions of projects.
+    # At time of writing, this feature is in use only in Javalab when a student
+    # commits their code.
+    project_versions = ProjectVersion.where(storage_app_id: storage_app_ids)
+    project_versions.each {|version| version.update!(comment: nil)}
+    @log.puts "Cleared #{project_versions.count} ProjectVersion comments" if project_versions.count > 0
+
     # Clear S3 contents for user's channels
     @log.puts "Deleting S3 contents for #{channel_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
@@ -264,6 +271,19 @@ class DeleteAccountsHelper
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
   end
 
+  def purge_code_review_comments(user_id)
+    @log.puts "Removing CodeReviewComment"
+
+    comments = CodeReviewComment.with_deleted.where(commenter_id: user_id)
+    comments_count = comments.count
+    comments.each do |comment|
+      comment.comment = nil
+      comment.destroy
+      comment.save(validate: false)
+    end
+    @log.puts "Cleared #{comments_count} CodeReviewComment" if comments_count > 0
+  end
+
   def check_safety_constraints(user)
     assert_constraint !user.facilitator?,
       'Automated purging of accounts with FACILITATOR permission is not supported at this time.'
@@ -344,6 +364,7 @@ class DeleteAccountsHelper
     user.destroy
 
     purge_teacher_feedbacks(user.id)
+    purge_code_review_comments(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
     anonymize_circuit_playground_discount_application(user)

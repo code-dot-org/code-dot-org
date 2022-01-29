@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-16 01:44:24 UTC",
+    "serialized_at": "2022-01-20 18:00:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -353,14 +353,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-mod3-CSP-TeacherVoices-CSPOverview"
+          "SP-VPL-21-CSP-mod3-IntroToCSP"
         ],
         "progression": "Course design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-CSP-TeacherVoices-CSPOverview"
+          "SP-VPL-21-CSP-mod3-IntroToCSP"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -368,7 +368,7 @@
         "activity_section.key": "efdce20d-0c9b-479e-93d3-3718619d3cd0"
       },
       "level_keys": [
-        "SP-VPL-21-mod3-CSP-TeacherVoices-CSPOverview"
+        "SP-VPL-21-CSP-mod3-IntroToCSP"
       ]
     },
     {
@@ -452,6 +452,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-CSP-mod3-LevelType-practice-lc"
         ],
@@ -553,14 +554,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-mod3-CSP-EIPM2"
+          "SP-VPL-21-CSP-mod3-EIPM"
         ],
         "progression": "EIPM sequences"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-CSP-EIPM2"
+          "SP-VPL-21-CSP-mod3-EIPM"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -568,7 +569,7 @@
         "activity_section.key": "8165843f-bbb6-4f40-a1fd-376a9fa60b9e"
       },
       "level_keys": [
-        "SP-VPL-21-mod3-CSP-EIPM2"
+        "SP-VPL-21-CSP-mod3-EIPM"
       ]
     },
     {
@@ -627,6 +628,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-mod3-AppLab-practice-lc-CSP"
         ],
@@ -778,31 +780,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-mod3-CSP-APExamVid"
-        ],
-        "progression": "The AP exam"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-mod3-CSP-APExamVid"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csp3-2021",
-        "activity_section.key": "b9729016-d415-4fa0-b22e-18ecfa0106ee"
-      },
-      "level_keys": [
-        "SP-VPL-21-mod3-CSP-APExamVid"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "SP-VPL-21-mod3-APExamOverview-CSP"
         ],
         "progression": "The AP exam"
@@ -819,6 +796,31 @@
       },
       "level_keys": [
         "SP-VPL-21-mod3-APExamOverview-CSP"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-APExam"
+        ],
+        "progression": "The AP exam"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSP-mod3-APExam"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp3-2021",
+        "activity_section.key": "b9729016-d415-4fa0-b22e-18ecfa0106ee"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSP-mod3-APExam"
       ]
     },
     {
@@ -998,9 +1000,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod3-CSP-TeacherVoices-CSPOverview",
+        "level.key": "SP-VPL-21-CSP-mod3-IntroToCSP",
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-CSP-TeacherVoices-CSPOverview"
+          "SP-VPL-21-CSP-mod3-IntroToCSP"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1094,9 +1096,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod3-CSP-EIPM2",
+        "level.key": "SP-VPL-21-CSP-mod3-EIPM",
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-CSP-EIPM2"
+          "SP-VPL-21-CSP-mod3-EIPM"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1202,9 +1204,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod3-CSP-APExamVid",
+        "level.key": "SP-VPL-21-mod3-APExamOverview-CSP",
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-CSP-APExamVid"
+          "SP-VPL-21-mod3-APExamOverview-CSP"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1214,9 +1216,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod3-APExamOverview-CSP",
+        "level.key": "SP-VPL-21-CSP-mod3-APExam",
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-APExamOverview-CSP"
+          "SP-VPL-21-CSP-mod3-APExam"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

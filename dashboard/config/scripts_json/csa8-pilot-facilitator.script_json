@@ -2,9 +2,10 @@
   "script": {
     "name": "csa8-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,8 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-03 18:22:17 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-01-28 19:46:57 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -502,6 +503,19 @@
       }
     },
     {
+      "key": "5e4eefd6-d017-4c32-9e09-4be7fdd47821",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e4eefd6-d017-4c32-9e09-4be7fdd47821",
+        "lesson.key": "Searching for Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "f371ba3e-9a6d-48ce-b94c-01fd38803da6",
       "position": 1,
       "properties": {
@@ -538,6 +552,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "0fddf99d-3ffd-4b68-8b7a-ce7412e58b95",
+        "lesson.key": "Implementing the Binary Search",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "02830b8c-5f48-4fbf-a45d-fd191c1b3a60",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02830b8c-5f48-4fbf-a45d-fd191c1b3a60",
         "lesson.key": "Implementing the Binary Search",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -586,6 +613,19 @@
       }
     },
     {
+      "key": "ea512b5c-9b25-4ec7-b747-fd7f3bb5aa64",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea512b5c-9b25-4ec7-b747-fd7f3bb5aa64",
+        "lesson.key": "Implementing a Recursive Binary Search",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "90677840-108d-4e90-8248-59ba3bc11184",
       "position": 1,
       "properties": {
@@ -622,6 +662,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "bd8f7143-e66d-468c-9afe-736741936500",
+        "lesson.key": "Implementing the Selection Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "9043c33e-b02e-4ba1-b8d6-3cc53e10c282",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9043c33e-b02e-4ba1-b8d6-3cc53e10c282",
         "lesson.key": "Implementing the Selection Sort",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -670,6 +723,19 @@
       }
     },
     {
+      "key": "42954efb-4475-4e3d-a3cc-e1520e435a52",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42954efb-4475-4e3d-a3cc-e1520e435a52",
+        "lesson.key": "Implementing the Insertion Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "e25560d6-b08f-4467-a74f-7a087e23dcfe",
       "position": 1,
       "properties": {
@@ -706,6 +772,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3b57d497-820c-44e0-94bf-d32bdacbe6b0",
+        "lesson.key": "Implementing the Merge Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "b5f8b5ed-3b3e-40b9-8813-badce21249d3",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5f8b5ed-3b3e-40b9-8813-badce21249d3",
         "lesson.key": "Implementing the Merge Sort",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -754,6 +833,19 @@
       }
     },
     {
+      "key": "47b56aee-eeb9-49d9-90a7-4c5e5d6668a8",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47b56aee-eeb9-49d9-90a7-4c5e5d6668a8",
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "b21400e2-1c65-4723-8130-5c3ddd367d8e",
       "position": 1,
       "properties": {
@@ -796,6 +888,19 @@
       }
     },
     {
+      "key": "0057e244-775e-43c8-80f9-de6d710c403e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0057e244-775e-43c8-80f9-de6d710c403e",
+        "lesson.key": "Traversing Multiple Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "a2fa1b65-94ef-4828-a42b-95f3b888e111",
       "position": 1,
       "properties": {
@@ -832,6 +937,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "08f8c01e-9052-4410-b08d-448460897c6f",
+        "lesson.key": "Defending Privacy and Security",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "6c4da911-66ab-4dfa-a3e7-1af2351e205c",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c4da911-66ab-4dfa-a3e7-1af2351e205c",
         "lesson.key": "Defending Privacy and Security",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -1484,6 +1602,17 @@
       }
     },
     {
+      "key": "f1caa21e-971e-4cab-86af-1964f3ecf571",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.5\n* Topic Questions 7.5\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1caa21e-971e-4cab-86af-1964f3ecf571",
+        "lesson_activity.key": "5e4eefd6-d017-4c32-9e09-4be7fdd47821"
+      }
+    },
+    {
       "key": "67ce3a5a-7e6a-4733-9a5a-616a1c0a5543",
       "position": 1,
       "properties": {
@@ -1637,6 +1766,17 @@
       }
     },
     {
+      "key": "afdafb33-4536-4cf9-b7bb-6f59a764f99a",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "afdafb33-4536-4cf9-b7bb-6f59a764f99a",
+        "lesson_activity.key": "02830b8c-5f48-4fbf-a45d-fd191c1b3a60"
+      }
+    },
+    {
       "key": "e7b23d32-6c13-4f68-b56b-2c274389aca8",
       "position": 1,
       "properties": {
@@ -1747,7 +1887,7 @@
       "key": "4dbada71-6af6-48d4-9848-c2e09f91668f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students identify the different parts of the recursive binary search method, including its parameters, conditional statements, return value, and recursive calls. They notice the difference in how binary search is implemented iteratively and recursively. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the parameters, base cases, and recursive calls in the recursive binary search method."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students identify the different parts of the recursive binary search method, including its parameters, conditional statements, return value, and recursive calls. They notice the difference in how binary search is implemented iteratively and recursively. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the parameters in the recursive binary search method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base cases in the recursive binary search method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the recursive calls in the recursive binary search method."
       },
       "seeding_key": {
         "activity_section.key": "4dbada71-6af6-48d4-9848-c2e09f91668f",
@@ -1864,6 +2004,30 @@
       }
     },
     {
+      "key": "fd65b00a-4e2f-4ac6-9dff-bc8d83df76ba",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd65b00a-4e2f-4ac6-9dff-bc8d83df76ba",
+        "lesson_activity.key": "e207cacb-10ba-4312-998d-c1b0b84db48c"
+      }
+    },
+    {
+      "key": "9e31a73a-04a2-4c48-a419-84995dfa01f1",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "9e31a73a-04a2-4c48-a419-84995dfa01f1",
+        "lesson_activity.key": "ea512b5c-9b25-4ec7-b747-fd7f3bb5aa64"
+      }
+    },
+    {
       "key": "edb3a60e-8683-46f7-9f17-84eb33bfe2fd",
       "position": 1,
       "properties": {
@@ -1902,10 +2066,33 @@
       }
     },
     {
-      "key": "c24e63a8-b12a-44b3-9bc6-586c926f8655",
+      "key": "dbca3059-9499-494c-a388-f57a87b82764",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review binary search.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you use the “Sort By” feature on an e-commerce site, like Amazon? What are some of the different options offered to sort the products?*\n\n**Discussion Goal:** Students note that they use the \"Sort By\" feature to find products quickly. Students share that they can sort by size, color, weight, delivery time, price, and other options."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review binary search."
+      },
+      "seeding_key": {
+        "activity_section.key": "dbca3059-9499-494c-a388-f57a87b82764",
+        "lesson_activity.key": "618c0927-a296-4757-95e5-d33061b9cb64"
+      }
+    },
+    {
+      "key": "b04038c4-d23b-41e3-9ad9-53f9ebe9595c",
+      "position": 3,
+      "properties": {
+        "description": "If we used a binary search, and there are 1000 items in a collection, you’d have to look at a maximum of 10 items to find the one you want. If there are a million items, you’d have to look at a maximum of 20 items compared to as many as a million items if the list is not sorted.\n\nUnlike humans, a computer only compares two values at a time when sorting. A computer cannot “see” the rest of values in the list.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b04038c4-d23b-41e3-9ad9-53f9ebe9595c",
+        "lesson_activity.key": "618c0927-a296-4757-95e5-d33061b9cb64"
+      }
+    },
+    {
+      "key": "c24e63a8-b12a-44b3-9bc6-586c926f8655",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you use the “Sort By” feature on an e-commerce site, like Amazon? What are some of the different options offered to sort the products?*\n\n**Discussion Goal:** Students note that they use the \"Sort By\" feature to find products quickly. Students share that they can sort by size, color, weight, delivery time, price, and other options."
       },
       "seeding_key": {
         "activity_section.key": "c24e63a8-b12a-44b3-9bc6-586c926f8655",
@@ -1914,7 +2101,7 @@
     },
     {
       "key": "035e8f47-206c-410a-8d08-ccebf6037628",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "There are many ways to sort a collection of items. One commonly used approach is a selection sort.",
         "remarks": true
@@ -1926,7 +2113,7 @@
     },
     {
       "key": "ee10e445-5143-45eb-85bd-9af8c6b88e0f",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define selection sort.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the selection sort algorithm.",
         "tips": [
@@ -1942,8 +2129,20 @@
       }
     },
     {
+      "key": "f220539b-df90-4868-a59f-30173c7e352f",
+      "position": 7,
+      "properties": {
+        "description": "Remember, if the value is smaller than the value in the current position, SWAP IT! The selection sort algorithm SWAPs the values to sort them in the correct order.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f220539b-df90-4868-a59f-30173c7e352f",
+        "lesson_activity.key": "618c0927-a296-4757-95e5-d33061b9cb64"
+      }
+    },
+    {
       "key": "ba5ca3b5-03d0-4ad4-8b63-130e40b9e2a5",
-      "position": 5,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Selection Sort Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the pseudocode for the selection sort algorithm.\n\n**Group:** Place students in groups of 4 to 6.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Selection Sort handout and five cups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Selection Sort activity.",
         "tips": [
@@ -1960,7 +2159,7 @@
     },
     {
       "key": "b957c11e-0ce8-4a4d-9816-67b3d4f41d30",
-      "position": 6,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question with a partner before discussing the question as a class. Click through the animated slide to show the correct answer."
       },
@@ -1971,7 +2170,7 @@
     },
     {
       "key": "e2f6719b-864e-4fd6-a75e-8bdb983d09dd",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "You now have time to continue your planning for your project. Remember, your planning might include outlines, rough drafts, flowcharts, UML diagrams, or pseudocode for key algorithms in your program. Take a look at your Project Planning Board to decide what task you need to tackle first.",
         "duration": "10",
@@ -1985,7 +2184,7 @@
     },
     {
       "key": "5ca7d897-8542-42be-8ecc-32a94bdfbba5",
-      "position": 8,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Inclusive Playground Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
@@ -2029,6 +2228,17 @@
       "seeding_key": {
         "activity_section.key": "57402bfc-9866-47b3-a021-961b058f7079",
         "lesson_activity.key": "bd8f7143-e66d-468c-9afe-736741936500"
+      }
+    },
+    {
+      "key": "a3d03215-db3b-4d7d-8f69-1c145ffdb20b",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "a3d03215-db3b-4d7d-8f69-1c145ffdb20b",
+        "lesson_activity.key": "9043c33e-b02e-4ba1-b8d6-3cc53e10c282"
       }
     },
     {
@@ -2229,6 +2439,17 @@
       }
     },
     {
+      "key": "a3382c1f-dfc0-4bde-b8dc-97a848b9e04b",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.6\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3382c1f-dfc0-4bde-b8dc-97a848b9e04b",
+        "lesson_activity.key": "42954efb-4475-4e3d-a3cc-e1520e435a52"
+      }
+    },
+    {
       "key": "35192792-3216-4e6a-915d-d9ef67a53bf5",
       "position": 1,
       "properties": {
@@ -2421,11 +2642,23 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "627c4714-d0f7-474d-bba1-9f1c6e39f676",
         "lesson_activity.key": "3b57d497-820c-44e0-94bf-d32bdacbe6b0"
+      }
+    },
+    {
+      "key": "b3946c9c-7403-4c61-b009-cf64cd37eddc",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3946c9c-7403-4c61-b009-cf64cd37eddc",
+        "lesson_activity.key": "b5f8b5ed-3b3e-40b9-8813-badce21249d3"
       }
     },
     {
@@ -2503,6 +2736,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to work on their Inclusive Playground Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "progression_name": "Inclusive Playground Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2561,11 +2795,23 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0742309c-f53d-4b7b-90ea-6853d178aa33",
         "lesson_activity.key": "981765d2-9d8d-4f55-aa1f-44b7e8827881"
+      }
+    },
+    {
+      "key": "ed83eb43-fe6b-4889-b388-231030ed77e8",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "ed83eb43-fe6b-4889-b388-231030ed77e8",
+        "lesson_activity.key": "47b56aee-eeb9-49d9-90a7-4c5e5d6668a8"
       }
     },
     {
@@ -2630,7 +2876,7 @@
       "key": "e9d96e6f-2868-48ce-95ac-775672a4c413",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "e9d96e6f-2868-48ce-95ac-775672a4c413",
@@ -2672,11 +2918,23 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "38f52a52-b7b1-4b72-886d-2d8b17fc8775",
         "lesson_activity.key": "18e169d1-44fc-43fb-a039-97bbf781753b"
+      }
+    },
+    {
+      "key": "c61fb740-0937-44cf-a684-f518a4058399",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "c61fb740-0937-44cf-a684-f518a4058399",
+        "lesson_activity.key": "0057e244-775e-43c8-80f9-de6d710c403e"
       }
     },
     {
@@ -2703,7 +2961,7 @@
       "properties": {
         "description": "You have learned a lot about Java this year and have spent a lot of time practicing software development. In addition to writing and manipulating code to create programs for end-users, a software engineer has a moral obligation to respect the privacy of the users and enhance the security of the program.",
         "duration": "15",
-        "name": "Secure Software Design",
+        "name": "Secure Coding Practices",
         "remarks": true
       },
       "seeding_key": {
@@ -2738,8 +2996,8 @@
       "key": "8f384862-b58a-4dac-8ea1-4d0606003cd1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss secure software design principles.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Software Design handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Software Design handout.",
-        "progression_name": "Secure Software Design"
+        "description": "**Do This:** Discuss secure coding practices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Input Validation\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Authentication and Password Management\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Session Management\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Access Control\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Error Handling and Logging\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Data Protection\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Communication Security\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> General Coding Practices\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Secure Coding Practices handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students choose a program to evaluate and complete the Secure Coding Practices handout.",
+        "progression_name": "Secure Coding Practices"
       },
       "seeding_key": {
         "activity_section.key": "8f384862-b58a-4dac-8ea1-4d0606003cd1",
@@ -2779,6 +3037,17 @@
       }
     },
     {
+      "key": "95fe95f6-c6f4-4239-a98d-d9d2e432c9c3",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What would you say are the risks to privacy from collecting and storing personal data on computer systems?\n\n**Discussion Goal:** Students share ideas about personal information being leaked online or accessed by someone without authorization. Students may share examples of events and issues that have occurred in the real world."
+      },
+      "seeding_key": {
+        "activity_section.key": "95fe95f6-c6f4-4239-a98d-d9d2e432c9c3",
+        "lesson_activity.key": "63b59918-0637-4df5-86c0-575de643388b"
+      }
+    },
+    {
       "key": "9e975134-032c-452f-86da-26c616777a91",
       "position": 1,
       "properties": {
@@ -2813,6 +3082,17 @@
       "seeding_key": {
         "activity_section.key": "2aad5dde-ff65-4d4a-8d61-c8b1c426846b",
         "lesson_activity.key": "08f8c01e-9052-4410-b08d-448460897c6f"
+      }
+    },
+    {
+      "key": "d1eed039-804a-4fd8-afbc-bb52dc726935",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.7\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1eed039-804a-4fd8-afbc-bb52dc726935",
+        "lesson_activity.key": "6c4da911-66ab-4dfa-a3e7-1af2351e205c"
       }
     },
     {
@@ -3456,6 +3736,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3599,6 +3882,31 @@
     },
     {
       "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L4-L3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L4-L3"
+        ],
+        "lesson.key": "Implementing a Recursive Binary Search",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "fd65b00a-4e2f-4ac6-9dff-bc8d83df76ba"
+      },
+      "level_keys": [
+        "CSA U8L4-L3"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3623,7 +3931,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3648,7 +3956,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3673,7 +3981,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3698,9 +4006,59 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L7-L3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L7-L3"
+        ],
+        "lesson.key": "Implementing the Merge Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "627c4714-d0f7-474d-bba1-9f1c6e39f676"
+      },
+      "level_keys": [
+        "CSA U8L7-L3"
+      ]
+    },
+    {
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "progression": "Algorithms in Games"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "687209ef-102b-4a06-bb75-ff720520b1a5"
+      },
+      "level_keys": [
+        "CSA U8L8-L1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3723,7 +4081,57 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "progression": "Inclusive Playground Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "8cabc0c2-6fd9-4c42-9010-ec7620570961"
+      },
+      "level_keys": [
+        "CSA U8L8-L3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "0742309c-f53d-4b7b-90ea-6853d178aa33"
+      },
+      "level_keys": [
+        "CSA U8L8-L4"
+      ]
+    },
+    {
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3748,9 +4156,34 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L9-L2"
+        ],
+        "progression": "Multiple Lists in Games"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L2"
+        ],
+        "lesson.key": "Traversing Multiple Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "4b425cd0-9acc-47fe-9be1-15cb6aa78b04"
+      },
+      "level_keys": [
+        "CSA U8L9-L2"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3773,7 +4206,32 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8L9-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L9-L4"
+        ],
+        "lesson.key": "Traversing Multiple Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "38f52a52-b7b1-4b72-886d-2d8b17fc8775"
+      },
+      "level_keys": [
+        "CSA U8L9-L4"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3781,7 +4239,7 @@
         "level_keys": [
           "CSA U8L10-L1"
         ],
-        "progression": "Secure Software Design"
+        "progression": "Secure Coding Practices"
       },
       "bonus": false,
       "seeding_key": {
@@ -3798,7 +4256,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3823,7 +4281,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3848,7 +4306,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3873,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3898,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3923,7 +4381,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3948,7 +4406,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3973,7 +4431,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3998,7 +4456,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4023,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4159,6 +4617,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8L4-L3",
+        "script_level.level_keys": [
+          "CSA U8L4-L3"
+        ],
+        "lesson.key": "Implementing a Recursive Binary Search",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "fd65b00a-4e2f-4ac6-9dff-bc8d83df76ba"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U8L5-L1",
         "script_level.level_keys": [
           "CSA U8L5-L1"
@@ -4207,6 +4677,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8L7-L3",
+        "script_level.level_keys": [
+          "CSA U8L7-L3"
+        ],
+        "lesson.key": "Implementing the Merge Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "627c4714-d0f7-474d-bba1-9f1c6e39f676"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L1",
+        "script_level.level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "687209ef-102b-4a06-bb75-ff720520b1a5"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U8L8-L2",
         "script_level.level_keys": [
           "CSA U8L8-L2"
@@ -4215,6 +4709,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator",
         "activity_section.key": "687209ef-102b-4a06-bb75-ff720520b1a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L3",
+        "script_level.level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "8cabc0c2-6fd9-4c42-9010-ec7620570961"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L4",
+        "script_level.level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "0742309c-f53d-4b7b-90ea-6853d178aa33"
       }
     },
     {
@@ -4231,6 +4749,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8L9-L2",
+        "script_level.level_keys": [
+          "CSA U8L9-L2"
+        ],
+        "lesson.key": "Traversing Multiple Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "4b425cd0-9acc-47fe-9be1-15cb6aa78b04"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U8L9-L3",
         "script_level.level_keys": [
           "CSA U8L9-L3"
@@ -4239,6 +4769,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator",
         "activity_section.key": "4b425cd0-9acc-47fe-9be1-15cb6aa78b04"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L9-L4",
+        "script_level.level_keys": [
+          "CSA U8L9-L4"
+        ],
+        "lesson.key": "Traversing Multiple Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator",
+        "activity_section.key": "38f52a52-b7b1-4b72-886d-2d8b17fc8775"
       }
     },
     {
@@ -4412,7 +4954,7 @@
       }
     },
     {
-      "name": "[KEY] Secure Software Design",
+      "name": "[KEY] Secure Coding Practices",
       "url": "https://docs.google.com/document/d/1AFMBp9GBhWBDEi2cISF-z2ezcKoCqdgFMBrlAxzSBNs/edit?usp=sharing",
       "key": "_key_secure_software_design",
       "properties": {
@@ -4541,6 +5083,51 @@
       },
       "seeding_key": {
         "resource.key": "_key_u8l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa8-pilot-facilitator/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa8-pilot-facilitator/standards",
+      "key": "all_standards_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_8"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa8-pilot-facilitator/vocab",
+      "key": "all_vocabulary_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8"
+      }
+    },
+    {
+      "name": "Binary Search",
+      "url": "https://docs.google.com/document/d/1pycNLXO3CCuwA57r9GYBUde3L5fSWxK7vxGxhSTnGuA/edit?usp=sharing",
+      "key": "binary_search",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "binary_search"
       }
     },
     {
@@ -4676,7 +5263,7 @@
       }
     },
     {
-      "name": "Secure Software Design",
+      "name": "Secure Coding Practices",
       "url": "https://docs.google.com/document/d/1rezVAXZugSKWFnYKYYI7Ff68iarRXFQVlL2zfxBjvEk/edit?usp=sharing",
       "key": "secure_software_design",
       "properties": {
@@ -4974,6 +5561,12 @@
     {
       "seeding_key": {
         "lesson.key": "Implementing the Binary Search",
+        "resource.key": "binary_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Implementing the Binary Search",
         "resource.key": "unit_8_presentation_slides"
       }
     },
@@ -5201,7 +5794,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_8",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_8",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

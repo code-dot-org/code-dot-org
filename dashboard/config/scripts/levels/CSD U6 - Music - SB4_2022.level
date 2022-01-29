@@ -25,7 +25,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
@@ -45,11 +45,7 @@
     "makerlab_enabled": "true",
     "parent_level_id": 20531,
     "name_suffix": "_2021",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "code_functions": {
       "buzzer.playNotes": null
@@ -62,6 +58,10 @@
       "/docs/concepts/maker-toolkit/playing-notes/",
       "/docs/concepts/javascript/arrays/",
       "/docs/concepts/javascript/modifying-arrays/"
+    ],
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
     ]
   },
   "game_id": 41,
@@ -70,7 +70,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-06T16:56:38.364+00:00\",\"changed\":[\"cloned from \\\"CSDU6 play predict code_2021\\\"\"],\"cloned_from\":\"CSDU6 play predict code_2021\"},{\"changed_at\":\"2021-12-06 17:11:11 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"hide_design_mode\",\"hide_view_data_button\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 17:14:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"code_functions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-06T16:56:38.364+00:00\",\"changed\":[\"cloned from \\\"CSDU6 play predict code_2021\\\"\"],\"cloned_from\":\"CSDU6 play predict code_2021\"},{\"changed_at\":\"2021-12-06 17:11:11 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"hide_design_mode\",\"hide_view_data_button\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 17:14:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"code_functions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:24:35 +0000\",\"changed\":[\"hide_share_and_remix\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -85,7 +85,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
         '11': {}
       },
       lockableAuthorized: false,
-      lockableAuthorizedLoaded: true
+      lockableAuthorizedLoaded: true,
+      lessonsBySectionIdLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {
@@ -114,7 +115,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       }
     }),
     progress: {
-      scriptName: 'script-name'
+      scriptName: 'script-name',
+      unitProgressHasLoaded: true
     },
     currentUser: {
       userId: 1
@@ -136,6 +138,7 @@ export const createStoreWithLockedLesson = (
       lessonsBySectionId: {
         '11': {}
       },
+      lessonsBySectionIdLoaded: true,
       lockableAuthorized: lockableAuthorized,
       lockableAuthorizedLoaded: true
     },
@@ -148,7 +151,9 @@ export const createStoreWithLockedLesson = (
         '11': {[lessonId]: true}
       }
     }),
-    progress: {},
+    progress: {
+      unitProgressHasLoaded: true
+    },
     currentUser: {
       userId: 1
     }

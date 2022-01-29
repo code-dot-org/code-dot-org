@@ -1,6 +1,6 @@
 name 'CSA U8L4-L2'
 display_name 'Recursive Binary Search'
-description 'level description here'
+description 'Use the recursive binary search to find a specific number or object.'
 
 sublevels
 level 'CSA U8L4-L2a'

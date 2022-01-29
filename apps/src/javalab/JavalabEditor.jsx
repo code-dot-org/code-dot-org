@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Radium from 'radium';
 import {
   setSource,
+  sourceTextUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
@@ -10,6 +11,7 @@ import {
   setRenderedHeight,
   setEditorColumnHeight
 } from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
 import PaneHeader, {
   PaneSection,
@@ -62,11 +64,12 @@ class JavalabEditor extends React.Component {
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
+    sourceTextUpdated: PropTypes.func,
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
     validation: PropTypes.object,
-    isDarkMode: PropTypes.bool,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool.isRequired
@@ -136,8 +139,9 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isDarkMode !== this.props.isDarkMode) {
-      const newStyle = this.props.isDarkMode ? oneDark : lightMode;
+    if (prevProps.displayTheme !== this.props.displayTheme) {
+      const newStyle =
+        this.props.displayTheme === DisplayTheme.DARK ? oneDark : lightMode;
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
@@ -162,10 +166,10 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {isDarkMode, isReadOnlyWorkspace} = this.props;
+    const {displayTheme, isReadOnlyWorkspace} = this.props;
     const extensions = [...editorSetup];
 
-    if (isDarkMode) {
+    if (displayTheme === DisplayTheme.DARK) {
       const darkModeExtension = this.editorModeConfigCompartment.of(oneDark);
       extensions.push(darkModeExtension);
     } else {
@@ -191,6 +195,8 @@ class JavalabEditor extends React.Component {
   }
 
   dispatchEditorChange = key => {
+    const {sourceTextUpdated} = this.props;
+
     // tr is a code mirror transaction
     // see https://codemirror.net/6/docs/ref/#state.Transaction
     return tr => {
@@ -199,10 +205,7 @@ class JavalabEditor extends React.Component {
       this.editors[key].update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        this.props.setSource(
-          this.state.fileMetadata[key],
-          tr.newDoc.toString()
-        );
+        sourceTextUpdated(this.state.fileMetadata[key], tr.newDoc.toString());
         projectChanged();
       }
     };
@@ -536,7 +539,7 @@ class JavalabEditor extends React.Component {
     } = this.state;
     const {
       onCommitCode,
-      isDarkMode,
+      displayTheme,
       sources,
       isEditingStartSources,
       isReadOnlyWorkspace,
@@ -577,7 +580,7 @@ class JavalabEditor extends React.Component {
           <PaneSection style={styles.backpackSection}>
             <Backpack
               id={'javalab-editor-backpack'}
-              isDarkMode={isDarkMode}
+              displayTheme={displayTheme}
               isDisabled={isReadOnlyWorkspace}
               onImport={this.onImportFile}
             />
@@ -611,14 +614,14 @@ class JavalabEditor extends React.Component {
           activeKey={activeTabKey}
           onSelect={key => this.onChangeTabs(key)}
           id="javalab-editor-tabs"
-          className={isDarkMode ? 'darkmode' : ''}
+          className={displayTheme === DisplayTheme.DARK ? 'darkmode' : ''}
         >
           <div>
             <Nav bsStyle="tabs" style={styles.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
-                isDarkMode={isDarkMode}
+                displayTheme={displayTheme}
               />
               {orderedTabKeys.map(tabKey => {
                 return (
@@ -648,7 +651,7 @@ class JavalabEditor extends React.Component {
                       type="button"
                       style={{
                         ...styles.fileMenuToggleButton,
-                        ...(this.props.isDarkMode &&
+                        ...(displayTheme === DisplayTheme.DARK &&
                           styles.darkFileMenuToggleButton),
                         ...(activeTabKey !== tabKey && {visibility: 'hidden'})
                       }}
@@ -674,7 +677,8 @@ class JavalabEditor extends React.Component {
                       ref={el => (this._codeMirrors[tabKey] = el)}
                       style={{
                         ...styles.editor,
-                        ...(isDarkMode && styles.darkBackground),
+                        ...(displayTheme === DisplayTheme.DARK &&
+                          styles.darkBackground),
                         ...{height: height - HEADER_OFFSET}
                       }}
                     />
@@ -710,7 +714,7 @@ class JavalabEditor extends React.Component {
           message={javalabMsg.deleteFileConfirmation({
             filename: fileMetadata[fileToDelete]
           })}
-          isDarkMode={isDarkMode}
+          displayTheme={displayTheme}
           confirmButtonText={javalabMsg.delete()}
           closeButtonText={javalabMsg.cancel()}
         />
@@ -721,7 +725,7 @@ class JavalabEditor extends React.Component {
           }
           filename={fileMetadata[editTabKey]}
           handleSave={this.onRenameFile}
-          isDarkMode={isDarkMode}
+          displayTheme={displayTheme}
           inputLabel="Rename the file"
           saveButtonText="Rename"
           errorMessage={renameFileError}
@@ -732,7 +736,7 @@ class JavalabEditor extends React.Component {
             this.setState({openDialog: null, newFileError: null})
           }
           handleSave={this.onCreateFile}
-          isDarkMode={isDarkMode}
+          displayTheme={displayTheme}
           inputLabel="Create new file"
           saveButtonText="Create"
           errorMessage={newFileError}
@@ -798,7 +802,7 @@ export default connect(
   state => ({
     sources: state.javalab.sources,
     validation: state.javalab.validation,
-    isDarkMode: state.javalab.isDarkMode,
+    displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
@@ -808,6 +812,8 @@ export default connect(
       dispatch(sourceVisibilityUpdated(filename, isVisible)),
     sourceValidationUpdated: (filename, isValidation) =>
       dispatch(sourceValidationUpdated(filename, isValidation)),
+    sourceTextUpdated: (filename, text) =>
+      dispatch(sourceTextUpdated(filename, text)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename)),

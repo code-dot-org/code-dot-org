@@ -7,6 +7,7 @@ const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
+const SOURCE_TEXT_UPDATED = 'javalab/SOURCE_TEXT_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
@@ -28,10 +29,11 @@ const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 
-const initialState = {
+// Exported for test
+export const initialState = {
   consoleLogs: [],
   sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
-  isDarkMode: false,
+  displayTheme: DisplayTheme.LIGHT,
   validation: {},
   renderedEditorHeight: 400,
   leftWidth: 400,
@@ -100,6 +102,13 @@ export const setSource = (
   isValidation
 });
 
+// Handles updates to text within Code Mirror (ie, when text is edited)
+export const sourceTextUpdated = (filename, text) => ({
+  type: SOURCE_TEXT_UPDATED,
+  filename,
+  text
+});
+
 export const sourceVisibilityUpdated = (filename, isVisible) => ({
   type: SOURCE_VISIBILITY_UPDATED,
   filename,
@@ -113,12 +122,10 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
 });
 
 // Updates the user preferences to reflect change
-export const setIsDarkMode = isDarkMode => {
-  new UserPreferences().setDisplayTheme(
-    isDarkMode ? DisplayTheme.DARK : DisplayTheme.LIGHT
-  );
+export const setDisplayTheme = displayTheme => {
+  new UserPreferences().setDisplayTheme(displayTheme);
   return {
-    isDarkMode: isDarkMode,
+    displayTheme: displayTheme,
     type: COLOR_PREFERENCE_UPDATED
   };
 };
@@ -280,6 +287,14 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
+  if (action.type === SOURCE_TEXT_UPDATED) {
+    let newSources = {...state.sources};
+    newSources[action.filename].text = action.text;
+    return {
+      ...state,
+      sources: newSources
+    };
+  }
   if (action.type === RENAME_FILE) {
     const source = state.sources[action.oldFilename];
     if (source !== undefined) {
@@ -318,7 +333,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === COLOR_PREFERENCE_UPDATED) {
     return {
       ...state,
-      isDarkMode: action.isDarkMode
+      displayTheme: action.displayTheme
     };
   }
   if (action.type === EDITOR_HEIGHT_UPDATED) {

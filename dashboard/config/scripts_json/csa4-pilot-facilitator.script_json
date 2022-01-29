@@ -2,7 +2,7 @@
   "script": {
     "name": "csa4-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "announcements": [
         {
@@ -14,6 +14,7 @@
         }
       ],
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -23,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:13 UTC",
+    "serialized_at": "2022-01-28 19:41:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -120,7 +121,7 @@
     },
     {
       "key": "Treating Data as a Different Types",
-      "name": "Treating Data as a Different Types",
+      "name": "Treating Data as a Different Type",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1177,8 +1178,20 @@
       }
     },
     {
-      "key": "4d6cb73c-47fe-43a3-9ca9-4440ba40047e",
+      "key": "ccf608c0-d2c0-4180-baac-09e63ab6e127",
       "position": 5,
+      "properties": {
+        "description": "Documentation for APIs and libraries are essential to understanding the attributes and behaviors of an object of a class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ccf608c0-d2c0-4180-baac-09e63ab6e127",
+        "lesson_activity.key": "fd199637-7f6b-4b68-8d03-5c82e5cef32a"
+      }
+    },
+    {
+      "key": "4d6cb73c-47fe-43a3-9ca9-4440ba40047e",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find out about the `Scanner` class?*\n* *What did you notice about the constructors and methods for the `Scanner` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `Scanner` class, including descriptions, constructors for creating `Scanner` objects, and methods that they can use. Students may wonder about other methods in the `Scanner` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define packages, explain their purpose, and demonstrate how to use them in a program."
       },
@@ -1189,7 +1202,7 @@
     },
     {
       "key": "2dde36d9-28f7-40bd-9aef-afe4979ab0b6",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "`String` is another object that we create and use in our programs, but we never wrote a `String` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> But no class, ______ (no object)!\n\nLike with the `Scanner` class, we can create `String` objects without first creating a `String` class because it is in a package.",
         "duration": "10",
@@ -1203,7 +1216,7 @@
     },
     {
       "key": "a7a25e38-77a4-4008-b9dc-7c5ddf525bfa",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Have students work with a partner to navigate the `String` class documentation to answer the questions.",
         "progression_name": "The String Class"
@@ -1215,7 +1228,7 @@
     },
     {
       "key": "64fe36f2-7756-47c9-af93-59a7d33b8ccc",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did you find out about the `String` class?*\n* *What did you notice about the constructors and methods for the `String` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `String` class, including descriptions, constructors for creating `String` objects, and methods that they can use. Students may wonder about other methods in the `String` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which package can we find the `String` class?*\n* *Why do you think we can create `String` objects without first importing `java.lang`?*\n\n**Discussion Goal:** Students share that the `String` class is part of the `java.lang` package. Students guess that the `java.lang` package is the core package of the Java language, so it is automatically included in every program.",
         "tips": [
@@ -1232,7 +1245,7 @@
     },
     {
       "key": "15329ba9-9a01-4ead-a07f-0e07fc9174e1",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with `java`, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
         "duration": "15",
@@ -1246,7 +1259,7 @@
     },
     {
       "key": "b9f082dc-70cd-4214-9d44-4f3e92c7780c",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers.",
         "progression_name": "Exploring APIs"
@@ -1258,7 +1271,7 @@
     },
     {
       "key": "5f599b64-cd50-4fd3-b10d-f07b6c3bcc47",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that software engineers can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
       },
@@ -1269,7 +1282,7 @@
     },
     {
       "key": "e255333c-e573-4648-950f-4bfcc917dded",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Playground, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
         "remarks": true
@@ -1281,7 +1294,7 @@
     },
     {
       "key": "3ed82c0e-fac9-40fc-8893-5474dcb1a659",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to review the API documentation for The Playground.",
         "progression_name": "Exploring The Playground"
@@ -1293,7 +1306,7 @@
     },
     {
       "key": "9b18d480-6417-4ba2-90fd-f997899141b3",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 5 on Code Studio. Students import The Playground and run the sample code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Playground.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
         "progression_name": "Creating the Dice and Roll Button"
@@ -1370,7 +1383,7 @@
       "key": "b2b39c83-8a65-41b9-a608-84ab125edcad",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found during the scavenger hunt and any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Want to Know” column on the KWL chart on the first page of their Solving Problems with the Math Class handout. Students can add to this column throughout the lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found during the scavenger hunt and any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Know” column on the KWL chart on the first page of their Solving Problems with the Math Class handout. Students can add to this column throughout the lesson."
       },
       "seeding_key": {
         "activity_section.key": "b2b39c83-8a65-41b9-a608-84ab125edcad",
@@ -2852,7 +2865,7 @@
       "key": "aedef5f9-ff40-432f-a9a2-8f73d2274368",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How would you guess logical operators show up in Java?*\n* *How might they help us simplify the use of conditional statements?*\n* *What if the weather was 98 degrees? How would you write that code segment?*\n\n**Discussion Goal:** Students suggest using a `&&` operator to test if the weather is between 81 and 95 degrees. If the condition is `true`, then they can go to the park. If it is `false`, then the second condition will be evaluated. If the second condition is `false`, they will stay at home. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show an example conditional statement using a logical operator. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 Code Studio. Students use logical operators to simplify the conditional statement. Have students continue to complete Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How would you guess logical operators show up in Java?*\n* *How might they help us simplify the use of conditional statements?*\n* *What if the weather was 98 degrees? How would you write that code segment?*\n\n**Discussion Goal:** Students suggest using a `&&` operator to test if the weather is between 81 and 95 degrees. If the condition is `true`, then they can go to the park. If it is `false`, then the second condition will be evaluated. If the second condition is `false`, they will stay at home. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show an example conditional statement using a logical operator.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define short circuit evaluation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 Code Studio. Students use logical operators to simplify the conditional statement. Have students continue to complete Level 3.",
         "progression_name": "Logical Operators"
       },
       "seeding_key": {
@@ -6601,6 +6614,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa4-pilot-facilitator/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa4-pilot-facilitator/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa4-pilot-facilitator/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "Around the World Printouts",
       "url": "https://docs.google.com/document/d/1FMlneQD0SY65y9atWPYPz2fN63wboyhUiTx8csrU_Vw/edit?usp=sharing",
       "key": "around_the_world_printouts",
@@ -7366,7 +7412,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

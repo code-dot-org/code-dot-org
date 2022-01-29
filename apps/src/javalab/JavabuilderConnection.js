@@ -58,6 +58,7 @@ export default class JavabuilderConnection {
         levelId: this.levelId,
         options: this.options,
         executionType: this.executionType,
+        useDashboardSources: true,
         miniAppType: this.miniAppType
       }
     })
@@ -104,11 +105,6 @@ export default class JavabuilderConnection {
       case StatusMessageType.RUNNING:
         message = javalabMsg.running();
         lineBreakCount = 2;
-        break;
-      // TODO: Remove this case once Javabuilder stops sending these messages
-      case StatusMessageType.GENERATING_RESULTS:
-        message = javalabMsg.generatingResults();
-        lineBreakCount = 1;
         break;
       case StatusMessageType.GENERATING_PROGRESS:
         message = javalabMsg.generatingProgress({
