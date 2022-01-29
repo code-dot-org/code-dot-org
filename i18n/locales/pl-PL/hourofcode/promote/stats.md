@@ -16,7 +16,7 @@ title: Notki i przydatne statystyki
 
 #### Wprowadź informatykę do swojej szkoły. Zacznij z Godziną Kodowania!
 
-Ponieważ technologia zmienia każdą branżę na świecie, znajomość informatyki staje się częścią wszechstronnego zestawu umiejętności. Jednakże mniej niż połowa szkół uczy informatyki! Dobrą wiadomością jest, że zamierzamy to zmienić. Jeśli słyszeliście już o Godzinie Kodowania w zeszłym roku, być może wiecie, że już zapisała się w historii. 100 milionów uczniów odkryło jak przystępna i ciekawa może być informatyka, wykonując zaledwie jedną Godzinę Kodowania.
+Ponieważ technologia zmienia każdą branżę na świecie, znajomość informatyki staje się częścią wszechstronnego zestawu umiejętności. But just half of all schools offer computer science! Dobrą wiadomością jest, że zamierzamy to zmienić. Jeśli słyszeliście już o Godzinie Kodowania w zeszłym roku, być może wiecie, że już zapisała się w historii. 100 milionów uczniów odkryło jak przystępna i ciekawa może być informatyka, wykonując zaledwie jedną Godzinę Kodowania.
 
 Godzina Kodowania jest godzinnym wstępem do informatyki, mającym na celu odczarowanie programowania i pokazanie, że każdy może nauczyć się podstaw. Dowiedz się więcej tutaj [ http://HourOfCode.com](http://HourofCode.com), próbuj godzinę samodzielnie lub lub będąc gospodarzem wydarzenia Godzina Kodowania, aby wprowadzić innych w świat informatyki!
 
@@ -30,7 +30,7 @@ Mamy nadzieję, że uda się rozbudzić zainteresowanie uczniów, by kontynuowal
 
 #### Dlaczego jest to ważne?
 
-Technologia zmienia każdą branżę na świecie. W 2015 r. było w USA 7 milionów wolnych miejsc pracy — włączając sztukę i projektowanie — które wymagały umiejętności kodowania. Ale 53 procent szkół w USA nie uczy informatyki. Najwyższy czas, by nadążyć za XXI wiekiem. Bez względu na to, czy nasi uczniowie w dorosłym życiu pójdą w kierunku medycyny, biznesu, polityki, czy sztuki, wiedza o tworzeniu technologii doda im pewności siebie w każdej dziedzinie i pozwoli im odnieść sukces. <br /> <br />
+Technologia zmienia każdą branżę na świecie. W 2015 r. było w USA 7 milionów wolnych miejsc pracy — włączając sztukę i projektowanie — które wymagały umiejętności kodowania. But 49 percent of schools in the U.S. don't offer computer science. Najwyższy czas, by nadążyć za XXI wiekiem. Bez względu na to, czy nasi uczniowie w dorosłym życiu pójdą w kierunku medycyny, biznesu, polityki, czy sztuki, wiedza o tworzeniu technologii doda im pewności siebie w każdej dziedzinie i pozwoli im odnieść sukces. <br /> <br />
 
 #### Cytat, którego możesz użyć w materiałach
 

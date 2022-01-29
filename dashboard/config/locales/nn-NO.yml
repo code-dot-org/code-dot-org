@@ -461,6 +461,7 @@ nn:
       prizes_link: Meir informasjon
   teacher:
     answer: Svar
+    dashboard: Lærarmodus
     for_teachers_only: Kun for lærarar
     title:
       one: 'Din lærar:'

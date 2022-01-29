@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ##### While CS Principles does provide students with ample time to learn and practice coding, the curriculum also seeks to provide knowledge and skills to meaningfully participate in our increasingly digital society, economy, and culture. Additionally, Code.org has thoughtfully designed the course to be accessible and non-threatening to students who have never coded before. 
 
-##### Therefore, the first two units of the course are _not_ programming units, but instead focus on digital information and the internet. We highly suggest that you begin with these two units instead of skipping to Unit 3 to build an inclusive classroom culture from day one.
+##### Therefore, the first two units of the course are _not_ programming units, but instead focus on digital information and the internet. We highly suggest that you begin with these two units, instead of skipping to Unit 3, to build an inclusive classroom culture from day one.
 
 ## Click on the units below to learn about the course content:
 
@@ -52,7 +52,7 @@ Students design their first app while learning both fundamental programming conc
 
 <img src="https://images.code.org/f16e6edef66592a9055bf4032745001a-image-1638565335247.02.03 PM.png" alt="Image of a flowchart showing a conditional situation." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
-Students expand the types of apps they can create as they learn how to store information (variables), make decisions (conditionals), and better organize code (functions). Each programming topic is covered in a specific sequence of lessons that ask students to ‘Explore’ ideas through hands-on activities, ‘Investigate’ these ideas through guided code reading, ‘Practice’ with sample problems, and apply their understanding as they ‘Make’ a one-day scoped project. The entire unit concludes with a three-day open-ended project in which students must build an app that makes a recommendation about any topic they wish.
+Students expand the types of apps they can create as they learn how to store information (variables), make decisions (conditionals), and better organize code (functions). Each programming topic is covered in a specific sequence of lessons that ask students to ‘Explore’ ideas through hands-on activities, ‘Investigate’ these ideas through guided code reading, ‘Practice’ with sample problems, and apply their understanding as they ‘Make’ a one-day scoped project. The entire unit concludes with a three-day open-ended project in which students must build an app that makes a recommendation to the user about any topic they wish.
 </details>
 
 <div style="clear:both"/>

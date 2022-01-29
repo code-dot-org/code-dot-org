@@ -17792,6 +17792,7 @@ de:
               name: Prüfungstag
               description_student: " In dieser Lektion haben Sie `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann Sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben Sie Ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten Sie das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test."
               description_teacher: In dieser Lektion haben die SchülerInnen `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben sie ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten die SchülerInnen das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test.
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -17806,12 +17807,27 @@ de:
             The Playground: {}
             lesson-5:
               name: Prüfungstag
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
             lessonGroup-5:
               display_name: Sandbox
-        csa8-pilot: {}
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-15:
+              name: Prüfungstag
+            lesson-16: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
         csa9-pilot: {}
         k5-onlinepd-2021:
           lessons:
@@ -18084,7 +18100,6 @@ de:
           lessons:
             lesson-1:
               name: Willkommen bei Code.org
-            lesson-2: {}
         self-paced-pl-csp2-2021: {}
         self-paced-pl-csp3-2021: {}
         self-paced-pl-csp4-2021: {}
@@ -18200,7 +18215,9 @@ de:
         poster-experiment:
           lessons:
             lesson-1: {}
-        tesspltest: {}
+        tesspltest:
+          lessons:
+            lesson-1: {}
         tesspl2: {}
         sb-pt-cont:
           lessons:
@@ -18987,8 +19004,6 @@ de:
             The Playground: {}
             lesson-1:
               key: Lektion-1
-              description_student: Die Projekte, die Sie im Laufe des Kurses bearbeitet haben, haben eine Menge Kreativität in Ihrem Umfeld freigesetzt! Beim Nachbarschaftsfest „Neighborhood Lit Fest“ kann jeder seine kreative Geschichten, Drehbücher, Songtexte, Briefe und Gedichte präsentieren. Das Neighborhood Lit Fest Projekt ist ein großes Projekt, an dem Sie während der gesamten Lerneinheit arbeiten. Mit unseren Projektmanagement-Strategien lernen Sie, wie Sie Ihre Arbeit organisieren und strukturieren. Sie erforschen Strategien für das Schreiben und Strukturieren von Code, den auch andere Softwareingenieure leicht verstehen können, und verwenden ein Java-Tool, mit dem Sie Ihre Programmdokumentation erstellen können.
-              description_teacher: Die Schülerinnen lernen das Neighborhood Lit Fest Projekt kennen und bewerten die Anforderungen und Beispiele, um Fragen und Schlüsselfunktionen zu identifizieren. Bevor sie mit der Arbeit an dem Projekt beginnen, erweitern die Schülerinnen ihr Verständnis für Programmstrukturen und -kommentare, wobei sie bewährte Verfahren kennenlernen und mit Javadocs die Erstellung der Programmdokumentation erkunden.
             lesson-2:
               key: Lektion-2
               description_student: Sie werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben Sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor Sie die Aufgaben planen können, die Sie für Ihr Neighborhood Lit Fest Projekt erledigen müssen.
@@ -19150,3 +19165,188 @@ de:
               description_student: Hilf der Schatzsucherin Laurel, Schritte zu zählen und zu addieren, um Edelsteine zu sammeln!
               description_teacher: "Diese Lektion baut auf früheren Aktivitäten des Zählens und der Addition auf. Zählen mit Laurel unterstützt Vorschulkinder und Schülerinnen und Schüler der ersten Klasse beim Üben des Zählens und Addierens. Sie programmieren Schleifen, um Laurel, der Schatzjägerin, beim Sammeln von Edelsteinen in einem Labyrinth zu helfen. Sie führen Laurel mit Programmbefehlen durch ein Gitter zu führen und sammeln mit ihr Edelsteine. Sie verwenden einen \"Wiederholungs\"-Baustein, der sie auffordert zu zählen, wie viele Schritte Laurel machen soll. Diese Zahl wird dann mit der richtigen Ziffer innerhalb eines Code-Bausteins dargestellt.\n\n#### Vorausgesetzte Fähigkeiten\n\nDiese Lektion ist nicht dazu gedacht, die Schülerinnen und Schüler in Zahlen, Zählen oder Addieren einzuführen. Die Schüler sollten zu dieser Lektion folgende Vorkenntnisse und den Fähigkeiten mit bringen:\n\n– Zahlen bis 10 zu erkennen und zählen, mithilfe von Bildern, den Fingern oder Manipulatoren.\n– Objekte, Bilder, Finger oder Manipulatoren bis zu einer Summe von 10 zu addieren."
           title: Zählen mit Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Unterricht
+        csa6-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11:
+              name: Neighborhood Lit Fest Projekt - 1. Tag
+            lesson-12:
+              name: Neighborhood Lit Fest Projekt - 2. Tag
+            lesson-13:
+              name: Neighborhood Lit Fest Projekt - 3. Tag
+            lesson-14: {}
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Ausbruch-Simulator
+            lesson-5:
+              name: Über mich mit Sprite Lab
+        csa7-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csf-2022-pilot:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+        csd6-pilot-2022: {}
+        csa8-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels: {}
+            Dani Test Lesson 2: {}
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Unit 7 Pilot Survey: {}
+            Java Lab:
+              name: Java-Labor
+              key: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-10:
+              key: Lektion-10
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
+            lesson-15:
+              key: Lektion-15
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+              name: Prüfungstag
+            lesson-16:
+              key: Lektion-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Unit 8 Pilot Survey: {}
+            Java Lab:
+              name: Java-Labor
+              key: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+            lesson-10:
+              key: Lektion-10
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
+            lesson-15:
+              key: Lektion-15
+              name: Prüfungstag
+            lesson-16:
+              key: Lektion-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
+        csa9-pilot-facilitator: {}

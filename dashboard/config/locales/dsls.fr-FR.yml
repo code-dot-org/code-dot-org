@@ -1445,10 +1445,108 @@ fr-FR:
           Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
       Internet Simulator Setup:
         content1: description ici
+        markdown: "# Simulateur Internet de Code.org\n\n_Remarque : Les instructions
+          répertoriées dans ce didacticiel sont destinées aux enseignants qui souhaitent
+          utiliser Internet Simulator en tant qu'outil autonome, distinct du programme
+          Code.org Computer Science Principles. Si vous prévoyez d'utiliser les activités
+          conçues dans le cadre du programme CSP de Code.org, veuillez vous rendre
+          sur la [page du programme CSP.](https://code.org/educate/csp)_\n\n### Contenu\nIl
+          y a 3 pages d'arrière-plan et d'informations contenues ici :\n\n* Qu'est-ce
+          que le simulateur Internet ? Aperçu (voir ci-dessous)\n* [instructions de
+          configuration](/s/netsim/lessons/1/levels/2)\n* [FAQ](/s/netsim/lessons/1/levels/3)\n
+          \n### Qu'est-ce qu'Internet Simulator ? Un aperçu :\n\nInternet Simulator
+          est un outil développé par Code.org pour notre nouvelle classe de lycée
+          [Principes informatiques] (https://code.org/educate/csp).Cet outil est conçu
+          pour permettre aux étudiants d'acquérir une expérience pratique en expérimentant
+          (et en résolvant) différents types de problèmes associés aux ordinateurs
+          en réseau. Le simulateur Internet est utilisé dans plusieurs leçons tout
+          au long des unités 1 et 2 de notre programme pour construire successivement
+          les différentes couches d'Internet.\n\nSi vous envisagez d'utiliser l'outil
+          dans votre classe avec des activités que vous concevez, nous vous recommandons
+          de vous familiariser avec l'outil via nos [plans de cours] (https://curriculum.code.org/csp/unit1).
+          **Les instructions de configuration** sur la page suivante sont destinées
+          aux enseignants qui souhaitent utiliser Internet Simulator indépendamment
+          du programme CSP de Code.org.\n\nL'outil en lui-même n'enseigne pas ces
+          concepts, mais fournit plutôt un environnement permettant à plusieurs élèves
+          de se réunir et d'envoyer des messages binaires, décimaux ou ascii entre
+          eux ou à d'autres camarades de classe. **L'environnement peut être configuré**
+          de différentes manières pour exposer différents types de problèmes, visualiser
+          les données et les connexions entre les hôtes et prendre en charge l'apprentissage
+          de divers concepts liés à Internet.\n\nLe simulateur Internet a été conçu
+          pour être utilisé dans une *salle de classe* avec des élèves travaillant
+          en collaboration en personne pour résoudre des problèmes. Souvent, ces problèmes
+          impliquent d'inventer un protocole de communication ou d'inventer des moyens
+          de coder les informations d'une manière structurée pour leur transport sur
+          Internet.\n\n**Dans le programme des principes de l'informatique de Code.org**,
+          nous structurons généralement les leçons et les activités de la manière
+          suivante :\n\n* **Premiers élèves présents avec un défi**\n * par exemple.
+          L'Internet physique est intrinsèquement peu fiable et peut laisser tomber
+          des messages\n* **Donnez l'opportunité d'expérimenter avec le simulateur
+          pour avoir une idée des problèmes**\n * par exemple. regardez les journaux
+          du routeur pour découvrir que 10 à 20 % de tous les messages sont abandonnés
+          et que les paquets peuvent être routés dans le désordre\n* **Donnez l'opportunité
+          d'inventer sa propre solution au défi**\n  * par exemple. inventer leur
+          propre protocole pour savoir comment envoyer des messages de manière fiable
+          sur ce réseau peu fiable\n* **Enfin, les élèves recherchent comment ce protocole
+          ou cette invention fonctionne \"dans le monde réel\"**\n * par exemple.
+          Recherchez le fonctionnement réel de TCP et regardez une vidéo\n\n### Pour
+          quoi le simulateur Internet peut-il être configuré ?\n\nÀ la base, Internet
+          Simulator peut communiquer un seul bit d'information via un seul câble partagé
+          sans coordination ni synchronisation. À son niveau le plus avancé, il peut
+          simuler des connexions non fiables sur plusieurs routeurs, en utilisant
+          des adresses IP, un DNS et des paquets de taille fixe nécessitant la création
+          de protocoles similaires à TCP/IP ou HTTP.\n\nNous avons mis en place Internet
+          Simulator dans une variété de configurations propices à l'enseignement de
+          certains sujets. Mais si vous utilisez Internet Simulator pour la classe,
+          vous devez connaître certains paramètres de l'interface utilisateur que
+          vous souhaiterez peut-être contrôler ou demander à vos étudiants de configurer
+          d'une manière particulière.\n\nPar exemple : l'une des fonctionnalités d'Internet
+          Simulator est que vous pouvez afficher les représentations binaires, décimales,
+          hexadécimales et ASCII de toutes les données que vous envoyez. Dans certaines
+          configurations, l'utilisateur peut également définir la « taille de bloc
+          » pour dicter la façon dont les bits sont interprétés. Pour une leçon de
+          votre propre conception, vous pouvez choisir l'une des configurations que
+          nous avons fournies, mais vous devrez peut-être exiger que les étudiants
+          n'affichent qu'une représentation particulière des bits, ou peut-être souhaitez-vous
+          que la taille du morceau soit définie sur une valeur particulière.\n\nLe
+          point le plus important est que les configurations fournies ici sont censées
+          être un point de départ pour l'enseignement d'un sujet particulier. Vous
+          devrez peut-être faire preuve d'ingéniosité et de stratégies d'enseignement
+          pour affiner davantage l'utilisation du simulateur en fonction de vos besoins.\n\n\n
+          <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\n_Prochaine
+          étape : instructions de configuration_"
       Internet Simulator Setup 2:
         content1: description ici
+        markdown: |-
+          # Simulateur Internet : Instructions de configuration
+
+          1. **Créez une section dans Code Studio.** Pour que les élèves de votre classe puissent communiquer entre eux, ils doivent tous être associés à la même section dans Code Studio. Connecté en tant que compte enseignant, vous devrez créer une section à laquelle tous vos élèves se joindront. Pour créer une rubrique :
+           * Accédez à la zone [sections](https://code.org/teacher-dashboard#/sections) du tableau de bord de l'enseignant
+           * Cliquez sur le bouton 'Nouvelle section'. Nous vous recommandons de choisir le type de connexion 'Email' et 'cspunit1' pour le cours.
+           <br>
+          <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png" width="600px" />
+          <br><br>
+          2. **Demandez à des élèves de rejoindre votre section.** Une fois la section créée, cliquez sur le lien « Gérer les élèves » pour la section. Vous verrez un code de section que vous pourrez leur demander de rejoindre, une fois qu'ils auront créé leurs propres comptes Code Studio.
+          <br>
+          <img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png" width="400px" />
+          <br><br>
+          3. **Donnez-leur l'URL de la version d'Internet Simulator que vous souhaitez utiliser.** Nous avons créé plusieurs configurations différentes d'Internet Simulator disponibles sur [code.org/internetsimulator](http://code.org/internetsimulator ). Lorsque vous trouvez une configuration qui fonctionne pour votre activité, partagez l'URL avec les élèves. S'ils sont tous dans la même section, alors ils pourront automatiquement se connecter entre eux lorsqu'ils arriveront à la même URL.
+
+          _Prochaine étape : Questions fréquemment posées_
       Internet Simulator Setup 3:
         content1: description ici
+        markdown: |-
+          # Simulateur Internet : FAQ
+
+          #### Où puis-je trouver les activités que vous avez conçues pour être utilisées avec Internet Simulator ?
+          Les activités que nous avons conçues pour notre programme de principes d'informatique, y compris les configurations spécifiques d'Internet Simulator, sont dans les plans de cours des unités [ici] (https://code.org/educate/csp). La plupart des plans de cours comportent des vidéos d'assistance « Conseils et astuces pour les enseignants » qui montrent des démonstrations du simulateur Internet utilisé dans le cadre des activités en classe. Vous pouvez utiliser ces activités telles quelles, ou n'hésitez pas à les modifier pour les adapter au mieux à votre classe !
+
+          #### Puis-je personnaliser Internet Simulator pour ma classe ?
+          À l'heure actuelle, nous n'avons malheureusement aucun moyen pour les personnes extérieures à Code.org de créer des configurations et des instructions spécifiques pour Internet Simulator. Nous avons essayé d'exposer une variété de configurations différentes qui peuvent, espérons-le, fonctionner pour votre classe et votre activité. À long terme, nous aimerions avoir un moyen de laisser les autres configurer l'outil.
+
+          #### Mes élèves ne peuvent pas se voir lorsqu'ils accèdent à l'URL que je leur donne pour Internet Simulator. Comment faire ?
+          Pour qu'ils puissent se voir dans le hall d'Internet Simulator, ils doivent être dans la même section. Vérifiez que vous avez suivi les instructions de configuration de section de la page précédente et qu'ils aient bien rejoint ce code de section spécifique. De plus, certains étudiants peuvent se trouver dans plusieurs sections s'ils ont déjà suivi des cours avec Code.org, alors assurez-vous qu'ils connaissent le nom de votre section et qu'ils l'ont choisi dans la liste déroulante avant d'entrer dans le hall.
       Internet-Unplugged:
         markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
           classe, simplement à l'aide de morceaux de papier.\n"
@@ -1727,6 +1825,63 @@ fr-FR:
           Si vous n'avez pas fini la section facultative des cours E à F, vous pouvez sauter ces niveaux.
       OPD-K5 Stage3aGo:
         content1: description ici
+        markdown: |-
+          # Séquençage > Leçons hors ligne
+
+          Comme nous l'avons mentionné, nous aimons introduire des sujets d'informatique avec des cours hors ligne. Ensuite, nous utilisons des activités de transition pour passer plus tard aux leçons en ligne. En commençant par ces leçons hors ligne, vous présentez les concepts de manière amusante et conviviale. Ensuite, les élèves se sentent déjà familiarisés avec le concept au moment où ils accèdent aux leçons en ligne et peuvent relier les leçons en ligne à l'activité hors ligne.
+
+          Pour ces étapes de programmation que vous allez traverser, nous commencerons également par des exemples de cours hors ligne. Lisez le plan de cours suivant et regardez les vidéos qui l'accompagnent, en pensant à la façon dont vous le mettriez en œuvre dans votre classe avec vos élèves.
+          <br/>
+          ***
+          <br/>
+          Nous allons commencer par le séquençage. À la base, ce style d'informatique concerne les **séquences**. Une séquence est un ordre spécial que quelque chose suit. Dans ces énigmes, nous voulons trouver la bonne séquence d'instructions pour dire à l'ordinateur quoi faire. Cette liste d'instructions est appelée **algorithme**. Une fois que cet algorithme est codé dans un langage lisible par une machine, il devient un **programme**.
+          <br/>
+          <br/>
+
+          **1. Passez en revue le plan de leçon "[Happy Maps](https://curriculum.code.org/csf/coursea/5/)" du cours A.**
+          <br/>
+          N'oubliez pas que le cours A est destiné aux élèves de la maternelle. Le séquençage apparaît également dans d'autres cours, et vous pouvez trouver des exemples de ces leçons au bas de cette page.
+
+          <br/>
+
+          **2. Regardez la vidéo étudiante : Happy Maps**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de séquençage et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/f00fb02e8f24d57e88d396eb0f2c5cce-image-1571253011379.09.54 PM.png)](https://youtube.com/watch?v=hrnhiKAQ1_k)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)
+
+          <br/>
+
+          **3. Regardez la vidéo de l'enseignant : Comment faciliter les « Happy Maps »**
+          <br/>
+
+          [![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01 PM.png)](https://youtube.com/watch?v=En6Bshuqljg)
+
+          <br/>
+
+
+          **4. Passez en revue d'autres leçons hors ligne qui introduisent le séquençage :**
+
+          - Cours A (maternelle) : [Algorithmes réels : planter une graine] (https://curriculum.code.org/csf-18/coursea/3/)
+          - Cours B (CP) : [My Robotic Friends Jr.](https://curriculum.code.org/csf-18/coursea/3/), [Move It, Move It](https://curriculum. code.org/csf-18/courseb/1/)
+          - Cours C (CE1) : [Avions en papier](https://curriculum.code.org/csf-18/coursec/4/)
+          - Cours D (CE2) : [Programmation sur papier millimétré](https://curriculum.code.org/csf-18/coursed/1/)
+          - Cours E, Cours F (CM1, CM2) : [Mes amis robotiques] (https://curriculum.code.org/csf-18/coursee/1/)
+
+
+          ---
+
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept de programmation (y compris le séquençage et les algorithmes) à vos élèves ? Partagez vos impressions sur <a href="http://forum.code.org/t/teaching-sequencing/408">notre forum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-sequencing/408" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >> </button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour continuer.
+
+          Dans la prochaine étape, nous allons ajouter de la complexité à nos programmes grâce à l'ajout de boucles.
       OPD-K5 Stage3aGo_copy:
         content1: description ici
         markdown: |-
@@ -1805,6 +1960,20 @@ fr-FR:
           <a href="https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer">![](https://images.code.org/281fbcbd84d0df2491e0c4050e612b97 -image-1571696135948.13.58 PM.png)</a>
       OPD-K5 diving deeper intro:
         content1: description ici
+        markdown: |-
+          # Plonger plus profondément : Cours E et F
+
+          ## Vous enseignez les cours E et F ?
+
+          Les cours E et F sont conçus pour les 4e et 5e années. Dans ces cours, nous approfondissons certains concepts et introduisons de nouveaux environnements de codage.
+
+          Si vous envisagez d'enseigner ces cours, nous vous recommandons de suivre les leçons suivantes. Si vous n'envisagez pas d'enseigner ces cours, vous pouvez ignorer cette partie conceptuelle et passer aux « étapes suivantes ».
+
+          ## Que trouverez-vous dans ce bout de concept ?
+          Nous y aborderons :
+          - Concepts de codage plus avancés : fonctions, variables et formes avancées de boucles (boucles imbriquées et boucles for)
+          - "Sprites" et un nouvel environnement de codage appelé Sprite Lab
+          - Projets de fin d'études
       OPD-K5 events introduced:
         content1: description ici
         markdown: |
@@ -1830,14 +1999,72 @@ fr-FR:
           - Leçon 6 : Construire un jeu Star Wars
       OPD-K5 for loops:
         content1: description ici
+        markdown: |-
+          # Leçon hors ligne : For Loop Fun
+
+          > Une **boucle For** a un début, une fin et un incrément prédéterminés (intervalle).
+          ***
+          ## **1. Révisez le plan de cours "<a href="https://curriculum.code.org/csf-19/coursef/11/" target="blank" rel="noopener noreferrer">For Loop Fun</a>" du cours F.**
+          <br/>
+          Le cours F est destiné aux élèves de CM2. C'est le seul endroit où des boucles For apparaissent dans les cours A-F.
+          <br/><br/>
+
+          ## **2. Regardez la vidéo de l'élève : For Loop Fun (disponible dans le plan de cours)**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept des boucles For et lancer la leçon hors ligne.
+
+          ***
+
+          <a href="https://curriculum.code.org/csf-19/coursef/11/" target="blank" rel="noopener noreferrer">![](https://images.code.org/ 73c0b6e95f2136d6ebcc03cbddee1be7-image-1573148733514.45.16 AM.png)</a>
       OPD-K5 for loops intro:
         content1: description ici
+        markdown: |-
+          # Présentation : boucles For
+
+          <img src="https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg" class="level-image">
+
+          ## Concepts de codage avancés : boucles For
+          - Comprendre que les boucles For ont un début, une fin et un incrément prédéterminés (intervalle)
+          - Entraînez-vous à utiliser les boucles For
       OPD-K5 for loops introduction:
         content1: description ici
+        markdown: |-
+          # Boucles For : où sont-elles introduites ?
+
+          ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" rel="noopener noreferrer">Cours F</a>
+          - Leçon 11 (hors ligne): For Loop Fun
+          - Leçon 12 : Boucles For avec Bee
+          - Leçon 13 : Boucles For avec l'Artiste
       OPD-K5 functions introduced:
         content1: description ici
+        markdown: "# Fonctions : Où sont-elles introduites ?\n\nCela vous donne une
+          idée du moment où les fonctions sont introduites dans les cours E-F. Vous
+          n'avez pas besoin d'aller voir toutes ces leçons -- nous allons en approfondir
+          certaines dans cette partie du cours en ligne -- mais n'hésitez pas à vous
+          y référer si nécessaire.\n\n## <a href=\"https://curriculum.code.org/csf-19/coursee/\"
+          target=\"blank\" rel=\"noopener noreferrer\">Cours E</a>\n- Leçon 14 (Unplugged)
+          : Écriture de chansons\n- Leçon 15 : Fonctions dans Minecraft\n- Leçon 16
+          : Fonctions avec Harvester\n- Leçon 17 : Fonctions avec l'artiste\n\n##
+          <a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\"
+          rel=\"noopener noreferrer\">Cours F</a>\n- Leçon 1 : Fonctions dans Minecraft "
       OPD-K5 journaling:
         content1: description ici
+        markdown: |-
+          # Pratique pédagogique : Journalisation
+
+          <img src="https://images.code.org/49264bf902a5804672133e723bee6e8b-image-1573170371197.42.28 PM.png" class="level-image">
+
+          ## Pourquoi l'utiliser ?
+          De la même façon qu'un chimiste cataloguerait les stratégies et les solutions, nous demandons à nos informaticiens en herbe de prendre des notes sur leurs essais et leurs réalisations. Les journaux sont utiles comme papier brouillon pour la construction, le débogage et l'élaboration de stratégies, offrant une ressource incroyable pour référencer les réponses précédentes lorsque vous êtes aux prises avec des problèmes plus complexes.
+
+          ## Comment l'utiliser ?
+          - Encouragez les élèves à garder leur journal à côté d'eux en tout temps lors du codage
+          - Rappelez-leur qu'ils peuvent écrire des solutions à la main, puis encercler les récurrences pour trouver les meilleures opportunités pour les boucles et les fonctions
+          - Demandez aux élèves de copier les réponses aux énigmes dont ils pourraient avoir besoin dans les niveaux futurs
+          - Demandez aux élèves de dessiner des émoticônes en haut des pages pour les aider à identifier ce qu'ils pensent des concepts
+          - Terminez chaque leçon par une pensée ou une question à laquelle les élèves peuvent répondre par écrit afin de réfléchir à leur évolution pour la journée
+
+          Les plans de cours contiennent également des invites de journalisation !
       OPD-K5 lesson implementation planning:
         content1: description ici
         markdown: |-
@@ -1920,8 +2147,38 @@ fr-FR:
           - Leçon 9 : Boucles imbriquées dans le labyrinthe
       OPD-K5 project:
         content1: description ici
+        markdown: |-
+          # Présentation : Projets de fin de cursus
+
+          <img src="https://images.code.org/0a5fca1b8c79ab8463d53ef7bde1a7a1-image-1573236230401.jpg" class="level-image">
+
+          ## Nouvelle pratique pédagogique : Projets de fin de cours
+
+          - Chaque cours offre l'opportunité aux élèves de rassembler tout ce qu'ils ont appris dans un projet unique issu de leur propre créativité.
+          - On les y encourage à planifier, construire, réviser et présenter leurs propres projets.
+          - Suivre un projet de sa conception à sa livraison offre un aperçu du cycle de développement du logiciel. Ces projets guidés offrent des rubriques échafaudées au profit de l'élève et de l'enseignant.
       OPD-K5 projects introduction:
         content1: description ici
+        markdown: |-
+          # Projets de fin de cursus : Où sont-ils présentés ?
+
+          ## <a href="https://curriculum.code.org/csf-19/coursea/" target="blank" rel="noopener noreferrer">Cours A</a>
+          - Leçon 12 : En mouvement avec des événements
+
+          ## <a href="https://curriculum.code.org/csf-19/courseb/" target="blank" rel="noopener noreferrer">Cours B</a>
+          - Leçon 12 : Une bataille royale avec des événements
+
+          ## <a href="https://curriculum.code.org/csf-19/coursec/" target="blank" rel="noopener noreferrer">Cours C</a>
+          - Leçon 18 : Projet de fin de cours
+
+          ## <a href="https://curriculum.code.org/csf-19/coursed/" target="blank" rel="noopener noreferrer">Cours D</a>
+          - Leçon 18 : Projet de fin de cours
+
+          ## <a href="https://curriculum.code.org/csf-19/coursee/" target="blank" rel="noopener noreferrer">Cours E</a>
+          - Leçon 18 : Projet de fin de cours
+
+          ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" rel="noopener noreferrer">Cours F</a>
+          - Leçon 20 : Projet de fin de cours
       OPD-K5 role_of_teacher:
         content1: description ici
         markdown: |-
@@ -1973,12 +2230,53 @@ fr-FR:
           - Leçon 1 : Séquençage dans le labyrinthe
       OPD-K5 sprite lab:
         content1: description ici
+        markdown: |-
+          # Présentation : Sprite Lab
+
+          <img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" class="level-image">
+
+          ## Concept de codage avancé : Sprites et comportements dans Sprite Lab
+          - Se familiariser avec un nouvel environnement de codage : Sprite Lab
+          - Entraînez-vous à créer des sprites
+          - Entraînez-vous à coder des comportements pour différents Sprites
       OPD-K5 sprite lab introduction:
         content1: description ici
+        markdown: |-
+          # Sprite Lab : Où est-il introduit ?
+
+          ## <a href="https://curriculum.code.org/csf-19/coursee/" target="blank" rel="noopener noreferrer">Cours E</a>
+          - Leçon 5 (hors ligne) : Simon dit
+          - Leçon 6 : Natation des poissons avec Sprite Lab
+          - Leçon 7 : Alien Dance Party avec Sprite Lab
+
+          ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" rel="noopener noreferrer">Cours F</a>
+          - Leçon 2 : Poissons nageurs avec Sprite Lab
+          - Leçon 3 : Alien Dance Party avec Sprite Lab
+          - Leçon 15 : Comportements dans Sprite Lab
+          - Leçon 16 : Animal de compagnie virtuel avec Sprite Lab
       OPD-K5 sprite lab unplugged:
         content1: description ici
+        markdown: |-
+          # Leçon hors ligne : Simon dit
+
+          > Un **Sprite** est un caractère graphique à l'écran avec des propriétés qui décrivent son emplacement, son mouvement et son apparence. Un **comportement** est une action qu'un Sprite exécute en continu jusqu'à ce qu'on lui dise de s'arrêter.
+
+          ***
+
+          ## **1. Révisez le plan de cours "<a href="https://curriculum.code.org/csf-19/coursee/5/" target="blank" rel="noopener noreferrer">Simon Says</a>" du cours E .**
+          <br/>
+          Le cours E est destiné aux élèves de CM1. Les comportements et les Sprites apparaissent dans les cours E et F.
+
+          ***
+          <a href="https://curriculum.code.org/csf-19/coursee/5/" target="blank" rel="noopener noreferrer">![](https://images.code.org/ 991a82dba5edbd6c4909c540a1777041-image-1573149641437.00.20 AM.png)</a>
       OPD-K5 sprite lab video:
         content1: description ici
+        markdown: |-
+          # Présentation de Sprite Lab
+
+          Regardez cette vidéo pour une introduction à Sprite Lab !
+
+          <a href="https://www.youtube.com/watch?v=l0B0gDuHHC8" target="blank" rel="noopener noreferrer">![](https://images.code.org/929bd692b7029063aa9bf5835f6e6397-image -1571775211459.12.36 PM.png)</a>
       OPD-K5 types of lessons:
         content1: description ici
         markdown: |-
@@ -2019,14 +2317,60 @@ fr-FR:
           Les plans de cours servent à présenter des concepts, faire réfléchir les élèves sur ce qu'ils ont appris et à les faire travailler ensemble.
       OPD-K5 variables:
         content1: description ici
+        markdown: "# Présentation : Variables\n\n<img src=\"https://images.code.org/833108f29baf6f8633b1282aeb7d06e5-image-1571780548872.jpg\"
+          class=\"level-image\">\n\n## Concepts de codage avancés : Variables\n\n-
+          Comprendre qu'un espace réservé variable pour une information qui peut changer\n-
+          S'entraîner à utiliser des variables "
       OPD-K5 variables introduction:
         content1: description ici
+        markdown: |-
+          # Variables : Où sont-elles introduites ?
+
+          ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" rel="noopener noreferrer">Cours F</a>
+          - Leçon 6 : (hors ligne) : Variables d'enveloppe
+          - Leçon 7 : Variables avec l'Artiste
+          - Leçon 8 : Changer les variables avec Bee
+          - Leçon 9 : Modification des variables avec l'Artiste
       OPD-K5 variables unplugged:
         content1: description ici
+        markdown: |-
+          # Leçon hors ligne : variables d'enveloppe
+
+          > Une **variable** est un espace réservé pour une information qui peut changer.
+
+          ***
+
+          ## **1. Révisez le plan de cours "<a href="https://curriculum.code.org/csf-20/coursef/7/" target="blank" rel="noopener noreferrer">Variables d'enveloppe</a>" du cours F .**
+          <br/>
+          Le cours F est destiné aux élèves de CM2. C'est le seul endroit où les variables apparaissent dans les cours A-F.
+          <br/><br/>
+
+          ## **2. Regardez la vidéo de l'élève : Variables d'enveloppe (dans le plan de cours)**
+          <br/>
+          Il s'agit d'une vidéo que vous pouvez montrer à vos élèves pour présenter le concept de variables et démarrer le cours hors ligne.
       OPD-K5 where to next:
         content1: description ici
+        markdown: "# Où aller ensuite ?\n\nToutes nos félicitations ! Vous avez terminé
+          la partie des concepts de base du codage de ce cours de développement professionnel
+          en ligne ! Alors, où allez-vous ensuite ?\n\n## Si vous prévoyez d'enseigner
+          les cours E et F\nSi vous envisagez d'enseigner les cours E et F (ou si
+          vous souhaitez simplement vous familiariser avec des concepts de codage
+          plus avancés), nous vous recommandons de continuer sur le <a href=\"https://studio.code.org/s/k5
+          -onlinepd-2019/lessons/8/levels/1\" target=\"blank\" rel=\"noopener noreferrer\">prochain
+          bout de concept</a>, qui couvre surtout ceux présentés dans ces cours.\n\n##
+          Si vous n'envisagez pas d'enseigner les cours E et F\nSi vous n'envisagez
+          pas d'enseigner les cours E et F, vous pouvez passer au <a href=\"https://studio.code.org/s/k5-onlinepd-2019/lessons/12/levels/1\"
+          target= \"blank\" rel=\"noopener noreferrer\">Bout de concept \"Prochaines
+          étapes\".</a> "
       OPD-K5-projects-1:
         content1: description ici
+        markdown: |-
+          Vous êtes sur le point de commencer votre projet final. Avant de commencer, prenez le temps d'examiner les exemples de projets.
+
+          | Écureuil affamé | histoire extraterrestre |
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank" rel="noopener noreferrer">![Écureuil affamé (Play Lab)](https : //images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Écureuil affamé (Play Lab")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu -bkKBnSORoIDs0o/view" target="blank" rel="noopener noreferrer">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab) ")</a>|
+          | Essayez d'ajouter des sons à ce jeu ! | Essayez d'ajouter une autre scène à cette histoire ! |
       'Overview: Design Mode':
         markdown: |
           #Bienvenue au Mode Design du App Lab
@@ -5068,6 +5412,63 @@ fr-FR:
           Apprend à programmer en codant pour tes amis!
       OPD-K5 Stage3aGo_dani:
         content1: description ici
+        markdown: |-
+          # Séquençage > Leçons hors ligne
+
+          Comme nous l'avons mentionné, nous aimons introduire des sujets d'informatique avec des cours hors ligne. Ensuite, nous utilisons des activités de transition pour passer plus tard aux leçons en ligne. En commençant par ces leçons hors ligne, vous présentez les concepts de manière amusante et conviviale. Ensuite, les élèves se sentent déjà familiarisés avec le concept au moment où ils accèdent aux leçons en ligne et peuvent relier les leçons en ligne à l'activité hors ligne.
+
+          Pour ces étapes de programmation que vous allez traverser, nous commencerons également par des exemples de cours hors ligne. Lisez le plan de cours suivant et regardez les vidéos qui l'accompagnent, en pensant à la façon dont vous le mettriez en œuvre dans votre classe avec vos élèves.
+          <br/>
+          ***
+          <br/>
+          Nous allons commencer par le séquençage. À la base, ce style d'informatique concerne les **séquences**. Une séquence est un ordre spécial que quelque chose suit. Dans ces énigmes, nous voulons trouver la bonne séquence d'instructions pour dire à l'ordinateur quoi faire. Cette liste d'instructions est appelée **algorithme**. Une fois que cet algorithme est codé dans un langage lisible par une machine, il devient un **programme**.
+          <br/>
+          <br/>
+
+          **1. Passez en revue le plan de leçon "[Happy Maps](https://curriculum.code.org/csf/coursea/5/)" du cours A.**
+          <br/>
+          N'oubliez pas que le cours A est destiné aux élèves de la maternelle. Le séquençage apparaît également dans d'autres cours, et vous pouvez trouver des exemples de ces leçons au bas de cette page.
+
+          <br/>
+
+          **2. Regardez la vidéo étudiante : Happy Maps**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de séquençage et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/f00fb02e8f24d57e88d396eb0f2c5cce-image-1571253011379.09.54 PM.png)](https://youtube.com/watch?v=hrnhiKAQ1_k)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)
+
+          <br/>
+
+          **3. Regardez la vidéo de l'enseignant : Comment faciliter les « Happy Maps »**
+          <br/>
+
+          [![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01 PM.png)](https://youtube.com/watch?v=En6Bshuqljg)
+
+          <br/>
+
+
+          **4. Passez en revue d'autres leçons hors ligne qui introduisent le séquençage :**
+
+          - Cours A (maternelle) : [Algorithmes réels : planter une graine] (https://curriculum.code.org/csf-18/coursea/3/)
+          - Cours B (CP) : [My Robotic Friends Jr.](https://curriculum.code.org/csf-18/coursea/3/), [Move It, Move It](https://curriculum. code.org/csf-18/courseb/1/)
+          - Cours C (CE1) : [Avions en papier](https://curriculum.code.org/csf-18/coursec/4/)
+          - Cours D (CE2) : [Programmation sur papier millimétré](https://curriculum.code.org/csf-18/coursed/1/)
+          - Cours E, Cours F (CM1, CM2) : [Mes amis robotiques] (https://curriculum.code.org/csf-18/coursee/1/)
+
+
+          ---
+
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept de programmation (y compris le séquençage et les algorithmes) à vos élèves ? Partagez vos impressions sur <a href="http://forum.code.org/t/teaching-sequencing/408">notre forum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-sequencing/408" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >> </button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour continuer.
+
+          Dans la prochaine étape, nous allons ajouter de la complexité à nos programmes grâce à l'ajout de boucles.
       PowerOfWords-Unplugged_2021:
         markdown: |-
           # Le pouvoir des mots
@@ -6603,3 +7004,2067 @@ fr-FR:
         description: C'est à votre tour de créer ce que vous voulez ! Quel genre de
           projet ferez-vous ?
         display_name: Sprites - Jeu libre
+      OPD-K5 About:
+        markdown: |-
+          # Démarrage : À propos de ce cours
+
+          ## Aperçu du cours
+
+          Ce cours est conçu comme une introduction au programme et aux ressources des principes fondamentaux de l'informatique de Code.org pour les enseignants. En lisant, en visionnant des vidéos, en complétant des puzzles interactifs et en réfléchissant à votre apprentissage, vous développerez votre propre compréhension tout en vous préparant à enseigner l'informatique dans votre classe.
+
+          ## Objectifs d'apprentissage
+
+          En suivant ce cours en ligne, les participants :
+
+          - Apprendront les bases de l'informatique
+          - Passeront en revue les meilleures pratiques pour enseigner ces bases aux élèves
+          - Accéderont au programme et aux ressources gratuites pour les enseignants
+          - Prévoiront comment commencer à enseigner les principes fondamentaux de l'informatique
+          - Se connecteront avec une communauté de collègues éducateurs qui apporteront des changements positifs dans leurs salles de classe grâce au codage
+
+          ## Conditions préalables
+
+          Aucune expérience préalable en codage ou en informatique n'est requise. Il s'agit d'un cours pour débutants.
+
+          > **Une note sur le public :** Ce cours se concentre sur le programme gratuit de Code.org sur les principes fondamentaux de l'informatique pour des élèves de la maternelle au CM2. Bien que bon nombre de ces concepts s'appliquent à n'importe quel cours d'informatique, si vous souhaitez enseigner un programme d'informatique plus approfondi que les fondamentaux de l'informatique (par exemple, l'un de nos [Middle](https://code.org /educate/csd) ou [High school](https://code.org/educate/csp)), nous vous recommandons de rechercher davantage [d'opportunités de développement professionnel approfondi ou continu](https://code.org/ éduquer/apprentissage professionnel/moyen-élevé).
+
+          ## Durée du cours
+
+          Ce cours en ligne devrait prendre entre 3 et 7 heures, en fonction de vos connaissances préalables et de la profondeur à laquelle vous souhaitez vous plonger dans les ressources Code.org.
+      OPD-K5 About_dani:
+        markdown: |-
+          # Démarrage : À propos de ce cours
+
+          ## Aperçu du cours
+
+          Ce cours est conçu comme une introduction au programme et aux ressources des principes fondamentaux de l'informatique de Code.org pour les enseignants. En lisant, en visionnant des vidéos, en complétant des puzzles interactifs et en réfléchissant à votre apprentissage, vous développerez votre propre compréhension tout en vous préparant à enseigner l'informatique dans votre classe.
+
+          ## Objectifs d'apprentissage
+
+          En suivant ce cours en ligne, les participants :
+
+          - Apprendront les bases de l'informatique
+          - Passeront en revue les meilleures pratiques pour enseigner ces bases aux élèves
+          - Accéderont au programme et aux ressources gratuites pour les enseignants
+          - Prévoiront comment commencer à enseigner les principes fondamentaux de l'informatique
+          - Se connecteront avec une communauté de collègues éducateurs qui apporteront des changements positifs dans leurs salles de classe grâce au codage
+
+          ## Conditions préalables
+
+          Aucune expérience préalable en codage ou en informatique n'est requise. Il s'agit d'un cours pour débutants.
+
+          > **Une note sur le public :** Ce cours se concentre sur le programme gratuit de Code.org sur les principes fondamentaux de l'informatique pour des élèves de la maternelle au CM2. Bien que bon nombre de ces concepts s'appliquent à n'importe quel cours d'informatique, si vous souhaitez enseigner un programme d'informatique plus approfondi que les fondamentaux de l'informatique (par exemple, l'un de nos [Middle](https://code.org /educate/csd) ou [High school](https://code.org/educate/csp)), nous vous recommandons de rechercher davantage [d'opportunités de développement professionnel approfondi ou continu](https://code.org/ éduquer/apprentissage professionnel/moyen-élevé).
+
+          ## Durée du cours
+
+          Ce cours en ligne devrait prendre entre 3 et 7 heures, en fonction de vos connaissances préalables et de la profondeur à laquelle vous souhaitez vous plonger dans les ressources Code.org.
+      OPD-K5 Assessment:
+        markdown: |-
+          # Planification > Autres ressources
+
+          Lorsque vous êtes connecté à Code.org en tant qu'enseignant, vous avez accès à de nombreuses fonctionnalités que vos élèves n'ont pas. Vous avez déjà vu comment trouver un cours, créer une section et affecter votre classe à cette section. Cependant, vous pouvez également :
+
+          - **Suivre les progrès des élèves** : [Évaluer l'apprentissage](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) de tous vos élèves.
+          - **Votre progression de cours** : affichez votre propre progression personnelle sur les leçons Code.org, en tant qu'apprenant. Vos élèves pourront également voir leur progression dans leurs comptes. Cependant, en tant qu'enseignant, vous pouvez également consulter les plans de cours et voir les solutions pour chaque puzzle.
+          - **Aide et communauté** : accédez à [support.code.org](https://support.code.org/), où vous pouvez poster des questions, répondre aux messages d'autres enseignants et lire les FAQ du personnel de Code.org . Sur cette page, vous pourrez également contacter directement Code.org pour toute question que vous pourriez avoir.
+          - **Développement professionnel** : Accédez à une [formation en personne](https://code.org/professional-development-workshops) pour les enseignants.
+          - **Conférenciers invités en informatique** : [Trouvez des professionnels intelligents, passionnés et engageants de l'industrie technologique] (https://code.org/volunteer/local) qui aimeraient parler à votre classe de leur travail.
+
+          <br/>
+          ---
+          > ## Allez sur support.code.org
+          > Si vous êtes bloqué ou avez des questions, assurez-vous de consulter nos articles d'assistance sur support.code.org ! Vous pouvez également nous contacter directement via cette page. [notre forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://support.code.org" target="blank" rel="noopener noreferrer"><button class="plc">Obtenir de l'aide >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 Assessment_dani:
+        markdown: |-
+          # Planification > Autres ressources
+
+          Lorsque vous êtes connecté à Code.org en tant qu'enseignant, vous avez accès à de nombreuses fonctionnalités que vos élèves n'ont pas. Vous avez déjà vu comment trouver un cours, créer une section et affecter votre classe à cette section. Cependant, vous pouvez également :
+
+          - **Suivre les progrès des élèves** : [Évaluer l'apprentissage](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) de tous vos élèves.
+          - **Votre progression de cours** : affichez votre propre progression personnelle sur les leçons Code.org, en tant qu'apprenant. Vos élèves pourront également voir leur progression dans leurs comptes. Cependant, en tant qu'enseignant, vous pouvez également consulter les plans de cours et voir les solutions pour chaque puzzle.
+          - **Aide et communauté** : accédez à [support.code.org](https://support.code.org/), où vous pouvez poster des questions, répondre aux messages d'autres enseignants et lire les FAQ du personnel de Code.org . Sur cette page, vous pourrez également contacter directement Code.org pour toute question que vous pourriez avoir.
+          - **Développement professionnel** : Accédez à une [formation en personne](https://code.org/professional-development-workshops) pour les enseignants.
+          - **Conférenciers invités en informatique** : [Trouvez des professionnels intelligents, passionnés et engageants de l'industrie technologique] (https://code.org/volunteer/local) qui aimeraient parler à votre classe de leur travail.
+
+          <br/>
+          ---
+          > ## Allez sur support.code.org
+          > Si vous êtes bloqué ou avez des questions, assurez-vous de consulter nos articles d'assistance sur support.code.org ! Vous pouvez également nous contacter directement via cette page. [notre forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://support.code.org" target="blank" rel="noopener noreferrer"><button class="plc">Obtenir de l'aide >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 CS Courses:
+        markdown: |-
+          # Planification > Se lancer sur Code.org
+
+
+          ## Étape 1 : Choisissez un cours
+          Tous nos cours - des pré-lecteurs aux lycéens - sont répertoriés dans notre **[catalogue de cours](https://studio.code.org/courses)**. Pour trouver les leçons CS Fundamentals avec lesquelles vous vous êtes entraîné, rendez-vous sur notre **[page élémentaire](https://code.org/educate/curriculum/elementary-school)** et faites défiler jusqu'à la section "Cours" . Tous nos cours sont disponibles sans frais. Discutez avec des collègues de votre école pour déterminer comment le programme du cours peut être intégré à une variété de matières.
+          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
+          ***
+          ## Étape 2 : Configurez votre section de classe
+          Configurez une section salle de classe pour afficher les progrès de votre élève, imprimer des cartes de connexion pour vos élèves, gérer leurs comptes et imprimer des certificats qu'ils peuvent rapporter à la maison à la fin du cours. Cliquez sur ce lien pour **[regarder une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** qui montre comment pour mettre en place votre premier cours d'informatique sur Code.org. Vous pouvez également trouver les étapes dans **[cet article d'assistance](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
+          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
+          ***
+          ## Étape 3 : Attribuez le cours à votre section
+          Cliquez sur le cours que vous enseignez - vous devriez voir un écran qui ressemble à celui ci-dessous. Vous pouvez ensuite cliquer sur « Attribuer un cours » et attribuer ce cours à l'une de vos sections.
+          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
+          ***
+          ## Étape 4 : Commencez à enseigner !
+          Tout ce qu'il faut, c'est une leçon pour introduire des concepts informatiques dans votre classe. Une fois que vous voyez l'enthousiasme de vos élèves pour l'informatique, allez plus loin avec des plans de cours quotidiens pour guider vos élèves, des activités hors ligne que vous pouvez faire sans ordinateur et des forums pour vous connecter à d'autres enseignants.
+      OPD-K5 CS Courses_dani:
+        markdown: |-
+          # Planification > Se lancer sur Code.org
+
+
+          ## Étape 1 : Choisissez un cours
+          Tous nos cours - des pré-lecteurs aux lycéens - sont répertoriés dans notre **[catalogue de cours](https://studio.code.org/courses)**. Pour trouver les leçons CS Fundamentals avec lesquelles vous vous êtes entraîné, rendez-vous sur notre **[page élémentaire](https://code.org/educate/curriculum/elementary-school)** et faites défiler jusqu'à la section "Cours" . Tous nos cours sont disponibles sans frais. Discutez avec des collègues de votre école pour déterminer comment le programme du cours peut être intégré à une variété de matières.
+          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
+          ***
+          ## Étape 2 : Configurez votre section de classe
+          Configurez une section salle de classe pour afficher les progrès de votre élève, imprimer des cartes de connexion pour vos élèves, gérer leurs comptes et imprimer des certificats qu'ils peuvent rapporter à la maison à la fin du cours. Cliquez sur ce lien pour **[regarder une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** qui montre comment pour mettre en place votre premier cours d'informatique sur Code.org. Vous pouvez également trouver les étapes dans **[cet article d'assistance](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
+          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
+          ***
+          ## Étape 3 : Attribuez le cours à votre section
+          Cliquez sur le cours que vous enseignez - vous devriez voir un écran qui ressemble à celui ci-dessous. Vous pouvez ensuite cliquer sur « Attribuer un cours » et attribuer ce cours à l'une de vos sections.
+          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
+          ***
+          ## Étape 4 : Commencez à enseigner !
+          Tout ce qu'il faut, c'est une leçon pour introduire des concepts informatiques dans votre classe. Une fois que vous voyez l'enthousiasme de vos élèves pour l'informatique, allez plus loin avec des plans de cours quotidiens pour guider vos élèves, des activités hors ligne que vous pouvez faire sans ordinateur et des forums pour vous connecter à d'autres enseignants.
+      OPD-K5 CS Tips:
+        markdown: |-
+          # Démarrage > Navigation dans ce cours en ligne
+
+          Si vous êtes arrivé jusqu'ici, félicitations ! En suivant ce cours, vous vous familiariserez avec tout ce que CS Fundamentals a à offrir.
+
+          Si vous rencontrez des difficultés, les informations ci-dessous vous aideront à naviguer et à utiliser cet espace pour votre apprentissage professionnel pendant que vous suivez ce cours en ligne.
+
+          ---
+
+          ## Étapes
+
+          La page principale de développement professionnel est illustrée ci-dessous. Cette page est divisée en plusieurs __étapes__, qui représentent chacune un sujet ou une idée différente.
+
+          <img src ="https://images.code.org/3f0fa0abc76fa6e6bde06bb4bc705202-image-1548976538784.png" />
+
+          <br/>
+          <br/>
+
+          ## Puzzles
+
+          Chaque étape est composée de niveaux que nous appelons __puzzles__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les puzzles sont indiqués par des cercles avec des nombres. Les couleurs du cercle du puzzle changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
+          <br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
+          <br/>
+
+          ## Accéder aux puzzles
+
+          On les trouve :
+          <p>-Sur la page principale de développement professionnel</p>
+          <p>-Sur l'en-tête dans n'importe quel autre puzzle sur la même scène</p>
+          <p>-Depuis le menu déroulant de l'en-tête dans n'importe quel puzzle</p>
+
+          <h4><détails>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur l'accès aux puzzles</summary>
+          <br>
+          <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
+          <br>
+          <img src ="https://images.code.org/27681ae1028bb26bcacd9970086c3792-image-1548976069596.gif" />
+          </détails></h4>
+
+          <br/>
+
+          ## Se déplacer entre les puzzles
+
+          Cliquez sur « Continuer » ou « Ressource suivante » après chaque puzzle pour passer au suivant, ou, passez à un nouveau puzzle en cliquant sur ce numéro dans l'en-tête, quand vous le voulez.
+
+          <h4><détails>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur le déplacement entre les puzzles</summary>
+          <br>
+          <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
+          <br>
+          <img src ="https://images.code.org/d28046a78ecb03f9501f3bb7764c7ce8-image-1548976730590.gif" />
+          </détails></h4>
+
+          <br/>
+          <br/>
+
+
+          > C'est tout ! N'hésitez pas à revenir à ce niveau à tout moment si vous avez besoin d'un rappel sur le fonctionnement de cette plate-forme.
+      OPD-K5 CS Tips_dani:
+        markdown: |-
+          # Démarrage > Navigation dans ce cours en ligne
+
+          Si vous êtes arrivé jusqu'ici, félicitations ! En suivant ce cours, vous vous familiariserez avec tout ce que CS Fundamentals a à offrir.
+
+          Si vous rencontrez des difficultés, les informations ci-dessous vous aideront à naviguer et à utiliser cet espace pour votre apprentissage professionnel pendant que vous suivez ce cours en ligne.
+
+          ---
+
+          ## Étapes
+
+          La page principale de développement professionnel est illustrée ci-dessous. Cette page est divisée en plusieurs __étapes__, qui représentent chacune un sujet ou une idée différente.
+
+          <img src ="https://images.code.org/3f0fa0abc76fa6e6bde06bb4bc705202-image-1548976538784.png" />
+
+          <br/>
+          <br/>
+
+          ## Puzzles
+
+          Chaque étape est composée de niveaux que nous appelons __puzzles__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les puzzles sont indiqués par des cercles avec des nombres. Les couleurs du cercle du puzzle changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
+          <br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
+          <br/>
+
+          ## Accéder aux puzzles
+
+          On les trouve :
+          <p>-Sur la page principale de développement professionnel</p>
+          <p>-Sur l'en-tête dans n'importe quel autre puzzle sur la même scène</p>
+          <p>-Depuis le menu déroulant de l'en-tête dans n'importe quel puzzle</p>
+
+          <h4><détails>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur l'accès aux puzzles</summary>
+          <br>
+          <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
+          <br>
+          <img src ="https://images.code.org/27681ae1028bb26bcacd9970086c3792-image-1548976069596.gif" />
+          </détails></h4>
+
+          <br/>
+
+          ## Se déplacer entre les puzzles
+
+          Cliquez sur « Continuer » ou « Ressource suivante » après chaque puzzle pour passer au suivant, ou, passez à un nouveau puzzle en cliquant sur ce numéro dans l'en-tête, quand vous le voulez.
+
+          <h4><détails>
+          <summary style="color:#ffa400;">Cliquez ici pour en savoir plus sur le déplacement entre les puzzles</summary>
+          <br>
+          <div><em>Cliquez ensuite sur la flèche ci-dessus pour réduire la section</em></div>
+          <br>
+          <img src ="https://images.code.org/d28046a78ecb03f9501f3bb7764c7ce8-image-1548976730590.gif" />
+          </détails></h4>
+
+          <br/>
+          <br/>
+
+
+          > C'est tout ! N'hésitez pas à revenir à ce niveau à tout moment si vous avez besoin d'un rappel sur le fonctionnement de cette plate-forme.
+      OPD-K5 Celebrate:
+        markdown: |-
+          # Prochaines étapes > Célébrez !
+
+          Félicitations pour avoir terminé ce cours en ligne de développement professionnel. Si vous avez terminé tous les niveaux de cette formation, vous pouvez télécharger et imprimer un certificat de réussite dès maintenant en suivant les étapes suivantes :
+
+          1. Allez sur [ce lien](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. Entrez votre nom dans le champ/la zone de saisie.
+          3. Cliquez sur Imprimer les certificats.
+          4. Faites un clic droit sur l'image du certificat et choisissez "Enregistrer l'image sous..." pour pouvoir la télécharger sur votre ordinateur.
+
+          Et n'oubliez pas... vous pouvez revenir à ce cours en ligne à tout moment pour revoir votre apprentissage, accéder à des liens ou à des ressources, ou simplement vous rafraîchir la mémoire !
+
+          Merci pour votre participation! Nous avons hâte d'entendre comment vous implémentez l'informatique et Code Studio dans votre classe !
+      OPD-K5 Celebrate_dani:
+        markdown: |-
+          # Prochaines étapes > Célébrez !
+
+          Félicitations pour avoir terminé ce cours en ligne de développement professionnel. Si vous avez terminé tous les niveaux de cette formation, vous pouvez télécharger et imprimer un certificat de réussite dès maintenant en suivant les étapes suivantes :
+
+          1. Allez sur [ce lien](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. Entrez votre nom dans le champ/la zone de saisie.
+          3. Cliquez sur Imprimer les certificats.
+          4. Faites un clic droit sur l'image du certificat et choisissez "Enregistrer l'image sous..." pour pouvoir la télécharger sur votre ordinateur.
+
+          Et n'oubliez pas... vous pouvez revenir à ce cours en ligne à tout moment pour revoir votre apprentissage, accéder à des liens ou à des ressources, ou simplement vous rafraîchir la mémoire !
+
+          Merci pour votre participation! Nous avons hâte d'entendre comment vous implémentez l'informatique et Code Studio dans votre classe !
+      OPD-K5 Congrats:
+        markdown: |-
+          # Événements > Revue
+
+          À ce stade, vous avez créé un jeu amusant, combinant des concepts de base et démontrant votre apprentissage. En nous permettant de déclencher des actions basées sur d'autres parties de notre programme, les événements nous permettent d'étirer nos muscles codants.
+
+          **Prenez un moment maintenant pour examiner comment les événements sont introduits dans le programme CS Fundamentals et réfléchir à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)
+      OPD-K5 CongratsFinal:
+        markdown: |-
+          # Toutes nos félicitations!
+
+          <img src="https://images.code.org/3e21c6e68f0b6565ba16ad2b63b892f0-image-1434398206115.jpg" width="450px">
+          <br/><br/>
+          À présent, vous devriez avoir terminé les étapes 1 à 8 et appris les bases de l'informatique. Nous espérons que vous vous êtes bien amusé en chemin ! Nous espérons également que vous avez réfléchi à la manière dont vous pourriez appliquer votre apprentissage à votre pratique d'enseignement.
+          <br/><br/>
+          Dans la prochaine étape, nous examinerons certaines des meilleures pratiques pour enseigner ces principes fondamentaux dans votre classe.
+      OPD-K5 CongratsFinal_dani:
+        markdown: |-
+          # Toutes nos félicitations!
+
+          <img src="https://images.code.org/3e21c6e68f0b6565ba16ad2b63b892f0-image-1434398206115.jpg" width="450px">
+          <br/><br/>
+          À présent, vous devriez avoir terminé les étapes 1 à 8 et appris les bases de l'informatique. Nous espérons que vous vous êtes bien amusé en chemin ! Nous espérons également que vous avez réfléchi à la manière dont vous pourriez appliquer votre apprentissage à votre pratique d'enseignement.
+          <br/><br/>
+          Dans la prochaine étape, nous examinerons certaines des meilleures pratiques pour enseigner ces principes fondamentaux dans votre classe.
+      OPD-K5 Congrats_dani:
+        markdown: |-
+          # Événements > Revue
+
+          À ce stade, vous avez créé un jeu amusant, combinant des concepts de base et démontrant votre apprentissage. En nous permettant de déclencher des actions basées sur d'autres parties de notre programme, les événements nous permettent d'étirer nos muscles codants.
+
+          **Prenez un moment maintenant pour examiner comment les événements sont introduits dans le programme CS Fundamentals et réfléchir à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)
+      OPD-K5 Connect:
+        markdown: |-
+          # Prochaines étapes > Connectez-vous
+
+          Au-delà d'une formation formelle supplémentaire, vous pouvez envisager d'accéder à la communauté code.org pour continuer à apprendre de manière informelle des autres, ou simplement pour trouver du soutien et un réseau de gens comme vous. Voici comment faire :
+
+          <br/><br/>
+
+          > **Continuez à participer à la communauté d'apprentissage professionnel des enseignants de code.org :** Le forum que vous avez utilisé tout au long de ce cours sera une excellente ressource pour vous permettre d'aller de l'avant. Vous pouvez l'utiliser non seulement pour vous référer à votre apprentissage de ce cours, mais pour trouver un soutien tout au long de votre parcours, ou même pour offrir un soutien à d'autres qui ont besoin de votre expertise. Assurez-vous de le mettre en signet maintenant et visitez souvent : [http://forum.code.org/c/csf](http://forum.code.org/c/csf)
+
+          <br/>
+
+          > **Connectez-vous à [@teachcode](http://twitter.com/teachcode) sur Twitter.**
+
+          <br/>
+
+          > **Rejoignez la Computer Science Teachers Association (CSTA) :** [La CSTA](http://csta.acm.org/index.html) est une communauté d'enseignants impliqués, à travers le pays qui s'engage à apporter l'informatique à leurs élèves tout en sensibilisant le grand public sur ce sujet. Ils organisent une conférence annuelle et ont également des sections qui tiennent des réunions locales.
+      OPD-K5 Connect_dani:
+        markdown: |-
+          # Prochaines étapes > Connectez-vous
+
+          Au-delà d'une formation formelle supplémentaire, vous pouvez envisager d'accéder à la communauté code.org pour continuer à apprendre de manière informelle des autres, ou simplement pour trouver du soutien et un réseau de gens comme vous. Voici comment faire :
+
+          <br/><br/>
+
+          > **Continuez à participer à la communauté d'apprentissage professionnel des enseignants de code.org :** Le forum que vous avez utilisé tout au long de ce cours sera une excellente ressource pour vous permettre d'aller de l'avant. Vous pouvez l'utiliser non seulement pour vous référer à votre apprentissage de ce cours, mais pour trouver un soutien tout au long de votre parcours, ou même pour offrir un soutien à d'autres qui ont besoin de votre expertise. Assurez-vous de le mettre en signet maintenant et visitez souvent : [http://forum.code.org/c/csf](http://forum.code.org/c/csf)
+
+          <br/>
+
+          > **Connectez-vous à [@teachcode](http://twitter.com/teachcode) sur Twitter.**
+
+          <br/>
+
+          > **Rejoignez la Computer Science Teachers Association (CSTA) :** [La CSTA](http://csta.acm.org/index.html) est une communauté d'enseignants impliqués, à travers le pays qui s'engage à apporter l'informatique à leurs élèves tout en sensibilisant le grand public sur ce sujet. Ils organisent une conférence annuelle et ont également des sections qui tiennent des réunions locales.
+      OPD-K5 Culture:
+        markdown: |-
+          # Bonnes pratiques > Culture de classe
+
+          Comment pouvons-nous promouvoir une culture de classe saine pour nos cours d'informatique ? Premièrement, nous pouvons nous assurer que tout le monde dans la classe, y compris nous-mêmes, comprenne comment nous pouvons agir comme des informaticiens et ce qu'il faut garder à l'esprit. Cela permet à tout le monde d'être sur la même longueur d'onde et facilite votre travail en classe.
+
+          <img src="https://images.code.org/b5d9ae18a882a4359f096b9c6ade135e-image-1434398703448.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ## Façons d'agir comme un informaticien :
+
+          - **Soyez curieux :** lorsque vous êtes curieux, vous faites des choses comme fouiller dans différents menus, exécuter des morceaux de code pour voir ce qui se passe ou vérifier les effets de différents paramètres. La curiosité conduit souvent à être capable de répondre à vos propres questions.
+          - **Posez des questions :** Collaborez avec d'autres personnes une fois que vous avez essayé de résoudre vous-même un problème.
+          - **Soyez persévérant :** Ayez confiance en vous pour résoudre des problèmes complexes ouverts et respectez-les. Cela devient plus facile une fois que vous avez écrit des programmes réussis et que vous savez à quel point il est agréable de surmonter un problème de programmation difficile.
+          - **Décomposer les gros problèmes en problèmes plus petits et plus faciles à gérer :** C'est ce qu'on appelle la **décomposition**.
+          - **Lisez votre code :** L'ordinateur suit exactement vos instructions. Le traçage du code étape par étape (comme si vous étiez l'ordinateur en train de traiter les instructions) vous aidera à trouver des erreurs dans votre logique ou des étapes manquantes.
+          - **Ne vous sentez pas mal à l'idée de faire des erreurs :** Les erreurs ne sont pas un échec ; elles vous rapprochent simplement de la création de la bonne solution ou du bon produit final.
+          - ** Éloignez-vous de votre écran :** Cela peut vous donner une pause bien méritée et vous pouvez souvent revenir à un problème avec une nouvelle perspective.
+
+          ## Choses à garder à l'esprit lors de l'apprentissage de l'informatique :
+
+          - Le monde de la programmation informatique évolue si vite qu'il n'y a pas vraiment de maîtres. **Nous sommes tous des élèves** à différents stades et nous n'avons jamais fini d'apprendre.
+          - La programmation devient plus facile à chaque fois que vous y revenez. **Vous ne serez pas un expert la première fois.**
+          - Il n'y a aucun moyen de contourner cela, l'acte de programmer et **apprendre à programmer prend du temps, mais tout le monde peut le faire !**
+          - Vous pouvez partager **votre propre expérience authentique d'apprentissage du codage** avec vos élèves !
+
+          > ## Réflexion :
+          > Comment comptez-vous créer une culture de classe positive lorsque vous enseignez l'informatique ? [Tweetez vos pensées](https://twitter.com/codeorg) et assurez-vous de taguer @codeorg dans votre tweet afin que nous puissions répondre.
+
+          > <a href="http://ctt.ec/pdL3a" target="blank" rel="noopener noreferrer"><button class="default">Partager sur Twitter >></button></a>
+      OPD-K5 Culture_dani:
+        markdown: |-
+          # Bonnes pratiques > Culture de classe
+
+          Comment pouvons-nous promouvoir une culture de classe saine pour nos cours d'informatique ? Premièrement, nous pouvons nous assurer que tout le monde dans la classe, y compris nous-mêmes, comprenne comment nous pouvons agir comme des informaticiens et ce qu'il faut garder à l'esprit. Cela permet à tout le monde d'être sur la même longueur d'onde et facilite votre travail en classe.
+
+          <img src="https://images.code.org/b5d9ae18a882a4359f096b9c6ade135e-image-1434398703448.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ## Façons d'agir comme un informaticien :
+
+          - **Soyez curieux :** lorsque vous êtes curieux, vous faites des choses comme fouiller dans différents menus, exécuter des morceaux de code pour voir ce qui se passe ou vérifier les effets de différents paramètres. La curiosité conduit souvent à être capable de répondre à vos propres questions.
+          - **Posez des questions :** Collaborez avec d'autres personnes une fois que vous avez essayé de résoudre vous-même un problème.
+          - **Soyez persévérant :** Ayez confiance en vous pour résoudre des problèmes complexes ouverts et respectez-les. Cela devient plus facile une fois que vous avez écrit des programmes réussis et que vous savez à quel point il est agréable de surmonter un problème de programmation difficile.
+          - **Décomposer les gros problèmes en problèmes plus petits et plus faciles à gérer :** C'est ce qu'on appelle la **décomposition**.
+          - **Lisez votre code :** L'ordinateur suit exactement vos instructions. Le traçage du code étape par étape (comme si vous étiez l'ordinateur en train de traiter les instructions) vous aidera à trouver des erreurs dans votre logique ou des étapes manquantes.
+          - **Ne vous sentez pas mal à l'idée de faire des erreurs :** Les erreurs ne sont pas un échec ; elles vous rapprochent simplement de la création de la bonne solution ou du bon produit final.
+          - ** Éloignez-vous de votre écran :** Cela peut vous donner une pause bien méritée et vous pouvez souvent revenir à un problème avec une nouvelle perspective.
+
+          ## Choses à garder à l'esprit lors de l'apprentissage de l'informatique :
+
+          - Le monde de la programmation informatique évolue si vite qu'il n'y a pas vraiment de maîtres. **Nous sommes tous des élèves** à différents stades et nous n'avons jamais fini d'apprendre.
+          - La programmation devient plus facile à chaque fois que vous y revenez. **Vous ne serez pas un expert la première fois.**
+          - Il n'y a aucun moyen de contourner cela, l'acte de programmer et **apprendre à programmer prend du temps, mais tout le monde peut le faire !**
+          - Vous pouvez partager **votre propre expérience authentique d'apprentissage du codage** avec vos élèves !
+
+          > ## Réflexion :
+          > Comment comptez-vous créer une culture de classe positive lorsque vous enseignez l'informatique ? [Tweetez vos pensées](https://twitter.com/codeorg) et assurez-vous de taguer @codeorg dans votre tweet afin que nous puissions répondre.
+
+          > <a href="http://ctt.ec/pdL3a" target="blank" rel="noopener noreferrer"><button class="default">Partager sur Twitter >></button></a>
+      OPD-K5 Outline:
+        markdown: |-
+          # Démarrage > Plan du cours
+
+          Ce cours est divisé en onze étapes, chacune étant composée de « niveaux » ou « puzzles ». Voici un aperçu de ce que vous apprendrez si vous suivez le cours en entier :
+
+          ## Étape 1 : Démarrage (10-30 minutes)
+
+          En terminant l'étape 1, vous :
+
+          - Reverrez les détails du cours
+          - Vous entrainerez à utiliser Code.org comme plateforme d'apprentissage
+          - Planifierez votre participation à ce cours
+
+          ## Étape 2 : Fondamentaux de l'informatique (10-30 minutes)
+
+          En terminant l'étape 2, vous :
+
+          - Définirez ce qu'est l'informatique et réviserez le vocabulaire clé
+          - Identifierez les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Saurez faire la différence entre "codage" et "informatique"
+          - Pourrez expliquer les avantages de commencer à coder en utilisant la programmation visuelle
+
+          ## Étape 3 : Regard vers l'avenir (10 minutes)
+
+          En terminant l'étape 3, vous :
+
+          - Serez prêt à "maîtriser les bases" de l'informatique en passant en revue la suite du cours
+
+          ## Étape 4 : Maîtriser les bases : Séquençage (10-30 minutes)
+
+          En terminant l'étape 4, vous :
+
+          - Définirez "programme" et "algorithme"
+          - Utiliserez le moteur de programmation visuel Code.org pour écrire des programmes simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 5 : Maîtriser les bases : Boucles (20-45 minutes)
+
+          En terminant l'étape 5, vous :
+
+          - Définirez des "boucles" et expliquerez leur importance
+          - Vous entrainerez à faire des boucles simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 6 : Maîtriser les bases : Conditions (20-45 minutes)
+
+          En terminant l'étape 6, vous :
+
+          - Définirez les "conditions" et expliquerez leur importance
+          - Vous entrainerez à coder des conditions simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 7 : Maîtriser les bases : Fonctions (20-45 minutes)
+
+          En terminant l'étape 7, vous :
+
+          - Définirez des « fonctions » et expliquerez leur importance
+          - Vous entrainerez à coder des fonctions simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 8 : Maîtriser les bases : événements (30-60 minutes)
+
+          En terminant l'étape 8, vous :
+
+          - Définirez les « événements » et expliquerez leur importance
+          - Vous entrainerez à coder des événements simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 9 : Meilleures pratiques pour l'enseignement de l'informatique (30-60 minutes)
+
+          En terminant l'étape 9, vous :
+
+          - Reverrez les bonnes pratiques pour l'enseignement de l'informatique
+
+          ## Étape 10 : Planification (30-60 minutes)
+
+          En terminant l'étape 10, vous :
+
+          - Explorerez les ressources Code.org, y compris le tableau de bord de l'enseignant
+          - Prévoirez comment vous intégrer l'informatique à votre activité
+
+          ## Étape 11 : Étapes suivantes (10-30 minutes)
+
+          En terminant l'étape 11, vous
+
+          - Réfléchirez à votre apprentissage
+          - Planifierez les prochaines étapes à suivre pour continuer votre apprentissage
+          - Vous connecterez à une communauté mondiale de collègues éducateurs intéressés par l'enseignement de l'informatique
+          - Ferez part de vos commentaires et ce que vous avez retenu de ce cours
+
+          > **Remarque** : Des suggestions d'horaires sont fournies ci-dessus pour vous aider à planifier votre apprentissage. Veuillez noter que vous voudrez peut-être passer plus ou moins de temps sur une scène donnée, en fonction de vos connaissances préalables, de vos intérêts et de vos capacités. Gardez à l'esprit que ce cours est entièrement auto-rythmé; vous pouvez toujours quitter le cours et revenir ou revoir n'importe quelle étape ou niveau à tout moment.
+      OPD-K5 Outline_dani:
+        markdown: |-
+          # Démarrage > Plan du cours
+
+          Ce cours est divisé en onze étapes, chacune étant composée de « niveaux » ou « puzzles ». Voici un aperçu de ce que vous apprendrez si vous suivez le cours en entier :
+
+          ## Étape 1 : Démarrage (10-30 minutes)
+
+          En terminant l'étape 1, vous :
+
+          - Reverrez les détails du cours
+          - Vous entrainerez à utiliser Code.org comme plateforme d'apprentissage
+          - Planifierez votre participation à ce cours
+
+          ## Étape 2 : Fondamentaux de l'informatique (10-30 minutes)
+
+          En terminant l'étape 2, vous :
+
+          - Définirez ce qu'est l'informatique et réviserez le vocabulaire clé
+          - Identifierez les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Saurez faire la différence entre "codage" et "informatique"
+          - Pourrez expliquer les avantages de commencer à coder en utilisant la programmation visuelle
+
+          ## Étape 3 : Regard vers l'avenir (10 minutes)
+
+          En terminant l'étape 3, vous :
+
+          - Serez prêt à "maîtriser les bases" de l'informatique en passant en revue la suite du cours
+
+          ## Étape 4 : Maîtriser les bases : Séquençage (10-30 minutes)
+
+          En terminant l'étape 4, vous :
+
+          - Définirez "programme" et "algorithme"
+          - Utiliserez le moteur de programmation visuel Code.org pour écrire des programmes simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 5 : Maîtriser les bases : Boucles (20-45 minutes)
+
+          En terminant l'étape 5, vous :
+
+          - Définirez des "boucles" et expliquerez leur importance
+          - Vous entrainerez à faire des boucles simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 6 : Maîtriser les bases : Conditions (20-45 minutes)
+
+          En terminant l'étape 6, vous :
+
+          - Définirez les "conditions" et expliquerez leur importance
+          - Vous entrainerez à coder des conditions simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 7 : Maîtriser les bases : Fonctions (20-45 minutes)
+
+          En terminant l'étape 7, vous :
+
+          - Définirez des « fonctions » et expliquerez leur importance
+          - Vous entrainerez à coder des fonctions simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 8 : Maîtriser les bases : événements (30-60 minutes)
+
+          En terminant l'étape 8, vous :
+
+          - Définirez les « événements » et expliquerez leur importance
+          - Vous entrainerez à coder des événements simples
+          - Réfléchirez à leur application en classe
+
+          ## Étape 9 : Meilleures pratiques pour l'enseignement de l'informatique (30-60 minutes)
+
+          En terminant l'étape 9, vous :
+
+          - Reverrez les bonnes pratiques pour l'enseignement de l'informatique
+
+          ## Étape 10 : Planification (30-60 minutes)
+
+          En terminant l'étape 10, vous :
+
+          - Explorerez les ressources Code.org, y compris le tableau de bord de l'enseignant
+          - Prévoirez comment vous intégrer l'informatique à votre activité
+
+          ## Étape 11 : Étapes suivantes (10-30 minutes)
+
+          En terminant l'étape 11, vous
+
+          - Réfléchirez à votre apprentissage
+          - Planifierez les prochaines étapes à suivre pour continuer votre apprentissage
+          - Vous connecterez à une communauté mondiale de collègues éducateurs intéressés par l'enseignement de l'informatique
+          - Ferez part de vos commentaires et ce que vous avez retenu de ce cours
+
+          > **Remarque** : Des suggestions d'horaires sont fournies ci-dessus pour vous aider à planifier votre apprentissage. Veuillez noter que vous voudrez peut-être passer plus ou moins de temps sur une scène donnée, en fonction de vos connaissances préalables, de vos intérêts et de vos capacités. Gardez à l'esprit que ce cours est entièrement auto-rythmé; vous pouvez toujours quitter le cours et revenir ou revoir n'importe quelle étape ou niveau à tout moment.
+      OPD-K5 Pair:
+        markdown: |-
+          # Bonnes pratiques > Programmation en binôme
+
+          Une stratégie de gestion de classe importante que de nombreux éducateurs utilisent est le regroupement stratégique. Chez Code.org, nous vous suggérons d'essayer la stratégie de regroupement stratégique utilisée dans les bureaux réels des plus grandes entreprises technologiques : la programmation en binôme.
+
+          >**La programmation en binôme** est lorsque deux étudiants utilisent un ordinateur pour écrire un programme ensemble. Le National Center for Women & Information Technology (NCWIT) a une [excellente ressource sur les avantages de la programmation en binôme] (http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+
+          La recherche montre que la programmation en binôme :
+
+          - Conduit à des programmes d'élèves de meilleure qualité par rapport à ceux non jumelés
+          - Réduit le soi-disant « écart de confiance » entre les élèves filles et garçons, tout en augmentant la confiance en la programmation de tous
+          <br/><br/>
+
+          Regardez cette vidéo pour comprendre comment fonctionne la programmation en binôme et écoutez directement les élèves pour voir comment elle améliore leur apprentissage.
+
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-pair-programming.mp4)
+          <br/><br/>
+          La programmation en binôme est non seulement bénéfique pour les élèves, mais elle est également pratiquée par certains programmeurs informatiques professionnels. Regardez cette vidéo pour apprendre à présenter la programmation en binôme à vos élèves.
+
+          [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          <br/>
+      OPD-K5 Pair_dani:
+        markdown: |-
+          # Bonnes pratiques > Programmation en binôme
+
+          Une stratégie de gestion de classe importante que de nombreux éducateurs utilisent est le regroupement stratégique. Chez Code.org, nous vous suggérons d'essayer la stratégie de regroupement stratégique utilisée dans les bureaux réels des plus grandes entreprises technologiques : la programmation en binôme.
+
+          >**La programmation en binôme** est lorsque deux étudiants utilisent un ordinateur pour écrire un programme ensemble. Le National Center for Women & Information Technology (NCWIT) a une [excellente ressource sur les avantages de la programmation en binôme] (http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+
+          La recherche montre que la programmation en binôme :
+
+          - Conduit à des programmes d'élèves de meilleure qualité par rapport à ceux non jumelés
+          - Réduit le soi-disant « écart de confiance » entre les élèves filles et garçons, tout en augmentant la confiance en la programmation de tous
+          <br/><br/>
+
+          Regardez cette vidéo pour comprendre comment fonctionne la programmation en binôme et écoutez directement les élèves pour voir comment elle améliore leur apprentissage.
+
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-pair-programming.mp4)
+          <br/><br/>
+          La programmation en binôme est non seulement bénéfique pour les élèves, mais elle est également pratiquée par certains programmeurs informatiques professionnels. Regardez cette vidéo pour apprendre à présenter la programmation en binôme à vos élèves.
+
+          [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          <br/>
+      OPD-K5 Participation:
+        markdown: |-
+          # Démarrage > Planifiez votre participation
+
+          Avant de commencer, prenez un moment pour évaluer vos besoins d'apprentissage, vos objectifs et l'expérience unique d'apprentissage dans un environnement en ligne à votre rythme, surtout s'il s'agit de votre premier cours en ligne !
+
+          ## C'est vous qui décidez
+
+          Ce cours en ligne à votre rythme est conçu pour vous mettre aux commandes et vous donner le contrôle de votre propre apprentissage. *** Veuillez prendre votre temps et suivre ce cours à votre rythme. Des temps suggérés sont donnés pour chaque étape.*** Si vous passez plus ou moins de temps sur une étape donnée, ne vous inquiétez pas ! Notre objectif principal est que vous vous amusiez, appreniez les bases et appliquiez ce que vous apprenez dans votre pratique en classe de la manière qui vous convient le mieux.
+
+          ## Connectez-vous
+
+          Une façon de rester motivé et concentré tout au long de votre apprentissage est de devenir actif sur notre <a href="http://forum.code.org/c/plc" target="_new">forum de la communauté d'apprentissage professionnel (PLC)< /a>.
+          Commencez par vous y présenter dans notre <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">fil de discussion "Introductions"</a>. Tout au long du cours, vous utiliserez le forum pour partager de manière asynchrone vos réflexions, vos points à retenir et vos questions avec d'autres personnes qui travaillent également sur le contenu.
+
+          <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank" rel="noopener noreferrer"><button class="plc">Introduire Vous-même maintenant >></button></a><br>
+
+          ## Recevez de l'aide en cas de besoin
+
+          Si vous êtes bloqué à tout moment pendant le cours, rendez-vous sur [support.code.org](http://support.code.org) et consultez [nos forums communautaires](https://support.code.org /hc/communities/public/topics). Vous y trouverez probablement la réponse à votre question. Si vous ne le faites pas ou si vous êtes toujours bloqué, vous pouvez envoyer un e-mail à [teacher@code.org](mailto:teacher@code.org) et un membre du personnel de Code.org vous répondra dès qu'il le pourra.
+
+          ## Faites équipe !
+
+          Étant constitués d'une petite équipe et au vu de tous les efforts que nous fournissons, nous ne pouvons pas répondre à toutes les demandes d'assistance, comme un instructeur pourrait le faire dans un cours en face à face. Nous vous encourageons donc à ***suivre ce cours en ligne avec un co-équipier ou un groupe de collègues***.
+
+          Code.org reconnaît le pouvoir de l'apprentissage et de la collaboration en équipe. En fait, la « programmation à plusieurs » est une excellente pratique du secteur que nous explorerons à l'étape 8 en tant que meilleure pratique en classe. Si vous pensez que vous apprendrez mieux avec un camarade ou en groupe, pourquoi ne pas terminer le cours avec un copain ou un collègue ? Si vous ne connaissez personne en vrai qui serait intéressé par un partenariat avec vous, rendez-vous sur [le forum PLC](http://forum.code.org/t/never-swim-alone-the-find-a- buddy-thread/411), [Twitter](https://twitter.com/teachcode) ou [Facebook](https://www.facebook.com/groups/1457214714576953/) et trouvez quelqu'un de Code.org susceptible de collaborer.
+
+          ## Trouvez l'expérience d'apprentissage qui vous convient
+
+          Enfin, l'apprentissage en ligne n'est pas donné à tout le monde. Ce cours n'a pas d'instructeur, ni de mécanisme intégré pour communiquer en temps réel avec vos pairs. Si vous avez besoin de plus d'attention individuelle ou si vous savez que vous apprenez mieux dans une salle de classe réelle où il y a plus d'opportunités de collaboration et d'engagement, nous vous recommandons de poursuivre l'une de nos opportunités de développement professionnel en personne.
+
+          <a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer"><button>Trouvez un atelier en personne près de chez vous >></button></ un>
+
+          * * *
+
+          ## Qu'avez-vous prévu ?
+
+          Prenez un moment maintenant pour réfléchir à comment et quand vous terminerez ce cours en ligne pour vous assurer de tirer le meilleur parti de l'expérience. Lorsque vous aurez un bon plan en tête, approfondissez l'étape 1.
+      OPD-K5 Participation_dani:
+        markdown: |-
+          # Démarrage > Planifiez votre participation
+
+          Avant de commencer, prenez un moment pour évaluer vos besoins d'apprentissage, vos objectifs et l'expérience unique d'apprentissage dans un environnement en ligne à votre rythme, surtout s'il s'agit de votre premier cours en ligne !
+
+          ## C'est vous qui décidez
+
+          Ce cours en ligne à votre rythme est conçu pour vous mettre aux commandes et vous donner le contrôle de votre propre apprentissage. *** Veuillez prendre votre temps et suivre ce cours à votre rythme. Des temps suggérés sont donnés pour chaque étape.*** Si vous passez plus ou moins de temps sur une étape donnée, ne vous inquiétez pas ! Notre objectif principal est que vous vous amusiez, appreniez les bases et appliquiez ce que vous apprenez dans votre pratique en classe de la manière qui vous convient le mieux.
+
+          ## Connectez-vous
+
+          Une façon de rester motivé et concentré tout au long de votre apprentissage est de devenir actif sur notre <a href="http://forum.code.org/c/plc" target="_new">forum de la communauté d'apprentissage professionnel (PLC)< /a>.
+          Commencez par vous y présenter dans notre <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">fil de discussion "Introductions"</a>. Tout au long du cours, vous utiliserez le forum pour partager de manière asynchrone vos réflexions, vos points à retenir et vos questions avec d'autres personnes qui travaillent également sur le contenu.
+
+          <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank" rel="noopener noreferrer"><button class="plc">Introduire Vous-même maintenant >></button></a><br>
+
+          ## Recevez de l'aide en cas de besoin
+
+          Si vous êtes bloqué à tout moment pendant le cours, rendez-vous sur [support.code.org](http://support.code.org) et consultez [nos forums communautaires](https://support.code.org /hc/communities/public/topics). Vous y trouverez probablement la réponse à votre question. Si vous ne le faites pas ou si vous êtes toujours bloqué, vous pouvez envoyer un e-mail à [teacher@code.org](mailto:teacher@code.org) et un membre du personnel de Code.org vous répondra dès qu'il le pourra.
+
+          ## Faites équipe !
+
+          Étant constitués d'une petite équipe et au vu de tous les efforts que nous fournissons, nous ne pouvons pas répondre à toutes les demandes d'assistance, comme un instructeur pourrait le faire dans un cours en face à face. Nous vous encourageons donc à ***suivre ce cours en ligne avec un co-équipier ou un groupe de collègues***.
+
+          Code.org reconnaît le pouvoir de l'apprentissage et de la collaboration en équipe. En fait, la « programmation à plusieurs » est une excellente pratique du secteur que nous explorerons à l'étape 8 en tant que meilleure pratique en classe. Si vous pensez que vous apprendrez mieux avec un camarade ou en groupe, pourquoi ne pas terminer le cours avec un copain ou un collègue ? Si vous ne connaissez personne en vrai qui serait intéressé par un partenariat avec vous, rendez-vous sur [le forum PLC](http://forum.code.org/t/never-swim-alone-the-find-a- buddy-thread/411), [Twitter](https://twitter.com/teachcode) ou [Facebook](https://www.facebook.com/groups/1457214714576953/) et trouvez quelqu'un de Code.org susceptible de collaborer.
+
+          ## Trouvez l'expérience d'apprentissage qui vous convient
+
+          Enfin, l'apprentissage en ligne n'est pas donné à tout le monde. Ce cours n'a pas d'instructeur, ni de mécanisme intégré pour communiquer en temps réel avec vos pairs. Si vous avez besoin de plus d'attention individuelle ou si vous savez que vous apprenez mieux dans une salle de classe réelle où il y a plus d'opportunités de collaboration et d'engagement, nous vous recommandons de poursuivre l'une de nos opportunités de développement professionnel en personne.
+
+          <a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer"><button>Trouvez un atelier en personne près de chez vous >></button></ un>
+
+          * * *
+
+          ## Qu'avez-vous prévu ?
+
+          Prenez un moment maintenant pour réfléchir à comment et quand vous terminerez ce cours en ligne pour vous assurer de tirer le meilleur parti de l'expérience. Lorsque vous aurez un bon plan en tête, approfondissez l'étape 1.
+      OPD-K5 PostSurvey:
+        markdown: |-
+          # Pour commencer - Répondez au post-sondage
+
+          Merci d'avoir utilisé le cours de développement professionnel en ligne Enseigner les principes fondamentaux de l'informatique !
+
+          Que vous ayez terminé ou non l'intégralité du cours, nous souhaitons connaître vos commentaires. Veuillez soumettre ce court sondage pour nous aider à améliorer le cours à l'avenir !
+
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Répondez au post-sondage</a>
+      OPD-K5 PostSurvey_dani:
+        markdown: |-
+          # Pour commencer - Répondez au post-sondage
+
+          Merci d'avoir utilisé le cours de développement professionnel en ligne Enseigner les principes fondamentaux de l'informatique !
+
+          Que vous ayez terminé ou non l'intégralité du cours, nous souhaitons connaître vos commentaires. Veuillez soumettre ce court sondage pour nous aider à améliorer le cours à l'avenir !
+
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Répondez au post-sondage</a>
+      OPD-K5 PreSurvey:
+        markdown: |-
+          # Démarrage > Répondez au pré-sondage
+
+          Nous voulons que vous profitiez au maximum de ce développement professionnel. C'est pourquoi, nous aimerions que vous remplissiez [cette petite pré-enquête](https://form.jotform.com/90556900301146). Ce sondage vous permettra de réfléchir à vos objectifs pour ce cours et nous dira un peu qui vous êtes et comment nous pouvons vous aider.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Répondre au pré-sondage</a>
+      OPD-K5 PreSurvey_dani:
+        markdown: |-
+          # Démarrage > Répondez au pré-sondage
+
+          Nous voulons que vous profitiez au maximum de ce développement professionnel. C'est pourquoi, nous aimerions que vous remplissiez [cette petite pré-enquête](https://form.jotform.com/90556900301146). Ce sondage vous permettra de réfléchir à vos objectifs pour ce cours et nous dira un peu qui vous êtes et comment nous pouvons vous aider.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Répondre au pré-sondage</a>
+      OPD-K5 Puzzles:
+        markdown: |-
+          # Regarder vers l'avenir > Tout sur les puzzles
+
+          Dans les étapes qui suivent, vous allez utiliser Code.org pour apprendre les bases de l'informatique. Vous serez confronté à une série d'énigmes qui doivent être résolues. Pour ce faire, vous devrez écrire des programmes utilisant différents personnages pour atteindre différents objectifs. Nous nous entraînerons avec notre premier puzzle à l'étape 3. Mais avant d'y arriver, voici un aperçu des différents types de puzzles que vous et vos élèves rencontrerez :
+
+          ## Exemples de puzzles de labyrinthe
+
+          ![](//code.org/images/mockup_birds.png)
+          ![](//code.org/images/pvz.png)
+
+          Vous devrez amener l'oiseau en colère au cochon et vous devrez amener le zombie au tournesol.
+
+          ## Exemple de puzzle d'artiste
+
+          ![](//code.org/images/artist.png)
+
+          Vous devez faire dessiner par l'artiste sur les lignes grises en le déplaçant autour de la toile. Il tracera une ligne derrière lui partout où il ira.
+
+          ## Exemple de puzzle d'abeille
+
+          ![](//code.org/images/bee.png)
+
+          Vous devrez déplacer l'abeille pour collecter tout le nectar et faire tout le miel. Les unités de nectar et de miel nécessaires pour chaque puzzle sont écrites dans le coin inférieur droit de chaque fleur ou rayon de miel.
+
+          ## Jouer au labo
+
+          ![](//code.org/images/playlab.png)
+
+          Dans Play Lab, vous créerez des jeux et des histoires basés sur différents objectifs.
+
+          ## Flappy
+
+          ![](//code.org/images/flappy.png)
+
+          Dans Flappy, vous créerez votre propre jeu d'oiseau Flappy.
+          Les énigmes qui ont précédé la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+
+          ## Rebondir
+
+          ![](//code.org/images/bounce.png)
+
+          Dans Bounce, vous pouvez créer votre propre jeu.
+          Tout comme dans Flappy, les énigmes menant à la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+
+          * * *
+
+          Dans cette série, nous vous présenterons des puzzles de [CS Fundamentals] (http://code.org/educate/k5). Ces puzzles servent de didacticiels en ligne, aidant les étudiants à apprendre des concepts tels que les boucles, les événements, les conditions et les fonctions.
+
+          Au cours de cette expérience de développement professionnel, nous intercalerons plusieurs progressions de puzzle, vous donnant la chance de vous familiariser avec les concepts de programmation dans CS Fundamentals et les personnages dont vos étudiants tomberont amoureux. Pendant ce cours, vous remarquerez que vous vous déplacez rapidement entre différents environnements qu'il s'agisse d'amener l'oiseau en colère au cochon, de faire un dessin ou de faire récolter du nectar à une abeille. Ces transitions se produisent rapidement dans ce cours pour vous montrer une gamme des énigmes proposées dans CS Fundamentals. Vos élèves passeront plus de temps avec chaque environnement.
+
+          Si vous voulez faire la même chose qu'eux, vous pouvez toujours suivre les cours [CS Fundamentals](http://studio.code.org/) par vous-même à tout moment. Mais ce cours vous donnera une bonne idée de ce à quoi vous attendre en tirant pour vous quelques-uns des puzzles et des leçons les plus fondamentaux en peu de temps.
+      OPD-K5 Puzzles_dani:
+        markdown: |-
+          # Regarder vers l'avenir > Tout sur les puzzles
+
+          Dans les étapes qui suivent, vous allez utiliser Code.org pour apprendre les bases de l'informatique. Vous serez confronté à une série d'énigmes qui doivent être résolues. Pour ce faire, vous devrez écrire des programmes utilisant différents personnages pour atteindre différents objectifs. Nous nous entraînerons avec notre premier puzzle à l'étape 3. Mais avant d'y arriver, voici un aperçu des différents types de puzzles que vous et vos élèves rencontrerez :
+
+          ## Exemples de puzzles de labyrinthe
+
+          ![](//code.org/images/mockup_birds.png)
+          ![](//code.org/images/pvz.png)
+
+          Vous devrez amener l'oiseau en colère au cochon et vous devrez amener le zombie au tournesol.
+
+          ## Exemple de puzzle d'artiste
+
+          ![](//code.org/images/artist.png)
+
+          Vous devez faire dessiner par l'artiste sur les lignes grises en le déplaçant autour de la toile. Il tracera une ligne derrière lui partout où il ira.
+
+          ## Exemple de puzzle d'abeille
+
+          ![](//code.org/images/bee.png)
+
+          Vous devrez déplacer l'abeille pour collecter tout le nectar et faire tout le miel. Les unités de nectar et de miel nécessaires pour chaque puzzle sont écrites dans le coin inférieur droit de chaque fleur ou rayon de miel.
+
+          ## Jouer au labo
+
+          ![](//code.org/images/playlab.png)
+
+          Dans Play Lab, vous créerez des jeux et des histoires basés sur différents objectifs.
+
+          ## Flappy
+
+          ![](//code.org/images/flappy.png)
+
+          Dans Flappy, vous créerez votre propre jeu d'oiseau Flappy.
+          Les énigmes qui ont précédé la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+
+          ## Rebondir
+
+          ![](//code.org/images/bounce.png)
+
+          Dans Bounce, vous pouvez créer votre propre jeu.
+          Tout comme dans Flappy, les énigmes menant à la création du jeu vous aident à apprendre les morceaux de code dont vous aurez besoin pour votre jeu.
+
+          * * *
+
+          Dans cette série, nous vous présenterons des puzzles de [CS Fundamentals] (http://code.org/educate/k5). Ces puzzles servent de didacticiels en ligne, aidant les étudiants à apprendre des concepts tels que les boucles, les événements, les conditions et les fonctions.
+
+          Au cours de cette expérience de développement professionnel, nous intercalerons plusieurs progressions de puzzle, vous donnant la chance de vous familiariser avec les concepts de programmation dans CS Fundamentals et les personnages dont vos étudiants tomberont amoureux. Pendant ce cours, vous remarquerez que vous vous déplacez rapidement entre différents environnements qu'il s'agisse d'amener l'oiseau en colère au cochon, de faire un dessin ou de faire récolter du nectar à une abeille. Ces transitions se produisent rapidement dans ce cours pour vous montrer une gamme des énigmes proposées dans CS Fundamentals. Vos élèves passeront plus de temps avec chaque environnement.
+
+          Si vous voulez faire la même chose qu'eux, vous pouvez toujours suivre les cours [CS Fundamentals](http://studio.code.org/) par vous-même à tout moment. Mais ce cours vous donnera une bonne idée de ce à quoi vous attendre en tirant pour vous quelques-uns des puzzles et des leçons les plus fondamentaux en peu de temps.
+      OPD-K5 Stage10Start:
+        markdown: |-
+          # Prochaines étapes > Passons en revue
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## Vous y êtes presque !
+
+          Jusqu'à présent, vous avez appris les bases du codage, exploré comment vous pourriez enseigner l'informatique et créé un plan simple des prochaines étapes.
+
+          En terminant l'étape 11, vous :
+
+            - Réfléchissez à votre apprentissage
+            - Planifiez les prochaines étapes que vous pourriez suivre pour continuer votre apprentissage
+            - Vous connectez avec des collègues dans le monde entier, intéressés par l'enseignement de l'informatique
+      OPD-K5 Stage10Start_dani:
+        markdown: |-
+          # Prochaines étapes > Passons en revue
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## Vous y êtes presque !
+
+          Jusqu'à présent, vous avez appris les bases du codage, exploré comment vous pourriez enseigner l'informatique et créé un plan simple des prochaines étapes.
+
+          En terminant l'étape 11, vous :
+
+            - Réfléchissez à votre apprentissage
+            - Planifiez les prochaines étapes que vous pourriez suivre pour continuer votre apprentissage
+            - Vous connectez avec des collègues dans le monde entier, intéressés par l'enseignement de l'informatique
+      OPD-K5 Stage1Go:
+        markdown: |-
+          # Démarrage > Prêt ? Attention ! Partez !
+
+          <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+          En faisant cette étape, vous devriez avoir :
+
+          - Révisé en détail le cours
+          - Appris à naviguer sur la plateforme d'apprentissage
+          - Planifié votre participation à ce cours
+
+          Dans l'étape d'après, nous allons :
+
+          - Définir « informatique » et revoir le vocabulaire clé
+          - Identifier les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Différencier le "codage" de "informatique"
+          - Expliquer les avantages de commencer à coder en utilisant la programmation visuelle
+      OPD-K5 Stage1Go_dani:
+        markdown: |-
+          # Démarrage > Prêt ? Attention ! Partez !
+
+          <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+          En faisant cette étape, vous devriez avoir :
+
+          - Révisé en détail le cours
+          - Appris à naviguer sur la plateforme d'apprentissage
+          - Planifié votre participation à ce cours
+
+          Dans l'étape d'après, nous allons :
+
+          - Définir « informatique » et revoir le vocabulaire clé
+          - Identifier les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Différencier le "codage" de "informatique"
+          - Expliquer les avantages de commencer à coder en utilisant la programmation visuelle
+      OPD-K5 Stage2Go:
+        markdown: |-
+          #CS Fundamentals > Regarder vers l'avenir
+
+          Nous espérons que cette étape soit pour vous une bonne introduction à l'informatique.
+
+          En la faisant, vous devriez être capable de :
+
+          - Définir "l'informatique" et revoir le vocabulaire clé
+          - Identifier les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Différencier entre "codage" et "informatique"
+          - Expliquer les avantages de commencer à coder en utilisant la programmation visuelle
+
+          > **Conseil pédagogique :** Bien que l'informatique puisse être une discipline riche et complexe, chez Code.org, nous reconnaissons que les enseignants et les étudiants doivent maîtriser les bases avant de se lancer dans des projets de niveau supérieur. Ce cours en ligne vous enseigne, en tant qu'enseignant, ces bases afin que vous puissiez également aider vos élèves à le faire.
+
+          Dans l'étape suivante, nous vous présenterons brièvement quelques cadres de réflexion sur le reste du contenu de ce cours. Ensuite, nous plongerons et commencerons à apprendre l'informatique.
+      OPD-K5 Stage2Go_dani:
+        markdown: |-
+          #CS Fundamentals > Regarder vers l'avenir
+
+          Nous espérons que cette étape soit pour vous une bonne introduction à l'informatique.
+
+          En la faisant, vous devriez être capable de :
+
+          - Définir "l'informatique" et revoir le vocabulaire clé
+          - Identifier les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Différencier entre "codage" et "informatique"
+          - Expliquer les avantages de commencer à coder en utilisant la programmation visuelle
+
+          > **Conseil pédagogique :** Bien que l'informatique puisse être une discipline riche et complexe, chez Code.org, nous reconnaissons que les enseignants et les étudiants doivent maîtriser les bases avant de se lancer dans des projets de niveau supérieur. Ce cours en ligne vous enseigne, en tant qu'enseignant, ces bases afin que vous puissiez également aider vos élèves à le faire.
+
+          Dans l'étape suivante, nous vous présenterons brièvement quelques cadres de réflexion sur le reste du contenu de ce cours. Ensuite, nous plongerons et commencerons à apprendre l'informatique.
+      OPD-K5 Stage2Overview:
+        markdown: |-
+          # CS Fundamentals > Présentation de l'étape
+
+          À l'étape 1, vous avez découvert ce cours et comment naviguer sur la plate-forme d'apprentissage. Vous êtes maintenant prêt à plonger dans le vrai contenu.
+
+          Commençons par quelques fondamentaux.
+
+          <img src="https://images.code.org/8af62f96e37199542519fae8580b0a29-image-1434146715374.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          En terminant l'étape 2, vous :
+
+          - Définirez « informatique » et reverrez le vocabulaire clé
+          - Identifierez les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Différencierez le "codage" de "informatique"
+          - Expliquerez les avantages de commencer à coder en utilisant la programmation visuelle
+
+          Prévoyez de passer entre 10 et 30 minutes pour terminer cette étape.
+      OPD-K5 Stage2Overview_dani:
+        markdown: |-
+          # CS Fundamentals > Présentation de l'étape
+
+          À l'étape 1, vous avez découvert ce cours et comment naviguer sur la plate-forme d'apprentissage. Vous êtes maintenant prêt à plonger dans le vrai contenu.
+
+          Commençons par quelques fondamentaux.
+
+          <img src="https://images.code.org/8af62f96e37199542519fae8580b0a29-image-1434146715374.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          En terminant l'étape 2, vous :
+
+          - Définirez « informatique » et reverrez le vocabulaire clé
+          - Identifierez les avantages de l'enseignement et de l'apprentissage de l'informatique
+          - Différencierez le "codage" de "informatique"
+          - Expliquerez les avantages de commencer à coder en utilisant la programmation visuelle
+
+          Prévoyez de passer entre 10 et 30 minutes pour terminer cette étape.
+      OPD-K5 Stage3Go:
+        markdown: |-
+          # Séquençage > Réfléchir
+
+          Toutes nos félicitations ! Vous venez d'écrire du code. Vous êtes officiellement programmeur ! Notre plate-forme enregistre le nombre de lignes de code que vous avez écrites et vous le dira après chaque puzzle !
+
+          ---
+
+          Avez-vous remarqué que le dernier puzzle était un peu plus difficile ? C'était un puzzle **défi**. Les casse-têtes sont destinés à repousser les limites de ce que les élèves vont faire. Nous indiquons clairement qu'ils doivent être tentés, sans forcément être terminés pour réussir le cours.
+
+          <img src="https://images.code.org/e3b9903cf4acc68be5c01c4118b3d53d-image-1434152749660.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ---
+
+          **Prenez un moment maintenant pour examiner comment le séquençage (y compris la programmation et les algorithmes) est introduit dans le programme CS Fundamentals, et réfléchissez à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+      OPD-K5 Stage3Go_dani:
+        markdown: |-
+          # Séquençage > Réfléchir
+
+          Toutes nos félicitations ! Vous venez d'écrire du code. Vous êtes officiellement programmeur ! Notre plate-forme enregistre le nombre de lignes de code que vous avez écrites et vous le dira après chaque puzzle !
+
+          ---
+
+          Avez-vous remarqué que le dernier puzzle était un peu plus difficile ? C'était un puzzle **défi**. Les casse-têtes sont destinés à repousser les limites de ce que les élèves vont faire. Nous indiquons clairement qu'ils doivent être tentés, sans forcément être terminés pour réussir le cours.
+
+          <img src="https://images.code.org/e3b9903cf4acc68be5c01c4118b3d53d-image-1434152749660.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ---
+
+          **Prenez un moment maintenant pour examiner comment le séquençage (y compris la programmation et les algorithmes) est introduit dans le programme CS Fundamentals, et réfléchissez à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+      OPD-K5 Stage3Start:
+        markdown: |-
+          # Séquençage > Présentation de la scène
+
+          <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          En terminant l'étape 4, vous :
+
+          - Définirez "algorithme" et "programme"
+          - Écrirez des programmes à l'aide de blocs de code
+          - Réfléchirez à leur application en classe
+
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous commencerons par un plan de cours hors ligne pour vous présenter un concept, pour modéliser la façon dont vous présenteriez des idées aux élèves de votre classe. Ensuite, nous vous fournirons des instructions vidéo et vous présenterons une série de puzzles et vous demanderons d'appliquer votre apprentissage. Pour terminer un puzzle, vous devrez écrire du code à l'aide de blocs de code Blockly. Ces leçons proviennent du cours A, qui s'adresse aux élèves de la maternelle. Nous terminerons par une occasion de réfléchir à la manière dont vous pourriez enseigner ce concept à vos élèves. Vous devriez passer entre 10 et 30 minutes sur cette étape.
+
+          Prêt ? C'est parti !
+      OPD-K5 Stage3Start_dani:
+        markdown: |-
+          # Séquençage > Présentation de la scène
+
+          <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          En terminant l'étape 4, vous :
+
+          - Définirez "algorithme" et "programme"
+          - Écrirez des programmes à l'aide de blocs de code
+          - Réfléchirez à leur application en classe
+
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous commencerons par un plan de cours hors ligne pour vous présenter un concept, pour modéliser la façon dont vous présenteriez des idées aux élèves de votre classe. Ensuite, nous vous fournirons des instructions vidéo et vous présenterons une série de puzzles et vous demanderons d'appliquer votre apprentissage. Pour terminer un puzzle, vous devrez écrire du code à l'aide de blocs de code Blockly. Ces leçons proviennent du cours A, qui s'adresse aux élèves de la maternelle. Nous terminerons par une occasion de réfléchir à la manière dont vous pourriez enseigner ce concept à vos élèves. Vous devriez passer entre 10 et 30 minutes sur cette étape.
+
+          Prêt ? C'est parti !
+      OPD-K5 Stage4Go:
+        markdown: |-
+          Dans cette étape, nous avons vu comment l'ajout de boucles à un programme est plus efficace lors du codage d'actions répétitives. Dans l'étape suivante, nous examinerons le codage des **instructions if** et d'autres conditions.
+          <br/>
+
+          **1. Révisez le plan de leçon "[Getting Loopy](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)" du cours C :**
+          <br/>Le cours C est destiné aux élèves de CE1. Les boucles apparaissent également dans d'autres cours, et vous pouvez trouver des exemples de ces leçons au bas de cette page.
+
+          <br/>
+
+          **2. Regardez la vidéo étudiante : Getting Loopy**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de boucles et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/eb585fcc71f5f1d2fa4d3bcddcf74b8b-image-1571253274522.14.26 PM.png)](https://www.youtube.com/watch?v=JoKTqHCni0M)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-getting-loopy.mp4)
+
+          <br/>
+
+          **3. Regardez la vidéo de l'enseignant : Comment faciliter « Getting Loopy »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+          [![](https://images.code.org/fc594434f8b6869b1db1872fc85ca309-image-1571253220717.13.14 PM.png)](https://www.youtube.com/watch?v=Vo2woYRRogA)
+
+
+          <br/>
+
+          **4. Passez en revue d'autres leçons hors ligne qui introduisent des boucles :**
+
+          - Cours A (maternelle) : [Happy Loops](https://curriculum.code.org/csf-18/coursea/9/)
+          - Cours B (CP) : [My Loopy Robotic Friends Jr.](https://curriculum.code.org/csf-18/courseb/8/)
+          - Cours E, F (CM1, CM2) : [Mes amis robotiques Loopy](https://curriculum.code.org/csf-18/coursee/6/)
+
+          ***
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept de boucles à vos étudiants ?<br><br> [Partagez vos impressions sur notre forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405 /1)
+
+          > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank" rel="noopener noreferrer"><button class="plc"> Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 Stage4Go_dani:
+        markdown: |-
+          Dans cette étape, nous avons vu comment l'ajout de boucles à un programme est plus efficace lors du codage d'actions répétitives. Dans l'étape suivante, nous examinerons le codage des **instructions if** et d'autres conditions.
+          <br/>
+
+          **1. Révisez le plan de leçon "[Getting Loopy](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)" du cours C :**
+          <br/>Le cours C est destiné aux élèves de CE1. Les boucles apparaissent également dans d'autres cours, et vous pouvez trouver des exemples de ces leçons au bas de cette page.
+
+          <br/>
+
+          **2. Regardez la vidéo étudiante : Getting Loopy**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de boucles et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/eb585fcc71f5f1d2fa4d3bcddcf74b8b-image-1571253274522.14.26 PM.png)](https://www.youtube.com/watch?v=JoKTqHCni0M)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-getting-loopy.mp4)
+
+          <br/>
+
+          **3. Regardez la vidéo de l'enseignant : Comment faciliter « Getting Loopy »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+          [![](https://images.code.org/fc594434f8b6869b1db1872fc85ca309-image-1571253220717.13.14 PM.png)](https://www.youtube.com/watch?v=Vo2woYRRogA)
+
+
+          <br/>
+
+          **4. Passez en revue d'autres leçons hors ligne qui introduisent des boucles :**
+
+          - Cours A (maternelle) : [Happy Loops](https://curriculum.code.org/csf-18/coursea/9/)
+          - Cours B (CP) : [My Loopy Robotic Friends Jr.](https://curriculum.code.org/csf-18/courseb/8/)
+          - Cours E, F (CM1, CM2) : [Mes amis robotiques Loopy](https://curriculum.code.org/csf-18/coursee/6/)
+
+          ***
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept de boucles à vos étudiants ?<br><br> [Partagez vos impressions sur notre forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405 /1)
+
+          > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank" rel="noopener noreferrer"><button class="plc"> Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 Stage4Review:
+        markdown: |-
+          # Boucles > Réflexion
+
+          Dans cette étape, nous avons exploré comment les boucles peuvent être utilisées pour que le code soit plus efficace. Dans la prochaine étape, nous verrons comment les conditions peuvent aider à ajouter de la logique à un programme.
+
+          **Prenez un moment maintenant pour examiner comment les boucles sont introduites dans le programme CS Fundamentals. Réfléchissez à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/c6dca0407f5a517823f7e71b8da3880b-image-1549050118354.jpg)
+      OPD-K5 Stage4Review_dani:
+        markdown: |-
+          # Boucles > Réflexion
+
+          Dans cette étape, nous avons exploré comment les boucles peuvent être utilisées pour que le code soit plus efficace. Dans la prochaine étape, nous verrons comment les conditions peuvent aider à ajouter de la logique à un programme.
+
+          **Prenez un moment maintenant pour examiner comment les boucles sont introduites dans le programme CS Fundamentals. Réfléchissez à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/c6dca0407f5a517823f7e71b8da3880b-image-1549050118354.jpg)
+      OPD-K5 Stage4Start:
+        markdown: |-
+          # Boucles > Présentation de l'étape 5
+
+          Cette étape s'appuie sur votre première expérience de programmation en ajoutant le concept de base des **boucles**.
+
+          <img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          En terminant l'étape 5, vous :
+
+          - Serez formé à coder des boucles simples
+          - Réfléchirez à leur application en classe
+
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous présenterons une leçon hors ligne et une série d'énigmes du cours C (destiné au niveau 2) qui se concentrent sur le concept de boucles. Pour terminer un puzzle, vous devrez écrire du code à l'aide d'une programmation visuelle basée sur des blocs. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt? Allons-y!
+      OPD-K5 Stage4Start_dani:
+        markdown: |-
+          # Boucles > Présentation de l'étape 5
+
+          Cette étape s'appuie sur votre première expérience de programmation en ajoutant le concept de base des **boucles**.
+
+          <img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          En terminant l'étape 5, vous :
+
+          - Serez formé à coder des boucles simples
+          - Réfléchirez à leur application en classe
+
+          > **À quoi s'attendre à ce stade :** Dans les niveaux qui suivent, nous présenterons une leçon hors ligne et une série d'énigmes du cours C (destiné au niveau 2) qui se concentrent sur le concept de boucles. Pour terminer un puzzle, vous devrez écrire du code à l'aide d'une programmation visuelle basée sur des blocs. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt? Allons-y!
+      OPD-K5 Stage5Go:
+        markdown: |-
+          # Conditions > Leçons hors ligne
+
+
+          **1. Revoir le plan de leçon "[Conditions avec cartes](https://curriculum.code.org/csf-18/coursed/13/)" du cours D :**
+          <br/>
+          Le cours D est destiné aux élèves de CE2. Cette même leçon apparaît également dans les cours E et F. Les conditions ne sont pas couvertes dans les cours A, B ou C.
+          <br/><br/>
+
+          **2. Regardez la vidéo de l'élève : Conditions avec cartes**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de condition et à lancer la leçon hors ligne.
+          [![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
+          <br/>
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
+
+          <br/><br/>
+          **3. Regardez un enseignant modéliser cette leçon : « Conditions avec des cartes »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+
+
+          [![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
+
+          <br/><br/>
+
+          ---
+
+          > ## Réfléchir
+          > Comment expliqueriez-vous la notion de condition à vos élèves ? Partagez vos réflexions dans [notre forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 Stage5Go_dani:
+        markdown: |-
+          # Conditions > Leçons hors ligne
+
+
+          **1. Revoir le plan de leçon "[Conditions avec cartes](https://curriculum.code.org/csf-18/coursed/13/)" du cours D :**
+          <br/>
+          Le cours D est destiné aux élèves de CE2. Cette même leçon apparaît également dans les cours E et F. Les conditions ne sont pas couvertes dans les cours A, B ou C.
+          <br/><br/>
+
+          **2. Regardez la vidéo de l'élève : Conditions avec cartes**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de condition et à lancer la leçon hors ligne.
+          [![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
+          <br/>
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
+
+          <br/><br/>
+          **3. Regardez un enseignant modéliser cette leçon : « Conditions avec des cartes »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+
+
+          [![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
+
+          <br/><br/>
+
+          ---
+
+          > ## Réfléchir
+          > Comment expliqueriez-vous la notion de condition à vos élèves ? Partagez vos réflexions dans [notre forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 Stage5Review:
+        markdown: |-
+          # Conditionnels > Réflexion
+
+          Dans cette étape, nous avons exploré comment les conditions aident les programmeurs à ajouter de la logique à leur code. Dans la prochaine étape, nous verrons comment les fonctions peuvent vous aider à faire passer votre codage au niveau supérieur.
+
+          **Prenez un moment maintenant pour examiner comment les conditions sont introduites dans le programme CS Fundamentals et comment vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
+      OPD-K5 Stage5Review_dani:
+        markdown: |-
+          # Conditionnels > Réflexion
+
+          Dans cette étape, nous avons exploré comment les conditions aident les programmeurs à ajouter de la logique à leur code. Dans la prochaine étape, nous verrons comment les fonctions peuvent vous aider à faire passer votre codage au niveau supérieur.
+
+          **Prenez un moment maintenant pour examiner comment les conditions sont introduites dans le programme CS Fundamentals et comment vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
+      OPD-K5 Stage5Start:
+        markdown: |-
+          # Conditions > Présentation de l'étape
+
+          <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/ >
+
+          Jusqu'à présent, vous avez écrit un programme simple et ajouté des boucles pour augmenter l'efficacité. Dans cette étape, nous allons explorer les **instructions if** qui commencent à ajouter de la logique à votre programme.
+
+          En terminant l'étape 6, vous :
+
+          - Vous entrainerez à coder des conditions simples
+          - Réfléchirez à leur application en classe
+
+          >**À quoi s'attendre à ce stade :** Nous allons d'abord présenter une leçon hors ligne du cours D (destiné au CE2) qui introduit l'idée des conditions. Ensuite, vous compléterez une série d'énigmes qui vous demanderont d'appliquer votre apprentissage à l'aide de conditions. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt? Allons-y!
+      OPD-K5 Stage5Start_dani:
+        markdown: |-
+          # Conditions > Présentation de l'étape
+
+          <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/ >
+
+          Jusqu'à présent, vous avez écrit un programme simple et ajouté des boucles pour augmenter l'efficacité. Dans cette étape, nous allons explorer les **instructions if** qui commencent à ajouter de la logique à votre programme.
+
+          En terminant l'étape 6, vous :
+
+          - Vous entrainerez à coder des conditions simples
+          - Réfléchirez à leur application en classe
+
+          >**À quoi s'attendre à ce stade :** Nous allons d'abord présenter une leçon hors ligne du cours D (destiné au CE2) qui introduit l'idée des conditions. Ensuite, vous compléterez une série d'énigmes qui vous demanderont d'appliquer votre apprentissage à l'aide de conditions. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt? Allons-y!
+      OPD-K5 Stage6Go:
+        markdown: |-
+          # Fonctions > Leçons hors ligne
+
+          Les programmeurs sont toujours à la recherche de moyens de rendre leur code plus efficace. Une façon de le faire consiste à utiliser des **fonctions**, qui leur permettent de réutiliser des segments de code
+
+          **1. Révisez le plan de cours "[Fonctions : écriture de chansons](https://curriculum.code.org/csf-18/coursee/14/)" du cours E.**
+          <br/>
+          Le cours E est destiné aux élèves de CM1. Les fonctions ne sont pas couvertes dans les cours A-D.
+
+          <br/>
+
+          **2. Regardez la vidéo de l'élève : Fonctions : Écriture de chansons**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de fonctions et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/7fe2de2239edca27f26ae77cd0dc4c35-image-1571253900570.24.39 PM.png)](https://youtube.com/watch?v=5iDCKkI6y2Y)
+
+          <br/>
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)
+
+          <br/>
+
+          **3. Regardez un enseignant modéliser cette leçon : « Fonctions : écriture de chansons »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+          [![](https://images.code.org/cfa0204ea2de0de27dab274369069a58-image-1571253902872.24.46 PM.png)](https://youtube.com/watch?v=QuIMLel1mmw)
+          [Vous ne voyez pas la vidéo ? Cliquez ici](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)
+          <br/>
+
+          ---
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept de fonctions à vos élèves ? Partagez vos impressions sur <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank" rel="noopener noreferrer">notre forum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 Stage6Go_copy:
+        markdown: |-
+          # Leçon hors ligne : composition de chansons
+
+          > Une **fonction** est un bout de code que vous pouvez facilement rappeler.
+
+          Les programmeurs cherchent sans arrêt à améliorer leur code. Pour ce faire, ils se servent des **fonctions**, qui leur permettent de réutiliser des segments de code.
+
+          ***
+
+          ## **1. Revoir "<a href="https://curriculum.code.org/csf-19/coursee/14/" target="blank" rel="noopener noreferrer">Fonctions : composition de chansons</a>" Plan de leçon du cours E.**
+          <br/>
+          Le cours E est destiné aux élèves de CM1. Il n'y a pas ces fonctions dans les cours A-D.
+
+          ## **2. Regardez la vidéo de l'élève : « Fonctions : Écriture de chansons » (trouvée dans le plan de cours)**
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à présenter le concept de fonctions et à lancer la leçon hors ligne.
+
+          ## **3. Regardez un enseignant modéliser cette leçon : « Fonctions : composition de chansons » (trouvée dans le plan de cours)**
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon de la faire.
+
+          ***
+          <a href="https://curriculum.code.org/csf-19/coursee/14/" target="blank" rel="noopener noreferrer">![](https://images.code.org/ c961585a0e79fc2934530d251dd84f53-image-1573080971047.55.58 PM.png)</a>
+      OPD-K5 Stage6Go_dani:
+        markdown: |-
+          # Fonctions > Leçons hors ligne
+
+          Les programmeurs sont toujours à la recherche de moyens de rendre leur code plus efficace. Une façon de le faire consiste à utiliser des **fonctions**, qui leur permettent de réutiliser des segments de code
+
+          **1. Révisez le plan de cours "[Fonctions : écriture de chansons](https://curriculum.code.org/csf-18/coursee/14/)" du cours E.**
+          <br/>
+          Le cours E est destiné aux élèves de CM1. Les fonctions ne sont pas couvertes dans les cours A-D.
+
+          <br/>
+
+          **2. Regardez la vidéo de l'élève : Fonctions : Écriture de chansons**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de fonctions et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/7fe2de2239edca27f26ae77cd0dc4c35-image-1571253900570.24.39 PM.png)](https://youtube.com/watch?v=5iDCKkI6y2Y)
+
+          <br/>
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)
+
+          <br/>
+
+          **3. Regardez un enseignant modéliser cette leçon : « Fonctions : écriture de chansons »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+          [![](https://images.code.org/cfa0204ea2de0de27dab274369069a58-image-1571253902872.24.46 PM.png)](https://youtube.com/watch?v=QuIMLel1mmw)
+          [Vous ne voyez pas la vidéo ? Cliquez ici](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)
+          <br/>
+
+          ---
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept de fonctions à vos élèves ? Partagez vos impressions sur <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank" rel="noopener noreferrer">notre forum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
+      OPD-K5 Stage6Review:
+        markdown: |-
+          # Fonctions > Réflexion
+
+          Dans cette étape, nous avons exploré comment les fonctions peuvent faire de vous un programmeur plus rapide et meilleur en vous permettant de réutiliser des segments de votre code. Dans la prochaine étape, nous examinerons le concept de base des événements et mettrons à l'épreuve vos compétences en matière de codage.
+
+          **Prenez un moment maintenant pour examiner comment les fonctions sont introduites dans le programme CS Fundamentals et réfléchir à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/47e2d3956aaafb745e462f0017c2a2b1-image-1549053916687.jpg)
+      OPD-K5 Stage6Review_dani:
+        markdown: |-
+          # Fonctions > Réflexion
+
+          Dans cette étape, nous avons exploré comment les fonctions peuvent faire de vous un programmeur plus rapide et meilleur en vous permettant de réutiliser des segments de votre code. Dans la prochaine étape, nous examinerons le concept de base des événements et mettrons à l'épreuve vos compétences en matière de codage.
+
+          **Prenez un moment maintenant pour examiner comment les fonctions sont introduites dans le programme CS Fundamentals et réfléchir à la manière dont vous pourriez mettre en œuvre les activités suggérées dans votre classe.**
+
+          ![](https://images.code.org/47e2d3956aaafb745e462f0017c2a2b1-image-1549053916687.jpg)
+      OPD-K5 Stage6Start:
+        markdown: |-
+          # Fonctions > Présentation de la scène
+
+          <img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Au cours des premières étapes, vous avez appris à écrire un programme, à ajouter des boucles et à utiliser des conditions. Dans cette étape, nous allons introduire le concept de **fonctions**.
+
+          En terminant l'étape 7, vous :
+
+          - Vous entrainerez à coder des fonctions simples
+          - Réfléchirez à l'application en classe
+
+          > **À quoi s'attendre à ce stade :** Tout d'abord, vous examinerez une leçon hors ligne du cours E (destiné au CM1) qui présente les fonctions. Ensuite, vous découvrirez les fonctions grâce à la vidéo et vous entraînerez à utiliser des fonctions dans une variété de puzzles. Vous réfléchirez ensuite à votre pratique. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt ? C'est parti !
+      OPD-K5 Stage6Start_copy:
+        markdown: |-
+          # Présentation : Fonctions
+
+          <img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          ## Concepts de codage : fonctions
+          - Entraînez-vous à coder des fonctions simples
+      OPD-K5 Stage6Start_dani:
+        markdown: |-
+          # Fonctions > Présentation de la scène
+
+          <img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Au cours des premières étapes, vous avez appris à écrire un programme, à ajouter des boucles et à utiliser des conditions. Dans cette étape, nous allons introduire le concept de **fonctions**.
+
+          En terminant l'étape 7, vous :
+
+          - Vous entrainerez à coder des fonctions simples
+          - Réfléchirez à l'application en classe
+
+          > **À quoi s'attendre à ce stade :** Tout d'abord, vous examinerez une leçon hors ligne du cours E (destiné au CM1) qui présente les fonctions. Ensuite, vous découvrirez les fonctions grâce à la vidéo et vous entraînerez à utiliser des fonctions dans une variété de puzzles. Vous réfléchirez ensuite à votre pratique. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt ? C'est parti !
+      OPD-K5 Stage7Go:
+        markdown: |-
+          # Évènements > Leçons hors ligne
+
+          <br/>
+
+          **1. Révisez le plan de leçon "[Le grand événement](https://curriculum.code.org/csf-18/coursec/11/)" du cours C.**
+          <br/>
+          Le cours C est destiné aux élèves de CE1. Des événements surviennent dans chaque cours CS Fundamentals, de A à F. Tous les cours n'ont pas une leçon débranchée pour couvrir les événements, mais vous pouvez voir la leçon hors ligne pour le cours A et le cours B au bas de cette page.
+          <br/><br/>
+
+          **2. Regardez la vidéo élèves : Le Grand Événement**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept d'événements et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/e5d8d5fc84416e34232f3e00142e5b2a-image-1571254248844.30.31 PM.png)](https://youtube.com/watch?v=u0WV9shCoak)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+          <br/><br/>
+
+          **3. Regardez la vidéo de l'enseignant : Comment animer « The Big Event »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+
+          [![](https://images.code.org/666ace3e1b7de917e112733112d358e4-image-1571254314712.31.50 PM.png)](https://youtube.com/watchv=aYECW6V8nQA)
+          <br/><br/>
+
+          **4. Passez en revue d'autres leçons hors ligne qui présentent des événements :**
+
+          - Cours A, Cours B (maternelle, année 1) : [The Big Event Jr.](https://curriculum.code.org/csf-18/courseb/12/)
+
+          ---
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept d'événement à vos élèves ? Partagez vos impressions sur <a href="http://forum.code.org/t/teaching-events/409/1">notre forum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour continuer.
+      OPD-K5 Stage7Go_dani:
+        markdown: |-
+          # Évènements > Leçons hors ligne
+
+          <br/>
+
+          **1. Révisez le plan de leçon "[Le grand événement](https://curriculum.code.org/csf-18/coursec/11/)" du cours C.**
+          <br/>
+          Le cours C est destiné aux élèves de CE1. Des événements surviennent dans chaque cours CS Fundamentals, de A à F. Tous les cours n'ont pas une leçon débranchée pour couvrir les événements, mais vous pouvez voir la leçon hors ligne pour le cours A et le cours B au bas de cette page.
+          <br/><br/>
+
+          **2. Regardez la vidéo élèves : Le Grand Événement**
+          <br/>
+          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept d'événements et à lancer la leçon hors ligne.
+
+          [![](https://images.code.org/e5d8d5fc84416e34232f3e00142e5b2a-image-1571254248844.30.31 PM.png)](https://youtube.com/watch?v=u0WV9shCoak)
+
+          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+          <br/><br/>
+
+          **3. Regardez la vidéo de l'enseignant : Comment animer « The Big Event »**
+          <br/>
+          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
+
+          [![](https://images.code.org/666ace3e1b7de917e112733112d358e4-image-1571254314712.31.50 PM.png)](https://youtube.com/watchv=aYECW6V8nQA)
+          <br/><br/>
+
+          **4. Passez en revue d'autres leçons hors ligne qui présentent des événements :**
+
+          - Cours A, Cours B (maternelle, année 1) : [The Big Event Jr.](https://curriculum.code.org/csf-18/courseb/12/)
+
+          ---
+
+          > ## Réflexion
+          > Comment expliqueriez-vous le concept d'événement à vos élèves ? Partagez vos impressions sur <a href="http://forum.code.org/t/teaching-events/409/1">notre forum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour continuer.
+      OPD-K5 Stage7Start:
+        markdown: |-
+          # Événements > Aperçu de la scène
+
+          <img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-14343979465990.JPG" width="450px" style="border-radius : 10px ; float : right ; margin : 0 0 40px 40px ;">
+
+          Jusqu'à présent, vous avez appris à séquencer un programme, à ajouter des boucles et à utiliser des conditions et des fonctions. Vous avez presque fini !
+
+          Dans cette étape, nous allons examiner les *événements*, un autre concept central de l'informatique. Au fur et à mesure que nous explorons les événements, vous synthétiserez ce que vous avez appris jusqu'à présent et écrirez des programmes plus complexes.
+
+          En terminant l'étape 8, vous :
+
+          - Vous entrainez à coder des événements simples
+          - Réfléchissez à leur application en classe
+
+          >**À quoi s'attendre à ce stade :** Vous commencerez par une leçon hors ligne du cours C (destinée au CE1) présentant des événements. Ensuite, vous explorerez quelques énigmes du cours F (destinés au CM2) qui vous permettront d'expérimenter avec des blocs d'événements. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt ? Allons-y !
+      OPD-K5 Stage7Start_dani:
+        markdown: |-
+          # Événements > Aperçu de la scène
+
+          <img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-14343979465990.JPG" width="450px" style="border-radius : 10px ; float : right ; margin : 0 0 40px 40px ;">
+
+          Jusqu'à présent, vous avez appris à séquencer un programme, à ajouter des boucles et à utiliser des conditions et des fonctions. Vous avez presque fini !
+
+          Dans cette étape, nous allons examiner les *événements*, un autre concept central de l'informatique. Au fur et à mesure que nous explorons les événements, vous synthétiserez ce que vous avez appris jusqu'à présent et écrirez des programmes plus complexes.
+
+          En terminant l'étape 8, vous :
+
+          - Vous entrainez à coder des événements simples
+          - Réfléchissez à leur application en classe
+
+          >**À quoi s'attendre à ce stade :** Vous commencerez par une leçon hors ligne du cours C (destinée au CE1) présentant des événements. Ensuite, vous explorerez quelques énigmes du cours F (destinés au CM2) qui vous permettront d'expérimenter avec des blocs d'événements. Nous terminerons par une occasion de réfléchir. Vous devriez passer entre 20 et 45 minutes sur cette étape.
+
+          Prêt ? Allons-y !
+      OPD-K5 Stage8Go:
+        markdown: |-
+          # Bonnes Pratiques > Réflexion
+
+          L'étape 8 vous a présenté un certain nombre de bonnes pratiques pour l'enseignement de l'informatique. Prenez un moment pour réfléchir aux stratégies couvertes à cette étape que vous pourriez utiliser dans votre pratique. À l'étape suivante, vous créerez un plan simple et réfléchirez au cours dans son ensemble.
+
+          ## Quelles stratégies utiliserez-vous pour faciliter l'apprentissage de l'informatique dans votre classe ?
+
+          Voici quelques exemples de notre communauté d'enseignants :
+
+          - **Faciliter les activités "hors ligne"** pour enseigner les concepts de base (cliquez sur [ici pour une liste complète des activités hors ligne] (https://code.org/curriculum/unplugged.)
+          - Mettez en œuvre la règle **"demandez 3 puis moi"** dans votre classe, c'est-à-dire lorsque les élèves doivent demander de l'aide à 3 camarades de classe avant de pouvoir poser la même question à l'enseignant. Cela réduit le nombre d'élèves auxquels vous devez répondre individuellement et favorise l'apprentissage en binôme.
+          - **Soyez calme mais persistant** lorsque des problèmes surviennent (ce qui sera le cas.) Votre réaction donne le ton aux élèves. Si, au premier signe d'un problème, vous proclamez « Je suis nul en technologie. J'abandonne », vos élèves penseront pareil que vous.
+          - ** Soyez fiers ** de leurs programmes. Montrez-les, mettez-les au travail, publiez-les en ligne. Il s'agit d'un grand accomplissement pour vous et vos élèves et ça se fête !
+          - **Posez des questions d'approfondissement** à un élève (même si vous ne connaissez pas la réponse aux questions.) Demandez à votre classe si quelqu'un a la réponse. Mettez-vous à l'aise en disant « Je ne sais pas ; découvrons cela ensemble ! »
+
+          ---
+
+          > ## Réflexion
+          Passez en revue plus de stratégies ou ajoutez les vôtres <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">dans nos forums .</a> :
+
+          > <a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank" rel="noopener noreferrer "><button class="plc">Partagez vos stratégies >></button></a>
+
+          Après avoir exploré le fil du forum et ajouté vos commentaires, cliquez ci-dessous pour passer à l'étape 9.
+      OPD-K5 Stage8Go_dani:
+        markdown: |-
+          # Bonnes Pratiques > Réflexion
+
+          L'étape 8 vous a présenté un certain nombre de bonnes pratiques pour l'enseignement de l'informatique. Prenez un moment pour réfléchir aux stratégies couvertes à cette étape que vous pourriez utiliser dans votre pratique. À l'étape suivante, vous créerez un plan simple et réfléchirez au cours dans son ensemble.
+
+          ## Quelles stratégies utiliserez-vous pour faciliter l'apprentissage de l'informatique dans votre classe ?
+
+          Voici quelques exemples de notre communauté d'enseignants :
+
+          - **Faciliter les activités "hors ligne"** pour enseigner les concepts de base (cliquez sur [ici pour une liste complète des activités hors ligne] (https://code.org/curriculum/unplugged.)
+          - Mettez en œuvre la règle **"demandez 3 puis moi"** dans votre classe, c'est-à-dire lorsque les élèves doivent demander de l'aide à 3 camarades de classe avant de pouvoir poser la même question à l'enseignant. Cela réduit le nombre d'élèves auxquels vous devez répondre individuellement et favorise l'apprentissage en binôme.
+          - **Soyez calme mais persistant** lorsque des problèmes surviennent (ce qui sera le cas.) Votre réaction donne le ton aux élèves. Si, au premier signe d'un problème, vous proclamez « Je suis nul en technologie. J'abandonne », vos élèves penseront pareil que vous.
+          - ** Soyez fiers ** de leurs programmes. Montrez-les, mettez-les au travail, publiez-les en ligne. Il s'agit d'un grand accomplissement pour vous et vos élèves et ça se fête !
+          - **Posez des questions d'approfondissement** à un élève (même si vous ne connaissez pas la réponse aux questions.) Demandez à votre classe si quelqu'un a la réponse. Mettez-vous à l'aise en disant « Je ne sais pas ; découvrons cela ensemble ! »
+
+          ---
+
+          > ## Réflexion
+          Passez en revue plus de stratégies ou ajoutez les vôtres <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">dans nos forums .</a> :
+
+          > <a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank" rel="noopener noreferrer "><button class="plc">Partagez vos stratégies >></button></a>
+
+          Après avoir exploré le fil du forum et ajouté vos commentaires, cliquez ci-dessous pour passer à l'étape 9.
+      OPD-K5 Stage8Start:
+        markdown: |-
+          # Bonnes pratiques > Présentation des étapes
+
+          <img src="https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          **Vous avez parcouru la majorité du contenu de ce cours. Toutes nos félicitations !**
+
+          À l'étape 1, vous avez examiné les informations sur le cours.
+          À l'étape 2, vous avez exploré l'informatique en tant que discipline.
+          À l'étape 3, vous vous êtes préparé à maîtriser les bases de l'informatique.
+          Aux étapes 4 à 8, vous avez joué vous-même le rôle de l'élève.
+          Passons maintenant à une exploration de la façon dont vous pourriez enseigner ce que vous avez appris aux jeunes.
+
+
+          En terminant l'étape 9, vous :
+
+          - Revoir les bonnes pratiques pour l'enseignement de l'informatique
+
+          > ## Regard vers l'avenir :
+          > Les meilleures pratiques que nous aborderons dans cette étape incluent :
+
+          >- Établir une culture de classe positive qui soutient l'apprentissage autodirigé, l'expérimentation et l'échec
+          - Savoir quand et comment appliquer des stratégies de conception pédagogique d'autres domaines
+          - Utiliser des stratégies de regroupement stratégique telles que la « programmation en binôme »
+          - Enseigner explicitement des stratégies de résolution de problèmes métacognitives
+          - "Débrancher" et enseigner quelques concepts de base avec une technologie minimale ou inexistante
+          - Autres bonnes pratiques suggérées par la communauté d'enseignants Code.org
+
+          Nous vous offrirons également l'occasion de partager vos meilleures pratiques avec notre communauté.
+      OPD-K5 Stage8Start_dani:
+        markdown: |-
+          # Bonnes pratiques > Présentation des étapes
+
+          <img src="https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          **Vous avez parcouru la majorité du contenu de ce cours. Toutes nos félicitations !**
+
+          À l'étape 1, vous avez examiné les informations sur le cours.
+          À l'étape 2, vous avez exploré l'informatique en tant que discipline.
+          À l'étape 3, vous vous êtes préparé à maîtriser les bases de l'informatique.
+          Aux étapes 4 à 8, vous avez joué vous-même le rôle de l'élève.
+          Passons maintenant à une exploration de la façon dont vous pourriez enseigner ce que vous avez appris aux jeunes.
+
+
+          En terminant l'étape 9, vous :
+
+          - Revoir les bonnes pratiques pour l'enseignement de l'informatique
+
+          > ## Regard vers l'avenir :
+          > Les meilleures pratiques que nous aborderons dans cette étape incluent :
+
+          >- Établir une culture de classe positive qui soutient l'apprentissage autodirigé, l'expérimentation et l'échec
+          - Savoir quand et comment appliquer des stratégies de conception pédagogique d'autres domaines
+          - Utiliser des stratégies de regroupement stratégique telles que la « programmation en binôme »
+          - Enseigner explicitement des stratégies de résolution de problèmes métacognitives
+          - "Débrancher" et enseigner quelques concepts de base avec une technologie minimale ou inexistante
+          - Autres bonnes pratiques suggérées par la communauté d'enseignants Code.org
+
+          Nous vous offrirons également l'occasion de partager vos meilleures pratiques avec notre communauté.
+      OPD-K5 Stage9Go:
+        markdown: |-
+          # Planification > Révision
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Dans cette étape, vous devriez avoir :
+
+          - Examiné le tableau de bord des enseignants et d'autres ressources sur Code.org
+          - Planifié la façon dont vous pourriez intégrer l'informatique à votre pratique
+
+          À l'étape 11, notre dernière étape, vous
+
+          - Réfléchissez à votre apprentissage
+          - Planifiez les prochaines étapes que vous pouvez suivre pour continuer votre apprentissage
+          - Vous connectez avec d'autres enseignants dans le monde, intéressés par l'enseignement de l'informatique
+      OPD-K5 Stage9Go_dani:
+        markdown: |-
+          # Planification > Révision
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Dans cette étape, vous devriez avoir :
+
+          - Examiné le tableau de bord des enseignants et d'autres ressources sur Code.org
+          - Planifié la façon dont vous pourriez intégrer l'informatique à votre pratique
+
+          À l'étape 11, notre dernière étape, vous
+
+          - Réfléchissez à votre apprentissage
+          - Planifiez les prochaines étapes que vous pouvez suivre pour continuer votre apprentissage
+          - Vous connectez avec d'autres enseignants dans le monde, intéressés par l'enseignement de l'informatique
+      OPD-K5 Stage9Start:
+        markdown: |-
+          # Planification > Explorer les ressources pour les enseignants
+
+          Tout au long des étapes 4 à 8, vous avez examiné certaines des ressources d'apprentissage « hors ligne » et en ligne disponibles pour CS Fundamentals, car elles s'alignaient sur les concepts informatiques que vous appreniez.
+
+          Maintenant que vous comprenez comment coder et comment enseigner l'informatique, il est temps de commencer à planifier votre enseignement. À ce stade, nous visiterons d'autres zones de la plate-forme Code.org et le **[Teacher Dashboard](http://studio.code.org/)**.
+
+          En terminant l'étape 10, vous :
+
+          - Explorez les ressources disponibles pour les enseignants
+          - Explorez Code.org **[Tableau de bord de l'enseignant](http://studio.code.org/)**
+          - Prévoyez comment vous pourriez intégrer l'informatique dans votre pratique
+
+          ***
+
+          Vous trouverez une capture d'écran du tableau de bord d'enseignant ci-dessous. Vous devrez vous connecter à votre compte d'enseignant Code.org pour le voir - une fois connecté, il devrait s'agir de l'écran par défaut que vous voyez sur le site Web Code.org. Si vous n'avez pas de compte enseignant, vous pouvez **[en créer un ici](https://studio.code.org/users/sign_up)**.
+
+          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+      OPD-K5 Stage9Start_dani:
+        markdown: |-
+          # Planification > Explorer les ressources pour les enseignants
+
+          Tout au long des étapes 4 à 8, vous avez examiné certaines des ressources d'apprentissage « hors ligne » et en ligne disponibles pour CS Fundamentals, car elles s'alignaient sur les concepts informatiques que vous appreniez.
+
+          Maintenant que vous comprenez comment coder et comment enseigner l'informatique, il est temps de commencer à planifier votre enseignement. À ce stade, nous visiterons d'autres zones de la plate-forme Code.org et le **[Teacher Dashboard](http://studio.code.org/)**.
+
+          En terminant l'étape 10, vous :
+
+          - Explorez les ressources disponibles pour les enseignants
+          - Explorez Code.org **[Tableau de bord de l'enseignant](http://studio.code.org/)**
+          - Prévoyez comment vous pourriez intégrer l'informatique dans votre pratique
+
+          ***
+
+          Vous trouverez une capture d'écran du tableau de bord d'enseignant ci-dessous. Vous devrez vous connecter à votre compte d'enseignant Code.org pour le voir - une fois connecté, il devrait s'agir de l'écran par défaut que vous voyez sur le site Web Code.org. Si vous n'avez pas de compte enseignant, vous pouvez **[en créer un ici](https://studio.code.org/users/sign_up)**.
+
+          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+      OPD-K5 Using CS:
+        markdown: "# Planification > Préparation d'un cours Code Studio\n\nJetons
+          un coup d'œil à la façon dont Code Studio fonctionne pour vous et vos élèves
+          dans une salle de classe.\n\n## Étape 1 : Choisissez un cours\nConsultez
+          notre [page de l'école primaire](https://code.org/educate/curriculum/elementary-school)
+          et trouvez les plans de cours et les cours complets de nos leçons CS Fundamentals
+          A-F. Ou, si vous êtes intéressé par nos cours de collège ou de lycée vous,\n,
+          vous trouverez des cours pour tous les niveaux scolaires - des pré-lecteurs
+          aux seniors du secondaire, et tout le monde entre les deux. Tous nos cours
+          sont disponibles sans frais. Discutez avec des collègues de votre école
+          pour déterminer comment le programme du cours peut être intégré à une variété
+          de matières.\n \n## Étape 2 : Configurez votre section de classe\nConfigurez
+          une section salle de classe pour afficher les progrès de votre élève, imprimer
+          des cartes de connexion pour vos élèves, gérer leurs comptes et imprimer
+          des certificats qu'ils peuvent rapporter à la maison à la fin du cours.
+          Cliquez sur ce lien pour [regarder une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          montre comment configurer votre premier cours d'informatique sur Code.org.
+          Vous pouvez également trouver les étapes dans [cet article d'assistance](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\n##
+          Étape 3 : Attribuez le cours à votre section\nCliquez sur le cours que vous
+          enseignez - vous devriez voir un écran qui ressemble à celui ci-dessous.
+          Vous pouvez ensuite cliquer sur « Attribuer un cours » et attribuer ce cours
+          à l'une de vos sections.\n\n## Étape 4 : Commencez à enseigner !\nTout ce
+          qu'il faut, c'est une leçon pour introduire des concepts informatiques dans
+          votre classe. Une fois que vous voyez l'enthousiasme de vos élèves pour
+          l'informatique, allez plus loin avec des plans de cours quotidiens pour
+          guider vos élèves, des activités hors ligne que vous pouvez faire sans ordinateur
+          et des forums pour vous connecter à d'autres enseignants."
+      OPD-K5 Using CS_dani:
+        markdown: "# Planification > Préparation d'un cours Code Studio\n\nJetons
+          un coup d'œil à la façon dont Code Studio fonctionne pour vous et vos élèves
+          dans une salle de classe.\n\n## Étape 1 : Choisissez un cours\nConsultez
+          notre [page de l'école primaire](https://code.org/educate/curriculum/elementary-school)
+          et trouvez les plans de cours et les cours complets de nos leçons CS Fundamentals
+          A-F. Ou, si vous êtes intéressé par nos cours de collège ou de lycée vous,\n,
+          vous trouverez des cours pour tous les niveaux scolaires - des pré-lecteurs
+          aux seniors du secondaire, et tout le monde entre les deux. Tous nos cours
+          sont disponibles sans frais. Discutez avec des collègues de votre école
+          pour déterminer comment le programme du cours peut être intégré à une variété
+          de matières.\n \n## Étape 2 : Configurez votre section de classe\nConfigurez
+          une section salle de classe pour afficher les progrès de votre élève, imprimer
+          des cartes de connexion pour vos élèves, gérer leurs comptes et imprimer
+          des certificats qu'ils peuvent rapporter à la maison à la fin du cours.
+          Cliquez sur ce lien pour [regarder une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          montre comment configurer votre premier cours d'informatique sur Code.org.
+          Vous pouvez également trouver les étapes dans [cet article d'assistance](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\n##
+          Étape 3 : Attribuez le cours à votre section\nCliquez sur le cours que vous
+          enseignez - vous devriez voir un écran qui ressemble à celui ci-dessous.
+          Vous pouvez ensuite cliquer sur « Attribuer un cours » et attribuer ce cours
+          à l'une de vos sections.\n\n## Étape 4 : Commencez à enseigner !\nTout ce
+          qu'il faut, c'est une leçon pour introduire des concepts informatiques dans
+          votre classe. Une fois que vous voyez l'enthousiasme de vos élèves pour
+          l'informatique, allez plus loin avec des plans de cours quotidiens pour
+          guider vos élèves, des activités hors ligne que vous pouvez faire sans ordinateur
+          et des forums pour vous connecter à d'autres enseignants."
+      OPD-K5 Vocabulary:
+        markdown: |-
+          # Fondamentaux de l'informatique > Vocabulaire clé
+
+          Lorsque vous commencez à apprendre l'informatique, l'une des tâches les plus importantes est de vous familiariser avec le langage de codage. Dans ce cours et dans toutes les ressources CS Fundamentals, nous utilisons le même vocabulaire que celui utilisé dans l'industrie informatique. Encourager les jeunes élèves à apprendre et à utiliser des termes professionnels, leur permet de communiquer avec les autres et de construire leurs connaissances en informatique sans avoir à réapprendre des termes et des concepts par la suite. Ceux utilisés dans ces cours sont définis à l'aide de mots que la plupart d'entre eux devraient être capables de comprendre.
+
+          Voici une [liste de termes de vocabulaire](http://code.org/curriculum/docs/k-5/glossary) utilisé dans les ressources CS Fundamentals ; bon nombre de ces termes sont également introduits dans ce cours. Vous n'avez pas besoin d'apprendre tous ces mots maintenant. Utilisez cette liste comme référence pendant ce cours de développement professionnel en ligne et lorsque vous utilisez nos cours avec vos élèves.
+
+          <a href="http://code.org/curriculum/docs/k-5/glossary" target="blank" rel="noopener noreferrer"><button class="default">Voir le glossaire >></ bouton></a>
+
+          > **Conseil pédagogique :** La meilleure pratique consiste à introduire les termes dans un langage facile à comprendre, à relier les termes à des expériences antérieures, à utiliser les termes à plusieurs reprises au-delà de la leçon elle-même tout au long du cours (et dans d'autres situations) le cas échéant , et renforcer l'utilisation des élèves dans la communication orale et écrite.
+      OPD-K5 Vocabulary_dani:
+        markdown: |-
+          # Fondamentaux de l'informatique > Vocabulaire clé
+
+          Lorsque vous commencez à apprendre l'informatique, l'une des tâches les plus importantes est de vous familiariser avec le langage de codage. Dans ce cours et dans toutes les ressources CS Fundamentals, nous utilisons le même vocabulaire que celui utilisé dans l'industrie informatique. Encourager les jeunes élèves à apprendre et à utiliser des termes professionnels, leur permet de communiquer avec les autres et de construire leurs connaissances en informatique sans avoir à réapprendre des termes et des concepts par la suite. Ceux utilisés dans ces cours sont définis à l'aide de mots que la plupart d'entre eux devraient être capables de comprendre.
+
+          Voici une [liste de termes de vocabulaire](http://code.org/curriculum/docs/k-5/glossary) utilisé dans les ressources CS Fundamentals ; bon nombre de ces termes sont également introduits dans ce cours. Vous n'avez pas besoin d'apprendre tous ces mots maintenant. Utilisez cette liste comme référence pendant ce cours de développement professionnel en ligne et lorsque vous utilisez nos cours avec vos élèves.
+
+          <a href="http://code.org/curriculum/docs/k-5/glossary" target="blank" rel="noopener noreferrer"><button class="default">Voir le glossaire >></ bouton></a>
+
+          > **Conseil pédagogique :** La meilleure pratique consiste à introduire les termes dans un langage facile à comprendre, à relier les termes à des expériences antérieures, à utiliser les termes à plusieurs reprises au-delà de la leçon elle-même tout au long du cours (et dans d'autres situations) le cas échéant , et renforcer l'utilisation des élèves dans la communication orale et écrite.
+      OPD-K5 Welcome 2:
+        markdown: |-
+          # Démarrage > Cours d'informatique basique
+
+          L'objectif du développement professionnel de Code.org est de préparer les enseignants comme vous, à intégrer l'informatique dans leurs cours et à soutenir leur croissance en tant qu'enseignants. Après avoir terminé ce cours en ligne, vous serez prêt à enseigner un ou plusieurs des cours Code.org Computer Science Fundamentals suivants dans votre classe :
+
+           - **[Cours A](http://studio.code.org/s/coursea)** : environ 12 heures (maternelle)
+           - **[Cours B](http://studio.code.org/s/courseb)** : environ 12 heures (CP)
+           - **[Cours C](http://studio.code.org/s/coursec)** : environ 18 heures (CE1)
+           - **[Cours D](http://studio.code.org/s/coursed)** : environ 18 heures (CE2)
+           - **[Cours E](http://studio.code.org/s/coursee)** : environ 18 heures (CM1)
+           - **[Cours F](http://studio.code.org/s/coursef)** : environ 20 heures (CM2)
+           - **[Computer Science (CS) Fundamentals Express](http://studio.code.org/s/express)** : environ 20 heures (à partir de 8 ans)
+           - **[Computer Science (CS) Fundamentals Pre-Express](http://studio.code.org/s/pre-express)** : environ 20 heures (4-8 ans)
+      OPD-K5 Welcome 2_dani:
+        markdown: |-
+          # Démarrage > Cours d'informatique basique
+
+          L'objectif du développement professionnel de Code.org est de préparer les enseignants comme vous, à intégrer l'informatique dans leurs cours et à soutenir leur croissance en tant qu'enseignants. Après avoir terminé ce cours en ligne, vous serez prêt à enseigner un ou plusieurs des cours Code.org Computer Science Fundamentals suivants dans votre classe :
+
+           - **[Cours A](http://studio.code.org/s/coursea)** : environ 12 heures (maternelle)
+           - **[Cours B](http://studio.code.org/s/courseb)** : environ 12 heures (CP)
+           - **[Cours C](http://studio.code.org/s/coursec)** : environ 18 heures (CE1)
+           - **[Cours D](http://studio.code.org/s/coursed)** : environ 18 heures (CE2)
+           - **[Cours E](http://studio.code.org/s/coursee)** : environ 18 heures (CM1)
+           - **[Cours F](http://studio.code.org/s/coursef)** : environ 20 heures (CM2)
+           - **[Computer Science (CS) Fundamentals Express](http://studio.code.org/s/express)** : environ 20 heures (à partir de 8 ans)
+           - **[Computer Science (CS) Fundamentals Pre-Express](http://studio.code.org/s/pre-express)** : environ 20 heures (4-8 ans)
+      OPD-K5 What is Mastery:
+        markdown: |-
+          # Regarder vers l'avenir > Qu'est-ce que la maîtrise ?
+
+          Dans les étapes qui suivent, vous maîtriserez les concepts de base de l'informatique suivants :
+
+          - Étape 4 : Séquençage
+          - Étape 5 : Boucles
+          - Étape 6 : Conditions
+          - Étape 7 : Fonctions
+          - Étape 8 : Événements
+
+          ## Qu'est-ce que la « maîtrise » ?
+
+          Nous définissons la « maîtrise » comme étant capable de faire ce qui suit :
+
+          - Définir et expliquer ce que signifie le concept de base, et pourquoi il est important en informatique
+          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des énigmes)
+          - Réfléchir à la façon dont vous pourriez intégrer le concept dans votre pratique
+
+          Utilisez cette liste comme rubrique tout au long du cours. Au fur et à mesure que vous terminez chaque étape, demandez-vous :
+
+          - Puis-je définir et expliquer l'importance de ce concept de base particulier à un niveau débutant ?
+          - Ai-je réussi à terminer les énigmes simples de cette étape ?
+          - Ai-je quelques idées sur la façon dont je pourrais l'utiliser dans ma classe ?
+
+          Si vous répondez oui à chaque question, passez à l'étape suivante. Si vous répondez non à l'une des questions, envisagez de revisiter la scène ou d'explorer davantage le sujet du côté étudiant de Code Studio avant de continuer.
+
+          ## Choses à garder à l'esprit lors de l'apprentissage de l'informatique :
+
+          - Le monde de la programmation informatique évolue si vite qu'il n'y a pas vraiment de maîtres. **Nous sommes tous des élèves** à différents stades, mais nous ne cessons jamais d'apprendre.
+          - La programmation devient plus confortable à chaque fois que vous y revenez. **Vous ne serez pas expert dès la première fois.**
+          - Il n'y a aucun moyen de contourner cela, l'acte de programmer et **apprendre à programmer prend du temps, mais tout le monde peut le faire !**
+
+          > **Prise en main :** L'objectif des prochaines étapes n'est pas de faire de vous un informaticien, mais plutôt de vous aider à vous sentir suffisamment à l'aise avec les concepts de base pour que vous soyez impatient de partager vos connaissances avec vos élèves.
+
+          ## Après avoir « maîtrisé » les concepts, qu'est-ce qui vient ensuite ?
+
+          Dans **Stage 9**, vous explorerez les programmes et ressources gratuits de Code.org pour les enseignants. Vous pouvez choisir d'utiliser l'une de ces ressources ou d'autres ressources pédagogiques de votre choix. Ce cours vous donnera les bases dont vous avez besoin pour comprendre tout programme d'études en informatique débutant.
+
+          Aux **étapes 10 et 11**, nous vous indiquerons les ressources que vous pouvez utiliser pour en savoir plus ou pour vous sentir mieux préparé à enseigner ces concepts dans votre classe.
+      OPD-K5 What is Mastery_dani:
+        markdown: |-
+          # Regarder vers l'avenir > Qu'est-ce que la maîtrise ?
+
+          Dans les étapes qui suivent, vous maîtriserez les concepts de base de l'informatique suivants :
+
+          - Étape 4 : Séquençage
+          - Étape 5 : Boucles
+          - Étape 6 : Conditions
+          - Étape 7 : Fonctions
+          - Étape 8 : Événements
+
+          ## Qu'est-ce que la « maîtrise » ?
+
+          Nous définissons la « maîtrise » comme étant capable de faire ce qui suit :
+
+          - Définir et expliquer ce que signifie le concept de base, et pourquoi il est important en informatique
+          - Écrire des programmes simples appliquant le concept (en utilisant la programmation visuelle pour résoudre des énigmes)
+          - Réfléchir à la façon dont vous pourriez intégrer le concept dans votre pratique
+
+          Utilisez cette liste comme rubrique tout au long du cours. Au fur et à mesure que vous terminez chaque étape, demandez-vous :
+
+          - Puis-je définir et expliquer l'importance de ce concept de base particulier à un niveau débutant ?
+          - Ai-je réussi à terminer les énigmes simples de cette étape ?
+          - Ai-je quelques idées sur la façon dont je pourrais l'utiliser dans ma classe ?
+
+          Si vous répondez oui à chaque question, passez à l'étape suivante. Si vous répondez non à l'une des questions, envisagez de revisiter la scène ou d'explorer davantage le sujet du côté étudiant de Code Studio avant de continuer.
+
+          ## Choses à garder à l'esprit lors de l'apprentissage de l'informatique :
+
+          - Le monde de la programmation informatique évolue si vite qu'il n'y a pas vraiment de maîtres. **Nous sommes tous des élèves** à différents stades, mais nous ne cessons jamais d'apprendre.
+          - La programmation devient plus confortable à chaque fois que vous y revenez. **Vous ne serez pas expert dès la première fois.**
+          - Il n'y a aucun moyen de contourner cela, l'acte de programmer et **apprendre à programmer prend du temps, mais tout le monde peut le faire !**
+
+          > **Prise en main :** L'objectif des prochaines étapes n'est pas de faire de vous un informaticien, mais plutôt de vous aider à vous sentir suffisamment à l'aise avec les concepts de base pour que vous soyez impatient de partager vos connaissances avec vos élèves.
+
+          ## Après avoir « maîtrisé » les concepts, qu'est-ce qui vient ensuite ?
+
+          Dans **Stage 9**, vous explorerez les programmes et ressources gratuits de Code.org pour les enseignants. Vous pouvez choisir d'utiliser l'une de ces ressources ou d'autres ressources pédagogiques de votre choix. Ce cours vous donnera les bases dont vous avez besoin pour comprendre tout programme d'études en informatique débutant.
+
+          Aux **étapes 10 et 11**, nous vous indiquerons les ressources que vous pouvez utiliser pour en savoir plus ou pour vous sentir mieux préparé à enseigner ces concepts dans votre classe.
+      OPD-K5 Why teach CS:
+        markdown: |-
+          # CS Fundamentals > Pourquoi enseigner l'informatique ?
+
+          <img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; float:left">
+
+          La recherche montre que l'informatique favorise la pensée critique, la créativité, la résolution de problèmes et l'engagement dans les compétences du monde réel. En fait, une [étude de recherche récente](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) a révélé que les classes avec des enseignants ingénieux obtiennent des scores plus élevés en anglais, mathématiques , et des tests scientifiques standardisés après avoir enseigné les cours de CS Fundamentals.
+
+          Pourquoi voudriez-vous enseigner l'informatique si vous n'êtes pas professeur de sciences et technologies ? Si vous suivez ce cours, vous avez probablement un certain nombre de vos propres réponses à cette question, mais si vous avez besoin de plus d'inspiration, prenez le temps maintenant et examinez [cette collection de vidéos](http://code.org/educate/ inspirer) pour avoir une idée du « pourquoi ». Montrez ces vidéos à vos élèves, votre administration, vos parents et le reste de votre entourage si vous avez besoin d'aide pour défendre l'informatique en classe. Vous pourriez également être intéressé par certaines des statistiques et des preuves concernant l'enseignement de l'informatique.
+
+          <a href="http://code.org/educate/inspire" target="blank" rel="noopener noreferrer"><button class="default">Explorer les vidéos inspirantes >></button></a> <a href="http://code.org/promote" target="blank" rel="noopener noreferrer"><button class="default">Explorer la recherche >></button></a>
+
+          Passez quelques instants à explorer nos recherches et notez tous les faits ou idées pertinents ou intéressants que vous découvrez.
+      OPD-K5 Why teach CS_dani:
+        markdown: |-
+          # CS Fundamentals > Pourquoi enseigner l'informatique ?
+
+          <img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; float:left">
+
+          La recherche montre que l'informatique favorise la pensée critique, la créativité, la résolution de problèmes et l'engagement dans les compétences du monde réel. En fait, une [étude de recherche récente](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) a révélé que les classes avec des enseignants ingénieux obtiennent des scores plus élevés en anglais, mathématiques , et des tests scientifiques standardisés après avoir enseigné les cours de CS Fundamentals.
+
+          Pourquoi voudriez-vous enseigner l'informatique si vous n'êtes pas professeur de sciences et technologies ? Si vous suivez ce cours, vous avez probablement un certain nombre de vos propres réponses à cette question, mais si vous avez besoin de plus d'inspiration, prenez le temps maintenant et examinez [cette collection de vidéos](http://code.org/educate/ inspirer) pour avoir une idée du « pourquoi ». Montrez ces vidéos à vos élèves, votre administration, vos parents et le reste de votre entourage si vous avez besoin d'aide pour défendre l'informatique en classe. Vous pourriez également être intéressé par certaines des statistiques et des preuves concernant l'enseignement de l'informatique.
+
+          <a href="http://code.org/educate/inspire" target="blank" rel="noopener noreferrer"><button class="default">Explorer les vidéos inspirantes >></button></a> <a href="http://code.org/promote" target="blank" rel="noopener noreferrer"><button class="default">Explorer la recherche >></button></a>
+
+          Passez quelques instants à explorer nos recherches et notez tous les faits ou idées pertinents ou intéressants que vous découvrez.
+      OPD-K5 Younger Grades:
+        markdown: |-
+          # Pourquoi enseigner l'informatique dès la primaire ?
+
+          <img src="https://images.code.org/0149da542dae03da5f40b7b8aacf73c0-image-1434818868152.jpg" class="level-image">
+
+          En plus des pratiques de pensée informatique que les élèves apprennent grâce à l'expérience de codage, l'enseignement de l'informatique dans les premières années a un avantage supplémentaire pour les élèves et pour la société &mdash; nous pouvons travailler pour créer plus d'équité dans l'industrie de la technologie.
+
+          Si on attend le lycée ou le collège pour initier les élèves à l'informatique, certains élèves auront déjà décidé que l'informatique n'est pas pour eux ou ils auront l'impression qu'ils sont déjà trop en retard par rapport aux élèves qui l'étudient en dehors de l'école.
+
+          Leur faire découvrir l'informatique de la maternelle au CM2, lorsqu'ils n'ont pas à s'inscrire à un cours comme ils le pourraient au lycée, leur permet de voir à quel point cette matière est accessible et s'ils aiment ça.
+
+          > ## Pourquoi pensez-vous qu'enseigner l'informatique vaut la peine ?
+          [Tweetez vos pensées](https://twitter.com/teachcode) et assurez-vous de taguer @teachcode dans votre tweet afin que nous puissions vous répondre.
+
+          > <a href="http://ctt.ec/Bfjw3" target="blank" rel="noopener noreferrer"><button class="default">Partager sur Twitter >></button></a>< br><br>
+          Vous n'avez pas de compte Twitter ? Vous pouvez aussi nous trouver sur [Facebook](https://www.facebook.com/Code.org/) ou [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Younger Grades_dani:
+        markdown: |-
+          # Pourquoi enseigner l'informatique dès la primaire ?
+
+          <img src="https://images.code.org/0149da542dae03da5f40b7b8aacf73c0-image-1434818868152.jpg" class="level-image">
+
+          En plus des pratiques de pensée informatique que les élèves apprennent grâce à l'expérience de codage, l'enseignement de l'informatique dans les premières années a un avantage supplémentaire pour les élèves et pour la société &mdash; nous pouvons travailler pour créer plus d'équité dans l'industrie de la technologie.
+
+          Si on attend le lycée ou le collège pour initier les élèves à l'informatique, certains élèves auront déjà décidé que l'informatique n'est pas pour eux ou ils auront l'impression qu'ils sont déjà trop en retard par rapport aux élèves qui l'étudient en dehors de l'école.
+
+          Leur faire découvrir l'informatique de la maternelle au CM2, lorsqu'ils n'ont pas à s'inscrire à un cours comme ils le pourraient au lycée, leur permet de voir à quel point cette matière est accessible et s'ils aiment ça.
+
+          > ## Pourquoi pensez-vous qu'enseigner l'informatique vaut la peine ?
+          [Tweetez vos pensées](https://twitter.com/teachcode) et assurez-vous de taguer @teachcode dans votre tweet afin que nous puissions vous répondre.
+
+          > <a href="http://ctt.ec/Bfjw3" target="blank" rel="noopener noreferrer"><button class="default">Partager sur Twitter >></button></a>< br><br>
+          Vous n'avez pas de compte Twitter ? Vous pouvez aussi nous trouver sur [Facebook](https://www.facebook.com/Code.org/) ou [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Your Plan:
+        markdown: |-
+          # Planification > Votre plan
+
+          Nous espérons que cette étape vous a aidé à vous présenter les ressources disponibles sur Code Studio. Alors que vous réfléchissez à la façon dont vous pourriez à l'avenir enseigner l'informatique en utilisant l'une des ressources de code.org ou Code Studio, prenez un moment pour [partager votre plan avec la communauté d'apprentissage professionnel (PLC)] (http://forum. code.org/t/teaching-computer-science-your-plans/412).
+
+          Partage avec nous :
+
+          - Quels sont vos objectifs pour votre classe ? Comment les ressources CS ou code.org vous aideront-elles à atteindre ces objectifs ?
+          - Qu'est-ce qui vous enthousiasme le plus lorsqu'il s'agit de mettre en œuvre certaines de ces ressources ?
+          - Quels défis envisagez-vous en essayant d'atteindre vos objectifs ?
+          - Quelles questions avez-vous auxquelles cette communauté pourrait vous aider à répondre ?
+
+          Après avoir publié votre plan initial, n'hésitez pas à revisiter [ce fil](http://forum.code.org/t/teaching-computer-science-your-plans/412) à l'avenir pour nous tenir au courant de la façon dont les choses se passent !
+
+          <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer"><button class="plc">Publier votre forfait >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour continuer.
+      OPD-K5 Your Plan_dani:
+        markdown: |-
+          # Planification > Votre plan
+
+          Nous espérons que cette étape vous a aidé à vous présenter les ressources disponibles sur Code Studio. Alors que vous réfléchissez à la façon dont vous pourriez à l'avenir enseigner l'informatique en utilisant l'une des ressources de code.org ou Code Studio, prenez un moment pour [partager votre plan avec la communauté d'apprentissage professionnel (PLC)] (http://forum. code.org/t/teaching-computer-science-your-plans/412).
+
+          Partage avec nous :
+
+          - Quels sont vos objectifs pour votre classe ? Comment les ressources CS ou code.org vous aideront-elles à atteindre ces objectifs ?
+          - Qu'est-ce qui vous enthousiasme le plus lorsqu'il s'agit de mettre en œuvre certaines de ces ressources ?
+          - Quels défis envisagez-vous en essayant d'atteindre vos objectifs ?
+          - Quelles questions avez-vous auxquelles cette communauté pourrait vous aider à répondre ?
+
+          Après avoir publié votre plan initial, n'hésitez pas à revisiter [ce fil](http://forum.code.org/t/teaching-computer-science-your-plans/412) à l'avenir pour nous tenir au courant de la façon dont les choses se passent !
+
+          <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer"><button class="plc">Publier votre forfait >></button></a>
+
+          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour continuer.
+      OPD-Stage3Start:
+        markdown: |-
+          # Regarder vers l'avenir > Aperçu de la scène
+
+          <img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="border-radius:10px;">
+
+          En complétant cette brève étape, vous allez :
+
+          - Vous préparer à "maîtriser les bases" de l'informatique en passant en revue la suite du cours
+      OPD-Stage3Start_dani:
+        markdown: |-
+          # Regarder vers l'avenir > Aperçu de la scène
+
+          <img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="border-radius:10px;">
+
+          En complétant cette brève étape, vous allez :
+
+          - Vous préparer à "maîtriser les bases" de l'informatique en passant en revue la suite du cours

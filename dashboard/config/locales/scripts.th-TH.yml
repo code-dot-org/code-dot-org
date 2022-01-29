@@ -7697,6 +7697,10 @@ th:
           lesson_groups:
             lessonGroup-5:
               display_name: แซนด์บ็อกซ์
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แซนด์บ็อกซ์
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -8503,17 +8507,6 @@ th:
                 ตอนนี้ ผู้เรียนประเมินความสำเร็จของวัตถุประสงค์และทักษะการเรียนรู้ของหน่วยการเรียนรู้ในการประเมินแบบปรนัย
             lesson-1:
               key: บทที่ 1
-              description_student: โปรเจกต์ที่คุณพัฒนาขึ้นในคอร์สนี้ได้ก่อเกิดเป็นผลงานสร้างสรรค์มากมายภายในชุมชน!
-                จะมีการจัดงาน A Neighborhood Lit Fest ขึ้นเพื่อแสดงผลงานสุดสร้างสรรค์ไม่ว่าจะเป็นสตอรีย์
-                สคริปต์ เนื้อเพลง จดหมายและบทกวี โดย Neighborhood Lit Fest เป็นโปรเจกต์ขนาดใหญ่ที่คุณจะได้ศึกษาตลอดหน่วยการเรียนรู้นี้
-                และกลยุทธ์การจัดการโปรเจกต์จะช่วยจัดระเบียบงานของคุณออกมาเป็นโครงสร้างที่ชัดเจน
-                คุณศึกษากลยุทธ์สำหรับการเขียนและการทำโครงสร้างของโค้ด ที่วิศวกรซอฟต์แวร์สามารถเข้าใจได้ง่าย
-                และใช้เครื่องมือ Java เพื่อจัดทำเอกสารประกอบโปรแกรม
-              description_teacher: ผู้เรียนจะได้รู้จักกับโปรเจกต์ Neighborhood Lit
-                Fest และประเมินข้อกำหนดและตัวอย่างเพื่อตั้งคำถามและคุณสมบัติที่สำคัญ
-                ซึ่งก่อนเริ่มทำโปรเจกต์ ผู้เรียนจะเข้าใจเรื่องโครงสร้างของโปรแกรมมากขึ้น
-                พร้อมแสดงความคิดเห็นด้วยการระบุถึงแนวทางปฏิบัติที่ดีที่สุด ควบคู่กับการศึกษาวิธีการใช้
-                Javadocs เพื่อจัดทำเอกสารประกอบโปรแกรม
             lesson-2:
               key: บทที่ 2
               description_student: คุณสร้างวัตถุ 'Integer' และ 'Double' เพื่อแทนค่าดั้งเดิม
@@ -8817,3 +8810,93 @@ th:
                 -   จดจำและนับตัวเลขได้มากถึง 10 ตัวโดยใช้รูปภาพ นิ้วมือหรือการวางแผนจัดการ
                 -   เพิ่มวัตถุ รูปภาพ นิ้วมือ หรือสิ่งปรุงแต่งได้มากถึง 10 อย่าง
           title: นับไปพร้อมกับลอเรล
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: บทเรียน
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: โปรเจกต์ Neighborhood Lit Fest - วันที่ 1
+            lesson-12:
+              name: โปรเจกต์ Neighborhood Lit Fest - วันที่ 2
+            lesson-13:
+              name: โปรเจกต์ Neighborhood Lit Fest - วันที่ 3
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: เครื่องจำลองการระบาด
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: บทที่ 10
+            lesson-6:
+              key: บทที่ 6
+            lesson-7:
+              key: บทที่ 7
+            lesson-8:
+              key: บทที่ 8
+            lesson-9:
+              key: บทที่ 9
+            lesson-11:
+              key: บทที่ 11
+            lesson-12:
+              key: บทที่ 12
+            lesson-13:
+              key: บทที่ 13
+            lesson-14:
+              key: บทที่ 14
+            lesson-15:
+              key: บทที่ 15
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+            lesson-4:
+              key: บทที่ 4
+            lesson-5:
+              key: บทที่ 5
+            lesson-16:
+              key: บทที่ 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แซนด์บ็อกซ์
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+            lesson-4:
+              key: บทที่ 4
+            lesson-5:
+              key: บทที่ 5
+            lesson-10:
+              key: บทที่ 10
+            lesson-6:
+              key: บทที่ 6
+            lesson-7:
+              key: บทที่ 7
+            lesson-8:
+              key: บทที่ 8
+            lesson-9:
+              key: บทที่ 9
+            lesson-11:
+              key: บทที่ 11
+            lesson-12:
+              key: บทที่ 12
+            lesson-13:
+              key: บทที่ 13
+            lesson-14:
+              key: บทที่ 14
+            lesson-15:
+              key: บทที่ 15
+            lesson-16:
+              key: บทที่ 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แซนด์บ็อกซ์

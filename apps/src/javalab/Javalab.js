@@ -8,7 +8,7 @@ import javalab, {
   getValidation,
   setAllSources,
   setAllValidation,
-  setIsDarkMode,
+  setDisplayTheme,
   appendOutputLog,
   setBackpackApi,
   setIsStartMode,
@@ -30,7 +30,7 @@ import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualiz
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
 import Theater from './theater/Theater';
 import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
-import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
+import {getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
@@ -81,9 +81,8 @@ Javalab.prototype.init = function(config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  // Sets dark mode based on displayTheme user preference
-  this.isDarkMode =
-    getDisplayThemeFromString(config.displayTheme) === DisplayTheme.DARK;
+  // Sets display theme based on displayTheme user preference
+  this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -250,8 +249,8 @@ Javalab.prototype.init = function(config) {
   getStore().dispatch(setIsStartMode(this.isStartMode));
   getStore().dispatch(setLevelName(this.level.name));
 
-  // Dispatches a redux update of isDarkMode
-  getStore().dispatch(setIsDarkMode(this.isDarkMode));
+  // Dispatches a redux update of display theme
+  getStore().dispatch(setDisplayTheme(this.displayTheme));
 
   getStore().dispatch(
     setBackpackApi(new BackpackClientApi(config.backpackChannel))

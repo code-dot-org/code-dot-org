@@ -2,5 +2,6 @@
   "key": "randColor",
   "name": "randColor",
   "category": "Unused",
+  "block_name": "gamelab_randColor",
   "syntax": "randColor"
 }

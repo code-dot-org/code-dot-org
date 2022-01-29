@@ -338,6 +338,19 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal(expected, flash[:alert])
   end
 
+  test 'student_register errors when joining a section where user does not meet participant type' do
+    sign_in @student
+    section = create(:section, login_type: Section::LOGIN_TYPE_EMAIL, participant_type: 'facilitator')
+
+    assert_does_not_create(User, Follower) do
+      get :student_register, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/'
+    expected = I18n.t('follower.error.not_participant_type', section_code: section.code)
+    assert_equal(expected, flash[:alert])
+  end
+
   test 'student_register redirects admins to admin_directory' do
     sign_in @admin
     assert_does_not_create(User, Follower) do

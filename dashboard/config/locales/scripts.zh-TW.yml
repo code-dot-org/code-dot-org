@@ -174,6 +174,7 @@ zh-TW:
           lessons:
             Play Lab:
               name: Play Lab
+              description_student: 在這節課中，學習者將獲得電腦科學的入門經驗，並使用基本的積木代碼創建一個遊戲。
           student_description: 在 Play Lab 上創作故事或是遊戲！
         artist:
           title: 藝術家
@@ -194,6 +195,10 @@ zh-TW:
           lessons:
             Maze:
               name: 迷宮
+              description_student: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂專門為年齡較小（4-10
+                歲）的學生所設計，但是在使用提供的年齡差異建議後，也適用於年齡較大的學生。
+              description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂專門為年齡較小（4-10
+                歲）的學生所設計，但是在使用提供的年齡差異建議後，也適用於年齡較大的學生。
           student_description: 和來自憤怒鳥、植物大戰殭屍、冰原歷險記的角色一起學習計算機科學的基礎知識！
         frozen:
           title: 與安娜與艾莎一同玩程式
@@ -202,6 +207,8 @@ zh-TW:
           lessons:
             Artist:
               name: 與安娜與艾莎一同玩程式
+              description_student: 在本課程中，所有年齡的學習者在一個安全的、支持性的環境中獲得程式設計和電腦科學的入門經驗。本課程是為10-13歲的中年級學生設計的，但可以根據提供的差異化建議來對更小或更大的學習者進行調整。學生應對簡單的幾何和繪圖角度有基本的瞭解。
+              description_teacher: 在本課程中，所有年齡的學習者在一個安全的、支持性的環境中獲得程式設計和電腦科學的入門經驗。本課程是為10-13歲的中年級學生設計的，但可以根據提供的差異化建議來對更小或更大的學習者進行調整。學生應對簡單的幾何和繪圖角度有基本的瞭解。
           student_description: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。你可以利用在雪上溜冰製造出雪花等圖案，然後打造一個冬季仙境並分享給你的朋友！
         course4:
           title: 課程 4
@@ -348,6 +355,7 @@ zh-TW:
           lessons:
             Infinity:
               name: 迪士尼無限 Play Lab
+              description_student: 在這節課中，學習者將獲得電腦科學的入門經驗，並使用基本的積木代碼創建一個遊戲。
           student_description: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
         algebrademo:
           title: 代數演示
@@ -647,6 +655,9 @@ zh-TW:
           lessons:
             Text Compression:
               name: 文字壓縮
+              description_student: 在將來的某個時候，我們會達到傳送位元的物理速度上限。若我們想更快傳送大量資訊，就必須找出方法，以更少位元表示相同的資訊。因此，我們必須壓縮資料。
+              description_teacher: "在將來的某個時候，我們會達到傳送位元的物理速度上限。若我們想更快傳送大量資訊，就必須找出方法，以更少位元表示相同的資訊。因此，我們必須
+                **壓縮** 資料。在本課堂中，學生會使用文字壓縮工具壓縮英語文字片段，方法是留意模式，並把符號替代為更大的文字模式。\\\r"
         CSPPD:
           title: 計算機科學原理專業發展
           description: 階段 1 CSP 線上介紹
@@ -1699,6 +1710,7 @@ zh-TW:
           lessons:
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
+              description_student: 在這節課中，學習者將獲得電腦科學的入門經驗，並使用基本的積木代碼創建一個遊戲。
           student_description: 用冰原歷險記的 Play Lab 來創作一個故事或遊戲!！
         CSPPD3-Unit3:
           title: 計算機科學原理：單元 3 專業發展
@@ -1775,10 +1787,18 @@ zh-TW:
           lessons:
             Hour of Code 2015:
               name: 一小時玩程式 2015
+              description_student: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂提供2個版本。
+              description_teacher: |-
+                在這節課中，所有年齡的學習者在一個安全的支持性環境中獲得程式設計和電腦科學的入門經驗。這節課有兩個版本。這個版本同時使用了拖放模組和JavaScript。學生需要能夠在鍵盤上打字。對於使用電腦的年齡較大的學生來說，學習JavaScript可能會很有趣，也會帶來額外的挑戰。 如果你的課堂上有一些已經學過一些程式設計的學生，那麼這個版本的教程也很有用。建議11歲以上兒童使用。
+
+                還推薦一個[Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)，可供使用無鍵盤的移動設備的學生、年輕學生和國際學生使用。
           student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         starwarsblocks:
           description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
           description_short: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
+          lessons:
+            Hour of Code 2015:
+              description_student: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂提供2個版本。
           student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         mc:
           title: 一小時玩 Minecraft
@@ -1787,6 +1807,8 @@ zh-TW:
           lessons:
             Hour of Code 2015:
               name: 一小時玩程式 2015
+              description_student: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
+              description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
         oceans:
           title: 在海洋中使用的 AI
@@ -1797,6 +1819,7 @@ zh-TW:
               name: 海洋
               description_student: 教程摘要：學生首先會把物件分類為「fish」（魚）或「not fish」（不是魚），從而嘗試清除海洋中的垃圾。然後，學生將需要擴充訓練資料集，加入屬於海洋的其他海洋生物。在活動的第
                 2 部分，學生會自行選擇標籤套用於隨機產生的魚中。這些訓練資料會在機器學習模型中使用，然後學習模型便應能夠自行標籤新的圖像。
+              description_teacher: 在本課中，所有年齡段的學習者都能在安全、支持性的環境中獲得編碼和電腦科學的入門體驗。首先，學生將物件分類為“魚”或“非魚”，試圖清除海洋中的垃圾。然後，學生將需要擴展他們的訓練資料集，以覆蓋水中的其他海洋生物。在活動的第二部分，學生將選擇他們自己的標籤以應用于隨機生成的魚的圖像。該訓練資料用於能夠自行標記新圖像的機器學習模型。
           student_description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
         CSPPD3-Unit3-pt2:
           title: 計算機科學原理：單元 3 專業發展挑戰
@@ -3638,6 +3661,8 @@ zh-TW:
           lessons:
             Simple Encryption:
               name: 簡單加密
+              description_student: 本課堂會向學生介紹，需要使用加密與簡單技術破解秘密訊息。學生會自己嘗試破解一條訊息，這個訊息以經典的凱撒密碼，以及隨機替換式密碼加密。學生應該要深深明白，在這個運算工具強大的世代，加密技術將需要變得更成熟。本課堂最重要的一點，是瞭解在我們每天的一切網路生活中，加密怎樣和為甚麼扮演著重要角色，並瞭解製作良好的加密技術不是小事。學生會嘗試瞭解：我們面對強大的運算工具，而這些工具可用來破解加密內容，因此必須考慮如何製作強大的加密方式。在網際網路上傳送位元時需要保持私密，對所有上網的人來說都非常重要。
+              description_teacher: 本課堂會向學生介紹，需要使用加密與簡單技術破解秘密訊息。學生會自己嘗試破解一條訊息，這個訊息以經典的凱撒密碼，以及隨機替換式密碼加密。學生應該要深深明白，在這個運算工具強大的世代，加密技術將需要變得更成熟。本課堂最重要的一點，是瞭解在我們每天的一切網路生活中，加密怎樣和為甚麼扮演著重要角色，並瞭解製作良好的加密技術不是小事。學生會嘗試瞭解：我們面對強大的運算工具，而這些工具可用來破解加密內容，因此必須考慮如何製作強大的加密方式。在網際網路上傳送位元時需要保持私密，對所有上網的人來說都非常重要。
         csd2-2017:
           title: CSD 單元 2 - Web 開發 ('17-'18)
           description_short: 在 Web Lab 中學習製作自己的網站。
@@ -3929,6 +3954,8 @@ zh-TW:
           lessons:
             Minecraft Hour of Code Designer:
               name: 一小時玩 Minecraft 設計師
+              description_student: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
+              description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
         flappy-impact-study:
           title: 帶調查的輕鬆代碼
@@ -6509,6 +6536,10 @@ zh-TW:
               name: App Lab 入門 - 準備開始
             Intro to App Lab:
               name: App Lab 入門
+              description_student: "在本教程的最後，你將能夠擴展一個項目，你開始構建一個“選擇你自己的冒險”、“賀卡”或“性格測試”應用程式。你也可以繼續構建code.org/applab頁面上顯示的更多項目。
+                \n\n祝你在應用實驗室愉快地完成一小時玩程式！"
+              description_teacher: "本教程旨在快速介紹應用實驗室程式設計環境，作為構建和共用應用程式的強大工具。教程本身教學生在JavaScript中使用模組或文本創建和控制按鈕、文本、圖像、聲音和螢幕。在教程結束時，學生有時間將他們開始構建的項目擴展為“選擇自己的冒險”、“賀卡”或“性格測試”應用程式。他們也可以繼續構建code.org/applab頁面上顯示的更多項目。
+                \ \n\n祝你在應用實驗室愉快地完成一小時玩程式！\n\n**年齡適宜性：**本教程為13歲以上的學生設計。因為它允許學生上傳自訂的聲音和圖像，年輕的學生不應該在沒有監督的情況下使用它。為了保護學生的隱私，如果你的學生年齡在13歲以下，他們將不能使用本教程，除非你首先在你管理的區域為他們設置帳戶。"
             'Lesson 1: App Lab Intro':
               name: 課堂 1 ：App Lab 簡介
           student_description: 用積木式或文字式的 JavaScript 編程工具，來創建一個你自己的 app。如果你已經會用積木寫了程式，那就進入下個階段。
@@ -7102,6 +7133,10 @@ zh-TW:
               name: 2019 年 CSD 課後問卷調查集結
             Place for testing crazy stuff:
               name: 測試瘋狂想法的地方
+            CSP pre-survey 21-2:
+              name: 電腦科學原理調研21-22
+            CSD pre-survey 21-2:
+              name: 電腦科學發現調研21-22
         k1hoc2017:
           title: 2017 年 K-1 一小時玩程式
           lessons:
@@ -7116,6 +7151,7 @@ zh-TW:
               name: Minecraft 英雄之旅 一小時玩程式
             Minecraft Hour of Code:
               name: Minecraft：英雄之旅
+              description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
         applab-intro-staging:
           title: App Lab 入門集結
@@ -9642,6 +9678,8 @@ zh-TW:
               name: 新的階段
             Dance Party:
               name: 舞蹈派對
+              description_student: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
+              description_teacher: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
         frozen-2018-test-b:
           title: 新冰雪奇緣腳本
@@ -9655,6 +9693,7 @@ zh-TW:
           lessons:
             Aquatic:
               name: 'Minecraft: 水上巡航'
+              description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
         sconyers:
           title: 翠絲的遊樂場
@@ -9745,6 +9784,8 @@ zh-TW:
           lessons:
             Dance Party - Go Further:
               name: 舞蹈派對 - 深入學習
+              description_student: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
+              description_teacher: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
           student_description: 在一小時之後嘗試更多奇思妙想。
         coursef-2019:
           title: 課程 F（2019）
@@ -13487,6 +13528,8 @@ zh-TW:
           lessons:
             Dance Party:
               name: 舞蹈派對
+              description_student: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
+              description_teacher: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
         k5-onlinepd-2019:
           title: 計算機科學基礎的教授
@@ -16693,6 +16736,8 @@ zh-TW:
               name: 在海洋中使用的 AI
             visualizing:
               name: 資料視覺化
+            CSP Tester:
+              name: 電腦科學原理測試員
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -18689,26 +18734,55 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
         csa2-pilot:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-1:
+              name: 第2單元領航問卷
             lesson-16:
               name: Java 實驗室
           lesson_groups:
             lesson group:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
         csa3-pilot:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-16:
+              name: 第3單元領航問卷
             lesson-17:
               name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: 我們已經比較了兩個`int`或`double`相等，但是我們如何比較物件呢？兩個'String
+                '相等意味著什麼？兩個甜甜圈呢？你將在Pop the Balloons遊戲中探索如何測試兩個對象的相等，並實施你的探索。
+              description_teacher: 學生區分對象和原始值的比較。學生探索對對象使用`==`或`!=`來確定是否需要'equals()'方法來比較對象數據。通過使用'equals()'方法，學生添加到Pop
+                the Balloons遊戲中以比較`Balloon`對象，並確定是否還有有效的移動。
+            lesson-8:
+              description_student: 你檢查'if/else'語句以根據布林運算式的結果實現替代操作。你練習在'Math.random()'中使用'if/else'語句來訪問The
+                Neighborhood中陣列的隨機元素。在Pop the Balloons遊戲中，你使用`if/else`語句檢查玩家移動的有效性。
+              description_teacher: 學生檢查'if/else'語句以根據布林運算式的結果實現替代操作。學生練習在'Math.random()'中使用'if/else'語句來訪問The
+                Neighborhood中陣列的隨機元素。在Pop the Balloons遊戲中，學生使用`if/else`語句檢查玩家移動的有效性。
+            lesson-9:
+              description_student: 有時我們需要檢查多個條件來確定正確的結果。在The Neighborhood中，你將學習使用“if/else-if/else”語句來解決“Painter”的問題。然後你在Pop
+                the Balloons遊戲中執行“if/else-if/else”語句，以檢查遊戲狀態並決定玩家是否獲勝。
+              description_teacher: 學生使用“if/else-if/else”語句來評估多個條件，以選擇一個特定的期望結果。為了檢查遊戲的狀態並確定玩家是否獲勝，學生使用多重選擇語句來檢查遊戲的條件，並選擇合適的結果。
+            lesson-10:
+              description_student: 你將探索涉及多個條件的問題，並學習在解決方案中使用嵌套“if”語句。在條件陳述式中使用新的邏輯運算子編寫運算式，並確定這些運算子對結果的影響。然後，你可以使用嵌套“if”語句和邏輯運算子改進Pop
+                the Balloons遊戲的玩法和功能。
+              description_teacher: 學生探索涉及多個條件的問題，並編寫嵌套“if”語句來開發解決方案。學生在條件陳述式中使用邏輯運算子編寫運算式，並識別邏輯運算子對結果的影響。然後在Pop
+                the Balloons遊戲中實現嵌套“if”語句和邏輯運算子，以改善遊戲玩法和整體功能。
             lesson-15:
               name: 評估日
             lesson-16:
@@ -18716,6 +18790,8 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
         csa5-pilot:
           lessons:
             lesson-15:
@@ -18725,6 +18801,8 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
         csa6-pilot:
           lessons:
             Java Lab:
@@ -18781,6 +18859,8 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
         csa7-pilot:
           lessons:
             Java Lab:
@@ -18790,6 +18870,19 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java 實驗室
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -19107,76 +19200,423 @@ zh-TW:
               display_name: 階段
             lessonGroup-3:
               display_name: 專案
+            lessonGroup-4:
+              display_name: 演示和資源
         hello-world-draft:
           lessons:
             lesson-1:
               name: 你好，世界！
           title: 你好，世界！
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: " Code.org學習平臺導航"
+              description_teacher: |-
+                **你將學習如何：**
+
+                -   流覽Code.org網站和教師工具。
+
+                **建議時間：** 30分鐘
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **你將學習如何：**
+
+                -   定位和使用課程教學計劃和教師資源。
+
+                **建議時間：** 30分鐘
+            Navigating support:
+              description_teacher: |-
+                **你將學習如何：**
+
+                -   在電腦科學發現教學時獲取支援。
+
+                **建議時間：** 15分鐘
+            lesson-4:
+              key: 第4課
+              description_teacher: |-
+                **你將學習如何：**
+
+                -   流覽Code.org網站和教師工具。
+
+                **建議時間：** 30分鐘
+            lesson-3:
+              key: 第3課
+              description_teacher: |-
+                **你將學習如何：**
+
+                -   定位和使用課程教學計畫和教師資源。
+
+                **建議時間：** 25分鐘
+            lesson-8:
+              key: 第8課
+              description_teacher: |-
+                **你將學習如何：**
+
+                -   在電腦科學發現教學時獲取支援。
+
+                **建議時間：** 15分鐘
+          title: CSA領航教師Code.org導航
+          description: "本模組旨在引導你瞭解在教授CSA時用於支持學生學習的工具。 \n\n\\*你將學習如何：\\*\\*\n\n-   流覽Code.org網站和教師工具。\n-
+            \  定位和使用課程教案和教師資源。 \n\n**建議時間：** 1小時"
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評估日
             lesson-1:
+              key: 第1課
               name: Java 實驗室
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-10:
+              key: 第10課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
+            lesson-15:
+              key: 第15課
+            lesson-16:
+              key: 第16課
+            lesson-17:
+              key: 第17課
+            lesson-18:
+              key: 第18課
+            lesson-19:
+              key: 第19課
             lesson-20:
+              key: 第20課
               name: 評估日
+            lesson-21:
+              key: 第21課
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評估日
+            Unit 2 Pilot Survey:
+              name: 第2單元領航問卷
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-10:
+              key: 第10課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
             lesson-15:
+              key: 第15課
               name: 評估日
             lesson-1:
+              key: 第1課
               name: Java 實驗室
           lesson_groups:
             lesson group:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評估日
+            Unit 3 Pilot Survey:
+              name: 第3單元領航問卷
             lesson-1:
+              key: 第1課
               name: Java 實驗室
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+              description_student: 你還記得“while”迴圈嗎？在這節課中，你將研究“while”迴圈的邊緣情況，並在“while”和“for”迴圈之間建立聯繫。你可以使用“矩形”類為你的音樂創建視覺效果。
+              description_teacher: 學生複習“while”迴圈並學習無限迴圈。在“while”和“for”迴圈之間轉換之前，學生探索如何創建視覺效果。學生使用“矩形”類創建自己的音樂視覺效果。
+            lesson-5:
+              key: 第5課
+              description_student: 你將探索名為多態性的對象導向原則的功能和優點，該原則用於創建和遍歷“Animal”對象陣列。在回顧繼承之後，你將發現每個子類如何擁有自己的行為版本。你可以使用一個“Animal”對象陣列在The
+                Theater中為你的音樂會創建一個新場景，並使用每個“Animal”版本的“speak()”方法。
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-10:
+              key: 第10課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+              description_teacher: 在之前的課程中，學生編寫了一個再混合演算法，並將其與他們在早期課程中開發的演算法相結合。學生使用靜態變數和常量來限制音樂會的長度。他們使用“Shape”陣列為音樂會添加視覺效果，然後在開發程式時參與代碼評審並使用回饋。
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
             lesson-15:
+              key: 第15課
               name: 評估日
+            lesson-16:
+              key: 第16課
+              name: 第3單元領航問卷
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: 我們已經比較了兩個`int`或`double`相等，但是我們如何比較物件呢？兩個'String
+                '相等意味著什麼？兩個甜甜圈呢？你將在Pop the Balloons遊戲中探索如何測試兩個對象的相等，並實施你的探索。
+              description_teacher: 學生區分對象和原始值的比較。學生探索對對象使用`==`或`!=`來確定是否需要'equals()'方法來比較對象數據。通過使用'equals()'方法，學生添加到Pop
+                the Balloons遊戲中以比較`Balloon`對象，並確定是否還有有效的移動。
+            Providing an Alternate Path of Execution:
+              description_student: 你檢查'if/else'語句以根據布林運算式的結果實現替代操作。你練習在'Math.random()'中使用'if/else'語句來訪問The
+                Neighborhood中陣列的隨機元素。在Pop the Balloons遊戲中，你使用`if/else`語句檢查玩家移動的有效性。
+              description_teacher: 學生檢查'if/else'語句以根據布林運算式的結果實現替代操作。學生練習在'Math.random()'中使用'if/else'語句來訪問The
+                Neighborhood中陣列的隨機元素。在Pop the Balloons遊戲中，學生使用`if/else`語句檢查玩家移動的有效性。
+            Testing Multiple Conditions:
+              description_student: 有時我們需要檢查多個條件來確定正確的結果。在The Neighborhood中，你將學習使用“if/else-if/else”語句來解決“Painter”的問題。然後你在Pop
+                the Balloons遊戲中執行“if/else-if/else”語句，以檢查遊戲狀態並決定玩家是否獲勝。
+              description_teacher: 學生使用“if/else-if/else”語句來評估多個條件，以選擇一個特定的期望結果。為了檢查遊戲的狀態並確定玩家是否獲勝，學生使用多重選擇語句來檢查遊戲的條件，並選擇合適的結果。
+            Using Logical Operators:
+              description_student: 你將探索涉及多個條件的問題，並學習在解決方案中使用嵌套“if”語句。在條件陳述式中使用新的邏輯運算子編寫運算式，並確定這些運算子對結果的影響。然後，你可以使用嵌套“if”語句和邏輯運算子改進Pop
+                the Balloons遊戲的玩法和功能。
+              description_teacher: 學生探索涉及多個條件的問題，並編寫嵌套“if”語句來開發解決方案。學生在條件陳述式中使用邏輯運算子編寫運算式，並識別邏輯運算子對結果的影響。然後在Pop
+                the Balloons遊戲中實現嵌套“if”語句和邏輯運算子，以改善遊戲玩法和整體功能。
             Assessment Day:
               name: 評估日
             lesson-1:
+              key: 第1課
               name: Java 實驗室
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-10:
+              key: 第10課
+            lesson-11:
+              key: 第11課
+            lesson-2:
+              key: 第2課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
             lesson-15:
+              key: 第15課
               name: 評估日
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評估日
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-10:
+              key: 第10課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
             lesson-15:
+              key: 第15課
               name: 評估日
             Java Lab:
               name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
+          name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: 情緒和態度
+          name: poetry-hoc
+          title: Poetry HoC
+          description_short: '一小時玩程式活動 - V2 '
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: 範本
             lesson-2:
               name: 運算上的創新
+            lesson-3:
+              name: 面板輸出（LED蜂鳴器）
+              description_teacher: |-
+                -   使用電路遊戲台上的蜂鳴器
+                -   使用電路遊戲台上的LED
+                -   沒有變數；沒有if語句；沒有螢幕元素
+            lesson-4:
+              name: 應用實驗室輸出（setProperty）
+              description_teacher: "-   使用setProperty()改變螢幕上的元素\n    -   使用亂數聚焦顏色和x/y位置\n-
+                \  使用setText()來更改螢幕上的文本 \n-   沒有電路遊戲台；沒有if語句；沒有變數"
+            lesson-5:
+              name: 感測器
+            lesson-6:
+              name: 面板輸入（按鈕切換）
+              description_teacher: |-
+                -   使用按鈕來改變螢幕上的元素
+                -   使用切換開關來改變螢幕上的元素
+                -   在電路遊戲台上使用按鈕並用蜂鳴器切換
+                -   沒有if語句；沒有變數；好的螢幕輸出
+            lesson-7:
+              name: 變數 + If語句
+              description_teacher: |-
+                -   使用變數+計數器模式來更新螢幕上的元素
+                -   示例：對按鈕按下的次數計數
+                -   使用if語句檢查切換開關的位置
+                -   使用變數檢查變數的值
+                -   例如：點擊一定次數後播放蜂鳴器
+            lesson-8:
+              name: 迷你項目：隨身APP
             lesson-9:
               name: 彩色顯示器
+              description_teacher: |-
+                -   使用螢幕事件來改變電路遊戲台的彩色LED
+                -   使用on()、off()、pulse()、toggle()和blink() LED功能
+                -   改變彩色LED的強度
+                -   不是焦點：陣列。
+                -   只需要從0開始計數的概念和位置映射的概念（即：[0]映射到CP上的特定LED；[5]映射到CP上的不同LED）
+            lesson-10:
+              name: 應用實驗室輸入（getProperty，getText）（下拉輸入滑塊？）
+              description_teacher: |-
+                僅在應用實驗室 - 沒有電路遊戲台（目前）。
+
+                全部關於getProperty、變數和if語句
+
+                -   從下拉清單中獲取屬性。If (X) -> do (Y)
+                -   從滑塊中獲取屬性。用來更新螢幕上某物的位置？
+                -   從輸入中獲取文本。用於更新標籤
+
+                **關注新的getProperty()命令和如何在新的設計elts上使用它。為明天保存面板輸入/輸出！**
+
+                在明天的課程中包含摩托車遊戲，你按下CP，螢幕上會有一些改變。
+            lesson-11:
+              name: 組合輸入
+              description_teacher: |-
+                -   使用下拉和滑塊來更新電路遊戲台的各個方面
+                -   使用getProperty()和setProperty()讓CP輸入更新螢幕元素
+                -   螢幕輸入 \<> 面板輸出是為第1通道末端的Maker專案做準備的
+
+                **自我備註：這些級別應該使用彩色LED而不是常規LED。** 在原來的課程中，我們只能使用LED和蜂鳴器。但是現在，我們有了彩色LED，所以讓我們在這裡也使用它們
+            lesson-12:
+              name: 項目：Maker
             lesson-13:
               name: 加速計
+            lesson-14:
+              name: 音樂 + 陣列
+            lesson-15:
+              name: 迷你項目：感測器
+            lesson-17:
+              name: 物理輸出（LED）
+            lesson-16:
+              name: 物理輸入
+            lesson-18:
+              name: 原型設計
             lesson-19:
               name: 專案
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 範本
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-4:
+              display_name: 第2章
+          name: csdu6-playground
+          title: CSD單元6游戲台
+          description_short: CSD單元6游戲台。有問題請參閲Dan Schneider
+          student_description: CSD單元6游戲台。有問題請參閲Dan Schneider
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: 你好世界
+          name: hello-world-food
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -19188,6 +19628,25 @@ zh-TW:
               display_name: 階段
             lessonGroup-3:
               display_name: 專案
+            lessonGroup-4:
+              display_name: 演示和資源
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: 你好世界
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: 你好世界
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: 你好世界
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: 你好世界
+          title: 你好世界
         csa4-exemplars:
           lessons:
             lesson-15:
@@ -19201,19 +19660,129 @@ zh-TW:
               display_name: 內容
             lessonGroup-2:
               display_name: 內容
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: 合作研究人工智慧倫理，並創建可共用的行為準則。
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              description_student: '舉辦課堂舞會來學習事件。 '
+        csc-things:
+          lessons:
+            lesson-1:
+              name: 詩歌稿紙
+          name: CSC事項
+          title: CSC大腦轉儲
+          description: '這些只是正在進行中的工作 :) '
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Poetry HoC v2
+          name: poetry-hoc2
+          title: Poetry HoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: 情緒學習
+          name: poetry-hoc3
+          title: Poetry HoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: 精靈圖效果挑戰
+          name: 精靈圖效果挑戰
+          title: 精靈圖效果挑戰
+          description_audience: 精靈圖實驗室中級/高級用戶
+          description_short: 接受挑戰，使用精靈圖實驗室創建自己的精靈圖效果！
         csa-u8-dev:
           lessons:
             lesson-1:
               name: 視窗元件
             lesson-2:
               name: 工具
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 演示和資源
+          name: csa-u8-dev
+          title: CSA單元8開發
+        poem-art:
+          lessons:
+            lesson-1:
+              name: 詩歌藝術
+          name: 詩歌藝術
+          title: 詩歌藝術
+        poetry:
+          lessons:
+            lesson-1:
+              name: 詩歌藝術
+            lesson-2:
+              name: 詩歌程式設計
+            lesson-4:
+              name: 構建一個詩歌生成器應用程式
+            lesson-5:
+              name: 仔細選擇詞語
+          name: 詩歌
+          title: 電腦科學與詩歌
         spelling-bee:
           lessons:
             lesson-1:
               name: 拼字蜜蜂
+              description_student: '幫助蜜蜂拼寫新單詞！  '
+              description_teacher: |-
+                本課以涉及拼寫和識別大寫字母的先前活動為基礎。與蜜蜂一起拼寫可以幫助幼稚園和一年級的學生練習跟隨和計數構成單詞的字母序列。他們使用一系列編碼命令讓拼字蜜蜂在一個字母網格中移動，以拼寫單詞。學生學習如何使用拖放編碼積木來移動字元，以及按正確順序排列命令的重要性，這樣他們才能拼寫一個單詞。
+
+                #### 必備技能
+
+                這節課的目的不是向學生介紹字母、字母組成單詞的順序或計數。學生進入本課程之前應該具備以下知識和技能
+
+                -   識別字母表中的大寫字母。
+                -   識別10以下的數位並用手指、物體或操縱器計數。
+                -   認識到單詞是由一系列字母組成的。
+          name: 拼字比賽
           title: 拼字蜜蜂
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: 疫情爆發第1天
+            lesson-2:
+              name: 疫情爆發第2天
+          name: 疫情爆發CSC
           title: 疫情爆發
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: 探索箱形圖和長條圖
+              description_student: '在應用實驗室的數據視覺化工具中創建橫條圖和柱狀圖。  '
+              description_teacher: |-
+                本課建立在已經給學生介紹過的橫條圖和柱狀圖概念之上。學生將練習從圖表中得出結論，並學習使用應用實驗室中的數據視覺化工具來創建兩種不同類型的圖表：橫條圖和柱狀圖。該工具旨在快速將學生與現實世界的數據集連接起來，並使其可以輕鬆地從數據創建視覺化，而無需學習如何流覽更複雜的工具。學生還可以訪問幾個真實世界的數據集，他們可以使用這些數據集來創建圖表。
+
+                這節課從快速回顧圖表為什麼對查看數據有用的原因開始。然後學生們在應用實驗室的數據視覺化工具中練習創建橫條圖。然後他們學習如何製作柱狀圖，以便在橫條圖可能沒用的情況下構建圖表。然後，學生們有機會探索不同的現實世界數據集，並瞭解製作圖表如何有助於交流相關的話題資訊。
+
+                #### 必備技能和詞彙
+
+                本課程旨在豐富或強化關於橫條圖和柱狀圖的現有課程。 它並不是為了向學生介紹新的核心內容。學生在上這節課之前應該具備以下知識和技能：
+
+                -   知道如何閱讀橫條圖，理解x和y軸上的值代表什麼
+                -   知道如何閱讀柱狀圖，理解值的範圍代表什麼
+          name: 探索數據1
+          title: 探索箱形圖和長條圖
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: 與Laurel一起計算
+              description_student: 幫助尋寶獵人Laurel計數和加總步數以收集寶石！
+              description_teacher: |-
+                本課建立在涉及計數和加法的先前活動之上。與Laurel一起計數支援幼稚園和一年級的學生，在他們使用迴圈幫助尋寶獵人在迷宮網格中收集寶石時，練習計數和相加。他們使用一系列編碼命令引導Laurel穿過網格去收集寶石，利用要求他們計算Laurel需要走多少步的“Repeat”積木，然後在代碼積木中使用正確的數來表示這個數字。
+
+                #### 必備技能
+
+                這節課並不是要向學生介紹數字、計數或加法。學生在上這節課之前應該具備以下知識和技能：
+
+                -   識別10以下的數位並用圖像、手指或操縱器計數。
+                -   將對象、圖像、手指或操縱器相加，總和最多為10。
+          name: 計算CSC
+          title: 與Laurel一起計算
         csa5-exemplars:
           lessons:
             lesson-14:
@@ -19221,6 +19790,8 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+          name: csa5-exemplars
+          title: 第5單元 - 給予對象組織[Exemplars]
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -19298,74 +19869,352 @@ zh-TW:
               name: Java 實驗室
               key: Java 實驗室
             lesson-1:
-              description_student: 你在整個課程中所開發的專案已為社群帶來諸多創意！《四鄰燈光節》即將到來，鄰居們將展示創意故事、劇本、歌詞、文字和詩歌。《四鄰燈光節》是一個大型專案，你將在整個單元中參與其中，專案管理戰略板將説明你組織和構建你的創作。你將探索編寫和構建代碼的策略，供其他軟體工程師輕鬆理解和使用Java工具來創建程式文檔。
-              description_teacher: 向學生們介紹《四鄰燈光節》專案，並評估要求和示例，明確其中的問題和關鍵特徵。在著手專案之前，學生們透過確定最佳實踐和探索如何使用Javadoc生成程式文檔，來擴展他們對程式結構和注釋的理解。
+              key: 第1課
             lesson-2:
+              key: 第2課
               description_student: 你將構建`Integer`和`Double`物件來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，你可以返回這些物件存儲為原始值的值。
                 在規劃《四鄰燈光節》所需的籌備任務前，你還將探索整數的最小和最大值，以避免溢出錯誤。
               description_teacher: 學生們將構建`Integer`和`Double`對象來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，學生們可以返回這些物件存儲為原始值的值。
                 在規劃《四鄰燈光節》所需的籌備任務前，學生們還將探索整數的最小和最大值，以避免溢出錯誤。
             lesson-3:
+              key: 第3課
               description_student: 在處理陣列和清單時，我們有時會遇到元素數量未知或清單大小不斷變化的問題。在本節課中，你將學習`ArrayList`結構，並明確這種資料結構較適宜的場景。
               description_teacher: 學生們將創建`ArrayList`來存儲`int`和`double`值。學生們區分`ArrayList`和一維陣列，以確定某個特定場景下最適宜的資料結構。
                 學生們將向`ArrayList`中添加元素，並在處理存儲的資料時，學習如何在原始值和包裝類之間進行自動裝箱轉換。
             lesson-4:
+              key: 第4課
               description_student: 你將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來計算`String`物件中的字元數。你將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。你將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
               description_teacher: 學生們將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來返回`String`物件中的字元數。他們將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。學生們將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
             lesson-5:
+              key: 第5課
               description_student: 到目前為止，你已經創建了`ArrayList`來存儲`Integer`、`Double`和`String`。與一維和二維陣列一樣，你也可以將創建的物件存儲在`ArrayList`中。在本節課中，你將創建一個物件的`ArrayList`，以應用你在全年中所使用的標準演算法來處理存儲在此清單中的資料。
               description_teacher: 學生將創建`ArrayList`來存儲物件，並學習Java中的通用類型。學生們將一維陣列中所學到的演算法應用於`ArrayList`，以查找最小值和最大值、計算總和及平均值，或找出滿足特定條件的元素。
             lesson-6:
+              key: 第6課
               description_student: 你將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。在此過程中，你會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
               description_teacher: 學生們將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。學生們會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
             lesson-7:
+              key: 第7課
               description_student: 你將探索`String`結構，了解`String`屬於物件。你將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
               description_teacher: 學生們將探索`String`結構，了解`String`屬於物件。學生們將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
             lesson-8:
+              key: 第8課
               description_student: 你將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，你將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
               description_teacher: 學生們將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，學生們將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
             lesson-9:
+              key: 第9課
               description_student: 你將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，你將參加同行評議會話，並反思《四鄰燈光節》項目的進展。
               description_teacher: 學生們將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，學生們將參加同行評議會話，並反思各自《四鄰燈光節》項目的進展。
             lesson-10:
+              key: 第10課
               description_student: 你將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。你將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
               description_teacher: 學生們將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。學生們將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
             lesson-11:
+              key: 第11課
               name: "《四鄰燈光節》項目 - 第1天"
               description_student: 你將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先你將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。你借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
               description_teacher: 學生們將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先學生們將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。學生們借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
             lesson-12:
+              key: 第12課
               name: "《四鄰燈光節》項目 - 第2天"
               description_student: 在上一課中，你已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，你將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
               description_teacher: 在上一課中，學生們已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，學生們將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
             lesson-13:
+              key: 第13課
               name: "《四鄰燈光節》項目 - 第3天"
               description_student: 你根據代碼審查和專案規劃板，完成最終的修改和更新任務。你將與同行分享各自的《四鄰燈光節》項目。隨後，你將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
               description_teacher: 學生們根據代碼審查和專案規劃板，完成最終的修改和更新任務。學生們將與同行分享各自的《四鄰燈光節》項目。隨後，學生們將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+            lesson-14:
+              key: 第14課
             lesson-15:
+              key: 第15課
               name: 評估日
               description_student: 在本單元中，你將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。你將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。你將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，你將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，你將確定並記錄物件和方法的前置條件和後置條件。此外，你將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
               description_teacher: 在本單元中，學生們將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。學生們將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。學生們將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，學生們將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，學生們將確定並記錄物件和方法的前置條件和後置條件。此外，學生們將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: 合作研究人工智慧倫理，並創建可共用的行為準則。
+            lesson-1:
+              key: 第1課
+              description_student: 合作研究人工智慧倫理，並創建可共用的行為準則。
         poem-art-2021:
           lessons:
             Poem Art:
+              name: 詩歌藝術
               description_teacher: |-
                 在本節電腦科學和ELA綜合課程中，學生們將使用代碼來動畫化一篇詩歌，以展現詩歌的意境。學生們將賞析和感受詩歌的意境。然後，他們將查找對應的效果和圖像，來展現這篇詩歌的意境。最後，學生們將使用事件（代碼）來展現詩歌中意境的轉換或採用動畫效果引入新畫面。
 
                 本節課可作為1小時的獨立課程完成。或將本節課作為多課時模組[詩歌程式設計](http://studio.code.org/s/poetry-2021)的第一節課。
+            lesson-1:
+              key: 第1課
+              name: 詩歌藝術
+          title: 詩歌藝術
         poetry-2021:
           lessons:
             Poem Art:
+              name: 詩歌藝術
               description_teacher: 在這個電腦科學和ELA綜合課程中，學生們將用代碼動畫化一首詩來展現詩歌的意境。學生將閱讀和發現一首詩的意境。然後學生會找到相應的效果和圖像，以説明展現詩歌的意境。最後，學生將使用事件（代碼）來展現意境的變化或在詩歌中動畫引入新形象。
-        spelling-bee-2021:
+            Code Your Own Poem:
+              name: 詩歌程式設計
+            Build a Poem Generator:
+              name: 構建一個詩歌生成器應用程式
+            Choosing Words Carefully:
+              name: 仔細選擇詞語
+            lesson-1:
+              key: 第1課
+              name: 詩歌藝術
+            lesson-2:
+              key: 第2課
+              name: 詩歌程式設計
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+              name: 仔細選擇詞語
+            lesson-7:
+              key: 第7課
+            lesson-6:
+              key: 第6課
+        hello-world-food-2021:
           lessons:
             lesson-1:
+              key: 第1課
+              name: 你好世界
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: 第1課
+              name: 你好世界
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: 第1課
+              name: 你好世界
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: 第1課
+              name: 你好世界
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: '幫助蜜蜂拼寫新單詞！  '
+              description_teacher: |-
+                本課以涉及拼寫和識別大寫字母的先前活動為基礎。與蜜蜂一起拼寫可以幫助幼稚園和一年級的學生練習跟隨和計數構成單詞的字母序列。他們使用一系列編碼命令讓拼字蜜蜂在一個字母網格中移動，以拼寫單詞。學生學習如何使用拖放編碼積木來移動字元，以及按正確順序排列命令的重要性，這樣他們才能拼寫一個單詞。
+
+                #### 必備技能
+
+                這節課的目的不是向學生介紹字母、字母組成單詞的順序或計數。學生進入本課程之前應該具備以下知識和技能
+
+                -   識別字母表中的大寫字母。
+                -   識別10以下的數位並用手指、物體或操縱器計數。
+                -   認識到單詞是由一系列字母組成的。
+            lesson-1:
+              key: 第1課
               name: 拼字蜜蜂
+              description_student: '幫助蜜蜂拼寫新單詞！  '
+              description_teacher: |-
+                本課以涉及拼寫和識別大寫字母的先前活動為基礎。與蜜蜂一起拼寫可以幫助幼稚園和一年級的學生練習跟隨和計數構成單詞的字母序列。他們使用一系列編碼命令讓拼字蜜蜂在一個字母網格中移動，以拼寫單詞。學生學習如何使用拖放編碼積木來移動字元，以及按正確順序排列命令的重要性，這樣他們才能拼寫一個單詞。
+
+                #### 必備技能
+
+                這節課的目的不是向學生介紹字母、字母組成單詞的順序或計數。學生進入本課程之前應該具備以下知識和技能
+
+                -   識別字母表中的大寫字母。
+                -   識別10以下的數位並用手指、物體或操縱器計數。
+                -   認識到單詞是由一系列字母組成的。
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: 資料視覺化
+              description_student: '在應用實驗室的數據視覺化工具中創建橫條圖和柱狀圖。  '
+              description_teacher: |-
+                本課建立在已經給學生介紹過的橫條圖和柱狀圖概念之上。學生將練習從圖表中得出結論，並學習使用應用實驗室中的數據視覺化工具來創建兩種不同類型的圖表：橫條圖和柱狀圖。該工具旨在快速將學生與現實世界的數據集連接起來，並使其可以輕鬆地從數據創建視覺化，而無需學習如何流覽更複雜的工具。學生還可以訪問幾個真實世界的數據集，他們可以使用這些數據集來創建圖表。
+
+                這節課從快速回顧圖表為什麼對查看數據有用的原因開始。然後學生們在應用實驗室的數據視覺化工具中練習創建橫條圖。然後他們學習如何製作柱狀圖，以便在橫條圖可能沒用的情況下構建圖表。然後，學生們有機會探索不同的現實世界數據集，並瞭解製作圖表如何有助於交流相關的話題資訊。
+
+                #### 必備技能和詞彙
+
+                本課程旨在豐富或強化關於橫條圖和柱狀圖的現有課程。 它並不是為了向學生介紹新的核心內容。學生在上這節課之前應該具備以下知識和技能：
+
+                -   知道如何閱讀橫條圖，理解x和y軸上的值代表什麼
+                -   知道如何閱讀柱狀圖，理解值的範圍代表什麼
+            lesson-1:
+              key: 第1課
+              name: 探索箱形圖和長條圖
+              description_student: '在應用實驗室的數據視覺化工具中創建橫條圖和柱狀圖。  '
+              description_teacher: |-
+                本課建立在已經給學生介紹過的橫條圖和柱狀圖概念之上。學生將練習從圖表中得出結論，並學習使用應用實驗室中的數據視覺化工具來創建兩種不同類型的圖表：橫條圖和柱狀圖。該工具旨在快速將學生與現實世界的數據集連接起來，並使其可以輕鬆地從數據創建視覺化，而無需學習如何流覽更複雜的工具。學生還可以訪問幾個真實世界的數據集，他們可以使用這些數據集來創建圖表。
+
+                這節課從快速回顧圖表為什麼對查看數據有用的原因開始。然後學生們在應用實驗室的數據視覺化工具中練習創建橫條圖。然後他們學習如何製作柱狀圖，以便在橫條圖可能沒用的情況下構建圖表。然後，學生們有機會探索不同的現實世界數據集，並瞭解製作圖表如何有助於交流相關的話題資訊。
+
+                #### 必備技能和詞彙
+
+                本課程旨在豐富或強化關於橫條圖和柱狀圖的現有課程。 它並不是為了向學生介紹新的核心內容。學生在上這節課之前應該具備以下知識和技能：
+
+                -   知道如何閱讀橫條圖，理解x和y軸上的值代表什麼
+                -   知道如何閱讀柱狀圖，理解值的範圍代表什麼
           title: 資料視覺化
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: 與Laurel一起計算
+              description_student: 幫助尋寶獵人Laurel計數和加總步數以收集寶石！
+              description_teacher: |-
+                本課建立在涉及計數和加法的先前活動之上。與Laurel一起計數支援幼稚園和一年級的學生，在他們使用迴圈幫助尋寶獵人在迷宮網格中收集寶石時，練習計數和相加。他們使用一系列編碼命令引導Laurel穿過網格去收集寶石，利用要求他們計算Laurel需要走多少步的“Repeat”積木，然後在代碼積木中使用正確的數來表示這個數字。
+
+                #### 必備技能
+
+                這節課並不是要向學生介紹數字、計數或加法。學生在上這節課之前應該具備以下知識和技能：
+
+                -   識別10以下的數位並用圖像、手指或操縱器計數。
+                -   將對象、圖像、手指或操縱器相加，總和最多為10。
+            lesson-1:
+              key: 第1課
+              name: 與Laurel一起計算
+              description_student: 幫助尋寶獵人Laurel計數和加總步數以收集寶石！
+              description_teacher: |-
+                本課建立在涉及計數和加法的先前活動之上。與Laurel一起計數支援幼稚園和一年級的學生，在他們使用迴圈幫助尋寶獵人在迷宮網格中收集寶石時，練習計數和相加。他們使用一系列編碼命令引導Laurel穿過網格去收集寶石，利用要求他們計算Laurel需要走多少步的“Repeat”積木，然後在代碼積木中使用正確的數來表示這個數字。
+
+                #### 必備技能
+
+                這節課並不是要向學生介紹數字、計數或加法。學生在上這節課之前應該具備以下知識和技能：
+
+                -   識別10以下的數位並用圖像、手指或操縱器計數。
+                -   將對象、圖像、手指或操縱器相加，總和最多為10。
+          title: 與Laurel一起計算
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: 階段
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: "《四鄰燈光節》項目 - 第1天"
+            lesson-12:
+              name: "《四鄰燈光節》項目 - 第2天"
+            lesson-13:
+              name: "《四鄰燈光節》項目 - 第3天"
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: 疫情爆發模擬
+            lesson-5:
+              name: 關於我
+        csa7-exemplars:
+          lessons:
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa8-exemplars:
+          lessons:
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa7-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+            lesson-10:
+              key: 第10課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
+            lesson-15:
+              key: 第15課
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+              name: 評估日
+            lesson-16:
+              key: 第16課
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa8-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+            lesson-10:
+              key: 第10課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
+            lesson-15:
+              key: 第15課
+              name: 評估日
+            lesson-16:
+              key: 第16課
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒

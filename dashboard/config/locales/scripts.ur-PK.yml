@@ -1480,6 +1480,10 @@ ur:
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2311,21 +2315,6 @@ ur:
                 سے زیادہ انتخابی تشخیص پر جانچتے ہیں۔
             lesson-1:
               key: سبق 1
-              description_student: پورے کورس کے دوران آپ کے تیار کردہ پروجیکٹس نے
-                کمیونٹی میں بہت ساری تخلیقی صلاحیتوں کو متاثر کیا ہے! تخلیقی کہانیوں،
-                اسکرپٹس، گانوں کے بول، خطوط اور نظموں کی نمائش کے لیے ایک Neighborhood
-                Lit Fest منعقد کیا جائے گا۔ Neighborhood Lit Fest پروجیکٹ ایک بڑا
-                پروجیکٹ ہے جس پر آپ پورے یونٹ میں کام کرتے ہیں، اور پروجیکٹ مینجمنٹ
-                کی حکمت عملی آپ کے کام کو منظم اور تشکیل دینے میں مدد کرتی ہے۔ آپ
-                کوڈ لکھنے اور ساخت کے لیے حکمت عملی تلاش کرتے ہیں تاکہ دوسرے سافٹ
-                ویئر انجینئر آسانی سے سمجھ سکیں اور پروگرام کی دستاویزات بنانے کے
-                لیے جاوا ٹول استعمال کر سکیں۔
-              description_teacher: طلباء کو Neighborhood Lit Fest پروجیکٹ سے متعارف
-                کرایا جاتا ہے اور سوالات اور اہم خصوصیات کی شناخت کے لیے تقاضوں اور
-                مثالوں کا جائزہ لیتے ہیں۔ پروجیکٹ پر کام شروع کرنے سے پہلے، طلباء
-                پروگرام کے ساخت کے بارے میں اپنی سمجھ کو بڑھاتے ہیں اور بہترین طریقوں
-                کی نشاندہی کرکے اور پروگرام کی دستاویزات تیار کرنے کے لیے جاوا ڈاکس
-                کے استعمال کو تلاش کرکے تبصرہ کرتے ہیں۔
             lesson-2:
               key: سبق 2
               description_student: آپ `انٹیجر` اور `ڈبل` قدیم قدروں کی بطور حوالہ
@@ -2680,3 +2669,93 @@ ur:
                 -   تصاویر، انگلیوں، یا مددگار بلاکوں کا استعمال کرتے ہوئے 10 تک کے نمبروں کو پہچانیں اور گنیں۔
                 -   10 کی رقم تک اشیاء، تصاویر، انگلیاں، یا بلاکوں کو شامل کریں۔
           title: لارل کے ساتھ گنتی
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: سبق
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Neighborhood Lit Fest پروجیکٹ - 1 دن
+            lesson-12:
+              name: Neighborhood Lit Fest پروجیکٹ - 2 دن
+            lesson-13:
+              name: Neighborhood Lit Fest پروجیکٹ - 3 دن
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: وباء کا سیمیولیٹر
+        csa7-pilot-facilitator:
+          lessons:
+            lesson-10:
+              key: سبق 10
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-9:
+              key: سبق 9
+            lesson-11:
+              key: سبق 11
+            lesson-12:
+              key: سبق 12
+            lesson-13:
+              key: سبق 13
+            lesson-14:
+              key: سبق 14
+            lesson-15:
+              key: سبق 15
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-4:
+              key: سبق 4
+            lesson-5:
+              key: سبق 5
+            lesson-16:
+              key: سبق 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-4:
+              key: سبق 4
+            lesson-5:
+              key: سبق 5
+            lesson-10:
+              key: سبق 10
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-9:
+              key: سبق 9
+            lesson-11:
+              key: سبق 11
+            lesson-12:
+              key: سبق 12
+            lesson-13:
+              key: سبق 13
+            lesson-14:
+              key: سبق 14
+            lesson-15:
+              key: سبق 15
+            lesson-16:
+              key: سبق 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس

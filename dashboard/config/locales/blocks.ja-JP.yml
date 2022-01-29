@@ -1846,10 +1846,13 @@ ja:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': フラワー
-            '"hearts"': ハート
+            '"brick"': レンガ
+            '"fire"': 火
+            '"flowers"': 花
+            '"hearts"': ハーツ
             '"iceCream"': アイスクリーム
-            '"rainbow"': 虹
+            '"leaves"': 葉
+            '"rainbow"': にじ
             '"stars"': 星
             '"waves"': 波
       Poetry_addLine:
@@ -1880,11 +1883,15 @@ ja:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 落ち着き
             '"sound://category_nature/steady_campfire_loop.mp3"': キャンプファイヤー
             '"sound://category_nature/rain_loop.mp3"': 霧雨
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 森
             '"sound://category_loops/faultering_desicion_loop1.mp3"': 幽霊
             '"sound://category_background/inside_plane.mp3"': ハム
             '"sound://category_loops/red_flag_loop1.mp3"': ミッション
+            '"sound://category_nature/summer_night_loop.mp3"': よる
             '"sound://category_background/ocean_waves.mp3"': 海
+            '"sound://category_background/rainforest_ambient_sound.mp3"': 熱帯雨林
             '"sound://category_background/repitition.mp3"': 乗る
+            '"sound://category_background/wavering_wind.mp3"': 眠い
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': 遅い
       Poetry_playSound:
         text: Playsound {SOUND}
@@ -1898,7 +1905,7 @@ ja:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失敗
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': はためき
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ジャンプ
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ライト
             '"sound://category_poof/puzzle_game_poof_04.mp3"': パッ
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': スキャン
             '"sound://category_background/typewriter.mp3"': タイプライター
@@ -1914,31 +1921,31 @@ ja:
         text: 背景エフェクトを {EFFECT} {PALETTE} にセット
         options:
           EFFECT:
-            '"colors"': 色
-            '"squiggles"': 波線
-            '"space"': 宇宙
-            '"stars"': 星
+            '"blooming"': 咲いている
+            '"bubbles"': 泡
+            '"clouds"': 雲
+            '"confetti"': 紙吹雪
             '"darkCircles"': ダークサークル
             '"fadeColors"': 色のフェード
-            '"blooming"': 咲いている
-            '"ripples"': さざ波
-            '"clouds"': 雲
+            '"hearts"': ハーツ
+            '"space"': 宇宙
             '"rain"': 雨
-            '"bubbles"': 泡
-            '"confetti"': 紙吹雪
-            '"hearts"': カラフルなハート
+            '"ripples"': さざ波
+            '"colors"': 色
+            '"stars"': 星
+            '"squiggles"': 波線
           PALETTE:
-            '"rainbow"': 虹
-            '"grayscale"': 白黒
-            '"sky"': 空
-            '"ocean"': 海
+            '"autumn"': 秋
             '"sunrise"': 日の出
             '"sunset"': 夕焼け
+            '"grayscale"': 白黒
+            '"ocean"': 海
+            '"rainbow"': にじ
+            '"roses"': バラ
+            '"sky"': 空
             '"spring"': 春
             '"summer"': 夏
-            '"autumn"': 秋
             '"winter"': 冬
-            '"roses"': バラ
       Poetry_setBackgroundImageAs:
         text: 背景を次の値に設定する {IMG}
       Poetry_setFont:
@@ -1946,23 +1953,23 @@ ja:
         options:
           FONT:
             '"Arial"': エイリアル
+            '"Arial Black"': エイリアルブラック
+            '"Courier"': クーリエ
+            '"Cursive"': 手書き
+            '"Impact"': インパクト
             '"Georgia"': ジョージア
             '"Times"': タイムズ
-            '"Courier"': クーリエ
-            '"Arial Black"': エイリアルブラック
-            '"Impact"': インパクト
-            '"Cursive"': 手書き
       Poetry_setFontColor:
         text: フォントの色を {FILL} にセットする
       Poetry_setForegroundEffect:
         text: "{EFFECT} 前景エフェクトを実行する"
         options:
           EFFECT:
-            '"rain"': 雨
             '"bubbles"': 泡
-            '"hearts"': カラフルなハート
-            '"emojis"': ハッピー絵文字
             '"confetti"': 紙吹雪
+            '"hearts"': ハーツ
+            '"emojis"': ハッピー絵文字
+            '"rain"': 雨
             '"starburst"': スターバースト
             '"glass"': ガラス割れ
             '"twinkling"': キラキラ
@@ -1979,11 +1986,11 @@ ja:
         options:
           EFFECT:
             '"fade"': フェード
-            '"typewriter"': タイプライター
             '"flyLeft"': 左から飛ぶ
             '"flyRight"': 右から飛ぶ
             '"flyTop"': 上から飛ぶ
             '"flyBottom"': 下から飛ぶ
+            '"typewriter"': タイプライター
       Poetry_setTitle:
         text: 詩のタイトルを {TITLE} にセット
       Poetry_showText:
@@ -1992,36 +1999,28 @@ ja:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} を始めます
         options:
           BEHAVIOR:
-            fluttering: パタパタさせる
-            growing: 大きくする
-            jittering: ブルブルさせる
-            moving_north_and_looping: 北にループ
-            moving_south_and_looping: 南にループ
-            moving_east_and_looping: 東にループ
-            moving_west_and_looping: 西にループ
-            shrinking: 小さくする
-            spinning_left: 左に回す
-            spinning_right: 右に回す
-            swimming_left_and_right: 水泳
-            wandering: あちこちに動かす
-            wobbling: ぐらぐらさせる
+            '"fluttering"': パタパタさせる
+            '"growing"': 大きくする
+            '"jittering"': ブルブルさせる
+            '"shrinking"': 小さくする
+            '"spinning_left"': 左に回す
+            '"spinning_right"': 右に回す
+            '"swimming_left_and_right"': 水泳
+            '"wandering"': あちこちに動かす
+            '"wobbling"': ぐらぐらさせる
       Poetry_stopBehavior:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} をやめます
         options:
           BEHAVIOR:
-            fluttering: パタパタさせる
-            growing: 大きくする
-            jittering: ブルブルさせる
-            moving_north_and_looping: 北にループ
-            moving_south_and_looping: 南にループ
-            moving_east_and_looping: 東にループ
-            moving_west_and_looping: 西にループ
-            shrinking: 小さくする
-            spinning_left: 左に回す
-            spinning_right: 右に回す
-            swimming_left_and_right: 水泳
-            wandering: あちこちに動かす
-            wobbling: ぐらぐらさせる
+            '"fluttering"': パタパタさせる
+            '"growing"': 大きくする
+            '"jittering"': ブルブルさせる
+            '"shrinking"': 小さくする
+            '"spinning_left"': 左に回す
+            '"spinning_right"': 右に回す
+            '"swimming_left_and_right"': 水泳
+            '"wandering"': あちこちに動かす
+            '"wobbling"': ぐらぐらさせる
             '"all"': "--すべての行動--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

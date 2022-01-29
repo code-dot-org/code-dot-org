@@ -1178,7 +1178,7 @@ pt:
       gamelab_mouseLocation:
         text: posição do mouse
       gamelab_moveBackward:
-        text: mover [SPRITE] [0] [DISTANCE] [1] pixels para trás
+        text: mover {SPRITE} {DISTANCE} pixels para trás
       gamelab_moveForward:
         text: mover {SPRITE} {DISTANCE} pixels pra frente
       gamelab_moveInDirection:
@@ -1413,7 +1413,7 @@ pt:
             '"right"': para direita
             '"left"': para esquerda
       gamelab_updateTitleWithColor:
-        text: mostra a tela do título [BREAK] [0] título [TITLE] [1] cor [COLOR] [2]
+        text: mostra a tela do título {BREAK} título {TITLE} cor {COLOR}
       gamelab_whenAllPromptsAnswered:
         text: quando todos os prompts forem respondidos
       gamelab_whenDownArrow:
@@ -1696,6 +1696,7 @@ pt:
         options:
           TEXT2:
             '" fence"': '"cerca"'
+            '" breeze blows"': '" brisa sopra"'
       Mikelab_randomColor:
         text: cor aleatória
       Mikelab_removeBehaviorSimple:
@@ -1828,12 +1829,16 @@ pt:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Flores
-            '"hearts"': Corações
+            '"bamboo"': Bambu
+            '"brick"': Tijolo
+            '"fire"': fogo
+            '"flowers"': flores
+            '"hearts"': copas
             '"iceCream"': Sorvete
-            '"rainbow"': Arco-íris
-            '"stars"': Estrelas
-            '"waves"': Ondas
+            '"leaves"': folhas
+            '"rainbow"': arco-íris
+            '"stars"': estrelas
+            '"waves"': ondas
       Poetry_addLine:
         text: adicionar linha {LINE}
       Poetry_animateText:
@@ -1861,17 +1866,24 @@ pt:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calmo
             '"sound://category_nature/steady_campfire_loop.mp3"': Fogueira
             '"sound://category_nature/rain_loop.mp3"': Garoa
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Floresta
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Assombrado
             '"sound://category_background/inside_plane.mp3"': Zumbir
             '"sound://category_loops/red_flag_loop1.mp3"': Missão
+            '"sound://category_nature/summer_night_loop.mp3"': Noite
+            '"sound://category_background/ocean_waves.mp3"': oceano
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': Chuvoso
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Floresta
+              tropical
             '"sound://category_background/repitition.mp3"': Equitação
+            '"sound://category_background/wavering_wind.mp3"': Sonolento
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lento
+            '"sound://category_background/waterfall.mp3"': Cachoeira
       Poetry_playSound:
         text: reproduzir som {SOUND}
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Sino
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Pausa
             '"sound://category_digital/boing_2.mp3"': Bóing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bolha
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Bate-papo
@@ -1879,7 +1891,7 @@ pt:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Falhar
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Vibração
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Salto
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Claro
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Luz
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Puf
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Varredura
             '"sound://category_background/typewriter.mp3"': Máquina de Escrever
@@ -1888,37 +1900,38 @@ pt:
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Redemoinho
             '"sound://category_achievements/peaceful_win_6.mp3"': Sinos de Vento
       Poetry_setAuthor:
-        text: definir o autor [[AUTHOR]][0]
+        text: definir o autor {AUTHOR}
       Poetry_setBackground:
         text: definir a cor do plano de fundo {COLOR}
       Poetry_setBackgroundEffect:
         text: definir o efeito do plano de fundo {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Cores
-            '"squiggles"': Ondulado
-            '"space"': Espaço
-            '"stars"': Estrelas
+            '"blooming"': Florescente
+            '"bubbles"': Bolhas
+            '"clouds"': Nublado
+            '"confetti"': Confete
             '"darkCircles"': Dissipação
             '"fadeColors"': Fosco
-            '"blooming"': Florescente
+            '"hearts"': copas
+            '"space"': Espaço
+            '"rain"': chuva
             '"ripples"': Ondulação
-            '"clouds"': Nublado
-            '"rain"': Chuva
-            '"bubbles"': Bolhas
-            '"confetti"': Confete
-            '"hearts"': Corações coloridos
+            '"colors"': Cores
+            '"stars"': Estrelas
+            '"squiggles"': Ondulado
           PALETTE:
-            '"rainbow"': Arco-íris
-            '"grayscale"': Tons de cinza
-            '"sky"': Céu
+            '"autumn"': Outono
             '"sunrise"': Aurora
             '"sunset"': Crepúsculo
+            '"grayscale"': Tons de cinza
+            '"ocean"': Oceano
+            '"rainbow"': arco-íris
+            '"roses"': Rosas
+            '"sky"': Céu
             '"spring"': Primavera
             '"summer"': Verão
-            '"autumn"': Outono
             '"winter"': Inverno
-            '"roses"': Rosas
       Poetry_setBackgroundImageAs:
         text: definir plano de fundo para {IMG}
       Poetry_setFont:
@@ -1926,23 +1939,23 @@ pt:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: definir a cor do texto {FILL}
       Poetry_setForegroundEffect:
         text: criar efeito {EFFECT} efeito
         options:
           EFFECT:
-            '"rain"': Chuva
             '"bubbles"': Bolhas
-            '"hearts"': Corações coloridos
-            '"emojis"': Emojis felizes
             '"confetti"': Confete
+            '"hearts"': copas
+            '"emojis"': Emojis felizes
+            '"rain"': chuva
             '"starburst"': Starburst
             '"glass"': Vidro estilhaçando
             '"twinkling"': Cintilante
@@ -1960,11 +1973,11 @@ pt:
         options:
           EFFECT:
             '"fade"': dissipar
-            '"typewriter"': máquina de escrever
             '"flyLeft"': voar partindo da esquerda
             '"flyRight"': voar partindo da direita
             '"flyTop"': voar partindo de cima
             '"flyBottom"': voar partindo de baixo
+            '"typewriter"': máquina de escrever
       Poetry_setTitle:
         text: definir título {TITLE}
       Poetry_showText:
@@ -1973,36 +1986,28 @@ pt:
         text: 'A {ANIMATION_NAME} da fada começa {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: tremulando
-            growing: crescendo
-            jittering: tremendo
-            moving_north_and_looping: ciclo para o norte
-            moving_south_and_looping: ciclo para o sul
-            moving_east_and_looping: ciclo para o leste
-            moving_west_and_looping: ciclo para o oeste
-            shrinking: encolhendo
-            spinning_left: girando para a esquerda
-            spinning_right: girando para a direita
-            swimming_left_and_right: nadando
-            wandering: vagando
-            wobbling: balançando
+            '"fluttering"': tremulando
+            '"growing"': crescendo
+            '"jittering"': tremendo
+            '"shrinking"': encolhendo
+            '"spinning_left"': girando para a esquerda
+            '"spinning_right"': girando para a direita
+            '"swimming_left_and_right"': nadando
+            '"wandering"': vagando
+            '"wobbling"': balançando
       Poetry_stopBehavior:
         text: 'A {ANIMATION_NAME} da fada se encerra {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: tremulando
-            growing: crescendo
-            jittering: tremendo
-            moving_north_and_looping: ciclo para o norte
-            moving_south_and_looping: ciclo para o sul
-            moving_east_and_looping: ciclo para o leste
-            moving_west_and_looping: ciclo para o oeste
-            shrinking: encolhendo
-            spinning_left: girando para a esquerda
-            spinning_right: girando para a direita
-            swimming_left_and_right: nadando
-            wandering: vagando
-            wobbling: balançando
+            '"fluttering"': tremulando
+            '"growing"': crescendo
+            '"jittering"': tremendo
+            '"shrinking"': encolhendo
+            '"spinning_left"': girando para a esquerda
+            '"spinning_right"': girando para a direita
+            '"swimming_left_and_right"': nadando
+            '"wandering"': vagando
+            '"wobbling"': balançando
             '"all"': "–todos os comportamentos–"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

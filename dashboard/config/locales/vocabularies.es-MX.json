@@ -18,7 +18,7 @@
         },
         "debugging/minecraft/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/minecraft/unversioned": {
           "word": "Programa",
@@ -37,7 +37,7 @@
         },
         "debugging/hero/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/hero/unversioned": {
           "word": "Programa",
@@ -49,7 +49,7 @@
         },
         "code/poem-art/2021": {
           "word": "Código",
-          "definition": "(v) escribir instrucciones para una computadora."
+          "definition": "(v) escribir instrucciones para un ordenador."
         },
         "event/poem-art/2021": {
           "word": "Evento",
@@ -72,7 +72,7 @@
         },
         "debugging/flappy/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/flappy/unversioned": {
           "word": "Programa",
@@ -83,7 +83,7 @@
         },
         "debugging/hourofcode/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/hourofcode/unversioned": {
           "word": "Programa",
@@ -94,7 +94,7 @@
         },
         "debugging/frozen/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/frozen/unversioned": {
           "word": "Programa",
@@ -105,7 +105,7 @@
         },
         "debugging/iceage/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/iceage/unversioned": {
           "word": "Programa",
@@ -117,7 +117,7 @@
         },
         "debugging/artist/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/artist/unversioned": {
           "word": "Programa",
@@ -128,7 +128,7 @@
         },
         "debugging/gumball/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/gumball/unversioned": {
           "word": "Programa",
@@ -150,7 +150,7 @@
         },
         "debugging/aquatic/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/aquatic/unversioned": {
           "word": "Programa",
@@ -197,7 +197,7 @@
         },
         "debugging/starwars/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/starwars/unversioned": {
           "word": "Programa",
@@ -208,7 +208,7 @@
         },
         "debugging/mc/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/mc/unversioned": {
           "word": "Programa",
@@ -219,7 +219,7 @@
         },
         "debugging/playlab/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/playlab/unversioned": {
           "word": "Programa",
@@ -230,7 +230,7 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/starwarsblocks/unversioned": {
           "word": "Programa",
@@ -250,7 +250,7 @@
         },
         "debugging/sports/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/sports/unversioned": {
           "word": "Programa",
@@ -261,7 +261,7 @@
         },
         "debugging/infinity/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/infinity/unversioned": {
           "word": "Programa",
@@ -276,7 +276,7 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/basketball/unversioned": {
           "word": "Programa",
@@ -310,7 +310,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "Código",
-          "definition": "(v) escribir instrucciones para una computadora."
+          "definition": "(v) escribir instrucciones para un ordenador."
         },
         "event/poem-art/unversioned": {
           "word": "Evento",
@@ -333,12 +333,12 @@
           "definition": "una acción que hace que algo suceda."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "Modelos y simulaciones",
-          "definition": "un programa que replica o imita características clave de un evento del mundo real para investigar su comportamiento sin el costo, el tiempo o el peligro de ejecutar un experimento en la vida real."
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
         "sprite/coursef/2021": {
           "word": "Sprite",
-          "definition": "Un gráfico en la pantalla con una ubicación, tamaño y apariencia."
+          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "user/coursef/2021": {
           "word": "Usuario",
@@ -346,7 +346,7 @@
         },
         "behavior/coursef/2021": {
           "word": "Comportamiento",
-          "definition": "Una acción que un sprite realiza continuamente hasta que se le dice que se detenga."
+          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "program/coursef/2021": {
           "word": "Programa",
@@ -365,12 +365,12 @@
           "definition": "un marcador de posición para una información que puede cambiar."
         },
         "prompt/coursef/2021": {
-          "word": "Prompen",
-          "definition": "Mensaje en la pantalla de la computadora que espera la entrada del usuario."
+          "word": "Prompt",
+          "definition": "Un mensaje en la pantalla del ordenador que espera la entrada del usuario."
         },
         "input/coursef/2021": {
           "word": "Entrada",
-          "definition": "El equipo de información obtienen de los usuarios."
+          "definition": "La información que los ordenadores obtienen de los usuarios."
         },
         "loop/coursef/2021": {
           "word": "Bucle",
@@ -385,8 +385,8 @@
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "Modelos y simulaciones",
-          "definition": "un programa que replica o imita características clave de un evento del mundo real para investigar su comportamiento sin el costo, el tiempo o el peligro de ejecutar un experimento en la vida real."
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
         "machine_learning/coursef/2021": {
           "word": "Aprendizaje automático",
@@ -454,10 +454,10 @@
         },
         "debugging/courseb/2021": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "click/courseb/2021": {
-          "word": "Clic",
+          "word": "Haga clic en",
           "definition": "presionar el botón del ratón."
         },
         "drag/courseb/2021": {
@@ -502,14 +502,14 @@
         },
         "debugging/coursea/2021": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/coursea/2021": {
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "click/coursea/2021": {
-          "word": "Clic",
+          "word": "Haga clic en",
           "definition": "presionar el botón del ratón."
         },
         "drag/coursea/2021": {
@@ -554,7 +554,7 @@
         },
         "debugging/coursec/2021": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/coursec/2021": {
           "word": "Programa",
@@ -598,7 +598,7 @@
         },
         "debugging/coursed/2021": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "loop/coursed/2021": {
           "word": "Bucle",
@@ -637,7 +637,7 @@
         },
         "pseudocode/coursed/2021": {
           "word": "pseudocódigo",
-          "definition": "Una descripción en lenguaje sencillo de los pasos en un algoritmo"
+          "definition": "Descripción en lenguaje sencillo de los pasos de un algoritmo"
         },
         "condition/coursed/2021": {
           "word": "Condición",
@@ -649,7 +649,7 @@
         },
         "until/coursed/2021": {
           "word": "Hasta",
-          "definition": "Un comando que te dice que hagas algo solo hasta el punto en donde algo se haga realidad."
+          "definition": "Un comando que te dice que hagas algo solo hasta el punto de que algo se haga realidad."
         },
         "algorithm/express/2021": {
           "word": "Algoritmo",
@@ -661,7 +661,7 @@
         },
         "debugging/express/2021": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "sequencing/express/2021": {
           "word": "Secuencias",
@@ -677,18 +677,18 @@
         },
         "behavior/express/2021": {
           "word": "Comportamiento",
-          "definition": "Una acción que un sprite realiza continuamente hasta que se le dice que se detenga."
+          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "sprite/express/2021": {
           "word": "Sprite",
-          "definition": "Un gráfico en la pantalla con una ubicación, tamaño y apariencia."
+          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "event/express/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
         "code/express/2021": {
-          "definition": "para escribir código, o para escribir instrucciones para una computadora."
+          "definition": "escribir código o escribir instrucciones para un equipo."
         },
         "loop/express/2021": {
           "word": "Bucle",
@@ -716,7 +716,7 @@
         },
         "until/express/2021": {
           "word": "Hasta",
-          "definition": "Un comando que te dice que hagas algo solo hasta el punto en donde algo se haga realidad."
+          "definition": "Un comando que te dice que hagas algo solo hasta el punto de que algo se haga realidad."
         },
         "function/express/2021": {
           "word": "Función",
@@ -727,8 +727,8 @@
           "definition": "un marcador de posición para una información que puede cambiar."
         },
         "prompt/express/2021": {
-          "word": "prompt",
-          "definition": "Mensaje en la pantalla de la computadora que espera la entrada del usuario."
+          "word": "preguntar",
+          "definition": "Un mensaje en la pantalla del ordenador que espera la entrada del usuario."
         },
         "for_loop/express/2021": {
           "word": "Bucles desde",
@@ -751,7 +751,7 @@
           "definition": "intentar hacer algo."
         },
         "click/pre-express/2021": {
-          "word": "Clic",
+          "word": "Haga clic en",
           "definition": "presionar el botón del ratón."
         },
         "drag/pre-express/2021": {
@@ -776,7 +776,7 @@
         },
         "debugging/pre-express/2021": {
           "word": "Depuración",
-          "definition": "encontrar y solucionar problemas en un algoritmo o programa."
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "program/pre-express/2021": {
           "word": "Programa",
@@ -804,7 +804,7 @@
         },
         "behavior/coursee/2021": {
           "word": "Comportamiento",
-          "definition": "Una acción que un sprite realiza continuamente hasta que se le dice que se detenga."
+          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "algorithm/coursee/2021": {
           "word": "algoritmo",
@@ -812,7 +812,7 @@
         },
         "sprite/coursee/2021": {
           "word": "Sprite",
-          "definition": "Un gráfico en la pantalla con una ubicación, tamaño y apariencia."
+          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "event/coursee/2021": {
           "word": "Evento",

@@ -7098,6 +7098,10 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -7255,6 +7259,8 @@ is:
               name: Yfirlit
         csa-u6-dev:
           lessons:
+            lesson-17:
+              name: Skjár
             lesson-18:
               name: Græjur
           lesson_groups:
@@ -7326,3 +7332,23 @@ is:
           lessons:
             lesson-1:
               name: Stafsetning
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald

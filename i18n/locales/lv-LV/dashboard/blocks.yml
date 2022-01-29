@@ -423,10 +423,26 @@ lv:
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"rainbow"': varavīksne
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': nakts
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': lēkt
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
+            '"clouds"': mākoņains
             '"colors"': Krāsas
+          PALETTE:
+            '"rainbow"': varavīksne
+            '"winter"': ziema
       RyanLab_moveForward:
         text: pārvietot uz priekšu
       RyanLab_turnLeft:

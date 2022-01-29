@@ -16,7 +16,7 @@ title: Reklamtext och användbar statistik
 
 #### Ta datavetenskap till din skola. Börja med en timmes Hour of Code!
 
-Med tekniken förändras varje industri på jorden, datalogiskt tänkande har blivit en del av vår nödvändiga kunskap. Men färre än hälften av alla skolor undervisar om datavetenskap! Goda nyheter är, vi är på väg att ändra detta. Om du hört talas om Hour of Code förra året, kanske du vet att projektet skapade historia. 100 miljoner studenter har nu upptäckt hur tillgänglig och rolig datavetenskap kan vara genom att bara göra en Hour of Code.
+Med tekniken förändras varje industri på jorden, datalogiskt tänkande har blivit en del av vår nödvändiga kunskap. But just half of all schools offer computer science! Goda nyheter är, vi är på väg att ändra detta. Om du hört talas om Hour of Code förra året, kanske du vet att projektet skapade historia. 100 miljoner studenter har nu upptäckt hur tillgänglig och rolig datavetenskap kan vara genom att bara göra en Hour of Code.
 
 Hour of Code är en entimmes introduktion till datavetenskap, utformad för att avmystifiera kodning och visa att vem som helst kan lära sig grunderna. Läs mer på <http://HourofCode.com>, prova en timme själv eller var värd för en Hour of Code för att introducera andra till datorernas värld!
 
@@ -30,7 +30,7 @@ Vi hoppas att det ska väcka större intresse för eleverna att lära sig mer. F
 
 #### Varför är detta viktigt?
 
-Teknologi förändrar varje industri på jorden. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. Men 53 procent av skolorna i USA undervisar inte datavetenskap. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, företagsverksamhet, politik, eller konst, så behöver de veta hur man använder teknologi och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
+Teknologi förändrar varje industri på jorden. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. But 49 percent of schools in the U.S. don't offer computer science. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, företagsverksamhet, politik, eller konst, så behöver de veta hur man använder teknologi och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
 
 #### Ett citat du kan använda i material
 

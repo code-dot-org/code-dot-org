@@ -1724,12 +1724,10 @@ ur:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': پھول
-            '"hearts"': دل
+            '"brick"': اینٹ
             '"iceCream"': آئس کریم
-            '"rainbow"': قوس قزح
-            '"stars"': ستارہ
-            '"waves"': لہریں
+            '"rainbow"': دھنک
+            '"stars"': ستاروں
       Poetry_addLine:
         text: لائن شامل کریں  {LINE}
       Poetry_animateText:
@@ -1759,6 +1757,7 @@ ur:
             '"sound://category_loops/faultering_desicion_loop1.mp3"': آسیب زدہ
             '"sound://category_background/inside_plane.mp3"': ہم
             '"sound://category_loops/red_flag_loop1.mp3"': مشن
+            '"sound://category_nature/summer_night_loop.mp3"': رات
             '"sound://category_background/repitition.mp3"': سواری
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': سست
       Poetry_playSound:
@@ -1774,7 +1773,6 @@ ur:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ناکام
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': پھڑپھڑانا
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': جست لگائیں
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': روشنی
             '"sound://category_poof/puzzle_game_poof_04.mp3"': پوف
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': اسکین
               کریں
@@ -1791,30 +1789,29 @@ ur:
         text: پس منظر کو{EFFECT} {PALETTE} پر سیٹ کریں
         options:
           EFFECT:
-            '"colors"': رنگ
-            '"squiggles"': سکویگلز
-            '"space"': جگہ
-            '"stars"': ستارہ
+            '"blooming"': کھلتی ہوئی
+            '"bubbles"': بُلبُلے
+            '"clouds"': ابر آلود
+            '"confetti"': کاغذی لیریاں
             '"darkCircles"': دھندلی
             '"fadeColors"': جما ہوا
-            '"blooming"': کھلتی ہوئی
-            '"ripples"': ریپلز
-            '"clouds"': ابر آلود
+            '"space"': جگہ
             '"rain"': بارش
-            '"bubbles"': بُلبُلے
-            '"confetti"': کاغذی لیریاں
-            '"hearts"': رنگین دل
+            '"ripples"': ریپلز
+            '"colors"': رنگ
+            '"stars"': ستارہ
+            '"squiggles"': سکویگلز
           PALETTE:
-            '"rainbow"': قوس قزح
-            '"grayscale"': خاکی ہوتی ہوئی
-            '"sky"': آسمانی
+            '"autumn"': موسم خزان
             '"sunrise"': صبح سویرے
             '"sunset"': ڈھلتی شام
+            '"grayscale"': خاکی ہوتی ہوئی
+            '"rainbow"': دھنک
+            '"roses"': گلابیں
+            '"sky"': آسمانی
             '"spring"': بهار
             '"summer"': موسم گرما
-            '"autumn"': موسم خزان
             '"winter"': سردی
-            '"roses"': گلابیں
       Poetry_setBackgroundImageAs:
         text: پس منظر کو {IMG} پر سیٹ کریں
       Poetry_setFont:
@@ -1822,23 +1819,22 @@ ur:
         options:
           FONT:
             '"Arial"': آیریل
+            '"Arial Black"': ایریل بلیک
+            '"Courier"': کورئیر
+            '"Cursive"': ہاتھ کی لکھائی
+            '"Impact"': امپیکٹ
             '"Georgia"': جارجیا
             '"Times"': ٹائمز
-            '"Courier"': کورئیر
-            '"Arial Black"': ایریل بلیک
-            '"Impact"': امپیکٹ
-            '"Cursive"': ہاتھ کی لکھائی
       Poetry_setFontColor:
         text: متن کا رنگ {FILL} سیٹ کریں
       Poetry_setForegroundEffect:
         text: "{EFFECT} اثر لگائیں۔"
         options:
           EFFECT:
-            '"rain"': بارش
             '"bubbles"': بُلبُلے
-            '"hearts"': رنگین دل
-            '"emojis"': خوشی کے ایموجی
             '"confetti"': کاغذی لیریاں
+            '"emojis"': خوشی کے ایموجی
+            '"rain"': بارش
             '"starburst"': اسٹاربسٹ
             '"glass"': ٹوٹتا ہوا شیشہ
             '"twinkling"': ٹمٹاتی روشنی
@@ -1855,31 +1851,21 @@ ur:
         options:
           EFFECT:
             '"fade"': دھندلا
-            '"typewriter"': ٹائپ رائٹر
             '"flyLeft"': بائیں سے پرواز
             '"flyRight"': دائیں سے پرواز
             '"flyTop"': اوپر سے پرواز
             '"flyBottom"': نیچے سے پرواز
+            '"typewriter"': ٹائپ رائٹر
       Poetry_setTitle:
         text: عنوان {TITLE} سیٹ کریں
       Poetry_showText:
         text: متن دکھائیں
       Poetry_startBehavior:
         text: سپرائٹ {ANIMATION_NAME} شروع کرنے لگتا ہے {BEHAVIOR}
-        options:
-          BEHAVIOR:
-            moving_north_and_looping: شمال کی طرف گھوم رہا ہے۔
-            moving_south_and_looping: جنوب کی طرف گھوم رہا ہے۔
-            moving_east_and_looping: مشرق کی طرف گھوم رہا ہے۔
-            moving_west_and_looping: مغرب کی طرف گھوم رہا ہے۔
       Poetry_stopBehavior:
         text: سپرائٹ {ANIMATION_NAME} رک جاتا ہے {BEHAVIOR}
         options:
           BEHAVIOR:
-            moving_north_and_looping: شمال کی طرف گھوم رہا ہے۔
-            moving_south_and_looping: جنوب کی طرف گھوم رہا ہے۔
-            moving_east_and_looping: مشرق کی طرف گھوم رہا ہے۔
-            moving_west_and_looping: مغرب کی طرف گھوم رہا ہے۔
             '"all"': "--تمام طرز عمل--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

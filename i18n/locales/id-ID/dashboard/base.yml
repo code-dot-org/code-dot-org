@@ -63,7 +63,8 @@ id:
   previous_page: Halaman sebelumnya
   next_page: Halamat berikutnya
   next_resource: Sumber selanjutnya
-  cancel: "Batal"
+  done_with_module: Selesaikan Module ini
+  cancel: "Batalkan"
   okay: "Oke"
   or: "atau"
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
@@ -82,7 +83,7 @@ id:
   stage_number: "Tahapan %{number}"
   puzzle: "Teka-teki"
   trophies: "Piala"
-  courses: 'Kursus'
+  courses: 'Nama Kursus'
   courses_page:
     title_student: "Belajar Ilmu Komputer"
     title_teacher: "Ajarkan Ilmu Komputer"
@@ -173,7 +174,7 @@ id:
     user_type_student_ability_2: "Bergabung dengan bagian kelas guru"
     user_type_teacher: "Guru"
     user_type_teacher_desc: "Setiap siswa memiliki akses ke, ditambah:"
-    user_type_teacher_ability_1: "Membuat bagian kelas"
+    user_type_teacher_ability_1: "Tambahkan Bagian Ruang Kelas"
     user_type_teacher_ability_2: "Menetapkan dan melacak pekerjaan siswa"
     user_type_teacher_ability_3: "Mendaftar dalam pembelajaran profesional"
     user_type_teacher_ability_4: "Berinteraksi dalam forum guru kami"
@@ -323,7 +324,7 @@ id:
     header:
       finished_hoc: "Saya selesai!"
       sign_in_to_save: 'Masuk untuk mencatat kemajuan belajar'
-      my_dashboard: "Dasbor saya"
+      my_dashboard: "Dashboard Saya"
       course_catalog: "Katalog Kursus"
       project_gallery: "Proyek"
       sections: "Bagian"
@@ -409,6 +410,8 @@ id:
       minecraft_hero: 'Pahlawan Minecraft'
       playlab: 'Lab Permainan'
       playlab_k1: 'Lab bermain (pra-pembaca)'
+      poetry: 'Puisi'
+      poetry_hoc: 'Seni Puisi'
       scratch: 'Scratch'
       sports: 'Olahraga'
       spritelab: 'Sprite Lab'
@@ -431,6 +434,7 @@ id:
       prizes_link: 'Info lebih lanjut'
   teacher:
     answer: Jawaban
+    dashboard: 'Dashboard untuk Guru'
     for_teachers_only: Hanya Untuk Guru
     title:
       one: 'Guru anda:'
@@ -447,7 +451,7 @@ id:
       student: 'siswa'
       viewing_solution: 'Melihat Solusi'
       try_it_yourself: 'Cobalah sendiri'
-      section: 'Sesi'
+      section: 'Bagian'
       example: 'Contoh Solusi'
       example_with_number: 'Contoh Solusi %{solution_number}'
       submitted_on: 'Dikirimkan pada:'
@@ -576,7 +580,7 @@ id:
     copyright: 'Hak cipta'
     more: 'Selengkapnya'
     feedback: 'Berikan pendapat'
-    translate: 'Bantu kami menerjemahkan ke bahasa anda'
+    translate: 'Jadi Relawan untuk Terjemahan'
     support: 'Bantuan dan komunitas'
     support_url: 'http://support.code.org'
     tos_short: 'Ketentuan'
@@ -651,7 +655,7 @@ id:
       body: "App Lab adalah sebuah lingkungan pemrograman untuk membuat berbagai aplikasi sederhana. Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik."
       body_short: "Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik."
       audience: 'Usia 13+'
-      cta: 'Pelajari caranya'
+      cta: 'Pelajari cara'
     dance:
       title: 'Pesta Tari'
     dance-2019:
@@ -676,7 +680,7 @@ id:
       title: "Game Lab"
       body: "Game Lab adalah sebuah lingkungan pemrograman untuk membuat animasi dan permainan sederhana berisikan objek dan karakter yang berinteraksi satu sama lain."
       audience: "Usia 13+"
-      cta: "Pelajari caranya"
+      cta: "Pelajari cara"
     hoc-encryption:
       title: "Enkripsi sederhana"
       body: "Murid akan mempelajari teknik membuat dan mengurai pesan terenkripsi."
@@ -684,7 +688,7 @@ id:
       title: "Web Lab (beta)"
       body: "Web Lab adalah lingkungan pemrograman untuk membuat halaman web sederhana menggunakan HTML dan CSS. Rancang halaman web Anda dan bagikan situs Anda dalam hitungan detik."
       audience: "Usia 13+"
-      cta: "Pelajari caranya"
+      cta: "Pelajari cara"
     frozen:
       title: "Frozen"
     starwars:
@@ -721,7 +725,7 @@ id:
       title: "Widget"
       body: "Murid dapat menjelajahi aneka konsep dari kursus Prinsip-Prinsip Ilmu Komputer kami secara langsung menggunakan alat-alat digital. Gunakan widget sendiri, atau buat pelajaran konsep tunggal untuk kelas Anda."
       audience: "Usia 14+"
-      cta: "Pelajari caranya"
+      cta: "Pelajari cara"
   landing:
     prerelease_tutorial: "Tutorial ini dalam versi **beta**.  Tutorial ini bisa direvisi kapan saja saat masukan diterima dan perbaikan dibuat."
     report_bug: "Laporkan Bug"
@@ -787,7 +791,7 @@ id:
     startover_title: "Kamu yakin ingin memulainya dari awal?"
     startover_body: "Ini akan mengembalikan puzzle ke kondisi awal dan mengatur ulang semua data yang Anda tambahkan atau ubah."
     startover_ok: "Mulai kembali"
-    startover_cancel: "Batal"
+    startover_cancel: "Batalkan"
   time:
     hour: '1 jam'
     day: 'hari'
@@ -916,6 +920,7 @@ id:
     instructor_feedback: 'Umpan balik instruktur'
     peer_feedback: 'Masukan Sejawat'
     outdated: 'Masukan ini ditambahkan untuk versi yang dikirim sebelumnya'
+    review_count: 'Kamu harus selesaikan %{review_count} ulasan untuk unit ini'
     peer_review: 'Penelaahan Sejawat'
   external_links:
     disclaimer: Penafian
@@ -997,6 +1002,7 @@ id:
       school: 'Sekolah'
       school_name: 'Nama Sekolah'
       school_city: 'Kota sekolah'
+      school_city_district: 'Kota/Distrik Sekolah'
       school_country: 'Negara Sekolah'
       school_department_region: 'Departemen sekolah/wilayah'
       colombian_school_city: 'Kota sekolah'

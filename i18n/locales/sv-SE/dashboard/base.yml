@@ -317,6 +317,7 @@ sv:
       prizes_link: 'Mer information'
   teacher:
     answer: Svar
+    dashboard: 'Lärare Dashboard'
     for_teachers_only: Endast för lärare
     title:
       one: 'Din lärare:'

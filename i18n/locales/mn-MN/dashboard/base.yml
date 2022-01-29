@@ -408,6 +408,7 @@ mn:
       prizes_link: 'дэлгэрэнгүй мэдээлэл'
   teacher:
     answer: Хариулт
+    dashboard: 'Багшийн хянах самбар'
     for_teachers_only: Багш нарт зөвхөн зориулав
     title:
       one: 'Таны багш:'

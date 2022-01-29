@@ -425,6 +425,7 @@ fr:
       prizes_link: 'Plus d''informations'
   teacher:
     answer: Réponse
+    dashboard: 'Tableau de bord enseignant'
     for_teachers_only: Pour les enseignants uniquement
     title:
       one: 'Ton enseignant:'

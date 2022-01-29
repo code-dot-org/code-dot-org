@@ -1189,36 +1189,44 @@ bs:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"hearts"': Srca
+            '"hearts"': srca
             '"iceCream"': Sladoled
-            '"rainbow"': Duge
-            '"stars"': Zvijezde
+            '"rainbow"': duga
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': kiša
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': noć
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': sporo
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Svjetlo
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skoči
       Poetry_setBackground:
         text: podesi boju pozadine {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
+            '"bubbles"': Balončići
+            '"clouds"': oblačno
+            '"confetti"': Konfeti
+            '"hearts"': srca
+            '"rain"': kiša
             '"colors"': Boje
             '"stars"': Zvijezde
-            '"rain"': Kiša
-            '"bubbles"': Balončići
-            '"confetti"': Konfeti
           PALETTE:
-            '"rainbow"': Duge
+            '"rainbow"': duga
+            '"winter"': zima
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Kiša
             '"bubbles"': Balončići
             '"confetti"': Konfeti
+            '"hearts"': srca
+            '"rain"': kiša
       Poetry_whenLineShows:
         options:
           'N':

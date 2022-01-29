@@ -11,14 +11,6 @@ import {connect} from 'react-redux';
 
 import blankImg from '../../static/common_images/1x1.gif';
 
-const styles = {
-  main: {
-    // common.scss provides an :after selector that ends up adding 18px of height
-    // to gameButtons. We want to get rid of that
-    marginBottom: -18
-  }
-};
-
 export const FinishButton = () => (
   <button type="button" id="finishButton" className="share">
     <img src="/blockly/media/1x1.gif" />
@@ -27,21 +19,15 @@ export const FinishButton = () => (
 );
 
 export const RunButton = Radium(props => (
-  <span id="runButtonWrapper">
-    <button
-      type="button"
-      id="runButton"
-      className={classNames([
-        'launch',
-        'blocklyLaunch',
-        props.hidden && 'hide'
-      ])}
-      style={props.style}
-    >
-      <div>{props.runButtonText || msg.runProgram()}</div>
-      <img src={blankImg} className="run26" />
-    </button>
-  </span>
+  <button
+    type="button"
+    id="runButton"
+    className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
+    style={props.style}
+  >
+    <div>{props.runButtonText || msg.runProgram()}</div>
+    <img src={blankImg} className="run26" />
+  </button>
 ));
 RunButton.propTypes = {
   hidden: PropTypes.bool,
@@ -80,7 +66,7 @@ ResetButton.displayName = 'ResetButton';
  */
 export const UnconnectedGameButtons = props => (
   <div>
-    <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
+    <ProtectedStatefulDiv id="gameButtons">
       <RunButton
         hidden={props.hideRunButton}
         runButtonText={props.runButtonText}

@@ -134,6 +134,22 @@
           "name": "تعديلات الدرس الافتراضي",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "المسارات الرقمية: شرائح الدرس",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "المسارات الرقمية: اتبع المسار الرقمي",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "المسارات الرقمية: مربعات المسار الرقمي",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "المسارات الرقمية: مسارات الحيوانات",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+        },
         "mimi-activity/courseb/2021": {
           "name": "حرّكها، حرّكها"
         },
@@ -210,35 +226,79 @@
           "name": "تعديلات الدرس الافتراضي",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: شرائح عرض الدرس",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: عالمي الافتراضي",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: الأمان، إنه يحكم!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "الأمان في عالمي الافتراضي: لحظة \"توقف وفكر\"!",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "البرمجة الزوجية"
         },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "الاهتزاز- جنون المعكرونة"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "استعد للبدء- أنشئ شعبة",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "الخرائط السعيدة"
+          "name": "الخرائط السعيدة",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "happy-map-cards/coursea/2021": {
-          "name": "بطاقات الخرائط السعيدة"
+          "name": "بطاقات الخرائط السعيدة",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
         },
         "activity-answer-happy-maps/coursea/2021": {
-          "name": "بطاقات الخرائط السعيدة"
+          "name": "بطاقات الخرائط السعيدة",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "قطع لعبة الخرائط السعيدة"
         },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+        },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "قوالب بلوكلي غير المتصلة (الصفوف من رياض الأطفال وحتى الفصل الأول)"
         },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "إيجاد وتصحيح الخلل البرمجي مع زر \"خطوة\"",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4><https://videos.code.org/csf/debugging-k1-blocks.mp4"
+        },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "بطاقات الخرائط السعيدة الكبيرة جدًا"
+          "name": "بطاقات الخرائط السعيدة الكبيرة جدًا",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "الحزمة الإضافية من قطع لعبة الخرائط السعيدة"
+          "name": "الحزمة الإضافية من قطع لعبة الخرائط السعيدة",
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "الإحساس بالوجوه"
         },
+        "pair-programming/coursea/2021": {
+          "name": "البرمجة مع صديق"
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "name": "أساسيات علم الكمبيوتر - توصيات الدرس"
+        },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت"
+        },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "أساسيات علم الكمبيوتر - توصيات الدرس"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "الحدث الكبير"
@@ -255,11 +315,47 @@
         "csf-lesson-recommend/coursea/2021": {
           "name": "نصائح النشاط الرئيسي في أساسيات علوم الكمبيوتر"
         },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "أساسيات علم الكمبيوتر - توصيات الدرس"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "دليل تخطيط مشروع الفنان",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "دليل تخطيط مشروع الفنان",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "مطابقة معايير رابطة معلمي علم الكمبيوتر",
+          "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "الأساسيات المشتركة وتوجيهات معايير جيل العلوم القادم",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "نشاط إضافي عبر المناهج",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "مفردات الدورة التدريبية",
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
+        },
         "implementation_guide/coursea/2021": {
           "name": "دليل التنفيذ"
         },
+        "lesson_type_guide/coursea/2021": {
+          "name": "دليل نوع الدرس"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+        },
         "curriculum_guide_1/coursea/2021": {
           "name": "دليل المقرر الدراسي"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "سجل التغيير ٢٠٢١"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "منتدى المعلم"

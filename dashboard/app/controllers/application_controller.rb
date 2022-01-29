@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   include SeamlessDatabasePool::ControllerFilter
-  # use_database_pool :all => :master
+  include MultipleDatabasesTransitionHelper::ControllerFilter
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

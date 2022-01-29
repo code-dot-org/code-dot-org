@@ -393,6 +393,7 @@ fi:
       prizes_link: 'lisätietoja'
   teacher:
     answer: Vastaus
+    dashboard: 'Opettajan päänäyttö'
     for_teachers_only: Vain opettajille
     title:
       one: 'Opettajasi:'

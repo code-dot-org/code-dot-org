@@ -348,6 +348,7 @@ bg:
       prizes_link: 'повече информация'
   teacher:
     answer: Oтговор
+    dashboard: 'Учителско табло'
     for_teachers_only: За учители само
     title:
       one: 'Вашият учител:'

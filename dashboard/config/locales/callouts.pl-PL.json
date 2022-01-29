@@ -1978,13 +1978,13 @@
           "whenKey": "Użyj bloku nowego zdarzenia znaleziony tutaj."
         },
         "courseF_events_practice_reorder": {
-          "stopAllBug": "Kolejność w tym bloku jest niepoprawna."
+          "stopAllBug": "Ten blok jest w złej kolejności"
         },
         "courseF_events_time": {
-          "events_category": "Kliknij tutaj, aby otworzyć kategorię \"Zdarzenia\"."
+          "events_category": "Kliknij tutaj, aby otworzyć kategorię Zdarzenia."
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "Kliknij tutaj, aby otworzyć kategorię \"Zachowania\"."
+          "behaviors_category": "Kliknij tutaj, aby otworzyć kategorię Zachowania."
         },
         "courseF_sprites_make": {
           "sprites_category": "Kliknij tutaj, aby otworzyć kategorię Duszki."
@@ -1996,19 +1996,19 @@
           "sprites_category2": "Poszukaj tutaj nowego bloku."
         },
         "courseF_text_events": {
-          "events_category": "Kliknij tutaj, aby otworzyć kategorię \"Zdarzenia\"."
+          "events_category": "Kliknij tutaj, aby otworzyć kategorię Zdarzenia."
         },
         "courseC_artist_prog2_2021": {
-          "slider": "Tutaj możesz spowolnić program."
+          "slider": "Tutaj możesz spowolnić swój program."
         },
         "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Spróbuj przejść przez swój kod po jednym bloku po kolei."
+          "stepButton": "Spróbuj przejść przez swój kod blok po bloku."
         },
         "courseF_label_predict": {
           "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
         },
         "courseF_text_answer": {
-          "answered_block": "Poszukaj tutaj nowych bloków!"
+          "answered_block": "Poszukaj tutaj nowego bloku!"
         },
         "courseF_text_choice_color": {
           "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
@@ -2018,17 +2018,17 @@
         },
         "courseF_text_choice_title": {
           "title_block": "Poszukaj tutaj dwóch nowych bloków!",
-          "text_answer_finish": "Czy ekran tytułowy pojawił się na 3 sekundy? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+          "text_answer_finish": "Czy ekran tytułowy pojawił się na 3 sekundy? Jeśli tak, kliknij Zakończ. Jeśli nie, kliknij Zresetuj, zmień kod i kliknij Uruchom ponownie."
         },
         "courseF_text_concat": {
-          "join_blocks": "Poszukaj tutaj nowego bloku!"
+          "join_blocks": "Poszukaj tutaj nowych bloków!"
         },
         "courseF_text_print": {
-          "print_block": "Znajdź blok `drukuj` tutaj!",
+          "print_block": "Znajdź blok drukowania tutaj!",
           "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "courseF_text_prompts": {
-          "prompt_block": "Znajdź blok `podpowiedź` tutaj!"
+          "prompt_block": "Znajdź tutaj blok podpowiedzi!"
         },
         "courseF_variables_predict": {
           "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."

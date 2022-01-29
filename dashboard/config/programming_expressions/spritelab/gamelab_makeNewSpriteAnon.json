@@ -2,5 +2,6 @@
   "key": "gamelab_makeNewSpriteAnon",
   "name": "makeNewSpriteAnon",
   "category": "Sprites",
+  "block_name": "gamelab_makeNewSpriteAnon",
   "syntax": "makeNewSpriteAnon"
 }

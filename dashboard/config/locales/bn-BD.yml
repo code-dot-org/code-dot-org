@@ -207,6 +207,7 @@ bn:
       prizes_link: আরও তথ্য
   teacher:
     answer: উত্তর
+    dashboard: শিক্ষক ড্যাশবোর্ড
     for_teachers_only: শুধু শিক্ষকদের জন্য
     title:
       one: 'আপনার শিক্ষক:'

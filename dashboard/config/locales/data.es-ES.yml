@@ -948,6 +948,8 @@ es:
         outbreak_events: 'Simulación de brote epidémico: Eventos'
         outbreak_scientist: 'Simulación de brote epidémico: Pensando como científicos'
         outbreak_outro: 'Simulación de brote epidémico: Juego libre'
+        PL_overview_CSP: "¿Qué son los Principios de la Informática?"
+        PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

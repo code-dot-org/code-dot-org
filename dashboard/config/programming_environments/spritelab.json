@@ -1,4 +1,5 @@
 {
   "name": "spritelab",
-  "editorType": "blockly"
+  "editor_type": "blockly",
+  "block_pool_name": "GamelabJr"
 }

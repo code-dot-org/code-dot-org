@@ -565,6 +565,15 @@ zh-CN:
         csd_ml_import_model: 导入AI模型
         playlab_2021: 游戏实验室的介绍
         playlab_2021_reader: 游戏实验室的介绍
+        PL_CSD_TeacherTips_Advise: 教师提示 - 给新教师的建议
+        PL_CSD_TeacherTips_IntroToCSD: 教师提示 - 计算机科学发现简介
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 教师提示 - 解决问题的流程
+        PL_CSD_TeacherTips_PairProgramming: 教师提示 - 结对编程
+        PL_CSD_TeacherTips_Debugging: 教师提示 - 调试
+        PL_CSD_TeacherTips_LeadLearner: 教师提示 - 引导学习者
+        poembot-playtest-intro: 诗歌机器人游戏测试简介
+        poembot-playtest-sprites: 诗歌机器人游戏测试精灵图
+        poembot-playtest-events: 诗歌机器人游戏测试活动
         hello_world_intro: 你好世界 - 欢迎来到精灵图实验室
         hello_world_events: 你好世界 - 使用事件编程
         hello_world_congrats: 你好世界 - 做你想做的

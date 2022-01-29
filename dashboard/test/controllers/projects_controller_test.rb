@@ -90,21 +90,62 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
     assert_sharing_meta_tags(
       url: "http://test.host/projects/artist/#{channel}",
-      image: 'http://test.host/assets/sharing_drawing.png',
+      image_url: "https://test-studio.code.org/v3/files/#{channel}/.metadata/thumbnail.png",
       image_width: 400,
       image_height: 400,
       small_thumbnail: true
     )
   end
 
-  test 'applab project level has sharing meta tags' do
+  test 'spritelab project level has sharing meta tags' do
+    spritelab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:spritelab][:name])
+    # populate level with correct game
+    spritelab_level.update(game: Game.create(app: Game::SPRITELAB))
+
     channel = 'fake-channel'
-    get :show, params: {key: 'applab', channel_id: channel, share: true}
+    get :show, params: {key: 'spritelab', channel_id: channel, share: true}
 
     assert_response :success
     assert_sharing_meta_tags(
+      url: "http://test.host/projects/spritelab/#{channel}",
+      image_url: "https://test-studio.code.org/v3/files/#{channel}/.metadata/thumbnail.png",
+      image_width: 400,
+      image_height: 400
+    )
+  end
+
+  test 'poetry_hoc project level has sharing meta tags' do
+    poetry_hoc_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:poetry_hoc][:name])
+    # populate level with correct game
+    poetry_hoc_level.update(game: Game.create(app: Game::POETRY))
+
+    channel = 'fake-channel'
+    get :show, params: {key: 'poetry_hoc', channel_id: channel, share: true}
+
+    assert_response :success
+    assert_sharing_meta_tags(
+      url: "http://test.host/projects/poetry_hoc/#{channel}",
+      image_url: "https://test-studio.code.org/v3/files/#{channel}/.metadata/thumbnail.png",
+      image_width: 400,
+      image_height: 400
+    )
+  end
+
+  test 'applab project level has sharing meta tags' do
+    applab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:applab][:name])
+    # populate level with correct game
+    applab_level.update(game: Game.create(app: Game::APPLAB))
+    channel = 'fake-channel'
+
+    ProjectsController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/applab_sharing_drawing.png')
+
+    get :show, params: {key: 'applab', channel_id: channel, share: true}
+
+    assert_response :success
+
+    assert_sharing_meta_tags(
       url: "http://test.host/projects/applab/#{channel}",
-      image: 'http://test.host/assets/sharing_drawing.png',
+      image_url: 'http://test.host/assets/applab_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true
@@ -112,13 +153,21 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'playlab project level has sharing meta tags' do
+    playlab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:playlab][:name])
+    # populate level with correct game
+    playlab_level.update(game: Game.create(app: Game::PLAYLAB))
+
     channel = 'fake-channel'
+
+    ProjectsController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/studio_sharing_drawing.png')
+
     get :show, params: {key: 'playlab', channel_id: channel, share: true}
 
     assert_response :success
+
     assert_sharing_meta_tags(
       url: "http://test.host/projects/playlab/#{channel}",
-      image: 'http://test.host/assets/sharing_drawing.png',
+      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true

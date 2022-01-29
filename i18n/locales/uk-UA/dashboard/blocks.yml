@@ -1700,12 +1700,15 @@ uk:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Квіти
-            '"hearts"': Серця
+            '"brick"': цеглина
+            '"fire"': вогонь
+            '"flowers"': квіти
+            '"hearts"': серця
             '"iceCream"': Морозиво
-            '"rainbow"': Веселка
-            '"stars"': Зірки
-            '"waves"': Хвилі
+            '"leaves"': листя
+            '"rainbow"': веселка
+            '"stars"': зірки
+            '"waves"': хвилі
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1715,55 +1718,71 @@ uk:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       Poetry_makeNumSprites:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
+            '"sound://category_nature/summer_night_loop.mp3"': ніч
+            '"sound://category_background/ocean_waves.mp3"': океан
+            '"sound://category_background/rainforest_ambient_sound.mp3"': тропічний ліс
+            '"sound://category_background/wavering_wind.mp3"': сонний
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': повільно
       Poetry_playSound:
         text: грати звук {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Світлий
+            '"sound://category_bell/long_bell_notification.mp3"': дзвоник
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': бульбашка
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибок
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': світло
       Poetry_setBackground:
         text: встановити колір тла {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Кольори
-            '"squiggles"': Звивання
-            '"space"': Відступ
-            '"stars"': Зірки
-            '"ripples"': Брижі
-            '"rain"': Дощ
             '"bubbles"': Бульбашки
+            '"clouds"': хмарно
             '"confetti"': Конфеті
-            '"hearts"': Різнокольорові серця
+            '"hearts"': серця
+            '"space"': Відступ
+            '"rain"': дощ
+            '"ripples"': Брижі
+            '"colors"': Кольори
+            '"stars"': Зірки
+            '"squiggles"': Звивання
           PALETTE:
-            '"rainbow"': Веселка
+            '"ocean"': океан
+            '"rainbow"': веселка
+            '"spring"': весна
+            '"winter"': зима
       Poetry_setBackgroundImageAs:
         text: встановити фон {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Дощ
             '"bubbles"': Бульбашки
-            '"hearts"': Різнокольорові серця
             '"confetti"': Конфеті
+            '"hearts"': серця
+            '"rain"': дощ
             '"starburst"': Вибухаюча зірка
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            fluttering: пурхання
-            growing: ріст
-            shrinking: стиснення
-            swimming_left_and_right: плавання
-            wandering: бродіння
-            wobbling: хитання
+            '"fluttering"': пурхання
+            '"growing"': ріст
+            '"shrinking"': стиснення
+            '"swimming_left_and_right"': плавання
+            '"wandering"': бродіння
+            '"wobbling"': хитання
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            fluttering: пурхання
-            growing: ріст
-            shrinking: стиснення
-            swimming_left_and_right: плавання
-            wandering: бродіння
-            wobbling: хитання
+            '"fluttering"': пурхання
+            '"growing"': ріст
+            '"shrinking"': стиснення
+            '"swimming_left_and_right"': плавання
+            '"wandering"': бродіння
+            '"wobbling"': хитання
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:

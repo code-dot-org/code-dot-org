@@ -359,6 +359,7 @@
           "student_overview": "수 많은 코딩을 할 준비를 하세요! 자신의 프로젝트를 만들기 시작할 시간입니다. "
         },
         "coursed-2021/lesson-5": {
+          "purpose": "Common Sense Education은 학생들에게 온라인 상에서 안전한 사용 방법을 가르치기 위해 이 수업을 만들었습니다.",
           "student_overview": "이 레슨에서는 비밀번호가 개인 정보를 보호하는 방식과 좋은 비밀번호를 만드는 법에 관해 배울 것입니다."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
@@ -600,6 +601,7 @@
           "student_overview": "사이버 폭력을 볼 때 나서서 행동하는 사람이 되는법을 배우세요."
         },
         "coursee-2021/Private and Personal Information": {
+          "purpose": "Common Sense Education은 학생들에게 온라인 상에서 안전한 사용 방법을 가르치기 위해 이 수업을 만들었습니다.",
           "student_overview": "인터넷은 재미 있고 흥미롭지만 안전을 유지하는 것 역시 중요합니다. 이 레슨은 공유해도 안전한 정보와 사적 정보의 차이를 가르쳐 줍니다."
         },
         "coursee-2021/About Me": {

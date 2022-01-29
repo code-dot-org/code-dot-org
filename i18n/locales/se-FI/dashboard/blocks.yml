@@ -1366,46 +1366,40 @@ se:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Lieđit
-            '"hearts"': Váimmut
+            '"hearts"': váimmut
             '"iceCream"': LákcaJiekŋa
-            '"rainbow"': Arvedávgi
-            '"stars"': Násttit
-            '"waves"': Bárut
+            '"stars"': násttit
       Poetry_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       Poetry_makeNumSprites:
         text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
-      Poetry_playSound:
-        text: čuojatJiena {SOUND}
+      Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Čuovga
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': njozet
+      Poetry_playSound:
+        text: čuojatJiena {SOUND}
       Poetry_setBackground:
         text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Ivnnit
-            '"squiggles"': Squiggles
-            '"space"': Gomuvuohta
-            '"stars"': Násttit
-            '"ripples"': Bárožat
-            '"rain"': Arvi
             '"bubbles"': Bulljarasat
             '"confetti"': Konfetti
-            '"hearts"': Ivdnás Váimmut
-          PALETTE:
-            '"rainbow"': Arvedávgi
+            '"hearts"': váimmut
+            '"space"': Gomuvuohta
+            '"ripples"': Bárožat
+            '"colors"': Ivnnit
+            '"stars"': Násttit
+            '"squiggles"': Squiggles
       Poetry_setBackgroundImageAs:
         text: bija duogábeali dása {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Arvi
             '"bubbles"': Bulljarasat
-            '"hearts"': Ivdnás Váimmut
             '"confetti"': Konfetti
+            '"hearts"': váimmut
             '"starburst"': Starburst
       Poetry_whenLineShows:
         options:
