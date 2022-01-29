@@ -1,4 +1,6 @@
 {
   "key": "poetry",
-  "display_name": "poetry"
+  "display_name": "poetry",
+  "category": "other",
+  "is_featured": false
 }

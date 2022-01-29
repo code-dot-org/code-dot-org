@@ -1,4 +1,6 @@
 {
   "key": "ui-test-versioned-script",
-  "display_name": "ui-test-versioned-script"
+  "display_name": "ui-test-versioned-script",
+  "category": "other",
+  "is_featured": false
 }

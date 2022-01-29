@@ -1,4 +1,6 @@
 {
   "key": "fit2019-apprentice",
-  "display_name": "fit2019-apprentice"
+  "display_name": "fit2019-apprentice",
+  "category": "other",
+  "is_featured": false
 }

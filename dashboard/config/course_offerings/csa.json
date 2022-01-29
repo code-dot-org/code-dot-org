@@ -1,4 +1,6 @@
 {
   "key": "csa",
-  "display_name": "csa"
+  "display_name": "csa",
+  "category": "other",
+  "is_featured": false
 }

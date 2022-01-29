@@ -1,4 +1,6 @@
 {
   "key": "poem-art",
-  "display_name": "poem-art"
+  "display_name": "poem-art",
+  "category": "other",
+  "is_featured": false
 }

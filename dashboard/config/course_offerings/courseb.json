@@ -1,4 +1,6 @@
 {
   "key": "courseb",
-  "display_name": "courseb"
+  "display_name": "courseb",
+  "category": "other",
+  "is_featured": false
 }

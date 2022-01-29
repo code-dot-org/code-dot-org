@@ -1,4 +1,6 @@
 {
   "key": "counting-csc",
-  "display_name": "counting-csc"
+  "display_name": "counting-csc",
+  "category": "other",
+  "is_featured": false
 }

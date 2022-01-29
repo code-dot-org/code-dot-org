@@ -1,4 +1,6 @@
 {
   "key": "course3",
-  "display_name": "course3"
+  "display_name": "course3",
+  "category": "other",
+  "is_featured": false
 }

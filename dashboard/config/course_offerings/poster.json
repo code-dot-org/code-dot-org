@@ -1,4 +1,6 @@
 {
   "key": "poster",
-  "display_name": "poster"
+  "display_name": "poster",
+  "category": "other",
+  "is_featured": false
 }
