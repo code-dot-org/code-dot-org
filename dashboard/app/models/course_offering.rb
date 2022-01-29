@@ -5,9 +5,10 @@
 #  id           :integer          not null, primary key
 #  key          :string(255)      not null
 #  display_name :string(255)      not null
-#  properties   :text(65535)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  category     :string(255)      default("other"), not null
+#  is_featured  :boolean          default(FALSE), not null
 #
 # Indexes
 #
