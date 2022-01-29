@@ -1,4 +1,6 @@
 "en-US":
+  homepage_higher_power_body: "Dance Party gets a Higher Power"
+  homepage_higher_power_button: "Learn more"
   hour_of_code: "Hour of Code"
   hello: "Hello world"
   'yes': 'Yes'
@@ -1753,10 +1755,12 @@
   homepage_slot_text_link_code_break: "Take a Code Break"
   homepage_slot_text_link_do_hoc: "Do an Hour of Code"
   homepage_slot_text_link_express_course: "Try an Express Course"
+  hoc2019_header_line1_mobile: 'Learn computer science.'
+  hoc2019_header_line2_mobile: 'Change the world.'
   page_not_available_title: "Page Not Available"
   page_not_available_description: "We're sorry, the page you requested is no longer available at this address. If you still need access, please email [support@code.org](%{support_email_link})."
   page_not_available_button: "Return home"
-  ! '': 
+  ! '':
   hoc2020_mc_available_code_org: "Available on Code.org"
   hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
