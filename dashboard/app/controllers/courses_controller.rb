@@ -147,11 +147,7 @@ class CoursesController < ApplicationController
   def get_unit_group
     course_name = params[:course_name]
 
-    unit_group =
-      params[:action] == "edit" ?
-        UnitGroup.get_without_cache(course_name) :
-        UnitGroup.get_from_cache(course_name)
-
+    unit_group = UnitGroup.get_from_cache(course_name)
     return unit_group if unit_group
 
     # When the url of a course family is requested, redirect to a specific course version.
