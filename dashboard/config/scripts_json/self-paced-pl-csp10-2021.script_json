@@ -9,10 +9,10 @@
     "new_name": null,
     "family_name": null,
     "serialized_at": "2021-11-22 17:09:07 UTC",
-    "published_state": "in_development",
-    "instruction_type": "self_paced",
-    "instructor_audience": "universal_instructor",
-    "participant_audience": "teacher",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csp10-2021"
     }
