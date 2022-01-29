@@ -81,7 +81,7 @@ class CourseOffering < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     file_path = Rails.root.join("config/course_offerings/#{key}.json")
     object_to_serialize = serialize
-    File.write(file_path, JSON.pretty_generate(object_to_serialize) + $/.to_s)
+    File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
   def self.seed_all(glob="config/course_offerings/*.json")
