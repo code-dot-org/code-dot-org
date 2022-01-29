@@ -97,6 +97,9 @@ class CourseOffering < ApplicationRecord
     config.symbolize_keys
   end
 
+  # Returns the course offering key to help in removing records
+  # that are no longer in use during the seeding process. See
+  # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
