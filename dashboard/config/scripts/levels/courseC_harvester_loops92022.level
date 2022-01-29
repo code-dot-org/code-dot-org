@@ -39,11 +39,16 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 21227,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:58.348+00:00\",\"changed\":[\"cloned from \\\"courseC_harvester_loops9_2021\\\"\"],\"cloned_from\":\"courseC_harvester_loops9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:58.348+00:00\",\"changed\":[\"cloned from \\\"courseC_harvester_loops9_2021\\\"\"],\"cloned_from\":\"courseC_harvester_loops9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
