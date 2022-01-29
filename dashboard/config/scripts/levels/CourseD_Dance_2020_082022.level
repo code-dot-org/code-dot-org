@@ -63,11 +63,16 @@
     "encrypted_examples": "PBfhDgrjmluTOgGEnQ6gva6Zo6t1BViYXGt/P6s7g4TY+L2ZP8MvoZUtIgPk\nObMRQ0ddMw0LuD91qnmYSRV8Ww==\n",
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
-    "hide_pause_button": "false"
+    "hide_pause_button": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:01.221+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_08_2021\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_08_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:01.221+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_08_2021\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_08_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

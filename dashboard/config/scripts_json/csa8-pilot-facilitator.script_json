@@ -2,9 +2,10 @@
   "script": {
     "name": "csa8-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-13 16:44:31 UTC",
+    "serialized_at": "2022-01-28 19:46:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -502,6 +503,19 @@
       }
     },
     {
+      "key": "5e4eefd6-d017-4c32-9e09-4be7fdd47821",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e4eefd6-d017-4c32-9e09-4be7fdd47821",
+        "lesson.key": "Searching for Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "f371ba3e-9a6d-48ce-b94c-01fd38803da6",
       "position": 1,
       "properties": {
@@ -538,6 +552,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "0fddf99d-3ffd-4b68-8b7a-ce7412e58b95",
+        "lesson.key": "Implementing the Binary Search",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "02830b8c-5f48-4fbf-a45d-fd191c1b3a60",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02830b8c-5f48-4fbf-a45d-fd191c1b3a60",
         "lesson.key": "Implementing the Binary Search",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -586,6 +613,19 @@
       }
     },
     {
+      "key": "ea512b5c-9b25-4ec7-b747-fd7f3bb5aa64",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea512b5c-9b25-4ec7-b747-fd7f3bb5aa64",
+        "lesson.key": "Implementing a Recursive Binary Search",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "90677840-108d-4e90-8248-59ba3bc11184",
       "position": 1,
       "properties": {
@@ -622,6 +662,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "bd8f7143-e66d-468c-9afe-736741936500",
+        "lesson.key": "Implementing the Selection Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "9043c33e-b02e-4ba1-b8d6-3cc53e10c282",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9043c33e-b02e-4ba1-b8d6-3cc53e10c282",
         "lesson.key": "Implementing the Selection Sort",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -670,6 +723,19 @@
       }
     },
     {
+      "key": "42954efb-4475-4e3d-a3cc-e1520e435a52",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42954efb-4475-4e3d-a3cc-e1520e435a52",
+        "lesson.key": "Implementing the Insertion Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "e25560d6-b08f-4467-a74f-7a087e23dcfe",
       "position": 1,
       "properties": {
@@ -706,6 +772,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3b57d497-820c-44e0-94bf-d32bdacbe6b0",
+        "lesson.key": "Implementing the Merge Sort",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "b5f8b5ed-3b3e-40b9-8813-badce21249d3",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5f8b5ed-3b3e-40b9-8813-badce21249d3",
         "lesson.key": "Implementing the Merge Sort",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -754,6 +833,19 @@
       }
     },
     {
+      "key": "47b56aee-eeb9-49d9-90a7-4c5e5d6668a8",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47b56aee-eeb9-49d9-90a7-4c5e5d6668a8",
+        "lesson.key": "Expanding Standard Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "b21400e2-1c65-4723-8130-5c3ddd367d8e",
       "position": 1,
       "properties": {
@@ -796,6 +888,19 @@
       }
     },
     {
+      "key": "0057e244-775e-43c8-80f9-de6d710c403e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0057e244-775e-43c8-80f9-de6d710c403e",
+        "lesson.key": "Traversing Multiple Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
       "key": "a2fa1b65-94ef-4828-a42b-95f3b888e111",
       "position": 1,
       "properties": {
@@ -832,6 +937,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "08f8c01e-9052-4410-b08d-448460897c6f",
+        "lesson.key": "Defending Privacy and Security",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "key": "6c4da911-66ab-4dfa-a3e7-1af2351e205c",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c4da911-66ab-4dfa-a3e7-1af2351e205c",
         "lesson.key": "Defending Privacy and Security",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot-facilitator"
@@ -1484,6 +1602,17 @@
       }
     },
     {
+      "key": "f1caa21e-971e-4cab-86af-1964f3ecf571",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.5\n* Topic Questions 7.5\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1caa21e-971e-4cab-86af-1964f3ecf571",
+        "lesson_activity.key": "5e4eefd6-d017-4c32-9e09-4be7fdd47821"
+      }
+    },
+    {
       "key": "67ce3a5a-7e6a-4733-9a5a-616a1c0a5543",
       "position": 1,
       "properties": {
@@ -1634,6 +1763,17 @@
       "seeding_key": {
         "activity_section.key": "b7b37d1f-9ad3-41e7-977a-614ee76cfc40",
         "lesson_activity.key": "0fddf99d-3ffd-4b68-8b7a-ce7412e58b95"
+      }
+    },
+    {
+      "key": "afdafb33-4536-4cf9-b7bb-6f59a764f99a",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "afdafb33-4536-4cf9-b7bb-6f59a764f99a",
+        "lesson_activity.key": "02830b8c-5f48-4fbf-a45d-fd191c1b3a60"
       }
     },
     {
@@ -1877,6 +2017,17 @@
       }
     },
     {
+      "key": "9e31a73a-04a2-4c48-a419-84995dfa01f1",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "9e31a73a-04a2-4c48-a419-84995dfa01f1",
+        "lesson_activity.key": "ea512b5c-9b25-4ec7-b747-fd7f3bb5aa64"
+      }
+    },
+    {
       "key": "edb3a60e-8683-46f7-9f17-84eb33bfe2fd",
       "position": 1,
       "properties": {
@@ -2080,6 +2231,17 @@
       }
     },
     {
+      "key": "a3d03215-db3b-4d7d-8f69-1c145ffdb20b",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "a3d03215-db3b-4d7d-8f69-1c145ffdb20b",
+        "lesson_activity.key": "9043c33e-b02e-4ba1-b8d6-3cc53e10c282"
+      }
+    },
+    {
       "key": "1d579b43-783a-4b59-9e2a-3bb720c9ac15",
       "position": 1,
       "properties": {
@@ -2274,6 +2436,17 @@
       "seeding_key": {
         "activity_section.key": "7d306aba-aa84-49d1-8087-e114201dcf95",
         "lesson_activity.key": "9f86de3b-7f0d-4942-8b59-541d7add35d1"
+      }
+    },
+    {
+      "key": "a3382c1f-dfc0-4bde-b8dc-97a848b9e04b",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.6\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3382c1f-dfc0-4bde-b8dc-97a848b9e04b",
+        "lesson_activity.key": "42954efb-4475-4e3d-a3cc-e1520e435a52"
       }
     },
     {
@@ -2478,6 +2651,17 @@
       }
     },
     {
+      "key": "b3946c9c-7403-4c61-b009-cf64cd37eddc",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3946c9c-7403-4c61-b009-cf64cd37eddc",
+        "lesson_activity.key": "b5f8b5ed-3b3e-40b9-8813-badce21249d3"
+      }
+    },
+    {
       "key": "658b0a31-ef7a-4a9c-9ec5-15d5b6c34701",
       "position": 1,
       "properties": {
@@ -2620,6 +2804,17 @@
       }
     },
     {
+      "key": "ed83eb43-fe6b-4889-b388-231030ed77e8",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "ed83eb43-fe6b-4889-b388-231030ed77e8",
+        "lesson_activity.key": "47b56aee-eeb9-49d9-90a7-4c5e5d6668a8"
+      }
+    },
+    {
       "key": "adfd14ba-a053-4942-a1c7-e2ef82b35fe6",
       "position": 1,
       "properties": {
@@ -2732,6 +2927,17 @@
       }
     },
     {
+      "key": "c61fb740-0937-44cf-a684-f518a4058399",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "c61fb740-0937-44cf-a684-f518a4058399",
+        "lesson_activity.key": "0057e244-775e-43c8-80f9-de6d710c403e"
+      }
+    },
+    {
       "key": "891aeae9-f706-435c-99ee-052b36867601",
       "position": 1,
       "properties": {
@@ -2831,6 +3037,17 @@
       }
     },
     {
+      "key": "95fe95f6-c6f4-4239-a98d-d9d2e432c9c3",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What would you say are the risks to privacy from collecting and storing personal data on computer systems?\n\n**Discussion Goal:** Students share ideas about personal information being leaked online or accessed by someone without authorization. Students may share examples of events and issues that have occurred in the real world."
+      },
+      "seeding_key": {
+        "activity_section.key": "95fe95f6-c6f4-4239-a98d-d9d2e432c9c3",
+        "lesson_activity.key": "63b59918-0637-4df5-86c0-575de643388b"
+      }
+    },
+    {
       "key": "9e975134-032c-452f-86da-26c616777a91",
       "position": 1,
       "properties": {
@@ -2865,6 +3082,17 @@
       "seeding_key": {
         "activity_section.key": "2aad5dde-ff65-4d4a-8d61-c8b1c426846b",
         "lesson_activity.key": "08f8c01e-9052-4410-b08d-448460897c6f"
+      }
+    },
+    {
+      "key": "d1eed039-804a-4fd8-afbc-bb52dc726935",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.7\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1eed039-804a-4fd8-afbc-bb52dc726935",
+        "lesson_activity.key": "6c4da911-66ab-4dfa-a3e7-1af2351e205c"
       }
     },
     {
@@ -4858,6 +5086,51 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa8-pilot-facilitator/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa8-pilot-facilitator/standards",
+      "key": "all_standards_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_8"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa8-pilot-facilitator/vocab",
+      "key": "all_vocabulary_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8"
+      }
+    },
+    {
+      "name": "Binary Search",
+      "url": "https://docs.google.com/document/d/1pycNLXO3CCuwA57r9GYBUde3L5fSWxK7vxGxhSTnGuA/edit?usp=sharing",
+      "key": "binary_search",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "binary_search"
+      }
+    },
+    {
       "name": "Counting Executions with Code",
       "url": "https://docs.google.com/document/d/1vor07qxMHGJGMhgRSsyYAvojic71CN3DKZyUMPYd6x0/edit?usp=sharing",
       "key": "counting_executions_with_code",
@@ -5288,6 +5561,12 @@
     {
       "seeding_key": {
         "lesson.key": "Implementing the Binary Search",
+        "resource.key": "binary_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Implementing the Binary Search",
         "resource.key": "unit_8_presentation_slides"
       }
     },
@@ -5515,7 +5794,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_8",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_8",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8",
+        "script.name": "csa8-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

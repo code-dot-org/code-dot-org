@@ -5,6 +5,7 @@ class CoursesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   check_authorization except: [:index]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
+  before_action :check_plc_enrollment, only: [:show]
   before_action :render_no_access, only: [:show, :vocab, :resources, :code, :standards]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'UnitGroup', except: [:index]
@@ -146,11 +147,7 @@ class CoursesController < ApplicationController
   def get_unit_group
     course_name = params[:course_name]
 
-    unit_group =
-      params[:action] == "edit" ?
-        UnitGroup.get_without_cache(course_name) :
-        UnitGroup.get_from_cache(course_name)
-
+    unit_group = UnitGroup.get_from_cache(course_name)
     return unit_group if unit_group
 
     # When the url of a course family is requested, redirect to a specific course version.
@@ -167,17 +164,19 @@ class CoursesController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @unit_group
   end
 
-  def render_no_access
-    unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
-      authenticate_user!
-      return render :no_access
-    end
-
-    if params[:action] == "show" && @unit_group.plc_course
+  def check_plc_enrollment
+    if @unit_group.plc_course
       authorize! :show, Plc::UserCourseEnrollment
       user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
       render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
       return
+    end
+  end
+
+  def render_no_access
+    unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
+      authenticate_user!
+      return render :no_access
     end
 
     if @unit_group.pilot?
