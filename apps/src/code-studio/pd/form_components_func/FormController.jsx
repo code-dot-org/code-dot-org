@@ -87,15 +87,22 @@ const FormController = props => {
     ...getInitialData()
   }));
   const [submitting, setSubmitting] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [showSavedMessage, setShowSavedMessage] = useState(false);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
   const [errorMessages, setErrorMessages] = useState({});
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
+  const [updatedApplicationId, setUpdatedApplicationId] = useState(
+    applicationId
+  );
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
     applicationId && allowPartialSaving
   );
+  const applicationStatusOnSave = 'incomplete';
+  const applicationStatusOnSubmit = 'unreviewed';
 
   // do this once on mount only
   useEffect(() => {
@@ -287,36 +294,68 @@ const FormController = props => {
    *
    * @returns {Object}
    */
-  const serializeFormData = () => {
+  const serializeFormData = formData => {
+    if (!formData) {
+      throw new Error(`formData cannot be undefined`);
+    }
     return {
-      form_data: data,
+      form_data: formData,
       ...serializeAdditionalData()
     };
   };
 
-  const makeRequest = () => {
+  const handleRequestFailure = data => {
+    if (data?.responseJSON?.errors?.form_data) {
+      setErrors(data.responseJSON.errors.form_data);
+      setErrorHeader(i18n.formErrorsBelow());
+    } else {
+      // Otherwise, something unknown went wrong on the server
+      setGlobalError(true);
+      setErrorHeader(i18n.formServerError());
+    }
+    setSubmitting(false);
+    setSaving(false);
+  };
+
+  const makeRequest = applicationStatus => {
+    const dataWithStatus = {status: applicationStatus, ...data};
+    setData(dataWithStatus);
+
     const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData())
+        data: JSON.stringify(serializeFormData(dataWithStatus))
       });
 
-    return applicationId
-      ? ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`)
+    return updatedApplicationId
+      ? ajaxRequest('PUT', `${apiEndpoint}/${updatedApplicationId}`)
       : ajaxRequest('POST', apiEndpoint);
   };
 
   const handleSave = () => {
     // [MEG] TODO: Consider rendering spinner if saving
 
-    console.log(
-      "[MEG] TODO: if there's already an id, do a PUT, else do a POST"
-    );
-    // if call is successful, do
-    onSuccessfulSave();
+    // clear errors so we can more clearly detect "new" errors and toggle
+    // submitting flag so we can prevent duplicate submission
+    setErrors([]);
+    setErrorHeader(null);
+    setGlobalError(false);
+    setSaving(true);
+
+    const handleSuccessfulSave = data => {
+      scrollToTop();
+      setShowSavedMessage(true);
+      setUpdatedApplicationId(data.id);
+      setSaving(false);
+      onSuccessfulSave(data);
+    };
+
+    makeRequest(applicationStatusOnSave)
+      .done(data => handleSuccessfulSave(data))
+      .fail(data => handleRequestFailure(data));
   };
 
   /**
@@ -352,21 +391,9 @@ const FormController = props => {
       onSuccessfulSubmit(data);
     };
 
-    const handleRequestFailure = data => {
-      if (data?.responseJSON?.errors?.form_data) {
-        setErrors(data.responseJSON.errors.form_data);
-        setErrorHeader(i18n.formErrorsBelow());
-      } else {
-        // Otherwise, something unknown went wrong on the server
-        setGlobalError(true);
-        setErrorHeader(i18n.formServerError());
-      }
-      setSubmitting(false);
-    };
-
-    makeRequest()
-      .done(handleSuccessfulSubmit)
-      .fail(handleRequestFailure);
+    makeRequest(applicationStatusOnSubmit)
+      .done(data => handleSuccessfulSubmit(data))
+      .fail(data => handleRequestFailure(data));
   };
 
   /**
@@ -480,23 +507,38 @@ const FormController = props => {
   };
 
   /**
-   * @returns {Element|undefined}
+   * @returns {Element|false}
    */
-  const renderDataWasLoadedMessage = () => {
-    if (showDataWasLoadedMessage) {
-      return (
-        <Alert
-          onDismiss={() => setShowDataWasLoadedMessage(false)}
-          bsStyle="info"
-        >
-          <p>
-            We found an application you started! Your saved responses have been
-            loaded.
-          </p>
-        </Alert>
-      );
-    }
-  };
+  const renderDataWasLoadedMessage = () =>
+    showDataWasLoadedMessage && (
+      <Alert
+        onDismiss={() => setShowDataWasLoadedMessage(false)}
+        bsStyle="info"
+      >
+        <p>
+          We found an application you started! Your saved responses have been
+          loaded.
+        </p>
+      </Alert>
+    );
+
+  /**
+   * @returns {Element|false}
+   */
+  const renderMessageOnSave = () =>
+    showSavedMessage && (
+      <Alert
+        onDismiss={() => {
+          setShowSavedMessage(false);
+        }}
+        bsStyle="info"
+      >
+        <p>
+          Your progress has been saved. Return to this page at any time to
+          continue working on your application.
+        </p>
+      </Alert>
+    );
 
   /**
    * @returns {Element}
@@ -535,6 +577,7 @@ const FormController = props => {
       <Button
         className="btn-gray"
         style={styles.saveButton}
+        disabled={saving}
         key="save"
         id="save"
         onClick={handleSave}
@@ -566,6 +609,7 @@ const FormController = props => {
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
       {renderDataWasLoadedMessage()}
+      {renderMessageOnSave()}
       {renderCurrentPage()}
       {renderControlButtons()}
       {renderErrorFeedback()}
