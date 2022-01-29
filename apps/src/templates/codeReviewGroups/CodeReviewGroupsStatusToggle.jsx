@@ -37,7 +37,7 @@ function CodeReviewGroupsStatusToggle({
       .setCodeReviewEnabled(toggledValue)
       .success(result => {
         const newExpiration = result.expiration;
-        setCodeReviewExpiration(newExpiration);
+        setCodeReviewExpiration(sectionId, newExpiration);
         setSaveInProgress(false);
       })
       .fail(() => {
