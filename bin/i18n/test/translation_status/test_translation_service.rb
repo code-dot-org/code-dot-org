@@ -52,8 +52,4 @@ class TranslationServiceTest < Minitest::Test
   def test_translated_given_unknown_frontend_string_should_return_false
     refute @@translation_service.translated?('de-DE', 'turtle.fill')
   end
-
-  def test_translated_given_scope_should_return_true
-    assert @@translation_service.translated?('es-MX', 'MOVES.Kick', '["data", "blocks", "Dancelab_changeMoveEachLR", "options", "MOVE"]')
-  end
 end

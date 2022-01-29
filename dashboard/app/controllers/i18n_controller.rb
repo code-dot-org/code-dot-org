@@ -26,10 +26,8 @@ class I18nController < ApplicationController
     # Limit the number of strings we will handle in one call.
     return render status: :bad_request, json: {error: 'Too many strings.'}  if string_keys.count > I18N_KEY_COUNT_LIMIT
 
-    # We don't expect these strings to have a scope or unique separator.
-    # If that changes, this endpoint will need to be updated to account for that.
     string_keys.each do |string_key|
-      I18nStringUrlTracker.instance.log(url, source, string_key)
+      I18nStringUrlTracker.instance.log(string_key, url, source)
     end
 
     head :ok
