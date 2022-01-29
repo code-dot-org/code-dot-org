@@ -71,19 +71,17 @@ class CourseOffering < ApplicationRecord
   def serialize
     {
       key: key,
-      display_name: display_name
-    }.merge(properties&.sort.to_h)
+      display_name: display_name,
+      category: category,
+      is_featured: is_featured
+    }
   end
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     file_path = Rails.root.join("config/course_offerings/#{key}.json")
     object_to_serialize = serialize
-    dirname = File.dirname(file_path)
-    unless File.directory?(dirname)
-      FileUtils.mkdir_p(dirname)
-    end
-    File.write(file_path, JSON.pretty_generate(object_to_serialize))
+    File.write(file_path, JSON.pretty_generate(object_to_serialize) + $/.to_s)
   end
 
   def self.seed_all(glob="config/course_offerings/*.json")

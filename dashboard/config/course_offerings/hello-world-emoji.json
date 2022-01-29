@@ -1,4 +1,6 @@
 {
   "key": "hello-world-emoji",
-  "display_name": "hello-world-emoji"
+  "display_name": "hello-world-emoji",
+  "category": "other",
+  "is_featured": false
 }

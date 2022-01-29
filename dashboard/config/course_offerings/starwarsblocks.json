@@ -1,4 +1,6 @@
 {
   "key": "starwarsblocks",
-  "display_name": "starwarsblocks"
+  "display_name": "starwarsblocks",
+  "category": "other",
+  "is_featured": false
 }

@@ -1,4 +1,6 @@
 {
   "key": "outbreak-csc",
-  "display_name": "outbreak-csc"
+  "display_name": "outbreak-csc",
+  "category": "other",
+  "is_featured": false
 }

@@ -1,4 +1,6 @@
 {
   "key": "aiml",
-  "display_name": "aiml"
+  "display_name": "aiml",
+  "category": "other",
+  "is_featured": false
 }
