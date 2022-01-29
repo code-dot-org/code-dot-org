@@ -17,6 +17,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   validates_uniqueness_of :name, case_sensitive: false
 
+  has_many :programming_environment_categories
   has_many :programming_expressions
 
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
@@ -44,12 +45,17 @@ class ProgrammingEnvironment < ApplicationRecord
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
-    environment.update! properties
+    environment.update! properties.except(:categories)
+    properties[:categories].each do |category_config|
+      category = ProgrammingEnvironmentCategory.find_or_initialize_by(programming_environment_id: environment.id, key: category_config['key'])
+      category.update! category_config
+    end
     environment.name
   end
 
   def serialize
-    {name: name}.merge(properties.sort.to_h)
+    env_hash = {name: name}.merge(properties.sort.to_h)
+    env_hash.merge(categories: programming_environment_categories.map(&:serialize))
   end
 
   def write_serialization
@@ -71,9 +77,5 @@ class ProgrammingEnvironment < ApplicationRecord
       description: description,
       editorType: editor_type
     }
-  end
-
-  def categories
-    programming_expressions.pluck(:category).uniq
   end
 end
