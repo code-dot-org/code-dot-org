@@ -1,5 +1,94 @@
 {
   "name": "spritelab",
+  "block_pool_name": "GamelabJr",
+  "description": "Spritelab description",
   "editor_type": "blockly",
-  "block_pool_name": "GamelabJr"
+  "title": "Spritelab",
+  "categories": [
+    {
+      "key": "sprites",
+      "name": "Sprites",
+      "color": "#df9399"
+    },
+    {
+      "key": "world",
+      "name": "World",
+      "color": "#acacd2"
+    },
+    {
+      "key": "location",
+      "name": "Location",
+      "color": "#f5ebaa"
+    },
+    {
+      "key": "actions",
+      "name": "Actions",
+      "color": "#5ef3ff"
+    },
+    {
+      "key": "events",
+      "name": "Events",
+      "color": "#62fc94"
+    },
+    {
+      "key": "behaviors",
+      "name": "Behaviors",
+      "color": "#89eba4"
+    },
+    {
+      "key": "loops",
+      "name": "Loops",
+      "color": "#f98bd0"
+    },
+    {
+      "key": "variables",
+      "name": "Variables",
+      "color": "#0cfb4c"
+    },
+    {
+      "key": "math",
+      "name": "Math",
+      "color": "#bbb3ce"
+    },
+    {
+      "key": "logic",
+      "name": "Logic",
+      "color": "#64d5ff"
+    },
+    {
+      "key": "functions",
+      "name": "Functions",
+      "color": "#a3e770"
+    },
+    {
+      "key": "text",
+      "name": "Text",
+      "color": "#acd2c6"
+    },
+    {
+      "key": "comments",
+      "name": "Comments",
+      "color": "#d9d9d9"
+    },
+    {
+      "key": "sl1",
+      "name": "SL1",
+      "color": null
+    },
+    {
+      "key": "unused",
+      "name": "Unused",
+      "color": null
+    },
+    {
+      "key": "control",
+      "name": "Control",
+      "color": "#64B5F6"
+    },
+    {
+      "key": "experimental",
+      "name": "Experimental",
+      "color": null
+    }
+  ]
 }

@@ -1,4 +1,16 @@
 {
   "name": "weblab",
-  "editor_type": "text"
+  "editor_type": "text",
+  "categories": [
+    {
+      "key": "html tags",
+      "name": "HTML Tags",
+      "color": "#fff176"
+    },
+    {
+      "key": "css properties",
+      "name": "CSS Properties",
+      "color": "#d3e965"
+    }
+  ]
 }
