@@ -24,7 +24,7 @@ social:
   <p>View the <a href="https://staging.code.org/files/csjourneys/csjourneys-teacherguide.pdf" target="_blank">Teacher Guide</a> to learn more about the CS Journeys program.</p>
 </div>
 <div class="col-33" style="margin-top:45px">
-  {{ myjourney3 }}
+  {{ csjourneys }}
 </div>
 
 <div style="clear: both; margin-bottom: 35px"></div>

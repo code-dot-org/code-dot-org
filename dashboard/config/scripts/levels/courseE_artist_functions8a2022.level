@@ -43,11 +43,18 @@
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/c159162a239e4da02e8841ba88a8fdde=levelbuilder/37074.png",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:01.276+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions8a_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions8a_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:01.276+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions8a_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions8a_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4,
+    "repeat_loops": 3,
+    "functions": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

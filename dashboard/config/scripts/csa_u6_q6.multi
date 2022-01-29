@@ -2,7 +2,7 @@ name 'CSA U6 q6'
 height 'auto'
 
 wrong ‘squid and whale’
-right ‘squid and octopus’
+right ‘whale and octopus’
 wrong ‘octopus and turtle’
 wrong ‘whale and turtle’
 wrong 'shark and octopus'

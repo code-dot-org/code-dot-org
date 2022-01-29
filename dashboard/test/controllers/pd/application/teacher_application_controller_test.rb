@@ -33,7 +33,9 @@ module Pd::Application
     end
 
     test 'teachers with an incomplete application have an application id and saved form data' do
-      application = create :pd_teacher_application, :incomplete
+      application = create :pd_teacher_application, form_data_hash: (
+        build :pd_teacher_application_hash, :incomplete
+      )
       sign_in application.user
       get :new
       assert_response :success
