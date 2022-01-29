@@ -254,7 +254,7 @@
             },
             {
               "value": "2",
-              "text": "2 year"
+              "text": "1 year"
             },
             {
               "value": "3",
@@ -458,7 +458,12 @@
             }
           ],
           "noneText": "Not sure"
-        },
+        }
+      ]
+    },
+    {
+      "name": "school_cs_resources",
+      "elements": [
         {
           "type": "html",
           "name": "section_cs_resources",
@@ -766,7 +771,7 @@
           "rows": [
             {
               "value": "help",
-              "text": "When I need help around administering computer science courses, I have someone to turn to"
+              "text": "When I need help administering computer science courses, I have someone to turn to"
             },
             {
               "value": "role_model",
@@ -789,7 +794,7 @@
         {
           "type": "matrix",
           "name": "cs_community_important",
-          "title": "How much to you agree or disagree with the following statements about the leaders and community members around you? (Check one in each row.) \n",
+          "title": "How much to you agree or disagree with the following statements about the leaders and community members in your area? (Check one in each row.) \n",
           "columns": [
             {
               "value": "0",
@@ -835,11 +840,11 @@
             },
             {
               "value": "comm_leaders_important",
-              "text": "Community leaders (political leaders, clergy, other) here think offering computer science courses is important"
+              "text": "Community leaders (political leaders, clergy, other) in my area think offering computer science courses is important"
             },
             {
               "value": "other_stakeholders_important",
-              "text": "Other local stakeholders (businesses, higher education, other) here think offering computer science courses is important"
+              "text": "Other local stakeholders (businesses, higher education, other) in my area think offering computer science courses is important"
             },
             {
               "value": "student_cs_demand",
@@ -1078,7 +1083,7 @@
             },
             {
               "value": "pbl_activities",
-              "text": "Engage the class in project-based learning (PBL) activities"
+              "text": "Engage the class in project-based learning activities"
             },
             {
               "value": "independent_work",
@@ -1151,7 +1156,7 @@
             },
             {
               "value": "student_choice",
-              "text": "Students should have choice in designing computer science curriculum and learning activities"
+              "text": "Students should have choices in designing computer science learning activities"
             },
             {
               "value": "connect_knowledge",
@@ -1319,10 +1324,6 @@
             {
               "value": "dev_literacy",
               "text": "Develop students’ literacy skills"
-            },
-            {
-              "value": "communicate_thots",
-              "text": "Students communicate their thought processes to others"
             },
             {
               "value": "digital_citizen",
@@ -1510,7 +1511,7 @@
           "type": "text",
           "name": "cs_background_ed",
           "visibleIf": "{highest_level_cs_education} contains 3 or {highest_level_cs_education} contains 5",
-          "title": "Please list the computer science certifications or endorsements you have and/or are working toward:"
+          "title": "Please list the computer science certificates or endorsements you have and/or are working toward:"
         },
         {
           "type": "radiogroup",

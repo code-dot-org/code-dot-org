@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-01-06T19:46:34.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -62,13 +66,10 @@
     "hide_pause_button": "false",
     "encrypted_examples": "+kDFw5Sg27v9/3CGwXKr61adxum/MOjj9+j22fLUfygNdm6PdchlA2AJ84oT\nOREo6GH23jpaaSpuo6PjGy6pE1J0gKb4AN8OBLMLD+e+eoGq9Yp5ix7AujkU\ngDn2/Vd4wmgBuLoYr7FBtljmRDRj5A==\n",
     "instructions_icon": "crab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-01-06T19:46:34.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:34.121+00:00\",\"changed\":[\"cloned from \\\"Fish Tank 4-validated_2021\\\"\"],\"cloned_from\":\"Fish Tank 4-validated_2021\"},{\"changed_at\":\"2022-01-19 17:43:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-20 19:39:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {

@@ -48,11 +48,16 @@
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
     "enable_download_image": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:55.137+00:00\",\"changed\":[\"cloned from \\\"courseD_artist_project4a_2021\\\"\"],\"cloned_from\":\"courseD_artist_project4a_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:55.137+00:00\",\"changed\":[\"cloned from \\\"courseD_artist_project4a_2021\\\"\"],\"cloned_from\":\"courseD_artist_project4a_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

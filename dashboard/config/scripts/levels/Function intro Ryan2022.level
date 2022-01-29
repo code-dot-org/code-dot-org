@@ -119,11 +119,16 @@
     "is_aquatic_level": "false",
     "boat": "false",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:50.369+00:00\",\"changed\":[\"cloned from \\\"Function intro Ryan_2021\\\"\"],\"cloned_from\":\"Function intro Ryan_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:50.369+00:00\",\"changed\":[\"cloned from \\\"Function intro Ryan_2021\\\"\"],\"cloned_from\":\"Function intro Ryan_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
