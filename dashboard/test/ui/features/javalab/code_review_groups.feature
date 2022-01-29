@@ -24,4 +24,10 @@ Feature: Code Review Groups
     Then I navigate to teacher dashboard for the section I saved
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
     And I click selector "#uitest-code-review-groups-button" once I see it
+    # Sometimes this click isn't happening, waiting seems to make it more consistent
+    And I wait for 2 seconds
+    And I click selector "#uitest-create-code-review-group" once I see it
+    # This isn't erroring (it did error before when it couldn't find the elements), but isn't dragging the elements either
+    And I drag "div[data-rbd-drag-handle-draggable-id]:first-child" to "div[data-rbd-droppable-id]:nth-child(2)"
+
     And I wait for 10 seconds
