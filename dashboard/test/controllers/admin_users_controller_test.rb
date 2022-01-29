@@ -375,6 +375,64 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_equal 1, PairedUserLevel.pairs(driver_user_level).count
   end
 
+  generate_admin_only_tests_for :user_projects_form
+
+  test 'user_projects finds user by id' do
+    sign_in @admin
+    post :user_projects_form, params: {user_identifier: @not_admin.id.to_s}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_projects finds user by username' do
+    sign_in @admin
+    post :user_projects_form, params: {user_identifier: @not_admin.username}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_projects finds user by email' do
+    sign_in @admin
+    post :user_projects_form, params: {user_identifier: @not_admin.email}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_projects shows error for non-existent user' do
+    sign_in @admin
+    post :user_projects_form, params: {user_identifier: "bogus_name"}
+    assert_select '.alert-danger', 'User not found'
+  end
+
+  test 'user_projects returns projects' do
+    ProjectsList.stubs(:fetch_personal_projects_for_admin).returns(
+      [
+        {
+          "channel" => "CcBZUYYB_u4BP3kXOpfWow",
+          "name" => "My artist project",
+          "studentName" => nil,
+          "thumbnailUrl" => "/v3/files/CcBZUYYB_u4BP3kXOpfWow/.metadata/thumbnail.png",
+          "type" => "artist",
+          "updatedAt" => "2022-01-14T15:06:14.990-08:00",
+          "publishedAt" => nil,
+          "libraryName" => nil,
+          "libraryDescription" => nil,
+          "libraryPublishedAt" => nil,
+          "sharedWith" => []
+        }
+      ]
+    )
+
+    sign_in @admin
+    post :user_projects_form, params: {user_identifier: @not_admin.id.to_s}
+
+    # page has 3 tables:
+    # table 1 - user information (1 row)
+    # table 2 - Projects (1 row)
+    # table 3 - Deleted projects (1 rows)
+    assert_select "table", 3
+    assert_select "table:nth-of-type(1) tbody tr", 1
+    assert_select "table:nth-of-type(2) tbody tr", 1
+    assert_select "table:nth-of-type(3) tbody tr", 1
+  end
+
   generate_admin_only_tests_for :permissions_form
 
   test 'find user for non-existent email displays no user error' do

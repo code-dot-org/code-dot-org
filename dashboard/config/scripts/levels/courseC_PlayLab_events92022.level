@@ -51,11 +51,16 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 21280,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:18.704+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events9_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:18.704+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events9_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

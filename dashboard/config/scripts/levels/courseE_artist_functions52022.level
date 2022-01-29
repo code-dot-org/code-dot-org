@@ -41,11 +41,18 @@
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/aac2dae95cf01b265f8d45310f9c25bb=levelbuilder/37068.png",
     "parent_level_id": 21569,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:00.930+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions5_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:00.930+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions5_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4,
+    "repeat_loops": 3,
+    "functions": 4
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>
