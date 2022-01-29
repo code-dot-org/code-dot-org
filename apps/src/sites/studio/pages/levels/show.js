@@ -5,10 +5,12 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import sectionData, {
-  setTtsAutoplayEnabled,
   setCodeReviewEnabled
 } from '@cdo/apps/redux/sectionDataRedux';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
+import instructions, {
+  setTtsAutoplayEnabledForLevel
+} from '@cdo/apps/redux/instructions';
 
 $(document).ready(initPage);
 
@@ -16,11 +18,11 @@ function initPage() {
   const script = document.querySelector('script[data-level]');
   const config = JSON.parse(script.dataset.level);
 
+  registerReducers({sectionData, instructions});
   // this is the common js entry point for level pages
   // which is why ttsAutoplay is set here
-  registerReducers({sectionData});
   const ttsAutoplayEnabled = config.tts_autoplay_enabled;
-  getStore().dispatch(setTtsAutoplayEnabled(ttsAutoplayEnabled));
+  getStore().dispatch(setTtsAutoplayEnabledForLevel(ttsAutoplayEnabled));
   const codeReviewEnabled = config.code_review_enabled;
   getStore().dispatch(setCodeReviewEnabled(codeReviewEnabled));
 
