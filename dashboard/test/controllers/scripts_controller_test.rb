@@ -1534,16 +1534,26 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  no_access_msg = "You don&#39;t have access to this unit."
+
+  test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view vocab page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view resources page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view standards page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view code page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
   test "view all instructions page for migrated unit" do
