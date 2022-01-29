@@ -187,7 +187,7 @@ class ScriptLevel < ApplicationRecord
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
-      if end_of_lesson? && script.show_unit_overview_between_lessons?(user)
+      if end_of_lesson? && script.show_unit_overview_between_lessons?
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
         else

@@ -2,9 +2,10 @@
   "script": {
     "name": "csa6-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 13:50:37 UTC",
+    "serialized_at": "2022-01-28 19:41:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1697,7 +1698,7 @@
       "key": "4af7c4f5-b17a-4a03-8784-45a90a17e5e1",
       "position": 11,
       "properties": {
-        "description": "`ArrayList`s allow software engineers to solve more complex problems with our programs because they adapt based on their needs.\n\nFor example, when we need to work with a lot of data, we usually don't want to enter the data into the program every time we run it. We also want our programs to work with different sets of data without needing to change our code every time. What if we could use text files that contain the data we want to use in our programs?",
+        "description": "Autoboxing also occurs when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class.\n\n`ArrayList`s allow software engineers to solve more complex problems with our programs because they adapt based on their needs. For example, when we need to work with a lot of data, we usually don't want to enter the data into the program every time we run it. We also want our programs to work with different sets of data without needing to change our code every time. What if we could use text files that contain the data we want to use in our programs?",
         "remarks": true
       },
       "seeding_key": {
@@ -1986,6 +1987,18 @@
       },
       "seeding_key": {
         "activity_section.key": "70aa5fb3-bf21-47be-830f-cf5128d03de9",
+        "lesson_activity.key": "dbef214d-3ce3-4fbe-a19a-7da496c04a7d"
+      }
+    },
+    {
+      "key": "7e75b355-1981-4fef-8501-5e911c7a0897",
+      "position": 13,
+      "properties": {
+        "description": "Unboxing also occurs when a wrapper class object is passed as a parameter to a method that expects a value of the corresponding primitive type.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7e75b355-1981-4fef-8501-5e911c7a0897",
         "lesson_activity.key": "dbef214d-3ce3-4fbe-a19a-7da496c04a7d"
       }
     },
@@ -2539,7 +2552,7 @@
       "key": "7d15e331-ec26-4499-96c8-07eeaa992439",
       "position": 11,
       "properties": {
-        "description": "Using this `substring()` method, we can find individual words to determine their parts of speech.",
+        "description": "Using this `substring()` method, we can find individual words to determine their parts of speech. Since `String` objects are immutable, this `substring()` method and other `String` class methods do not change the `String` object itself.",
         "remarks": true
       },
       "seeding_key": {
@@ -6168,6 +6181,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa6-pilot-facilitator/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa6-pilot-facilitator/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa6-pilot-facilitator/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
+    {
       "name": "Dr. Seuss Book Written by A.I.",
       "url": "https://youtu.be/DckBBDU6V4k",
       "key": "dr_seuss_book_written_by_a_i_",
@@ -6807,7 +6853,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 
