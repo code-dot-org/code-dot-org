@@ -31,7 +31,6 @@ export const sectionDataPropType = PropTypes.shape({
  * Action type constants
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
-export const SET_TTS_AUTOPLAY_ENABLED = 'sectionData/SET_TTS_AUTOPLAY_ENABLED';
 export const SET_CODE_REVIEW_ENABLED = 'sectionData/SET_CODE_REVIEW_ENABLED';
 export const SET_CODE_REVIEW_EXPIRES_AT =
   'sectionData/SET_CODE_REVIEW_EXPIRES_AT';
@@ -59,11 +58,6 @@ export const setSection = section => {
   };
   return {type: SET_SECTION, section: filteredSectionData};
 };
-
-export const setTtsAutoplayEnabled = ttsAutoplayEnabled => ({
-  type: SET_TTS_AUTOPLAY_ENABLED,
-  ttsAutoplayEnabled
-});
 
 export const setCodeReviewEnabled = codeReviewEnabled => ({
   type: SET_CODE_REVIEW_ENABLED,
@@ -93,16 +87,6 @@ export default function sectionData(state = initialState, action) {
     return {
       ...initialState,
       section: action.section
-    };
-  }
-
-  if (action.type === SET_TTS_AUTOPLAY_ENABLED) {
-    return {
-      ...state,
-      section: {
-        ...state.section,
-        ttsAutoplayEnabled: action.ttsAutoplayEnabled
-      }
     };
   }
 
