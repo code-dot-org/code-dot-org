@@ -1,4 +1,6 @@
 {
   "key": "csd-post-survey",
-  "display_name": "csd-post-survey"
+  "display_name": "csd-post-survey",
+  "category": "other",
+  "is_featured": false
 }

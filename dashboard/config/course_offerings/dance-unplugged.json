@@ -1,4 +1,6 @@
 {
   "key": "dance-unplugged",
-  "display_name": "dance-unplugged"
+  "display_name": "dance-unplugged",
+  "category": "other",
+  "is_featured": false
 }

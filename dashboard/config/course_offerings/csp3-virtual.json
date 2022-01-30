@@ -1,4 +1,6 @@
 {
   "key": "csp3-virtual",
-  "display_name": "csp3-virtual"
+  "display_name": "csp3-virtual",
+  "category": "other",
+  "is_featured": false
 }

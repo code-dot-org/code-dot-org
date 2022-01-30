@@ -80,7 +80,9 @@ class CourseOffering < ApplicationRecord
   def serialize
     {
       key: key,
-      display_name: display_name
+      display_name: display_name,
+      category: category,
+      is_featured: is_featured
     }
   end
 
@@ -88,11 +90,7 @@ class CourseOffering < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     file_path = Rails.root.join("config/course_offerings/#{key}.json")
     object_to_serialize = serialize
-    dirname = File.dirname(file_path)
-    unless File.directory?(dirname)
-      FileUtils.mkdir_p(dirname)
-    end
-    File.write(file_path, JSON.pretty_generate(object_to_serialize))
+    File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
   def self.seed_all(glob="config/course_offerings/*.json")
@@ -108,6 +106,9 @@ class CourseOffering < ApplicationRecord
     config.symbolize_keys
   end
 
+  # Returns the course offering key to help in removing records
+  # that are no longer in use during the seeding process. See
+  # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])

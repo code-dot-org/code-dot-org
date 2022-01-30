@@ -884,10 +884,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit.name}.script", "#{Rails.root}/config/scripts_json/#{unit.name}.script_json", "#{Rails.root}/config/course_offerings/fake-family-z.json"]
-    File.stubs(:write).with do |filename, _|
-      filenames_to_stub.include?(filename)
-    end
+    stub_file_writes(unit.name, family_name: 'fake-family-z')
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -1615,10 +1612,10 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, params: {id: @migrated_unit.name}
   end
 
-  def stub_file_writes(unit_name)
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json"]
+  def stub_file_writes(unit_name, family_name: nil)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
     File.stubs(:write).with do |filename, _|
-      filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
+      filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts.en.yml')
     end
   end
 end

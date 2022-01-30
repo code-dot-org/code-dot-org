@@ -1,4 +1,6 @@
 {
   "key": "hello-world-animals",
-  "display_name": "hello-world-animals"
+  "display_name": "hello-world-animals",
+  "category": "other",
+  "is_featured": false
 }

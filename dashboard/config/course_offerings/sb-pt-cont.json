@@ -1,4 +1,6 @@
 {
   "key": "sb-pt-cont",
-  "display_name": "sb-pt-cont"
+  "display_name": "sb-pt-cont",
+  "category": "other",
+  "is_featured": false
 }
