@@ -63,6 +63,7 @@ class XhrProxyController < ApplicationController
     api.zippopotam.us
     bible-api.com
     code.org
+    codeorg-api.com
     covidtracking.com
     cryptonator.com
     data.austintexas.gov
@@ -113,6 +114,7 @@ class XhrProxyController < ApplicationController
     wikipedia.org
     worldclockapi.com
     worldtimeapi.org
+    xeno-canto.org
   ).freeze
 
   # How long the content is allowed to be cached

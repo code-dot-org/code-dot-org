@@ -31,7 +31,6 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import testJavabuilderWebsocketConnection from '@cdo/apps/util/testJavabuilderWebsocketConnection';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -45,8 +44,7 @@ const {
   hasSeenStandardsReportInfo,
   localeCode,
   textToSpeechUnitIds,
-  lessonExtrasUnitIds,
-  isJavabuilderConnectionTestEnabled
+  lessonExtrasUnitIds
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -108,8 +106,6 @@ $(document).ready(function() {
         />
       </Router>
     </Provider>,
-    document.getElementById('teacher-dashboard'),
-    () =>
-      isJavabuilderConnectionTestEnabled && testJavabuilderWebsocketConnection()
+    document.getElementById('teacher-dashboard')
   );
 });

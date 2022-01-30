@@ -2096,6 +2096,14 @@ class User < ApplicationRecord
     TERMS_OF_SERVICE_VERSIONS.last
   end
 
+  # Updates user's most recently accepted Terms of Service version to the latest version
+  def update_user_tos_version_accept
+    terms_of_service_version = latest_terms_version
+    self.terms_of_service_version = terms_of_service_version
+
+    save!
+  end
+
   # Ideally this would just be called school, but school is already a column
   # on the user table representing the school name
   def school_info_school

@@ -204,11 +204,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_group.course_version.course_offering.id,
         display_name: @unit_group.course_version.course_offering.display_name,
+        category: @unit_group.category,
+        is_featured: @unit_group.is_featured?,
         course_versions: [
           {
             id: @unit_group.course_version.id,
-            display_name: @unit_group.course_version.display_name,
             version_year: @unit_group.course_version.version_year,
+            display_name: @unit_group.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -219,11 +221,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
+        category: @unit_teacher_to_students.category,
+        is_featured: @unit_teacher_to_students.is_featured?,
         course_versions: [
           {
             id: @unit_teacher_to_students.course_version.id,
-            display_name: @unit_teacher_to_students.course_version.display_name,
             version_year: @unit_teacher_to_students.course_version.version_year,
+            display_name: @unit_teacher_to_students.course_version.display_name,
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
@@ -231,8 +235,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
           },
           {
             id: @unit_teacher_to_students2.course_version.id,
-            display_name: @unit_teacher_to_students2.course_version.display_name,
             version_year: @unit_teacher_to_students2.course_version.version_year,
+            display_name: @unit_teacher_to_students2.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -250,11 +254,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
+        category: @unit_facilitator_to_teacher.category,
+        is_featured: @unit_facilitator_to_teacher.is_featured?,
         course_versions: [
           {
             id: @unit_facilitator_to_teacher.course_version.id,
-            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
+            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -272,11 +278,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_group.course_version.course_offering.id,
         display_name: @unit_group.course_version.course_offering.display_name,
+        category: @unit_group.category,
+        is_featured: @unit_group.is_featured?,
         course_versions: [
           {
             id: @unit_group.course_version.id,
-            display_name: @unit_group.course_version.display_name,
             version_year: @unit_group.course_version.version_year,
+            display_name: @unit_group.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -287,11 +295,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
+        category: @unit_teacher_to_students.category,
+        is_featured: @unit_teacher_to_students.is_featured?,
         course_versions: [
           {
             id: @unit_teacher_to_students.course_version.id,
-            display_name: @unit_teacher_to_students.course_version.display_name,
             version_year: @unit_teacher_to_students.course_version.version_year,
+            display_name: @unit_teacher_to_students.course_version.display_name,
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
@@ -299,8 +309,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
           },
           {
             id: @unit_teacher_to_students2.course_version.id,
-            display_name: @unit_teacher_to_students2.course_version.display_name,
             version_year: @unit_teacher_to_students2.course_version.version_year,
+            display_name: @unit_teacher_to_students2.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -311,11 +321,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
+        category: @unit_facilitator_to_teacher.category,
+        is_featured: @unit_facilitator_to_teacher.is_featured?,
         course_versions: [
           {
             id: @unit_facilitator_to_teacher.course_version.id,
-            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
+            display_name: @unit_facilitator_to_teacher.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
@@ -326,6 +338,20 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ]
 
     assert_equal CourseOffering.assignable_course_offerings_info(@facilitator), expected_course_offering_info
+  end
+
+  test "can serialize and seed course offerings" do
+    course_offering = create :course_offering, key: 'course-offering-1'
+    serialization = course_offering.serialize
+    previous_course_offering = course_offering.freeze
+    course_offering.destroy!
+
+    File.stubs(:read).returns(serialization.to_json)
+
+    new_course_offering_key = CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
+    new_course_offering = CourseOffering.find_by(key: new_course_offering_key)
+    assert_equal previous_course_offering.attributes.except('id', 'created_at', 'updated_at'),
+      new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
 
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)

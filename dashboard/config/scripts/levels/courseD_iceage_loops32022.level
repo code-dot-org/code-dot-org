@@ -40,11 +40,16 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "tts_long_instructions_override": "Can you get to the acorn with just one move forward block? Try using a loop!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:25.748+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops3_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops3_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:25.748+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops3_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops3_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
