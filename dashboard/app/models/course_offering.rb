@@ -118,7 +118,7 @@ class CourseOffering < ApplicationRecord
       id: id,
       display_name: display_name,
       category: category,
-      is_featured: is_featued?,
+      is_featured: is_featured?,
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
     }
   end
