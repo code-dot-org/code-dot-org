@@ -591,6 +591,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute teacher.permission? UserPermission::AUTHORIZED_TEACHER
   end
 
+  test 'Enrolling student user in CSD course does not make them authorized teacher' do
+    student = create :student
+    assert_empty student.permissions
+
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    create :pd_enrollment, workshop: workshop, user: student
+
+    refute student.permission? UserPermission::AUTHORIZED_TEACHER
+  end
+
   test 'Updating existing enrollment sets permission' do
     workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
     enrollment = create :pd_enrollment, workshop: workshop, user: nil
