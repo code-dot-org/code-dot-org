@@ -1,6 +1,6 @@
 {
   "key": "sports",
-  "display_name": "sports",
-  "category": "other",
+  "display_name": "Code your own sports game",
+  "category": "hoc",
   "is_featured": false
 }
