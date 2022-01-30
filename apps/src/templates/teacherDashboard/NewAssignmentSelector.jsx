@@ -7,6 +7,8 @@ import {
   sectionShape
 } from './shapes';
 import NewAssignmentVersionSelector from './NewAssignmentVersionSelector';
+import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import _ from 'lodash';
 
 const noUnitAssignment = {id: 0, name: ''};
 const noCourseVersionAssignment = {id: 0, display_name: '', units: []};
@@ -42,6 +44,9 @@ export default function NewAssignmentSelector(props) {
   // If the user is setting up a new section and selects a course version with units as the
   // primary assignment, default the secondary assignment to the first
   // unit in the course.
+
+  const courseOfferingsByCategories = _.groupBy(courseOfferings, 'category');
+  console.log(courseOfferingsByCategories);
 
   const updateSelectedUnit = unitId => {
     let newUnit = selectedCourseVersion.units.find(
@@ -113,9 +118,9 @@ export default function NewAssignmentSelector(props) {
           disabled={disabled}
         >
           <option key={0} value={0} />
-          {props.courseOfferingsByCategories.map(category => (
-            <optgroup key={category.name} label={category.name}>
-              {category.courseOfferings.map(courseOffering => (
+          {CourseOfferingCategories.values.map(category => (
+            <optgroup key={category} label={category}>
+              {courseOfferingsByCategories[category].map(courseOffering => (
                 <option key={courseOffering.id} value={courseOffering.id}>
                   {courseOffering.display_name}
                 </option>
@@ -164,8 +169,7 @@ NewAssignmentSelector.propTypes = {
   dropdownStyle: PropTypes.object,
   disabled: PropTypes.bool,
   section: sectionShape,
-  onChange: PropTypes.func,
-  courseOfferingsByCategories: PropTypes.object
+  onChange: PropTypes.func
 };
 
 const styles = {
