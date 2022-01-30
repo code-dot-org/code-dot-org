@@ -10,7 +10,8 @@ const styles = {
 const courseOfferings = [
   {
     id: 1,
-    display_name: 'coursea',
+    display_name: 'Course A',
+    category: 'csf',
     course_versions: [
       {
         id: 84,
