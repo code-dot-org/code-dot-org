@@ -24,7 +24,7 @@ social:
   <p>View the <a href="https://staging.code.org/files/csjourneys/csjourneys-teacherguide.pdf" target="_blank">Teacher Guide</a> to learn more about the CS Journeys program.</p>
 </div>
 <div class="col-33" style="margin-top:45px">
-  {{ myjourney3 }}
+  {{ csjourneys }}
 </div>
 
 <div style="clear: both; margin-bottom: 35px"></div>
@@ -34,26 +34,26 @@ social:
 
 <div class="col-50" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="csadventures" href="/csjourneys/csadventures" target="_blank">
+      <a class="linktag" id="csadventures" href="/csjourneys/csadventures#trips" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="NASA Chandra X-Ray Observatory">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Virtual field trips</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for virtual field trips with NASA, Amazon and others! Students get a firsthand look at different ways that CS and tech are used in the real world.</div>
-        <a class="linktag" id="csadventures" href="/csjourneys/csadventures" target="_blank"><button>Learn more</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for virtual field trips with NASA, Amazon and Monterey Bay Aquarium! Students get a firsthand look at different ways that CS and tech are used in the real world.</div>
+        <a class="linktag" id="csadventures" href="/csjourneys/csadventures#trips" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
 </div>
 
 <div class="col-50" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-        <a class="linktag" id="myjourneychats" href="/csjourneys/myjourneychats" target="_blank">
-          <img class="tutorial-tile-img" src="/images/csjourneys/myjourneychats2.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="My Journey Chats: Weekly Classroom Speakers">
+        <a class="linktag" id="myjourneychats" href="/csjourneys/csadventures#chats" target="_blank">
+          <img class="tutorial-tile-img" src="/images/csjourneys/myjourneychats3.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="My Journey Chats: Weekly Classroom Speakers">
         </a>
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Career chats with professionals</strong></h3>
-        <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Join us for live weekly chats with computing professionals from Spotify, Oculus, Snapchat, and more!</div>
-        <a class="linktag" id="myjourneychats" href="/csjourneys/myjourneychats" target="_blank"><button>Learn more</button></a>
+        <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Join us for live weekly chats with a diverse group of computing professionals from Spotify, Oculus, MeowWolf, Snapchat, and more!</div>
+        <a class="linktag" id="myjourneychats" href="/csjourneys/csadventures#chats" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
 </div>
@@ -67,35 +67,37 @@ social:
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>View career exploration and inspiration resources</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">View our career exploration hub for videos, interactive tools, and other resources that students can use to explore different CS pathways.</div>
         <br>
+        <br>
         <div class="smalltext" style="color: dimgray; text-align: left"><a class="linktag" id="career-k5" href="/careers-with-cs/k5" target="_blank">For grades K-5</a> | <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank">For grades 6-12</a></div>
     </div>
-</div>
+  </div>
 </div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-    <a class="linktag" id="wit-rtc" href="https://rewritingthecode.org/code/" target="_blank">
-      <img class="tutorial-tile-img" src="/images/csjourneys/rtc-panels.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monthly panels with Rewriting the Code">
+    <a class="linktag" id="wit-rtc" href="/csjourneys/cs-in-college" target="_blank">
+      <img class="tutorial-tile-img" src="/images/csjourneys/rtc-panels3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monthly panels with Rewriting the Code">
     </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>What's it like to take CS in college?</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey.</div>
-        <a class="linktag" id="wit-rtc" href="https://rewritingthecode.org/code/" target="_blank"><button>Learn more</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Monthly discussions for young women, by young women</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Let your high schoolers know about this awesome opportunity to get the inside scoop from college women pursuing computer science.</div>
+        <a class="linktag" id="wit-rtc" href="/csjourneys/cs-in-college" target="_blank"><button>Learn more</button></a>
     </div>
-</div>
+  </div>
 </div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-        <a class="linktag" id="beyond-resources" href="/beyond" target="_blank">
-          <img class="tutorial-tile-img" src="/images/csjourneys/go-beyond.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Resources to empower students to take the next step">
-        </a>
+    <a class="linktag" id="beyond-resources" href="/beyond" target="_blank">
+      <img class="tutorial-tile-img" src="/images/csjourneys/go-beyond.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Resources to empower students to take the next step">
+    </a>
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Resources to empower students to take the next step</strong></h3>
         <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Point students to opportunities like mentorships, scholarships, and extracurricular opportunities.</div>
+        <br>
         <a class="linktag" id="beyond-resources" href="/beyond" target="_blank"><button>Learn more</button></a>
+    </div>
   </div>
-</div>
 </div>
 
 <div style="clear: both"></div>

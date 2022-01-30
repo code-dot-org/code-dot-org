@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-01-06T19:46:34.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -61,15 +65,12 @@
     "hide_pause_button": "false",
     "encrypted_examples": "wvsXLdD6UxmbAXeloQNLYBoWr06DOLsxEfInnv2p1KG+16GMjA0CT/AYYvcN\nI1tWjh/f1PqO7cF4/XouhEH/5bzfvGKyv+Vo/oarHhA4J7BUuFbZ3lCSCAAK\nDNZ/wm3D2UbCxVdkjKVvZnfIDUnshA==\n",
     "instructions_icon": "crab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-01-06T19:46:34.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:34.547+00:00\",\"changed\":[\"cloned from \\\"Fish Tank 5-validated_2021\\\"\"],\"cloned_from\":\"Fish Tank 5-validated_2021\"},{\"changed_at\":\"2022-01-19 17:42:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:34.547+00:00\",\"changed\":[\"cloned from \\\"Fish Tank 5-validated_2021\\\"\"],\"cloned_from\":\"Fish Tank 5-validated_2021\"},{\"changed_at\":\"2022-01-19 17:42:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-20 19:39:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1
   }
@@ -160,11 +161,11 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="spinning_right">spinning right</title>
+            <title name="VAR" id="spinning right">spinning right</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="swimming_left_and_right">swimming left and right</title>
+            <title name="VAR" id="swimming left and right">swimming left and right</title>
           </block>
         </category>
       </xml>

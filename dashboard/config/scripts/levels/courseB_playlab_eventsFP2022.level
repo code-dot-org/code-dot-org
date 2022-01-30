@@ -61,11 +61,16 @@
     "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.",
     "default_num_example_blocks": "false",
     "long_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:09.923+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_eventsFP_2021\\\"\"],\"cloned_from\":\"courseB_playlab_eventsFP_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:09.923+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_eventsFP_2021\\\"\"],\"cloned_from\":\"courseB_playlab_eventsFP_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

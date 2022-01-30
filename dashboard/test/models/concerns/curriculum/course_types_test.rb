@@ -226,22 +226,6 @@ class CourseTypesTests < ActiveSupport::TestCase
     refute @course_plc_reviewer_to_facilitator.can_be_participant?(nil)
   end
 
-  test 'get_course_family_name should get family name from UnitGroup if called for Unit in UnitGroup' do
-    assert_equal @unit_in_course_2.get_course_family_name, 'teacher-unit-groups'
-  end
-
-  test 'get_course_family_name should get family name from Unit if called for Unit that is not in UnitGroup' do
-    assert_equal @unit_group_2.get_course_family_name, 'teacher-unit-groups'
-  end
-
-  test 'get_course_family_name should get family name from UnitGroup if called for UnitGroup' do
-    assert_equal @unit_teacher_to_students_2.get_course_family_name, 'teacher-units'
-  end
-
-  test 'get_family_courses should get all UnitGroups with the same family name if called for Unit in UnitGroup' do
-    assert_equal @unit_in_course_2.get_family_courses.map(&:name), ['course-instructed-by-teacher', 'course-instructed-by-teacher-2', 'course-teacher-to-student']
-  end
-
   test 'get_family_courses should get all UnitGroups with the same family name if called for UnitGroup' do
     assert_equal @unit_group_2.get_family_courses.map(&:name), ['course-instructed-by-teacher', 'course-instructed-by-teacher-2', 'course-teacher-to-student']
   end
@@ -287,6 +271,15 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert_nothing_raised do
       solo_unit_in_family_name.participant_audience = SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       solo_unit_in_family_name.save!
+    end
+  end
+
+  # A unit without a family is in a unit group
+  test 'should not raise error when changing unit wihtout family' do
+    unit_without_family_name = create :script, name: 'solo-family-name', family_name: nil
+    assert_nothing_raised do
+      unit_without_family_name.participant_audience = SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      unit_without_family_name.save!
     end
   end
 end

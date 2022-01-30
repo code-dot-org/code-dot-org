@@ -10,10 +10,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 21218,
-    "name_suffix": "2022"
+    "name_suffix": "2022",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:35.954+00:00\",\"changed\":[\"cloned from \\\"harvester_skinOverview_video_2021\\\"\"],\"cloned_from\":\"harvester_skinOverview_video_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:35.954+00:00\",\"changed\":[\"cloned from \\\"harvester_skinOverview_video_2021\\\"\"],\"cloned_from\":\"harvester_skinOverview_video_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>
