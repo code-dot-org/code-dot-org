@@ -18,6 +18,8 @@
 class CourseOffering < ApplicationRecord
   has_many :course_versions
 
+  validates :category, acceptance: {accept: SharedCourseConstants::COURSE_OFFERING_CATEGORIES.to_h.values, message: 'must be one of the course offering categories'}
+
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key,
