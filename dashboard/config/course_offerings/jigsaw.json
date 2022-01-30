@@ -1,4 +1,6 @@
 {
   "key": "jigsaw",
-  "display_name": "jigsaw"
+  "display_name": "jigsaw",
+  "category": "other",
+  "is_featured": false
 }

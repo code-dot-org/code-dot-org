@@ -1,4 +1,6 @@
 {
   "key": "csp",
-  "display_name": "csp"
+  "display_name": "csp",
+  "category": "other",
+  "is_featured": false
 }

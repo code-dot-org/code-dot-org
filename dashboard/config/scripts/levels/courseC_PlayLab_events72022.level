@@ -55,11 +55,17 @@
     "remove_items_when_actor_collides": "false",
     "parent_level_id": 21278,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:18.286+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events7_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events7_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:18.286+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events7_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events7_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

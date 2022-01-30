@@ -1,4 +1,6 @@
 {
   "key": "hoc-encryption",
-  "display_name": "hoc-encryption"
+  "display_name": "hoc-encryption",
+  "category": "other",
+  "is_featured": false
 }

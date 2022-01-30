@@ -1,4 +1,6 @@
 {
   "key": "sports",
-  "display_name": "sports"
+  "display_name": "sports",
+  "category": "other",
+  "is_featured": false
 }

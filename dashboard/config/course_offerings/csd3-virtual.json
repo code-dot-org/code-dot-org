@@ -1,4 +1,6 @@
 {
   "key": "csd3-virtual",
-  "display_name": "csd3-virtual"
+  "display_name": "csd3-virtual",
+  "category": "other",
+  "is_featured": false
 }

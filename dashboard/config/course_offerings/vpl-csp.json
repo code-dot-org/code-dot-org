@@ -1,4 +1,6 @@
 {
   "key": "vpl-csp",
-  "display_name": "vpl-csp"
+  "display_name": "vpl-csp",
+  "category": "other",
+  "is_featured": false
 }

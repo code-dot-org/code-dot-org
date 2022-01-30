@@ -1,4 +1,6 @@
 {
   "key": "dance",
-  "display_name": "dance"
+  "display_name": "dance",
+  "category": "other",
+  "is_featured": false
 }

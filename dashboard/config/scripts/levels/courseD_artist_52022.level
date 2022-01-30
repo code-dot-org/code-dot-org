@@ -43,11 +43,16 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/b37b8f5fb32fba217e6c1cb571d57979=levelbuilder/36850.png",
     "show_type_hints": "false",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:36.290+00:00\",\"changed\":[\"cloned from \\\"courseD_artist_5_2021\\\"\"],\"cloned_from\":\"courseD_artist_5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:36.290+00:00\",\"changed\":[\"cloned from \\\"courseD_artist_5_2021\\\"\"],\"cloned_from\":\"courseD_artist_5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -1,4 +1,6 @@
 {
   "key": "algebra",
-  "display_name": "algebra"
+  "display_name": "algebra",
+  "category": "other",
+  "is_featured": false
 }
