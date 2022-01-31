@@ -26610,6 +26610,8 @@ es-MX:
               description_teacher: 'En esta lección, los estudiantes aprenderán sobre accesibilidad y sobre el valor de la empatía mediante la reflexión y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
             'Hello World: Food':
               name: 'Hola Mundo: Alimentos'
+              description_student: En esta lección, aprenderás a crear y animar sprites y a hacerlos interactivos usando eventos.
+              description_teacher: 'En esta lección de **desarrollo de habilidades**, los alumnos aprenderán a crear y animar sprites y hacerlos interactivos usando eventos. '
           lesson_groups:
             csf_sprites:
               display_name: Sprites
