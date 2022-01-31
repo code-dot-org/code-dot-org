@@ -209,25 +209,6 @@ const courseOfferings = [
     is_featured: false,
     course_versions: [
       {
-        id: 144,
-        version_year: '2020',
-        display_name: '2020',
-        is_stable: false,
-        is_recommended: false,
-        locales: ['English'],
-        units: [
-          {id: 1148, name: 'Object Oriented Programming'},
-          {id: 1149, name: 'Giving Objects State'},
-          {id: 1150, name: 'Expanding Program Data'},
-          {id: 1151, name: 'Expanding Program Logic'},
-          {id: 1152, name: 'Giving Objects Organization'},
-          {id: 1153, name: 'Expanding Program Capabilities'},
-          {id: 1154, name: 'Expanding Software Design'},
-          {id: 1155, name: 'Giving Objects Life'},
-          {id: 1156, name: ''}
-        ]
-      },
-      {
         id: 287,
         version_year: '2022',
         display_name: '2022',
@@ -461,26 +442,6 @@ const courseOfferings = [
           {id: 546, name: "Data ('21-'22)"},
           {id: 538, name: "Cybersecurity and Global Impacts ('21-'22)"},
           {id: 12860, name: 'CS Principles Post-Course Survey'}
-        ]
-      },
-      {
-        id: 284,
-        version_year: '2022',
-        display_name: '2022',
-        is_stable: false,
-        is_recommended: false,
-        locales: ['English'],
-        units: [
-          {id: 11668, name: "Digital Information ('21-'22)"},
-          {id: 11680, name: "The Internet ('21-'22)"},
-          {id: 11689, name: "Intro to App Design ('21-'22)"},
-          {id: 11703, name: "Variables, Conditionals, and Functions ('21-'22)"},
-          {id: 11712, name: "Lists, Loops, and Traversals ('21-'22)"},
-          {id: 11720, name: "Algorithms ('21-'22)"},
-          {id: 12925, name: "Parameters, Return, and Libraries ('21-'22)"},
-          {id: 11727, name: "Create PT Prep ('21-'22)"},
-          {id: 11730, name: "Data ('21-'22)"},
-          {id: 11674, name: "Cybersecurity and Global Impacts ('21-'22)"}
         ]
       }
     ]
