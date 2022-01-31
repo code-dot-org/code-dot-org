@@ -2132,7 +2132,16 @@
         "iceage_sound_and_points_dani": "Dokážeš program napsat tak, aby se při setkání Sida s Granny současně **přehrál zvuk** i **připsal bod**? ",
         "iceage_throw_hearts": "Použij příkaz „postava \\_\\_ pošle“, aby Sid (postava 1) poslal srdce Granny (postavě 2), a nastav, aby se nálada Granny změnila na šťastnou, když ji srdce zasáhnou.",
         "iceage_warn_ice_age": "Zvol ledové pozadí scény a nastav pro Sida (postavu 1) vysokou rychlost.",
-        "iceage_warn_ice_age_dani": "Zvol ledové pozadí scény a nastav pro Sida (postavu 1) vysokou rychlost."
+        "iceage_warn_ice_age_dani": "Zvol ledové pozadí scény a nastav pro Sida (postavu 1) vysokou rychlost.",
+        "NetSim Standalone Automatic DNS": "V téhle verzi Simulátoru internetu máš k dispozici službu DNS (Domain Name System) a jsou známy IP adresy všech připojených počítačů. Pošli zprávu ve formátu GET [název_hostitele] do služby DNS na adresu \\<čísloTvéhoRouterur>.15 a dostaneš adresu studenta.",
+        "NetSim Standalone Broadcast": "V téhle verzi Simulátoru internetu můžete propojit až 5 dalších lidí v místnosti. Když pošlete v rámci místnosti zprávu, všichni ji dostanou. Jaké problémy může tenhle systém mít a jak by se daly vyřešit?",
+        "NetSim Standalone Classroom Routers": "V téhle verzi Simulátoru internetu se každý připojí k routeru přes vlastní adresu. Abyste mohli posílat zprávy, je potřeba adresovat je na konkrétní adresu příjemce a router se pak postará o jejich odeslání do správného počítače. Pokud máte ve třídě vytvořené další routery, požádejte některého ze spolužáků o adresu a pošlete mu zprávu. V protokolu se můžete podívat na cestu, kudy zpráva po síti putovala.",
+        "NetSim Standalone Freeplay": "V této konfiguraci je většina možností zapnutá a můžeš si s nimi pohrát. Dobře se bav!",
+        "NetSim Standalone Manual DNS": "V téhle verzi simulátoru nevidíš adresy ostatních studentů. Místo toho musí někdo z vás fungovat jako názvová služba a pomáhat se vzájemným sdílením adres.",
+        "NetSim Standalone Packets TCP": "Zprávy můžou k příjemci po internetu putovat různými cestami a někdy se část zprávy po cestě ztratí. V téhle verzi Simulátoru internetu je 10% pravděpodobnost, že se ztratí paket, více paketů může putovat k příjemci různými cestami a výchozí maximální velikost paketu je nastavená na 6 dalších znaků. ",
+        "NetSim Standalone SendAB": "Se svým partnerem sdílíš jedno drátové připojení, které může být jen ve stavu A, nebo ve stavu B. Drátové připojení můžeš kdykoli nastavit do libovolného stavu a kdykoli můžeš stav drátového připojení přečíst. Dokážeš vymyslet účinnou komunikaci jen pomocí tohoto systému?",
+        "NetSim Standalone Sending Numbers": "S partnerem teď můžete spolehlivě posílat zprávy v obou směrech bez jakékoli složitější koordinace. Protože v obou směrech neustále posíláte bity, můžete tyto bity reprezentovat desetinnými čísly. Jaký druh informací se dá pomocí tohoto systému reprezentovat? ",
+        "NetSim Standalone Sending Numbers Ascii": "Když jste teď přenesli informace reprezentované jako desetinná čísla, můžete tato čísla namapovat na znaky textu, abyste mohli obousměrně posílat textové informace. Pomocí textového protokolu můžete snadno reprezentovat a posílat nejrůznější informace. "
       }
     }
   }
