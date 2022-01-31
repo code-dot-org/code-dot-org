@@ -118,9 +118,9 @@ export default function NewAssignmentSelector(props) {
           disabled={disabled}
         >
           <option key={0} value={0} />
-          {CourseOfferingCategories.values.map(category => (
+          {Object.keys(CourseOfferingCategories).map(category => (
             <optgroup key={category} label={category}>
-              {courseOfferingsByCategories[category].map(courseOffering => (
+              {courseOfferingsByCategories[category]?.map(courseOffering => (
                 <option key={courseOffering.id} value={courseOffering.id}>
                   {courseOffering.display_name}
                 </option>
