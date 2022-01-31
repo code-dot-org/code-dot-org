@@ -42,7 +42,13 @@ class CourseOffering < ApplicationRecord
     if content_root.is_course?
       raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
 
-      offering = CourseOffering.find_or_create_by!(key: content_root.family_name, display_name: content_root.family_name)
+      offering = CourseOffering.find_or_create_by!(key: content_root.family_name) do |co|
+        co.display_name = content_root.family_name if co.display_name.nil_or_empty?
+      end
+
+      if Rails.application.config.levelbuilder_mode
+        offering.write_serialization
+      end
     else
       offering = nil
     end
@@ -60,5 +66,44 @@ class CourseOffering < ApplicationRecord
     Rails.cache.fetch("course_offering/#{key}", force: !should_cache?) do
       CourseOffering.find_by_key(key)
     end
+  end
+
+  def serialize
+    {
+      key: key,
+      display_name: display_name,
+      category: category,
+      is_featured: is_featured
+    }
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    file_path = Rails.root.join("config/course_offerings/#{key}.json")
+    object_to_serialize = serialize
+    File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
+  end
+
+  def self.seed_all(glob="config/course_offerings/*.json")
+    removed_records = all.pluck(:key)
+    Dir.glob(Rails.root.join(glob)).each do |path|
+      removed_records -= [CourseOffering.seed_record(path)]
+    end
+    where(key: removed_records).destroy_all
+  end
+
+  def self.properties_from_file(content)
+    config = JSON.parse(content)
+    config.symbolize_keys
+  end
+
+  # Returns the course offering key to help in removing records
+  # that are no longer in use during the seeding process. See
+  # seed_all
+  def self.seed_record(file_path)
+    properties = properties_from_file(File.read(file_path))
+    course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
+    course_offering.update! properties
+    course_offering.key
   end
 end
