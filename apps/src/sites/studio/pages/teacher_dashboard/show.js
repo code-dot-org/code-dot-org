@@ -31,6 +31,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import {setStudentsForCurrentSection} from '../../../../templates/teacherDashboard/teacherSectionsRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -70,6 +71,7 @@ $(document).ready(function() {
   store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
+  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setValidAssignments(validCourses, validScripts));

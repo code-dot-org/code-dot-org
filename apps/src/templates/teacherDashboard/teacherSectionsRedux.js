@@ -1227,7 +1227,8 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   sectionId: sectionId,
   id: serverStudent.id,
   name: serverStudent.name,
-  sharingDisabled: serverStudent.sharing_disabled
+  sharingDisabled: serverStudent.sharing_disabled,
+  totalLines: serverStudent.total_lines
 });
 
 /**
