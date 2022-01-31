@@ -273,30 +273,22 @@ button.arrow:disabled {
 
 .soft-buttons-1 {
   @supports not (gap: 9px) {
-    display: table-cell;
-    vertical-align: top;
     min-width: 43px;
   }
   
 }
 .soft-buttons-2 {
   @supports not (gap: 9px) {
-    display: table-cell;
-    vertical-align: top;
     min-width: 95px;
   }
 }
 .soft-buttons-3 {
   @supports not (gap: 9px) {
-    display: table-cell;
-    vertical-align: top;
     min-width: 147px;
   }
 }
 .soft-buttons-4 {
   @supports not (gap: 9px) {
-    display: table-cell;
-    vertical-align: top;
     min-width: 199px;
   }
 }
