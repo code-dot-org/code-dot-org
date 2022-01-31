@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-01-30T03:56:38.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -71,14 +67,19 @@
     "short_instructions": "Use the `when clicked` event to make a sprite say something.",
     "instructions_icon": "bear",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Connect a `say` block under a `when click` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"cuteanimals_seahorse\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_spriteSay\\\">\\n        <title name=\\\"SPEECH\\\">Hello, ocean!</title>\\n        <value name=\\\"SPRITE\\\">\\n          <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n            <title name=\\\"ANIMATION\\\">\\\"cuteanimals_seahorse\\\"</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"hello_world_click\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db4684f80de2b03bb311a1aec559cc6a/helloworld_animals_events.mp3\"}]",
-    "video_key": "hello_world_events",
     "skip_autosave": true,
     "encrypted_examples": "tpekT9zvwMMZJcg2FTYi7Oi7hfaJYQj6U4HMeqvA1kNIvwmWi3XrKCfm9Myk\n4YRWg9h0YJERpaqKNnB5wCXLMF1V9Sy1cssNxk8YWeHayTM2yxwdGXFlQ11u\nKFTo5iND8+z8YJuqXsub+YtKH/hvhQ==\n",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-01-30T03:56:38.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-30T03:56:37.995+00:00\",\"changed\":[\"cloned from \\\"helloworld_animals_events\\\"\"],\"cloned_from\":\"helloworld_animals_events\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-30T03:56:37.995+00:00\",\"changed\":[\"cloned from \\\"helloworld_animals_events\\\"\"],\"cloned_from\":\"helloworld_animals_events\"},{\"changed_at\":\"2022-01-31 22:03:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
