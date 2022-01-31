@@ -1,6 +1,6 @@
 {
   "key": "starwarsblocks",
-  "display_name": "starwarsblocks",
-  "category": "other",
+  "display_name": "Star Wars: Building a Galaxy With Code (Blockly)",
+  "category": "hoc",
   "is_featured": false
 }
