@@ -925,6 +925,7 @@ fr:
             The Design Recipe:
               name: La Recette de Conception
         ECSPD-NexTech:
+          logo_image: nextech\_logo.png
           lessons:
             Growth Mindset:
               name: État D'Esprit De Croissance
@@ -954,6 +955,7 @@ fr:
               name: Qu'est-ce que ECS ?
         algebraPD-NexTech:
           title: Informatique en DP d'algèbre
+          logo_image: nextech\_logo.png
           lessons:
             Course Overview:
               name: Aperçu de Cours
@@ -983,6 +985,7 @@ fr:
             Why Computer Science belongs in Algebra:
               name: Pourquoi les sciences informatiques dépendent de l'algèbre
         sciencePD-NexTech:
+          logo_image: nextech\_logo.png
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modélisation Basée sur Agent de Systèmes Adaptatifs Complexes
