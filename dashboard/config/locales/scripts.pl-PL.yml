@@ -30786,14 +30786,62 @@ pl:
                 algorytmu wyszukiwania przy użyciu liczby wykonań.
             lesson-3:
               name: Implementacja wyszukiwania binarnego
+              description_student: Odkrywasz lepszy algorytm wyszukiwania, który może
+                działać wydajniej, jeśli lista jest już posortowana. Śledzisz kod
+                wyszukiwania binarnego, aby ocenić jego efektywność i porównać go
+                z wyszukiwaniem liniowym. Algorytm wyszukiwania binarnego służy do
+                rozwiązywania problemów w różnych scenariuszach.
+              description_teacher: Uczniowie odkrywają lepszy algorytm wyszukiwania,
+                który może działać szybciej, jeśli lista jest już posortowana. Śledzą
+                kod wyszukiwania binarnego, aby ocenić jego efektywność i porównać
+                go z wyszukiwaniem liniowym. Następnie stosują algorytm wyszukiwania
+                binarnego do rozwiązywania problemów w różnych scenariuszach.
             lesson-4:
               name: Implementacja rekurencyjnego wyszukiwania binarnego
+              description_student: Podobnie jak wiele algorytmów, które napisałeś,
+                wyszukiwanie binarne można zaimplementować rekurencyjnie. Na tej lekcji
+                zapoznasz się z rekurencyjną implementacją wyszukiwania binarnego
+                i zastosowaniem go do rozwiązywania różnych problemów.
+              description_teacher: Uczniowie zapoznają się z algorytmem wyszukiwania
+                binarnego i poznają jego implementację rekurencyjną. Następnie stosują
+                rekurencyjny algorytm wyszukiwania binarnego do rozwiązywania problemów,
+                które zawierają różne typy danych, struktury danych i ograniczenia
+                problemowe.
             lesson-5:
               name: Implementacja sortowania przez wybór
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań.
             lesson-10:
               name: Implementacja sortowania przez wstawianie
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+                Rozróżniasz algorytmy sortowania przez wybór i sortowania przez wstawianie
+                porównując ich efektywność.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań. Uczniowie rozróżniają algorytmy sortowania przez wybór
+                i sortowania przez wstawianie porównując ich efektywność.
             lesson-6:
               name: Implementacja sortowania przez scalanie
+              description_student: Analizujesz algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikujesz składowe algorytmu i poznajesz funkcje pomocnicze.
+                Śledzisz algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikują składowe algorytmu i poznają funkcje pomocnicze. Uczniowie
+                śledzą algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+            lesson-7:
+              name: Rozszerzanie standardowych algorytmów
             lesson-9:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -34457,6 +34505,8 @@ pl:
               name: Implementacja sortowania przez wstawianie
             lesson-7:
               name: Implementacja sortowania przez scalanie
+            lesson-8:
+              name: Rozszerzanie standardowych algorytmów
             lesson-10:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -34932,14 +34982,62 @@ pl:
                 algorytmu wyszukiwania przy użyciu liczby wykonań.
             Implementing the Binary Search:
               name: Implementacja wyszukiwania binarnego
+              description_student: Odkrywasz lepszy algorytm wyszukiwania, który może
+                działać wydajniej, jeśli lista jest już posortowana. Śledzisz kod
+                wyszukiwania binarnego, aby ocenić jego efektywność i porównać go
+                z wyszukiwaniem liniowym. Algorytm wyszukiwania binarnego służy do
+                rozwiązywania problemów w różnych scenariuszach.
+              description_teacher: Uczniowie odkrywają lepszy algorytm wyszukiwania,
+                który może działać szybciej, jeśli lista jest już posortowana. Śledzą
+                kod wyszukiwania binarnego, aby ocenić jego efektywność i porównać
+                go z wyszukiwaniem liniowym. Następnie stosują algorytm wyszukiwania
+                binarnego do rozwiązywania problemów w różnych scenariuszach.
             Implementing a Recursive Binary Search:
               name: Implementacja rekurencyjnego wyszukiwania binarnego
+              description_student: Podobnie jak wiele algorytmów, które napisałeś,
+                wyszukiwanie binarne można zaimplementować rekurencyjnie. Na tej lekcji
+                zapoznasz się z rekurencyjną implementacją wyszukiwania binarnego
+                i zastosowaniem go do rozwiązywania różnych problemów.
+              description_teacher: Uczniowie zapoznają się z algorytmem wyszukiwania
+                binarnego i poznają jego implementację rekurencyjną. Następnie stosują
+                rekurencyjny algorytm wyszukiwania binarnego do rozwiązywania problemów,
+                które zawierają różne typy danych, struktury danych i ograniczenia
+                problemowe.
             Implementing the Selection Sort:
               name: Implementacja sortowania przez wybór
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań.
             Implementing the Insertion Sort:
               name: Implementacja sortowania przez wstawianie
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+                Rozróżniasz algorytmy sortowania przez wybór i sortowania przez wstawianie
+                porównując ich efektywność.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań. Uczniowie rozróżniają algorytmy sortowania przez wybór
+                i sortowania przez wstawianie porównując ich efektywność.
             Implementing the Merge Sort:
               name: Implementacja sortowania przez scalanie
+              description_student: Analizujesz algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikujesz składowe algorytmu i poznajesz funkcje pomocnicze.
+                Śledzisz algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikują składowe algorytmu i poznają funkcje pomocnicze. Uczniowie
+                śledzą algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+            Expanding Standard Algorithms:
+              name: Rozszerzanie standardowych algorytmów
             Defending Privacy and Security:
               name: Ochrona prywatności i bezpieczeństwa
             Inclusive Playground Project - Day 1:
@@ -34986,20 +35084,67 @@ pl:
             lesson-3:
               key: lekcja 3
               name: Implementacja wyszukiwania binarnego
+              description_student: Odkrywasz lepszy algorytm wyszukiwania, który może
+                działać wydajniej, jeśli lista jest już posortowana. Śledzisz kod
+                wyszukiwania binarnego, aby ocenić jego efektywność i porównać go
+                z wyszukiwaniem liniowym. Algorytm wyszukiwania binarnego służy do
+                rozwiązywania problemów w różnych scenariuszach.
+              description_teacher: Uczniowie odkrywają lepszy algorytm wyszukiwania,
+                który może działać szybciej, jeśli lista jest już posortowana. Śledzą
+                kod wyszukiwania binarnego, aby ocenić jego efektywność i porównać
+                go z wyszukiwaniem liniowym. Następnie stosują algorytm wyszukiwania
+                binarnego do rozwiązywania problemów w różnych scenariuszach.
             lesson-4:
               key: lekcja 4
               name: Implementacja rekurencyjnego wyszukiwania binarnego
+              description_student: Podobnie jak wiele algorytmów, które napisałeś,
+                wyszukiwanie binarne można zaimplementować rekurencyjnie. Na tej lekcji
+                zapoznasz się z rekurencyjną implementacją wyszukiwania binarnego
+                i zastosowaniem go do rozwiązywania różnych problemów.
+              description_teacher: Uczniowie zapoznają się z algorytmem wyszukiwania
+                binarnego i poznają jego implementację rekurencyjną. Następnie stosują
+                rekurencyjny algorytm wyszukiwania binarnego do rozwiązywania problemów,
+                które zawierają różne typy danych, struktury danych i ograniczenia
+                problemowe.
             lesson-5:
               key: lekcja 5
               name: Implementacja sortowania przez wybór
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań.
             lesson-10:
               key: lekcja 10
               name: Implementacja sortowania przez wstawianie
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+                Rozróżniasz algorytmy sortowania przez wybór i sortowania przez wstawianie
+                porównując ich efektywność.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań. Uczniowie rozróżniają algorytmy sortowania przez wybór
+                i sortowania przez wstawianie porównując ich efektywność.
             lesson-6:
               key: lekcja 6
               name: Implementacja sortowania przez scalanie
+              description_student: Analizujesz algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikujesz składowe algorytmu i poznajesz funkcje pomocnicze.
+                Śledzisz algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikują składowe algorytmu i poznają funkcje pomocnicze. Uczniowie
+                śledzą algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
             lesson-7:
               key: lekcja 7
+              name: Rozszerzanie standardowych algorytmów
             lesson-8:
               key: lekcja 8
             lesson-9:
