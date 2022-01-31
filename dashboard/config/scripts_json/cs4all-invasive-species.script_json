@@ -1,0 +1,1266 @@
+{
+  "script": {
+    "name": "cs4all-invasive-species",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "hideable_lessons": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-01-31 18:38:20 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "cs4all-invasive-species"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Collection 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Collection 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Collection 3"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Collection 4"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Collection 5"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Surprising Stories about Plants and Animals",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Click this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "When Species Invade",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "Access the lesson plan [here](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing)"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Algorithms: Watch Me Dance",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Swimming into Sprite Lab",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "Click on this [link](https://docs.google.com/document/d/1DdepCOwf9BVtZNzSwNiXkeRdvEYLrPlCoPZC-sPchCU/edit?usp=sharing) the access the lesson plan. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Analyzing the Impact",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Local Invasive Species",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Big Fish, Little Pond1",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "###Click this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) for the lesson plan. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "SciComm and Me",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Communicating with Comics",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Pet Debate",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Responding to Conditions",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Conditionals",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Exploring Solutions for the Burmese Python",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Conditionals in Minecraft",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Exploring Solutions for Invasive Species",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Debugging",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Project Inspiration",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Making It Work",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "Debugging",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "Sharing Projects",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "d04fc999-863c-4d61-a69b-54e4139e48a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d04fc999-863c-4d61-a69b-54e4139e48a1",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "d726ff6c-35c7-416a-82ff-654f3d8d2408",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d726ff6c-35c7-416a-82ff-654f3d8d2408",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "bbf6dc14-dad2-4b0d-8ec3-3bbfca2b171a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbf6dc14-dad2-4b0d-8ec3-3bbfca2b171a",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "c08999e1-411f-4fa3-96b4-2dc072d33927",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c08999e1-411f-4fa3-96b4-2dc072d33927",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "0430043b-d52c-4b0d-b8ae-1aaa1d1d20bc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0430043b-d52c-4b0d-b8ae-1aaa1d1d20bc",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "50dc2204-1482-48c5-928b-c64752f6eee1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "50dc2204-1482-48c5-928b-c64752f6eee1",
+        "lesson_activity.key": "d04fc999-863c-4d61-a69b-54e4139e48a1"
+      }
+    },
+    {
+      "key": "e2c5ec74-5553-4bb3-979b-c7b7cf50a25c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c5ec74-5553-4bb3-979b-c7b7cf50a25c",
+        "lesson_activity.key": "d726ff6c-35c7-416a-82ff-654f3d8d2408"
+      }
+    },
+    {
+      "key": "3dea732c-cef8-4e42-890b-209e91f931ad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3dea732c-cef8-4e42-890b-209e91f931ad",
+        "lesson_activity.key": "bbf6dc14-dad2-4b0d-8ec3-3bbfca2b171a"
+      }
+    },
+    {
+      "key": "35521aa9-540e-4d78-a416-e9b234f78a3e",
+      "position": 1,
+      "properties": {
+        "name": "Video: Introducing Sprite Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "35521aa9-540e-4d78-a416-e9b234f78a3e",
+        "lesson_activity.key": "c08999e1-411f-4fa3-96b4-2dc072d33927"
+      }
+    },
+    {
+      "key": "3d5a366c-6f4e-4b1f-be97-5a7015f97f6f",
+      "position": 2,
+      "properties": {
+        "name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d5a366c-6f4e-4b1f-be97-5a7015f97f6f",
+        "lesson_activity.key": "c08999e1-411f-4fa3-96b4-2dc072d33927"
+      }
+    },
+    {
+      "key": "555f5498-47e7-4f53-9db0-fe38c730aea4",
+      "position": 3,
+      "properties": {
+        "name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "555f5498-47e7-4f53-9db0-fe38c730aea4",
+        "lesson_activity.key": "c08999e1-411f-4fa3-96b4-2dc072d33927"
+      }
+    },
+    {
+      "key": "2feccdcb-2faa-4539-9e35-a92fa0769830",
+      "position": 4,
+      "properties": {
+        "name": "Video: How to Make a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "2feccdcb-2faa-4539-9e35-a92fa0769830",
+        "lesson_activity.key": "c08999e1-411f-4fa3-96b4-2dc072d33927"
+      }
+    },
+    {
+      "key": "decab913-00d7-4a20-8dfe-2b9b8eb5b28f",
+      "position": 5,
+      "properties": {
+        "name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "decab913-00d7-4a20-8dfe-2b9b8eb5b28f",
+        "lesson_activity.key": "c08999e1-411f-4fa3-96b4-2dc072d33927"
+      }
+    },
+    {
+      "key": "1a85a719-32e9-4505-ad02-ab2d97b73807",
+      "position": 6,
+      "properties": {
+        "name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a85a719-32e9-4505-ad02-ab2d97b73807",
+        "lesson_activity.key": "c08999e1-411f-4fa3-96b4-2dc072d33927"
+      }
+    },
+    {
+      "key": "774735aa-3de1-41d0-9f5b-2f238fbccda3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Hello World: Animals"
+      },
+      "seeding_key": {
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3",
+        "lesson_activity.key": "0430043b-d52c-4b0d-b8ae-1aaa1d1d20bc"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "35521aa9-540e-4d78-a416-e9b234f78a3e"
+      },
+      "level_keys": [
+        "CourseEF_video_IntroSpriteLab_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 1-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "3d5a366c-6f4e-4b1f-be97-5a7015f97f6f"
+      },
+      "level_keys": [
+        "Fish Tank 1-validated_2021_cs4all"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 2-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "555f5498-47e7-4f53-9db0-fe38c730aea4"
+      },
+      "level_keys": [
+        "Fish Tank 2-validated_2021_cs4all"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 3-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "555f5498-47e7-4f53-9db0-fe38c730aea4"
+      },
+      "level_keys": [
+        "Fish Tank 3-validated_2021_cs4all"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 4-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "555f5498-47e7-4f53-9db0-fe38c730aea4"
+      },
+      "level_keys": [
+        "Fish Tank 4-validated_2021_cs4all"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "2feccdcb-2faa-4539-9e35-a92fa0769830"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_2021"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 5-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "decab913-00d7-4a20-8dfe-2b9b8eb5b28f"
+      },
+      "level_keys": [
+        "Fish Tank 5-validated_2021_cs4all"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 6-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "decab913-00d7-4a20-8dfe-2b9b8eb5b28f"
+      },
+      "level_keys": [
+        "Fish Tank 6-validated_2021_cs4all"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 7-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "1a85a719-32e9-4505-ad02-ab2d97b73807"
+      },
+      "level_keys": [
+        "Fish Tank 7-validated_2021_cs4all"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_say_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_say_cs4all"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_location_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_location_cs4all"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_multi_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_multi_cs4all"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_click_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_click_cs4all"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_events_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_events_cs4all"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_backgrounds_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_backgrounds_cs4all"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_costumes_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_costumes_cs4all"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_sizes_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_sizes_cs4all"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_behaviors_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_behaviors_cs4all"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_sounds_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_sounds_cs4all"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello World: Animals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_freeplay_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      },
+      "level_keys": [
+        "helloworld_animals_freeplay_cs4all"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_IntroSpriteLab_2021",
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "35521aa9-540e-4d78-a416-e9b234f78a3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 1-validated_2021_cs4all",
+        "script_level.level_keys": [
+          "Fish Tank 1-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "3d5a366c-6f4e-4b1f-be97-5a7015f97f6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 2-validated_2021_cs4all",
+        "script_level.level_keys": [
+          "Fish Tank 2-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "555f5498-47e7-4f53-9db0-fe38c730aea4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 3-validated_2021_cs4all",
+        "script_level.level_keys": [
+          "Fish Tank 3-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "555f5498-47e7-4f53-9db0-fe38c730aea4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 4-validated_2021_cs4all",
+        "script_level.level_keys": [
+          "Fish Tank 4-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "555f5498-47e7-4f53-9db0-fe38c730aea4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_2021",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "2feccdcb-2faa-4539-9e35-a92fa0769830"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 5-validated_2021_cs4all",
+        "script_level.level_keys": [
+          "Fish Tank 5-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "decab913-00d7-4a20-8dfe-2b9b8eb5b28f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 6-validated_2021_cs4all",
+        "script_level.level_keys": [
+          "Fish Tank 6-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "decab913-00d7-4a20-8dfe-2b9b8eb5b28f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 7-validated_2021_cs4all",
+        "script_level.level_keys": [
+          "Fish Tank 7-validated_2021_cs4all"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "1a85a719-32e9-4505-ad02-ab2d97b73807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_say_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_say_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_location_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_location_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_multi_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_multi_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_click_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_click_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_events_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_events_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_backgrounds_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_backgrounds_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_costumes_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_costumes_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_sizes_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_sizes_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_behaviors_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_behaviors_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_sounds_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_sounds_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_freeplay_cs4all",
+        "script_level.level_keys": [
+          "helloworld_animals_freeplay_cs4all"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "774735aa-3de1-41d0-9f5b-2f238fbccda3"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
