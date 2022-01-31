@@ -1162,6 +1162,8 @@ fil:
               name: Pagtukoy sa Kurikulum
             Contained Levels:
               name: Nilalaman na mga Antas
+            Java Lab:
+              name: Java Lab
         algebraPD2b:
           lessons:
             Best Practices for Teaching Computer Science:
@@ -18825,6 +18827,22 @@ fil:
               name: Gamitin ang Proseso ng Pagdisenyo ng Laro
             Project - Design a Game:
               name: Proyekto - Pagdisenyo ng Laro
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Aralin
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Aralin
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Aralin
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Aralin
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -20761,6 +20779,9 @@ fil:
           student_description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon
             mula sa isang lumitaw na virus. '
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
@@ -20768,6 +20789,8 @@ fil:
           lessons:
             lesson-1:
               name: Unit 2 na Pilot Survey
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Kahon ng buhangin
@@ -20775,6 +20798,8 @@ fil:
           lessons:
             lesson-16:
               name: Unit 3 na Pilot Survey
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
@@ -20839,22 +20864,36 @@ fil:
                 Ipinapatupad sa larong Pop the Balloons ang mga nested na `kung` na
                 pahayag at lohikal na operator upang pahusayin ang gameplay at pangkalahatang
                 functionality.
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Kahon ng buhangin
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Kahon ng buhangin
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
@@ -20998,6 +21037,8 @@ fil:
             lesson-18:
               name: Mga Widget
           lesson_groups:
+            lessonGroup-2:
+              display_name: Mga Aralin
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
         csa-self-paced-pl:
@@ -21057,6 +21098,7 @@ fil:
           lessons:
             lesson-1:
               key: aralin-1
+              name: Java Lab
             lesson-2:
               key: aralin-2
             lesson-3:
@@ -21135,6 +21177,7 @@ fil:
               key: aralin-15
             lesson-1:
               key: aralin-1
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Kahon ng buhangin
@@ -21145,6 +21188,7 @@ fil:
               name: Unit 3 na Pilot Survey
             lesson-1:
               key: aralin-1
+              name: Java Lab
             lesson-2:
               key: aralin-2
             lesson-3:
@@ -21267,6 +21311,7 @@ fil:
                 functionality.
             lesson-1:
               key: aralin-1
+              name: Java Lab
             lesson-3:
               key: aralin-3
             lesson-4:
@@ -21331,6 +21376,8 @@ fil:
               key: aralin-14
             lesson-15:
               key: aralin-15
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Kahon ng buhangin
@@ -21447,6 +21494,8 @@ fil:
             lesson-2:
               name: Mga Widget
           lesson_groups:
+            lessonGroup-2:
+              display_name: Mga Aralin
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
         hello-world-animals:
@@ -21598,6 +21647,9 @@ fil:
           title: Yunit 5 - Pagbibigay ng Organisasyon ng Mga Bagay [Mga Halimbawa]
         csa6-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
             lesson-1:
               key: aralin-1
             lesson-2:
@@ -21799,6 +21851,10 @@ fil:
                 -   kilalanin at bilangin ang mga numero hanggang 10 gamit ang mga larawan, daliri, o manipulatives.
                 -   magdagdag ng mga bagay, larawan, daliri, o manipulatives hanggang sa kabuuan ng 10.
           title: Nagbibilang kasama si Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Aralin
         2022drafting:
           lessons:
             lesson-4:
@@ -21857,6 +21913,9 @@ fil:
               display_name: Mga variable
         csa7-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
             lesson-10:
               key: aralin-10
             lesson-6:
@@ -21894,6 +21953,9 @@ fil:
               display_name: Kahon ng buhangin
         csa8-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
             lesson-1:
               key: aralin-1
             lesson-2:

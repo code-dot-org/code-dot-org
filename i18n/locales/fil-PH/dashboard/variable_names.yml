@@ -25,6 +25,7 @@ fil:
       repeat: ulitin
       right: kanan
       score: Score
+      shout: "\nsigaw"
       size: sukat
       speed: bilis
       startX: startx

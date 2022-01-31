@@ -520,6 +520,7 @@
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "Pagtatasa",
           "tips": [
             null
           ]
@@ -560,6 +561,7 @@
           ]
         },
         "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "name": "Pagtatasa",
           "tips": [
             null
           ]
@@ -1325,6 +1327,9 @@
             null
           ]
         },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Mga antas"
+        },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Pagmumuni-muni"
         },
@@ -1926,6 +1931,9 @@
             null
           ]
         },
+        "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
+          "name": "Pagtatasa"
+        },
         "cb6735d8-d986-408b-adef-61e9a52ad30f": {
           "name": "Panimula"
         },
@@ -2097,6 +2105,9 @@
           "tips": [
             null
           ]
+        },
+        "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
+          "name": "Pagtatasa"
         },
         "7e3d14a1-a677-4c9d-a695-e043db71c52e": {
           "tips": [
@@ -2294,6 +2305,9 @@
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
           "name": "Pagmumuni-muni"
+        },
+        "9c113356-76b9-4324-b22f-e35ce5a49216": {
+          "name": "Pagtatasa"
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Introduksyon sa mga Loops"

@@ -1238,6 +1238,8 @@ fil:
             "'sound://category_animals/sheep.mp3'": tupa
             "'sound://category_animals/goat.mp3'": kambing
             "'sound://category_animals/chicken.mp3'": manok
+            "'sound://category_animals/rooster.mp3'": tandang
+            "'sound://category_animals/elephant.mp3'": elepante
             "'sound://category_animals/dolphin.mp3'": dolphin
             "'sound://category_nature/thunderstorm_1.mp3'": pagkulog at pagkidlat
             "'sound://category_animals/chick.mp3'": sisiw
@@ -1250,6 +1252,7 @@ fil:
             "'sound://category_transition/star_dust_particle_10.mp3'": star dust
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": barko ng alien
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": gayuma
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": pumili
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": kakaibang bass
             "'sound://category_digital/jump_7.mp3'": talon
       gamelab_playSpeech:
@@ -1304,6 +1307,7 @@ fil:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grid
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': kusina
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': parang
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': tanawin ng parke
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': mga puno ng pino
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': bahaghari
@@ -1707,6 +1711,7 @@ fil:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': harap ng bahay
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': kusina
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': parang
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': tanawin ng parke
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': mga puno ng pino
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
@@ -1797,12 +1802,14 @@ fil:
         options:
           BRUSH:
             '"brick"': laryo
+            '"fire"': apoy
             '"flowers"': mga bulaklak
             '"hearts"': mga puso
             '"iceCream"': Sorbetes
             '"leaves"': mga dahon
             '"rainbow"': bahaghari
             '"stars"': mga bituin
+            '"waves"': mga alon
       Poetry_addLine:
         text: magdagdag ng linya {LINE}
       Poetry_animateText:
@@ -1843,6 +1850,7 @@ fil:
             '"sound://category_digital/boing_2.mp3"': boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': bula
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': talon
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ilaw
             '"sound://category_background/typewriter.mp3"': Makinilya
       Poetry_setAuthor:
         text: itakda ang may-akda {AUTHOR}

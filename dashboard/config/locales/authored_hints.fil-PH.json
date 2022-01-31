@@ -2608,7 +2608,8 @@
           "storyboard_behavior_example": "_Tandaan:_ Upang bigyan ng pag-uugali ang tiyanak, kailangan mong gumamit ng `nagsisimula ang tiyanak` na block na may isa sa mga berdeng block na pag-uugali, gaya ng `umiikot sa kanan`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito."
+          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito.",
+          "hw_click_sprites": "Mag-click sa mga tiyanak habang gumagana ang programa."
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "Subukang i-konekta ng block ng `baguhin ang kasuotan` sa block ng event na `kapag na-click`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2636,7 +2637,8 @@
           "storyboard_behavior_example": "_Tandaan:_ Upang bigyan ng pag-uugali ang tiyanak, kailangan mong gumamit ng `nagsisimula ang tiyanak` na block na may isa sa mga berdeng block na pag-uugali, gaya ng `umiikot sa kanan`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito."
+          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito.",
+          "hw_click_sprites": "Mag-click sa mga tiyanak habang gumagana ang programa."
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "Subukang i-konekta ng block ng `baguhin ang kasuotan` sa block ng event na `kapag na-click`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2664,7 +2666,8 @@
           "storyboard_behavior_example": "_Tandaan:_ Upang bigyan ng pag-uugali ang tiyanak, kailangan mong gumamit ng `nagsisimula ang tiyanak` na block na may isa sa mga berdeng block na pag-uugali, gaya ng `umiikot sa kanan`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito."
+          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito.",
+          "hw_click_sprites": "Mag-click sa mga tiyanak habang gumagana ang programa."
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "Subukang i-konekta ng block ng `baguhin ang kasuotan` sa block ng event na `kapag na-click`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2692,7 +2695,8 @@
           "storyboard_behavior_example": "_Tandaan:_ Upang bigyan ng pag-uugali ang tiyanak, kailangan mong gumamit ng `nagsisimula ang tiyanak` na block na may isa sa mga berdeng block na pag-uugali, gaya ng `umiikot sa kanan`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito."
+          "hw_no_changes": "Hindi mo kailangang baguhin ang alinman sa code sa level na ito.",
+          "hw_click_sprites": "Mag-click sa mga tiyanak habang gumagana ang programa."
         },
         "helloworld_retro_costumes": {
           "hello_world_costumes": "Subukang i-konekta ng block ng `baguhin ang kasuotan` sa block ng event na `kapag na-click`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2735,6 +2739,31 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "Hanapin ang block na ito at i-click ang `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nAno ang mangyayari kapag ang numero ay `25`?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "Magagawa mo bang mag-away ng Ice Crystal sina Sid at Manny?",
+          "iceage_free_play_b": "Ipahabol Lola si Diego. Tapusin ang laro bilang panalo kung mahuli niya siya.",
+          "iceage_free_play_c": "Maaari mo bang hayaan si Sid na maghagis ng mga snowflake kay Diego at palakihin si Diego sa tuwing tatama ang isa? Tapusin ang laro bilang isang panalo kung natamaan ng 5 beses si Diego."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "Kakailanganin mong magdagdag ng dalawang bloke sa ilalim ng kaganapang `kapag hinawakan ng aktor 1 ang aktor 2`.",
+          "iceage_sound_and_points_b": "Kakailanganin mo ang bloke ng `score a point` at ang bloke na 'laro \\_\\_\\_\\_ tunog\\` upang makapasa sa antas na ito."
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "Kakailanganin mong magdagdag ng dalawang bloke sa ilalim ng kaganapang `kapag hinawakan ng aktor 1 ang aktor 2`.",
+          "iceage_sound_and_points_b": "Kakailanganin mo ang bloke ng `score a point` at ang bloke na 'laro \\_\\_\\_\\_ tunog\\` upang makapasa sa antas na ito."
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "Kailan mo gustong ihagis ang puso kay lola? Kapag pinindot ang isang arrow? Kapag nag-click ka kay Sid? Kapag nag-click ka kay Lola? Ikaw ang magpapasiya!",
+          "iceage_throw_hearts_b": "Upang maging masaya si lola kapag nakatanggap ng puso, kakailanganin mong ikonekta ang `i-set ang mood ng aktor 2 sa masaya` na bloke sa ilalim ng event na `kapag hinawakan ng aktor 2 ang projectile`."
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "Dapat ka lang magdagdag ng dalawang bloke upang makuha ang puzzle na ito kung saan ito dapat.",
+          "iceage_warn_ice_age_b": "Idagdag ang parehong mga bagong bloke sa ilalim ng kaganapang `kapag tumakbo` upang mangyari ang mga ito kaagad pagkatapos magsimula ang programa."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "Dapat ka lang magdagdag ng dalawang bloke upang makuha ang puzzle na ito kung saan ito dapat.",
+          "iceage_warn_ice_age_b": "Idagdag ang parehong mga bagong bloke sa ilalim ng kaganapang `kapag tumakbo` upang mangyari ang mga ito kaagad pagkatapos magsimula ang programa."
         }
       }
     }
