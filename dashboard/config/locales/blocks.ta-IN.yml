@@ -335,6 +335,7 @@ ta:
           FORMAT:
             '"border"': பார்டர்
             '"inner"': சதுரத்திற்குள்
+            '"diamond"': வைரம்
             '"circle"': வட்டம்
             '"grid"': கிரிட்
             '"row"': வரிசை
@@ -436,6 +437,7 @@ ta:
           LAYOUT:
             '"border"': பார்டர்
             '"inner"': சதுரத்திற்குள்
+            '"diamond"': வைரம்
             '"circle"': வட்டம்
             '"grid"': கிரிட்
             '"row"': வரிசை
@@ -829,6 +831,7 @@ ta:
             '"squiggles"': சிறு வளை கோடுகள்
             '"growing_stars"': வளரும் நட்சத்திரங்கள்
             '"hearts_colorful"': இதயங்கள்
+            '"diamond"': வைரம்
             '"s"': s
             '"t"': t
             '"u"': u
@@ -1122,6 +1125,7 @@ ta:
           EFFECT:
             '"burst"': வெடி சிதறல்
             '"pop"': பாப்
+            '"rain"': மழை
             '"spiral"': சுருள்
       gamelab_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
@@ -1782,6 +1786,7 @@ ta:
           EFFECT:
             '"burst"': வெடி சிதறல்
             '"pop"': பாப்
+            '"rain"': மழை
             '"spiral"': சுருள்
       Poetry_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
@@ -1841,6 +1846,7 @@ ta:
             '"fadeColors"': இனிப்பான
             '"hearts"': இதயங்கள்
             '"space"': ஸ்பேஸ்
+            '"rain"': மழை
             '"ripples"': சிற்றலைகள்
             '"colors"': வண்ணங்கள்
             '"stars"': நட்சத்திரங்கள்
@@ -1880,6 +1886,7 @@ ta:
             '"confetti"': கான்ஃபெடி
             '"hearts"': இதயங்கள்
             '"emojis"': மகிழ்ச்சியான எமோஜிகள்
+            '"rain"': மழை
             '"glass"': நொறுங்கும் கண்ணாடி
             '"twinkling"': மின்னும்
       Poetry_setPrompt:

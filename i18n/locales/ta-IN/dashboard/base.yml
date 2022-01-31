@@ -309,6 +309,8 @@ ta:
       subjects:
         cs: 'கணினி அறிவியல்'
         math: 'கணிதம்'
+        science: 'அறிவியல்'
+        la: 'மொழி கலைகள்'
       workshop_course:
         csf_express: 'CS அடிப்படைகள்(Pre-Express or Express)'
         not_applicable: "பொருந்தாது"
