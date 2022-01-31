@@ -744,6 +744,12 @@
         "frozen line": {
           "run": "तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" दाबा!",
           "move_elsa_forward": "\"move forward\" ब्लॉक ड्रॅग करा आणि एल्साला पुढे जायला लावण्यासाठी तो \"When Run\" ब्लॉकच्या खाली जोडा."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "स्क्रीनचा रंग हिरवा झाला का? असेल तर \"Finish\" दाबा, नसेल तर \"Reset\" दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "तुम्ही आता डिझाईन मोडमध्ये आहात."
         }
       }
     }
