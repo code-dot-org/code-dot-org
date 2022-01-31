@@ -716,6 +716,8 @@ eu:
           lessons:
             Functions:
               name: Funtzioak
+            Velocity:
+              name: Abiadura
         CSF_Secret_Sample:
           description_audience: 8-18 bitarteko adina
         algebraFacilitator:
@@ -732,6 +734,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        allthehiddenthings:
+          lessons:
+            Game Lab:
+              name: Jolas laborategia
         CSDU5-Draft:
           description_short: Datu
         CSF_Secret_Sample_Story:
@@ -830,6 +836,8 @@ eu:
               display_name: Bista orokorra
         csd3-2017:
           lessons:
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             Variables:
@@ -1057,10 +1065,14 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd3-old:
           lessons:
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd2-draft:
@@ -1073,6 +1085,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             'null':
@@ -1317,6 +1331,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd3-2018:
@@ -1325,6 +1341,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd2-2018:
@@ -1703,6 +1721,8 @@ eu:
               name: Gertaera Handia
             Binary Bracelets:
               name: Eskumuturreko bitarrak
+        gamelab:
+          title: Jolas laborategia
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -1758,6 +1778,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd6-2019:
@@ -1890,6 +1912,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             Sprite Properties:
@@ -2065,6 +2089,8 @@ eu:
               name: Sprite-n Propietateak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             Text:
@@ -2208,6 +2234,8 @@ eu:
               name: Aldagaiak
         virtual-holding-place:
           lessons:
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         code-break:
@@ -2244,6 +2272,8 @@ eu:
               name: Testua
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         2021drafting:
@@ -2268,6 +2298,9 @@ eu:
             Conditionals:
               key: Baldintzak
               name: Baldintzak
+            Velocity:
+              key: Abiadura
+              name: Abiadura
             Functions:
               key: Funtzioak
               name: Funtzioak
