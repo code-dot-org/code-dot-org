@@ -1215,7 +1215,8 @@ export const sectionFromServerSection = serverSection => ({
   postMilestoneDisabled: serverSection.post_milestone_disabled,
   codeReviewExpiresAt: serverSection.code_review_expires_at
     ? Date.parse(serverSection.code_review_expires_at)
-    : null
+    : null,
+  isAssignedCSA: serverSection.is_assigned_csa
 });
 
 /**
