@@ -66,7 +66,6 @@
     "short_instructions": "Use the `say` block to make me say whatever you like!",
     "instructions_icon": "bear",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make the bear say something, connect the blocks of code like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\"><next>  <block type=\\\"gamelab_makeNewSpriteAnon\\\">\\n    <title name=\\\"ANIMATION_NAME\\\">\\\"cuteanimals_bear\\\"</title>\\n    <value name=\\\"LOCATION\\\">\\n      <block type=\\\"gamelab_location_picker\\\">\\n        <title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</title>\\n      </block>\\n    </value><next>  <block type=\\\"gamelab_spriteSay\\\">\\n    <title name=\\\"SPEECH\\\">Hello, world!</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"cuteanimals_bear\\\"</title>\\n      </block>\\n    </value>\\n  </block></next>\\n  </block></next></block>\\n</xml>\",\"hint_id\":\"hello-world-first-solution-bear\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9a54ccf67ed142a7dc60745e8cde513b/helloworld_animals_say.mp3\"}]",
-    "video_key": "hello_world_intro",
     "skip_autosave": true,
     "encrypted_examples": "YLfjWYZcwOwd49eEhmVFQ9thTdTt95OiP30EVaH1eTYPIzYegc/iTKTWss17\n9BHRTGcJTqwrzh6oVWvXHmjEAA==\n",
     "preload_asset_list": null
@@ -77,7 +76,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-30T04:00:20.067+00:00\",\"changed\":[\"cloned from \\\"helloworld_animal_say_csta\\\"\"],\"cloned_from\":\"helloworld_animal_say_csta\"},{\"changed_at\":\"2022-01-30 04:10:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-01-30 04:12:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"project_template_level_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-30T04:00:20.067+00:00\",\"changed\":[\"cloned from \\\"helloworld_animal_say_csta\\\"\"],\"cloned_from\":\"helloworld_animal_say_csta\"},{\"changed_at\":\"2022-01-30 04:10:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-01-30 04:12:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"project_template_level_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-01-31 22:04:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
