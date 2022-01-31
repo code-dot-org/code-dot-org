@@ -7,7 +7,6 @@ import teacherSections, {
   setSections,
   setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import currentUser, {
   setCurrentUserName
 } from '@cdo/apps/templates/currentUserRedux';
@@ -23,20 +22,19 @@ setPegasusOrigin(scriptData.pegasusOrigin);
 setStudioOrigin(scriptData.studioOrigin);
 
 // Register the reducers we need to show the parent letter:
-registerReducers({currentUser, sectionData, teacherSections});
+registerReducers({currentUser, teacherSections});
 
 // Populate the store with data passed down from the server:
 const store = getStore();
 store.dispatch(setCurrentUserName(scriptData.userName));
 store.dispatch(setSections(scriptData.sections));
+store.dispatch(selectSection(scriptData.section.id));
 store.dispatch(
   setStudentsForCurrentSection(
     scriptData.section.id,
     scriptData.section.students
   )
 );
-store.dispatch(setSection(scriptData.section));
-store.dispatch(selectSection(scriptData.section.id));
 
 window.addEventListener('DOMContentLoaded', function() {
   // Mount and render the letter:
