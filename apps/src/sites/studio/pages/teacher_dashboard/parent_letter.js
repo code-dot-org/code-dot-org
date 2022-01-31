@@ -4,7 +4,8 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   selectSection,
-  setSections
+  setSections,
+  setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import currentUser, {
@@ -28,6 +29,12 @@ registerReducers({currentUser, sectionData, teacherSections});
 const store = getStore();
 store.dispatch(setCurrentUserName(scriptData.userName));
 store.dispatch(setSections(scriptData.sections));
+store.dispatch(
+  setStudentsForCurrentSection(
+    scriptData.section.id,
+    scriptData.section.students
+  )
+);
 store.dispatch(setSection(scriptData.section));
 store.dispatch(selectSection(scriptData.section.id));
 
