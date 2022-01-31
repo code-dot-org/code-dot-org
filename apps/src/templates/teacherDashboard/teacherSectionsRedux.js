@@ -18,7 +18,8 @@ const USER_EDITABLE_SECTION_PROPS = [
   'scriptId',
   'grade',
   'hidden',
-  'restrictSection'
+  'restrictSection',
+  'codeReviewExpiresAt'
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -73,6 +74,9 @@ const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
 const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
+/** Sets section codeReviewExpiresAt after it's been updated */
+const SET_SECTION_CODE_REVIEW_EXPIRES_AT =
+  'teacherSections/SET_SECTION_CODE_REVIEW_EXPIRES_AT';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
@@ -141,6 +145,16 @@ export const setShowLockSectionField = showLockSectionField => {
   return {
     type: SET_SHOW_LOCK_SECTION_FIELD,
     showLockSectionField
+  };
+};
+export const setSectionCodeReviewExpiresAt = (
+  sectionId,
+  codeReviewExpiresAt
+) => {
+  return {
+    type: SET_SECTION_CODE_REVIEW_EXPIRES_AT,
+    sectionId,
+    codeReviewExpiresAt
   };
 };
 
@@ -814,6 +828,27 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_SECTION_CODE_REVIEW_EXPIRES_AT) {
+    const {sectionId, codeReviewExpiresAt} = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          codeReviewExpiresAt: codeReviewExpiresAt
+            ? Date.parse(codeReviewExpiresAt)
+            : null
+        }
+      }
+    };
+  }
+
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId
       ? {...state.sections[action.sectionId]}
@@ -1087,6 +1122,15 @@ export function sectionName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).name;
 }
 
+export function selectedSection(state) {
+  const selectedSectionId = getRoot(state).selectedSectionId;
+  if (selectedSectionId) {
+    return getRoot(state).sections[selectedSectionId];
+  } else {
+    return null;
+  }
+}
+
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
     return rosterProvider(state);
@@ -1168,7 +1212,10 @@ export const sectionFromServerSection = serverSection => ({
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
-  postMilestoneDisabled: serverSection.post_milestone_disabled
+  postMilestoneDisabled: serverSection.post_milestone_disabled,
+  codeReviewExpiresAt: serverSection.code_review_expires_at
+    ? Date.parse(serverSection.code_review_expires_at)
+    : null
 });
 
 /**
