@@ -488,10 +488,10 @@
           "challenges": "**Provocare opțională**\n\n-   Fă-l pe dansator să răspundă la tastele cu săgeată stânga și dreapta."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\nNivelul se sfârșește după 7 măsuri."
         },
         "CourseD_Dance_2020_05": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\n_Acest nivel se termină după 11 măsuri._\"",
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\nAcest nivel se termină după 11 măsuri.",
           "challenges": "**Provocare opțională**\n\n-   Modifică acompaniamentul când dansatorii schimbă mișcările."
         },
         "CourseD_Dance_2020_06": {
@@ -516,37 +516,37 @@
         },
         "CourseD_Dance_Party_01": {
           "validation": "\"**Cum trec de acest nivel?**\n\n-   Asigură-te că pe ecran apare un dansator.\n\n_Acest nivel se termină după 4 măsuri._\"",
-          "challenges": "\"**Provocări opționale**\n\n-   Alege un alt cântec.\n-   Redenumește-ți dansatorul.\"."
+          "challenges": "\"**Provocări opționale**\n\n-   Alege un alt cântec pentru a-l reda.\n-   Redenumește-ți dansatorul.\"."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\nNivelul se sfârșește după 7 măsuri."
         },
         "CourseD_Dance_Party_03": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\n_Acest nivel se termină după 11 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\nAcest nivel se termină după 11 măsuri."
         },
         "CourseD_Dance_Party_04": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să faci ca efectul de fundal să se schimbe înainte de a șaptea măsură din cântec.\n\n_Acest nivel se termină după 9 măsuri._\"",
-          "challenges": "**Provocări suplimentare**\n\nSchimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"măsuri\"</title></block></xml>."
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să faci ca efectul de fundal să se schimbe înainte de a șaptea măsură a cântecului.\n\nAcest nivel se termină după 9 măsuri.",
+          "challenges": "**Provocări Suplimentare**\n\nSchimbă efectul de fundal în diferite momente din timpul cântecului, conectând noul bloc în baza evenimentelor <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>."
         },
         "CourseD_Dance_Party_06": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să ai cel puțin doi dansatori.\n\n_Acest nivel se termină după 5 măsuri._\"",
-          "challenges": "\"**Provocare opțională**\n\n-   Adaugă un al treilea dansator (sau cât de mulți dorești!)\n-   Fă ca toți dansatorii tăi să execute diferite mișcări în momente diferite ale cântecului.\"."
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să ai cel puțin doi dansatori.\n\nAcest nivel se termină după 5 măsuri.",
+          "challenges": "\"**Provocare Opțională**\n\n-   Adaugă un al treilea dansator (sau cât de mulți dorești!)\n-   Fă ca toți dansatorii tăi să execute diferite mișcări în puncte diferite din cântec."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doi dansatori trebuie să aibă altă dimensiune decât 100.\n\n_Acest nivel se termină după 5 măsuri._\"",
-          "challenges": "\"**Provocare opțională**\n\n-   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţia, etc)\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doi dansatori trebuie să aibă altă dimensiune decât 100.\n\nAcest nivel se termină după 5 măsuri.",
+          "challenges": "\"**Provocare Opțională**\n\n-   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţia, etc)\""
         },
         "CourseD_Dance_Party_09": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Schimbă culoarea a cel puțin un dansator.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Schimbă culoarea a cel puțin un dansator.\n\nAcest nivel se termină după 7 măsuri."
         },
         "CourseD_Dance_Party_10": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Proprietățile a doi sau ale mai multor dansatori trebuie schimbate.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Proprietățile pentru doi sau mai mulți dansatori trebuie schimbate.\n\nAcest nivel se termină după 7 măsuri."
         },
         "CourseD_Dance_Party_11": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Fii creativ!\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doar fii creativ!\n\nAcest nivel se termină după 7 măsuri."
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Fii creativ!\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doar fii creativ!\n\nAcest nivel se termină după 7 măsuri."
         },
         "CourseD_Dance_Party_11b": {
           "validation": "\"**Cum trec de acest nivel?**\n\n-   Folosește blocul `când se apasă săgeata stânga` pentru a-l face pe Robot să execute o mișcare de dans când îl apeși.\n\n_Acest nivel se termină după 7 măsuri._\""
@@ -564,10 +564,10 @@
           "challenges": "**Provocare opțională**\n\n-   Fă-l pe dansator să răspundă la tastele cu săgeată stânga și dreapta."
         },
         "Dance_2019_04": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\nNivelul se sfârșește după 7 măsuri."
         },
         "Dance_2019_05": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\n_Acest nivel se termină după 11 măsuri._\"",
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\nAcest nivel se termină după 11 măsuri.",
           "challenges": "**Provocare opțională**\n\n-   Modifică acompaniamentul când dansatorii schimbă mișcările."
         },
         "Dance_2019_06": {
@@ -589,43 +589,43 @@
         },
         "Dance_Party_01": {
           "validation": "\"**Cum trec de acest nivel?**\n\n-   Asigură-te că pe ecran apare un dansator.\n\n_Acest nivel se termină după 4 măsuri._\"",
-          "challenges": "\"**Provocări opționale**\n\n-   Alege un alt cântec.\n-   Redenumește-ți dansatorul.\"."
+          "challenges": "\"**Provocări opționale**\n\n-   Alege un alt cântec pentru a-l reda.\n-   Redenumește-ți dansatorul.\"."
         },
         "Dance_Party_02": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\nNivelul se sfârșește după 7 măsuri."
         },
         "Dance_Party_03": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\n_Acest nivel se termină după 11 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\nAcest nivel se termină după 11 măsuri."
         },
         "Dance_Party_04": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să faci ca efectul de fundal să se schimbe înainte de a șaptea măsură din cântec.\n\n_Acest nivel se termină după 9 măsuri._\"",
-          "challenges": "**Provocări suplimentare**\n\nSchimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"măsuri\"</title></block></xml>."
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să faci ca efectul de fundal să se schimbe înainte de a șaptea măsură a cântecului.\n\nAcest nivel se termină după 9 măsuri.",
+          "challenges": "**Provocări Suplimentare**\n\nSchimbă efectul de fundal în diferite momente din timpul cântecului, conectând noul bloc în baza evenimentelor <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>."
         },
         "Dance_Party_05": {
           "validation": "**Cum trec de acest nivel?** \n\n-   Dansatorul tău trebuie să parcurgă cel puțin 4 mișcări de dans diferite înainte de sfârșitul nivelului. \n\n_Acest nivel se termină după 12 măsuri._"
         },
         "Dance_Party_06": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să ai cel puțin doi dansatori.\n\n_Acest nivel se termină după 5 măsuri._\"",
-          "challenges": "\"**Provocare opțională**\n\n-   Adaugă un al treilea dansator (sau cât de mulți dorești!)\n-   Fă ca toți dansatorii tăi să execute diferite mișcări în momente diferite ale cântecului.\"."
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Trebuie să ai cel puțin doi dansatori.\n\nAcest nivel se termină după 5 măsuri.",
+          "challenges": "\"**Provocare Opțională**\n\n-   Adaugă un al treilea dansator (sau cât de mulți dorești!)\n-   Fă ca toți dansatorii tăi să execute diferite mișcări în puncte diferite din cântec."
         },
         "Dance_Party_08": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doi dansatori trebuie să aibă altă dimensiune decât 100.\n\n_Acest nivel se termină după 5 măsuri._\"",
-          "challenges": "\"**Provocare opțională**\n\n-   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţia, etc)\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doi dansatori trebuie să aibă altă dimensiune decât 100.\n\nAcest nivel se termină după 5 măsuri.",
+          "challenges": "\"**Provocare Opțională**\n\n-   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţia, etc)\""
         },
         "Dance_Party_09": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Schimbă culoarea a cel puțin un dansator.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Schimbă culoarea a cel puțin un dansator.\n\nAcest nivel se termină după 7 măsuri."
         },
         "Dance_Party_10": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Proprietățile a doi sau ale mai multor dansatori trebuie schimbate.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Proprietățile pentru doi sau mai mulți dansatori trebuie schimbate.\n\nAcest nivel se termină după 7 măsuri."
         },
         "Dance_Party_11": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Fii creativ!\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doar fii creativ!\n\nAcest nivel se termină după 7 măsuri."
         },
         "Dance_Party_11_5": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Fii creativ!\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Doar fii creativ!\n\nAcest nivel se termină după 7 măsuri."
         },
         "Dance_Party_11b": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Folosește blocul `când se apasă săgeata stânga` pentru a-l face pe Robot să execute o mișcare de dans când îl apeși.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Folosește blocul `când se apasă săgeata stânga` pentru ca Robotul să execute o mișcare de dans când o apeși.\n\nAcest nivel se termină după 7 măsuri."
         },
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Blocul alternează este în categoria „Dansatori”."
@@ -1576,10 +1576,10 @@
           "challenges": "**Provocare opțională**\n\n-   Fă-l pe dansator să răspundă la tastele cu săgeată stânga și dreapta."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\n_Acest nivel se termină după 7 măsuri._\""
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.\n\nNivelul se sfârșește după 7 măsuri."
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\n_Acest nivel se termină după 11 măsuri._\"",
+          "validation": "\"**Cum trec de acest nivel?**\n\n-   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.\n\nAcest nivel se termină după 11 măsuri.",
           "challenges": "**Provocare opțională**\n\n-   Modifică acompaniamentul când dansatorii schimbă mișcările."
         },
         "CourseD_Dance_2020_06_2021": {
