@@ -45,8 +45,11 @@ export default function NewAssignmentSelector(props) {
   // primary assignment, default the secondary assignment to the first
   // unit in the course.
 
-  const courseOfferingsByCategories = _.groupBy(courseOfferings, 'category');
-  console.log(courseOfferingsByCategories);
+  const orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+  const courseOfferingsByCategories = _.groupBy(
+    orderedCourseOfferings,
+    'category'
+  );
 
   const updateSelectedUnit = unitId => {
     let newUnit = selectedCourseVersion.units.find(
