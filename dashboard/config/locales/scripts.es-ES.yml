@@ -3,34 +3,32 @@ es:
   data:
     script:
       category:
-        csd_category_name: Descubrimientos de Ciencias de la Computación ('17-'18)
-        csd_2018_category_name: Descubrimientos de Ciencias de la Computación ('18-'19)
-        csd_2019_category_name: Descubrimientos de Ciencias de la Computación ('19-'20)
-        csd_2020_category_name: Descubrimientos de Ciencias de la Computación ('20-'21)
-        csd_2021_category_name: Descubrimientos de Ciencias de la Computación ('21-'22)
-        csd_pilot_category_name: Piloto de Descubrimientos en Ciencias de la Computación
+        csd_category_name: Descubrimientos de Informática ('17-'18)
+        csd_2018_category_name: Descubrimientos de Informática ('18-'19)
+        csd_2019_category_name: Descubrimientos de Informática ('19-'20)
+        csd_2020_category_name: Descubrimientos de Informática ('20-'21)
+        csd_2021_category_name: Descubrimientos de Informática ('21-'22)
+        csd_pilot_category_name: Piloto de Descubrimientos de Informática
         csf_category_name: Fundamentos de Ciencias de la Computación
-        csf_2018_category_name: Fundamentos de Ciencias de la Computación ('18-'19)
-        csf_2019_category_name: Fundamentos de Ciencias de la Computación ('19-'20)
-        csf_2020_category_name: Fundamentos de Ciencias de la Computación ('20-'21)
-        csf_2021_category_name: Fundamentos de Ciencias de la Computación ('21-'22)
-        csf_international_category_name: Fundamentos de Ciencias de la Computación
-          (internacional)
-        csf2_draft_category_name: 'En desarrollo: cursos A-F'
+        csf_2018_category_name: Fundamentos de Informática ('18-'19)
+        csf_2019_category_name: Fundamentos de Informática ('19-'20)
+        csf_2020_category_name: Fundamentos de Informática ('20-'21)
+        csf_2021_category_name: Fundamentos de Informática ('21-'22)
+        csf_international_category_name: Fundamentos de Informática (internacional)
+        csf2_draft_category_name: 'En desarrollo: Cursos A - F'
         csp_category_name: Principios de Informática ('15-'16)
-        csp_2018_category_name: Principios de Ciencias de la Computación ('18-'19)
-        csp_2019_category_name: Principios de Ciencias de la Computación ('19-'20)
-        csp_2020_category_name: Principios de Ciencias de la Computación ('20-'21)
-        csp_2021_category_name: Principios de Ciencias de la Computación ('21-'22)
-        cspexams_category_name: Prueba de práctica de Principios de Ciencias de la
-          Computación
-        csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
-        aiml_2021_category_name: IA / ML
-        csc_2021_category_name: Conexiones CS ('21-'22)
+        csp_2018_category_name: Principios de Informática ('18-'19)
+        csp_2019_category_name: Principios de Informática ('19-'20)
+        csp_2020_category_name: Principios de Informática ('20-'21)
+        csp_2021_category_name: Principios de Informática ('21-'22)
+        cspexams_category_name: Examen Práctico de Principios de Informática
+        csp17_category_name: Principios de Informática ('17-'18)
+        aiml_2021_category_name: Inteligencia Artificial / Aprendizaje Automático
+        csc_2021_category_name: Conexiones de Informática ('21-'22)
         full_course_category_name: Cursos completos
         hoc_category_name: Hora del Código
         math_category_name: Matemáticas
-        research_studies_category_name: Estudios de investigación
+        research_studies_category_name: Estudios de Investigación
         twenty_hour_category_name: 20 horas
         tts_category_name: Texto-a-voz
         other_category_name: Otros
@@ -48,15 +46,15 @@ es:
           description_audience: Edades de 4 a 6 años
           lessons:
             'Artist: Loops':
-              name: Bucles
+              name: 'Artista: Bucles'
             'Artist: Sequence':
-              name: 'Artista: Secuencia'
+              name: 'Artista: Secuencias'
             'Artist: Shapes':
               name: 'Artista: Formas'
             'Bee: Loops':
-              name: 'Abeja: Bucle'
+              name: 'Abeja: Bucles'
             'Bee: Sequence':
-              name: 'Abeja: Secuencia'
+              name: 'Abeja: Secuencias'
             Building a Foundation:
               name: Construyendo una Base
             Getting Loopy:
@@ -68,19 +66,19 @@ es:
             'Jigsaw: Learn to drag and drop':
               name: 'Rompecabezas: Aprende a arrastrar y soltar'
             'Maze: Debugging':
-              name: 'Laberinto: Debugging'
+              name: 'Laberinto: Depuración'
             'Maze: Loops':
-              name: Bucle
+              name: 'Laberinto: Bucles'
             'Maze: Sequence':
-              name: 'Laberinto: Secuencia'
+              name: 'Laberinto: Secuencias'
             Move it, Move it:
               name: Muévelo, muévelo
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
             Spelling Bee:
-              name: Concurso de Ortografía
+              name: 'Abeja: Deletreando'
             'Studio: Create a Story':
-              name: 'Laboratorio de Juego: Crea un Historia'
+              name: 'Laboratorio de Juegos: Crea una Historia'
             The Big Event:
               name: El Gran Evento
           student_description: El Curso 1 esta diseñado para permitir a los lectores
@@ -95,24 +93,24 @@ es:
             no tienen experiencia previa en programación. En este curso los estudiantes
             crearán programas para resolver problemas y desarrollar juegos interactivos
             o historias que pueden compartir. Se recomienda para los grados 2-5.
-          description_short: El Curso 2 está diseñado para estudiantes que pueden
+          description_short: Introducción a la informática para estudiantes que saben
             leer.
           description_audience: Más de 6 años (debe saber leer)
           lessons:
             'Artist: Debugging':
               name: 'Artista: Depuración'
             'Artist: Loops':
-              name: Bucles
+              name: 'Artista: Bucles'
             'Artist: Nested Loops':
               name: 'Artista: Bucles Anidados'
             'Artist: Sequence':
-              name: 'Artista: Secuencia'
+              name: 'Artista: Secuencias'
             'Bee: Conditionals':
               name: 'Abeja: Condicionales'
             'Bee: Debugging':
               name: 'Abeja: Depuración'
             'Bee: Loops':
-              name: 'Abeja: Bucle'
+              name: 'Abeja: Bucles'
             Binary Bracelets:
               name: Pulseras Binarias
             Conditionals:
@@ -124,15 +122,15 @@ es:
             Graph Paper Programming:
               name: Programación en papel cuadriculado
             'Maze: Loops':
-              name: Bucle
+              name: 'Laberinto: Bucles'
             'Maze: Sequence':
-              name: 'Laberinto: Secuencia'
+              name: 'Laberinto: Secuencias'
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos de la vida real : Aviones de papel'
             Relay programming:
               name: Programación de relevos
             'Studio: Create a Story':
-              name: 'Laboratorio de Juego: Crea un Historia'
+              name: 'Laboratorio de Juegos: Crea una Historia'
             The Big Event:
               name: El Gran Evento
             Your Digital Footprint:
@@ -144,14 +142,14 @@ es:
             grados 2-5.
         course3:
           title: Curso 3
-          description: El Curso 3 está diseñado para estudiantes que han tomado el
-            Curso 2. Los estudiantes profundizarán en temas de programación presentados
-            en cursos anteriores con el objetivo de crear soluciones flexibles para
-            problemas más complejos. Al final de este curso, los estudiantes crearán
-            historias y juegos interactivos que podrán compartir con otras personas.
-            Recomendado para cuarto y quinto grado.
+          description: El Curso 3 está diseñado para los estudiantes que ya han completado
+            el Curso 2. Los estudiantes profundizarán en los temas de programación
+            introducidos en los cursos anteriores para crear soluciones flexibles
+            a problemas más complejos. Al final de este curso, los estudiantes crean
+            historias y juegos interactivos que pueden compartir con cualquier persona.
+            Recomendado para los grados 4-5.
           description_short: Profundiza aún más en la programación mientras desarrollas
-            juegos e historias interactivos. Este curso es una continuación del Curso
+            historias y juegos interactivos. Este curso es una continuación del Curso
             2.
           description_audience: Edades de 8 a 18 años
           lessons:
@@ -196,13 +194,13 @@ es:
             'Studio: Create a Game':
               name: 'Laboratorio de Juegos: Crear un Juego'
             'Studio: Create a Story':
-              name: 'Laboratorio de Juego: Crea un Historia'
-          student_description: El Curso 3 está diseñado para estudiantes que han tomado
-            el Curso 2. Los estudiantes profundizarán en temas de programación presentados
-            en cursos anteriores con el objetivo de crear soluciones flexibles para
-            problemas más complejos. Al final de este curso, los estudiantes crearán
-            historias y juegos interactivos que podrán compartir con otras personas.
-            Recomendado para cuarto y quinto grado.
+              name: 'Laboratorio de Juegos: Crea una Historia'
+          student_description: El Curso 3 está diseñado para los estudiantes que ya
+            han completado el Curso 2. Los estudiantes profundizarán en los temas
+            de programación introducidos en los cursos anteriores para crear soluciones
+            flexibles a problemas más complejos. Al final de este curso, los estudiantes
+            crean historias y juegos interactivos que pueden compartir con cualquier
+            persona. Recomendado para los grados 4-5.
         playlab:
           title: Laboratorio de juegos
           description: "¡Crea una historia o haz un juego con Laboratorio de Juegos!"
@@ -230,16 +228,16 @@ es:
             Artist:
               name: Artista
               description_student: Programa el Artista para crear imágenes hermosas.
-              description_teacher: En esta lección, los estudiantes tomarán control
-                del Artista para completar los dibujos en pantalla. En esta etapa
-                del Artista, los estudiantes podrán crear imágenes de mayor complejidad
-                mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar
-                90 grados a la derecha`.
+              description_teacher: En esta lección, los estudiantes asumirán el control
+                del Artista para completar los dibujos en la pantalla. Esta etapa
+                del Artista permitirá a los estudiantes crear imágenes de complejidad
+                creciente utilizando bloques de programación como "avanzar 100 píxeles"
+                y "girar 90 grados a la derecha".
           student_description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
         hourofcode:
           title: Laberinto clásico
           description: "¡Prueba los fundamentos de la informática con los personajes
-            de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!"
+            de Angry Birds, Plantas vs Zombis y Scrat, de La Era del Hielo!"
           description_short: "¡Prueba los fundamentos de la informática con muchos
             personajes divertidos!"
           lessons:
@@ -256,7 +254,7 @@ es:
                 jóvenes, de 4 a 10 años, pero puede adaptarse a alumnos mayores utilizando
                 las sugerencias de diferenciación que se proporcionan.
           student_description: "¡Prueba los fundamentos de la informática con los
-            personajes de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!"
+            personajes de Angry Birds, Plantas vs Zombis y Scrat, de La Era del Hielo!"
         frozen:
           title: Programa con Ana y Elsa
           description: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
@@ -288,23 +286,23 @@ es:
             puedes compartir con tus amigos!
         course4:
           title: Curso 4
-          description: El curso 4 está diseñado para alumnos que hayan hecho los cursos
-            2 y 3. Los estudiantes profundizarán en los temas de programación iniciados
-            en los cursos anteriores desde soluciones flexibles hasta problemas más
-            complejos. Al final del curso, los estudiantes crearán historias y juegos
-            interactivos para compartir con otras personas. Recomendado para los grados
-            4-8.
-          description_short: Desarrolla programas más complejos con conceptos tales
-            como bucles y funciones con parámetros. Este curso es una continuación
+          description: El Curso 4 está diseñado para alumnos que hayan completado
+            los Cursos 2 y 3. Los estudiantes profundizarán en los temas de programación
+            iniciados en los cursos anteriores desde soluciones flexibles hasta problemas
+            más complejos. Al final del curso, los estudiantes crearán historias y
+            juegos interactivos para compartir con otras personas. Recomendado para
+            los grados 4-8.
+          description_short: Construye programas más complejos con conceptos como
+            los bucles "for" y las funciones con parámetros. Esta es una continuación
             del Curso 3.
           description_audience: Edades de 10 a 18 años
           lessons:
             Artist:
               name: Artista
             Artist Binary:
-              name: Artista binario
+              name: Artista Binario
             'Artist: For Loops':
-              name: 'Artista: Bucles Para'
+              name: 'Artista: Bucles "For"'
             'Artist: Functions':
               name: 'Artista: Funciones'
             'Artist: Functions with Parameters':
@@ -312,58 +310,58 @@ es:
             'Artist: Variables':
               name: 'Artista: Variables'
             'Bee: For Loops':
-              name: 'Abeja: Bucles For'
+              name: 'Abeja: Bucles "For"'
             'Bee: Functions with Parameters':
-              name: 'Abeja: Funciones con parámetros'
+              name: 'Abeja: Funciones con Parámetros'
             Extreme Challenge - Comprehensive:
-              name: 'Desafío extremo: integral'
+              name: 'Desafío Extremo: Global'
             Maze and Bee:
-              name: El laberinto y la abeja
+              name: El Laberinto y La Abeja
             'Play Lab: For Loops':
-              name: 'Laboratorio de Juegos: Bucles Para'
+              name: 'Laboratorio de Juegos: Bucles "For"'
             'Play Lab: Functions with Parameters':
-              name: 'Laboratorio de juegos: Funciones con parámetros'
+              name: 'Laboratorio de Juegos: Funciones con Parámetros'
             'Play Lab: Variables':
-              name: 'Laboratorio de juegos: Variables'
+              name: 'Laboratorio de Juegos: Variables'
             Super Challenge - For Loops:
-              name: 'Súper reto: para los bucles'
+              name: Superdesafío - Bucles "For"
             Super Challenge - Functions and Parameters:
-              name: 'Súper reto: funciones y parámetros'
+              name: Superdesafío - Funciones y Parámetros
             Super Challenge - Variables:
-              name: 'Súper desafío: variables'
+              name: Superdesafío - Variables
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: 'Sin Conexión: Binario'
             'Unplugged: Envelope Variables':
-              name: 'Desconectado: Variables de Sobre'
+              name: 'Sin Conexión: Variables Envolventes'
             'Unplugged: For Loop Fun':
-              name: 'Desconectado: Bucles Para divertidos'
+              name: 'Sin Conexión: Bucles "For" Divertidos'
             'Unplugged: Madlibs':
-              name: 'Desconectado: Madlibs'
+              name: 'Sin Conexión: Madlibs'
             'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composición de canciones con parámetros'
+              name: 'Sin Conexión: Composición de Canciones con Parámetros'
             'Unplugged: Tangrams':
-              name: 'Desconectado: Tangrams'
-          student_description: El curso 4 está diseñado para alumnos que hayan hecho
-            los cursos 2 y 3. Los estudiantes profundizarán en los temas de programación
+              name: 'Sin Conexión: Tangrams'
+          student_description: El Curso 4 está diseñado para alumnos que hayan completado
+            los Cursos 2 y 3. Los estudiantes profundizarán en los temas de programación
             iniciados en los cursos anteriores desde soluciones flexibles hasta problemas
             más complejos. Al final del curso, los estudiantes crearán historias y
             juegos interactivos para compartir con otras personas. Recomendado para
             los grados 4-8.
         Course4pre:
-          title: Prerequisito del Curso 4
-          description: Un breve resumen de conceptos para los estudiantes que no han
-            tomado los cursos 2 y 3.
-          description_short: Un breve resumen de conceptos para los estudiantes que
-            no han tomado los cursos 2 y 3.
+          title: Condición Previa del  Curso 4
+          description: Un breve repaso de los conceptos para los alumnos que no hayan
+            realizado los cursos 2 y 3.
+          description_short: Un breve repaso de los conceptos para los alumnos que
+            no hayan realizado los cursos 2 y 3.
           lessons:
             'Artist: Functions':
               name: 'Artista: Funciones'
             'Artist: Loops':
-              name: Bucles
+              name: 'Artista: Bucles'
             'Artist: Nested Loops':
               name: 'Artista: Bucles Anidados'
             'Artist: Sequence':
-              name: 'Artista: Secuencia'
+              name: 'Artista: Secuencias'
             'Bee: Conditionals':
               name: 'Abeja: Condicionales'
             'Bee: Debugging':
@@ -373,9 +371,9 @@ es:
             'Farmer: While Loops':
               name: 'Granjera: Bucles Mientras'
             'Maze: Sequence':
-              name: 'Laberinto: Secuencia'
-          student_description: Un breve resumen de conceptos para los estudiantes
-            que no han tomado los cursos 2 y 3.
+              name: 'Laberinto: Secuencias'
+          student_description: Un breve repaso de los conceptos para los alumnos que
+            no hayan realizado los cursos 2 y 3.
         usability:
           title: Pruebas de usabilidad
           description: Una selección de los niveles del Curso 4 para pruebas de usabilidad.
@@ -385,28 +383,28 @@ es:
             For Loops:
               name: Bucles Para
             Functions and Functions with Parameters:
-              name: Funciones y funciones con parámetros
+              name: Funciones y Funciones con Parámetros
             Intro:
-              name: Intro
+              name: Introducción
             Variables:
               name: Variables
           student_description: Una selección de los niveles del Curso 4 para pruebas
             de usabilidad.
         algebra:
           title: Ciencias de la computación en álgebra
-          description: Aprende programación funcional a través del álgebra.
-          description_short: Aprende programación funcional a través del álgebra.
+          description: Aprende Programación Funcional a través del Álgebra.
+          description_short: Aprende Programación Funcional a través del Álgebra.
           lessons:
             'Calc: Defining Variables':
-              name: Definición de Variables y sustitución
+              name: Definición de Variables y Sustitución
             'Calc: Evaluation Blocks':
-              name: Bloques de evaluación y expresiones aritméticas
+              name: Bloques de Evaluación y Expresiones Aritméticas
             'Eval: Boolean Operators':
-              name: Operadores booleanos
+              name: Operadores Booleanos
             'Eval: Conditionals':
               name: Condicionales
             'Eval: Defining Functions':
-              name: Funciones compuestas
+              name: Funciones Compuestas
             'Eval: Functions':
               name: Resolución de problemas con la receta de diseño
             'Eval: Strings and Images':
@@ -422,22 +420,22 @@ es:
             'Play Lab: Collision Detection (Big Game)':
               name: El gran juego - detección de colisiones
             'Play Lab: Defining Functions':
-              name: Altura del cohete
+              name: Altura del Cohete
             'Play Lab: Defining Variables (Big Game)':
-              name: El gran juego - Variables
+              name: El Gran Juego - Variables
             'Unplugged: Booleans':
-              name: 'Desconectado: Booleanos y lógica'
+              name: 'Desconectado: Booleanos y Lógica'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Desconectado: Detección de colisiones y el teorema de Pitágoras'
+              name: 'Desconectado: Detección de Colisiones y el Teorema de Pitágoras'
             'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Sin conexión: Condicionales y funciones por partes'
+              name: 'Sin Conexión: Condicionales y Funciones Piecewise'
             'Unplugged: Contracts':
               name: 'Desconectado: Contratos, dominio y rango'
             'Unplugged: The Design Recipe':
               name: 'Sin conexión: La receta de diseño'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Desconectado: videojuegos y planos de coordenadas'
-          student_description: Aprende programación funcional a través del álgebra.
+          student_description: Aprende Programación Funcional a través del Álgebra.
         infinity:
           title: Laboratorio de Juego Disney Infinity
           description: Utiliza el laboratorio de juegos para crear una historia o
@@ -2554,7 +2552,7 @@ es:
             'Unplugged: Collision Detection and the Distance Formula':
               name: 'Desconectado: Detección de colisiones y la fórmula de distancia'
             'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Sin conexión: Condicionales y funciones por partes'
+              name: 'Sin Conexión: Condicionales y Funciones Piecewise'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Desconectado: videojuegos y planos de coordenadas'
           student_description: Aprender programación funcional a través del álgebra
@@ -3712,15 +3710,15 @@ es:
           description_audience: Edad 10-110
           lessons:
             'Artist: For Loops':
-              name: 'Artista: Bucles Para'
+              name: 'Artista: Bucles "For"'
             'Artist: Functions with Parameters':
               name: 'Artista: Funciones con Parámetros'
             'Artist: Variables':
               name: 'Artista: Variables'
             'Bee: For Loops':
-              name: 'Abeja: Bucles For'
+              name: 'Abeja: Bucles "For"'
             'Bee: Functions with Parameters':
-              name: 'Abeja: Funciones con parámetros'
+              name: 'Abeja: Funciones con Parámetros'
             Digital Citizenship:
               name: Ciudadanía Digital
             Explore project ideas:
@@ -3734,15 +3732,15 @@ es:
             'Final Project - Work Day: Build Project Online':
               name: 'Proyecto final - Día de trabajo: crear un proyecto en línea'
             'Play Lab: Variables':
-              name: 'Laboratorio de juegos: Variables'
+              name: 'Laboratorio de Juegos: Variables'
             Try programming with Khan Academy:
               name: Prueba la programación con Khan Academy
             'Unplugged: Envelope Variables':
-              name: 'Desconectado: Variables de Sobre'
+              name: 'Sin Conexión: Variables Envolventes'
             'Unplugged: For Loop Fun':
-              name: 'Desconectado: Bucles Para divertidos'
+              name: 'Sin Conexión: Bucles "For" Divertidos'
             'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composición de canciones con parámetros'
+              name: 'Sin Conexión: Composición de Canciones con Parámetros'
           student_description: Guion de Planificación para CSF 2.0
         ecs-unit1:
           title: ECS Unidad 1
@@ -5863,9 +5861,9 @@ es:
             Digital Citizenship:
               name: Ciudadanía Digital
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: 'Sin Conexión: Binario'
             Artist Binary:
-              name: Artista binario
+              name: Artista Binario
             Nested Loops in Bee:
               name: Bucles anidados en Abeja
             Nested Loops:
@@ -9515,7 +9513,7 @@ es:
             Events in Play Lab:
               name: Eventos en Laboratorio de Juegos
             Spelling Bee:
-              name: Concurso de Ortografía
+              name: 'Abeja: Deletreando'
           student_description: Aprende los fundamentos de las ciencias de la computación
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
             historia para compartir.
@@ -9812,9 +9810,9 @@ es:
             Build a Play Lab Game:
               name: Crea un juego en el Laboratorio de Juegos
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: 'Sin Conexión: Binario'
             Artist Binary:
-              name: Artista binario
+              name: Artista Binario
             Building a Foundation:
               name: Construyendo una Base
             Loops in Artist:
@@ -14572,7 +14570,7 @@ es:
             Events in Play Lab:
               name: Una batalla real con eventos
             Spelling Bee:
-              name: Concurso de Ortografía
+              name: 'Abeja: Deletreando'
             Move It, Move It:
               name: Muévelo, Muévelo
             Sequencing with Scrat:
@@ -15811,9 +15809,9 @@ es:
             Binary Bracelets:
               name: Pulseras Binarias
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: 'Sin Conexión: Binario'
             Artist Binary:
-              name: Artista binario
+              name: Artista Binario
             Internet:
               name: Internet
             Crowdsourcing:
@@ -16676,7 +16674,7 @@ es:
             Events in Play Lab:
               name: Eventos en Laboratorio de Juegos
             Spelling Bee:
-              name: Concurso de Ortografía
+              name: 'Abeja: Deletreando'
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
             Programming in Maze:
@@ -25301,7 +25299,7 @@ es:
                 de las habilidades de algoritmo secuencial y comenzarán a usar el
                 proceso de depuración. '
             Spelling Bee:
-              name: Concurso de Ortografía
+              name: 'Abeja: Deletreando'
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
               description_teacher: Partiendo del concepto de repetición de instrucciones
@@ -32276,7 +32274,7 @@ es:
                 condicionales. Al practicar los tres, los/as estudiantes aprenderán
                 a escribir código complejo y flexible.
             'Unplugged: Binary':
-              key: 'Desconectado: binario'
+              key: 'Sin Conexión: Binario'
               name: Imágenes binarias
               description_student: Aprende cómo las computadoras almacenan imágenes
                 a través de un lenguaje que tiene solo dos opciones.
@@ -32287,7 +32285,7 @@ es:
                 que ilustra cómo un computador puede también almacenar incluso información
                 más compleja (como imágenes y colores) en binario.
             Artist Binary:
-              key: Artista binario
+              key: Artista Binario
               name: Imágenes Binarias con Artista
               description_student: En esta lección, aprenderás a crear imágenes mediante
                 ceros y unos.
@@ -41088,7 +41086,7 @@ es:
         spelling-bee:
           lessons:
             lesson-1:
-              name: Concurso de Ortografía
+              name: 'Abeja: Deletreando'
               description_student: "¡Ayuda a la abeja a deletrear nuevas palabras!
                 \ "
               description_teacher: |-
@@ -41102,7 +41100,7 @@ es:
                 -   reconocer y contar números hasta el 10 utilizando los dedos, objetos o manipulativos.
                 -   reconocer que las palabras están formadas por una secuencia de letras.
           name: deletreando-abeja
-          title: Concurso de Ortografía
+          title: 'Abeja: Deletreando'
         outbreak-csc:
           lessons:
             lesson-1:
@@ -41883,7 +41881,7 @@ es:
                 -   reconocer que las palabras están formadas por una secuencia de letras.
             lesson-1:
               key: lección-1
-              name: Concurso de Ortografía
+              name: 'Abeja: Deletreando'
               description_student: "¡Ayuda a la abeja a deletrear nuevas palabras!
                 \ "
               description_teacher: |-
@@ -43859,6 +43857,7 @@ es:
           description_short: 'Una introducción a la ciencia de la computación: combina
             lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
           description_audience: 'Edades: 9 a 18'
+          name: exprés-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -47116,6 +47115,11 @@ es:
                 y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
             'Hello World: Food':
               name: 'Hola Mundo: Alimentos'
+              description_student: En esta lección, aprenderás a crear y animar sprites
+                y a hacerlos interactivos usando eventos.
+              description_teacher: 'En esta lección de **desarrollo de habilidades**,
+                los alumnos aprenderán a crear y animar sprites y hacerlos interactivos
+                usando eventos. '
           lesson_groups:
             csf_sprites:
               display_name: Sprites

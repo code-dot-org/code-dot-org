@@ -1321,6 +1321,8 @@ es:
         text: eliminar color de {THIS}
       gamelab_repeatForever:
         text: Repetir para siempre
+      gamelab_resetTimer:
+        text: reiniciar temporizador
       gamelab_setAnimation:
         text: cambiar {THIS} disfraz a {ANIMATION}
       gamelab_setBackground:

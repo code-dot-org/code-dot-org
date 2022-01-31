@@ -368,6 +368,8 @@ es:
       full_section: No hemos podido añadirte a la sección %{section_code} porque ya
         existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor
         para que te ayude.
+      not_participant_type: No hemos podido añadirte a la sección %{section_code}
+        porque no reúnes el criterio de participante para la sección.
     mail:
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como
@@ -685,6 +687,8 @@ es:
       están en la nueva sección.
     third_party_login: No puedes mover estudiantes a una sección sincronizada con
       una herramienta de otro proveedor.
+    not_correct_participant_type: No puedes mover a estos usuarios porque no tienen
+      permisos para ser participantes en la nueva sección.
   share:
     title: Aprender en Code Studio
     description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
@@ -751,6 +755,7 @@ es:
     how_it_works: Cómo funciona (ver el código)
     try_hour_of_code: "¡Prueba una Hora de Code!"
     store: Tienda
+    cookie_notice: Aviso de Cookies
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Ver estos vídeos y sugerencias
