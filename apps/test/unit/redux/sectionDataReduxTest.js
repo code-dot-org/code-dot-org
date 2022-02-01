@@ -19,8 +19,7 @@ const fakeSectionData = {
   },
   lesson_extras: false,
   tts_autoplay_enabled: false,
-  is_assigned_csa: false,
-  codeReviewExpiresAt: null
+  is_assigned_csa: false
 };
 
 const sortedFakeSectionData = {
@@ -41,8 +40,7 @@ const sortedFakeSectionData = {
   },
   isAssignedCSA: false,
   lessonExtras: false,
-  ttsAutoplayEnabled: false,
-  codeReviewExpiresAt: null
+  ttsAutoplayEnabled: false
 };
 
 describe('sectionDataRedux', () => {
