@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-26 00:06:36 UTC",
+    "serialized_at": "2022-01-31 19:44:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -76,7 +76,7 @@
   "lessons": [
     {
       "key": "lesson-10",
-      "name": "Accessing Object Behavior",
+      "name": "Writing Methods to Satisfy Conditions",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +94,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Writing Methods to Satisfy Conditions",
+      "name": "Exploring Method Components and Functionality",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -112,7 +112,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Exploring Method Components and Functionality",
+      "name": "Using Object References as Parameters",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -130,7 +130,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Using Object References as Parameters",
+      "name": "Overloading Methods",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -147,7 +147,7 @@
     },
     {
       "key": "lesson-9",
-      "name": "Overloading Methods",
+      "name": "Accessing Object Behavior",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
