@@ -91,11 +91,7 @@ class CoursesController < ApplicationController
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
-      has_numbered_units: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-      participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      has_numbered_units: true
     )
     if @unit_group.save
       @unit_group.write_serialization

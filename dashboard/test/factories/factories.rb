@@ -24,9 +24,6 @@ FactoryGirl.define do
   end
 
   factory :unit_group_unit do
-    after(:create) do |unit_group_unit|
-      unit_group_unit.unit_group.update_scripts(unit_group_unit.unit_group.default_units.map(&:name))
-    end
   end
 
   factory :unit_group do
@@ -831,6 +828,13 @@ FactoryGirl.define do
       after(:create) do |hoc_script|
         hoc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save
+      end
+    end
+
+    factory :standalone_unit do
+      after(:create) do |standalone_unit|
+        standalone_unit.is_course = true
+        standalone_unitg.save
       end
     end
   end

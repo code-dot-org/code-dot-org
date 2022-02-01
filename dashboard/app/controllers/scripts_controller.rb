@@ -91,15 +91,6 @@ class ScriptsController < ApplicationController
   def create
     return head :bad_request unless general_params[:is_migrated]
     @script = Script.new(unit_params)
-
-    # Sets default values in order to makes sure these values are not nil
-    # for a unit that is not in a course. This is required by a callback after save
-    # These will be updated by update_text if general_params contained different values
-    @script.published_state = SharedCourseConstants::PUBLISHED_STATE.in_development
-    @script.instruction_type = SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-    @script.instructor_audience = SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-    @script.participant_audience = SharedCourseConstants::PARTICIPANT_AUDIENCE.student
-
     if @script.save && @script.update_text(unit_params, i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
