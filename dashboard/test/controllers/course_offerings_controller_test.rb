@@ -11,12 +11,12 @@ class CourseOfferingsControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @course_offering = create :course_offering, display_name: 'Course Offering Name', category: 'Other'
+    @course_offering = create :course_offering, display_name: 'Course Offering Name', category: 'other', is_featured: false
 
     @update_params = {
       key: @course_offering.key,
       display_name: 'New Display Name',
-      category: 'Full Courses',
+      category: 'full_course',
       is_featured: false
     }
   end
