@@ -76,7 +76,7 @@
   #toprow
     #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
       %a{:href=>"/printcertificate?s=#{cert_script}", :target=>'_blank'}
-        %img{:src=>"/images/fit-540/#{certificate_template_for(cert_script)}", :width=>"100%"}
+        %img{:src=>"/images/fit-540/#{CertificateImage.fallback_course_title_for(cert_script)}", :width=>"100%"}
 
     #certificate.col-50
       = view :csf_congrats_certificate, course: course
