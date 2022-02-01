@@ -349,14 +349,16 @@ const styles = {
   },
   dropdown: {
     overflow: 'auto',
-    padding: '10px 0'
+    padding: '10px 0',
+    minWidth: 'inherit'
   },
   dropdownDark: {
     backgroundColor: '#292C33',
     color: '#F1F2F4'
   },
   listContainer: {
-    width: 'fit-content'
+    width: 'fit-content',
+    minWidth: 'inherit'
   },
   buttonStyles: {
     cursor: 'pointer',
