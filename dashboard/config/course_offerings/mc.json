@@ -1,6 +1,6 @@
 {
   "key": "mc",
-  "display_name": "mc",
-  "category": "other",
+  "display_name": "Minecraft Hour of Code",
+  "category": "hoc",
   "is_featured": false
 }

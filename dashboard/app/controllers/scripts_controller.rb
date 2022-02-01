@@ -6,6 +6,7 @@ class ScriptsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
+  before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
 
@@ -73,7 +74,7 @@ class ScriptsController < ApplicationController
 
     @script_data = @script.summarize(true, current_user).merge(additional_script_data)
 
-    if @script.old_professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
+    if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
     end
   end
@@ -160,23 +161,19 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def resources
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def code
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def standards
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def get_rollup_resources
@@ -238,13 +235,13 @@ class ScriptsController < ApplicationController
   def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
+  end
 
-    if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
-      render :no_access
-    end
-
-    if current_user && @script.in_development? && !current_user.permission?(UserPermission::LEVELBUILDER)
-      render :no_access
+  def render_no_access
+    if current_user
+      if  @script.pilot? && !@script.has_pilot_access?(current_user)
+        return render :no_access
+      end
     end
   end
 
