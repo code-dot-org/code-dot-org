@@ -34,15 +34,44 @@ social:
 
 <div style="clear: both; margin-bottom:40px"></div>
 
+<ul>
+    <li><a href="#upcoming">Upcoming discussions</a></li>
+    <li><a href="#past">Past discussions</a></li>
+</ul>    
+<br>
 
+<a id="upcoming"></a>
+
+<div class="col-100" style="padding:25px; background-color: #7665a0; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Day in the Life of a Woman College Student in CS</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #7665a0; border-radius:0 0 15px 15px; border-top:none">
+  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, February 23rd at 8 pm EDT / 5 pm PDT</strong></h3>
+  <p>This first discussion is all about transitions! Learn how Computer Science 101 is different than taking CS in high school. Get the inside scoop on what lectures and projects are like, who to seek help from and when (TAs and office hours), and the importance of finding/building community.</p>
+  <button style="margin-bottom:20px">Register</button> 
+  <p>Featuring:</p>
+  <ul>
+    <li>Catherine Hu, Sophomore at <a href="https://www.ucla.edu/" target="_blank">UCLA</a></li>
+    <li>Indigo Parlin, Sophomore at <a href="https://www.columbia.edu/" target="_blank">Columbia University</a></li>
+    <li>Pranavi Pratapa, Sophomore at <a href="https://umich.edu/" target="_blank">University of Michigan</a></li>
+    <li>Anna Quinlan, Junior at <a href="https://www.stanford.edu/" target="_blank">Stanford University</a></li>
+    <li>Cindy Wang, Sophomore at <a href="https://home.dartmouth.edu/" target="_blank">Dartmouth College</a></li>
+  </ul>
+  <br>
+  <a href="#top">Back to top</a>
+</div>
+<div style="clear:both"></div>
+
+<div style="clear: both; margin-bottom:40px"></div>
+
+<a id="past"></a>
 <div class="col-100" style="padding:25px; background-color: #7665a0; border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">The Transition from High School to College</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #7665a0; border-radius:0 0 15px 15px; border-top:none">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, January 26th at 8 pm EDT / 5 pm PDT</strong></h3>
   <p>This first discussion is all about transitions! Learn how Computer Science 101 is different than taking CS in high school. Get the inside scoop on what lectures and projects are like, who to seek help from and when (TAs and office hours), and the importance of finding/building community.</p>
-  <a href="https://us02web.zoom.us/webinar/register/WN_k58ui58bRfGJHbRlQtucSA" target="_blank"><button style="margin-bottom:20px">Register</button></a>
-  <p>Featuring:</p>
+   <p>Featuring:</p>
   <ul>
     <li>Luna Chen, Freshman at <a href="https://www.washington.edu/" target="_blank">University of Washington</a></li>
     <li>Grace Coleman, Sophomore at <a href="https://www.unc.edu/" target="_blank">University of North Carolina-Chapel Hill</a></li>
