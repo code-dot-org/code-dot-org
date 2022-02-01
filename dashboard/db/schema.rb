@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_28_220317) do
+ActiveRecord::Schema.define(version: 2022_02_01_165407) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1370,7 +1370,9 @@ ActiveRecord::Schema.define(version: 2022_01_28_220317) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "key", null: false
+    t.integer "programming_environment_category_id"
     t.index ["name", "category"], name: "index_programming_expressions_on_name_and_category", type: :fulltext
+    t.index ["programming_environment_category_id"], name: "index_programming_expressions_on_environment_category_id"
     t.index ["programming_environment_id", "key"], name: "programming_environment_key", unique: true
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
