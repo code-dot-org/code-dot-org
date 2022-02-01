@@ -2,9 +2,10 @@
   "script": {
     "name": "csa5-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-15 14:29:02 UTC",
+    "serialized_at": "2022-01-28 19:41:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6626,6 +6627,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa5-pilot-facilitator/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa5-pilot-facilitator/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa5-pilot-facilitator/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
+      }
+    },
+    {
       "name": "Creating 2D Arrays",
       "url": "https://docs.google.com/document/d/1uazR1PUKou39puTk5g_WqsQKjFo2hON8aYd-E5Za_EM/edit?usp=sharing",
       "key": "creating_2d_arrays",
@@ -7403,7 +7437,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csa5-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "csa5-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
+        "script.name": "csa5-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

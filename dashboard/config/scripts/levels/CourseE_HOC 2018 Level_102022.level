@@ -50,11 +50,18 @@
     "ideal": "9",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"See the **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? How can you use a conditional with them to get through the Ocean Monument?\\n\\n\",\"hint_id\":\"voyage_aquatic_10a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ed2de881de826ebf938108e54e3c5673/HOC 2018 Level_10.mp3\"}]",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:16.264+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_10_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_10_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:16.264+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_10_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_10_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 2,
+    "repeat_until_while": 3,
+    "conditionals": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
