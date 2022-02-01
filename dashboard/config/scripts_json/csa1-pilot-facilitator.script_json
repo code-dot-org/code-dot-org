@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-21 22:04:29 UTC",
+    "serialized_at": "2022-01-27 18:15:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3193,10 +3193,33 @@
       }
     },
     {
-      "key": "98016b24-9e88-4f3c-a314-76c7f599e006",
+      "key": "7674786b-dde8-4c70-ad90-f0234059d932",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "7674786b-dde8-4c70-ad90-f0234059d932",
+        "lesson_activity.key": "c675bcb8-6e7e-4b93-8fb8-02c3890600d7"
+      }
+    },
+    {
+      "key": "f268971f-f5d0-4b29-916b-0965b5c1f0c5",
+      "position": 6,
+      "properties": {
+        "description": "When we write the `PainterPlus` class, we have to write a constructor that calls the superclass constructor. Even though the `PainterPlus` class will inherit all of the attributes and behaviors from the `Painter` class, it will not inherit the constructor. The `PainterPlus` constructor will then call the superclass constructor by using the keyword `super`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f268971f-f5d0-4b29-916b-0965b5c1f0c5",
+        "lesson_activity.key": "c675bcb8-6e7e-4b93-8fb8-02c3890600d7"
+      }
+    },
+    {
+      "key": "98016b24-9e88-4f3c-a314-76c7f599e006",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
         "progression_name": "Creating PainterPlus",
         "tips": [
           {
@@ -3212,11 +3235,12 @@
     },
     {
       "key": "c072ceac-1175-4715-8bb2-d695c87747dc",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? A subclass is usually designed to have modified (overridden) or additional methods or instance variables. Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
         "duration": "15",
-        "name": "Writing New Methods"
+        "name": "Writing New Methods",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "c072ceac-1175-4715-8bb2-d695c87747dc",
@@ -3225,7 +3249,7 @@
     },
     {
       "key": "1d32cb07-512e-4c07-a8c2-ff739d3db96d",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Methods video.",
         "tips": [
@@ -3242,7 +3266,7 @@
     },
     {
       "key": "91723289-69ae-4c08-a676-09587a93228c",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the syntax for writing methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to write the `turnRight()` method.",
         "progression_name": "PainterPlus: turnRight()"
@@ -3254,7 +3278,7 @@
     },
     {
       "key": "6e82becc-aca1-45d5-8b09-067a12a01244",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.\n\n**Discussion Goal:** Students realize that the `turnRight()` method makes the code more efficient.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do you think would happen if we tried to call our new `turnRight()` method on a `Painter` object instead of a `PainterPlus` object?\n\n**Discussion Goal:** Students make predictions about the code, including that potential errors they think will happen or they may think that the code will work as intended.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
         "progression_name": "Bug: Calling a Subclass's Method on a Superclass Object"
@@ -3266,7 +3290,7 @@
     },
     {
       "key": "9e09304c-83a8-49b8-a26c-11fc7b47b18f",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you called `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Students realize that a `Painter` object cannot use the `turnRight()` method because it has not been defined in the `Painter` class. Students note that the only class that can use the `turnRight()` method is `PainterPlus`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing a strategy to identify and fix errors that occur when an object tries to use a method that is not available to them. "
       },

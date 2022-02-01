@@ -58,6 +58,7 @@ export default class JavabuilderConnection {
         levelId: this.levelId,
         options: this.options,
         executionType: this.executionType,
+        useDashboardSources: true,
         miniAppType: this.miniAppType
       }
     })
@@ -149,6 +150,7 @@ export default class JavabuilderConnection {
         this.onStatusMessage(data.value, data.detail);
         break;
       case WebSocketMessageType.SYSTEM_OUT:
+      case WebSocketMessageType.TEST_RESULT:
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
