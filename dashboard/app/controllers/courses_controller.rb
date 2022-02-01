@@ -109,8 +109,6 @@ class CoursesController < ApplicationController
   end
 
   def get_rollup_resources
-    return render :forbidden if @unit_group.plc_course
-
     course_version = @unit_group.course_version
     return render status: 400, json: {error: 'Course does not have course version'} unless course_version
     rollup_pages = []
