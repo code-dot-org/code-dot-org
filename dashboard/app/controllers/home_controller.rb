@@ -134,7 +134,7 @@ class HomeController < ApplicationController
 
     @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
 
-    script = Queries::ScriptActivity.primary_student_script(current_user)
+    script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
     end

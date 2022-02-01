@@ -1672,9 +1672,9 @@ class User < ApplicationRecord
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
       select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
 
-    user_pl_scripts = user_scripts.select {|us| us.script.pl_course?}
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
-    user_script_data = user_pl_scripts.map do |user_script|
+    user_script_data = pl_user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1704,7 +1704,7 @@ class User < ApplicationRecord
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
   def recent_student_courses_and_units(exclude_primary_script)
-    primary_script_id = Queries::ScriptActivity.primary_student_script(self).try(:id)
+    primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
     unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
