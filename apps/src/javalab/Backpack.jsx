@@ -211,6 +211,12 @@ class Backpack extends Component {
       !backpackFilesLoading &&
       !backpackLoadError &&
       backpackFilenames.length === 0;
+    const hasSelectedFiles = selectedFiles.length !== 0;
+
+    const importButtonStyles = {...styles.importButton};
+    if (hasSelectedFiles) {
+      importButtonStyles.borderColor = color.orange;
+    }
 
     return (
       <>
@@ -275,9 +281,9 @@ class Backpack extends Component {
                 </div>
                 <JavalabButton
                   text={javalabMsg.import()}
-                  style={styles.importButton}
+                  style={importButtonStyles}
                   onClick={this.handleImport}
-                  isDisabled={selectedFiles.length === 0}
+                  isDisabled={!hasSelectedFiles}
                 />
               </>
             )}
@@ -330,26 +336,24 @@ const styles = {
     position: 'absolute',
     flexDirection: 'column',
     top: 30,
-    backgroundColor: color.lightest_gray,
+    backgroundColor: color.white,
     zIndex: 20,
     borderWidth: 1,
-    borderColor: color.darkest_gray,
+    borderColor: '#9197A6',
     borderStyle: 'solid',
-    borderTopWidth: 0,
     borderRadius: 4,
     maxWidth: '35%',
     maxHeight: '80%',
     minWidth: 150,
-    color: color.darkest_gray
+    color: '#4F575E'
   },
   dropdown: {
     overflow: 'auto',
     padding: 10
   },
   dropdownDark: {
-    backgroundColor: color.darkest_gray,
-    color: color.lightest_gray,
-    borderColor: color.lightest_gray
+    backgroundColor: '#292C33',
+    color: '#F1F2F4'
   },
   listContainer: {
     width: 'fit-content'
@@ -383,12 +387,12 @@ const styles = {
     padding: '5px',
     width: '100%',
     ':hover': {
-      backgroundColor: color.lighter_gray
+      backgroundColor: '#F1F2F4'
     }
   },
   fileListItemDark: {
     ':hover': {
-      backgroundColor: color.black
+      backgroundColor: '#505563'
     }
   },
   fileListLabel: {
