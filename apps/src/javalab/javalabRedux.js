@@ -210,6 +210,16 @@ export const getValidation = state => {
   return validation;
 };
 
+export const getSourcesAndValidation = state => {
+  let sources = {};
+  for (let key in state.javalab.sources) {
+    sources[key] = {
+      ...state.javalab.sources[key]
+    };
+  }
+  return sources;
+};
+
 export const setRenderedHeight = height => ({
   type: EDITOR_HEIGHT_UPDATED,
   height

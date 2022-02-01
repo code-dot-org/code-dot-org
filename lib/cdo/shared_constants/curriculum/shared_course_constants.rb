@@ -49,6 +49,7 @@ module SharedCourseConstants
     }
   ).freeze
 
+  # All the categories options used to group course offerings in the assignment dropdown
   COURSE_OFFERING_CATEGORIES = OpenStruct.new(
     full_course: 'Full Courses',
     csf: 'CS Fundamentals',
@@ -59,5 +60,5 @@ module SharedCourseConstants
     math: 'Math',
     twenty_hour: '20-hour',
     other: 'Other'
-  )
+  ).freeze
 end
