@@ -16,7 +16,8 @@ import teacherSections, {
   setValidGrades,
   setTextToSpeechUnitIds,
   setLessonExtrasUnitIds,
-  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
+  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
+  setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
@@ -31,7 +32,6 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import {setStudentsForCurrentSection} from '../../../../templates/teacherDashboard/teacherSectionsRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
