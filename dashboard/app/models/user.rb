@@ -1664,7 +1664,7 @@ class User < ApplicationRecord
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
   def recent_courses_and_scripts(exclude_primary_script)
-    primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
+    primary_script_id = Queries::ScriptActivity.primary_student_script(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
     unit_group_units_script_ids = courses_as_student.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
