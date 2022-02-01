@@ -3351,7 +3351,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns both courses and scripts" do
-      courses_and_scripts = @student.recent_courses_and_scripts(false)
+      courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
       assert_equal 'csd', courses_and_scripts[0][:name]
@@ -3369,7 +3369,7 @@ class UserTest < ActiveSupport::TestCase
       script = Script.find_by_name('csd1')
       @student.assign_script(script)
 
-      courses_and_scripts = @student.recent_courses_and_scripts(false)
+      courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
       assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
@@ -3390,7 +3390,7 @@ class UserTest < ActiveSupport::TestCase
       section = create :section, user_id: teacher.id, unit_group: unit_group
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
-      courses_and_scripts = student.recent_courses_and_scripts(true)
+      courses_and_scripts = student.recent_student_courses_and_units(true)
 
       assert_equal 1, courses_and_scripts.length
 
