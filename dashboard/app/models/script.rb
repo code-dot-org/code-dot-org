@@ -164,7 +164,7 @@ class Script < ApplicationRecord
   after_save :check_course_type_settings
 
   def check_course_type_settings
-    if unit_group.nil?
+    if is_course?
       raise 'Published state must be set on the unit if its not in a course.' if published_state.nil?
       raise 'Instructor audience must be set on the unit if its not in a course.' if instructor_audience.nil?
       raise 'Participant audience must be set on the unit if its not in a course.' if participant_audience.nil?

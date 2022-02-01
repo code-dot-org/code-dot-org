@@ -338,10 +338,6 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: @coursez_2019.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: @coursez_2019.published_state,
-      instruction_type: @coursez_2019.instruction_type,
-      instructor_audience: @coursez_2019.instructor_audience,
-      participant_audience: @coursez_2019.participant_audience
     }
     assert_response :forbidden
   end
@@ -356,10 +352,6 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: @partner_unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: @coursez_2019.published_state,
-      instruction_type: @coursez_2019.instruction_type,
-      instructor_audience: @coursez_2019.instructor_audience,
-      participant_audience: @coursez_2019.participant_audience
     }
     assert_response :success
   end
@@ -389,11 +381,7 @@ class ScriptsControllerTest < ActionController::TestCase
     post :create, params: {
       script: {name: unit_name},
       lesson_groups: '[]',
-      is_migrated: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-      participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      is_migrated: true
     }
     assert_redirected_to edit_script_path id: unit_name
 
@@ -425,7 +413,7 @@ class ScriptsControllerTest < ActionController::TestCase
       '../evil_unit_name',
       'subdir/../../../evil_unit_name'
     ].each do |name|
-      evil_unit = Script.new(name: name, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+      evil_unit = Script.new(name: name)
       evil_unit.save(validate: false)
       assert_raise ArgumentError do
         delete :destroy, params: {id: evil_unit.id}
@@ -445,10 +433,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     unit.reload
@@ -469,10 +454,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
@@ -493,10 +475,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced,
-      published_state: unit.published_state,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     assert_response :success
     unit.reload
@@ -517,10 +496,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
     unit.reload
@@ -542,10 +518,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
-      pilot_experiment: 'my-pilot',
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      pilot_experiment: 'my-pilot'
     }
     assert_response :success
     unit.reload
@@ -566,10 +539,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
     unit.reload
@@ -590,10 +560,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
@@ -614,10 +581,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.stable,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
     unit.reload
@@ -636,10 +600,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
@@ -658,10 +619,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     unit.reload
@@ -680,10 +638,6 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
     }
     assert_response :bad_request
   end
@@ -709,11 +663,7 @@ class ScriptsControllerTest < ActionController::TestCase
         script: {name: unit.name},
         is_migrated: true,
         last_updated_at: updated_at.to_s,
-        lesson_groups: lesson_groups_json,
-        published_state: unit.published_state,
-        instruction_type: unit.instruction_type,
-        instructor_audience: unit.instructor_audience,
-        participant_audience: unit.participant_audience
+        lesson_groups: lesson_groups_json
       }
       assert_response :success
       unit.reload
@@ -739,11 +689,7 @@ class ScriptsControllerTest < ActionController::TestCase
         script: {name: unit.name},
         is_migrated: true,
         lesson_groups: '[]',
-        last_updated_at: timestamp,
-        published_state: unit.published_state,
-        instruction_type: unit.instruction_type,
-        instructor_audience: unit.instructor_audience,
-        participant_audience: unit.participant_audience
+        last_updated_at: timestamp
       }
     end
     assert_includes e.message, 'Could not update the unit because it has been modified more recently outside of this editor.'
@@ -764,10 +710,6 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       lesson_groups: lesson_groups_json,
       last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
     }
     assert_response :success
     assert unit.is_migrated
@@ -799,10 +741,6 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       lesson_groups: lesson_groups_json,
       last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
     }
 
     assert_response :not_acceptable
@@ -834,10 +772,6 @@ class ScriptsControllerTest < ActionController::TestCase
       resourceIds: teacher_resources.map(&:id),
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
     }
     assert_equal teacher_resources.map(&:key), Script.find_by_name(unit.name).resources.map {|r| r[:key]}
   end
@@ -863,10 +797,6 @@ class ScriptsControllerTest < ActionController::TestCase
       studentResourceIds: student_resources.map(&:id),
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
     }
     assert_equal student_resources.map(&:key), Script.find_by_name(unit.name).student_resources.map {|r| r[:key]}
   end
@@ -884,10 +814,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       lesson_groups: '[]',
       pilot_experiment: 'pilot-experiment',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     }
 
     assert_response :success
@@ -910,10 +837,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       lesson_groups: '[]',
       pilot_experiment: '',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.preview,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
 
     assert_response :success
@@ -944,11 +868,7 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
       version_year: '2017',
-      is_maker_unit: 'on',
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      is_maker_unit: 'on'
     }
     unit.reload
 
@@ -995,10 +915,6 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
     }.merge(general_params)
     assert_response :success
     unit.reload
@@ -1025,9 +941,6 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: '',
       supported_locales: [],
       project_widget_types: [],
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
     }
     assert_response :success
     unit.reload
@@ -1051,11 +964,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      tts: true,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      tts: true
     }, as: :json
     assert_response :success
     unit.reload
@@ -1079,11 +988,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      tts: false,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      tts: false
     }, as: :json
     assert_response :success
     unit.reload
@@ -1096,12 +1001,20 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    unit = create :script
+    unit = create :script, published_state: nil
     create :unit_group_unit, unit_group: course, script: unit, position: 1
-
     stub_file_writes(unit.name)
 
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    }
+    assert_response :success
     unit.reload
+
     assert_nil unit.published_state
   end
 
@@ -1110,23 +1023,16 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    unit = create :script
+    unit = create :script, published_state: nil
     create :unit_group_unit, unit_group: course, script: unit, position: 1
-
     stub_file_writes(unit.name)
-
-    unit.reload
-    assert_nil unit.published_state
 
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       lesson_groups: '[]',
       is_migrated: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
     unit.reload
@@ -1170,11 +1076,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     assert_response :success
     assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
@@ -1214,11 +1116,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     assert_response :success
     lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
@@ -1273,11 +1171,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     assert_response :success
     lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
@@ -1328,11 +1222,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     assert_response :success
     lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
@@ -1384,11 +1274,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     unit.reload
     assert_equal ['lesson 1', 'lesson 2'], unit.lesson_groups[0].lessons.map(&:name)
@@ -1438,11 +1324,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     unit.reload
     assert_empty unit.lesson_groups[0].lessons
@@ -1492,11 +1374,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     unit.reload
     assert_equal ['lesson 2', 'lesson 1', 'lesson 3'], unit.lesson_groups[0].lessons.map(&:name)
@@ -1546,11 +1424,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: lesson_groups_json,
-      last_updated_at: unit.updated_at.to_s,
-      published_state: unit.published_state,
-      instruction_type: unit.instruction_type,
-      instructor_audience: unit.instructor_audience,
-      participant_audience: unit.participant_audience
+      last_updated_at: unit.updated_at.to_s
     }
     unit.reload
     assert_equal ['lesson group 2', 'lesson group 1'], unit.lesson_groups.map(&:display_name)

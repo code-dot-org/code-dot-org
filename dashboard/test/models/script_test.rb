@@ -2187,7 +2187,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should raise error if participant audience is nil for standalone unit' do
-    unit = create(:script)
+    unit = create(:standalone_unit)
     error = assert_raises do
       unit.participant_audience = nil
       unit.save!
@@ -2197,7 +2197,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should raise error if instructor audience is nil for standalone unit' do
-    unit = create(:script)
+    unit = create(:standalone_unit)
     error = assert_raises do
       unit.instructor_audience = nil
       unit.save!
@@ -2207,7 +2207,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should raise error if published state is nil for standalone unit' do
-    unit = create(:script)
+    unit = create(:standalone_unit)
     error = assert_raises do
       unit.published_state = nil
       unit.save!
@@ -2217,7 +2217,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should raise error if instruction type is nil for standalone unit' do
-    unit = create(:script)
+    unit = create(:standalone_unit)
     error = assert_raises do
       unit.instruction_type = nil
       unit.save!
