@@ -40,11 +40,16 @@
     "long_instructions": "Figure out what is missing and then add blocks to get Scrat to the acorn!",
     "mini_rubric": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:16.083+00:00\",\"changed\":[\"cloned from \\\"courseB_maze_seq7_2021\\\"\"],\"cloned_from\":\"courseB_maze_seq7_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:16.083+00:00\",\"changed\":[\"cloned from \\\"courseB_maze_seq7_2021\\\"\"],\"cloned_from\":\"courseB_maze_seq7_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "debugging": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
