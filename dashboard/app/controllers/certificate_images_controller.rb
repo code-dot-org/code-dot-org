@@ -3,6 +3,8 @@ require 'base64'
 class CertificateImagesController < ApplicationController
   # GET /certificate_images/filename.jpg
   def show
+    prevent_caching
+
     filename = params[:filename]
     format = params[:format]
     unless ['jpg', 'jpeg', 'png'].include?(format)
