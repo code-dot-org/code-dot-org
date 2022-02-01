@@ -17,12 +17,12 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     # working on scripts
     assert_equal [s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
     # primary script -- most recently progressed in
-    assert_equal s2.script, Queries::ScriptActivity.primary_script(@user)
+    assert_equal s2.script, Queries::ScriptActivity.primary_student_script(@user)
 
     # add an assigned script that's more recent
     a = create :user_script, user: @user, started_at: (Time.now - 1.day)
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
-    assert_equal a.script, Queries::ScriptActivity.primary_script(@user)
+    assert_equal a.script, Queries::ScriptActivity.primary_student_script(@user)
 
     unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     course_script = create :script, published_state: nil
@@ -30,12 +30,12 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     course_script.reload
     create :user_script, user: @user, started_at: Time.now - 12.hours, script: course_script
     assert_equal [course_script, a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
-    assert_equal course_script, Queries::ScriptActivity.primary_script(@user)
+    assert_equal course_script, Queries::ScriptActivity.primary_student_script(@user)
 
     # make progress on an older script
     s1.update_attribute(:last_progress_at, Time.now - 3.hours)
     assert_equal [s1.script, course_script, a.script, s2.script], Queries::ScriptActivity.working_on_scripts(@user)
-    assert_equal s1.script, Queries::ScriptActivity.primary_script(@user)
+    assert_equal s1.script, Queries::ScriptActivity.primary_student_script(@user)
   end
 
   test 'user should prefer working on 20hour instead of hoc' do

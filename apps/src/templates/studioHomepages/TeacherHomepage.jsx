@@ -39,6 +39,7 @@ export const UnconnectedTeacherHomepage = ({
   teacherId,
   teacherName,
   topCourse,
+  topPlCourse,
   beginGoogleImportRosterFlow
 }) => {
   const censusBanner = useRef(null);
@@ -228,6 +229,12 @@ export const UnconnectedTeacherHomepage = ({
           showAllCoursesLink={true}
           isTeacher={true}
         />
+        <RecentCourses
+          courses={courses}
+          topCourse={topPlCourse}
+          showAllCoursesLink={true}
+          isProfessionalLearningCourse={true}
+        />
         <TeacherResources />
         <ProjectWidgetWithData
           canViewFullList={true}
@@ -259,6 +266,7 @@ UnconnectedTeacherHomepage.propTypes = {
   teacherId: PropTypes.number,
   teacherName: PropTypes.string,
   topCourse: shapes.topCourse,
+  topPlCourse: shapes.topCourse,
   beginGoogleImportRosterFlow: PropTypes.func
 };
 

@@ -134,7 +134,7 @@ class HomeController < ApplicationController
 
     @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
 
-    script = Queries::ScriptActivity.primary_script(current_user)
+    script = Queries::ScriptActivity.primary_student_script(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
     end
@@ -149,6 +149,20 @@ class HomeController < ApplicationController
     end
 
     if current_user.teacher?
+      pl_unit = Queries::ScriptActivity.primary_pl_script(current_user)
+      if pl_unit
+        pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
+      end
+      @homepage_data[:topPlCourse] = nil
+      if pl_unit && pl_script_level
+        @homepage_data[:topPlCourse] = {
+          assignableName: data_t_suffix('script.name', pl_unit[:name], 'title'),
+          lessonName: pl_script_level.lesson.localized_title,
+          linkToOverview: script_path(pl_unit),
+          linkToLesson: script_next_path(pl_unit, 'next')
+        }
+      end
+
       unless current_user.donor_teacher_banner_dismissed
         donor_banner_name = current_user.school_donor_name
       end
