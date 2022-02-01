@@ -6,7 +6,7 @@ class ScriptsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
-  before_action :render_no_access, only: [:show, :vocab, :resources, :code, :standards]
+  before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
 
@@ -245,10 +245,6 @@ class ScriptsController < ApplicationController
 
     if current_user
       if  @script.pilot? && !@script.has_pilot_access?(current_user)
-        return render :no_access
-      end
-
-      if @script.in_development? && !current_user.permission?(UserPermission::LEVELBUILDER)
         return render :no_access
       end
     end
