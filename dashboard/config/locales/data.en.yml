@@ -670,6 +670,7 @@ en:
         outbreak_outro: 'Outbreak Simulator: Free Play'
         PL_overview_CSP: What is Computer Science Principles?
         PL_CSP_EIPMOverview: Guide to EIPM Lessons
+        tesstest: Tesstes
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
