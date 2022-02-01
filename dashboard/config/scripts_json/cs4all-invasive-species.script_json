@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-01 00:21:35 UTC",
+    "serialized_at": "2022-02-01 21:40:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -345,6 +345,7 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "overview": "Click on this [link](https://docs.google.com/document/d/1vDetbOM1qCAIkdpa8WiRSGaUorbe7cPvV3WEFpyg0SE/edit?usp=sharing) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -360,6 +361,7 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
+        "overview": "Click on this [link](https://docs.google.com/document/d/1kGekxHbE9VmCTW01flUiq-OvpN1qdb-CsVziQUfcugU/edit?usp=sharing) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-18",
@@ -375,6 +377,7 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
+        "overview": "Click on this [link](https://docs.google.com/document/d/1W2uDdHo8-ZQoX-Gs7izAz8CAIUcBZnB8gqrqHqLtD2E/edit?usp=sharing) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-19",
@@ -390,6 +393,7 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
+        "overview": "Click on this [link](https://docs.google.com/document/d/1rxzUyQA3jJzjEUTDvCwYtFK_dYgLgqot0LlpGydK68Q/edit?usp=sharing) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-20",
@@ -590,6 +594,54 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "cs4all-invasive-species"
       }
+    },
+    {
+      "key": "82a00fe2-823e-437b-a6cc-6df02c14a237",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82a00fe2-823e-437b-a6cc-6df02c14a237",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "2296ace5-28a4-4ea6-8c50-e409e4b3b4dd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2296ace5-28a4-4ea6-8c50-e409e4b3b4dd",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "95f35eeb-dbf1-4f4c-a34f-c0a6e719c544",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95f35eeb-dbf1-4f4c-a34f-c0a6e719c544",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
+    },
+    {
+      "key": "857970df-7c5e-4a22-ab11-123fee9268e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "857970df-7c5e-4a22-ab11-123fee9268e3",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "cs4all-invasive-species"
+      }
     }
   ],
   "activity_sections": [
@@ -713,6 +765,7 @@
       "key": "774735aa-3de1-41d0-9f5b-2f238fbccda3",
       "position": 1,
       "properties": {
+        "name": "Hello World: Animals",
         "progression_name": "Video: Hello World: Welcome to Sprite Lab"
       },
       "seeding_key": {
@@ -851,9 +904,94 @@
       "key": "7e997d63-6097-4230-b4f3-b52841e5f585",
       "position": 1,
       "properties": {
+        "description": "Students are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.",
+        "name": "Conditionals in Minecraft: Voyage Aquatic",
+        "progression_name": "Video: Minecraft: Voyage Aquatic Introduction"
       },
       "seeding_key": {
         "activity_section.key": "7e997d63-6097-4230-b4f3-b52841e5f585",
+        "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
+      }
+    },
+    {
+      "key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 2-4 - Skill Building\" slide\n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5",
+        "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
+      }
+    },
+    {
+      "key": "16458dff-6c81-405a-b49e-b8086d03c58b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Minecraft: Voyage Aquatic Repeat Until\" video",
+        "progression_name": "Video: Minecraft: Voyage Aquatic Repeat Until"
+      },
+      "seeding_key": {
+        "activity_section.key": "16458dff-6c81-405a-b49e-b8086d03c58b",
+        "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
+      }
+    },
+    {
+      "key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 6-8 - Skill Building\" slide\n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a",
+        "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
+      }
+    },
+    {
+      "key": "f3fa8307-8e52-4397-b726-6b591615a539",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Minecraft: Voyage Aquatic Conditionals\" video",
+        "progression_name": "Video: Minecraft: Voyage Aquatic Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3fa8307-8e52-4397-b726-6b591615a539",
+        "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
+      }
+    },
+    {
+      "key": "575397b5-1bbd-4c89-b26e-27119251d815",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 10-14 - Skill Building\" slide",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815",
+        "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
+      }
+    },
+    {
+      "key": "e7045cf4-460c-4e98-b464-6e34d73af57e",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video: Minecraft: Voyage Aquatic Congratulations"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7045cf4-460c-4e98-b464-6e34d73af57e",
+        "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
+      }
+    },
+    {
+      "key": "5f3a5782-b1b2-4aad-b37a-d101d0da252d",
+      "position": 8,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f3a5782-b1b2-4aad-b37a-d101d0da252d",
         "lesson_activity.key": "5c22f9d3-ffdc-462c-a867-189ab687a0f8"
       }
     },
@@ -875,6 +1013,46 @@
       "seeding_key": {
         "activity_section.key": "f37aada4-cb5c-496c-9ddd-2bdd741ddf2b",
         "lesson_activity.key": "664078f9-be77-4b3e-8c45-c139558b2906"
+      }
+    },
+    {
+      "key": "7caf4bdf-4a48-41ea-9090-1128ccef54d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7caf4bdf-4a48-41ea-9090-1128ccef54d9",
+        "lesson_activity.key": "82a00fe2-823e-437b-a6cc-6df02c14a237"
+      }
+    },
+    {
+      "key": "52b166d6-a304-40f5-9024-7351db274ecb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "52b166d6-a304-40f5-9024-7351db274ecb",
+        "lesson_activity.key": "2296ace5-28a4-4ea6-8c50-e409e4b3b4dd"
+      }
+    },
+    {
+      "key": "93d548a7-5d44-4501-8271-f403d1de2d77",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "93d548a7-5d44-4501-8271-f403d1de2d77",
+        "lesson_activity.key": "95f35eeb-dbf1-4f4c-a34f-c0a6e719c544"
+      }
+    },
+    {
+      "key": "9862cad9-b39e-49b4-a9ae-9da4ee1ed6ed",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9862cad9-b39e-49b4-a9ae-9da4ee1ed6ed",
+        "lesson_activity.key": "857970df-7c5e-4a22-ab11-123fee9268e3"
       }
     }
   ],
@@ -1581,6 +1759,358 @@
       "level_keys": [
         "courseE_aboutme_62022_cs4all"
       ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Minecraft: Voyage Aquatic Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid12022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "7e997d63-6097-4230-b4f3-b52841e5f585"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid12022"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_12022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_12022_cs4all"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_22022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_22022_cs4all"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_32022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_32022_cs4all"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid22022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "16458dff-6c81-405a-b49e-b8086d03c58b"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid22022"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_42022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_42022_cs4all"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_52022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_52022_cs4all"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_62022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_62022_cs4all"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid32022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "f3fa8307-8e52-4397-b726-6b591615a539"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid32022_cs4all"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_7a2022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_7a2022_cs4all"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_82022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_82022_cs4all"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_9b2022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_9b2022_cs4all"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_102022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_102022_cs4all"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 14,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_112022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_112022_cs4all"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid42022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "e7045cf4-460c-4e98-b464-6e34d73af57e"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid42022"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HOC 2018 Level_122022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "5f3a5782-b1b2-4aad-b37a-d101d0da252d"
+      },
+      "level_keys": [
+        "HOC 2018 Level_122022_cs4all"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1942,6 +2472,198 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "cs4all-invasive-species",
         "activity_section.key": "5e7a2560-3a4b-420b-95ff-d30ed7c284c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aquatic_vid12022",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid12022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "7e997d63-6097-4230-b4f3-b52841e5f585"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_12022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_12022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_22022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_22022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_32022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_32022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aquatic_vid22022",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid22022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "16458dff-6c81-405a-b49e-b8086d03c58b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_42022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_42022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_52022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_52022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_62022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_62022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aquatic_vid32022_cs4all",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid32022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "f3fa8307-8e52-4397-b726-6b591615a539"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_7a2022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_7a2022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_82022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_82022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_9b2022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_9b2022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_102022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_102022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_112022_cs4all",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_112022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "575397b5-1bbd-4c89-b26e-27119251d815"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aquatic_vid42022",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid42022"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "e7045cf4-460c-4e98-b464-6e34d73af57e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HOC 2018 Level_122022_cs4all",
+        "script_level.level_keys": [
+          "HOC 2018 Level_122022_cs4all"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "5f3a5782-b1b2-4aad-b37a-d101d0da252d"
       }
     }
   ],
