@@ -130,7 +130,7 @@ class HomeController < ApplicationController
     # script, so we don't want to include that script (if it exists) in the
     # regular lists of recent scripts.
     exclude_primary_script = true
-    @homepage_data[:courses] = current_user.recent_courses_and_scripts(exclude_primary_script)
+    @homepage_data[:courses] = current_user.recent_student_courses_and_units(exclude_primary_script)
 
     @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
 
@@ -149,7 +149,13 @@ class HomeController < ApplicationController
     end
 
     if current_user.teacher?
-      pl_unit = Queries::ScriptActivity.primary_pl_script(current_user)
+      # Teachers will receive a topPlCourse for their primary
+      # unit, so we don't want to include that unit (if it exists) in the
+      # regular lists of recent units.
+      exclude_primary_script = true
+      @homepage_data[:plCourses] = current_user.recent_pl_courses_and_units(exclude_primary_script)
+
+      pl_unit = Queries::ScriptActivity.primary_pl_unit(current_user)
       if pl_unit
         pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
       end

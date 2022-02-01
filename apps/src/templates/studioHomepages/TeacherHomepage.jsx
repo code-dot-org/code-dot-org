@@ -24,6 +24,7 @@ export const UnconnectedTeacherHomepage = ({
   announcement,
   canViewAdvancedTools,
   censusQuestion,
+  plCourses,
   courses,
   donorBannerName,
   isEnglish,
@@ -229,12 +230,14 @@ export const UnconnectedTeacherHomepage = ({
           showAllCoursesLink={true}
           isTeacher={true}
         />
-        <RecentCourses
-          courses={courses}
-          topCourse={topPlCourse}
-          showAllCoursesLink={true}
-          isProfessionalLearningCourse={true}
-        />
+        {(plCourses?.length > 0 || topPlCourse) && (
+          <RecentCourses
+            courses={plCourses}
+            topCourse={topPlCourse}
+            showAllCoursesLink={true}
+            isProfessionalLearningCourse={true}
+          />
+        )}
         <TeacherResources />
         <ProjectWidgetWithData
           canViewFullList={true}
@@ -250,6 +253,7 @@ UnconnectedTeacherHomepage.propTypes = {
   announcement: shapes.teacherAnnouncement,
   canViewAdvancedTools: PropTypes.bool,
   censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
+  plCourses: shapes.courses,
   courses: shapes.courses,
   donorBannerName: PropTypes.string,
   hocLaunch: PropTypes.string,
