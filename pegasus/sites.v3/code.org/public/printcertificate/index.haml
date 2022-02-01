@@ -5,4 +5,4 @@ theme: none
 ---
 - cert_script = params[:s]
 
-%img{src:"/images/#{CertificateImage.fallback_course_title_for(cert_script)}", alt:"Certificate for Completion of One Hour of Code", width:'100%'}
+%img{src:"/images/#{CertificateImage.certificate_template_for(cert_script)}", alt:"Certificate for Completion of One Hour of Code", width:'100%'}

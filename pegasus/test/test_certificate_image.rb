@@ -18,17 +18,17 @@ class CertificateImageTest < Minitest::Test
   end
 
   def test_course_templates
-    assert_equal 'MC_Hour_Of_Code_Certificate.png', CertificateImage.fallback_course_title_for('mc')
-    assert_equal '20hours_certificate.jpg', CertificateImage.fallback_course_title_for('20-hour')
-    assert_equal '20hours_certificate.jpg', CertificateImage.fallback_course_title_for('20-hour')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.fallback_course_title_for('frozen')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.fallback_course_title_for('starwars')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.fallback_course_title_for('flappy')
-    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.fallback_course_title_for('playlab')
-    assert_equal 'blank_certificate.png', CertificateImage.fallback_course_title_for('course1')
-    assert_equal 'blank_certificate.png', CertificateImage.fallback_course_title_for('course2')
-    assert_equal 'blank_certificate.png', CertificateImage.fallback_course_title_for('course3')
-    assert_equal 'blank_certificate.png', CertificateImage.fallback_course_title_for('course4')
+    assert_equal 'MC_Hour_Of_Code_Certificate.png', CertificateImage.certificate_template_for('mc')
+    assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('20-hour')
+    assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('20-hour')
+    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('frozen')
+    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('starwars')
+    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('flappy')
+    assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('playlab')
+    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course1')
+    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course2')
+    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course3')
+    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course4')
   end
 
   def test_course_fallback_titles
