@@ -254,8 +254,8 @@ module Services
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal(
-        ['My Activity', 'New Activity Name', 'Updated Activity Name'],
-        lesson.lesson_activities.map(&:name).sort!
+        ["Updated Activity Name", "My Activity", "New Activity Name"],
+        lesson.lesson_activities.sort_by(&:position).map(&:name)
       )
     end
 
