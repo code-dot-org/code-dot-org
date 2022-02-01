@@ -585,7 +585,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the right across the screen</description>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"East"</title>
@@ -607,7 +607,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>rotate a sprite to its left</description>
           </mutation>
-          <title name="NAME">spinning left</title>
+          <title name="NAME" id="spinning left">spinning left</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"left"</title>
@@ -629,7 +629,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>rotate a sprite to its right</description>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"right"</title>
@@ -695,7 +695,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite downwards across the screen</description>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"South"</title>
@@ -840,7 +840,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite upwards across the screen</description>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"North"</title>
@@ -893,7 +893,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the left across the screen</description>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"West"</title>
@@ -972,7 +972,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving with arrow keys</title>
+          <title name="NAME" id="moving with arrow keys">moving with arrow keys</title>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">
