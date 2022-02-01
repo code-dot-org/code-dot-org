@@ -18,7 +18,7 @@ import {
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {getStore} from '@cdo/apps/redux';
 import _ from 'lodash';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import logToCloud from '@cdo/apps/logToCloud';
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
@@ -100,7 +100,9 @@ export function loadScriptProgress(scriptId, sectionId) {
   // Combine and transform the data
   requests.push(scriptRequest);
   Promise.all(requests).then(() => {
-    recordTimeToLoadSectionProgress(scriptId, performance.now() - startTime);
+    logToCloud.addPageAction(logToCloud.PageAction.SectionProgressLoaded, {
+      timeInMs: performance.now() - startTime
+    });
 
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
@@ -154,15 +156,4 @@ function postProcessLessonData(lesson, includeBonusLevels) {
     ...lesson,
     levels: levels.map(level => processedLevel(level))
   };
-}
-
-function recordTimeToLoadSectionProgress(scriptId, time) {
-  firehoseClient.putRecord({
-    study: 'sectionProgressLoader',
-    event: 'loaded_section_level_progress',
-    data_json: JSON.stringify({
-      script_id: scriptId,
-      timeInMs: time
-    })
-  });
 }
