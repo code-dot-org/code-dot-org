@@ -1,6 +1,6 @@
 {
   "key": "artist",
-  "display_name": "artist",
-  "category": "other",
+  "display_name": "Artist",
+  "category": "hoc",
   "is_featured": false
 }
