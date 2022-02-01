@@ -314,7 +314,7 @@ class FollowersControllerTest < ActionController::TestCase
     user_script = UserScript.where(user: assigns(:user), script: @laurel_section_script.script).first
     assert user_script
     assert user_script.assigned_at
-    assert_equal @laurel_section_script.script, Queries::ScriptActivity.primary_student_script(assigns(:user))
+    assert_equal @laurel_section_script.script, Queries::ScriptActivity.primary_student_unit(assigns(:user))
   end
 
   test "student_register with a picture/word section redirects to section login" do

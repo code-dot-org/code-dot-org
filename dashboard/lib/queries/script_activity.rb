@@ -37,7 +37,7 @@ class Queries::ScriptActivity
   end
 
   # return the primary unit with progress for all student units
-  def self.primary_student_script(user)
+  def self.primary_student_unit(user)
     working_on_student_units(user).first.try(:cached)
   end
 
