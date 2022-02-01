@@ -966,6 +966,11 @@ FactoryGirl.define do
     sequence(:name) {|n| "programming-environment-#{n}"}
   end
 
+  factory :programming_environment_category do
+    sequence(:key) {|n| "programming-environment-category-#{n}"}
+    sequence(:name) {|n| "programming-environment-category-#{n}"}
+  end
+
   factory :programming_expression do
     association :programming_environment
     sequence(:name) {|n| "programming expression #{n}"}
