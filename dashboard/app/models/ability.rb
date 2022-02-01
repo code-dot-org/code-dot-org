@@ -250,16 +250,16 @@ class Ability
       end
     end
 
-    can [:vocab, :resources, :code, :standards], UnitGroup do |unit_group|
-      # Assumes if one unit in a unit group is migrated they all are
-      !!unit_group.default_units[0].is_migrated && !unit_group.plc_course
-    end
-
-    can [:vocab, :resources, :code, :standards], Script do |script|
-      !!script.is_migrated
-    end
-
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], UnitGroup do |unit_group|
+      # Assumes if one unit in a unit group is migrated they all are
+      unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
+    end
+
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Script do |script|
+      script.is_migrated && can?(:read, script)
+    end
+
     can :read, UnitGroup do |unit_group|
       if unit_group.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
