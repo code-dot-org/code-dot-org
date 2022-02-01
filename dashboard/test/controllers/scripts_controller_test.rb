@@ -930,7 +930,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
-    stub_file_writes(unit.name)
+    stub_file_writes(unit.name, family_name: 'fake-family-z')
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -1636,9 +1636,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test_user_gets_response_for(:vocab, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view vocab page for pl course') do
     refute response.body.include? no_access_msg
   end
-  test_user_gets_response_for(:vocab, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view vocab page for pl course') do
-    assert response.body.include? no_access_msg
-  end
+  test_user_gets_response_for(:vocab, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view vocab page for pl course')
   test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view vocab page for student facing course') do
     refute response.body.include? no_access_msg
   end
@@ -1647,9 +1645,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test_user_gets_response_for(:resources, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view resources page for pl course') do
     refute response.body.include? no_access_msg
   end
-  test_user_gets_response_for(:resources, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view resources page for pl course') do
-    assert response.body.include? no_access_msg
-  end
+  test_user_gets_response_for(:resources, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view resources page for pl course')
   test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view resources page for student facing course') do
     refute response.body.include? no_access_msg
   end
@@ -1658,9 +1654,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test_user_gets_response_for(:standards, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view standards page for pl course') do
     refute response.body.include? no_access_msg
   end
-  test_user_gets_response_for(:standards, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view standards page for pl course') do
-    assert response.body.include? no_access_msg
-  end
+  test_user_gets_response_for(:standards, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view standards page for pl course')
   test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view standards page for student facing course') do
     refute response.body.include? no_access_msg
   end
@@ -1669,9 +1663,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test_user_gets_response_for(:code, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view code page for pl course') do
     refute response.body.include? no_access_msg
   end
-  test_user_gets_response_for(:code, response: :success, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view code page for pl course') do
-    assert response.body.include? no_access_msg
-  end
+  test_user_gets_response_for(:code, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view code page for pl course')
   test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view code page for student facing course') do
     refute response.body.include? no_access_msg
   end
@@ -1743,10 +1735,10 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, params: {id: @migrated_unit.name}
   end
 
-  def stub_file_writes(unit_name)
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json"]
+  def stub_file_writes(unit_name, family_name: nil)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
     File.stubs(:write).with do |filename, _|
-      filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
+      filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts.en.yml')
     end
   end
 end
