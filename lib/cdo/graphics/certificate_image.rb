@@ -181,7 +181,7 @@ class CertificateImage
 
   def self.hoc_course?(course)
     hoc_course = ScriptConstants.unit_in_category?(:hoc, course)
-    hoc_course ||= CertificateImage.tutorial_codes.any? {|code| code == course}
+    hoc_course ||= tutorial_codes.any? {|code| code == course}
     hoc_course
   end
 
