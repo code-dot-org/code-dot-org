@@ -1567,30 +1567,22 @@ class ScriptsControllerTest < ActionController::TestCase
       @in_development_unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     end
 
-    no_access_msg = "You don&#39;t have access to this unit."
-
     test_user_gets_response_for :show, response: :redirect, user: nil,
       params: -> {{id: @in_development_unit.name}},
       name: 'signed out user cannot view in-development unit'
 
-    test_user_gets_response_for(:show, response: :success, user: :student,
+    test_user_gets_response_for(:show, response: :forbidden, user: :student,
       params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
-    ) do
-      assert response.body.include? no_access_msg
-    end
+    )
 
-    test_user_gets_response_for(:show, response: :success, user: :teacher,
+    test_user_gets_response_for(:show, response: :forbidden, user: :teacher,
       params: -> {{id: @in_development_unit.name}},
       name: 'teacher cannot view in-development unit'
-    ) do
-      assert response.body.include? no_access_msg
-    end
+    )
 
     test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
       params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
-    ) do
-      refute response.body.include? no_access_msg
-    end
+    )
   end
 
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do

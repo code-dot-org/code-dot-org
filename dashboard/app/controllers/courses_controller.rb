@@ -6,9 +6,14 @@ class CoursesController < ApplicationController
   check_authorization except: [:index]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
   before_action :check_plc_enrollment, only: [:show]
-  before_action :render_no_access, only: [:show, :vocab, :resources, :code, :standards]
+  before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource class: 'UnitGroup', except: [:index]
+  # specifying instance_name and id_param tells CanCan to use the value of @unit_group set in set_unit_group
+  # when authorizing actions like vocab and resources. for more details, see
+  # https://github.com/ryanb/cancan/blob/705b5d6f0d8a78d9436eb90eda14e771309f155e/lib/cancan/controller_resource.rb#L161-L162
+  # https://github.com/ryanb/cancan/blob/705b5d6f0d8a78d9436eb90eda14e771309f155e/lib/cancan/controller_resource.rb#L137-L139
+
+  authorize_resource class: 'UnitGroup', except: [:index], instance_name: 'unit_group', id_param: :course_name
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
@@ -88,28 +93,22 @@ class CoursesController < ApplicationController
   end
 
   def vocab
-    return render :forbidden unless can?(:vocab, @unit_group)
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def resources
-    return render :forbidden unless can?(:resources, @unit_group)
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def code
-    return render :forbidden unless can?(:code, @unit_group)
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def standards
-    return render :forbidden unless can?(:standards, @unit_group)
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def get_rollup_resources
-    return render :forbidden if @unit_group.plc_course
-
     course_version = @unit_group.course_version
     return render status: 400, json: {error: 'Course does not have course version'} unless course_version
     rollup_pages = []
@@ -182,13 +181,6 @@ class CoursesController < ApplicationController
     if @unit_group.pilot?
       authenticate_user!
       unless @unit_group.has_pilot_access?(current_user)
-        return render :no_access
-      end
-    end
-
-    if @unit_group.in_development?
-      authenticate_user!
-      unless current_user.permission?(UserPermission::LEVELBUILDER)
         return render :no_access
       end
     end
