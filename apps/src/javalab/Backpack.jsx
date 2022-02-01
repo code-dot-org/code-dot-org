@@ -349,7 +349,7 @@ const styles = {
   },
   dropdown: {
     overflow: 'auto',
-    padding: 10
+    padding: '10px 0'
   },
   dropdownDark: {
     backgroundColor: '#292C33',
@@ -384,7 +384,8 @@ const styles = {
   fileListItem: {
     display: 'flex',
     flexDirection: 'row',
-    padding: '5px',
+    boxSizing: 'border-box',
+    padding: '5px 15px',
     width: '100%',
     ':hover': {
       backgroundColor: '#F1F2F4'
