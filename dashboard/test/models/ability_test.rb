@@ -3,7 +3,7 @@ require 'test_helper'
 class AbilityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @public_teacher_to_student_unit_group = create(:unit_group)
+    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
@@ -93,9 +93,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
-
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
     assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
@@ -130,9 +127,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
-
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
     assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
@@ -164,9 +158,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
-
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
@@ -210,9 +201,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
-    assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.cannot?(:read, @public_universal_instructor_to_teacher_unit)
-    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
+    refute ability.can?(:read, @public_facilitator_to_teacher_unit)
+    refute ability.can?(:read, @public_universal_instructor_to_teacher_unit)
+    refute ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     refute ability.can?(:read, @pilot_course)
     refute ability.can?(:read, @pl_pilot_course)
@@ -221,9 +212,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
-    assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.cannot?(:read, @public_universal_instructor_to_teacher_script_level)
-    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
+    refute ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
+    refute ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
 

@@ -47,7 +47,9 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:26.093+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog6_predict1_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog6_predict1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:26.093+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog6_predict1_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog6_predict1_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
