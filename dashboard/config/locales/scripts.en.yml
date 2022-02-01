@@ -28282,16 +28282,16 @@ en:
               description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
             Lots of Sprites:
               name: "[New] Lots of Sprites"
-              description_student: 
-              description_teacher: 
+              description_student: You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
             Counting with Variables:
               name: "[New] Counting with Variables"
               description_student: 
               description_teacher: 
             'Mini-Project: Collector Game':
               name: "[New] Mini-Project: Collector Game"
-              description_student: 
-              description_teacher: 
+              description_student: Collect all the sprites! In this project, you will create a game that others can play.
+              description_teacher: In this **mini-project** lesson, students will create a customized "collector game", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**
             Simulating Experiments:
               name: Simulating Experiments
               description_student: Run simulations on the computer and experiment by changing variables.
@@ -30947,45 +30947,67 @@ en:
             lesson-1:
               name: Surprising Stories about Plants and Animals
               description_student: 
-              description_teacher: "Click this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
+              description_teacher: "Click on this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
             lesson-2:
               name: When Species Invade
               description_student: 
-              description_teacher: Access the lesson plan [here](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing)
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing) to access the lesson plan. '
             lesson-3:
-              name: Big Fish, Little Pond
+              name: Big Goldfish, Little Pond
               description_student: 
-              description_teacher: "###Click this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) for the lesson plan. "
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
             lesson-4:
               name: Swimming into Sprite Lab
               description_student: 
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1DdepCOwf9BVtZNzSwNiXkeRdvEYLrPlCoPZC-sPchCU/edit?usp=sharing) the access the lesson plan. '
             lesson-5:
               name: Analyzing the Impact
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1KspaLQjmbXYKwEQC2vOIGLUdom2tcI0kauUk-0bdZJ4/edit?usp=sharing) to access the lesson plan. '
             lesson-6:
               name: Local Invasive Species
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W3PqmcDpPJ5QElP7U_mKPy43ZwGb_ZI3bpRvWN-yitQ/edit?usp=sharing) to access the lesson plan. '
             lesson-7:
               name: 'Algorithms: Watch Me Dance'
               description_student: 
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
             lesson-8:
               name: SciComm and Me
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1njAzvHI3gS_aSoR2IM8Eeekw4bI6kADxvY2s_96SZCM/edit?usp=sharing) to access the lesson plan. '
             lesson-9:
               name: Communicating with Comics
+              description_student: 
+              description_teacher: Click on this [link](https://docs.google.com/document/d/1C_WWNg9ACiLpSBNXFwCKzDb4ftyb71we7RTJYV_-CQA/edit?usp=sharing) to access the lesson plan.
             lesson-10:
               name: Pet Debate
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1Hxx0MESA13SNsA4mvRhZoZ-XeScezGg3DmAz8DO6p1A/edit?usp=sharing) to access the lesson plan. '
             lesson-11:
               name: Responding to Conditions
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1s4pklUxcmnDIjigMXWK-hrBgvuIDRBfEjzEqDAGzx7E/edit?usp=sharing) to access the lesson plan. '
             lesson-12:
               name: Conditionals
+              description_student: 
+              description_teacher: Click on this [link](https://docs.google.com/document/d/1yp9BOEYibCekx80fizqTcEksKqaRxQPMW0HQY7gNc3k/edit?usp=sharing) to access the lesson plan.
             lesson-13:
               name: Exploring Solutions for the Burmese Python
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1sft21ez0yI20e0D-n8MNZDmeOQyIR9PhsQU31yzG3I0/edit?usp=sharing) to access the lesson plan. '
             lesson-14:
               name: Conditionals in Minecraft
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1o0Ki_9yC2l2S8spL-EUjdEy0xqgP-Y717qoeSBoIEk8/edit?usp=sharing) to access the lesson plan. '
             lesson-15:
               name: Exploring Solutions for Invasive Species
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1amEfZ4QMfa765k_2sz4hcsyn-IVBzZv3cT6CAGDu0Ek/edit?usp=sharing) to access the lesson plan. '
             lesson-16:
               name: Debugging
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vLHsUsDrWU1g8Z7neMcqX1NtmQCc7or95lWO6p3oBGw/edit?usp=sharing) to access the lesson plan. '
             lesson-17:
               name: Project Inspiration
             lesson-18:
