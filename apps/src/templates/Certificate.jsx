@@ -51,7 +51,7 @@ function Certificate(props) {
     });
   };
 
-  const getCertificate = () => {
+  const getCertificatePath = () => {
     if (!props.showStudioCertificate) {
       return `${
         dashboard.CODE_ORG_URL
@@ -76,7 +76,7 @@ function Certificate(props) {
   } = props;
 
   const certificate = certificateId || 'blank';
-  const personalizedCertificate = getCertificate();
+  const personalizedCertificate = getCertificatePath();
   const blankCertificate =
     blankCertificates[tutorial] || blankCertificates.hourOfCode;
   const imgSrc = personalized ? personalizedCertificate : blankCertificate;
