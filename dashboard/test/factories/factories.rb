@@ -834,7 +834,7 @@ FactoryGirl.define do
     factory :standalone_unit do
       after(:create) do |standalone_unit|
         standalone_unit.is_course = true
-        standalone_unitg.save
+        standalone_unit.save
       end
     end
   end
