@@ -59,7 +59,7 @@ function Certificate(props) {
     return btoa(JSON.stringify(data));
   };
 
-  const getCertificateImagePath = () => {
+  const getCertificateImagePath = certificate => {
     if (!props.showStudioCertificate) {
       return `${
         dashboard.CODE_ORG_URL
@@ -111,7 +111,7 @@ function Certificate(props) {
   } = props;
 
   const certificate = certificateId || 'blank';
-  const personalizedCertificate = getCertificateImagePath();
+  const personalizedCertificate = getCertificateImagePath(certificate);
   const blankCertificate =
     blankCertificates[tutorial] || blankCertificates.hourOfCode;
   const imgSrc = personalized ? personalizedCertificate : blankCertificate;
