@@ -66,6 +66,19 @@ function Certificate(props) {
     return `/certificate_images/${filename}.jpg`;
   };
 
+  const getPrintPath = certificate => {
+    let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+    if (isMinecraft() && !personalized) {
+      // Correct the minecraft print url for non-personalized certificates.
+      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${props.tutorial}`;
+    }
+    if (isAIOceans() && !personalized) {
+      // Correct the minecraft print url for non-personalized certificates.
+      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${props.tutorial}`;
+    }
+    return print;
+  };
+
   const {
     responsiveSize,
     tutorial,
@@ -101,15 +114,7 @@ function Certificate(props) {
       : i18n.justDidHourOfCode()
   });
 
-  let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-  if (isMinecraft() && !personalized) {
-    // Correct the minecraft print url for non-personalized certificates.
-    print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
-  }
-  if (isAIOceans() && !personalized) {
-    // Correct the minecraft print url for non-personalized certificates.
-    print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
-  }
+  const print = getPrintPath(certificate);
 
   return (
     <div style={styles.container}>
