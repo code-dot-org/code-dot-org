@@ -98,6 +98,8 @@
   "reviewClassmateProject": "Review a classmate’s project...",
   "returnToMyProject": "Return to my project",
   "running": "Running...",
+  "runningProjectTests": "Running your project's tests...",
+  "runningValidation": "Running level tests...",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "saveToBackpack": "Save to Backpack",
   "sendingVideo": "Sending video. Total length: {totalTime} seconds.",
