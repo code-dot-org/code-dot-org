@@ -51,6 +51,14 @@ function Certificate(props) {
     });
   };
 
+  const getEncodedParams = () => {
+    const data = {
+      name: studentName,
+      course: props.tutorial
+    };
+    return btoa(JSON.stringify(data));
+  };
+
   const getCertificateImagePath = () => {
     if (!props.showStudioCertificate) {
       return `${
@@ -58,11 +66,7 @@ function Certificate(props) {
       }/api/hour/certificate/${certificate}.jpg`;
     }
 
-    const data = {
-      name: studentName,
-      course: props.tutorial
-    };
-    const filename = btoa(JSON.stringify(data));
+    const filename = getEncodedParams();
     return `/certificate_images/${filename}.jpg`;
   };
 
@@ -84,11 +88,7 @@ function Certificate(props) {
       return print;
     }
 
-    const data = {
-      name: studentName,
-      course: props.tutorial
-    };
-    const encoded = btoa(JSON.stringify(data));
+    const encoded = getEncodedParams();
     return `/print_certificates/${encoded}`;
   };
 
@@ -97,11 +97,7 @@ function Certificate(props) {
       return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
     }
 
-    const data = {
-      name: studentName,
-      course: props.tutorial
-    };
-    const encoded = btoa(JSON.stringify(data));
+    const encoded = getEncodedParams();
     return `/certificates/${encoded}`;
   };
 
