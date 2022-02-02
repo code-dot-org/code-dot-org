@@ -204,8 +204,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_group.course_version.course_offering.id,
         display_name: @unit_group.course_version.course_offering.display_name,
-        category: @unit_group.category,
-        is_featured: @unit_group.is_featured?,
+        category: @unit_group.course_version.course_offering.category,
+        is_featured: @unit_group.course_version.course_offering.is_featured?,
         course_versions: [
           {
             id: @unit_group.course_version.id,
@@ -221,8 +221,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
-        category: @unit_teacher_to_students.category,
-        is_featured: @unit_teacher_to_students.is_featured?,
+        category: @unit_teacher_to_students.course_version.course_offering.category,
+        is_featured: @unit_teacher_to_students.course_version.course_offering.is_featured?,
         course_versions: [
           {
             id: @unit_teacher_to_students.course_version.id,
@@ -254,8 +254,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
-        category: @unit_facilitator_to_teacher.category,
-        is_featured: @unit_facilitator_to_teacher.is_featured?,
+        category: @unit_facilitator_to_teacher.course_version.course_offering.category,
+        is_featured: @unit_facilitator_to_teacher.course_version.course_offering.is_featured?,
         course_versions: [
           {
             id: @unit_facilitator_to_teacher.course_version.id,
@@ -278,8 +278,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_group.course_version.course_offering.id,
         display_name: @unit_group.course_version.course_offering.display_name,
-        category: @unit_group.category,
-        is_featured: @unit_group.is_featured?,
+        category: @unit_group.course_version.course_offering.category,
+        is_featured: @unit_group.course_version.course_offering.is_featured?,
         course_versions: [
           {
             id: @unit_group.course_version.id,
@@ -295,8 +295,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
-        category: @unit_teacher_to_students.category,
-        is_featured: @unit_teacher_to_students.is_featured?,
+        category: @unit_teacher_to_students.course_version.course_offering.category,
+        is_featured: @unit_teacher_to_students.course_version.course_offering.is_featured?,
         course_versions: [
           {
             id: @unit_teacher_to_students.course_version.id,
@@ -321,8 +321,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
-        category: @unit_facilitator_to_teacher.category,
-        is_featured: @unit_facilitator_to_teacher.is_featured?,
+        category: @unit_facilitator_to_teacher.course_version.course_offering.category,
+        is_featured: @unit_facilitator_to_teacher.course_version.course_offering.is_featured?,
         course_versions: [
           {
             id: @unit_facilitator_to_teacher.course_version.id,
