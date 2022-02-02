@@ -4,13 +4,15 @@ import sinon from 'sinon';
 import {assert} from 'chai';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import {courses, topCourse} from './homepagesTestData';
+import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
 const DEFAULT_PROPS = {
   announcements: [],
   censusQuestion: 'how_many_10_hours',
   courses,
   topCourse,
+  plCourses,
+  topPlCourse,
   isEnglish: true,
   joinedSections: [],
   ncesSchoolId: 'school-id',
@@ -114,15 +116,23 @@ describe('TeacherHomepage', () => {
     assert(wrapper.containsMatchingElement(<TeacherSections />));
   });
 
-  it('renders a RecentCourses component', () => {
+  it('renders two RecentCourses component', () => {
     const wrapper = setUp();
     const recentCourses = wrapper.find('RecentCourses');
-    assert.deepEqual(recentCourses.props(), {
+    assert.deepEqual(recentCourses.at(0).props(), {
       showAllCoursesLink: true,
       isTeacher: true,
       hasFeedback: false,
       courses: courses,
       topCourse: topCourse
+    });
+    assert.deepEqual(recentCourses.at(1).props(), {
+      showAllCoursesLink: true,
+      isTeacher: false,
+      hasFeedback: false,
+      isProfessionalLearningCourse: true,
+      courses: plCourses,
+      topPlCourse: topPlCourse
     });
   });
 
