@@ -19,7 +19,7 @@ import {
 import {getStore} from '@cdo/apps/redux';
 import _ from 'lodash';
 
-const NUM_STUDENTS_PER_PAGE = 50;
+const NUM_STUDENTS_PER_PAGE = 25;
 
 export function loadScriptProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
