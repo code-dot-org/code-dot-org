@@ -19,7 +19,7 @@ describe('StatsTable', () => {
     const wrapper = mount(
       <StatsTable
         sectionId={1}
-        student={students}
+        students={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
     );
@@ -31,7 +31,7 @@ describe('StatsTable', () => {
     const wrapper = mount(
       <StatsTable
         sectionId={1}
-        student={students}
+        students={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
     );
@@ -44,7 +44,7 @@ describe('StatsTable', () => {
     const wrapper = mount(
       <StatsTable
         sectionId={1}
-        student={students}
+        students={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
     );
