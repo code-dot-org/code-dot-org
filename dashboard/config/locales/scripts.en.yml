@@ -28286,8 +28286,8 @@ en:
               description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
             Counting with Variables:
               name: "[New] Counting with Variables"
-              description_student: 
-              description_teacher: 
+              description_student: You will learn to use variables to make a counter or keep track of a score in a game.
+              description_teacher: In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**
             'Mini-Project: Collector Game':
               name: "[New] Mini-Project: Collector Game"
               description_student: Collect all the sprites! In this project, you will create a game that others can play.
@@ -30875,7 +30875,62 @@ en:
           description: ''
           student_description: ''
         pre-express-2022:
-          lessons: {}
+          lessons:
+            Learn to Drag and Drop:
+              key: Learn to Drag and Drop
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming with Angry Birds:
+              key: Programming with Angry Birds
+              name: Programming with Angry Birds
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              key: Programming with Rey and BB-8
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Programming with Harvester:
+              key: Programming with Harvester
+              name: Programming with Harvester
+              description_student: ''
+              description_teacher: ''
+            Loops with Scrat:
+              key: Loops with Scrat
+              name: Loops with Scrat
+              description_student: ''
+              description_teacher: ''
+            Loops with Laurel:
+              key: Loops with Laurel
+              name: Loops with Laurel
+              description_student: ''
+              description_teacher: ''
+            Ocean Scene with Loops:
+              key: Ocean Scene with Loops
+              name: Ocean Scene with Loops
+              description_student: ''
+              description_teacher: ''
+            Drawing Gardens with Loops:
+              key: Drawing Gardens with Loops
+              name: Drawing Gardens with Loops
+              description_student: ''
+              description_teacher: ''
+            On the Move with Events:
+              key: On the Move with Events
+              name: On the Move with Events
+              description_student: ''
+              description_teacher: ''
+            A Royal Battle with Events:
+              key: A Royal Battle with Events
+              name: A Royal Battle with Events
+              description_student: ''
+              description_teacher: ''
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -31010,12 +31065,20 @@ en:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vLHsUsDrWU1g8Z7neMcqX1NtmQCc7or95lWO6p3oBGw/edit?usp=sharing) to access the lesson plan. '
             lesson-17:
               name: Project Inspiration
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vDetbOM1qCAIkdpa8WiRSGaUorbe7cPvV3WEFpyg0SE/edit?usp=sharing) to access the lesson plan. '
             lesson-18:
               name: Making It Work
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1kGekxHbE9VmCTW01flUiq-OvpN1qdb-CsVziQUfcugU/edit?usp=sharing) to access the lesson plan. '
             lesson-19:
               name: Debugging
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W2uDdHo8-ZQoX-Gs7izAz8CAIUcBZnB8gqrqHqLtD2E/edit?usp=sharing) to access the lesson plan. '
             lesson-20:
               name: Sharing Projects
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1rxzUyQA3jJzjEUTDvCwYtFK_dYgLgqot0LlpGydK68Q/edit?usp=sharing) to access the lesson plan. '
           lesson_groups:
             lessonGroup-2:
               display_name: Collection 1
