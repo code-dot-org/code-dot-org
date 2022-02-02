@@ -185,7 +185,7 @@ class JavalabView extends React.Component {
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
-      document.body.style.backgroundColor = color.darkest_slate_gray;
+      document.body.style.backgroundColor = color.background_black;
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
