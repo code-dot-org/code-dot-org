@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-07 22:57:01 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2022-02-02 21:19:06 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp-post-survey-2021"
     }
@@ -83,6 +83,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_2021"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
