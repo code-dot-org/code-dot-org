@@ -339,13 +339,13 @@ const styles = {
     backgroundColor: color.white,
     zIndex: 20,
     borderWidth: 1,
-    borderColor: '#9197A6',
+    borderColor: color.light_gray,
     borderStyle: 'solid',
     borderRadius: 4,
     maxWidth: '35%',
     maxHeight: '80%',
     minWidth: 150,
-    color: '#4F575E'
+    color: color.dark_charcoal
   },
   dropdown: {
     overflow: 'auto',
@@ -354,7 +354,7 @@ const styles = {
   },
   dropdownDark: {
     backgroundColor: '#292C33',
-    color: '#F1F2F4'
+    color: color.background_gray
   },
   listContainer: {
     width: 'fit-content',
@@ -390,12 +390,12 @@ const styles = {
     padding: '5px 15px',
     width: '100%',
     ':hover': {
-      backgroundColor: '#F1F2F4'
+      backgroundColor: color.background_gray
     }
   },
   fileListItemDark: {
     ':hover': {
-      backgroundColor: '#505563'
+      backgroundColor: color.dark_charcoal
     }
   },
   fileListLabel: {
