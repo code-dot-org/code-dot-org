@@ -30875,7 +30875,62 @@ en:
           description: ''
           student_description: ''
         pre-express-2022:
-          lessons: {}
+          lessons:
+            Learn to Drag and Drop:
+              key: Learn to Drag and Drop
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming with Angry Birds:
+              key: Programming with Angry Birds
+              name: Programming with Angry Birds
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              key: Programming with Rey and BB-8
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Programming with Harvester:
+              key: Programming with Harvester
+              name: Programming with Harvester
+              description_student: ''
+              description_teacher: ''
+            Loops with Scrat:
+              key: Loops with Scrat
+              name: Loops with Scrat
+              description_student: ''
+              description_teacher: ''
+            Loops with Laurel:
+              key: Loops with Laurel
+              name: Loops with Laurel
+              description_student: ''
+              description_teacher: ''
+            Ocean Scene with Loops:
+              key: Ocean Scene with Loops
+              name: Ocean Scene with Loops
+              description_student: ''
+              description_teacher: ''
+            Drawing Gardens with Loops:
+              key: Drawing Gardens with Loops
+              name: Drawing Gardens with Loops
+              description_student: ''
+              description_teacher: ''
+            On the Move with Events:
+              key: On the Move with Events
+              name: On the Move with Events
+              description_student: ''
+              description_teacher: ''
+            A Royal Battle with Events:
+              key: A Royal Battle with Events
+              name: A Royal Battle with Events
+              description_student: ''
+              description_teacher: ''
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
