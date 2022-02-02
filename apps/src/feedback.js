@@ -117,7 +117,7 @@ FeedbackUtils.prototype.displayFeedback = function(
 ) {
   options.level = options.level || {};
 
-  const {onContinue, shareLink} = options;
+  const {onContinue, shareLink, doNothingOnHidden} = options;
   const hadShareFailure = options.response && options.response.share_failure;
   const showingSharing =
     options.showingSharing && !hadShareFailure && shareLink;
@@ -229,17 +229,20 @@ FeedbackUtils.prototype.displayFeedback = function(
     project.saveIfSourcesChanged();
   }
 
-  var onHidden = onlyContinue
-    ? onContinue
-    : function() {
-        if (!continueButton || feedbackDialog.hideButDontContinue) {
-          this.studioApp_.displayMissingBlockHints(
-            missingRecommendedBlockHints
-          );
-        } else {
-          onContinue();
-        }
-      }.bind(this);
+  let onHidden;
+  if (doNothingOnHidden) {
+    // No additional onHidden functionality upon closing the dialog
+  } else if (
+    !continueButton ||
+    feedbackDialog.hideButDontContinue ||
+    againButton
+  ) {
+    onHidden = this.studioApp_
+      .displayMissingBlockHints(missingRecommendedBlockHints)
+      .bind(this);
+  } else {
+    onHidden = onContinue();
+  }
 
   var icon;
   if (!options.hideIcon) {
