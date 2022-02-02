@@ -326,7 +326,7 @@ export const UnconnectedMoveStudents = MoveStudents;
 export default connect(
   state => ({
     sections: getVisibleSections(state),
-    currentSectionId: state.sectionData.section.id
+    currentSectionId: state.teacherSections.selectedSectionId
   }),
   dispatch => ({
     updateStudentTransfer(transferData) {
