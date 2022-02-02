@@ -509,10 +509,7 @@ describe('teacherSectionsRedux', () => {
     it('does set selectedSectionId if passed a single section', () => {
       const action = setSections(sections.slice(0, 1));
       const nextState = reducer(startState, action);
-      assert.strictEqual(
-        nextState.selectedSectionId,
-        sections[0].id.toString()
-      );
+      assert.strictEqual(nextState.selectedSectionId, sections[0].id);
     });
 
     it('throws rather than let us destroy data', () => {
