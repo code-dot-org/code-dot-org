@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 
 const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
 
@@ -218,24 +219,33 @@ class Backpack extends Component {
       importButtonStyles.borderColor = color.orange;
     }
 
+    const backpackIcon = (
+      <i style={{marginRight: 8, fontSize: 13}}>
+        <img
+          src="/blockly/media/javalab/backpack.png"
+          alt="backpack icon"
+          style={styles.backpackIcon}
+        />
+      </i>
+    );
+
+    // Use PaneButton as primary Backpack button
+    // to align with other buttons in the JavalabEditor header,
+    // which all use PaneButton.
     return (
       <>
-        <JavalabButton
-          icon={
-            <img
-              src="/blockly/media/javalab/backpack.png"
-              alt="backpack icon"
-              style={styles.backpackIcon}
-            />
-          }
-          text={javalabMsg.backpackLabel()}
+        <PaneButton
+          id="javalab-editor-backpack"
+          icon={backpackIcon}
+          onClick={this.toggleDropdown}
+          headerHasFocus
+          isRtl={false}
+          label={javalabMsg.backpackLabel()}
+          leftJustified
+          isDisabled={isDisabled}
           style={{
-            ...styles.buttonStyles,
             ...(dropdownOpen && styles.dropdownOpenButton)
           }}
-          isHorizontal
-          onClick={this.toggleDropdown}
-          isDisabled={isDisabled}
         />
         {dropdownOpen && (
           <div
@@ -345,7 +355,8 @@ const styles = {
     maxWidth: '35%',
     maxHeight: '80%',
     minWidth: 150,
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
+    marginLeft: 3
   },
   dropdown: {
     overflow: 'auto',
@@ -359,26 +370,6 @@ const styles = {
   listContainer: {
     width: 'fit-content',
     minWidth: 'inherit'
-  },
-  buttonStyles: {
-    cursor: 'pointer',
-    float: 'right',
-    backgroundColor: color.light_purple,
-    margin: '3px 3px 3px 0px',
-    height: 24,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    // prevent jitter when the button is clicked
-    borderColor: color.purple,
-    borderRadius: 4,
-    fontSize: 13,
-    color: color.white,
-    padding: '0px 12px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    lineHeight: '18px',
-    ':hover': {
-      backgroundColor: color.cyan
-    }
   },
   dropdownOpenButton: {
     backgroundColor: color.cyan
