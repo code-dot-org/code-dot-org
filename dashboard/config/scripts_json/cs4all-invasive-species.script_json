@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-01 21:40:38 UTC",
+    "serialized_at": "2022-02-02 17:39:36 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -86,7 +86,7 @@
       "name": "Surprising Stories about Plants and Animals",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
@@ -102,7 +102,7 @@
       "name": "When Species Invade",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing) to access the lesson plan. "
@@ -118,7 +118,7 @@
       "name": "Algorithms: Watch Me Dance",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. "
@@ -150,7 +150,7 @@
       "name": "Analyzing the Impact",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1KspaLQjmbXYKwEQC2vOIGLUdom2tcI0kauUk-0bdZJ4/edit?usp=sharing) to access the lesson plan. "
@@ -166,7 +166,7 @@
       "name": "Local Invasive Species",
       "absolute_position": 6,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1W3PqmcDpPJ5QElP7U_mKPy43ZwGb_ZI3bpRvWN-yitQ/edit?usp=sharing) to access the lesson plan. "
@@ -214,7 +214,7 @@
       "name": "Communicating with Comics",
       "absolute_position": 9,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1C_WWNg9ACiLpSBNXFwCKzDb4ftyb71we7RTJYV_-CQA/edit?usp=sharing) to access the lesson plan."
@@ -230,7 +230,7 @@
       "name": "Pet Debate",
       "absolute_position": 10,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1Hxx0MESA13SNsA4mvRhZoZ-XeScezGg3DmAz8DO6p1A/edit?usp=sharing) to access the lesson plan. "
@@ -278,7 +278,7 @@
       "name": "Exploring Solutions for the Burmese Python",
       "absolute_position": 13,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1sft21ez0yI20e0D-n8MNZDmeOQyIR9PhsQU31yzG3I0/edit?usp=sharing) to access the lesson plan. "
@@ -310,7 +310,7 @@
       "name": "Exploring Solutions for Invasive Species",
       "absolute_position": 15,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 15,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1amEfZ4QMfa765k_2sz4hcsyn-IVBzZv3cT6CAGDu0Ek/edit?usp=sharing) to access the lesson plan. "
@@ -326,7 +326,7 @@
       "name": "Debugging",
       "absolute_position": 16,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 16,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1vLHsUsDrWU1g8Z7neMcqX1NtmQCc7or95lWO6p3oBGw/edit?usp=sharing) to access the lesson plan. "
@@ -342,7 +342,7 @@
       "name": "Project Inspiration",
       "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 17,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1vDetbOM1qCAIkdpa8WiRSGaUorbe7cPvV3WEFpyg0SE/edit?usp=sharing) to access the lesson plan. "
@@ -358,7 +358,7 @@
       "name": "Making It Work",
       "absolute_position": 18,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 18,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1kGekxHbE9VmCTW01flUiq-OvpN1qdb-CsVziQUfcugU/edit?usp=sharing) to access the lesson plan. "
@@ -374,7 +374,7 @@
       "name": "Debugging",
       "absolute_position": 19,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 19,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1W2uDdHo8-ZQoX-Gs7izAz8CAIUcBZnB8gqrqHqLtD2E/edit?usp=sharing) to access the lesson plan. "
@@ -390,7 +390,7 @@
       "name": "Sharing Projects",
       "absolute_position": 20,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 20,
       "properties": {
         "overview": "Click on this [link](https://docs.google.com/document/d/1rxzUyQA3jJzjEUTDvCwYtFK_dYgLgqot0LlpGydK68Q/edit?usp=sharing) to access the lesson plan. "
@@ -1640,6 +1640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_12022_cs4all"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1661,6 +1664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_22022_cs4all"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1682,6 +1688,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_32022_cs4all"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1703,6 +1712,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_42022_cs4all"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1724,6 +1736,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_52022_cs4all"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1745,6 +1760,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_62022_cs4all"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1766,6 +1784,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid12022"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Introduction"
       },
       "bonus": false,
@@ -1788,6 +1809,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_12022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1810,6 +1834,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_22022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1832,6 +1859,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_32022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1854,6 +1884,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid22022"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
       },
       "bonus": false,
@@ -1876,6 +1909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_42022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1898,6 +1934,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_52022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1920,6 +1959,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_62022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1942,6 +1984,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid32022_cs4all"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
       },
       "bonus": false,
@@ -1964,6 +2009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_7a2022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1986,6 +2034,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_82022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2008,6 +2059,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_9b2022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2030,6 +2084,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_102022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2052,6 +2109,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_112022_cs4all"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2074,6 +2134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid42022"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
       },
       "bonus": false,
@@ -2096,6 +2159,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_122022_cs4all"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
