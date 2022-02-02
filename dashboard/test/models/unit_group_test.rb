@@ -402,7 +402,13 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "remove UnitGroupUnits" do
-      unit_group = create :unit_group
+      unit_group = create(
+        :unit_group,
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      )
       unit1 = create(
         :script,
         name: 'unit1',
@@ -418,17 +424,21 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       unit_group.update_scripts(['unit1', 'unit2'])
 
-      assert_equal unit1.published_state, nil
-      assert_equal unit1.instruction_type, nil
-      assert_equal unit1.instructor_audience, nil
-      assert_equal unit1.participant_audience, nil
-      assert_equal unit1.family_name, nil
-      assert_equal unit1.is_course, false
-      assert_equal unit1.version_year, nil
+      unit1.reload
+
+      assert_nil unit1.published_state
+      assert_nil unit1.instruction_type
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+      assert_nil unit1.family_name
+      assert_nil unit1.is_course
+      assert_nil unit1.version_year
 
       unit_group.update_scripts(['unit2'])
 
       unit_group.reload
+      unit1.reload
+
       assert_equal 1, unit_group.default_unit_group_units.length
       assert_equal 1, unit_group.default_unit_group_units[0].position
       assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
