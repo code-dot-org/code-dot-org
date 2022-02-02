@@ -18,7 +18,7 @@ class CertificateImagesController < ApplicationController
     end
 
     begin
-      image = create_course_certificate_image(data['name'], data['course'])
+      image = CertificateImage.create_course_certificate_image(data['name'], data['course'])
       image.format = format
       content_type = "image/#{format}"
       send_data image.to_blob, type: content_type
