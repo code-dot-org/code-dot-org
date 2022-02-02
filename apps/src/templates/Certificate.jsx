@@ -93,7 +93,16 @@ function Certificate(props) {
   };
 
   const getCertificateSharePath = certificate => {
-    return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+    if (!props.showStudioCertificate) {
+      return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+    }
+
+    const data = {
+      name: studentName,
+      course: props.tutorial
+    };
+    const encoded = btoa(JSON.stringify(data));
+    return `/certificates/${encoded}`;
   };
 
   const {
