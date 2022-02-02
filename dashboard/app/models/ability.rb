@@ -296,7 +296,7 @@ class Ability
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
-        (user.persisted? || !login_required)
+        user.persisted? || !login_required
       end
     end
 
