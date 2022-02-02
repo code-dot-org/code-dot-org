@@ -747,7 +747,7 @@ export default function teacherSections(state = initialState, action) {
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
-      selectedSectionId = action.sections[0].id.toString();
+      selectedSectionId = action.sections[0].id;
     }
 
     sections.forEach(section => {

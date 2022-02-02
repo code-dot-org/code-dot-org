@@ -643,7 +643,8 @@ describe('teacherSectionsRedux', () => {
         isAssigned: undefined,
         restrictSection: false,
         postMilestoneDisabled: false,
-        codeReviewExpiresAt: null
+        codeReviewExpiresAt: null,
+        isAssignedCSA: undefined
       });
     });
   });
@@ -918,7 +919,8 @@ describe('teacherSectionsRedux', () => {
           isAssigned: undefined,
           restrictSection: false,
           postMilestoneDisabled: false,
-          codeReviewExpiresAt: null
+          codeReviewExpiresAt: null,
+          isAssignedCSA: undefined
         }
       });
     });

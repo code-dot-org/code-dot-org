@@ -13,16 +13,13 @@ const studentsCompletedLevelCount = {
   2: 12,
   3: 65
 };
-const section = {
-  id: 1,
-  students
-};
 
 describe('StatsTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
       <StatsTable
-        section={section}
+        sectionId={1}
+        student={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
     );
@@ -33,7 +30,8 @@ describe('StatsTable', () => {
   it('renders students as table rows', () => {
     const wrapper = mount(
       <StatsTable
-        section={section}
+        sectionId={1}
+        student={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
     );
@@ -45,7 +43,8 @@ describe('StatsTable', () => {
   it('sorts students by name upon clicking student name header cell', () => {
     const wrapper = mount(
       <StatsTable
-        section={section}
+        sectionId={1}
+        student={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
     );
