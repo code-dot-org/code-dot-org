@@ -272,38 +272,38 @@ class Ability
       end
     end
 
-    can :read, Script do |unit|
-      return false unless unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+    can :read, Script do |script|
+      return false unless script.can_be_participant?(user) || script.can_be_instructor?(user)
 
-      if unit.in_development?
+      if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
-      elsif unit.pilot?
-        unit.has_pilot_access?(user)
+      elsif script.pilot?
+        script.has_pilot_access?(user)
       else
         true
       end
     end
 
     can :read, ScriptLevel do |script_level, params|
-      return false unless unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+      script = script_level.script
+      return false unless script.can_be_participant?(user) || script.can_be_instructor?(user)
 
-      unit = script_level.script
-      if unit.in_development?
+      if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
-      elsif unit.pilot?
-        unit.has_pilot_access?(user)
+      elsif script.pilot?
+        script.has_pilot_access?(user)
       else
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
-        login_required = unit.login_required? || (!params.nil? && params[:login_required] == "true")
+        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
         (user.persisted? || !login_required)
       end
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
-      return false unless unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
-
       script = lesson.script
+      return false unless script.can_be_participant?(user) || script.can_be_instructor?(user)
+
       if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif script.pilot?
