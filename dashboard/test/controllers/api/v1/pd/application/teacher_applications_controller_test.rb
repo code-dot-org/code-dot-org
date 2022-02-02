@@ -61,7 +61,7 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
-    test 'do not send principal approval email on successful create if RP has selective principal approval' do
+    test 'does not send principal approval email on successful create if RP has selective principal approval' do
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
@@ -119,6 +119,21 @@ module Api::V1::Pd::Application
 
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+    end
+
+    test 'does not update course hours nor autoscore on successful create if application status is incomplete' do
+      Pd::Application::TeacherApplication.expects(:auto_score).never
+      Pd::Application::TeacherApplication.expects(:queue_email).never
+
+      application_hash = build(
+        TEACHER_APPLICATION_HASH_FACTORY,
+        cs_how_many_minutes: 45,
+        cs_how_many_days_per_week: 5,
+        cs_how_many_weeks_per_year: 30
+      )
+
+      sign_in @applicant
+      put :create, params: {form_data: application_hash.merge({status: 'incomplete'})}
     end
 
     # [MEG] TODO: verify update of params with fewer (and no) params
