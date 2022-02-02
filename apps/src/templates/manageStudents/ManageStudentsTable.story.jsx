@@ -15,6 +15,17 @@ const initialState = {
     studentData: {},
     addStatus: {}
   },
+  teacherSections: {
+    selectedSectionId: 53,
+    sections: [
+      {
+        id: 53,
+        name: 'Test section',
+        loginType: SectionLoginType.email,
+        hidden: false
+      }
+    ]
+  },
   sectionData: {
     section: {
       id: 53
