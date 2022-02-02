@@ -103,10 +103,10 @@ module Pd::Application
     # 1. Application has a specific school? always overwrite the user's school info
     # 2. User doesn't have a specific school? overwrite with the custom school info.
     def update_user_school_info!
-      if school_id || user.school_info.try(&:school).nil?
-        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_school_info(school_info)
-      end
+      return unless school_id || user.school_info.try(&:school).nil?
+      school_info = school_info_attr
+      return unless school_info
+      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
     end
 
     def update_scholarship_status(scholarship_status)
@@ -270,6 +270,7 @@ module Pd::Application
         }
       else
         hash = sanitize_form_data_hash
+        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
