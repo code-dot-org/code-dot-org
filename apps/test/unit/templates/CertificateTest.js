@@ -98,6 +98,11 @@ describe('Certificate', () => {
         /^\/_karma_webpack_\/hour_of_code_certificate/
       );
 
+      const printLink = wrapper.find('.social-print-link');
+      expect(printLink.prop('href')).to.equal(
+        'https://code.org/printcertificate/sessionId'
+      );
+
       const input = wrapper.find('input#name');
       input.simulate('change', {target: {value: 'Student'}});
       const submitButton = wrapper
@@ -133,6 +138,9 @@ describe('Certificate', () => {
       expect(image.prop('src')).to.match(
         /^\/_karma_webpack_\/hour_of_code_certificate/
       );
+
+      const printLink = wrapper.find('.social-print-link');
+      expect(printLink.prop('href')).to.match(/^\/print_certificates/);
 
       const input = wrapper.find('input#name');
       input.simulate('change', {target: {value: 'Student'}});
