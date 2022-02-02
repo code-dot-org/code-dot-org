@@ -18,11 +18,31 @@
 class ProgrammingEnvironmentCategory < ApplicationRecord
   belongs_to :programming_environment
 
+  KEY_CHAR_RE = /[a-z_]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters and underscores; got \"%{value}\"."
+
+  before_validation :generate_key, on: :create
+
   def serialize
     {
       key: key,
       name: name,
       color: color
     }
+  end
+
+  def generate_key
+    return key if key
+    key = ProgrammingEnvironmentCategory.sanitize_key(name)
+    self.key = key
+  end
+
+  def self.sanitize_key(key)
+    key.strip.downcase.chars.map do |character|
+      KEY_CHAR_RE.match(character) ? character : '_'
+    end.join.gsub(/_+/, '_')
   end
 end

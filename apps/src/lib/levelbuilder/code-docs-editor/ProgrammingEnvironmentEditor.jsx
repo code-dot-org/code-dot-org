@@ -8,7 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {createUuid, navigateToHref} from '@cdo/apps/utils';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const EDITOR_TYPES = ['blockly', 'droplet', 'text'];
 
@@ -20,7 +20,11 @@ const useProgrammingEnvironment = initialProgrammingEnvironment => {
     setProgrammingEnvironment({...programmingEnvironment, [key]: value});
   };
 
-  return [programmingEnvironment, updateProgrammingEnvironment];
+  return [
+    programmingEnvironment,
+    updateProgrammingEnvironment,
+    setProgrammingEnvironment
+  ];
 };
 
 const renderCategoryEditor = (category, updateFunc) => {
@@ -54,12 +58,10 @@ export default function ProgrammingEnvironmentEditor({
     name,
     ...remainingProgrammingEnvironment
   } = initialProgrammingEnvironment;
-  remainingProgrammingEnvironment.categories.forEach(
-    c => (c.key = createUuid())
-  );
   const [
     programmingEnvironment,
-    updateProgrammingEnvironment
+    updateProgrammingEnvironment,
+    setProgrammingEnvironment
   ] = useProgrammingEnvironment(remainingProgrammingEnvironment);
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -84,13 +86,19 @@ export default function ProgrammingEnvironmentEditor({
         if (response.ok) {
           setLastUpdated(Date.now());
           setError(null);
+          return response.json();
         } else {
-          setError(response.statusText);
+          throw new Error(error.statusText);
+          //setError(response.statusText);
         }
+      })
+      .then(json => {
+        delete json.name;
+        setProgrammingEnvironment(json);
       })
       .catch(error => {
         setIsSaving(false);
-        setError(error.responseText);
+        setError(error);
       });
   };
 
@@ -151,7 +159,7 @@ export default function ProgrammingEnvironmentEditor({
         }
         features={{imageUpload: true}}
       />
-     <CollapsibleEditorSection title="Categories" collapsed>
+      <CollapsibleEditorSection title="Categories" collapsed>
         <OrderableList
           list={programmingEnvironment.categories || []}
           setList={list => updateProgrammingEnvironment('categories', list)}
