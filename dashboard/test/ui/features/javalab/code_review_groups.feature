@@ -28,6 +28,13 @@ Feature: Code Review Groups
     And I wait for 2 seconds
     And I click selector "#uitest-create-code-review-group" once I see it
     # This isn't erroring (it did error before when it couldn't find the elements), but isn't dragging the elements either
-    And I drag "div[data-rbd-drag-handle-draggable-id]:first-child" to "div[data-rbd-droppable-id]:nth-child(2)"
+    # And I drag "div[data-rbd-drag-handle-draggable-id]:first-child" to "div[data-rbd-droppable-id]:nth-child(2)"
+    And I shift tab
+    And I press keys ":tab"
+    And I press keys ":space"
+    And I press keys ":arrow_right"
+    And I press keys ":space"
+#    div[followerid="366"]
+#    div[data-rbd-droppable-id="groupId171"]
 
     And I wait for 10 seconds

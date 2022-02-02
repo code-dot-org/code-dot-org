@@ -1118,6 +1118,10 @@ When /^I press enter key$/ do
   @browser.action.send_keys(:return).perform
 end
 
+When /^I shift tab$/ do
+  @browser.action.send_keys(:shift, :tab).perform
+end
+
 When /^I press double-quote key$/ do
   @browser.action.send_keys('"').perform
 end
