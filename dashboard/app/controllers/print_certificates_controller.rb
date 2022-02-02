@@ -19,6 +19,8 @@ class PrintCertificatesController < ApplicationController
   private
 
   def certificate_image_url(name, course)
+    return '/images/hour_of_code_certificate.jpg' unless course
+
     opts = {
       name: name,
       course: course
