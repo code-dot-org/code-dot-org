@@ -290,17 +290,11 @@ class Ability
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      if script.can_be_participant?(user) || script.can_be_instructor?(user)
-        if script.in_development?
-          user.permission?(UserPermission::LEVELBUILDER)
-        elsif script.pilot?
-          script.has_pilot_access?(user)
-        else
-          # login is required if this script always requires it or if request
-          # params were passed to authorize! and includes login_required=true
-          login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
-          user.persisted? || !login_required
-        end
+      if (script.can_be_participant?(user) || script.can_be_instructor?(user)) && can?(:read, script)
+        # login is required if this script always requires it or if request
+        # params were passed to authorize! and includes login_required=true
+        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
+        user.persisted? || !login_required
       else
         false
       end
