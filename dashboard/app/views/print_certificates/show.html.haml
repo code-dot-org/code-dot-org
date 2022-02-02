@@ -1,1 +1,2 @@
-%img{src: @certificate_image_url, alt:"Certificate for #{@student_name}", width:"100%", style: "margin-top: 25px"}
+- alt_text = @student_name ? "Certificate for #{@student_name}" : 'Certificate for Completion of One Hour of Code'
+%img{src: @certificate_image_url, alt: alt_text, width:"100%", style: "margin-top: 25px"}
