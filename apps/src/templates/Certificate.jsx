@@ -92,6 +92,10 @@ function Certificate(props) {
     return `/print_certificates/${encoded}`;
   };
 
+  const getCertificateSharePath = certificate => {
+    return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+  };
+
   const {
     responsiveSize,
     tutorial,
@@ -106,9 +110,7 @@ function Certificate(props) {
   const blankCertificate =
     blankCertificates[tutorial] || blankCertificates.hourOfCode;
   const imgSrc = personalized ? personalizedCertificate : blankCertificate;
-  const certificateLink = `https:${
-    dashboard.CODE_ORG_URL
-  }/certificates/${certificate}`;
+  const certificateLink = getCertificateSharePath(certificate);
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
