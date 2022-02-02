@@ -50,6 +50,33 @@ const Dialog = makeEnum(
 );
 const DEFAULT_FILE_NAME = '.java';
 
+// Custom theme overrides
+const editorDarkModeThemeOverride = EditorView.theme(
+  {
+    '&': {
+      backgroundColor: color.darkest_slate_gray
+    },
+    '.cm-activeLine': {
+      backgroundColor: color.dark_charcoal
+    },
+    '.cm-gutters': {
+      backgroundColor: color.darkest_slate_gray
+    }
+  },
+  {dark: true}
+);
+const editorLightModeThemeOverride = EditorView.theme(
+  {
+    '&': {
+      backgroundColor: color.white
+    },
+    '.cm-gutters': {
+      backgroundColor: color.white
+    }
+  },
+  {dark: false}
+);
+
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
@@ -97,6 +124,7 @@ class JavalabEditor extends React.Component {
 
     // Used to manage dark and light mode configuration.
     this.editorModeConfigCompartment = new Compartment();
+    this.editorThemeOverrideCompartment = new Compartment();
 
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
@@ -140,12 +168,19 @@ class JavalabEditor extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.displayTheme !== this.props.displayTheme) {
+      const styleOverride =
+        this.props.displayTheme === DisplayTheme.DARK
+          ? editorDarkModeThemeOverride
+          : editorLightModeThemeOverride;
       const newStyle =
         this.props.displayTheme === DisplayTheme.DARK ? oneDark : lightMode;
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
-          effects: this.editorModeConfigCompartment.reconfigure(newStyle)
+          effects: [
+            this.editorThemeOverrideCompartment.reconfigure(styleOverride),
+            this.editorModeConfigCompartment.reconfigure(newStyle)
+          ]
         });
       });
     }
@@ -169,13 +204,19 @@ class JavalabEditor extends React.Component {
     const {displayTheme, isReadOnlyWorkspace} = this.props;
     const extensions = [...editorSetup];
 
-    if (displayTheme === DisplayTheme.DARK) {
-      const darkModeExtension = this.editorModeConfigCompartment.of(oneDark);
-      extensions.push(darkModeExtension);
-    } else {
-      const lightModeExtension = this.editorModeConfigCompartment.of(lightMode);
-      extensions.push(lightModeExtension);
-    }
+    extensions.push(
+      displayTheme === DisplayTheme.DARK
+        ? [
+            this.editorThemeOverrideCompartment.of(editorDarkModeThemeOverride),
+            this.editorModeConfigCompartment.of(oneDark)
+          ]
+        : [
+            this.editorThemeOverrideCompartment.of(
+              editorLightModeThemeOverride
+            ),
+            this.editorModeConfigCompartment.of(lightMode)
+          ]
+    );
 
     if (isReadOnlyWorkspace) {
       extensions.push(
@@ -763,7 +804,7 @@ const styles = {
     backgroundColor: color.white
   },
   darkBackground: {
-    backgroundColor: color.dark_slate_gray
+    backgroundColor: color.darkest_slate_gray
   },
   fileMenuToggleButton: {
     margin: '0, 0, 0, 4px',
