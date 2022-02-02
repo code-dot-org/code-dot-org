@@ -14,12 +14,21 @@ class ProgrammingEnvironmentsController < ApplicationController
       render :not_found
       return
     end
-    programming_environment.assign_attributes(programming_environment_params)
+    programming_environment.assign_attributes(programming_environment_params.except(:categories))
     begin
-      if programming_environment.changed?
-        programming_environment.save!
-        programming_environment.write_serialization
-      end
+      programming_environment.categories =
+        programming_environment_params[:categories].map do |category|
+          if category['id']
+            existing_category = programming_environment.categories.find(category['id'])
+            existing_category.assign_attributes(category.except('id'))
+            existing_category.save! if existing_category.changed?
+            existing_category
+          else
+            ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id))
+          end
+        end
+      programming_environment.save!
+      programming_environment.write_serialization
       render json: programming_environment.summarize_for_edit.to_json
     rescue ActiveRecord::RecordInvalid => e
       render(status: :not_acceptable, plain: e.message)
@@ -35,7 +44,7 @@ class ProgrammingEnvironmentsController < ApplicationController
       :description,
       :editor_type,
       :image_url,
-      categories: [:name, :color]
+      categories: [:id, :name, :color]
     )
     transformed_params
   end

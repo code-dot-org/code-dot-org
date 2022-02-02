@@ -28,7 +28,6 @@ class ProgrammingEnvironment < ApplicationRecord
     title
     description
     image_url
-    categories
   )
 
   def self.properties_from_file(content)
