@@ -403,9 +403,28 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     test "remove UnitGroupUnits" do
       unit_group = create :unit_group
+      unit1 = create(
+        :script,
+        name: 'unit1',
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        family_name: 'unit1-family',
+        version_year: '1991',
+        is_course: true
+      )
+      create(:script, name: 'unit2')
 
-      create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'unit1'))
-      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      assert_equal unit1.published_state, nil
+      assert_equal unit1.instruction_type, nil
+      assert_equal unit1.instructor_audience, nil
+      assert_equal unit1.participant_audience, nil
+      assert_equal unit1.family_name, nil
+      assert_equal unit1.is_course, false
+      assert_equal unit1.version_year, nil
 
       unit_group.update_scripts(['unit2'])
 
@@ -413,6 +432,10 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group.default_unit_group_units.length
       assert_equal 1, unit_group.default_unit_group_units[0].position
       assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
+      assert_equal unit1.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+      assert_equal unit1.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      assert_equal unit1.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+      assert_equal unit1.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
     end
 
     test "removed units have their published state instruction type participant audience and instructor audience reset" do
