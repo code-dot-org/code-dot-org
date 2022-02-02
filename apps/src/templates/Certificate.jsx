@@ -25,6 +25,7 @@ const blankCertificates = {
 
 function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
+  const [studentName, setStudentName] = useState();
   const nameInputRef = useRef(null);
 
   const isMinecraft = () =>
@@ -44,9 +45,25 @@ function Certificate(props) {
       }
     }).done(response => {
       if (response.certificate_sent) {
+        setStudentName(response['name']);
         setPersonalized(true);
       }
     });
+  };
+
+  const getCertificatePath = () => {
+    if (!props.showStudioCertificate) {
+      return `${
+        dashboard.CODE_ORG_URL
+      }/api/hour/certificate/${certificate}.jpg`;
+    }
+
+    const data = {
+      name: studentName,
+      course: props.tutorial
+    };
+    const filename = btoa(JSON.stringify(data));
+    return `/certificate_images/${filename}.jpg`;
   };
 
   const {
@@ -59,9 +76,7 @@ function Certificate(props) {
   } = props;
 
   const certificate = certificateId || 'blank';
-  const personalizedCertificate = `${
-    dashboard.CODE_ORG_URL
-  }/api/hour/certificate/${certificate}.jpg`;
+  const personalizedCertificate = getCertificatePath();
   const blankCertificate =
     blankCertificates[tutorial] || blankCertificates.hourOfCode;
   const imgSrc = personalized ? personalizedCertificate : blankCertificate;
@@ -156,7 +171,8 @@ Certificate.propTypes = {
   randomDonorTwitter: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  showStudioCertificate: PropTypes.bool
 };
 
 const styles = {
