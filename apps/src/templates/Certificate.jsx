@@ -119,7 +119,7 @@ function Certificate(props) {
   const blankCertificate =
     blankCertificates[tutorial] || blankCertificates.hourOfCode;
   const imgSrc = personalized ? personalizedCertificate : blankCertificate;
-  const certificateLink = getCertificateSharePath(certificate);
+  const certificateShareLink = getCertificateSharePath(certificate);
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -127,11 +127,11 @@ function Certificate(props) {
   const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
   const facebook = queryString.stringify({
-    u: certificateLink
+    u: certificateShareLink
   });
 
   const twitter = queryString.stringify({
-    url: certificateLink,
+    url: certificateShareLink,
     related: 'codeorg',
     text: randomDonorTwitter
       ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
@@ -151,7 +151,7 @@ function Certificate(props) {
       )}
       <div id="uitest-certificate" style={certificateStyle}>
         <BackToFrontConfetti active={personalized} style={styles.confetti} />
-        <a href={certificateLink}>
+        <a href={certificateShareLink}>
           <img src={imgSrc} />
         </a>
       </div>
