@@ -681,6 +681,7 @@ Dance.prototype.displayFeedback_ = function() {
     ' on @codeorg!';
 
   let feedbackOptions = {
+    doNothingOnHidden: true,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
