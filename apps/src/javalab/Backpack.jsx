@@ -364,7 +364,7 @@ const styles = {
     minWidth: 'inherit'
   },
   dropdownDark: {
-    backgroundColor: '#292C33',
+    backgroundColor: color.darkest_slate_gray,
     color: color.background_gray
   },
   listContainer: {
