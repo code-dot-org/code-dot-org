@@ -884,7 +884,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script
-    stub_file_writes(unit.name)
+    stub_file_writes(unit.name, family_name: 'fake-family-z')
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -1485,30 +1485,22 @@ class ScriptsControllerTest < ActionController::TestCase
       @in_development_unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     end
 
-    no_access_msg = "You don&#39;t have access to this unit."
-
     test_user_gets_response_for :show, response: :redirect, user: nil,
       params: -> {{id: @in_development_unit.name}},
       name: 'signed out user cannot view in-development unit'
 
-    test_user_gets_response_for(:show, response: :success, user: :student,
+    test_user_gets_response_for(:show, response: :forbidden, user: :student,
       params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
-    ) do
-      assert response.body.include? no_access_msg
-    end
+    )
 
-    test_user_gets_response_for(:show, response: :success, user: :teacher,
+    test_user_gets_response_for(:show, response: :forbidden, user: :teacher,
       params: -> {{id: @in_development_unit.name}},
       name: 'teacher cannot view in-development unit'
-    ) do
-      assert response.body.include? no_access_msg
-    end
+    )
 
     test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
       params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
-    ) do
-      refute response.body.include? no_access_msg
-    end
+    )
   end
 
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
@@ -1534,16 +1526,26 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  no_access_msg = "You don&#39;t have access to this unit."
+
+  test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view vocab page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view resources page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view standards page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view code page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
   test "view all instructions page for migrated unit" do
@@ -1612,10 +1614,10 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, params: {id: @migrated_unit.name}
   end
 
-  def stub_file_writes(unit_name)
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json"]
+  def stub_file_writes(unit_name, family_name: nil)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
     File.stubs(:write).with do |filename, _|
-      filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
+      filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts.en.yml')
     end
   end
 end
