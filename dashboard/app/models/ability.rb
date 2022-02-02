@@ -308,17 +308,7 @@ class Ability
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
-      if script.can_be_participant?(user) || script.can_be_instructor?(user)
-        if script.in_development?
-          user.permission?(UserPermission::LEVELBUILDER)
-        elsif script.pilot?
-          script.has_pilot_access?(user)
-        else
-          true
-        end
-      else
-        false
-      end
+      (script.can_be_participant?(user) || script.can_be_instructor?(user)) && can?(:read, script)
     end
 
     # Handle standalone projects as a special case.
