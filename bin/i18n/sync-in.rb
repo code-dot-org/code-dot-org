@@ -23,6 +23,7 @@ def sync_in
   localize_block_content
   localize_animation_library
   localize_shared_functions
+  localize_course_offerings
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -373,6 +374,18 @@ def localize_shared_functions
   end
   File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
     f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
+  end
+end
+
+def localize_course_offerings
+  puts "Preparing course offerings"
+
+  hash = {}
+  CourseOffering.all.sort.each do |co|
+    hash[co.key] = co.display_name
+  end
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.yml"), "w+") do |f|
+    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"course_offerings" => hash}}}))
   end
 end
 
