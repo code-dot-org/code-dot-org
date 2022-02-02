@@ -253,7 +253,7 @@ class Ability
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
     can [:vocab, :resources, :code, :standards, :get_rollup_resources], UnitGroup do |unit_group|
       # Assumes if one unit in a unit group is migrated they all are
-      !!unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
+      unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
     can [:vocab, :resources, :code, :standards, :get_rollup_resources], Script do |script|
@@ -261,47 +261,55 @@ class Ability
     end
 
     can :read, UnitGroup do |unit_group|
+      return false unless unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+
       if unit_group.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit_group.pilot?
-        unit_group.has_pilot_access?(user) && (unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user))
+        unit_group.has_pilot_access?(user)
       else
-        unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+        true
       end
     end
 
     can :read, Script do |unit|
+      return false unless unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+
       if unit.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit.pilot?
-        unit.has_pilot_access?(user) && (unit.can_be_participant?(user) || unit.can_be_instructor?(user))
+        unit.has_pilot_access?(user)
       else
-        unit.can_be_participant?(user) || unit.can_be_instructor?(user)
+        true
       end
     end
 
     can :read, ScriptLevel do |script_level, params|
+      return false unless unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+
       unit = script_level.script
       if unit.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit.pilot?
-        unit.has_pilot_access?(user) && (unit.can_be_participant?(user) || unit.can_be_instructor?(user))
+        unit.has_pilot_access?(user)
       else
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = unit.login_required? || (!params.nil? && params[:login_required] == "true")
-        (user.persisted? || !login_required) && (unit.can_be_participant?(user) || unit.can_be_instructor?(user))
+        (user.persisted? || !login_required)
       end
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
+      return false unless unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+
       script = lesson.script
       if script.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif script.pilot?
-        script.has_pilot_access?(user) && (script.can_be_participant?(user) || script.can_be_instructor?(user))
+        script.has_pilot_access?(user)
       else
-        script.can_be_participant?(user) || script.can_be_instructor?(user)
+        true
       end
     end
 
