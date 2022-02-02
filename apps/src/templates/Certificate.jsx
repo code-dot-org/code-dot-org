@@ -67,16 +67,29 @@ function Certificate(props) {
   };
 
   const getPrintPath = certificate => {
-    let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-    if (isMinecraft() && !personalized) {
-      // Correct the minecraft print url for non-personalized certificates.
-      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${props.tutorial}`;
+    if (!props.showStudioCertificate) {
+      let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+      if (isMinecraft() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      if (isAIOceans() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      return print;
     }
-    if (isAIOceans() && !personalized) {
-      // Correct the minecraft print url for non-personalized certificates.
-      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${props.tutorial}`;
-    }
-    return print;
+
+    const data = {
+      name: studentName,
+      course: props.tutorial
+    };
+    const encoded = btoa(JSON.stringify(data));
+    return `/print_certificates/${encoded}`;
   };
 
   const {
