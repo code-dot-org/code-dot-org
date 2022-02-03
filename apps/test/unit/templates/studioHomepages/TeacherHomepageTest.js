@@ -132,7 +132,7 @@ describe('TeacherHomepage', () => {
       hasFeedback: false,
       isProfessionalLearningCourse: true,
       courses: plCourses,
-      topPlCourse: topPlCourse
+      topCourse: topPlCourse
     });
   });
 
