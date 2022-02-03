@@ -5,27 +5,16 @@
 
   "banners": {
     "higherPower": {
-      "desktopImage": "/images/marketing/homepage-higher-power-desktop.png",
-      "bodyText": ["homepage_higher_power_body"],
-      "actions": [
+      "desktopImage": "/images/marketing/homepage-higher-power-background.png",
+      "items": [
         {
-          "text": "homepage_action_text_try_it",
-          "url": "/dance",
-          "type": "cta_button_hollow_white"
+          "type": "image",
+          "url": "/images/marketing/homepage-higher-power-logo.png"
         },
-
         {
-          "text": "homepage_higher_power_button",
-          "url": "/dance",
-          "type": "cta_button_solid_white"
+          "type": "text",
+          "text": "homepage_higher_power_body"
         }
-      ]
-    },
-    "changeWorld": {
-      "desktopImage": "/images/homepage/announcement.jpg",
-      "bodyText": [
-        "hoc2019_header_line1_mobile",
-        "hoc2019_header_line2_mobile"
       ],
       "actions": [
         {
@@ -37,7 +26,7 @@
         {
           "text": "homepage_higher_power_button",
           "url": "/dance",
-          "type": "cta_button_solid_white"
+          "type": "cta_button_solid_yellow"
         }
       ]
     }
