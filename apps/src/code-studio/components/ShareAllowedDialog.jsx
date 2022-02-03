@@ -197,12 +197,17 @@ class ShareAllowedDialog extends React.Component {
     const tweetText = artistTwitterHandle
       ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
       : 'Check out what I made on @codeorg!';
+    const hashtags = this.props.selectedSong
+      ? ['codeplay', 'HourOfCode']
+      : ['HourOfCode'];
+    const comma = '%2C';
     const twitterShareUrl =
       'https://twitter.com/intent/tweet?text=' +
       encodeURIComponent(tweetText) +
       '&url=' +
       encodeURIComponent(this.props.shareUrl) +
-      '&hashtags=HourOfCode&related=codeorg';
+      `&hashtags=${hashtags.join(comma)}` +
+      '&related=codeorg';
 
     const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
