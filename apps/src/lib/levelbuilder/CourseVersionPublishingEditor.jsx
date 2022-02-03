@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Button from '../../templates/Button';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
@@ -20,7 +21,8 @@ export default class CourseVersionPublishingEditor extends Component {
     initialPublishedState: PropTypes.string.isRequired,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired,
-    preventCourseVersionChange: PropTypes.bool
+    preventCourseVersionChange: PropTypes.bool,
+    courseOfferingEditorLink: PropTypes.string
   };
 
   constructor(props) {
@@ -263,6 +265,15 @@ export default class CourseVersionPublishingEditor extends Component {
               }
             />
           </label>
+        )}
+        {this.props.courseOfferingEditorLink && (
+          <Button
+            __useDeprecatedTag
+            color={Button.ButtonColor.gray}
+            href={this.props.courseOfferingEditorLink}
+            target="_blank"
+            text={'Edit Course Offering'}
+          />
         )}
       </div>
     );
