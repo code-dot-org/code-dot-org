@@ -981,14 +981,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, versions.length
     assert_equal 'foo-2018', versions[0][:name]
     assert_equal 'foo-2017', versions[1][:name]
-
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-    versions = foo17.summarize(true, teacher)[:versions]
-    assert_equal 3, versions.length
-    assert_equal 'foo-2019', versions[0][:name]
-    assert_equal 'foo-2018', versions[1][:name]
-    assert_equal 'foo-2017', versions[2][:name]
   end
 
   test 'summarize includes show assign button' do
@@ -1530,14 +1522,6 @@ class ScriptTest < ActiveSupport::TestCase
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-
-    units = Script.valid_scripts(teacher)
     assert has_unlaunched_unit?(units)
   end
 

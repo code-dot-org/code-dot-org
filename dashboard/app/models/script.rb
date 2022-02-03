@@ -336,7 +336,7 @@ class Script < ApplicationRecord
   # @return [Script[]]
   def self.valid_scripts(user)
     has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
-    with_hidden = !has_any_course_experiments && user.hidden_script_access?
+    with_hidden = !has_any_course_experiments
     units = with_hidden ? all_scripts : visible_units
 
     if has_any_course_experiments
