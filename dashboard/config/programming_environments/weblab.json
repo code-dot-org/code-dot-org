@@ -3,12 +3,12 @@
   "editor_type": "text",
   "categories": [
     {
-      "key": "html tags",
+      "key": "html_tags",
       "name": "HTML Tags",
       "color": "#fff176"
     },
     {
-      "key": "css properties",
+      "key": "css_properties",
       "name": "CSS Properties",
       "color": "#d3e965"
     }
