@@ -86,6 +86,7 @@ module Pd::Application
 
     before_validation :set_course_from_program, unless: -> {program.nil?}
     before_validation :set_total_course_hours, if: -> {form_data_changed?}
+    before_validation :update_user_school_info!, if: -> {form_data_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
@@ -1172,11 +1173,7 @@ module Pd::Application
     # Called after the application is created. Do any manipulation needed for the form data
     # hash here, as well as send emails
     def on_successful_create
-      update_user_school_info!
-
       on_completed_app unless status == 'incomplete'
-
-      save
     end
 
     def on_completed_app
@@ -1185,6 +1182,7 @@ module Pd::Application
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         queue_email :principal_approval, deliver_now: true
       end
+      save
     end
 
     # Called after principal approval has been created. Do any manipulation needed for the
