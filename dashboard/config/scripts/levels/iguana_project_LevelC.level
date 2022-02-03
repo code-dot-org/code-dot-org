@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-02-02T23:58:36.000Z",
+  "level_num": "custom",
+  "user_id": 833,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -54,20 +58,11 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_tab\",\r\n  \"callout_text\": \"Click here to add costumes to your project.\",\r\n  \"element_id\": \"[id=\\\"animationMode\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "authored_hints": "[]",
     "skip_autosave": true,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-02-02T23:50:49.000Z",
-  "level_num": "custom",
-  "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-02T23:50:49.737+00:00\",\"changed\":[\"cloned from \\\"iguana_project_LevelB\\\"\"],\"cloned_from\":\"iguana_project_LevelB\"},{\"changed_at\":\"2022-02-02 23:51:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:52:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-03 00:15:20 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "audit_log": "[{\"changed_at\":\"2022-02-02T23:58:36.879+00:00\",\"changed\":[\"cloned from \\\"iguana_project_LevelA\\\"\"],\"cloned_from\":\"iguana_project_LevelA\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
