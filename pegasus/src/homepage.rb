@@ -33,9 +33,9 @@ class Homepage
           symbolize_names: true,
           object_class: HashWithIndifferentAccess
         )
-        #unless validate_announcements_data(@@announcements_data)
-        #  @@load_error = true
-        #end
+        unless validate_announcements_data(@@announcements_data)
+          @@load_error = true
+        end
       rescue JSON::ParserError
         @@load_error = true
       end
@@ -56,7 +56,7 @@ class Homepage
 
   # validate a banner has the required fields
   def self.validate_banner(banner)
-    banner[:image] && banner[:title] && banner[:body] && banner[:buttonText] && banner[:buttonUrl]
+    banner[:desktopImage] && banner[:items] && banner[:actions]
   end
 
   def self.get_heroes
@@ -438,7 +438,7 @@ class Homepage
     custom_banner = get_announcement_for_page("homepage")
     if custom_banner
       heroes_arranged =
-        [{centering: "50% 30%", textposition: "bottom", text: custom_banner["bodyText"], image: custom_banner["desktopImage"]}]
+        [{centering: "50% 30%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
     elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
     else
