@@ -71,24 +71,9 @@
       "color": "#d9d9d9"
     },
     {
-      "key": "sl1",
-      "name": "SL1",
-      "color": null
-    },
-    {
-      "key": "unused",
-      "name": "Unused",
-      "color": null
-    },
-    {
       "key": "control",
       "name": "Control",
       "color": "#64B5F6"
-    },
-    {
-      "key": "experimental",
-      "name": "Experimental",
-      "color": null
     }
   ]
 }
