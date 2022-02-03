@@ -47,7 +47,37 @@ module Pd::Application
       assert_equal 'Albus Dumbledore', application_without_principal_title.principal_greeting
     end
 
-    test 'meets criteria says an application meets critera when all YES_NO fields are marked yes' do
+    test 'set_total_course_hours calculates total course hours when there is info for it' do
+      custom_minutes_hours_weeks = {
+        cs_how_many_minutes: '45',
+        cs_how_many_days_per_week: '5',
+        cs_how_many_weeks_per_year: '30'
+      }
+
+      application = create :pd_teacher_application, form_data_hash: (
+        build :pd_teacher_application_hash, :incomplete, custom_minutes_hours_weeks
+      )
+
+      assert_equal 112, application.sanitize_form_data_hash[:cs_total_course_hours]
+    end
+
+    test 'set_total_course_hours does nothing when there is not enough info for it' do
+      empty_minutes_hours_weeks = {
+        cs_how_many_minutes: nil,
+        cs_how_many_days_per_week: nil,
+        cs_how_many_weeks_per_year: nil
+      }
+
+      %i(cs_how_many_minutes cs_how_many_days_per_week cs_how_many_weeks_per_year).each do |attribute|
+        application = create :pd_teacher_application, form_data_hash: (
+          build :pd_teacher_application_hash, :incomplete, empty_minutes_hours_weeks.slice(attribute)
+        )
+
+        assert_nil application.sanitize_form_data_hash[:cs_total_course_hours]
+      end
+    end
+
+    test 'meets criteria says an application meets criteria when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher_application, course: 'csd',
                                   response_scores: {
                                     meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].map {|x| [x, 'Yes']}.to_h
