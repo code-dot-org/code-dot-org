@@ -103,6 +103,14 @@ describe('Certificate', () => {
         'https://code.org/printcertificate/sessionId'
       );
 
+      // the share link is used in the image thumbnail as well as the facebook
+      // and twitter links. just test its value in the thumbnail, because it is
+      // harder to extract from the facebook and twitter links.
+      const thumbnailLink = wrapper.find('#uitest-certificate a');
+      expect(thumbnailLink.prop('href')).to.equal(
+        'https:https://code.org/certificates/sessionId'
+      );
+
       const input = wrapper.find('input#name');
       input.simulate('change', {target: {value: 'Student'}});
       const submitButton = wrapper
@@ -141,6 +149,12 @@ describe('Certificate', () => {
 
       const printLink = wrapper.find('.social-print-link');
       expect(printLink.prop('href')).to.match(/^\/print_certificates/);
+
+      // the share link is used in the image thumbnail as well as the facebook
+      // and twitter links. just test its value in the thumbnail, because it is
+      // harder to extract from the facebook and twitter links.
+      const thumbnailLink = wrapper.find('#uitest-certificate a');
+      expect(thumbnailLink.prop('href')).to.match(/^\/certificates/);
 
       const input = wrapper.find('input#name');
       input.simulate('change', {target: {value: 'Student'}});
