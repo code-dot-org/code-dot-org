@@ -1525,31 +1525,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-unit')
-    alternate_unit = build(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
-
-    units = Script.valid_scripts(user)
-    assert_equal [alternate_unit], units
-  end
-
-  test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    unit = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(nil)
-
-    units = Script.valid_scripts(user)
-    assert_equal [unit], units
-  end
-
   test "self.valid_scripts: omits in-development units" do
     student = create :student
     teacher = create :teacher
