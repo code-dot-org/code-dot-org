@@ -1518,17 +1518,17 @@ class ScriptTest < ActiveSupport::TestCase
     refute has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: returns unlaunched units when user is an admin" do
+  test "self.valid_scripts: does not return unlaunched units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_unlaunched_unit?(units)
+    refute has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: omits in-development units" do
     student = create :student
     teacher = create :teacher
-    levelbuilder = create :levelbuilder
+    levelbuilder = create :levelbuilder, name: "levelbuilder"
     create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     assert Script.any?(&:in_development?)
 

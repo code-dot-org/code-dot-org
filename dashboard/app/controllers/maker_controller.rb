@@ -22,7 +22,7 @@ class MakerController < ApplicationController
   ScriptAndCourse = Struct.new(:script, :course)
 
   def self.maker_script(for_user)
-    maker_units = Script.maker_units(for_user).
+    maker_units = Script.maker_units.
         sort_by(&:version_year).
         reverse.
         freeze
