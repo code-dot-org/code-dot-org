@@ -42,6 +42,16 @@ Resources:
     Properties:
       AccessControl: PublicRead
       BucketName: !Ref BucketName
+      CorsConfiguration:
+        CorsRules:
+          - AllowedMethods: [GET]
+            AllowedOrigins:
+              [
+                '*.code.org',
+                '*.code.org:3000',
+                'http://localhost-studio.code.org:*',
+              ]
+            AllowedHeaders: ['*']
       Tags:
         - Key: environment
           Value: production
