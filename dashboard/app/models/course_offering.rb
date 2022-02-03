@@ -96,7 +96,7 @@ class CourseOffering < ApplicationRecord
     CourseOffering.all.select {|co| co.assignable?(user)}
   end
 
-  def self.assignable_course_offerings_info(user, locale_code = nil)
+  def self.assignable_course_offerings_info(user, locale_code = 'en-us')
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
   end
 
