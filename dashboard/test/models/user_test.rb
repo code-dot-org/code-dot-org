@@ -3384,7 +3384,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal '/s/other', courses_and_scripts[1][:link]
     end
 
-    test "it returns both student courses and student scripts" do
+    test "it returns both pl courses and pl scripts" do
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
@@ -3409,7 +3409,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
 
-    test "it does not return student scripts that are in returned student courses" do
+    test "it does not return pl scripts that are in returned pl courses" do
       script = Script.find_by_name('pl-csd1')
       @teacher.assign_script(script)
 
