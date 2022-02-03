@@ -138,16 +138,18 @@ module Api::V1::Pd::Application
       assert_response :created
     end
 
-    test 'updating an application with empty form data updates fields' do
+    test 'updating an application with empty form data updates appropriate fields' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
       original_data = application.form_data_hash
+      original_school_info = @applicant.school_info
 
       put :update, params: {id: application.id, form_data: {status: 'incomplete'}}
       application.reload
       refute_equal original_data, application.form_data_hash
       assert_nil application.program
       assert_nil application.form_data_hash[:cs_total_course_hours]
+      assert_equal original_school_info, @applicant.school_info
       assert_response :ok
     end
 
