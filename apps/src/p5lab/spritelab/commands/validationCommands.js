@@ -70,30 +70,36 @@ export const commands = {
     return this.criteria;
   },
 
+  // Used in levels to override default validation timing.
   setEarlyTime(frames) {
     this.validationTimes.early = frames;
   },
-
   setWaitTime(frames) {
     this.validationTimes.wait = frames;
   },
-
   setDelayTime(frames) {
     this.validationTimes.delay = frames;
   },
 
+  // Used in levels (typically first frame only) to create an ordered list of success criteria
   addCriteria(predicate, feedback) {
     if (typeof predicate === 'function' && typeof feedback === 'string') {
       this.criteria.push(new criteria(predicate, feedback));
     }
   },
 
+  // Used in levels (typically every frame) to validate based on all criteria
   validate() {
+    // Get the current (ie. previous frame) pass/fail state prior to validation
     let state = commands.getPassState(this.criteria);
 
     let barWidth =
       this.currentFrame() * commands.calculateBarScale(this.validationTimes);
     drawUtils.validationBar(this.p5, barWidth, state, {});
+
+    if (this.previous.eventLogLength === undefined) {
+      this.previous.eventLogLength = this.eventLog.length;
+    }
 
     //check criteria and update complete status
     if (this.currentFrame() <= this.validationTimes.wait) {
@@ -117,6 +123,7 @@ export const commands = {
       }
       return results;
     }
+    this.previous.eventLogLength = this.eventLog.length;
   },
 
   getPassState(criteria) {
@@ -167,10 +174,6 @@ export const commands = {
     }
   },
 
-  passLevel() {
-    return true;
-  },
-
   minimumSprites(min) {
     return this.getSpriteIdsInUse().length >= min;
   },
@@ -181,6 +184,58 @@ export const commands = {
 
   allSpriteHaveSameCostume() {
     return this.getAnimationsInUse().length === 1;
+  },
+
+  spritesDefaultSize(spriteIds) {
+    let result = true;
+    spriteIds.forEach(id => {
+      if (this.nativeSpriteMap[spriteIds[id]].getScale() !== 1) {
+        result = false;
+      }
+    });
+    return result;
+  },
+
+  anySpriteClicked(spriteIds) {
+    let result = false;
+    if (this.p5.mouseWentDown('left')) {
+      spriteIds.forEach(id => {
+        if (this.p5.mouseIsOver(this.nativeSpriteMap[spriteIds[id]])) {
+          result = true;
+        }
+      });
+    }
+    return result;
+  },
+
+  clickEventFound() {
+    let result = false;
+    let eventLog = this.eventLog;
+    eventLog.forEach(currentEvent => {
+      if (
+        currentEvent.includes('whenClick: ') ||
+        currentEvent.includes('whileClick: ')
+      ) {
+        result = true;
+      }
+    });
+    return result;
+  },
+
+  clickEventFoundThisFrame() {
+    let result = false;
+
+    //Only check for values that are new this frame
+    for (let i = this.previous.eventLogLength; i < this.eventLog.length; i++) {
+      if (
+        this.eventLog[i].includes('whenClick: ') ||
+        this.eventLog[i].includes('whileClick: ')
+      ) {
+        result = true;
+      }
+    }
+
+    return result;
   }
 };
 class criteria {
