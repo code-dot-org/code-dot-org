@@ -176,6 +176,7 @@
   "spriteMovedTooSoon": "The sprite moved too soon. Try moving the behavior underneath a <xml><block type=\"gamelab_atTime\"><title name=\"UNIT\">\"seconds\"</title><value name=\"N\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value></block></xml> block.",
   "spriteNotClicked": "Make sure that you click on each sprite and that you have the right events in your workspace. \n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title></block></xml>",
   "spriteNotClickedWithBlockXML": "Make sure that you click on the sprite and that you have the right event in your workspace. \n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml>",
+  "spritesNotDefaultSize": "Your sprites should only change size when they are clicked. Make sure the `change size` block is connected to a `when clicked` event block.",
   "spritesNeedUniqueCostumes": "Make sure all sprites have different costumes.",
   "spritesNeedSameCostumes": "Make sure all sprites have the same costume.",
   "spritesNotTouch": "Make sure your sprites touch at some point.",
