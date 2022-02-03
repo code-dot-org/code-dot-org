@@ -3694,4 +3694,8 @@ html[dir=rtl] {
   }
 }
 
+.validation-children div > p {
+  font-size: 14px;
+}
+
 @import "NpsSurveyBlock";
