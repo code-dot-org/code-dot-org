@@ -402,6 +402,8 @@ Dashboard::Application.routes.draw do
 
   get '/certificate_images/:filename', to: 'certificate_images#show'
 
+  get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
