@@ -35,7 +35,7 @@
     "pause_animations_by_default": "false",
     "parent_level_id": 28361,
     "mini_rubric": "false",
-    "long_instructions": "##Explore this project. \r\n* Click the \"Run\" button.\r\n* Press keys as directed.\r\n* Read the code closely.\r\n* Play with this code for a bit, then click Finish.\r\n",
+    "long_instructions": "## Free Play\r\n",
     "encrypted": "false",
     "soft_buttons": [
       "leftButton",
@@ -61,11 +61,11 @@
   },
   "game_id": 64,
   "published": true,
-  "created_at": "2022-02-02T23:50:49.000Z",
+  "created_at": "2022-02-02T18:58:23.000Z",
   "level_num": "custom",
   "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-02T23:50:49.737+00:00\",\"changed\":[\"cloned from \\\"iguana_project_LevelB\\\"\"],\"cloned_from\":\"iguana_project_LevelB\"},{\"changed_at\":\"2022-02-02 23:51:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:52:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-03 00:15:20 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-03 17:54:14 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-02T18:58:23.415+00:00\",\"changed\":[\"cloned from \\\"helloworld_animals_freeplay\\\"\"],\"cloned_from\":\"helloworld_animals_freeplay\"},{\"changed_at\":\"2022-02-02 19:00:47 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"embed\",\"short_instructions\",\"long_instructions\",\"soft_buttons\",\"encrypted_examples\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 19:05:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 21:24:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"long_instructions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 21:25:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 21:30:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 21:42:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 21:44:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 21:51:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:38:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:41:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:50:32 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:54:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -5873,7 +5873,280 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <category name="World">
+          <block type="gamelab_setBackgroundImageAs">
+            <field name="IMG">"hw_sky_background_1"</field>
+          </block>
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="text">
+                <field name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_showTitleScreen">
+            <value name="TITLE">
+              <block type="text">
+                <field name="TEXT"/>
+              </block>
+            </value>
+            <value name="SUBTITLE">
+              <block type="text">
+                <field name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideTitleScreen"/>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <field name="ANIMATION_NAME">"iguana_1"</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <field name="LOCATION">{"x":200,"y":200}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_makeNumSprites">
+            <field name="ANIMATION_NAME">"iguana_1"</field>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_makeBurst">
+            <field name="EFFECT">"burst"</field>
+            <field name="ANIMATION_NAME">"iguana_1"</field>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_spriteSayTime">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+            <value name="TEXT1">
+              <block type="text">
+                <field name="TEXT">Hello, world!</field>
+              </block>
+            </value>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_jumpTo">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+            <value name="LOCATION">
+              <block type="gamelab_randomLocation"/>
+            </value>
+          </block>
+          <block type="gamelab_setTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <field name="COLOUR">#33ccff</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_turn">
+            <field name="DIRECTION">"right"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+            <value name="N">
+              <block type="math_number">
+                <field name="NUM">45</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_destroy">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Locations">
+          <block type="gamelab_location_picker">
+            <field name="LOCATION">{"x":200,"y":200}</field>
+          </block>
+          <block type="gamelab_locationAt">
+            <value name="X">
+              <block type="math_number">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_number">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_randomLocation"/>
+        </category>
+        <category name="Events">
+          <block type="gamelab_atTime">
+            <field name="UNIT">"seconds"</field>
+            <value name="N">
+              <block type="math_number" can_disconnect_from_parent="false">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_keyPressed">
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
+          </block>
+        </category>
+        <category name="Behaviors">
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeAllBehaviors">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"iguana_1"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="spinning right">spinning right</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="spinning left">spinning left</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="shrinking">shrinking</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="growing">growing</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="fluttering">fluttering</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="jittering">jittering</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="wobbling">wobbling</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="wandering">wandering</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving north">moving north</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving south">moving south</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving east">moving east</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving west">moving west</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving north and looping">moving north and looping</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving south and looping">moving south and looping</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving east and looping">moving east and looping</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving west and looping">moving west and looping</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="swimming left and right">swimming left and right</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="patrolling">patrolling</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+          </block>
+          <block type="gamelab_behavior_get">
+            <mutation/>
+            <field name="VAR" id="driving with arrow keys">driving with arrow keys</field>
+          </block>
+        </category>
+        <category name="Conditionals">
+          <block type="controls_if"/>
+          <block type="logic_compare">
+            <field name="OP">EQ</field>
+          </block>
+        </category>
+      </xml>
     </toolbox_blocks>
   </blocks>
 </GamelabJr>
