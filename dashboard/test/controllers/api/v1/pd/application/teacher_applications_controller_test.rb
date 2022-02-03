@@ -138,21 +138,16 @@ module Api::V1::Pd::Application
       assert_response :created
     end
 
-    # [MEG] TODO: verify update of params with fewer (and no) params
-    test 'updating an application modifies form data' do
+    test 'updating an application with empty form data updates fields' do
       sign_in @applicant
-      @updated_form_data = build(TEACHER_APPLICATION_HASH_FACTORY).merge(
-        {
-          "firstName": "Harry",
-          "program": "Computer Science Discoveries (appropriate for 6th - 10th grade)",
-          "csdWhichGrades": ["8"]
-        }.stringify_keys
-      )
-
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
-      put :update, params: {id: application.id, form_data: @updated_form_data}
+      original_data = application.form_data_hash
+
+      put :update, params: {id: application.id, form_data: {status: 'incomplete'}}
       application.reload
-      assert_equal @updated_form_data, application.form_data_hash
+      refute_equal original_data, application.form_data_hash
+      assert_nil application.program
+      assert_nil application.form_data_hash[:cs_total_course_hours]
       assert_response :ok
     end
 
