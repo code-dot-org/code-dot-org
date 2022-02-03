@@ -47,9 +47,10 @@ class ProgrammingEnvironment < ApplicationRecord
     properties = properties_from_file(File.read(file_path))
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
     environment.update! properties.except(:categories)
-    properties[:categories].each do |category_config|
+    environment.categories = properties[:categories].map do |category_config|
       category = ProgrammingEnvironmentCategory.find_or_initialize_by(programming_environment_id: environment.id, key: category_config['key'])
       category.update! category_config
+      category
     end
     environment.name
   end
