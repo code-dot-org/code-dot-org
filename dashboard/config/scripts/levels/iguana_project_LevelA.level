@@ -65,7 +65,7 @@
   "level_num": "custom",
   "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-02T23:50:49.737+00:00\",\"changed\":[\"cloned from \\\"iguana_project_LevelB\\\"\"],\"cloned_from\":\"iguana_project_LevelB\"},{\"changed_at\":\"2022-02-02 23:51:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:52:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-03 00:15:20 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-02T23:50:49.737+00:00\",\"changed\":[\"cloned from \\\"iguana_project_LevelB\\\"\"],\"cloned_from\":\"iguana_project_LevelB\"},{\"changed_at\":\"2022-02-02 23:51:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-02 23:52:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-03 00:15:20 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-02-03 17:54:14 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

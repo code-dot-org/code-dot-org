@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-03 00:08:12 UTC",
+    "serialized_at": "2022-02-03 18:11:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -788,7 +788,7 @@
       "key": "26a48a02-044a-426c-91cf-694e0f3c557b",
       "position": 2,
       "properties": {
-        "name": "Skill Building"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "26a48a02-044a-426c-91cf-694e0f3c557b",
@@ -799,7 +799,7 @@
       "key": "8f0c6205-55d1-46ea-99c2-7518e8728044",
       "position": 3,
       "properties": {
-        "name": "Video: Hello World: Programming with Events"
+        "progression_name": "Video: Hello World: Programming with Events"
       },
       "seeding_key": {
         "activity_section.key": "8f0c6205-55d1-46ea-99c2-7518e8728044",
@@ -810,7 +810,7 @@
       "key": "d6956d94-966b-4eec-955d-e6cf051915bc",
       "position": 4,
       "properties": {
-        "name": "Skill Building"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "d6956d94-966b-4eec-955d-e6cf051915bc",
@@ -821,7 +821,7 @@
       "key": "7fe08764-7c96-4efb-a021-40e7b1d7e180",
       "position": 5,
       "properties": {
-        "name": "Video: Hello World: Do What You Want"
+        "progression_name": "Video: Hello World: Do What You Want"
       },
       "seeding_key": {
         "activity_section.key": "7fe08764-7c96-4efb-a021-40e7b1d7e180",
@@ -832,7 +832,7 @@
       "key": "11b4c0a2-d12b-4416-a9bc-833445dc9959",
       "position": 6,
       "properties": {
-        "name": "Free Play"
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "11b4c0a2-d12b-4416-a9bc-833445dc9959",
@@ -843,7 +843,7 @@
       "key": "6d4872d6-758d-486f-9e40-f5933274e918",
       "position": 1,
       "properties": {
-        "name": "Exploration: Rikki's Poster"
+        "progression_name": "Exploration: Rikki's Poster"
       },
       "seeding_key": {
         "activity_section.key": "6d4872d6-758d-486f-9e40-f5933274e918",
@@ -854,7 +854,7 @@
       "key": "5e7a2560-3a4b-420b-95ff-d30ed7c284c4",
       "position": 2,
       "properties": {
-        "name": "Mini-Project: About Me"
+        "progression_name": "Mini-Project: About Me"
       },
       "seeding_key": {
         "activity_section.key": "5e7a2560-3a4b-420b-95ff-d30ed7c284c4",
@@ -894,17 +894,6 @@
       }
     },
     {
-      "key": "4d1f6c84-12f5-480c-be71-da695945e22c",
-      "position": 2,
-      "properties": {
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "4d1f6c84-12f5-480c-be71-da695945e22c",
-        "lesson_activity.key": "bd67c1a3-e43e-4f0a-a4d9-2d8ce86dc739"
-      }
-    },
-    {
       "key": "b96cd4e4-63e2-4910-b944-7707ba1cf9f2",
       "position": 1,
       "properties": {
@@ -913,6 +902,17 @@
       },
       "seeding_key": {
         "activity_section.key": "b96cd4e4-63e2-4910-b944-7707ba1cf9f2",
+        "lesson_activity.key": "bae33603-89eb-4fa9-91a6-9881e17e335c"
+      }
+    },
+    {
+      "key": "9d87be6f-06f4-4b75-bde8-c22d51907ca0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d87be6f-06f4-4b75-bde8-c22d51907ca0",
         "lesson_activity.key": "bae33603-89eb-4fa9-91a6-9881e17e335c"
       }
     },
@@ -1114,6 +1114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "liz_fishpond_spritelab"
+        ],
         "progression": "Liz's Fish Pond Example"
       },
       "bonus": false,
@@ -1363,7 +1366,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_say_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1387,7 +1391,8 @@
       "properties": {
         "level_keys": [
           "liz_fishpond"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1411,7 +1416,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_location_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1435,7 +1441,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_multi_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1459,7 +1466,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_click_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1483,7 +1491,8 @@
       "properties": {
         "level_keys": [
           "coursee_helloworld_eventsvideo"
-        ]
+        ],
+        "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
       "seeding_key": {
@@ -1507,7 +1516,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_events_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1531,7 +1541,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_backgrounds_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1555,7 +1566,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_costumes_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1579,7 +1591,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_sizes_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1603,7 +1616,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_behaviors_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1627,7 +1641,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_sounds_cs4all"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1651,7 +1666,8 @@
       "properties": {
         "level_keys": [
           "coursee_helloworld_freeplayvideo"
-        ]
+        ],
+        "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
       "seeding_key": {
@@ -1675,7 +1691,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_freeplay_cs4all"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -1699,7 +1716,8 @@
       "properties": {
         "level_keys": [
           "courseE_aboutme_12022_cs4all"
-        ]
+        ],
+        "progression": "Exploration: Rikki's Poster"
       },
       "bonus": false,
       "seeding_key": {
@@ -1723,7 +1741,8 @@
       "properties": {
         "level_keys": [
           "courseE_aboutme_22022_cs4all"
-        ]
+        ],
+        "progression": "Mini-Project: About Me"
       },
       "bonus": false,
       "seeding_key": {
@@ -1747,7 +1766,8 @@
       "properties": {
         "level_keys": [
           "courseE_aboutme_32022_cs4all"
-        ]
+        ],
+        "progression": "Mini-Project: About Me"
       },
       "bonus": false,
       "seeding_key": {
@@ -1771,7 +1791,8 @@
       "properties": {
         "level_keys": [
           "courseE_aboutme_42022_cs4all"
-        ]
+        ],
+        "progression": "Mini-Project: About Me"
       },
       "bonus": false,
       "seeding_key": {
@@ -1795,7 +1816,8 @@
       "properties": {
         "level_keys": [
           "courseE_aboutme_52022_cs4all"
-        ]
+        ],
+        "progression": "Mini-Project: About Me"
       },
       "bonus": false,
       "seeding_key": {
@@ -1819,7 +1841,8 @@
       "properties": {
         "level_keys": [
           "courseE_aboutme_62022_cs4all"
-        ]
+        ],
+        "progression": "Mini-Project: About Me"
       },
       "bonus": false,
       "seeding_key": {
@@ -1841,6 +1864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iguana_project_LevelA"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -1859,32 +1885,13 @@
     },
     {
       "chapter": 33,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iguana_project_LevelB"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "cs4all-invasive-species",
-        "activity_section.key": "4d1f6c84-12f5-480c-be71-da695945e22c"
-      },
-      "level_keys": [
-        "iguana_project_LevelB"
-      ]
-    },
-    {
-      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iguana_project_LevelC"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -1899,6 +1906,28 @@
       },
       "level_keys": [
         "iguana_project_LevelC"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iguana_project_LevelB"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "9d87be6f-06f4-4b75-bde8-c22d51907ca0"
+      },
+      "level_keys": [
+        "iguana_project_LevelB"
       ]
     },
     {
@@ -2689,18 +2718,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "iguana_project_LevelB",
-        "script_level.level_keys": [
-          "iguana_project_LevelB"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "cs4all-invasive-species",
-        "activity_section.key": "4d1f6c84-12f5-480c-be71-da695945e22c"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "iguana_project_LevelC",
         "script_level.level_keys": [
           "iguana_project_LevelC"
@@ -2709,6 +2726,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "cs4all-invasive-species",
         "activity_section.key": "b96cd4e4-63e2-4910-b944-7707ba1cf9f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iguana_project_LevelB",
+        "script_level.level_keys": [
+          "iguana_project_LevelB"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "cs4all-invasive-species",
+        "activity_section.key": "9d87be6f-06f4-4b75-bde8-c22d51907ca0"
       }
     },
     {
