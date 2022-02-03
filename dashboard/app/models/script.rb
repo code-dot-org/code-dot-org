@@ -335,18 +335,9 @@ class Script < ApplicationRecord
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
-    with_hidden = !has_any_course_experiments
-    units = with_hidden ? all_scripts : visible_units
+    units = user.admin? ? all_scripts : visible_units
 
-    if has_any_course_experiments
-      units = units.map do |unit|
-        alternate_script = unit.alternate_script(user)
-        alternate_script.presence || unit
-      end
-    end
-
-    if !with_hidden && has_any_pilot_access?(user)
+    if has_any_pilot_access?(user)
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
@@ -1650,11 +1641,9 @@ class Script < ApplicationRecord
     return [] unless family_name
     return [] unless has_other_versions?
     return [] unless unit_groups.empty?
-    with_hidden = user&.hidden_script_access?
     units = Script.
       where(family_name: family_name).
-      all.
-      select {|unit| with_hidden || unit.launched?}.
+      all.select(&:launched?).
       map do |s|
         {
           name: s.name,
