@@ -17,6 +17,7 @@ class CourseOfferingsController < ApplicationController
       @course_offering.write_serialization
     end
 
+    render json: @course_offering.summarize_for_edit
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
     render(status: :not_acceptable, plain: e.message)
   end
