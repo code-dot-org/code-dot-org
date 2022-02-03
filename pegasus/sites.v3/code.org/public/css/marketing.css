@@ -84,6 +84,10 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 .blackstudentdata p {margin: 1em;}
 .blackstudentdata h3 {font-weight:bold; margin-bottom: .75em; text-align: center;}
 
+/* misc */
+
+.bold-text {font-family: 'Gotham 7r', sans-serif;}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) and (min-width: 0px) {
