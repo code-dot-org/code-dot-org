@@ -84,11 +84,12 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
+    before_validation :set_course_from_program, unless: -> {program.nil?}
+    before_validation :set_total_course_hours, if: -> {form_data_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_validation :set_course_from_program, unless: -> {program.nil?}
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     before_save :log_status, if: -> {status_changed?}
 
@@ -137,6 +138,27 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_total_course_hours
+      hash = sanitize_form_data_hash
+      minutes = hash[:cs_how_many_minutes]
+      days_per_week = hash[:cs_how_many_days_per_week]
+      weeks_per_year = hash[:cs_how_many_weeks_per_year]
+
+      if minutes && days_per_week && weeks_per_year
+        update_form_data_hash(
+          {
+            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
+          }
+        )
+      else
+        update_form_data_hash(
+          {
+            cs_total_course_hours: nil
+          }
+        )
+      end
     end
 
     def save_partner
@@ -1151,20 +1173,6 @@ module Pd::Application
     # hash here, as well as send emails
     def on_successful_create
       update_user_school_info!
-
-      form_data_hash = sanitize_form_data_hash
-
-      if form_data_hash[:cs_how_many_minutes] && form_data_hash[:cs_how_many_days_per_week] && form_data_hash[:cs_how_many_weeks_per_year]
-        update_form_data_hash(
-          {
-            cs_total_course_hours: form_data_hash.slice(
-              :cs_how_many_minutes,
-              :cs_how_many_days_per_week,
-              :cs_how_many_weeks_per_year
-            ).values.map(&:to_i).reduce(:*) / 60
-          }
-        )
-      end
 
       on_completed_app unless status == 'incomplete'
 
