@@ -1528,7 +1528,7 @@ class ScriptTest < ActiveSupport::TestCase
   test "self.valid_scripts: omits in-development units" do
     student = create :student
     teacher = create :teacher
-    levelbuilder = create :levelbuilder, name: "levelbuilder"
+    levelbuilder = create :levelbuilder
     create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     assert Script.any?(&:in_development?)
 
