@@ -1628,24 +1628,21 @@ class Script < ApplicationRecord
 
   # Returns an array of objects showing the name and version year for all units
   # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil)
+  def summarize_versions(user)
     return [] unless family_name
     return [] unless has_other_versions?
     return [] unless unit_groups.empty?
-    units = Script.
-      where(family_name: family_name).
-      all.select(&:launched?).
-      map do |s|
-        {
-          name: s.name,
-          version_year: s.version_year,
-          version_title: s.version_year,
-          can_view_version: s.can_view_version?(user),
-          is_stable: s.stable?,
-          locales: s.supported_locale_names,
-          locale_codes: s.supported_locales
-        }
-      end
+    units = visible_units(user).select {|s| s.family_name = family_name}.map do |s|
+      {
+        name: s.name,
+        version_year: s.version_year,
+        version_title: s.version_year,
+        can_view_version: s.can_view_version?(user),
+        is_stable: s.stable?,
+        locales: s.supported_locale_names,
+        locale_codes: s.supported_locales
+      }
+    end
 
     units.sort_by {|info| info[:version_year]}.reverse
   end
