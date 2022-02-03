@@ -12,4 +12,9 @@ module CertificatesHelper
     encoded = encode_params(name, course)
     "/certificate_images/#{encoded}.jpg"
   end
+
+  def certificate_print_url(name, course)
+    encoded = encode_params(name, course)
+    "/print_certificates/#{encoded}"
+  end
 end

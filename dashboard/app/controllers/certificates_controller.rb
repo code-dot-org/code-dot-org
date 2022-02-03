@@ -14,5 +14,6 @@ class CertificatesController < ApplicationController
     end
 
     @certificate_image_url = certificate_image_url(data['name'], data['course'])
+    @certificate_print_url = certificate_print_url(data['name'], data['course'])
   end
 end
