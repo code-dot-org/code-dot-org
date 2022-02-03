@@ -322,8 +322,8 @@ class Script < ApplicationRecord
     @@lesson_extras_script_ids ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
   end
 
-  def self.maker_units
-    @@maker_units ||= visible_units.select(&:is_maker_unit?)
+  def self.maker_units(user)
+    @@maker_units ||= visible_units(user).select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
@@ -335,17 +335,7 @@ class Script < ApplicationRecord
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    units = user.admin? || user.levelbuilder? ? all_scripts : visible_units
-
-    if has_any_pilot_access?(user)
-      units += all_scripts.select {|s| s.has_pilot_access?(user)}
-    end
-
-    if user.permission?(UserPermission::LEVELBUILDER)
-      units += all_scripts.select(&:in_development?)
-    end
-
-    units
+    visible_units(user)
   end
 
   class << self
@@ -362,8 +352,9 @@ class Script < ApplicationRecord
 
     private
 
-    def visible_units
-      @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
+    def visible_units(user)
+      ability = Ability.new(user)
+      @@visible_units ||= all_scripts.select {|s| ability.can?(:read, s)}.to_a.freeze
     end
   end
 
