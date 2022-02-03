@@ -24,7 +24,7 @@ describe('Certificate', () => {
   beforeEach(() => {
     storedWindowDashboard = window.dashboard;
     window.dashboard = {
-      CODE_ORG_URL: 'https://code.org'
+      CODE_ORG_URL: '//code.org'
     };
   });
 
@@ -100,7 +100,7 @@ describe('Certificate', () => {
 
       const printLink = wrapper.find('.social-print-link');
       expect(printLink.prop('href')).to.equal(
-        'https://code.org/printcertificate/sessionId'
+        '//code.org/printcertificate/sessionId'
       );
 
       // the share link is used in the image thumbnail as well as the facebook
@@ -108,7 +108,7 @@ describe('Certificate', () => {
       // harder to extract from the facebook and twitter links.
       const thumbnailLink = wrapper.find('#uitest-certificate a');
       expect(thumbnailLink.prop('href')).to.equal(
-        'https:https://code.org/certificates/sessionId'
+        'https://code.org/certificates/sessionId'
       );
 
       const input = wrapper.find('input#name');
@@ -122,7 +122,7 @@ describe('Certificate', () => {
       wrapper.update();
       image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.equal(
-        'https://code.org/api/hour/certificate/sessionId.jpg'
+        '//code.org/api/hour/certificate/sessionId.jpg'
       );
     });
 
