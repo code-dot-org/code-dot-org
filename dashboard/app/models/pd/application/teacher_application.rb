@@ -1154,15 +1154,17 @@ module Pd::Application
 
       form_data_hash = sanitize_form_data_hash
 
-      update_form_data_hash(
-        {
-          cs_total_course_hours: form_data_hash.slice(
-            :cs_how_many_minutes,
-            :cs_how_many_days_per_week,
-            :cs_how_many_weeks_per_year
-          ).values.map(&:to_i).reduce(:*) / 60
-        }
-      )
+      if form_data_hash[:cs_how_many_minutes] && form_data_hash[:cs_how_many_days_per_week] && form_data_hash[:cs_how_many_weeks_per_year]
+        update_form_data_hash(
+          {
+            cs_total_course_hours: form_data_hash.slice(
+              :cs_how_many_minutes,
+              :cs_how_many_days_per_week,
+              :cs_how_many_weeks_per_year
+            ).values.map(&:to_i).reduce(:*) / 60
+          }
+        )
+      end
 
       on_completed_app unless status == 'incomplete'
 

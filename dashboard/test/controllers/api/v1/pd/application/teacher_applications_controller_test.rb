@@ -136,6 +136,14 @@ module Api::V1::Pd::Application
       put :create, params: {form_data: application_hash.merge({status: 'incomplete'})}
     end
 
+    test 'can submit an empty form if application is incomplete' do
+      sign_in @applicant
+      put :create, params: {form_data: {status: 'incomplete'}}
+
+      assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
+      assert_response :created
+    end
+
     # [MEG] TODO: verify update of params with fewer (and no) params
     test 'updating an application modifies form data' do
       sign_in @applicant
