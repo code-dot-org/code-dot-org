@@ -121,26 +121,20 @@ module Api::V1::Pd::Application
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
     end
 
-    test 'does not update course hours nor autoscore on successful create if application status is incomplete' do
-      Pd::Application::TeacherApplication.expects(:auto_score).never
-      Pd::Application::TeacherApplication.expects(:queue_email).never
-
-      application_hash = build(
-        TEACHER_APPLICATION_HASH_FACTORY,
-        cs_how_many_minutes: 45,
-        cs_how_many_days_per_week: 5,
-        cs_how_many_weeks_per_year: 30
-      )
-
-      sign_in @applicant
-      put :create, params: {form_data: application_hash.merge({status: 'incomplete'})}
-    end
-
     test 'can submit an empty form if application is incomplete' do
       sign_in @applicant
       put :create, params: {form_data: {status: 'incomplete'}}
 
       assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
+      assert_response :created
+    end
+
+    test 'does not update course hours nor autoscore on successful create if application status is incomplete' do
+      Pd::Application::TeacherApplication.expects(:auto_score).never
+      Pd::Application::TeacherApplication.expects(:queue_email).never
+
+      sign_in @applicant
+      put :create, params: {form_data: {status: 'incomplete'}}
       assert_response :created
     end
 
