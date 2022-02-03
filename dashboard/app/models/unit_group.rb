@@ -388,7 +388,8 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
-      course_path: link
+      course_path: link,
+      course_offering_edit_path: for_edit ? edit_course_offering_path(course_version.course_offering) : nil
     }
   end
 
