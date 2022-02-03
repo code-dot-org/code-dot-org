@@ -212,12 +212,6 @@ class Backpack extends Component {
       !backpackFilesLoading &&
       !backpackLoadError &&
       backpackFilenames.length === 0;
-    const hasSelectedFiles = selectedFiles.length !== 0;
-
-    const importButtonStyles = {...styles.importButton};
-    if (hasSelectedFiles) {
-      importButtonStyles.borderColor = color.orange;
-    }
 
     const backpackIcon = (
       <i style={{marginRight: 8, fontSize: 13}}>
@@ -291,9 +285,9 @@ class Backpack extends Component {
                 </div>
                 <JavalabButton
                   text={javalabMsg.import()}
-                  style={importButtonStyles}
+                  style={styles.importButton}
                   onClick={this.handleImport}
-                  isDisabled={!hasSelectedFiles}
+                  isDisabled={selectedFiles.length === 0}
                 />
               </>
             )}
@@ -398,7 +392,11 @@ const styles = {
     color: color.white,
     fontSize: 13,
     padding: '5px 16px',
-    width: 'fit-content'
+    width: 'fit-content',
+    borderColor: color.orange,
+    ':disabled': {
+      borderColor: color.light_gray
+    }
   },
   backpackIcon: {
     height: 15,
