@@ -8,4 +8,4 @@
   .clear{style: "clear: both"}
 - elsif Homepage.show_courses_banner(request)
   .curriculum-banner
-    = hoc_s(:codeorg_homepage_hoc2018_curriculum, locals: {studio_url: CDO.studio_url})
+    != hoc_s(:codeorg_homepage_hoc2018_curriculum, {studio_url: CDO.studio_url})
