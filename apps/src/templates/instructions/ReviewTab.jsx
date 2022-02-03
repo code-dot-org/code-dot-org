@@ -433,7 +433,7 @@ class ReviewTab extends Component {
 
 export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
-  codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
+  codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   viewAsTeacher: state.viewAs === ViewType.Instructor,
   channelId: state.pageConstants.channelId,

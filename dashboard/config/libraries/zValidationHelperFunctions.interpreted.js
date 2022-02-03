@@ -401,6 +401,7 @@ function getClickedSpriteId(eventLog, prevEventLogLength){
  */
 function checkSpriteSay(eventLog, prevEventLogLength){
   // TODO: don't know if first if statement this should be in every event check method......
+  var spriteIds = getSpriteIdsInUse();
   if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {

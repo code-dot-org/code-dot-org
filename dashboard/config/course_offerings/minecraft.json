@@ -1,6 +1,6 @@
 {
   "key": "minecraft",
-  "display_name": "minecraft",
-  "category": "other",
+  "display_name": "Minecraft Hour of Code Designer",
+  "category": "hoc",
   "is_featured": false
 }
