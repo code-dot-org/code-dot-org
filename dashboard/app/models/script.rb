@@ -335,7 +335,7 @@ class Script < ApplicationRecord
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    units = user.admin? ? all_scripts : visible_units
+    units = user.admin? || user.levelbuilder? ? all_scripts : visible_units
 
     if has_any_pilot_access?(user)
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
