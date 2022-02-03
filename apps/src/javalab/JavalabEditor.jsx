@@ -53,12 +53,15 @@ const DEFAULT_FILE_NAME = '.java';
 // Custom theme overrides
 const editorDarkModeThemeOverride = EditorView.theme(
   {
+    // Sets the background color for the main editor area
     '&': {
       backgroundColor: color.darkest_slate_gray
     },
+    // Sets the background color for the currently selected line
     '.cm-activeLine': {
       backgroundColor: color.dark_charcoal
     },
+    // Sets the background color for the left-hand side gutters
     '.cm-gutters': {
       backgroundColor: color.darkest_slate_gray
     }
@@ -67,9 +70,11 @@ const editorDarkModeThemeOverride = EditorView.theme(
 );
 const editorLightModeThemeOverride = EditorView.theme(
   {
+    // Sets the background color for the main editor area
     '&': {
       backgroundColor: color.white
     },
+    // Sets the background color for the left-hand side gutters
     '.cm-gutters': {
       backgroundColor: color.white
     }
