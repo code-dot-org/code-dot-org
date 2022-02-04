@@ -5,12 +5,13 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "invasive-species-cs4all"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-03 18:11:37 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-02-04 18:28:24 UTC",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1914,6 +1915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iguana_project_LevelB"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
