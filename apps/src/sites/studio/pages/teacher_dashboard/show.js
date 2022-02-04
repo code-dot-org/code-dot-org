@@ -19,7 +19,6 @@ import teacherSections, {
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -54,7 +53,6 @@ const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 $(document).ready(function() {
   registerReducers({
     teacherSections,
-    sectionData,
     manageStudents,
     sectionProgress,
     unitSelection,
@@ -69,7 +67,6 @@ $(document).ready(function() {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
   store.dispatch(setStudentsForCurrentSection(section.id, section.students));
