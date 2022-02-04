@@ -17,6 +17,7 @@
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
   belongs_to :programming_environment
+  has_many :programming_expressions
 
   KEY_CHAR_RE = /[a-z_]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/

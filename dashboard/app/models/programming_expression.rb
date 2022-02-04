@@ -23,6 +23,7 @@ class ProgrammingExpression < ApplicationRecord
   include SerializedProperties
 
   belongs_to :programming_environment
+  belongs_to :programming_environment_category
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
   has_many :lessons_programming_expressions
 
@@ -70,9 +71,12 @@ class ProgrammingExpression < ApplicationRecord
     environment_name = File.basename(File.dirname(path)) == 'GamelabJr' ? 'spritelab' : File.basename(File.dirname(path))
     programming_environment = ProgrammingEnvironment.find_by(name: environment_name)
     throw "Cannot find ProgrammingEnvironment #{environment_name}" unless programming_environment
-    expression_config.symbolize_keys.merge(
+    env_category = programming_environment.categories.find_by_key(expression_config['category_key'])
+    puts "Cannot find category #{expression_config['category_key']} in #{environment_name}" unless env_category
+    expression_config.symbolize_keys.except(:category_key).merge(
       {
         programming_environment_id: programming_environment.id,
+        programming_environment_category_id: env_category&.id,
         color: environment_name == 'spritelab' ? expression_config['color'] : ProgrammingExpression.get_category_color(expression_config['category'])
       }
     )
@@ -238,6 +242,7 @@ class ProgrammingExpression < ApplicationRecord
       key: key,
       name: name,
       category: category,
+      category_key: programming_environment_category.key
     }.merge(properties.except('color').sort.to_h)
   end
 
