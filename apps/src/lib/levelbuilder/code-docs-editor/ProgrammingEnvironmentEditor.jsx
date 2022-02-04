@@ -89,7 +89,6 @@ export default function ProgrammingEnvironmentEditor({
           return response.json();
         } else {
           throw new Error(error.statusText);
-          //setError(response.statusText);
         }
       })
       .then(json => {

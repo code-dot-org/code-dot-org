@@ -16,17 +16,19 @@ class ProgrammingEnvironmentsController < ApplicationController
     end
     programming_environment.assign_attributes(programming_environment_params.except(:categories))
     begin
-      programming_environment.categories =
-        programming_environment_params[:categories].map do |category|
-          if category['id']
-            existing_category = programming_environment.categories.find(category['id'])
-            existing_category.assign_attributes(category.except('id'))
-            existing_category.save! if existing_category.changed?
-            existing_category
-          else
-            ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id))
+      if programming_environment_params[:categories]
+        programming_environment.categories =
+          programming_environment_params[:categories].map do |category|
+            if category['id']
+              existing_category = programming_environment.categories.find(category['id'])
+              existing_category.assign_attributes(category.except('id'))
+              existing_category.save! if existing_category.changed?
+              existing_category
+            else
+              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id))
+            end
           end
-        end
+      end
       programming_environment.save!
       programming_environment.write_serialization
       render json: programming_environment.summarize_for_edit.to_json
