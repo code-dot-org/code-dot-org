@@ -30962,7 +30962,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
           name: csa2-2022
-          title: Giving Objects State ('22-'23)
+          title: Class Structure and Design ('22-'23)
           description_audience: ''
           description_short: ''
           description: ''
@@ -30979,7 +30979,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
           name: csa3-2022
-          title: Expanding Program Data ('22-'23)
+          title: Arrays and Algorithms ('22-'23)
           description_audience: ''
           description_short: ''
           description: ''
@@ -31094,5 +31094,39 @@ en:
           title: 'Invasive Species '
           description_audience: ''
           description_short: 'This is a NSF funded research grant for CS4All '
+          description: ''
+          student_description: ''
+        csa4-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 4 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa4-2022
+          title: Conditions and Logic ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 5 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know Week
+          name: csa5-2022
+          title: Two-Dimensional Arrays ('22-'23)
+          description_audience: ''
+          description_short: ''
           description: ''
           student_description: ''
