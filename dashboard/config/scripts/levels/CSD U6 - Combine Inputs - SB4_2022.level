@@ -62,7 +62,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20441,
     "name_suffix": "_2021",
-    "encrypted_examples": "p+7Oa8AeItTiRQXojPfd1yiITOjSfi8AZf039OoMnHBvcMQvQcuNF6YSYFeq\n5PZc7hJ4GZS6GVXtRx02iMJTTQ==\n",
+    "encrypted_examples": "04eC4RCQF6pNU/wepe1TOzxGrNviFEci0zK+6atQ7/G2zbCU1M7YJPJgcKjJ\nGUDwmfxwFsBC14Wokofr3RXJsA==\n",
     "text_mode_at_start": "false",
     "reference_links": [
       "/docs/concepts/app-lab/taking-input-with-getproperty/"
@@ -81,7 +81,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T21:11:34.343+00:00\",\"changed\":[\"cloned from \\\"CSD U6 change_2021\\\"\"],\"cloned_from\":\"CSD U6 change_2021\"},{\"changed_at\":\"2021-08-31 21:12:19 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 18:45:36 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 18:47:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 21:43:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 22:23:02 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T21:11:34.343+00:00\",\"changed\":[\"cloned from \\\"CSD U6 change_2021\\\"\"],\"cloned_from\":\"CSD U6 change_2021\"},{\"changed_at\":\"2021-08-31 21:12:19 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 18:45:36 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 18:47:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 21:43:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 22:23:02 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:24:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 20:24:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
