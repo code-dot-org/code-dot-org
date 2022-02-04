@@ -7,7 +7,6 @@ import i18n from '@cdo/locale';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
-import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
 import {
@@ -15,6 +14,7 @@ import {
   validScriptPropType,
   getSelectedScriptName
 } from '@cdo/apps/redux/unitSelectionRedux';
+import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -30,34 +30,59 @@ class TextResponses extends Component {
   static propTypes = {
     // Provided by redux.
     sectionId: PropTypes.number.isRequired,
-    responses: PropTypes.object.isRequired,
-    isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
     scriptName: PropTypes.string,
-    setScriptId: PropTypes.func.isRequired,
-    asyncLoadTextResponses: PropTypes.func.isRequired
+    setScriptId: PropTypes.func.isRequired
   };
 
   state = {
-    filterByLessonName: null
+    filterByLessonName: null,
+    textResponsesByScript: {},
+    isLoadingResponses: false
   };
 
   componentDidMount() {
-    this.props.asyncLoadTextResponses(
-      this.props.sectionId,
-      this.props.scriptId
-    );
+    this.asyncLoadTextResponses(this.props.sectionId, this.props.scriptId);
   }
 
+  asyncLoadTextResponses = (sectionId, scriptId, onComplete = () => {}) => {
+    // Don't load data if it's already stored in state.
+    if (this.state.textResponsesByScript[scriptId]) {
+      onComplete();
+      return;
+    }
+
+    this.setState({isLoadingResponses: true});
+
+    loadTextResponsesFromServer(sectionId, scriptId, (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        this.setTextResponses(scriptId, data);
+        onComplete();
+      }
+      this.setState({isLoadingResponses: false});
+    });
+  };
+
+  setTextResponses = (scriptId, data) => {
+    const newTextResponsesByScript = {
+      ...this.state.textResponsesByScript,
+      [scriptId]: data
+    };
+    this.setState({textResponsesByScript: newTextResponsesByScript});
+  };
+
   getResponsesByScript = () => {
-    const {responses, scriptId} = this.props;
-    return responses[scriptId] || [];
+    const {scriptId} = this.props;
+    const {textResponsesByScript} = this.state;
+    return textResponsesByScript[scriptId] || [];
   };
 
   onChangeScript = scriptId => {
-    const {setScriptId, asyncLoadTextResponses, sectionId} = this.props;
-    asyncLoadTextResponses(sectionId, scriptId, () => {
+    const {setScriptId, sectionId} = this.props;
+    this.asyncLoadTextResponses(sectionId, scriptId, () => {
       setScriptId(scriptId);
       this.setState({filterByLessonName: null});
     });
@@ -114,13 +139,8 @@ class TextResponses extends Component {
   };
 
   render() {
-    const {
-      validScripts,
-      scriptId,
-      scriptName,
-      sectionId,
-      isLoadingResponses
-    } = this.props;
+    const {validScripts, scriptId, scriptName, sectionId} = this.props;
+    const {isLoadingResponses} = this.state;
     const filteredResponses = this.getFilteredResponses();
 
     return (
@@ -212,8 +232,6 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(
   state => ({
     sectionId: state.sectionData.section.id,
-    responses: state.textResponses.responseDataByScript,
-    isLoadingResponses: state.textResponses.isLoadingResponses,
     validScripts: state.unitSelection.validScripts,
     scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)
@@ -221,9 +239,6 @@ export default connect(
   dispatch => ({
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
-    },
-    asyncLoadTextResponses(sectionId, scriptId, onComplete) {
-      dispatch(asyncLoadTextResponses(sectionId, scriptId, onComplete));
     }
   })
 )(TextResponses);
