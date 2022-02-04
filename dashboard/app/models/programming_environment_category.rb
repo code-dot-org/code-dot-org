@@ -16,4 +16,13 @@
 #  index_programming_environment_categories_on_key_and_env_id  (key,programming_environment_id) UNIQUE
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
+  belongs_to :programming_environment
+
+  def serialize
+    {
+      key: key,
+      name: name,
+      color: color
+    }
+  end
 end
