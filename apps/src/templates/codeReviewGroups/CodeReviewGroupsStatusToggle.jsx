@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';
-import {setCodeReviewExpiresAt} from '../../redux/sectionDataRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import color from '@cdo/apps/util/color';
+import {
+  setSectionCodeReviewExpiresAt,
+  selectedSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 function CodeReviewGroupsStatusToggle({
   codeReviewExpiresAt,
@@ -34,7 +37,7 @@ function CodeReviewGroupsStatusToggle({
       .setCodeReviewEnabled(toggledValue)
       .success(result => {
         const newExpiration = result.expiration;
-        setCodeReviewExpiration(newExpiration);
+        setCodeReviewExpiration(sectionId, newExpiration);
         setSaveInProgress(false);
       })
       .fail(() => {
@@ -80,12 +83,12 @@ export const UnconnectedCodeReviewGroupsStatusToggle = CodeReviewGroupsStatusTog
 
 export default connect(
   state => ({
-    codeReviewExpiresAt: state.sectionData.section.codeReviewExpiresAt,
-    sectionId: state.sectionData.section.id
+    codeReviewExpiresAt: selectedSection(state).codeReviewExpiresAt,
+    sectionId: selectedSection(state).id
   }),
   dispatch => ({
-    setCodeReviewExpiration: expiration =>
-      dispatch(setCodeReviewExpiresAt(expiration))
+    setCodeReviewExpiration: (sectionId, expiration) =>
+      dispatch(setSectionCodeReviewExpiresAt(sectionId, expiration))
   })
 )(CodeReviewGroupsStatusToggle);
 
