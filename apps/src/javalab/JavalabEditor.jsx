@@ -50,8 +50,8 @@ const Dialog = makeEnum(
 );
 const DEFAULT_FILE_NAME = '.java';
 
-// Custom theme overrides
-const editorDarkModeThemeOverride = EditorView.theme(
+// Custom theme overrides (exported for tests)
+export const editorDarkModeThemeOverride = EditorView.theme(
   {
     // Sets the background color for the main editor area
     '&': {
@@ -68,7 +68,7 @@ const editorDarkModeThemeOverride = EditorView.theme(
   },
   {dark: true}
 );
-const editorLightModeThemeOverride = EditorView.theme(
+export const editorLightModeThemeOverride = EditorView.theme(
   {
     // Sets the background color for the main editor area
     '&': {
