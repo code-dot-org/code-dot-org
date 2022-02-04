@@ -14,6 +14,7 @@ class Ability
     can :read, :all
     cannot :read, [
       TeacherFeedback,
+      CourseOffering,
       UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
@@ -343,6 +344,7 @@ class Ability
         Lesson,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        CourseOffering,
         UnitGroup,
         Resource,
         Script,
@@ -410,6 +412,7 @@ class Ability
         Game,
         Level,
         UnitGroup,
+        CourseOffering,
         Script,
         Lesson,
         ScriptLevel,
