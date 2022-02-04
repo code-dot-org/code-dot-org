@@ -793,8 +793,7 @@ const styles = {
     textAlign: 'left',
     display: 'inline-block',
     float: 'left',
-    overflow: 'visible',
-    marginLeft: 3
+    overflow: 'visible'
   }
 };
 
