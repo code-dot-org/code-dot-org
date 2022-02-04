@@ -19,13 +19,7 @@
       "actions": [
         {
           "text": "homepage_action_text_try_it",
-          "url": "/dance",
-          "type": "cta_button_hollow_white"
-        },
-
-        {
-          "text": "homepage_higher_power_button",
-          "url": "/dance",
+          "url": "/coldplay",
           "type": "cta_button_solid_yellow"
         }
       ]
