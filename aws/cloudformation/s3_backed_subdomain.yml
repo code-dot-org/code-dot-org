@@ -46,11 +46,10 @@ Resources:
         CorsRules:
           - AllowedMethods: [GET]
             AllowedOrigins:
-              [
-                '*.code.org',
-                '*.code.org:3000',
-                'http://localhost-studio.code.org:*',
-              ]
+              - !Sub "*.${Domain}"
+              # Permit local host development environments
+              - '*.code.org:3000'
+              - 'http://localhost-studio.code.org:*'
             AllowedHeaders: ['*']
       Tags:
         - Key: environment
