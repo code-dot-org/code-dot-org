@@ -22,7 +22,7 @@ class Homepage
   def self.load_announcements
     # Reloads JSON file with announcement data on each page load
     # in non-production environments
-    unless (@@load_error || @@loaded) && Rails.env.production?
+    unless (@@load_error || @@loaded) && rack_env?(:production)
       unless File.file?(@@json_path)
         @@load_error = true
         return
