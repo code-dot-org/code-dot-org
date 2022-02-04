@@ -66,6 +66,28 @@ export const commands = {
     );
   },
 
+  anySpriteSpeaksThisFrame(spriteIds) {
+    let result = false;
+    spriteIds.forEach(spriteId => {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, spriteId)) {
+        result = true;
+      }
+    });
+    return result;
+  },
+
+  singleSpriteSpeaksThisFrame(spriteIds) {
+    let result = false;
+    let count = 0;
+    spriteIds.forEach(spriteId => {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, spriteId)) {
+        count++;
+      }
+    });
+    result = count === 1;
+    return result;
+  },
+
   getCriteria() {
     return this.criteria;
   },
