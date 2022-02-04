@@ -132,6 +132,14 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         this.onExit();
         break;
+      case StatusMessageType.RUNNING_PROJECT_TESTS:
+        message = javalabMsg.runningProjectTests();
+        lineBreakCount = 2;
+        break;
+      case StatusMessageType.RUNNING_VALIDATION:
+        message = javalabMsg.runningValidation();
+        lineBreakCount = 2;
+        break;
       default:
         break;
     }
@@ -150,6 +158,7 @@ export default class JavabuilderConnection {
         this.onStatusMessage(data.value, data.detail);
         break;
       case WebSocketMessageType.SYSTEM_OUT:
+      case WebSocketMessageType.TEST_RESULT:
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
