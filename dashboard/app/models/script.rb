@@ -158,9 +158,6 @@ class Script < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
-  # Use after_save instead of validates in order to let seeding complete without checking this
-  # Since we seed scripts first, they do not yet know if they are in a unit_group and this leads
-  # to this check failing during the seed process
   after_save :check_course_type_settings
 
   def check_course_type_settings
