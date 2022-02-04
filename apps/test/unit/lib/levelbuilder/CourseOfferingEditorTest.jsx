@@ -99,8 +99,6 @@ describe('CourseOfferingEditor', () => {
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).to.be.true;
-
-      server.restore();
     });
 
     it('can save and close', () => {
@@ -133,8 +131,6 @@ describe('CourseOfferingEditor', () => {
       expect(utils.navigateToHref).to.have.been.calledWith(
         `/${window.location.search}`
       );
-
-      server.restore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -165,8 +161,6 @@ describe('CourseOfferingEditor', () => {
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).to.be.true;
-
-      server.restore();
     });
   });
 });
