@@ -2,6 +2,7 @@
   "key": "mouseWentUp",
   "name": "mouseWentUp",
   "category": "World",
+  "category_key": "world",
   "palette_params": [
     {
       "name": "button"

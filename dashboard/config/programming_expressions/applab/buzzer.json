@@ -2,5 +2,6 @@
   "key": "buzzer",
   "name": "buzzer",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "buzzer"
 }

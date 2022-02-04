@@ -2,5 +2,6 @@
   "key": "key",
   "name": "key",
   "category": "World",
+  "category_key": "world",
   "syntax": "key"
 }

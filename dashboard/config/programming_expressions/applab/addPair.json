@@ -2,6 +2,7 @@
   "key": "addPair",
   "name": "addPair",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "object"

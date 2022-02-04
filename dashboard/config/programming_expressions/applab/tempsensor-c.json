@@ -2,5 +2,6 @@
   "key": "tempSensor.C",
   "name": "tempSensor.C",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "tempSensor.C"
 }

@@ -2,5 +2,6 @@
   "key": "debug",
   "name": "debug",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "debug"
 }

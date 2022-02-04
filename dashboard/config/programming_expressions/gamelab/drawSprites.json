@@ -2,5 +2,6 @@
   "key": "drawSprites",
   "name": "drawSprites",
   "category": "World",
+  "category_key": "world",
   "syntax": "drawSprites"
 }

@@ -2,6 +2,7 @@
   "key": "codestudio_definingFunction",
   "name": "procedures_defnoreturn",
   "category": "Functions",
+  "category_key": "functions",
   "block_name": "procedures_defnoreturn",
   "syntax": "procedures_defnoreturn"
 }
