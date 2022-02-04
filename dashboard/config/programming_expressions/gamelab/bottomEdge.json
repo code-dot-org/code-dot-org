@@ -2,5 +2,6 @@
   "key": "bottomEdge",
   "name": "bottomEdge",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "bottomEdge"
 }

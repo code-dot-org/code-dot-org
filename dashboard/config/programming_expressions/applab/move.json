@@ -2,6 +2,7 @@
   "key": "move",
   "name": "move",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "x"

@@ -2,5 +2,6 @@
   "key": "mass",
   "name": "mass",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "mass"
 }

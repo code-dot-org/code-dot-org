@@ -2,6 +2,7 @@
   "key": "addSpeed",
   "name": "addSpeed",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "speed"

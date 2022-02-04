@@ -2,6 +2,7 @@
   "key": "text",
   "name": "text",
   "category": "Drawing",
+  "category_key": "drawing",
   "palette_params": [
     {
       "name": "str"

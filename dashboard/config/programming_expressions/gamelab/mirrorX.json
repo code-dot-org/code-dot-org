@@ -2,6 +2,7 @@
   "key": "mirrorX",
   "name": "mirrorX",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "dir"

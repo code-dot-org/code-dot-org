@@ -2,5 +2,6 @@
   "key": "randomNumber",
   "name": "randomNumber",
   "category": "Math",
+  "category_key": "math",
   "syntax": "randomNumber"
 }
