@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
@@ -9,6 +9,7 @@ import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
+import TextResponsesLessonSelector from './TextResponsesLessonSelector';
 import {
   setScriptId,
   validScriptPropType,
@@ -23,110 +24,67 @@ const CSV_HEADERS = [
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'}
 ];
-const DEFAULT_FILTER_KEY = i18n.all();
 const PADDING = 8;
 
-class TextResponses extends Component {
-  static propTypes = {
-    // Provided by redux.
-    sectionId: PropTypes.number.isRequired,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
-    scriptId: PropTypes.number,
-    scriptName: PropTypes.string,
-    setScriptId: PropTypes.func.isRequired
-  };
+function TextResponses({
+  sectionId,
+  validScripts,
+  scriptId,
+  scriptName,
+  setScriptId
+}) {
+  const [textResponsesByScript, setTextResponsesByScript] = useState({});
+  const [isLoadingResponses, setIsLoadingResponses] = useState(false);
+  const [filterByLessonName, setFilterByLessonName] = useState(null);
 
-  state = {
-    filterByLessonName: null,
-    textResponsesByScript: {},
-    isLoadingResponses: false
-  };
+  useEffect(() => {
+    asyncLoadTextResponses(sectionId, scriptId);
+  }, [scriptId]);
 
-  componentDidMount() {
-    this.asyncLoadTextResponses(this.props.sectionId, this.props.scriptId);
-  }
-
-  asyncLoadTextResponses = (sectionId, scriptId, onComplete = () => {}) => {
+  const asyncLoadTextResponses = (
+    sectionId,
+    scriptId,
+    onComplete = () => {}
+  ) => {
     // Don't load data if it's already stored in state.
-    if (this.state.textResponsesByScript[scriptId]) {
+    if (textResponsesByScript[scriptId]) {
       onComplete();
       return;
     }
 
-    this.setState({isLoadingResponses: true});
+    setIsLoadingResponses(true);
 
-    loadTextResponsesFromServer(sectionId, scriptId, (error, data) => {
-      if (error) {
-        console.error(error);
-      } else {
-        this.setTextResponses(scriptId, data);
+    loadTextResponsesFromServer(sectionId, scriptId)
+      .then(textResponses => {
+        setTextResponses(scriptId, textResponses);
         onComplete();
-      }
-      this.setState({isLoadingResponses: false});
-    });
+        setIsLoadingResponses(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setIsLoadingResponses(false);
+      });
   };
 
-  setTextResponses = (scriptId, data) => {
+  const setTextResponses = (scriptId, textResponses) => {
     const newTextResponsesByScript = {
-      ...this.state.textResponsesByScript,
-      [scriptId]: data
+      ...textResponsesByScript,
+      [scriptId]: textResponses
     };
-    this.setState({textResponsesByScript: newTextResponsesByScript});
+    setTextResponsesByScript(newTextResponsesByScript);
   };
 
-  getResponsesByScript = () => {
-    const {scriptId} = this.props;
-    const {textResponsesByScript} = this.state;
+  const responsesForCurrentScript = () => {
     return textResponsesByScript[scriptId] || [];
   };
 
-  onChangeScript = scriptId => {
-    const {setScriptId, sectionId} = this.props;
-    this.asyncLoadTextResponses(sectionId, scriptId, () => {
-      setScriptId(scriptId);
-      this.setState({filterByLessonName: null});
-    });
+  const onChangeScript = scriptId => {
+    setScriptId(scriptId);
+    setFilterByLessonName(null);
   };
 
-  renderFilterByLessonDropdown = () => {
-    const lessons = this.getLessons();
-
-    // only render filter dropdown if there are 2+ lessons
-    if (lessons.length <= 1) {
-      return null;
-    }
-
-    return (
-      <div style={styles.dropdownContainer}>
-        <div style={styles.dropdownLabel}>{i18n.filterByStage()}</div>
-        <select
-          id="uitest-lesson-filter"
-          style={styles.dropdown}
-          onChange={this.onChangeFilter}
-        >
-          <option key={DEFAULT_FILTER_KEY}>{DEFAULT_FILTER_KEY}</option>
-          {lessons.map(lesson => (
-            <option key={lesson}>{lesson}</option>
-          ))}
-        </select>
-      </div>
-    );
-  };
-
-  getLessons = () => {
-    const lessons = uniq(map(this.getResponsesByScript(), 'lesson'));
-    return lessons;
-  };
-
-  onChangeFilter = event => {
-    const filterByLessonName =
-      event.target.value === DEFAULT_FILTER_KEY ? null : event.target.value;
-    this.setState({filterByLessonName});
-  };
-
-  getFilteredResponses = () => {
-    const {filterByLessonName} = this.state;
-    let filteredResponses = [...this.getResponsesByScript()];
+  const getFilteredResponses = () => {
+    let filteredResponses = [...responsesForCurrentScript()];
 
     if (filterByLessonName) {
       filteredResponses = filter(filteredResponses, [
@@ -138,54 +96,61 @@ class TextResponses extends Component {
     return filteredResponses;
   };
 
-  render() {
-    const {validScripts, scriptId, scriptName, sectionId} = this.props;
-    const {isLoadingResponses} = this.state;
-    const filteredResponses = this.getFilteredResponses();
+  const filteredResponses = getFilteredResponses();
+  const lessons = uniq(map(responsesForCurrentScript(), 'lesson'));
 
-    return (
-      <div>
-        <div style={styles.unitSelection}>
-          <div style={{...h3Style, ...styles.header}}>
-            {i18n.selectACourse()}
-          </div>
-          <UnitSelector
-            validScripts={validScripts}
-            scriptId={scriptId}
-            onChange={this.onChangeScript}
-          />
-        </div>
-        {filteredResponses.length > 0 && (
-          <div id="uitest-response-actions" style={styles.actionRow}>
-            <div>{this.renderFilterByLessonDropdown()}</div>
-            <CSVLink
-              style={styles.buttonContainer}
-              filename="responses.csv"
-              data={filteredResponses}
-              headers={CSV_HEADERS}
-            >
-              {/* onClick functionality for Button handled by CSVLink */}
-              <Button
-                __useDeprecatedTag
-                text={i18n.downloadCSV()}
-                onClick={() => {}}
-                color={Button.ButtonColor.white}
-              />
-            </CSVLink>
-          </div>
-        )}
-        <div style={styles.table}>
-          <TextResponsesTable
-            responses={filteredResponses}
-            sectionId={sectionId}
-            isLoading={isLoadingResponses}
-            scriptName={scriptName}
-          />
-        </div>
+  return (
+    <div>
+      <div style={styles.unitSelection}>
+        <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
+        <UnitSelector
+          validScripts={validScripts}
+          scriptId={scriptId}
+          onChange={onChangeScript}
+        />
       </div>
-    );
-  }
+      {filteredResponses.length > 0 && (
+        <div id="uitest-response-actions" style={styles.actionRow}>
+          <TextResponsesLessonSelector
+            lessons={lessons}
+            onChange={setFilterByLessonName}
+          />
+          <CSVLink
+            style={styles.buttonContainer}
+            filename="responses.csv"
+            data={filteredResponses}
+            headers={CSV_HEADERS}
+          >
+            {/* onClick functionality for Button handled by CSVLink */}
+            <Button
+              __useDeprecatedTag
+              text={i18n.downloadCSV()}
+              onClick={() => {}}
+              color={Button.ButtonColor.white}
+            />
+          </CSVLink>
+        </div>
+      )}
+      <div style={styles.table}>
+        <TextResponsesTable
+          responses={filteredResponses}
+          sectionId={sectionId}
+          isLoading={isLoadingResponses}
+          scriptName={scriptName}
+        />
+      </div>
+    </div>
+  );
 }
+
+TextResponses.propTypes = {
+  // Provided by redux.
+  sectionId: PropTypes.number.isRequired,
+  validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+  scriptId: PropTypes.number,
+  scriptName: PropTypes.string,
+  setScriptId: PropTypes.func.isRequired
+};
 
 const styles = {
   header: {
@@ -202,21 +167,6 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between'
-  },
-  dropdownContainer: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  dropdown: {
-    display: 'block',
-    boxSizing: 'border-box',
-    height: 30,
-    paddingLeft: PADDING,
-    paddingRight: PADDING,
-    marginLeft: PADDING
   },
   buttonContainer: {
     display: 'flex',

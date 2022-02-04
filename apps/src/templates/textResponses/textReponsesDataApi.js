@@ -2,27 +2,21 @@ import PropTypes from 'prop-types';
 
 // Make a request to the server for text responses
 // scriptId is not required; endpoint will use the default script if no scriptId is supplied
-export const loadTextResponsesFromServer = (
-  sectionId,
-  scriptId,
-  onComplete
-) => {
-  let payload = {};
+export const loadTextResponsesFromServer = (sectionId, scriptId) => {
+  let requestUrl = `/dashboardapi/section_text_responses/${sectionId}`;
+
   if (scriptId) {
-    payload.script_id = scriptId;
+    requestUrl += `?script_id=${scriptId}`;
   }
 
-  $.ajax({
-    url: `/dashboardapi/section_text_responses/${sectionId}`,
-    method: 'GET',
-    contentType: 'application/json;charset=UTF-8',
-    data: payload
+  return fetch(requestUrl, {
+    credentials: 'same-origin'
   })
-    .done(responseData => {
-      onComplete(null, convertTextResponseServerData(responseData));
+    .then(response => {
+      return response.json();
     })
-    .fail((jqXhr, status) => {
-      onComplete(status, jqXhr.responseJSON);
+    .then(responseData => {
+      return convertTextResponseServerData(responseData);
     });
 };
 
