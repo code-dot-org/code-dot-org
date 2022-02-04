@@ -72,6 +72,15 @@ class CourseOffering < ApplicationRecord
     end
   end
 
+  def summarize_for_edit
+    {
+      key: key,
+      is_featured: is_featured?,
+      category: category,
+      display_name: display_name
+    }
+  end
+
   def serialize
     {
       key: key,

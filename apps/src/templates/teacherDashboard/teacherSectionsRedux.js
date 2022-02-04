@@ -747,7 +747,7 @@ export default function teacherSections(state = initialState, action) {
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
-      selectedSectionId = action.sections[0].id.toString();
+      selectedSectionId = action.sections[0].id;
     }
 
     sections.forEach(section => {
@@ -1215,7 +1215,8 @@ export const sectionFromServerSection = serverSection => ({
   postMilestoneDisabled: serverSection.post_milestone_disabled,
   codeReviewExpiresAt: serverSection.code_review_expires_at
     ? Date.parse(serverSection.code_review_expires_at)
-    : null
+    : null,
+  isAssignedCSA: serverSection.is_assigned_csa
 });
 
 /**
@@ -1226,7 +1227,10 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   sectionId: sectionId,
   id: serverStudent.id,
   name: serverStudent.name,
-  sharingDisabled: serverStudent.sharing_disabled
+  sharingDisabled: serverStudent.sharing_disabled,
+  totalLines: serverStudent.total_lines,
+  secretPicturePath: serverStudent.secret_picture_path,
+  secretWords: serverStudent.secret_words
 });
 
 /**
