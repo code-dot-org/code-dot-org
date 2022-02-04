@@ -282,6 +282,22 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
     end
 
+    test "removes course version for new UnitGroupUnits" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1', family_name: 'family-unit1', version_year: '1991', is_course: true)
+      CourseOffering.add_course_offering(unit1)
+
+      unit1.reload
+      assert unit1.course_version
+
+      unit_group.update_scripts(['unit1'])
+
+      unit1.reload
+      assert_nil unit1.published_state
+      refute unit1.course_version
+    end
+
     test "set published state to nil for new UnitGroupUnits" do
       unit_group = create :unit_group
 
