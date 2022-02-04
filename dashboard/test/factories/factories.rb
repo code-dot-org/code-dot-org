@@ -967,8 +967,9 @@ FactoryGirl.define do
   end
 
   factory :programming_environment_category do
-    sequence(:key) {|n| "programming-environment-category-#{n}"}
-    sequence(:name) {|n| "programming-environment-category-#{n}"}
+    sequence(:key, 'a') {|n| "programming_environment_category_#{n}"}
+    sequence(:name, 'b') {|n| "programming-environment-category-#{n}"}
+    color '#000000'
   end
 
   factory :programming_expression do
