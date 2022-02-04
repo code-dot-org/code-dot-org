@@ -162,10 +162,10 @@ class Script < ApplicationRecord
 
   def check_course_type_settings
     if is_course?
-      raise 'Published state must be set on the unit if its not in a course.' if published_state.nil?
-      raise 'Instructor audience must be set on the unit if its not in a course.' if instructor_audience.nil?
-      raise 'Participant audience must be set on the unit if its not in a course.' if participant_audience.nil?
-      raise 'Instruction type must be set on the unit if its not in a course.' if instruction_type.nil?
+      raise 'Published state must be set on the unit if its a standalone unit.' if published_state.nil?
+      raise 'Instructor audience must be set on the unit if its a standalone unit.' if instructor_audience.nil?
+      raise 'Participant audience must be set on the unit if its a standalone unit.' if participant_audience.nil?
+      raise 'Instruction type must be set on the unit if its a standalone unit.' if instruction_type.nil?
     end
   end
 

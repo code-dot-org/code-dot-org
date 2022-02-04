@@ -2204,7 +2204,7 @@ class ScriptTest < ActiveSupport::TestCase
       unit.save!
     end
 
-    assert_includes error.message, 'Participant audience must be set on the unit if its not in a course.'
+    assert_includes error.message, 'Participant audience must be set on the unit if its a standalone unit.'
   end
 
   test 'should raise error if instructor audience is nil for standalone unit' do
@@ -2214,7 +2214,7 @@ class ScriptTest < ActiveSupport::TestCase
       unit.save!
     end
 
-    assert_includes error.message, 'Instructor audience must be set on the unit if its not in a course.'
+    assert_includes error.message, 'Instructor audience must be set on the unit if its a standalone unit.'
   end
 
   test 'should raise error if published state is nil for standalone unit' do
@@ -2224,7 +2224,7 @@ class ScriptTest < ActiveSupport::TestCase
       unit.save!
     end
 
-    assert_includes error.message, 'Published state must be set on the unit if its not in a course.'
+    assert_includes error.message, 'Published state must be set on the unit if its a standalone unit.'
   end
 
   test 'should raise error if instruction type is nil for standalone unit' do
@@ -2234,7 +2234,7 @@ class ScriptTest < ActiveSupport::TestCase
       unit.save!
     end
 
-    assert_includes error.message, 'Instruction type must be set on the unit if its not in a course.'
+    assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
   end
 
   private
