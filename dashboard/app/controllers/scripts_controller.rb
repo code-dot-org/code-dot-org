@@ -96,7 +96,7 @@ class ScriptsController < ApplicationController
     # a unit it is not yet in a unit group so we set default values here
     #
     # Setting default values for the columns would not work because those
-    # are not used when you can new() just when you call create
+    # are not used when you call new() just when you call create
     updated_unit_params = unit_params.merge(
       {
         published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
