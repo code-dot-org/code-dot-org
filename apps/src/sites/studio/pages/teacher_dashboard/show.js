@@ -29,7 +29,10 @@ import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashbo
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
-import {setValidScripts} from '../../../../redux/unitSelectionRedux';
+import {
+  setValidScripts,
+  setScriptId
+} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -88,6 +91,10 @@ $(document).ready(function() {
   store.dispatch(
     setValidScripts(validScripts, studentScriptIds, validCourses, section)
   );
+
+  // Default the scriptId to the script assigned to the section
+  const defaultScriptId = section.script ? section.script.id : null;
+  store.dispatch(setScriptId(defaultScriptId));
 
   ReactDOM.render(
     <Provider store={store}>
