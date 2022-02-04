@@ -282,6 +282,22 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
     end
 
+    test "removes course version for new UnitGroupUnits" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1', family_name: 'family-unit1', version_year: '1991', is_course: true)
+      CourseOffering.add_course_offering(unit1)
+
+      unit1.reload
+      assert unit1.course_version
+
+      unit_group.update_scripts(['unit1'])
+
+      unit1.reload
+      assert_nil unit1.published_state
+      refute unit1.course_version
+    end
+
     test "set published state to nil for new UnitGroupUnits" do
       unit_group = create :unit_group
 
@@ -402,17 +418,50 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "remove UnitGroupUnits" do
-      unit_group = create :unit_group
+      unit_group = create(
+        :unit_group,
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      )
+      unit1 = create(
+        :script,
+        name: 'unit1',
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        family_name: 'unit1-family',
+        version_year: '1991',
+        is_course: true
+      )
+      create(:script, name: 'unit2')
 
-      create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'unit1'))
-      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit1.reload
+
+      assert_nil unit1.published_state
+      assert_nil unit1.instruction_type
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+      assert_nil unit1.family_name
+      assert_nil unit1.is_course
+      assert_nil unit1.version_year
 
       unit_group.update_scripts(['unit2'])
 
       unit_group.reload
+      unit1.reload
+
       assert_equal 1, unit_group.default_unit_group_units.length
       assert_equal 1, unit_group.default_unit_group_units[0].position
       assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
+      assert_equal unit1.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+      assert_equal unit1.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      assert_equal unit1.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+      assert_equal unit1.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
     end
 
     test "removed units have their published state instruction type participant audience and instructor audience reset" do
