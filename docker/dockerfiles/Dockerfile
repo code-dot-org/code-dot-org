@@ -145,7 +145,7 @@ RUN sudo apt-get install -y jq
 RUN sudo apt-get install -y locales
 RUN sudo locale-gen en_US.UTF-8
 
-COPY entrypoint.sh /entrypoint.sh
+COPY docker/dockerfiles/entrypoint.sh /entrypoint.sh
 RUN sudo chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
