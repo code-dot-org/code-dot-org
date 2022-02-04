@@ -66,9 +66,7 @@
     "start_blocks": "var yPosition = 170;\r\n\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  //Move the bird up by subtracting from yPosition\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  //Move the bird down by adding to the yPosition\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-twitter\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"birdIcon\" style=\"height: 125px; width: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 170px; margin: 0px;\" data-icon-color=\"#01cbff\"></div></div>",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "FZUyzjVp4Qb9kmE0yiBfpw1o2AwtKHzcYoCyLZB12TT2VHdXbY1cHcC2/3Y7\nAMOau4Uj61PUbjGbYPM9HxF+mA==\n"
   },
   "game_id": 41,
   "published": true,
@@ -76,7 +74,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-11-17T20:54:45.973+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB4_2022\"},{\"changed_at\":\"2021-11-17 21:00:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-17 21:02:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:11:50 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-11-17T20:54:45.973+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB4_2022\"},{\"changed_at\":\"2021-11-17 21:00:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-17 21:02:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:11:50 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 19:51:15 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
