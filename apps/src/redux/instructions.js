@@ -28,6 +28,10 @@ const SET_DYNAMIC_INSTRUCTIONS_KEY =
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 const SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK =
   'instructions/SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK';
+const SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL =
+  'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL';
+const SET_CODE_REVIEW_ENABLED_FOR_LEVEL =
+  'instructions/SET_CODE_REVIEW_ENABLED_FOR_LEVEL';
 
 /**
  * Some scenarios:
@@ -62,6 +66,10 @@ const instructionsInitialState = {
   maxAvailableHeight: Infinity,
   allowResize: true,
   hasAuthoredHints: false,
+  // represents if the user is in any unarchived section where tts autoplay is enabled
+  // logic defined in script_levels_controller#show
+  ttsAutoplayEnabledForLevel: false,
+  codeReviewEnabledForLevel: false,
   overlayVisible: false,
   levelVideos: [],
   mapReference: undefined,
@@ -156,6 +164,18 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   if (action.type === SET_HAS_AUTHORED_HINTS) {
     return Object.assign({}, state, {
       hasAuthoredHints: action.hasAuthoredHints
+    });
+  }
+
+  if (action.type === SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL) {
+    return Object.assign({}, state, {
+      ttsAutoplayEnabledForLevel: action.ttsAutoplayEnabledForLevel
+    });
+  }
+
+  if (action.type === SET_CODE_REVIEW_ENABLED_FOR_LEVEL) {
+    return Object.assign({}, state, {
+      codeReviewEnabledForLevel: action.codeReviewEnabledForLevel
     });
   }
 
@@ -264,6 +284,16 @@ export const setAllowInstructionsResize = allowResize => ({
 export const setHasAuthoredHints = hasAuthoredHints => ({
   type: SET_HAS_AUTHORED_HINTS,
   hasAuthoredHints
+});
+
+export const setTtsAutoplayEnabledForLevel = ttsAutoplayEnabledForLevel => ({
+  type: SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL,
+  ttsAutoplayEnabledForLevel
+});
+
+export const setCodeReviewEnabledForLevel = codeReviewEnabledForLevel => ({
+  type: SET_CODE_REVIEW_ENABLED_FOR_LEVEL,
+  codeReviewEnabledForLevel
 });
 
 export const setFeedback = feedback => ({

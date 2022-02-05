@@ -10,12 +10,12 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
-#  notes                 :text(65535)
-#  audit_log             :text(65535)
+#  notes                 :text(16777215)
+#  audit_log             :text(16777215)
 #
 # Indexes
 #

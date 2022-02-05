@@ -85,7 +85,10 @@ module Crowdin
       @logger.info("#{files_to_download.keys.length} languages have changes")
 
       etags = File.exist?(@etags_json) ? JSON.parse(File.read(@etags_json)) : {}
-      files_to_sync_out = File.exist?(@files_to_sync_out_json) ? JSON.parse(File.read(@files_to_sync_out_json)) : {}
+      # Initialize @files_to_sync_out file if it doesn't exist yet.
+      # It could already exist if multiple sync-down's occurred since the last sync-out.
+      File.write @files_to_sync_out_json, JSON.pretty_generate({}) unless File.exist?(@files_to_sync_out_json)
+      files_to_sync_out = JSON.parse(File.read(@files_to_sync_out_json))
 
       @project.languages.each do |language|
         code = language["code"]

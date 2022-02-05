@@ -16,126 +16,124 @@ import {
   lessonIsVisible
 } from './progressHelpers';
 
-class SummaryProgressRow extends React.Component {
-  static propTypes = {
-    dark: PropTypes.bool.isRequired,
-    lesson: lessonType.isRequired,
-    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+function SummaryProgressRow({
+  dark,
+  lesson,
+  levels,
+  lessonIsHiddenForStudents,
+  lessonIsLockedForUser,
+  lessonIsLockedForAllStudents,
+  viewAs
+}) {
+  // The parent component filters out hidden SummaryProgressRows from the student view,
+  // this check is just to ensure it won't be rendered if it should be hidden for students
+  if (lessonIsHiddenForStudents && viewAs === ViewType.Participant) {
+    return null;
+  }
 
-    // from redux
-    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    lessonIsVisible: PropTypes.func.isRequired,
-    lessonIsLockedForUser: PropTypes.func.isRequired,
-    lessonIsLockedForAllStudents: PropTypes.func.isRequired
-  };
+  const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
+  const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
+  const showAsLocked = isLockedForUser || isLockedForSection;
 
-  render() {
-    const {
-      dark,
-      lesson,
-      levels,
-      lessonIsVisible,
-      lessonIsLockedForUser,
-      lessonIsLockedForAllStudents,
-      viewAs
-    } = this.props;
+  let lessonTitle = lesson.name;
+  if (lesson.lessonNumber) {
+    lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
+  }
 
-    // Would this lesson be hidden if we were a participant?
-    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Participant);
-    const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
-    const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
-    const showAsLocked = isLockedForUser || isLockedForSection;
+  const displayDashedBorder = lessonIsHiddenForStudents || showAsLocked;
 
-    let lessonTitle = lesson.name;
-    if (lesson.lessonNumber) {
-      lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
-    }
+  const titleTooltipId = _.uniqueId();
+  const lockedTooltipId = _.uniqueId();
 
-    const titleTooltipId = _.uniqueId();
-    const lockedTooltipId = _.uniqueId();
-    return (
-      <tr
-        id={`summary-progress-row-${lesson.lessonNumber}`}
-        className="uitest-summary-progress-row"
+  return (
+    <tr
+      id={`summary-progress-row-${lesson.lessonNumber}`}
+      className="uitest-summary-progress-row"
+      style={{
+        ...(dark ? styles.darkRow : styles.lightRow),
+        ...(displayDashedBorder && styles.dashedBorder)
+      }}
+    >
+      <td
         style={{
-          ...(!dark && styles.lightRow),
-          ...(dark && styles.darkRow),
-          ...((hiddenForStudents || showAsLocked) && styles.dashedBorder)
+          ...styles.col1,
+          ...(isLockedForUser && styles.fadedCol)
         }}
       >
-        <td
-          style={{
-            ...styles.col1,
-            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
-              isLockedForUser) &&
-              styles.fadedCol)
-          }}
-        >
-          <div style={styles.colText}>
-            {hiddenForStudents && (
-              <FontAwesome icon="eye-slash" style={styles.icon} />
-            )}
-            {lesson.lockable && (
-              <span data-tip data-for={lockedTooltipId}>
-                <FontAwesome
-                  icon={showAsLocked ? 'lock' : 'unlock'}
-                  style={{
-                    ...styles.icon,
-                    ...(!showAsLocked && styles.unlockedIcon)
-                  }}
-                />
-                {!showAsLocked && viewAs === ViewType.Instructor && (
-                  <ReactTooltip
-                    id={lockedTooltipId}
-                    role="tooltip"
-                    wrapper="span"
-                    effect="solid"
-                  >
-                    {i18n.lockAssessmentLong()}
-                  </ReactTooltip>
-                )}
-              </span>
-            )}
-            <span
-              data-tip
-              data-for={titleTooltipId}
-              aria-describedby={titleTooltipId}
-            >
-              {lessonTitle}
-              <ReactTooltip
-                id={titleTooltipId}
-                role="tooltip"
-                wrapper="span"
-                effect="solid"
-              >
-                {lesson.name}
-              </ReactTooltip>
-            </span>
-          </div>
-        </td>
-        <td
-          style={{
-            ...styles.col2,
-            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
-              isLockedForUser) &&
-              styles.fadedCol)
-          }}
-        >
-          {levels.length === 0 ? (
-            i18n.lessonContainsNoLevels()
-          ) : (
-            <ProgressBubbleSet
-              levels={levels}
-              disabled={isLockedForUser}
-              style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
-            />
+        <div style={styles.colText}>
+          {lessonIsHiddenForStudents && (
+            <FontAwesome icon="eye-slash" style={styles.icon} />
           )}
-          {lesson.isFocusArea && <FocusAreaIndicator />}
-        </td>
-      </tr>
-    );
-  }
+          {lesson.lockable && (
+            <span data-tip data-for={lockedTooltipId}>
+              <FontAwesome
+                icon={showAsLocked ? 'lock' : 'unlock'}
+                style={{
+                  ...styles.icon,
+                  ...(!showAsLocked && styles.unlockedIcon)
+                }}
+              />
+              {!showAsLocked && viewAs === ViewType.Instructor && (
+                <ReactTooltip
+                  id={lockedTooltipId}
+                  role="tooltip"
+                  wrapper="span"
+                  effect="solid"
+                >
+                  {i18n.lockAssessmentLong()}
+                </ReactTooltip>
+              )}
+            </span>
+          )}
+          <span
+            data-tip
+            data-for={titleTooltipId}
+            aria-describedby={titleTooltipId}
+          >
+            {lessonTitle}
+            <ReactTooltip
+              id={titleTooltipId}
+              role="tooltip"
+              wrapper="span"
+              effect="solid"
+            >
+              {lesson.name}
+            </ReactTooltip>
+          </span>
+        </div>
+      </td>
+      <td
+        style={{
+          ...styles.col2,
+          ...(isLockedForUser && styles.fadedCol)
+        }}
+      >
+        {levels.length === 0 ? (
+          i18n.lessonContainsNoLevels()
+        ) : (
+          <ProgressBubbleSet
+            levels={levels}
+            disabled={isLockedForUser}
+            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
+          />
+        )}
+        {lesson.isFocusArea && <FocusAreaIndicator />}
+      </td>
+    </tr>
+  );
 }
+
+SummaryProgressRow.propTypes = {
+  dark: PropTypes.bool.isRequired,
+  lesson: lessonType.isRequired,
+  levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+
+  // from redux
+  viewAs: PropTypes.oneOf(Object.keys(ViewType)),
+  lessonIsHiddenForStudents: PropTypes.bool.isRequired,
+  lessonIsLockedForUser: PropTypes.func.isRequired,
+  lessonIsLockedForAllStudents: PropTypes.func.isRequired
+};
 
 export const styles = {
   lightRow: {
@@ -200,9 +198,13 @@ export const styles = {
 };
 
 export const UnconnectedSummaryProgressRow = SummaryProgressRow;
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
-  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
+  lessonIsHiddenForStudents: !lessonIsVisible(
+    ownProps.lesson,
+    state,
+    ViewType.Participant
+  ),
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),
   lessonIsLockedForAllStudents: lessonId =>
