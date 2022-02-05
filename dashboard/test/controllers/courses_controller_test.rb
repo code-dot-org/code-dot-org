@@ -401,18 +401,24 @@ class CoursesControllerTest < ActionController::TestCase
                               params: -> {{course_name: @in_development_unit_group.name}},
                               name: 'signed out user cannot view in-development unit group'
 
-  test_user_gets_response_for(:show, response: :forbidden, user: :student,
+  test_user_gets_response_for(:show, response: :success, user: :student,
                               params: -> {{course_name: @in_development_unit_group.name}}, name: 'student cannot view in-development unit group'
-  )
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
-  test_user_gets_response_for(:show, response: :forbidden, user: :teacher,
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
                               params: -> {{course_name: @in_development_unit_group.name}},
                               name: 'teacher access cannot view in-development unit group'
-  )
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
                               params: -> {{course_name: @in_development_unit_group.name}}, name: 'levelbuilder can view in-development unit group'
-  )
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
   # Tests for create
 

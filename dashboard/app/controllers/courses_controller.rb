@@ -173,14 +173,8 @@ class CoursesController < ApplicationController
   end
 
   def render_no_access
-    if current_user
-      unless @unit_group.can_be_instructor?(current_user) || @unit_group.can_be_participant?(current_user)
-        return render :no_access
-      end
-
-      if  @unit_group.pilot? && !@unit_group.has_pilot_access?(current_user)
-        return render :no_access
-      end
+    if current_user && !current_user.admin? && !can?(:read, @unit_group)
+      render :no_access
     end
   end
 
