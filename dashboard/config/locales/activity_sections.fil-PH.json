@@ -490,6 +490,19 @@
             null
           ]
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Panimula"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Pagsiklab",
+          "progression_name": "Pagsiklab"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Libreng Laro"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Pagmumuni-muni"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Panimula",
           "tips": [
@@ -507,6 +520,7 @@
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "Pagtatasa",
           "tips": [
             null
           ]
@@ -547,6 +561,7 @@
           ]
         },
         "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "name": "Pagtatasa",
           "tips": [
             null
           ]
@@ -874,6 +889,9 @@
         "30f90504-21cc-4713-949c-c5bcdb5c3288": {
           "progression_name": "Libreng Laro"
         },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "Proyekto sa Sprite Lab"
+        },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
           "name": "Proyekto ng Artista",
           "progression_name": "Proyekto ng Artista"
@@ -901,9 +919,15 @@
           "name": "Libreng Laro",
           "progression_name": "Libreng Laro"
         },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "Proyekto sa Sprite Lab"
+        },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "Proyekto ng Artista",
           "progression_name": "Proyekto ng Artista"
+        },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "Proyekto sa Sprite Lab"
         },
         "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
           "name": "Proyekto ng Artista",
@@ -1290,19 +1314,6 @@
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Sining ng Tula"
         },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Panimula"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Pagsiklab",
-          "progression_name": "Pagsiklab"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Libreng Laro"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Pagmumuni-muni"
-        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
             null
@@ -1315,6 +1326,9 @@
           "tips": [
             null
           ]
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Mga antas"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Pagmumuni-muni"
@@ -1917,6 +1931,9 @@
             null
           ]
         },
+        "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
+          "name": "Pagtatasa"
+        },
         "cb6735d8-d986-408b-adef-61e9a52ad30f": {
           "name": "Panimula"
         },
@@ -2088,6 +2105,9 @@
           "tips": [
             null
           ]
+        },
+        "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
+          "name": "Pagtatasa"
         },
         "7e3d14a1-a677-4c9d-a695-e043db71c52e": {
           "tips": [
@@ -2285,6 +2305,9 @@
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
           "name": "Pagmumuni-muni"
+        },
+        "9c113356-76b9-4324-b22f-e35ce5a49216": {
+          "name": "Pagtatasa"
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Introduksyon sa mga Loops"
