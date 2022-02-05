@@ -165,8 +165,7 @@ class CertificateImage
     end
 
     unless sponsor
-      weight = SecureRandom.random_number
-      donor = DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
+      donor = CdoDonor.get_random_donor_by_weight
       sponsor = donor[:name_s]
     end
 
