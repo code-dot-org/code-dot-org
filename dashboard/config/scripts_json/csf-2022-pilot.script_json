@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-21 21:47:59 UTC",
+    "serialized_at": "2022-02-01 20:12:56 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -213,6 +213,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**",
+        "purpose": "This lesson temporarily shifts away from variables and instead focuses on programming with groups of sprites. Later in the course, students will learn more about variables and simulations. The types of programs students create in this lesson will provide additional context for those lessons.",
+        "student_overview": "You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!"
       },
       "seeding_key": {
         "lesson.key": "Lots of Sprites",
@@ -228,6 +231,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**",
+        "purpose": "In previous lessons, students learn to use variables to store data that can be retrieved later. In this lesson, students will begin learning to modify the data stored in a variable. This key understanding of how variables work will also enable them to create more advanced projects.",
+        "student_overview": "You will learn to use variables to make a counter or keep track of a score in a game."
       },
       "seeding_key": {
         "lesson.key": "Counting with Variables",
@@ -243,6 +249,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this **mini-project** lesson, students will create a customized \"collector game\", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**",
+        "purpose": "This project is designed to allow students to apply their new knowledge of variables in a fun way. By understanding how to modify the value stored in a variable, students can create a game that automatically keeps the score based on the player's actions.",
+        "student_overview": "Collect all the sprites! In this project, you will create a game that others can play."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Collector Game",
@@ -1739,9 +1748,21 @@
       }
     },
     {
-      "key": "d19de45b-d40f-4dc5-bc53-a014060e9666",
+      "key": "b41bb62f-29a1-46f0-a5cd-9ee246af9e2b",
       "position": 1,
       "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "b41bb62f-29a1-46f0-a5cd-9ee246af9e2b",
+        "lesson_activity.key": "8f4d1714-6613-4473-a1ea-e3dcc07bf690"
+      }
+    },
+    {
+      "key": "d19de45b-d40f-4dc5-bc53-a014060e9666",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666",
@@ -1750,7 +1771,7 @@
     },
     {
       "key": "87cc9df9-3c2a-4e91-b439-20c3e2ae5294",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Exploration: Clicker Game"
       },
@@ -1761,7 +1782,7 @@
     },
     {
       "key": "90882c84-cf50-477d-af40-835ba12296b5",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Mini-Project: Clicker Game"
       },
@@ -3274,7 +3295,8 @@
       "properties": {
         "level_keys": [
           "courseF_variables2_predict"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "bonus": false,
       "seeding_key": {
@@ -3284,7 +3306,7 @@
         "lesson.key": "Counting with Variables",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+        "activity_section.key": "b41bb62f-29a1-46f0-a5cd-9ee246af9e2b"
       },
       "level_keys": [
         "courseF_variables2_predict"
@@ -3293,12 +3315,13 @@
     {
       "chapter": 53,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_variables2_set"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -3317,12 +3340,13 @@
     {
       "chapter": 54,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_variables2_change"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -3341,12 +3365,13 @@
     {
       "chapter": 55,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_variables2_click"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -3518,6 +3543,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_samples"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -3690,6 +3718,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_freeplay"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -4379,7 +4410,7 @@
         "lesson.key": "Counting with Variables",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "d19de45b-d40f-4dc5-bc53-a014060e9666"
+        "activity_section.key": "b41bb62f-29a1-46f0-a5cd-9ee246af9e2b"
       }
     },
     {

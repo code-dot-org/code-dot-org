@@ -16,12 +16,12 @@ with pledged as
 hoc_event as
 (
   select distinct
-    json_extract_path_text(data_text, 'nces_school_s') school_id,
+    json_extract_path_text(data, 'nces_school_s') school_id,
     1 as hoc_event
   from pegasus_pii.forms
   where left(kind, 9) = 'HocSignup'
   and right(kind, 4) = (select school_year_int from analysis.school_years where getdate() between started_at and ended_at)
-  and json_extract_path_text(data_text, 'nces_school_s') not in ('','-1')
+  and json_extract_path_text(data, 'nces_school_s') not in ('','-1')
 ),
 -- which schools have had someone already apply to CSP or CSD PD?
 -- starts showing applications for the 2020-2021 application cycle

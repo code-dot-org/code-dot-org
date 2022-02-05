@@ -50,11 +50,18 @@
     "long_instructions": "Create your own code to solve this puzzle.",
     "bubble_choice_description": "Create your own code to solve this puzzle.",
     "thumbnail_url": "https://images.code.org/c22aa9dde78b34c17e2cec4d5de62a9e-image-1615818812564.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:58.564+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_5b_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_5b_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:58.564+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_5b_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_5b_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 5,
+    "repeat_until_while": 4,
+    "variables": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>
