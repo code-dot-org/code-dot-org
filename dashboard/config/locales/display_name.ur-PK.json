@@ -103,7 +103,11 @@
         "helloworld_food_sizes": "سائز",
         "helloworld_food_sounds": "آوازیں",
         "helloworld_retro_sizes": "سائز",
-        "helloworld_retro_sounds": "آوازیں"
+        "helloworld_retro_sounds": "آوازیں",
+        "helloworld_animals_costumes": "ملبوسات",
+        "helloworld_emoji_costumes": "ملبوسات",
+        "helloworld_food_costumes": "ملبوسات",
+        "helloworld_retro_costumes": "ملبوسات"
       }
     }
   }

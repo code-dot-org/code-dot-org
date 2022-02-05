@@ -352,6 +352,7 @@ ur:
             '"right"': دایاں کالم
             '"x"': متقاطع
             '"plus"': جمع کریں
+            '"spiral"': پیچ دار
             '"random"': بےترتیب
       Dancelab_makeAnonymousDanceSprite:
         text: ایک نیا {COSTUME} کہلانے والا {LOCATION} پر بنائیں
@@ -360,11 +361,15 @@ ur:
             '"ALIEN"': اجنبی(Alien)
             '"BEAR"': ریچھ
             '"CAT"': بلی
+            '"DOG"': کتا
+            '"DUCK"': بطخ
             '"FROG"': مینڈک
             '"MOOSE"': موس بارہ سنگا
             '"PINEAPPLE"': پائن ایپل
+            '"ROBOT"': روباٹ
             '"SHARK"': شارک
             '"SLOTH"': سلاتھ
+            '"UNICORN"': یونیکورن
           LOCATION:
             "{x: 200, y: 100}": اوپر
             "{x: 200, y: 300}": زيريں
@@ -383,11 +388,15 @@ ur:
             '"ALIEN"': اجنبی(Alien)
             '"BEAR"': ریچھ
             '"CAT"': بلی
+            '"DOG"': کتا
+            '"DUCK"': بطخ
             '"FROG"': مینڈک
             '"MOOSE"': موس بارہ سنگا
             '"PINEAPPLE"': پائن ایپل
+            '"ROBOT"': روباٹ
             '"SHARK"': شارک
             '"SLOTH"': سلاتھ
+            '"UNICORN"': یونیکورن
           LOCATION:
             "{x: 200, y: 100}": اوپر
             "{x: 200, y: 300}": زيريں
@@ -451,6 +460,7 @@ ur:
             '"right"': دایاں کالم
             '"x"': متقاطع
             '"plus"': جمع کریں
+            '"spiral"': پیچ دار
             '"random"': بےترتیب
       Dancelab_mixColors:
         text: "{COLOR1} اور {COLOR2} کو ملائیں"
@@ -959,7 +969,10 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
+            '"speed"': رفتار
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} چھونے {SPRITE2}"
         options:
@@ -970,6 +983,13 @@ ur:
         text: جب {SPRITE} کلک کیا
       gamelab_clickedSpritePointer:
         text: کلک کیا {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): شمال کی طرف بڑھنا اور لوپ
+              کرنا
+            new Behavior(moving_south_and_looping, []): جنوب کی طرف بڑھنا اور لوپ
+              کرنا
       gamelab_comment:
         text: 'تبصرہ: {COMMENT}'
       gamelab_costumeImage:
@@ -997,8 +1017,11 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
             '"tint"': رنگت
+            '"speed"': رفتار
       gamelab_getThisSprite:
         text: "{CHOICE} سرین"
         options:
@@ -1018,6 +1041,19 @@ ur:
         text: |-
           اگر {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} کا کاسٹیوم ہے {COSTUME}"
       gamelab_isKeyPressed:
@@ -1119,8 +1155,10 @@ ur:
         text: "{EFFECT} بنائیں {NUM}{ANIMATION_NAME} سپرائٹس کے ساتھ ایفیکٹ"
         options:
           EFFECT:
+            '"burst"': پھوٹنا
             '"pop"': پاپ
             '"rain"': بارش
+            '"spiral"': پیچ دار
       gamelab_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       gamelab_makeNumSprites:
@@ -1173,6 +1211,8 @@ ur:
             "'sound://category_digital/boing_2.mp3'": بوئنگ
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": پاپ
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": ٹمٹمانا
+            "'sound://category_app/app_button_1.mp3'": بٹن
+            "'sound://category_collect/clicky_crunch.mp3'": کرنچ
             "'sound://category_swish/quick_swing.mp3'": سونگ
             "'sound://category_nature/summer_night_loop.mp3'": موسم گرما کی رات
             "'sound://category_background/ocean_waves.mp3'": سمندر کے موج
@@ -1181,11 +1221,19 @@ ur:
             "'sound://category_animals/bear.mp3'": ریچھ
             "'sound://category_animals/cat.mp3'": بلی
             "'sound://category_animals/cow.mp3'": گائے
+            "'sound://category_animals/pig.mp3'": سور
             "'sound://category_animals/sheep.mp3'": بھیڑ
+            "'sound://category_animals/goat.mp3'": بکری
             "'sound://category_animals/chicken.mp3'": چکن
+            "'sound://category_animals/rooster.mp3'": مرغا
+            "'sound://category_animals/elephant.mp3'": ہاتھی
             "'sound://category_animals/dolphin.mp3'": ڈالفن
             "'sound://category_nature/thunderstorm_1.mp3'": توفانی بارش
+            "'sound://category_animals/chick.mp3'": مرغی کا بچہ
+            "'sound://category_animals/dog.mp3'": کتا
+            "'sound://category_animals/tiger.mp3'": شیر
             "'sound://category_collect/trill_stings.mp3'": باریک آواز کا گانا
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": ہارپ
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": ٹپ ٹپ
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": ٹونل
               ہٹ
@@ -1196,11 +1244,18 @@ ur:
               جہاز
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": جادو کا
               منتر
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": انتخاب کرنا
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": عجیب بیس
               آواز
             "'sound://category_digital/jump_7.mp3'": چھلانگ لگایں
       gamelab_playSpeech:
         text: کلام چلائیں {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): تیر یعنی arrow کے بٹنوں کے ساتھ
+              حرکت
+            draggable(): ڈریگگایبل ہونے کی وجہ سے
       gamelab_pointInDirection:
         text: نقطہ {SPRITE} {DIRECTION}
         options:
@@ -1223,6 +1278,8 @@ ur:
         text: سکرائٹ {SPRITE} رک جاتا ہے {BEHAVIOR}
       gamelab_removeTint:
         text: "{THIS} سے رنگ ہٹا دیں"
+      gamelab_repeatForever:
+        text: ہمیشہ کے لئے دہرائیں
       gamelab_setAnimation:
         text: تبدیل {THIS} کپڑے {ANIMATION}
       gamelab_setBackground:
@@ -1251,6 +1308,8 @@ ur:
               خانہ
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': کمرہ
               مجلس
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': سبز
+              وادی
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': پارک
               ویو
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': صنوبر
@@ -1260,7 +1319,10 @@ ur:
               افسانہ
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': فٹ
               بال کا میدان
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': سٹیج
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ستاروں
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': سب
+              وے
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': سورج
               اور قوس قزح
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': دھوپ
@@ -1269,6 +1331,8 @@ ur:
               کا میدان
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': درختوں
               کا جزیرہ
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': زیر
+              زمین
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': پانی
               کے اندر
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': سردیاں
@@ -1294,7 +1358,10 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
+            '"speed"': رفتار
       gamelab_setProp_dropdown:
         text: "{SPRITE} {PROPERTY} کو {SIZE} سیٹ کریں"
         options:
@@ -1312,6 +1379,14 @@ ur:
             '"scale"': سائز
             '"width"': چوڑائی
             '"height"': اونچائی
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': سست
+            '5': عام
+            '7': تیز
+            '9': extra fast
       gamelab_setTint:
         text: تبدیل کریں رنگ {THIS} کرنے کے لئے {COLOR}
       gamelab_setupScoreboard:
@@ -1461,6 +1536,8 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
       Mikelab_createNewSprite:
         options:
@@ -1481,6 +1558,8 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
       Mikelab_groupChangeAnim:
         text: "{SELECT} {COSTUME} کو {COSTUME2} میں تبدیل کریں"
@@ -1495,6 +1574,8 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
       Mikelab_groupCreateNewSprite:
         text: ایک نیا {COSTUME} کہلانے والا {LOCATION} پر بنائیں
@@ -1526,6 +1607,8 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
       Mikelab_groupRemoveAllBehaviors:
         text: روکیں {SELECT} {COSTUME} رویے
@@ -1550,6 +1633,8 @@ ur:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
       Mikelab_groupSetTint:
         text: کا رنگ تبدیل کریں {SELECT} {COSTUME} کرنے {COLOR}
@@ -1625,6 +1710,8 @@ ur:
         text: بے ترتیب رنگ
       Mikelab_removeBehaviorSimple:
         text: سکرائٹ {SPRITE} رک جاتا ہے {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ہمیشہ کے لئے دہرائیں
       Mikelab_sendBad:
         text: منتقل اعتراض بائیں
       Mikelab_sendGood:
@@ -1647,12 +1734,17 @@ ur:
               خانہ
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': کمرہ
               مجلس
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': سبز
+              وادی
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': پارک
               ویو
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': صنوبر
               کے درخت
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': فٹ
               بال کا میدان
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': سٹیج
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': سب
+              وے
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': سورج
               اور قوس قزح
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': دھوپ
@@ -1661,11 +1753,15 @@ ur:
               کا میدان
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': درختوں
               کا جزیرہ
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': زیر
+              زمین
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
+            '"x"': x پوزیشن
+            '"y"': y پوزیشن
             '"direction"': حرکت کی سمت
       Mikelab_setupSim:
         text: |-
@@ -1698,6 +1794,10 @@ ur:
         text: جب {KEY} کو دبایا جاتا ہے
         options:
           KEY:
+            '"up"': اوپر کا تیر
+            '"down"': نیچے تیر
+            '"left"': بائیں تیر
+            '"right"': دائیں تیر
             '"w"': مغرب
             '"a"': ایے
             '"s"': جنوب
@@ -1705,6 +1805,10 @@ ur:
       Mikelab_whenKeyReleased:
         options:
           KEY:
+            '"up"': اوپر کا تیر
+            '"down"': نیچے تیر
+            '"left"': بائیں تیر
+            '"right"': دائیں تیر
             '"w"': مغرب
             '"a"': ایے
             '"s"': جنوب
@@ -1717,6 +1821,13 @@ ur:
           KEY:
             '"yes"': جی
             '"no"': نہيں
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': اوپر کا تیر
+            '"down"': نیچے تیر
+            '"left"': بائیں تیر
+            '"right"': دائیں تیر
       Mikelab_xLocationOf:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
@@ -1725,9 +1836,14 @@ ur:
         options:
           BRUSH:
             '"brick"': اینٹ
+            '"fire"': آگ
+            '"flowers"': پھولیں
+            '"hearts"': دل
             '"iceCream"': آئس کریم
+            '"leaves"': پتے
             '"rainbow"': دھنک
             '"stars"': ستاروں
+            '"waves"': موجیں
       Poetry_addLine:
         text: لائن شامل کریں  {LINE}
       Poetry_animateText:
@@ -1742,8 +1858,10 @@ ur:
         text: "{EFFECT} بنائیں {NUM}{ANIMATION_NAME} سپرائٹس کے ساتھ ایفیکٹ"
         options:
           EFFECT:
+            '"burst"': پھوٹنا
             '"pop"': پاپ
             '"rain"': بارش
+            '"spiral"': پیچ دار
       Poetry_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       Poetry_makeNumSprites:
@@ -1754,11 +1872,15 @@ ur:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': پرسکون
             '"sound://category_nature/steady_campfire_loop.mp3"': کیمپ فائر
             '"sound://category_nature/rain_loop.mp3"': بوندا باندی
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': جنگل
             '"sound://category_loops/faultering_desicion_loop1.mp3"': آسیب زدہ
             '"sound://category_background/inside_plane.mp3"': ہم
             '"sound://category_loops/red_flag_loop1.mp3"': مشن
             '"sound://category_nature/summer_night_loop.mp3"': رات
+            '"sound://category_background/ocean_waves.mp3"': سمندر
+            '"sound://category_background/rainforest_ambient_sound.mp3"': برساتی جنگل
             '"sound://category_background/repitition.mp3"': سواری
+            '"sound://category_background/wavering_wind.mp3"': خوابیدہ
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': سست
       Poetry_playSound:
         text: پلے آواز {SOUND}
@@ -1773,6 +1895,7 @@ ur:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ناکام
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': پھڑپھڑانا
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': جست لگائیں
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': روشنی
             '"sound://category_poof/puzzle_game_poof_04.mp3"': پوف
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': اسکین
               کریں
@@ -1795,6 +1918,7 @@ ur:
             '"confetti"': کاغذی لیریاں
             '"darkCircles"': دھندلی
             '"fadeColors"': جما ہوا
+            '"hearts"': دل
             '"space"': جگہ
             '"rain"': بارش
             '"ripples"': ریپلز
@@ -1806,6 +1930,7 @@ ur:
             '"sunrise"': صبح سویرے
             '"sunset"': ڈھلتی شام
             '"grayscale"': خاکی ہوتی ہوئی
+            '"ocean"': سمندر
             '"rainbow"': دھنک
             '"roses"': گلابیں
             '"sky"': آسمانی
@@ -1833,6 +1958,7 @@ ur:
           EFFECT:
             '"bubbles"': بُلبُلے
             '"confetti"': کاغذی لیریاں
+            '"hearts"': دل
             '"emojis"': خوشی کے ایموجی
             '"rain"': بارش
             '"starburst"': اسٹاربسٹ
@@ -1862,10 +1988,14 @@ ur:
         text: متن دکھائیں
       Poetry_startBehavior:
         text: سپرائٹ {ANIMATION_NAME} شروع کرنے لگتا ہے {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': تیرنا
       Poetry_stopBehavior:
         text: سپرائٹ {ANIMATION_NAME} رک جاتا ہے {BEHAVIOR}
         options:
           BEHAVIOR:
+            '"swimming_left_and_right"': تیرنا
             '"all"': "--تمام طرز عمل--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

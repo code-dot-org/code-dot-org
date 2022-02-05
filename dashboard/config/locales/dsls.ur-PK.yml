@@ -519,6 +519,7 @@ ur-PK:
         - {}
         questions:
         - {}
+        title: عنوان
       CSD U3 Boolean MC_2018:
         answers:
         - correct: true
@@ -527,6 +528,7 @@ ur-PK:
         - {}
         questions:
         - {}
+        title: عنوان
       CSD U3 Boolean MC_2018_2019:
         answers:
         - correct: true
@@ -535,6 +537,7 @@ ur-PK:
         - {}
         questions:
         - {}
+        title: عنوان
       CSD U3 Functions Prediction define first:
         answers:
         - {}

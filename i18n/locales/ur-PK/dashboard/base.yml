@@ -38,6 +38,7 @@ ur:
   submit: جمع کرائیں
   next_page: اگلا صفحہ
   cancel: "منسوخ کریں"
+  okay: "اوکے"
   or: "یا"
   add_hint_form:
     placeholder: 'براے مہربانی اپنا اشارہ یہاں enter کریں'
@@ -229,6 +230,15 @@ ur:
       audience: "عمر 14+"
   landing:
     help_support: "مدد اور معاونت"
+  multi-submittable:
+    wrong_title: "آپکا شکریہ"
+    correct_title: "آپکا شکریہ"
+  level_group:
+    wrong_title: "آپکا شکریہ"
+    correct_title: "آپکا شکریہ"
+  level_group-submittable:
+    wrong_title: "آپکا شکریہ"
+    correct_title: "آپکا شکریہ"
   dialog:
     ok: "ٹھیک ہے"
     startover_title: "کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟"

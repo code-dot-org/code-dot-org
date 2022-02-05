@@ -3,6 +3,7 @@ ur:
   data:
     script:
       category:
+        csf_category_name: CS کے بنیادی اصول
         hoc_category_name: آور-آف-کوڈ
         math_category_name: ریاضی
         other_category_name: دیگر
@@ -110,6 +111,10 @@ ur:
           lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+        K5-OnlinePD:
+          lessons:
+            Computer Science Fundamentals:
+              name: کمپیوٹر سائنس کے بنیادی اصول
         algebraPD2:
           lessons:
             Teacher Dashboard:
@@ -118,6 +123,8 @@ ur:
           description_audience: Ages 6-13
         afterschool1:
           description_audience: Ages 7-13
+        cspunit4draft:
+          description_short: ڈیٹا
         Special Fun:
           description_audience: Ages 10-18
         SpecialSeries:
@@ -199,6 +206,8 @@ ur:
           lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+        CSDU5-Draft:
+          description_short: ڈیٹا
         CSF_Secret_Sample_Story:
           description_audience: Ages 8-18+
         MikeTest:
@@ -503,6 +512,8 @@ ur:
           lesson_groups:
             csf_variables:
               display_name: متغیرات
+            csf_data:
+              display_name: ڈیٹا
           lessons:
             Loops in Artist:
               name: Artist میں لوپس
@@ -554,6 +565,8 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
           lessons:
             Loops in Artist:
               name: Artist میں لوپس
@@ -681,6 +694,8 @@ ur:
               description_teacher: اس سبق میں، ہر عمر کے سیکھنے والوں کو ایک محفوظ، معاون ماحول میں کوڈنگ اور کمپیوٹر سائنس کے ساتھ تعارفی تجربہ ملتا ہے۔ یہ سبق ہر عمر کے سیکھنے والوں کے لیے ڈیزائن کیا گیا ہے لیکن اسے میں پڑھنے کی ضرورت ہوتی ہے۔ اس سرگرمی کے لیے آواز کی ضرورت ہوتی ہے کیونکہ یہ ٹول موسیقی کا جواب دینے کے لیے بنایا گیا تھا۔
         k5-onlinepd-2019:
           lessons:
+            Computer Science Fundamentals:
+              name: کمپیوٹر سائنس کے بنیادی اصول
             Loops:
               name: لوپس
             Conditionals:
@@ -764,6 +779,8 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -782,6 +799,8 @@ ur:
           lesson_groups:
             csf_variables:
               display_name: متغیرات
+            csf_data:
+              display_name: ڈیٹا
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
@@ -807,6 +826,10 @@ ur:
           lessons:
             Loops in Artist:
               name: Artist میں لوپس
+        jess-test-script:
+          lessons:
+            Tools:
+              name: اوزار
         csp5-virtual:
           lessons:
             Variables:
@@ -859,6 +882,8 @@ ur:
               name: کورس E
             Course F:
               name: کورس F
+            csf:
+              name: CS کے بنیادی اصول
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
@@ -936,6 +961,8 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
         coursed-2021:
           title: کورس D (2021)
           lessons:
@@ -1129,6 +1156,11 @@ ur:
           lessons:
             lesson-9:
               name: شروعات کرنا 1
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: کمپیوٹر سائنس کے بنیادی اصول
+              name: کمپیوٹر سائنس کے بنیادی اصول
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
@@ -1141,6 +1173,8 @@ ur:
               description: آزمانا
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: اوزار
             lesson-17:
               name: کنسول
           lesson_groups:
@@ -1521,6 +1555,9 @@ ur:
               name: ہیلو ورلڈ
           name: hello-world-food
         csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: اوزار
           lesson_groups:
             lessonGroup-4:
               display_name: ڈیمو اور وسائل
@@ -1577,6 +1614,9 @@ ur:
           description_audience: سپرائٹ لیب کے وسطی/ترقی یافتہ صارفین
           description_short: سپرائٹ لیب استعمال کرتے ہوئے اپنے سپرائٹ بنانے کا چیلنج قبول کریں!
         csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: اوزار
           lesson_groups:
             lessonGroup-2:
               display_name: ڈیمو اور وسائل
@@ -1874,6 +1914,13 @@ ur:
           lessons:
             lesson-4:
               name: وباء کا سیمیولیٹر
+          lesson_groups:
+            lessonGroup-8:
+              display_name: آور-آف-کوڈ
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرات
         csa7-pilot-facilitator:
           lessons:
             lesson-10:
@@ -1948,3 +1995,142 @@ ur:
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
+        coursea-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        express-2022:
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-1:
+              key: سبق 1
+              name: ڈانس پارٹی
+            lesson-4:
+              key: سبق 4
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        courseb-2022:
+          lessons:
+            Loops in Artist:
+              key: Artist میں لوپس
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursec-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: سبق 4
+        csp9-2022:
+          lessons:
+            lesson-10:
+              key: سبق 10
+        coursed-2022:
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+              key: ڈانس پارٹی
+            lesson-5:
+              key: سبق 5
+            Loops in Artist:
+              key: Artist میں لوپس
+            lesson-6:
+              key: سبق 6
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+          title: کورس D (2021)
+        coursee-2022:
+          lessons:
+            lesson-4:
+              key: سبق 4
+            Conditionals:
+              key: شرائط
+            lesson-1:
+              key: سبق 1
+            'Hello World: Food':
+              name: ہیلو ورلڈ
+          lesson_groups:
+            csf_nested_loops:
+              display_name: شرائط
+        coursef-2022:
+          lessons:
+            Outbreak:
+              name: وباء کا پھیلنا
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-2:
+              key: سبق 2
+            lesson-9:
+              key: سبق 9
+            lesson-10:
+              key: سبق 10
+            lesson-11:
+              key: سبق 11
+            lesson-5:
+              key: سبق 5
+          lesson_groups:
+            lessonGroup-8:
+              display_name: متغیرات
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: شرائط
+            lesson-17:
+              name: پروجیکٹ انسپائریشن
