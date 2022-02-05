@@ -239,8 +239,8 @@ bg:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Използвай блокове с код, за да отведеш Стив
     или Алекс на приключение в този свят на Minecraft.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -986,6 +986,7 @@ bg:
   footer_menu_support: Поддръжка
   footer_menu_terms: Условия
   footer_menu_privacy: Декларация за поверителност
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Пробвайте едночасов урок за всички възрасти на повече от 45
     езика.  Присъединете се към милиони ученици и учители в над 180 страни, като започнете

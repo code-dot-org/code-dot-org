@@ -36,7 +36,7 @@ Algunos consejos:
 - [Directrices de marca registrada](#design)
 - [Pixel de seguimiento](#tm)
 - [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Promociona tu actividad, Semana de la Educación en Informática (CSEdWeek) y La Hora del Código](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -105,7 +105,7 @@ Qué necesitas:
 * Nombre de la actividad (no puede incluir "Hora del Código" en el nombre)
 * URL para la actividad
 * Descripciones de la actividad 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. Si la actividad aborda estándares específicos, considera incluir esta información.
+    * Por favor, incluye en la descripción si es principalmente una actividad dirigida por el estudiante o por el profesor. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. Si la actividad aborda estándares específicos, considera incluir esta información.
 * Niveles de grado recomendados para los usuarios previstos. Puedes consultar \[los estándares K-12 de la Computer Science Teachers’ Association\] (https://k12cs.org/framework-statements-by-grade-band/) para ver los conceptos de las ciencias de la computación adecuados para cada grado. Algunos ejemplos de niveles de grado: 
     * Jardín de infantes - Grado 1 (4 a 6 años)
     * Grados 2-5 (7 a 10 años)
@@ -119,12 +119,12 @@ Qué necesitas:
     * 1 hora solamente
     * 1 hora con curso de seguimiento
     * 2 a 6 horas (pueden ser varias lecciones)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Una lista de adaptaciones de accesibilidad, si su actividad las tiene. Entre ellas se encuentran la compatibilidad con lectores de pantalla, las funciones de conversión de texto a voz, el uso de colores de alto contraste o cualquier otra adaptación realizada para alumnos con discapacidad.
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* Enlace a tu plan de lecciones. Puede ser una página web, un enlace a dropbox, google drive u otro servicio similar. Nothing?)
+* Enlace a tu plan de estudios. Puede ser una página web, un enlace de Dropbox, Google Drive o un servicio similar. 
+* ¿Qué software y/o hardware necesitará el profesor para realizar su plan de estudios (Scratch? ¿Robots? ¿Ninguno?)
 
 #### Otras cosas que necesitarás cuando envíes actividades en línea
 
@@ -139,14 +139,14 @@ Qué necesitas:
         * Android Chrome (optimizado para dispositivos móviles)
     * Sin conexión: especificar la plataforma para el código nativo (Mac, Win, iOS, Android, xBox, otra)
     * Sin conexión
-* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png. Todas las imágenes deben ser enviadas como un enlace URL a un .jpg, .jpeg o .png.
 * Para poder realizar un seguimiento más preciso de la participación, los tutoriales de la Hora del Código de los socios deben incluir imágenes de seguimiento de 1 pixel en la primera página. Coloca una imagen de pixel inicial en la página de inicio.
 * Una vez que finalizan tu actividad, los usuarios serán dirigidos a [code.org/api/hour/finish](https://code.org/api/hour/finish), donde podrán: 
     * Decir en las redes sociales que han completado la Hora del Código
     * Recibir un certificado que dice que completaron la Hora del Código
     * Ver tablas con los países y ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
     * Para los usuarios que pasan una hora en tu actividad y no la completan, incluye un botón que diga "Terminé mi Hora del Código" y que también lleve a <http://code.org/api/hour/finish>.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
+* (Opcional) Podemos hacer un seguimiento con un enlace a una encuesta/formulario en línea solicitando un informe de las siguientes métricas de actividad: 
     * Para actividades en línea (especialmente aplicaciones para smartphones y tablets): 
         * Número de usuarios
         * Cuántos completaron la tarea
@@ -293,4 +293,4 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 [**Volver al principio**](#top)
 
-{{ signup_button }}
+{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
