@@ -2236,6 +2236,46 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'should raise error if participant audience is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.participant_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Participant audience must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if instructor audience is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.instructor_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instructor audience must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if published state is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.published_state = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Published state must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if instruction type is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.instruction_type = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
+  end
+
   private
 
   def has_unlaunched_unit?(units)
