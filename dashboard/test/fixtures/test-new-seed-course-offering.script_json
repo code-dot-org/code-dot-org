@@ -10,10 +10,6 @@
     },
     "new_name": null,
     "family_name": "xyz",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "test-new-seed-course-offering"
     }

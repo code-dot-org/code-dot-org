@@ -9,10 +9,6 @@
     },
     "new_name": null,
     "family_name": null,
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "test-migrated-models"
     }
