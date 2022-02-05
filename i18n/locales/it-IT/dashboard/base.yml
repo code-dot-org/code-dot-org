@@ -1120,3 +1120,4 @@ it:
     this_sprite: "questo personaggio"
   unit_prefix: "Unità %{n}"
   code_org_logo_alt: "Code.org Home"
+  teacher_feedback: "Commento dell'insegnante"
