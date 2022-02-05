@@ -185,6 +185,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit_group)
     refute ability.can?(:read, @in_development_unit_group)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test "as student" do
@@ -295,6 +297,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit_group)
     refute ability.can?(:read, @in_development_unit_group)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test "as plc reviewer" do
@@ -373,6 +377,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit_group)
     refute ability.can?(:read, @in_development_unit_group)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test "as admin" do
@@ -414,6 +420,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.cannot?(:read, @public_teacher_to_student_unit_group)
     assert ability.cannot?(:read, @in_development_unit_group)
+
+    refute ability.can?(:read, CourseOffering)
   end
 
   test "as levelbuilder" do
@@ -526,6 +534,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Lesson)
     assert ability.can?(:manage, ScriptLevel)
     assert ability.can?(:manage, UnitGroup)
+    assert ability.can?(:manage, CourseOffering)
   end
 
   test 'teachers can manage feedback for students in a section they own' do

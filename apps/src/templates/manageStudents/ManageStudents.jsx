@@ -41,7 +41,7 @@ export const UnconnectedManageStudents = ManageStudents;
 
 export default connect(
   state => ({
-    sectionId: state.sectionData.section.id,
+    sectionId: state.teacherSections.selectedSectionId,
     isLoadingStudents: state.manageStudents.isLoadingStudents
   }),
   dispatch => ({

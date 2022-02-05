@@ -118,8 +118,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "blockly_options 'level.isLastLevelInLesson' is false if script level is not the last level in the lesson" do
     @level = create :applab
     @lesson = create :lesson
-    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 1
-    create :script_level, lesson: @lesson, position: 2
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, chapter: 1, position: 1
+    create :script_level, lesson: @lesson, chapter: 2, position: 2
 
     options = blockly_options
 
@@ -129,8 +129,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "blockly_options 'level.isLastLevelInLesson' is true if script level is the last level in the lesson" do
     @level = create :applab
     @lesson = create :lesson
-    create :script_level, lesson: @lesson, position: 1
-    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 2
+    create :script_level, lesson: @lesson, position: 1, chapter: 1
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 2, chapter: 2
 
     options = blockly_options
 

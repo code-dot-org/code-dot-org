@@ -14,7 +14,8 @@
   -country_total = "0" if country_total == ""
   = succeed "." do
     = events_text + ","
-    = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
+    -# TODO - FND-1894: Removed `gsub` usage
+    = hoc_s(:map_header_country, locals: {country_total: country_total, country: country_full_name}).gsub('#', format_integer_with_commas(country_total))
 -else
   = succeed "." do
     = events_text
