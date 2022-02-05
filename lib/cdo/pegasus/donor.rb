@@ -42,4 +42,9 @@ class CdoDonor
       error_message: donor ? "Donor returned nil for weight #{weight}" : "Twitter handle was nil for donor #{donor}"
     )
   end
+
+  def self.get_random_donor_by_weight
+    weight = SecureRandom.random_number
+    DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
+  end
 end
