@@ -239,7 +239,8 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil)
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false)
+        unit.course_version.destroy if unit.course_version
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -721,15 +722,5 @@ class UnitGroup < ApplicationRecord
       student_resources.any? ||
       default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
-  end
-
-  # Look through all of the objects with the specified family name which have
-  # a stable published_state, and return the one with the latest version year.
-  def self.latest_stable(family_name)
-    raise unless family_name.present?
-    all_courses.
-      select {|c| c.family_name == family_name && c.stable?}.
-      sort_by(&:version_year).
-      last
   end
 end
