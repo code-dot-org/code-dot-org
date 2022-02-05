@@ -81,7 +81,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Sensors Practice",
+    "long_instructions": "# Volume Meter\r\n\r\nThis app simulates a \"Volume Meter\" that displays how loud or quiet your environment is. It uses a button that changes height to react to the sound in the room - the louder the sound, the taller the button. The button itself and the background should also react based on the volume in the room - if it is too loud, the app gives a warning by changing colors.\r\n\r\n## Do This\r\n\r\n- Add a [`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/) block to set the range of values from 30-400\r\n- Add an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the `soundSensor` has `data`\r\n- Inside the [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block:\r\n\t- Use [`setProperty()`(#fff176)](/docs/applab/setProperty/) to update the height of the button to the value of the `soundSensor`\r\n    - Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to detect if the sound sensor is greater than 200. If it is:\r\n    \t- Update the color of the volume button to red\r\n        - Update the background color of the screen to black\r\n    - Use another [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to detect if the sound sensor is less than 200. If it is:\r\n    \t- Update the color of the volume button to blue\r\n        - Update the background color of the screen to white\r\n\r\n**Run The App!** As you speak or make noise near the circuit playground, the app should react in real time!",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
@@ -99,7 +99,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"volumeButton\" style=\"padding: 0px; margin: 0px; width: 275px; font-size: 23px; color: rgb(255, 255, 255); background-color: rgb(23, 0, 255); position: absolute; left: 20px; top: 5px; height: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">Volume Meter!</button></div></div>"
   },
   "game_id": 41,
   "published": true,
@@ -107,7 +108,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-19T18:28:43.325+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PC_2022\"},{\"changed_at\":\"2022-01-19 18:28:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-19T18:28:43.325+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PC_2022\"},{\"changed_at\":\"2022-01-19 18:28:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:01:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:02:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
