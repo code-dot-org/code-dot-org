@@ -49,6 +49,6 @@ class CdoDonor
   end
 
   def self.all_donors
-    @@all_donors ||= DB[:cdo_donors].all
+    @@all_donors ||= PEGASUS_DB[:cdo_donors].all
   end
 end
