@@ -4,6 +4,10 @@
 require 'honeybadger/ruby'
 require 'rmagick'
 require_relative '../script_constants'
+require 'cdo/pegasus/donor'
+
+# needed for force_8859_to_utf8
+require 'cdo/pegasus/string'
 
 # The area in pixels under the "Certificate of Completion" on the certificate reserved for the name.
 CERT_NAME_AREA_WIDTH = 900
