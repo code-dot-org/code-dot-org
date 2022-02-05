@@ -530,8 +530,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
-    # Must be part of instructor or participant audience to view version
-    return false unless can_be_participant?(user) || can_be_instructor?(user)
+    return false unless Ability.new(user).can?(:read, self)
 
     latest_course_version = UnitGroup.latest_stable_version(family_name)
     is_latest = latest_course_version == self
@@ -541,7 +540,7 @@ class UnitGroup < ApplicationRecord
 
     # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    return true unless can_be_participant?(user)
+    return true if can_be_instructor?(user)
 
     # A student can view the course version if they are assigned to it or they have progress in it.
     user.section_courses.include?(self) || has_progress?(user)
