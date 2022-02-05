@@ -1,6 +1,5 @@
-require_relative '../../lib/cdo/graphics/certificate_image'
-require_relative 'fixtures/mock_pegasus'
-require 'minitest/autorun'
+require_relative '../../test_helper'
+require 'cdo/graphics/certificate_image'
 
 class CertificateImageTest < Minitest::Test
   def test_special_template_courses
