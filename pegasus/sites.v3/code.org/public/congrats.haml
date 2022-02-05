@@ -29,7 +29,7 @@ max_age: 60
   end
 
   facebook = {:u=>share_url}
-  twitter_message = I18n.t('just_did_hoc_donor', donor_twitter: get_random_donor_twitter)
+  twitter_message = I18n.t('just_did_hoc_donor', donor_twitter: CdoDonor.get_random_donor_twitter)
   twitter = {:url=>share_url, :related=>'codeorg', :text=>twitter_message}
   twitter[:hashtags] = 'HourOfCode' unless twitter_message.include? '#HourOfCode'
 
