@@ -32,7 +32,7 @@ class CdoDonor
   # @return [Array] a donor record and the random weight used to find that record
   def self.get_random_donor_by_twitter_weight
     weight = SecureRandom.random_number
-    donor = DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
+    donor = all_donors.find {|d| d[:twitter_weight_f] - weight >= 0}
     [donor, weight]
   end
 
@@ -45,6 +45,10 @@ class CdoDonor
 
   def self.get_random_donor_by_weight
     weight = SecureRandom.random_number
-    DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
+    all_donors.find {|d| d[:weight_f] - weight >= 0}
+  end
+
+  def self.all_donors
+    @@all_donors ||= DB[:cdo_donors].all
   end
 end
