@@ -718,8 +718,8 @@ ActiveRecord::Schema.define(version: 2022_02_03_122150) do
     t.string "type"
     t.string "md5"
     t.boolean "published", default: false, null: false
-    t.text "notes"
-    t.text "audit_log"
+    t.text "notes", limit: 16777215
+    t.text "audit_log", limit: 16777215
     t.index ["game_id"], name: "index_levels_on_game_id"
     t.index ["level_num"], name: "index_levels_on_level_num"
     t.index ["name"], name: "index_levels_on_name"
