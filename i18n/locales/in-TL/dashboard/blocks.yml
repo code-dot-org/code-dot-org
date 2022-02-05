@@ -373,6 +373,8 @@ in:
             '"right"': crwdns2657566:0crwdne2657566:0
             '"x"': crwdns2657568:0crwdne2657568:0
             '"plus"': crwdns2657570:0crwdne2657570:0
+            '"spiral"': crwdns2862429:0crwdne2862429:0
+            '"infinity"': crwdns2862431:0crwdne2862431:0
             '"random"': crwdns2657572:0crwdne2657572:0
       Dancelab_makeAnonymousDanceSprite:
         text: crwdns2063134:0[COSTUME]crwdnd2063134:0[0]crwdnd2063134:0[LOCATION]crwdnd2063134:0[1]crwdne2063134:0
@@ -478,6 +480,8 @@ in:
             '"right"': crwdns2657666:0crwdne2657666:0
             '"x"': crwdns2657668:0crwdne2657668:0
             '"plus"': crwdns2657670:0crwdne2657670:0
+            '"spiral"': crwdns2862433:0crwdne2862433:0
+            '"infinity"': crwdns2862435:0crwdne2862435:0
             '"random"': crwdns2657672:0crwdne2657672:0
       Dancelab_mixColors:
         text: crwdns168900:0[COLOR1]crwdnd168900:0[0]crwdnd168900:0[COLOR2]crwdnd168900:0[1]crwdne168900:0
@@ -539,6 +543,7 @@ in:
             '"fireworks"': crwdns2657744:0crwdne2657744:0
             '"flowers"': crwdns2657746:0crwdne2657746:0
             '"growing_stars"': crwdns2657748:0crwdne2657748:0
+            '"higher_power"': crwdns2862437:0crwdne2862437:0
             '"swirl"': crwdns2657750:0crwdne2657750:0
             '"kaleidoscope"': crwdns2657752:0crwdne2657752:0
             '"lasers"': crwdns2657754:0crwdne2657754:0
@@ -1005,6 +1010,8 @@ in:
             '"y"': crwdns2658386:0crwdne2658386:0
             '"direction"': crwdns2658388:0crwdne2658388:0
             '"speed"': crwdns2658390:0crwdne2658390:0
+      gamelab_changeVarBy:
+        text: crwdns2859061:0[VARIABLE]crwdnd2859061:0[0]crwdnd2859061:0[VAL]crwdnd2859061:0[1]crwdne2859061:0
       gamelab_checkTouching:
         text: crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0
         options:
@@ -1015,6 +1022,21 @@ in:
         text: crwdns169029:0[SPRITE]crwdnd169029:0[0]crwdne169029:0
       gamelab_clickedSpritePointer:
         text: crwdns774668:0[SPRITE]crwdnd774668:0[0]crwdne774668:0
+      gamelab_collectibleBehaviors:
+        text: crwdns2862439:0[BEHAVIOR]crwdnd2862439:0[0]crwdne2862439:0
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): crwdns2862441:0crwdne2862441:0
+            new Behavior(spinning_left, []): crwdns2862443:0crwdne2862443:0
+            new Behavior(fluttering, []): crwdns2862445:0crwdne2862445:0
+            new Behavior(jittering, []): crwdns2862447:0crwdne2862447:0
+            new Behavior(wobbling, []): crwdns2862449:0crwdne2862449:0
+            new Behavior(wandering, []): crwdns2862451:0crwdne2862451:0
+            new Behavior(patrolling, []): crwdns2862453:0crwdne2862453:0
+            new Behavior(moving_west_and_looping, []): crwdns2862455:0crwdne2862455:0
+            new Behavior(moving_east_and_looping, []): crwdns2862457:0crwdne2862457:0
+            new Behavior(moving_north_and_looping, []): crwdns2862459:0crwdne2862459:0
+            new Behavior(moving_south_and_looping, []): crwdns2862461:0crwdne2862461:0
       gamelab_comment:
         text: crwdns169030:0[COMMENT]crwdnd169030:0[0]crwdne169030:0
       gamelab_costumeImage:
@@ -1064,6 +1086,20 @@ in:
         text: crwdns169053:0crwdne169053:0
       gamelab_ifVarEquals:
         text: crwdns2471710:0[NUM]crwdnd2471710:0[0]crwdnd2471710:0[VAL]crwdnd2471710:0[1]crwdnd2471710:0[STATEMENT]crwdnd2471710:0[2]crwdne2471710:0
+      gamelab_int10:
+        text: crwdns2862463:0[VALUE]crwdnd2862463:0[0]crwdne2862463:0
+        options:
+          VALUE:
+            '1': crwdns2862465:0crwdne2862465:0
+            '2': crwdns2862467:0crwdne2862467:0
+            '3': crwdns2862469:0crwdne2862469:0
+            '4': crwdns2862471:0crwdne2862471:0
+            '5': crwdns2862473:0crwdne2862473:0
+            '6': crwdns2862475:0crwdne2862475:0
+            '7': crwdns2862477:0crwdne2862477:0
+            '8': crwdns2862479:0crwdne2862479:0
+            '9': crwdns2862481:0crwdne2862481:0
+            '10': crwdns2862483:0crwdne2862483:0
       gamelab_isCostumeEqual:
         text: crwdns2471712:0[SPRITE]crwdnd2471712:0[0]crwdnd2471712:0[COSTUME]crwdnd2471712:0[1]crwdne2471712:0
       gamelab_isKeyPressed:
@@ -1253,6 +1289,13 @@ in:
             "'sound://category_digital/jump_7.mp3'": crwdns2693825:0crwdne2693825:0
       gamelab_playSpeech:
         text: crwdns2692843:0[SOUND]crwdnd2692843:0[0]crwdne2692843:0
+      gamelab_playerBehaviors:
+        text: crwdns2862485:0[BEHAVIOR]crwdnd2862485:0[0]crwdne2862485:0
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): crwdns2862487:0crwdne2862487:0
+            new Behavior(driving_with_arrow_keys, []): crwdns2862489:0crwdne2862489:0
+            draggable(): crwdns2862491:0crwdne2862491:0
       gamelab_pointInDirection:
         text: crwdns169102:0[SPRITE]crwdnd169102:0[0]crwdnd169102:0[DIRECTION]crwdnd169102:0[1]crwdne169102:0
         options:
@@ -1277,6 +1320,8 @@ in:
         text: crwdns169113:0[THIS]crwdnd169113:0[0]crwdne169113:0
       gamelab_repeatForever:
         text: crwdns2471714:0crwdne2471714:0
+      gamelab_resetTimer:
+        text: crwdns2864055:0crwdne2864055:0
       gamelab_setAnimation:
         text: crwdns169115:0[THIS]crwdnd169115:0[0]crwdnd169115:0[ANIMATION]crwdnd169115:0[1]crwdne169115:0
       gamelab_setBackground:
@@ -1356,6 +1401,15 @@ in:
             '"scale"': crwdns2658646:0crwdne2658646:0
             '"width"': crwdns2658648:0crwdne2658648:0
             '"height"': crwdns2658650:0crwdne2658650:0
+      gamelab_setSpeed_dropdown:
+        text: crwdns2865698:0[SPRITE]crwdnd2865698:0[0]crwdnd2865698:0[SIZE]crwdnd2865698:0[1]crwdne2865698:0
+        options:
+          SIZE:
+            '1': crwdns2865700:0crwdne2865700:0
+            '3': crwdns2865702:0crwdne2865702:0
+            '5': crwdns2865704:0crwdne2865704:0
+            '7': crwdns2865706:0crwdne2865706:0
+            '9': crwdns2865708:0crwdne2865708:0
       gamelab_setTint:
         text: crwdns169141:0[THIS]crwdnd169141:0[0]crwdnd169141:0[COLOR]crwdnd169141:0[1]crwdne169141:0
       gamelab_setupScoreboard:
