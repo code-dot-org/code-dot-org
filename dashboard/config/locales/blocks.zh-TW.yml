@@ -1011,7 +1011,21 @@ zh-TW:
       gamelab_clickedOn:
         text: 當角色 {SPRITE} 被點擊
       gamelab_clickedSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋轉
+            new Behavior(spinning_left, []): 向左旋轉
+            new Behavior(fluttering, []): 飄移
+            new Behavior(jittering, []): 抖動
+            new Behavior(wobbling, []): 搖晃
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡邏
+            new Behavior(moving_west_and_looping, []): 向西移動並循環
+            new Behavior(moving_east_and_looping, []): 向東移動並循環
+            new Behavior(moving_north_and_looping, []): 向北移動並迴圈
+            new Behavior(moving_south_and_looping, []): 向南移動並迴圈
       gamelab_comment:
         text: 註解：{COMMENT}
       gamelab_costumeImage:
@@ -1065,6 +1079,19 @@ zh-TW:
         text: |-
           如果{NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}服裝是{COSTUME}"
       gamelab_isKeyPressed:
@@ -1203,7 +1230,7 @@ zh-TW:
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
       gamelab_newSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
       gamelab_patrollingUpDown:
@@ -1247,6 +1274,12 @@ zh-TW:
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_playSpeech:
         text: 游戲言語{SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 使用方向鍵移動
+            new Behavior(driving_with_arrow_keys, []): 用方向鍵駕駛
+            draggable(): 可拖曳
       gamelab_pointInDirection:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 度
         options:
@@ -1350,6 +1383,14 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': 慢
+            '5': 普通
+            '7': 快
+            '9': extra fast
       gamelab_setTint:
         text: 角色 {THIS} 顏色設為 {COLOR}
       gamelab_setupScoreboard:
@@ -1388,7 +1429,7 @@ zh-TW:
       gamelab_stopGliding:
         text: "{SPRITE}停止滑動"
       gamelab_subjectSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
