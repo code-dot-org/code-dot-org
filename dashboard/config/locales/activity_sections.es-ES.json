@@ -51,7 +51,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "499c1123-e663-43e7-b573-a59ffd946fc4": {
@@ -102,7 +102,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
@@ -129,7 +129,7 @@
           ]
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
-          "name": "Minecraft: Viaje del héroe",
+          "name": "Minecraft: El Viaje del Héroe",
           "description": "Desafía a tus alumnos a completar el tutorial de [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de sus alumnos, puede considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
@@ -141,7 +141,7 @@
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
-          "progression_name": "Minecraft: Viaje del héroe"
+          "progression_name": "Minecraft: El Viaje del Héroe"
         },
         "ae17edd9-ad82-47dc-95f5-368b58084998": {
           "name": "Informe",
@@ -152,7 +152,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
@@ -209,7 +209,7 @@
           "progression_name": "Desarrollo de Habilidades"
         },
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
-          "description": "**Nivel 9:** Anima a los alumnos a leer todos los poemas del menú desplegable para encontrar uno que les guste. Dile a los estudiantes que pueden compartir lo que hacen en este último nivel con sus amigos y familiares. ¡Ahora es el momento de poner en común todas las habilidades de codificación y la lengua inglesa! ",
+          "description": "**Nivel 9:** Anima a los alumnos a leer todos los poemas del menú desplegable para encontrar uno que les guste. Comenta a los alumnos que pueden compartir lo que hacen en este último nivel con sus amigos y familiares. ¡Ahora es el momento de poner en común todas las habilidades de codificación y la lengua inglesa! ",
           "progression_name": "Juego libre"
         },
         "a93e96cb-27d2-4d92-8321-57accd5addde": {
@@ -254,7 +254,7 @@
           "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "5d6f31b4-6919-4b24-b4c3-2c93d827aa52": {
@@ -302,7 +302,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
@@ -357,7 +357,7 @@
           "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "144b447f-1c5d-413b-a08c-65dda905a706": {
@@ -400,7 +400,7 @@
           "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "6d1e12d2-9d95-4b3d-b7cc-3fee11148439": {
@@ -501,7 +501,7 @@
           "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
@@ -591,7 +591,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "0600e9df-03bd-4d61-9876-7516a87c2d30": {
@@ -663,7 +663,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
@@ -823,7 +823,7 @@
           "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
@@ -872,7 +872,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
@@ -912,7 +912,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "513a07e1-551a-45d3-bd35-7e1de49293a2": {
@@ -1016,7 +1016,7 @@
           "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
@@ -1072,6 +1072,46 @@
         },
         "17878891-5c24-412b-b385-35b54fdaeb11": {
           "description": "**Mundo Real: Compresión Zip**\n\n-   Experimenta con la compresión utilizando archivos de texto con diferentes contenidos.  ¿Son los resultados para los archivos pequeños tan buenos como para los grandes? (En los Macs, en el Finder elije \"obtener información\" de un archivo para ver el número real de bytes totales en el archivo, ya que la pantalla del Finder mostrará 4KB para cualquier archivo que sea menor que eso).  \n-   Advertencia: los resultados pueden variar.  Zip funciona muy bien para el texto, pero puede que no comprima muy bien otros archivos porque ya están comprimidos o no tienen los mismos tipos de patrones incrustados que los documentos de texto.\n\n**Desafío:  Investigar el algoritmo LZW**\n\n-   La compresión .zip se basa en el Esquema de Compresión [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch).\n\n-   Si bien la idea detrás de la herramienta de compresión de texto es similar al algoritmo LZW (zip), rastrear el camino de la compresión y la descompresión es algo desafiante.  Aprender más sobre LZW y lo que ocurre en el curso de este algoritmo sería un excelente proyecto de extensión para algunas personas."
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introducción",
+          "description": "**Debatir:**\n\n-   ¿Qué sabemos sobre cómo se propaga un virus?\n-   ¿Qué puede hacer que un virus se propague más rápidamente por una ciudad?\n-   ¿Qué puede ayudar a frenar la propagación de un virus?\n\nEl objetivo de este debate es que los alumnos tengan la oportunidad de activar sus conocimientos previos y ver sus ideas en la pizarra. También es una oportunidad para investigar algunos conceptos erróneos sobre cómo se propagan los virus."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Brote",
+          "description": "_En la lección de hoy, vas a ir a \"Monster Town\", donde está a punto de producirse un brote de virus. El Dr. Monstruo necesita tu ayuda para frenar la propagación del virus._\n\n_Crearás una simulación de brote en el Laboratorio de Sprite y la utilizarás para entender cómo puede propagarse un virus. ¡También ayudarás a todos los monstruos a recuperar la salud!_",
+          "progression_name": "Brote"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Hacer esto:** Leer _Bienvenidos a Monster Town_ en grupo.",
+          "progression_name": "Bienvenido a Monster Town"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Hacer esto:** Repasar el vocabulario, **modelos y simulaciones** con los alumnos, basándose en la lección anterior. Una simulación es un modelo informático de un proceso o sistema."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Hoy, vamos a hacer que un lugar como Monster Town cobre vida escribiendo algo de código. En esta simulación, vas a utilizar sprites para representar a los diferentes monstruos. Los sprites tendrán diferentes disfraces para indicarnos cosas como si están enfermos o sanos. También utilizarás comportamientos para que los monstruos se muevan. Finalmente, usarás eventos para cambiar el disfraz de un sprite cuando dos sprites se toquen en esta pantalla. Esto representará que un monstruo le pasa el virus a otro. ¡Harás predicciones sobre lo que les ocurrirá a los vecinos de Monster Town, y les ayudarás a recuperar la salud!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Haz esto:** Lleva a los estudiantes a sus ordenadores y haz que empiecen a seguir las instrucciones de cada nivel en la sección de desarrollo de habilidades. Si los estudiantes terminan esta sección antes de tiempo, pueden seguir experimentando con su código en el nivel 6 hasta que la clase esté lista para continuar.",
+          "progression_name": "Desarrollo de Habilidades"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Haz esto:** Lleva a los alumnos de vuelta a sus ordenadores y haz que trabajen en los niveles restantes. Algunos de estos niveles ofrecen desafíos opcionales. Anima a los alumnos a leer las instrucciones con atención y a experimentar con sus simulaciones.",
+          "progression_name": "Miniproyecto: Simulador de Brotes"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Juego libre"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas, a predecir cómo resolver el problema y a probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría ser un brote de virus en Monster Town._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Comentar:**\n\n-   ¿Cómo pueden ser útiles las simulaciones en el mundo real? \n-   ¿Cómo pueden las simulaciones ayudarnos a entender el mundo que nos rodea? \n-   ¿Cómo pueden las simulaciones mejorar la forma en que probamos las ideas? \n\nEl objetivo del debate es que los alumnos comprendan que las simulaciones son una forma de modelar sistemas complejos de manera interactiva. También deben ver cómo las simulaciones permiten probar ideas de forma rápida, barata y segura. "
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflexión",
+          "description": "**Preguntas:**\n\n-   ¿En qué se parece esta simulación al mundo real? ¿En qué se diferencia?\n-   ¿Qué te gustaría cambiar o añadir a tu simulación?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introducción",
@@ -1151,7 +1191,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "2742e426-46e4-46d9-8e04-314c3469f15e": {
@@ -1269,7 +1309,7 @@
           "description": "#### Hazte Viral\n\nLa Hora del Código se basa en la creatividad, ¡y estamos deseando ver lo que habéis creado! Por favor, comparte las creaciones, fotos y vídeos de los alumnos en las redes sociales. Profesores, grabad a vuestra clase codificando un baile, o practicando el baile. Haz que tu vídeo sea especial añadiendo un [clip final](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nAsegúrate de incluir #HourOfCode y etiquetarnos en Facebook, Twitter e Instagram.  Puntos extra por etiquetar al artista cuya música han utilizado tus alumnos. Code.org volverá a compartir nuestras publicaciones favoritas con nuestros millones de seguidores. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Por supuesto, asegúrate de respetar la política de redes sociales de tu centro educativo._"
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Comunica a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](http://code.org/learn) para ver una lista de opciones o, si estás planeando alguna de las otras actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
@@ -1354,7 +1394,7 @@
           "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
-          "name": "Próximos pasos",
+          "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "5a2bbf38-69c3-49c0-88ff-4f220565fb53": {
@@ -1369,7 +1409,7 @@
           "tips": [
             "Puedes compartir estas historias con tu clase para ayudarles a ver el impacto de la Inteligencia Artificial en el futuro.\n\n-   [El despilfarro de alimentos es un problema grave, pero la IA intenta resolverlo](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/).\n-   [La tecnología de IA puede identificar trastornos genéticos a partir de la cara de una persona](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Cómo una empresa de IA diseñó un candidato a fármaco en sólo 46 días](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [La herramienta de IA del MIT puede predecir el cáncer de mama hasta 5 años antes](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [El Ejército acelera el ritmo de los coches autónomos](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco dice que utilizará la IA para reducir los prejuicios a la hora de acusar a las personas de delitos](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [La IA está ayudando a los estudiosos a restaurar antiguos textos griegos en tablillas de piedra](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ],
-          "progression_name": "Aprendizaje Automático de la Inteligencia Artificial - Vídeo"
+          "progression_name": "Inteligencia Artificial y Aprendizaje Automático - Vídeo"
         },
         "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
           "description": "**Compartir Rápidamente:** ¿Dónde has visto o experimentado la inteligencia artificial en tu vida?\nAlgunos ejemplos del vídeo son: \n\n-   filtros de correo electrónico\n-   texto autocompletado\n-   sistemas de recomendación de vídeos\n-   reconocimiento de voz\n-   aplicaciones de traducción\n-   asistentes digitales\n-   reconocimiento de imágenes\n\n**Pregunta:** Según lo que has visto en el vídeo, ¿Qué es el aprendizaje automático?\n\n**Conversar:** Comenzando en pequeños grupos y luego pasando a toda la clase, los alumnos comparten sus respuestas. El objetivo es que los estudiantes se familiaricen con el mundo de la inteligencia artificial, reflexionen sobre la prevalencia de la inteligencia artificial en nuestras vidas y piensen ampliamente en las posibles innovaciones futuras.\n\n**Comenta:** _El aprendizaje automático se refiere a un ordenador que puede reconocer patrones y tomar decisiones sin ser programado explícitamente. En esta actividad vas a proporcionar los datos para entrenar tu propio modelo de aprendizaje automático. Imagina un océano que contiene criaturas como peces, pero también contiene basura arrojada por los humanos. ¿Qué pasaría si pudiéramos entrenar a un ordenador para que distinguiera la diferencia y luego utilizar esa tecnología para ayudar a limpiar el océano?_"
@@ -1432,7 +1472,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -1707,7 +1747,7 @@
           "progression_name": "La pestaña de Animación"
         },
         "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
-          "progression_name": "Añadiendo los Imágenes"
+          "progression_name": "Añadiendo Imágenes"
         },
         "0f6d3640-c10a-497b-a1ce-7dcca920ca0d": {
           "progression_name": "Creación de escenas"
@@ -2210,14 +2250,14 @@
           "progression_name": "Usar eventos del acelerómetro"
         },
         "9602c704-6393-46ea-9ab9-96560faebed8": {
-          "progression_name": "Sucesos del acelerómetro"
+          "progression_name": "Eventos de Acelerómetro"
         },
         "0c189d32-46e3-442b-a6c0-b8f13a280968": {
           "progression_name": "Volver al patrón del contador"
         },
         "1f25bdc7-3dec-4d8e-8136-4d6f0a8763d0": {
-          "name": "Sucesos del acelerómetro",
-          "progression_name": "Sucesos del acelerómetro"
+          "name": "Eventos de Acelerómetro",
+          "progression_name": "Eventos de Acelerómetro"
         },
         "88f514f4-56a0-4cf3-9d36-b51826452be9": {
           "progression_name": "Resumen de la lección"
@@ -2579,7 +2619,7 @@
           "progression_name": "Imágenes en HTML"
         },
         "44a49f5c-5c77-4aae-833c-3288ab973af9": {
-          "progression_name": "Añadiendo los Imágenes"
+          "progression_name": "Añadiendo Imágenes"
         },
         "92b79761-2b2d-4c02-8d03-1b6bc34363c3": {
           "progression_name": "Búsqueda de Creative Commons"
@@ -3324,8 +3364,8 @@
           "progression_name": "Proyecto del Laboratorio de sprites"
         },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
-          "name": "Proyecto de Arte",
-          "progression_name": "Proyecto de Arte"
+          "name": "Proyecto de Artista",
+          "progression_name": "Proyecto de Artista"
         },
         "3775a465-853a-4717-98b1-78e9907b71c1": {
           "progression_name": "Introducción al Laberinto: Programación con bloques"
@@ -3538,8 +3578,8 @@
           "progression_name": "Proyecto del Laboratorio de sprites"
         },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
-          "name": "Proyecto de Arte",
-          "progression_name": "Proyecto de Arte"
+          "name": "Proyecto de Artista",
+          "progression_name": "Proyecto de Artista"
         },
         "7ac41e7f-cc21-4e84-ba6c-28b74d5eb12a": {
           "progression_name": "Proyectos de ejemplo"
@@ -3548,8 +3588,8 @@
           "progression_name": "Proyecto del Laboratorio de sprites"
         },
         "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
-          "name": "Proyecto de Arte",
-          "progression_name": "Proyecto de Arte"
+          "name": "Proyecto de Artista",
+          "progression_name": "Proyecto de Artista"
         },
         "b458b973-6f45-4447-82a2-57ad389d589c": {
           "progression_name": "Introducción al Laberinto: Programación con bloques"
@@ -3788,7 +3828,7 @@
           "progression_name": "La pestaña de Animación"
         },
         "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
-          "progression_name": "Añadiendo los Imágenes"
+          "progression_name": "Añadiendo Imágenes"
         },
         "659bc6e3-ae3c-44c3-83f1-816afa3a113d": {
           "progression_name": "Creación de escenas"
@@ -4267,7 +4307,7 @@
           "progression_name": "El acelerómetro"
         },
         "cfb7fdf7-acfd-49fd-a833-916fb604644f": {
-          "progression_name": "Sucesos del acelerómetro"
+          "progression_name": "Eventos de Acelerómetro"
         },
         "2790192d-f5e7-44f6-904e-f13f089f903f": {
           "progression_name": "Usar eventos del acelerómetro"
@@ -4276,8 +4316,8 @@
           "progression_name": "Volver al patrón del contador"
         },
         "cc461490-71ab-41a3-9b17-762e8e70be78": {
-          "name": "Sucesos del acelerómetro",
-          "progression_name": "Sucesos del acelerómetro"
+          "name": "Eventos de Acelerómetro",
+          "progression_name": "Eventos de Acelerómetro"
         },
         "898932d7-711c-44de-a4b6-9556201f10b8": {
           "progression_name": "Resumen de la lección"
@@ -4630,7 +4670,7 @@
           "progression_name": "Resumen de la lección"
         },
         "2a1838a5-708c-4af3-baf7-54864c87153a": {
-          "progression_name": "Añadiendo los Imágenes"
+          "progression_name": "Añadiendo Imágenes"
         },
         "24179087-12c5-4d00-871f-f7856b5d35b9": {
           "progression_name": "Imágenes en HTML"
@@ -4958,7 +4998,7 @@
           "progression_name": "La pestaña de Animación"
         },
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
-          "progression_name": "Añadiendo los Imágenes"
+          "progression_name": "Añadiendo Imágenes"
         },
         "64957b25-c71b-4b9c-ab40-16fc9845944d": {
           "progression_name": "Escenas de sprites"
@@ -5508,14 +5548,14 @@
           "progression_name": "Usar eventos del acelerómetro"
         },
         "28ef0db8-d735-44ed-ae34-b62cb9c27a84": {
-          "progression_name": "Sucesos del acelerómetro"
+          "progression_name": "Eventos de Acelerómetro"
         },
         "ce51f1a5-64ea-4927-84be-73c8a0c47a26": {
           "progression_name": "Volver al patrón del contador"
         },
         "d0d2b68c-d439-452a-b0ae-4819284c34da": {
-          "name": "Sucesos del acelerómetro",
-          "progression_name": "Sucesos del acelerómetro"
+          "name": "Eventos de Acelerómetro",
+          "progression_name": "Eventos de Acelerómetro"
         },
         "9eb53d89-cdac-4e24-9ac6-e165e3abed0f": {
           "progression_name": "Resumen de la lección"
@@ -5646,7 +5686,7 @@
           "progression_name": "Imágenes en HTML"
         },
         "f8c60aab-32aa-4d82-8a8a-8d3ef2d5a467": {
-          "progression_name": "Añadiendo los Imágenes"
+          "progression_name": "Añadiendo Imágenes"
         },
         "a99d76c7-f450-46d6-ac24-13cc17620581": {
           "progression_name": "Búsqueda de Creative Commons"
@@ -6036,46 +6076,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Tienes dos notas adhesivas. En una, escribe una cosa que hayas aprendido hoy sobre codificación. \nEn la segunda, escribe una cosa que hayas aprendido hoy sobre la poesía. \n\nVamos a compartirlo con toda la clase levantando la mano para responder a esta pregunta: ¿Qué más esperas aprender sobre codificación e informática en el futuro? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introducción",
-          "description": "**Debatir:**\n\n-   ¿Qué sabemos sobre cómo se propaga un virus?\n-   ¿Qué puede hacer que un virus se propague más rápidamente por una ciudad?\n-   ¿Qué puede ayudar a frenar la propagación de un virus?\n\nEl objetivo de este debate es que los alumnos tengan la oportunidad de activar sus conocimientos previos y ver sus ideas en la pizarra. También es una oportunidad para investigar algunos conceptos erróneos sobre cómo se propagan los virus."
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Brote",
-          "description": "_En la lección de hoy, vas a ir a \"Monster Town\", donde está a punto de producirse un brote de virus. El Dr. Monstruo necesita tu ayuda para frenar la propagación del virus._\n\n_Crearás una simulación de brote en el Laboratorio de Sprite y la utilizarás para entender cómo puede propagarse un virus. ¡También ayudarás a todos los monstruos a recuperar la salud!_",
-          "progression_name": "Brote"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "**Hacer esto:** Leer _Bienvenidos a Monster Town_ en grupo.",
-          "progression_name": "Bienvenido a Monster Town"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Hacer esto:** Repasar el vocabulario, **modelos y simulaciones** con los alumnos, basándose en la lección anterior. Una simulación es un modelo informático de un proceso o sistema."
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Hoy, vamos a hacer que un lugar como Monster Town cobre vida escribiendo algo de código. En esta simulación, vas a utilizar sprites para representar a los diferentes monstruos. Los sprites tendrán diferentes disfraces para indicarnos cosas como si están enfermos o sanos. También utilizarás comportamientos para que los monstruos se muevan. Finalmente, usarás eventos para cambiar el disfraz de un sprite cuando dos sprites se toquen en esta pantalla. Esto representará que un monstruo le pasa el virus a otro. ¡Harás predicciones sobre lo que les ocurrirá a los vecinos de Monster Town, y les ayudarás a recuperar la salud!_"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Haz esto:** Lleva a los estudiantes a sus ordenadores y haz que empiecen a seguir las instrucciones de cada nivel en la sección de desarrollo de habilidades. Si los estudiantes terminan esta sección antes de tiempo, pueden seguir experimentando con su código en el nivel 6 hasta que la clase esté lista para continuar.",
-          "progression_name": "Desarrollo de Habilidades"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Haz esto:** Lleva a los alumnos de vuelta a sus ordenadores y haz que trabajen en los niveles restantes. Algunos de estos niveles ofrecen desafíos opcionales. Anima a los alumnos a leer las instrucciones con atención y a experimentar con sus simulaciones.",
-          "progression_name": "Miniproyecto: Simulador de Brotes"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Juego libre"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas, a predecir cómo resolver el problema y a probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría ser un brote de virus en Monster Town._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Comentar:**\n\n-   ¿Cómo pueden ser útiles las simulaciones en el mundo real? \n-   ¿Cómo pueden las simulaciones ayudarnos a entender el mundo que nos rodea? \n-   ¿Cómo pueden las simulaciones mejorar la forma en que probamos las ideas? \n\nEl objetivo del debate es que los alumnos comprendan que las simulaciones son una forma de modelar sistemas complejos de manera interactiva. También deben ver cómo las simulaciones permiten probar ideas de forma rápida, barata y segura. "
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexión",
-          "description": "**Preguntas:**\n\n-   ¿En qué se parece esta simulación al mundo real? ¿En qué se diferencia?\n-   ¿Qué te gustaría cambiar o añadir a tu simulación?"
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Preparando el terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _Hoy vamos a pasar una hora trabajando con algunos rompecabezas en línea y aprendiendo los comportamientos en el laboratorio de informática._\nEl objetivo de esta charla es enseñar a los alumnos qué deben esperar y cómo deben comportarse cuando entran en el laboratorio de informática."
