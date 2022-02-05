@@ -276,6 +276,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :course_offerings, only: [:edit, :update], param: 'key'
+
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
 
@@ -401,6 +403,10 @@ Dashboard::Application.routes.draw do
   end
 
   get '/certificate_images/:filename', to: 'certificate_images#show'
+
+  get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+
+  get '/certificates/:encoded_params', to: 'certificates#show'
 
   get '/beta', to: redirect('/')
 
