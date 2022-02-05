@@ -16,7 +16,8 @@ import teacherSections, {
   setValidGrades,
   setTextToSpeechUnitIds,
   setLessonExtrasUnitIds,
-  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
+  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
+  setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
@@ -70,6 +71,7 @@ $(document).ready(function() {
   store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
+  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setValidAssignments(validCourses, validScripts));

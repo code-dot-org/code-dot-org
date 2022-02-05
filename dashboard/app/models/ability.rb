@@ -14,6 +14,7 @@ class Ability
     can :read, :all
     cannot :read, [
       TeacherFeedback,
+      CourseOffering,
       UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
@@ -290,7 +291,7 @@ class Ability
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      if (script.can_be_participant?(user) || script.can_be_instructor?(user)) && can?(:read, script)
+      if can?(:read, script)
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
@@ -302,7 +303,7 @@ class Ability
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
-      (script.can_be_participant?(user) || script.can_be_instructor?(user)) && can?(:read, script)
+      can?(:read, script)
     end
 
     # Handle standalone projects as a special case.
@@ -343,6 +344,7 @@ class Ability
         Lesson,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        CourseOffering,
         UnitGroup,
         Resource,
         Script,
@@ -410,6 +412,7 @@ class Ability
         Game,
         Level,
         UnitGroup,
+        CourseOffering,
         Script,
         Lesson,
         ScriptLevel,

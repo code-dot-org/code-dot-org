@@ -238,7 +238,8 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil)
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false)
+        unit.course_version.destroy if unit.course_version
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -530,8 +531,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
-    # Must be part of instructor or participant audience to view version
-    return false unless can_be_participant?(user) || can_be_instructor?(user)
+    return false unless Ability.new(user).can?(:read, self)
 
     latest_course_version = UnitGroup.latest_stable_version(family_name)
     is_latest = latest_course_version == self
@@ -541,7 +541,7 @@ class UnitGroup < ApplicationRecord
 
     # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    return true unless can_be_participant?(user)
+    return true if can_be_instructor?(user)
 
     # A student can view the course version if they are assigned to it or they have progress in it.
     user.section_courses.include?(self) || has_progress?(user)

@@ -47,7 +47,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# TODO\r\n- Add design elements; students just need to add code\r\n\r\n<hr />\r\n\r\n# Make a Thermometer App\r\n\r\nWhile the light and sound sensors have just a raw value with the `value` property, the temperature sensor is a little bit smarter. Instead of `tempSensor.value`, there are two properties `tempSensor.F` and `tempSensor.C` which convert the raw input value to either Fahrenheit or Celsius.\r\n\r\n# Do This\r\n\r\nMake a simple thermometer app that reads in values from the temperature sensor. Your app can display the temperature in either Fahrenheit or Celsius (or both!)\r\n\r\n* Using Design Mode, create a button for updating and a label to display the temperature\r\n* Add an event handler to respond to your update button being clicked\r\n* Add code to your event handler to read the temperature sensor and display the value on screen",
+    "long_instructions": "# Make a Thermometer App\r\n\r\nWhile the light and sound sensors have just a raw value with the `value` property, the temperature sensor is a little bit smarter. Instead of `tempSensor.value`, there are two properties `tempSensor.F` and `tempSensor.C` which convert the raw input value to either Fahrenheit or Celsius.\r\n\r\n# Do This\r\n\r\n- Add an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the `tempSensor` has `data`\r\n- Inside the [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/):\r\n\t- Use [`setText()`(#fff176)](/docs/applab/setText/) to update the Fahrenheit label to [`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/)\r\n    - Use [`setText()`(#fff176)](/docs/applab/setText/) to update the Celsius label to [`tempSensor.C`(#f78183)](/docs/applab/tempSensor.C/)\r\n\r\n**Run your program!** You should see the temperature update in real-time. To test the program, hold your finger over the sensor and see if the temperature increases due to body heat.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -68,7 +68,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
-    "free_play": "true",
+    "free_play": "false",
     "validation_enabled": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
@@ -79,23 +79,26 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "encrypted_examples": "2VrroOjIJPyKNKD4xiACnR18lf8OqR3cYU0BhEBbUfbXTTB9UBdlBNShYBkw\nlKtiSrfRaZo9iJNtNbkWGbjdxg==\n",
+    "encrypted_examples": [
+
+    ],
     "parent_level_id": 20453,
     "name_suffix": "_2021",
     "map_reference": "/docs/concepts/maker-toolkit/analog-sensors/",
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"underTheSea\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(7, 130, 130);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(9, 106, 106); background-color: rgb(149, 219, 229); border-color: rgb(9, 106, 106); border-radius: 30px; border-width: 2px; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 27px; padding: 2px 15px; width: 295px; height: 95px; position: absolute; left: 10px; top: 10px; text-align: center;\" id=\"titleLabel\" data-mod-fontsize=\"1\">Current Temperature in Fahrenheit and Celsius</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(9, 106, 106); background-color: rgb(149, 219, 229); border-color: rgb(9, 106, 106); border-radius: 30px; border-width: 2px; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 40px; padding: 2px 15px; width: 160px; height: 55px; position: absolute; left: 80px; top: 180px; text-align: center;\" id=\"tempFLabel\"></label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(9, 106, 106); background-color: rgb(149, 219, 229); border-color: rgb(9, 106, 106); border-radius: 30px; border-width: 2px; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 40px; padding: 2px 15px; width: 160px; height: 55px; position: absolute; left: 80px; top: 315px; text-align: center;\" id=\"tempCLabel\"></label></div></div>",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -103,7 +106,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:11:22.342+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog temp_2021\\\"\"],\"cloned_from\":\"CSD U6 analog temp_2021\"},{\"changed_at\":\"2021-09-01 22:11:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:11:22.342+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog temp_2021\\\"\"],\"cloned_from\":\"CSD U6 analog temp_2021\"},{\"changed_at\":\"2021-09-01 22:11:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:06:51 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:11:38 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"free_play\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:14:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -158,6 +158,17 @@ class Script < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
+  after_save :check_course_type_settings
+
+  def check_course_type_settings
+    if is_course?
+      raise 'Published state must be set on the unit if its a standalone unit.' if published_state.nil?
+      raise 'Instructor audience must be set on the unit if its a standalone unit.' if instructor_audience.nil?
+      raise 'Participant audience must be set on the unit if its a standalone unit.' if participant_audience.nil?
+      raise 'Instruction type must be set on the unit if its a standalone unit.' if instruction_type.nil?
+    end
+  end
+
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
     new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
     raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
@@ -714,8 +725,7 @@ class Script < ApplicationRecord
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
   def can_view_version?(user, locale: nil)
-    # Must be part of instructor or participant audience to view version
-    return false unless can_be_participant?(user) || can_be_instructor?(user)
+    return false unless Ability.new(user).can?(:read, self)
 
     # Users can view any course not in a family.
     return true unless family_name
@@ -729,7 +739,7 @@ class Script < ApplicationRecord
 
     # Restrictions only apply to students and logged out users.
     return false if user.nil?
-    return true unless can_be_participant?(user)
+    return true if can_be_instructor?(user)
 
     # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)

@@ -91,8 +91,33 @@ class ScriptsController < ApplicationController
 
   def create
     return head :bad_request unless general_params[:is_migrated]
-    @script = Script.new(unit_params)
-    if @script.save && @script.update_text(unit_params, i18n_params, general_params)
+
+    # These fields should be set unless a unit is in a unit group
+    # and are required to be set if is_course is true. When creating
+    # a unit it is not yet in a unit group so we set default values here
+    #
+    # Setting default values for the columns would not work because those
+    # are not used when you call new() just when you call create
+    updated_unit_params = unit_params.merge(
+      {
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      }
+    )
+
+    updated_general_params = general_params.merge(
+      {
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      }
+    )
+
+    @script = Script.new(updated_unit_params)
+    if @script.save && @script.update_text(unit_params, i18n_params, updated_general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
       render json: @script.errors
@@ -238,15 +263,8 @@ class ScriptsController < ApplicationController
   end
 
   def render_no_access
-    unless @script.can_be_instructor?(current_user) || @script.can_be_participant?(current_user)
-      authenticate_user!
-      return render :no_access
-    end
-
-    if current_user
-      if  @script.pilot? && !@script.has_pilot_access?(current_user)
-        return render :no_access
-      end
+    if current_user && !current_user.admin? && !can?(:read, @script)
+      render :no_access
     end
   end
 
