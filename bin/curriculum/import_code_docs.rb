@@ -89,7 +89,7 @@ def main(options)
       exp.return_value = cb_exp['return_value']
       exp.tips = cb_exp['tips']
       if cb_exp['image']
-        warn "#{exp.key} has an image at #{cb_exp['image']}"
+        log "#{exp.key} has an image at #{cb_exp['image']}"
         exp.image_url = cb_exp['image']
       end
       if cb_exp['video']
@@ -108,7 +108,7 @@ def fetch(url)
   response = Net::HTTP.get_response(uri)
   #raise "HTTP status #{response.code} fetching #{uri}" unless response.is_a? Net::HTTPSuccess
   unless response.is_a? Net::HTTPSuccess
-    #warn "Received non-success status #{response.code} fetching #{uri}"
+    warn "Received non-success status #{response.code} fetching #{uri}"
     return nil
   end
   body = response.body
