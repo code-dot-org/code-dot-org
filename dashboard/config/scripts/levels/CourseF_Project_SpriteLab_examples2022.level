@@ -68,7 +68,7 @@
   "user_id": 63,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:56.416+00:00\",\"changed\":[\"cloned from \\\"CourseF_Project_SpriteLab_examples_2021\\\"\"],\"cloned_from\":\"CourseF_Project_SpriteLab_examples_2021\"},{\"changed_at\":\"2022-01-27 18:51:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:56.416+00:00\",\"changed\":[\"cloned from \\\"CourseF_Project_SpriteLab_examples_2021\\\"\"],\"cloned_from\":\"CourseF_Project_SpriteLab_examples_2021\"},{\"changed_at\":\"2022-01-27 18:51:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-01-31 15:47:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-31 15:48:32 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-31 15:52:13 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-31 15:53:04 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-31 15:53:09 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-31 15:53:13 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1,
@@ -93,41 +93,32 @@
                       <field name="TEXT">Sky Dancer</field>
                     </block>
                   </value>
+                  <value name="SUBTITLE">
+                    <block type="text">
+                      <field name="TEXT">Press the arrow keys to move. Collect the coins. Avoid the clouds.</field>
+                    </block>
+                  </value>
                   <next>
-                    <block type="gamelab_makeNumSprites">
-                      <field name="ANIMATION_NAME">"cloud"</field>
-                      <value name="NUM">
-                        <block type="math_number">
-                          <field name="NUM">3</field>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <field name="ANIMATION_NAME">"blue plane"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <field name="LOCATION">{"x":54,"y":199}</field>
                         </block>
                       </value>
                       <next>
                         <block type="gamelab_addBehaviorSimple">
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"cloud"</field>
+                              <field name="ANIMATION">"blue plane"</field>
                             </block>
                           </value>
                           <value name="BEHAVIOR">
                             <block type="gamelab_behavior_get">
                               <mutation/>
-                              <field name="VAR" id="moving west and looping">moving west and looping</field>
+                              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
                             </block>
                           </value>
-                          <next>
-                            <block type="gamelab_createNewSprite">
-                              <field name="NAME">player</field>
-                              <field name="COSTUME">"blue plane"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":54,"y":199}</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_hideTitleScreen"/>
-                              </next>
-                            </block>
-                          </next>
                         </block>
                       </next>
                     </block>
@@ -137,103 +128,96 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_ifVarEquals">
-          <field name="NUM">selection</field>
-          <value name="VAL">
-            <block type="gamelab_costumeImage">
-              <field name="COSTUME">"blue plane"</field>
+        <block type="gamelab_atTime">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">5</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_ifVarEquals">
-              <field name="NUM">selection</field>
-              <value name="VAL">
-                <block type="gamelab_costumeImage">
-                  <field name="COSTUME">"red plane"</field>
-                </block>
-              </value>
-              <statement name="STATEMENT">
-                <block type="gamelab_createNewSprite">
-                  <field name="NAME">player</field>
-                  <field name="COSTUME">"red plane"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":54,"y":199}</field>
-                    </block>
-                  </value>
-                </block>
-              </statement>
+            <block type="gamelab_hideTitleScreen">
               <next>
-                <block type="gamelab_addBehaviorSimple">
-                  <value name="SPRITE">
-                    <block type="sprite_variables_get">
-                      <field name="VAR">player</field>
-                    </block>
-                  </value>
-                  <value name="BEHAVIOR">
-                    <block type="gamelab_behavior_get">
-                      <mutation/>
-                      <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+                <block type="gamelab_makeNumSprites">
+                  <field name="ANIMATION_NAME">"gold coin"</field>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">3</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNumSprites">
-                      <field name="ANIMATION_NAME">"gold coin"</field>
-                      <value name="NUM">
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"gold coin"</field>
+                        </block>
+                      </value>
+                      <value name="VAL">
                         <block type="math_number">
-                          <field name="NUM">3</field>
+                          <field name="NUM">50</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_setProp">
-                          <field name="PROPERTY">"scale"</field>
+                        <block type="gamelab_addBehaviorSimple">
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
                               <field name="ANIMATION">"gold coin"</field>
                             </block>
                           </value>
-                          <value name="VAL">
-                            <block type="math_number">
-                              <field name="NUM">50</field>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get">
+                              <mutation/>
+                              <field name="VAR" id="moving west and looping">moving west and looping</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_addBehaviorSimple">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"gold coin"</field>
-                                </block>
-                              </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get">
-                                  <mutation/>
-                                  <field name="VAR" id="moving west and looping">moving west and looping</field>
+                            <block type="gamelab_makeNumSprites">
+                              <field name="ANIMATION_NAME">"cloud"</field>
+                              <value name="NUM">
+                                <block type="math_number">
+                                  <field name="NUM">3</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_changePropBy">
-                                  <field name="PROPERTY">"x"</field>
+                                <block type="gamelab_addBehaviorSimple">
                                   <value name="SPRITE">
                                     <block type="gamelab_allSpritesWithAnimation">
                                       <field name="ANIMATION">"cloud"</field>
                                     </block>
                                   </value>
-                                  <value name="VAL">
-                                    <block type="math_number">
-                                      <field name="NUM">400</field>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_behavior_get">
+                                      <mutation/>
+                                      <field name="VAR" id="moving west and looping">moving west and looping</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="variables_set">
-                                      <field name="VAR">score</field>
-                                      <value name="VALUE">
+                                    <block type="gamelab_changePropBy">
+                                      <field name="PROPERTY">"x"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"cloud"</field>
+                                        </block>
+                                      </value>
+                                      <value name="VAL">
                                         <block type="math_number">
-                                          <field name="NUM">0</field>
+                                          <field name="NUM">400</field>
                                         </block>
                                       </value>
                                       <next>
                                         <block type="gamelab_playSound">
                                           <field name="SOUND">sound://category_slide/whoosh_2.mp3</field>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR">score</field>
+                                              <value name="VALUE">
+                                                <block type="math_number">
+                                                  <field name="NUM">0</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
                                         </block>
                                       </next>
                                     </block>
@@ -251,18 +235,11 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_whenPromptAnswered">
-          <value name="VAR">
-            <block type="variables_get" can_disconnect_from_parent="false">
-              <field name="VAR">selection</field>
-            </block>
-          </value>
-        </block>
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="sprite_variables_get">
-              <field name="VAR">player</field>
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"blue plane"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -361,8 +338,8 @@
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="sprite_variables_get">
-              <field name="VAR">player</field>
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"blue plane"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -415,6 +392,73 @@
                           <next>
                             <block type="gamelab_playSound">
                               <field name="SOUND">sound://category_retro/retro_game_click.mp3</field>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_atTime">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">30</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_showTitleScreen">
+              <value name="TITLE">
+                <block type="text">
+                  <field name="TEXT">Game over!</field>
+                </block>
+              </value>
+              <value name="SUBTITLE">
+                <block type="gamelab_textJoin">
+                  <field name="TEXT1">Score: </field>
+                  <value name="TEXT2">
+                    <block type="variables_get">
+                      <field name="VAR">score</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_removeAllBehaviors">
+                  <value name="SPRITE">
+                    <block type="gamelab_getAllSprites"/>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"blue plane"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_behavior_get">
+                          <mutation/>
+                          <field name="VAR" id="moving east">moving east</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_destroy">
+                          <value name="THIS">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"gold coin"</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_destroy">
+                              <value name="THIS">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"cloud"</field>
+                                </block>
+                              </value>
                             </block>
                           </next>
                         </block>

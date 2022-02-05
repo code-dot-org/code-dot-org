@@ -30,7 +30,8 @@ export default function Congrats(props) {
     under13,
     language,
     randomDonorTwitter,
-    hideDancePartyFollowUp
+    hideDancePartyFollowUp,
+    showStudioCertificate
   } = props;
   const isEnglish = language === 'en';
   const tutorialType = getTutorialType(tutorial);
@@ -42,6 +43,7 @@ export default function Congrats(props) {
         certificateId={certificateId}
         randomDonorTwitter={randomDonorTwitter}
         under13={under13}
+        showStudioCertificate={showStudioCertificate}
       />
       {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
       <StudentsBeyondHoc
@@ -65,7 +67,8 @@ Congrats.propTypes = {
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
-  hideDancePartyFollowUp: PropTypes.bool
+  hideDancePartyFollowUp: PropTypes.bool,
+  showStudioCertificate: PropTypes.bool
 };
 
 const styles = {

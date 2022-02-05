@@ -5,7 +5,7 @@ social:
   twitter:url: https://hourofcode.com
 ---
 :ruby
-  @header["title"] = hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year'))
+  @header["title"] = hoc_s(:front_title, locals: {campaign_date: campaign_date('full-year')})
 
   hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
