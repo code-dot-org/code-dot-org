@@ -16,6 +16,10 @@ class Homepage
     return nil unless banner_id_for_page
 
     banner = banners[banner_id_for_page]
+
+    # If the banner has an array of environments, then the current environment must be one of them.
+    return nil if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
+
     banner ? banner.merge({"id": banner_id_for_page}) : nil
   end
 
