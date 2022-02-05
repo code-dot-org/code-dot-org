@@ -283,6 +283,8 @@ ms-MY:
   volunteer_engineer_submission_field_description: Keterangan
   volunteer_engineer_submission_field_email: Alamat e-mel
   volunteer_engineer_submission_field_email_placeholder: Alamat e-mel
+  volunteer_engineer_submission_field_email_preference_privacy: "(Lihat dasar privasi
+    kami)"
   volunteer_engineer_submission_field_email_preference_yes: Ya
   volunteer_engineer_submission_field_email_preference_no: Tidak
   volunteer_engineer_submission_submit: Hantar
@@ -896,6 +898,7 @@ ms-MY:
   hoc2021_mc_mee_ai_title: AI untuk Kebaikan
   hoc2021_mc_mee_ai_description: 'Terokai AI dengan pelajar anda dan belajar mengekod
     dalam Minecraft: Edisi Pendidikan.'
+  codebytes_skinny_banner_english_only: Bahasa Inggeris sahaja
   footer_privacy_policy: Dasar Privasi
   footer_about: Tentang
   footer_donate: Derma
