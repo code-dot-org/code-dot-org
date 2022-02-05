@@ -446,9 +446,9 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit1.instruction_type
       assert_nil unit1.instructor_audience
       assert_nil unit1.participant_audience
-      assert_nil unit1.family_name
+      assert_equal unit1.family_name, 'unit1-family'
       assert_nil unit1.is_course
-      assert_nil unit1.version_year
+      assert_equal unit1.version_year, '1991'
 
       unit_group.update_scripts(['unit2'])
 
