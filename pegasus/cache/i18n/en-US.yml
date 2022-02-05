@@ -391,6 +391,7 @@
   homepage_donors_donate: "Donate"
   homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
   homepage_below_hero_announcement_link_text: "Learn more"
+  homepage_higher_power_body: "Create with Dance Party, get a chance to see the band live."
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "I'm a teacher/educator"
@@ -1756,7 +1757,6 @@
   page_not_available_title: "Page Not Available"
   page_not_available_description: "We're sorry, the page you requested is no longer available at this address. If you still need access, please email [support@code.org](%{support_email_link})."
   page_not_available_button: "Return home"
-  ! '': 
   hoc2020_mc_available_code_org: "Available on Code.org"
   hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"

@@ -25,6 +25,7 @@ const blankCertificates = {
 
 function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
+  const [studentName, setStudentName] = useState();
   const nameInputRef = useRef(null);
 
   const isMinecraft = () =>
@@ -44,9 +45,60 @@ function Certificate(props) {
       }
     }).done(response => {
       if (response.certificate_sent) {
+        setStudentName(response['name']);
         setPersonalized(true);
       }
     });
+  };
+
+  const getEncodedParams = () => {
+    const data = {
+      name: studentName,
+      course: props.tutorial
+    };
+    return btoa(JSON.stringify(data));
+  };
+
+  const getCertificateImagePath = certificate => {
+    if (!props.showStudioCertificate) {
+      return `${
+        dashboard.CODE_ORG_URL
+      }/api/hour/certificate/${certificate}.jpg`;
+    }
+
+    const filename = getEncodedParams();
+    return `/certificate_images/${filename}.jpg`;
+  };
+
+  const getPrintPath = certificate => {
+    if (!props.showStudioCertificate) {
+      let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+      if (isMinecraft() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      if (isAIOceans() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      return print;
+    }
+
+    const encoded = getEncodedParams();
+    return `/print_certificates/${encoded}`;
+  };
+
+  const getCertificateSharePath = certificate => {
+    if (!props.showStudioCertificate) {
+      return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+    }
+
+    const encoded = getEncodedParams();
+    return `/certificates/${encoded}`;
   };
 
   const {
@@ -59,15 +111,11 @@ function Certificate(props) {
   } = props;
 
   const certificate = certificateId || 'blank';
-  const personalizedCertificate = `${
-    dashboard.CODE_ORG_URL
-  }/api/hour/certificate/${certificate}.jpg`;
+  const personalizedCertificate = getCertificateImagePath(certificate);
   const blankCertificate =
     blankCertificates[tutorial] || blankCertificates.hourOfCode;
   const imgSrc = personalized ? personalizedCertificate : blankCertificate;
-  const certificateLink = `https:${
-    dashboard.CODE_ORG_URL
-  }/certificates/${certificate}`;
+  const certificateShareLink = getCertificateSharePath(certificate);
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -75,26 +123,18 @@ function Certificate(props) {
   const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
   const facebook = queryString.stringify({
-    u: certificateLink
+    u: certificateShareLink
   });
 
   const twitter = queryString.stringify({
-    url: certificateLink,
+    url: certificateShareLink,
     related: 'codeorg',
     text: randomDonorTwitter
       ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
       : i18n.justDidHourOfCode()
   });
 
-  let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-  if (isMinecraft() && !personalized) {
-    // Correct the minecraft print url for non-personalized certificates.
-    print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
-  }
-  if (isAIOceans() && !personalized) {
-    // Correct the minecraft print url for non-personalized certificates.
-    print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
-  }
+  const print = getPrintPath(certificate);
 
   return (
     <div style={styles.container}>
@@ -107,7 +147,7 @@ function Certificate(props) {
       )}
       <div id="uitest-certificate" style={certificateStyle}>
         <BackToFrontConfetti active={personalized} style={styles.confetti} />
-        <a href={certificateLink}>
+        <a href={certificateShareLink}>
           <img src={imgSrc} />
         </a>
       </div>
@@ -156,7 +196,8 @@ Certificate.propTypes = {
   randomDonorTwitter: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  showStudioCertificate: PropTypes.bool
 };
 
 const styles = {

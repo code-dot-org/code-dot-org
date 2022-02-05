@@ -2,17 +2,19 @@
 #
 # Table name: programming_expressions
 #
-#  id                         :bigint           not null, primary key
-#  name                       :string(255)      not null
-#  category                   :string(255)
-#  properties                 :text(65535)
-#  programming_environment_id :bigint           not null
-#  created_at                 :datetime         not null
-#  updated_at                 :datetime         not null
-#  key                        :string(255)      not null
+#  id                                  :bigint           not null, primary key
+#  name                                :string(255)      not null
+#  category                            :string(255)
+#  properties                          :text(65535)
+#  programming_environment_id          :bigint           not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  key                                 :string(255)      not null
+#  programming_environment_category_id :integer
 #
 # Indexes
 #
+#  index_programming_expressions_on_environment_category_id     (programming_environment_category_id)
 #  index_programming_expressions_on_name_and_category           (name,category)
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
 #  programming_environment_key                                  (programming_environment_id,key) UNIQUE
