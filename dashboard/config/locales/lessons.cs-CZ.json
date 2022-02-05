@@ -82,6 +82,9 @@
         "text-compression/Text Compression": {
           "student_overview": "V určitém bodě narazíme na hranici fyzických možností ohledně rychlosti posílání bitů. Pokud chceme posílat větší množství informací rychleji, musíme najít způsob, jak reprezentovat stejnou informaci pomocí menšího množství bitů – musíme komprimovat data. "
         },
+        "outbreak/Outbreak": {
+          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
+        },
         "sports/Sports": {
           "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
           "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
@@ -109,9 +112,6 @@
         "poem-art/lesson-1": {
           "overview": "V této spojené lekci informatiky a jazyka budou studenti animovat báseň pomocí kódu, aby dokreslili její atmosféru. Během této úvodní kódovací aktivity si studenti přečtou báseň a určí její atmosféru. Pak najdou odpovídající efekty a obrázky, které pomohou atmosféru básně dokreslit. Nakonec budou studenti používat události (kód) k ilustraci změny atmosféry nebo k animaci nástupu nových obrazů v básni. \n\nTuto lekci lze probrat jako hodinovou samostatnou lekci. Také je možné tuto lekci použít jako první lekci z modulu o pěti lekcích, který se nazývá [Kódování s poezií](http://code.org/poetry). Na konci modulu Kódování s poezií budou studenti psát své vlastní básně a vytvoří aplikaci na generování básní, které mohou sdílet se svými kamarády. \n\nKódování s poezií je součástí výukového plánu Propojení informatiky organizace Code.org. Cílem tohoto výukového plánu je propojit informatiku s dalšími předměty, například matematikou, jazykem a přírodními vědami, v souladu se vzdělávacími standardy CCSS, NGSS a CSTA. ",
           "preparation": "–   Prohlédněte si a sami dokončete výukový online program: [Básnické umění](http://studio.code.org/s/poem-art).\n\n–   Než požádáte studenty, aby prováděli aktivity, nezapomeňte si je sami vyzkoušet. \n\n–   Zkontrolujte svou technologii a rozhodněte se, zda není potřeba předem vyřešit nějaké problémy.\n\n–   U některých úrovní je třeba přehrávat zvuk. Rozdejte včas sluchátka. \n\n–   [Optional] Dva samolepicí papírky na studenta pro hodnocení."
-        },
-        "outbreak/Outbreak": {
-          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
         },
         "jigsaw/Jigsaw": {
           "overview": "Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.",
