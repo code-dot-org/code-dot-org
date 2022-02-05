@@ -681,7 +681,10 @@ Dance.prototype.displayFeedback_ = function() {
     ' on @codeorg!';
 
   const comma = '%2C';
-  const hashtags = ['codeplay', 'HourOfCode'].join(comma);
+  const hashtags =
+    artistTwitterHandle === 'Coldplay'
+      ? ['codeplay', 'HourOfCode'].join(comma)
+      : ['HourOfCode'];
 
   let feedbackOptions = {
     feedbackType: this.testResults,

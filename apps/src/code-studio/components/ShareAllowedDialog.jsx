@@ -197,9 +197,10 @@ class ShareAllowedDialog extends React.Component {
     const tweetText = artistTwitterHandle
       ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
       : 'Check out what I made on @codeorg!';
-    const hashtags = this.props.selectedSong
-      ? ['codeplay', 'HourOfCode']
-      : ['HourOfCode'];
+    const hashtags =
+      artistTwitterHandle === 'Coldplay'
+        ? ['codeplay', 'HourOfCode']
+        : ['HourOfCode'];
     const comma = '%2C';
     const twitterShareUrl =
       'https://twitter.com/intent/tweet?text=' +
