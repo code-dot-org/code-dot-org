@@ -5,6 +5,7 @@
 
   "banners": {
     "higherPower": {
+      "environments": ["development", "staging", "test"],
       "desktopImage": "/images/marketing/homepage-higher-power-background.png",
       "items": [
         {
