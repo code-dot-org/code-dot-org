@@ -69,6 +69,7 @@ ms:
   next_resource: Sumber seterusnya
   done_with_module: Selesai dengan Modul Pembelajaran ini
   cancel: Batal
+  okay: Okey
   or: atau
   heading_x_of_y: "%{heading} (muka surat %{x} of %{y})"
   join_section:
@@ -235,6 +236,7 @@ ms:
     email_preference_question: Bolehkah kami menghantar e-mel kepada anda mengenai
       kemas kini kursus, peluang tempatan, atau berita sains komputer yang lain? (kira-kira
       sekali sebulan)
+    email_preference_privacy: "(Lihat dasar privasi kami)"
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: Anda mesti nyatakan keutamaan e-mel.
@@ -518,6 +520,7 @@ ms:
     none: Tiada
     only_one_parent_email_supported_warning: 'Nota: kami hanya dapat sokong satu e-mel
       ibubapa/penjaga untuk setiap akaun pelajar pada masa ini.'
+    encrypted: Disulitkan
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -712,10 +715,14 @@ ms:
     correct_title: Betul
     correct_body: Itulah jawapan yang betul.
   multi-submittable:
+    wrong_title: Terima kasih
     wrong_body: Terima kasih kerana menghantar jawapan.
+    correct_title: Terima kasih
     correct_body: Terima kasih kerana menghantar jawapan.
   level_group:
+    wrong_title: Terima kasih
     wrong_body: Terima kasih kerana menghantar jawapan.
+    correct_title: Terima kasih
     correct_body: Terima kasih kerana menghantar jawapan.
     hide_survey_last_answer: Kaji selidik ini adalah tanpa nama.  Sila lawati papan
       pemuka guru untuk mendapatkan keputusan agregat.  Harap maklum bahawa keputusan
@@ -725,7 +732,9 @@ ms:
       anda masih dapat melihat respons untuk seluruh kelas, tetapi tanpa nama yang
       dilampirkan.
   level_group-submittable:
+    wrong_title: Terima kasih
     wrong_body: Terima kasih kerana menghantar jawapan.
+    correct_title: Terima kasih
     correct_body: Terima kasih kerana menghantar jawapan.
     unsubmit-title: Nyahlanggan penilaian anda
     unsubmit-body: Menyahlanggan penilaian anda akan menetapkan semula masa dan tarikh
@@ -907,6 +916,8 @@ ms:
       subjects:
         cs: Sains Komputer
         math: Matematik
+        science: Sains
+        la: Seni bahasa
       workshop_course:
         csf_express: Asas CS (Praekspres atau Ekspres)
       email_opt_in:
@@ -921,3 +932,4 @@ ms:
       untuk kemaskini kemajuan dan projek anak anda!"
     link_your_email: Sambung e-mel
     not_now: Nanti
+  teacher_feedback: Maklum balas Pengajar

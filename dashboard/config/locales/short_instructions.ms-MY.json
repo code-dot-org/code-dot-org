@@ -185,7 +185,10 @@
         "poetry_hoc_spriteSizes": "Anda boleh mengubah saiz pari-pari yang telah anda buat. ",
         "New Gumball Project": "Buat apa sahaja yang anda suka dan kongsi!",
         "New Ice Age Project": "Buat apa sahaja yang anda suka dan kongsi!",
-        "New Infinity Project": "Buat apa sahaja yang anda suka dan kongsi!"
+        "New Infinity Project": "Buat apa sahaja yang anda suka dan kongsi!",
+        "iceage_hello1": "Bantu Sid berkata \"Hello!\" dengan menyeret keluar blok `katakan` dan menyambungkannya ke bahagian bawah acara `apabila dijalankan`.",
+        "iceage_hello2": "Bantu Manny dan Sid bertegur sapa dengan menggunakan blok `pelakon ___ sebut` dua kali.",
+        "iceage_move_to_flag": "Scrat sedang mencari buah pokok oaknya! Bolehkah anda membantunya mengalihkan 200 piksel terakhir?"
       }
     }
   }
