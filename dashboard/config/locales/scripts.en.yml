@@ -23103,23 +23103,23 @@ en:
               description_student: 
               description_teacher: 
             lesson-6:
-              name: Writing Methods to Satisfy Conditions
+              name: Exploring Method Components and Functionality
               description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
               description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
             lesson-7:
-              name: Exploring Method Components and Functionality
+              name: Using Object References as Parameters
               description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
               description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
             lesson-8:
-              name: Using Object References as Parameters
+              name: Overloading Methods
               description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
               description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
             lesson-9:
-              name: Overloading Methods
+              name: Accessing Object Behavior
               description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
               description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
             lesson-10:
-              name: Accessing Object Behavior
+              name: Writing Methods to Satisfy Conditions
               description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
               description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
             lesson-11:
@@ -24832,6 +24832,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp6-2021:
           lessons: {}
           lesson_groups: {}
@@ -24840,6 +24841,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp7-2021:
           lessons: {}
           lesson_groups: {}
@@ -24848,6 +24850,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp8-2021:
           lessons: {}
           lesson_groups: {}
@@ -24856,6 +24859,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp9-2021:
           lessons: {}
           lesson_groups: {}
@@ -24864,6 +24868,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp10-2021:
           lessons: {}
           lesson_groups: {}
@@ -24872,6 +24877,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp11-2021:
           lessons: {}
           lesson_groups: {}
@@ -24880,6 +24886,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         poster:
           lessons:
             HoC Tutorial 1:
@@ -28275,16 +28282,16 @@ en:
               description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
             Lots of Sprites:
               name: "[New] Lots of Sprites"
-              description_student: 
-              description_teacher: 
+              description_student: You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
             Counting with Variables:
               name: "[New] Counting with Variables"
-              description_student: 
-              description_teacher: 
+              description_student: You will learn to use variables to make a counter or keep track of a score in a game.
+              description_teacher: In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**
             'Mini-Project: Collector Game':
               name: "[New] Mini-Project: Collector Game"
-              description_student: 
-              description_teacher: 
+              description_student: Collect all the sprites! In this project, you will create a game that others can play.
+              description_teacher: In this **mini-project** lesson, students will create a customized "collector game", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**
             Simulating Experiments:
               name: Simulating Experiments
               description_student: Run simulations on the computer and experiment by changing variables.
@@ -28408,23 +28415,23 @@ en:
         csa7-pilot-facilitator:
           lessons:
             Accessing Object Behavior:
-              name: Accessing Object Behavior
+              name: Writing Methods to Satisfy Conditions
               description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
               description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
             Writing Methods to Satisfy Conditions:
-              name: Writing Methods to Satisfy Conditions
+              name: Exploring Method Components and Functionality
               description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
               description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
             Exploring Method Components and Functionality:
-              name: Exploring Method Components and Functionality
+              name: Using Object References as Parameters
               description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
               description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
             Using Object References as Parameters:
-              name: Using Object References as Parameters
+              name: Overloading Methods
               description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
               description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
             Overloading Methods:
-              name: Overloading Methods
+              name: Accessing Object Behavior
               description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
               description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
             Overriding Methods:
@@ -30868,7 +30875,62 @@ en:
           description: ''
           student_description: ''
         pre-express-2022:
-          lessons: {}
+          lessons:
+            Learn to Drag and Drop:
+              key: Learn to Drag and Drop
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming with Angry Birds:
+              key: Programming with Angry Birds
+              name: Programming with Angry Birds
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              key: Programming with Rey and BB-8
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Programming with Harvester:
+              key: Programming with Harvester
+              name: Programming with Harvester
+              description_student: ''
+              description_teacher: ''
+            Loops with Scrat:
+              key: Loops with Scrat
+              name: Loops with Scrat
+              description_student: ''
+              description_teacher: ''
+            Loops with Laurel:
+              key: Loops with Laurel
+              name: Loops with Laurel
+              description_student: ''
+              description_teacher: ''
+            Ocean Scene with Loops:
+              key: Ocean Scene with Loops
+              name: Ocean Scene with Loops
+              description_student: ''
+              description_teacher: ''
+            Drawing Gardens with Loops:
+              key: Drawing Gardens with Loops
+              name: Drawing Gardens with Loops
+              description_student: ''
+              description_teacher: ''
+            On the Move with Events:
+              key: On the Move with Events
+              name: On the Move with Events
+              description_student: ''
+              description_teacher: ''
+            A Royal Battle with Events:
+              key: A Royal Battle with Events
+              name: A Royal Battle with Events
+              description_student: ''
+              description_teacher: ''
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -30900,7 +30962,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
           name: csa2-2022
-          title: Giving Objects State ('22-'23)
+          title: Class Structure and Design ('22-'23)
           description_audience: ''
           description_short: ''
           description: ''
@@ -30917,7 +30979,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
           name: csa3-2022
-          title: Expanding Program Data ('22-'23)
+          title: Arrays and Algorithms ('22-'23)
           description_audience: ''
           description_short: ''
           description: ''
@@ -30931,6 +30993,139 @@ en:
           lesson_groups: {}
           name: tessplayground
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        cs4all-invasive-species:
+          lessons:
+            lesson-1:
+              name: Surprising Stories about Plants and Animals
+              description_student: 
+              description_teacher: "Click on this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
+            lesson-2:
+              name: When Species Invade
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing) to access the lesson plan. '
+            lesson-3:
+              name: Big Goldfish, Little Pond
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
+            lesson-4:
+              name: Swimming into Sprite Lab
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1DdepCOwf9BVtZNzSwNiXkeRdvEYLrPlCoPZC-sPchCU/edit?usp=sharing) the access the lesson plan. '
+            lesson-5:
+              name: Analyzing the Impact
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1KspaLQjmbXYKwEQC2vOIGLUdom2tcI0kauUk-0bdZJ4/edit?usp=sharing) to access the lesson plan. '
+            lesson-6:
+              name: Local Invasive Species
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W3PqmcDpPJ5QElP7U_mKPy43ZwGb_ZI3bpRvWN-yitQ/edit?usp=sharing) to access the lesson plan. '
+            lesson-7:
+              name: 'Algorithms: Watch Me Dance'
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
+            lesson-8:
+              name: SciComm and Me
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1njAzvHI3gS_aSoR2IM8Eeekw4bI6kADxvY2s_96SZCM/edit?usp=sharing) to access the lesson plan. '
+            lesson-9:
+              name: Communicating with Comics
+              description_student: 
+              description_teacher: Click on this [link](https://docs.google.com/document/d/1C_WWNg9ACiLpSBNXFwCKzDb4ftyb71we7RTJYV_-CQA/edit?usp=sharing) to access the lesson plan.
+            lesson-10:
+              name: Pet Debate
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1Hxx0MESA13SNsA4mvRhZoZ-XeScezGg3DmAz8DO6p1A/edit?usp=sharing) to access the lesson plan. '
+            lesson-11:
+              name: Responding to Conditions
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1s4pklUxcmnDIjigMXWK-hrBgvuIDRBfEjzEqDAGzx7E/edit?usp=sharing) to access the lesson plan. '
+            lesson-12:
+              name: Conditionals
+              description_student: 
+              description_teacher: Click on this [link](https://docs.google.com/document/d/1yp9BOEYibCekx80fizqTcEksKqaRxQPMW0HQY7gNc3k/edit?usp=sharing) to access the lesson plan.
+            lesson-13:
+              name: Exploring Solutions for the Burmese Python
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1sft21ez0yI20e0D-n8MNZDmeOQyIR9PhsQU31yzG3I0/edit?usp=sharing) to access the lesson plan. '
+            lesson-14:
+              name: Conditionals in Minecraft
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1o0Ki_9yC2l2S8spL-EUjdEy0xqgP-Y717qoeSBoIEk8/edit?usp=sharing) to access the lesson plan. '
+            lesson-15:
+              name: Exploring Solutions for Invasive Species
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1amEfZ4QMfa765k_2sz4hcsyn-IVBzZv3cT6CAGDu0Ek/edit?usp=sharing) to access the lesson plan. '
+            lesson-16:
+              name: Debugging
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vLHsUsDrWU1g8Z7neMcqX1NtmQCc7or95lWO6p3oBGw/edit?usp=sharing) to access the lesson plan. '
+            lesson-17:
+              name: Project Inspiration
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vDetbOM1qCAIkdpa8WiRSGaUorbe7cPvV3WEFpyg0SE/edit?usp=sharing) to access the lesson plan. '
+            lesson-18:
+              name: Making It Work
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1kGekxHbE9VmCTW01flUiq-OvpN1qdb-CsVziQUfcugU/edit?usp=sharing) to access the lesson plan. '
+            lesson-19:
+              name: Debugging
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W2uDdHo8-ZQoX-Gs7izAz8CAIUcBZnB8gqrqHqLtD2E/edit?usp=sharing) to access the lesson plan. '
+            lesson-20:
+              name: Sharing Projects
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1rxzUyQA3jJzjEUTDvCwYtFK_dYgLgqot0LlpGydK68Q/edit?usp=sharing) to access the lesson plan. '
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Collection 1
+            lessonGroup-3:
+              display_name: Collection 2
+            lessonGroup-4:
+              display_name: Collection 3
+            lessonGroup-5:
+              display_name: Collection 4
+            lessonGroup-6:
+              display_name: Collection 5
+          name: cs4all-invasive-species
+          title: 'Invasive Species '
+          description_audience: ''
+          description_short: 'This is a NSF funded research grant for CS4All '
+          description: ''
+          student_description: ''
+        csa4-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 4 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa4-2022
+          title: Conditions and Logic ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 5 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know Week
+          name: csa5-2022
+          title: Two-Dimensional Arrays ('22-'23)
           description_audience: ''
           description_short: ''
           description: ''
