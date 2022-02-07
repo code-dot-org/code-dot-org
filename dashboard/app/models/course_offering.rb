@@ -74,7 +74,7 @@ class CourseOffering < ApplicationRecord
 
   def localized_display_name
     localized_name = I18n.t(
-      display_name,
+      key,
       scope: [:data, :course_offerings],
       default: nil
     )
