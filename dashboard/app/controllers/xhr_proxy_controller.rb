@@ -63,7 +63,6 @@ class XhrProxyController < ApplicationController
     api.zippopotam.us
     bible-api.com
     code.org
-    codeorg-api.com
     covidtracking.com
     cryptonator.com
     data.austintexas.gov
