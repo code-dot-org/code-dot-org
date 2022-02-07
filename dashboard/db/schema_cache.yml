@@ -8164,9 +8164,9 @@ columns:
     table_name: levels
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &477 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: mediumtext
+        sql_type: longtext
         type: :text
-        limit: 16777215
+        limit: 4294967295
         precision: 
         scale: 
       type_metadata: *477
@@ -8174,7 +8174,7 @@ columns:
     'null': true
     default: 
     default_function: 
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_520_ci
     comment: 
   - &1914 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: type
@@ -26546,4 +26546,4 @@ data_sources:
   users_view: true
   videos: true
   vocabularies: true
-version: 20220201165407
+version: 20220203122150
