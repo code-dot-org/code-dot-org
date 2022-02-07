@@ -78,7 +78,7 @@ class ProgrammingEnvironment < ApplicationRecord
       imageUrl: image_url,
       description: description,
       editorType: editor_type,
-      categories: categories
+      categories: categories.map(&:serialize_for_edit)
     }
   end
 end
