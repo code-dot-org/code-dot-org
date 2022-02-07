@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType} from '../permission';
-import {useFoormSurvey} from '../workshop_summary_utils';
+import {shouldUseFoormSurvey} from '../workshop_summary_utils';
 
 export class WorkshopManagement extends React.Component {
   static contextTypes = {
@@ -45,7 +45,7 @@ export class WorkshopManagement extends React.Component {
         ? new Date(props.endDate)
         : new Date(props.date);
 
-      if (useFoormSurvey(props.subject, workshop_date)) {
+      if (shouldUseFoormSurvey(props.subject, workshop_date)) {
         surveyBaseUrl = 'workshop_daily_survey_results';
       } else if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';

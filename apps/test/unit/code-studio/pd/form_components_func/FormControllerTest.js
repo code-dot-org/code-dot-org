@@ -2,7 +2,7 @@ import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormCo
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
