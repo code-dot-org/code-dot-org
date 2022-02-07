@@ -9,7 +9,7 @@ import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
-import TextResponsesLessonSelector from './TextResponsesLessonSelector';
+import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import {
   setScriptId,
   validScriptPropType,
@@ -41,14 +41,9 @@ function TextResponses({
     asyncLoadTextResponses(sectionId, scriptId);
   }, [scriptId]);
 
-  const asyncLoadTextResponses = (
-    sectionId,
-    scriptId,
-    onComplete = () => {}
-  ) => {
+  const asyncLoadTextResponses = (sectionId, scriptId) => {
     // Don't load data if it's already stored in state.
     if (textResponsesByScript[scriptId]) {
-      onComplete();
       return;
     }
 
@@ -57,7 +52,6 @@ function TextResponses({
     loadTextResponsesFromServer(sectionId, scriptId)
       .then(textResponses => {
         setTextResponses(scriptId, textResponses);
-        onComplete();
         setIsLoadingResponses(false);
       })
       .catch(err => {
@@ -74,30 +68,22 @@ function TextResponses({
     setTextResponsesByScript(newTextResponsesByScript);
   };
 
-  const responsesForCurrentScript = () => {
-    return textResponsesByScript[scriptId] || [];
-  };
-
   const onChangeScript = scriptId => {
     setScriptId(scriptId);
     setFilterByLessonName(null);
   };
 
-  const getFilteredResponses = () => {
-    let filteredResponses = [...responsesForCurrentScript()];
+  const responsesForCurrentScript = textResponsesByScript[scriptId] || [];
 
-    if (filterByLessonName) {
-      filteredResponses = filter(filteredResponses, [
-        'lesson',
-        filterByLessonName
-      ]);
-    }
+  let filteredResponses = [...responsesForCurrentScript];
+  if (filterByLessonName) {
+    filteredResponses = filter(filteredResponses, [
+      'lesson',
+      filterByLessonName
+    ]);
+  }
 
-    return filteredResponses;
-  };
-
-  const filteredResponses = getFilteredResponses();
-  const lessons = uniq(map(responsesForCurrentScript(), 'lesson'));
+  const lessons = uniq(map(responsesForCurrentScript, 'lesson'));
 
   return (
     <div>
@@ -113,7 +99,7 @@ function TextResponses({
         <div id="uitest-response-actions" style={styles.actionRow}>
           <TextResponsesLessonSelector
             lessons={lessons}
-            onChange={setFilterByLessonName}
+            onChangeFilter={lessonName => setFilterByLessonName(lessonName)}
           />
           <CSVLink
             style={styles.buttonContainer}
