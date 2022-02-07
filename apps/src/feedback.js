@@ -232,15 +232,21 @@ FeedbackUtils.prototype.displayFeedback = function(
   let onHidden;
   if (doNothingOnHidden) {
     // No additional onHidden functionality upon closing the dialog
-  } else if (
-    !continueButton ||
-    (feedbackDialog && feedbackDialog.hideButDontContinue)
-  ) {
-    onHidden = function() {
-      this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
-    }.bind(this);
   } else {
-    onHidden = onContinue;
+    /*
+    hideButDontContinue toggles when the again button is pressed, so its value
+    may change after this definition
+    */
+    onHidden = function() {
+      if (
+        !continueButton ||
+        (feedbackDialog && feedbackDialog.hideButDontContinue)
+      ) {
+        this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
+      } else {
+        onContinue();
+      }
+    }.bind(this);
   }
 
   var icon;
