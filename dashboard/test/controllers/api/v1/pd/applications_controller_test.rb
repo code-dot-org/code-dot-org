@@ -670,6 +670,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -713,6 +714,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -756,6 +758,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -807,6 +810,7 @@ module Api::V1::Pd
         application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
         application.lock!
@@ -851,6 +855,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -893,6 +898,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!

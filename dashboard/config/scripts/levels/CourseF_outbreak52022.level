@@ -12,7 +12,7 @@
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -72,11 +72,16 @@
     "instructions_icon": "drmonster",
     "video_key": "outbreak_scientist",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:39.912+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak5\\\"\"],\"cloned_from\":\"CourseF_outbreak5\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:39.912+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak5\\\"\"],\"cloned_from\":\"CourseF_outbreak5\"},{\"changed_at\":\"2022-01-18 14:35:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

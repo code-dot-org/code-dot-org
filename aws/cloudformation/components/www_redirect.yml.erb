@@ -38,16 +38,10 @@
               OriginProtocolPolicy: match-viewer
         DefaultCacheBehavior:
           TargetOriginId: PrimaryOrigin
-          LambdaFunctionAssociations:
-            # Trigging upon origin-request ensures redirect is cached
-            - EventType: origin-request
-              LambdaFunctionARN: !Ref <%=app%>WwwRedirectLambdaVersion1
-          ForwardedValues:
-            QueryString: "false"
-            Headers:
-              - Origin
-            Cookies:
-              Forward: none
+          CachePolicyId: !Ref <%=app%>RedirectCachePolicy
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !Ref <%=app%>RedirectCloudfrontFunction
           ViewerProtocolPolicy: allow-all
           # Use shared Realtime Log config
           RealtimeLogConfigArn: !ImportValue AccessLogs-Config
@@ -92,68 +86,26 @@
           QueryStringsConfig: 
             QueryStringBehavior: all
 
-  <%=app%>WwwRedirectLambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      Runtime: nodejs14.x
-      Role: !GetAtt <%=app%>WwwRedirectLambdaRole.Arn
-      Handler: index.handler
-      Code:
-        ZipFile: |
-          'use strict';
+  <%=app%>RedirectCloudfrontFunction:
+    Type: AWS::CloudFront::Function
+    Properties: 
+      Name: !Sub "${AWS::StackName}-www-redirect"
+      FunctionConfig: 
+        Comment: Redirects a subdomain to the root domain
+        Runtime: cloudfront-js-1.0
+      AutoPublish: true
+      FunctionCode: !Sub |
+        function handler(event) {
+          var newUrl = 'https://<%=CDO.pegasus_hostname%>';
 
-          exports.handler = (event, context, callback) => {
-            const request = event.Records[0].cf.request;
-            const uri = request.uri;
-            const host = request.headers.host[0].value;
-            const querystring = request.querystring;
+          // Append path
+          newUrl += event.request.uri;
 
-            // Start building new url
-            let newUrl = 'https://<%=CDO.pegasus_hostname%>';
-
-            // Append path
-            if (uri) newUrl += uri;
-            
-            // Append query string
-            if (querystring && querystring != '') newUrl += "?" + querystring;
-
-            const response = {
-              status: '302',
-              statusDescription: '302 Redirect to root domain',
-              headers: {
-                location: [{
-                  key: 'Location',
-                  value: newUrl
-                }]
-              }
-            };
-            callback(null, response);
+          return {
+            statusCode: 302,
+            statusDescription: '302 Redirect to root domain',
+            headers:{
+              "location": { "value": newUrl }
+            }
           };
-      Description: Redirect www traffic to root domain
-      TracingConfig:
-        Mode: Active
-
-  # To make a new version, bump the NAME of this resource and all references
-  <%=app%>WwwRedirectLambdaVersion1:
-    Type: AWS::Lambda::Version
-    Properties:
-      FunctionName: !Ref <%=app%>WwwRedirectLambda
-
-  <%=app%>WwwRedirectLambdaRole:
-    Type: "AWS::IAM::Role"
-    Properties:
-      Path: "/"
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
-      ManagedPolicyArns:
-        - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Sid: "AllowLambdaServiceToAssumeRole"
-            Effect: "Allow"
-            Action:
-              - "sts:AssumeRole"
-            Principal:
-              Service:
-                - "lambda.amazonaws.com"
-                - "edgelambda.amazonaws.com"
+        };

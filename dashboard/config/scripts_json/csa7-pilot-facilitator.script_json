@@ -2,9 +2,10 @@
   "script": {
     "name": "csa7-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 21:40:01 UTC",
+    "serialized_at": "2022-01-31 19:48:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -76,7 +77,7 @@
   "lessons": [
     {
       "key": "Accessing Object Behavior",
-      "name": "Accessing Object Behavior",
+      "name": "Writing Methods to Satisfy Conditions",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +95,7 @@
     },
     {
       "key": "Writing Methods to Satisfy Conditions",
-      "name": "Writing Methods to Satisfy Conditions",
+      "name": "Exploring Method Components and Functionality",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -112,7 +113,7 @@
     },
     {
       "key": "Exploring Method Components and Functionality",
-      "name": "Exploring Method Components and Functionality",
+      "name": "Using Object References as Parameters",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -130,7 +131,7 @@
     },
     {
       "key": "Using Object References as Parameters",
-      "name": "Using Object References as Parameters",
+      "name": "Overloading Methods",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -147,7 +148,7 @@
     },
     {
       "key": "Overloading Methods",
-      "name": "Overloading Methods",
+      "name": "Accessing Object Behavior",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -460,6 +461,19 @@
       }
     },
     {
+      "key": "aa168529-8432-4a8e-9a45-feee77c630fc",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa168529-8432-4a8e-9a45-feee77c630fc",
+        "lesson.key": "Accessing Object Behavior",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
       "key": "ede87748-cedb-4794-83b6-164d82591f80",
       "position": 1,
       "properties": {
@@ -544,6 +558,19 @@
       }
     },
     {
+      "key": "be1d3cd8-eaa8-46b1-b3f9-43e478f63665",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be1d3cd8-eaa8-46b1-b3f9-43e478f63665",
+        "lesson.key": "Exploring Method Components and Functionality",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
       "key": "fc08f6be-f1df-4494-b9ca-04e9b6fe4445",
       "position": 1,
       "properties": {
@@ -580,6 +607,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2f313cc8-2fbd-448d-878f-17d36890bf25",
+        "lesson.key": "Using Object References as Parameters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "key": "2773813c-42c9-48a4-a22f-ae86e4b0db65",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2773813c-42c9-48a4-a22f-ae86e4b0db65",
         "lesson.key": "Using Object References as Parameters",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa7-pilot-facilitator"
@@ -628,6 +668,19 @@
       }
     },
     {
+      "key": "8db52279-908c-4779-b9d4-7dd9cb065764",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8db52279-908c-4779-b9d4-7dd9cb065764",
+        "lesson.key": "Overloading Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
       "key": "99f04e24-289a-4d35-b712-b4866e1abf90",
       "position": 1,
       "properties": {
@@ -664,6 +717,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "b8e91cd3-4505-4d82-9441-4fb5dc5a666a",
+        "lesson.key": "Overriding Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "key": "277c13a5-aa5d-4079-8e43-955f6e35c448",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "277c13a5-aa5d-4079-8e43-955f6e35c448",
         "lesson.key": "Overriding Methods",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa7-pilot-facilitator"
@@ -712,6 +778,19 @@
       }
     },
     {
+      "key": "8521534e-98dc-4fa9-94e2-eb29dd8ce53a",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8521534e-98dc-4fa9-94e2-eb29dd8ce53a",
+        "lesson.key": "Exploring Recursive Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
       "key": "78285c0f-27c8-4588-a156-f1bcbe6fc4dc",
       "position": 1,
       "properties": {
@@ -748,6 +827,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "6a42ecd8-3b6f-45d2-8a8d-5c720283b1e8",
+        "lesson.key": "Comparing Recursive and Iterative Solutions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "key": "c038e78a-db4a-4a87-b3a8-7fac50a9e6f9",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c038e78a-db4a-4a87-b3a8-7fac50a9e6f9",
         "lesson.key": "Comparing Recursive and Iterative Solutions",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa7-pilot-facilitator"
@@ -796,6 +888,19 @@
       }
     },
     {
+      "key": "6a9b866c-de0f-4b96-99fd-d7772e8c8ea4",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a9b866c-de0f-4b96-99fd-d7772e8c8ea4",
+        "lesson.key": "Writing Recursive Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
       "key": "acf50f6c-dfb0-4025-b413-6f11dad7d3ac",
       "position": 1,
       "properties": {
@@ -832,6 +937,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "95b37806-78c4-41b7-b0e0-303ac9ec813e",
+        "lesson.key": "Maximizing System Reliability",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "key": "f214eee8-1b4d-444e-a866-d6040aad3dc1",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f214eee8-1b4d-444e-a866-d6040aad3dc1",
         "lesson.key": "Maximizing System Reliability",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa7-pilot-facilitator"
@@ -1305,6 +1423,17 @@
       }
     },
     {
+      "key": "bb748af9-0704-48dd-8d93-1f1d36db4e06",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "bb748af9-0704-48dd-8d93-1f1d36db4e06",
+        "lesson_activity.key": "aa168529-8432-4a8e-9a45-feee77c630fc"
+      }
+    },
+    {
       "key": "413a12ea-d69a-4d4c-89ce-4c242f5c8e3d",
       "position": 1,
       "properties": {
@@ -1357,7 +1486,7 @@
       "key": "ada37441-55d8-42ae-bc4d-f40dff5e067a",
       "position": 3,
       "properties": {
-        "description": "We are now going to look at a code segment with actual and formal parameters. Trace the code to predict the output and answer the questions about the relationship between the parameters. ",
+        "description": "When an actual parameter is a primitive value, the formal parameter is initialized with a copy of that value. Changes to the formal parameter have no effect on the corresponding actual parameter.\n\nWe are now going to look at a code segment with actual and formal parameters. Trace the code to predict the output and answer the questions about the relationship between the parameters. ",
         "remarks": true
       },
       "seeding_key": {
@@ -1403,10 +1532,33 @@
       }
     },
     {
-      "key": "9074a8de-4f7b-451f-af26-d93b381781cb",
+      "key": "79cc3718-f1dd-46c5-ae06-008276b5b737",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review accessor methods and define non-void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review mutator methods and define void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug code that has incorrect method headers and return statements or types.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review accessor methods and define non-void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review mutator methods and define void methods."
+      },
+      "seeding_key": {
+        "activity_section.key": "79cc3718-f1dd-46c5-ae06-008276b5b737",
+        "lesson_activity.key": "9e82633d-1a52-4c07-b7e8-23af3e11e3ee"
+      }
+    },
+    {
+      "key": "ebfe43b1-6476-41fd-8881-79c645210c52",
+      "position": 8,
+      "properties": {
+        "description": "Non-void methods with parameters receive values through parameters, use those values, and return a computed value of the specified type. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ebfe43b1-6476-41fd-8881-79c645210c52",
+        "lesson_activity.key": "9e82633d-1a52-4c07-b7e8-23af3e11e3ee"
+      }
+    },
+    {
+      "key": "9074a8de-4f7b-451f-af26-d93b381781cb",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug code that has incorrect method headers and return statements or types.",
         "progression_name": "Void and Non-Void Methods"
       },
       "seeding_key": {
@@ -1416,7 +1568,7 @@
     },
     {
       "key": "122f4252-c23c-4f8e-8fc8-4e893234eb21",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "We reviewed the project's requirements in the previous lesson and looked at examples to identify the key features we needed to develop. Using the list of common characteristics and key features you created and the project requirements, let's identify and plan the tasks we need to complete.",
         "duration": "10",
@@ -1430,7 +1582,7 @@
     },
     {
       "key": "2fc0d439-ee24-43fa-be09-07cae69bc93f",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Identify the key benchmarks and deadlines for the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
         "tips": [
@@ -1447,7 +1599,7 @@
     },
     {
       "key": "9ef8bd8a-475e-4ae7-80d3-77acbfc77085",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board."
       },
@@ -1478,6 +1630,18 @@
       },
       "seeding_key": {
         "activity_section.key": "59db8acd-0c21-4881-ad93-80a84c6256a2",
+        "lesson_activity.key": "bc70ae9d-2cbb-4c14-bd01-d2ea6ffd247d"
+      }
+    },
+    {
+      "key": "3e622455-66cd-4eae-a98d-ad8f34fdd35e",
+      "position": 3,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e622455-66cd-4eae-a98d-ad8f34fdd35e",
         "lesson_activity.key": "bc70ae9d-2cbb-4c14-bd01-d2ea6ffd247d"
       }
     },
@@ -1574,7 +1738,7 @@
       "key": "3240b989-6f8b-4d9c-ab17-4914206400eb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object.\n\nIn this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object.\n\nAdditionally, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.",
         "remarks": true
       },
       "seeding_key": {
@@ -1670,6 +1834,17 @@
       "seeding_key": {
         "activity_section.key": "1a3ffffd-5451-441d-b90d-6cc3924549b1",
         "lesson_activity.key": "27b6e2a4-ac10-49ce-a8ad-ab60ac2a7ae6"
+      }
+    },
+    {
+      "key": "eccede68-e6c8-431e-9f47-4e1fff226882",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "eccede68-e6c8-431e-9f47-4e1fff226882",
+        "lesson_activity.key": "be1d3cd8-eaa8-46b1-b3f9-43e478f63665"
       }
     },
     {
@@ -1831,6 +2006,17 @@
       }
     },
     {
+      "key": "e7d5c34a-0f91-4011-b7c5-614d39792f45",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "e7d5c34a-0f91-4011-b7c5-614d39792f45",
+        "lesson_activity.key": "2773813c-42c9-48a4-a22f-ae86e4b0db65"
+      }
+    },
+    {
       "key": "605ed0cc-4a85-40c3-a238-733f7f393ad6",
       "position": 1,
       "properties": {
@@ -1963,6 +2149,17 @@
       "seeding_key": {
         "activity_section.key": "5660823a-a13e-4425-ac41-95c923c9100f",
         "lesson_activity.key": "178b0bfb-f48c-4cce-a4c2-24c90a4e7e8c"
+      }
+    },
+    {
+      "key": "81dd85cd-2341-4dd5-8493-a4893b52ad0d",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "81dd85cd-2341-4dd5-8493-a4893b52ad0d",
+        "lesson_activity.key": "8db52279-908c-4779-b9d4-7dd9cb065764"
       }
     },
     {
@@ -2110,6 +2307,17 @@
       "seeding_key": {
         "activity_section.key": "ffaee6ad-650c-446d-8e15-a401f4383552",
         "lesson_activity.key": "b8e91cd3-4505-4d82-9441-4fb5dc5a666a"
+      }
+    },
+    {
+      "key": "cc2f392e-8351-40f5-b4e6-0d39b05feeeb",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "cc2f392e-8351-40f5-b4e6-0d39b05feeeb",
+        "lesson_activity.key": "277c13a5-aa5d-4079-8e43-955f6e35c448"
       }
     },
     {
@@ -2295,6 +2503,17 @@
       }
     },
     {
+      "key": "328170d4-1de3-43ea-8fa2-e7d89933142f",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "328170d4-1de3-43ea-8fa2-e7d89933142f",
+        "lesson_activity.key": "8521534e-98dc-4fa9-94e2-eb29dd8ce53a"
+      }
+    },
+    {
       "key": "1632a6f0-2b69-4351-ba4a-e97ce75ab603",
       "position": 1,
       "properties": {
@@ -2462,6 +2681,17 @@
       "seeding_key": {
         "activity_section.key": "0dcc3860-b0a0-437e-a08d-1ab79f5c205a",
         "lesson_activity.key": "6a42ecd8-3b6f-45d2-8a8d-5c720283b1e8"
+      }
+    },
+    {
+      "key": "dc50768b-d63f-4c37-b844-e56d691b4ebd",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "dc50768b-d63f-4c37-b844-e56d691b4ebd",
+        "lesson_activity.key": "c038e78a-db4a-4a87-b3a8-7fac50a9e6f9"
       }
     },
     {
@@ -2635,6 +2865,17 @@
       }
     },
     {
+      "key": "604b9680-c597-4ea1-937c-e851c9998670",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "604b9680-c597-4ea1-937c-e851c9998670",
+        "lesson_activity.key": "6a9b866c-de0f-4b96-99fd-d7772e8c8ea4"
+      }
+    },
+    {
       "key": "ac9bcaad-c240-40e1-b54e-698f5e7512a9",
       "position": 1,
       "properties": {
@@ -2714,8 +2955,20 @@
       }
     },
     {
-      "key": "f0514613-466d-4527-b8f0-9167ae45c29f",
+      "key": "c6a177e9-20d9-4557-8803-bbbfcfc38d40",
       "position": 5,
+      "properties": {
+        "description": "The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial, harmful, or both. In addition to system reliability issues, we also have to consider legal issues and intellectual property concerns when creating programs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c6a177e9-20d9-4557-8803-bbbfcfc38d40",
+        "lesson_activity.key": "f137e5e2-738b-4e5c-bcf0-67a794d10271"
+      }
+    },
+    {
+      "key": "f0514613-466d-4527-b8f0-9167ae45c29f",
+      "position": 6,
       "properties": {
         "description": "Using the items on your Project Planning Board, continue to develop your Title Sequence Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
         "duration": "15",
@@ -2729,7 +2982,7 @@
     },
     {
       "key": "c456eb20-4b6d-40a0-8f10-a5b4ba7c20db",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
         "progression_name": "Title Sequence Project",
@@ -2780,6 +3033,17 @@
       "seeding_key": {
         "activity_section.key": "21db52de-1b80-4042-ba74-b3557d064def",
         "lesson_activity.key": "95b37806-78c4-41b7-b0e0-303ac9ec813e"
+      }
+    },
+    {
+      "key": "e5b56892-3bb0-4469-9156-6be6947eedd8",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "e5b56892-3bb0-4469-9156-6be6947eedd8",
+        "lesson_activity.key": "f214eee8-1b4d-444e-a866-d6040aad3dc1"
       }
     },
     {
@@ -3984,6 +4248,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4281,6 +4548,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5444,6 +5714,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa7-pilot-facilitator/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa7-pilot-facilitator/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa7-pilot-facilitator/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
+      }
+    },
+    {
       "name": "Coloring Page",
       "url": "https://docs.google.com/document/u/4/d/1SyXIy-SRNvXGlUTJVs-wg-5bfHKUf0zPxk-luiBqxi8/edit",
       "key": "coloring_page",
@@ -6131,7 +6434,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
+        "script.name": "csa7-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -15,12 +15,21 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-11-22 19:57:26 UTC",
+    "serialized_at": "2022-01-20 17:44:09 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -24,7 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
@@ -69,7 +69,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-03T23:24:42.242+00:00\",\"changed\":[\"cloned from \\\"CSDU6 piano with notes_2021\\\"\"],\"cloned_from\":\"CSDU6 piano with notes_2021\"},{\"changed_at\":\"2021-12-03 23:26:48 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-03T23:24:42.242+00:00\",\"changed\":[\"cloned from \\\"CSDU6 piano with notes_2021\\\"\"],\"cloned_from\":\"CSDU6 piano with notes_2021\"},{\"changed_at\":\"2021-12-03 23:26:48 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:23:18 +0000\",\"changed\":[\"hide_share_and_remix\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

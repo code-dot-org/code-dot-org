@@ -102,6 +102,7 @@
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
       cronjob at:'31 17 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
       cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
       cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')

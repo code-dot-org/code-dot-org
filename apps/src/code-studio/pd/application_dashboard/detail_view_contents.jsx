@@ -681,7 +681,7 @@ export class DetailViewContents extends React.Component {
   renderHeader = () => {
     const rubricURL =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view'
+        ? 'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view'
         : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
 
     return (

@@ -47,6 +47,16 @@ class StorageApps
     true
   end
 
+  def restore(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
+    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+
+    update_count = @table.where(id: storage_app_id).update(state: 'active')
+    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+
+    true
+  end
+
   def get(channel_id)
     owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     row = @table.where(id: storage_app_id).exclude(state: 'deleted').first

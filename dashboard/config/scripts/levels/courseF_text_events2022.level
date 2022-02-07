@@ -73,11 +73,17 @@
     "encrypted_examples": "/gmGSKrtG2xPfYr7K5uXDBu6eiA8V5lxo6Yoj5TLewOtlmWcND/l5RhnMLEE\njO2ld12Qngo+gHU2VdwzBzBufA==\n",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use events to make more text appear on the screen over time.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:32.476+00:00\",\"changed\":[\"cloned from \\\"courseF_text_events\\\"\"],\"cloned_from\":\"courseF_text_events\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:32.476+00:00\",\"changed\":[\"cloned from \\\"courseF_text_events\\\"\"],\"cloned_from\":\"courseF_text_events\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "events": 2,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

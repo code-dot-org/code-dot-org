@@ -70,11 +70,15 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Give a sprite a behavior.",
     "instructions_icon": "strawberry",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.347+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_behaviors\\\"\"],\"cloned_from\":\"courseF_sprites_behaviors\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.347+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_behaviors\\\"\"],\"cloned_from\":\"courseF_sprites_behaviors\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

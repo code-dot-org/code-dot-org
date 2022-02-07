@@ -1299,6 +1299,8 @@ en:
               name: AI Lab
             Java Lab:
               name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-47:
               name: Example CSP Assessment
               description_student: 
@@ -19044,6 +19046,8 @@ en:
               name: 'Mini-Project: User Input Programs'
             lesson-4:
               name: Debugging Prototypes
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: Groups of Sprites
             lesson-6:
@@ -20594,6 +20598,10 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            lesson-1:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_lists:
               display_name: Lists
@@ -20642,6 +20650,8 @@ en:
               display_name: Traversals
             csp_project:
               display_name: Project
+            lessonGroup-5:
+              display_name: Post-Course Survey
           name: csp5-2021
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
         csp6-2021:
@@ -20680,9 +20690,13 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            lesson-1:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unit 6: Algorithms'
+              display_name: Algorithms
               description: |-
                 ### Unit Philosophy and Pedagogy
 
@@ -20711,6 +20725,8 @@ en:
                 * 3.17 Algorithmic Efficiency
                 * 3.18 Undecidable Problems
                 * 4.3 Parallel and Distributed Computing
+            lessonGroup-2:
+              display_name: Post-Course Survey
           name: csp6-2021
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
         csp7-2021:
@@ -20774,12 +20790,18 @@ en:
               name: Assessment Day
               description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
               description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
+            lesson-1:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameters and Return Values
               description: "### Unit Philosophy and Pedagogy\n\n* **Learning by Building Libraries:** In the second EIPM sequence of this unit, students learn to use the Student-Create Libraries tool in App Lab. This tool allows them to build and share libraries of functions that they can use in many different projects. This tool serves many purposes besides simply teaching students about libraries. By having to write functions that other students find useful, they will need to think about common patterns or situations that they have seen in projects across the course. Students will also practice commenting their code so others can understand how it works, practice designing functions that use parameters and return.  \n\n* **Final Preparation for the Create PT:** Students learn very few new concepts in this unit; nevertheless, it can be challenging because students need to learn how to integrate the ideas of parameters and return with every other concept they have learned in this course. This unit presents a good opportunity to do a final review of every programming construct covered in the course as students prepare to demonstrate what they've learned on the Create PT.\n\n### Major Assessment and Projects\n\nThe unit project asks students to design a library of functions that they can share with classmates. Their library must contain at least two functions, and at least one of those functions must include a parameter, return, a loop, and an if-statement. This requirement ensures students practice skills they willll use in the Create PT. Using a project guide, students choose a theme for their library, build it, test it, and exchange feedback with other students. Students submit their library code, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. They will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.12 Calling Procedures\n* 3.13 Developing Procedures\n* 3.14 Libraries\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.c.i\n* 3.c.ii\n* 3.c.iii\n* 3.c.iv\n* 3.d.i\n* 3.d.ii\n* 3.d.iii"
             csp_libraries:
               display_name: Libraries
+            lessonGroup-3:
+              display_name: Survey
           name: csp7-2021
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
         csp8-2021:
@@ -20807,7 +20829,15 @@ en:
               name: Create PT Deep Dive
               description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT.
               description_teacher: 'This lesson is designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they''re scored. '
-          lesson_groups: {}
+            lesson-1:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Survey
           name: csp8-2021
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
 
@@ -20867,10 +20897,16 @@ en:
               name: Algorithmic Bias
               description_student: In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image.
               description_teacher: In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.
+            lesson-1:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
               description: "### Unit Philosophy and Pedagogy\n\n\n* **The Data Analysis Process:** This unit is built around a data analysis process that helps students break down how data is turned into new information about the world. Some lessons are designed around different steps of this process, like cleaning data or building visualizations. Other lessons focus on ways this process is applied in real-world contexts like citizen science or machine learning. The data analysis process helps provide a consistent reference point as students explore the importance of data analysis in computing. \n\n* **Exploring Data with the Data Visualizer:** The Data Visualizer is a tool built into App Lab that allows students to quickly create visualizations of the data they've added to their projects. The set of possible visualizations is intentionally limited to a few ways to change or modify the chart. This tool aims to encourage exploring the different kinds of questions that can be answered with data visualizations, with a greater emphasis on students' ability to create a variety of visualizations quickly.\n\n\n### Major Assessment and Projects\n\nStudents use the data visualizer to find and present a data story. Using what they've learned about the data analysis process, students either choose a dataset inside the data library or upload one of their own and create visualizations that find interesting patterns that may reveal new insights and knowledge. Students complete an activity guide describing their findings and the process they used in identifying them. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* DAT-2: Programs can be used to process data, which allows users to discover information and create new knowledge.\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 2.3 Extracting Information from Data\n* 2.4 Using Programs with Data\n* 5.3 Computing Bias\n* 5.4 Crowdsourcing"
+            lessonGroup-2:
+              display_name: Survey
           name: csp9-2021
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
         csp10-2021:
@@ -20949,10 +20985,16 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            lesson-1:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
               description: "### Unit Philosophy and Pedagogy\n\n* **Learning Through Full-class Simulation:** The simulation project that runs through this unit serves several important goals. It helps contextualize what students are learning by moving from abstract ideas of privacy or security to concrete potential innovations. Since the simulation is based on modernizing schools, students can consider the consequences of computing innovations in a familiar setting. By taking on an assigned role and interacting with a group of teammates who have done the same, students must consider a breadth of interests and goals beyond their own when it comes to innovating in schools. \n\n* **Ending the Year as \"Deciders\":** A major theme students engage with throughout this unit is the need to consider both sides of technological innovation. Computing technology has led to both benefits and harms to culture, economy, and society at large. Responding to important questions facing our world requires understanding technology and an ability to identify and interpret the impacts it causes. This unit is not designed to advocate for any particular point of view on the impact of technology. Still, it should empower students to adeptly see and weigh the consequences of the technology around them. While the Create PT may feel like the most significant project of this course, the Explore Curricular requirement and the questions faced in this unit are arguably more crucial. Many of the young people who take CS Principles may pursue studies or careers in which they are \"creators\" with technology, but all of them will need to be thoughtful \"deciders\" in a world profoundly shaped by computing. \n\n\n### Major Assessment and Projects\n\nStudents complete the Future School Convention simulation throughout this unit. Working in teams of roughly five people, students are assigned a role and a set of interests they'll need to investigate. They research real-world innovations that could improve schools and align with the interests of their character. Throughout the unit, they are given opportunities to refine their proposals as a team and debate the benefits and risks of different computing innovations. Eventually, their team submits an overall proposal for the Future School, and all students vote for the team and innovation they believe to be the best. Students will also complete an end-of-unit assessment aligned with the CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n* IOC-2: The use of computing innovations may involve risks to your personal safety and identity.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 5.1 Beneficial and Harmful Effects\n* 5.6 Safe Computing"
+            lessonGroup-2:
+              display_name: Survey
           name: csp10-2021
           student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
 
@@ -22275,6 +22317,8 @@ en:
           lessons:
             new lesson:
               name: lesson display name
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: new lesson 1
           lesson_groups:
@@ -23059,23 +23103,23 @@ en:
               description_student: 
               description_teacher: 
             lesson-6:
-              name: Writing Methods to Satisfy Conditions
+              name: Exploring Method Components and Functionality
               description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
               description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
             lesson-7:
-              name: Exploring Method Components and Functionality
+              name: Using Object References as Parameters
               description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
               description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
             lesson-8:
-              name: Using Object References as Parameters
+              name: Overloading Methods
               description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
               description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
             lesson-9:
-              name: Overloading Methods
+              name: Accessing Object Behavior
               description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
               description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
             lesson-10:
-              name: Accessing Object Behavior
+              name: Writing Methods to Satisfy Conditions
               description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
               description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
             lesson-11:
@@ -23716,13 +23760,13 @@ en:
           description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also create a Verified Teachers Account to view answer keys and exemplars - [click here](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to learn more about becoming a Verified Teacher.
-
             This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about recommendations for introducing students to App Lab before this unit.
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/s/self-paced-pl-csd5-2021). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            **For Teachers:** [Click here](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview#heading=h.c7x6ho8ek6yz) to learn more about this unit and view lesson plans. You can also access lesson plans from this page if you create a Code.org teacher account.
+            **For Teachers:** [Click here](https://studio.code.org/s/aiml-2021?viewAs=Teacher) to see lesson plans and teacher resources for this unit.
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1 - Understanding Machine Learning
@@ -23919,9 +23963,11 @@ en:
             **Implementation guidance for Unit 7**
 
             - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit assumes students have seen App Lab from Unit 4: The Design Process before starting the unit. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about the App Lab expectations in this unit, and ways to introduce App Lab to students before starting the unit.
+            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about recommendations for introducing students to App Lab before this unit.
             - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) for more information
             - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/s/self-paced-pl-csd5-2021). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
         kodea-pd-2021:
           title: CSF Online PD - Kodea
@@ -24540,6 +24586,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csd8-2021:
           lessons: {}
           lesson_groups: {}
@@ -24548,6 +24595,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp1-2021:
           lessons:
             lesson-1:
@@ -24784,6 +24832,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp6-2021:
           lessons: {}
           lesson_groups: {}
@@ -24792,6 +24841,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp7-2021:
           lessons: {}
           lesson_groups: {}
@@ -24800,6 +24850,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp8-2021:
           lessons: {}
           lesson_groups: {}
@@ -24808,6 +24859,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp9-2021:
           lessons: {}
           lesson_groups: {}
@@ -24816,6 +24868,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp10-2021:
           lessons: {}
           lesson_groups: {}
@@ -24824,6 +24877,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         self-paced-pl-csp11-2021:
           lessons: {}
           lesson_groups: {}
@@ -24832,6 +24886,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         poster:
           lessons:
             HoC Tutorial 1:
@@ -25423,7 +25478,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod1:
           lessons:
@@ -25523,7 +25578,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csp-mod2:
           lessons:
@@ -26122,7 +26177,18 @@ en:
             lessonGroup-4:
               display_name: Sandbox
           title: Giving Objects State
-          description: In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
+          description: |-
+            In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa2-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 1
+            * Personal Progress Check 5
+            * Personal Progress Check 9
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
           description_short: ''
           description_audience: ''
@@ -26295,7 +26361,17 @@ en:
             lessonGroup-5:
               display_name: Sandbox
           title: Expanding Program Data
-          description: In this unit, students create one-dimensional arrays to store primitive values and object references. Students represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
+          description: |-
+            In this unit, students create one-dimensional arrays to store primitive values and object references. Students represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa3-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 4
+            * Personal Progress Check 6
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you create one-dimensional arrays to store primitive values and object references. You represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
           description_short: ''
           description_audience: ''
@@ -26454,7 +26530,16 @@ en:
             lessonGroup-5:
               display_name: Unit 4 Pilot Survey
           title: Expanding Program Logic
-          description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
+          description: |-
+            In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa4-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 3
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           description_short: ''
           description_audience: ''
@@ -26622,7 +26707,16 @@ en:
             lessonGroup-5:
               display_name: Pilot Survey
           title: Giving Objects Organization
-          description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
+          description: |-
+            In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa5-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 8
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
           description_short: ''
           description_audience: ''
@@ -26855,8 +26949,16 @@ en:
           description: ''
           student_description: ''
         tesstest921:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Testing CSA Clone
           lesson_groups: {}
+          name: tesstest921
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         hello-world-animals:
           lessons:
             lesson-1:
@@ -27567,7 +27669,17 @@ en:
             lessonGroup-5:
               display_name: Sandbox
           title: Expanding Program Capabilities
-          description: In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+          description: |-
+            In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 2
+            * Personal Progress Check 7
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
           description_short: ''
           description_audience: ''
@@ -27988,6 +28100,46 @@ en:
               name: Toolboxes
               description_student: 
               description_teacher: 
+            Drawing with Loops:
+              name: Drawing with Loops
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.
+            Using Variables with the Artist:
+              name: Using Variables with the Artist
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
+            Programming with the Bee:
+              name: Programming with the Bee
+              description_student: This lesson will teach you what happens when you place a loop inside another loop.
+              description_teacher: In this **skill-building** lesson, students will be encouraged to figure out how minor changes in loops will affect their program.
+            Variables with the Bee:
+              name: Variables with the Bee
+              description_student: This bee loves variables!
+              description_teacher: This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.
+            For Loop Fun:
+              name: For Loop Fun
+              description_student: You're going to have loads of fun learning about "for" loops!
+              description_teacher: In this **skill-building** lesson, students will use loops with a powerful, new structure.
+            For Loops with Bee:
+              name: For Loops with Bee
+              description_student: In these puzzles you will be guiding a bee to nectar and honey using for loops!
+              description_teacher: 'This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. '
+            For Loops with Artist:
+              name: For Loops with Artist
+              description_student: Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures.
+              description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
+            Follow the Algorithm:
+              name: Follow the Algorithm
+              description_student: Play a game and think about what commands are needed to get the right result.
+              description_teacher: In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.
+            'Hello World: Food':
+              name: 'Hello World: Food'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.
           lesson_groups:
             lessonGroup-2:
               display_name: Variables, Pt 2
@@ -27995,6 +28147,14 @@ en:
               display_name: Modified Lessons
             lessonGroup-4:
               display_name: Toolboxes, etc.
+            lessonGroup-5:
+              display_name: Course F Variables (Deprecated)
+            lessonGroup-6:
+              display_name: Course F For Loops (Deprecated)
+            lessonGroup-7:
+              display_name: Course E Sprites (Deprecated)
+            lessonGroup-8:
+              display_name: Hour of Code
           name: 2022drafting
           title: Planning Script for CSF 2022
           description_audience: ''
@@ -28122,16 +28282,16 @@ en:
               description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
             Lots of Sprites:
               name: "[New] Lots of Sprites"
-              description_student: 
-              description_teacher: 
+              description_student: You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
             Counting with Variables:
               name: "[New] Counting with Variables"
-              description_student: 
-              description_teacher: 
+              description_student: You will learn to use variables to make a counter or keep track of a score in a game.
+              description_teacher: In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**
             'Mini-Project: Collector Game':
               name: "[New] Mini-Project: Collector Game"
-              description_student: 
-              description_teacher: 
+              description_student: Collect all the sprites! In this project, you will create a game that others can play.
+              description_teacher: In this **mini-project** lesson, students will create a customized "collector game", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**
             Simulating Experiments:
               name: Simulating Experiments
               description_student: Run simulations on the computer and experiment by changing variables.
@@ -28255,23 +28415,23 @@ en:
         csa7-pilot-facilitator:
           lessons:
             Accessing Object Behavior:
-              name: Accessing Object Behavior
+              name: Writing Methods to Satisfy Conditions
               description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
               description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
             Writing Methods to Satisfy Conditions:
-              name: Writing Methods to Satisfy Conditions
+              name: Exploring Method Components and Functionality
               description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
               description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
             Exploring Method Components and Functionality:
-              name: Exploring Method Components and Functionality
+              name: Using Object References as Parameters
               description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
               description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
             Using Object References as Parameters:
-              name: Using Object References as Parameters
+              name: Overloading Methods
               description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
               description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
             Overloading Methods:
-              name: Overloading Methods
+              name: Accessing Object Behavior
               description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
               description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
             Overriding Methods:
@@ -28609,7 +28769,16 @@ en:
             lessonGroup-5:
               display_name: Sandbox
           title: Giving Objects Life
-          description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+          description: |-
+            In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa8-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 10
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
@@ -28634,6 +28803,115 @@ en:
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
+              key: Safety in My Online Neighborhood
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              key: Learn to Drag and Drop
+            Happy Maps:
+              name: Happy Maps
+              description_student: Write instructions to get the Flurb to the fruit.
+              description_teacher: 'This **context-setting** lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided.'
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+              description_student: Program Scrat to reach the acorn.
+              description_teacher: In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
+              key: Sequencing with Scrat
+            Programming with Scrat:
+              name: Programming with Scrat
+              description_student: Write programs to help Scrat reach the acorn.
+              description_teacher: In this **skill-building** lesson, students will continue to develop sequential algorithms.
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: Help BB-8 collect the scrap metal.
+              description_teacher: In this **skill-building** lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with _BB-8_.
+              key: Programming with Rey and BB-8
+            Happy Loops:
+              name: Happy Loops
+              description_student: Help the Flurb solve bigger problems using loops.
+              description_teacher: This **context-setting** lesson revisits Happy Maps. This time, students will use loops to solve bigger, longer puzzles with their code.
+            Loops with Scrat:
+              name: Loops with Scrat
+              description_student: Help Scrat cover more ground using loops.
+              description_teacher: In this **skill-building** lesson, students will practice loops in programming puzzles where the goal is to help the squirrel reach the acorn.
+            Loops with Laurel:
+              name: Loops with Laurel
+              description_student: Help Laurel the adventurer collect the treasure underground.
+              description_teacher: In this **skill-building** lesson, students continue learning the concept of loops. Here, students use loops to collect treasure in open cave spaces.
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+              description_student: Use loops and patterns to finish the images.
+              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.
+              key: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+              description_student: Move and shout when your teachers presses buttons on a giant remote.
+              description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
+            'Mini-Project: On the Move with Play Lab':
+              name: 'Mini-Project: On the Move with Play Lab'
+              description_student: Create your own game or story.
+              description_teacher: In this **mini-project**, students will use events in Play Lab and apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+            End of Course Project:
+              name: End of Course Project
+              description_student: Tell a story with the Artist!
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and loops with the Artist.
+            'Programming: Happy Maps':
+              key: 'Programming: Happy Maps'
+              name: Happy Maps
+              description_student: Write instructions to get the Flurb to the fruit.
+              description_teacher: 'This **context-setting** lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided.'
+            Programming in Ice Age:
+              key: Programming in Ice Age
+              name: Programming with Scrat
+              description_student: Write programs to help Scrat reach the acorn.
+              description_teacher: In this **skill-building** lesson, students will continue to develop sequential algorithms.
+            'Loops: Happy Loops':
+              key: 'Loops: Happy Loops'
+              name: Happy Loops
+              description_student: Help the Flurb solve bigger problems using loops.
+              description_teacher: This **context-setting** lesson revisits Happy Maps. This time, students will use loops to solve bigger, longer puzzles with their code.
+            Loops in Ice Age:
+              key: Loops in Ice Age
+              name: Loops with Scrat
+              description_student: Help Scrat cover more ground using loops.
+              description_teacher: In this **skill-building** lesson, students will practice loops in programming puzzles where the goal is to help the squirrel reach the acorn.
+            Loops in Collector:
+              key: Loops in Collector
+              name: Loops with Laurel
+              description_student: Help Laurel the adventurer collect the treasure underground.
+              description_teacher: In this **skill-building** lesson, students continue learning the concept of loops. Here, students use loops to collect treasure in open cave spaces.
+            'Events: The Big Event':
+              key: 'Events: The Big Event'
+              name: The Big Event Jr.
+              description_student: Move and shout when your teachers presses buttons on a giant remote.
+              description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
+            Events in Play Lab:
+              key: Events in Play Lab
+              name: 'Mini-Project: On the Move with Play Lab'
+              description_student: Create your own game or story.
+              description_teacher: In this **mini-project**, students will use events in Play Lab and apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+            lesson-1:
+              key: lesson-1
+              name: End of Course Project
+              description_student: Tell a story with the Artist!
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and loops with the Artist.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            lessonGroup-5:
+              display_name: End of Course Project
+          title: Course A (2021)
+          description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
+          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
         express-2022:
           lessons:
             Programming with Angry Birds:
@@ -28840,6 +29118,7 @@ en:
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -29669,30 +29948,37 @@ en:
               name: Parameters and Return Explore
               description_student: Develop a mental model for how functions can be generalized using parameters and return values.
               description_teacher: 'Students work with envelopes and paper to model functions with parameters and return values. Students create their own physical function envelope for drawing a house that takes in different parameters, and then build another function to calculate and return the cost of building that house.  '
+              key: Parameters and Return Explore
             Parameters and Return Investigate:
               name: Parameters and Return Investigate
               description_student: 'Investigate and modify sample apps that use parameters and return values. '
-              description_teacher: 'In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. '
+              description_teacher: 'In this lesson, students work with partners to investigate two different apps that use parameters and return values. '
+              key: Parameters and Return Investigate
             Parameters and Return Practice:
               name: Parameters and Return Practice
               description_student: Practice programming with parameters and return values through a set of programming puzzles.
               description_teacher: Students practice writing programs with parameters and return values by creating and debugging functions that use them.
+              key: Parameters and Return Practice
             Parameters and Return Make:
               name: Parameters and Return Make
               description_student: Make an app that uses functions with parameters and return.
               description_teacher: Students use the knowledge and skills they've developed working with parameters and return values to develop a Rock Paper Scissors App. Unlike typical Make projects, students are given a significant portion of the starter code but are given three functions with parameters and return values that they'll need to develop themselves. At the end students submit their apps which can be assessed using a provided rubric.
+              key: Parameters and Return Make
             Libraries Explore:
               name: Libraries Explore
               description_student: 'Develop a mental model for how libraries work. '
               description_teacher: 'Students learn the basics of libraries while building upon the envelope model of a function with a folder to represent a library. '
+              key: Libraries Explore
             Libraries Investigate:
               name: Libraries Investigate
               description_student: Investigate and modify sample apps that use libraries learn how libraries help programmers simplify and reuse their code.
               description_teacher: In this lesson students work with partners to investigate two apps that use libraries as well as the code used to make a library. Through a series of guided discussions they learn how libraries help programmers simplify and reuse their code.
+              key: Libraries Investigate
             Libraries Practice:
               name: Libraries Practice
               description_student: Practice programming with libraries through a set of programming puzzles.
               description_teacher: Students practice important skills for working with libraries, including testing and debugging libraries, and using libraries to help develop apps. After a brief introduction to these practices by the teacher, students spend the majority of their time programming in a level progression.
+              key: Libraries Practice
             Project   Make a Library Part 1:
               name: Project   Make a Library Part 1
               description_student: The first day of a three day project where students build and test their own libraries.
@@ -29705,9 +29991,40 @@ en:
               name: Project   Make a Library Part 3
               description_student: The third day of a three day project where students build and test their own libraries.
               description_teacher: Students complete their library project, finalizing their code and writing written responses explaining the way one of the functions in their library works.
+            Assessment Day:
+              name: Assessment Day
+              description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
+              description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
+            Project - Make a Library Part 1:
+              key: Project - Make a Library Part 1
+              name: Project   Make a Library Part 1
+              description_student: The first day of a three day project where students build and test their own libraries.
+              description_teacher: In this lesson students begin a multi-day project designing a library of functions. Students will brainstorm common problems they've encountered while programming this year and begin to design functions that address those common problems.
+            Project - Make a Library Part 2:
+              key: Project - Make a Library Part 2
+              name: Project   Make a Library Part 2
+              description_student: The second day of a three day project where students build and test their own libraries.
+              description_teacher: Students continue to develop their library of functions. Students are encouraged to begin developing tests for their functions to make sure they return values as expected. Late in the lesson students exchange their library with a classmate for feedback.
+            Project - Make a Library Part 3:
+              key: Project - Make a Library Part 3
+              name: Project   Make a Library Part 3
+              description_student: The third day of a three day project where students build and test their own libraries.
+              description_teacher: Students complete their library project, finalizing their code and writing written responses explaining the way one of the functions in their library works.
+            'Lesson 11: Assessment Day':
+              key: 'Lesson 11: Assessment Day'
+              name: Assessment Day
+              description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
+              description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
+          title: Parameters, Return, and Libraries ('21-'22)
+          description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
+          description_audience: ''
         csp8-2022:
           lessons:
             Create PT   Review the Task:
@@ -29974,10 +30291,12 @@ en:
               name: Introduction to Online Puzzles
               description_student: This lesson will give you practice in the skills you will need for this course.
               description_teacher: In this **skill-building** lesson, students will practice their _sequencing_ and debugging skills in maze puzzles.
+              key: Introduction to Online Puzzles
             Relay Programming:
               name: Relay Programming
               description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
               description_teacher: This **context-setting** lesson will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+              key: Relay Programming
             Debugging with Laurel:
               name: Debugging with Laurel
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
@@ -29986,11 +30305,116 @@ en:
               name: Events in Bounce
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.
+              key: Events in Bounce
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+              description_student: Feel the force as you build your own Star Wars game in this lesson.
+              description_teacher: In this **skill-building** lesson, students will practice using events to build a game that they can share.
+              key: Build a Star Wars Game
+            Dance Party:
+              name: Dance Party
+              description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
+              description_teacher: 'In this **skill-building** lesson, students will program an interactive dance party. '
+              key: Dance Party
+            Loops in Ice Age:
+              name: Loops in Ice Age
+              description_student: In this lesson you'll use the repeat block to help Scrat reach the acorn as efficiently as possible.
+              description_teacher: This **context-setting/skill-building** lesson will quickly introduce students to loops.
+              key: Loops in Ice Age
+            Drawing Shapes with Loops:
+              name: Drawing Shapes with Loops
+              description_student: In this lesson, loops make it easy to make cool images with the Artist!
+              description_teacher: This **skill-building** lesson builds on the understanding of loops from the previous lesson and doubles as a debugging exercise for extra problem-solving practice.
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+              description_student: This lesson will teach you what happens when you put loops inside loops inside loops.
+              description_teacher: In this **skill-building** lesson, students will learn how to program a loop inside of another loop.
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: It's time to play a game where you earn points only under certain conditions!
+              description_teacher: 'In this **context-setting** lesson, students will write *conditional (if/else) statements* to state the rules of simple card games. '
+              key: Conditionals with Cards
+            Looking Ahead with Minecraft:
+              name: Looking Ahead with Minecraft
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
+              description_teacher: This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!
+            If/Else with Bee:
+              name: If/Else with Bee
+              description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
+              description_teacher: In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
+              description_teacher: In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.
+              key: While Loops in Farmer
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: You can do some amazing things when you use "until" loops!
+              description_teacher: In this **skill-building** lesson, students will learn about "until" loops. Students will build programs that have the main character repeat actions "until" they reach their desired stopping point.
+              key: Until Loops in Maze
+            End of Course Project:
+              name: End of Course Project
+              description_student: Get those hands ready for plenty of coding! It's time to start building your project.
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
+              key: End of Course Project
+            lesson-5:
+              key: lesson-5
+              name: Password Power-Up
+              description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
+            'Algorithms: Graph Paper Programming':
+              key: 'Algorithms: Graph Paper Programming'
+              name: Graph Paper Programming
+              description_student: In this lesson, you will program your classmate to draw pictures!
+              description_teacher: 'In this **context-setting** lesson, students use symbols to instruct each other to color squares on graph paper. By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. '
+            Debugging in Collector:
+              key: Debugging in Collector
+              name: Debugging with Laurel
+              description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
+              description_teacher: In this **skill-building** lesson, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
+            Loops in Artist:
+              key: Loops in Artist
+              name: Drawing Shapes with Loops
+              description_student: In this lesson, loops make it easy to make cool images with the Artist!
+              description_teacher: This **skill-building** lesson builds on the understanding of loops from the previous lesson and doubles as a debugging exercise for extra problem-solving practice.
+            Nested Loops in Bee:
+              key: Nested Loops in Bee
+              name: Nested Loops in Maze
+              description_student: This lesson will teach you what happens when you put loops inside loops inside loops.
+              description_teacher: In this **skill-building** lesson, students will learn how to program a loop inside of another loop.
+            lesson-6:
+              key: lesson-6
+              name: Looking Ahead with Minecraft
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
+              description_teacher: This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!
+            Conditionals in Bee:
+              key: Conditionals in Bee
+              name: If/Else with Bee
+              description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
+              description_teacher: In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
           lesson_groups:
             lessonGroup-6:
               display_name: Digital Citizenship
             csf_sequencing:
               display_name: Sequencing
+            csf_events:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course D (2021)
+          description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
+          student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_audience: 'Ages: 7-11'
         coursee-2022:
           lessons:
             Follow the Algorithm:
@@ -30150,6 +30574,10 @@ en:
               name: Designing for Accessibility
               description_student: 'Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
               description_teacher: 'In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+            'Hello World: Food':
+              name: Hello World
+              description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
+              description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups:
             csf_sprites:
               display_name: Sprites
@@ -30165,11 +30593,14 @@ en:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
-          title: Course E (2021)
+            lessonGroup-8:
+              display_name: Deprecated
+          title: Course E (2022)
           description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
+          name: coursee-2022
         coursef-2022:
           lessons:
             Introducing Sprite Lab:
@@ -30390,3 +30821,312 @@ en:
           description_short: ''
           description: This unit contains the CS Principles Post-Course Survey.
           student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
+        csa1-2022:
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+            lesson-2:
+              name: Exploring The Neighborhood
+            lesson-3:
+              name: Working with the Painter
+            lesson-4:
+              name: Navigating and Painting
+            lesson-5:
+              name: Making Decisions
+            lesson-6:
+              name: Creating Types of Painters
+            lesson-7:
+              name: Improving Programs with Code Reviews
+            lesson-8:
+              name: Repeating Instructions
+            lesson-9:
+              name: Expanding Decisions
+            lesson-10:
+              name: Debugging with the Painter
+            lesson-11:
+              name: Adding New Capabilities
+            lesson-12:
+              name: Creating a StampPainter
+            lesson-13:
+              name: Expanding the StampPainter
+            lesson-14:
+              name: Creating a BackgroundPainter
+            lesson-15:
+              name: Becoming Software Engineers
+            lesson-16:
+              name: Asphalt Art Project – Day 1
+            lesson-17:
+              name: Asphalt Art Project – Day 2
+            lesson-18:
+              name: Asphalt Art Project – Day 3
+            lesson-19:
+              name: FRQ Practice
+            lesson-20:
+              name: Unit 1 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa1-2022
+          title: Object-Oriented Programming ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              key: Learn to Drag and Drop
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming with Angry Birds:
+              key: Programming with Angry Birds
+              name: Programming with Angry Birds
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              key: Programming with Rey and BB-8
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Programming with Harvester:
+              key: Programming with Harvester
+              name: Programming with Harvester
+              description_student: ''
+              description_teacher: ''
+            Loops with Scrat:
+              key: Loops with Scrat
+              name: Loops with Scrat
+              description_student: ''
+              description_teacher: ''
+            Loops with Laurel:
+              key: Loops with Laurel
+              name: Loops with Laurel
+              description_student: ''
+              description_teacher: ''
+            Ocean Scene with Loops:
+              key: Ocean Scene with Loops
+              name: Ocean Scene with Loops
+              description_student: ''
+              description_teacher: ''
+            Drawing Gardens with Loops:
+              key: Drawing Gardens with Loops
+              name: Drawing Gardens with Loops
+              description_student: ''
+              description_teacher: ''
+            On the Move with Events:
+              key: On the Move with Events
+              name: On the Move with Events
+              description_student: ''
+              description_teacher: ''
+            A Royal Battle with Events:
+              key: A Royal Battle with Events
+              name: A Royal Battle with Events
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+          name: pre-express-2022
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-2022:
+          lessons:
+            lesson-1:
+              name: Neighborhood Store Management Project – Day 1
+            lesson-2:
+              name: Neighborhood Store Management Project – Day 2
+            lesson-3:
+              name: Neighborhood Store Management Project – Day 3
+            lesson-4:
+              name: FRQ Practice
+            lesson-5:
+              name: Unit 2 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa2-2022
+          title: Class Structure and Design ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa3-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 3 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa3-2022
+          title: Arrays and Algorithms ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        tessplayground:
+          lessons:
+            Conditionals and Debugging:
+              name: Conditionals and Debugging
+              description_student: Now that you know how to call methods, you help the `Painter` make decisions about how to interact with The Neighborhood using methods that give information. You identify syntax and logic errors as well as debugging strategies to use throughout the year.
+              description_teacher: 'Students modify programs using three Boolean methods: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Students use Boolean methods and `if` statements to apply conditional logic in their programs. Students develop debugging strategies by identifying syntax and logic errors in their code.'
+          lesson_groups: {}
+          name: tessplayground
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        cs4all-invasive-species:
+          lessons:
+            lesson-1:
+              name: Surprising Stories about Plants and Animals
+              description_student: 
+              description_teacher: "Click on this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
+            lesson-2:
+              name: When Species Invade
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing) to access the lesson plan. '
+            lesson-3:
+              name: Big Goldfish, Little Pond
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
+            lesson-4:
+              name: Swimming into Sprite Lab
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1DdepCOwf9BVtZNzSwNiXkeRdvEYLrPlCoPZC-sPchCU/edit?usp=sharing) the access the lesson plan. '
+            lesson-5:
+              name: Analyzing the Impact
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1KspaLQjmbXYKwEQC2vOIGLUdom2tcI0kauUk-0bdZJ4/edit?usp=sharing) to access the lesson plan. '
+            lesson-6:
+              name: Local Invasive Species
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W3PqmcDpPJ5QElP7U_mKPy43ZwGb_ZI3bpRvWN-yitQ/edit?usp=sharing) to access the lesson plan. '
+            lesson-7:
+              name: 'Algorithms: Watch Me Dance'
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
+            lesson-8:
+              name: SciComm and Me
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1njAzvHI3gS_aSoR2IM8Eeekw4bI6kADxvY2s_96SZCM/edit?usp=sharing) to access the lesson plan. '
+            lesson-9:
+              name: Communicating with Comics
+              description_student: 
+              description_teacher: Click on this [link](https://docs.google.com/document/d/1C_WWNg9ACiLpSBNXFwCKzDb4ftyb71we7RTJYV_-CQA/edit?usp=sharing) to access the lesson plan.
+            lesson-10:
+              name: Pet Debate
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1Hxx0MESA13SNsA4mvRhZoZ-XeScezGg3DmAz8DO6p1A/edit?usp=sharing) to access the lesson plan. '
+            lesson-11:
+              name: Responding to Conditions
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1s4pklUxcmnDIjigMXWK-hrBgvuIDRBfEjzEqDAGzx7E/edit?usp=sharing) to access the lesson plan. '
+            lesson-12:
+              name: Conditionals
+              description_student: 
+              description_teacher: Click on this [link](https://docs.google.com/document/d/1yp9BOEYibCekx80fizqTcEksKqaRxQPMW0HQY7gNc3k/edit?usp=sharing) to access the lesson plan.
+            lesson-13:
+              name: Exploring Solutions for the Burmese Python
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1sft21ez0yI20e0D-n8MNZDmeOQyIR9PhsQU31yzG3I0/edit?usp=sharing) to access the lesson plan. '
+            lesson-14:
+              name: Conditionals in Minecraft
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1o0Ki_9yC2l2S8spL-EUjdEy0xqgP-Y717qoeSBoIEk8/edit?usp=sharing) to access the lesson plan. '
+            lesson-15:
+              name: Exploring Solutions for Invasive Species
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1amEfZ4QMfa765k_2sz4hcsyn-IVBzZv3cT6CAGDu0Ek/edit?usp=sharing) to access the lesson plan. '
+            lesson-16:
+              name: Debugging
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vLHsUsDrWU1g8Z7neMcqX1NtmQCc7or95lWO6p3oBGw/edit?usp=sharing) to access the lesson plan. '
+            lesson-17:
+              name: Project Inspiration
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vDetbOM1qCAIkdpa8WiRSGaUorbe7cPvV3WEFpyg0SE/edit?usp=sharing) to access the lesson plan. '
+            lesson-18:
+              name: Making It Work
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1kGekxHbE9VmCTW01flUiq-OvpN1qdb-CsVziQUfcugU/edit?usp=sharing) to access the lesson plan. '
+            lesson-19:
+              name: Debugging
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W2uDdHo8-ZQoX-Gs7izAz8CAIUcBZnB8gqrqHqLtD2E/edit?usp=sharing) to access the lesson plan. '
+            lesson-20:
+              name: Sharing Projects
+              description_student: 
+              description_teacher: 'Click on this [link](https://docs.google.com/document/d/1rxzUyQA3jJzjEUTDvCwYtFK_dYgLgqot0LlpGydK68Q/edit?usp=sharing) to access the lesson plan. '
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Collection 1
+            lessonGroup-3:
+              display_name: Collection 2
+            lessonGroup-4:
+              display_name: Collection 3
+            lessonGroup-5:
+              display_name: Collection 4
+            lessonGroup-6:
+              display_name: Collection 5
+          name: cs4all-invasive-species
+          title: 'Invasive Species '
+          description_audience: ''
+          description_short: 'This is a NSF funded research grant for CS4All '
+          description: ''
+          student_description: ''
+        csa4-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 4 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa4-2022
+          title: Conditions and Logic ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-2022:
+          lessons:
+            lesson-1:
+              name: FRQ Practice
+            lesson-2:
+              name: Unit 5 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know Week
+          name: csa5-2022
+          title: Two-Dimensional Arrays ('22-'23)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -45,6 +45,13 @@ class DeleteAccountsHelper
       where(id: storage_app_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
+    # Clear any comments associated with specific versions of projects.
+    # At time of writing, this feature is in use only in Javalab when a student
+    # commits their code.
+    project_versions = ProjectVersion.where(storage_app_id: storage_app_ids)
+    project_versions.each {|version| version.update!(comment: nil)}
+    @log.puts "Cleared #{project_versions.count} ProjectVersion comments" if project_versions.count > 0
+
     # Clear S3 contents for user's channels
     @log.puts "Deleting S3 contents for #{channel_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)

@@ -5,20 +5,22 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 2 - 4
 
-#### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
+##### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
 
 ## Key terms used throughout the AI and Machine Learning unit
 
+* ##### **Model** - a computer program designed to make a decision.
 * ##### **Features** - the inputs that a model uses to make decisions.
 * ##### **Label** - the output you are trying to decide or predict with a model.
-* ##### **Model** - a computer program designed to make a decision.
 * ##### **Training** - giving examples to a model so it can learn.
 
-## Purpose of offline activities 
+## Purpose of unplugged activities 
 
-##### The lessons within the AI and Machine Learning unit are a mix between online and offline activities. The offline activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
+##### The lessons within the AI and Machine Learning unit are a mix between online and unplugged activities. The unplugged activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
 
 ## Overview of Lessons 2 - 4 
+
+##### Click the dropdown arrows below to view lesson overviews.
 
 <details>
 <summary><strong>Lesson 2: Types of Machine Learning</strong></summary>
