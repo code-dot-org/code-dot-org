@@ -199,7 +199,7 @@ module ApplicationHelper
   end
 
   def script_certificate_image_url(user, script)
-    certificate_image_url(
+    CertificateImage.certificate_image_url(
       name: user.name,
       course: script.name,
       course_title: data_t_suffix('script.name', script.name, 'title')

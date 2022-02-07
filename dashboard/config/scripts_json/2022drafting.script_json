@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "drafting",
-    "serialized_at": "2022-01-24 13:29:03 UTC",
+    "serialized_at": "2022-02-02 22:33:52 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1012,6 +1012,17 @@
       },
       "seeding_key": {
         "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c",
+        "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd"
+      }
+    },
+    {
+      "key": "6501fb37-0fc5-4fa7-ae29-1beebe07319a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Behavior duplication levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "6501fb37-0fc5-4fa7-ae29-1beebe07319a",
         "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd"
       }
     },
@@ -2421,10 +2432,57 @@
     },
     {
       "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Behavior duplication levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "behavior_dup_test_no_shared"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "6501fb37-0fc5-4fa7-ae29-1beebe07319a"
+      },
+      "level_keys": [
+        "behavior_dup_test_no_shared"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Behavior duplication levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "behavior_dup_test_shared"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "6501fb37-0fc5-4fa7-ae29-1beebe07319a"
+      },
+      "level_keys": [
+        "behavior_dup_test_shared"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SimonSays-Unplugged2022"
+        ],
         "progression": "Follow the Algorithm - Unplugged Activity"
       },
       "bonus": false,
@@ -2442,11 +2500,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 1-validated2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2464,11 +2525,14 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CDEF_video_SpritesInAction2022"
+        ],
         "progression": "Video: Sprites in Action"
       },
       "bonus": false,
@@ -2486,11 +2550,14 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 22022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2508,11 +2575,14 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 32022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2530,11 +2600,14 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 42022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2552,11 +2625,14 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 52022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2574,11 +2650,14 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 62022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2596,11 +2675,14 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 72022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2618,11 +2700,14 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 33,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party Freeplay2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2640,7 +2725,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2665,7 +2750,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2690,7 +2775,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2715,7 +2800,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2740,7 +2825,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2765,7 +2850,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -2790,7 +2875,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2815,7 +2900,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2840,7 +2925,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2865,7 +2950,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2890,7 +2975,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2915,7 +3000,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2940,7 +3025,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -2965,7 +3050,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 47,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2990,7 +3075,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3015,7 +3100,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3040,7 +3125,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3065,7 +3150,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3090,7 +3175,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3115,7 +3200,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3140,7 +3225,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3165,7 +3250,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3190,7 +3275,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3215,7 +3300,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3240,7 +3325,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -3265,7 +3350,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -3290,7 +3375,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3315,7 +3400,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3340,7 +3425,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3365,7 +3450,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3390,7 +3475,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3415,7 +3500,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3440,7 +3525,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3465,7 +3550,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3490,7 +3575,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -3515,7 +3600,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 69,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -3540,7 +3625,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 70,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3565,7 +3650,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 71,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -3590,7 +3675,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 72,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -3615,7 +3700,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3640,7 +3725,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3665,7 +3750,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3690,7 +3775,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3715,7 +3800,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 77,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3740,7 +3825,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 78,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -3765,7 +3850,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 79,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -3790,7 +3875,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 80,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3815,7 +3900,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 81,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3840,7 +3925,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 82,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -4120,6 +4205,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "behavior_dup_test_no_shared",
+        "script_level.level_keys": [
+          "behavior_dup_test_no_shared"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "6501fb37-0fc5-4fa7-ae29-1beebe07319a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "behavior_dup_test_shared",
+        "script_level.level_keys": [
+          "behavior_dup_test_shared"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "6501fb37-0fc5-4fa7-ae29-1beebe07319a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SimonSays-Unplugged2022",
         "script_level.level_keys": [
           "SimonSays-Unplugged2022"
@@ -4128,6 +4237,114 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "2022drafting",
         "activity_section.key": "32881ece-c98b-4f99-8f33-2d45874a07db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 1-validated2022",
+        "script_level.level_keys": [
+          "Dance Party 1-validated2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "a503087d-2e58-4d0b-b07d-490397da92c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CDEF_video_SpritesInAction2022",
+        "script_level.level_keys": [
+          "CDEF_video_SpritesInAction2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "cf95c5ae-8833-47a8-a134-edc80bb3d8c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 22022",
+        "script_level.level_keys": [
+          "Dance Party 22022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 32022",
+        "script_level.level_keys": [
+          "Dance Party 32022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 42022",
+        "script_level.level_keys": [
+          "Dance Party 42022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 52022",
+        "script_level.level_keys": [
+          "Dance Party 52022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 62022",
+        "script_level.level_keys": [
+          "Dance Party 62022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 72022",
+        "script_level.level_keys": [
+          "Dance Party 72022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party Freeplay2022",
+        "script_level.level_keys": [
+          "Dance Party Freeplay2022"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting",
+        "activity_section.key": "0b81cb53-5ebb-488b-9513-4450d869b58e"
       }
     },
     {
@@ -4716,114 +4933,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "2022drafting",
         "activity_section.key": "020a10b0-7a37-4e77-abfb-206d05abc419"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party 1-validated2022",
-        "script_level.level_keys": [
-          "Dance Party 1-validated2022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "a503087d-2e58-4d0b-b07d-490397da92c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CDEF_video_SpritesInAction2022",
-        "script_level.level_keys": [
-          "CDEF_video_SpritesInAction2022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "cf95c5ae-8833-47a8-a134-edc80bb3d8c2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party 22022",
-        "script_level.level_keys": [
-          "Dance Party 22022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party 32022",
-        "script_level.level_keys": [
-          "Dance Party 32022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party 42022",
-        "script_level.level_keys": [
-          "Dance Party 42022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party 52022",
-        "script_level.level_keys": [
-          "Dance Party 52022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "b88c5d6b-d058-443b-8d04-d855bb836069"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party 62022",
-        "script_level.level_keys": [
-          "Dance Party 62022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party 72022",
-        "script_level.level_keys": [
-          "Dance Party 72022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "2ef70f40-2c26-453e-a878-c10b20cf1952"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance Party Freeplay2022",
-        "script_level.level_keys": [
-          "Dance Party Freeplay2022"
-        ],
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "2022drafting",
-        "activity_section.key": "0b81cb53-5ebb-488b-9513-4450d869b58e"
       }
     }
   ],
