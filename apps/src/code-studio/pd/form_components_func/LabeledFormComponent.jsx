@@ -8,6 +8,8 @@ export const LabelsContext = React.createContext({});
 
 // UI Helpers
 export const labelFor = name => {
+  // TODO: Fix the usage of useContext and remove next line
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const labels = useContext(LabelsContext);
   if (!(name in labels)) {
     console.warn(`Label missing for ${name}`);
