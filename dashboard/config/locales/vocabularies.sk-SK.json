@@ -169,6 +169,10 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "event/outbreak/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
         "event/sports/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
@@ -242,10 +246,6 @@
         "line/poem-art/unversioned": {
           "word": "Riadok",
           "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
-        },
-        "event/outbreak/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "sprite/coursef/2021": {
           "word": "Sprajt",
