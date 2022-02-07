@@ -979,6 +979,13 @@ ga:
         text: nuair a chliceáiltear {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): casadh ar deiseal
+            new Behavior(jittering, []): crith
+            new Behavior(wandering, []): fánaíocht
+            new Behavior(patrolling, []): patrólú
       gamelab_comment:
         text: 'nóta trachta: {COMMENT}'
       gamelab_costumeImage:
@@ -1010,6 +1017,19 @@ ga:
             '"seconds"': soicind
       gamelab_hideTitleScreen:
         text: cuir an scáileán teidil i bhfolach
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1211,6 +1231,14 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': mall
+            '5': gnáthmhód
+            '7': sciobtha
+            '9': extra fast
       gamelab_setTint:
         text: athraigh dath {THIS} go {COLOR}
       gamelab_showTitleScreen:
