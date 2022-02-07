@@ -32,7 +32,8 @@ import manageStudents, {
   TransferType
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
-  setSections
+  setSections,
+  selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
@@ -151,6 +152,7 @@ describe('ManageStudentsTable', () => {
       store.dispatch(setLoginType(fakeSection.login_type));
       store.dispatch(setSections([fakeSection]));
       store.dispatch(setSection(fakeSection));
+      store.dispatch(selectSection(fakeSection.id));
       store.dispatch(setStudents(fakeStudents));
     });
 
