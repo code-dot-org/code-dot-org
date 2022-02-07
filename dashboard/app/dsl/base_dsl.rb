@@ -20,8 +20,9 @@ class BaseDSL
   def self.parse(str, filename, name=nil)
     object = new
     object.name(name) if name.present?
-    utf8 = str ? str.force_encoding('UTF-8') : ''
-    object.instance_eval(utf8, filename)
+    # Use consistent apostrophe symbol, and remove no-break space
+    parsed_string = str ? str.gsub(/‘|’/, "'").gsub(/ /, "") : ''
+    object.instance_eval(parsed_string, filename)
     [object.parse_output, object.i18n_hash]
   end
 
