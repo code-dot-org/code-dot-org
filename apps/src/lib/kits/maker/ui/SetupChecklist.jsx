@@ -275,7 +275,7 @@ export default class SetupChecklist extends Component {
                 className="btn"
                 type="button"
                 value={applabI18n.makerSetupCalibrateCompass()}
-                onClick={() => window.alert('Look at your board.')}
+                onClick={() => this.props.setupChecker.calibrateCompass()}
                 disabled={this.state.isDetecting}
                 title={applabI18n.makerSetupCalibrateCompassDescription()}
               />

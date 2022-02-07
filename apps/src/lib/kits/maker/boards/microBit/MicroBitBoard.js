@@ -240,4 +240,8 @@ export default class MicroBitBoard extends EventEmitter {
       false /* shouldDestroyComponents */
     );
   }
+
+  calibrateCompass() {
+    this.boardClient_.compassCalibration();
+  }
 }
