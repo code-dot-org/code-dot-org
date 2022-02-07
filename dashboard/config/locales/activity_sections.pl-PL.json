@@ -715,6 +715,46 @@
         "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
           "progression_name": "Widget: Kompresja tekstu"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Wstęp",
+          "description": "**Omówić:**\n\n-   _Co wiemy o rozprzestrzenianiu się wirusa?_\n-   _Co może powodować szybsze rozprzestrzenianie się wirusa w mieście?_\n-   _Co może pomóc w spowolnieniu rozprzestrzeniania się wirusa?_\n\nCelem tej dyskusji jest umożliwienie uczniom uaktywnienia wcześniejszej wiedzy i ujrzenia ich pomysłów na tablicy. Jest to również okazją do zbadania niektórych błędnych przekonań na temat rozprzestrzeniania się wirusów."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemia",
+          "description": "_Na dzisiejszej lekcji udasz się do Miasta potworów, gdzie niedługo nastąpi epidemia wirusa. Dr Monster potrzebuje Twojej pomocy, aby spowolnić rozprzestrzenianie się wirusa._\n\n_Stworzysz symulator epidemii w Sprite Lab, a następnie użyjesz go, aby zrozumieć, w jaki sposób wirus może się rozprzestrzeniać. Pomożesz też wszystkim potworom odzyskać zdrowie!_",
+          "progression_name": "Epidemia"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Wykonaj to:** Przeczytaj _Witamy w Mieście potworów_ jako klasa.",
+          "progression_name": "Witamy w mieście potworów"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Wykonaj to:** Przejrzyj słownictwo, **modele i symulacje** z uczniami, korzystając z poprzedniej lekcji. Symulacja to komputerowy model procesu lub systemu."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Dzisiaj ożywimy takie miejsce jak Miasto Potworów, pisząc pewien kod. W tej symulacji, użyjesz duszków do reprezentowania różnych potworów. Będą one miały różne kostiumy, abyśmy wiedzieli, czy są chore, czy zdrowe. Będziesz także używać zachowań, aby potwory się poruszały. Na koniec użyjesz zdarzeń, aby zmienić kostium duszka, gdy dwa duszki dotkną się na ekranie. Będzie to reprezentować przekazanie wirusa przez jednego potwora drugiemu. Będziesz przewidywał, co stanie się z sąsiadami Miasta Potworów i pomożesz im wrócić do zdrowia!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Zrób to:** Usadź uczniów przy ich komputerach i poproś ich, aby zaczęli postępować zgodnie z instrukcjami dla każdego poziomu w sekcji rozwijania umiejętności. Jeśli uczniowie skończą tę sekcję wcześniej, mogą kontynuować eksperymentowanie ze swoim kodem na poziomie 6, dopóki klasa nie będzie gotowa do dalszej pracy.",
+          "progression_name": "Budowanie umiejętności"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Zrób to:** Usadź uczniów z powrotem przy ich komputerach i poproś ich, aby przeszli przez pozostałe poziomy. Niektóre z tych poziomów oferują opcjonalne wyzwania. Zachęć uczniów do uważnego przeczytania instrukcji i eksperymentowania z ich symulacjami.",
+          "progression_name": "Mini-projekt: Symulator pandemii "
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Czas na zabawę"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Symulacje to świetny sposób na naukę o tym, co trudno zaobserwować w rzeczywistości. Pomagają naukowcom rozwiązywać problemy, przewidywać sposób ich rozwiązania oraz bezpiecznie i skutecznie testować nowe pomysły. Twoja symulacja to sposób na pokazanie, jak może wyglądać epidemia wirusa w Mieście Potworów._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Omówić:**\n\n-   W jaki sposób symulacje mogą być pomocne w rzeczywistym świecie?\n-   W jaki sposób symulacje mogą pomóc nam zrozumieć otaczający nas świat?\n-   W jaki sposób symulacje mogą poprawić sposób sprawdzania pomysłów?\n\nCelem dyskusji jest zrozumienie przez uczniów, że symulacje są sposobem interaktywnego modelowania złożonych systemów. Powinni także zobaczyć, jak symulacje umożliwiają testowanie pomysłów szybko, tanio i bezpiecznie."
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Refleksja",
+          "description": "**Monity:**\n\n-   Jak ta symulacja przypomina prawdziwy świat? Czym się różni?\n-   Co chciałbyś zmienić/dodać do swojej symulacji?"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Wstęp",
           "tips": [
@@ -4731,46 +4771,6 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Masz dwie karteczki samoprzylepne. Na jednej napisz jedną rzecz, której nauczyłeś się dzisiaj o kodowaniu.\nPo drugie, napisz jedną rzecz, której nauczyłeś się dzisiaj o poezji.\n\nPodziel się z całą klasą, podnosząc rękę do góry, odpowiadając na pytanie: Czego jeszcze masz nadzieję mógłbyś się nauczyć o kodowaniu i informatyce?"
         },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Wstęp",
-          "description": "**Omówić:**\n\n-   _Co wiemy o rozprzestrzenianiu się wirusa?_\n-   _Co może powodować szybsze rozprzestrzenianie się wirusa w mieście?_\n-   _Co może pomóc w spowolnieniu rozprzestrzeniania się wirusa?_\n\nCelem tej dyskusji jest umożliwienie uczniom uaktywnienia wcześniejszej wiedzy i ujrzenia ich pomysłów na tablicy. Jest to również okazją do zbadania niektórych błędnych przekonań na temat rozprzestrzeniania się wirusów."
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Epidemia",
-          "description": "_Na dzisiejszej lekcji udasz się do Miasta potworów, gdzie niedługo nastąpi epidemia wirusa. Dr Monster potrzebuje Twojej pomocy, aby spowolnić rozprzestrzenianie się wirusa._\n\n_Stworzysz symulator epidemii w Sprite Lab, a następnie użyjesz go, aby zrozumieć, w jaki sposób wirus może się rozprzestrzeniać. Pomożesz też wszystkim potworom odzyskać zdrowie!_",
-          "progression_name": "Epidemia"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "**Wykonaj to:** Przeczytaj _Witamy w Mieście potworów_ jako klasa.",
-          "progression_name": "Witamy w mieście potworów"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Wykonaj to:** Przejrzyj słownictwo, **modele i symulacje** z uczniami, korzystając z poprzedniej lekcji. Symulacja to komputerowy model procesu lub systemu."
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Dzisiaj ożywimy takie miejsce jak Miasto Potworów, pisząc pewien kod. W tej symulacji, użyjesz duszków do reprezentowania różnych potworów. Będą one miały różne kostiumy, abyśmy wiedzieli, czy są chore, czy zdrowe. Będziesz także używać zachowań, aby potwory się poruszały. Na koniec użyjesz zdarzeń, aby zmienić kostium duszka, gdy dwa duszki dotkną się na ekranie. Będzie to reprezentować przekazanie wirusa przez jednego potwora drugiemu. Będziesz przewidywał, co stanie się z sąsiadami Miasta Potworów i pomożesz im wrócić do zdrowia!_"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Zrób to:** Usadź uczniów przy ich komputerach i poproś ich, aby zaczęli postępować zgodnie z instrukcjami dla każdego poziomu w sekcji rozwijania umiejętności. Jeśli uczniowie skończą tę sekcję wcześniej, mogą kontynuować eksperymentowanie ze swoim kodem na poziomie 6, dopóki klasa nie będzie gotowa do dalszej pracy.",
-          "progression_name": "Budowanie umiejętności"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Zrób to:** Usadź uczniów z powrotem przy ich komputerach i poproś ich, aby przeszli przez pozostałe poziomy. Niektóre z tych poziomów oferują opcjonalne wyzwania. Zachęć uczniów do uważnego przeczytania instrukcji i eksperymentowania z ich symulacjami.",
-          "progression_name": "Mini-projekt: Symulator pandemii "
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Czas na zabawę"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Symulacje to świetny sposób na naukę o tym, co trudno zaobserwować w rzeczywistości. Pomagają naukowcom rozwiązywać problemy, przewidywać sposób ich rozwiązania oraz bezpiecznie i skutecznie testować nowe pomysły. Twoja symulacja to sposób na pokazanie, jak może wyglądać epidemia wirusa w Mieście Potworów._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Omówić:**\n\n-   W jaki sposób symulacje mogą być pomocne w rzeczywistym świecie?\n-   W jaki sposób symulacje mogą pomóc nam zrozumieć otaczający nas świat?\n-   W jaki sposób symulacje mogą poprawić sposób sprawdzania pomysłów?\n\nCelem dyskusji jest zrozumienie przez uczniów, że symulacje są sposobem interaktywnego modelowania złożonych systemów. Powinni także zobaczyć, jak symulacje umożliwiają testowanie pomysłów szybko, tanio i bezpiecznie."
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Refleksja",
-          "description": "**Monity:**\n\n-   Jak ta symulacja przypomina prawdziwy świat? Czym się różni?\n-   Co chciałbyś zmienić/dodać do swojej symulacji?"
-        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
             null
@@ -8689,7 +8689,7 @@
           "description": "Na tablicy wyświetlanej dla całej klasy narysuj (lub wyświetl za pomocą projektora) jeden z ostatecznych projektów z zagadek Code Studio związanych z tą lekcją. Zalecamy jedną z następujących czynności:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nZapytaj klasę, w jaki sposób komputer może narysować wyświetlany rysunek.\n\nPo kilku przewidywaniach zostało powiedziane, odpowiedz \\_with dla pętli oczywiście! \\_\n\nPowiedz uczniom, że wkrótce nauczą się tworzyć te drobne rysunki za pomocą pętli i zmiennych."
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
-          "name": "Pętle \"dla\" z Artistą ",
+          "name": "Pętle \"dla\" z Artystą ",
           "tips": [
             "Te zagadki są super zabawne, ale to może być pomocne dla studentów, aby mieć protractors, ołówki i papier zarysowania, aby zobaczyć, jak te projekty zostały wykonane w formie fizycznej. Jeśli nie jest to opcja w klasie, spróbuj skłaniać uczniów do śledzenia na ekranie komputera palcami."
           ]
@@ -9578,6 +9578,9 @@
         },
         "281f3680-418c-4e9f-b18f-dedc11afe3f2": {
           "name": "Spróbuj"
+        },
+        "d9e64ac0-86c1-4035-8bc6-467cac99039f": {
+          "name": "Prezentacje — Dzień 4"
         },
         "ea6885b7-d893-417c-b8c9-d1bf3bfae12c": {
           "tips": [
