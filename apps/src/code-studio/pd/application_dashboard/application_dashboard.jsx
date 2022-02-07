@@ -29,6 +29,7 @@ import AdminCohortView from './admin_cohort_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
+// eslint-disable-next-line react-hooks/rules-of-hooks
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
