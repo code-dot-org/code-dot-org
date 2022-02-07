@@ -1,0 +1,71 @@
+- hide_keep_on_dancing_tile = DCDO.get('hide_dance_followup', nil)
+
+:css
+  div[dir='rtl'] .img-dance-stars {
+    left: auto;
+    right: 20px;
+  }
+
+  .higher-power-text a {
+    color: #ffa2f3
+  }
+
+  .higher-power-text {
+    top: 260px;
+  }
+
+  @media screen and (min-width: 560px) and (max-width: 970px) {
+    .higher-power-text {
+      top: 320px;
+    }
+  }
+
+.dance-clear-element
+.tutorial-promo-container.dance-party-container
+  .img-container.tablet-only.desktop-only
+    %img.background-img.desktop-only{style: "border-radius: 10px", src: "/images/dance-hoc/dance_party_higher_power_background.png" }
+    %img.background-img.tablet-only.mobile-only{style: "border-radius: 10px", src: "/images/fill-500x400/dance-hoc/dance_party_higher_power_background.png" }
+    %img.img-dance-stars.desktop-only{style: "padding: 0px 10px 10px; left: 20px; width: 450px;", src: "/images/fit-300x300/dance-hoc/dance_party_higher_power_band_glow.png"}
+    %img.img-dance-stars.tablet-only{style: "top: 10%; margin-left: -240px", src: "/images/fit-520x300/dance-hoc/dance_party_higher_power_band_glow.png"}
+    %img.img-dance-stars.mobile-only{src: "/images/fit-300x300/dance-hoc/dance_party_higher_power_band.png"}
+
+  %img.mobile-only{style: "width: 100%", src: "/images/dance-hoc/dance_party_higher_power_band_glow.png"}
+  .higher-power-text.mobile-only{style: "font-family: 'Gotham 5r', sans-serif; color: dimgray; text-align: center; padding: 20px; font-size: 18px; line-height: 1.5em;"}
+    %div
+      = "Code a dance to Coldplay's \"Higher Power\" and you could get the chance to see the band live!"
+    .higher-power-text
+      != "Check out <a>code.org/coldplay</a> for more information."
+
+  .col-25.specific-tutorial.right-tutorial.dance-tutorial{:class => ('right-to-left' if language_dir_class == 'rtl' )}
+    .tutorial-box{style: "background-color: rgba(34, 99, 183, 0.37)"}
+      %h2.specific-tutorial-heading.dance-party-h2{style: "color: #ffa2f3"}= I18n.t(:hoc2018_dance_party_box_title)
+      .tutorial-details
+        %p.tutorial-description= I18n.t(:hoc2018_dance_party_box_description)
+      %a{href: CDO.studio_url('/s/dance-2019/reset'), target: '_self'}
+        %button.tutorial-button.dance-try-button= I18n.t(:hoc2018_dance_party_button)
+  .col-25.specific-tutorial.left-tutorial.dance-tutorial{:class => ('right-to-left' if language_dir_class == 'rtl' )}
+    - unless hide_keep_on_dancing_tile
+      .tutorial-box{style: "background-color: rgba(34, 99, 183, 0.37)"}
+        %h2.specific-tutorial-heading.dance-party-h2{style: "color: #ffa2f3"}= I18n.t(:hoc2018_dance_keep_on_dancing_box_title)
+        .tutorial-details
+          %p.tutorial-description= I18n.t(:hoc2018_dance_keep_on_dancing_description)
+        %a{href: CDO.studio_url('/s/dance-extras-2019/reset'), target: '_self'}
+          %button.tutorial-button.dance-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
+
+  .higher-power-text.desktop-only.tablet-only{style: "font-family: 'Gotham 5r', sans-serif; position: absolute; color: white; text-align: center; padding: 20px; font-size: 18px; line-height: 1.5em;"}
+    %div
+      = "Code a dance to Coldplay's \"Higher Power\" and you could get the chance to see the band live!"
+    .higher-power-text
+      != "Check out <a>code.org/coldplay</a> for more information."
+
+.dance-clear-element
+
+%div{style: "text-align: center; padding-top: 10px"}
+  .foot-note-heading= hoc_s(:codeorg_homepage_hoc2018_musician_before)
+  .artist-names
+    - Homepage.get_dance_stars.each do |star|
+      %span.artist-name= star
+      &nbsp; &nbsp;
+    %span.and-more= hoc_s(:codeorg_homepage_hoc2018_musician_after)
+      
+.dance-clear-element
