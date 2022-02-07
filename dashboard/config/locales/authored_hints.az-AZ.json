@@ -467,35 +467,44 @@
           "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
         },
         "courseC_collector_prog2": {
-          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog2_a": "Proqramınızı qısaltmaq üçün dörd <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokdan istifadə edə və ya <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokundan istifadə edə bilərsiniz."
         },
         "courseC_collector_prog2_2018": {
-          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog2_a": "Proqramınızı qısaltmaq üçün dörd <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokdan istifadə edə və ya <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokundan istifadə edə bilərsiniz."
         },
         "courseC_collector_prog2_2019": {
-          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog2_a": "Proqramınızı qısaltmaq üçün dörd <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokdan istifadə edə və ya <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokundan istifadə edə bilərsiniz."
         },
         "courseC_collector_prog2_2020": {
-          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog2_a": "Proqramınızı qısaltmaq üçün dörd <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokdan istifadə edə və ya <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokundan istifadə edə bilərsiniz."
         },
         "courseC_collector_prog2_2021": {
-          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog2_a": "Proqramınızı qısaltmaq üçün dörd <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokdan istifadə edə və ya <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokundan istifadə edə bilərsiniz."
         },
         "courseC_collector_prog4": {
           "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
-          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın.",
+          "courseC_collector_prog4_a": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın."
         },
         "courseC_collector_prog4_2018": {
           "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
-          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın.",
+          "courseC_collector_prog4_a": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın."
         },
         "courseC_collector_prog4_2019": {
           "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
-          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın.",
+          "courseC_collector_prog4_a": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın."
         },
         "courseC_collector_prog4_2020": {
           "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
-          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın.",
+          "courseC_collector_prog4_a": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın."
         },
         "courseC_collector_prog4_2021": {
           "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
@@ -689,16 +698,24 @@
           "courseC_harvester_loops_challenge1_b": "Siz 'move forward' ve 'pick corn'  bloklarini istediyiniz qeder ishlede bilersiniz, sonra ise her kuncde 'turn right' blokunu ishledin."
         },
         "courseC_maze_programming5": {
-          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?"
+          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
+          "courseC_maze_programming5_b": "Quş bu məsələni həll etmək üçün bir dönüş etməlidir. Necə olduğunu həll edə bilərsinizmi?",
+          "courseC_maze_programming5_c": "Həll iki \"irəli get\" bloku, bir dönüş və daha iki \"irəli get\" bloku olacaq."
         },
         "courseC_maze_programming5_2018": {
-          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?"
+          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
+          "courseC_maze_programming5_b": "Quş bu məsələni həll etmək üçün bir dönüş etməlidir. Necə olduğunu həll edə bilərsinizmi?",
+          "courseC_maze_programming5_c": "Həll iki \"irəli get\" bloku, bir dönüş və daha iki \"irəli get\" bloku olacaq."
         },
         "courseC_maze_programming5_2019": {
-          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?"
+          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
+          "courseC_maze_programming5_b": "Quş bu məsələni həll etmək üçün bir dönüş etməlidir. Necə olduğunu həll edə bilərsinizmi?",
+          "courseC_maze_programming5_c": "Həll iki \"irəli get\" bloku, bir dönüş və daha iki \"irəli get\" bloku olacaq."
         },
         "courseC_maze_programming5_2020": {
-          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?"
+          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
+          "courseC_maze_programming5_b": "Quş bu məsələni həll etmək üçün bir dönüş etməlidir. Necə olduğunu həll edə bilərsinizmi?",
+          "courseC_maze_programming5_c": "Həll iki \"irəli get\" bloku, bir dönüş və daha iki \"irəli get\" bloku olacaq."
         },
         "courseC_maze_programming5_2021": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
@@ -706,16 +723,20 @@
           "courseC_maze_programming5_c": "Həll iki \"irəli get\" bloku, bir dönüş və daha iki \"irəli get\" bloku olacaq."
         },
         "courseC_maze_programming8": {
-          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming8_a": "Zorlandığınız təqdirdə kodunuzu bir-bir araşdırmaq üçün \"Addım\" düyməsini istifadə edə biləcəyinizi unutmayın."
         },
         "courseC_maze_programming8_2018": {
-          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming8_a": "Zorlandığınız təqdirdə kodunuzu bir-bir araşdırmaq üçün \"Addım\" düyməsini istifadə edə biləcəyinizi unutmayın."
         },
         "courseC_maze_programming8_2019": {
-          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming8_a": "Zorlandığınız təqdirdə kodunuzu bir-bir araşdırmaq üçün \"Addım\" düyməsini istifadə edə biləcəyinizi unutmayın."
         },
         "courseC_maze_programming8_2020": {
-          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming8_a": "Zorlandığınız təqdirdə kodunuzu bir-bir araşdırmaq üçün \"Addım\" düyməsini istifadə edə biləcəyinizi unutmayın."
         },
         "courseC_maze_programming8_2021": {
           "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
@@ -802,14 +823,17 @@
           "courseD_collector_debugging3_a": "Laurelin mənası olmayan bir şey etdiyi bir yer varmı? Bu blokları dəyişdirəndə nə baş verir?"
         },
         "courseD_collector_debugging4": {
-          "courseD_collector_debugging4_c": "Proqramda 1 blok yoxdur. Onu tapa bilərsiz?"
+          "courseD_collector_debugging4_c": "Proqramda 1 blok yoxdur. Onu tapa bilərsiz?",
+          "courseD_collector_debugging4_a": "Ardıcıl olaraq bir neçə dəfə sazlama prosesindən istifadə etməyə çalışın.\n\nBirinci problem nədən qaynaqlanır?\n\nBu problem həll edildikdən sonra nə səhv olur?",
+          "courseD_collector_debugging4_b": "Pilləkən pilləkəninin naxışını necə düzəltməyi başa düşməkdə çətinlik çəkirsinizsə, barmağınızla onu izləməyə və əmrləri yüksək səslə deməyə çalışın.\n\nDönüşlərin istiqamətini qeyd etməyi unutmayın!"
         },
         "courseD_collector_debugging5": {
           "courseD_collector_debugging5_a": "Yalnız ilk dövrə baxaraq başlayın.\n\nBu nə edir?\n\nNə etməli idi?\n\nBu sənə nə deyir?",
           "courseD_collector_debugging5_b": "İlk döngəni istədiyiniz kimi etdikdən sonra kodunuzda nə qalır?"
         },
         "courseD_collector_debugging6": {
-          "courseD_collector_debugging6_b": "Bütün düzgün addımların burada olduğu görünür, sadəcə bunlardan daha çoxuna ehtiyacınız var. \"Toplamaq\" əməliyyatını necə dəfələrlə təkrar edə bilərsiniz?"
+          "courseD_collector_debugging6_b": "Bütün düzgün addımların burada olduğu görünür, sadəcə bunlardan daha çoxuna ehtiyacınız var. \"Toplamaq\" əməliyyatını necə dəfələrlə təkrar edə bilərsiniz?",
+          "courseD_collector_debugging6_a": "\"Addım\" düyməsindən istifadə edərək kodu icra eləməyə çalış. Birinci addımda hər şey yolundadır?\n\nBəs ikinci addımda?\n\nSəhv haradadır?"
         },
         "courseD_collector_debugging8": {
           "courseD_collector_debugging8_a": "Bir döngə ilə sadələşdirə biləcəyiniz bir nümunə görürsünüzmü?",
@@ -908,26 +932,32 @@
           "courseC_maze_programming2_b": "Blokların üçünün də tam vurulduğundan əmin olun, sonra yenidən \"Çalıştır\" düyməsini basın."
         },
         "courseD_maze_ramp4": {
-          "courseC_maze_programming4_b": "Yolu izləmək üçün irəliləyin və bir tərəfə dönün, sonra yenidən hərəkət edin və əks tərəfə dönün. Donuza çatmaq üçün bir dəfə daha irəliləyin."
+          "courseC_maze_programming4_b": "Yolu izləmək üçün irəliləyin və bir tərəfə dönün, sonra yenidən hərəkət edin və əks tərəfə dönün. Donuza çatmaq üçün bir dəfə daha irəliləyin.",
+          "courseC_maze_programming4_a": "Quş baxımından sağa və ya sola dönə bilərsiniz. Əgər siz sağa baxırsınızsa, sağa dönmək sizi aşağıya doğru göstərəcək."
         },
         "courseD_maze_ramp4_2018": {
-          "courseC_maze_programming4_b": "Yolu izləmək üçün irəliləyin və bir tərəfə dönün, sonra yenidən hərəkət edin və əks tərəfə dönün. Donuza çatmaq üçün bir dəfə daha irəliləyin."
+          "courseC_maze_programming4_b": "Yolu izləmək üçün irəliləyin və bir tərəfə dönün, sonra yenidən hərəkət edin və əks tərəfə dönün. Donuza çatmaq üçün bir dəfə daha irəliləyin.",
+          "courseC_maze_programming4_a": "Quş baxımından sağa və ya sola dönə bilərsiniz. Əgər siz sağa baxırsınızsa, sağa dönmək sizi aşağıya doğru göstərəcək."
         },
         "courseD_maze_ramp5": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5_2018": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5_2019": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5_2020": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5_2021": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
@@ -936,11 +966,13 @@
         },
         "courseD_maze_ramp5a": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5a_2018": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5a_2019": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
@@ -954,19 +986,23 @@
         },
         "courseD_maze_ramp5b": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5b_2018": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5b_2019": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5b_2020": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
-          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_maze_programming5_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_maze_programming5_b": "Dönüşlərin quşun nöqteyi-nəzərindən olduğunu xatırlayın."
         },
         "courseD_maze_ramp5b_2021": {
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
@@ -980,7 +1016,8 @@
         },
         "courseD_maze_ramp7": {
           "courseD_maze_ramp7_a": "Scrat'ı meşe palamuduna götürmek için kullanımlarını kullan!",
-          "courseD_maze_ramp7_c": "Kodunuzu sadələşdirmək istəyirsinizsə, bir təkrar döngəni digərinin içinə qoya bilərsiniz! Buna \\*\\* iç içə döngə \\*\\* deyilir."
+          "courseD_maze_ramp7_c": "Kodunuzu sadələşdirmək istəyirsinizsə, bir təkrar döngəni digərinin içinə qoya bilərsiniz! Buna \\*\\* iç içə döngə \\*\\* deyilir.",
+          "courseD_maze_ramp7_b": "Blok -blok keçmək və səhvləri axtarmaq üçün \"Addım\" düyməsini istifadə etməyi unutma."
         },
         "courseD_maze_until5": {
           "courseD_maze_until5_a": "Zombi dönmək üçün bir yer yoxlamaq üçün `sola gedən yol` istifadə etməyi unutmayın.",
@@ -1010,7 +1047,8 @@
           "courseC_maze_programming2_b": "Üç \"ileriye git\" bloğunun da \"ne zaman çalıştırılır\" bloğuna eklendiğinden emin olun."
         },
         "courseD_scrat_ramp3": {
-          "courseC_maze_programming3_b": "Sağa ve sola dönüşlerin Scrat'ın bakış açısından olduğunu unutmayın."
+          "courseC_maze_programming3_b": "Sağa ve sola dönüşlerin Scrat'ın bakış açısından olduğunu unutmayın.",
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün onun altındakı bütün blokları sağa doğru dartın və bir müddət iş yerində otursunlar.\n\nSilmək istədiyiniz blokun üzərinə klikləyin və onu yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
         },
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
@@ -1032,7 +1070,8 @@
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_a": "Scrat'ı meşe palamuduna götürmek için kullanımlarını kullan!",
-          "courseD_maze_ramp7_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseD_maze_ramp7_c": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseD_maze_ramp7_b": "Blok -blok keçmək və səhvləri axtarmaq üçün \"Addım\" düyməsini istifadə etməyi unutma."
         },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_a": "Bir kenar çizmek için \"100 piksel ileri git\" bloğunu kullanın ve 100'ü 200'e değiştirin.",
@@ -1046,10 +1085,15 @@
           "grade4_artist_functions_windows0_b": "İç içə döngələrdən istifadə etməyə çalışın. Daxili döngə kvadratı düzəldəcək və xarici döngə kvadratı dörd dəfə döndərəcəkdir."
         },
         "courseE_artist_functions7": {
-          "courseD_artist_functions7_b": "Əlavə təkrar döngü əlavə etməyinizə ehtiyac yoxdur. Rəssamı hər yuxarı pəncərə arasında 100 piksel, daha sonra alt pəncərələrə getmək üçün 150 piksel aşağı atlayın."
+          "courseD_artist_functions7_b": "Əlavə təkrar döngü əlavə etməyinizə ehtiyac yoxdur. Rəssamı hər yuxarı pəncərə arasında 100 piksel, daha sonra alt pəncərələrə getmək üçün 150 piksel aşağı atlayın.",
+          "courseD_artist_functions7_a": "Əvvəlcə funksiyanızı yaratmağa çalışın, sonra bir-bir pəncərə əlavə edin."
         },
         "courseE_artist_functions8": {
-          "courseD_artist_functions8_c": "Hər kvadrat sətrin sonunda, sənətkar növbəti kvadrat sətirini çəkmədən əvvəl aşağı və arxaya sıçramalı olacaq."
+          "courseD_artist_functions8_c": "Hər kvadrat sətrin sonunda, sənətkar növbəti kvadrat sətirini çəkmədən əvvəl aşağı və arxaya sıçramalı olacaq.",
+          "courseD_artist_functions8_f": "Sizə yalnız bir “irəli hərəkət” bloku lazımdır, lakin sizə kifayət qədər “irəli atlama” və yaxud “geri atlama” blokları lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.\n\nBu təsviri yaratmaq üçün \"kvadratların xəttini çəkmək\" funksiyasından necə istifadə edərdiniz?",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   yan uzunluğu **50 piksel** olan kvadrat çəkin\n    -   irəli atılma **100 piksel**",
+          "courseD_artist_functions8_b": "Bu şəkildəki hər cərgəni 3 kvadratdan ibarət bir xətt kimi düşünün. Neçə kvadrat xətti var və onların hər birini çəkməyə haradan başlayırsınız?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
         },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_a": "Bir kenar çizmek için \"100 piksel ileri git\" bloğunu kullanın ve 100'ü 200'e değiştirin.",
@@ -1066,11 +1110,15 @@
           "courseD_artist_ramp12_c": "Her iki tarafı çizmek için 100 piksel ilerlemeniz ve ardından 120 derece sağa dönmeniz gerekir. Kaç tarafa ihtiyacın var?"
         },
         "courseE_bee_concept2": {
-          "courseE_bee_concept2_d": "Balın> 0 olduğunu yoxlamaq üçün boş yerləri də yoxlaya bilərsiniz."
+          "courseE_bee_concept2_d": "Balın> 0 olduğunu yoxlamaq üçün boş yerləri də yoxlaya bilərsiniz.",
+          "courseE_bee_concept2_a": "Burada 'while' döngəsi kömək edə bilərmi?",
+          "courseE_bee_concept2_b": "Siz hər yolun sonuna keçmək və hər boşluqdan bütün balı toplamaq üçün “while” döngələrindən istifadə edə bilərsiniz.",
+          "courseE_bee_concept2_c": "Arı hər yoldan sonra hansı tərəfə dönməlidir?"
         },
         "courseE_bee_concept3": {
           "courseE_bee_concept3a_a": "Bu tapmacanı həll etmək üçün iç içə təkrarlanan döngələrdən istifadə etməyə çalışın.",
-          "courseE_bee_concept3a_c": "Üç qrup çiçək var, buna görə xarici \"təkrar\" döngəniz üç dəfə təkrarlanmalıdır."
+          "courseE_bee_concept3a_c": "Üç qrup çiçək var, buna görə xarici \"təkrar\" döngəniz üç dəfə təkrarlanmalıdır.",
+          "courseE_bee_concept3a_b": "Döngələri hara qoyacağınızı anlaya bilmirsinizsə, kodunuzu addım-addım yazmağa və nümunələri axtarmağa çalışın."
         },
         "courseE_bee_functions1": {
           "courseE_bee_functions1_a": "Sola və sağa dönmələrin arı baxımından olduğunu unutmayın.",
@@ -1124,10 +1172,13 @@
           "courseE_farmer_functions10b_c": "Funksiyanın hazırlanmasında köməyə ehtiyacınız varsa, son tapmacaya baxın."
         },
         "courseE_farmer_functions1a": {
-          "courseE_farmer_functions1a_a": "Addım-addım \"if / else\" ifadələrini nəzərdən keçirin. Bir qarğıdalı bitkisindəsinizsə nə etməlisiniz?"
+          "courseE_farmer_functions1a_a": "Addım-addım \"if / else\" ifadələrini nəzərdən keçirin. Bir qarğıdalı bitkisindəsinizsə nə etməlisiniz?",
+          "courseE_farmer_functions1a_b": "Use a `repeat until` block to get to the pumpkin!"
         },
         "courseE_farmer_functions2b": {
-          "courseE_farmer_functions2b_a": "İki yolun sonuna çatmaq üçün bir \"balqabağa qədər təkrar\" istifadə edə bilərsiniz."
+          "courseE_farmer_functions2b_a": "İki yolun sonuna çatmaq üçün bir \"balqabağa qədər təkrar\" istifadə edə bilərsiniz.",
+          "courseE_farmer_functions2b_b": "Birləşdirən yolda qarğıdalı yoxdur, ona görə də sadəcə onunla hərəkət edə və dönə bilərsiniz.",
+          "courseE_farmer_functions2b_c": "Bütün məhsulu əldə etmək üçün sizə iki ayrı “təkrar et” bloku lazımdır."
         },
         "courseE_farmer_functions2ba": {
           "courseE_farmer_functions2ba_a": "Bu funksiyanı çağırmaq üçün yaşıl `qarğıdalı və balqabaq` blokundan istifadə edin.",
@@ -1408,7 +1459,8 @@
           "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku minalayır."
         },
         "courseA_collector_loops_challenge2": {
-          "courseA_collector_loops_challenge2_b": "Bunu həll etmək üçün yalnız 1 blokdan istifadə etməlisiniz."
+          "courseA_collector_loops_challenge2_b": "Bunu həll etmək üçün yalnız 1 blokdan istifadə etməlisiniz.",
+          "courseA_collector_loops_challenge2_a": "Cənuba hərəkət etməzdən əvvəl ikinci dəfə yolun üzərindən geriyə hərəkət edə bilərsiniz."
         },
         "courseA_maze_seq5_2021": {
           "1": "Bir həll tapmaq üçün addımları kağız üzərində yazmağa çalışın! ",
@@ -1425,7 +1477,8 @@
           "courseB_artist_loops5_a": "'Təkrar et' komandasından istifadə edin , sonra başqa blokları içinə yerləşdirin. Bunu neçə dəfə təkrarlamalısınız?"
         },
         "courseB_collector_loops4": {
-          "courseB_collector_loops4_c": "'Təkrar et' komandasından sonra Laurel aşağı enməli və xəzinəni toplamalıdır!"
+          "courseB_collector_loops4_c": "'Təkrar et' komandasından sonra Laurel aşağı enməli və xəzinəni toplamalıdır!",
+          "courseB_collector_loops4_b": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin."
         },
         "courseC_collector_prog5_2021": {
           "courseC_collector_prog5_a": "\"İlk addımda işləyirmi?\nİkinci addımda işləyirmi?\nİşlər harada səhv gedir? \"",
@@ -1660,28 +1713,36 @@
           "MC_HOC_2017_02_Cole_d": "Agentin xəritədə göstərilən yolu izlədiyinə əmin olun!"
         },
         "MC_HOC_2017_03_Cole": {
-          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!"
+          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!",
+          "MC_HOC_2017_03_Cole_a": "Agenti təzyiq lövhəsinə çatdırdıqdan sonra oyunçunu kompasa aparmaq üçün ox düymələrinizdən istifadə edə bilərsiniz!"
         },
         "MC_HOC_2017_03_Cole_2019": {
-          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!"
+          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!",
+          "MC_HOC_2017_03_Cole_a": "Agenti təzyiq lövhəsinə çatdırdıqdan sonra oyunçunu kompasa aparmaq üçün ox düymələrinizdən istifadə edə bilərsiniz!"
         },
         "MC_HOC_2017_03_Cole_2020": {
-          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!"
+          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!",
+          "MC_HOC_2017_03_Cole_a": "Agenti təzyiq lövhəsinə çatdırdıqdan sonra oyunçunu kompasa aparmaq üçün ox düymələrinizdən istifadə edə bilərsiniz!"
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!"
+          "MC_HOC_2017_03_Cole_b": "Kod bir az uzun hiss etdirirmi? Bir \"təkrarlama\" döngəsi istifadə etməyə çalışın və bunu necə qısalda biləcəyinizi anlaya biləcəyinizə baxın!",
+          "MC_HOC_2017_03_Cole_a": "Agenti təzyiq lövhəsinə çatdırdıqdan sonra oyunçunu kompasa aparmaq üçün ox düymələrinizdən istifadə edə bilərsiniz!"
         },
         "MC_HOC_2017_04POINT5_RYAN": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin"
+          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent yalnız Aleksin və ya Stivin baltaya keçməsinə icazə vermək üçün ilk təzyiq lövhəsinə çatmalıdır."
         },
         "MC_HOC_2017_04POINT5_RYAN_2019": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin"
+          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent yalnız Aleksin və ya Stivin baltaya keçməsinə icazə vermək üçün ilk təzyiq lövhəsinə çatmalıdır."
         },
         "MC_HOC_2017_04POINT5_RYAN_2020": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin"
+          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent yalnız Aleksin və ya Stivin baltaya keçməsinə icazə vermək üçün ilk təzyiq lövhəsinə çatmalıdır."
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin"
+          "MC_HOC_2017_04POINT5_RYAN_b": "Agentin istiqamətini dəyişdirmək üçün \"sağa dön\" blokundan istifadə edin",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent yalnız Aleksin və ya Stivin baltaya keçməsinə icazə vermək üçün ilk təzyiq lövhəsinə çatmalıdır."
         },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agentin 7 dəfə irəli getməsi lazımdır. Bunun baş verməsi üçün \"təkrar\" döngəsindən necə istifadə edə bilərsiniz?",
@@ -1890,7 +1951,8 @@
           "behaviors_hint1": "Siz iki müxtəlif hərəkətləri birləşdirən və ya iki mövcud əməlləri birləşdirən yeni bir əməl yarada bilərsiniz."
         },
         "comment_intro_maze_2018": {
-          "courseC_maze_programming4_a": "Rəylər, digər insanlar sizin kodunuzu oxumağa çalışarkən çox faydalıdır."
+          "courseC_maze_programming4_a": "Rəylər, digər insanlar sizin kodunuzu oxumağa çalışarkən çox faydalıdır.",
+          "courseC_maze_programming4_b": "İstiqamətləri dəyişdirərkən şərh əlavə edin - başqa tərəfə dönsəniz nə olardı?"
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Əgər çox uzağa hərəkət etsən, bəzi cığırlar səni TNT-yə aparacaq."
@@ -2349,16 +2411,24 @@
           "courseC_maze_debugging5_a": "Artıq iş yerində çoxlu faydalı bloklar var. Hamısını silməyin!\n\nKeçmək və kodun harada səhv getdiyini anlamaq üçün \"Addım\" düyməsini istifadə edin."
         },
         "courseC_maze_debugging_challenge1": {
-          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!"
+          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!",
+          "courseC_maze_debugging_challenge1_b": "Scrat yolu bir düzbucaqlıdır! o ehtiyac duyur ki hər dəfə eyni şəkildə dönməlidir.",
+          "courseC_maze_debugging_challenge1_c": "Tapa bilirmirsizsə, hər zaman yenidən başlaya və yeni bir yol tapa bilərsiniz!"
         },
         "courseC_maze_debugging_challenge1_2018": {
-          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!"
+          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!",
+          "courseC_maze_debugging_challenge1_b": "Scrat yolu bir düzbucaqlıdır! o ehtiyac duyur ki hər dəfə eyni şəkildə dönməlidir.",
+          "courseC_maze_debugging_challenge1_c": "Tapa bilirmirsizsə, hər zaman yenidən başlaya və yeni bir yol tapa bilərsiniz!"
         },
         "courseC_maze_debugging_challenge1_2019": {
-          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!"
+          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!",
+          "courseC_maze_debugging_challenge1_b": "Scrat yolu bir düzbucaqlıdır! o ehtiyac duyur ki hər dəfə eyni şəkildə dönməlidir.",
+          "courseC_maze_debugging_challenge1_c": "Tapa bilirmirsizsə, hər zaman yenidən başlaya və yeni bir yol tapa bilərsiniz!"
         },
         "courseC_maze_debugging_challenge1_2020": {
-          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!"
+          "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!",
+          "courseC_maze_debugging_challenge1_b": "Scrat yolu bir düzbucaqlıdır! o ehtiyac duyur ki hər dəfə eyni şəkildə dönməlidir.",
+          "courseC_maze_debugging_challenge1_c": "Tapa bilirmirsizsə, hər zaman yenidən başlaya və yeni bir yol tapa bilərsiniz!"
         },
         "courseC_maze_debugging_challenge1_2021": {
           "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!",
@@ -2378,51 +2448,68 @@
           "courseC_maze_programming1_0": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın."
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın."
+          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın.",
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> blokundan istifadə etmək üçün onu alətlər qutusundan dartın və <xml><block type=\"when_run\"/></xml> blokuna yapışdırın."
         },
         "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın."
+          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın.",
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> blokundan istifadə etmək üçün onu alətlər qutusundan dartın və <xml><block type=\"when_run\"/></xml> blokuna yapışdırın."
         },
         "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın."
+          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın.",
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> blokundan istifadə etmək üçün onu alətlər qutusundan dartın və <xml><block type=\"when_run\"/></xml> blokuna yapışdırın."
         },
         "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın."
+          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın.",
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> blokundan istifadə etmək üçün onu alətlər qutusundan dartın və <xml><block type=\"when_run\"/></xml> blokuna yapışdırın."
         },
         "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın."
+          "courseC_maze_programming2_b": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın.",
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> blokundan istifadə etmək üçün onu alətlər qutusundan dartın və <xml><block type=\"when_run\"/></xml> blokuna yapışdırın."
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_a": "Bu kodu birinci inisializasiya edin ve sonram sehvi mueyyen edin."
+          "courseC_maze_programming3_a": "Harada səhv olduğunu görmək üçün əvvəlcə kodu işə salın.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
         },
         "courseC_maze_programming3_2018": {
-          "courseC_maze_programming3_a": "Bu kodu birinci inisializasiya edin ve sonram sehvi mueyyen edin."
+          "courseC_maze_programming3_a": "Harada səhv olduğunu görmək üçün əvvəlcə kodu işə salın.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
         },
         "courseC_maze_programming3_2019": {
-          "courseC_maze_programming3_a": "Bu kodu birinci inisializasiya edin ve sonram sehvi mueyyen edin."
+          "courseC_maze_programming3_a": "Harada səhv olduğunu görmək üçün əvvəlcə kodu işə salın.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
         },
         "courseC_maze_programming3_2020": {
-          "courseC_maze_programming3_a": "Bu kodu birinci inisializasiya edin ve sonram sehvi mueyyen edin."
+          "courseC_maze_programming3_a": "Harada səhv olduğunu görmək üçün əvvəlcə kodu işə salın.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
         },
         "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_a": "Bu kodu birinci inisializasiya edin ve sonram sehvi mueyyen edin.",
+          "courseC_maze_programming3_a": "Harada səhv olduğunu görmək üçün əvvəlcə kodu işə salın.",
           "courseC_maze_programming3_b": "kodunuzun ortasından bir blok silmək üçün bütün blokları iş sahəsinin başqa bir hissəsinə sürükləyin.\nsilmək istədiyiniz bloku alət qutusuna geri çəkin.\nnəhayət, digər bloklarınızı aid olduqları yerə qoyun."
         },
         "courseC_maze_programming6": {
           "courseC_maze_programming6_a": "Bu tapmacanı həll etmək üçün 2 yol var!",
-          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!"
+          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!",
+          "courseC_maze_programming6_b": "Barmağını quşdan donuza qədər izlə, hansı addımları atdın?",
+          "courseC_maze_programming6_c": "Unutma ki, əvvəlcə dönməlisən, çünki quş divarla üzləşir. "
         },
         "courseC_maze_programming6_2018": {
           "courseC_maze_programming6_a": "Bu tapmacanı həll etmək üçün 2 yol var!",
-          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!"
+          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!",
+          "courseC_maze_programming6_b": "Barmağını quşdan donuza qədər izlə, hansı addımları atdın?",
+          "courseC_maze_programming6_c": "Unutma ki, əvvəlcə dönməlisən, çünki quş divarla üzləşir. "
         },
         "courseC_maze_programming6_2019": {
           "courseC_maze_programming6_a": "Bu tapmacanı həll etmək üçün 2 yol var!",
-          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!"
+          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!",
+          "courseC_maze_programming6_b": "Barmağını quşdan donuza qədər izlə, hansı addımları atdın?",
+          "courseC_maze_programming6_c": "Unutma ki, əvvəlcə dönməlisən, çünki quş divarla üzləşir. "
         },
         "courseC_maze_programming6_2020": {
           "courseC_maze_programming6_a": "Bu tapmacanı həll etmək üçün 2 yol var!",
-          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!"
+          "courseC_maze_programming6_d": "İlişdiyini hiss edirsən? Bu yola bax!",
+          "courseC_maze_programming6_b": "Barmağını quşdan donuza qədər izlə, hansı addımları atdın?",
+          "courseC_maze_programming6_c": "Unutma ki, əvvəlcə dönməlisən, çünki quş divarla üzləşir. "
         },
         "courseC_maze_programming_challenge1": {
           "courseC_maze_programming_challenge1_a": "Burada donuzu əldə etmək üçün çoxlu yollar var. Barmağından istifadə edərək yolu tap və sonra onu proqramlaşdır!"
@@ -2437,19 +2524,25 @@
           "courseC_maze_programming_challenge1_a": "Burada donuzu əldə etmək üçün çoxlu yollar var. Barmağından istifadə edərək yolu tap və sonra onu proqramlaşdır!"
         },
         "courseC_starWars_loops1": {
-          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops1_a": "BB-8 metal qırıntılarının üzərinə yuvarlananda onu avtomatik götürür.",
+          "courseC_starWars_loops1_c": "Bu tapmacanı həll etmək üçün beş dəfə “irəli hərəkət etmək” istəyəcəksiniz."
         },
         "courseC_starWars_loops10": {
-          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops10_a": "Bu naxış nəhəng pilləkən addımlarına bənzəmirmi? Əvvəlki tapmacalardan öyrəndiklərinizi bütün növbə əldə etmək üçün istifadə edə biləcəyinizə baxın."
         },
         "courseC_starWars_loops10_2018": {
-          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops10_a": "Bu naxış nəhəng pilləkən addımlarına bənzəmirmi? Əvvəlki tapmacalardan öyrəndiklərinizi bütün növbə əldə etmək üçün istifadə edə biləcəyinizə baxın."
         },
         "courseC_starWars_loops10_2019": {
-          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops10_a": "Bu naxış nəhəng pilləkən addımlarına bənzəmirmi? Əvvəlki tapmacalardan öyrəndiklərinizi bütün növbə əldə etmək üçün istifadə edə biləcəyinizə baxın."
         },
         "courseC_starWars_loops10_2020": {
-          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops10_a": "Bu naxış nəhəng pilləkən addımlarına bənzəmirmi? Əvvəlki tapmacalardan öyrəndiklərinizi bütün növbə əldə etmək üçün istifadə edə biləcəyinizə baxın."
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
@@ -2457,16 +2550,24 @@
           "courseC_starWars_loops10_b": "daha az kod istifadə etmək istəyirsinizsə, digərinin içinə bir \"təkrar\" döngəsi qoya bilərsiniz\nbuna içəri döngə deyilir."
         },
         "courseC_starWars_loops1_2018": {
-          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops1_a": "BB-8 metal qırıntılarının üzərinə yuvarlananda onu avtomatik götürür.",
+          "courseC_starWars_loops1_c": "Bu tapmacanı həll etmək üçün beş dəfə “irəli hərəkət etmək” istəyəcəksiniz."
         },
         "courseC_starWars_loops1_2019": {
-          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops1_a": "BB-8 metal qırıntılarının üzərinə yuvarlananda onu avtomatik götürür.",
+          "courseC_starWars_loops1_c": "Bu tapmacanı həll etmək üçün beş dəfə “irəli hərəkət etmək” istəyəcəksiniz."
         },
         "courseC_starWars_loops1_2020": {
-          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops1_a": "BB-8 metal qırıntılarının üzərinə yuvarlananda onu avtomatik götürür.",
+          "courseC_starWars_loops1_c": "Bu tapmacanı həll etmək üçün beş dəfə “irəli hərəkət etmək” istəyəcəksiniz."
         },
         "courseC_starWars_loops1_2021": {
-          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "courseC_starWars_loops1_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseC_starWars_loops1_a": "BB-8 metal qırıntılarının üzərinə yuvarlananda onu avtomatik götürür.",
+          "courseC_starWars_loops1_c": "Bu tapmacanı həll etmək üçün beş dəfə “irəli hərəkət etmək” istəyəcəksiniz."
         },
         "courseC_starWars_loops4": {
           "courseC_starWars_loops4_a": "İki 'tekrarla' bloku istifadə et. "
@@ -2512,16 +2613,20 @@
           "courseC_starWars_loops7_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
         },
         "courseC_starWars_loops9": {
-          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
+          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən.",
+          "course_starWars_loops9_c": "Bu tapmacanı həll etmək üçün sola dönmək lazım deyil. Bütün növbələriniz sağa dönə bilər."
         },
         "courseC_starWars_loops9_2018": {
-          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
+          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən.",
+          "course_starWars_loops9_c": "Bu tapmacanı həll etmək üçün sola dönmək lazım deyil. Bütün növbələriniz sağa dönə bilər."
         },
         "courseC_starWars_loops9_2019": {
-          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
+          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən.",
+          "course_starWars_loops9_c": "Bu tapmacanı həll etmək üçün sola dönmək lazım deyil. Bütün növbələriniz sağa dönə bilər."
         },
         "courseC_starWars_loops9_2020": {
-          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
+          "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən.",
+          "course_starWars_loops9_c": "Bu tapmacanı həll etmək üçün sola dönmək lazım deyil. Bütün növbələriniz sağa dönə bilər."
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən.",
@@ -2859,7 +2964,8 @@
           "harvey_tictactoe": "Digər boşluqlara keçmək üçün \"tullanma\" bloklarından istifadə edə bilərsiniz."
         },
         "course1_collector_loops_challenge1": {
-          "courseA_collector_loops_challenge1_a": "Bir şey səhv olarsa, hər bir döngədəki rəqəmləri dəyişməyə çalışın."
+          "courseA_collector_loops_challenge1_a": "Bir şey səhv olarsa, hər bir döngədəki rəqəmləri dəyişməyə çalışın.",
+          "courseA_collector_loops_challenge1_b": "Bir şeyi bircə dəfə edirsinizsə, dövrdən istifadə etməyinizə ehtiyac yoxdur."
         },
         "course1_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "Quşu oxumağa məcbur edə bilərsən.\n\"Blockly\"blok[0]"
@@ -2956,16 +3062,20 @@
           "courseA_artist_loops8_c": "Bu kod nə edir?\\\nO nə etməlidir?\\\nBu sənə nə deyir?\\\\"
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı."
+          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı.",
+          "courseA_collector_loops1_a": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
         },
         "courseA_collector_loops1_2018": {
-          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı."
+          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı.",
+          "courseA_collector_loops1_a": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı."
+          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı.",
+          "courseA_collector_loops1_a": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı."
+          "courseA_collector_loops1_b": "2 dəfə şərqə getmək və xəzinəyə çatmaq sadə bir həll olardı.",
+          "courseA_collector_loops1_a": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
         },
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_a": "Xəzinə olan meydana gəldikdən sonra bu blokdan isdifadə edin.\n<xml>  <block type=\"collector_collect\"/></xml>",
@@ -3397,10 +3507,12 @@
           "courseC_artist_loops1b_a": "bu sizə lazım olacaq ilk blokdur:\n\n[bloklu blok] [0]\n\nistər sola, istərsə də sağa və istənilən sayda dərəcə seçə bilərsiniz"
         },
         "courseC_artist_loops2a_2019": {
-          "courseC_artist_loops2a_a": "Döngənizin içərisində ortasına tullanmaq, sonra dönmək, sonra bir etiket çəkmək istəyəcəksiniz."
+          "courseC_artist_loops2a_a": "Döngənizin içərisində ortasına tullanmaq, sonra dönmək, sonra bir etiket çəkmək istəyəcəksiniz.",
+          "courseC_artist_loops2a_b": "Neçə dəfə təkrarlandığını dəyişdirmək üçün \"təkrar\" döngəsinin yuxarısındakı nömrəni vurun."
         },
         "courseC_artist_loops2a_2020": {
-          "courseC_artist_loops2a_a": "Döngənizin içərisində ortasına tullanmaq, sonra dönmək, sonra bir etiket çəkmək istəyəcəksiniz."
+          "courseC_artist_loops2a_a": "Döngənizin içərisində ortasına tullanmaq, sonra dönmək, sonra bir etiket çəkmək istəyəcəksiniz.",
+          "courseC_artist_loops2a_b": "Neçə dəfə təkrarlandığını dəyişdirmək üçün \"təkrar\" döngəsinin yuxarısındakı nömrəni vurun."
         },
         "courseC_artist_loops2a_2021": {
           "courseC_artist_loops2a_a": "Döngənizin içərisində ortasına tullanmaq, sonra dönmək, sonra bir etiket çəkmək istəyəcəksiniz.",
@@ -3419,23 +3531,31 @@
           "courseC_artist_loops3a_b": "Proqramınız belə görünməlidir!\n\n[bloklu blok] [0]\n\nİstədiyiniz stikerlərdən istifadə edə bilərsiniz!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_b": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops4a_b": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseC_artist_loops4a_a": "İrəli tullanmaq üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNə qədər olduğunu dəyişməyi unutmayın!"
         },
         "courseC_artist_loops4a_2020": {
-          "courseC_artist_loops4a_b": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops4a_b": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseC_artist_loops4a_a": "İrəli tullanmaq üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNə qədər olduğunu dəyişməyi unutmayın!"
         },
         "courseC_artist_loops4a_2021": {
-          "courseC_artist_loops4a_b": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops4a_b": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseC_artist_loops4a_a": "İrəli tullanmaq üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNə qədər olduğunu dəyişməyi unutmayın!"
         },
         "courseC_artist_loops5b_2019": {
-          "courseC_artist_loops5b_c": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_c": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_a": "Xətlərinizin nümunəsini təyin etmək üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Yuxarıdakı kimi bir dizayn etmək üçün siz irəlilədiyiniz məbləği geriyə çəkmək istəyəcəksiniz."
         },
         "courseC_artist_loops5b_2020": {
-          "courseC_artist_loops5b_c": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_c": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_a": "Xətlərinizin nümunəsini təyin etmək üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Yuxarıdakı kimi bir dizayn etmək üçün siz irəlilədiyiniz məbləği geriyə çəkmək istəyəcəksiniz."
         },
         "courseC_artist_loops5b_2021": {
           "courseC_artist_loops5b_b": "Yuxarıdakı kimi bir dizayn etmək üçün, irəli getdiyiniz qədər geri çəkilmək istəyəcəksiniz.",
-          "courseC_artist_loops5b_c": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_c": "Proqramınız belə görünməlidir!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_a": "Xətlərinizin nümunəsini təyin etmək üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>"
         },
         "courseC_artist_prog6_2021": {
           "courseC_artist_prog6_a": "Rəssam artıq ilk xəttini çəkmək üçün düzgün yolla üzləşib.",
@@ -3449,10 +3569,13 @@
           "courseC_maze_loops_challenge2_b": "`toplama` bloklarının tükənməməsi üçün döngələrdən istifadə edin!"
         },
         "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_b": "Ən sadə həll yolu bir dəfə irəliləmək, sonra xəzinə toplamaq olardı."
+          "courseC_collector_prog1_b": "Ən sadə həll yolu bir dəfə irəliləmək, sonra xəzinə toplamaq olardı.",
+          "courseC_collector_prog1_a": "Xəzinə olan bir məkanda dayandığınız zaman onu götürmək üçün <xml><block type=\"collector_collect\"/></xml> blokundan istifadə edin."
         },
         "courseC_collector_prog3_2021": {
-          "courseC_collector_prog3_b": "Kodunuzu bir sətirdə işlətmək üçün \"Addım\" düyməsini istifadə etməyə çalışın. Kodun harada səhv getdiyini görürsünüzmü?"
+          "courseC_collector_prog3_b": "Kodunuzu bir sətirdə işlətmək üçün \"Addım\" düyməsini istifadə etməyə çalışın. Kodun harada səhv getdiyini görürsünüzmü?",
+          "courseC_collector_prog3_a": "Proqram yalnız <xml><block type=\"when_run\"/></xml> blokuna qoşulmuş blokları işlədəcək.",
+          "courseC_collector_prog3_c": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
         },
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_a": "İş yerində artıq çox böyük kod var. Bu tapmacanı həll etmək üçün heç birini silməyə ehtiyac yoxdur.",
@@ -3525,7 +3648,8 @@
           "courseD_bee_nestedLoops7_c": "bloklarınızı bu şəkildə üç dərinliyə yerləşdirin\n təkrar 4\n təkrar 3\n təkrar 12\n nektar almaq\n önə doğru irəlilə\n sağa dönün"
         },
         "courseD_collector_debugging4a_2021": {
-          "courseD_collector_debugging4_a": "Bir dəfəyə bir neçə dəfə səhv tapma prossesini yerinə yetirməyə çalışın. \nBirinci problemə nə səbəb olur?\nBu problem düzəldiləndən sonra nə səhvdi?"
+          "courseD_collector_debugging4_a": "Bir dəfəyə bir neçə dəfə səhv tapma prossesini yerinə yetirməyə çalışın. \nBirinci problemə nə səbəb olur?\nBu problem düzəldiləndən sonra nə səhvdi?",
+          "courseD_collector_debugging4_b": "Pilləkən pilləsinin nümunəsini necə düzəltməyi başa düşməkdə çətinlik çəkirsinizsə, onu barmağınızla izləməyə və əmrləri yüksək səslə deməyə çalışın.\n\nDönüşlərin istiqamətini qeyd etməyi unutmayın!"
         },
         "courseD_collector_debugging5a_2021": {
           "courseD_collector_debugging5a_a": "Bu nə edir?\nO nə etməlidir?\nBu sənə nə deyir?",
@@ -3616,6 +3740,1122 @@
         },
         "iceage_sound_and_points_dani": {
           "iceage_sound_and_points_a": "Aktyor 1 aktyor 2 hadisəsinə toxunduqda 'altına iki blok əlavə etməlisiniz."
+        },
+        "courseA_collector_loops2": {
+          "courseA_collector_loops2_b": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
+        },
+        "courseA_collector_loops2_2018": {
+          "courseA_collector_loops2_b": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
+        },
+        "courseA_collector_loops2_2019": {
+          "courseA_collector_loops2_b": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
+        },
+        "courseA_collector_loops2_2020": {
+          "courseA_collector_loops2_b": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
+        },
+        "courseA_collector_loops3": {
+          "courseA_collector_loops3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> dövrəsindən istifadə etməyə çalışın!"
+        },
+        "courseA_collector_loops3_2018": {
+          "courseA_collector_loops3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> dövrəsindən istifadə etməyə çalışın!"
+        },
+        "courseA_collector_loops4": {
+          "courseA_collector_loops4_a": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin.",
+          "courseA_collector_loops4_b": "Unutmayın ki, Laurel <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> dövrəsini bitirdikdən sonra aşağı enib xəzinəni toplamalıdır!"
+        },
+        "courseA_collector_loops4_2018": {
+          "courseA_collector_loops4_a": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin.",
+          "courseA_collector_loops4_b": "Unutmayın ki, Laurel <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> dövrəsini bitirdikdən sonra aşağı enib xəzinəni toplamalıdır!"
+        },
+        "courseA_collector_loops4_2019": {
+          "courseA_collector_loops4_a": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin.",
+          "courseA_collector_loops4_b": "Unutmayın ki, Laurel <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> dövrəsini bitirdikdən sonra aşağı enib xəzinəni toplamalıdır!"
+        },
+        "courseA_collector_loops4_2020": {
+          "courseA_collector_loops4_a": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin.",
+          "courseA_collector_loops4_b": "Unutmayın ki, Laurel <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> dövrəsini bitirdikdən sonra aşağı enib xəzinəni toplamalıdır!"
+        },
+        "courseA_collector_loops5": {
+          "courseA_collector_loops5_a": "Cavabı dərhal tapa bilmirsinizsə, hansı oxlara ehtiyacınız olacağını anlamaq üçün kağız parçasından istifadə etməyə çalışın və nümunə axtarın.",
+          "courseA_collector_loops5_b": "Yana ve aşağı doğru hərəkət edərək problemi iki addımda həll etməyi yoxlayın.",
+          "courseA_collector_loops5_c": "Laurel'ın qərbə irəliləyərək xəzinəni toplaması üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsü ilə başlaya bilərsiniz."
+        },
+        "courseA_collector_loops5_2018": {
+          "courseA_collector_loops5_a": "Cavabı dərhal tapa bilmirsinizsə, hansı oxlara ehtiyacınız olacağını anlamaq üçün kağız parçasından istifadə etməyə çalışın və nümunə axtarın.",
+          "courseA_collector_loops5_b": "Yana ve aşağı doğru hərəkət edərək problemi iki addımda həll etməyi yoxlayın.",
+          "courseA_collector_loops5_c": "Laurel'ın qərbə irəliləyərək xəzinəni toplaması üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsü ilə başlaya bilərsiniz."
+        },
+        "courseA_collector_loops5_2019": {
+          "courseA_collector_loops5_a": "Cavabı dərhal tapa bilmirsinizsə, hansı oxlara ehtiyacınız olacağını anlamaq üçün kağız parçasından istifadə etməyə çalışın və nümunə axtarın.",
+          "courseA_collector_loops5_b": "Yana ve aşağı doğru hərəkət edərək problemi iki addımda həll etməyi yoxlayın.",
+          "courseA_collector_loops5_c": "Laurel'ın qərbə irəliləyərək xəzinəni toplaması üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsü ilə başlaya bilərsiniz."
+        },
+        "courseA_collector_loops5_2020": {
+          "courseA_collector_loops5_a": "Cavabı dərhal tapa bilmirsinizsə, hansı oxlara ehtiyacınız olacağını anlamaq üçün kağız parçasından istifadə etməyə çalışın və nümunə axtarın.",
+          "courseA_collector_loops5_b": "Yana ve aşağı doğru hərəkət edərək problemi iki addımda həll etməyi yoxlayın.",
+          "courseA_collector_loops5_c": "Laurel'ın qərbə irəliləyərək xəzinəni toplaması üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsü ilə başlaya bilərsiniz."
+        },
+        "courseA_collector_loops6": {
+          "courseA_collector_loops6_a": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın.",
+          "courseA_collector_loops6_b": "Ən qısa həllin bir- birinin ardınca gələn 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>  dövrü var,"
+        },
+        "courseA_collector_loops6_2018": {
+          "courseA_collector_loops6_a": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın.",
+          "courseA_collector_loops6_b": "Ən qısa həllin bir- birinin ardınca gələn 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>  dövrü var,"
+        },
+        "courseA_collector_loops6_2019": {
+          "courseA_collector_loops6_a": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın.",
+          "courseA_collector_loops6_b": "Ən qısa həllin bir- birinin ardınca gələn 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>  dövrü var,"
+        },
+        "courseA_collector_loops6_2020": {
+          "courseA_collector_loops6_a": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın.",
+          "courseA_collector_loops6_b": "Ən qısa həllin bir- birinin ardınca gələn 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>  dövrü var,"
+        },
+        "courseA_collector_loops7": {
+          "courseA_collector_loops7_a": "Əgər sonra nə olacağını anlaya bilmirsinizsə, Laurel-in harada bitdiyini görmək üçün kodu işə salın."
+        },
+        "courseA_collector_loops7_2018": {
+          "courseA_collector_loops7_a": "Əgər sonra nə olacağını anlaya bilmirsinizsə, Laurel-in harada bitdiyini görmək üçün kodu işə salın."
+        },
+        "courseA_collector_loops7_2019": {
+          "courseA_collector_loops7_a": "Əgər sonra nə olacağını anlaya bilmirsinizsə, Laurel-in harada bitdiyini görmək üçün kodu işə salın."
+        },
+        "courseA_collector_loops7_2020": {
+          "courseA_collector_loops7_a": "Əgər sonra nə olacağını anlaya bilmirsinizsə, Laurel-in harada bitdiyini görmək üçün kodu işə salın."
+        },
+        "courseA_collector_loops8": {
+          "courseA_collector_loops8_a": "Bu tapmacanı tapmaqda çətinlik çəkirsinizsə, hərəkətləri bir kağız parçasına yazmağa və nümunə axtarmağa çalışın.",
+          "courseA_collector_loops8_b": "Bu tapmacanı 3 ayrı problemə bölməyə və hər biri üçün döngələr yazmağa çalışın.",
+          "courseA_collector_loops8_c": "Bir dəfəyə bir kod yaza biləcəyinizi unutmayın, sonra oradan hara getməli olduğunuzu öyrənmək üçün çalışdırın."
+        },
+        "courseA_collector_loops8_2018": {
+          "courseA_collector_loops8_a": "Bu tapmacanı tapmaqda çətinlik çəkirsinizsə, hərəkətləri bir kağız parçasına yazmağa və nümunə axtarmağa çalışın.",
+          "courseA_collector_loops8_b": "Bu tapmacanı 3 ayrı problemə bölməyə və hər biri üçün döngələr yazmağa çalışın.",
+          "courseA_collector_loops8_c": "Bir dəfəyə bir kod yaza biləcəyinizi unutmayın, sonra oradan hara getməli olduğunuzu öyrənmək üçün çalışdırın."
+        },
+        "courseA_collector_loops8_2019": {
+          "courseA_collector_loops8_a": "Bu tapmacanı tapmaqda çətinlik çəkirsinizsə, hərəkətləri bir kağız parçasına yazmağa və nümunə axtarmağa çalışın.",
+          "courseA_collector_loops8_b": "Bu tapmacanı 3 ayrı problemə bölməyə və hər biri üçün döngələr yazmağa çalışın.",
+          "courseA_collector_loops8_c": "Bir dəfəyə bir kod yaza biləcəyinizi unutmayın, sonra oradan hara getməli olduğunuzu öyrənmək üçün çalışdırın."
+        },
+        "courseA_collector_loops8_2020": {
+          "courseA_collector_loops8_a": "Bu tapmacanı tapmaqda çətinlik çəkirsinizsə, hərəkətləri bir kağız parçasına yazmağa və nümunə axtarmağa çalışın.",
+          "courseA_collector_loops8_b": "Bu tapmacanı 3 ayrı problemə bölməyə və hər biri üçün döngələr yazmağa çalışın.",
+          "courseA_collector_loops8_c": "Bir dəfəyə bir kod yaza biləcəyinizi unutmayın, sonra oradan hara getməli olduğunuzu öyrənmək üçün çalışdırın."
+        },
+        "courseA_collector_loops_challenge1": {
+          "courseA_collector_loops_challenge1_a": "Nəsə səhv görünərsə, hər dövrdəki rəqəmləri dəyişməyə çalışın.",
+          "courseA_collector_loops_challenge1_b": "Bir şeyi bircə dəfə edirsinizsə, dövrdən istifadə etməyinizə ehtiyac yoxdur.",
+          "courseA_collector_loops_challenge1_c": "Əvvəlcə mağaranın sağ tərəfində 6 daş var, ancaq cənuba doğru hərəkət etməli və 5 dəfə xəzinə toplamalısan. Bilirsən niyə?",
+          "courseA_collector_loops_challenge1_d": "İlkin proqramda son 2 daş toplanmır. Bu kodu sona əlavə etməyə çalışın:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge1_2018": {
+          "courseA_collector_loops_challenge1_a": "Nəsə səhv görünərsə, hər dövrdəki rəqəmləri dəyişməyə çalışın.",
+          "courseA_collector_loops_challenge1_b": "Bir şeyi bircə dəfə edirsinizsə, dövrdən istifadə etməyinizə ehtiyac yoxdur.",
+          "courseA_collector_loops_challenge1_c": "Əvvəlcə mağaranın sağ tərəfində 6 daş var, ancaq cənuba doğru hərəkət etməli və 5 dəfə xəzinə toplamalısan. Bilirsən niyə?",
+          "courseA_collector_loops_challenge1_d": "İlkin proqramda son 2 daş toplanmır. Bu kodu sona əlavə etməyə çalışın:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge1_2019": {
+          "courseA_collector_loops_challenge1_a": "Nəsə səhv görünərsə, hər dövrdəki rəqəmləri dəyişməyə çalışın.",
+          "courseA_collector_loops_challenge1_b": "Bir şeyi bircə dəfə edirsinizsə, dövrdən istifadə etməyinizə ehtiyac yoxdur.",
+          "courseA_collector_loops_challenge1_c": "Əvvəlcə mağaranın sağ tərəfində 6 daş var, ancaq cənuba doğru hərəkət etməli və 5 dəfə xəzinə toplamalısan. Bilirsən niyə?",
+          "courseA_collector_loops_challenge1_d": "İlkin proqramda son 2 daş toplanmır. Bu kodu sona əlavə etməyə çalışın:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge1_2020": {
+          "courseA_collector_loops_challenge1_a": "Nəsə səhv görünərsə, hər dövrdəki rəqəmləri dəyişməyə çalışın.",
+          "courseA_collector_loops_challenge1_b": "Bir şeyi bircə dəfə edirsinizsə, dövrdən istifadə etməyinizə ehtiyac yoxdur.",
+          "courseA_collector_loops_challenge1_c": "Əvvəlcə mağaranın sağ tərəfində 6 daş var, ancaq cənuba doğru hərəkət etməli və 5 dəfə xəzinə toplamalısan. Bilirsən niyə?",
+          "courseA_collector_loops_challenge1_d": "İlkin proqramda son 2 daş toplanmır. Bu kodu sona əlavə etməyə çalışın:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_preLoops4_a": "Xəzinəni tutmaq üçün proqramın aşağısına iki ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blok və bir ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blok yapışdırın və \"Çalış\" düyməsini basın!"
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_preLoops5_a": "Hətta bir inci əldə etmək üçün iki fərqli istiqamətə getməli olacaqsınız!"
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_preLoops6_a": "Bu tapmacanı həll etmək üçün iki ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blokdan istifadə etməlisiniz."
+        },
+        "courseA_collector_preLoops7": {
+          "courseA_collector_loops2_b": "Xəzinə olan bir kvadrata köçdükdən sonra onu götürmək üçün bu blokdan istifadə edin."
+        },
+        "courseB_collector_loops4_2018": {
+          "courseB_collector_loops4_b": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin."
+        },
+        "courseB_collector_loops4_2019": {
+          "courseB_collector_loops4_b": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin."
+        },
+        "courseB_collector_loops4_2020": {
+          "courseB_collector_loops4_b": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin."
+        },
+        "courseC_artist_loop1": {
+          "courseC_artist_loop1_a": "Döngüdə hər hansı bir dəyişiklik etmək lazım deyil, sadəcə onun üstündə bir blok qoyun.",
+          "courseC_artist_loop1_b": "Nümunə qurmaq üçün sizə lazım olacaq blok budur:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\nİstədiyiniz nümunəni seçin!"
+        },
+        "courseC_artist_loop1_2018": {
+          "courseC_artist_loop1_a": "Döngüdə hər hansı bir dəyişiklik etmək lazım deyil, sadəcə onun üstündə bir blok qoyun.",
+          "courseC_artist_loop1_b": "Nümunə qurmaq üçün sizə lazım olacaq blok budur:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\nİstədiyiniz nümunəni seçin!"
+        },
+        "courseC_artist_loop1_2019": {
+          "courseC_artist_loop1_a": "Döngüdə hər hansı bir dəyişiklik etmək lazım deyil, sadəcə onun üstündə bir blok qoyun.",
+          "courseC_artist_loop1_b": "Nümunə qurmaq üçün sizə lazım olacaq blok budur:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\nİstədiyiniz nümunəni seçin!"
+        },
+        "courseC_artist_loop1_2020": {
+          "courseC_artist_loop1_a": "Döngüdə hər hansı bir dəyişiklik etmək lazım deyil, sadəcə onun üstündə bir blok qoyun.",
+          "courseC_artist_loop1_b": "Nümunə qurmaq üçün sizə lazım olacaq blok budur:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\nİstədiyiniz nümunəni seçin!"
+        },
+        "courseC_artist_loops1a": {
+          "courseC_artist_loops1a_a": "Bu sizə lazım olacaq ilk blokdur:",
+          "courseC_artist_loops1a_b": "Etiket çəkmək üçün bu blokdan istifadə edin!"
+        },
+        "courseC_artist_loops1a_2018": {
+          "courseC_artist_loops1a_a": "Bu sizə lazım olacaq ilk blokdur:",
+          "courseC_artist_loops1a_b": "Etiket çəkmək üçün bu blokdan istifadə edin!"
+        },
+        "courseC_artist_loops1a_2019": {
+          "courseC_artist_loops1a_a": "Bu sizə lazım olacaq ilk blokdur:",
+          "courseC_artist_loops1a_b": "Etiket çəkmək üçün bu blokdan istifadə edin!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "courseC_artist_loops1a_a": "Bu sizə lazım olacaq ilk blokdur:",
+          "courseC_artist_loops1a_b": "Etiket çəkmək üçün bu blokdan istifadə edin!"
+        },
+        "courseC_artist_loops2a": {
+          "courseC_artist_loops2a_a": "Döngənizin içərisində 200-dən 200-ə tullanmaq, sonra quş stikerini çəkmək, sonra 30 dərəcə döndərmək istəyəcəksiniz.",
+          "courseC_artist_loops2a_b": "Neçə dəfə təkrarlandığını dəyişdirmək üçün \"təkrar\" döngəsinin yuxarısındakı nömrəni vurun."
+        },
+        "courseC_artist_loops2a_2018": {
+          "courseC_artist_loops2a_a": "Döngənizin içərisində 200-dən 200-ə tullanmaq, sonra quş stikerini çəkmək, sonra 30 dərəcə döndərmək istəyəcəksiniz.",
+          "courseC_artist_loops2a_b": "Neçə dəfə təkrarlandığını dəyişdirmək üçün \"təkrar\" döngəsinin yuxarısındakı nömrəni vurun."
+        },
+        "courseC_artist_loops3a": {
+          "courseC_artist_loops3a_a": "Siz quş stikerindən sonra döngənizin içərisinə yalnız bir blok əlavə etmək istəyəcəksiniz.",
+          "courseC_artist_loops3a_b": "Yarasa stikerini tapmaq üçün “stiker çəkmək” blokunda açılan menyudan istifadə edin."
+        },
+        "courseC_artist_loops3a_2018": {
+          "courseC_artist_loops3a_a": "Siz quş stikerindən sonra döngənizin içərisinə yalnız bir blok əlavə etmək istəyəcəksiniz.",
+          "courseC_artist_loops3a_b": "Yarasa stikerini tapmaq üçün “stiker çəkmək” blokunda açılan menyudan istifadə edin."
+        },
+        "courseC_artist_loops4a": {
+          "courseC_artist_loops4a_a": "İrəli tullanmaq üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nNə qədər olduğunu dəyişməyi unutmayın!"
+        },
+        "courseC_artist_loops4a_2018": {
+          "courseC_artist_loops4a_a": "İrəli tullanmaq üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nNə qədər olduğunu dəyişməyi unutmayın!"
+        },
+        "courseC_artist_loops5a": {
+          "courseC_artist_loops5a_a": "Şəkilləri dəyişdirmək üçün \"stiker çəkmək\" bloklarında açılan menyulardan istifadə edin."
+        },
+        "courseC_artist_loops5a_2018": {
+          "courseC_artist_loops5a_a": "Şəkilləri dəyişdirmək üçün \"stiker çəkmək\" bloklarında açılan menyulardan istifadə edin."
+        },
+        "courseC_artist_loops5a_2019": {
+          "courseC_artist_loops5a_a": "Şəkilləri dəyişdirmək üçün \"stiker çəkmək\" bloklarında açılan menyulardan istifadə edin."
+        },
+        "courseC_artist_loops5a_2020": {
+          "courseC_artist_loops5a_a": "Şəkilləri dəyişdirmək üçün \"stiker çəkmək\" bloklarında açılan menyulardan istifadə edin."
+        },
+        "courseC_artist_loops5b": {
+          "courseC_artist_loops5b_a": "Xətlərinizin nümunəsini təyin etmək üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Yuxarıdakı kimi bir dizayn etmək üçün siz irəlilədiyiniz məbləği geriyə çəkmək istəyəcəksiniz."
+        },
+        "courseC_artist_loops5b_2018": {
+          "courseC_artist_loops5b_a": "Xətlərinizin nümunəsini təyin etmək üçün bu blokdan istifadə edin:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Yuxarıdakı kimi bir dizayn etmək üçün siz irəlilədiyiniz məbləği geriyə çəkmək istəyəcəksiniz."
+        },
+        "courseC_artist_loops6a": {
+          "courseC_artist_loops6a_a": "Yuxarıdakı kimi dizayn etmək üçün hər stiker arasında 75 pikseldən az irəli atlayın."
+        },
+        "courseC_artist_loops6a_2018": {
+          "courseC_artist_loops6a_a": "Yuxarıdakı kimi dizayn etmək üçün hər stiker arasında 75 pikseldən az irəli atlayın."
+        },
+        "courseC_artist_loops6a_2019": {
+          "courseC_artist_loops6a_a": "Yuxarıdakı kimi dizayn etmək üçün hər stiker arasında 75 pikseldən az irəli atlayın."
+        },
+        "courseC_artist_loops6a_2020": {
+          "courseC_artist_loops6a_a": "Yuxarıdakı kimi dizayn etmək üçün hər stiker arasında 75 pikseldən az irəli atlayın."
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "Yuxarıdakı kimi dizayn etmək üçün hər stiker arasında 75 pikseldən az irəli atlayın."
+        },
+        "courseC_artist_loops7a": {
+          "courseC_artist_loops7a_a": "Bir dairənin 360 dərəcəsi var. Növbənizdəki dərəcələri təkrar etdiyiniz sayı ilə çarpın. 360-a bərabərdir?\nBunun işlədiyini görmək üçün təklif olunan fırlanmaları yoxlayın!"
+        },
+        "courseC_artist_loops7a_2018": {
+          "courseC_artist_loops7a_a": "Bir dairənin 360 dərəcəsi var. Növbənizdəki dərəcələri təkrar etdiyiniz sayı ilə çarpın. 360-a bərabərdir?\nBunun işlədiyini görmək üçün təklif olunan fırlanmaları yoxlayın!"
+        },
+        "courseC_artist_loops7a_2019": {
+          "courseC_artist_loops7a_a": "Bir dairənin 360 dərəcəsi var. Növbənizdəki dərəcələri təkrar etdiyiniz sayı ilə çarpın. 360-a bərabərdir?\nBunun işlədiyini görmək üçün təklif olunan fırlanmaları yoxlayın!"
+        },
+        "courseC_artist_loops7a_2020": {
+          "courseC_artist_loops7a_a": "Bir dairənin 360 dərəcəsi var. Növbənizdəki dərəcələri təkrar etdiyiniz sayı ilə çarpın. 360-a bərabərdir?\nBunun işlədiyini görmək üçün təklif olunan fırlanmaları yoxlayın!"
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "Bir dairənin 360 dərəcəsi var. Növbənizdəki dərəcələri təkrar etdiyiniz sayı ilə çarpın. 360-a bərabərdir?\nBunun işlədiyini görmək üçün təklif olunan fırlanmaları yoxlayın!"
+        },
+        "courseC_artist_loopsPre1a": {
+          "courseC_artist_loopsPre1a_a": "Döngənin içərisinə `dönüş` blokunu qoymağı unutmayın.",
+          "courseC_artist_loopsPre1a_b": "Sizin `təkrar` döngənizin içərisində 3 blok olmalıdır: `200-dən 200-dən aşağıya atlayın`, `50 piksel irəliləyin` və `60 dərəcə sağa dönün`."
+        },
+        "courseC_artist_loopsPre1a_2018": {
+          "courseC_artist_loopsPre1a_a": "Döngənin içərisinə `dönüş` blokunu qoymağı unutmayın.",
+          "courseC_artist_loopsPre1a_b": "Sizin `təkrar` döngənizin içərisində 3 blok olmalıdır: `200-dən 200-dən aşağıya atlayın`, `50 piksel irəliləyin` və `60 dərəcə sağa dönün`."
+        },
+        "courseC_artist_loopsPre1a_2019": {
+          "courseC_artist_loopsPre1a_a": "Döngənin içərisinə `dönüş` blokunu qoymağı unutmayın.",
+          "courseC_artist_loopsPre1a_b": "Sizin `təkrar` döngənizin içərisində 3 blok olmalıdır: `200-dən 200-dən aşağıya atlayın`, `50 piksel irəliləyin` və `60 dərəcə sağa dönün`."
+        },
+        "courseC_artist_loopsPre1a_2020": {
+          "courseC_artist_loopsPre1a_a": "Döngənin içərisinə `dönüş` blokunu qoymağı unutmayın.",
+          "courseC_artist_loopsPre1a_b": "Sizin `təkrar` döngənizin içərisində 3 blok olmalıdır: `200-dən 200-dən aşağıya atlayın`, `50 piksel irəliləyin` və `60 dərəcə sağa dönün`."
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_a": "Sizə lazım olacaq ilk blok:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "50 piksel irəli getmək üçün bu blokdan istifadə edin:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_a": "Sizə lazım olacaq ilk blok:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "50 piksel irəli getmək üçün bu blokdan istifadə edin:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_a": "Sizə lazım olacaq ilk blok:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "50 piksel irəli getmək üçün bu blokdan istifadə edin:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_a": "Xəzinə olan bir məkanda dayandığınız zaman onu götürmək üçün <xml><block type=\"collector_collect\"/></xml> blokundan istifadə edin.",
+          "courseC_collector_prog1_b": "Ən sadə həll yolu bir dəfə irəliləmək, sonra xəzinə toplamaq olardı."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_a": "Xəzinə olan bir məkanda dayandığınız zaman onu götürmək üçün <xml><block type=\"collector_collect\"/></xml> blokundan istifadə edin.",
+          "courseC_collector_prog1_b": "Ən sadə həll yolu bir dəfə irəliləmək, sonra xəzinə toplamaq olardı."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_a": "Xəzinə olan bir məkanda dayandığınız zaman onu götürmək üçün <xml><block type=\"collector_collect\"/></xml> blokundan istifadə edin.",
+          "courseC_collector_prog1_b": "Ən sadə həll yolu bir dəfə irəliləmək, sonra xəzinə toplamaq olardı."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_a": "Xəzinə olan bir məkanda dayandığınız zaman onu götürmək üçün <xml><block type=\"collector_collect\"/></xml> blokundan istifadə edin.",
+          "courseC_collector_prog1_b": "Ən sadə həll yolu bir dəfə irəliləmək, sonra xəzinə toplamaq olardı."
+        },
+        "courseC_collector_prog3": {
+          "courseC_collector_prog3_a": "Proqram yalnız <xml><block type=\"when_run\"/></xml> blokuna qoşulmuş blokları işlədəcək.",
+          "courseC_collector_prog3_b": "Kodunuzu bir sətirdə işlətmək üçün \"Addım\" düyməsini istifadə etməyə çalışın. Kodun harada səhv getdiyini görürsünüzmü?",
+          "courseC_collector_prog3_c": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_collector_prog3_2018": {
+          "courseC_collector_prog3_a": "Proqram yalnız <xml><block type=\"when_run\"/></xml> blokuna qoşulmuş blokları işlədəcək.",
+          "courseC_collector_prog3_b": "Kodunuzu bir sətirdə işlətmək üçün \"Addım\" düyməsini istifadə etməyə çalışın. Kodun harada səhv getdiyini görürsünüzmü?",
+          "courseC_collector_prog3_c": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_collector_prog3_2019": {
+          "courseC_collector_prog3_a": "Proqram yalnız <xml><block type=\"when_run\"/></xml> blokuna qoşulmuş blokları işlədəcək.",
+          "courseC_collector_prog3_b": "Kodunuzu bir sətirdə işlətmək üçün \"Addım\" düyməsini istifadə etməyə çalışın. Kodun harada səhv getdiyini görürsünüzmü?",
+          "courseC_collector_prog3_c": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_collector_prog3_2020": {
+          "courseC_collector_prog3_a": "Proqram yalnız <xml><block type=\"when_run\"/></xml> blokuna qoşulmuş blokları işlədəcək.",
+          "courseC_collector_prog3_b": "Kodunuzu bir sətirdə işlətmək üçün \"Addım\" düyməsini istifadə etməyə çalışın. Kodun harada səhv getdiyini görürsünüzmü?",
+          "courseC_collector_prog3_c": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_collector_prog5": {
+          "courseC_collector_prog5_a": "\"İlk addımda işləyirmi?\nİkinci addımda işləyirmi?\nİşlər harada səhv gedir? \"",
+          "courseC_collector_prog5_b": "Bir səhv düzəltmisinizsə və proqram hələ də işləmirsə, daha çox səhv tapmaq üçün yuxarıdakı addımları istifadə edin.",
+          "courseC_collector_prog5_c": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın.",
+          "courseC_collector_prog5_d": "Xəzinəni yığmaq üçün yolu izlə."
+        },
+        "courseC_collector_prog5_2018": {
+          "courseC_collector_prog5_a": "\"İlk addımda işləyirmi?\nİkinci addımda işləyirmi?\nİşlər harada səhv gedir? \"",
+          "courseC_collector_prog5_b": "Bir səhv düzəltmisinizsə və proqram hələ də işləmirsə, daha çox səhv tapmaq üçün yuxarıdakı addımları istifadə edin.",
+          "courseC_collector_prog5_c": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın.",
+          "courseC_collector_prog5_d": "Xəzinəni yığmaq üçün yolu izlə."
+        },
+        "courseC_collector_prog5_2019": {
+          "courseC_collector_prog5_a": "\"İlk addımda işləyirmi?\nİkinci addımda işləyirmi?\nİşlər harada səhv gedir? \"",
+          "courseC_collector_prog5_b": "Bir səhv düzəltmisinizsə və proqram hələ də işləmirsə, daha çox səhv tapmaq üçün yuxarıdakı addımları istifadə edin.",
+          "courseC_collector_prog5_c": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın.",
+          "courseC_collector_prog5_d": "Xəzinəni yığmaq üçün yolu izlə."
+        },
+        "courseC_collector_prog5_2020": {
+          "courseC_collector_prog5_a": "\"İlk addımda işləyirmi?\nİkinci addımda işləyirmi?\nİşlər harada səhv gedir? \"",
+          "courseC_collector_prog5_b": "Bir səhv düzəltmisinizsə və proqram hələ də işləmirsə, daha çox səhv tapmaq üçün yuxarıdakı addımları istifadə edin.",
+          "courseC_collector_prog5_c": "Tapa bilmirsizsə, addımları bir kağıza yazmağa çalışın.",
+          "courseC_collector_prog5_d": "Xəzinəni yığmaq üçün yolu izlə."
+        },
+        "courseC_collector_prog6": {
+          "courseC_collector_prog6_a": "Nəyin səhv getdiyini anlaya bilərsinizmi?\n\n\"Addım\" düyməsini səhvləri tapmaq üçün kodunuzu sətir sətir işləyərək istifadə etməyə çalışın.",
+          "courseC_collector_prog6_b": "İlişmisən? Xəzinəni yığmaq üçün bu yolu izlə."
+        },
+        "courseC_collector_prog6_2018": {
+          "courseC_collector_prog6_a": "Nəyin səhv getdiyini anlaya bilərsinizmi?\n\n\"Addım\" düyməsini səhvləri tapmaq üçün kodunuzu sətir sətir işləyərək istifadə etməyə çalışın.",
+          "courseC_collector_prog6_b": "İlişmisən? Xəzinəni yığmaq üçün bu yolu izlə."
+        },
+        "courseC_collector_prog6_2019": {
+          "courseC_collector_prog6_a": "Nəyin səhv getdiyini anlaya bilərsinizmi?\n\n\"Addım\" düyməsini səhvləri tapmaq üçün kodunuzu sətir sətir işləyərək istifadə etməyə çalışın.",
+          "courseC_collector_prog6_b": "İlişmisən? Xəzinəni yığmaq üçün bu yolu izlə."
+        },
+        "courseC_collector_prog6_2020": {
+          "courseC_collector_prog6_a": "Nəyin səhv getdiyini anlaya bilərsinizmi?\n\n\"Addım\" düyməsini səhvləri tapmaq üçün kodunuzu sətir sətir işləyərək istifadə etməyə çalışın.",
+          "courseC_collector_prog6_b": "İlişmisən? Xəzinəni yığmaq üçün bu yolu izlə."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_a": "İş yerində artıq çox böyük kod var. Bu tapmacanı həll etmək üçün heç birini silməyə ehtiyac yoxdur.",
+          "courseC_collector_prog7_b": "Macəraçının düzgün istiqamətdə hərəkət etməsi üçün lazım olan bloku görmürsən? Alət qutusundan birini çəkin.",
+          "courseC_collector_prog7_c": "Bütün xəzinəni toplamaq üçün bir yol görməkdə çətinlik çəkirsiniz? Bu yolu sınayın!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_a": "İş yerində artıq çox böyük kod var. Bu tapmacanı həll etmək üçün heç birini silməyə ehtiyac yoxdur.",
+          "courseC_collector_prog7_b": "Macəraçının düzgün istiqamətdə hərəkət etməsi üçün lazım olan bloku görmürsən? Alət qutusundan birini çəkin.",
+          "courseC_collector_prog7_c": "Bütün xəzinəni toplamaq üçün bir yol görməkdə çətinlik çəkirsiniz? Bu yolu sınayın!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_a": "İş yerində artıq çox böyük kod var. Bu tapmacanı həll etmək üçün heç birini silməyə ehtiyac yoxdur.",
+          "courseC_collector_prog7_b": "Macəraçının düzgün istiqamətdə hərəkət etməsi üçün lazım olan bloku görmürsən? Alət qutusundan birini çəkin.",
+          "courseC_collector_prog7_c": "Bütün xəzinəni toplamaq üçün bir yol görməkdə çətinlik çəkirsiniz? Bu yolu sınayın!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_a": "İş yerində artıq çox böyük kod var. Bu tapmacanı həll etmək üçün heç birini silməyə ehtiyac yoxdur.",
+          "courseC_collector_prog7_b": "Macəraçının düzgün istiqamətdə hərəkət etməsi üçün lazım olan bloku görmürsən? Alət qutusundan birini çəkin.",
+          "courseC_collector_prog7_c": "Bütün xəzinəni toplamaq üçün bir yol görməkdə çətinlik çəkirsiniz? Bu yolu sınayın!"
+        },
+        "courseC_collector_prog_challenge1": {
+          "courseC_collector_prog_challenge1_a": "Əlavə xəzinə toplamaq üçün \"toplama\" blokundan dəfələrlə istifadə edə bilərsiniz."
+        },
+        "courseC_collector_prog_challenge1_2018": {
+          "courseC_collector_prog_challenge1_a": "Əlavə xəzinə toplamaq üçün \"toplama\" blokundan dəfələrlə istifadə edə bilərsiniz."
+        },
+        "courseC_collector_prog_challenge1_2019": {
+          "courseC_collector_prog_challenge1_a": "Əlavə xəzinə toplamaq üçün \"toplama\" blokundan dəfələrlə istifadə edə bilərsiniz."
+        },
+        "courseC_collector_prog_challenge1_2020": {
+          "courseC_collector_prog_challenge1_a": "Əlavə xəzinə toplamaq üçün \"toplama\" blokundan dəfələrlə istifadə edə bilərsiniz."
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Əlavə xəzinə toplamaq üçün \"toplama\" blokundan dəfələrlə istifadə edə bilərsiniz."
+        },
+        "courseC_collector_prog_challenge2": {
+          "courseC_collector_prog_challenge1_a": "Hər boşluqda birdən çox “toplama” blokundan istifadə edə bilərsiniz.",
+          "courseC_collector_prog_challenge1_b": "Yolunuzu itirdiniz? Tapmacanı həll etmək üçün bu yolu sınayın!"
+        },
+        "courseC_collector_prog_challenge2_2018": {
+          "courseC_collector_prog_challenge1_a": "Hər boşluqda birdən çox “toplama” blokundan istifadə edə bilərsiniz.",
+          "courseC_collector_prog_challenge1_b": "Yolunuzu itirdiniz? Tapmacanı həll etmək üçün bu yolu sınayın!"
+        },
+        "courseC_collector_prog_challenge2_2019": {
+          "courseC_collector_prog_challenge1_a": "Hər boşluqda birdən çox “toplama” blokundan istifadə edə bilərsiniz.",
+          "courseC_collector_prog_challenge1_b": "Yolunuzu itirdiniz? Tapmacanı həll etmək üçün bu yolu sınayın!"
+        },
+        "courseC_collector_prog_challenge2_2020": {
+          "courseC_collector_prog_challenge1_a": "Hər boşluqda birdən çox “toplama” blokundan istifadə edə bilərsiniz.",
+          "courseC_collector_prog_challenge1_b": "Yolunuzu itirdiniz? Tapmacanı həll etmək üçün bu yolu sınayın!"
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "Hər boşluqda birdən çox “toplama” blokundan istifadə edə bilərsiniz.",
+          "courseC_collector_prog_challenge1_b": "Yolunuzu itirdiniz? Tapmacanı həll etmək üçün bu yolu sınayın!"
+        },
+        "courseC_flappy_events7": {
+          "courseC_flappy_events7_a": "Siz “səhnə qur” blokundan istifadə edərək fonu dəyişə bilərsiniz."
+        },
+        "courseC_flappy_events7_2018": {
+          "courseC_flappy_events7_a": "Siz “səhnə qur” blokundan istifadə edərək fonu dəyişə bilərsiniz."
+        },
+        "courseC_flappy_events7_2019": {
+          "courseC_flappy_events7_a": "Siz “səhnə qur” blokundan istifadə edərək fonu dəyişə bilərsiniz."
+        },
+        "courseC_flappy_events7_2020": {
+          "courseC_flappy_events7_a": "Siz “səhnə qur” blokundan istifadə edərək fonu dəyişə bilərsiniz."
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "Siz “səhnə qur” blokundan istifadə edərək fonu dəyişə bilərsiniz."
+        },
+        "courseC_maze_debugging1": {
+          "courseC_maze_debugging1_a": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging1_b": "Bu tapmacanı tamamlamaq üçün əlavə etməli olduğunuz 1 blok var."
+        },
+        "courseC_maze_debugging1_2018": {
+          "courseC_maze_debugging1_a": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging1_b": "Bu tapmacanı tamamlamaq üçün əlavə etməli olduğunuz 1 blok var."
+        },
+        "courseC_maze_debugging1_2019": {
+          "courseC_maze_debugging1_a": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging1_b": "Bu tapmacanı tamamlamaq üçün əlavə etməli olduğunuz 1 blok var."
+        },
+        "courseC_maze_debugging1_2020": {
+          "courseC_maze_debugging1_a": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging1_b": "Bu tapmacanı tamamlamaq üçün əlavə etməli olduğunuz 1 blok var."
+        },
+        "courseC_maze_debugging2": {
+          "courseC_maze_debugging2_a": "İş yerində çoxlu qiymətli kod var. Sadəcə hamısını silib yenidən başlamayın!",
+          "courseC_maze_debugging2_b": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging2_c": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging2_2018": {
+          "courseC_maze_debugging2_a": "İş yerində çoxlu qiymətli kod var. Sadəcə hamısını silib yenidən başlamayın!",
+          "courseC_maze_debugging2_b": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging2_c": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging2_2019": {
+          "courseC_maze_debugging2_a": "İş yerində çoxlu qiymətli kod var. Sadəcə hamısını silib yenidən başlamayın!",
+          "courseC_maze_debugging2_b": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging2_c": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging2_2020": {
+          "courseC_maze_debugging2_a": "İş yerində çoxlu qiymətli kod var. Sadəcə hamısını silib yenidən başlamayın!",
+          "courseC_maze_debugging2_b": "-   İlk addımdan sonra hər şey işləyir?\n-   İkincidən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging2_c": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging3": {
+          "courseC_maze_debugging3_a": "Kodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging3_2018": {
+          "courseC_maze_debugging3_a": "Kodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging3_2019": {
+          "courseC_maze_debugging3_a": "Kodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging3_2020": {
+          "courseC_maze_debugging3_a": "Kodunuzun ortasından bloku silmək üçün bütün blokları iş sahəsinin başqa hissəsinə dartın.\n\nSilmək istədiyiniz bloku yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Nəyin yanlış olduğunu anlaya bilmirsən? Nə baş verdiyini görmək üçün kodu bir neçə dəfə işlətməyə çalışın."
+        },
+        "courseC_maze_debugging4": {
+          "courseC_maze_debugging4_a": "Təlimatları bir-bir keçmək üçün \"Addım\" düyməsini istifadə edin. Bu, işlərin səhv getdiyi xətti tapmağa kömək edirmi?",
+          "courseC_maze_debugging4_b": "Dönüşlərdən biri Skratın yanlış istiqamətə getməsinə səbəb olur. Hansı birini anlaya bilərsiniz?"
+        },
+        "courseC_maze_debugging4_2018": {
+          "courseC_maze_debugging4_a": "Təlimatları bir-bir keçmək üçün \"Addım\" düyməsini istifadə edin. Bu, işlərin səhv getdiyi xətti tapmağa kömək edirmi?",
+          "courseC_maze_debugging4_b": "Dönüşlərdən biri Skratın yanlış istiqamətə getməsinə səbəb olur. Hansı birini anlaya bilərsiniz?"
+        },
+        "courseC_maze_debugging4_2019": {
+          "courseC_maze_debugging4_a": "Təlimatları bir-bir keçmək üçün \"Addım\" düyməsini istifadə edin. Bu, işlərin səhv getdiyi xətti tapmağa kömək edirmi?",
+          "courseC_maze_debugging4_b": "Dönüşlərdən biri Skratın yanlış istiqamətə getməsinə səbəb olur. Hansı birini anlaya bilərsiniz?"
+        },
+        "courseC_maze_debugging4_2020": {
+          "courseC_maze_debugging4_a": "Təlimatları bir-bir keçmək üçün \"Addım\" düyməsini istifadə edin. Bu, işlərin səhv getdiyi xətti tapmağa kömək edirmi?",
+          "courseC_maze_debugging4_b": "Dönüşlərdən biri Skratın yanlış istiqamətə getməsinə səbəb olur. Hansı birini anlaya bilərsiniz?"
+        },
+        "courseC_maze_debugging_challenge2": {
+          "courseC_maze_debugging_challenge2_b": "Tapa bilmirsizsə,kodu ayırd etməyi yoxlayın.harada səhvlik var?",
+          "courseC_maze_debugging_challenge2_c": "Yalnız irəli gedərək dörd dəfə dönərək izləyə biləcəyiniz iki fərqli yol var. Bir döngə istifadə etməyin bir yolunu tapsanız, daha da çox ola bilər!"
+        },
+        "courseC_maze_debugging_challenge2_2018": {
+          "courseC_maze_debugging_challenge2_b": "Tapa bilmirsizsə,kodu ayırd etməyi yoxlayın.harada səhvlik var?",
+          "courseC_maze_debugging_challenge2_c": "Yalnız irəli gedərək dörd dəfə dönərək izləyə biləcəyiniz iki fərqli yol var. Bir döngə istifadə etməyin bir yolunu tapsanız, daha da çox ola bilər!"
+        },
+        "courseC_maze_debugging_challenge2_2019": {
+          "courseC_maze_debugging_challenge2_b": "Tapa bilmirsizsə,kodu ayırd etməyi yoxlayın.harada səhvlik var?",
+          "courseC_maze_debugging_challenge2_c": "Yalnız irəli gedərək dörd dəfə dönərək izləyə biləcəyiniz iki fərqli yol var. Bir döngə istifadə etməyin bir yolunu tapsanız, daha da çox ola bilər!"
+        },
+        "courseC_maze_debugging_challenge2_2020": {
+          "courseC_maze_debugging_challenge2_b": "Tapa bilmirsizsə,kodu ayırd etməyi yoxlayın.harada səhvlik var?",
+          "courseC_maze_debugging_challenge2_c": "Yalnız irəli gedərək dörd dəfə dönərək izləyə biləcəyiniz iki fərqli yol var. Bir döngə istifadə etməyin bir yolunu tapsanız, daha da çox ola bilər!"
+        },
+        "courseC_maze_loops_challenge1a": {
+          "courseC_maze_loops_challenge1_a": "Bu yolu iki fərqli parça kimi düşünün. Hər birinin təkrar edə biləcəyiniz bir nümunəsi var.",
+          "courseC_maze_loops_challenge1_b": "Bir pilləkən nümunəsini təkrarlamaq üçün döngələrdən necə istifadə edəcəyinizi xatırlayırsınızmı?"
+        },
+        "courseC_maze_loops_challenge1a_2018": {
+          "courseC_maze_loops_challenge1_a": "Bu yolu iki fərqli parça kimi düşünün. Hər birinin təkrar edə biləcəyiniz bir nümunəsi var.",
+          "courseC_maze_loops_challenge1_b": "Bir pilləkən nümunəsini təkrarlamaq üçün döngələrdən necə istifadə edəcəyinizi xatırlayırsınızmı?"
+        },
+        "courseC_maze_loops_challenge1a_2019": {
+          "courseC_maze_loops_challenge1_a": "Bu yolu iki fərqli parça kimi düşünün. Hər birinin təkrar edə biləcəyiniz bir nümunəsi var.",
+          "courseC_maze_loops_challenge1_b": "Bir pilləkən nümunəsini təkrarlamaq üçün döngələrdən necə istifadə edəcəyinizi xatırlayırsınızmı?"
+        },
+        "courseC_maze_loops_challenge1a_2020": {
+          "courseC_maze_loops_challenge1_a": "Bu yolu iki fərqli parça kimi düşünün. Hər birinin təkrar edə biləcəyiniz bir nümunəsi var.",
+          "courseC_maze_loops_challenge1_b": "Bir pilləkən nümunəsini təkrarlamaq üçün döngələrdən necə istifadə edəcəyinizi xatırlayırsınızmı?"
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_a": "Unutma ki, dönəndə _quşun_ baxımından dönürsən. Sağa dönsən, quş aşağı baxacaq. ",
+          "courseC_maze_programming4_b": "Yolu izləmək üçün:\n\n-   irəli get\n-   bir istiqamətə dön\n-   irəli get\n-   başqa istiqamətə dön\n-   irəli get"
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_a": "Unutma ki, dönəndə _quşun_ baxımından dönürsən. Sağa dönsən, quş aşağı baxacaq. ",
+          "courseC_maze_programming4_b": "Yolu izləmək üçün:\n\n-   irəli get\n-   bir istiqamətə dön\n-   irəli get\n-   başqa istiqamətə dön\n-   irəli get"
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_a": "Unutma ki, dönəndə _quşun_ baxımından dönürsən. Sağa dönsən, quş aşağı baxacaq. ",
+          "courseC_maze_programming4_b": "Yolu izləmək üçün:\n\n-   irəli get\n-   bir istiqamətə dön\n-   irəli get\n-   başqa istiqamətə dön\n-   irəli get"
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_a": "Unutma ki, dönəndə _quşun_ baxımından dönürsən. Sağa dönsən, quş aşağı baxacaq. ",
+          "courseC_maze_programming4_b": "Yolu izləmək üçün:\n\n-   irəli get\n-   bir istiqamətə dön\n-   irəli get\n-   başqa istiqamətə dön\n-   irəli get"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_a": "Blok -blok keçmək və səhvləri axtarmaq üçün \"Addım\" düyməsini istifadə etməyi unutma.",
+          "courseC_maze_programming7_b": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_a": "Blok -blok keçmək və səhvləri axtarmaq üçün \"Addım\" düyməsini istifadə etməyi unutma.",
+          "courseC_maze_programming7_b": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_a": "Blok -blok keçmək və səhvləri axtarmaq üçün \"Addım\" düyməsini istifadə etməyi unutma.",
+          "courseC_maze_programming7_b": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_a": "Blok -blok keçmək və səhvləri axtarmaq üçün \"Addım\" düyməsini istifadə etməyi unutma.",
+          "courseC_maze_programming7_b": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_maze_programming_challenge2": {
+          "courseC_maze_programming_challenge2_a": "\\_ \"Məni geriyə göndərsən, diqqətli ol ki, doğru istiqamətə dönüm!\" \\_",
+          "courseC_maze_programming_challenge2_b": "Ən qısa yol 5 blokdan ibarətdir, amma bu blokdan istifadə olunur [0]"
+        },
+        "courseC_maze_programming_challenge2_2018": {
+          "courseC_maze_programming_challenge2_a": "\\_ \"Məni geriyə göndərsən, diqqətli ol ki, doğru istiqamətə dönüm!\" \\_",
+          "courseC_maze_programming_challenge2_b": "Ən qısa yol 5 blokdan ibarətdir, amma bu blokdan istifadə olunur [0]"
+        },
+        "courseC_maze_programming_challenge2_2019": {
+          "courseC_maze_programming_challenge2_a": "\\_ \"Məni geriyə göndərsən, diqqətli ol ki, doğru istiqamətə dönüm!\" \\_",
+          "courseC_maze_programming_challenge2_b": "Ən qısa yol 5 blokdan ibarətdir, amma bu blokdan istifadə olunur [0]"
+        },
+        "courseC_maze_programming_challenge2_2020": {
+          "courseC_maze_programming_challenge2_a": "\\_ \"Məni geriyə göndərsən, diqqətli ol ki, doğru istiqamətə dönüm!\" \\_",
+          "courseC_maze_programming_challenge2_b": "Ən qısa yol 5 blokdan ibarətdir, amma bu blokdan istifadə olunur [0]"
+        },
+        "courseC_starWars_loops5_2018": {
+          "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
+        },
+        "courseC_starWars_loops5_2019": {
+          "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
+        },
+        "courseC_starWars_loops5_2020": {
+          "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "Bu əməliyyatların hər ikisi kodunuzda olmalıdır."
+        },
+        "courseD_bounce_events11s_2021": {
+          "courseD_bounce_events11s_a": "Oyun başlayanda, səbətə toxunduqda və əl topu qaçırdıqda topu atmalı olacaqsınız."
+        },
+        "courseD_bounce_events12s_2018": {
+          "courseD_bounce_events12s_b": "Hər atışı 2 xal dəyərində etməyə və  komandanın loqosunu ,öz doğma şəhərinizin komandasının loqosu ilə əvəz etməyə çalışın"
+        },
+        "courseD_bounce_events12s_2019": {
+          "courseD_bounce_events12s_b": "Hər atışı 2 xal dəyərində etməyə və  komandanın loqosunu ,öz doğma şəhərinizin komandasının loqosu ilə əvəz etməyə çalışın"
+        },
+        "courseD_bounce_events12s_2020": {
+          "courseD_bounce_events12s_b": "Hər atışı 2 xal dəyərində etməyə və  komandanın loqosunu ,öz doğma şəhərinizin komandasının loqosu ilə əvəz etməyə çalışın"
+        },
+        "courseD_bounce_events12s_2021": {
+          "courseD_bounce_events12s_a": "\"Qaçarkən\" əməliyyatına bu blokları əlavə etməklə,Basketbolu və ya əli sürətləndirə silərsiniz.",
+          "courseD_bounce_events12s_b": "Hər atışı 2 xal dəyərində etməyə və  komandanın loqosunu ,öz doğma şəhərinizin komandasının loqosu ilə əvəz etməyə çalışın"
+        },
+        "courseD_bounce_events1s_2018": {
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
+        },
+        "courseD_bounce_events1s_2019": {
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
+        },
+        "courseD_bounce_events1s_2020": {
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
+        },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
+        },
+        "courseD_bounce_events2s_2018": {
+          "courseD_bounce_events2s_a": "Bunun işləməsi üçün kodlanmış iki 'hərəkət' hadisəsi dəsti olmalıdır:"
+        },
+        "courseD_bounce_events2s_2019": {
+          "courseD_bounce_events2s_a": "Bunun işləməsi üçün kodlanmış iki 'hərəkət' hadisəsi dəsti olmalıdır:"
+        },
+        "courseD_bounce_events2s_2020": {
+          "courseD_bounce_events2s_a": "Bunun işləməsi üçün kodlanmış iki 'hərəkət' hadisəsi dəsti olmalıdır:"
+        },
+        "courseD_bounce_events2s_2021": {
+          "courseD_bounce_events2s_a": "Bunun işləməsi üçün kodlanmış iki 'hərəkət' hadisəsi dəsti olmalıdır:"
+        },
+        "courseD_bounce_events5s_2018": {
+          "courseD_bounce_events5s_b": "Bu kodu iş sahənizə əlavə etdiyinizdən əmin olun:\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events5s_2019": {
+          "courseD_bounce_events5s_b": "Bu kodu iş sahənizə əlavə etdiyinizdən əmin olun:\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events5s_2020": {
+          "courseD_bounce_events5s_b": "Bu kodu iş sahənizə əlavə etdiyinizdən əmin olun:\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events5s_2021": {
+          "courseD_bounce_events5s_a": "Bu tapmacanı həll etmək üçün əli hərəkət etdirməyə ehtiyac yoxdur.",
+          "courseD_bounce_events5s_b": "Bu kodu iş sahənizə əlavə etdiyinizdən əmin olun:\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events6s_2021": {
+          "courseD_bounce_events6s_a": "Sənin buna oxşayan bir əməliyyatın varmı?\n[Blok şəklində blok]",
+          "courseD_bounce_events6s_b": "Əgər kodu düzgün yazdınızsa,qazanmaq üçün əlinizi hərəkət etdirməməlisiniz."
+        },
+        "courseD_bounce_events7s_2021": {
+          "courseD_bounce_events7s_a": "Əgər bəyənsəniz,Səsləri daha çox yerlərə əlavə edə bilərsiniz."
+        },
+        "courseD_collector_debugging4a_2018": {
+          "courseD_collector_debugging4_a": "Ardıcıl olaraq bir neçə dəfə sazlama prosesindən istifadə etməyə çalışın.\n\nBirinci problem nədən qaynaqlanır?\n\nBu problem həll edildikdən sonra nə səhv olur?",
+          "courseD_collector_debugging4_b": "Pilləkən pilləkəninin naxışını necə düzəltməyi başa düşməkdə çətinlik çəkirsinizsə, barmağınızla onu izləməyə və əmrləri yüksək səslə deməyə çalışın.\n\nDönüşlərin istiqamətini qeyd etməyi unutmayın!"
+        },
+        "courseD_collector_debugging4a_2019": {
+          "courseD_collector_debugging4_a": "Ardıcıl olaraq bir neçə dəfə sazlama prosesindən istifadə etməyə çalışın.\n\nBirinci problem nədən qaynaqlanır?\n\nBu problem həll edildikdən sonra nə səhv olur?",
+          "courseD_collector_debugging4_b": "Pilləkən pilləkəninin naxışını necə düzəltməyi başa düşməkdə çətinlik çəkirsinizsə, barmağınızla onu izləməyə və əmrləri yüksək səslə deməyə çalışın.\n\nDönüşlərin istiqamətini qeyd etməyi unutmayın!"
+        },
+        "courseD_collector_debugging4a_2020": {
+          "courseD_collector_debugging4_a": "Ardıcıl olaraq bir neçə dəfə sazlama prosesindən istifadə etməyə çalışın.\n\nBirinci problem nədən qaynaqlanır?\n\nBu problem həll edildikdən sonra nə səhv olur?",
+          "courseD_collector_debugging4_b": "Pilləkən pilləkəninin naxışını necə düzəltməyi başa düşməkdə çətinlik çəkirsinizsə, barmağınızla onu izləməyə və əmrləri yüksək səslə deməyə çalışın.\n\nDönüşlərin istiqamətini qeyd etməyi unutmayın!"
+        },
+        "courseD_collector_debugging5a_2018": {
+          "courseD_collector_debugging5a_a": "Bu nə edir?\n\nNə etməli?\n\nBu sizə nə deyir?",
+          "courseD_collector_debugging5a_b": "Xəzinənin birinci sırasını topladıqdan sonra kodunuzda artıq qalan nədir?"
+        },
+        "courseD_collector_debugging5a_2019": {
+          "courseD_collector_debugging5a_a": "Bu nə edir?\n\nNə etməli?\n\nBu sizə nə deyir?",
+          "courseD_collector_debugging5a_b": "Xəzinənin birinci sırasını topladıqdan sonra kodunuzda artıq qalan nədir?"
+        },
+        "courseD_collector_debugging5a_2020": {
+          "courseD_collector_debugging5a_a": "Bu nə edir?\n\nNə etməli?\n\nBu sizə nə deyir?",
+          "courseD_collector_debugging5a_b": "Xəzinənin birinci sırasını topladıqdan sonra kodunuzda artıq qalan nədir?"
+        },
+        "courseD_collector_debugging6a_2018": {
+          "courseD_collector_debugging6_a": "\"Addım\" düyməsindən istifadə edərək kodu icra eləməyə çalış. Birinci addımda hər şey yolundadır?\n\nBəs ikinci addımda?\n\nSəhv haradadır?",
+          "courseD_collector_debugging6_b": "Belə görünür ki, ehtiyacın olan bütün bloklar iş sahəsindədir. Əgər işlər bir-birinə qarışsa, \"yenidən başla\" düyməsindən istifadə et."
+        },
+        "courseD_collector_debugging6a_2019": {
+          "courseD_collector_debugging6_a": "\"Addım\" düyməsindən istifadə edərək kodu icra eləməyə çalış. Birinci addımda hər şey yolundadır?\n\nBəs ikinci addımda?\n\nSəhv haradadır?",
+          "courseD_collector_debugging6_b": "Belə görünür ki, ehtiyacın olan bütün bloklar iş sahəsindədir. Əgər işlər bir-birinə qarışsa, \"yenidən başla\" düyməsindən istifadə et."
+        },
+        "courseD_collector_debugging6a_2020": {
+          "courseD_collector_debugging6_a": "\"Addım\" düyməsindən istifadə edərək kodu icra eləməyə çalış. Birinci addımda hər şey yolundadır?\n\nBəs ikinci addımda?\n\nSəhv haradadır?",
+          "courseD_collector_debugging6_b": "Belə görünür ki, ehtiyacın olan bütün bloklar iş sahəsindədir. Əgər işlər bir-birinə qarışsa, \"yenidən başla\" düyməsindən istifadə et."
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Qırıq buzlara diqqət yetirin! Scrat suya düşəcək! ",
+          "courseB_iceage_loops10_b": "Addımları yüksək səslə deməyə və ya bir kağız parçasına yazmağa çalışın. Hər hansı bir nümunə görürsən?",
+          "courseB_iceage_loops10_c": "Bu uzun bir tapmacadır! Bu yolu izləyin. "
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "Qırıq buzlardan ehtiyaltlı olun! Scrat birbaşa ora düşəcək! ",
+          "courseD_iceage_loops1_b": "Bu blokdan istifadə etməli olacaqsınız:"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "Bu puzzle-ı iki hissəyə böl, biri küncdən əvvəl, və biri küncdən sonra."
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Tıxanmısınızsa, bir kağıza addımlar yazmağa çalışın. Bir nümunə görürsən?",
+          "courseB_iceage_loops7_b": "Bu, Scrat'ın palamuta çatmaq üçün keçməli olduğu yoldur. "
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_a": "Hərəkət blokları doğrudurmu? Başqa nə dəyişə bilərsən?",
+          "courseD_iceage_loops8_b": "Birinci döngə \\*\\* 3 \\*\\* dəfə, ikincisi \\*\\* 5 \\*\\* dəfə, üçüncü döngə \\*\\* 4 \\*\\* dəfə və son döngü \\*\\* 4 \\*\\* dəfə təkrarlanmalıdır.",
+          "courseD_iceage_loops8_c": "Scrat'ın bu yolu izləməsinə kömək etmək üçün döngələrdən istifadə edin. "
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "Çətinlik çəkmək? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanı işə salmaqdan qorxma! ",
+          "courseD_iceage_loops9_b": "Son kodunuzda \\*\\* 4 \\*\\* döngə olmalıdır.",
+          "courseD_iceage_loops9_c": "Palıd qozasını almaq üçün Scrat bu yolu izləməlidir."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün onun altındakı bütün blokları sağa doğru dartın və bir müddət iş yerində otursunlar.\n\nSilmək istədiyiniz blokun üzərinə klikləyin və onu yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün onun altındakı bütün blokları sağa doğru dartın və bir müddət iş yerində otursunlar.\n\nSilmək istədiyiniz blokun üzərinə klikləyin və onu yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün onun altındakı bütün blokları sağa doğru dartın və bir müddət iş yerində otursunlar.\n\nSilmək istədiyiniz blokun üzərinə klikləyin və onu yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün onun altındakı bütün blokları sağa doğru dartın və bir müddət iş yerində otursunlar.\n\nSilmək istədiyiniz blokun üzərinə klikləyin və onu yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nKodunuzun ortasından bloku silmək üçün onun altındakı bütün blokları sağa doğru dartın və bir müddət iş yerində otursunlar.\n\nSilmək istədiyiniz blokun üzərinə klikləyin və onu yenidən alətlər qutusuna dartın.\n\nNəhayət, digər bloklarınızı aid olduqları yerə qoyun."
+        },
+        "courseE_artist_concept4": {
+          "courseE_artist_concept4_b": "Bir kvadrat yaratmağa çalışın. Sonra kvadratlardan bir xətt düzəldin. Sonra nə gəlir?",
+          "courseE_artist_concept4_c": "Kvadratların xəttini çəkdikdən sonra ya dönüb sola gedən başqa kvadrat xətti çəkə bilərsiniz, ya da sağa gedən kvadratların başqa xəttini çəkmək üçün fiqurun sol tərəfinə geri atlaya bilərsiniz. Hansına üstünlük verirsən?"
+        },
+        "courseE_artist_concept4_2018": {
+          "courseE_artist_concept4_b": "Bir kvadrat yaratmağa çalışın. Sonra kvadratlardan bir xətt düzəldin. Sonra nə gəlir?",
+          "courseE_artist_concept4_c": "Kvadratların xəttini çəkdikdən sonra ya dönüb sola gedən başqa kvadrat xətti çəkə bilərsiniz, ya da sağa gedən kvadratların başqa xəttini çəkmək üçün fiqurun sol tərəfinə geri atlaya bilərsiniz. Hansına üstünlük verirsən?"
+        },
+        "courseE_artist_concept_challenge1": {
+          "courseE_artist_concept_challenge1_c": "Tam forma vermək üçün təkrarlamaq istədiyiniz dizayn budur:\n\n![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)"
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "courseE_artist_concept_challenge1_c": "Tam forma vermək üçün təkrarlamaq istədiyiniz dizayn budur:\n\n![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)"
+        },
+        "courseE_artist_functions10": {
+          "courseD_artist_functions10_b": "Bu rəsm sonuncuya çox bənzəyir, lakin “xətti çəkmək” funksiyası indi fərqli bir forma çəkir.",
+          "courseD_artist_functions10_a": "Çoxsaylı `irəli hərəkət` bloklarından istifadə etməmək üçün `altıbucaqlı çəkmək` funksiyası yaradın və buna dəfələrlə zəng edin.",
+          "courseD_artist_functions10_c": "Bu rəsmin \"altıbucaqlılar xətti\" adlı funksiyadan harada istifadə edə biləcəyini görürsünüzmü?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions10_2018": {
+          "courseD_artist_functions10_b": "Bu rəsm sonuncuya çox bənzəyir, lakin “xətti çəkmək” funksiyası indi fərqli bir forma çəkir.",
+          "courseD_artist_functions10_a": "Çoxsaylı `irəli hərəkət` bloklarından istifadə etməmək üçün `altıbucaqlı çəkmək` funksiyası yaradın və buna dəfələrlə zəng edin.",
+          "courseD_artist_functions10_c": "Bu rəsmin \"altıbucaqlılar xətti\" adlı funksiyadan harada istifadə edə biləcəyini görürsünüzmü?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions10_2019": {
+          "courseD_artist_functions10_b": "Bu rəsm sonuncuya çox bənzəyir, lakin “xətti çəkmək” funksiyası indi fərqli bir forma çəkir.",
+          "courseD_artist_functions10_a": "Çoxsaylı `irəli hərəkət` bloklarından istifadə etməmək üçün `altıbucaqlı çəkmək` funksiyası yaradın və buna dəfələrlə zəng edin.",
+          "courseD_artist_functions10_c": "Bu rəsmin \"altıbucaqlılar xətti\" adlı funksiyadan harada istifadə edə biləcəyini görürsünüzmü?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions10_2020": {
+          "courseD_artist_functions10_b": "Bu rəsm sonuncuya çox bənzəyir, lakin “xətti çəkmək” funksiyası indi fərqli bir forma çəkir.",
+          "courseD_artist_functions10_a": "Çoxsaylı `irəli hərəkət` bloklarından istifadə etməmək üçün `altıbucaqlı çəkmək` funksiyası yaradın və buna dəfələrlə zəng edin.",
+          "courseD_artist_functions10_c": "Bu rəsmin \"altıbucaqlılar xətti\" adlı funksiyadan harada istifadə edə biləcəyini görürsünüzmü?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "Bu rəsm sonuncuya çox bənzəyir, lakin “xətti çəkmək” funksiyası indi fərqli bir forma çəkir.",
+          "courseD_artist_functions10_a": "Çoxsaylı `irəli hərəkət` bloklarından istifadə etməmək üçün `altıbucaqlı çəkmək` funksiyası yaradın və buna dəfələrlə zəng edin.",
+          "courseD_artist_functions10_c": "Bu rəsmin \"altıbucaqlılar xətti\" adlı funksiyadan harada istifadə edə biləcəyini görürsünüzmü?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_b": "Funksiya bütün proqramınızı ehtiva etməməlidir, sadəcə tərəfləri 100 piksel olan kvadrat çəkən hissəni ehtiva etməlidir.",
+          "courseD_artist_functions2_c": "Funksiyanıza \"zəng etmək\" üçün yaşıl \"kvadrat çək\" blokundan istifadə etdiyinizə əmin olun. Əks halda, funksiyanızdakı kod işləməyəcək.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Proqramınız:\n\n-   Öz funksiyanızdan istifadə edin\n-   İrəli 100 + 75 piksel\n-   Yenidən funksiyanızdan istifadə edin"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_b": "Funksiya bütün proqramınızı ehtiva etməməlidir, sadəcə tərəfləri 100 piksel olan kvadrat çəkən hissəni ehtiva etməlidir.",
+          "courseD_artist_functions2_c": "Funksiyanıza \"zəng etmək\" üçün yaşıl \"kvadrat çək\" blokundan istifadə etdiyinizə əmin olun. Əks halda, funksiyanızdakı kod işləməyəcək.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Proqramınız:\n\n-   Öz funksiyanızdan istifadə edin\n-   İrəli 100 + 75 piksel\n-   Yenidən funksiyanızdan istifadə edin"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_b": "Funksiya bütün proqramınızı ehtiva etməməlidir, sadəcə tərəfləri 100 piksel olan kvadrat çəkən hissəni ehtiva etməlidir.",
+          "courseD_artist_functions2_c": "Funksiyanıza \"zəng etmək\" üçün yaşıl \"kvadrat çək\" blokundan istifadə etdiyinizə əmin olun. Əks halda, funksiyanızdakı kod işləməyəcək.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Proqramınız:\n\n-   Öz funksiyanızdan istifadə edin\n-   İrəli 100 + 75 piksel\n-   Yenidən funksiyanızdan istifadə edin"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_b": "Funksiya bütün proqramınızı ehtiva etməməlidir, sadəcə tərəfləri 100 piksel olan kvadrat çəkən hissəni ehtiva etməlidir.",
+          "courseD_artist_functions2_c": "Funksiyanıza \"zəng etmək\" üçün yaşıl \"kvadrat çək\" blokundan istifadə etdiyinizə əmin olun. Əks halda, funksiyanızdakı kod işləməyəcək.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Proqramınız:\n\n-   Öz funksiyanızdan istifadə edin\n-   İrəli 100 + 75 piksel\n-   Yenidən funksiyanızdan istifadə edin"
+        },
+        "courseE_artist_functions5_2018": {
+          "courseD_artist_functions5_c": "`Ulduz çəkmək` funksiyanızı yaratmaqla başlayın, sonra üç ulduzu çəkmək üçün bu funksiyadan istifadə edin!"
+        },
+        "courseE_artist_functions5_2019": {
+          "courseD_artist_functions5_c": "`Ulduz çəkmək` funksiyanızı yaratmaqla başlayın, sonra üç ulduzu çəkmək üçün bu funksiyadan istifadə edin!"
+        },
+        "courseE_artist_functions5_2020": {
+          "courseD_artist_functions5_c": "`Ulduz çəkmək` funksiyanızı yaratmaqla başlayın, sonra üç ulduzu çəkmək üçün bu funksiyadan istifadə edin!"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_c": "`Ulduz çəkmək` funksiyanızı yaratmaqla başlayın, sonra üç ulduzu çəkmək üçün bu funksiyadan istifadə edin!"
+        },
+        "courseE_artist_functions7_2018": {
+          "courseD_artist_functions7_a": "Əvvəlcə funksiyanızı yaratmağa çalışın, sonra bir-bir pəncərə əlavə edin.",
+          "courseD_artist_functions7_b": "Üst pəncərələrdən aşağı pəncərələrə keçmək üçün sadəcə olaraq rəssamı sağa çevirin, 150 piksel tullayın, sonra yenidən rəssamı sağa çevirin! İndi sənətçi evin qalan hissəsini bitirmək üçün düzgün istiqamətlə üzləşəcək!"
+        },
+        "courseE_artist_functions7_2019": {
+          "courseD_artist_functions7_a": "Əvvəlcə funksiyanızı yaratmağa çalışın, sonra bir-bir pəncərə əlavə edin.",
+          "courseD_artist_functions7_b": "Üst pəncərələrdən aşağı pəncərələrə keçmək üçün sadəcə olaraq rəssamı sağa çevirin, 150 piksel tullayın, sonra yenidən rəssamı sağa çevirin! İndi sənətçi evin qalan hissəsini bitirmək üçün düzgün istiqamətlə üzləşəcək!"
+        },
+        "courseE_artist_functions7_2020": {
+          "courseD_artist_functions7_a": "Əvvəlcə funksiyanızı yaratmağa çalışın, sonra bir-bir pəncərə əlavə edin.",
+          "courseD_artist_functions7_b": "Üst pəncərələrdən aşağı pəncərələrə keçmək üçün sadəcə olaraq rəssamı sağa çevirin, 150 piksel tullayın, sonra yenidən rəssamı sağa çevirin! İndi sənətçi evin qalan hissəsini bitirmək üçün düzgün istiqamətlə üzləşəcək!"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "Əvvəlcə funksiyanızı yaratmağa çalışın, sonra bir-bir pəncərə əlavə edin.",
+          "courseD_artist_functions7_b": "Üst pəncərələrdən aşağı pəncərələrə keçmək üçün sadəcə olaraq rəssamı sağa çevirin, 150 piksel tullayın, sonra yenidən rəssamı sağa çevirin! İndi sənətçi evin qalan hissəsini bitirmək üçün düzgün istiqamətlə üzləşəcək!"
+        },
+        "courseE_artist_functions8_2018": {
+          "courseD_artist_functions8_f": "Sizə yalnız bir “irəli hərəkət” bloku lazımdır, lakin sizə kifayət qədər “irəli atlama” və yaxud “geri atlama” blokları lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.\n\nBu təsviri yaratmaq üçün \"kvadratların xəttini çəkmək\" funksiyasından necə istifadə edərdiniz?",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   yan uzunluğu **50 piksel** olan kvadrat çəkin\n    -   irəli atılma **100 piksel**",
+          "courseD_artist_functions8_b": "Bu şəkildəki hər cərgəni 3 kvadratdan ibarət bir xətt kimi düşünün. Neçə kvadrat xətti var və onların hər birini çəkməyə haradan başlayırsınız?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "Hər bir pilləli kvadrat dəstinin sonunda rəssam növbəti pilləli kvadratlar dəstini çəkməzdən əvvəl aşağı və geri tullanmalı olacaq."
+        },
+        "courseE_artist_functions8_2019": {
+          "courseD_artist_functions8_f": "Sizə yalnız bir “irəli hərəkət” bloku lazımdır, lakin sizə kifayət qədər “irəli atlama” və yaxud “geri atlama” blokları lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.\n\nBu təsviri yaratmaq üçün \"kvadratların xəttini çəkmək\" funksiyasından necə istifadə edərdiniz?",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   yan uzunluğu **50 piksel** olan kvadrat çəkin\n    -   irəli atılma **100 piksel**",
+          "courseD_artist_functions8_b": "Bu şəkildəki hər cərgəni 3 kvadratdan ibarət bir xətt kimi düşünün. Neçə kvadrat xətti var və onların hər birini çəkməyə haradan başlayırsınız?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "Hər bir pilləli kvadrat dəstinin sonunda rəssam növbəti pilləli kvadratlar dəstini çəkməzdən əvvəl aşağı və geri tullanmalı olacaq."
+        },
+        "courseE_artist_functions8_2020": {
+          "courseD_artist_functions8_f": "Sizə yalnız bir “irəli hərəkət” bloku lazımdır, lakin sizə kifayət qədər “irəli atlama” və yaxud “geri atlama” blokları lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.\n\nBu təsviri yaratmaq üçün \"kvadratların xəttini çəkmək\" funksiyasından necə istifadə edərdiniz?",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   yan uzunluğu **50 piksel** olan kvadrat çəkin\n    -   irəli atılma **100 piksel**",
+          "courseD_artist_functions8_b": "Bu şəkildəki hər cərgəni 3 kvadratdan ibarət bir xətt kimi düşünün. Neçə kvadrat xətti var və onların hər birini çəkməyə haradan başlayırsınız?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "Hər bir pilləli kvadrat dəstinin sonunda rəssam növbəti pilləli kvadratlar dəstini çəkməzdən əvvəl aşağı və geri tullanmalı olacaq."
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "Sizə yalnız bir “irəli hərəkət” bloku lazımdır, lakin sizə kifayət qədər “irəli atlama” və yaxud “geri atlama” blokları lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.\n\nBu təsviri yaratmaq üçün \"kvadratların xəttini çəkmək\" funksiyasından necə istifadə edərdiniz?",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   yan uzunluğu **50 piksel** olan kvadrat çəkin\n    -   irəli atılma **100 piksel**",
+          "courseD_artist_functions8_b": "Bu şəkildəki hər cərgəni 3 kvadratdan ibarət bir xətt kimi düşünün. Neçə kvadrat xətti var və onların hər birini çəkməyə haradan başlayırsınız?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "Hər bir pilləli kvadrat dəstinin sonunda rəssam növbəti pilləli kvadratlar dəstini çəkməzdən əvvəl aşağı və geri tullanmalı olacaq."
+        },
+        "courseE_artist_functions8b_2018": {
+          "courseD_artist_functions8_f": "Bunu düzgün edirsinizsə, sizə yalnız bir “irəli hərəkət” bloku lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   kvadrat çəkin\n    -   irəli atılma **100 piksel**"
+        },
+        "courseE_artist_functions8b_2019": {
+          "courseD_artist_functions8_f": "Bunu düzgün edirsinizsə, sizə yalnız bir “irəli hərəkət” bloku lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   kvadrat çəkin\n    -   irəli atılma **100 piksel**"
+        },
+        "courseE_artist_functions8b_2020": {
+          "courseD_artist_functions8_f": "Bunu düzgün edirsinizsə, sizə yalnız bir “irəli hərəkət” bloku lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   kvadrat çəkin\n    -   irəli atılma **100 piksel**"
+        },
+        "courseE_artist_functions8b_2021": {
+          "courseD_artist_functions8_f": "Bunu düzgün edirsinizsə, sizə yalnız bir “irəli hərəkət” bloku lazımdır!",
+          "courseD_artist_functions8_a": "Kvadrat üçün funksiya yaratmaqla başlayın, sonra kvadratlar xətti üçün funksiya yaratmağa çalışın.",
+          "courseD_artist_functions8_d": "Kvadratlardan bir xətt çəkmək üçün,\n\n-   3 dəfə təkrarlayın\n    -   kvadrat çəkin\n    -   irəli atılma **100 piksel**"
+        },
+        "courseE_artist_functions8c_2018": {
+          "courseD_artist_functions8_f": "Bu göründüyündən daha asandır! Burada heç bir “hərəkət” və ya “atlama” bloklarına ehtiyacınız yoxdur!",
+          "courseD_artist_functions8_a": "Kvadratların ikinci xətti birincidən fərqli olaraq cəmi 180 dərəcə dönmədir!",
+          "courseD_artist_functions8_c": "Kvadratların hər sətirinin sonunda rəssamın növbəti kvadrat xəttini çəkməzdən əvvəl yalnız 180 dərəcə dönməsi lazımdır. Sizi növbəti məşqə hazırlamaq üçün hər şeyi təkrar döngəyə qoyun!"
+        },
+        "courseE_artist_functions8c_2019": {
+          "courseD_artist_functions8_f": "Bu göründüyündən daha asandır! Burada heç bir “hərəkət” və ya “atlama” bloklarına ehtiyacınız yoxdur!",
+          "courseD_artist_functions8_a": "Kvadratların ikinci xətti birincidən fərqli olaraq cəmi 180 dərəcə dönmədir!",
+          "courseD_artist_functions8_c": "Kvadratların hər sətirinin sonunda rəssamın növbəti kvadrat xəttini çəkməzdən əvvəl yalnız 180 dərəcə dönməsi lazımdır. Sizi növbəti məşqə hazırlamaq üçün hər şeyi təkrar döngəyə qoyun!"
+        },
+        "courseE_artist_functions8c_2020": {
+          "courseD_artist_functions8_f": "Bu göründüyündən daha asandır! Burada heç bir “hərəkət” və ya “atlama” bloklarına ehtiyacınız yoxdur!",
+          "courseD_artist_functions8_a": "Kvadratların ikinci xətti birincidən fərqli olaraq cəmi 180 dərəcə dönmədir!",
+          "courseD_artist_functions8_c": "Kvadratların hər sətirinin sonunda rəssamın növbəti kvadrat xəttini çəkməzdən əvvəl yalnız 180 dərəcə dönməsi lazımdır. Sizi növbəti məşqə hazırlamaq üçün hər şeyi təkrar döngəyə qoyun!"
+        },
+        "courseE_artist_functions8c_2021": {
+          "courseD_artist_functions8_f": "Bu göründüyündən daha asandır! Burada heç bir “hərəkət” və ya “atlama” bloklarına ehtiyacınız yoxdur!",
+          "courseD_artist_functions8_a": "Kvadratların ikinci xətti birincidən fərqli olaraq cəmi 180 dərəcə dönmədir!",
+          "courseD_artist_functions8_c": "Kvadratların hər sətirinin sonunda rəssamın növbəti kvadrat xəttini çəkməzdən əvvəl yalnız 180 dərəcə dönməsi lazımdır. Sizi növbəti məşqə hazırlamaq üçün hər şeyi təkrar döngəyə qoyun!"
+        },
+        "courseE_artist_functions9": {
+          "courseD_artist_functions9_e": "Bu rəsmdə “üçbucaqlar xəttinin” istifadə oluna biləcəyi dörd yeri görə bilərsinizmi?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Bu tapmaca üç hissəyə bölünə bilər:\n\n-   `üçbucaq çəkmək` funksiyasını yerinə yetirin\n-   “üçbucaqların xəttini çəkmək” funksiyasını yerinə yetirin\n-   rəsmi tamamlamaq üçün `üçbucaqlar xəttini çək` funksiyasından dörd dəfə istifadə edin",
+          "courseD_artist_functions9_b": "Bu rəsm üçbucaq xəttini 4 dəfə çəkməklə və növbəti üçbucaq xəttini çəkməzdən əvvəl ya 60, ya da 120 dərəcə çevirməklə hazırlanır.",
+          "courseD_artist_functions9_c": "Üçbucaqlar xətti çəkmək üçün:\n\n-   4 dəfə təkrarlayın\n    -   üçbucaq çəkin\n    -   50 piksel irəli atlama",
+          "courseD_artist_functions9_d": "Almaz çəkmək üçün:\n\n-   2 dəfə təkrarlayın\n    -   üçbucaqların xəttini çəkin\n    -   60 dərəcə döndərin\n    -   üçbucaqların xəttini çəkin\n    -   120 dərəcə çevirin"
+        },
+        "courseE_artist_functions9_2018": {
+          "courseD_artist_functions9_e": "Bu rəsmdə “üçbucaqlar xəttinin” istifadə oluna biləcəyi dörd yeri görə bilərsinizmi?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Bu tapmaca üç hissəyə bölünə bilər:\n\n-   `üçbucaq çəkmək` funksiyasını yerinə yetirin\n-   “üçbucaqların xəttini çəkmək” funksiyasını yerinə yetirin\n-   rəsmi tamamlamaq üçün `üçbucaqlar xəttini çək` funksiyasından dörd dəfə istifadə edin",
+          "courseD_artist_functions9_b": "Bu rəsm üçbucaq xəttini 4 dəfə çəkməklə və növbəti üçbucaq xəttini çəkməzdən əvvəl ya 60, ya da 120 dərəcə çevirməklə hazırlanır.",
+          "courseD_artist_functions9_c": "Üçbucaqlar xətti çəkmək üçün:\n\n-   4 dəfə təkrarlayın\n    -   üçbucaq çəkin\n    -   50 piksel irəli atlama",
+          "courseD_artist_functions9_d": "Almaz çəkmək üçün:\n\n-   2 dəfə təkrarlayın\n    -   üçbucaqların xəttini çəkin\n    -   60 dərəcə döndərin\n    -   üçbucaqların xəttini çəkin\n    -   120 dərəcə çevirin"
+        },
+        "courseE_artist_functions9_2019": {
+          "courseD_artist_functions9_e": "Bu rəsmdə “üçbucaqlar xəttinin” istifadə oluna biləcəyi dörd yeri görə bilərsinizmi?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Bu tapmaca üç hissəyə bölünə bilər:\n\n-   `üçbucaq çəkmək` funksiyasını yerinə yetirin\n-   “üçbucaqların xəttini çəkmək” funksiyasını yerinə yetirin\n-   rəsmi tamamlamaq üçün `üçbucaqlar xəttini çək` funksiyasından dörd dəfə istifadə edin",
+          "courseD_artist_functions9_b": "Bu rəsm üçbucaq xəttini 4 dəfə çəkməklə və növbəti üçbucaq xəttini çəkməzdən əvvəl ya 60, ya da 120 dərəcə çevirməklə hazırlanır.",
+          "courseD_artist_functions9_c": "Üçbucaqlar xətti çəkmək üçün:\n\n-   4 dəfə təkrarlayın\n    -   üçbucaq çəkin\n    -   50 piksel irəli atlama",
+          "courseD_artist_functions9_d": "Almaz çəkmək üçün:\n\n-   2 dəfə təkrarlayın\n    -   üçbucaqların xəttini çəkin\n    -   60 dərəcə döndərin\n    -   üçbucaqların xəttini çəkin\n    -   120 dərəcə çevirin"
+        },
+        "courseE_artist_functions9_2020": {
+          "courseD_artist_functions9_e": "Bu rəsmdə “üçbucaqlar xəttinin” istifadə oluna biləcəyi dörd yeri görə bilərsinizmi?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Bu tapmaca üç hissəyə bölünə bilər:\n\n-   `üçbucaq çəkmək` funksiyasını yerinə yetirin\n-   “üçbucaqların xəttini çəkmək” funksiyasını yerinə yetirin\n-   rəsmi tamamlamaq üçün `üçbucaqlar xəttini çək` funksiyasından dörd dəfə istifadə edin",
+          "courseD_artist_functions9_b": "Bu rəsm üçbucaq xəttini 4 dəfə çəkməklə və növbəti üçbucaq xəttini çəkməzdən əvvəl ya 60, ya da 120 dərəcə çevirməklə hazırlanır.",
+          "courseD_artist_functions9_c": "Üçbucaqlar xətti çəkmək üçün:\n\n-   4 dəfə təkrarlayın\n    -   üçbucaq çəkin\n    -   50 piksel irəli atlama",
+          "courseD_artist_functions9_d": "Almaz çəkmək üçün:\n\n-   2 dəfə təkrarlayın\n    -   üçbucaqların xəttini çəkin\n    -   60 dərəcə döndərin\n    -   üçbucaqların xəttini çəkin\n    -   120 dərəcə çevirin"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "Bu rəsmdə “üçbucaqlar xəttinin” istifadə oluna biləcəyi dörd yeri görə bilərsinizmi?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Bu tapmaca üç hissəyə bölünə bilər:\n\n-   `üçbucaq çəkmək` funksiyasını yerinə yetirin\n-   “üçbucaqların xəttini çəkmək” funksiyasını yerinə yetirin\n-   rəsmi tamamlamaq üçün `üçbucaqlar xəttini çək` funksiyasından dörd dəfə istifadə edin",
+          "courseD_artist_functions9_b": "Bu rəsm üçbucaq xəttini 4 dəfə çəkməklə və növbəti üçbucaq xəttini çəkməzdən əvvəl ya 60, ya da 120 dərəcə çevirməklə hazırlanır.",
+          "courseD_artist_functions9_c": "Üçbucaqlar xətti çəkmək üçün:\n\n-   4 dəfə təkrarlayın\n    -   üçbucaq çəkin\n    -   50 piksel irəli atlama",
+          "courseD_artist_functions9_d": "Almaz çəkmək üçün:\n\n-   2 dəfə təkrarlayın\n    -   üçbucaqların xəttini çəkin\n    -   60 dərəcə döndərin\n    -   üçbucaqların xəttini çəkin\n    -   120 dərəcə çevirin"
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_a": "Əgər funksiyanı bir daha çağırsanız, son küncdə eyni dizaynı yarada bilərsiniz.",
+          "courseE_artist_functions_challenge1_b": "BSiz həmçinin başqa mövqelərə 'atlaya' və ya bütün dizaynı istədiyiniz kimi dəyişə bilərsiniz!"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_a": "Əgər funksiyanı bir daha çağırsanız, son küncdə eyni dizaynı yarada bilərsiniz.",
+          "courseE_artist_functions_challenge1_b": "BSiz həmçinin başqa mövqelərə 'atlaya' və ya bütün dizaynı istədiyiniz kimi dəyişə bilərsiniz!"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_a": "Əgər funksiyanı bir daha çağırsanız, son küncdə eyni dizaynı yarada bilərsiniz.",
+          "courseE_artist_functions_challenge1_b": "BSiz həmçinin başqa mövqelərə 'atlaya' və ya bütün dizaynı istədiyiniz kimi dəyişə bilərsiniz!"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_a": "Əgər funksiyanı bir daha çağırsanız, son küncdə eyni dizaynı yarada bilərsiniz.",
+          "courseE_artist_functions_challenge1_b": "BSiz həmçinin başqa mövqelərə 'atlaya' və ya bütün dizaynı istədiyiniz kimi dəyişə bilərsiniz!"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "Əgər funksiyanı bir daha çağırsanız, son küncdə eyni dizaynı yarada bilərsiniz.",
+          "courseE_artist_functions_challenge1_b": "BSiz həmçinin başqa mövqelərə 'atlaya' və ya bütün dizaynı istədiyiniz kimi dəyişə bilərsiniz!"
+        },
+        "courseE_bee_concept1": {
+          "courseE_bee_concept1_b": "Burada _təkrarlanan_ nümunələr varmı?",
+          "courseE_bee_concept1_a": "Burada iç içə döngələrdən necə istifadə edəcəyinizi başa düşmürsinizsə, təlimatları addım-addım bir kağız parçasına yazmağa çalışın. Gördüyünüz nümunələri dairəyə çəkin."
+        },
+        "courseE_bee_concept1_2018": {
+          "courseE_bee_concept1_b": "Burada _təkrarlanan_ nümunələr varmı?",
+          "courseE_bee_concept1_a": "Burada iç içə döngələrdən necə istifadə edəcəyinizi başa düşmürsinizsə, təlimatları addım-addım bir kağız parçasına yazmağa çalışın. Gördüyünüz nümunələri dairəyə çəkin."
+        },
+        "courseE_bee_concept2_2018": {
+          "courseE_bee_concept2_a": "Burada 'while' döngəsi kömək edə bilərmi?",
+          "courseE_bee_concept2_d": "Bu “while” döngəsi ilə siz balın miqdarının > 0 olub-olmadığını yoxlamaq üçün boş yerləri yoxlaya bilərsiniz. Bu, “bal varkən” döngəsi ilə eyni şeyi edir.",
+          "courseE_bee_concept2_b": "Siz hər yolun sonuna keçmək və hər boşluqdan bütün balı toplamaq üçün “while” döngələrindən istifadə edə bilərsiniz.",
+          "courseE_bee_concept2_c": "Arı hər yoldan sonra hansı tərəfə dönməlidir?"
+        },
+        "courseE_bee_concept3_2018": {
+          "courseE_bee_concept3a_a": "Bu tapmacanı həll etmək üçün daxili `təkrar` və ya `while` döngələrindən istifadə etməyə çalışın.",
+          "courseE_bee_concept3a_b": "Döngələri hara qoyacağınızı anlaya bilmirsinizsə, kodunuzu addım-addım yazmağa və nümunələri axtarmağa çalışın."
+        },
+        "courseE_farmer_concept1": {
+          "courseE_farmer_concept1_a": "“Bir çuxur varkən” bloku istənilən çuxuru düz olana qədər doldurmağa kömək edəcək.",
+          "courseE_farmer_concept1_b": "Deliklərə çatmaq üçün bir pilləkən addımı nümunəsindən istifadə edə bilərsiniz."
+        },
+        "courseE_farmer_concept1_2018": {
+          "courseE_farmer_concept1_a": "“Bir çuxur varkən” bloku istənilən çuxuru düz olana qədər doldurmağa kömək edəcək.",
+          "courseE_farmer_concept1_b": "Deliklərə çatmaq üçün bir pilləkən addımı nümunəsindən istifadə edə bilərsiniz."
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_a": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin.",
+          "courseE_farmer_functions1_b": "Sizə yalnız bir balqabaq seçmək lazımdır, lakin ona çatmaq üçün bir döngədən istifadə edə bilərsinizmi?"
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_a": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin.",
+          "courseE_farmer_functions1_b": "Sizə yalnız bir balqabaq seçmək lazımdır, lakin ona çatmaq üçün bir döngədən istifadə edə bilərsinizmi?"
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_a": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin.",
+          "courseE_farmer_functions1_b": "Sizə yalnız bir balqabaq seçmək lazımdır, lakin ona çatmaq üçün bir döngədən istifadə edə bilərsinizmi?"
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_a": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin.",
+          "courseE_farmer_functions1_b": "Sizə yalnız bir balqabaq seçmək lazımdır, lakin ona çatmaq üçün bir döngədən istifadə edə bilərsinizmi?"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin.",
+          "courseE_farmer_functions1_b": "Sizə yalnız bir balqabaq seçmək lazımdır, lakin ona çatmaq üçün bir döngədən istifadə edə bilərsinizmi?"
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_a": "Funksiya tərifini oxuduğunuzdan əmin olun. Bunun nə etdiyini deyə bilərsinizmi?",
+          "courseE_farmer_functions1a_b": "Use a `repeat until` block to get to the pumpkin!"
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_a": "Funksiya tərifini oxuduğunuzdan əmin olun. Bunun nə etdiyini deyə bilərsinizmi?",
+          "courseE_farmer_functions1a_b": "Use a `repeat until` block to get to the pumpkin!"
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_a": "Funksiya tərifini oxuduğunuzdan əmin olun. Bunun nə etdiyini deyə bilərsinizmi?",
+          "courseE_farmer_functions1a_b": "Use a `repeat until` block to get to the pumpkin!"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_a": "Funksiya tərifini oxuduğunuzdan əmin olun. Bunun nə etdiyini deyə bilərsinizmi?",
+          "courseE_farmer_functions1a_b": "Use a `repeat until` block to get to the pumpkin!"
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions2b_a": "İki yolun sonuna çatmaq üçün \"balqabağa qədər təkrarlaya\" bilərsiniz.",
+          "courseE_farmer_functions2b_b": "Birləşdirən yolda qarğıdalı yoxdur, ona görə də sadəcə onunla hərəkət edə və dönə bilərsiniz.",
+          "courseE_farmer_functions2b_c": "Bütün məhsulu əldə etmək üçün sizə iki ayrı “təkrar et” bloku lazımdır."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions2b_a": "İki yolun sonuna çatmaq üçün \"balqabağa qədər təkrarlaya\" bilərsiniz.",
+          "courseE_farmer_functions2b_b": "Birləşdirən yolda qarğıdalı yoxdur, ona görə də sadəcə onunla hərəkət edə və dönə bilərsiniz.",
+          "courseE_farmer_functions2b_c": "Bütün məhsulu əldə etmək üçün sizə iki ayrı “təkrar et” bloku lazımdır."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions2b_a": "İki yolun sonuna çatmaq üçün \"balqabağa qədər təkrarlaya\" bilərsiniz.",
+          "courseE_farmer_functions2b_b": "Birləşdirən yolda qarğıdalı yoxdur, ona görə də sadəcə onunla hərəkət edə və dönə bilərsiniz.",
+          "courseE_farmer_functions2b_c": "Bütün məhsulu əldə etmək üçün sizə iki ayrı “təkrar et” bloku lazımdır."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_a": "İki yolun sonuna çatmaq üçün \"balqabağa qədər təkrarlaya\" bilərsiniz.",
+          "courseE_farmer_functions2b_b": "Birləşdirən yolda qarğıdalı yoxdur, ona görə də sadəcə onunla hərəkət edə və dönə bilərsiniz.",
+          "courseE_farmer_functions2b_c": "Bütün məhsulu əldə etmək üçün sizə iki ayrı “təkrar et” bloku lazımdır."
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "courseE_farmer_functions2ba_a": "Bütün balqabağı aldığınızdan əmin olmaq üçün yaşıl “bütün balqabağaları əldə edin” blokundan istifadə edin!"
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "courseE_farmer_functions2ba_a": "Bütün balqabağı aldığınızdan əmin olmaq üçün yaşıl “bütün balqabağaları əldə edin” blokundan istifadə edin!"
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "courseE_farmer_functions2ba_a": "Bütün balqabağı aldığınızdan əmin olmaq üçün yaşıl “bütün balqabağaları əldə edin” blokundan istifadə edin!"
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "courseE_farmer_functions2ba_a": "Bütün balqabağı aldığınızdan əmin olmaq üçün yaşıl “bütün balqabağaları əldə edin” blokundan istifadə edin!"
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "coursee_farmer_functions3c1_2018_a": "Bu tapmacanı həll etmək üçün üç dəfə “yol boyu seç” funksiyasından istifadə etməlisiniz.",
+          "coursee_farmer_functions3c1_2018_b": "Küncləri keçmək üçün hansı kodu əlavə etməlisiniz?"
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "coursee_farmer_functions3c1_2018_a": "Bu tapmacanı həll etmək üçün üç dəfə “yol boyu seç” funksiyasından istifadə etməlisiniz.",
+          "coursee_farmer_functions3c1_2018_b": "Küncləri keçmək üçün hansı kodu əlavə etməlisiniz?"
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "coursee_farmer_functions3c1_2018_a": "Bu tapmacanı həll etmək üçün üç dəfə “yol boyu seç” funksiyasından istifadə etməlisiniz.",
+          "coursee_farmer_functions3c1_2018_b": "Küncləri keçmək üçün hansı kodu əlavə etməlisiniz?"
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "coursee_farmer_functions3c1_2018_a": "Bu tapmacanı həll etmək üçün üç dəfə “yol boyu seç” funksiyasından istifadə etməlisiniz.",
+          "coursee_farmer_functions3c1_2018_b": "Küncləri keçmək üçün hansı kodu əlavə etməlisiniz?"
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "courseE_farmer_functions7a1_2018_a": "Alətlər qutusunda \"funksiyalar\" bölməsi altında öz funksiyanızı yaradın.",
+          "courseE_farmer_functions7a1_2018_b": "Hazırladığınız zaman funksiyanızdan istifadə etməyi unutmayın!"
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "courseE_farmer_functions7a1_2018_a": "Alətlər qutusunda \"funksiyalar\" bölməsi altında öz funksiyanızı yaradın.",
+          "courseE_farmer_functions7a1_2018_b": "Hazırladığınız zaman funksiyanızdan istifadə etməyi unutmayın!"
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "courseE_farmer_functions7a1_2018_a": "Alətlər qutusunda \"funksiyalar\" bölməsi altında öz funksiyanızı yaradın.",
+          "courseE_farmer_functions7a1_2018_b": "Hazırladığınız zaman funksiyanızdan istifadə etməyi unutmayın!"
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "courseE_farmer_functions7a1_2018_a": "Alətlər qutusunda \"funksiyalar\" bölməsi altında öz funksiyanızı yaradın.",
+          "courseE_farmer_functions7a1_2018_b": "Hazırladığınız zaman funksiyanızdan istifadə etməyi unutmayın!"
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "courseE_farmer_functions8a1_2018a": "Son tapmacada etdiyiniz eyni funksiyanı kodlaşdırmaqla bu tapmacaya başlayın.",
+          "courseE_farmer_functions8a1_2018b": "Funksiya ilk dəfə işə salındıqdan sonra onu yenidən işə salmaqdan əvvəl bir əlavə dönüş etməlisiniz."
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "courseE_farmer_functions8a1_2018a": "Son tapmacada etdiyiniz eyni funksiyanı kodlaşdırmaqla bu tapmacaya başlayın.",
+          "courseE_farmer_functions8a1_2018b": "Funksiya ilk dəfə işə salındıqdan sonra onu yenidən işə salmaqdan əvvəl bir əlavə dönüş etməlisiniz."
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "courseE_farmer_functions8a1_2018a": "Son tapmacada etdiyiniz eyni funksiyanı kodlaşdırmaqla bu tapmacaya başlayın.",
+          "courseE_farmer_functions8a1_2018b": "Funksiya ilk dəfə işə salındıqdan sonra onu yenidən işə salmaqdan əvvəl bir əlavə dönüş etməlisiniz."
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "courseE_farmer_functions8a1_2018a": "Son tapmacada etdiyiniz eyni funksiyanı kodlaşdırmaqla bu tapmacaya başlayın.",
+          "courseE_farmer_functions8a1_2018b": "Funksiya ilk dəfə işə salındıqdan sonra onu yenidən işə salmaqdan əvvəl bir əlavə dönüş etməlisiniz."
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "courseE_farmer_functions9a1_2018a": "Son bir neçə tapmacada etdiyiniz funksiyadan istifadə edəcəksiniz.",
+          "courseE_farmer_functions9a1_2018b": "Bu tapmacanın birinci yarısını həll etmək üçün əvvəlki tapmacanın eyni addımlarını istifadə edin.",
+          "courseE_farmer_functions9a1_2018c": "Funksiyanıza yenidən zəng etməzdən əvvəl kahının son məhsuluna çatmaq üçün bir neçə dəfə “fırlanmalı” və “irəli hərəkət etməlisiniz”."
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "courseE_farmer_functions9a1_2018a": "Son bir neçə tapmacada etdiyiniz funksiyadan istifadə edəcəksiniz.",
+          "courseE_farmer_functions9a1_2018b": "Bu tapmacanın birinci yarısını həll etmək üçün əvvəlki tapmacanın eyni addımlarını istifadə edin.",
+          "courseE_farmer_functions9a1_2018c": "Funksiyanıza yenidən zəng etməzdən əvvəl kahının son məhsuluna çatmaq üçün bir neçə dəfə “fırlanmalı” və “irəli hərəkət etməlisiniz”."
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "courseE_farmer_functions9a1_2018a": "Son bir neçə tapmacada etdiyiniz funksiyadan istifadə edəcəksiniz.",
+          "courseE_farmer_functions9a1_2018b": "Bu tapmacanın birinci yarısını həll etmək üçün əvvəlki tapmacanın eyni addımlarını istifadə edin.",
+          "courseE_farmer_functions9a1_2018c": "Funksiyanıza yenidən zəng etməzdən əvvəl kahının son məhsuluna çatmaq üçün bir neçə dəfə “fırlanmalı” və “irəli hərəkət etməlisiniz”."
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "courseE_farmer_functions9a1_2018a": "Son bir neçə tapmacada etdiyiniz funksiyadan istifadə edəcəksiniz.",
+          "courseE_farmer_functions9a1_2018b": "Bu tapmacanın birinci yarısını həll etmək üçün əvvəlki tapmacanın eyni addımlarını istifadə edin.",
+          "courseE_farmer_functions9a1_2018c": "Funksiyanıza yenidən zəng etməzdən əvvəl kahının son məhsuluna çatmaq üçün bir neçə dəfə “fırlanmalı” və “irəli hərəkət etməlisiniz”."
+        },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "helloworld_food_click": {
+          "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
         }
       }
     }

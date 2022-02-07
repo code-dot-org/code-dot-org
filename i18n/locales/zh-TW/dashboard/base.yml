@@ -1125,3 +1125,4 @@ zh-TW:
     this_sprite: "這個角色"
   unit_prefix: "%{n} 個單位"
   code_org_logo_alt: "Code.org 首頁"
+  teacher_feedback: "老師的回饋\n"

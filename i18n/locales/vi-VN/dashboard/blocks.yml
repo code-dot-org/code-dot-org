@@ -993,6 +993,20 @@ vi:
         text: khi nhấp chuột vào {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): xoay phải
+            new Behavior(spinning_left, []): xoay trái
+            new Behavior(fluttering, []): rung rinh
+            new Behavior(jittering, []): phập phồng
+            new Behavior(wobbling, []): nhúc nhích
+            new Behavior(wandering, []): lang thang
+            new Behavior(patrolling, []): tuần tra
+            new Behavior(moving_west_and_looping, []): di chuyển sang trái và lặp lại
+            new Behavior(moving_east_and_looping, []): di chuyển sang phải và lặp lại
+            new Behavior(moving_north_and_looping, []): di chuyển lên trên và lặp lại
+            new Behavior(moving_south_and_looping, []): di chuyển xuống dưới và lặp lại
       gamelab_comment:
         text: 'bình luận: {COMMENT}'
       gamelab_costumeImage:
@@ -1044,6 +1058,19 @@ vi:
         text: |-
           nếu {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: diện mạo của {SPRITE} là {COSTUME}
       gamelab_isKeyPressed:
@@ -1220,6 +1247,12 @@ vi:
             "'sound://category_digital/jump_7.mp3'": nhảy
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): di chuyển bằng phím mũi tên
+            new Behavior(driving_with_arrow_keys, []): chuyển động bằng các phím mũi tên
+            draggable(): có thể kéo được
       gamelab_pointInDirection:
         text: hướng {SPRITE} về phía {DIRECTION}
         options:

@@ -1105,3 +1105,4 @@ sk:
     this_sprite: "tento objekt"
   unit_prefix: "Jednotka %{n}"
   code_org_logo_alt: "Code.org Domov"
+  teacher_feedback: "Spätná väzba od učiteľa"

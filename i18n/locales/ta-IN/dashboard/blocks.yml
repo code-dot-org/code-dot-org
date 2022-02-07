@@ -927,6 +927,11 @@ ta:
         text: பொழுது{SPRITE}கிளிக் செய்த
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): வடக்கே நகர்ந்து வளையும்
+            new Behavior(moving_south_and_looping, []): தெற்கே நகர்ந்து வளையும்
       gamelab_comment:
         text: கருத்து:{COMMENT}
       gamelab_costumeImage:
@@ -979,6 +984,19 @@ ta:
         text: |-
           என்றால் {NUM} = {VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ஆடை என்பது {COSTUME}"
       gamelab_isKeyPressed:
@@ -1135,6 +1153,7 @@ ta:
             "'sound://category_nature/summer_night_loop.mp3'": கோடை இரவு
             "'sound://category_background/ocean_waves.mp3'": கடல் அலைகள்
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": கடற்கரை சிற்றலை
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": நீர்க்குமிழி
             "'sound://category_animals/bear.mp3'": கரடி
             "'sound://category_animals/cat.mp3'": பூனை
             "'sound://category_animals/cow.mp3'": மாடு
@@ -1153,6 +1172,11 @@ ta:
             "'sound://category_digital/jump_7.mp3'": குதி
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): அம்பு விசைகளுடன் நகரும்
+            draggable(): இழுக்கப்படக்கூடியது
       gamelab_pointInDirection:
         text: புள்ளி {SPRITE} {DIRECTION}
         options:
@@ -1612,6 +1636,7 @@ ta:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': செங்கல்
             '"iceCream"': ஐஸ்க்ரீம்
             '"rainbow"': வானவில்
       Poetry_addLine:
