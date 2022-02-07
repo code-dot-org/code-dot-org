@@ -234,14 +234,13 @@ FeedbackUtils.prototype.displayFeedback = function(
     // No additional onHidden functionality upon closing the dialog
   } else if (
     !continueButton ||
-    againButton ||
-    !!feedbackDialog.hideButDontContinue
+    (feedbackDialog && feedbackDialog.hideButDontContinue)
   ) {
     onHidden = function() {
       this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
     }.bind(this);
   } else {
-    onHidden = onContinue();
+    onHidden = onContinue;
   }
 
   var icon;
