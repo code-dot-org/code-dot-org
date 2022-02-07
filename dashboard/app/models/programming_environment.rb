@@ -81,8 +81,4 @@ class ProgrammingEnvironment < ApplicationRecord
       categories: categories
     }
   end
-
-  def category_options
-    programming_expressions.pluck(:category).uniq
-  end
 end
