@@ -993,6 +993,20 @@ vi:
         text: khi nhấp chuột vào {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): xoay phải
+            new Behavior(spinning_left, []): xoay trái
+            new Behavior(fluttering, []): rung rinh
+            new Behavior(jittering, []): phập phồng
+            new Behavior(wobbling, []): nhúc nhích
+            new Behavior(wandering, []): lang thang
+            new Behavior(patrolling, []): tuần tra
+            new Behavior(moving_west_and_looping, []): di chuyển sang trái và lặp lại
+            new Behavior(moving_east_and_looping, []): di chuyển sang phải và lặp lại
+            new Behavior(moving_north_and_looping, []): di chuyển lên trên và lặp lại
+            new Behavior(moving_south_and_looping, []): di chuyển xuống dưới và lặp lại
       gamelab_comment:
         text: 'bình luận: {COMMENT}'
       gamelab_costumeImage:
@@ -1044,6 +1058,19 @@ vi:
         text: |-
           nếu {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: diện mạo của {SPRITE} là {COSTUME}
       gamelab_isKeyPressed:
@@ -1195,6 +1222,7 @@ vi:
             "'sound://category_digital/boing_2.mp3'": bụp
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": nổ
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": lấp lánh
+            "'sound://category_app/app_button_1.mp3'": nút
             "'sound://category_collect/clicky_crunch.mp3'": khủng hoảng
             "'sound://category_swish/quick_swing.mp3'": đung đưa
             "'sound://category_nature/summer_night_loop.mp3'": đêm hè
@@ -1205,7 +1233,9 @@ vi:
             "'sound://category_animals/cat.mp3'": con mèo
             "'sound://category_animals/cow.mp3'": con bò
             "'sound://category_animals/sheep.mp3'": con cừu
+            "'sound://category_animals/goat.mp3'": dê
             "'sound://category_animals/chicken.mp3'": con gà
+            "'sound://category_animals/elephant.mp3'": voi
             "'sound://category_animals/dolphin.mp3'": cá heo
             "'sound://category_nature/thunderstorm_1.mp3'": mưa bão
             "'sound://category_animals/dog.mp3'": con chó
@@ -1220,6 +1250,12 @@ vi:
             "'sound://category_digital/jump_7.mp3'": nhảy
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): di chuyển bằng phím mũi tên
+            new Behavior(driving_with_arrow_keys, []): chuyển động bằng các phím mũi tên
+            draggable(): có thể kéo được
       gamelab_pointInDirection:
         text: hướng {SPRITE} về phía {DIRECTION}
         options:
@@ -1319,6 +1355,14 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': chậm
+            '5': bình thường
+            '7': nhanh
+            '9': extra fast
       gamelab_setTint:
         text: thay đổi màu sắc của {THIS} thành {COLOR}
       gamelab_setupScoreboard:
@@ -1781,6 +1825,8 @@ vi:
         options:
           BRUSH:
             '"brick"': gạch
+            '"fire"': lửa
+            '"flowers"': hoa
             '"hearts"': trái tim
             '"iceCream"': Kem
             '"rainbow"': cầu vồng
@@ -1814,6 +1860,7 @@ vi:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Yên tĩnh
             '"sound://category_nature/steady_campfire_loop.mp3"': Lửa trại
             '"sound://category_nature/rain_loop.mp3"': Mưa phùn
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': rừng
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Ma ám
             '"sound://category_background/inside_plane.mp3"': Vo ve
             '"sound://category_loops/red_flag_loop1.mp3"': Nhiệm vụ
