@@ -20,8 +20,8 @@ class BaseDSL
   def self.parse(str, filename, name=nil)
     object = new
     object.name(name) if name.present?
-    ascii = str ? str.to_ascii : ''
-    object.instance_eval(ascii, filename)
+    utf8 = str ? str.force_encoding('UTF-8') : ''
+    object.instance_eval(utf8, filename)
     [object.parse_output, object.i18n_hash]
   end
 
