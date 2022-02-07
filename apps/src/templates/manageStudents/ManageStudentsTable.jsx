@@ -22,7 +22,8 @@ import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
 import NoSectionCodeDialog from './NoSectionCodeDialog';
 import {
   sectionCode,
-  sectionName
+  sectionName,
+  selectedSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
@@ -48,7 +49,6 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '../SafeMarkdown';
-import experiments from '@cdo/apps/util/experiments';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -808,13 +808,12 @@ class ManageStudentsTable extends Component {
             but is otherwise similar to other button/modal components here.
             Despite being unused in this component, we pass the dataApi object
             so that it can be more easily stubbed in tests. */}
-          {isSectionAssignedCSA &&
-            experiments.isEnabled(experiments.CODE_REVIEW_GROUPS) && (
-              <CodeReviewGroupsDialog
-                dataApi={new CodeReviewGroupsDataApi(sectionId)}
-                buttonContainerStyle={styles.button}
-              />
-            )}
+          {isSectionAssignedCSA && (
+            <CodeReviewGroupsDialog
+              dataApi={new CodeReviewGroupsDataApi(sectionId)}
+              buttonContainerStyle={styles.button}
+            />
+          )}
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
             <div
               style={styles.sectionCodeBox}
@@ -921,12 +920,12 @@ export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(
   state => ({
-    sectionId: state.sectionData.section.id,
-    sectionCode: sectionCode(state, state.sectionData.section.id),
-    sectionName: sectionName(state, state.sectionData.section.id),
+    sectionId: state.teacherSections.selectedSectionId,
+    sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
+    sectionName: sectionName(state, state.teacherSections.selectedSectionId),
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
-    isSectionAssignedCSA: state.sectionData.section.isAssignedCSA,
+    isSectionAssignedCSA: selectedSection(state).isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

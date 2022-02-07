@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-30 19:30:48 UTC",
+    "serialized_at": "2022-01-14 18:12:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3663,7 +3663,7 @@
       "key": "038ca026-dab7-4b7a-8c7b-c6266154edcf",
       "position": 8,
       "properties": {
-        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
+        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n- [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdditionally, [this guide from the Harvard Law School Library](https://guides.library.harvard.edu/c.php?g=310751&p=2072816) has a variety of search engines that could be used for creative commons images. This may be overwhelming for students, but it could be a good resource for specific situations or to find additional search engines that are available at your school.\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
       },
       "seeding_key": {
         "activity_section.key": "038ca026-dab7-4b7a-8c7b-c6266154edcf",

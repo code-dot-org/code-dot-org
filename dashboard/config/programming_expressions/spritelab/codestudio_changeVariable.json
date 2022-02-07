@@ -2,5 +2,6 @@
   "key": "codestudio_changeVariable",
   "name": "math_change",
   "category": "Variables",
+  "block_name": "math_change",
   "syntax": "math_change"
 }

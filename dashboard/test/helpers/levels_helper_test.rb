@@ -115,6 +115,79 @@ class LevelsHelperTest < ActionView::TestCase
     refute blockly_options[:embed]
   end
 
+  test "blockly_options 'level.isLastLevelInLesson' is false if script level is not the last level in the lesson" do
+    @level = create :applab
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, chapter: 1, position: 1
+    create :script_level, lesson: @lesson, chapter: 2, position: 2
+
+    options = blockly_options
+
+    refute options[:level]['isLastLevelInLesson']
+  end
+
+  test "blockly_options 'level.isLastLevelInLesson' is true if script level is the last level in the lesson" do
+    @level = create :applab
+    @lesson = create :lesson
+    create :script_level, lesson: @lesson, position: 1, chapter: 1
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 2, chapter: 2
+
+    options = blockly_options
+
+    assert options[:level]['isLastLevelInLesson']
+  end
+
+  test "blockly_options 'level.isLastLevelInScript' is false if script level is not the last level in the script" do
+    @script = create :script
+    lesson_group = create :lesson_group, script: @script
+    @lesson = create :lesson, lesson_group: lesson_group, relative_position: 1
+    lesson_2 = create :lesson, lesson_group: lesson_group, relative_position: 2
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level]
+    create :script_level, lesson: lesson_2
+
+    options = blockly_options
+
+    refute options[:level]['isLastLevelInScript']
+  end
+
+  test "blockly_options 'level.isLastLevelInScript' is true if script level is the last level in the script" do
+    @script = create :script
+    lesson_group = create :lesson_group, script: @script
+    create :lesson, lesson_group: lesson_group, relative_position: 1
+    @lesson = create :lesson, lesson_group: lesson_group, relative_position: 2
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level], position: 1
+
+    options = blockly_options
+
+    assert options[:level]['isLastLevelInScript']
+  end
+
+  test "blockly_options 'level.showEndOfLessonMsgs' is true if script.show_unit_overview_between_lessons? is true" do
+    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns true
+    @script = create :script
+    @lesson = create :lesson
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level]
+
+    options = blockly_options
+
+    assert options[:level]['showEndOfLessonMsgs']
+  end
+
+  test "blockly_options 'level.showEndOfLessonMsgs' is false if script.show_unit_overview_between_lessons? is false" do
+    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns false
+    @script = create :script
+    @lesson = create :lesson
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level]
+
+    options = blockly_options
+
+    refute options[:level]['showEndOfLessonMsgs']
+  end
+
   test "get video choices" do
     choices_cached = video_key_choices
     assert_equal(choices_cached.count, Video.where(locale: 'en-US').count)

@@ -19,7 +19,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'grade',
   'hidden',
   'restrictSection',
-  'codeReviewEnabled'
+  'codeReviewExpiresAt'
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -74,6 +74,9 @@ const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
 const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
+/** Sets section codeReviewExpiresAt after it's been updated */
+const SET_SECTION_CODE_REVIEW_EXPIRES_AT =
+  'teacherSections/SET_SECTION_CODE_REVIEW_EXPIRES_AT';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
@@ -142,6 +145,16 @@ export const setShowLockSectionField = showLockSectionField => {
   return {
     type: SET_SHOW_LOCK_SECTION_FIELD,
     showLockSectionField
+  };
+};
+export const setSectionCodeReviewExpiresAt = (
+  sectionId,
+  codeReviewExpiresAt
+) => {
+  return {
+    type: SET_SECTION_CODE_REVIEW_EXPIRES_AT,
+    sectionId,
+    codeReviewExpiresAt
   };
 };
 
@@ -577,8 +590,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     scriptId: scriptId || null,
     hidden: false,
     isAssigned: undefined,
-    restrictSection: false,
-    codeReviewEnabled: true
+    restrictSection: false
   };
 }
 
@@ -735,7 +747,7 @@ export default function teacherSections(state = initialState, action) {
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
-      selectedSectionId = action.sections[0].id.toString();
+      selectedSectionId = action.sections[0].id;
     }
 
     sections.forEach(section => {
@@ -811,6 +823,27 @@ export default function teacherSections(state = initialState, action) {
         [sectionId]: {
           ...state.sections[sectionId],
           hidden: !state.sections[sectionId].hidden
+        }
+      }
+    };
+  }
+
+  if (action.type === SET_SECTION_CODE_REVIEW_EXPIRES_AT) {
+    const {sectionId, codeReviewExpiresAt} = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          codeReviewExpiresAt: codeReviewExpiresAt
+            ? Date.parse(codeReviewExpiresAt)
+            : null
         }
       }
     };
@@ -1089,6 +1122,15 @@ export function sectionName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).name;
 }
 
+export function selectedSection(state) {
+  const selectedSectionId = getRoot(state).selectedSectionId;
+  if (selectedSectionId) {
+    return getRoot(state).sections[selectedSectionId];
+  } else {
+    return null;
+  }
+}
+
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
     return rosterProvider(state);
@@ -1170,8 +1212,11 @@ export const sectionFromServerSection = serverSection => ({
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
-  codeReviewEnabled: serverSection.code_review_enabled,
-  postMilestoneDisabled: serverSection.post_milestone_disabled
+  postMilestoneDisabled: serverSection.post_milestone_disabled,
+  codeReviewExpiresAt: serverSection.code_review_expires_at
+    ? Date.parse(serverSection.code_review_expires_at)
+    : null,
+  isAssignedCSA: serverSection.is_assigned_csa
 });
 
 /**
@@ -1182,7 +1227,10 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   sectionId: sectionId,
   id: serverStudent.id,
   name: serverStudent.name,
-  sharingDisabled: serverStudent.sharing_disabled
+  sharingDisabled: serverStudent.sharing_disabled,
+  totalLines: serverStudent.total_lines,
+  secretPicturePath: serverStudent.secret_picture_path,
+  secretWords: serverStudent.secret_words
 });
 
 /**
@@ -1202,8 +1250,7 @@ export function serverSectionFromSection(section) {
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined,
-    restrict_section: section.restrictSection,
-    code_review_enabled: section.codeReviewEnabled
+    restrict_section: section.restrictSection
   };
 }
 

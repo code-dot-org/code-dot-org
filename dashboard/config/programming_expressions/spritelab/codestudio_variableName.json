@@ -2,5 +2,6 @@
   "key": "codestudio_variableName",
   "name": "variables_get",
   "category": "Variables",
+  "block_name": "variables_get",
   "syntax": "variables_get"
 }

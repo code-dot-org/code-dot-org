@@ -2,5 +2,6 @@
   "key": "gamelab_setTint",
   "name": "setTint",
   "category": "Sprites",
+  "block_name": "gamelab_setTint",
   "syntax": "setTint"
 }

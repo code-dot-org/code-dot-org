@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Consider real world implications
 
-#### In the next section of this professional learning module, you will introduced to AI and ethics with a focus on how students will consider the real world impacts of training data bias. 
+##### In the next section of this professional learning module, you will introduced to AI and ethics with a focus on how students will consider the real world impacts of training data bias. 
 
 ## You will:
 

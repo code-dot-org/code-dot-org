@@ -329,13 +329,13 @@ class Pd::Enrollment < ApplicationRecord
   # workshop id
   # @return [Integer, nil] application id or nil if cannot find any application
   def set_application_id
-    course_match = ->(application) {Pd::Application::ApplicationBase::COURSE_NAME_MAP.dig(application.try(:course).to_sym) == workshop.try(:course)}
+    course_match = ->(application) {Pd::Application::ApplicationBase::COURSE_NAME_MAP.dig(application.try(:course)&.to_sym) == workshop.try(:course)}
     pd_match = ->(application) {application.try(:pd_workshop_id) == pd_workshop_id}
 
     application_id = nil
     # Finds application from the school year of the workshop. Assumes workshops start after 6/1
     # because workshop.school_year assumes 6/1 is the start of the school year
-    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: workshop.school_year).each do |application|
+    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: workshop&.school_year).each do |application|
       application_id = application.id if course_match.call(application) || pd_match.call(application)
       break if application_id
     end
@@ -374,7 +374,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def authorize_teacher_account
-    user.permission = UserPermission::AUTHORIZED_TEACHER if user && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
+    user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
   end
 
   private_class_method def self.filter_for_pegasus_survey_completion(enrollments, select_completed)

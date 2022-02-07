@@ -136,6 +136,7 @@ class ProgressLesson extends React.Component {
 
     return (
       <div
+        id={`progress-lesson-${lesson.lessonNumber}`}
         className="uitest-progress-lesson"
         style={{
           ...styles.outer,

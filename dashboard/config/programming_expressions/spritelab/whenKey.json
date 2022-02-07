@@ -2,5 +2,6 @@
   "key": "whenKey",
   "name": "whenKey",
   "category": "Unused",
+  "block_name": "gamelab_whenKey",
   "syntax": "whenKey"
 }
