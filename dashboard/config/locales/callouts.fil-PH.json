@@ -1271,6 +1271,54 @@
           "poetry_background": "Maghanap ng mga block ng code dito.",
           "pause_button": "Subukan ang animation mo gamit ang button na ito.",
           "run_button": "Subukan ang animation mo gamit ang button na ito."
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "Isa itong `paulit-ulit` na loop! I-click ito sa workspace at magdagdag ng code na gusto mong patakbuhin nang paulit-ulit."
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "Isa itong `paulit-ulit` na loop! I-click ito sa workspace at magdagdag ng code na gusto mong patakbuhin nang paulit-ulit."
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "Isa itong `paulit-ulit` na loop! I-click ito sa workspace at magdagdag ng code na gusto mong patakbuhin nang paulit-ulit."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Isa itong `paulit-ulit` na loop! I-click ito sa workspace at magdagdag ng code na gusto mong patakbuhin nang paulit-ulit."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Maaaring mag-hover ang Agent sa ibabaw ng tubig, ngunit hindi ang manlalaro!"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Maaaring mag-hover ang Agent sa ibabaw ng tubig, ngunit hindi ang manlalaro!"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Maaaring mag-hover ang Agent sa ibabaw ng tubig, ngunit hindi ang manlalaro!"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Maaaring mag-hover ang Agent sa ibabaw ng tubig, ngunit hindi ang manlalaro!"
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Hindi mo maaaring itapon ang mga bloke na ito, ngunit maaari mong i-edit ang mga ito!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_1": "Hindi mo maaaring itapon ang mga bloke na ito, ngunit maaari mong i-edit ang mga ito!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_1": "Hindi mo maaaring itapon ang mga bloke na ito, ngunit maaari mong i-edit ang mga ito!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Hindi mo maaaring itapon ang mga bloke na ito, ngunit maaari mong i-edit ang mga ito!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Maaaring mag-hover ang Agent sa lava, ngunit hindi magagawa nina Steve at Alex!"
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_1": "Maaaring mag-hover ang Agent sa lava, ngunit hindi magagawa nina Steve at Alex!"
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Maaaring mag-hover ang Agent sa lava, ngunit hindi magagawa nina Steve at Alex!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Maaaring mag-hover ang Agent sa lava, ngunit hindi magagawa nina Steve at Alex!"
         }
       }
     }
