@@ -178,6 +178,12 @@
           },
           "draw a house": {
             "name": "ایک گھر بنائیں"
+          },
+          "sun": {
+            "name": "سورج"
+          },
+          "square": {
+            "name": "مربع"
           }
         },
         "Geometric Sun_2018": {
@@ -186,6 +192,12 @@
           },
           "draw a house": {
             "name": "ایک گھر بنائیں"
+          },
+          "sun": {
+            "name": "سورج"
+          },
+          "square": {
+            "name": "مربع"
           }
         },
         "InspirationalArtwork": {
@@ -1614,6 +1626,16 @@
           },
           "build long bridge": {
             "name": "طویل پل بنائیں"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "میرا فنکشن"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "میرا فنکشن"
           }
         }
       }

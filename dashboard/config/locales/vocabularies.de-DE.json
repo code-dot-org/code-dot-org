@@ -172,6 +172,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Verlustlose Kompression"
         },
+        "event/outbreak/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
         "event/sports/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
@@ -245,10 +249,6 @@
         "line/poem-art/unversioned": {
           "word": "Zeile",
           "definition": "(Poesie) - ein Teil eines Gedichtes, das in einer Reihe angeordnet ist und am rechten Rand endet."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Ereignis",
-          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "sprite/coursef/2021": {
           "word": "Sprite"

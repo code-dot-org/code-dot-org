@@ -356,6 +356,7 @@ ro:
             '"right"': coloana dreaptă
             '"x"': încrucişat
             '"plus"': plus
+            '"spiral"': spirală
             '"random"': aleator
       Dancelab_makeAnonymousDanceSprite:
         text: crează un nou {COSTUME} la {LOCATION}
@@ -465,6 +466,7 @@ ro:
             '"right"': coloana dreaptă
             '"x"': încrucişat
             '"plus"': plus
+            '"spiral"': spirală
             '"random"': aleator
       Dancelab_mixColors:
         text: amestecă {COLOR1} şi {COLOR2}
@@ -999,6 +1001,11 @@ ro:
         text: când {SPRITE} e apăsat
       gamelab_clickedSpritePointer:
         text: a făcut clic pe {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): mergând către nord și formarea de bucle
+            new Behavior(moving_south_and_looping, []): mergând către sud și formarea de bucle
       gamelab_comment:
         text: 'comentariu: {COMMENT}'
       gamelab_costumeImage:
@@ -1049,6 +1056,19 @@ ro:
         text: |-
           dacă {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} costum este {COSTUME}"
       gamelab_isKeyPressed:
@@ -1150,8 +1170,10 @@ ro:
         text: creează {EFFECT} efect cu {NUM} {ANIMATION_NAME} spirite
         options:
           EFFECT:
+            '"burst"': explozie
             '"pop"': pop
             '"rain"': ploaie
+            '"spiral"': spirală
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       gamelab_makeNumSprites:
@@ -1214,12 +1236,18 @@ ro:
             "'sound://category_animals/bear.mp3'": ursi
             "'sound://category_animals/cat.mp3'": pisică
             "'sound://category_animals/cow.mp3'": vacă
+            "'sound://category_animals/pig.mp3'": porc
             "'sound://category_animals/sheep.mp3'": oaie
+            "'sound://category_animals/goat.mp3'": capră
             "'sound://category_animals/chicken.mp3'": gaina
+            "'sound://category_animals/elephant.mp3'": elefant
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_nature/thunderstorm_1.mp3'": furtună cu trăsnete
+            "'sound://category_animals/chick.mp3'": puicuță
             "'sound://category_animals/dog.mp3'": câine
+            "'sound://category_animals/tiger.mp3'": tigru
             "'sound://category_collect/trill_stings.mp3'": tril
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harpă
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": atingere
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": lovitură tonală
             "'sound://category_transition/trippy_robotic_transition.mp3'": tranziție robotică
@@ -1230,6 +1258,11 @@ ro:
             "'sound://category_digital/jump_7.mp3'": sari
       gamelab_playSpeech:
         text: reprodu discursul {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): mutare cu tastele săgeată
+            draggable(): fiind draggable
       gamelab_pointInDirection:
         text: îndreaptă {SPRITE} {DIRECTION}
         options:
@@ -1275,16 +1308,20 @@ ro:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rețea
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': bucătărie
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sufragerie
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': păpajiște
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': vedere la parc
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pini
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': curcubeu
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': teren de fotbal
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': scenă
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stele
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': sundae
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': soare și curcubeu
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': averse de soare
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': teren de tenis
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': insula arborilor
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subteran
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': subacvatic
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': iarna
             undefined: nici unul
@@ -1679,13 +1716,17 @@ ro:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': fațada casei
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': bucătărie
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sufragerie
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': păpajiște
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': vedere la parc
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pini
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': teren de fotbal
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': scenă
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': sundae
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': soare și curcubeu
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': averse de soare
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': teren de tenis
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': insula arborilor
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subteran
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1769,8 +1810,10 @@ ro:
           BRUSH:
             '"brick"': cărămidă
             '"fire"': foc
+            '"flowers"': flori
             '"hearts"': inimi
             '"iceCream"': Îngheţată
+            '"leaves"': frunze
             '"rainbow"': curcubeu
             '"stars"': stele
       Poetry_addLine:
@@ -1787,8 +1830,10 @@ ro:
         text: creează {EFFECT} efect cu {NUM} {ANIMATION_NAME} spirite
         options:
           EFFECT:
+            '"burst"': explozie
             '"pop"': pop
             '"rain"': ploaie
+            '"spiral"': spirală
       Poetry_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       Poetry_makeNumSprites:
@@ -1804,7 +1849,10 @@ ro:
             '"sound://category_background/inside_plane.mp3"': Murmurat
             '"sound://category_loops/red_flag_loop1.mp3"': Misiune
             '"sound://category_nature/summer_night_loop.mp3"': noapte
+            '"sound://category_background/ocean_waves.mp3"': ocean
+            '"sound://category_background/rainforest_ambient_sound.mp3"': pădure tropicală
             '"sound://category_background/repitition.mp3"': Călărit
+            '"sound://category_background/wavering_wind.mp3"': somnoros
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Încet
       Poetry_playSound:
         text: PlaySound {SOUND}
@@ -1818,6 +1866,7 @@ ro:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Eșec
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fâlfâit
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Săritură
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': lumină
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scanare
             '"sound://category_background/typewriter.mp3"': Mașină de scris
@@ -1851,6 +1900,7 @@ ro:
             '"sunrise"': Zori
             '"sunset"': Amurg
             '"grayscale"': Cenușii
+            '"ocean"': ocean
             '"rainbow"': curcubeu
             '"roses"': Trandafiri
             '"sky"': Cer
@@ -1909,10 +1959,14 @@ ro:
         text: arată text
       Poetry_startBehavior:
         text: spiridușul {ANIMATION_NAME} începe {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': înot
       Poetry_stopBehavior:
         text: spiridușul {ANIMATION_NAME} oprește {BEHAVIOR}
         options:
           BEHAVIOR:
+            '"swimming_left_and_right"': înot
             '"all"': "--toate comportamentele--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

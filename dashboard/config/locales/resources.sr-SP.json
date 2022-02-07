@@ -2,6 +2,18 @@
   "sr-SP": {
     "data": {
       "resources": {
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Увод у Уметника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Cкретања и углови",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "Интернет"
         },
@@ -79,6 +91,17 @@
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Моји роботски пријатељи"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Увод у Уметника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "Cкретања и углови"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Велики догађај"
@@ -161,8 +184,26 @@
         "implementation_guide/coursed/2021": {
           "name": "Водич за имплементацију"
         },
+        "artist_introduction/express/2021": {
+          "name": "Увод у Уметника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/express/2021": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "Cкретања и углови"
+        },
         "variables_video/express/2021": {
           "name": "Променљиве"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "Cкретања и углови"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "implementation_guide/coursee/2021": {
           "name": "Водич за имплементацију"

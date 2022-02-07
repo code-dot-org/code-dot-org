@@ -309,6 +309,7 @@ az:
             "{x: 300, y: 300}": aşağı sağ
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": təsadüfi
       Dancelab_layoutSprites:
+        text: forma {GROUP} {FORMAT} kimi
         options:
           GROUP:
             sprites: bütün
@@ -338,6 +339,7 @@ az:
             '"right"': sağ sütun
             '"x"': çarpaz xaç
             '"plus"': üstəgəl
+            '"spiral"': spiral
             '"random"': təsadüfi
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -440,7 +442,10 @@ az:
             '"right"': sağ sütun
             '"x"': çarpaz xaç
             '"plus"': üstəgəl
+            '"spiral"': spiral
             '"random"': təsadüfi
+      Dancelab_mixColors:
+        text: "{COLOR1} və {COLOR2} -ni qarışdır "
       Dancelab_onPointerDown:
         text: aşağı çubuqda
       Dancelab_onPointerUp:
@@ -924,6 +929,23 @@ az:
           CONDITION:
             '"when"': nə zaman
             '"while"': hələ ki,
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa fırlanır
+            new Behavior(spinning_left, []): sola fırlanır
+            new Behavior(fluttering, []): çırpınan
+            new Behavior(jittering, []): |-
+              titrəmək
+              (hər hansı cihazın titrəməsi)
+            new Behavior(wobbling, []): titrəmə(titrəmək)
+            new Behavior(wandering, []): gəzən
+            new Behavior(patrolling, []): patrul
+            new Behavior(moving_west_and_looping, []): qərbə doğru hərəkət edin və
+              dönün
+            new Behavior(moving_east_and_looping, []): şərqə doğru döngə hərəkəti
+            new Behavior(moving_north_and_looping, []): şimala doğru hərəkət və döngə
+            new Behavior(moving_south_and_looping, []): cənuba doğru hərəkət və döngü
       gamelab_comment:
         text: rəy bildir
       gamelab_draggable:
@@ -953,6 +975,19 @@ az:
             '"frames"': çərçivə
       gamelab_hideTitleScreen:
         text: başlıq ekranını gizlət
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1110,6 +1145,13 @@ az:
             "'sound://category_digital/jump_7.mp3'": atıl
       gamelab_playSpeech:
         text: nitqi oynat
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): işarə düymələri ilə hərəkət
+              edin
+            new Behavior(driving_with_arrow_keys, []): işarə düymələri ilə hərəkət
+            draggable(): sürüklənən olması
       gamelab_pointInDirection:
         options:
           DIRECTION:

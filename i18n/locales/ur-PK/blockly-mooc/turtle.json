@@ -1,4 +1,5 @@
 {
+  "backward": "پیچھے جانب",
   "blocksUsed": "استعمال کیے گۓ بلاک: %1",
   "branches": "شاخیں",
   "catColour": "رنگ بھریں",
@@ -36,6 +37,7 @@
   "drawATriangle": "ایک مثلث بنائیں",
   "drawUpperWave": "ایک اَپر-ویو (اونچی لہر) کا خاکہ بنائیں",
   "drawLowerWave": "ایک لوئر ویو (نچلی لہر) کا خاکہ بنائیں",
+  "drawSticker": "سٹکر کا خاکہ بنانا",
   "forward": "آگے بھیجیں",
   "heightParameter": "اونچائی",
   "hideTurtle": "فن کار چھپائیں",

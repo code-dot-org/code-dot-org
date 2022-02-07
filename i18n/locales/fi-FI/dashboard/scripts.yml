@@ -2937,6 +2937,26 @@ fi:
               display_name: Listat
             csp_loops:
               display_name: Silmukat
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmit
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kysely
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kysely
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3201,3 +3221,163 @@ fi:
           lessons:
             lesson-1:
               name: Kirjurimehiläinen
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Silmukkahupia
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Koodaustunti
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Muuttujat
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Iloiset kartat
+            'Programming: Happy Maps':
+              name: Iloiset kartat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Tanssibileet
+            lesson-1:
+              name: Tanssibileet
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+            csf_functions:
+              display_name: Funktiot
+            csf_variables:
+              display_name: Muuttujat
+            csf_for_loops:
+              display_name: Silmukat
+        csp1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Virheen etsintä
+              key: Virheen etsintä
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Muuttujat
+            csp_conditionals:
+              display_name: Ehtolausekkeet
+            csp_functions:
+              display_name: Funktiot
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: Silmukat
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Liikuta, liikuta
+              key: Liikuta, liikuta
+            Getting Loopy:
+              name: Mennään silmukoille
+            'Loops: Getting Loopy':
+              name: Mennään silmukoille
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Suuri tapahtuma
+            Binary Bracelets:
+              name: Binäärikorut
+              key: Binäärikorut
+            'Events: The Big Event':
+              name: Suuri tapahtuma
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Ruutupaperiohjelmointi
+            Relay Programming:
+              name: Releohjelmointi
+              key: Releohjelmointi
+            Dance Party:
+              name: Tanssibileet
+              key: Tanssibileet
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+              key: Ehtolauseet pelikorteilla
+            'Algorithms: Graph Paper Programming':
+              name: Ruutupaperiohjelmointi
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaalinen kansalaisuus
+            csf_events:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Säveltäminen
+            'Functions: Songwriting':
+              name: Säveltäminen
+            Conditionals:
+              key: Ehtolausekkeet
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            ramp_up:
+              display_name: Sisäkkäiset silmukat
+            csf_functions:
+              display_name: Funktiot
+            csf_nested_loops:
+              display_name: Ehtolausekkeet
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Silmukkahupia
+              key: Silmukkahupia
+            The Internet:
+              name: Internetti
+            Internet:
+              key: Internet
+              name: Internetti
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-8:
+              display_name: Muuttujat
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat

@@ -3239,6 +3239,10 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
         csp7-2021:
           lesson_groups:
             csp_libraries:
@@ -3800,10 +3804,19 @@ sv:
           lessons:
             lesson-4:
               name: Utbrottssimulator
+            For Loop Fun:
+              name: "'För' loop skoj"
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Timmen med Kod
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: variabler
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3813,6 +3826,178 @@ sv:
             lessonGroup-2:
               display_name: Innehåll
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Glada kartor
+            'Programming: Happy Maps':
+              name: Glada kartor
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Dansparty
+            lesson-1:
+              name: Dansparty
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+            csf_functions:
+              display_name: funktioner
+            csf_variables:
+              display_name: variabler
+            csf_for_loops:
+              display_name: "'För' loopar"
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binära tal
+              key: Binära tal
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Felsökning
+              key: Felsökning
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: variabler
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listor
+            csp_loops:
+              display_name: loopar
+            csp_project:
+              display_name: Projekt
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Flytta det, flytta den
+              key: Flytta det, flytta den
+            Getting Loopy:
+              name: Att bli snurrig
+            'Loops: Getting Loopy':
+              name: Att bli snurrig
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Den stora händelsen
+            Binary Bracelets:
+              name: Binära armband
+              key: Binära armband
+            'Events: The Big Event':
+              name: Den stora händelsen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        csp7-2022:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Kalkyleringsprogrammering
+            Relay Programming:
+              name: Stafettprogrammering
+              key: Stafettprogrammering
+            Dance Party:
+              name: Dansparty
+              key: Dansparty
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+              key: Villkorssatser med kort
+            'Algorithms: Graph Paper Programming':
+              name: Kalkyleringsprogrammering
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Låtskrivande
+            'Functions: Songwriting':
+              name: Låtskrivande
+            Conditionals:
+              key: Villkor
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: "'För' loop skoj"
+              key: "'För' loop skoj"
+            Outbreak:
+              name: Utbrott
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalt medborgarskap
+            lessonGroup-8:
+              display_name: variabler
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa3-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll

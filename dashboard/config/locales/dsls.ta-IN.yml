@@ -489,6 +489,7 @@ ta-IN:
         - {}
         questions:
         - {}
+        title: தலைப்பு
       CSD U3 Boolean MC_2018:
         answers:
         - correct: true
@@ -497,6 +498,7 @@ ta-IN:
         - {}
         questions:
         - {}
+        title: தலைப்பு
       CSD U3 Boolean MC_2018_2019:
         answers:
         - correct: true
@@ -505,6 +507,7 @@ ta-IN:
         - {}
         questions:
         - {}
+        title: தலைப்பு
       CSD U3 Functions Prediction define first:
         answers:
         - {}

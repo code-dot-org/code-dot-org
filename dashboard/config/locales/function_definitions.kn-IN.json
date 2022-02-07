@@ -1,0 +1,620 @@
+{
+  "kn-IN": {
+    "data": {
+      "function_definitions": {
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "ನನ್ನ ಪ್ರಶ್ನೆ"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "small flower": {
+            "name": "ಸಣ್ಣ ಫ್ಲವರ್"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ಲಾಜಿಕ್ ಫ್ಲವರ್ಸ್‌2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ಲಾಜಿಕ್ ಫ್ಲವರ್"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ಲಾಜಿಕ್ ಫ್ಲವರ್ಸ್‌"
+          },
+          "draw a star": {
+            "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "points": "ಪಾಯಿಂಟ್‌ಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a circle": {
+            "name": "ವೃತ್ತ ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "radius": "ತ್ರಿಜ್ಯ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ಪಿನ್ವೀಲ್ ಅನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ",
+              "repeat": "ಪುನರಾವರ್ತನೆ"
+            }
+          },
+          "draw a triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a house": {
+            "name": "ಮನೆಯನ್ನು ರಚಿಸಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "sides": "ಬದಿಗಳು"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "points": "ಪಾಯಿಂಟ್‌ಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a circle": {
+            "name": "ವೃತ್ತ ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "radius": "ತ್ರಿಜ್ಯ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ಪಿನ್ವೀಲ್ ಅನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ",
+              "repeat": "ಪುನರಾವರ್ತನೆ"
+            }
+          },
+          "draw a triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a house": {
+            "name": "ಮನೆಯನ್ನು ರಚಿಸಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "points": "ಪಾಯಿಂಟ್‌ಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a circle": {
+            "name": "ವೃತ್ತ ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "radius": "ತ್ರಿಜ್ಯ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ಪಿನ್ವೀಲ್ ಅನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ",
+              "repeat": "ಪುನರಾವರ್ತನೆ"
+            }
+          },
+          "draw a triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a house": {
+            "name": "ಮನೆಯನ್ನು ರಚಿಸಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "points": "ಪಾಯಿಂಟ್‌ಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a circle": {
+            "name": "ವೃತ್ತ ಎಳೆಯಿರಿ",
+            "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "radius": "ತ್ರಿಜ್ಯ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ಪಿನ್ವೀಲ್ ಅನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ",
+              "repeat": "ಪುನರಾವರ್ತನೆ"
+            }
+          },
+          "draw a triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a house": {
+            "name": "ಮನೆಯನ್ನು ರಚಿಸಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "ಗೇಮ್ ರಿಸೆಟ್ ಮಾಡಿ"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "ಬ್ರಿಡ್ಜ್‌ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "ಬ್ರಿಡ್ಜ್‌ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "ಬ್ರಿಡ್ಜ್‌ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "ಬ್ರಿಡ್ಜ್‌ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "ದಾರಿ ತೆರವುಗೊಳಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "ದಾರಿ ತೆರವುಗೊಳಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "ದಾರಿ ತೆರವುಗೊಳಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "ದಾರಿ ತೆರವುಗೊಳಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "ಉದ್ದನೆಯ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          },
+          "fix short path": {
+            "name": "ಸಣ್ಣ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "ಉದ್ದನೆಯ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          },
+          "fix short path": {
+            "name": "ಸಣ್ಣ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "ಉದ್ದನೆಯ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          },
+          "fix short path": {
+            "name": "ಸಣ್ಣ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "ಉದ್ದನೆಯ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          },
+          "fix short path": {
+            "name": "ಸಣ್ಣ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "ಸಣ್ಣ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          },
+          "build long bridge": {
+            "name": "ಉದ್ದನೆಯ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "ಸಣ್ಣ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          },
+          "build long bridge": {
+            "name": "ಉದ್ದನೆಯ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "ಸಣ್ಣ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          },
+          "build long bridge": {
+            "name": "ಉದ್ದನೆಯ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "ಸಣ್ಣ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          },
+          "build long bridge": {
+            "name": "ಉದ್ದನೆಯ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "ಫಂಕ್ಷನ್ 1"
+          },
+          "function 2": {
+            "name": "ಫಂಕ್ಷನ್ 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "ಸಂಭಾವ್ಯ ಪರಿಹಾರ"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "ಜ್ವಾಲೆಯನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "ಬೆಂಕಿ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "ಬೂಸ್ಟರ್‌"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw hexagon": {
+            "name": "ಷಡ್ಭುಜಗಳನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw line of hexagons": {
+            "name": "ಷಡ್ಭುಜಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "draw ear stems": {
+            "name": "ಕಿವಿ ಸ್ಟೆಮ್‌ಗಳನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "ಕಿಟಕಿಯನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "staggered squares": {
+            "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
+          },
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "staggered squares": {
+            "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw line of triangles": {
+            "name": "ತ್ರಿಕೋನಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "ಷಡ್ಭುಜಗಳನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw line of hexagons": {
+            "name": "ಷಡ್ಭುಜಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "staggered squares": {
+            "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
+          },
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "ನನ್ನ ವಿನ್ಯಾಸ"
+          },
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "ನನ್ನ ವಿನ್ಯಾಸ"
+          },
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "draw ear stems": {
+            "name": "ಕಿವಿ ಸ್ಟೆಮ್‌ಗಳನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "ಬಹುಭುಜಾಕೃತಿಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw polygon": {
+            "name": "ಬಹುಭುಜಾಕೃ ಎಳೆಯಿರಿ"
+          },
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          },
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          },
+          "pumpkin square": {
+            "name": "ಕುಂಬಳಕಾಯಿ ಚೌಕ"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          },
+          "pumpkin square": {
+            "name": "ಕುಂಬಳಕಾಯಿ ಚೌಕ"
+          },
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get produce": {
+            "name": "ಉತ್ಪನ್ನ ಪಡೆಯಿರಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          },
+          "check for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಪರಿಶೀಲಿಸಿ"
+          },
+          "corn rectangle": {
+            "name": "ಕಾರ್ನ್ ಆಯತ"
+          },
+          "lettuce stairs": {
+            "name": "ಲೆಟಿಸ್ ಮೆಟ್ಟಿಲುಗಳು"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          },
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "ಉದ್ಯಾನ ಚೌಕ"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "ಉದ್ಯಾನ ಚೌಕ"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "ಉದ್ಯಾನ ಚೌಕ"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "ಕೊನೆಯ ಗೇಮ್"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "ಸರಿಸಿ ಮತ್ತು ಕೌಂಟರ್‌ನೊಂದಿಗೆ ಮಕರಂದವನ್ನು ಪಡೆಯಿರಿ"
+          }
+        }
+      }
+    }
+  }
+}

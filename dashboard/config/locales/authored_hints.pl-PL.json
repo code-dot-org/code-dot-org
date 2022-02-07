@@ -581,10 +581,10 @@
           "validation": "**Jak mam przejść ten poziom?**\n\n-   Użyj bloku 'kiedy strzałka w lewo', aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.\n\n_Ten poziom kończy się po 7 taktach._"
         },
         "CourseE_HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
+          "voyage_aquatic_10a": "Widzisz **Latarnie morskie**  ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
         },
         "CourseE_HOC 2018 Level_10_2020": {
-          "voyage_aquatic_10a": "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
+          "voyage_aquatic_10a": "Widzisz **Latarnie morskie**  ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
         },
         "CourseE_HOC 2018 Level_7a": {
           "aquatic7": "Możesz użyć bloku \"jeśli jest ścieżka\", aby wykonać właściwy skręt."
@@ -678,19 +678,19 @@
           "alternate": "Naprzemienny blok znajduje się w kategorii „Tancerze”."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą będziesz się przemieszczać...",
+          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżka, którą będziesz się przemieszczać...",
           "Function_intro_Ryan_a": "W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą będziesz się przemieszczać...",
+          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżka, którą będziesz się przemieszczać...",
           "Function_intro_Ryan_a": "W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą będziesz się przemieszczać...",
+          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżka, którą będziesz się przemieszczać...",
           "Function_intro_Ryan_a": "W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę."
         },
         "HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
+          "voyage_aquatic_10a": "Widzisz **Latarnie morskie**  ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
         },
         "HOC 2018 Level_7a": {
           "aquatic7": "Możesz użyć bloku \"jeśli jest ścieżka\", aby wykonać właściwy skręt."
@@ -783,15 +783,15 @@
           "MC_HOC_2017_05_Cole_b": "Przeprowadź Agenta przez rzekę, budując stopniowo most."
         },
         "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy powinna się powtórzyć?",
+          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy _powinna_ się powtórzyć?",
           "MC_HOC_2017_06_Cole_b": "Pomóż Agentowi zbudować most przez calutką wodę! "
         },
         "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy powinna się powtórzyć?",
+          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy _powinna_ się powtórzyć?",
           "MC_HOC_2017_06_Cole_b": "Pomóż Agentowi zbudować most przez calutką wodę! "
         },
         "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy powinna się powtórzyć?",
+          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy _powinna_ się powtórzyć?",
           "MC_HOC_2017_06_Cole_b": "Pomóż Agentowi zbudować most przez calutką wodę! "
         },
         "MC_HOC_2017_07_Cole": {
@@ -956,58 +956,58 @@
           "courseF_artist_variables5_d": "To jest wzorzec, zgodnie z którym będzie podążał Twój artysta:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "Overworld Avoid Monsters": {
-          "mc_8_a": "Do wyboru jest kilka ścieżek. Która jest najkrótsza?",
-          "mc_8_b": "Wykorzystaj pętlę `repeat` aby uprościć swój kod.",
+          "mc_8_a": "Do wyboru masz kilka ścieżek. Która jest najkrótsza?",
+          "mc_8_b": "Wykorzystaj pętlę `powtarzaj`, aby uprościć swój kod.",
           "mc_8_c": "Twoim celem jest dojście do wejścia domu na samej górze ekranu."
         },
         "Overworld Avoid Monsters_2019": {
-          "mc_8_a": "Do wyboru jest kilka ścieżek. Która jest najkrótsza?",
-          "mc_8_b": "Wykorzystaj pętlę `repeat` aby uprościć swój kod.",
+          "mc_8_a": "Do wyboru masz kilka ścieżek. Która jest najkrótsza?",
+          "mc_8_b": "Wykorzystaj pętlę `powtarzaj`, aby uprościć swój kod.",
           "mc_8_c": "Twoim celem jest dojście do wejścia domu na samej górze ekranu."
         },
         "Overworld Avoid Monsters_2020": {
-          "mc_8_a": "Do wyboru jest kilka ścieżek. Która jest najkrótsza?",
-          "mc_8_b": "Wykorzystaj pętlę `repeat` aby uprościć swój kod.",
+          "mc_8_a": "Do wyboru masz kilka ścieżek. Która jest najkrótsza?",
+          "mc_8_b": "Wykorzystaj pętlę `powtarzaj`, aby uprościć swój kod.",
           "mc_8_c": "Twoim celem jest dojście do wejścia domu na samej górze ekranu."
         },
         "Overworld Chop Tree": {
-          "mc_2_a": "Aby stanąć przed drzewem musisz podwójnie `move forward`.",
+          "mc_2_a": "Aby stanąć przed drzewem, musisz podwójnie użyć bloku `idź do przodu`.",
           "mc_2_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld Chop Tree_2019": {
-          "mc_2_a": "Aby stanąć przed drzewem musisz podwójnie `move forward`.",
+          "mc_2_a": "Aby stanąć przed drzewem, musisz podwójnie użyć bloku `idź do przodu`.",
           "mc_2_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld Chop Tree_2020": {
-          "mc_2_a": "Aby stanąć przed drzewem musisz podwójnie `move forward`.",
+          "mc_2_a": "Aby stanąć przed drzewem, musisz podwójnie użyć bloku `idź do przodu`.",
           "mc_2_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld Chop Trees": {
-          "mc_4_a": "Możesz zrąbać drzewa w dowolnej kolejności. Jaka ścieżka wymaga najmniejszej liczby bloków?",
+          "mc_4_a": "Możesz ściąć drzewa w dowolnej kolejności. Która droga wymaga najmniejszej liczby bloków?",
           "mc_4_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld Chop Trees_2019": {
-          "mc_4_a": "Możesz zrąbać drzewa w dowolnej kolejności. Jaka ścieżka wymaga najmniejszej liczby bloków?",
+          "mc_4_a": "Możesz ściąć drzewa w dowolnej kolejności. Która droga wymaga najmniejszej liczby bloków?",
           "mc_4_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld Chop Trees_2020": {
-          "mc_4_a": "Możesz zrąbać drzewa w dowolnej kolejności. Jaka ścieżka wymaga najmniejszej liczby bloków?",
+          "mc_4_a": "Możesz ściąć drzewa w dowolnej kolejności. Która droga wymaga najmniejszej liczby bloków?",
           "mc_4_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld House Frame Chosen": {
           "mc_6_a": "Kliknij strzałkę na bloku \"umieść\", aby wybrać, co chcesz umieścić.",
-          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
-          "mc_6_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "mc_6_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld House Frame Chosen_2019": {
           "mc_6_a": "Kliknij strzałkę na bloku \"umieść\", aby wybrać, co chcesz umieścić.",
-          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
-          "mc_6_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "mc_6_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld House Frame Chosen_2020": {
           "mc_6_a": "Kliknij strzałkę na bloku \"umieść\", aby wybrać, co chcesz umieścić.",
-          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
-          "mc_6_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "mc_6_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld Move to Sheep": {
           "mc_1_a": "Blok \"idź do przodu\" znajduje się w górnej części przybornika.",
@@ -1022,118 +1022,118 @@
           "mc_1_b": "Upewnij się, że oba bloki \"idź do przodu\" są podłączone do bloku \"po uruchomieniu\"."
         },
         "Overworld Place Wall": {
-          "mc_5_a": "Na początku użyj bloku `place`, następnie `move`.",
-          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.",
-          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_5_a": "Na początku użyj bloku `umieść`, następnie `idź`.",
+          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `powtarzaj`, aby uruchomić kod więcej niż raz.",
+          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Overworld Place Wall_2019": {
-          "mc_5_a": "Na początku użyj bloku `place`, następnie `move`.",
-          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.",
-          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_5_a": "Na początku użyj bloku `umieść`, następnie `idź`.",
+          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `powtarzaj`, aby uruchomić kod więcej niż raz.",
+          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Overworld Place Wall_2020": {
-          "mc_5_a": "Na początku użyj bloku `place`, następnie `move`.",
-          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.",
-          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_5_a": "Na początku użyj bloku `umieść`, następnie `idź`.",
+          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `powtarzaj`, aby uruchomić kod więcej niż raz.",
+          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Overworld Plant Crops": {
           "mc_7_a": "Użyj bloku \"sadź rośliny\", aby sadzić rośliny w miejscu, w którym stoisz.",
-          "mc_7_b": "Oba spłachetki ciemnobrązowej ziemi nad wodą należy wypełnić roślinami.",
-          "mc_7_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_7_b": "Obie brązowe połacie pola nad wodą należy wypełnić roślinami.",
+          "mc_7_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld Plant Crops_2019": {
           "mc_7_a": "Użyj bloku \"sadź rośliny\", aby sadzić rośliny w miejscu, w którym stoisz.",
-          "mc_7_b": "Oba spłachetki ciemnobrązowej ziemi nad wodą należy wypełnić roślinami.",
-          "mc_7_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_7_b": "Obie brązowe połacie pola nad wodą należy wypełnić roślinami.",
+          "mc_7_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld Plant Crops_2020": {
           "mc_7_a": "Użyj bloku \"sadź rośliny\", aby sadzić rośliny w miejscu, w którym stoisz.",
-          "mc_7_b": "Oba spłachetki ciemnobrązowej ziemi nad wodą należy wypełnić roślinami.",
-          "mc_7_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_7_b": "Obie brązowe połacie pola nad wodą należy wypełnić roślinami.",
+          "mc_7_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld Powered Minecart": {
-          "mc_13_a": "Użyj \"umieść szynę\", aby umieścić szynę, w miejscu w którym stoisz.",
-          "mc_13_b": "Aby skrócić swój kod użyj pętli `repeat`."
+          "mc_13_a": "Użyj bloku \"umieść tory\", aby umieścić tory, w miejscu, w którym stoisz.",
+          "mc_13_b": "Użyj pętli `powtarzaj`, aby skrócić swój kod."
         },
         "Overworld Powered Minecart_2019": {
-          "mc_13_a": "Użyj \"umieść szynę\", aby umieścić szynę, w miejscu w którym stoisz.",
-          "mc_13_b": "Aby skrócić swój kod użyj pętli `repeat`."
+          "mc_13_a": "Użyj bloku \"umieść tory\", aby umieścić tory, w miejscu, w którym stoisz.",
+          "mc_13_b": "Użyj pętli `powtarzaj`, aby skrócić swój kod."
         },
         "Overworld Powered Minecart_2020": {
-          "mc_13_a": "Użyj \"umieść szynę\", aby umieścić szynę, w miejscu w którym stoisz.",
-          "mc_13_b": "Aby skrócić swój kod użyj pętli `repeat`."
+          "mc_13_a": "Użyj bloku \"umieść tory\", aby umieścić tory, w miejscu, w którym stoisz.",
+          "mc_13_b": "Użyj pętli `powtarzaj`, aby skrócić swój kod."
         },
         "Overworld Shear Sheep": {
-          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz naprzeciw owcy?",
-          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.",
-          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz przed owcą?",
+          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `skręć`.",
+          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Overworld Shear Sheep_2019": {
-          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz naprzeciw owcy?",
-          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.",
-          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz przed owcą?",
+          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `skręć`.",
+          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Overworld Shear Sheep_2020": {
-          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz naprzeciw owcy?",
-          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.",
-          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz przed owcą?",
+          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `skręć`.",
+          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Underground Avoiding Lava": {
-          "mc_11_a": "Wszystkie kody są na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
-          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinna się znajdować wewnątrz instrukcji \"jeśli\" czy po niej?"
+          "mc_11_a": "Cały kod jest na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
+          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinno się znajdować wewnątrz instrukcji \"jeżeli\" czy po niej?"
         },
         "Underground Avoiding Lava_2019": {
-          "mc_11_a": "Wszystkie kody są na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
-          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinna się znajdować wewnątrz instrukcji \"jeśli\" czy po niej?"
+          "mc_11_a": "Cały kod jest na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
+          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinno się znajdować wewnątrz instrukcji \"jeżeli\" czy po niej?"
         },
         "Underground Avoiding Lava_2020": {
-          "mc_11_a": "Wszystkie kody są na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
-          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinna się znajdować wewnątrz instrukcji \"jeśli\" czy po niej?"
+          "mc_11_a": "Cały kod jest na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
+          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinno się znajdować wewnątrz instrukcji \"jeżeli\" czy po niej?"
         },
         "Underground If Statements": {
-          "mc_12_a": "Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.",
-          "mc_12_b": "Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?",
-          "mc_12_c": "Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
+          "mc_12_a": "W miejscach z czerwonymi plamkami znajdziesz Redstone.",
+          "mc_12_b": "Czy możesz wykorzystać pętlę `powtarzaj`, aby skrócić swój kod?",
+          "mc_12_c": "Wykorzystaj instrukcję `jeżeli`, aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
         },
         "Underground If Statements_2019": {
-          "mc_12_a": "Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.",
-          "mc_12_b": "Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?",
-          "mc_12_c": "Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
+          "mc_12_a": "W miejscach z czerwonymi plamkami znajdziesz Redstone.",
+          "mc_12_b": "Czy możesz wykorzystać pętlę `powtarzaj`, aby skrócić swój kod?",
+          "mc_12_c": "Wykorzystaj instrukcję `jeżeli`, aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
         },
         "Underground If Statements_2020": {
-          "mc_12_a": "Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.",
-          "mc_12_b": "Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?",
-          "mc_12_c": "Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
+          "mc_12_a": "W miejscach z czerwonymi plamkami znajdziesz Redstone.",
+          "mc_12_b": "Czy możesz wykorzystać pętlę `powtarzaj`, aby skrócić swój kod?",
+          "mc_12_c": "Wykorzystaj instrukcję `jeżeli`, aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
         },
         "Underground Iron": {
           "mc_10_a": "Żelazne bloki są nakrapianymi miejscami za pochodnią! Jak masz zamiar się tam dostać?",
-          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!",
-          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść bruk z przodu`, aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po niej przejść!",
+          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Underground Iron_2019": {
           "mc_10_a": "Żelazne bloki są nakrapianymi miejscami za pochodnią! Jak masz zamiar się tam dostać?",
-          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!",
-          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść bruk z przodu`, aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po niej przejść!",
+          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Underground Iron_2020": {
           "mc_10_a": "Żelazne bloki są nakrapianymi miejscami za pochodnią! Jak masz zamiar się tam dostać?",
-          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!",
-          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść bruk z przodu`, aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po niej przejść!",
+          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Underground Mining Coal": {
-          "mc_9_a": "Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.",
-          "mc_9_b": "Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.",
-          "mc_9_c": "Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz."
+          "mc_9_a": "Czy stoisz we właściwym kierunku? Blok „zniszcz blok” zakopie blok przed Tobą. ",
+          "mc_9_b": "Czarne plamy na ścianie to węgiel! Aby je wykopać, użyj bloku `zniszcz blok`.",
+          "mc_9_c": "Użyj bloku `umieść pochodnię`, aby umieścić pochodnię w miejscu, w którym stoisz."
         },
         "Underground Mining Coal_2019": {
-          "mc_9_a": "Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.",
-          "mc_9_b": "Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.",
-          "mc_9_c": "Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz."
+          "mc_9_a": "Czy stoisz we właściwym kierunku? Blok „zniszcz blok” zakopie blok przed Tobą. ",
+          "mc_9_b": "Czarne plamy na ścianie to węgiel! Aby je wykopać, użyj bloku `zniszcz blok`.",
+          "mc_9_c": "Użyj bloku `umieść pochodnię`, aby umieścić pochodnię w miejscu, w którym stoisz."
         },
         "Underground Mining Coal_2020": {
-          "mc_9_a": "Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.",
-          "mc_9_b": "Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.",
-          "mc_9_c": "Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz."
+          "mc_9_a": "Czy stoisz we właściwym kierunku? Blok „zniszcz blok” zakopie blok przed Tobą. ",
+          "mc_9_b": "Czarne plamy na ścianie to węgiel! Aby je wykopać, użyj bloku `zniszcz blok`.",
+          "mc_9_c": "Użyj bloku `umieść pochodnię`, aby umieścić pochodnię w miejscu, w którym stoisz."
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
@@ -1214,7 +1214,7 @@
           "courseD_bee_conditionals_challenge1_b": "W tej łamigłówce każde miejsce może mieścić kwiatek, plaster miodu lub nic. Oznacza to, że w każdym kwadracie możesz powtórzyć swoją sekwencję „jeśli/w przeciwnym razie”. "
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Oryginalny kod działałby świetnie - gdyby był tylko jeden skarb na każdym stosie!",
@@ -1273,10 +1273,10 @@
           "courseF_bee_functions_challenge2_b": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "W końcu zbierz pozostałe klejnoty. Dodaj te bloki do swojego programu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Tutaj jest pełne rozwiązanie tej łamigłówki.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "courseD_collector_debugging_challenge2_a": "Zacznij od zebrania tylko DWÓCH klejnotów z każdego z pierwszych dwóch stosów. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUżyj poniższych bloków.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          "courseD_collector_debugging_challenge2_a": "Zacznij od zebrania tylko DWÓCH klejnotów z każdego z pierwszych dwóch stosów. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUżyj poniższych bloków.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "Przycisk `STEP` może być bardzo pomocny w tym wyzwaniu.",
@@ -2890,22 +2890,22 @@
           "courseB_starWars_prog8_b": "Spróbuj użyć bloku \"powtórz\", aby zobaczyć, co się stanie z tym kodem, jeśli włożysz go do środka.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
-          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
           "courseB_starWars_prog9_c": "Czy pomoże tutaj pętla \"powtórz\"?"
         },
         "courseB_starWars_prog9_2018": {
-          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
           "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
         },
         "courseB_starWars_prog9_2019": {
-          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
           "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
         },
         "courseB_starWars_prog9_2020": {
-          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
           "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
         },
@@ -2985,19 +2985,19 @@
         },
         "courseC_PlayLab_events4": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events4_2018": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events4_2019": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events4_2020": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events5": {
           "courseC_PlayLab_events5_a": "Trzeba kliknąć menu rozwijane na bloku \"postać mówi\", aby znaleźć tekst: \"Co nowego?\"",
@@ -3676,16 +3676,16 @@
           "courseC_flappy_events5_a": "Musisz użyć bloku \"zdobądź punkt\", aby przejść ten poziom."
         },
         "courseC_flappy_events6": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events6_2018": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events6_2019": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events6_2020": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events7": {
           "courseC_flappy_events7_a": "Możesz zmienić tło używając bloku \"ustaw scenę\". "
@@ -4248,42 +4248,42 @@
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "Gdy BB-8 przetacza złom, zbiera go automatycznie.",
-          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseC_starWars_loops1_c": "Będziesz musiał użyć bloku \"Idź do przodu\" pięć razy, aby rozwiązać tę łamigłówkę."
         },
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "Czy to nie przypomina gigantycznej kaskady? Przekonaj się, czy możesz wykorzystać to, czego się nauczyłeś w poprzednich łamigłowkach, aby pokonać wszystkie zakręty? ",
           "courseC_starWars_loops10_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**.",
-          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops10_2018": {
           "courseC_starWars_loops10_a": "Czy to nie przypomina gigantycznej kaskady? Przekonaj się, czy możesz wykorzystać to, czego się nauczyłeś w poprzednich łamigłowkach, aby pokonać wszystkie zakręty? ",
           "courseC_starWars_loops10_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**.",
-          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops10_2019": {
           "courseC_starWars_loops10_a": "Czy to nie przypomina gigantycznej kaskady? Przekonaj się, czy możesz wykorzystać to, czego się nauczyłeś w poprzednich łamigłowkach, aby pokonać wszystkie zakręty? ",
           "courseC_starWars_loops10_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**.",
-          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops10_2020": {
           "courseC_starWars_loops10_a": "Czy to nie przypomina gigantycznej kaskady? Przekonaj się, czy możesz wykorzystać to, czego się nauczyłeś w poprzednich łamigłowkach, aby pokonać wszystkie zakręty? ",
           "courseC_starWars_loops10_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**.",
-          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_a": "Gdy BB-8 przetacza złom, zbiera go automatycznie.",
-          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseC_starWars_loops1_c": "Będziesz musiał użyć bloku \"Idź do przodu\" pięć razy, aby rozwiązać tę łamigłówkę."
         },
         "courseC_starWars_loops1_2019": {
           "courseC_starWars_loops1_a": "Gdy BB-8 przetacza złom, zbiera go automatycznie.",
-          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseC_starWars_loops1_c": "Będziesz musiał użyć bloku \"Idź do przodu\" pięć razy, aby rozwiązać tę łamigłówkę."
         },
         "courseC_starWars_loops1_2020": {
           "courseC_starWars_loops1_a": "Gdy BB-8 przetacza złom, zbiera go automatycznie.",
-          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseC_starWars_loops1_c": "Będziesz musiał użyć bloku \"Idź do przodu\" pięć razy, aby rozwiązać tę łamigłówkę."
         },
         "courseC_starWars_loops2": {
@@ -4357,27 +4357,27 @@
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
           "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
-          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops7_2018": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
           "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
-          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops7_2019": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
           "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
-          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops7_2020": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
           "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
-          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops7_copy": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
           "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
-          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Pomyśl o tym problemie małymi partiami. Nie spiesz się. Nie musisz rozwiązać go przy pierwszej próbie!",
@@ -5199,16 +5199,16 @@
           "courseD_bee_conditionals_challenge1_b": "W tej łamigłówce każde miejsce może mieścić kwiatek, plaster miodu lub nic. Oznacza to, że w każdym kwadracie możesz powtórzyć swoją sekwencję „jeśli/w przeciwnym razie”. "
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Dlaczego program działa w pierwszej połowie? Pomyśl dlaczego pszczółka musi poruszać się w tył. Ile nektaru zbiera pszczółka za każdym razem, gdy porusza się na kwiatem?",
@@ -5393,8 +5393,8 @@
           "courseD_collector_debugging9_b": "Wymyśl, jak rozwiążesz tę łamigłówkę, a potem przesuwaj się krok-po-kroku, aby spróbować utworzyć kod dopasowany do tego, co masz na myśli. "
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Zacznij od zebrania tylko **dwóch** klejnotów z każdego z pierwszych \\*\\*dwóch stosów. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUżyj tych bloków.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Zacznij od zebrania tylko **dwóch** klejnotów z każdego z pierwszych \\*\\*dwóch stosów. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUżyj tych bloków.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "W końcu zbierz pozostałe klejnoty. Dodaj te bloki do swojego programu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Tutaj jest pełne rozwiązanie tej łamigłówki.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -7681,7 +7681,7 @@
           "iceage_hello2_a": "Aby rozwiązać tę łamigłówkę trzeba skłonić Sida, aby coś powiedział z wykorzystaniem bloku \"postać 1 mówi\". Trzeba również skłonić Manny'ego, aby coś powiedział przy pomocy bloku \"postać 2 mówi\". "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka \\***\\*\\_\\*\\***\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
+          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka ****\\_****\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
         },
         "iceage_move_to_actor": {
           "iceage_move_to_actor_a": "Jeśli chodzi o tę łamigłówkę, czy możesz albo przemieścić Diego na doł o 200 pikseli lub przemieścić Manny'ego do góry o 200 pikseli.",
@@ -8814,7 +8814,7 @@
           "alternate": "Naprzemienny blok znajduje się w kategorii „Tancerze”."
         },
         "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
+          "voyage_aquatic_10a": "Widzisz **Latarnie morskie**  ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "Możesz użyć bloku \"jeśli jest ścieżka\", aby wykonać właściwy skręt."
@@ -8831,22 +8831,22 @@
           "hint1": "Kliknij przycisk \\`+' w bloku zdarzeń. Wypełnij puste miejsce w bloku „zmiana kostiumu” blokiem „temat” znajdującym się w środku.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Aby nadać maski potworom, użyj bloku „zmiana kostiumu” ze zdarzeniem „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nPamiętaj, aby przeciągnąć również mały czerwony blok z kliknięciem!",
-          "hint2": "Nowy kod dla tego poziomu powinien wyglądać następująco:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Aby nadać maski potworom, użyj bloku „zmiana kostiumu” ze zdarzeniem „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nPamiętaj, aby przeciągnąć również mały czerwony blok z kliknięciem!",
+          "hint2": "Nowy kod dla tego poziomu powinien wyglądać następująco:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Szukasz dodatkowego wyzwania?\n\nMożesz także sprawić, by potwory poruszały się szybciej lub wolniej.\n\n1.  Kliknij „Edytuj” w tym bloku <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Zwiększ lub zmniejsz liczbę w tym bloku:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nAby potwory poruszały się wolniej, wybierz liczbę dziesiętną, taką jak „0,5” lub „0,25”. Aby poruszały się szybciej, wybierz dowolną liczbę większą niż 1."
         },
         "CourseF_outbreak6": {
           "hint2": "Pamiętaj, aby przesunąć pozostałe bloki „akcji” do wnętrza bloku „jeśli szansa”:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Będziesz musiał dodać jeszcze 3 zdarzenia „kiedy dotyka”, aby sprawdzić wszystkie możliwe kombinacje „dotknięć” zdrowych i zainfekowanych duszków.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Będziesz musiał dodać jeszcze 3 zdarzenia „kiedy dotyka”, aby sprawdzić wszystkie możliwe kombinacje „dotknięć” zdrowych i zainfekowanych duszków.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Szczepionki\n\nKlikając na nie, możesz symulować podawanie szczepionki potworom. Aby to zrobić, użyj bloku „zmień kostium” w przypadku tego zdarzenia:\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Szczepionki\n\nKlikając na nie, możesz symulować podawanie szczepionki potworom. Aby to zrobić, użyj bloku „zmień kostium” w przypadku tego zdarzenia:\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Czujesz się zablokowany? Zawsze możesz zresetować swój kod, klikając na Historia wersji poniżej, a następnie wybierając opcję Zacznij od nowa."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą będziesz się przemieszczać...",
+          "Function_intro_Ryan_b": "Jeśli wywołasz funkcję poprawnie, to jest ścieżka, którą będziesz się przemieszczać...",
           "Function_intro_Ryan_a": "W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę."
         },
         "MC_HOC_2017_01_RETRY_2021": {
@@ -8878,7 +8878,7 @@
           "MC_HOC_2017_05_Cole_b": "Przeprowadź Agenta przez rzekę, budując stopniowo most."
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy powinna się powtórzyć?",
+          "MC_HOC_2017_06_Cole_a": "Ile razy powtarza się ta pętla, a ile razy _powinna_ się powtórzyć?",
           "MC_HOC_2017_06_Cole_b": "Pomóż Agentowi zbudować most przez calutką wodę! "
         },
         "MC_HOC_2017_07_Cole_2021": {
@@ -8899,64 +8899,64 @@
           "MC_HOC_2017_13_Cole_a": "Spróbuj tak pokierować Agentem tak, aby zbudował kilka dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!"
         },
         "Overworld Avoid Monsters_2021": {
-          "mc_8_a": "Do wyboru jest kilka ścieżek. Która jest najkrótsza?",
-          "mc_8_b": "Wykorzystaj pętlę `repeat` aby uprościć swój kod.",
+          "mc_8_a": "Do wyboru masz kilka ścieżek. Która jest najkrótsza?",
+          "mc_8_b": "Wykorzystaj pętlę `powtarzaj`, aby uprościć swój kod.",
           "mc_8_c": "Twoim celem jest dojście do wejścia domu na samej górze ekranu."
         },
         "Overworld Chop Tree_2021": {
-          "mc_2_a": "Aby stanąć przed drzewem musisz podwójnie `move forward`.",
+          "mc_2_a": "Aby stanąć przed drzewem, musisz podwójnie użyć bloku `idź do przodu`.",
           "mc_2_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld Chop Trees_2021": {
-          "mc_4_a": "Możesz zrąbać drzewa w dowolnej kolejności. Jaka ścieżka wymaga najmniejszej liczby bloków?",
+          "mc_4_a": "Możesz ściąć drzewa w dowolnej kolejności. Która droga wymaga najmniejszej liczby bloków?",
           "mc_4_b": "Polecenie \"zniszcz blok\" ścina drzewo przed Tobą."
         },
         "Overworld House Frame Chosen_2021": {
           "mc_6_a": "Kliknij strzałkę na bloku \"umieść\", aby wybrać, co chcesz umieścić.",
-          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
-          "mc_6_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_6_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "mc_6_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld Move to Sheep_2021": {
           "mc_1_a": "Blok \"idź do przodu\" znajduje się w górnej części przybornika.",
           "mc_1_b": "Upewnij się, że oba bloki \"idź do przodu\" są podłączone do bloku \"po uruchomieniu\"."
         },
         "Overworld Place Wall_2021": {
-          "mc_5_a": "Na początku użyj bloku `place`, następnie `move`.",
-          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.",
-          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_5_a": "Na początku użyj bloku `umieść`, następnie `idź`.",
+          "mc_5_b": "Upewnij się, że oba bloki są wewnątrz pętli `powtarzaj`, aby uruchomić kod więcej niż raz.",
+          "mc_5_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Overworld Plant Crops_2021": {
           "mc_7_a": "Użyj bloku \"sadź rośliny\", aby sadzić rośliny w miejscu, w którym stoisz.",
-          "mc_7_b": "Oba spłachetki ciemnobrązowej ziemi nad wodą należy wypełnić roślinami.",
-          "mc_7_c": "Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok."
+          "mc_7_b": "Obie brązowe połacie pola nad wodą należy wypełnić roślinami.",
+          "mc_7_c": "Wewnątrz pętli `powtarzaj` możesz umieścić więcej niż jeden blok."
         },
         "Overworld Powered Minecart_2021": {
-          "mc_13_a": "Użyj \"umieść szynę\", aby umieścić szynę, w miejscu w którym stoisz.",
-          "mc_13_b": "Aby skrócić swój kod użyj pętli `repeat`."
+          "mc_13_a": "Użyj bloku \"umieść tory\", aby umieścić tory, w miejscu, w którym stoisz.",
+          "mc_13_b": "Użyj pętli `powtarzaj`, aby skrócić swój kod."
         },
         "Overworld Shear Sheep_2021": {
-          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz naprzeciw owcy?",
-          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.",
-          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_3_a": "Blok \"strzyż\" powoduje, że owca pojawia się przed Tobą. Czy stoisz przed owcą?",
+          "mc_3_b": "Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `skręć`.",
+          "mc_3_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Underground Avoiding Lava_2021": {
-          "mc_11_a": "Wszystkie kody są na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
-          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinna się znajdować wewnątrz instrukcji \"jeśli\" czy po niej?"
+          "mc_11_a": "Cały kod jest na miejscu, aby sprawdzić lawę i zająć się nią. Wystarczy, że dodasz blok, aby iść.",
+          "mc_11_b": "Czy Twoje polecenie \"idź do przodu\" powinno się znajdować wewnątrz instrukcji \"jeżeli\" czy po niej?"
         },
         "Underground If Statements_2021": {
-          "mc_12_a": "Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.",
-          "mc_12_b": "Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?",
-          "mc_12_c": "Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
+          "mc_12_a": "W miejscach z czerwonymi plamkami znajdziesz Redstone.",
+          "mc_12_b": "Czy możesz wykorzystać pętlę `powtarzaj`, aby skrócić swój kod?",
+          "mc_12_c": "Wykorzystaj instrukcję `jeżeli`, aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. "
         },
         "Underground Iron_2021": {
           "mc_10_a": "Żelazne bloki są nakrapianymi miejscami za pochodnią! Jak masz zamiar się tam dostać?",
-          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!",
-          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "mc_10_b": "Kiedy stoisz na krawędzi lawy, użyj `umieść bruk z przodu`, aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po niej przejść!",
+          "mc_10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "Underground Mining Coal_2021": {
-          "mc_9_a": "Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.",
-          "mc_9_b": "Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.",
-          "mc_9_c": "Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz."
+          "mc_9_a": "Czy stoisz we właściwym kierunku? Blok „zniszcz blok” zakopie blok przed Tobą. ",
+          "mc_9_b": "Czarne plamy na ścianie to węgiel! Aby je wykopać, użyj bloku `zniszcz blok`.",
+          "mc_9_c": "Użyj bloku `umieść pochodnię`, aby umieścić pochodnię w miejscu, w którym stoisz."
         },
         "courseA_artist_loops2_2021": {
           "courseA_artist_loops2_a": "Nie możesz wymyślić, jak narysować linię? Zacznij od dołączenia bloków do bloku <xml><block type=\"when_run\"/></xml>, aby zobaczyć, co się stanie.",
@@ -9485,7 +9485,7 @@
           "courseB_starWars_prog8_b": "Spróbuj użyć bloku \"powtórz\", aby zobaczyć, co się stanie z tym kodem, jeśli włożysz go do środka.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
           "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
         },
@@ -9520,7 +9520,7 @@
         },
         "courseC_PlayLab_events4_2021": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events5_2021": {
           "courseC_PlayLab_events5_a": "Trzeba kliknąć menu rozwijane na bloku \"postać mówi\", aby znaleźć tekst: \"Co nowego?\"",
@@ -9552,8 +9552,8 @@
           "courseC_PlayLab_eventsA_a": "Użyj klawiszy ze strzałkami, aby przemieścić pingwina. Nie musisz pisać żadnego kodu, aby ukończyć ten poziom."
         },
         "courseC_PlayLab_eventsFP_2021": {
-          "idea1": "_Potrzebujesz pomysłu?_\n\n**Kto tam?** Spraw, by postacie pojawiały się w przypadkowych obrazkach tak, aby nikt nie wiedział, kto pojawi się jako następny. \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
-          "idea2": "_Potrzebujesz pomysłu?_\n\n**Udajesz się na przygodę**  - Zmień tło, a następnie spraw, by postaci rozmawiały o tym, gdzie są teraz. \n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea1": "_Czy potrzebujesz pomysłu?_\n\n**Kto tam?** Spraw, by postacie pojawiały się w przypadkowych obrazkach tak, aby nikt nie wiedział, kto pojawi się jako następny. \n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_Czy potrzebujesz pomysłu?_\n\n**Udajesz się na przygodę**  - Zmień tło, a następnie spraw, by postaci rozmawiały o tym, gdzie są teraz. \n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
           "idea3": "_Potrzebujesz pomysłu?_\n\n**Pinball** - Spraw, by jedna z postaci poruszała się, korzystając z klawiszy ze strzałkami (użyj bloków \"gdy strzałka w górę\", \"gdy strzałka w dół\"), a następnie odtwarzaj przypadkowe dźwięki, gdy zderzy się z innymi postaciami na ekranie. "
         },
         "courseC_PlayLab_events_challenge1_2021": {
@@ -9673,7 +9673,7 @@
           "courseC_collector_prog_challenge1_b": "Zgubiłeś się? Spróbuj tej ścieżki, aby rozwiązać tę łamigłówkę!"
         },
         "courseC_flappy_events1_2021": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events2_2021": {
           "courseC_flappy_events2_a": "Blok, który musisz dodać, nazywa się \"ustaw prędkość\". ",
@@ -9689,7 +9689,7 @@
           "courseC_flappy_events5_a": "Musisz użyć bloku \"zdobądź punkt\", aby przejść ten poziom."
         },
         "courseC_flappy_events6_2021": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events7_2021": {
           "courseC_flappy_events7_a": "Możesz zmienić tło używając bloku \"ustaw scenę\". "
@@ -9710,7 +9710,7 @@
           "courseC_harvester_loops2_c": "Jedna pętla będzie powtarzać komendę \"idź do przodu\", a inna \"zbierz dynie\"."
         },
         "courseC_harvester_loops3_2021": {
-          "courseC_harvester_loops3_a": "Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchamiać ten kod aby przekonać się, co się stanie, nawet jeśli jeszcze nie rozwiązałeś taj łamigłówki. ",
+          "courseC_harvester_loops3_a": "Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchamiać ten kod, aby przekonać się, co się stanie, nawet jeśli jeszcze nie rozwiązałeś tej łamigłówki. ",
           "courseC_harvester_loops3_b": "W przypadku pierwszych dyń, możesz posługiwać się kodem bardzo podobnym do ostatniej łamigłówki. W którą stronę musisz później skręcić?",
           "courseC_harvester_loops3_c": "Jeśli chcesz uprościć swój kod, możesz umieścić jedną pętlę w drugiej! Nazywa się to **zagnieżdżona pętla**."
         },
@@ -9834,11 +9834,11 @@
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "Czy to nie przypomina gigantycznej kaskady? Przekonaj się, czy możesz wykorzystać to, czego się nauczyłeś w poprzednich łamigłowkach, aby pokonać wszystkie zakręty? ",
           "courseC_starWars_loops10_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**.",
-          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops10_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops1_2021": {
           "courseC_starWars_loops1_a": "Gdy BB-8 przetacza złom, zbiera go automatycznie.",
-          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
+          "courseC_starWars_loops1_b": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseC_starWars_loops1_c": "Będziesz musiał użyć bloku \"Idź do przodu\" pięć razy, aby rozwiązać tę łamigłówkę."
         },
         "courseC_starWars_loops2_2021": {
@@ -9859,7 +9859,7 @@
         "courseC_starWars_loops7_2021": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
           "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
-          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops8_2021": {
           "course_starWars_loops8_a": "Pomyśl o tym problemie małymi partiami. Nie spiesz się. Nie musisz rozwiązać go przy pierwszej próbie!",
@@ -10011,7 +10011,7 @@
           "courseD_bee_conditionals_challenge1_b": "W tej łamigłówce każde miejsce może mieścić kwiatek, plaster miodu lub nic. Oznacza to, że w każdym kwadracie możesz powtórzyć swoją sekwencję „jeśli/w przeciwnym razie”. "
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "Nie działa? Nie zapomnij użyć przycisku „Krok”, aby uruchamiać i przechodzić każdy wiersz programu po kolei.",
@@ -10431,7 +10431,7 @@
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
           "courseC_starWars_loops7_b": "Jeśli masz problem z tą łamigłówką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.",
-          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
+          "courseC_starWars_loops7_c": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki."
         },
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "Pomyśl o tym problemie małymi partiami. Nie spiesz się. Nie musisz rozwiązać go przy pierwszej próbie!",
@@ -10617,7 +10617,7 @@
           "courseD_artist_functions5_c": "Rozpocznij od przeciągania kodu do funkcji \"narysuj gwiazdę\" dla uzyskania kształtu gwiazdy a następnie użyj tej funkcji, aby narysować trzy gwiazdy!"
         },
         "iceage_move_events_dani": {
-          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka \\***\\*\\_\\*\\***\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
+          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka ****\\_****\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
         },
         "iceage_sound_and_points_dani": {
           "iceage_sound_and_points_a": "Musisz dodać dwa bloki poniżej zdarzenia \"kiedy postać 1 dotknie postaci 2.\"",
@@ -10628,7 +10628,7 @@
           "iceage_warn_ice_age_b": "Dodaj oba nowe bloki poniżej zdarzenia \"po uruchomieniu\", aby wydarzyły się natychmiast po uruchomieniu programu."
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "Możesz zmienić tło, łącząc blok „ustaw tło” pod blokiem zdarzenia „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Możesz zmienić tło, łącząc blok „ustaw tło” pod blokiem zdarzenia „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "_Uwaga:_ Aby nadać duszkowi zachowanie, musisz użyć bloku `początek duszka` z jednym z zielonych bloków zachowania, np. `skręcanie w prawo`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10638,7 +10638,7 @@
           "hw_click_sprites": "Klikaj duszki, gdy program działa"
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "Spróbuj połączyć blok „zmień kostium” pod blokiem zdarzenia „po kliknięciu”.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "Spróbuj połączyć blok „zmień kostium” pod blokiem zdarzenia „po kliknięciu”.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_location": {
           "storyboard_location": "Aby zmienić lokalizację duszka, kliknij pinezkę na bloku lokalizacji.\n\n<xml><block type=\"gamelab_location_picker\" id=\"pin\">\n          <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n        </block></xml>",
@@ -10703,7 +10703,7 @@
           "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "Możesz zmienić tło, łącząc blok „ustaw tło” pod blokiem zdarzenia „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Możesz zmienić tło, łącząc blok „ustaw tło” pod blokiem zdarzenia „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "_Uwaga:_ Aby nadać duszkowi zachowanie, musisz użyć bloku `początek duszka` z jednym z zielonych bloków zachowania, np. `skręcanie w prawo`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10720,7 +10720,7 @@
           "location_pin_hint": "Aby zmienić lokalizację duszka, kliknij pinezkę na bloku lokalizacji, a następnie kliknij w miejsce, w którym ma się znaleźć.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "Upewnij się, że kostiumy pasują do każdego duszka.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Upewnij się, że kostiumy pasują do każdego duszka.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Aby stworzyć postać mówiącą cokolwiek, połącz bloki kodu w ten sposób:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -10739,7 +10739,7 @@
           "cat_xml": "Upewnij się, że kostiumy pasują do siebie w każdym bloku.\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
         },
         "helloworld_animals_say": {
-          "hello-world-first-solution-bear": "Aby niedźwiedź coś powiedział, połącz bloki kodu w ten sposób:\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      \\<block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  \\<block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals\\_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-bear": "Aby niedźwiedź coś powiedział, połącz bloki kodu w ten sposób:\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_events": {
           "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
@@ -10754,8 +10754,8 @@
           "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
         },
         "poetry_hoc_sounds": {
-          "more_code": "Dodaj więcej efektów i kolorów, aby dopasować się do wybranego dźwięku.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>",
-          "poetry_sound_hint": "Znajdź ten blok:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\n\nPołącz ten blok pod 'po uruchomieniu' w swoim obszarze roboczym."
+          "more_code": "Dodaj więcej efektów i kolorów, aby dopasować się do wybranego dźwięku.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>",
+          "poetry_sound_hint": "Znajdź ten blok:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\n\nPołącz ten blok pod 'po uruchomieniu' w swoim obszarze roboczym."
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Znajdź blok tła taki, jak ten:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\ni znajdź blok efektu tekstowego taki, jak ten:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nPodłącz te bloki pod „po uruchomieniu” w swoim obszarze roboczym.",
@@ -10768,10 +10768,10 @@
           "do_effect_hint": "Ten nowy blok „spowoduj efekt” doda nowy efekt raz.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\nMożesz ułożyć więcej niż jeden „spowoduj efekt” jeden nad drugim, aby efekt trwał dłużej.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Dodaj blok „duszek zaczyna” do swojego kodu. Upewnij się, że już stworzyłeś duszka, któremu nadajesz zachowanie. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Dodaj blok „duszek zaczyna” do swojego kodu. Upewnij się, że już stworzyłeś duszka, któremu nadajesz zachowanie. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Znajdź ten blok i kliknij `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nCo się dzieje, gdy ta liczba to '25'?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Znajdź ten blok i kliknij `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nCo się dzieje, gdy ta liczba to '25'?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Będziesz również potrzebować tego bloku:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -10783,8 +10783,8 @@
           "behavior_list": "Spróbuj użyć zachowań takich jak \"przemieszczanie się na wschód i powtarzanie w pętli\" i \"chodzenie\"."
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Każdy duszek ma **położenie**. Możesz ustawić położenie, klikając pinezkę na tym bloku:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Kliknij pinezkę ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) w bloku lokalizacji, a następnie wybierz nową pozycję dla swojego duszka na ekranie.\n-   Po ukończeniu kodu naciśnij przycisk „Uruchom”.",
-          "remove_hint": "Możesz usunąć duszka pod określonym numerem linii. Możesz dodać nowego duszka na jego miejsce:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Każdy duszek ma **położenie**. Możesz ustawić położenie, klikając pinezkę na tym bloku:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Kliknij pinezkę ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) w bloku lokalizacji, a następnie wybierz nową pozycję dla swojego duszka na ekranie.\n-   Po ukończeniu kodu naciśnij przycisk „Uruchom”.",
+          "remove_hint": "Możesz usunąć duszka pod określonym numerem linii. Możesz dodać nowego duszka na jego miejsce:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "Czy chcesz wypróbować inne wielokąty? \n\nUżyj liczby boków w swoim bloku `powtórz` i kąt w bloku `obracaj`.\nWypróbuj poniższe:\n\n|    Kształt    | Boki |  Kąt |\n| :-----------: | :--: | :--: |\n|    trójkąt    |   3  | 120° |\n|    kwadrat    |   4  |  90° |\n|   pięciokąt   |   5  |  72° |\n|   sześciokąt  |   6  |  60° |\n|    ośmiokąt   |   8  |  45° |\n| dziewięciokąt |   9  |  40° |\n| dziesięciokąt |  10  |  36° |"

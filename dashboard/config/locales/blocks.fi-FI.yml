@@ -1007,6 +1007,19 @@ fi:
             '"seconds"': sekuntia
       gamelab_hideTitleScreen:
         text: piilota otsikkonäyttö
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1150,6 +1163,10 @@ fi:
             "'sound://category_animals/dolphin.mp3'": delfiini
             "'sound://category_animals/dog.mp3'": koira
             "'sound://category_digital/jump_7.mp3'": hyppää
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): on vedettävä
       gamelab_pointInDirection:
         text: suuntaa {SPRITE} {DIRECTION}
         options:
