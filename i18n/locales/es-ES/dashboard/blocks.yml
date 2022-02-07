@@ -991,6 +991,8 @@ es:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"speed"': velocidad
+      gamelab_changeVarBy:
+        text: cambia {VARIABLE} por {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:

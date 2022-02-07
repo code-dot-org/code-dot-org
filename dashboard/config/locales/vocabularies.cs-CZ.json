@@ -132,6 +132,12 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program "
         },
+        "event/outbreak/unversioned": {
+          "word": "Událost"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modely a simulace"
+        },
         "event/sports/unversioned": {
           "word": "Událost"
         },
@@ -192,12 +198,6 @@
         "line/poem-art/unversioned": {
           "word": "Verš",
           "definition": "(poezie) – dílčí část básně, uspořádaná do řádku, který končí na pravém okraji. "
-        },
-        "event/outbreak/unversioned": {
-          "word": "Událost"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modely a simulace"
         },
         "sprite/coursef/2021": {
           "word": "Sprite",

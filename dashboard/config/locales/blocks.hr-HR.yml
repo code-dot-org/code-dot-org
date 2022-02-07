@@ -6,6 +6,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_atTimestamp:
@@ -16,6 +17,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_changePropBy:
@@ -28,6 +30,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -38,6 +41,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_everySeconds:
@@ -68,6 +72,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           LOCATION:
@@ -78,6 +83,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           FORMAT:
@@ -112,6 +118,7 @@ hr:
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           LAYOUT:
@@ -131,6 +138,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           SPEED:
@@ -149,6 +157,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -165,6 +174,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -175,18 +185,21 @@ hr:
         options:
           THIS:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_startMapping:
@@ -199,6 +212,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -215,6 +229,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:

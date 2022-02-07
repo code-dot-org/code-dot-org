@@ -82,6 +82,9 @@
         "text-compression/Text Compression": {
           "student_overview": "Bir noktada, bitleri gönderebileceğimiz fiziksel hız sınırına ulaşırız ve büyük miktarda bilgiyi daha hızlı göndermek istiyorsak, aynı bilgiyi daha az bit ile temsil etmenin bir yolunu bulmalıyız, yani verileri sıkıştırmalıyız."
         },
+        "outbreak/Outbreak": {
+          "purpose": "Bir önceki derste öğrenciler basit bir simülasyondan veri toplayıp yorumladılar. Bu derste öğrenciler kendi simülasyon modellerini kodlamak için yönergeleri takip edecekler. Öğrencilerin gerçek dünyadaki virüs salgınları hakkındaki ön bilgileri hayali bir senaryoya uygulanacaktır."
+        },
         "sports/Sports": {
           "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
           "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
@@ -109,9 +112,6 @@
         "poem-art/lesson-1": {
           "overview": "Bu BB ve İDB entegre dersinde, öğrenciler bir şiirin ruh halini göstermek için kodla bir şiiri canlandıracaklar. Bu giriş niteliğindeki kodlama etkinliği sırasında öğrenciler bir şiirin ruh halini okuyacak ve tespit edeceklerdir. Ardından, şiirin ruh halini açıklamaya yardımcı olacak ilgili efektleri ve görüntüleri bulacaklar. Son olarak, öğrenciler ruh halindeki bir değişikliği göstermek veya bir şiirdeki yeni görüntülerin dahil oluşunu canlandırmak için olayları (kod) kullanacaklardır.\n\nBu ders 1 saatlik bağımsız ders olarak tamamlanabilir. Bu dersi, [Şiirle Kodlama](http://code.org/poetry) adlı 5 derslik modülün ilk dersi olarak kullanma seçeneği de sunulmaktadır. Şiirle Kodlama modülünün sonunda öğrenciler kendi şiirlerini yazacak ve arkadaşlarıyla paylaşmak için bir şiir üretme uygulaması oluşturacaklar. \n\nŞiirle Kodlama, Code.org'un BB Bağlantıları müfredatının bir parçasıdır ve BB'yi matematik, İDB ve fen bilimleri gibi diğer konu alanlarına CCSS, NGSS ve CSTA standartlarına uyumlu hale getirmeyi amaçlamaktadır. ",
           "preparation": "-   Çevrimiçi öğreticiyi kendiniz inceleyin ve tamamlayın: [Şiir Sanatı](http://studio.code.org/s/poem-art).\n\n-   Öğrencilerinizden tamamlamalarını istemeden önce etkinlikleri denediğinizden emin olun.\n\n-   Teknolojinizi kontrol edin ve herhangi bir sorunu önceden gidermeniz gerekip gerekmediğine karar verin.\n\n-   Bazı seviyeler oynamak için ses gerektirir. Kulaklıkları önceden dağıtın.\n\n-   [İsteğe bağlı] Değerlendirme için öğrenci başına 2 yapışkan not."
-        },
-        "outbreak/Outbreak": {
-          "purpose": "Bir önceki derste öğrenciler basit bir simülasyondan veri toplayıp yorumladılar. Bu derste öğrenciler kendi simülasyon modellerini kodlamak için yönergeleri takip edecekler. Öğrencilerin gerçek dünyadaki virüs salgınları hakkındaki ön bilgileri hayali bir senaryoya uygulanacaktır."
         },
         "jigsaw/Jigsaw": {
           "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",

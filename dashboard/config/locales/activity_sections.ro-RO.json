@@ -1073,6 +1073,46 @@
         "17878891-5c24-412b-b385-35b54fdaeb11": {
           "description": "**Lumea reală: compresia Zip**\n\n-   Experimentați cu zip folosind fișiere text cu conținut diferit. Sunt rezultatele pentru fișierele mici la fel de bune ca și pentru fișierele mari? (Pe Mac, în Finder, alegeți „obține informații” pentru un fișier pentru a vedea numărul real de biți din fișier, deoarece afișajul Finder va afișa 4KB pentru orice fișier care este mai mic decât atât.)\n    -   Atenție: rezultatele pot varia. Zip funcționează foarte bine pentru text, dar s-ar putea să nu comprime foarte bine alte fișiere, deoarece acestea sunt deja comprimate sau nu au aceleași tipuri de modele încorporate pe care le au documentele text.\n\n**Provocare: cercetați algoritmul LZW**\n\n-   Compresia .zip se bazează pe [Schema de compresie LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   În timp ce ideea din spatele instrumentului de compresie a textului este similară cu algoritmul LZW (zip), urmărirea căii de compresie și decompresie este oarecum provocatoare. A afla mai multe despre LZW și ce se întâmplă în cursul acestui algoritm ar fi un proiect de extplorare excelent pentru unele persoane."
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introducere",
+          "description": "**Discutați:**\n\n-   _Ce știm despre cum se răspândește un virus?_\n-   _Ce poate face ca un virus să se răspândească mai repede printr-un oraș?_\n-   _Ce poate ajuta la încetinirea răspândirii unui virus?_\n\nScopul acestei discuții este ca elevii să aibă ocazia să activeze cunoștințele anterioare și să-și vadă ideile pe tablă. Aceasta este, de asemenea, o oportunitate de a investiga unele concepții greșite despre modul în care virușii se răspândesc."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemie",
+          "description": "_În lecția de astăzi, vei merge în „Orașul monștrilor”, unde este pe cale să se producă o epidemie de viruși. Dr. Monster are nevoie de ajutorul tău pentru a încetini răspândirea virusului._\n\n_Veți crea un simulator de focar în Sprite Lab și apoi îl veți folosi pentru a înțelege cum se poate răspândi un virus. De asemenea, îi vei ajuta pe toți monștrii să fie sănătoși din nou!_",
+          "progression_name": "Epidemie"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "\\*\\* Citiți _Bine ați venit în Monster Town_ la nivel de clasă.",
+          "progression_name": "Bine ai venit în Orașul Monștrilor"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Faceți acest lucru:** revizuiți vocabularul, **modelele și simulările** cu elevii, pornind de la lecția anterioară. O simulare este un model computerizat al unui proces sau sistem."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Astăzi, vom face ca un loc precum Orașul Monștrilor să prindă viață scriind un cod. În această simulare, vei folosi sprite-uri (personaje) pentru a reprezenta diferiții monștri. Aceste personaje vor avea costume diferite pentru a ne spune lucruri precum dacă sunt bolnavi sau sănătoși. De asemenea, vei folosi comportamente pentru a-i face pe monștri să se miște. În cele din urmă, vei folosi evenimente pentru a schimba costumul unui personaj atunci când două personaje ating ecranul. Aceasta va reprezenta un monstru care transmite virusul altuia. Vei face predicții despre ceea ce se va întâmpla cu vecinii din Orașul Monștrilor și îi vei ajuta să se însănătoșească din nou!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Faceți acest lucru:** Așezați elevii la computerele lor și rugați-i să înceapă să urmeze instrucțiunile pentru fiecare nivel din secțiunea de dezvoltare a abilităților. Dacă elevii termină această secțiune mai devreme, ei pot continua să experimenteze cu codul lor la nivelul 6 până când clasa este gata să meargă mai departe.",
+          "progression_name": "Dezvoltarea aptitudinilor"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Faceți acest lucru:** Lăsați elevii la computerele lor și rugații să treacă prin nivelurile rămase. Unele dintre aceste niveluri oferă provocări opționale. Încurajați elevii să citească cu atenție instrucțiunile și să experimenteze cu simulările lor.",
+          "progression_name": "Mini-proiect: Simulator de focar de epidemie"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Joc la liber"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simulările sunt o modalitate excelentă de a învăța lucruri care pot fi greu de observat în lumea reală. Ele ajută oamenii de știință să rezolve probleme, să prezică cum să rezolve problema și să testeze idei noi în siguranță și în mod eficient. Simularea ta este o modalitate de a arăta cum ar putea arăta un focar de virus în Orașul Monștrilor._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Discutați:**\n\n-   Cum pot fi de ajutor simulările în lumea reală?\n-   Cum ne pot ajuta simulările să înțelegem lumea din jurul nostru?\n-   Cum pot simulările să îmbunătățească modul în care testăm ideile?\n\nScopul discuției este ca elevii să înțeleagă că simulările sunt o modalitate de a modela sisteme complexe într-un mod interactiv. De asemenea, ar trebui să vadă cum simulările le permit oamenilor să testeze idei rapid, ieftin și în siguranță."
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflecţie",
+          "description": "**Concluzii:**\n\n-   Prin ce se aseamănă această simulare cu lumea reală? Prin ce diferă?\n-   Ce ați dori să schimbați/adăugați la simulare?"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introducere",
           "description": "#### Urați-le Bun venit elevilor în clasă și prezentați pe scurt activitatea ce se va desfășura în ziua respectivă.\n\n_Spuneți-le: „Astăzi vom petrece o oră învățând să codăm. A mai auzit cineva de aici de termenul „cod”? Ce înseamnă?\"_\n\nElevii ar putea menționa că un „cod” este ca un mesaj secret sau că are legătură într-un fel cu computerele.",
@@ -2028,46 +2068,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Aveți două bilete post-it. Pe unul dintre acestea scrieți un lucru pe care l-ați învățat astăzi despre programare. \nPe al doilea, scrieți un lucru pe care l-ați învățat astăzi despre poezie. \n\nSă le spunem și colegilor - ridicați mâna pentru a răspunde la această întrebare: Ce altceva doriți să mai învățați în continuare despre programare și știința calculatoarelor? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introducere",
-          "description": "**Discutați:**\n\n-   _Ce știm despre cum se răspândește un virus?_\n-   _Ce poate face ca un virus să se răspândească mai repede printr-un oraș?_\n-   _Ce poate ajuta la încetinirea răspândirii unui virus?_\n\nScopul acestei discuții este ca elevii să aibă ocazia să activeze cunoștințele anterioare și să-și vadă ideile pe tablă. Aceasta este, de asemenea, o oportunitate de a investiga unele concepții greșite despre modul în care virușii se răspândesc."
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Epidemie",
-          "description": "_În lecția de astăzi, vei merge în „Orașul monștrilor”, unde este pe cale să se producă o epidemie de viruși. Dr. Monster are nevoie de ajutorul tău pentru a încetini răspândirea virusului._\n\n_Veți crea un simulator de focar în Sprite Lab și apoi îl veți folosi pentru a înțelege cum se poate răspândi un virus. De asemenea, îi vei ajuta pe toți monștrii să fie sănătoși din nou!_",
-          "progression_name": "Epidemie"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "\\*\\* Citiți _Bine ați venit în Monster Town_ la nivel de clasă.",
-          "progression_name": "Bine ai venit în Orașul Monștrilor"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Faceți acest lucru:** revizuiți vocabularul, **modelele și simulările** cu elevii, pornind de la lecția anterioară. O simulare este un model computerizat al unui proces sau sistem."
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Astăzi, vom face ca un loc precum Orașul Monștrilor să prindă viață scriind un cod. În această simulare, vei folosi sprite-uri (personaje) pentru a reprezenta diferiții monștri. Aceste personaje vor avea costume diferite pentru a ne spune lucruri precum dacă sunt bolnavi sau sănătoși. De asemenea, vei folosi comportamente pentru a-i face pe monștri să se miște. În cele din urmă, vei folosi evenimente pentru a schimba costumul unui personaj atunci când două personaje ating ecranul. Aceasta va reprezenta un monstru care transmite virusul altuia. Vei face predicții despre ceea ce se va întâmpla cu vecinii din Orașul Monștrilor și îi vei ajuta să se însănătoșească din nou!_"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Faceți acest lucru:** Așezați elevii la computerele lor și rugați-i să înceapă să urmeze instrucțiunile pentru fiecare nivel din secțiunea de dezvoltare a abilităților. Dacă elevii termină această secțiune mai devreme, ei pot continua să experimenteze cu codul lor la nivelul 6 până când clasa este gata să meargă mai departe.",
-          "progression_name": "Dezvoltarea aptitudinilor"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Faceți acest lucru:** Lăsați elevii la computerele lor și rugații să treacă prin nivelurile rămase. Unele dintre aceste niveluri oferă provocări opționale. Încurajați elevii să citească cu atenție instrucțiunile și să experimenteze cu simulările lor.",
-          "progression_name": "Mini-proiect: Simulator de focar de epidemie"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Joc la liber"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Simulările sunt o modalitate excelentă de a învăța lucruri care pot fi greu de observat în lumea reală. Ele ajută oamenii de știință să rezolve probleme, să prezică cum să rezolve problema și să testeze idei noi în siguranță și în mod eficient. Simularea ta este o modalitate de a arăta cum ar putea arăta un focar de virus în Orașul Monștrilor._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Discutați:**\n\n-   Cum pot fi de ajutor simulările în lumea reală?\n-   Cum ne pot ajuta simulările să înțelegem lumea din jurul nostru?\n-   Cum pot simulările să îmbunătățească modul în care testăm ideile?\n\nScopul discuției este ca elevii să înțeleagă că simulările sunt o modalitate de a modela sisteme complexe într-un mod interactiv. De asemenea, ar trebui să vadă cum simulările le permit oamenilor să testeze idei rapid, ieftin și în siguranță."
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflecţie",
-          "description": "**Concluzii:**\n\n-   Prin ce se aseamănă această simulare cu lumea reală? Prin ce diferă?\n-   Ce ați dori să schimbați/adăugați la simulare?"
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Pregătirea\n\nUrați Bun venit elevilor în clasă și prezentați pe scurt activitatea zilei.\n\nSpuneți-le: _Astăzi vom petrece o oră rezolvând niște puzzle-uri online și învățând abilități specifice laboratorului de informatică._\nScopul acestei discuții este de a-i învăța pe elevi la ce să se aștepte și cum să se comporte atunci când intră în laboratorul de informatică."

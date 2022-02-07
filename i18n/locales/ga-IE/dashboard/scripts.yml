@@ -4016,6 +4016,9 @@ ga:
             csp_project:
               display_name: Tionscadal
         csp5-2021:
+          lessons:
+            lesson-1:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_lists:
               display_name: Liostaí
@@ -4025,23 +4028,55 @@ ga:
               display_name: Trasnáil
             csp_project:
               display_name: Tionscadal
+            lessonGroup-5:
+              display_name: Suirbhé Iarchúrsa
+        csp6-2021:
+          lessons:
+            lesson-1:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algartaim
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         csp7-2021:
+          lessons:
+            lesson-1:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_parameters_return_values:
               display_name: Paraiméadair agus Luachanna Athfhillte
             csp_libraries:
               display_name: Leabharlanna
+            lessonGroup-3:
+              display_name: Suirbhé
+        csp8-2021:
+          lessons:
+            lesson-1:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Suirbhé
         csp9-2021:
           lessons:
             Machine Learning and Bias:
               name: Meaisínfhoghlaim
+            lesson-1:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Aonad 9: Sonraí'
+            lessonGroup-2:
+              display_name: Suirbhé
         csp10-2021:
+          lessons:
+            lesson-1:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
+            lessonGroup-2:
+              display_name: Suirbhé
         coursea-2021:
           description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
           lessons:
@@ -4502,6 +4537,17 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprideanna
+            lessonGroup-3:
+              display_name: Athróga
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -4511,6 +4557,268 @@ ga:
             lessonGroup-2:
               display_name: Ábhar
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Mapaí Meidhreacha
+            'Programming: Happy Maps':
+              name: Mapaí Meidhreacha
+            Loops in Ice Age:
+              key: Lúba in Ice Age
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+          description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
+        express-2022:
+          lessons:
+            Sprites in Action:
+              name: Sprideanna ar Obair
+            Virtual Pet with Sprite Lab:
+              name: Peata Fíorúil i Saotharlann na Sprideanna
+              key: Peata Fíorúil i Saotharlann na Sprideanna
+            Dance Party:
+              name: Cóisir Dhamhsa
+            lesson-3:
+              name: Sprideanna ar Obair
+            lesson-1:
+              name: Cóisir Dhamhsa
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_sprites:
+              display_name: Sprideanna
+            lessonGroup-9:
+              display_name: Teagmhais
+            csf_loops:
+              display_name: Lúba
+            csf_conditionals:
+              display_name: Coinníollacha
+            csf_functions:
+              display_name: Feidhmeanna
+            csf_variables:
+              display_name: Athróga
+            csf_for_loops:
+              display_name: Lúba "Do Gach"
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
+              key: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+            csp_unit1_2020:
+              display_name: 'Aonad 1: Faisnéis dhigiteach'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Aonad 2: An tIdirlíon'
+        csp3-2022:
+          lessons:
+            Introduction to Design Mode:
+              name: Buneolas ar an Mód Deartha
+              key: Buneolas ar an Mód Deartha
+            Debugging:
+              name: Dífhabhtú
+              key: Dífhabhtú
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Athróga
+            csp_conditionals:
+              display_name: Coinníollacha
+            csp_functions:
+              display_name: Feidhmeanna
+            csp_project:
+              display_name: Tionscadal
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Liostaí
+            csp_loops:
+              display_name: Lúba
+            csp_traversals:
+              display_name: Trasnáil
+            csp_project:
+              display_name: Tionscadal
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Bog é, Bog é
+              key: Bog é, Bog é
+            Getting Loopy:
+              name: Bí Lúbach
+            'Loops: Getting Loopy':
+              name: Bí Lúbach
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+          description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí. Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: An Teagmhas Mór
+            Binary Bracelets:
+              name: Bráisléid Dhénártha
+              key: Bráisléid Dhénártha
+            'Events: The Big Event':
+              name: An Teagmhas Mór
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Paraiméadair agus Luachanna Athfhillte
+            csp_libraries:
+              display_name: Leabharlanna
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Meaisínfhoghlaim
+            Machine Learning and Bias:
+              name: Meaisínfhoghlaim
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Aonad 9: Sonraí'
+        csp10-2022:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Ríomhchlárú ar Ghrafpháipéar
+            Relay Programming:
+              name: Códáil Sealaíochta
+              key: Códáil Sealaíochta
+            Dance Party:
+              name: Cóisir Dhamhsa
+              key: Cóisir Dhamhsa
+            Loops in Ice Age:
+              name: Lúba in Ice Age
+              key: Lúba in Ice Age
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+              key: Coinníollacha le Cártaí
+            'Algorithms: Graph Paper Programming':
+              name: Ríomhchlárú ar Ghrafpháipéar
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_events:
+              display_name: Teagmhais
+            csf_loops:
+              display_name: Lúba
+            csf_conditionals:
+              display_name: Coinníollacha
+          title: Cúrsa D (2021)
+        coursee-2022:
+          lessons:
+            Swimming Fish with Sprite Lab:
+              name: Éisc ar snámh i Saotharlann na Sprideanna
+            Alien Dance Party with Sprite Lab:
+              name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+              key: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+            'Mini-Project: About Me':
+              name: Maidir Liomsa i Saotharlann na Sprideanna
+            Songwriting:
+              name: Ceapadh Ceoil
+            Learning Sprites with Sprite Lab:
+              key: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+              name: Éisc ar snámh i Saotharlann na Sprideanna
+            About Me:
+              name: Maidir Liomsa i Saotharlann na Sprideanna
+            'Functions: Songwriting':
+              name: Ceapadh Ceoil
+            Conditionals:
+              key: Coinníollacha
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprideanna
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            ramp_up:
+              display_name: Lúba Neadaithe
+            csf_functions:
+              display_name: Feidhmeanna
+            csf_nested_loops:
+              display_name: Coinníollacha
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
+            For Loop Fun:
+              name: Spraoi le Lúba
+              key: Spraoi le Lúba
+            AI For Oceans:
+              name: AI ar son an Aigéin
+            The Internet:
+              name: An tIdirlíon
+            lesson-8:
+              name: Sprideanna ar Obair
+            AI for Oceans:
+              key: AI ar son an Aigéin
+              name: AI ar son an Aigéin
+            Internet:
+              key: An tIdirlíon
+              name: An tIdirlíon
+          lesson_groups:
+            ramp_up:
+              display_name: Sprideanna
+            lessonGroup-7:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-8:
+              display_name: Athróga
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+        csp-post-survey-2021:
+          title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        pre-express-2022:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa3-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar

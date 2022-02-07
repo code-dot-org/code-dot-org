@@ -1013,6 +1013,8 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunek ruchu
             '"speed"': prędkość
+      gamelab_changeVarBy:
+        text: zastąp {VARIABLE} przez {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
         options:
@@ -1374,7 +1376,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
       gamelab_spriteClicked:
@@ -1748,7 +1750,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -2019,6 +2021,10 @@ pl:
             '"fluttering"': trzepotanie
             '"growing"': rośnięcie
             '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
             '"shrinking"': zwężenie
             '"spinning_left"': obracanie się w lewo
             '"spinning_right"': obracanie się w prawo
@@ -2032,6 +2038,10 @@ pl:
             '"fluttering"': trzepotanie
             '"growing"': rośnięcie
             '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
             '"shrinking"': zwężenie
             '"spinning_left"': obracanie się w lewo
             '"spinning_right"': obracanie się w prawo

@@ -1005,6 +1005,8 @@ in:
             '"y"': crwdns2658386:0crwdne2658386:0
             '"direction"': crwdns2658388:0crwdne2658388:0
             '"speed"': crwdns2658390:0crwdne2658390:0
+      gamelab_changeVarBy:
+        text: crwdns2859061:0[VARIABLE]crwdnd2859061:0[0]crwdnd2859061:0[VAL]crwdnd2859061:0[1]crwdne2859061:0
       gamelab_checkTouching:
         text: crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0
         options:

@@ -467,6 +467,12 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Szöveg tömörítése"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Bevezető"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Ingyenes Játék"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Bevezető",
           "tips": [
@@ -2323,12 +2329,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Két öntapadós jegyzetlapotok van. Az egyikre írjatok egy dolgot, amit ma tanultatok a kódolásról. \nA másikra írjatok egy dolgot, amit ma a költészetről tanultatok. \n\nKézfelemeléssel, osszátok meg az egész osztállyal: Mit szeretnétek a legközelebb tanulni a kódolásról és az informatikáról?"
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Bevezető"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Ingyenes Játék"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

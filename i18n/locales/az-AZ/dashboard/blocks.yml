@@ -309,6 +309,7 @@ az:
             "{x: 300, y: 300}": aşağı sağ
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": təsadüfi
       Dancelab_layoutSprites:
+        text: forma {GROUP} {FORMAT} kimi
         options:
           GROUP:
             sprites: bütün
@@ -441,6 +442,8 @@ az:
             '"x"': çarpaz xaç
             '"plus"': üstəgəl
             '"random"': təsadüfi
+      Dancelab_mixColors:
+        text: "{COLOR1} və {COLOR2} -ni qarışdır "
       Dancelab_onPointerDown:
         text: aşağı çubuqda
       Dancelab_onPointerUp:

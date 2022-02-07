@@ -311,6 +311,15 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Ampliación del aprendizaje"
         },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Calentamiento"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Actividad Principal"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Actividad de cierre"
+        },
         "05180d31-d1ff-422e-8227-69f7d07884a6": {
           "name": "Calentamiento"
         },
@@ -2870,15 +2879,6 @@
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Actividad de cierre"
         },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Calentamiento"
-        },
-        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
-          "name": "Actividad Principal"
-        },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
-          "name": "Actividad de cierre"
-        },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Niveles"
         },
@@ -3621,16 +3621,16 @@
           "name": "Actividad de cierre"
         },
         "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
-          "name": "Ver: Mi Barrio en Línea"
+          "name": "Ver: mi vecindario en línea"
         },
         "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
-          "name": "Leer: ¡Seguridad, Reglas!"
+          "name": "Leer: seguridad, ¡la lleva!"
         },
         "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
-          "name": "Explora: Excursión por Internet"
+          "name": "Explorar: de excursión en internet"
         },
         "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
-          "name": "Momento de Pausa y Reflexión"
+          "name": "Pausa para reflexionar"
         },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
           "name": "Ampliación del aprendizaje"
@@ -3717,7 +3717,7 @@
           "name": "Calentamiento"
         },
         "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
-          "name": " Actividad Puente - Escoge Una"
+          "name": " Actividad puente: elige una"
         },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Actividad Principal"
@@ -3768,7 +3768,7 @@
           "name": "Calentamiento"
         },
         "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
-          "name": "Actividad puente - Eventos - Elige uno"
+          "name": "Actividad puente: eventos - Elige una"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Actividad Principal"
