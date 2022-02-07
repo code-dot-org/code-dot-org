@@ -62,7 +62,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20438,
     "name_suffix": "_2021",
-    "encrypted_examples": "XoA2xyzKwmXf/huHvzxrAb82acptqU0sfb3fHBf1ZaV2lSKh8QZM0ZRng5Jd\niRu4zQH6pl1pgekNqZK0/z2p9A==\n",
+    "encrypted_examples": "AL4sN6naYUsVftCS0gq50fGvXmR1V7OyhgNOeD0NU3FcpxWyMpZp9diEb2BG\nZh69ju678eK02FlqrayyAu4LCw==\n",
     "text_mode_at_start": "false",
     "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
     "mini_rubric": "false",
@@ -78,7 +78,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T21:08:17.204+00:00\",\"changed\":[\"cloned from \\\"CSD U6 frequency_2021\\\"\"],\"cloned_from\":\"CSD U6 frequency_2021\"},{\"changed_at\":\"2021-08-31 21:08:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-30 03:18:02 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T21:08:17.204+00:00\",\"changed\":[\"cloned from \\\"CSD U6 frequency_2021\\\"\"],\"cloned_from\":\"CSD U6 frequency_2021\"},{\"changed_at\":\"2021-08-31 21:08:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-30 03:18:02 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:23:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
