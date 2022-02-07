@@ -122,6 +122,7 @@ export const commands = {
     if (this.previous.eventLogLength === undefined) {
       this.previous.eventLogLength = this.eventLog.length;
     }
+    commands.initializePreviousCostumes.call(this, this.getSpriteIdsInUse());
 
     //check criteria and update complete status
     if (this.currentFrame() <= this.validationTimes.wait) {
@@ -146,6 +147,7 @@ export const commands = {
       return results;
     }
     this.previous.eventLogLength = this.eventLog.length;
+    commands.updatePreviousCostumes.call(this, this.getSpriteIdsInUse());
   },
 
   getPassState(criteria) {
@@ -206,6 +208,74 @@ export const commands = {
 
   allSpriteHaveSameCostume() {
     return this.getAnimationsInUse().length === 1;
+  },
+
+  anyCostumeChangedThisFrame(spriteIds) {
+    let result = false;
+    spriteIds.forEach(id => {
+      let currentCostume = this.nativeSpriteMap[
+        spriteIds[id]
+      ].getAnimationLabel();
+      let previousCostume = this.previous.costumesById.costumes[id];
+      if (currentCostume !== previousCostume) {
+        result = true;
+      }
+    });
+    return result;
+  },
+
+  onlyClickedCostumeChangedThisFrame(spriteIds) {
+    let result = false;
+    spriteIds.forEach(id => {
+      let currentCostume = this.nativeSpriteMap[
+        spriteIds[id]
+      ].getAnimationLabel();
+      let previousCostume = this.previous.costumesById.costumes[id];
+      if (currentCostume !== previousCostume) {
+        //sprite change costume
+        result = true;
+        if (
+          !(
+            this.p5.mouseIsOver(this.nativeSpriteMap[spriteIds[id]]) &&
+            this.p5.mouseWentDown('left')
+          )
+        ) {
+          //sprite was not clicked this frame
+          result = false;
+        }
+      }
+    });
+    return result;
+  },
+
+  initializePreviousCostumes(spriteIds) {
+    if (this.previous.costumesById === undefined) {
+      this.previous.costumesById = {
+        frame: this.currentFrame(),
+        costumes: []
+      };
+      spriteIds.forEach(id => {
+        this.previous.costumesById.costumes.push(
+          this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
+        );
+      });
+    }
+  },
+
+  updatePreviousCostumes(spriteIds) {
+    if (this.previous.costumesById !== undefined) {
+      if (this.previous.costumesById.frame !== this.currentFrame()) {
+        this.previous.costumesById = {
+          frame: this.currentFrame(),
+          costumes: []
+        };
+        spriteIds.forEach(id => {
+          this.previous.costumesById.costumes.push(
+            this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
+          );
+        });
+      }
+    }
   },
 
   spritesDefaultSize(spriteIds) {
