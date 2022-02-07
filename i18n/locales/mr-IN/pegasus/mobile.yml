@@ -94,6 +94,7 @@
   volunteer_engineer_submission_field_name: "नाव"
   volunteer_engineer_submission_field_linkedin_placeholder: "http://www.linkedin.com/in/your_name"
   volunteer_engineer_submission_field_facebook_placeholder: "https://www.facebook.com/your_name"
+  volunteer_engineer_submission_field_description: "वर्णन"
   volunteer_engineer_submission_field_email_preference_yes: 'होय'
   volunteer_engineer_submission_field_email_preference_no: 'नाही'
   dashboard_action_delete_yes: 'होय'
@@ -388,6 +389,8 @@
   view_resources: "संसाधने पहा"
   imagine_cup_junior: "इमॅजिन कप ज्युनिअर\n"
   imagine_cup_junior_tile_description: "हे चांगल्यासाठी AI चे जागतिक आव्हान विद्यार्थ्यांना मायक्रोसॉफ्टच्या चांगल्यासाठी AI पुढाकाराचा परिचय करून देते, त्यामुळे ते AI ची ताकद वापरून जगातील समस्या सोडवण्यासाठी सक्षम होतात."
+  ai_activity: "उपक्रम"
+  ai_description: "वर्णन"
   ai_seeing_ai: "AI पाहणे"
   ai_seeing_ai_description: "तुमच्या आजूबाजूच्या जगाचे वर्णन विविध भाषांमध्ये सांगणारे एक मोफत अॅप."
   ai_quick_draw: "लवकर, चित्र काढा!"
