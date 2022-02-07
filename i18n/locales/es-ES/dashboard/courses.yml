@@ -4,47 +4,47 @@ es:
     course:
       name:
         csp-2017:
-          assignment_family_title: Principios de Ciencias de la Computación
-          title: Principios de Ciencias de la Computación ('17-'18)
+          assignment_family_title: Principios de Informática
+          title: Principios de Informática ('17-'18)
           version_title: "'17-'18"
-          description_student: En otoño 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la Computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados con herramientas computacionales esenciales y oportunidades multidisciplinarias.
-          description_teacher: En otoño 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la Computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados con herramientas computacionales esenciales y oportunidades multidisciplinarias.
-          description_short: Aprende conceptos fundamentales de Ciencias de la Computación.
+          description_student: En otoño de 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. El curso introduce a los estudiantes en los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de las ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están menos representados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En otoño de 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. El curso introduce a los estudiantes en los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de las ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están menos representados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_short: Aprender los conceptos básicos de la Informática.
         csd-2017:
-          assignment_family_title: Descubrimientos de Ciencias de la Computación
-          title: Descubrimientos de Ciencias de la Computación ('17-'18)
+          assignment_family_title: Descubrimientos de la Informática
+          title: Descubrimientos de Informática ('17-'18)
           version_title: "'17-'18"
-          description_student: Descubrimientos de Ciencias de la Computación (Descubrimientos CC) es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
-          description_teacher: Descubrimientos de Ciencias de la Computación (Descubrimientos CC) es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
-          description_short: Un curso introductorio de las Ciencias de la Computación que permite a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_short: Un curso de introducción a la informática que permite a los estudiantes crear artefactos auténticos.
         allthethingscourse:
-          title: cursotodaslascosas
+          title: cursodetodaslascosas
           description_short: Este es un curso para todaslascosas
-          description_student: Este es un curso para todaslascosas y cuenta con una descripción más extensa para los estudiantes
-          description_teacher: Este es un curso para todaslascosas y cuenta con una descripción más extensa para los profesores
+          description_student: Este es un curso para todas las cosas y tiene una descripción más larga para los estudiantes
+          description_teacher: Este es un curso para todaslascosas y tiene una descripción más larga para los profesores
         csd-2018:
-          assignment_family_title: Descubrimientos de Ciencias de la Computación
-          title: Descubrimientos de Ciencias de la Computación ('18-'19)
+          assignment_family_title: Descubrimientos de la Informática
+          title: Descubrimientos de la Informática ('18-'19)
           version_title: "'18-'19"
-          description_short: Un curso introductorio de las Ciencias de la Computación que permite a los estudiantes crear artefactos auténticos.
-          description_student: Descubrimientos de Ciencias de la Computación (Descubrimientos CC) es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
-          description_teacher: Descubrimientos de Ciencias de la Computación (Descubrimientos CC) es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_short: Un curso de introducción a la informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
         csp-2018:
-          assignment_family_title: Principios de Ciencias de la Computación
-          title: Principios de Ciencias de la Computación ('18-'19)
+          assignment_family_title: Principios de Informática
+          title: Principios de Informática ('18-'19)
           version_title: "'18-'19"
-          description_short: Aprende conceptos fundamentales de Ciencias de la Computación.
-          description_student: En otoño 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la Computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados con herramientas computacionales esenciales y oportunidades multidisciplinarias.
-          description_teacher: En otoño 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la Computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados con herramientas computacionales esenciales y oportunidades multidisciplinarias.
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: En otoño de 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. El curso introduce a los estudiantes en los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de las ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están menos representados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En otoño de 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. El curso introduce a los estudiantes en los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de las ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están menos representados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
         csp-2019:
-          title: Principios de Ciencias de la Computación ('19-'20)
+          title: Principios de Informática ('19-'20)
           version_title: "'19-'20"
-          description_short: Aprende conceptos fundamentales de Ciencias de la Computación.
-          description_student: En otoño 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la Computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados con herramientas computacionales esenciales y oportunidades multidisciplinarias.
-          description_teacher: En otoño 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la Computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados con herramientas computacionales esenciales y oportunidades multidisciplinarias.
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: En otoño de 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. El curso introduce a los estudiantes en los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de las ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están menos representados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En otoño de 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. El curso introduce a los estudiantes en los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de las ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están menos representados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
         csd-2019:
-          title: Descubrimientos de Ciencias de la Computación ('19-'20)
+          title: Descubrimientos de la Informática ('19-'20)
           version_title: "'19-'20"
-          description_short: Un curso introductorio de las Ciencias de la Computación que permite a los estudiantes crear artefactos auténticos.
-          description_student: Descubrimientos de Ciencias de la Computación (Descubrimientos CC) es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
-          description_teacher: Descubrimientos de Ciencias de la Computación (Descubrimientos CC) es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_short: Un curso de introducción a la informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
