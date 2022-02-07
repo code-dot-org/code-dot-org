@@ -21,6 +21,7 @@ class ToggleSwitch extends React.Component {
     const iconStyle = {...styles.icon, ...dynamicStyle};
     return (
       <button
+        id="uitest-code-review-groups-toggle"
         type="button"
         onClick={onToggle}
         aria-pressed={isToggledOn}
