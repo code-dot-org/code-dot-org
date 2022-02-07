@@ -570,6 +570,25 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Kompresia textu"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Úvod"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Nákaza",
+          "progression_name": "Nákaza"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "progression_name": "Vitajte v mestečku Monster Town"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "progression_name": "Budovanie zručností"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Voľná hra"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflexia"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Úvod",
           "tips": [
@@ -4361,25 +4380,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Máte dva poznámkové bločky. Na prvý napíšte jednu vec, ktorú ste sa dnes naučili o programovaní. \nNa druhý napíšte jednu vec, ktorú ste sa dnes naučili o poézii. \n\nPodeľme sa s celou triedou zdvihnutím ruky, a odpovedajte na túto otázku: Čo by ste sa ešte mohli naučiť o programovaní a počítačovej vede? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Úvod"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Nákaza",
-          "progression_name": "Nákaza"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "progression_name": "Vitajte v mestečku Monster Town"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "progression_name": "Budovanie zručností"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Voľná hra"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexia"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

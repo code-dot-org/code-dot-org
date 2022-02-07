@@ -1362,3 +1362,4 @@ cs:
     this_sprite: tento sprajt
   unit_prefix: Jednotka %{n}
   code_org_logo_alt: Hlavní strana Code.org
+  teacher_feedback: Zpětná vazba učitele

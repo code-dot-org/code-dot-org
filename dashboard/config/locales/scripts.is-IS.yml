@@ -7469,12 +7469,26 @@ is:
               display_name: Yfirferðir
             csp_project:
               display_name: Verkefni
+            lessonGroup-5:
+              display_name: Könnun eftir námskeið
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algrím
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Stikar og skilagildi
             csp_libraries:
               display_name: Söfn
+            lessonGroup-3:
+              display_name: Könnun
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Könnun
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -7482,10 +7496,14 @@ is:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Kafli 9: Gögn'
+            lessonGroup-2:
+              display_name: Könnun
         csp10-2021:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            lessonGroup-2:
+              display_name: Könnun
         coursea-2021:
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
           description_audience: 'Aldur: 4-7'
@@ -8115,6 +8133,30 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
+            'Mini-Project: Virtual Pet':
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kvikar
+            lessonGroup-3:
+              display_name: Breytur
+            lessonGroup-4:
+              display_name: Lokaverkefni námskeiðs
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -8124,6 +8166,387 @@ is:
             lessonGroup-2:
               display_name: Innihald
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Krúttleg kort
+            Happy Loops:
+              name: Lukkulegar lykkjur
+              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í
+                forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að
+                haga því þannig að nemendur vilji fá auðveldari leið til að leysa
+                hversdagsleg verkefni.
+            Loops with Laurel:
+              name: Lykkjur með Láru
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            'Programming: Happy Maps':
+              name: Krúttleg kort
+            'Loops: Happy Loops':
+              name: Lukkulegar lykkjur
+              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í
+                forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að
+                haga því þannig að nemendur vilji fá auðveldari leið til að leysa
+                hversdagsleg verkefni.
+            Loops in Ice Age:
+              key: Lykkjur í Ísöld
+            Loops in Collector:
+              name: Lykkjur með Láru
+            lesson-1:
+              name: Lokaverkefni námskeiðs
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            lessonGroup-5:
+              display_name: Lokaverkefni námskeiðs
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description_audience: 'Aldur: 4-7'
+        express-2022:
+          lessons:
+            Sprites in Action:
+              name: Kvikar í verki
+            Virtual Pet with Sprite Lab:
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+            Dance Party:
+              name: Danspartý
+            Looking Ahead with Minecraft:
+              name: Horft fram á við
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+              key: Lokaverkefni námskeiðs
+            lesson-3:
+              name: Kvikar í verki
+            lesson-1:
+              name: Danspartý
+            'Looking Ahead with Minecraft ':
+              name: Horft fram á við
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_sprites:
+              display_name: Kvikar
+            lessonGroup-9:
+              display_name: Atvik
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            csf_functions:
+              display_name: Föll
+            csf_variables:
+              display_name: Breytur
+            csf_for_loops:
+              display_name: Frá lykkjur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni
+            okkar fyrir eldri nemendur í grunnskóla.'
+          description_audience: 'Aldur: 9-18'
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Tvíundartölur
+              key: Tvíundartölur
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csp_unit1_2020:
+              display_name: Kafli 1 - Stafrænar upplýsingar
+        csp2-2022:
+          lessons:
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+              key: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+              key: Netbeinar og umfremd
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Kafli 2: Internetið'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Villuleit
+              key: Villuleit
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Eining 3: Kynning á gerð appa'
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Breytur
+            csp_conditionals:
+              display_name: Skilyrði
+            csp_functions:
+              display_name: Föll
+            csp_project:
+              display_name: Verkefni
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listar
+            csp_loops:
+              display_name: Lykkjur
+            csp_traversals:
+              display_name: Yfirferðir
+            csp_project:
+              display_name: Verkefni
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+              key: Hreyfa sig, hreyfa sig
+            Sequencing with Angry Birds:
+              name: Röð aðgerða með Angry Birds
+            Programming with Harvester:
+              name: Forritun með Hirðinum
+            Getting Loopy:
+              name: Lykkjulæti
+            Loops with Harvester:
+              name: Lykkjur með Hirðinum
+            Loops with Laurel:
+              name: Lykkjur með Láru
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            Sequencing in Maze:
+              key: Röð aðgerða í Völundarhúsi
+              name: Röð aðgerða með Angry Birds
+            Programming in Harvester:
+              key: Forritun með Hirðinum
+              name: Forritun með Hirðinum
+            'Loops: Getting Loopy':
+              name: Lykkjulæti
+            Loops in Harvester:
+              name: Lykkjur með Hirðinum
+            Loops in Collector:
+              name: Lykkjur með Láru
+            lesson-1:
+              name: Lokaverkefni námskeiðs
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            lessonGroup-6:
+              display_name: Lokaverkefni námskeiðs
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_audience: 'Aldur: 5 - 8'
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Stórviðburður
+            Binary Bracelets:
+              name: Stafræn armbönd
+              key: Stafræn armbönd
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            'Events: The Big Event':
+              name: Stórviðburður
+            'End of Course Project: Create a Play Lab Game':
+              name: Lokaverkefni námskeiðs
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            csf_data:
+              display_name: Gögn
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin
+            myndir, sögur og leiki.
+          description_audience: 'Aldur: 6-10'
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Stikar og skilagildi
+            csp_libraries:
+              display_name: Söfn
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Vélarnám
+            Machine Learning and Bias:
+              name: Vélarnám
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Kafli 9: Gögn'
+        csp10-2022:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Forritun rúðublaða
+            Relay Programming:
+              name: Boðhlaupsforritun
+              key: Boðhlaupsforritun
+            Dance Party:
+              name: Danspartý
+              key: Danspartý
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+              key: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+              key: Skilyrði með kortum
+            Looking Ahead with Minecraft:
+              name: Horft fram á við
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+              key: Lokaverkefni námskeiðs
+            'Algorithms: Graph Paper Programming':
+              name: Forritun rúðublaða
+            lesson-6:
+              name: Horft fram á við
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_events:
+              display_name: Atvik
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          title: Námskeið D (2021)
+          description_audience: 'Aldur: 7-11'
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Lagasmíð
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+              key: Lokaverkefni námskeiðs
+            'Functions: Songwriting':
+              name: Lagasmíð
+            Conditionals:
+              key: Skilyrði
+          lesson_groups:
+            csf_sprites:
+              display_name: Kvikar
+            csf_digcit:
+              display_name: Stafrænn borgari
+            ramp_up:
+              display_name: Innri lykkjur
+            csf_functions:
+              display_name: Föll
+            csf_nested_loops:
+              display_name: Skilyrði
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 8 - 12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
+            'Mini-Project: Virtual Pet':
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+            The Power of Words:
+              name: Afl orða
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+              key: Fyndnar frá lykkjur
+            The Internet:
+              name: Internetið
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+              key: Lokaverkefni námskeiðs
+            lesson-8:
+              name: Kvikar í verki
+            Virtual Pet:
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+            lesson-2:
+              name: Afl orða
+            For Loops in Bee:
+              key: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              key: Frá-lykkjur með Listamanni
+            Internet:
+              key: Internet
+              name: Internetið
+          lesson_groups:
+            ramp_up:
+              display_name: Kvikar
+            lessonGroup-7:
+              display_name: Stafrænn borgari
+            lessonGroup-8:
+              display_name: Breytur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
+            til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 9-13'
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        pre-express-2022:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa3-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald

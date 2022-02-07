@@ -516,6 +516,45 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Nén văn bản"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Giới thiệu",
+          "description": "**Thảo luận:**\n\n-   _Chúng ta biết điều gì về cách thức lây lan của vi rút?_\n-   _Điều gì có thể khiến vi rút lây lan trong thị trấn nhanh hơn?_\n-   \\_Điều gì có thể giúp làm chậm quá trình lây lan của vi rút?\n\n\\_Mục tiêu của hoạt động thảo luận này là để học sinh có cơ hội ôn lại kiến thức cũ và quan sát ý tưởng của mình trên bảng. Đây cũng là cơ hội để tìm hiểu một số quan niệm sai lầm về cách thức lây lan của vi rút."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Dịch bệnh bùng phát",
+          "description": "_Trong bài học hôm nay, các bạn sẽ đến với “Thị Trấn Quái Vật”, nơi sắp xảy ra một đợt lây lan vi rút. Tiến sĩ Quái Vật cần sự giúp đỡ của bạn để làm chậm sự lây lan của vi-rút._\n\n_Bạn sẽ tạo một trình mô phỏng dịch bệnh trong Sprite Lab, rồi sử dụng trình mô phỏng đó để hiểu cách lây lan của vi rút. Bạn cũng sẽ giúp tất cả quái vật hồi phục sức khỏe đấy!_",
+          "progression_name": "Dịch bệnh bùng phát"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Làm như sau:** Đọc bài _Chào mừng đến với Thị Trấn Quái Vật_ trước cả lớp.",
+          "progression_name": "Chào mừng đến với Thị Trấn Quái Vật"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Làm như sau:** Cùng học sinh ôn lại từ vựng **mô hình và bản mô phỏng** bằng cách phát triển từ bài học trước. Bản mô phỏng là mô hình máy tính của một quy trình hoặc hệ thống."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Hôm nay, chúng ta sẽ biến một nơi như Thị Trấn Quái Vật trở nên sống động bằng cách viết một số mã lệnh. Trong bản mô phỏng này, bạn sẽ sử dụng các nhân vật để đại diện cho những con quái vật khác nhau. Nhân vật sẽ có những bộ trang phục khác nhau để cho chúng ta biết thông tin như họ đang bị ốm hay khỏe mạnh. Bạn cũng sẽ sử dụng hành vi để khiến quái vật di chuyển. Cuối cùng, bạn sẽ sử dụng các sự kiện để thay đổi trang phục của một nhân vật khi hai nhân vật chạm vào nhau trên màn hình. Sự kiện này sẽ đại diện cho việc một quái vật truyền vi rút cho quái vật khác. Bạn sẽ dự đoán kết quả xảy ra với những vùng lân cận của Thị Trấn Quái Vật và giúp họ khỏe mạnh trở lại!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Làm như sau:** Cho học sinh chuyển sang máy tính của họ và yêu cầu họ bắt đầu làm theo hướng dẫn của từng cấp độ trong phần phát triển kỹ năng. Nếu hoàn thành phần này sớm, học sinh có thể tiếp tục thử nghiệm với mã lệnh của mình ở Cấp độ 6 cho đến khi cả lớp sẵn sàng học tiếp."
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Làm như sau:** Cho học sinh trở về máy tính của mình và để họ hoàn thành các cấp độ còn lại. Một số cấp độ trong số này có các thử thách tùy chọn. Hãy khuyến khích học sinh đọc kỹ hướng dẫn và thử nghiệm các bản mô phỏng của mình.",
+          "progression_name": "Dự án nhỏ: Trình mô phỏng dịch bệnh bùng phát"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "chơi miễn phí"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Bản mô phỏng là phương pháp tuyệt vời để học những điều khó có thể quan sát được trong thế giới thực. Chúng giúp các nhà khoa học giải quyết vấn đề, dự đoán cách giải quyết vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là cách thể hiện diễn biến của một đợt lây lan vi rút ở Thị Trấn Quái Vật._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Thảo luận:**\n\n-   Bản mô phỏng có ích như thế nào trong thế giới thực?\n-   Bản mô phỏng có thể giúp chúng ta hiểu thế giới xung quanh mình như thế nào?\n-   Bản mô phỏng có thể cải thiện cách chúng ta thử nghiệm các ý tưởng như thế nào? Mục tiêu của cuộc thảo luận là để học sinh hiểu rằng mô phỏng là một cách mô hình hóa các hệ thống phức tạp bằng phương pháp tương tác. Họ cũng cần hiểu được cách các bản mô phỏng giúp mọi người thử nghiệm các ý tưởng một cách nhanh chóng, an toàn và chi phí thấp."
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Phản ánh",
+          "description": "**Lời nhắc:**\n\n-   Bản mô phỏng này giống như thế giới thực như thế nào? Khác biệt như thế nào?\n-   Bạn muốn thay đổi/thêm gì vào bản mô phỏng của mình không?"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Giới thiệu",
           "tips": [
@@ -1207,45 +1246,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Bạn có hai tờ giấy nhớ. Trên một tờ, hãy viết một điều bạn đã học được về lập trình ngày hôm nay. Trên tờ thứ hai, viết một điều bạn đã học được về thơ hôm nay. Hãy chia sẻ với cả lớp bằng cách giơ tay để trả lời câu hỏi này: Bạn hy vọng mình có thể học thêm điều gì về lập trình và khoa học máy tính?"
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Giới thiệu",
-          "description": "**Thảo luận:**\n\n-   _Chúng ta biết điều gì về cách thức lây lan của vi rút?_\n-   _Điều gì có thể khiến vi rút lây lan trong thị trấn nhanh hơn?_\n-   \\_Điều gì có thể giúp làm chậm quá trình lây lan của vi rút?\n\n\\_Mục tiêu của hoạt động thảo luận này là để học sinh có cơ hội ôn lại kiến thức cũ và quan sát ý tưởng của mình trên bảng. Đây cũng là cơ hội để tìm hiểu một số quan niệm sai lầm về cách thức lây lan của vi rút."
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Dịch bệnh bùng phát",
-          "description": "_Trong bài học hôm nay, các bạn sẽ đến với “Thị Trấn Quái Vật”, nơi sắp xảy ra một đợt lây lan vi rút. Tiến sĩ Quái Vật cần sự giúp đỡ của bạn để làm chậm sự lây lan của vi-rút._\n\n_Bạn sẽ tạo một trình mô phỏng dịch bệnh trong Sprite Lab, rồi sử dụng trình mô phỏng đó để hiểu cách lây lan của vi rút. Bạn cũng sẽ giúp tất cả quái vật hồi phục sức khỏe đấy!_",
-          "progression_name": "Dịch bệnh bùng phát"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "**Làm như sau:** Đọc bài _Chào mừng đến với Thị Trấn Quái Vật_ trước cả lớp.",
-          "progression_name": "Chào mừng đến với Thị Trấn Quái Vật"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Làm như sau:** Cùng học sinh ôn lại từ vựng **mô hình và bản mô phỏng** bằng cách phát triển từ bài học trước. Bản mô phỏng là mô hình máy tính của một quy trình hoặc hệ thống."
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Hôm nay, chúng ta sẽ biến một nơi như Thị Trấn Quái Vật trở nên sống động bằng cách viết một số mã lệnh. Trong bản mô phỏng này, bạn sẽ sử dụng các nhân vật để đại diện cho những con quái vật khác nhau. Nhân vật sẽ có những bộ trang phục khác nhau để cho chúng ta biết thông tin như họ đang bị ốm hay khỏe mạnh. Bạn cũng sẽ sử dụng hành vi để khiến quái vật di chuyển. Cuối cùng, bạn sẽ sử dụng các sự kiện để thay đổi trang phục của một nhân vật khi hai nhân vật chạm vào nhau trên màn hình. Sự kiện này sẽ đại diện cho việc một quái vật truyền vi rút cho quái vật khác. Bạn sẽ dự đoán kết quả xảy ra với những vùng lân cận của Thị Trấn Quái Vật và giúp họ khỏe mạnh trở lại!_"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Làm như sau:** Cho học sinh chuyển sang máy tính của họ và yêu cầu họ bắt đầu làm theo hướng dẫn của từng cấp độ trong phần phát triển kỹ năng. Nếu hoàn thành phần này sớm, học sinh có thể tiếp tục thử nghiệm với mã lệnh của mình ở Cấp độ 6 cho đến khi cả lớp sẵn sàng học tiếp."
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Làm như sau:** Cho học sinh trở về máy tính của mình và để họ hoàn thành các cấp độ còn lại. Một số cấp độ trong số này có các thử thách tùy chọn. Hãy khuyến khích học sinh đọc kỹ hướng dẫn và thử nghiệm các bản mô phỏng của mình.",
-          "progression_name": "Dự án nhỏ: Trình mô phỏng dịch bệnh bùng phát"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "chơi miễn phí"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Bản mô phỏng là phương pháp tuyệt vời để học những điều khó có thể quan sát được trong thế giới thực. Chúng giúp các nhà khoa học giải quyết vấn đề, dự đoán cách giải quyết vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là cách thể hiện diễn biến của một đợt lây lan vi rút ở Thị Trấn Quái Vật._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Thảo luận:**\n\n-   Bản mô phỏng có ích như thế nào trong thế giới thực?\n-   Bản mô phỏng có thể giúp chúng ta hiểu thế giới xung quanh mình như thế nào?\n-   Bản mô phỏng có thể cải thiện cách chúng ta thử nghiệm các ý tưởng như thế nào? Mục tiêu của cuộc thảo luận là để học sinh hiểu rằng mô phỏng là một cách mô hình hóa các hệ thống phức tạp bằng phương pháp tương tác. Họ cũng cần hiểu được cách các bản mô phỏng giúp mọi người thử nghiệm các ý tưởng một cách nhanh chóng, an toàn và chi phí thấp."
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Phản ánh",
-          "description": "**Lời nhắc:**\n\n-   Bản mô phỏng này giống như thế giới thực như thế nào? Khác biệt như thế nào?\n-   Bạn muốn thay đổi/thêm gì vào bản mô phỏng của mình không?"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

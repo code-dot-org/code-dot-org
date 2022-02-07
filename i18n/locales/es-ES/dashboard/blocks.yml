@@ -356,6 +356,7 @@ es:
             '"right"': columna derecha
             '"x"': entrecruzado
             '"plus"': signo más
+            '"spiral"': espiral
             '"random"': aleatorio
       Dancelab_makeAnonymousDanceSprite:
         text: crear un nuevo {COSTUME} en {LOCATION}
@@ -465,6 +466,7 @@ es:
             '"right"': columna derecha
             '"x"': entrecruzado
             '"plus"': signo más
+            '"spiral"': espiral
             '"random"': aleatorio
       Dancelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
@@ -991,6 +993,8 @@ es:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"speed"': velocidad
+      gamelab_changeVarBy:
+        text: cambia {VARIABLE} por {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
@@ -1001,6 +1005,20 @@ es:
         text: cuando se hace clic en {SPRITE}
       gamelab_clickedSpritePointer:
         text: clic en sprite {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando a la derecha
+            new Behavior(spinning_left, []): girando a la izquierda
+            new Behavior(fluttering, []): revoloteando
+            new Behavior(jittering, []): nerviosismo
+            new Behavior(wobbling, []): tambaleándose
+            new Behavior(wandering, []): vagando
+            new Behavior(patrolling, []): patrullando
+            new Behavior(moving_west_and_looping, []): moviéndose hacia el oeste y haciendo un bucle
+            new Behavior(moving_east_and_looping, []): moviéndose hacia el este y haciendo un bucle
+            new Behavior(moving_north_and_looping, []): moviéndose hacia el norte y haciendo un bucle
+            new Behavior(moving_south_and_looping, []): moviéndose hacia el sur y haciendo un bucle
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_costumeImage:
@@ -1052,6 +1070,19 @@ es:
         text: |-
           if {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} el disfraz es {COSTUME}"
       gamelab_isKeyPressed:
@@ -1243,6 +1274,12 @@ es:
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSpeech:
         text: reproducir grabación {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moverse con las flechas del teclado
+            new Behavior(driving_with_arrow_keys, []): conducir con las teclas de flecha
+            draggable(): poder arrastrastrarlos
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:

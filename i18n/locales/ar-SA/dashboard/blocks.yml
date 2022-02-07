@@ -1014,6 +1014,16 @@ ar:
         text: عند النقر على {SPRITE}
       gamelab_clickedSpritePointer:
         text: النقر {SPRITE}
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): الدوران ناحية اليمين
+            new Behavior(spinning_left, []): الدوران ناحية اليسار
+            new Behavior(jittering, []): الاهتزاز
+            new Behavior(wandering, []): التحرك
+            new Behavior(patrolling, []): التجوُّل
+            new Behavior(moving_north_and_looping, []): تحريك إلى الشمال والدوران
+            new Behavior(moving_south_and_looping, []): تحريك إلى الجنوب والدوران
       gamelab_comment:
         text: 'التعليق: {COMMENT}'
       gamelab_costumeImage:
@@ -1065,6 +1075,19 @@ ar:
         text: |-
           إذا {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} الزي {COSTUME}"
       gamelab_isKeyPressed:
@@ -1252,6 +1275,11 @@ ar:
             "'sound://category_digital/jump_7.mp3'": قفز
       gamelab_playSpeech:
         text: ألعاب النطق {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): التحرك من خلال الأسهم
+            draggable(): كونها قابلة للسحب
       gamelab_pointInDirection:
         text: نقطه {SPRITE} {DIRECTION}
         options:

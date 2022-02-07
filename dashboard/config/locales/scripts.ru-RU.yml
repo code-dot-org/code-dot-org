@@ -7835,12 +7835,26 @@ ru:
               display_name: Обходов
             csp_project:
               display_name: Проект
+            lessonGroup-5:
+              display_name: Опрос после окончания курса
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритмы
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Параметры и возвращаемые значения
             csp_libraries:
               display_name: Библиотеки
+            lessonGroup-3:
+              display_name: Опрос
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опрос
         csp9-2021:
           lessons:
             Big Data, Crowdsourcing, and Machine Learning:
@@ -7851,12 +7865,17 @@ ru:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Урок 9: Данные'
+            lessonGroup-2:
+              display_name: Опрос
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
               description_student: Обзор урока
             'Project: Innovation Simulation Part 7':
               description_student: Обзор урока
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос
         coursea-2021:
           description_short: Введение в компьютерные науки для детей, еще не умеющих
             читать.
@@ -10072,6 +10091,26 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Представляем Лабораторию спрайтов
+              description_student: Вы будете обсуждать роль компьютеров и технологий
+                в вашей жизни с акцентом на том, как приложения и инструменты позволяют
+                пользователям выбирать способы их использования.
+            Making Sprites:
+              name: Создание спрайтов
+            Sprites in Action:
+              name: Спрайты в действии
+            'Mini-Project: Virtual Pet':
+              name: 'Мини-проект: Виртуальный питомец'
+            'Mini-Project: User Input Programs':
+              name: 'Мини-проект: Программы с пользовательским вводом'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайты
+            lessonGroup-3:
+              display_name: Переменные
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -10160,3 +10199,558 @@ ru:
               display_name: Содержимое
             lessonGroup-5:
               display_name: Песочница
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: Безопасность в моем интернет-окружении
+              description_student: Узнайте, как безопасно посещать сайты в Интернете.
+              key: Безопасность в моем интернет-окружении
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
+              description_student: Щелкните и перетащите, чтобы закончить головоломки.
+              key: Изучение перетаскивания
+            Happy Maps:
+              name: Весёлые карты
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
+              description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
+              key: Последовательность в "Скрат"
+            Programming with Scrat:
+              name: Программирование со Скратом
+            Programming with Rey and BB-8:
+              name: Программирование с Реем и BB-8
+              key: Программирование с Реем и BB-8
+            Happy Loops:
+              name: Счастливые циклы
+              description_teacher: Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы.
+            Loops with Scrat:
+              name: Циклы со Скратом
+            Loops with Laurel:
+              name: Циклы в Собирателе
+            Ocean Scene with Loops:
+              name: Циклы в исполнителе Художник
+              key: Циклы в исполнителе Художник
+            'Programming: Happy Maps':
+              name: Весёлые карты
+            Programming in Ice Age:
+              name: Программирование со Скратом
+            'Loops: Happy Loops':
+              name: Счастливые циклы
+              description_teacher: Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы.
+            Loops in Ice Age:
+              key: Циклы в ледниковом периоде
+              name: Циклы со Скратом
+            Loops in Collector:
+              key: Циклы в Собирателе
+              name: Циклы в Собирателе
+            'Events: The Big Event':
+              key: 'События: Большое событие'
+            Events in Play Lab:
+              key: События в Лаборатории игр
+            lesson-1:
+              key: урок-1
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+          student_description: Изучите основы информатики и интернет-безопасности.
+            В конце курса создайте свою собственную игру или историю, которой сможете
+            поделиться.
+          description_short: Введение в компьютерные науки для детей, еще не умеющих
+            читать.
+          description_audience: 'Возраст: 4-7'
+        express-2022:
+          lessons:
+            Making Sprites:
+              name: Создание спрайтов
+            Sprites in Action:
+              name: Спрайты в действии
+            Dance Party:
+              name: Танцевальная вечеринка
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
+              key: Вложенные циклы в Лабиринте
+            While Loops in Farmer:
+              name: Цикл while в Фермере
+            For Loops with Bee:
+              name: Циклы со счетчиком в игре "Пчела"
+              key: Циклы со счетчиком в игре "Пчела"
+            For Loops with Artist:
+              name: Цикл for в Художнике
+              key: Цикл for в Художнике
+            lesson-2:
+              key: урок-2
+              name: Создание спрайтов
+            lesson-3:
+              key: урок-3
+              name: Спрайты в действии
+            lesson-1:
+              key: урок-1
+              name: Танцевальная вечеринка
+            Sticker Art with Loops:
+              key: Циклы в исполнителе Художник
+            While Loops with the Farmer:
+              key: Циклы «пока» со Сборщицей урожая
+              name: Цикл while в Фермере
+            lesson-4:
+              key: урок-4
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_sprites:
+              display_name: Спрайты
+            lessonGroup-9:
+              display_name: События
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_functions:
+              display_name: функции
+            csf_variables:
+              display_name: Переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
+          description_audience: 'Возраст: 9-18'
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Двоичные числа
+              key: Двоичные числа
+            Lossless Compression:
+              name: Сжатие без потерь
+              key: Сжатие без потерь
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифровая информация'
+        csp2-2022:
+          lessons:
+            The Need for Addressing:
+              name: Необходимость адресации
+              key: Необходимость адресации
+            Routers and Redundancy:
+              name: Маршрутизаторы и резервирование
+              key: Маршрутизаторы и резервирование
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Урок 2: Интернет'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Отладка
+              key: Отладка
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Циклы
+            csp_traversals:
+              display_name: Обходов
+            csp_project:
+              display_name: Проект
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Вперед, вперед
+              key: Вперед, вперед
+            Getting Loopy:
+              name: Зацикливание
+            Loops with Laurel:
+              name: Циклы в Собирателе
+            Drawing Gardens with Loops:
+              name: Циклы в исполнителе Художник
+            The Right App:
+              name: The Right App
+              key: The Right App
+            Programming in Maze:
+              key: Программирование в Лабиринте
+            'Loops: Getting Loopy':
+              name: Зацикливание
+            Loops in Harvester:
+              key: Циклы в харвестере
+            Loops in Collector:
+              key: Циклы в Собирателе
+              name: Циклы в Собирателе
+            Loops in Artist:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              key: 'События: Большое событие'
+            Events in Play Lab:
+              key: События в Лаборатории игр
+            lesson-1:
+              key: урок-1
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_impacts:
+              display_name: Воздействие компьютерной техники
+            csf_events:
+              display_name: События
+          student_description: Изучите основы информатики и интернет-безопасности.
+            В конце курса создайте свою собственную игру или историю, которой сможете
+            поделиться.
+          description_audience: 'Возраст: 5-8'
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Большое Событие
+            Picturing Data:
+              name: Изображение данных
+              key: Изображение данных
+            Binary Bracelets:
+              name: Двоичные браслеты
+              key: Двоичные браслеты
+            Programming in Maze:
+              key: Программирование в Лабиринте
+            Programming in Collector:
+              key: Программирование в игре Collector
+            Loops in Harvester:
+              key: Циклы в харвестере
+            Sticker Art with Loops:
+              key: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              key: 'События: Большое событие'
+              name: Большое Событие
+            Events in Play Lab:
+              key: События в Лаборатории игр
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+            csf_data:
+              display_name: Данные
+          description_audience: 'Возраст: 6-10'
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметры и возвращаемые значения
+            csp_libraries:
+              display_name: Библиотеки
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: урок-4
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Машинное обучение
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Big Data, краудсорсинг и машинное обучение
+            Machine Learning and Bias:
+              key: Машинное обучение и предвзятость
+              name: Машинное обучение
+            lesson-10:
+              key: урок-10
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Урок 9: Данные'
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 6:
+              description_student: Обзор урока
+            Project   Innovation Simulation Part 7:
+              description_student: Обзор урока
+            'Project: Innovation Simulation Part 6':
+              description_student: Обзор урока
+            'Project: Innovation Simulation Part 7':
+              description_student: Обзор урока
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
+            Introduction to Online Puzzles:
+              name: Знакомство с онлайн-головоломками
+              key: Знакомство с онлайн-головоломками
+            Relay Programming:
+              name: Эстафетное программирование
+              key: Эстафетное программирование
+            Dance Party:
+              name: Танцевальная вечеринка
+              key: Танцевальная вечеринка
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
+              key: Циклы в ледниковом периоде
+            Drawing Shapes with Loops:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
+            Conditionals with Cards:
+              name: Условные выражения с картами
+              key: Условные выражения с картами
+            While Loops in Farmer:
+              name: Цикл while в Фермере
+              key: Цикл while в Фермере
+            lesson-5:
+              key: урок-5
+            'Algorithms: Graph Paper Programming':
+              name: Программирование на бумаге в клеточку
+            Debugging in Collector:
+              key: Отладка в игре Collector
+            Loops in Artist:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+            Nested Loops in Bee:
+              key: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
+            lesson-6:
+              key: урок-6
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_events:
+              display_name: События
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+          title: Курс D (2021)
+          description_audience: 'Возраст: 7-11'
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Private and Personal Information
+              key: Private and Personal Information
+            'Mini-Project: About Me':
+              name: 'Мини-проект: Обо мне'
+            Digital Sharing:
+              name: Публикация цифровых произведений
+              key: Публикация цифровых произведений
+            Fancy Shapes using Nested Loops:
+              name: Вложенные циклы в среде Художник
+            Songwriting:
+              name: Написание песен
+              description_teacher: Одним из самых великолепных структур в мире компьютерной
+                науки является функция.  Функции (иногда называемые процедурами) -
+                это мини-программы, которые можно использовать снова и снова внутри
+                большой программы. Этот урок поможет учащимся интуитивно понять, почему
+                объединение частей кода в функцию является такой полезной практикой.
+            Designing for Accessibility:
+              name: Разработка для обеспечения доступности
+              description_student: 'Узнай о значении доступности и эмпатии путем коллективного
+                обсуждения и разработки решений в области доступа для гипотетических
+                приложений. '
+            Simon Says:
+              key: Саймон говорит
+            lesson-4:
+              key: урок-4
+            About Me:
+              name: 'Мини-проект: Обо мне'
+            Nested Loops in Artist:
+              key: Вложенные циклы в Художнике
+              name: Вложенные циклы в среде Художник
+            Nested Loops in Frozen:
+              key: Вложенные циклы в игре на тему "Ледяного сердца"
+            'Functions: Songwriting':
+              name: Написание песен
+              description_teacher: Одним из самых великолепных структур в мире компьютерной
+                науки является функция.  Функции (иногда называемые процедурами) -
+                это мини-программы, которые можно использовать снова и снова внутри
+                большой программы. Этот урок поможет учащимся интуитивно понять, почему
+                объединение частей кода в функцию является такой полезной практикой.
+            Conditionals:
+              key: Условные команды
+            Functions in Harvester:
+              key: Функции в игре "Жнец"
+            lesson-1:
+              key: урок-1
+              name: Разработка для обеспечения доступности
+              description_student: 'Узнай о значении доступности и эмпатии путем коллективного
+                обсуждения и разработки решений в области доступа для гипотетических
+                приложений. '
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайты
+            csf_digcit:
+              display_name: Цифровое гражданство
+            ramp_up:
+              display_name: Вложенные циклы
+            csf_functions:
+              display_name: функции
+            csf_nested_loops:
+              display_name: Условные команды
+            lessonGroup-7:
+              display_name: Воздействие компьютерной техники
+          description_audience: 'Возраст: 8-12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Представляем Лабораторию спрайтов
+              description_student: Вы будете обсуждать роль компьютеров и технологий
+                в вашей жизни с акцентом на том, как приложения и инструменты позволяют
+                пользователям выбирать способы их использования.
+            Making Sprites:
+              name: Создание спрайтов
+            Sprites in Action:
+              name: Спрайты в действии
+            'Mini-Project: Virtual Pet':
+              name: 'Мини-проект: Виртуальный питомец'
+            The Power of Words:
+              name: Digital Citizenship
+            'Mini-Project: User Input Programs':
+              name: 'Мини-проект: Программы с пользовательским вводом'
+            Programming with the Bee:
+              name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
+            For Loop Fun:
+              name: Игры с циклами
+              key: Игры с циклами
+            For Loops with Bee:
+              name: Циклы со счетчиком в игре "Пчела"
+            For Loops with Artist:
+              name: Цикл for в Художнике
+            Outbreak:
+              name: Эпидемия
+            AI For Oceans:
+              name: AI для океанов
+              description_student: 'Краткое содержание урока: сначала ученики классифицируют
+                объекты либо как "рыбу", либо как" не рыбу", чтобы попытаться удалить
+                мусор из океана. Затем учащиеся должны будут расширить свой набор
+                данных обучения, чтобы включить в него других морских существ, которые
+                живут в воде. Во второй части занятия учащиеся будут выбирать собственные
+                метки для нанесения на изображения случайно сгенерированных рыб. Эти
+                обучающие данные используются для модели машинного обучения, которая
+                затем должна иметь возможность самостоятельно маркировать новые изображения.'
+              description_teacher: "\\*\\* Краткое содержание урока: \\* \\* сначала
+                ученики классифицируют объекты либо как \"рыбу\", либо как\" не рыбу\",
+                чтобы попытаться удалить мусор из океана. Затем учащиеся должны будут
+                расширить свой набор данных обучения, чтобы включить в него других
+                морских существ, которые живут в воде. Во второй части занятия учащиеся
+                будут выбирать собственные метки для нанесения на изображения случайно
+                сгенерированных рыб. Эти обучающие данные используются для модели
+                машинного обучения, которая затем должна иметь возможность самостоятельно
+                маркировать новые изображения.\\\\р\n\\\r\n\\\r\n\\*\\* Проверка правильности:
+                \\* \\* этот учебник не скажет ученикам, правильно ли они прошли уровень.
+                Можно быстро пропустить различные части действия. Поощряйте учащихся
+                смотреть видео, читать инструкции и пробовать разные вещи по пути.
+                В любой момент они могут поделиться своими находками с вами или одноклассником.\\\\р"
+            The Internet:
+              name: Интернет
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+              name: Создание спрайтов
+            lesson-8:
+              key: урок-8
+              name: Спрайты в действии
+            Virtual Pet:
+              key: Виртуальный питомец
+              name: 'Мини-проект: Виртуальный питомец'
+            lesson-2:
+              key: урок-2
+              name: Digital Citizenship
+            lesson-9:
+              key: урок-9
+            lesson-10:
+              key: урок-10
+            lesson-11:
+              key: урок-11
+              name: 'Мини-проект: Программы с пользовательским вводом'
+            Loops with the Artist:
+              key: Циклы с Художником
+            Nested Loops in the Maze:
+              name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
+            For Loops in Bee:
+              key: Цикл for в Пчеле
+              name: Циклы со счетчиком в игре "Пчела"
+            For Loops in Artist:
+              key: Цикл for в Художнике
+              name: Цикл for в Художнике
+            lesson-5:
+              key: урок-5
+            AI for Oceans:
+              key: AI для океанов
+              name: AI для океанов
+              description_student: 'Краткое содержание урока: сначала ученики классифицируют
+                объекты либо как "рыбу", либо как" не рыбу", чтобы попытаться удалить
+                мусор из океана. Затем учащиеся должны будут расширить свой набор
+                данных обучения, чтобы включить в него других морских существ, которые
+                живут в воде. Во второй части занятия учащиеся будут выбирать собственные
+                метки для нанесения на изображения случайно сгенерированных рыб. Эти
+                обучающие данные используются для модели машинного обучения, которая
+                затем должна иметь возможность самостоятельно маркировать новые изображения.'
+              description_teacher: "\\*\\* Краткое содержание урока: \\* \\* сначала
+                ученики классифицируют объекты либо как \"рыбу\", либо как\" не рыбу\",
+                чтобы попытаться удалить мусор из океана. Затем учащиеся должны будут
+                расширить свой набор данных обучения, чтобы включить в него других
+                морских существ, которые живут в воде. Во второй части занятия учащиеся
+                будут выбирать собственные метки для нанесения на изображения случайно
+                сгенерированных рыб. Эти обучающие данные используются для модели
+                машинного обучения, которая затем должна иметь возможность самостоятельно
+                маркировать новые изображения.\\\\р\n\\\r\n\\\r\n\\*\\* Проверка правильности:
+                \\* \\* этот учебник не скажет ученикам, правильно ли они прошли уровень.
+                Можно быстро пропустить различные части действия. Поощряйте учащихся
+                смотреть видео, читать инструкции и пробовать разные вещи по пути.
+                В любой момент они могут поделиться своими находками с вами или одноклассником.\\\\р"
+            Internet:
+              key: интернет
+              name: Интернет
+          lesson_groups:
+            ramp_up:
+              display_name: Спрайты
+            lessonGroup-7:
+              display_name: Цифровое гражданство
+            lessonGroup-8:
+              display_name: Переменные
+          description_short: Изучи все понятия в Основах компьютерных наук и создай
+            собственную картинку, игру или историю!
+          description_audience: 'Возраст: 9-13'
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        pre-express-2022:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое

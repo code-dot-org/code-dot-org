@@ -295,6 +295,7 @@ bg:
             '"row"': ред
             '"column"': колона
             '"plus"': плюс
+            '"spiral"': спирала
             '"random"': случаен
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -378,6 +379,7 @@ bg:
             '"row"': ред
             '"column"': колона
             '"plus"': плюс
+            '"spiral"': спирала
             '"random"': случаен
       Dancelab_randomColor:
         text: случаен цвят
@@ -734,6 +736,19 @@ bg:
             '"seconds"': секунди
       gamelab_hideTitleScreen:
         text: скрива заглавния екран
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -819,6 +834,10 @@ bg:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": арфа
             "'sound://category_retro/retro_game_ui_select_6.mp3'": изберете
             "'sound://category_digital/jump_7.mp3'": скок
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): може да се мести
       gamelab_randColor:
         text: случаен цвят
       gamelab_randomColor:

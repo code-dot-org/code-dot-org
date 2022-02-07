@@ -1405,3 +1405,4 @@ pt:
     not_now: Agora não
   behaviors:
     this_sprite: este personagem
+  teacher_feedback: Feedback do Professor
