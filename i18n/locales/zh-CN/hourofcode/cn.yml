@@ -186,7 +186,7 @@ cn:
   codeorg_homepage_csc_title: 计算机科学联系
   hoc2018_tutorial_mchoc_description: 使用代码方块，带领艾莉克斯或史蒂夫踏上《我的世界》冒险旅程。
   codeorg_homepage_hoc2019_dance_heading: 尝试新版 <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  为面临学校停课的家长和教师提供支持。"
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
@@ -741,6 +741,7 @@ cn:
   footer_menu_support: 支持
   footer_menu_terms: 条款
   footer_menu_privacy: 隐私政策
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: 编程一小时
   learn_banner_blurb: 试用为所有年龄段精心设计的 一小时教程，可提供超过 45 种语言版本。 与全球 180 多个国家的数百万名学生和老师一起，开始“编程一小时”。
   learn_banner_beyond: 想要继续学习？ <a id='learn_banner_beyond'>超过一小时</a>
