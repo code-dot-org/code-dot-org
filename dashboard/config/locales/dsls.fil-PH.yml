@@ -1219,65 +1219,73 @@ fil-PH:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2050,6 +2058,7 @@ fil-PH:
           sa iba, o magbahagi ng isang mensahe tungkol sa kung ano sa tingin mo ang
           maaari naming gawin upang matulungan ang iba na maging malusog pagdating
           ng isang virus sa bayan."
+        content1: paglalarawan dito
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - {}
@@ -2101,9 +2110,10 @@ fil-PH:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2341,6 +2351,7 @@ fil-PH:
 
 
           Kapag tapos ka na, ibahagi ang iyong simulasyon sa iba. Ibahagi ang iyong mensahe tungkol sa kung ano sa palagay mo ang maaaring gawin upang matulungan ang iba na maging malusog pagdating ng isang virus sa bayan.
+        content1: paglalarawan dito
       CSD U3 Collisions SFLP:
         markdown: |-
           Pinoprograma ng klase ang kanilang mga tiyanak na makipag-ugnayan sa mga bagong paraan. Pagkatapos ng maikling pagsusuri kung paano nila ginamit ang isTouching na block, nag-isip ang klase ng iba pang paraan kung paano makikipag-ugnayan ang dalawang tiyanak. Ginagamit nila ang isTouching upang hayaang itulak ng isang tiyanak ang isa pa sa screen bago magsanay gamit ang apat na block ng banggaan (bumangga, umalis, tumalbog, at bounceOff).
@@ -2401,3 +2412,270 @@ fil-PH:
           ## Mga Mapagkukunan
 
           * [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      Begin planning your project:
+        content1: paglalarawan dito
+      Begin planning your project_2018:
+        content1: paglalarawan dito
+      Begin planning your project_2018_2019:
+        content1: paglalarawan dito
+      Begin planning your project_2018_2019_2020:
+        content1: paglalarawan dito
+      CSD U2 Design Project:
+        content1: paglalarawan dito
+      CSD U2 Design Project_2018:
+        content1: paglalarawan dito
+      CSD U2 Design Project_2018_2019:
+        content1: paglalarawan dito
+      CSD U2 L1 Overview:
+        content1: paglalarawan dito
+      CSD U2 L2 Overview:
+        content1: paglalarawan dito
+      CSD U2 L3 Overview:
+        content1: paglalarawan dito
+      CSD U2 L4 Overview:
+        content1: paglalarawan dito
+      CSD U2 L5 Overview:
+        content1: paglalarawan dito
+      CSD U2 L6 Overview:
+        content1: paglalarawan dito
+      CSD U2 Lesson 6 Overview:
+        content1: paglalarawan dito
+      CSD U2 expand project:
+        content1: paglalarawan dito
+      CSD U2 expand project_2018:
+        content1: paglalarawan dito
+      CSD U2 expand project_2018_2019:
+        content1: paglalarawan dito
+      CSD U2 project guide:
+        content1: paglalarawan dito
+      CSD U2 project guide_2018:
+        content1: paglalarawan dito
+      CSD U2 project guide_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 Card Examples_2018:
+        content1: paglalarawan dito
+      CSD U3 Card Examples_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 combining rep:
+        content1: paglalarawan dito
+      CSD U3 combining rep_2018:
+        content1: paglalarawan dito
+      CSD U3 combining rep_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 game intro:
+        content1: paglalarawan dito
+      CSD U3 game intro_2018:
+        content1: paglalarawan dito
+      CSD U3 game intro_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 platform intro:
+        content1: paglalarawan dito
+      CSD U3 platform intro_2018:
+        content1: paglalarawan dito
+      CSD U3 platform intro_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 Encryption 1:
+        content1: paglalarawan dito
+      CSD U5 Encryption 1_2018:
+        content1: paglalarawan dito
+      CSD U5 Encryption 1_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 Encryption 2:
+        content1: paglalarawan dito
+      CSD U5 Encryption 2_2018:
+        content1: paglalarawan dito
+      CSD U5 Encryption 2_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: paglalarawan dito
+      CSD U5 crosstab warmup:
+        content1: paglalarawan dito
+      CSD U5 crosstab warmup_2018:
+        content1: paglalarawan dito
+      CSD U5 crosstab warmup_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 data visualization:
+        content1: paglalarawan dito
+      CSD U5 data visualization_2018:
+        content1: paglalarawan dito
+      CSD U5 data visualization_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 student record:
+        content1: paglalarawan dito
+      CSD U5 student record_2018:
+        content1: paglalarawan dito
+      CSD U5 student record_2018_2019:
+        content1: paglalarawan dito
+      CSD U6 LED create intro:
+        content1: paglalarawan dito
+      CSD U6 LED create intro_2018:
+        content1: paglalarawan dito
+      CSD U6 LED create intro_2018_2019:
+        content1: paglalarawan dito
+      CSD U6 final intro:
+        content1: paglalarawan dito
+      CSD U6 final intro_2018:
+        content1: paglalarawan dito
+      CSD U6 final intro_2018_2019:
+        content1: paglalarawan dito
+      Internet Simulator Setup:
+        content1: paglalarawan dito
+      Internet Simulator Setup 2:
+        content1: paglalarawan dito
+      Internet Simulator Setup 3:
+        content1: paglalarawan dito
+      Multi-Screen Apps:
+        content1: paglalarawan dito
+      New Challenge Introduction:
+        content1: paglalarawan dito
+        markdown: "### Bagong Hamon: Mag-crack ng Random Substitution Cipher...na
+          may bagong widget\n\nPaano kung sa halip na ilipat ang buong alpabeto, i-mapa
+          namin ang bawat titik ng alpabeto sa isang random na magkakaibang titik
+          ng alpabeto? Tinatawag ito na **random substitution cipher.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNgayon,
+          sa halip na ang lihim na mensahe ay naka-encode sa isang simpleng alphabetic
+          shift, haharapin mo ang mga mensaheng naka-encode na may **random substitution**.\n\n\n\nMas
+          mahirap itong i-crack at nangangailangan ng mas sopistikadong tool, kaya...\n\nKapag
+          nag-click ka sa magpatuloy, makakakita ka ng **bago, mas sopistikadong bersyon
+          ng tool sa pag-encrypt** na nagpapakita sa iyo ng maraming iba't ibang bagay.\n\nNgunit
+          isang kaunting misteryo ang ginagawa nito!\n\n### Iyong Gawain:\n\n * Alamin
+          kung ano ang nangyayari sa bagong bersyon na ito ng tool\n * Anong impormasyon
+          ang inilalahad sa iyo?\n * Alamin kung ano ang pinapayagan ng tool na gawin
+          mo\n * Gaya ng dati: hindi mo ito masisira. Kaya mag-click sa mga bagay,
+          sundutin sa paligid.\n * Kung malalaman mo ito, maaari mong i-crack ang
+          isang mensaheng naka-encode na may random na pagpapalit.\n \n### Mungkahi\n\n*
+          Alam mo ba na **E** ang pinakakaraniwang titik na ginagamit sa Ingles?\n\n###
+          Muling Magtipon at Mag-usap\nPagkatapos ng ilang oras na paglalaro dito,
+          dapat kang makipag-usap sa isang tao - kasosyo, maliit na grupo, buong klase
+          - upang talakayin kung ano ang nahanap mo at i-verify na alam mo kung ano
+          ang nangyayari at ang iba't ibang paraan na magagamit mo ang tool."
+      OPD-K5 Reviewing Reflections:
+        content1: paglalarawan dito
+      OPD-K5 Stage3aGo:
+        content1: paglalarawan dito
+      OPD-K5 Stage3aGo_copy:
+        content1: paglalarawan dito
+      OPD-K5 Stage3aGo_dani:
+        content1: paglalarawan dito
+      OPD-K5 conditionals introduced:
+        content1: paglalarawan dito
+      OPD-K5 debugging:
+        content1: paglalarawan dito
+      OPD-K5 diving deeper intro:
+        content1: paglalarawan dito
+      OPD-K5 events introduced:
+        content1: paglalarawan dito
+      OPD-K5 for loops:
+        content1: paglalarawan dito
+      OPD-K5 for loops intro:
+        content1: paglalarawan dito
+      OPD-K5 for loops introduction:
+        content1: paglalarawan dito
+      OPD-K5 functions introduced:
+        content1: paglalarawan dito
+      OPD-K5 journaling:
+        content1: paglalarawan dito
+      OPD-K5 lesson implementation planning:
+        content1: paglalarawan dito
+      OPD-K5 lesson plans:
+        content1: paglalarawan dito
+      OPD-K5 loops introduced:
+        content1: paglalarawan dito
+      OPD-K5 project:
+        content1: paglalarawan dito
+      OPD-K5 projects introduction:
+        content1: paglalarawan dito
+      OPD-K5 role_of_teacher:
+        content1: paglalarawan dito
+      OPD-K5 sequencing introduced:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab introduction:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab unplugged:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab video:
+        content1: paglalarawan dito
+      OPD-K5 types of lessons:
+        content1: paglalarawan dito
+      OPD-K5 using lesson plans:
+        content1: paglalarawan dito
+      OPD-K5 variables:
+        content1: paglalarawan dito
+      OPD-K5 variables introduction:
+        content1: paglalarawan dito
+      OPD-K5 variables unplugged:
+        content1: paglalarawan dito
+      OPD-K5 where to next:
+        content1: paglalarawan dito
+      OPD-K5-projects-1:
+        content1: paglalarawan dito
+      Prepare for your presentation:
+        content1: paglalarawan dito
+      'Technique: Frequency Analysis':
+        content1: paglalarawan dito
+        markdown: "# Pagka-crack ng Mga Substitution Cipher\n\nKilala bilang **frequency
+          analysis** ang pinakamahusay na pamamaraan sa pag-crack ng random substitution
+          cipher\n\nMuling Pagsulat mula sa: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          Isang diskarteng nakabatay sa kung gaano *dalas* lumilitaw ang ilang mga
+          titik sa English kumpara sa iba ang **Frequency analysis**.\n* Halimbawa,
+          bihira sa isang seksiyon ng English na text, *E*, *T*, *A* at *O* ang pinakakaraniwan,
+          habang ang *Z*, *Q* at *X*. Gayundin, ang mga pinakakaraniwang pares ng
+          mga titik na magkatabi  ang *TH*, *ER*, *ON*, at *AN*.\n* Sa katunayan,
+          halos pareho  ang pamamahagi ng mga titik sa halos *lahat* ng mga sample
+          ng English na teksto.\n\n\nNilayon ng bersiyon ng widget sa nakaraang page
+          na tulungan kang **mag-crack ng substitution cipher sa pamamagitan ng frequency
+          analysis**.\n\nSa pamamagitan ng pagsusuri sa dalas ng mga titik sa naka-encrypt
+          na mensahe kumpara sa dalas ng mga titik sa isang tipikal na piraso ng English
+          na prosa, maaari kang magsimulang tumakda sa kung ano ang maaaring maging
+          mga letter mapping.\n\nIpinapakita sa iyo ng tool kung paano inihahambing
+          ang dalas ng mga titik sa naka-encrypt na teksto (orange) sa mga frequency
+          mula sa karaniwang ingles (asul).\n\n### Hint: Saan magsisimula?\n\n1. Hanapin
+          ang mga maikling salita at \"i-crack\" muna ang mga ito. Ilang isang letrang
+          salita ang alam mo? (\"a\"). Ang isang napaka-karaniwang 3-titik na salita
+          ay \"ang\".\n2. Kapag nagawa mo na iyon, mayroon kang mga substition sa
+          ilan sa mga pinakakaraniwang titik. Dapat kang gumamit ng intuwisyon upang
+          tumingin sa iba pang mga salita gamit ang mga bahagyang subsitition na ito
+          at gumawa ng mahusay na mga hula.\n3. Matapos mahanap ang isang maliit na
+          bilang ng mga hard-fight na mga titik, mabilis na babagsak ang iba.\n4.
+          Nagbibigay ng magandang pananaw sa paggawa ng mga matinong hula ang paghahambing
+          ng mga frequency ng mga titik.\n\n### Subukan mo ito:\nNagpapakita ng isang
+          tao na nagsisimula ang animation sa ibaba. Narito kung ano ang sinubukan
+          nila\n\n* Unahin ang mga character ayon sa dalas.\n* Tukuyin ang isang pangkat
+          ng mga karakter na maaaring mapa sa salitang `ang`. \nIsang magandang simula
+          ito!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Maganda ba ang random substitution?\n* Pagkatapos ng kaunting pagsasanay,
+          gaano katagal bago ka mag-crack ng random substitution cipher?\n* Maganda
+          ba ito o hindi?\n"
+      Terminology Recap:
+        content1: paglalarawan dito
+        markdown: |-
+          # I-pause at Recap
+
+          Napakadaling basagin ang mga mensaheng naka-encrypt gamit ang **Caesar cipher**, lalo na sa isang computational tool. Ngayon na mayroon ka nang kaunting pagsasanay sa pag-crack ng isang alphabetic shift cipher (medyo madali, ha?) subukan natin ang isang bagay na mas mahirap.
+
+          **Terminolohiya ng Recap:**
+
+          * **Encryption** - isang proseso ng pag-encode ng mga mensahe upang panatilihing lihim ang mga ito, kaya ang mga "awtorisadong" partido lang ang makakabasa nito.
+          * **Decryption** - isang proseso na binabaligtad ang encryption, pagkuha ng isang lihim na mensahe at paggawa ng orihinal na plain text
+          * **Cipher** - ang generic na termino sa isang technique (o algorithm) na nagsasagawa ng pag-encrypt
+          * **Caesar's Cipher** - isang pamamaraan sa pag-encrypt na nagbabago ng alpabeto sa pamamagitan ng ilang bilang ng mga karakter.
+          * **Cracking encryption** - Kapag sinubukan mong i-decode ang isang lihim na mensahe
+          *nang hindi* nalalaman ang lahat ng mga detalye ng cipher, sinusubukan mong **i-crack** ang encryption.
+
+
+          I-click ang Magpatuloy upang makita ang **Susunod na Hamon**...
+      courseF_variables_stop:
+        content1: paglalarawan dito
+      csf_be_a_super_digital_citizen:
+        content1: paglalarawan dito
+      csf_be_a_super_digital_citizen_2021:
+        content1: paglalarawan dito
+      csf_password_power-up:
+        content1: paglalarawan dito
+      csf_password_power-up_2021:
+        content1: paglalarawan dito
+      csf_putting_a_stop_to_online_meanness:
+        content1: paglalarawan dito
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: paglalarawan dito

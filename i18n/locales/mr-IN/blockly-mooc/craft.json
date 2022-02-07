@@ -1,6 +1,8 @@
 {
+  "absolute": "केवल",
   "blockActionRepeat": "पुन्हा करा",
   "blockIf": "जर",
+  "blockWhileXAheadWhile": "जेव्हा",
   "directionDown": "खाली",
   "directionLeft": "डावा",
   "directionRight": "उजवा",

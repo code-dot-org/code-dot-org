@@ -231,8 +231,8 @@ hr:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: S pomoću blokova koda povedi Alexa ili Stevea
     na avanturu kroz Mincraft svijet.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -983,6 +983,7 @@ hr:
   footer_menu_support: Pomoć
   footer_menu_terms: Uvjeti
   footer_menu_privacy: Politika privatnosti
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: SAT KODIRANJA
   learn_banner_blurb: Isprobajte jednosatni vodič prilagođen svim uzrastima u više
     od 45 jezika. Pridružite se milijunima učenika i nastavnika u preko 180 zemalja

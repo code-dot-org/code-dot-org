@@ -94,7 +94,7 @@ es:
   courses_page:
     title_student: Aprende Ciencias de la Computación
     title_teacher: Enseñar ciencias de la computación
-  unplugged_activity: Actividad fuera de línea
+  unplugged_activity: Actividad sin conexión
   of: de
   more: MÁS
   less: MENOS
@@ -368,6 +368,8 @@ es:
       full_section: No hemos podido añadirte a la sección %{section_code} porque ya
         existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor
         para que te ayude.
+      not_participant_type: No hemos podido añadirte a la sección %{section_code}
+        porque no reúnes el criterio de participante para la sección.
     mail:
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como
@@ -404,7 +406,7 @@ es:
       finished_hoc: He terminado mi Hora de Código
       sign_in_to_save: Inicia sesión para guardar tu progreso
       my_dashboard: Mi Panel de Control
-      course_catalog: Catalogo de cursos
+      course_catalog: Catálogo de Cursos
       project_gallery: Proyectos
       sections: Secciones
       help_support: Ayuda y soporte
@@ -685,6 +687,8 @@ es:
       están en la nueva sección.
     third_party_login: No puedes mover estudiantes a una sección sincronizada con
       una herramienta de otro proveedor.
+    not_correct_participant_type: No puedes mover a estos usuarios porque no tienen
+      permisos para ser participantes en la nueva sección.
   share:
     title: Aprender en Code Studio
     description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
@@ -751,6 +755,7 @@ es:
     how_it_works: Cómo funciona (ver el código)
     try_hour_of_code: "¡Prueba una Hora de Code!"
     store: Tienda
+    cookie_notice: Aviso de Cookies
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Ver estos vídeos y sugerencias
@@ -845,8 +850,8 @@ es:
       body: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos
         de programación. El curso está diseñado para su uso en aulas para los grados
         K-8, pero es divertido aprender en todas las edades.  '
-      body_short: Aprende ciencias de la computación básicas con una versión acelerada
-        de los cursos 2-4.
+      body_short: Aprende informática básica con una versión acelerada de los cursos
+        2 a 4.
     hoc2014:
       try_new_tutorial: Prueba nuestro nuevo tutorial de la Hora de Code en beta
       try_frozen: Artista con Anna y Elsa de "Frozen"
@@ -876,7 +881,7 @@ es:
     starwars:
       title: Star Wars
     infinity:
-      title: Laboratorio de Juego Infinity
+      title: Laboratorio de Juegos Disney Infinity
       body: Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado
         por personajes de Disney Infinity.
     minecraft:
@@ -902,16 +907,17 @@ es:
     unplugged:
       title: Lecciones sin conexión
       audience: Desde 4 años
-      body: Hemos recopilado una lista de lecciones sin conexión que puedes utilizar
-        en tu aula. Ahora puedes enseñar los fundamentos de la ciencia de la computación,
-        aunque no tengas computadoras en tu aula. Intenta utilizar estas lecciones
-        como un curso independiente o como un complemento de otros cursos de computación.
-      body_short: Si no tienes computadoras, prueba estas lecciones sin conexión en
+      body: Hemos recopilado una lista de lecciones sin conexión para que las utilices
+        en tu aula. Ahora puedes enseñar los fundamentos de la informática, tanto
+        si tienes ordenadores en tu aula como si no. Prueba a utilizar estas lecciones
+        como curso independiente o como lecciones complementarias para cualquier curso
+        de informática.
+      body_short: Si no tienes ordenadores, prueba estas lecciones sin conexión en
         tu aula.
     unplugged_conditionals:
       title: Condicionales
-      body: En esta actividad "sin conexión", utilizarás una baraja de naipes para
-        aprender sobre algoritmos y sentencias condicionales.
+      body: Aprende los algoritmos y sentencias condicionales en esta actividad "sin
+        conexión" utilizando una baraja de cartas.
     widgets:
       title: Widgets
       body: Los estudiantes pueden explorar conceptos de nuestro curso de Principios
@@ -1374,7 +1380,7 @@ es:
         other: 'Otros:'
       workshop_course:
         csf_af: Fundamentos de Ciencias de la Computación (cursos A-F)
-        csf_express: Fundamentos de Ciencias de la Computación (Pre-Express o Express)
+        csf_express: Fundamentos de Ciencias de la Computación (Pre-Exprés o Exprés)
         csd: Descubrimientos de Ciencias de la Computación
         csp: Principios de Ciencias de la Computación
         not_applicable: No aplicable
@@ -1450,3 +1456,4 @@ es:
     this_sprite: Este sprite
   unit_prefix: Unidad %{n}
   code_org_logo_alt: Inicio de Code.org
+  teacher_feedback: Retroalimentación del docente

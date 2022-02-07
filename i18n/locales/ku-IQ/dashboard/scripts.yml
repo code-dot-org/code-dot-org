@@ -710,6 +710,10 @@ ku:
               display_name: لیستەکان
             csp_loops:
               display_name: گرێکان
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: خوارزمیەکان
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -801,3 +805,88 @@ ku:
           lesson_groups:
             lessonGroup-2:
               description: تاقیکردنەوە
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: كاژێری كۆدنووسی
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: گۆڕاوەکان
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: نەخشەی دڵخۆش
+            'Programming: Happy Maps':
+              name: نەخشەی دڵخۆش
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+            csf_functions:
+              display_name: فرمانەکان
+            csf_variables:
+              display_name: گۆڕاوەکان
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: لیستەکان
+            csp_loops:
+              display_name: گرێکان
+        courseb-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursec-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
+              key: بەرنامەڕێژی بە پێشبڕکێ
+            'Algorithms: Graph Paper Programming':
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+        coursee-2022:
+          lessons:
+            Conditionals:
+              key: مەرجیەکان
+          lesson_groups:
+            csf_functions:
+              display_name: فرمانەکان
+            csf_nested_loops:
+              display_name: مەرجیەکان
+        coursef-2022:
+          lessons:
+            The Internet:
+              name: ئینتەرنێت
+            Internet:
+              name: ئینتەرنێت
+          lesson_groups:
+            lessonGroup-8:
+              display_name: گۆڕاوەکان
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان

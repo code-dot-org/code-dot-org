@@ -359,6 +359,7 @@ it:
             '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
+            '"spiral"': spirale
             '"random"': a caso
       Dancelab_makeAnonymousDanceSprite:
         text: |-
@@ -470,6 +471,7 @@ it:
             '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
+            '"spiral"': spirale
             '"random"': a caso
       Dancelab_mixColors:
         text: mescola {COLOR1} e {COLOR2}
@@ -1002,6 +1004,21 @@ it:
         text: quando si clicca su {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): rotazione oraria
+            new Behavior(spinning_left, []): rotazione anti-oraria
+            new Behavior(fluttering, []): ondeggiamento
+            new Behavior(jittering, []): pulsazione
+            new Behavior(wobbling, []): barcollamento
+            new Behavior(wandering, []): movimento casuale
+            new Behavior(patrolling, []): pattugliamento
+            new Behavior(moving_west_and_looping, []): spostamento verso ovest e ciclo
+            new Behavior(moving_east_and_looping, []): spostamento verso est e ciclo
+            new Behavior(moving_north_and_looping, []): spostamento verso nord e ciclo
+            new Behavior(moving_south_and_looping, []): spostamento verso sud e ciclo
       gamelab_comment:
         text: 'commento: {COMMENT}'
       gamelab_costumeImage:
@@ -1053,6 +1070,20 @@ it:
         text: |-
           se {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: Il costume di {SPRITE} è {COSTUME}
       gamelab_isKeyPressed:
@@ -1242,6 +1273,13 @@ it:
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSpeech:
         text: riproduci discorso {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): movimento con tasti freccia
+            new Behavior(driving_with_arrow_keys, []): guida con tasti freccia
+            draggable(): trascinabile
       gamelab_pointInDirection:
         text: orienta {SPRITE} in direzione {DIRECTION}
         options:

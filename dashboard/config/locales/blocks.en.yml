@@ -377,6 +377,8 @@ en:
             '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
+            '"spiral"': spiral
+            '"infinity"': infinite line
             '"random"': random
       Dancelab_makeAnonymousDanceSprite:
         text: make a new {COSTUME} at {LOCATION}
@@ -486,6 +488,8 @@ en:
             '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
+            '"spiral"': spiral
+            '"infinity"': infinite line
             '"random"': random
       Dancelab_mixColors:
         text: mix {COLOR1} and {COLOR2}
@@ -553,6 +557,7 @@ en:
             '"fireworks"': Fireworks
             '"flowers"': Flowers
             '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoscope
             '"lasers"': Laser Dance Floor
@@ -1021,6 +1026,8 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"speed"': speed
+      gamelab_changeVarBy:
+        text: change {VARIABLE} by {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:
@@ -1031,6 +1038,21 @@ en:
         text: when {SPRITE} clicked
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning right
+            new Behavior(spinning_left, []): spinning left
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): wobbling
+            new Behavior(wandering, []): wandering
+            new Behavior(patrolling, []): patrolling
+            new Behavior(moving_west_and_looping, []): moving west and looping
+            new Behavior(moving_east_and_looping, []): moving east and looping
+            new Behavior(moving_north_and_looping, []): moving north and looping
+            new Behavior(moving_south_and_looping, []): moving south and looping
       gamelab_comment:
         text: 'comment: {COMMENT}'
       gamelab_costumeImage:
@@ -1082,6 +1104,20 @@ en:
         text: |-
           if {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} costume is {COSTUME}"
       gamelab_isKeyPressed:
@@ -1271,6 +1307,13 @@ en:
             "'sound://category_digital/jump_7.mp3'": jump
       gamelab_playSpeech:
         text: play speech {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moving with arrow keys
+            new Behavior(driving_with_arrow_keys, []): driving with arrow keys
+            draggable(): being draggable
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1295,6 +1338,8 @@ en:
         text: remove color from {THIS}
       gamelab_repeatForever:
         text: repeat forever
+      gamelab_resetTimer:
+        text: reset timer
       gamelab_setAnimation:
         text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:

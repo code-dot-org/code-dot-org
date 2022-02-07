@@ -2685,6 +2685,13 @@ ur:
           lessons:
             lesson-4:
               name: وباء کا سیمیولیٹر
+          lesson_groups:
+            lessonGroup-8:
+              display_name: آور-آف-کوڈ
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرات
         csa7-pilot-facilitator:
           lessons:
             lesson-10:
@@ -2759,3 +2766,133 @@ ur:
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
+        coursea-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        express-2022:
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-1:
+              key: سبق 1
+              name: ڈانس پارٹی
+            lesson-4:
+              key: سبق 4
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        courseb-2022:
+          lessons:
+            Loops in Artist:
+              key: Artist میں لوپس
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursec-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: سبق 4
+        csp9-2022:
+          lessons:
+            lesson-10:
+              key: سبق 10
+        coursed-2022:
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+              key: ڈانس پارٹی
+            lesson-5:
+              key: سبق 5
+            Loops in Artist:
+              key: Artist میں لوپس
+            lesson-6:
+              key: سبق 6
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+          title: کورس D (2021)
+        coursee-2022:
+          lessons:
+            lesson-4:
+              key: سبق 4
+            Conditionals:
+              key: شرائط
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            csf_nested_loops:
+              display_name: شرائط
+        coursef-2022:
+          lessons:
+            Outbreak:
+              name: وباء کا پھیلنا
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-2:
+              key: سبق 2
+            lesson-9:
+              key: سبق 9
+            lesson-10:
+              key: سبق 10
+            lesson-11:
+              key: سبق 11
+            lesson-5:
+              key: سبق 5
+          lesson_groups:
+            lessonGroup-8:
+              display_name: متغیرات
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات

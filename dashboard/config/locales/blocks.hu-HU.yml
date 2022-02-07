@@ -352,6 +352,7 @@ hu:
             '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
+            '"spiral"': spirál
             '"random"': véletlen
       Dancelab_makeAnonymousDanceSprite:
         text: 'készíts új {COSTUME} itt: {LOCATION}'
@@ -461,6 +462,7 @@ hu:
             '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
+            '"spiral"': spirál
             '"random"': véletlen
       Dancelab_mixColors:
         text: "{COLOR1} és {COLOR2} keverése"
@@ -993,6 +995,13 @@ hu:
         text: amikor {SPRITE} szereplőre klikkel
       gamelab_clickedSpritePointer:
         text: kattintott {SPRITE} szereplőre
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): csapkodva
+            new Behavior(wobbling, []): kalimpálva
+            new Behavior(moving_west_and_looping, []): nyugat felé menni és ismételgetni
+            new Behavior(moving_east_and_looping, []): kelet felé menni és ismételgetni
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
       gamelab_costumeImage:
@@ -1044,6 +1053,19 @@ hu:
         text: |-
           ha {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ruhája {COSTUME}"
       gamelab_isKeyPressed:
@@ -1237,6 +1259,11 @@ hu:
             "'sound://category_digital/jump_7.mp3'": Ugorj
       gamelab_playSpeech:
         text: "{SOUND} beszéd eljátszása"
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(driving_with_arrow_keys, []): irányítás nyilakkal
+            draggable(): vonszolható
       gamelab_pointInDirection:
         text: "{SPRITE} fordulj {DIRECTION} felé"
         options:

@@ -1106,7 +1106,7 @@ es-ES:
   dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Curso E: '
   dashboard_coursef: 'Curso F: '
-  dashboard_pre-express: 'Curso Express para prelectores: '
+  dashboard_pre-express: 'Curso Exprés para pre-lectores: '
   dashboard_express: 'Curso Express: '
   dashboard_unplugged: Si no tienes equipos, <a href='%{unplugged_url}'> prueba estas
     clases de unplugged</a> en su aula.
@@ -1363,18 +1363,18 @@ es-ES:
   coursee-2021_name: Curso E (2021)
   coursef-2021_name: Curso F (2021)
   express-2018_name: Curso Express (2018)
-  pre-express-2018_name: Curso Express para prelectores (2018)
+  pre-express-2018_name: Curso Exprés para pre-lectores (2018)
   express-2019_name: Curso Express (2019)
-  pre-express-2019_name: Curso Express para prelectores (2019)
+  pre-express-2019_name: Curso Exprés para pre-lectores (2019)
   express-2020_name: Curso Express (2019)
-  pre-express-2020_name: Curso exprés para prelectores (2020)
+  pre-express-2020_name: Curso exprés para pre-lectores (2020)
   express-2021_name: Curso Express (2021)
   pre-express-2021_name: Curso rápido prescolar (2021)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
   express_name: Curso Express (2018)
-  pre-express_name: Curso Express para prelectores
+  pre-express_name: Curso Exprés para pre-lectores
   20-hour_name: Curso acelerado
   algebra_name: Curso completo de Ciencias de la Comunicación en el álgebra
   AlgebraA_name: Curso A de Ciencias de la Comunicación en el álgebra
@@ -1630,58 +1630,54 @@ es-ES:
     flexibles a problemas más complejos. Al final de este curso, los estudiantes crearan
     historias interactivas y juegos que podrán compartir con cualquiera. Recomendado
     para los grados 4-8."
-  coursea_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores.
-  courseb_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
-    avanzados).
-  coursec_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
-  coursed_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego
-    puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
-    C y D, y luego avanza con funciones.
+  coursea_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para los alumnos más mayores).
+  coursec_shortdescription_congrats: Aprende los fundamentos de la informática y crea
+    tu propio arte, historias y juegos.
+  coursed_shortdescription_congrats: Aprende rápidamente los conceptos del Curso C,
+    y luego continúa avanzando con algoritmos, bucles anidados, condicionales y mucho
+    más.
+  coursee_shortdescription_congrats: Aprende rápidamente los conceptos de los cursos
+    C y D y luego, continúa avanzando con las funciones.
   coursef_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de
-    Ciencias de la Computación y crea tu propio arte, historia o juego.
-  coursea-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores.
-  courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
-    avanzados).
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
-  coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso
-    C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee-2017_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
-    C y D, y luego avanza con funciones.
+    Informática y crea tu propio arte, historia o juego.
+  coursea-2017_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb-2017_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para los alumnos más mayores).
+  coursec-2017_shortdescription_congrats: Aprende los fundamentos de la informática
+    y crea tu propio arte, historias y juegos.
+  coursed-2017_shortdescription_congrats: Aprende rápidamente los conceptos del Curso
+    C, y luego continúa avanzando con algoritmos, bucles anidados, condicionales y
+    mucho más.
+  coursee-2017_shortdescription_congrats: Aprende rápidamente los conceptos de los
+    cursos C y D y luego, continúa avanzando con las funciones.
   coursef-2017_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
-    de Ciencias de la Computación y crea tu propio arte, historia o juego.
-  coursea-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores.
-  courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
-    avanzados).
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
-  coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso
-    C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
-    C y D, y luego avanza con funciones.
+    de Informática y crea tu propio arte, historia o juego.
+  coursea-2018_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb-2018_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para los alumnos más mayores).
+  coursec-2018_shortdescription_congrats: Aprende los fundamentos de la informática
+    y crea tu propio arte, historias y juegos.
+  coursed-2018_shortdescription_congrats: Aprende rápidamente los conceptos del Curso
+    C, y luego continúa avanzando con algoritmos, bucles anidados, condicionales y
+    mucho más.
+  coursee-2018_shortdescription_congrats: Aprende rápidamente los conceptos de los
+    cursos C y D y luego, continúa avanzando con las funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
-    de Ciencias de la Computación y crea tu propio arte, historia o juego.
-  coursea-2019_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores.
-  courseb-2019_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
-    avanzados).
-  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
-  coursed-2019_shortdescription_congrats: Rápidamente repasada conceptos del Curso
-    C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee-2019_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
-    C y D, y luego avanza con funciones.
+    de Informática y crea tu propio arte, historia o juego.
+  coursea-2019_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb-2019_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para los alumnos más mayores).
+  coursec-2019_shortdescription_congrats: Aprende los fundamentos de la informática
+    y crea tu propio arte, historias y juegos.
+  coursed-2019_shortdescription_congrats: Aprende rápidamente los conceptos del Curso
+    C, y luego continúa avanzando con algoritmos, bucles anidados, condicionales y
+    mucho más.
+  coursee-2019_shortdescription_congrats: Aprende rápidamente los conceptos de los
+    cursos C y D y luego, continúa avanzando con las funciones.
   coursef-2019_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
-    de Ciencias de la Computación y crea tu propio arte, historia o juego.
+    de Informática y crea tu propio arte, historia o juego.
   coursea-2020_shortdescription_congrats: Aprende los fundamentos de las ciencias
     de la computación y la seguridad en Internet. Al final del curso, crea tu propio
     juego o historia para compartir.
@@ -2431,7 +2427,7 @@ es-ES:
   hoc2018_creativity_social_media_2: 'La creatividad es la protagonista de la #HoraDelCódigo
     de este año. ¿Qué vas a crear?'
   hoc2018_creativity_courses: Ve más allá con los cursos de Code.org
-  hoc2018_creativity_courses_link: Ve más allá con los <a href="https://studio.code.org/courses">cursos
+  hoc2018_creativity_courses_link: Sigue avanzando con los <a href="https://studio.code.org/courses">cursos
     de Code.org</a>
   hoc2018_homepage: "¡Inscribe a tu clase para probar una de las más de 150 NUEVAS
     actividades de la Hora del Código (del 3 al 9 de diciembre)!"
@@ -2542,7 +2538,7 @@ es-ES:
   hoc2018_dance_teacher_resources_tile2_description: "¡No necesitas una computadora!
     Aprende conceptos de programación para crear una coreografía de la fiesta de baile
     con tus compañeros."
-  hoc2018_dance_teacher_resources_tile2_button: Actividad fuera de línea
+  hoc2018_dance_teacher_resources_tile2_button: Actividad sin conexión
   hoc2018_dance_featured_student_creations_title: Creaciones destacadas de los estudiantes
   hoc2018_dance_videos_section_heading: Inspírate
   hoc2018_dance_video_title_what_is_creativity: "¿Qué es la creatividad?"
@@ -2760,3 +2756,4 @@ es-ES:
     Town."
   outbreak_tile_alt: Una simulación de cómo se propaga un virus a través de un grupo
     de monstruos morados.
+  footer_cookie_notice: Aviso de Cookies

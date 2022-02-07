@@ -2718,7 +2718,18 @@
         "poetry_hoc_exemplar2": "Anong mga imahe ang pumasok sa isip?",
         "poetry_hoc_sounds": "Magdagdag ng mga tunog sa programa mo upang mabago ang pakiramdam ng tula habang binabasa mo ito.",
         "poetry_hoc_spriteBehaviors": "Maaaring gumawa ang mga tiyanak ng ilang mga aksyon o pag-uugali nang paulit-ulit habang tumatakbo ang programa.",
-        "poetry_hoc_spriteSizes": "Maaari mong baguhin ang laki ng isang tiyanak na ginawa mo na."
+        "poetry_hoc_spriteSizes": "Maaari mong baguhin ang laki ng isang tiyanak na ginawa mo na.",
+        "Standalone_Artist_2": "Iguhit ang brilyante na ito na may 120 at 60 degree na anggulo at 150 pixel ang haba ng mga gilid.",
+        "Standalone_Artist_3": "Maaari mo bang iguhit ang hexagon na ito na may 100 pixel na gilid at 60 degree na pagliko?",
+        "Standalone_Artist_5.5": "Pansinin kung paano namin pinasimple ang diamond code sa pamamagitan ng paggawa nito sa isang loop. Maaari mong i-loop ang buong sequence na iyon ng 12 beses upang iguhit ang bulaklak. Mungkahi: Kakailanganin mong lumiko ng 30 degrees pagkatapos ng diamond loop mo upang hindi ka patuloy na gumuhit sa ibabaw ng parehong brilyante.",
+        "Standalone_Artist_6": "I-loop ang hexagon code na ito ng 6 na beses upang gawin ang disenyo. Ilang degree ang kailangan mong iikot sa bawat oras? Mungkahi: hatiin ang bilang ng mga degree sa isang bilog sa dami ng beses na naglo-loop ka.",
+        "Standalone_Artist_7": "Isa pang tool sa programming ang isang function upang matulungan kang maiwasan ang pag-ulit ng iyong sarili. Gumuhit ng isang bulaklak ang function na ito, kaya maaari mo itong gamitin anumang oras na gusto mong gumuhit ng isang bulaklak. Mungkahi: 150 pixels ang pagitan ng mga bulaklak",
+        "Standalone_Artist_9": "Ngayon sige at gumawa ng kahit anong larawang gusto mo! Mayroon ka pang walang laman na function na maaari mong gawin kahit anong gusto mo!",
+        "Widget: Text Compression": "Maghanap ng mga pattern (paulit-ulit na salita o parirala) sa teksto. Ilagay ang mga pattern na nakikita mo sa diksyunaryo sa kanan. Habang nagta-type ka ng mga entry sa diksyunaryo, ipinapasok sa teksto bilang kapalit ng pattern ang simbolo sa entry.",
+        "scrat 16": "Ensina! Ensina! Ensina! Gumamit ng \"kung\" na bloke upang mapunta ako doon na may pinakamababang bilang ng mga bloke.",
+        "scrat 17": "Ok, gawin natin iyon muli sa pagsasanay - hindi ito masyadong naiiba, ngunit mag-ingat sa pader!",
+        "scrat 18": "Sinusuri ng mga \"kung-iba pa\" na mga bloke ang isang kundisyon, at pagkatapos ay gumagawa ng isang bagay O isa pa. Upang mapunta ako sa ensina subukan mong gamitin ang bagong bloke na ito.",
+        "scrat 20": "Maaari ka bang magdagdag lamang ng 3 bloke upang matulungan akong malutas ang isang mas kumplikadong maze? Kung gagawin mo ito ng tama, maaari kong lakarin ang anumang kurbadong landas kahit gaano kahaba. Bilis! Natutunaw ang yelo!"
       }
     }
   }

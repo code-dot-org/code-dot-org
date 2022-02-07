@@ -5,6 +5,7 @@ ta:
       Dancelab_alternateMoves:
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -57,6 +58,7 @@ ta:
         text: "{GROUP} செய்க {MOVE} {DIR} எப்போதும்"
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -115,6 +117,7 @@ ta:
         text: மாற்றவும் {GROUP} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -137,6 +140,7 @@ ta:
         text: "{GROUP} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -289,6 +293,7 @@ ta:
       Dancelab_jumpToEach:
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -315,6 +320,7 @@ ta:
         text: "{FORMAT} ஆக {GROUP}-ஐ தளவமைக்கவும்"
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -329,12 +335,14 @@ ta:
           FORMAT:
             '"border"': பார்டர்
             '"inner"': சதுரத்திற்குள்
+            '"diamond"': வைரம்
             '"circle"': வட்டம்
             '"grid"': கிரிட்
             '"row"': வரிசை
             '"column"': பத்தி
             '"x"': கிரிஸ்-கிராஸ்
             '"plus"': ப்ளஸ்
+            '"spiral"': சுருள்
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -429,12 +437,14 @@ ta:
           LAYOUT:
             '"border"': பார்டர்
             '"inner"': சதுரத்திற்குள்
+            '"diamond"': வைரம்
             '"circle"': வட்டம்
             '"grid"': கிரிட்
             '"row"': வரிசை
             '"column"': பத்தி
             '"x"': கிரிஸ்-கிராஸ்
             '"plus"': ப்ளஸ்
+            '"spiral"': சுருள்
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_mixColors:
         text: "{COLOR1} மற்றும் {COLOR2} –ஐ கலக்கவும்"
@@ -530,7 +540,7 @@ ta:
         text: "{SPRITE} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
           SPEED:
-            '1': normal
+            '1': வழக்கமான
             '2': வேகமாக
             '4': அதிக வேகம்
             '0.5': வேகக் குறைவு
@@ -539,6 +549,7 @@ ta:
         text: "{GROUP} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -551,7 +562,7 @@ ta:
             '"SHARK"': சுறாமீன்கள்
             '"UNICORN"': யூனிகார்ன்கள்
           SPEED:
-            '1': normal
+            '1': வழக்கமான
             '2': வேகமாக
             '4': அதிக வேகம்
             '0.5': வேகக் குறைவு
@@ -607,6 +618,7 @@ ta:
         text: "{GROUP} {PROPERTY} ஐ {VAL} ஆக்கவும்"
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -641,6 +653,7 @@ ta:
         text: "{GROUP} {PROPERTY} ஐ ரேன்டம் ஆக்கவும்"
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -666,6 +679,7 @@ ta:
         text: "{THIS} ன் டின்ட்டை {VAL} ஆக்கவும்"
         options:
           THIS:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -681,6 +695,7 @@ ta:
         text: "{THIS} ன் டின்ட்டை {VAL} ஆக்கவும்"
         options:
           THIS:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -704,6 +719,7 @@ ta:
         text: "{THIS} ன் தோற்றத்தை {VISIBILITY} க்கு தெரியும்படி செய்யவும்"
         options:
           THIS:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -736,6 +752,7 @@ ta:
       Dancelab_startMappingEach:
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -778,6 +795,7 @@ ta:
       Dancelab_stopMappingEach:
         options:
           GROUP:
+            sprites: எல்லாம்
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
             '"CAT"': பூனைகள்
@@ -813,6 +831,7 @@ ta:
             '"squiggles"': சிறு வளை கோடுகள்
             '"growing_stars"': வளரும் நட்சத்திரங்கள்
             '"hearts_colorful"': இதயங்கள்
+            '"diamond"': வைரம்
             '"s"': s
             '"t"': t
             '"u"': u
@@ -916,7 +935,10 @@ ta:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
+            '"speed"': வேகம்
       gamelab_checkTouching:
         text: "{CONDITION}{SPRITE1}தொடுகிறது{SPRITE2}"
         options:
@@ -927,6 +949,11 @@ ta:
         text: பொழுது{SPRITE}கிளிக் செய்த
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): வடக்கே நகர்ந்து வளையும்
+            new Behavior(moving_south_and_looping, []): தெற்கே நகர்ந்து வளையும்
       gamelab_comment:
         text: கருத்து:{COMMENT}
       gamelab_costumeImage:
@@ -957,8 +984,11 @@ ta:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
             '"tint"': டின்ட்
+            '"speed"': வேகம்
       gamelab_getThisSprite:
         text: "{CHOICE} ஸ்பிரைட்"
         options:
@@ -979,6 +1009,19 @@ ta:
         text: |-
           என்றால் {NUM} = {VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ஆடை என்பது {COSTUME}"
       gamelab_isKeyPressed:
@@ -1080,7 +1123,10 @@ ta:
         text: உருவாக்க {EFFECT} விளைவு {NUM} {ANIMATION_NAME} உருவங்கள்
         options:
           EFFECT:
+            '"burst"': வெடி சிதறல்
             '"pop"': பாப்
+            '"rain"': மழை
+            '"spiral"': சுருள்
       gamelab_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       gamelab_makeNumSprites:
@@ -1131,28 +1177,45 @@ ta:
             "'sound://category_digital/boing_2.mp3'": போயிங்
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": பாப்
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": மின்னும்
+            "'sound://category_app/app_button_1.mp3'": பொத்தான்
+            "'sound://category_collect/clicky_crunch.mp3'": கிரஞ்ச்
             "'sound://category_swish/quick_swing.mp3'": சுழல்தள்
             "'sound://category_nature/summer_night_loop.mp3'": கோடை இரவு
             "'sound://category_background/ocean_waves.mp3'": கடல் அலைகள்
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": கடற்கரை சிற்றலை
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": நீர்க்குமிழி
             "'sound://category_animals/bear.mp3'": கரடி
             "'sound://category_animals/cat.mp3'": பூனை
             "'sound://category_animals/cow.mp3'": மாடு
+            "'sound://category_animals/pig.mp3'": பன்றி
             "'sound://category_animals/sheep.mp3'": ஆடு
+            "'sound://category_animals/goat.mp3'": ஆடு
             "'sound://category_animals/chicken.mp3'": கோழி
+            "'sound://category_animals/rooster.mp3'": சேவல்
+            "'sound://category_animals/elephant.mp3'": யானை
+            "'sound://category_animals/dolphin.mp3'": டால்ஃபின்
             "'sound://category_nature/thunderstorm_1.mp3'": இடியுடன் கூடிய மழை
+            "'sound://category_animals/chick.mp3'": கோழிகுஞ்சு
             "'sound://category_animals/dog.mp3'": நாய்
+            "'sound://category_animals/tiger.mp3'": புலி
             "'sound://category_collect/trill_stings.mp3'": தில்லுமுல்லு
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": யாழ் இசைகருவி
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": தட்டவும்
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": டோனல் ஹிட்
             "'sound://category_transition/trippy_robotic_transition.mp3'": ரோபோ மாற்றம்
             "'sound://category_transition/star_dust_particle_10.mp3'": நட்சத்திர தூசி
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": அன்னிய கப்பல்
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": மந்திர எழுத்துப்பிழை
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": தேர்ந்தெடுப்பு
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": நகைச்சுவையான பாஸ்
             "'sound://category_digital/jump_7.mp3'": குதி
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): அம்பு விசைகளுடன் நகரும்
+            draggable(): இழுக்கப்படக்கூடியது
       gamelab_pointInDirection:
         text: புள்ளி {SPRITE} {DIRECTION}
         options:
@@ -1175,6 +1238,8 @@ ta:
         text: ஸ்பிரைட் {SPRITE} நிறுத்துகிறது {BEHAVIOR}
       gamelab_removeTint:
         text: நிறத்தை அகற்று {THIS}
+      gamelab_repeatForever:
+        text: மீண்டும் தொடர்ந்தபட இருக்கவும்
       gamelab_setAnimation:
         text: ஆடையை {ANIMATION}மாற்று {THIS}
       gamelab_setBackground:
@@ -1186,23 +1251,30 @@ ta:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': குகை
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
             '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': தொடர்ச்சியான புல்
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': நீதிமன்றம்
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': பாலைவனம்
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': பாலைவன சாலை
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': விவசாய நிலம்
             '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': மிதக்கும் புல்
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': வீட்டுக்கு முன்னால்
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': விண்வெளி மண்டலம்
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': கிரிட்
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'சமையலறை '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': வாழ்க்கை அறை
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': புல் வெளி
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': பூங்கா காட்சி
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': பைன் மரங்கள்
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': வானவில்
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': அறிவியல் புனைகதை
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': கால்பந்து துறை
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': மேடை
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': நட்சத்திரங்கள்
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': சுரங்கப்பாதை
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': சூரியன் மற்றும் வானவில்
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': சூரிய ஒளி மழை
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': டென்னிஸ் மைதானம்
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': மரத் தீவு
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': நிலத்தடி
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': நீருக்கடியில்
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': குளிர்காலம்
             undefined: எதுவுமில்லை
@@ -1214,7 +1286,7 @@ ta:
           SIZE:
             '25': மிகச்சிறியது
             '50': சிறிய
-            '75': medium
+            '75': ஊடகம்
             '100': பெரிய
       gamelab_setPrompt:
         text: மாறிக்கான {VAR} உடனடி பயனர் {QUESTION}
@@ -1226,7 +1298,10 @@ ta:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
+            '"speed"': வேகம்
       gamelab_setProp_dropdown:
         text: "{SPRITE} {PROPERTY} ஐ {SIZE} ஆக்கவும்"
         options:
@@ -1235,7 +1310,7 @@ ta:
           SIZE:
             '25': மிகச்சிறியது
             '50': சிறிய
-            '75': medium
+            '75': ஊடகம்
             '100': பெரிய
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} க்கு{N}% என அமை"
@@ -1385,6 +1460,8 @@ ta:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
       Mikelab_createNewSprite:
         options:
@@ -1403,18 +1480,24 @@ ta:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
       Mikelab_groupChangeAnim:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
       Mikelab_groupChangePropBy:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
       Mikelab_groupCreateNewSprite:
         options:
@@ -1431,6 +1514,7 @@ ta:
       Mikelab_groupDestroy:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
       Mikelab_groupGetProp:
         options:
@@ -1439,30 +1523,39 @@ ta:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
       Mikelab_groupRemoveBehaviorSimple:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
       Mikelab_groupRemoveTint:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
       Mikelab_groupSetProp:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
       Mikelab_groupSetTint:
         options:
           SELECT:
+            '"all"': எல்லாம்
             '"this"': இது
       Mikelab_hideFish:
         options:
@@ -1509,6 +1602,8 @@ ta:
         text: ஏதாவது ஒரு நிறம்
       Mikelab_removeBehaviorSimple:
         text: ஸ்பிரைட் {SPRITE} நிறுத்துகிறது {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: மீண்டும் தொடர்ந்தபட இருக்கவும்
       Mikelab_setBG:
         options:
           BG:
@@ -1520,18 +1615,24 @@ ta:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': வீட்டுக்கு முன்னால்
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'சமையலறை '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': வாழ்க்கை அறை
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': புல் வெளி
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': பூங்கா காட்சி
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': பைன் மரங்கள்
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': கால்பந்து துறை
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': மேடை
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': சுரங்கப்பாதை
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': சூரியன் மற்றும் வானவில்
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': சூரிய ஒளி மழை
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': டென்னிஸ் மைதானம்
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': மரத் தீவு
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': நிலத்தடி
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
+            '"x"': x பொசிஷன்
+            '"y"': y பொசிஷன்
             '"direction"': நகர்வு திசை
       Mikelab_setupOutbreak:
         text: "அவுட்பிரேக்  செட்அப் \nமக்கள் தொகை:{SPRITE2N}\n{TOGGLE}வைரஸ்"
@@ -1569,6 +1670,10 @@ ta:
         text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
+            '"up"': மேல் அம்புக்குறி
+            '"down"': கீழ் அம்புக்குறி
+            '"left"': இடது அம்புக்குறி
+            '"right"': வலது அம்புக்குறி
             '"w"': மேற்கு
             '"a"': அ
             '"s"': தெற்கு
@@ -1576,6 +1681,10 @@ ta:
       Mikelab_whenKeyReleased:
         options:
           KEY:
+            '"up"': மேல் அம்புக்குறி
+            '"down"': கீழ் அம்புக்குறி
+            '"left"': இடது அம்புக்குறி
+            '"right"': வலது அம்புக்குறி
             '"w"': மேற்கு
             '"a"': அ
             '"s"': தெற்கு
@@ -1585,6 +1694,13 @@ ta:
           KEY:
             '"yes"': ஆம்
             '"no"': இல்லை
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': மேல் அம்புக்குறி
+            '"down"': கீழ் அம்புக்குறி
+            '"left"': இடது அம்புக்குறி
+            '"right"': வலது அம்புக்குறி
       Mikelab_xLocationOf:
         text: x ஒருங்கிணைப்பு {SPRITE}
       Mikelab_yLocationOf:
@@ -1612,8 +1728,15 @@ ta:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': செங்கல்
+            '"fire"': நெருப்பு
+            '"flowers"': மலர்கள்
+            '"hearts"': இதயங்கள்
             '"iceCream"': ஐஸ்க்ரீம்
+            '"leaves"': இலைகள்
             '"rainbow"': வானவில்
+            '"stars"': நட்சத்திரங்கள்
+            '"waves"': அலைகள்
       Poetry_addLine:
         text: வரி சேர்க்க {LINE}
       Poetry_animateText:
@@ -1628,7 +1751,10 @@ ta:
         text: உருவாக்க {EFFECT} விளைவு {NUM} {ANIMATION_NAME} உருவங்கள்
         options:
           EFFECT:
+            '"burst"': வெடி சிதறல்
             '"pop"': பாப்
+            '"rain"': மழை
+            '"spiral"': சுருள்
       Poetry_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       Poetry_makeNumSprites:
@@ -1639,11 +1765,15 @@ ta:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': அமைதி
             '"sound://category_nature/steady_campfire_loop.mp3"': கேம்ப்ஃபயர்
             '"sound://category_nature/rain_loop.mp3"': தூறல்
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': காடு
             '"sound://category_loops/faultering_desicion_loop1.mp3"': பேய்
             '"sound://category_background/inside_plane.mp3"': ஹம்
             '"sound://category_loops/red_flag_loop1.mp3"': பணி
             '"sound://category_nature/summer_night_loop.mp3"': இரவு
+            '"sound://category_background/ocean_waves.mp3"': கடல்
+            '"sound://category_background/rainforest_ambient_sound.mp3"': மழைக்காடு
             '"sound://category_background/repitition.mp3"': சவாரி
+            '"sound://category_background/wavering_wind.mp3"': தூக்க நிலை
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': மெதுவான
       Poetry_playSound:
         text: ஒலி விளையாட்டு {SOUND}
@@ -1657,6 +1787,7 @@ ta:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': தோல்வி
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': படபடப்பு
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': குதித்தல்
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ஒளி
             '"sound://category_poof/puzzle_game_poof_04.mp3"': பூஃப்
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': ஸ்கேன்
             '"sound://category_background/typewriter.mp3"': தட்டச்சுப்பொறி
@@ -1678,7 +1809,9 @@ ta:
             '"confetti"': கான்ஃபெடி
             '"darkCircles"': மறைதல்
             '"fadeColors"': இனிப்பான
+            '"hearts"': இதயங்கள்
             '"space"': ஸ்பேஸ்
+            '"rain"': மழை
             '"ripples"': சிற்றலைகள்
             '"colors"': வண்ணங்கள்
             '"stars"': நட்சத்திரங்கள்
@@ -1688,6 +1821,7 @@ ta:
             '"sunrise"': விடியல்
             '"sunset"': அந்தி
             '"grayscale"': சாம்பல் நிறங்கள்
+            '"ocean"': கடல்
             '"rainbow"': வானவில்
             '"roses"': ரோஜாக்கள்
             '"sky"': வானம்
@@ -1715,7 +1849,9 @@ ta:
           EFFECT:
             '"bubbles"': குமிழிகள்
             '"confetti"': கான்ஃபெடி
+            '"hearts"': இதயங்கள்
             '"emojis"': மகிழ்ச்சியான எமோஜிகள்
+            '"rain"': மழை
             '"glass"': நொறுங்கும் கண்ணாடி
             '"twinkling"': மின்னும்
       Poetry_setPrompt:
@@ -1740,10 +1876,14 @@ ta:
         text: உரையைக் காட்டு
       Poetry_startBehavior:
         text: 'ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} தொடங்குகிறது '
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': நீச்சல்
       Poetry_stopBehavior:
         text: ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} நிறுத்துகிறது
         options:
           BEHAVIOR:
+            '"swimming_left_and_right"': நீச்சல்
             '"all"': "--எல்லா நடத்தைகளும்-- "
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}\n "
@@ -1789,6 +1929,20 @@ ta:
             '"border"': பார்டர்
             '"row"': வரிசை
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': எல்லாம்
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': எல்லாம்
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} சொல் {SPEECH}"
       binary_move:
@@ -1825,6 +1979,7 @@ ta:
         options:
           TYPE:
             "'sand'": மண்
+            "'planksOak'": ஓக் மரப்பலகை
       craft_ifStandingOnLimit:
         text: |-
           நின்று கொண்டிருந்தால் {TYPE}
@@ -1850,6 +2005,10 @@ ta:
           {STATEMENT}
       craft_spawnEntity:
         text: ஸ்பான் {ENTITY}
+        options:
+          ENTITY:
+            '"dolphin"': டால்ஃபின்
+            '"squid"': ஸ்க்விட், கடல் வாழ் உயிரினம்
       craft_turn:
         text: திரும்பவும்{DIR}
         options:

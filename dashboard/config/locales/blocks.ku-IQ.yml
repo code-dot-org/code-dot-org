@@ -847,6 +847,19 @@ ku:
             '"this"': ئەمە
       gamelab_hideTitleScreen:
         text: شاشەی ناونیشان بشارەوە
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -951,6 +964,10 @@ ku:
           SOUND:
             "'sound://category_animals/bear.mp3'": وورچ
             "'sound://category_animals/dolphin.mp3'": دۆلفین
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): دەتوانرێ بجوڵێنرێ
       gamelab_pointInDirection:
         text: ئاماژە {SPRITE} {DIRECTION}
         options:

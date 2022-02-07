@@ -16728,6 +16728,8 @@ id:
             'Lesson 18: Assessment Day':
               key: 'Pelajaran 18: Hari Penilaian'
               name: Hari Penilaian
+            lesson-1:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_lists:
               display_name: List
@@ -16737,6 +16739,8 @@ id:
               display_name: Melintang
             csp_project:
               display_name: Proyek
+            lessonGroup-5:
+              display_name: Survei Pasca Kursus
         csp6-2021:
           lessons:
             Algorithms Solve Problems:
@@ -16757,9 +16761,13 @@ id:
             'Lesson 6: Assessment Day':
               key: 'Pelajaran 6: Hari Penilaian'
               name: Hari Penilaian
+            lesson-1:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unit 6: Algorithm'
+              display_name: Algoritma
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
         csp7-2021:
           lessons:
             Parameters and Return Explore:
@@ -16792,11 +16800,15 @@ id:
             'Lesson 11: Assessment Day':
               key: 'Pelajaran 11: Hari Penilaian'
               name: Hari Penilaian
+            lesson-1:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameter dan Nilai Balik
             csp_libraries:
               display_name: Perpustakaan
+            lessonGroup-3:
+              display_name: Survei
         csp8-2021:
           lessons:
             Create PT - Review the Task:
@@ -16805,6 +16817,13 @@ id:
               key: Membuat PT - Membuat Rencana
             Create PT - Complete the Task:
               key: Membuat PT - Menyelesaikan tugas
+            lesson-1:
+              name: Survei Pascakursus CS Principles
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buat PT
+            lessonGroup-3:
+              display_name: Survei
         csp9-2021:
           lessons:
             Learning From Data:
@@ -16830,9 +16849,13 @@ id:
             'Lesson 9: Assessment Day':
               key: 'Pelajaran 9: Hari Penilaian'
               name: Hari Penilaian
+            lesson-1:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Survei
         csp10-2021:
           lessons:
             Project - Innovation Simulation Part 1:
@@ -16870,9 +16893,13 @@ id:
             'Lesson 14: Unit Assessment Day':
               key: 'Pelajaran 14: Hari Penilaian Unit'
               name: Hari Penilaian
+            lesson-1:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit10_2020:
               display_name: Unit 10 - Cybersecurity dan Dampak Global
+            lessonGroup-2:
+              display_name: Survei
         coursea-2021:
           description_short: Pengenalan ilmu komputer untuk pra-pembaca.
           description_audience: 'Usia: 4-7'
@@ -18302,6 +18329,8 @@ id:
               name: Komputasi Fisik
         self-paced-pl-csd6-2021:
           lessons:
+            lesson-4:
+              name: Data dan Masyarakat
             lesson-6:
               name: Data dan Masyarakat
         csa1-exemplars:
@@ -19202,6 +19231,43 @@ id:
               name: Simulator Wabah
             lesson-5:
               name: Tentang Saya dengan Sprite Lab
+            Drawing with Loops:
+              name: Loop dengan Artis
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+            Using Variables with the Artist:
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan.
+              description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.
+            Programming with the Bee:
+              name: Nested Loop dalam Labirin
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+            Variables with the Bee:
+              name: Mengubah Variable dengan Lebah
+              description_student: Lebah ini menyukai variable!
+              description_teacher: Pelajaran ini akan membantu menjelaskan cara variable dapat membuat program lebih kuat dengan memudahkan nilai berubah pada saat code dijalankan.
+            For Loop Fun:
+              name: Untuk Loop Fun
+              description_student: Anda akan merasakan banyak kegembiraan belajar tentang loop `for`!
+              description_teacher: Kita tahu bahwa loop memungkinkan kita melakukan banyak hal berkali-kali, tetapi sekarang kita akan mempelajari cara menggunakan loop yang memiliki struktur ekstra bawaan. Struktur baru ini akan memudahkan murid membuat code yang lebih hebat dan dinamis.
+            For Loops with Bee:
+              name: For Loop dengan Lebah
+              description_student: Ngung, ngung. Dalam puzzle ini, Anda akan menggiring lebah menuju nektar dan madu menggunakan loop `for`!
+              description_teacher: Dengan menampilkan Lebah, pelajaran ini fokus pada loop `for` dan menggunakan variable yang terus bertambah untuk memecahkan puzzle yang lebih pelik. Murid akan memulai pelajaran dengan meninjau kembali loop dari pelajaran sebelumnya, lalu mereka mengikuti pengenalan tentang loop 'for' agar mereka bisa memecahkan masalah kompleks secara lebih efektif.
+            For Loops with Artist:
+              name: For Loop dengan Artis
+              description_student: Bersiaplah membuat karya hebat Anda berikutnya. Di sini Anda akan menggunakan loop `for` untuk membuat gambar yang membikin orang terkagum-kagum.
+              description_teacher: Dalam pelajaran ini, murid terus berlatih loop 'for', tetapi kali ini bersama Artis. Murid akan menyelesaikan puzzle dengan menggabungkan ide-ide tentang variable, loop, dan loop 'for' untuk membuat desain yang kompleks. Pada akhir pelajaran, mereka berkesempatan membuat karya seni sendiri di level bermain bebas.
+            Follow the Algorithm:
+              description_student: Mainkan permainan dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang tepat.
+              description_teacher: Dalam pelajaran ini, murid akan memainkan permainan yang dimaksudkan untuk memancing mereka berpikir tentang cara yang mengharuskan pemberian perintah untuk membuahkan hasil yang benar. Cara ini akan membantu mereka (murid) dengan mudah membawa pelajaran ini ke Sprite Lab dalam pelajaran yang akan datang.
+            Alien Dance Party with Sprite Lab:
+              name: Event dengan Sprite Lab
+              description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas.
+              description_teacher: Pelajaran ini menampilkan Sprite Lab, sebuah platform bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri. Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai event untuk membuat "pesta dansa alien".
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Jam kode
         csa7-exemplars:
           lessons:
             lesson-15:
@@ -19209,6 +19275,33 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Memperkenalkan Sprite Lab
+            Making Sprites:
+              name: Membuat Sprite
+            Sprites in Action:
+              name: Sprite tengah Beraksi
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Piaraan Virtual'
+              description_student: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+              description_teacher: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: Program Input Pengguna'
+            Simulating Experiments:
+              name: Melakukan Simulasi Eksperimen
+              description_student: Lakukan simulasi di komputer dan lakukan eksperimen dengan mengubah variable.
+              description_teacher: Dengan melakukan simulasi sederhana di Sprite Lab, murid akan merasakan cara menggunakan komputasi untuk mengumpulkan data yang dapat mengidentifikasi tren atau pola. Setelah melakukan simulasi beberapa kali, murid berkesempatan membuat prediksi bahwa perubahan variable dalam simulasi dapat memengaruhi hasil, dan kemudian menguji hipotesis tersebut.
+            End of Course Project:
+              description_student: Proyek sebesar ini pasti menyita waktu dan banyak perencanaan. Cari inspirasi, susun rencana, dan kerahkan kreativitas Anda!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: variabel
+            lessonGroup-4:
+              display_name: Proyek Akhir Kursus
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -19300,3 +19393,1335 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Sandbox
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: Keamanan di Lingkungan Sekitar Online Saya
+              key: Keamanan di Lingkungan Sekitar Online Saya
+            Learn to Drag and Drop:
+              name: Belajar Cara Drag and Drop
+              description_student: Klik dan drag untuk menyelesaikan puzzle.
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
+              key: Belajar Cara Drag and Drop
+            Happy Maps:
+              name: Pemetaan bahagia
+              description_student: Menulis instruksi untuk mengantar Flurb ke buah-buahan.
+              description_teacher: 'Pelajaran tanpa komputer ini mempersatukan tim untuk mengerjakan tugas sederhana: bawa "flurb" ke buah-buahan. Murid akan berlatih menulis instruksi yang presisi sewaktu mereka berusaha menerjemahkan instruksi ke dalam simbol yang tersedia. Jika muncul masalah dalam code, murid juga harus bekerja bersama-sama untuk mengenali bug dan membuat solusi.'
+            Sequencing with Scrat:
+              name: Pengurutan dengan Scrat
+              description_student: Program Scrat untuk mencapai biji akorn.
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
+              key: Pengurutan dengan Scrat
+            Programming with Scrat:
+              name: Pemrograman dengan Scrat
+              description_student: Tulis program untuk membantu Scrat mencapai biji akorn.
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+            Programming with Rey and BB-8:
+              name: Pemrograman dengan Rey dan BB-8
+              description_student: Bantu BB-8 mengumpulkan logam rongsokan.
+              description_teacher: Dalam pelajaran ini, murid akan menggunakan keterampilan pemrograman yang baru dikuasainya dengan cara-cara yang lebih kompleks untuk menyusuri jalur yang mengecoh dengan BB-8.
+              key: Pemrograman dengan Rey dan BB-8
+            Happy Loops:
+              name: Happy Loop
+              description_student: Bantu Flurb memecahkan masalah yang lebih besar menggunakan loop.
+              description_teacher: Aktivitas ini mengkaji ulang Happy Maps. Kali ini, murid akan menyelesaikan puzzle yang lebih besar dan panjang dengan code mereka yang membuat mereka melihat kegunaan dalam struktur yang memudahkan mereka menulis code lebih panjang dengan cara yang lebih mudah.
+            Loops with Scrat:
+              name: Loop dengan Scrat
+              description_student: Bantu Scrat menutupi tanah lebih banyak menggunakan loop.
+              description_teacher: Berpijak pada konsep mengulang instruksi dari "Happy Loops," tahap ini akan meminta murid menggunakan loop untuk sampai ke biji akorn dengan lebih efisien di Code.org.
+            Loops with Laurel:
+              name: Loop dengan Laurel
+              description_student: Bantu Laurel si petualang mengumpulkan harta karun di bawah tanah.
+              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Dalam pelajaran sebelumnya, murid diperkenalkan dengan loop dengan menyusuri labirin dan mengambil jagung. Di sini, loop digunakan untuk mengumpulkan harta karun di kotak gua terbuka.
+            Ocean Scene with Loops:
+              name: Adegan Laut dengan Loop
+              description_student: Gunakan loop dan pola untuk menyelesaikan gambar.
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan loop.
+              key: Adegan Laut dengan Loop
+            The Big Event Jr.:
+              name: The Big Event Jr.
+              description_student: Gerak dan teriak ketika guru Anda menekan tombol pada remote raksasa.
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
+            'Mini-Project: On the Move with Play Lab':
+              description_student: Buat permainan atau cerita Anda sendiri.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!
+            End of Course Project:
+              name: Proyek Akhir Kursus
+            'Programming: Happy Maps':
+              key: 'Pemrograman: peta bahagia'
+              name: Pemetaan bahagia
+              description_student: Menulis instruksi untuk mengantar Flurb ke buah-buahan.
+              description_teacher: 'Pelajaran tanpa komputer ini mempersatukan tim untuk mengerjakan tugas sederhana: bawa "flurb" ke buah-buahan. Murid akan berlatih menulis instruksi yang presisi sewaktu mereka berusaha menerjemahkan instruksi ke dalam simbol yang tersedia. Jika muncul masalah dalam code, murid juga harus bekerja bersama-sama untuk mengenali bug dan membuat solusi.'
+            Programming in Ice Age:
+              key: Pemrograman dalam Zaman Es
+              name: Pemrograman dengan Scrat
+              description_student: Tulis program untuk membantu Scrat mencapai biji akorn.
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+            'Loops: Happy Loops':
+              key: 'Loop: Loop Bahagia'
+              name: Happy Loop
+              description_student: Bantu Flurb memecahkan masalah yang lebih besar menggunakan loop.
+              description_teacher: Aktivitas ini mengkaji ulang Happy Maps. Kali ini, murid akan menyelesaikan puzzle yang lebih besar dan panjang dengan code mereka yang membuat mereka melihat kegunaan dalam struktur yang memudahkan mereka menulis code lebih panjang dengan cara yang lebih mudah.
+            Loops in Ice Age:
+              key: Loop dalam Ice Age
+              name: Loop dengan Scrat
+              description_student: Bantu Scrat menutupi tanah lebih banyak menggunakan loop.
+              description_teacher: Berpijak pada konsep mengulang instruksi dari "Happy Loops," tahap ini akan meminta murid menggunakan loop untuk sampai ke biji akorn dengan lebih efisien di Code.org.
+            Loops in Collector:
+              key: Loop dalam Kolektor
+              name: Loop dengan Laurel
+              description_student: Bantu Laurel si petualang mengumpulkan harta karun di bawah tanah.
+              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Dalam pelajaran sebelumnya, murid diperkenalkan dengan loop dengan menyusuri labirin dan mengambil jagung. Di sini, loop digunakan untuk mengumpulkan harta karun di kotak gua terbuka.
+            'Events: The Big Event':
+              key: 'Event: Event Besar'
+              name: The Big Event Jr.
+              description_student: Gerak dan teriak ketika guru Anda menekan tombol pada remote raksasa.
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
+            Events in Play Lab:
+              key: Event dalam Play Lab
+              description_student: Buat permainan atau cerita Anda sendiri.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!
+            lesson-1:
+              key: pelajaran ke-1
+              name: Proyek Akhir Kursus
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+            lessonGroup-5:
+              display_name: Proyek Akhir Kursus
+          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+          description_audience: 'Usia: 4-7'
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: Pemrograman dengan Angry Birds
+              description_student: Pelajari tentang urutan dan algorithm dengan Angry Birds.
+              description_teacher: Dengan menggunakan karakter dari permainan Angry Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+              key: Pemrograman dengan Angry Birds
+            Debugging in Maze:
+              name: Debugging dalam Labirin
+              description_student: Carilah masalah dalam puzzle dan latih kemampuan debugging Anda.
+              description_teacher: Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan.
+            Collecting Treasure with Laurel:
+              name: Mengumpulkan Harta Karun bersama Laurel
+              key: Mengumpulkan Harta Karun bersama Laurel
+            Creating Art with Code:
+              name: Membuat Seni dengan Code
+              description_student: Buat gambar-gambar yang indah dengan memprogram Artis.
+              description_teacher: Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.
+              key: Membuat Seni dengan Code
+            Swimming Fish in Sprite Lab:
+              name: Iklan Berenang di Sprite Lab
+              description_student: Pelajari cara membuat dan mengedit sprite.
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang dua konsep inti dari Sprite Lab: sprite dan perilaku. Sprite adalah karakter atau objek di layar yang dapat digerakkan, diubah, dan dimanipulasi oleh murid. Perilaku adalah kegiatan yang akan dilakukan terus-menerus oleh sprite sampai berhenti.'
+              key: Iklan Berenang di Sprite Lab
+            Making Sprites:
+              name: Membuat Sprite
+            Sprites in Action:
+              name: Sprite tengah Beraksi
+            Virtual Pet with Sprite Lab:
+              name: Piaraan Virtual
+              description_student: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+              description_teacher: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+              key: Piaraan Virtual
+            Dance Party:
+              name: Pesta Tari
+              description_student: Saatnya merayakan! Dalam pelajaran ini, Anda akan memprogram pesta dansa interaktif Anda sendiri.
+              description_teacher: Dalam pelajaran ini, murid akan memprogram pesta dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena alatnya dibuat untuk menanggapi musik.
+            Loops with Rey and BB-8:
+              name: Loop dengan Rey dan BB-8
+              description_student: 'Tolong BB-8 melintasi labirin menggunakan loop! '
+              key: Loop dengan Rey dan BB-8
+            'Mini-Project: Sticker Art':
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+            Nested Loops in Maze:
+              name: Nested Loop dalam Labirin
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+              key: Nested Loop dalam Labirin
+            Snowflakes with Anna and Elsa:
+              name: Keping Salju bersama Anna dan Elsa
+              description_student: 'Anna dan Elsa memiliki keahlian seluncur es yang sempurna, tetapi membutuhkan bantuan Anda untuk membuat pola di es. Gunakan nested loop untuk menciptakan sesuatu yang KEREN habis. '
+              description_teacher: Sekarang murid tahu cara melapisi loop, mereka dapat membuat begitu banyak hal yang indah.  Pelajaran ini akan membimbing murid mengerjakan serangkaian latihan untuk membantu mereka membuat gambar siap-portofolio sendiri menggunakan keterampilan berseluncur es Anna dan Elsa yang luar biasa!
+              key: Keping Salju bersama Anna dan Elsa
+            Looking Ahead with Minecraft:
+              name: Melihat ke depan
+              description_student: Hindari lava! Di sini Anda mulai belajar tentang conditional di dunia Minecraft.
+              description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
+            If/Else with Bee:
+              name: If/Else dengan Lebah
+              description_student: 'Setelah Anda memahami conditional, kini saatnya memprogram Lebah untuk menggunakan conditional tersebut ketika mengumpulkan madu dan nektar. '
+              description_teacher: Sampai titik ini, murid sudah menulis code yang mengeksekusi dengan cara yang sama persis setiap kali dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, murid Anda akan mulai mengcode dengan kondisional, yang memungkinkan mereka menulis code yang berfungsi berbeda bergantung pada kondisi khusus yang dijumpai oleh program.
+              key: If/Else dengan Lebah
+            While Loops in Farmer:
+              name: While Loop dalam Petani
+              description_student: 'Loop sangat membantu dalam coding. Pelajaran ini akan mengajari Anda tentang jenis loop baru: while loop!'
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditional dalam Minecraft: Perjalanan Air'
+              description_student: Di sini Anda akan belajar tentang conditional di dunia Minecraft.
+              description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
+              key: 'Conditional dalam Minecraft: Perjalanan Air'
+            Until Loops in Maze:
+              name: Until Loop dalam Labirin
+              description_student: Anda dapat melakukan hal-hal menakjubkan ketika menggunakan `until` loops!
+              description_teacher: Dalam pelajaran ini, murid akan belajar tentang loop `until`. Murid akan membuat program yang memerintahkan karakter utama mengulang-ulang kegiatan `until` mereka mencapai titik berhenti yang dikehendaki.
+              key: Until Loop dalam Labirin
+            Harvesting with Conditionals:
+              name: Memanen dengan Conditional
+              description_student: Tidak selalu jelas kapan menggunakan setiap kondisional.  Pelajaran ini akan membantu Anda berlatih memutuskan harus berbuat apa.
+              description_teacher: Murid akan berlatih loop `while`, loop `until`, dan pernyataan `if / else`. Semua blok ini menggunakan conditional. Dengan berlatih ketiga-tiganya, murid akan belajar menulis code yang kompleks dan fleksibel.
+              key: Memanen dengan Conditional
+            Functions in Minecraft:
+              name: Function dalam Minecraft
+              description_student: Bisakah Anda menebak cara menggunakan function untuk code yang paling efisien?
+              description_teacher: Murid mulai memahami betapa bergunanya function dalam petualangan Minecraft yang seru dan interaktif ini!
+              key: Function dalam Minecraft
+            Functions with Artist:
+              name: Function dengan Artis
+              description_student: Buat gambar yang kompleks dengan lebih mudah menggunakan function!
+              description_teacher: Murid akan diperkenalkan dengan penggunaan function dengan Artis. Gambar-gambar megah akan dibuat dan dimodifikasi. Untuk pola yang lebih kompleks, murid akan belajar tentang pembuatan nested function dengan memanggil satu function dari dalam function yang lain.
+              key: Function dengan Artis
+            Functions with Harvester:
+              name: Function dengan Pemanen
+              description_student: Function akan banyak menghemat pekerjaan saat Anda membantu petani memanen hasil panenannya!
+              description_teacher: Murid telah berlatih membuat desain impresif dalam Artis dan menavigasi labirin dalam Lebah, tetapi hari ini mereka akan menggunakan function untuk memetik hasil panen dalam Pemanen. Pelajaran ini akan mendorong murid menggunakan function dengan cara-cara baru dengan menggabungkan function tersebut dengan loop `while` dan pernyataan `if / else`.
+              key: Function dengan Pemanen
+            Using Variables with the Artist:
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan.
+              description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.
+            Variables with the Bee:
+              name: Mengubah Variable dengan Lebah
+              description_student: Lebah ini menyukai variable!
+              description_teacher: Pelajaran ini akan membantu menjelaskan cara variable dapat membuat program lebih kuat dengan memudahkan nilai berubah pada saat code dijalankan.
+            For Loops with Bee:
+              name: For Loop dengan Lebah
+              description_student: Ngung, ngung. Dalam puzzle ini, Anda akan menggiring lebah menuju nektar dan madu menggunakan loop `for`!
+              description_teacher: Dengan menampilkan Lebah, pelajaran ini fokus pada loop `for` dan menggunakan variable yang terus bertambah untuk memecahkan puzzle yang lebih pelik. Murid akan memulai pelajaran dengan meninjau kembali loop dari pelajaran sebelumnya, lalu mereka mengikuti pengenalan tentang loop 'for' agar mereka bisa memecahkan masalah kompleks secara lebih efektif.
+              key: For Loop dengan Lebah
+            For Loops with Artist:
+              name: For Loop dengan Artis
+              description_student: Bersiaplah membuat karya hebat Anda berikutnya. Di sini Anda akan menggunakan loop `for` untuk membuat gambar yang membikin orang terkagum-kagum.
+              description_teacher: Dalam pelajaran ini, murid terus berlatih loop 'for', tetapi kali ini bersama Artis. Murid akan menyelesaikan puzzle dengan menggabungkan ide-ide tentang variable, loop, dan loop 'for' untuk membuat desain yang kompleks. Pada akhir pelajaran, mereka berkesempatan membuat karya seni sendiri di level bermain bebas.
+              key: For Loop dengan Artis
+            End of Course Project:
+              name: Proyek Akhir Kursus
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+              key: Proyek Akhir Kursus
+            Debugging with Scrat:
+              key: Debugging dengan Scrat
+              name: Debugging dalam Labirin
+              description_student: Carilah masalah dalam puzzle dan latih kemampuan debugging Anda.
+              description_teacher: Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan.
+            lesson-2:
+              key: pelajaran ke-2
+              name: Membuat Sprite
+            lesson-3:
+              key: pelajaran ke- 3
+              name: Sprite tengah Beraksi
+            lesson-1:
+              key: pelajaran ke-1
+              name: Pesta Tari
+              description_student: Saatnya merayakan! Dalam pelajaran ini, Anda akan memprogram pesta dansa interaktif Anda sendiri.
+              description_teacher: Dalam pelajaran ini, murid akan memprogram pesta dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena alatnya dibuat untuk menanggapi musik.
+            Sticker Art with Loops:
+              key: Seni Stiker dengan Loop
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+            'Looking Ahead with Minecraft ':
+              name: Melihat ke depan
+              description_student: Hindari lava! Di sini Anda mulai belajar tentang conditional di dunia Minecraft.
+              description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
+            While Loops with the Farmer:
+              key: While Loop dengan Petani
+              name: While Loop dalam Petani
+              description_student: 'Loop sangat membantu dalam coding. Pelajaran ini akan mengajari Anda tentang jenis loop baru: while loop!'
+            lesson-4:
+              key: pelajaran ke- 4
+            Variables with Artist:
+              key: Variabel dengan Artis
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan.
+              description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.
+            Changing Variables with Bee:
+              key: Mengubah Variable dengan Lebah
+              name: Mengubah Variable dengan Lebah
+              description_student: Lebah ini menyukai variable!
+              description_teacher: Pelajaran ini akan membantu menjelaskan cara variable dapat membuat program lebih kuat dengan memudahkan nilai berubah pada saat code dijalankan.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_functions:
+              display_name: fungsi
+            csf_variables:
+              display_name: variabel
+            csf_for_loops:
+              display_name: For Loop
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          description_short: 'Pengenalan ilmu komputer: menggabungkan kurikulum terbaik sekolah dasar bagi murid yang lebih tua usianya.'
+          description_audience: 'Usia: 9-18'
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: Prasurvei CS Principles
+              key: Prasurvei CS Principles
+            Welcome to CSP:
+              name: Selamat datang di CSP
+              key: Selamat datang di CSP
+            Representing Information:
+              name: Menunjukkan informasi
+              key: Menunjukkan informasi
+            Circle Square Patterns:
+              name: Pola Lingkaran Persegi Empat
+              key: Pola Lingkaran Persegi Empat
+            Binary Numbers:
+              name: Bilangan Biner
+              key: Bilangan Biner
+            Overflow and Rounding:
+              name: Overflow dan Rounding (Pembulatan)
+              key: Overflow dan Rounding (Pembulatan)
+            Representing Text:
+              name: Merepresentasikan Teks
+              key: Merepresentasikan Teks
+            Black and White Images:
+              name: Gambar Hitam dan Putih
+              key: Gambar Hitam dan Putih
+            Color Images:
+              name: Gambar Warna
+              key: Gambar Warna
+            Lossless Compression:
+              name: Lossless Compression
+              key: Lossless Compression
+            Lossy Compression:
+              name: Lossy Compression
+              key: Lossy Compression
+            Intellectual Property:
+              name: Hak milik intelektual
+              key: Hak milik intelektual
+            Assessment Day:
+              name: Hari Penilaian
+            Project - Digital Information Dilemmas Part 1:
+              key: Proyek - Dilema Informasi Digital Bagian 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Proyek - Dilema Informasi Digital Bagian 2
+            'Lesson 14: Assessment Day':
+              key: 'Pelajaran 14: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp_unit1_2020:
+              display_name: "(Lama) Unit 1: Informasi Digital"
+        csp2-2022:
+          lessons:
+            Welcome to the Internet:
+              name: Selamat datang di Internet!
+              key: Selamat datang di Internet!
+            Building a Network:
+              name: Membangun Jaringan
+              key: Membangun Jaringan
+            The Need for Addressing:
+              name: Dibutuhkan untuk Pengalamatan
+              key: Dibutuhkan untuk Pengalamatan
+            Routers and Redundancy:
+              name: Router dan Kualitas
+              key: Router dan Kualitas
+            Packets:
+              name: Paket
+              key: Paket
+            Assessment Day:
+              name: Hari Penilaian
+            DNS and HTTP:
+              key: DNS dan HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Proyek - Dilema Internet Bagian 1
+            Project - Internet Dilemmas Part 2:
+              key: Proyek - Dilema Internet Bagian 2
+            'Lesson 9: Assessment Day':
+              key: 'Pelajaran 9: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: Internet'
+        csp3-2022:
+          lessons:
+            Introduction to Apps:
+              name: Pengenalan Aplikasi
+              key: Pengenalan Aplikasi
+            The Need for Programming Languages:
+              name: Kebutuhan akan Bahasa Pemrograman
+              key: Kebutuhan akan Bahasa Pemrograman
+            Intro to Programming:
+              name: Pengenalan Pemrograman
+              key: Pengenalan Pemrograman
+            Debugging:
+              name: Debugging
+              key: Debugging
+            Assessment Day:
+              name: Hari Penilaian
+            Project - Designing an App Part 1:
+              key: Proyek - Mendesain Aplikasi Bag 1
+            Project - Designing an App Part 2:
+              key: Proyek - Mendesain Aplikasi Bag 2
+            Project - Designing an App Part 3:
+              key: Proyek - Mendesain Aplikasi Bag 3
+            Project - Designing an App Part 4:
+              key: Proyek - Mendesain Aplikasi Bag 4
+            Project - Designing an App Part 5:
+              key: Proyek - Mendesain Aplikasi Bag 5
+            'Lesson 11: Assessment Day':
+              key: 'Pelajaran 11: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unit 3: Pengenalan Desain Aplikasi'
+        csp4-2022:
+          lessons:
+            Variables Explore:
+              name: Eksplorasi Variable
+              key: Eksplorasi Variable
+            Variables Investigate:
+              name: Selidiki Variable
+              key: Selidiki Variable
+            Variables Practice:
+              name: Latih Variable
+              key: Latih Variable
+            Variables Make:
+              name: Variable Membuat
+              key: Variable Membuat
+            Conditionals Explore:
+              name: Mengeksplorasi Conditional
+              key: Mengeksplorasi Conditional
+            Conditionals Investigate:
+              name: Menyelidiki Conditional
+              key: Menyelidiki Conditional
+            Conditionals Practice:
+              name: Praktik Conditional
+              key: Praktik Conditional
+            Functions Explore / Investigate:
+              name: Eksplorasi / Selidiki Function
+              key: Eksplorasi / Selidiki Function
+            Functions Practice:
+              name: Praktik Function
+              key: Praktik Function
+            Functions Make:
+              name: Function Membuat
+              key: Function Membuat
+            Assessment Day:
+              name: Hari Penilaian
+            Conditional Make:
+              key: Conditional Membuat
+            Project - Decision Maker App Part 1:
+              key: Proyek - Aplikasi Pembuat Keputusan Bagian 1
+            Project - Decision Maker App Part 2:
+              key: Proyek - Aplikasi Pembuat Keputusan Bagian 2
+            Project - Decision Maker App Part 3:
+              key: Proyek - Aplikasi Pembuat Keputusan Bagian 3
+            'Lesson 15: Assessment Day':
+              key: 'Pelajaran 15: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_variables:
+              display_name: variabel
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp5-2022:
+          lessons:
+            Lists Explore:
+              name: Eksplorasi Daftar
+              key: Eksplorasi Daftar
+            Lists Investigate:
+              name: Selidiki Daftar
+              key: Selidiki Daftar
+            Lists Practice:
+              name: Latih Daftar
+              key: Latih Daftar
+            Lists Make:
+              name: Daftar Membuat
+              key: Daftar Membuat
+            Loops Explore:
+              name: Eksplorasi Loop
+              key: Eksplorasi Loop
+            Loops Investigate:
+              name: Selidiki Loop
+              key: Selidiki Loop
+            Loops Practice:
+              name: Latih Loop
+              key: Latih Loop
+            Loops Make:
+              name: Loop Membuat
+              key: Loop Membuat
+            Traversals Explore:
+              name: Mengeksplorasi Traversal
+              key: Mengeksplorasi Traversal
+            Traversals Investigate:
+              name: Selidiki Traversal
+              key: Selidiki Traversal
+            Traversals Practice:
+              name: Latihan Traversal
+              key: Latihan Traversal
+            Traversals Make:
+              name: Traversal Membuat
+              key: Traversal Membuat
+            Assessment Day:
+              name: Hari Penilaian
+            Semester Hackathon Part 1:
+              key: Semester Hackathon Bagian 1
+            Semester Hackathon Part 2:
+              key: Semester Hackathon Bagian 2
+            Semester Hackathon Part 3:
+              key: Semester Hackathon Bagian 3
+            Semester Hackathon Part 4:
+              key: Semester Hackathon Bagian 4
+            Semester Hackathon Part 5:
+              key: Semester Hackathon Bagian 5
+            'Lesson 18: Assessment Day':
+              key: 'Pelajaran 18: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_lists:
+              display_name: List
+            csp_loops:
+              display_name: Loop
+            csp_traversals:
+              display_name: Melintang
+            csp_project:
+              display_name: Proyek
+        courseb-2022:
+          lessons:
+            Digital Trails:
+              name: Jejak Digital
+              description_student: 'Pelajari tentang jejak digital Anda dan cara menjaga keselamatan diri saat mengunjungi situs web. '
+              key: Jejak Digital
+            Move It, Move It:
+              name: Gerakkan itu, Gerakkan itu
+              description_student: Program teman sekelas Anda untuk melangkah dengan cermat dari satu tempat ke tempat lain.
+              description_teacher: Pelajaran ini akan mempersiapkan murid secara mental untuk latihan coding yang akan mereka jumpai sepanjang kursus ini. Dalam tim-tim kecil, murid akan menggunakan aktivitas fisik untuk memprogram teman sekelas mereka untuk melangkah dengan hati-hati dari satu tempat ke tempat lain sampai tujuan tercapai.
+              key: Gerakkan itu, Gerakkan itu
+            Sequencing with Angry Birds:
+              name: Pengurutan dengan Angry Birds
+              description_student: Bantu Angry Bird merah menyusuri jalur menuju babi nakal.
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
+            Programming with Angry Birds:
+              name: Pemrograman dengan Angry Birds
+              description_student: Buat program untuk membantu Angry Bird bergerak melintasi labirin.
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+            Programming with Harvester:
+              name: Pemrograman dengan Pemanen
+              description_student: Bantu Pemanen mengumpulkan sayuran di sepanjang jalur.
+              description_teacher: Murid akan menerapkan konsep-konsep pemrograman yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial dan mulai menggunakan proses debugging.
+            Getting Loopy:
+              name: Dapat berulang-ulang
+              description_student: Dalam pelajaran ini, kita akan membuat pesta dansa menggunakan repeat loop!
+              description_teacher: Sewaktu kita mulai menulis program yang lebih panjang dan semakin menarik, code kita sering berisi banyak pengulangan. Dalam pelajaran ini, murid akan belajar tentang cara menggunakan loop untuk mengomunikasikan dengan mudah instruksi yang memiliki banyak pengulangan dengan mencermati pola-pola gerakan berulang dalam suatu dansa.
+            Loops with Harvester:
+              name: Loop dengan Pemanen
+              description_student: Bantu Pemanen mengumpulkan panenan lebih banyak lagi menggunakan loop!
+              description_teacher: Berpijak pada konsep mengulang instruksi dari "Getting Loopy," tahap ini akan meminta murid menggunakan loop untuk memetik jagung dengan lebih efisien di Code.org.
+            Loops with Laurel:
+              name: Loop dengan Laurel
+              description_student: Program Laurel si petualang untuk mengumpulkan harta karun di gua terbuka.
+              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
+            Drawing Gardens with Loops:
+              name: Menggambar Taman dengan Loop
+              description_student: Gunakan pola dan loop untuk menyelesaikan gambar.
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, murid menggunakan loop untuk membuat pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar sendiri menggunakan loop.
+            The Right App:
+              name: Aplikasi yang Tepat
+              description_student: Buat sketsa aplikasi ponsel pintar Anda sendiri.
+              description_teacher: Pelajaran ini membuat murid sadar bahwa ilmu komputer dapat membantu manusia dalam kehidupan nyata. Pertama, murid berempati dengan beberapa pengguna telepon pintar fiktif agar dapat membantu mereka menemukan "aplikasi yang tepat" yang memenuhi kebutuhan mereka. Lalu murid melatih empati dan kreativitas untuk membuat sketsa aplikasi telepon pintar sendiri yang memenuhi kebutuhan seorang pengguna lagi.
+              key: Aplikasi yang Tepat
+            The Big Event Jr.:
+              name: The Big Event Jr.
+              description_student: Gerak atau teriak ketika guru Anda menekan tombol pada remote raksasa.
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
+            'Mini-Project: A Royal Battle with Events':
+              description_student: Gunakan event untuk membuat cerita atau permainan interaktif.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
+            End of Course Project:
+              name: Proyek Akhir Kursus
+            Sequencing in Maze:
+              key: Pengurutan dalam Labirin
+              name: Pengurutan dengan Angry Birds
+              description_student: Bantu Angry Bird merah menyusuri jalur menuju babi nakal.
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
+            Programming in Maze:
+              key: Pemrograman dalam Labirin
+              name: Pemrograman dengan Angry Birds
+              description_student: Buat program untuk membantu Angry Bird bergerak melintasi labirin.
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+            Programming in Harvester:
+              key: Pemrograman dalam Pemanen
+              name: Pemrograman dengan Pemanen
+              description_student: Bantu Pemanen mengumpulkan sayuran di sepanjang jalur.
+              description_teacher: Murid akan menerapkan konsep-konsep pemrograman yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial dan mulai menggunakan proses debugging.
+            'Loops: Getting Loopy':
+              key: 'Loop: Menjadi Berbelit'
+              name: Dapat berulang-ulang
+              description_student: Dalam pelajaran ini, kita akan membuat pesta dansa menggunakan repeat loop!
+              description_teacher: Sewaktu kita mulai menulis program yang lebih panjang dan semakin menarik, code kita sering berisi banyak pengulangan. Dalam pelajaran ini, murid akan belajar tentang cara menggunakan loop untuk mengomunikasikan dengan mudah instruksi yang memiliki banyak pengulangan dengan mencermati pola-pola gerakan berulang dalam suatu dansa.
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: Loop dengan Pemanen
+              description_student: Bantu Pemanen mengumpulkan panenan lebih banyak lagi menggunakan loop!
+              description_teacher: Berpijak pada konsep mengulang instruksi dari "Getting Loopy," tahap ini akan meminta murid menggunakan loop untuk memetik jagung dengan lebih efisien di Code.org.
+            Loops in Collector:
+              key: Loop dalam Kolektor
+              name: Loop dengan Laurel
+              description_student: Program Laurel si petualang untuk mengumpulkan harta karun di gua terbuka.
+              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
+            Loops in Artist:
+              key: Loops in Artist
+              name: Menggambar Taman dengan Loop
+              description_student: Gunakan pola dan loop untuk menyelesaikan gambar.
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, murid menggunakan loop untuk membuat pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar sendiri menggunakan loop.
+            'Events: The Big Event':
+              key: 'Event: Event Besar'
+              name: The Big Event Jr.
+              description_student: Gerak atau teriak ketika guru Anda menekan tombol pada remote raksasa.
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
+            Events in Play Lab:
+              key: Event dalam Play Lab
+              description_student: Gunakan event untuk membuat cerita atau permainan interaktif.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
+            lesson-1:
+              key: pelajaran ke-1
+              name: Proyek Akhir Kursus
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            csf_events:
+              display_name: kegiatan
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus A, tetapi dengan tambahan konsep 'pendalaman'.
+          description_audience: 'Usia: 5-8'
+        coursec-2022:
+          lessons:
+            Putting a STOP to Online Meanness:
+              name: MENGHENTIKAN Kejahatan Online
+              key: MENGHENTIKAN Kejahatan Online
+            My Robotic Friends Jr.:
+              name: Teman Robot Saya Jr.
+              description_student: Dalam pelajaran ini, Anda menganggap seolah-olah teman kelas Anda adalah robot dan memprogram mereka untuk membuat pola-pola cangkir bertumpuk.
+              description_teacher: Dengan menggunakan sekumpulan simbol sebagai pengganti code, murid akan merancang algorithm untuk memerintahkan "robot" agar menumpuk cangkir dengan pola yang berbeda-beda. Murid akan bergiliran berpartisipasi sebagai robot, yang hanya menanggapi algorithm yang ditentukan oleh rekan sejawat mereka. Segmen ini mengajari murid tentang hubungan antara simbol dengan kegiatan, perbedaan antara algorithm dengan program, dan keterampilan debugging yang tak ternilai harganya.
+            Programming with Angry Birds:
+              name: Pemrograman dengan Angry Birds
+              description_student: Pelajari tentang urutan dan algorithm dengan Angry Birds.
+              description_teacher: Dengan menggunakan karakter dari permainan Angry Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+            Debugging in Maze:
+              name: Debugging dalam Labirin
+              description_student: Carilah masalah dalam puzzle dan latih kemampuan debugging Anda.
+              description_teacher: Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan.
+              key: Debugging dalam Labirin
+            Collecting Treasure with Laurel:
+              name: Mengumpulkan Harta Karun bersama Laurel
+              description_student: Tulislah algortima untuk membantu Laurel si Petualang mengumpulkan banyak permata!
+              description_teacher: Dalam rangkaian puzzle ini, murid akan terus mengembangkan pemahaman tentang algorithm dan debugging. Bermodalkan karakter baru, Laurel si Petualang, murid akan membuat algorithm sekuensial untuk memerintahkan Laurel mengambil harta karun sepanjang dia menyusuri jalur.
+            Creating Art with Code:
+              name: Membuat Seni dengan Code
+              description_student: Buat gambar-gambar yang indah dengan memprogram Artis.
+              description_teacher: Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.
+            My Loopy Robotic Friends Jr.:
+              name: Teman-teman Robot Saya yang Mengulang-ulang Jr.
+              description_student: Dalam pelajaran ini, Anda akan memprogram teman sekelas lagi, tetapi dengan menggunakan loop Anda akan dapat memecahkan masalah yang lebih besar dan lebih rumit.
+              description_teacher: Berpijak pada aktivitas awal "Teman-Teman Robot Saya", murid mengatasi desain yang lebih besar dan kompleks. Agar dapat memprogram "robot" mereka untuk menyelesaikan desain yang lebih besar ini, murid harus mengidentifikasi pola berulang dalam instruksi mereka yang dapat digantikan dengan loop.
+            Loops with Rey and BB-8:
+              name: Loop dengan Rey dan BB-8
+              description_student: 'Tolong BB-8 melintasi labirin menggunakan loop! '
+              description_teacher: Berpijak pada konsep mengulang instruksi dari "Getting Loopy," tahap ini akan meminta murid menggunakan loop untuk membantu BB-8 melintasi labirin dengan lebih efisien daripada sebelumnya.
+              key: Loop dengan Rey dan BB-8
+            Harvesting Crops with Loops:
+              name: Memanen Hasil Panen dengan Loop
+              description_student: Mari gunakan loop untuk membantu pemanen memanen sayuran!
+            'Mini-Project: Sticker Art':
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+            The Big Event:
+              name: Acara besar
+              description_student: 'Mainkan permainan seru untuk belajar tentang event. '
+              description_teacher: Murid akan segera belajar bahwa peristiwa adalah cara yang efektif untuk menambahkan fleksibilitas ke algorithm yang sudah ditulis sebelumnya. Kadang-kadang Anda menginginkan program yang mampu menanggapi pengguna seketika itu juga sesuai keinginan pengguna. Peristiwa dapat membuat program Anda lebih menarik dan interaktif.
+            Build a Flappy Game:
+              name: Buat Permainan Kepakan
+              description_student: Buat permainan Flappy Bird Anda sesuka hati, lalu bagikan ke teman-teman Anda!
+              description_teacher: Dalam tahapan khusus ini, murid harus membuat permainan Flappy Bird sendiri dengan menggunakan pengatur event untuk mendeteksi klik mouse dan benturan objek. Pada akhir level, murid akan dapat menyesuaikan permainan mereka dengan mengubah tampilan visual atau aturan.
+              key: Buat Permainan Kepakan
+            'Mini-Project: Chase Game':
+              description_student: Saatnya menjadi kreatif dan membuat permainan di Play Lab!
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
+            Picturing Data:
+              name: Penggambaran Data
+              description_student: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
+              description_teacher: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
+              key: Penggambaran Data
+            Binary Bracelets:
+              name: Gelang biner
+              description_student: Buat gelang binary Anda sendiri dan pelajari cara komputer mengingat informasi!
+              description_teacher: Binary luar biasa penting di dunia komputer. Mayoritas komputer dewasa ini menyimpan semua jenis informasi dalam bentuk binary. Pelajaran ini membantu memperlihatkan kemungkinan mengambil sesuatu dari kehidupan nyata dan menerjemahkannya ke dalam serangkaian on dan off.
+              key: Gelang biner
+            End of Course Project:
+              name: Proyek Akhir Kursus
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+              description_teacher: Pelajaran capstone ini memandu murid menjalani proses perancangan, pengembangan, dan pemeragaan proyek-proyek Play Lab mereka sendiri! Untuk memastikan kelancaran proses ini, kami sudah menyediakan struktur langkah demi langkah untuk diikuti oleh murid, mulai dari perencanaan di kertas hingga melakukan coding di situs web kami. Selain itu, kami menawarkan ide-ide untuk membantu guru memfasilitasi unjuk kebolehan pamungkas!
+            'Programming: My Robotic Friends':
+              key: 'Pemrograman: Teman-Teman Robot Saya'
+              name: Teman Robot Saya Jr.
+              description_student: Dalam pelajaran ini, Anda menganggap seolah-olah teman kelas Anda adalah robot dan memprogram mereka untuk membuat pola-pola cangkir bertumpuk.
+              description_teacher: Dengan menggunakan sekumpulan simbol sebagai pengganti code, murid akan merancang algorithm untuk memerintahkan "robot" agar menumpuk cangkir dengan pola yang berbeda-beda. Murid akan bergiliran berpartisipasi sebagai robot, yang hanya menanggapi algorithm yang ditentukan oleh rekan sejawat mereka. Segmen ini mengajari murid tentang hubungan antara simbol dengan kegiatan, perbedaan antara algorithm dengan program, dan keterampilan debugging yang tak ternilai harganya.
+            Programming in Maze:
+              key: Pemrograman dalam Labirin
+              name: Pemrograman dengan Angry Birds
+              description_student: Pelajari tentang urutan dan algorithm dengan Angry Birds.
+              description_teacher: Dengan menggunakan karakter dari permainan Angry Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
+            Programming in Collector:
+              key: Pemrograman dalam Kolektor
+              name: Mengumpulkan Harta Karun bersama Laurel
+              description_student: Tulislah algortima untuk membantu Laurel si Petualang mengumpulkan banyak permata!
+              description_teacher: Dalam rangkaian puzzle ini, murid akan terus mengembangkan pemahaman tentang algorithm dan debugging. Bermodalkan karakter baru, Laurel si Petualang, murid akan membuat algorithm sekuensial untuk memerintahkan Laurel mengambil harta karun sepanjang dia menyusuri jalur.
+            Programming in Artist:
+              key: Pemrograman dalam Artis
+              name: Membuat Seni dengan Code
+              description_student: Buat gambar-gambar yang indah dengan memprogram Artis.
+              description_teacher: Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.
+            'Loops: My Loopy Robotic Friends':
+              key: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
+              name: Teman-teman Robot Saya yang Mengulang-ulang Jr.
+              description_student: Dalam pelajaran ini, Anda akan memprogram teman sekelas lagi, tetapi dengan menggunakan loop Anda akan dapat memecahkan masalah yang lebih besar dan lebih rumit.
+              description_teacher: Berpijak pada aktivitas awal "Teman-Teman Robot Saya", murid mengatasi desain yang lebih besar dan kompleks. Agar dapat memprogram "robot" mereka untuk menyelesaikan desain yang lebih besar ini, murid harus mengidentifikasi pola berulang dalam instruksi mereka yang dapat digantikan dengan loop.
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: Memanen Hasil Panen dengan Loop
+              description_student: Mari gunakan loop untuk membantu pemanen memanen sayuran!
+            Sticker Art with Loops:
+              key: Seni Stiker dengan Loop
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+            'Events: The Big Event':
+              key: 'Event: Event Besar'
+              name: Acara besar
+              description_student: 'Mainkan permainan seru untuk belajar tentang event. '
+              description_teacher: Murid akan segera belajar bahwa peristiwa adalah cara yang efektif untuk menambahkan fleksibilitas ke algorithm yang sudah ditulis sebelumnya. Kadang-kadang Anda menginginkan program yang mampu menanggapi pengguna seketika itu juga sesuai keinginan pengguna. Peristiwa dapat membuat program Anda lebih menarik dan interaktif.
+            Events in Play Lab:
+              key: Event dalam Play Lab
+              description_student: Saatnya menjadi kreatif dan membuat permainan di Play Lab!
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
+            'End of Course Project: Create a Play Lab Game':
+              key: 'Proyek Akhir Kursus: Membuat Permainan Play Lab'
+              name: Proyek Akhir Kursus
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+              description_teacher: Pelajaran capstone ini memandu murid menjalani proses perancangan, pengembangan, dan pemeragaan proyek-proyek Play Lab mereka sendiri! Untuk memastikan kelancaran proses ini, kami sudah menyediakan struktur langkah demi langkah untuk diikuti oleh murid, mulai dari perencanaan di kertas hingga melakukan coding di situs web kami. Selain itu, kami menawarkan ide-ide untuk membantu guru memfasilitasi unjuk kebolehan pamungkas!
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          student_description: Buat program dengan pengurutan, loop, dan event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+          description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
+          description_audience: 'Usia: 6-10'
+        csp6-2022:
+          lessons:
+            Algorithms Solve Problems:
+              name: Algorithm Memecahkan Masalah
+              key: Algorithm Memecahkan Masalah
+            Algorithm Efficiency:
+              name: Efisiensi Algorithm
+              key: Efisiensi Algorithm
+            Unreasonable Time:
+              name: Waktu yang Tidak Masuk Akal
+              key: Waktu yang Tidak Masuk Akal
+            The Limits of Algorithms:
+              name: Batas-Batas Algorithm
+              key: Batas-Batas Algorithm
+            Parallel and Distributed Algorithms:
+              name: Algorithm Paralel dan Terdistribusi
+              key: Algorithm Paralel dan Terdistribusi
+            Assessment Day:
+              name: Hari Penilaian
+            'Lesson 6: Assessment Day':
+              key: 'Pelajaran 6: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unit 6: Algorithm'
+        csp7-2022:
+          lessons:
+            Parameters and Return Explore:
+              name: Parameter dan Return Explore
+              key: Parameter dan Return Explore
+            Parameters and Return Investigate:
+              name: Parameter dan Return Investigate
+              key: Parameter dan Return Investigate
+            Parameters and Return Practice:
+              name: Parameter dan Return Practice
+              key: Parameter dan Return Practice
+            Parameters and Return Make:
+              name: Parameter dan Return Make
+              key: Parameter dan Return Make
+            Libraries Explore:
+              name: Eksplorasi Perpustakaan
+              key: Eksplorasi Perpustakaan
+            Libraries Investigate:
+              name: Selidiki Perpustakaan
+              key: Selidiki Perpustakaan
+            Libraries Practice:
+              name: Praktik Perpustakaan
+              key: Praktik Perpustakaan
+            Assessment Day:
+              name: Hari Penilaian
+            Project - Make a Library Part 1:
+              key: Proyek - Membuat Perpustakaan Bagian 1
+            Project - Make a Library Part 2:
+              key: Proyek - Membuat Perpustakaan Bagian 2
+            Project - Make a Library Part 3:
+              key: Proyek - Membuat Perpustakaan Bagian 3
+            'Lesson 11: Assessment Day':
+              key: 'Pelajaran 11: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter dan Nilai Balik
+            csp_libraries:
+              display_name: Perpustakaan
+        csp8-2022:
+          lessons:
+            Create PT - Review the Task:
+              key: Membuat PT - Meninjau Tugas
+            lesson-4:
+              key: pelajaran ke- 4
+            Create PT - Make a Plan:
+              key: Membuat PT - Membuat Rencana
+            Create PT - Complete the Task:
+              key: Membuat PT - Menyelesaikan tugas
+        csp9-2022:
+          lessons:
+            Exploring One Column:
+              name: Mengeksplorasi Satu Kolom
+              key: Mengeksplorasi Satu Kolom
+            Filtering and Cleaning Data:
+              name: Memfilter dan Membersihkan Data
+              key: Memfilter dan Membersihkan Data
+            Exploring Two Columns:
+              name: Mengeksplorasi Dua Kolom
+              key: Mengeksplorasi Dua Kolom
+            Machine Learning:
+              name: Pembelajaran Mesin
+            Assessment Day:
+              name: Hari Penilaian
+            Learning From Data:
+              key: Belajar Dari Data
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Mahadata, Crowdsourcing, dan Pembelajaran Mesin
+            Machine Learning and Bias:
+              key: Pembelajaran Mesin dan Bias
+              name: Pembelajaran Mesin
+            lesson-10:
+              key: pelajaran ke-10
+            Project - Tell a Data Story - Part 1:
+              key: Proyek - Menuturkan Cerita Data - Bagian 1
+            Project - Tell a Data Story - Part 2:
+              key: Proyek - Menuturkan Cerita Data - Bagian 2
+            'Lesson 9: Assessment Day':
+              key: 'Pelajaran 9: Hari Penilaian'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
+        csp10-2022:
+          lessons:
+            Data Policies and Privacy:
+              name: Kebijakan dan Privasi Data
+              key: Kebijakan dan Privasi Data
+            The Value of Privacy:
+              name: Nilai Privasi
+              key: Nilai Privasi
+            Security Risks Part 1:
+              name: Risiko Keamanan Bagian 1
+              key: Risiko Keamanan Bagian 1
+            Security Risks Part 2:
+              name: Risiko Keamanan Bagian 2
+              key: Risiko Keamanan Bagian 2
+            Protecting Data Part 1:
+              name: Melindungi Data Bagian 1
+              key: Melindungi Data Bagian 1
+            Protecting Data Part 2:
+              name: Melindungi Data Bagian 2
+              key: Melindungi Data Bagian 2
+            Assessment Day:
+              name: Hari Penilaian
+            Project - Innovation Simulation Part 1:
+              key: Proyek - Simulasi Inovasi Bagian 1
+            Project - Innovation Simulation Part 2:
+              key: Proyek - Simulasi Inovasi Bagian 2
+            Project - Innovation Simulation Part 3:
+              key: Proyek - Simulasi Inovasi Bagian 3
+            'Project: Innovation Simulation Part 4':
+              key: 'Proyek: Simulasi Inovasi Bagian 4'
+            'Project: Innovation Simulation Part 5':
+              key: 'Proyek: Simulasi Inovasi Bagian 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Proyek: Simulasi Inovasi Bagian 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Proyek: Simulasi Inovasi Bagian 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'Pelajaran 14: Hari Penilaian Unit'
+              name: Hari Penilaian
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: Unit 10 - Cybersecurity dan Dampak Global
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              name: Penguatan Kata Sandi
+              description_student: Dalam pelajaran ini, Anda akan mempelajari cara kata sandi melindungi informasi Anda, dan cara membuat kata sandi yang bagus.
+            Graph Paper Programming:
+              name: Pemrograman grafis diatas kertas
+              description_student: Dalam pelajaran ini, Anda akan memprogram teman sekelas Anda untuk membuat gambar!
+              description_teacher: 'Dengan "memprogram" satu sama lain untuk menggambar, murid berkesempatan merasakan beberapa konsep inti pemrograman secara mengasyikkan dan mudah diakses. Murid di kelas akan memulai pelajaran dengan meminta murid menggunakan simbol untuk memerintahkan satu sama lain mewarnai persegi empat di kertas grafik dalam upaya mereproduksi gambar yang sudah ada. Jika masih ada waktu, pelajaran dapat diakhiri dengan gambar yang dibuat oleh murid sendiri.  '
+            Introduction to Online Puzzles:
+              name: Pengantar teka-Teki secara Online
+              description_student: Pelajaran ini memberikan latihan keterampilan yang akan Anda butuhkan untuk kursus ini.
+              description_teacher: 'Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.'
+              key: Pengantar teka-Teki secara Online
+            Relay Programming:
+              name: Pemrograman bergiliran
+              description_student: Ingat pada awal kursus ini ketika Anda menggambar dengan code? Dalam pelajaran ini, Anda akan bekerja sama dengan tim untuk melakukan sesuatu yang sangat mirip!
+              key: Pemrograman bergiliran
+            Debugging with Laurel:
+              name: Debugging dengan Laurel
+              description_student: Pernahkah Anda menemui masalah saat melakukan coding? Dalam pelajaran ini, Anda akan belajar tentang rahasia debugging. Debugging adalah proses mencari dan memperbaiki masalah dalam code.
+              description_teacher: Dalam aktivitas online ini, murid akan berlatih debugging dalam lingkungan "kolektor". Murid harus berlatih membaca dan mengedit code untuk memperbaiki puzzle dengan algorithm, loop, dan nested loop sederhana.
+            Events in Bounce:
+              name: Event dalam Pantulan
+              description_student: Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!
+              description_teacher: Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.
+              key: Event dalam Pantulan
+            Build a Star Wars Game:
+              name: Buat Permainan Star Wars
+              description_student: Merasakan kekuatan seperti yang anda membangun anda sendiri Peran Bintang Permainan dalam pelajaran ini.
+              description_teacher: Dalam pelajaran ini, murid akan berlatih menggunakan event untuk membuat permainan yang dapat mereka bagikan secara online. Dengan menampilkan R2-D2 dan karakter Star Wars lainnya, murid akan dipandu menjelajahi event, lalu diberi ruang untuk membuat permainan mereka sendiri.
+              key: Buat Permainan Star Wars
+            Dance Party:
+              name: Pesta Tari
+              description_student: Saatnya merayakan! Dalam pelajaran ini, Anda akan memprogram pesta dansa interaktif Anda sendiri.
+              description_teacher: Dalam pelajaran ini, murid akan memprogram pesta dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena alatnya dibuat untuk menanggapi musik.
+              key: Pesta Tari
+            Loops in Ice Age:
+              name: Loop dalam Ice Age
+              description_student: Dalam pelajaran ini, Anda akan menggunakan blok repeat untuk menolong Scrat sampai di biji akorn seefisien mungkin.
+              description_teacher: Sebagai pembaruan (atau pengenalan) cepat dalam menggunakan loop, tahap ini akan memerintahkan murid menggunakan blok `repeat` untuk membawa Scrat ke biji akorn dengan lebih efisien.
+              key: Loop dalam Ice Age
+            Drawing Shapes with Loops:
+              name: Menggambar Bentuk dengan Loop
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar keren dengan Artis!
+              description_teacher: Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini juga berfungsi ganda sebagai latihan debugging untuk praktik pemecahan masalah ekstra.
+            Nested Loops in Maze:
+              name: Nested Loop dalam Labirin
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
+              description_student: Saatnya memainkan permainan untuk mendapatkan poin hanya dalam kondisi tertentu!
+              key: Bersyarat dengan kartu
+            Looking Ahead with Minecraft:
+              name: Melihat ke depan
+              description_student: Hindari lava! Di sini Anda mulai belajar tentang conditional di dunia Minecraft.
+              description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
+            If/Else with Bee:
+              name: If/Else dengan Lebah
+              description_student: 'Setelah Anda memahami conditional, kini saatnya memprogram Lebah untuk menggunakan conditional tersebut ketika mengumpulkan madu dan nektar. '
+              description_teacher: Sampai titik ini, murid sudah menulis code yang mengeksekusi dengan cara yang sama persis setiap kali dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, murid Anda akan mulai mengcode dengan kondisional, yang memungkinkan mereka menulis code yang berfungsi berbeda bergantung pada kondisi khusus yang dijumpai oleh program.
+            While Loops in Farmer:
+              name: While Loop dalam Petani
+              description_student: 'Loop sangat membantu dalam coding. Pelajaran ini akan mengajari Anda tentang jenis loop baru: while loop!'
+              key: While Loop dalam Petani
+            Until Loops in Maze:
+              name: Until Loop dalam Labirin
+              description_student: Anda dapat melakukan hal-hal menakjubkan ketika menggunakan `until` loops!
+              description_teacher: Dalam pelajaran ini, murid akan belajar tentang loop `until`. Murid akan membuat program yang memerintahkan karakter utama mengulang-ulang kegiatan `until` mereka mencapai titik berhenti yang dikehendaki.
+              key: Until Loop dalam Labirin
+            End of Course Project:
+              name: Proyek Akhir Kursus
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+              key: Proyek Akhir Kursus
+            lesson-5:
+              key: pelajaran ke-5
+              name: Penguatan Kata Sandi
+              description_student: Dalam pelajaran ini, Anda akan mempelajari cara kata sandi melindungi informasi Anda, dan cara membuat kata sandi yang bagus.
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritma: Kertas Grafik Pemrograman'
+              name: Pemrograman grafis diatas kertas
+              description_student: Dalam pelajaran ini, Anda akan memprogram teman sekelas Anda untuk membuat gambar!
+              description_teacher: 'Dengan "memprogram" satu sama lain untuk menggambar, murid berkesempatan merasakan beberapa konsep inti pemrograman secara mengasyikkan dan mudah diakses. Murid di kelas akan memulai pelajaran dengan meminta murid menggunakan simbol untuk memerintahkan satu sama lain mewarnai persegi empat di kertas grafik dalam upaya mereproduksi gambar yang sudah ada. Jika masih ada waktu, pelajaran dapat diakhiri dengan gambar yang dibuat oleh murid sendiri.  '
+            Debugging in Collector:
+              key: Debugging dalam Kolektor
+              name: Debugging dengan Laurel
+              description_student: Pernahkah Anda menemui masalah saat melakukan coding? Dalam pelajaran ini, Anda akan belajar tentang rahasia debugging. Debugging adalah proses mencari dan memperbaiki masalah dalam code.
+              description_teacher: Dalam aktivitas online ini, murid akan berlatih debugging dalam lingkungan "kolektor". Murid harus berlatih membaca dan mengedit code untuk memperbaiki puzzle dengan algorithm, loop, dan nested loop sederhana.
+            Loops in Artist:
+              key: Loops in Artist
+              name: Menggambar Bentuk dengan Loop
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar keren dengan Artis!
+              description_teacher: Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini juga berfungsi ganda sebagai latihan debugging untuk praktik pemecahan masalah ekstra.
+            Nested Loops in Bee:
+              key: Nested Loop dalam Lebah
+              name: Nested Loop dalam Labirin
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+            lesson-6:
+              key: pelajaran ke-6
+              name: Melihat ke depan
+              description_student: Hindari lava! Di sini Anda mulai belajar tentang conditional di dunia Minecraft.
+              description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
+            Conditionals in Bee:
+              key: Kondisional dengan Lebah
+              name: If/Else dengan Lebah
+              description_student: 'Setelah Anda memahami conditional, kini saatnya memprogram Lebah untuk menggunakan conditional tersebut ketika mengumpulkan madu dan nektar. '
+              description_teacher: Sampai titik ini, murid sudah menulis code yang mengeksekusi dengan cara yang sama persis setiap kali dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, murid Anda akan mulai mengcode dengan kondisional, yang memungkinkan mereka menulis code yang berfungsi berbeda bergantung pada kondisi khusus yang dijumpai oleh program.
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_events:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          title: Kursus D (2021)
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni, permainan, dan bahkan pesta dansa.
+          description_audience: 'Usia: 7-11'
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              description_student: Mainkan permainan dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang tepat.
+              description_teacher: Dalam pelajaran ini, murid akan memainkan permainan yang dimaksudkan untuk memancing mereka berpikir tentang cara yang mengharuskan pemberian perintah untuk membuahkan hasil yang benar. Cara ini akan membantu mereka (murid) dengan mudah membawa pelajaran ini ke Sprite Lab dalam pelajaran yang akan datang.
+            Swimming Fish with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+              description_student: Pelajari cara membuat dan mengedit sprite.
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang dua konsep inti dari Sprite Lab: sprite dan perilaku. Sprite adalah karakter atau objek di layar yang dapat digerakkan, diubah, dan dimanipulasi oleh murid. Perilaku adalah kegiatan yang akan dilakukan terus-menerus oleh sprite sampai berhenti.'
+            Alien Dance Party with Sprite Lab:
+              name: Event dengan Sprite Lab
+              description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas.
+              description_teacher: Pelajaran ini menampilkan Sprite Lab, sebuah platform bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri. Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai event untuk membuat "pesta dansa alien".
+              key: Event dengan Sprite Lab
+            Be A Super Digital Citizen:
+              name: Menjadi Warga Digital Super
+            Private and Personal Information:
+              name: Informasi Privat dan Pribadi
+              description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
+              key: Informasi Privat dan Pribadi
+            'Mini-Project: About Me':
+              name: Tentang Saya dengan Sprite Lab
+              description_student: Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.
+            Digital Sharing:
+              name: Berbagi Secara Digital
+              description_student: 'Dalam pelajaran ini, Anda akan belajar tentang tantangan dan manfaat kepemilikan dan hak cipta. '
+              key: Berbagi Secara Digital
+            Drawing with Loops:
+              name: Loop dengan Artis
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+            Fancy Shapes using Nested Loops:
+              name: Bentuk-Bentuk Menawan menggunakan Nested Loop
+              description_student: Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop.
+            'Mini-Project: Design a Snowflake':
+              description_student: 'Anna dan Elsa memiliki keahlian seluncur es yang sempurna, tetapi membutuhkan bantuan Anda untuk membuat pola di es. Gunakan nested loop untuk menciptakan sesuatu yang KEREN habis. '
+            Songwriting:
+              name: Menulis lagu
+              description_student: Bahkan bintang musik rock sekalipun membutuhkan keterampilan pemrograman. Pelajaran ini akan mengajari Anda tentang function menggunakan lirik lagu.
+              description_teacher: Salah satu struktur paling megah di dunia ilmu komputer adalah function. Function (kadang-kadang disebut prosedur) adalah program mini yang dapat Anda gunakan berulang-ulang di dalam program yang lebih besar. Pelajaran ini akan membantu murid secara intuitif memahami alasan mengapa penggabungan potongan code ke dalam function adalah sebuah praktik yang begitu berguna.
+            Functions in Minecraft:
+              name: Function dalam Minecraft
+              description_student: Bisakah Anda menebak cara menggunakan function untuk code yang paling efisien?
+              description_teacher: Murid mulai memahami betapa bergunanya function dalam petualangan Minecraft yang seru dan interaktif ini!
+              key: Function dalam Minecraft
+            Functions with Artist:
+              name: Function dengan Artis
+              description_student: Buat gambar yang kompleks dengan lebih mudah menggunakan function!
+              description_teacher: Murid akan diperkenalkan dengan penggunaan function dengan Artis. Gambar-gambar megah akan dibuat dan dimodifikasi. Untuk pola yang lebih kompleks, murid akan belajar tentang pembuatan nested function dengan memanggil satu function dari dalam function yang lain.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditional dalam Minecraft: Perjalanan Air'
+              description_student: Di sini Anda akan belajar tentang conditional di dunia Minecraft.
+              description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
+              key: 'Conditional dalam Minecraft: Perjalanan Air'
+            Conditionals with the Farmer:
+              name: Conditional dengan Petani
+              description_student: Anda harus memberi tahu komputer apa yang harus dilakukan dalam kondisi tertentu lewat serial yang seru dan menantang ini.
+              description_teacher: Pelajaran ini memperkenalkan murid dengan loop `while` dan pernyataan `if / else`. _While loops_ adalah loop yang terus mengulang perintah sepanjang kondisinya benar. While loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah harus diulang, tetapi pemrogram tahu kondisi apa yang harus benar agar loop dapat terus mengulang. Pernyataan `If / Else` memberikan fleksibilitas dalam pemrograman dengan menjalankan seluruh bagian code hanya jika sesuatu itu benar, tetapi menjalankan code yang lain jika sebaliknya.
+            Functions with Harvester:
+              name: Function dengan Pemanen
+              description_student: Function akan banyak menghemat pekerjaan saat Anda membantu petani memanen hasil panenannya!
+              description_teacher: Murid telah berlatih membuat desain impresif dalam Artis dan menavigasi labirin dalam Lebah, tetapi hari ini mereka akan menggunakan function untuk memetik hasil panen dalam Pemanen. Pelajaran ini akan mendorong murid menggunakan function dengan cara-cara baru dengan menggabungkan function tersebut dengan loop `while` dan pernyataan `if / else`.
+            Designing for Accessibility:
+              name: Mendesain untuk Aksesibilitas
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang aksesibilitas dan nilai empati melalui penggodokan (curah gugasan) dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
+            End of Course Project:
+              name: Proyek Akhir Kursus
+              description_student: Proyek sebesar ini pasti menyita waktu dan banyak perencanaan. Cari inspirasi, susun rencana, dan kerahkan kreativitas Anda!
+              description_teacher: |-
+                Empat pelajaran berikutnya memberi kesempatan murid untuk menerapkan keterampilan coding mereka ke dalam proyek capstone. Proyek ini akan membantu setiap murid mendapatkan pengalaman coding dan menghasilkan sebuah contoh untuk dibagikan kepada rekan sejawat dan orang-orang tercinta. Karena dimaksudkan sebagai pengalaman multipelajaran atau multipekan, murid akan meluangkan waktu melakukan penggodokan, belajar tentang proses desain, pembuatan, dan presentasi karya puncak. \\r
+                \\r
+                Dalam tahap eksplorasi, murid akan bermain-main dengan berbagai contoh proyek yang sudah dibuat di Artis dan juga Sprite Lab sebagai sumber inspirasi. Berikutnya, murid akan belajar tentang proses desain dan cara menerapkan proses tersebut ke dalam proyek mereka sendiri.  Mereka kemudian akan mendapatkan ruang untuk membuat proyek sendiri dalam Artis, Sprite Lab, atau antarmuka lain yang sudah mereka akrabi (kemungkinan ini menjadi tahapan proyek yang paling panjang). Terakhir, murid akan dapat mempresentasikan karya mereka yang sudah jadi kepada rekan sejawat.
+              key: Proyek Akhir Kursus
+            Simon Says:
+              key: Simon Mengatakan
+              description_student: Mainkan permainan dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang tepat.
+              description_teacher: Dalam pelajaran ini, murid akan memainkan permainan yang dimaksudkan untuk memancing mereka berpikir tentang cara yang mengharuskan pemberian perintah untuk membuahkan hasil yang benar. Cara ini akan membantu mereka (murid) dengan mudah membawa pelajaran ini ke Sprite Lab dalam pelajaran yang akan datang.
+            Learning Sprites with Sprite Lab:
+              key: Mempelajari Sprite dengan Sprite Lab
+              name: Iklan Berenang dengan Sprite Lab
+              description_student: Pelajari cara membuat dan mengedit sprite.
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang dua konsep inti dari Sprite Lab: sprite dan perilaku. Sprite adalah karakter atau objek di layar yang dapat digerakkan, diubah, dan dimanipulasi oleh murid. Perilaku adalah kegiatan yang akan dilakukan terus-menerus oleh sprite sampai berhenti.'
+            lesson-4:
+              key: pelajaran ke- 4
+              name: Menjadi Warga Digital Super
+            About Me:
+              key: Tentang Saya
+              name: Tentang Saya dengan Sprite Lab
+              description_student: Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.
+            Programming and Loops with the Artist:
+              key: Pemrograman dan Loop dengan Artis
+              name: Loop dengan Artis
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+            Nested Loops in Artist:
+              key: Nested Loop dalam Artis
+              name: Bentuk-Bentuk Menawan menggunakan Nested Loop
+              description_student: Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop.
+            Nested Loops in Frozen:
+              key: Nested Loop dalam Frozen
+              description_student: 'Anna dan Elsa memiliki keahlian seluncur es yang sempurna, tetapi membutuhkan bantuan Anda untuk membuat pola di es. Gunakan nested loop untuk menciptakan sesuatu yang KEREN habis. '
+            'Functions: Songwriting':
+              key: 'Fungsi: Mencipta Lagu'
+              name: Menulis lagu
+              description_student: Bahkan bintang musik rock sekalipun membutuhkan keterampilan pemrograman. Pelajaran ini akan mengajari Anda tentang function menggunakan lirik lagu.
+              description_teacher: Salah satu struktur paling megah di dunia ilmu komputer adalah function. Function (kadang-kadang disebut prosedur) adalah program mini yang dapat Anda gunakan berulang-ulang di dalam program yang lebih besar. Pelajaran ini akan membantu murid secara intuitif memahami alasan mengapa penggabungan potongan code ke dalam function adalah sebuah praktik yang begitu berguna.
+            Functions in Artist:
+              key: Fungsi dalam Artis
+              name: Function dengan Artis
+              description_student: Buat gambar yang kompleks dengan lebih mudah menggunakan function!
+              description_teacher: Murid akan diperkenalkan dengan penggunaan function dengan Artis. Gambar-gambar megah akan dibuat dan dimodifikasi. Untuk pola yang lebih kompleks, murid akan belajar tentang pembuatan nested function dengan memanggil satu function dari dalam function yang lain.
+            Conditionals:
+              key: Kondisi
+              name: Conditional dengan Petani
+              description_student: Anda harus memberi tahu komputer apa yang harus dilakukan dalam kondisi tertentu lewat serial yang seru dan menantang ini.
+              description_teacher: Pelajaran ini memperkenalkan murid dengan loop `while` dan pernyataan `if / else`. _While loops_ adalah loop yang terus mengulang perintah sepanjang kondisinya benar. While loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah harus diulang, tetapi pemrogram tahu kondisi apa yang harus benar agar loop dapat terus mengulang. Pernyataan `If / Else` memberikan fleksibilitas dalam pemrograman dengan menjalankan seluruh bagian code hanya jika sesuatu itu benar, tetapi menjalankan code yang lain jika sebaliknya.
+            Functions in Harvester:
+              key: Function dalam Pemanen
+              name: Function dengan Pemanen
+              description_student: Function akan banyak menghemat pekerjaan saat Anda membantu petani memanen hasil panenannya!
+              description_teacher: Murid telah berlatih membuat desain impresif dalam Artis dan menavigasi labirin dalam Lebah, tetapi hari ini mereka akan menggunakan function untuk memetik hasil panen dalam Pemanen. Pelajaran ini akan mendorong murid menggunakan function dengan cara-cara baru dengan menggabungkan function tersebut dengan loop `while` dan pernyataan `if / else`.
+            lesson-1:
+              key: pelajaran ke-1
+              name: Mendesain untuk Aksesibilitas
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang aksesibilitas dan nilai empati melalui penggodokan (curah gugasan) dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            ramp_up:
+              display_name: Nested Loop
+            csf_functions:
+              display_name: fungsi
+            csf_nested_loops:
+              display_name: Kondisi
+            lessonGroup-7:
+              display_name: Dampak dari Komputasi
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 8-12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Memperkenalkan Sprite Lab
+            Making Sprites:
+              name: Membuat Sprite
+            Sprites in Action:
+              name: Sprite tengah Beraksi
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Piaraan Virtual'
+              description_student: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+              description_teacher: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+            The Power of Words:
+              name: Kekuatan kata-Kata
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: Program Input Pengguna'
+            Drawing with Loops:
+              name: Loop dengan Artis
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+            Using Variables with the Artist:
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan.
+              description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.
+            Programming with the Bee:
+              name: Nested Loop dalam Labirin
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+            Variables with the Bee:
+              name: Mengubah Variable dengan Lebah
+              description_student: Lebah ini menyukai variable!
+              description_teacher: Pelajaran ini akan membantu menjelaskan cara variable dapat membuat program lebih kuat dengan memudahkan nilai berubah pada saat code dijalankan.
+            For Loop Fun:
+              name: Untuk Loop Fun
+              description_student: Anda akan merasakan banyak kegembiraan belajar tentang loop `for`!
+              description_teacher: Kita tahu bahwa loop memungkinkan kita melakukan banyak hal berkali-kali, tetapi sekarang kita akan mempelajari cara menggunakan loop yang memiliki struktur ekstra bawaan. Struktur baru ini akan memudahkan murid membuat code yang lebih hebat dan dinamis.
+              key: Untuk Loop Fun
+            For Loops with Bee:
+              name: For Loop dengan Lebah
+              description_student: Ngung, ngung. Dalam puzzle ini, Anda akan menggiring lebah menuju nektar dan madu menggunakan loop `for`!
+              description_teacher: Dengan menampilkan Lebah, pelajaran ini fokus pada loop `for` dan menggunakan variable yang terus bertambah untuk memecahkan puzzle yang lebih pelik. Murid akan memulai pelajaran dengan meninjau kembali loop dari pelajaran sebelumnya, lalu mereka mengikuti pengenalan tentang loop 'for' agar mereka bisa memecahkan masalah kompleks secara lebih efektif.
+            For Loops with Artist:
+              name: For Loop dengan Artis
+              description_student: Bersiaplah membuat karya hebat Anda berikutnya. Di sini Anda akan menggunakan loop `for` untuk membuat gambar yang membikin orang terkagum-kagum.
+              description_teacher: Dalam pelajaran ini, murid terus berlatih loop 'for', tetapi kali ini bersama Artis. Murid akan menyelesaikan puzzle dengan menggabungkan ide-ide tentang variable, loop, dan loop 'for' untuk membuat desain yang kompleks. Pada akhir pelajaran, mereka berkesempatan membuat karya seni sendiri di level bermain bebas.
+            Simulating Experiments:
+              name: Melakukan Simulasi Eksperimen
+              description_student: Lakukan simulasi di komputer dan lakukan eksperimen dengan mengubah variable.
+              description_teacher: Dengan melakukan simulasi sederhana di Sprite Lab, murid akan merasakan cara menggunakan komputasi untuk mengumpulkan data yang dapat mengidentifikasi tren atau pola. Setelah melakukan simulasi beberapa kali, murid berkesempatan membuat prediksi bahwa perubahan variable dalam simulasi dapat memengaruhi hasil, dan kemudian menguji hipotesis tersebut.
+              key: Melakukan Simulasi Eksperimen
+            AI For Oceans:
+              name: AI for Oceans
+            The Internet:
+              name: Internet
+              description_student: Pernah bertanya-tanya bagaimana informasi melintasi internet? Bukan sulap! Pelajaran ini akan mengajari Anda dasar-dasar cara kerja internet.
+              description_teacher: Meskipun banyak orang menggunakan internet setiap hari, tidak begitu banyak yang tahu cara kerjanya. Dalam pelajaran ini, murid berpura-pura akan menyusuri internet, sambil terus belajar tentang koneksi, URL, Alamat IP, dan DNS.
+            End of Course Project:
+              name: Proyek Akhir Kursus
+              description_student: Proyek sebesar ini pasti menyita waktu dan banyak perencanaan. Cari inspirasi, susun rencana, dan kerahkan kreativitas Anda!
+              key: Proyek Akhir Kursus
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+              name: Membuat Sprite
+            lesson-8:
+              key: pelajaran ke- 8
+              name: Sprite tengah Beraksi
+            Virtual Pet:
+              key: piaraan virtual
+              name: 'Mini-Project: Piaraan Virtual'
+              description_student: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+              description_teacher: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
+            lesson-2:
+              key: pelajaran ke-2
+              name: Kekuatan kata-Kata
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-11:
+              key: pelajaran ke-11
+              name: 'Mini-Project: Program Input Pengguna'
+            Loops with the Artist:
+              key: Loop dengan Artis
+              name: Loop dengan Artis
+              description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
+              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+            Variables that Change in Artist:
+              key: Variable yang Berubah dalam Artis
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan.
+              description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.
+            Nested Loops in the Maze:
+              key: Nested Loop dalam Labirin
+              name: Nested Loop dalam Labirin
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+            Variables that Change in Bee:
+              key: Variable yang Berubah dalam Lebah
+              name: Mengubah Variable dengan Lebah
+              description_student: Lebah ini menyukai variable!
+              description_teacher: Pelajaran ini akan membantu menjelaskan cara variable dapat membuat program lebih kuat dengan memudahkan nilai berubah pada saat code dijalankan.
+            For Loops in Bee:
+              key: For Loop dalam Lebah
+              name: For Loop dengan Lebah
+              description_student: Ngung, ngung. Dalam puzzle ini, Anda akan menggiring lebah menuju nektar dan madu menggunakan loop `for`!
+              description_teacher: Dengan menampilkan Lebah, pelajaran ini fokus pada loop `for` dan menggunakan variable yang terus bertambah untuk memecahkan puzzle yang lebih pelik. Murid akan memulai pelajaran dengan meninjau kembali loop dari pelajaran sebelumnya, lalu mereka mengikuti pengenalan tentang loop 'for' agar mereka bisa memecahkan masalah kompleks secara lebih efektif.
+            For Loops in Artist:
+              key: For Loop dalam Artis
+              name: For Loop dengan Artis
+              description_student: Bersiaplah membuat karya hebat Anda berikutnya. Di sini Anda akan menggunakan loop `for` untuk membuat gambar yang membikin orang terkagum-kagum.
+              description_teacher: Dalam pelajaran ini, murid terus berlatih loop 'for', tetapi kali ini bersama Artis. Murid akan menyelesaikan puzzle dengan menggabungkan ide-ide tentang variable, loop, dan loop 'for' untuk membuat desain yang kompleks. Pada akhir pelajaran, mereka berkesempatan membuat karya seni sendiri di level bermain bebas.
+            lesson-5:
+              key: pelajaran ke-5
+            AI for Oceans:
+              key: AI for Oceans
+              name: AI for Oceans
+            Internet:
+              key: Internet
+              name: Internet
+              description_student: Pernah bertanya-tanya bagaimana informasi melintasi internet? Bukan sulap! Pelajaran ini akan mengajari Anda dasar-dasar cara kerja internet.
+              description_teacher: Meskipun banyak orang menggunakan internet setiap hari, tidak begitu banyak yang tahu cara kerjanya. Dalam pelajaran ini, murid berpura-pura akan menyusuri internet, sambil terus belajar tentang koneksi, URL, Alamat IP, dan DNS.
+          lesson_groups:
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-7:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-8:
+              display_name: variabel
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+          description_audience: 'Usia: 9-13'
+        csp-post-survey-2021:
+          title: Survei Pascakursus CS Principles
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        pre-express-2022:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+        csa2-2022:
+          lessons:
+            lesson-5:
+              name: Unit 2 Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten

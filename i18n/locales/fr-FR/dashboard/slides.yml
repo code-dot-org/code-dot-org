@@ -2014,3 +2014,74 @@ fr:
         image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
       11:
         image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+      7:
+      8:
+      9:
+      10:
+    hello_world_congrats:
+      1:
+      2:
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
