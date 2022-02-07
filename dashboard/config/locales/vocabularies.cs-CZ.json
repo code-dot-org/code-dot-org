@@ -132,6 +132,12 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program "
         },
+        "event/outbreak/unversioned": {
+          "word": "Událost"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modely a simulace"
+        },
         "event/sports/unversioned": {
           "word": "Událost"
         },
@@ -193,12 +199,6 @@
           "word": "Verš",
           "definition": "(poezie) – dílčí část básně, uspořádaná do řádku, který končí na pravém okraji. "
         },
-        "event/outbreak/unversioned": {
-          "word": "Událost"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modely a simulace"
-        },
         "sprite/coursef/2021": {
           "word": "Sprite",
           "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
@@ -208,6 +208,7 @@
           "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
         },
         "behavior/coursef/2021": {
+          "word": "Chování",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "program/coursef/2021": {
@@ -510,6 +511,7 @@
           "definition": "Umění vytvoření programu"
         },
         "behavior/express/2021": {
+          "word": "Chování",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "sprite/express/2021": {
@@ -627,6 +629,7 @@
           "word": "Událost"
         },
         "behavior/coursee/2021": {
+          "word": "Chování",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "algorithm/coursee/2021": {
