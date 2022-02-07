@@ -1,133 +1,165 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {act} from 'react-dom/test-utils';
 import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
+import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
+import sinon from 'sinon';
+import {isolateComponent} from 'isolate-components';
 
 // responses (object) - keys are scriptIds, values are
 // array of student text responses for that script
-const responses = {
-  1: [
-    {
-      puzzle: 2,
-      question: 'Free Response',
-      response: 'Lorem ipsum dolor sit amet, postea pericula',
-      lesson: 'Lesson 1',
-      studentId: 1,
-      studentName: 'Student A',
-      url: 'http://fake.url'
-    },
-    {
-      puzzle: 3,
-      question: 'Free Response',
-      response: 'Lorem ipsum dolor sit amet, postea pericula',
-      lesson: 'Lesson 2',
-      studentId: 1,
-      studentName: 'Student A',
-      url: 'http://fake.url'
-    },
-    {
-      puzzle: 3,
-      question: 'Free Response',
-      response: 'Lorem ipsum dolor sit amet, postea pericula',
-      lesson: 'Lesson 2',
-      studentId: 3,
-      studentName: 'Student C',
-      url: 'http://fake.url'
-    }
-  ],
-  2: []
-};
+const responses = [
+  {
+    puzzle: 2,
+    question: 'Free Response',
+    response: 'Lorem ipsum dolor sit amet, postea pericula',
+    lesson: 'Lesson 1',
+    studentId: 1,
+    studentName: 'Student A',
+    url: 'http://fake.url'
+  },
+  {
+    puzzle: 3,
+    question: 'Free Response',
+    response: 'Lorem ipsum dolor sit amet, postea pericula',
+    lesson: 'Lesson 2',
+    studentId: 1,
+    studentName: 'Student A',
+    url: 'http://fake.url'
+  },
+  {
+    puzzle: 3,
+    question: 'Free Response',
+    response: 'Lorem ipsum dolor sit amet, postea pericula',
+    lesson: 'Lesson 2',
+    studentId: 3,
+    studentName: 'Student C',
+    url: 'http://fake.url'
+  }
+];
 
 describe('TextResponses', () => {
-  it('renders the UnitSelector dropdown', () => {
-    const wrapper = shallow(
-      <TextResponses
-        sectionId={2}
-        responses={responses}
-        isLoadingResponses={false}
-        validScripts={[]}
-        scriptId={1}
-        setScriptId={() => {}}
-        asyncLoadTextResponses={() => {}}
-      />
-    );
-
-    expect(wrapper.find('UnitSelector').exists()).to.be.true;
-  });
-
-  it('renders the TextResponsesTable', () => {
-    const wrapper = shallow(
-      <TextResponses
-        sectionId={2}
-        responses={responses}
-        isLoadingResponses={false}
-        validScripts={[]}
-        scriptId={1}
-        setScriptId={() => {}}
-        asyncLoadTextResponses={() => {}}
-      />
-    );
-
-    expect(wrapper.find('TextResponsesTable').exists()).to.be.true;
-  });
-
-  describe('action row', () => {
-    it('does not render when there are no text responses', () => {
-      const wrapper = shallow(
-        <TextResponses
-          sectionId={2}
-          responses={{}}
-          isLoadingResponses={false}
-          validScripts={[]}
-          scriptId={1}
-          setScriptId={() => {}}
-          asyncLoadTextResponses={() => {}}
-        />
-      );
-
-      expect(wrapper.find('#uitest-response-actions').exists()).to.be.false;
-      expect(wrapper.find('#uitest-lesson-filter').exists()).to.be.false;
-      expect(wrapper.find('CSVLink').exists()).to.be.false;
+  describe('when there are text responses', () => {
+    beforeEach(() => {
+      sinon
+        .stub(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .returns(Promise.resolve(responses));
     });
 
-    it('renders a CSVLink if there are 1 or more text responses', () => {
-      const wrapper = shallow(
-        <TextResponses
-          sectionId={2}
-          responses={responses}
-          isLoadingResponses={false}
-          validScripts={[]}
-          scriptId={1}
-          setScriptId={() => {}}
-          asyncLoadTextResponses={() => {}}
-        />
-      );
-
-      const csvLink = wrapper.find('CSVLink');
-      expect(csvLink.exists()).to.be.true;
-      expect(csvLink.find('Button').exists()).to.be.true;
+    afterEach(() => {
+      textReponsesDataApi.loadTextResponsesFromServer.restore();
     });
 
-    it('renders a filter if there are 2+ lessons to filter by', () => {
-      const wrapper = shallow(
-        <TextResponses
-          sectionId={2}
-          responses={responses}
-          isLoadingResponses={false}
-          validScripts={[]}
-          scriptId={1}
-          setScriptId={() => {}}
-          asyncLoadTextResponses={() => {}}
-        />
-      );
+    it('renders the UnitSelector dropdown', async () => {
+      let wrapper;
 
-      const filterDropdown = wrapper.find('#uitest-lesson-filter');
-      const filterOptions = filterDropdown.find('option');
-      expect(filterDropdown.exists()).to.be.true;
-      expect(filterOptions).to.have.length(3);
-      expect(filterOptions.at(0)).to.have.text('All');
-      expect(filterOptions.at(1)).to.have.text('Lesson 1');
-      expect(filterOptions.at(2)).to.have.text('Lesson 2');
+      await act(async () => {
+        wrapper = isolateComponent(
+          <TextResponses
+            sectionId={2}
+            validScripts={[]}
+            scriptId={1}
+            setScriptId={() => {}}
+            scriptName="A Script"
+          />
+        );
+      });
+
+      expect(wrapper.exists('UnitSelector')).to.be.true;
+    });
+
+    it('renders the TextResponsesTable', async () => {
+      let wrapper;
+
+      await act(async () => {
+        wrapper = isolateComponent(
+          <TextResponses
+            sectionId={2}
+            validScripts={[]}
+            scriptId={1}
+            setScriptId={() => {}}
+            scriptName="A Script"
+          />
+        );
+      });
+
+      expect(wrapper.exists('TextResponsesTable')).to.be.true;
+      const textResponsesTable = wrapper.findOne('TextResponsesTable');
+      expect(textResponsesTable.props.responses).to.eql(responses);
+      expect(textResponsesTable.props.sectionId).to.equal(2);
+      expect(textResponsesTable.props.scriptName).to.equal('A Script');
+    });
+
+    it('renders a CSVLink if there are 1 or more text responses', async () => {
+      let wrapper;
+
+      await act(async () => {
+        wrapper = isolateComponent(
+          <TextResponses
+            sectionId={2}
+            validScripts={[]}
+            scriptId={1}
+            setScriptId={() => {}}
+            scriptName="A Script"
+          />
+        );
+      });
+
+      expect(wrapper.exists('CSVLink')).to.be.true;
+      expect(wrapper.exists('Button')).to.be.true;
+    });
+
+    it('renders a filter if there are 2+ lessons to filter by', async () => {
+      let wrapper;
+
+      await act(async () => {
+        wrapper = isolateComponent(
+          <TextResponses
+            sectionId={2}
+            validScripts={[]}
+            scriptId={1}
+            setScriptId={() => {}}
+            scriptName="A Script"
+          />
+        );
+      });
+
+      expect(wrapper.exists('TextResponsesLessonSelector')).to.be.true;
+      expect(
+        wrapper.findOne('TextResponsesLessonSelector').props.lessons
+      ).to.eql(['Lesson 1', 'Lesson 2']);
+    });
+  });
+
+  describe('when there are no text responses', () => {
+    beforeEach(() => {
+      sinon
+        .stub(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .returns(Promise.resolve({}));
+    });
+
+    afterEach(() => {
+      textReponsesDataApi.loadTextResponsesFromServer.restore();
+    });
+
+    it('does not render actions when there are no text responses', async () => {
+      let wrapper;
+
+      await act(async () => {
+        wrapper = isolateComponent(
+          <TextResponses
+            sectionId={2}
+            validScripts={[]}
+            scriptId={1}
+            setScriptId={() => {}}
+            scriptName="A Script"
+          />
+        );
+      });
+
+      expect(wrapper.exists('#uitest-response-actions')).to.be.false;
+      expect(wrapper.exists('TextResponsesLessonSelector')).to.be.false;
+      expect(wrapper.exists('CSVLink')).to.be.false;
     });
   });
 });
