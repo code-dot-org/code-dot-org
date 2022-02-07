@@ -6,6 +6,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_atTimestamp:
@@ -16,6 +17,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_changePropBy:
@@ -28,6 +30,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -38,6 +41,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_everySeconds:
@@ -68,6 +72,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           LOCATION:
@@ -78,6 +83,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           FORMAT:
@@ -112,6 +118,7 @@ hr:
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           LAYOUT:
@@ -131,6 +138,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           SPEED:
@@ -149,6 +157,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -165,6 +174,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -175,18 +185,21 @@ hr:
         options:
           THIS:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_startMapping:
@@ -199,6 +212,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -215,6 +229,7 @@ hr:
         options:
           GROUP:
             sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -253,6 +268,20 @@ hr:
           CONDITION:
             '"when"': kada
             '"while"': dok
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): vrteći se udesno
+            new Behavior(spinning_left, []): vrteći se ulijevo
+            new Behavior(fluttering, []): lepršanje
+            new Behavior(jittering, []): treperenje
+            new Behavior(wobbling, []): njihanje
+            new Behavior(wandering, []): lutanje
+            new Behavior(patrolling, []): patroliranje
+            new Behavior(moving_west_and_looping, []): krećući se prema zapadu i petljajući
+            new Behavior(moving_east_and_looping, []): krećući se prema istoku i petljajući
+            new Behavior(moving_north_and_looping, []): krećući se prema sjeveru i petljajući
+            new Behavior(moving_south_and_looping, []): krećući se prema jugu i petljajući
       gamelab_getProp:
         options:
           PROPERTY:
@@ -313,6 +342,11 @@ hr:
             "'sound://category_animals/chicken.mp3'": kokoš
             "'sound://category_animals/dog.mp3'": pas
             "'sound://category_digital/jump_7.mp3'": skoči
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): vožnja sa strelicama
+            new Behavior(driving_with_arrow_keys, []): vožnja sa strelicama
       gamelab_randColor:
         text: nasumično odabrana boja
       gamelab_randomColor:
@@ -357,6 +391,14 @@ hr:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': normalan
+            '7': brzu
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
