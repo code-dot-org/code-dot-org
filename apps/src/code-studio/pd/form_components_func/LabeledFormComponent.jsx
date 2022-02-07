@@ -7,9 +7,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 export const LabelsContext = React.createContext({});
 
 // UI Helpers
-export const labelFor = name => {
-  // TODO: Fix the usage of useContext and remove next line
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+export const useLabelFor = name => {
   const labels = useContext(LabelsContext);
   if (!(name in labels)) {
     console.warn(`Label missing for ${name}`);
@@ -28,10 +26,11 @@ export const labelFor = name => {
   );
 };
 
-export const defaultOptions = (name, label) => {
+export const useDefaultOptions = (name, label) => {
+  const contextLabel = useLabelFor(name) || label;
   return {
     name,
-    label: label || labelFor(name),
+    label: contextLabel,
     controlWidth: {md: 6},
     required: true
   };
