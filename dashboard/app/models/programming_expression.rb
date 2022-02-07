@@ -178,7 +178,7 @@ class ProgrammingExpression < ApplicationRecord
       key: key,
       name: name,
       blockName: block_name,
-      category: category,
+      categoryKey: programming_environment_category.key,
       programmingEnvironmentName: programming_environment.name,
       environmentEditorType: programming_environment.editor_type,
       imageUrl: image_url,
@@ -198,7 +198,7 @@ class ProgrammingExpression < ApplicationRecord
     {
       name: name,
       blockName: block_name,
-      category: category,
+      category: programming_environment_category.name,
       color: get_color,
       externalDocumentation: external_documentation,
       content: content,
@@ -230,7 +230,9 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_color
-    if programming_environment.name == 'spritelab'
+    if programming_environment_category
+      programming_environment_category.color
+    elsif programming_environment.name == 'spritelab'
       color
     else
       ProgrammingExpression.get_category_color(category)
