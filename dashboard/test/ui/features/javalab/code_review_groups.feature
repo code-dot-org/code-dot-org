@@ -6,8 +6,8 @@ Feature: Code Review Groups
   # (x) create a csa section
   # (x) create multiple students
   # (x) navigate to teacher dashboard, manage students
-  # create a code review group
-  # put a student in one of the groups
+  # (x) create a code review group
+  # (x) put a student in one of the groups
   # ...
 
   Scenario: Setting up groups
@@ -26,15 +26,26 @@ Feature: Code Review Groups
     And I click selector "#uitest-code-review-groups-button" once I see it
     # Sometimes this click isn't happening, waiting seems to make it more consistent
     And I wait for 2 seconds
+    # Create group
     And I click selector "#uitest-create-code-review-group" once I see it
-    # This isn't erroring (it did error before when it couldn't find the elements), but isn't dragging the elements either
-    # And I drag "div[data-rbd-drag-handle-draggable-id]:first-child" to "div[data-rbd-droppable-id]:nth-child(2)"
-    And I shift tab
+    # Put students in group
+    And I focus selector "#uitest-unassign-all-button"
     And I press keys ":tab"
     And I press keys ":space"
     And I press keys ":arrow_right"
     And I press keys ":space"
-#    div[followerid="366"]
-#    div[data-rbd-droppable-id="groupId171"]
-
-    And I wait for 10 seconds
+    And I focus selector "#uitest-unassign-all-button"
+    And I press keys ":tab"
+    And I press keys ":space"
+    And I press keys ":arrow_right"
+    And I press keys ":space"
+    # Save groups
+    And I click selector ".uitest-base-dialog-confirm"
+    # Enable code review
+    And I click selector "#uitest-code-review-groups-toggle"
+    And I wait for 5 seconds
+    # Unassign all
+    And I click selector "#uitest-unassign-all-button"
+    # Unassign all
+    # Groups save?
+    # Enable/disable code review
