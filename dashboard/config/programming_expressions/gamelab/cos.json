@@ -1,11 +1,11 @@
 {
-  "func": "cos",
+  "key": "cos",
+  "name": "cos",
   "category": "Math",
-  "paletteParams": [
-    "angle"
+  "palette_params": [
+    {
+      "name": "angle"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "value"
+  "syntax": "cos(angle)"
 }

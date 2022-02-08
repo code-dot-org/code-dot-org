@@ -81,6 +81,11 @@ $content-view-width: $content-width - $student-list-width;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      .fa {
+        html[dir='RTL'] & {
+          transform: scaleX(-1);
+        }
+      }
     }
     .expanded-row {
       td {
@@ -100,6 +105,34 @@ $content-view-width: $content-width - $student-list-width;
     thead,
     tbody {
       max-width: $content-view-width;
+      td {
+        text-align: center;
+      }
+    }
+    .lesson-arrow {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      .line {
+        width: 100%;
+        height: 0px;
+        border: 1px solid;
+        margin-inline-end: -7px;
+        margin-inline-start: 4px;
+      }
+      .arrow {
+        display: inline-block;
+        border-style: solid;
+        border-width: 0px 2px 2px 0px;
+        width: 6px;
+        height: 6px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        html[dir='RTL'] & {
+          border-width: 2px 0px 0px 2px;
+        }
+      }
     }
   }
 }

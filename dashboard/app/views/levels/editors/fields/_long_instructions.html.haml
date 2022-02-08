@@ -5,13 +5,16 @@
     uploaded to a suitable location.
   %li
     markdown-enabled instructions can take advantage of
-    = link_to 'various markdown rendering options', 'https://commonmark.org/help/', target: '_blank'
+    = link_to 'various markdown rendering options', 'https://github.com/code-dot-org/code-dot-org/wiki/Markdown', target: '_blank'
     to provide more in-depth (and more vertically intrusive) instruction.
 
   %div{ style: 'border: 8px solid rgb(239, 239, 239)' }
     #level_long_instructions_preview{ style: 'padding: 20px' }
     %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
       ~ f.text_area :long_instructions, rows: 4
+
+= render partial: 'levels/editors/fields/custom_instructor', locals: {f: f} if @level.is_a? GamelabJr
+
 
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {

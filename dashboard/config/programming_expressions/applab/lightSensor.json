@@ -1,4 +1,6 @@
 {
-  "func": "lightSensor",
-  "category": "Circuit"
+  "key": "lightSensor",
+  "name": "lightSensor",
+  "category": "Circuit",
+  "syntax": "lightSensor"
 }

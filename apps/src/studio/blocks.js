@@ -2325,7 +2325,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown2 = createSpriteGroupDropdown(
         msg.collidesWithAnySpriteName,
         value =>
-          endLabel.setText(
+          endLabel.setValue(
             msg.toTouchedSpriteName({spriteName: stripQuotes(value)})
           )
       );

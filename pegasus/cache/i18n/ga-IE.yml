@@ -1329,12 +1329,30 @@ ga-IE:
   coursed-2017_name: Cúrsa D (2017)
   coursee-2017_name: Cúrsa E (2017)
   coursef-2017_name: Cúrsa F (2017)
+  coursea-2019_name: Cúrsa A (2019)
+  courseb-2019_name: Cúrsa B (2019)
+  coursec-2019_name: Cúrsa C (2019)
+  coursed-2019_name: Cúrsa D (2019)
+  coursee-2019_name: Cúrsa E (2019)
+  coursef-2019_name: Cúrsa F (2019)
+  coursea-2020_name: Cúrsa A (2020)
+  courseb-2020_name: Cúrsa B (2020)
+  coursec-2020_name: Cúrsa C (2020)
+  coursed-2020_name: Cúrsa D (2020)
+  coursee-2020_name: Cúrsa E (2020)
+  coursef-2020_name: Cúrsa F (2020)
+  coursed-2021_name: Cúrsa D (2021)
   express-2018_name: Luaschúrsa (2018)
   pre-express-2018_name: Luaschúrsa do Réamhléitheoirí (2018)
+  express-2019_name: Luaschúrsa (2019)
   pre-express-2019_name: Luaschúrsa do Réamhléitheoirí (2019)
+  express-2020_name: Luaschúrsa (2020)
+  pre-express-2020_name: Luaschúrsa do Réamhléitheoirí (2020)
+  pre-express-2021_name: Luaschúrsa do Réamhléitheoirí (2021)
   csd2_name: 'Aonad 2: Forbairt Gréasáin'
   csd3_name: 'Aonad 3: Beochan agus Cluichí'
   accelerated_name: Cúrsa Luathaithe
+  express_name: Luaschúrsa
   pre-express_name: Luaschúrsa do Réamhléitheoirí
   20-hour_name: Cúrsa Luathaithe
   algebra_name: 'Ríomheolaíocht san Ailgéabar: Cúrsa Iomlán'
@@ -1437,6 +1455,12 @@ ga-IE:
   coursed-2020_gradelevel: Aois 13+
   coursee-2020_gradelevel: Aois 8-12
   coursef-2020_gradelevel: Aois 9-13
+  coursea-2021_gradelevel: Aois 4-7
+  courseb-2021_gradelevel: Aois 5-8
+  coursec-2021_gradelevel: Aois 6-10
+  coursed-2021_gradelevel: Aois 13+
+  coursee-2021_gradelevel: Aois 8-12
+  coursef-2021_gradelevel: Aois 9-13
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -2516,6 +2540,7 @@ ga-IE:
   footer_support: Cabhair
   footer_terms: Téarmaí
   ai_for_oceans: AI ar son an Aigéin
+  ai_for_oceans_lesson_plan: plean ceachta
   ai_in_partnership_with: I gcomhar le
   ai_microsoft_thanks: 'Táimid buíoch de Microsoft as tacaíocht a thabhairt dár bhfís
     agus dár misean: deis a thabhairt do gach gasúr an ríomheolaíocht a fhoghlaim

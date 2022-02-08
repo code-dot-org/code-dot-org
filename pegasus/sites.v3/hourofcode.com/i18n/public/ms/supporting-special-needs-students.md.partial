@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: Menyokong pelajar yang memerlukan keperluan khas untuk Jam Kod
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# Menyokong pelajar yang kurang upaya untuk Jam Kod
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Sesiapa sahaja boleh mencuba Jam Kod semasa Minggu Pendidikan Sains Komputer. Seringkali, pelajar autisme, ADHD atau perbezaan pembelajaran lain mendapati mereka menyukai pengaturcaraan. Galakkan semua pelajar di dalam kelas anda untuk mencubanya! Dalam menyediakan pengalaman untuk kelas anda, berikan ganjaran untuk penyertaan dan bukannya semasa melengkapkannya. Anda boleh memberikan [sijil]({{ supporting-special-needs-students/certificate }}) kepada semua individu tanpa mengambil kira jumlah teka-teki atau cabaran yang mereka selesaikan dalam masa sejam. [Pengaturcaraan berpasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q) ialah cara lain yang terbaik untuk mengajar kerjasama dan meminta pelajar berusaha bersama menyelesaikan masalah.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Sesuai dengan pelbagai keperluan bersama tutorial nirplag dan dalam talian
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+Dalam mencari aktiviti yang betul untuk semua individu di dalam kelas anda, pertimbangkan pilihan dalam talian dan “nirplag” yang tidak memerlukan komputer. Aktiviti nirplag membolehkan pelajar melibatkan diri secara langsung dengan konsep sains komputer. [Acara Besar](https://studio.code.org/s/course1/lessons/15/levels/1) meletakkan guru dalam kawalan atas tindakan pelajar, membuka peluang besar untuk menyesuaikan kandungan dengan kemampuan setiap pelajar.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+Bagi pelajar lain, kemudahan yang tersedia pada komputer mungkin membolehkan mereka melibatkan diri dengan lebih baik berbanding pilihan nirplag. Sebagai contoh, pelajar yang pekak atau kurang pendengaran boleh menyertai tutorial dalam talian sepenuhnya.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+Pilihan yang paling terangkum juga bergantung pada sama ada anda mempunyai makmal komputer atau komputer riba yang boleh diakses.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+Sebagai contoh, adakah pelajar anda telah mengalami kekurangan keupayaan atau ketangkasan? Jika semua pelajar anda mempunyai akses kepada teknologi di sekolah anda, sila tanya pelajar atau guru teknologi anda jenis kemudahan yang biasanya digunakan oleh pelajar anda dengan komputer yang tersedia.
 
-## Sensory Impairments
+## Kehilangan Deria
 
-### Students who are blind or low vision
+### Pelajar yang buta atau kurang daya penglihatan
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Bagi pelajar yang menggunakan pembaca skrin, [Tutorial kuorum untuk mereka yang baharu bermula](https://quorumlanguage.com/hourofcode/astro1.html) atau [Tutorial kuorum untuk pelajar yang selesa](https://quorumlanguage.com/hourofcode/part1.html) ialah tempat yang sangat baik untuk bermula. Quorum bermula sebagai bahasa tertafsir yang direka bentuk untuk diakses melalui pembaca skrin. Akhirnya, ia menjadi bahasa pengaturcaraan serbaguna yang direka bentuk untuk mana-mana pengguna. Anda boleh menggunakan tutorial Jam Kod ini dengan seluruh kelas anda. Dan, jika anda ingin menjangkaui Jam Kod, pasukan di Quorum mempunyai alatan dan kurikulum tambahan.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+Jika pelajar anda menggunakan kemudahan lain di dalam kelas teknologi, anda juga boleh menggunakan kemudahan tersebut untuk membantu Jam Kod juga. Ini boleh termasuk monitor yang lebih besar, pembesaran skrin perisian, tetapan kontras tinggi di dalam sistem operasinya, kawalan suara dan banyak lagi.
 
-### Students who are deaf or hard of hearing
+### Pelajar yang pekak atau kurang pendengaran
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+[Tutorial Code.org](https://studio.code.org/) semuanya direka bentuk supaya digunakan dengan atau tanpa bunyi. Semua video mempunyai kapsyen. Sebilangan pelajar juga dapat memperoleh manfaatkan daripada fon kepala yang ditetapkan kepada kelantangan yang lebih tinggi.
 
 ## Ketahui lebih lanjut
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+Untuk mengetahui lebih lanjut tentang pendidikan sains komputer dan pelajar yang memerlukan keperluan khas, kami menyarankan [buku dalam talian]({{ supporting-special-needs-students/book }}) ini.

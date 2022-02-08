@@ -1,8 +1,6 @@
 {
-  "func": "container",
+  "key": "container",
+  "name": "container",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"html\""
-  ]
+  "syntax": "container"
 }

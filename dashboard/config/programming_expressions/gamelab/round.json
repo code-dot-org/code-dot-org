@@ -1,11 +1,11 @@
 {
-  "func": "round",
+  "key": "round",
+  "name": "round",
   "category": "Math",
-  "paletteParams": [
-    "num"
+  "palette_params": [
+    {
+      "name": "num"
+    }
   ],
-  "params": [
-    "0.9"
-  ],
-  "type": "value"
+  "syntax": "round(num)"
 }

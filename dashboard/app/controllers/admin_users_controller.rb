@@ -116,6 +116,88 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
+  # GET /admin/user_progress
+  def user_progress_form
+    script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
+
+    set_target_user_from_identifier(params[:user_identifier])
+
+    if @target_user
+      @user_scripts = UserScript.
+        where(user_id: @target_user.id).
+        order(updated_at: :desc).
+        limit(100).
+        offset(script_offset)
+    end
+  end
+
+  # GET /admin/user_projects
+  # This page takes an optional user_identifier param and renders a page with the users active and deleted projects
+  def user_projects_form
+    set_target_user_from_identifier(params[:user_identifier])
+
+    if @target_user
+      @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'active')
+      @deleted_projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'deleted')
+    end
+  end
+
+  # PUT /admin/user_project
+  # This page takes a user_id and channel param and un-deletes the project and then refreshes the user_projects_form
+  def user_project_restore_form
+    user_id = params[:user_id]
+    channel = params[:channel]
+
+    if channel.present? && user_id.present?
+      StorageApps.new(storage_id_for_user_id(user_id)).restore(channel)
+    end
+
+    redirect_to action: "user_projects_form", user_identifier: user_id
+  end
+
+  # GET /admin/delete_progress
+  # This page is linked from /admin/user_progress to confirm that the admin
+  # wants to delete progress and to capture additional information. It expects
+  # user_id and script_id to be passed in as parameters.
+  def delete_progress_form
+    params.require([:user_id, :script_id])
+
+    @target_user = User.find(params[:user_id])
+    @script = Script.get_from_cache(params[:script_id])
+    @user_level_count = UserLevel.
+      where(user_id: @target_user.id, script_id: @script.id).
+      count
+  end
+
+  def delete_progress
+    params.require([:user_id, :script_id, :reason])
+
+    user_id = params[:user_id]
+    script_id = params[:script_id]
+    user_storage_id = storage_id_for_user_id(user_id)
+
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'reset-progress',
+        event: 'admin-delete-progress',
+        user_id: user_id,
+        script_id: script_id,
+        data_json: {
+          signed_in_user: current_user.username,
+          reason: params[:reason]
+        }.to_json
+      }
+    )
+
+    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
+    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
+    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+
+    redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
+  end
+
   # get /admin/permissions
   def permissions_form
     search_term = params[:search_term]
@@ -245,5 +327,13 @@ class AdminUsersController < ApplicationController
   def page_size
     return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
     params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
+  end
+
+  def set_target_user_from_identifier(user_identifier)
+    if user_identifier
+      user_identifier.strip!
+      @target_user = User.from_identifier(user_identifier)
+      flash[:alert] = 'User not found' unless @target_user
+    end
   end
 end

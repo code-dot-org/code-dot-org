@@ -2,13 +2,17 @@
   "script": {
     "name": "csd-sample-online",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:36 UTC",
+    "serialized_at": "2021-11-22 19:56:19 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd-sample-online"
     }
@@ -59,23 +63,66 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7463e694-ea4b-4487-b938-2c41ba761529",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7463e694-ea4b-4487-b938-2c41ba761529",
+        "lesson.key": "What is a Computer? - sample progression",
+        "lesson_group.key": "",
+        "script.name": "csd-sample-online"
+      }
+    },
+    {
+      "key": "513fb8b6-c2ba-4701-8e8c-95333d43992e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "513fb8b6-c2ba-4701-8e8c-95333d43992e",
+        "lesson.key": "Problem Solving Process - sample activities",
+        "lesson_group.key": "",
+        "script.name": "csd-sample-online"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676",
+        "lesson_activity.key": "7463e694-ea4b-4487-b938-2c41ba761529"
+      }
+    },
+    {
+      "key": "ae81e751-804d-45f8-9531-d7d1dd65956d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ae81e751-804d-45f8-9531-d7d1dd65956d",
+        "lesson_activity.key": "513fb8b6-c2ba-4701-8e8c-95333d43992e"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged WIAC"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -83,7 +130,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       },
       "level_keys": [
         "csd digital unplugged WIAC"
@@ -92,14 +140,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged WIAC L1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -107,7 +154,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       },
       "level_keys": [
         "csd digital unplugged WIAC L1"
@@ -116,14 +164,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged WIAC L2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -131,7 +178,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       },
       "level_keys": [
         "csd digital unplugged WIAC L2"
@@ -140,14 +188,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD digital Unplugged WIAC video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -155,7 +202,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       },
       "level_keys": [
         "CSD digital Unplugged WIAC video"
@@ -164,14 +212,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged WIAC L3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -179,7 +226,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       },
       "level_keys": [
         "csd digital unplugged WIAC L3"
@@ -188,14 +236,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD digital unplugged WIAC Qs"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -203,7 +250,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       },
       "level_keys": [
         "CSD digital unplugged WIAC Qs"
@@ -212,14 +260,13 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged PSP word search"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -227,7 +274,8 @@
         ],
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "ae81e751-804d-45f8-9531-d7d1dd65956d"
       },
       "level_keys": [
         "csd digital unplugged PSP word search"
@@ -236,14 +284,13 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged PSP seating"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -251,7 +298,8 @@
         ],
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "ae81e751-804d-45f8-9531-d7d1dd65956d"
       },
       "level_keys": [
         "csd digital unplugged PSP seating"
@@ -267,7 +315,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       }
     },
     {
@@ -278,7 +327,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       }
     },
     {
@@ -289,7 +339,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       }
     },
     {
@@ -300,7 +351,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       }
     },
     {
@@ -311,7 +363,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       }
     },
     {
@@ -322,7 +375,8 @@
         ],
         "lesson.key": "What is a Computer? - sample progression",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "3dc42d94-d3d3-46d1-89fb-987d1ca32676"
       }
     },
     {
@@ -333,7 +387,8 @@
         ],
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "ae81e751-804d-45f8-9531-d7d1dd65956d"
       }
     },
     {
@@ -344,7 +399,8 @@
         ],
         "lesson.key": "Problem Solving Process - sample activities",
         "lesson_group.key": "",
-        "script.name": "csd-sample-online"
+        "script.name": "csd-sample-online",
+        "activity_section.key": "ae81e751-804d-45f8-9531-d7d1dd65956d"
       }
     }
   ],

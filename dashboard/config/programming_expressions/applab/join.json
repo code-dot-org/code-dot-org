@@ -1,12 +1,11 @@
 {
-  "func": "join",
+  "key": "join",
+  "name": "join",
   "category": "Variables",
-  "modeOptionName": "*.join",
-  "paletteParams": [
-    "separator"
+  "palette_params": [
+    {
+      "name": "separator"
+    }
   ],
-  "params": [
-    "\"-\""
-  ],
-  "type": "value"
+  "syntax": "join(separator)"
 }

@@ -1,7 +1,6 @@
 {
-  "func": "mouseDragged",
-  "block": "function mouseDragged() {}",
-  "expansion": "function mouseDragged() {\n  __;\n}",
+  "key": "mouseDragged",
+  "name": "mouseDragged",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "function mouseDragged() {}"
 }

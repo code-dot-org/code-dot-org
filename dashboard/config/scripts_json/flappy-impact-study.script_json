@@ -2,13 +2,18 @@
   "script": {
     "name": "flappy-impact-study",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "HOC",
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:54 UTC",
+    "serialized_at": "2021-11-22 19:56:59 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "flappy-impact-study"
     }
@@ -74,23 +79,89 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e349ab6d-3786-415c-89e3-6748b5ce07fa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e349ab6d-3786-415c-89e3-6748b5ce07fa",
+        "lesson.key": "Pre Hour of Code Survey",
+        "lesson_group.key": "",
+        "script.name": "flappy-impact-study"
+      }
+    },
+    {
+      "key": "01e45fd4-f592-44f4-9add-98fd6b8fe018",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01e45fd4-f592-44f4-9add-98fd6b8fe018",
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy-impact-study"
+      }
+    },
+    {
+      "key": "c0e7fb62-a8d7-43a1-90a1-4cec0a10d932",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0e7fb62-a8d7-43a1-90a1-4cec0a10d932",
+        "lesson.key": "Post Hour of Code Survey",
+        "lesson_group.key": "",
+        "script.name": "flappy-impact-study"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6d255da0-d2c3-4b9f-bf17-0bb03092c4bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6d255da0-d2c3-4b9f-bf17-0bb03092c4bd",
+        "lesson_activity.key": "e349ab6d-3786-415c-89e3-6748b5ce07fa"
+      }
+    },
+    {
+      "key": "15a30627-b9db-4264-860e-cbd9bde8acbc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc",
+        "lesson_activity.key": "01e45fd4-f592-44f4-9add-98fd6b8fe018"
+      }
+    },
+    {
+      "key": "fde35fcf-e51b-4a2a-b03e-9862f947c9f3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fde35fcf-e51b-4a2a-b03e-9862f947c9f3",
+        "lesson_activity.key": "c0e7fb62-a8d7-43a1-90a1-4cec0a10d932"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "HOC pre-survey 2016 levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -98,7 +169,8 @@
         ],
         "lesson.key": "Pre Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "6d255da0-d2c3-4b9f-bf17-0bb03092c4bd"
       },
       "level_keys": [
         "HOC pre-survey 2016 levelgroup"
@@ -107,14 +179,13 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -122,7 +193,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_1"
@@ -131,14 +203,13 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -146,7 +217,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_2"
@@ -155,14 +227,13 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -170,7 +241,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_3"
@@ -179,14 +251,13 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -194,7 +265,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_4"
@@ -203,14 +275,13 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -218,7 +289,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_5"
@@ -227,14 +299,13 @@
     {
       "chapter": 7,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -242,7 +313,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_6"
@@ -251,14 +323,13 @@
     {
       "chapter": 8,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +337,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_7"
@@ -275,14 +347,13 @@
     {
       "chapter": 9,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -290,7 +361,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_8"
@@ -299,14 +371,13 @@
     {
       "chapter": 10,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -314,7 +385,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_9"
@@ -323,14 +395,13 @@
     {
       "chapter": 11,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "flappy_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -338,7 +409,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       },
       "level_keys": [
         "flappy_11"
@@ -347,14 +419,13 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "HOC post-survey 2016 levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -362,7 +433,8 @@
         ],
         "lesson.key": "Post Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "fde35fcf-e51b-4a2a-b03e-9862f947c9f3"
       },
       "level_keys": [
         "HOC post-survey 2016 levelgroup"
@@ -378,7 +450,8 @@
         ],
         "lesson.key": "Pre Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "6d255da0-d2c3-4b9f-bf17-0bb03092c4bd"
       }
     },
     {
@@ -389,7 +462,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -400,7 +474,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -411,7 +486,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -422,7 +498,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -433,7 +510,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -444,7 +522,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -455,7 +534,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -466,7 +546,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -477,7 +558,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -488,7 +570,8 @@
         ],
         "lesson.key": "Flappy Code",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "15a30627-b9db-4264-860e-cbd9bde8acbc"
       }
     },
     {
@@ -499,7 +582,8 @@
         ],
         "lesson.key": "Post Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "flappy-impact-study"
+        "script.name": "flappy-impact-study",
+        "activity_section.key": "fde35fcf-e51b-4a2a-b03e-9862f947c9f3"
       }
     }
   ],

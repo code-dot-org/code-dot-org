@@ -8,6 +8,8 @@ import * as redux from '@cdo/apps/redux';
 
 const serverScriptResponse = {
   csf: true,
+  isCsp: false,
+  isCsd: false,
   family_name: 'courseb',
   name: 'courseb-2020',
   hasStandards: false,
@@ -39,6 +41,7 @@ const serverProgressResponse = {
         result: -1,
         paired: false,
         time_spent: undefined,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       },
       '2001': {
@@ -46,6 +49,7 @@ const serverProgressResponse = {
         result: 30,
         paired: true,
         time_spent: 12345,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       }
     },
@@ -55,6 +59,7 @@ const serverProgressResponse = {
         result: 100,
         paired: false,
         time_spent: 6789,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 6789
       }
     }
@@ -80,6 +85,7 @@ const firstServerProgressResponse = {
         result: -1,
         paired: false,
         time_spent: undefined,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       },
       '2001': {
@@ -87,6 +93,7 @@ const firstServerProgressResponse = {
         result: 30,
         paired: true,
         time_spent: 12345,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       }
     }
@@ -109,6 +116,7 @@ const secondServerProgressResponse = {
         result: 100,
         paired: false,
         time_spent: 6789,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 6789
       }
     }
@@ -116,9 +124,11 @@ const secondServerProgressResponse = {
 };
 
 const fullExpectedResult = {
-  scriptDataByScript: {
+  unitDataByUnit: {
     123: {
       csf: true,
+      isCsp: false,
+      isCsd: false,
       family_name: 'courseb',
       name: 'courseb-2020',
       hasStandards: false,
@@ -129,7 +139,7 @@ const fullExpectedResult = {
       version_year: '2020'
     }
   },
-  studentLevelProgressByScript: {
+  studentLevelProgressByUnit: {
     123: {
       100: {},
       101: {
@@ -140,6 +150,7 @@ const fullExpectedResult = {
           result: -1,
           paired: false,
           timeSpent: undefined,
+          teacherFeedbackReviewState: undefined,
           lastTimestamp: 12345
         },
         '2001': {
@@ -149,6 +160,7 @@ const fullExpectedResult = {
           result: 30,
           paired: true,
           timeSpent: 12345,
+          teacherFeedbackReviewState: undefined,
           lastTimestamp: 12345
         }
       },
@@ -160,12 +172,13 @@ const fullExpectedResult = {
           result: 100,
           paired: false,
           timeSpent: 6789,
+          teacherFeedbackReviewState: undefined,
           lastTimestamp: 6789
         }
       }
     }
   },
-  studentLessonProgressByScript: {
+  studentLessonProgressByUnit: {
     123: {
       100: {
         11: null
@@ -190,7 +203,7 @@ const fullExpectedResult = {
       }
     }
   },
-  studentLastUpdateByScript: {
+  studentLastUpdateByUnit: {
     123: {
       '100': null,
       '101': timeInSeconds,
@@ -229,8 +242,8 @@ describe('sectionProgressLoader.loadScript', () => {
         return {
           sectionProgress: {
             isRefreshingProgress: true,
-            studentLevelProgressByScript: [true],
-            scriptDataByScript: [true],
+            studentLevelProgressByUnit: [true],
+            unitDataByUnit: [true],
             currentView: 0
           },
           sectionData: {}
@@ -243,7 +256,7 @@ describe('sectionProgressLoader.loadScript', () => {
   });
 
   describe('when loading data', () => {
-    let addDataByScriptStub, finishLoadingProgressStub;
+    let addDataByUnitStub, finishLoadingProgressStub;
     let finishRefreshingProgressStub;
     beforeEach(() => {
       sinon.stub(Promise, 'all').returns({then: sinon.stub().callsArg(0)});
@@ -260,18 +273,18 @@ describe('sectionProgressLoader.loadScript', () => {
     afterEach(() => {
       sectionProgress.finishLoadingProgress.restore();
       sectionProgress.finishRefreshingProgress.restore();
-      addDataByScriptStub.restore();
+      addDataByUnitStub.restore();
       Promise.all.restore();
     });
 
     it('refreshes the data if data already exists', () => {
-      addDataByScriptStub = sinon.stub(sectionProgress, 'addDataByScript');
+      addDataByUnitStub = sinon.stub(sectionProgress, 'addDataByUnit');
       reduxStub.returns({
         getState: () => {
           return {
             sectionProgress: {
-              studentLevelProgressByScript: [true],
-              scriptDataByScript: [true],
+              studentLevelProgressByUnit: [true],
+              unitDataByUnit: [true],
               currentView: 0
             },
             sectionData: {
@@ -292,7 +305,7 @@ describe('sectionProgressLoader.loadScript', () => {
       loadScriptProgress(0, 0);
       expect(startLoadingProgressStub).to.have.not.been.called;
       expect(startRefreshingProgressStub).to.have.been.calledOnce;
-      expect(addDataByScriptStub).to.have.been.calledOnce;
+      expect(addDataByUnitStub).to.have.been.calledOnce;
       expect(finishLoadingProgressStub).to.have.been.calledOnce;
       expect(finishRefreshingProgressStub).to.have.been.calledOnce;
     });
@@ -302,9 +315,9 @@ describe('sectionProgressLoader.loadScript', () => {
         getState: () => {
           return {
             sectionProgress: {
-              studentLevelProgressByScript: [],
-              studentLessonProgressByScript: [],
-              scriptDataByScript: [],
+              studentLevelProgressByUnit: [],
+              studentLessonProgressByUnit: [],
+              unitDataByUnit: [],
               currentView: 0
             },
             sectionData: {
@@ -318,7 +331,7 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-      addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+      addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
       fetchStub.onCall(0).returns({
         then: sinon.stub().returns({
           then: sinon.stub().callsArgWith(0, serverScriptResponse)
@@ -335,7 +348,7 @@ describe('sectionProgressLoader.loadScript', () => {
         })
       });
       loadScriptProgress(123, 0);
-      expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+      expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
     });
 
@@ -346,8 +359,8 @@ describe('sectionProgressLoader.loadScript', () => {
           getState: () => {
             return {
               sectionProgress: {
-                studentLevelProgressByScript: [],
-                scriptDataByScript: [],
+                studentLevelProgressByUnit: [],
+                unitDataByUnit: [],
                 currentView: 0
               },
               sectionData: {
@@ -363,7 +376,7 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       it('starts and finishes loading progress', () => {
-        addDataByScriptStub = sinon.stub(sectionProgress, 'addDataByScript');
+        addDataByUnitStub = sinon.stub(sectionProgress, 'addDataByUnit');
         fetchStub.returns({
           then: sinon.stub().returns({
             then: sinon.stub().callsArgWith(0, {})
@@ -373,21 +386,23 @@ describe('sectionProgressLoader.loadScript', () => {
         loadScriptProgress(0, 0);
         expect(startLoadingProgressStub).to.have.been.calledOnce;
         expect(startRefreshingProgressStub).to.have.not.been.called;
-        expect(addDataByScriptStub).to.have.been.calledOnce;
+        expect(addDataByUnitStub).to.have.been.calledOnce;
         expect(finishLoadingProgressStub).to.have.been.calledOnce;
         expect(finishRefreshingProgressStub).to.have.been.calledOnce;
       });
 
       it('processes levels before updating the redux store', () => {
         sinon.stub(progressHelpers, 'processedLevel').returns('success');
-        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
         const serverResponse = {
           lessons: [{levels: ['fail']}]
         };
         const expectedResult = {
-          scriptDataByScript: {
+          unitDataByUnit: {
             '0': {
-              csf: undefined,
+              csf: false,
+              isCsd: undefined,
+              isCsp: undefined,
               family_name: undefined,
               name: undefined,
               hasStandards: undefined,
@@ -398,9 +413,9 @@ describe('sectionProgressLoader.loadScript', () => {
               version_year: undefined
             }
           },
-          studentLevelProgressByScript: {'0': {}},
-          studentLessonProgressByScript: {'0': {}},
-          studentLastUpdateByScript: {'0': {}}
+          studentLevelProgressByUnit: {'0': {}},
+          studentLessonProgressByUnit: {'0': {}},
+          studentLastUpdateByUnit: {'0': {}}
         };
 
         fetchStub.onCall(0).returns({
@@ -414,13 +429,13 @@ describe('sectionProgressLoader.loadScript', () => {
           })
         });
         loadScriptProgress(0, 0);
-        expect(addDataByScriptStub).to.have.been.calledWith(expectedResult);
+        expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
 
       it('transforms the data provided by the server', () => {
         sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
             then: sinon.stub().callsArgWith(0, serverScriptResponse)
@@ -432,7 +447,7 @@ describe('sectionProgressLoader.loadScript', () => {
           })
         });
         loadScriptProgress(123, 0);
-        expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+        expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
 
@@ -442,7 +457,7 @@ describe('sectionProgressLoader.loadScript', () => {
         scriptResponse.lessons[0].levels.push({bonus: true});
 
         sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
 
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
@@ -455,7 +470,7 @@ describe('sectionProgressLoader.loadScript', () => {
           })
         });
         loadScriptProgress(123, 0);
-        expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+        expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
 
@@ -467,12 +482,10 @@ describe('sectionProgressLoader.loadScript', () => {
         scriptResponse.lessons[0].levels.push(bonusLevel);
 
         const expectedResult = _.cloneDeep(fullExpectedResult);
-        expectedResult.scriptDataByScript[123].lessons[0].levels.push(
-          bonusLevel
-        );
+        expectedResult.unitDataByUnit[123].lessons[0].levels.push(bonusLevel);
 
         sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
 
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
@@ -485,7 +498,7 @@ describe('sectionProgressLoader.loadScript', () => {
           })
         });
         loadScriptProgress(123, 0);
-        expect(addDataByScriptStub).to.have.been.calledWith(expectedResult);
+        expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
     });

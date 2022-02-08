@@ -116,6 +116,14 @@
       }
     }
   },
+  "https://studio.code.org/p/spritelab": {
+    "placeholder_texts": {
+      "6e41661ddc1edd50b00b7c607cdcec1a": "choice 1",
+      "7fec9998c3e5a11f435dc6f2f8e399db": "choice 2",
+      "c3787b1ed128fdeec3ad638c8ba547d3": "choice 3",
+      "6cd3556deb0da54bca060b4c39479839": "Hello, world!"
+    }
+  },
   "https://studio.code.org/p/dance": {
     "display_name": "New Dance Party Project"
   },

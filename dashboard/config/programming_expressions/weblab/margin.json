@@ -1,5 +1,6 @@
 {
-  "func": "margin",
+  "key": "margin",
+  "name": "margin",
   "category": "CSS Properties",
   "syntax": "margin: value;"
 }

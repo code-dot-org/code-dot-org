@@ -1,4 +1,6 @@
 {
-  "func": "drawSprites",
-  "category": "World"
+  "key": "drawSprites",
+  "name": "drawSprites",
+  "category": "World",
+  "syntax": "drawSprites"
 }

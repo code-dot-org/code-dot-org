@@ -1,12 +1,11 @@
 {
-  "func": "analogRead",
+  "key": "analogRead",
+  "name": "analogRead",
   "category": "Maker",
-  "type": "value",
-  "nativeIsAsync": true,
-  "paletteParams": [
-    "pin"
+  "palette_params": [
+    {
+      "name": "pin"
+    }
   ],
-  "params": [
-    "5"
-  ]
+  "syntax": "analogRead(pin)"
 }

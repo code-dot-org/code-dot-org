@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   getStore,
@@ -37,5 +37,6 @@ describe('Craft', () => {
     Craft.init(config);
     server.respond();
     assert(getStore().getState().pageConstants.isMinecraft);
+    server.restore();
   });
 });

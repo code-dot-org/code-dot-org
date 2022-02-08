@@ -26,6 +26,8 @@ const SHOW_BACKGROUND = 'AnimationPicker/SHOW_BACKGROUND';
 const HIDE = 'AnimationPicker/HIDE';
 const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
+const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
+const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -35,52 +37,68 @@ const initialState = {
   uploadFilename: null,
   uploadError: null,
   isSpriteLab: false,
-  isBackground: false
+  isBackground: false,
+  // List of animations selected to be added through multiselect
+  selectedAnimations: {}
 };
 
 export default function reducer(state, action) {
   state = state || initialState;
-  switch (action.type) {
-    case SHOW:
-      if (!state.visible) {
-        return _.assign({}, initialState, {
-          visible: true,
-          goal: action.goal,
-          isBackground: false,
-          isSpriteLab: action.isSpriteLab
-        });
-      }
-      return state;
-
-    case SHOW_BACKGROUND:
-      if (!state.visible) {
-        return _.assign({}, initialState, {
-          visible: true,
-          goal: action.goal,
-          isBackground: true,
-          isSpriteLab: true
-        });
-      }
-      return state;
-
-    case HIDE:
-      return initialState;
-
-    case BEGIN_UPLOAD:
-      return _.assign({}, state, {
-        uploadInProgress: true,
-        uploadFilename: action.filename
+  if (action.type === SHOW) {
+    if (!state.visible) {
+      return _.assign({}, initialState, {
+        visible: true,
+        goal: action.goal,
+        isBackground: false,
+        isSpriteLab: action.isSpriteLab
       });
-
-    case HANDLE_UPLOAD_ERROR:
-      return _.assign({}, state, {
-        uploadInProgress: false,
-        uploadError: action.status
-      });
-
-    default:
-      return state;
+    }
+    return state;
   }
+  if (action.type === SHOW_BACKGROUND) {
+    if (!state.visible) {
+      return _.assign({}, initialState, {
+        visible: true,
+        goal: action.goal,
+        isBackground: true,
+        isSpriteLab: true
+      });
+    }
+    return state;
+  }
+  if (action.type === HIDE) {
+    return initialState;
+  }
+  if (action.type === BEGIN_UPLOAD) {
+    return _.assign({}, state, {
+      uploadInProgress: true,
+      uploadFilename: action.filename
+    });
+  }
+  if (action.type === HANDLE_UPLOAD_ERROR) {
+    return _.assign({}, state, {
+      uploadInProgress: false,
+      uploadError: action.status
+    });
+  }
+  if (action.type === SELECT_ANIMATION) {
+    return {
+      ...state,
+      selectedAnimations: {
+        ...state.selectedAnimations,
+        [action.animation.sourceUrl]: action.animation
+      }
+    };
+  }
+  if (action.type === REMOVE_ANIMATION) {
+    const updatedAnimations = {...state.selectedAnimations};
+    delete updatedAnimations[action.animation.sourceUrl];
+    return {
+      ...state,
+      selectedAnimations: updatedAnimations
+    };
+  }
+  return state;
 }
 
 /**
@@ -132,6 +150,15 @@ export function beginUpload(filename) {
  * @returns {function}
  */
 export function handleUploadComplete(result) {
+  firehoseClient.putRecord({
+    study: 'animation-library',
+    study_group: 'control-2020',
+    event: 'upload',
+    data_json: JSON.stringify({
+      size: result.size
+    })
+  });
+
   return function(dispatch, getState) {
     const {goal, uploadFilename} = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
@@ -195,6 +222,30 @@ export function handleUploadError(status) {
 }
 
 /**
+ * An animation has been selected to be added to the list to save later.
+ * @param {!AnimationProps} animation
+ * @returns {{type: string, animation: AnimationProps}}
+ */
+export function addSelectedAnimation(animation) {
+  return {
+    type: SELECT_ANIMATION,
+    animation: animation
+  };
+}
+
+/**
+ * Remove an animation that was selected has been selected to save later.
+ * @param {!AnimationProps} animation
+ * @returns {{type: string, animation: AnimationProps}}
+ */
+export function removeSelectedAnimation(animation) {
+  return {
+    type: REMOVE_ANIMATION,
+    animation: animation
+  };
+}
+
+/**
  * The user chose to draw their own animation.  This concludes our picking
  * process.  Dispatch action to add a new image, and then close the animation
  * picker.
@@ -234,13 +285,34 @@ export function pickLibraryAnimation(animation) {
   });
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
+    const selectedAnimations = getState().animationPicker.selectedAnimations;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(
-        addLibraryAnimation(animation, getState().animationPicker.isSpriteLab)
-      );
+      if (!!selectedAnimations[animation.sourceUrl]) {
+        dispatch(removeSelectedAnimation(animation));
+      } else {
+        dispatch(addSelectedAnimation(animation));
+      }
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
     }
+  };
+}
+
+/**
+ * The user wants to save the selected animations to their project. This concludes our picking
+ * process. Loop through all selectedAnimations and save each individually to the project.
+ * Only triggered at the end of multiselect.
+ * @returns {function}
+ */
+export function saveSelectedAnimations() {
+  return (dispatch, getState) => {
+    const animations = Object.values(
+      getState().animationPicker.selectedAnimations
+    );
+    const isSpriteLab = getState().animationPicker.isSpriteLab;
+    animations.map(animation => {
+      dispatch(addLibraryAnimation(animation, isSpriteLab));
+    });
     dispatch(hide());
   };
 }

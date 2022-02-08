@@ -1,50 +1,66 @@
-import * as coreLibrary from '../coreLibrary';
-
 export const commands = {
   getAnimationsInUse() {
-    return coreLibrary.getAnimationsInUse();
+    return this.getAnimationsInUse();
   },
 
   getBackground() {
-    if (typeof coreLibrary.background === 'string') {
-      return coreLibrary.background;
+    const background = this.getBackground();
+    if (background === undefined) {
+      return undefined;
+    } else if (typeof background === 'string') {
+      return background;
     } else {
-      return coreLibrary.background.name;
+      return background.name;
     }
   },
 
   getEventLog() {
-    return coreLibrary.eventLog;
+    return this.eventLog;
   },
 
   getNumBehaviorsForAnimation(animation) {
-    return coreLibrary.getNumBehaviorsForAnimation(animation);
+    return this.getNumBehaviorsForAnimation(animation);
   },
 
   getNumBehaviorsForSpriteId(spriteId) {
-    return coreLibrary.getNumBehaviorsForSpriteId(spriteId);
+    return this.getNumBehaviorsForSpriteId(spriteId);
   },
 
   getBehaviorsForSpriteId(spriteId) {
-    return coreLibrary.getBehaviorsForSpriteId(spriteId);
+    return this.getBehaviorsForSpriteId(spriteId);
   },
 
   getPrintLog() {
-    return coreLibrary.printLog;
+    return this.printLog;
   },
 
   getPromptVars() {
-    return coreLibrary.promptVars;
+    return this.promptVars;
+  },
+
+  getSoundLog() {
+    return this.soundLog;
+  },
+
+  getSpeechForSpriteId(spriteId) {
+    return this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
   },
 
   getSpriteIdsInUse() {
-    return coreLibrary.getSpriteIdsInUse();
+    return this.getSpriteIdsInUse();
   },
 
   getTitle() {
     return {
-      title: coreLibrary.screenText.title,
-      subtitle: coreLibrary.screenText.subtitle
+      title: this.screenText.title,
+      subtitle: this.screenText.subtitle
     };
+  },
+
+  spriteSpeechRenderedThisFrame(spriteId) {
+    return (
+      this.getLastSpeechBubbleForSpriteId(spriteId)?.renderFrame ===
+      this.currentFrame()
+    );
   }
 };

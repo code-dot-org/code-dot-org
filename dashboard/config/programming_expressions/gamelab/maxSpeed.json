@@ -1,7 +1,6 @@
 {
-  "func": "maxSpeed",
+  "key": "maxSpeed",
+  "name": "maxSpeed",
   "category": "Sprites",
-  "modeOptionName": "*.maxSpeed",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "maxSpeed"
 }

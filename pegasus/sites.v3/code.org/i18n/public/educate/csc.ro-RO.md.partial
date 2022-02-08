@@ -1,0 +1,56 @@
+---
+title: CS Connections
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Conexiunile Informaticii
+
+Cel mai nou curriculum al nostru face conexiuni între învățarea informaticii și alte subiecte precum matematica, artele lingvistice, știința și studiile sociale. Prin intermediul CS Connections, clasele K-12 explorează subiectele obișnuite în moduri noi și interesante!
+
+## Încearcă CS Connections cu aceste activități pentru Hour of Code
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Arta Poeziei", left_description: "Exprimă-te! Utilizează codul pentru a crea poezii animate.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Începe", right_heading: "Hello World", right_description: "Alege din patru teme amuzante pentru a codifica personaje interactive într-o lume pe care o creezi.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Începe"}}
+{{ clearfix }}
+
+## Module
+
+Modulele CS Connections sunt o serie de lecții structurate, care integrează învățarea informaticii în materiile de bază, precum matematica, Artele Limbii Engleze și științele. Aceste module sunt aliniate standardelor din toate disciplinelor și culminează într-un proiect inter-curricular.
+
+Acestea sunt perfecte pentru profesorii care doresc să includă știința calculatoarelor în planurile de lecții pentru alte materii, dar și pentru instructorii de ȘC care doresc să consolideze ce au învățat elevii la alte materii.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "Artele Limbii Engleze", duration: "5 ore", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codarea cu Poetry", right_description: "Conectează informatica și poezia în clasa ta cu această serie de lecții.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Vezi modulul" }}
+
+## Proiecte cu final deschis
+
+Continuă să faci conexiuni între informatică și disciplinele tradiționale cu ajutorul proiectelor noastre inter-curriculare. Acestea durează doar 1-2 ore de instruire și sunt ideale pentru orice profesor care dorește să dezvolte proiecte specifice unui subiect care să se încadreze în programa școlară existentă.
+
+<em>Sfat: Pentru aceste proiecte trebuie să aveți câteva noțiuni de bază de știința calculatoarelor, prin urmare vă recomandăm să finalizați activitatea Hour of Code - Salutare lume înainte de a începe!</em>
+
+{{ csc_module, title: "Ecosisteme", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Stiință", duration: "1-2 ore", description: "Utilizarea aptitudinilor de codare de bază, elevii crează un model interactiv al unui ecosistem, care explorează modul în care diferitele animale, plante și organisme se influențează unii pe alții. Acest model ar putea, de asemenea, să fie adaptat în interacțiunile dintre geosferă, biosferă, hidrosferă și/sa atmosferă.", button_text: "Află mai multe", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Cicluri de Viață", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Știință", duration: "1-2 ore", description: "Treceți de la ou la mormoloc la broască cu acest proiect, în care elevii utilizează coduri pentru a crea un model al unui ciclu științific - ca ciclul de viață al unei broaște sau transferul de energie!", button_text: "Află mai multe", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Studiul Personajului", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "Artele Limbii Engleze", duration: "1-2 ore", description: "Fiecare acțiune are o reacțiune! Nu, asta nu este fizică - acest proiect permite elevilor să utilizeze coduri pentru a construi o scenă de la o poveste care arată modul cum acțiunile unui personaj afectează seria evenimentelor.", button_text: "Află mai multe", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Morala Poveștii", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "Artele Limbii Engleze", duration: "1-2 ore", description: "Ce se află între \"A fost o dată\" și\"Sfârșit?\" Elevii codifică o aplicație interactivă care relatează o poveste și morala sa. Elevii ar putea aplica această aptitudine în orice poveste, basm popular, carte sau fabulă.", button_text: "Află mai multe", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Lecții de Legătură
+
+Lecții noastre de legătură oferă un mod rapid și interesant să facă o conexiune între informatică și alte discipline. Aceste lecții nu necesită cunoștințe prealabile de informatică, deci sunt perfecte pentru orice profesor care dorește să incorporeze învățarea esențială a secolului 21 în programa școlară tradițională sau să motiveze elevii cu noi moduri captivante de a învăța subiecte mai vechi.
+
+
+{{ csc_module, title: "Să Scriem cu Albinuța", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "Artele Limbii Engleze", duration: "1 oră", description: "F-U-N! În această lecție, elevii utilizează aptitudinile codificării de bază pentru a-i spune Albinuței unde să B-Â-Z-Â-I-E ca să scrie cuvintele pe o grilă plină cu litere.", button_text: "Află mai multe", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Să Numărăm cu Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Matematică", duration: "1 oră", description: "Este o vânătoare de comori! Elevii vor exersa numărarea și adunarea atunci când codifică cu bucle pentru a o ajuta pe Laurel să colecteze pietre prețioase dintr-o grilă labirint.", button_text: "Află mai multe", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Cod de Etică IA", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "Artele Limbii Engleze sau Umaniste", duration: "1 oră", description: "După ce au cercetat posibilele capcane etice ale inteligenței artificiale (IA), elevii lucrează împreună să dezvolte o resursă de clasă \"Codul de Etică IA\".", button_text: "Află mai multe", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Vizualizarea Datelor", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Matematică", duration: "1 oră", description: "Această lecție prezintă elevilor instrumentul Vizualizator Date din App Lab, precum și importante tipuri de grafic: un grafic cu bare și o histogramă. Pe parcursul lecției, elevii vor dezvolta aptitudini de folosire a acestui instrument și de citire a datelor.", button_text: "Află mai multe", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Ai terminat o activitate CS Connection și/sau cauți mai multe opțiuni pentru clasa ta? Te rugăm să <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">împărtășești opinia ta</a> și idei pentru mai multe lecții aici!</em>

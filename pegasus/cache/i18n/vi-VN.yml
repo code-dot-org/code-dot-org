@@ -97,6 +97,8 @@ vi-VN:
   congratulations_volunteer: 'Xin chúc mừng: Bây giờ bạn đã cố gắng Hour of code,
     <a href="https://code.org/volunteer"> đăng ký tình nguyện trong một lớp học</a>
     và giúp học sinh tìm hiểu Hour of Code!'
+  congratulations_on_completing_course: Xin chúc mừng đã hoàn thành %{course} khóa
+    học
   congrats_next_tutorials_title: Thực hiện các hướng dẫn tiếp theo
   congrats_next_tutorials_desc: Hảy thữ những bài hướng dẫn ngắn hơn (dài khoảng 1
     tiếng), hoặc là thử <a href="%{current_path}/next"> đối tác hướng dẫn</a>.
@@ -247,6 +249,8 @@ vi-VN:
   learn_next_level: Tiếp tục đến cấp độ tiếp theo
   learn_online: Thử các khóa học trực tuyến khác
   learn_classes: Tìm một lớp học tại địa phương
+  hoc_is_here: Hãy học khoa học máy tính, ta có thể thay đổi mọi thứ. Truy cập https://youtu.be/xJqSu1IbcHg
+    để biết thêm chi tiết.
   just_did_hoc: 'Tôi chỉ cần làm #HourOfCode - kiểm tra nó xem! @codeorg'
   just_did_course1: Mình vừa hoàn thành khóa 1 tại @codeorg, xem thử đi
   just_did_course2: Mình vừa hoàn thành khóa 2 tại @codeorg, xem thử đi
@@ -449,6 +453,8 @@ vi-VN:
     với sự góp mặt của các thần tượng và người nổi tiếng
   videos_more_markdown: Thêm [video truyền cảm hứng](%{inspiring_videos_playlist})
     với sự góp mặt của các thần tượng và người nổi tiếng
+  careers_page_more: Thêm <a href='%{careers_url}' target='_blank'>những video truyền
+    cảm hứng</a> với các chuyên gia trong lĩnh vực công nghệ
   playlab_choose_theme: Chọn chủ đề cho Play Lab của bạn
   playlab_classic_title: Cổ điển
   playlab_gumball_title: Thế giới kì diệu của Gumball
@@ -467,17 +473,23 @@ vi-VN:
     lưu khám phá thế giới Minecraft
   mc_shortdescription: Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu
     lưu khám phá thế giới Minecraft
+  mc_gradelevel: 6-106 tuổi
   mc_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa tuổi
     6-106
   minecraft_agent: 'Minecraft: Hero''s Journey'
   minecraft_designer: Nhà thiết kế Minecraft
+  minecraft_adventurer: Minecraft Chuyến phiêu lưu
   minecraft_tutorials: Bài hướng dẫn Giờ lập trình Minecraft
+  minecraft_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa
+    tuổi 6-106
   minecraft_agent_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới
     cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
   minecraft_agent_button: Bắt đầu
   minecraft_designer_description: Chương trình động vật và sinh vật Minecraft khác
     trong phiên bản Minecraft của riêng bạn.
   minecraft_designer_button: Bắt đầu
+  minecraft_adventurer_description: Sử dụng mã lệnh để đưa Alex hay Steve tới một
+    cuộc phiêu lưu.
   minecraft_adventurer_button: Bắt đầu
   minecraft_no_internet: Không có Internet?
   minecraft_download_adventurer: Tải về các phiên bản ngoại tuyến của Nhà phiêu lưu
@@ -514,7 +526,11 @@ vi-VN:
   video_title_anybody_can_learn: Bất cứ ai cũng có thể học
   video_title_steph_curry: Giờ lập trình với Steph Curry
   video_title_my_name_is_aracely: Tên tôi là Aracely
+  video_1min: 1 phút
+  video_2min: 2 phút
+  video_3min: 3 phút
   video_5min: 5 phút
+  speak_another_language: Bạn nói một ngôn ngữ khác?
   help_translate: Giúp chúng tôi dịch.
   no_internet: Không có Internet?
   download_offline: Tải xuống phiên bản ngoại tuyến.
@@ -668,6 +684,7 @@ vi-VN:
   dashboard_hoc_courses: Giờ lập trình cho mọi lứa tuổi
   dashboard_k5_courses: Khóa học 20 giờ dành cho K-5
   dashboard_middle_courses: Các khóa học 20-Giờ cho học sinh Trung học
+  dashboard_course_csina: Khoa học máy tính trong đại số
   dashboard_course_csins: Khoa học máy tính đối với khoa học
   dashboard_course_ecs: Khám phá Khoa học Máy tính
   dashboard_course_ecs_desc: 'Khám phá Khoa học máy tính là một khóa học kéo dài môt
@@ -694,6 +711,7 @@ vi-VN:
   dashboard_navigation_add_students: Thêm học sinh
   dashboard_navigation_manage_students: Quản lý sinh viên
   dashboard_navigation_lesson_plans_resources: Kế hoạch bài học và tài nguyên
+  dashboard_navigation_view_stats: Xem thống kê
   dashboard_progress_not_started: chưa bắt đầu
   dashboard_progress_in_progress: đang thực hiện
   dashboard_progress_not_completed: chưa hoàn thành
@@ -702,6 +720,7 @@ vi-VN:
   dashboard_progress_furthest_level_attempted: đã cố gắng ở mức độ cao nhất
   dashboard_progress_submitted: đã gửi
   dashboard_progress_view: 'Xem tiến trình của:'
+  dashboard_progress_pair_programming: lập trình theo cặp
   dashboard_sections_new_section: Thêm bài mới
   dashboard_sections_table_section: Học phần
   dashboard_sections_table_secret: Loại đăng nhập
@@ -715,6 +734,8 @@ vi-VN:
     chọn một kiểu <b>từ</b> hoặc <b>hình ảnh</b> bí mật cho phần đó.
   dashboard_sections_close: Đóng
   dashboard_sections_other_section: Giáo viên khác
+  dashboard_sections_yes_both: Đúng, tôi muốn sao chép sinh viên đang ở mục hiện tại
+    và muc mới
   dashboard_students_add_multiple: 'Gõ hoặc dán tên của các học sinh, mỗi tên một
     dòng:'
   dashboard_students_name: Tên
@@ -724,6 +745,7 @@ vi-VN:
   dashboard_students_completed_levels: Các Cấp độ đã Hoàn thành
   dashboard_students_total_lines: Số dòng Lệnh
   dashboard_students_secret_picture_title: Bức ảnh Bí mật
+  dashboard_students_secret_picture: Bức ảnh Bí mật
   dashboard_students_reset_picture: Bạn có thể đặt lại hình ảnh bí mật của học sinh
     bất cứ lức nào bằng cách chọn<b>Hiện bí mât</b> sau đó <b> Đặt lại bí mât </b>.
     Một hình ảnh bí mật sẽ được tạo ra cho học sinh sau khi học sinh đó đăng nhập.
@@ -762,6 +784,7 @@ vi-VN:
   dashboard_teacher_worksheet: bảng giáo viên
   dashboard_curriculum_csina: 'Khoa học máy tính trong đại số:'
   dashboard_curriculum_csins: 'Khoa học máy tính trong khoa học:'
+  dashboard_curriculum_csp: 'Nguyên tắc Khoa học Máy tính:'
   dashboard_curriculum_ecs: 'Khám phá Khoa học Máy tính:'
   dashboard_grade_k: K
   dashboard_grade_other: Khác
@@ -817,11 +840,13 @@ vi-VN:
   carousel_heading_beginners: Hướng dẫn cho người mới bắt đầu
   carousel_heading_beyond_beginners: Hướng dẫn cho người mới bắt đầu
   carousel_heading_javascript: Hướng dẫn dạy JavaScript
+  carousel_heading_beyond_javascript: Hướng dẫn dạy JavaScript
   carousel_heading_unplugged: Không có thiết bị hoặc internet? Thử rút khỏi khoa học
     máy tính
   carousel_heading_devices: Hướng dẫn viết ứng dụng cho điện thoại và máy tính bảng
   carousel_heading_beyond_devices: Hướng dẫn cho điện thoại hoặc máy tính bảng
   carousel_heading_languages: Các hướng dẫn trong các ngôn ngữ lập trình khác
+  carousel_heading_beyond_languages: Các hướng dẫn trong các ngôn ngữ lập trình khác
   carousel_heading_apps_games: Làm ứng dụng hoặc trò chơi của riêng bạn
   carousel_heading_university: Các khóa Đại học trực tuyến
   carousel_heading_webpages: Tìm hiểu để làm trang web
@@ -904,13 +929,22 @@ vi-VN:
   coursed-2020_name: Khóa học D (2020)
   coursee-2020_name: Khóa học E (2020)
   coursef-2020_name: Khóa học F (2020)
+  coursea-2021_name: Khóa học A (2021)
+  courseb-2021_name: Khóa học B (2021)
+  coursec-2021_name: Khóa học C (2021)
+  coursed-2021_name: Khóa học D (2021)
+  coursee-2021_name: Khóa học E (2021)
+  coursef-2021_name: Khóa học F (2021)
   pre-express-2018_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2018)
   express-2019_name: Khóa học cấp tốc (2019)
   pre-express-2019_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2019)
+  express-2020_name: Khóa học cấp tốc (2020)
   pre-express-2020_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2020)
+  pre-express-2021_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2021)
   accelerated_name: Khóa học cấp tốc
   pre-express_name: Khóa học cấp tốc cho trẻ chưa biết đọc
   20-hour_name: Khóa học cấp tốc
+  gumball_name: Thế giới kì diệu của Gumball
   classicmaze_name: Mê cung cổ điển
   iceage_name: Kỉ băng hà
   minecraft_name: Minecraft
@@ -922,30 +956,86 @@ vi-VN:
   basketball_name: Làm game bóng rổ
   sports_name: Tự lập trình game thể thao của riêng bạn
   applab_gradelevel: 13 tuổi trở lên
+  applab_shortdescription_congrats: App Lab là một môi trường lập trình mà bạn có
+    thể tạo ra các ứng dụng đơn giản. Thiết kế một ứng dụng, lập trình bằng các khối
+    hoặc JavaScript, và chia sẻ ứng dụng của bạn trong vài giây
+  codeorg_gradelevel: Tuổi từ 4-104
+  codeintl_gradelevel: Tuổi từ 4-104
+  tynker_gradelevel: Tuổi từ 5-13
+  scratch_gradelevel: Lứa tuổi 8+
   lightbot_gradelevel: Mọi lứa tuổi
   thinkersmith_gradelevel: Mọi lứa tuổi
+  condcards_gradelevel: 8-12 tuổi
   lightbotintl_gradelevel: Mọi lứa tuổi
   codehs_gradelevel: Trung học phổ thông
   codecademy_gradelevel: Trung học phổ thông
   processing_gradelevel: Trung học phổ thông
+  robomind_gradelevel: 8-13 tuổi
   codespark_gradelevel: Tiểu học
   kodable_gradelevel: Tiểu học
+  tynkerapp_gradelevel: Tuổi từ 5-13
+  robomindnl_gradelevel: 8-13 tuổi
+  flappy_gradelevel: 6-106 tuổi
   bitsbox_gradelevel: Tiểu học
   makeschool_gradelevel: Trung học phổ thông
   touchdevelop_gradelevel: Trung học phổ thông
   blockly_gradelevel: Mọi lứa tuổi
+  thinkersmith2_gradelevel: Lứa tuổi 8+
+  kodableunplugged_gradelevel: 8-13 tuổi
+  projguts_gradelevel: Độ tuổi 10-13
+  hourofcode_gradelevel: 6-106 tuổi
   frozen_gradelevel: Độ tuổi 8-108
+  starwars_gradelevel: 6-106 tuổi
+  playlab_gradelevel: 6-14 tuổi
+  infinity_gradelevel: 6-14 tuổi
   artist_gradelevel: Độ tuổi 8-108
+  monstercoding_gradelevel: Tuổi từ 5-13
+  allcancode_gradelevel: 5-10 tuổi
+  csfirst_gradelevel: 9-14 tuổi
   boxisland_gradelevel: Tiểu học
+  codesters_gradelevel: Tuổi từ 12-14
+  texasinstruments_gradelevel: 13-16 tuổi
+  teacherled_gradelevel: Lứa tuổi 5+
   course1_gradelevel: Tuổi từ 4-6
   course2_gradelevel: Lứa tuổi 6 + (yêu cầu biết đọc)
   course3_gradelevel: 8-18 tuổi
   course4_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
+  coursea_gradelevel: Tuổi từ 4-7
+  courseb_gradelevel: 5-8 tuổi
+  coursec_gradelevel: 6-10 tuổi
   coursed_gradelevel: Lớp 8 +
+  coursee_gradelevel: 8-12 tuổi
+  coursef_gradelevel: 9-13 tuổi
+  coursea-2017_gradelevel: Tuổi từ 4-7
+  courseb-2017_gradelevel: 5-8 tuổi
+  coursec-2017_gradelevel: 6-10 tuổi
   coursed-2017_gradelevel: Lớp 8 +
+  coursee-2017_gradelevel: 8-12 tuổi
+  coursef-2017_gradelevel: 9-13 tuổi
+  coursea-2018_gradelevel: Tuổi từ 4-7
+  courseb-2018_gradelevel: 5-8 tuổi
+  coursec-2018_gradelevel: 6-10 tuổi
   coursed-2018_gradelevel: Lớp 8 +
+  coursee-2018_gradelevel: 8-12 tuổi
+  coursef-2018_gradelevel: 9-13 tuổi
+  coursea-2019_gradelevel: Tuổi từ 4-7
+  courseb-2019_gradelevel: 5-8 tuổi
+  coursec-2019_gradelevel: 6-10 tuổi
   coursed-2019_gradelevel: Lớp 8 +
+  coursee-2019_gradelevel: 8-12 tuổi
+  coursef-2019_gradelevel: 9-13 tuổi
+  coursea-2020_gradelevel: Tuổi từ 4-7
+  courseb-2020_gradelevel: 5-8 tuổi
+  coursec-2020_gradelevel: 6-10 tuổi
   coursed-2020_gradelevel: Lớp 8 +
+  coursee-2020_gradelevel: 8-12 tuổi
+  coursef-2020_gradelevel: 9-13 tuổi
+  coursea-2021_gradelevel: Tuổi từ 4-7
+  courseb-2021_gradelevel: 5-8 tuổi
+  coursec-2021_gradelevel: 6-10 tuổi
+  coursed-2021_gradelevel: Lớp 8 +
+  coursee-2021_gradelevel: 8-12 tuổi
+  coursef-2021_gradelevel: 9-13 tuổi
   accelerated_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   thinkersmithspanish_platformtext: Không dùng máy tính
   thinkersmith_platformtext: Không dùng máy tính
@@ -964,6 +1054,8 @@ vi-VN:
   khanhe_shortdescription: Học cách vẽ trên JavaScript
   khanfr_shortdescription: Học cách vẽ trên JavaScript
   khanpl_shortdescription: Học cách vẽ trên JavaScript
+  codehs_shortdescription: Bắt đầu lập trình với chú cún Karel, một phần giới thiệu
+    vui vẻ và trực quan về lập trình!
   robomind_shortdescription: Viết mã cho một robot ảo
   groklearning_shortdescription: Dạy "Eliza" chatbot để lừa các bạn của bạn nghĩ cô
     ấy là con người!
@@ -977,6 +1069,8 @@ vi-VN:
     Submarine
   bitsbox_shortdescription: Mã một loạt các ứng dụng để chơi và chia sẻ, dùng ngôn
     ngữ JavaScript.
+  makeschool_shortdescription: Làm cho một trò chơi cho iPhone! Tìm hiểu bằng cách
+    viết mã để dạy quái vật của bạn di chuyển!
   touchdevelop_shortdescription: 'Giải quyết câu đố, tạo ra trò chơi và học lập trình
     trên điện thoại của bạn. '
   appinventor_shortdescription: Làm ứng dụng của riêng bạn! (Chỉ cho android)
@@ -1065,6 +1159,38 @@ vi-VN:
     nhau và thảo luận về các tác động xã hội của máy tính và internet. Trong phần
     thứ hai của khóa học này, hãy thiết kế và tạo dự án thực tiễn để có thể chia sẻ
     với bạn bè và gia đình.
+  coursea-2021_shortdescription_congrats: Hãy tìm hiểu kiến thức cơ bản về khoa học
+    máy tính và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
+    tạo câu chuyện của riêng bạn để có thể chia sẻ.
+  courseb-2021_shortdescription_congrats: Hãy tìm hiểu kiến thức cơ bản về khoa học
+    máy tính và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
+    tạo câu chuyện của riêng bạn để có thể chia sẻ.
+  coursec-2021_shortdescription_congrats: Tạo chương trình với trình tự, vòng lặp
+    và sự kiện. Dịch tên viết tắt của bạn sang dạng nhị phân, khám phá các kỹ thuật
+    giải quyết vấn đề khác nhau và tìm hiểu cách đối phó với nạn bắt nạt trực tuyến.
+    Vào cuối khóa học, hãy làm game hoặc sáng tác câu chuyện của riêng bạn để có thể
+    chia sẻ!
+  coursed-2021_shortdescription_congrats: Học sinh phát triển kiến thức về vòng lặp,
+    lệnh điều kiện và sự kiện. Ngoài lập trình, học sinh còn tìm hiểu về quyền công
+    dân kỹ thuật số.
+  coursee-2021_shortdescription_congrats: Bắt đầu viết mã với các thuật toán, vòng
+    lặp, điều kiện và sự kiện, sau đó bạn sẽ chuyển sang các hàm. Trong phần thứ hai
+    của khóa học này, hãy thiết kế và tạo một dự án thực tiễn để có thể chia sẻ với
+    bạn bè và gia đình của mình.
+  coursef-2021_shortdescription_congrats: Học cách sử dụng các loại vòng lặp, sự kiện,
+    hàm và lệnh điều kiện khác nhau. Phân tích các kỹ thuật giải quyết vấn đề khác
+    nhau và thảo luận về các tác động xã hội của máy tính và internet. Trong phần
+    thứ hai của khóa học này, hãy thiết kế và tạo dự án thực tiễn để có thể chia sẻ
+    với bạn bè và gia đình.
+  codeorg_longdescription: Học các khái niệm cơ bản về Khoa học Máy tính với lập trình
+    kéo thả. Đây là một trò chơi giống như các bài thuyết trình video tự hướng dẫn
+    của Bill Gates, Mark Zuckerberg, Angry Birds và Plants vs. Zombies. Tìm hiểu vòng
+    lặp lặp lại, điều kiện, và các thuật toán cơ bản. Có sẵn trên 34 ngôn ngữ.
+  codeintl_longdescription: Học các khái niệm cơ bản về Khoa học Máy tính với lập
+    trình kéo thả. Đây là một trò chơi giống như các bài thuyết trình video tự hướng
+    dẫn của Bill Gates, Mark Zuckerberg, Angry Birds và Plants vs. Zombies. Tìm hiểu
+    vòng lặp lặp lại, điều kiện, và các thuật toán cơ bản. Có sẵn trên 34 ngôn ngữ.
+  hourofcode_longdescription: Viết chương trình máy tính đầu tiên của bạn
   frozen_longdescription: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá
     sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt
     băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ
@@ -1078,11 +1204,15 @@ vi-VN:
   robomind_beyond_name: Lập trình một robot ảo
   codehs_beyond_name: Học cách lập trình cùng cún Karel
   teachingtree_beyond_name: Các khóa Đại học trực tuyến
+  codeorg_beyond_gradelevel: Tuổi từ 4-104
+  tynker_beyond_gradelevel: Tuổi từ 5-13
+  scratch_beyond_gradelevel: Lứa tuổi 8+
   lightbot_beyond_gradelevel: Mọi lứa tuổi
   codecademy_beyond_gradelevel: Trung học phổ thông
   kodable_beyond_gradelevel: Tiểu học
   scratchjr_beyond_gradelevel: Tiểu học
   hacketyhack_beyond_gradelevel: Trung học phổ thông
+  robomind_beyond_gradelevel: 8-13 tuổi
   makeschool_beyond_gradelevel: Trung học phổ thông
   touchdevelop_beyond_gradelevel: Trung học phổ thông
   codehs_beyond_gradelevel: Trung học phổ thông
@@ -1090,10 +1220,14 @@ vi-VN:
   coursera_beyond_gradelevel: Trường đại học
   udacity_beyond_gradelevel: Trường đại học
   teachingtree_beyond_gradelevel: Trường đại học
+  kodu_beyond_gradelevel: Lứa tuổi 8+
+  cargobot_beyond_gradelevel: Lứa tuổi 8+
   kidsruby_beyond_gradelevel: Lứa tuổi 12+
   w3schools_beyond_gradelevel: Lứa tuổi 12+
   mozilla_beyond_gradelevel: Lứa tuổi 12+
+  finch_beyond_gradelevel: Lứa tuổi 8+
   processing_beyond_gradelevel: Trung học phổ thông
+  sphero_beyond_gradelevel: Lứa tuổi 8+
   scratch_beyond_platformtext: Tất cả trình duyệt
   lightbot_beyond_platformtext: IOS, Android(hoặc trình duyệt web)
   pocketcode_beyond_platformtext: Phần mềm di động
@@ -1106,6 +1240,7 @@ vi-VN:
   appinventor_beyond_shortdescription: Làm ứng dụng của riêng bạn! (Chỉ cho android)
   kodu_beyond_shortdescription: Thiết kế một thế giới game 3D
   codea_beyond_shortdescription: Tạo những phần mềm trên Ipad của bạn
+  compatibility_hide_this_warning: Ẩn cảnh báo này
   compatibility_unsupported_browser: Trình duyệt của bạn không được hỗ trợ. Hãy nâng
     cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một
     trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang
@@ -1144,6 +1279,7 @@ vi-VN:
   header_about_faqs: Hỏi đáp
   header_learn: Học
   header_teach: Dạy
+  header_stats: Xem thống kê
   header_help_us: Giúp đỡ chúng tôi
   header_about: về chúng tôi
   header_teacher_community: Cộng đồng giáo viên
@@ -1168,6 +1304,7 @@ vi-VN:
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy bird
   user_header_view_all: Xem tất cả các dự án ...
+  user_header_view_project_gallery: Xem các dự án
   user_header_view_my_projects: Xem chương trình của tôi
   view_all_sections: Xem tất cả các phần
   hero_name: 'Minecraft: Hero''s Journey'
@@ -1207,6 +1344,7 @@ vi-VN:
     này.
   hoc_overview_view_teacher_guide: Xem hướng dẫn cho giáo viên
   hoc2018_creativity_create: Tạo
+  hoc2018_creativity_hoc_coming: Giờ Lập Trình đã đến…
   hoc2018_creativity_what_will_you_create: Bạn sẽ tạo những gì?
   hoc2018_creativity_courses_link: Hãy tiếp tục với <a href="https://studio.code.org/courses">các
     khóa học Code.org</a>
@@ -1346,6 +1484,7 @@ vi-VN:
     giấy phép âm nhạc của họ trên Code.org."
   hoc2018_dance_measure: Nhịp
   hoc2018_dance_measure_colon: 'Nhịp:'
+  page_not_found_title: Không tìm thấy trang
   hoc2018_mc_with_microsoft: Hợp tác cùng
   hoc2018_mc_thank_microsoft: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng
     tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ
@@ -1365,6 +1504,18 @@ vi-VN:
     các em học sinh! Hãy truy cập những nguồn hỗ trợ miễn phí, bao gồm thời khóa biểu,
     video, chương trình đào tạo khoa học máy tính, bài học về sự công bằng và các
     khóa đào tạo giáo viên.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Du hành ngược thời gian và học cách code! Hướng dẫn
+    Giờ Lập Trình Minecraft mới hiện đã có trong Minecraft: Education Edition (Minecraft:
+    Phiên bản giáo dục) dành cho Windows, Mac, Chromebook và iPad. Bắt đầu với các
+    tài nguyên, tài liệu đào tạo và video miễn phí dành cho giáo viên.'
+  hoc2021_mc_mee_villages_title: Tale of Two Villages (Câu chuyện về hai ngôi làng)
+  hoc2021_mc_mee_villages_description: 'Tìm hiểu kiến thức cơ bản về lập trình và
+    khám phá sự đa dạng và hòa nhập với học viên của bạn trong Minecraft: Education
+    Edition.'
+  hoc2021_mc_mee_ai_title: AI For Good (AI vì những điều tốt đẹp)
+  hoc2021_mc_mee_ai_description: 'Khám phá AI với học viên của bạn và học cách viết
+    code trong Minecraft: Education Edition.'
   footer_powered_by_aws: Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là
     các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và
     / hoặc các quốc gia khác.
@@ -1375,9 +1526,80 @@ vi-VN:
   footer_support: Trợ giúp và Cộng đồng
   footer_terms: Điều khoản
   ai_for_oceans: Trí Tuệ Nhân Tạo cho Đại Dương
+  ai_for_oceans_lesson_plan: giáo án
+  ai_for_oceans_tile_description: Giúp AI làm sạch đại dương bằng cách đào tạo AI
+    phát hiện rác thải! Hãy tìm hiểu về dữ liệu đào tạo và định kiến​cũng như cách
+    AI có thể giải quyết các vấn đề của thế giới. Xem
+  how_ai_works: Cách thức hoạt động của AI
+  how_ai_works_tile_description: Tìm hiểu về cách hoạt động và tầm quan trọng của
+    AI thông qua loạt video ngắn này. Với sự tham gia của CEO Satya Nadella của Microsoft
+    và đội ngũ chuyên gia đa ngành nghề.
+  watch_the_videos: Xem video
+  ai_and_ethics: AI và Đạo đức
+  ai_and_ethics_tile_description: Học sinh suy nghĩ về các tác động đạo đức của AI,
+    sau đó cùng nhau làm việc để soạn tài liệu “Bộ quy tắc đạo đức AI” cho những nhà
+    sáng tạo AI và các nhà lập pháp ở khắp mọi nơi.
+  view_lesson_plan: Xem giáo án
   ai_in_partnership_with: Hợp tác cùng
   ai_microsoft_thanks: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng tôi
     để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ năng
     cần thiết để thành công trong thế kỷ 21.
+  ai_ethics_panel_header: Khám phá cuộc thảo luận về Đạo đức của AI
+  ai_ethics_panel_description_1: Tìm hiểu sâu hơn cùng một số chuyên gia AI được yêu
+    mến của chúng tôi! Cuộc thảo luận hội đồng này sẽ đề cập đến các vấn đề quan trọng
+    như sai lệch thuật toán và tương lai của thị trường lao động. Hãy kết hợp với
+  ai_ethics_lesson_plan: Giáo án AI & Đạo đức
+  ai_ethics_panel_description_2: để thành bài giới thiệu tuyệt vời về đạo đức của
+    trí tuệ nhân tạo!
+  cs_for_good: Lợi ích của KHMT
+  cs_for_good_tile_description: Các tài liệu truyền cảm hứng cho học sinh suy nghĩ
+    sâu sắc về vai trò của khoa học máy tính trong việc tạo ra một thế giới bình đẳng
+    và bền vững hơn.
+  view_resources: Xem tài liệu
+  imagine_cup_junior: Cúp Tưởng Tượng Trẻ Em
+  imagine_cup_junior_tile_description: Thử thách toàn cầu về Lợi ích của AI này sẽ
+    giới thiệu cho học sinh các sáng kiến có ích của AI đến từ Microsoft, trao quyền
+    cho họ để giải quyết một vấn đề trên thế giới bằng sức mạnh của AI.
   ai_activity: Hoạt động
   ai_description: Mô tả
+  ai_seeing_ai: Quan sát AI
+  ai_seeing_ai_description: Ứng dụng miễn phí tường thuật thế giới xung quanh bạn
+    bằng nhiều ngôn ngữ khác nhau.
+  ai_quick_draw: Vẽ nhanh nào!
+  ai_quick_draw_description: Mạng thần kinh nhân tạo có thể học cách nhận diện hình
+    vẽ nháp không?
+  ai_teachable_machine: Cỗ máy biết học
+  ai_teachable_machine_description: Đào tạo máy tính để nhận diện hình ảnh, âm thanh
+    và tư thế của riêng bạn.
+  ai_google: Thử nghiệm AI với Google
+  ai_google_description: Bắt đầu khám phá công nghệ học máy thông qua hình ảnh, bản
+    vẽ, ngôn ngữ, âm nhạc, v.v.
+  ai_zooniverse: Zooniverse - Chụp hình ngựa vằn núi
+  ai_zooniverse_description: Giúp bảo vệ loài ngựa vằn núi Cape có nguy cơ tuyệt chủng
+    bằng cách xác định các loài động vật khác nhau trong hình ảnh.
+  ai_audience: Khán giả
+  ai_minecraft_description: 'Truy cập các tài liệu miễn phí bao gồm giáo án, video,
+    giáo trình khoa học máy tính và đào tạo giáo viên. (Yêu cầu Minecraft: Education
+    Edition)'
+  ai_k_12_audience: K-12 (Yêu cầu biết đọc)
+  ai_microsoft_workshop: Hội thảo trực tuyến miễn phí từ Microsoft
+  ai_microsoft_workshop_description: Khơi dậy trí tò mò với hội thảo STEM và lập trình
+    miễn phí.
+  ai_machine_learning_for_kids: Công nghệ máy học cho trẻ em
+  ai_machine_learning_for_kids_description: Đào tạo mô hình máy học bằng chữ, số hoặc
+    hình ảnh và sử dụng mô hình này để làm game trong Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: Công nghệ học máy cho trẻ em'
+  ai_ecs: 'ECS: Trí tuệ nhân tạo (AI)'
+  ai_ecs_description: Học phần thay thế mới cho chương trình Khám phá Khoa học Máy
+    tính (ECS).
+  ai_elements: Các yếu tố của AI
+  ai_elements_description: Loạt các khóa học trực tuyến miễn phí do Reaktor và Đại
+    học Helsinki tổ chức.
+  ai_cognimates: Cognimates
+  ai_cognimates_description: Nền tảng giáo dục AI để làm game, lập trình robot và
+    đào tạo.
+  ai_try_activity: Thử hoạt động
+  outbreak_tile_title: Dịch bệnh bùng phát
+  outbreak_tile_subtitle: Một loại virus đã lây nhiễm bệnh cho Thị Trấn Quái Vật!
+    Hãy code một trình mô phỏng ổ dịch và đưa ra dự đoán về những gì sẽ xảy ra với
+    những người hàng xóm của Thị Trấn Quái Vật.

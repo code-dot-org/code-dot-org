@@ -1,12 +1,14 @@
 {
-  "func": "setImageURL",
+  "key": "setImageURL",
+  "name": "setImageURL",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "url"
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "url"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "\"https://code.org/images/logo.png\""
-  ]
+  "syntax": "setImageURL(id, url)"
 }

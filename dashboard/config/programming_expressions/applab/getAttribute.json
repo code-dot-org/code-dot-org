@@ -1,10 +1,6 @@
 {
-  "func": "getAttribute",
+  "key": "getAttribute",
+  "name": "getAttribute",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"scrollHeight\""
-  ],
-  "type": "value",
-  "noAutocomplete": true
+  "syntax": "getAttribute"
 }

@@ -5,7 +5,7 @@ import React from 'react';
 import throttle from 'lodash/throttle';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {SingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacySingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 import Match from '@cdo/apps/code-studio/levels/match';
 window.Match = Match;
@@ -162,7 +162,7 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
         : i18n.submittableIncomplete();
     }
     const confirmationDialog = (
-      <SingleLevelGroupDialog id={id} title={title} body={body} />
+      <LegacySingleLevelGroupDialog id={id} title={title} body={body} />
     );
 
     return {

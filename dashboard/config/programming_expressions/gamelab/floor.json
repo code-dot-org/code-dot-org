@@ -1,11 +1,11 @@
 {
-  "func": "floor",
+  "key": "floor",
+  "name": "floor",
   "category": "Math",
-  "paletteParams": [
-    "num"
+  "palette_params": [
+    {
+      "name": "num"
+    }
   ],
-  "params": [
-    "0.9"
-  ],
-  "type": "value"
+  "syntax": "floor(num)"
 }

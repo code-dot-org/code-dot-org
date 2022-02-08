@@ -1,0 +1,513 @@
+{
+  "script": {
+    "name": "hello-world-animals",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_path": "https://studio.code.org/s/hello-world-food/lessons/1",
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
+      "is_migrated": true,
+      "redirect_to": "hello-world-animals-2021",
+      "tts": true,
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "hello-world-animals",
+    "serialized_at": "2021-11-22 17:09:14 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "hello-world-animals"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Hello World",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "bd17d4c9-4f15-460e-b035-46a0f4ef10f4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd17d4c9-4f15-460e-b035-46a0f4ef10f4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "91fb1076-b8f1-41ad-b416-6f329db2b701",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701",
+        "lesson_activity.key": "bd17d4c9-4f15-460e-b035-46a0f4ef10f4"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_say"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_say"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_say"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_location"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_location"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_location"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_multi"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_multi"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_multi"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_click"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_click"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_click"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_events"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_events"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_events"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_backgrounds"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_backgrounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_backgrounds"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_costumes"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_costumes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_costumes"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_sizes"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_sizes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_sizes"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_behaviors"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_behaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_behaviors"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_sounds"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_sounds"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_animals_freeplay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_animals_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      },
+      "level_keys": [
+        "helloworld_animals_freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_say",
+        "script_level.level_keys": [
+          "helloworld_animals_say"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_location",
+        "script_level.level_keys": [
+          "helloworld_animals_location"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_multi",
+        "script_level.level_keys": [
+          "helloworld_animals_multi"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_click",
+        "script_level.level_keys": [
+          "helloworld_animals_click"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_events",
+        "script_level.level_keys": [
+          "helloworld_animals_events"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_backgrounds",
+        "script_level.level_keys": [
+          "helloworld_animals_backgrounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_costumes",
+        "script_level.level_keys": [
+          "helloworld_animals_costumes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_sizes",
+        "script_level.level_keys": [
+          "helloworld_animals_sizes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_behaviors",
+        "script_level.level_keys": [
+          "helloworld_animals_behaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_sounds",
+        "script_level.level_keys": [
+          "helloworld_animals_sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_animals_freeplay",
+        "script_level.level_keys": [
+          "helloworld_animals_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-animals",
+        "activity_section.key": "91fb1076-b8f1-41ad-b416-6f329db2b701"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

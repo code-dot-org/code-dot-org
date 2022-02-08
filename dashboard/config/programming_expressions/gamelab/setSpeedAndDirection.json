@@ -1,13 +1,14 @@
 {
-  "func": "setSpeedAndDirection",
+  "key": "setSpeedAndDirection",
+  "name": "setSpeedAndDirection",
   "category": "Sprites",
-  "paletteParams": [
-    "speed",
-    "angle"
+  "palette_params": [
+    {
+      "name": "speed"
+    },
+    {
+      "name": "angle"
+    }
   ],
-  "params": [
-    "1",
-    "90"
-  ],
-  "modeOptionName": "*.setSpeedAndDirection"
+  "syntax": "setSpeedAndDirection(speed, angle)"
 }

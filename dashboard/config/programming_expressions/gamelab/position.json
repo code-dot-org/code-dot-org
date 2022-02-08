@@ -1,7 +1,6 @@
 {
-  "func": "position",
+  "key": "position",
+  "name": "position",
   "category": "Sprites",
-  "modeOptionName": "*.position",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "position"
 }

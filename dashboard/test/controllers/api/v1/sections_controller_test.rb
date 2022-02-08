@@ -15,17 +15,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:unit_group)
+    @unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
-    @script = create(:script)
-    @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
+    @script = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @script_in_preview_state = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @section_with_script = create(:section, user: @teacher, script: @script_in_preview_state)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
-    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
-    @csp_script = create(:script, name: 'csp1')
+    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @csp_script = create(:script, name: 'csp1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
+    @csp_script.reload
+
+    Script.clear_cache
   end
 
   test 'logged out cannot list sections' do
@@ -126,6 +130,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     post :join, params: {id: 'xxxxxx'}
     assert_response :bad_request
     assert_equal "section_notfound", returned_json['result']
+  end
+
+  test "join with a full section code" do
+    student = create :student
+    sign_in student
+    section = create(:section, login_type: 'email')
+
+    500.times do
+      create(:follower, section: section)
+    end
+
+    post :join, params: {id: section.code}
+    assert_response :forbidden
+    assert_equal "section_full", returned_json['result']
   end
 
   test "join with a restricted section code" do
@@ -454,6 +472,62 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_section.unit_group
   end
 
+  test 'pilot teacher can assign the pilot course id' do
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    sign_in pilot_teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      course_id: pilot_unit_group.id
+    }
+    assert_response :success
+
+    assert_equal pilot_unit_group.id, returned_json['course_id']
+    assert_equal pilot_unit_group, returned_section.unit_group
+  end
+
+  test 'non pilot teacher cannot assign the pilot course id' do
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      course_id: pilot_unit_group.id
+    }
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_json['course_id']
+    assert_nil returned_section.unit_group
+  end
+
+  test 'pilot teacher can assign pilot script' do
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    sign_in pilot_teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      script: {id: pilot_script.id}
+    }
+    assert_response :success
+
+    assert_equal pilot_script.id, returned_json['script']['id']
+    assert_equal pilot_script, returned_section.script
+  end
+
+  test 'non pilot teacher cannot assign a pilot script' do
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      script: {id: pilot_script.id}
+    }
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_json['script']['id']
+    assert_nil returned_section.script
+  end
+
   test 'can create with a script id but no course id' do
     sign_in @teacher
     post :create, params: {
@@ -562,7 +636,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section_with_script = create(
       :section,
       user: @teacher,
-      script_id: Script.flappy_script.id,
+      script_id: @script_in_preview_state.id,
       login_type: Section::LOGIN_TYPE_WORD,
       grade: "1",
       lesson_extras: true,
@@ -676,7 +750,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: script_id is not updated if invalid" do
-    Script.stubs(:valid_script_id?).returns(false)
+    Script.stubs(:valid_unit_id?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: nil)
@@ -721,7 +795,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update: can set course and script" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, as: :json, params: {
       id: section.id,
       course_id: @csp_unit_group.id,
@@ -735,46 +809,46 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update: non-matching course/script rejected" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
       course_id: @unit_group.id,
-      script_id: Script.artist_script.id
+      script_id: @script.id
     }
     assert_response 400
   end
 
   test "update: can set course-less script" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
-      script_id: Script.artist_script.id
+      script_id: @script.id
     }
     assert_response :success
     section.reload
     assert_nil section.course_id
-    assert_equal(Script.artist_script.id, section.script_id)
+    assert_equal(@script.id, section.script_id)
   end
 
   test "update: setting a script results in UserScripts for students" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     student = create(:follower, section: section).student_user
 
-    assert_nil UserScript.find_by(script: Script.artist_script, user: student)
+    assert_nil UserScript.find_by(script: @script, user: student)
 
     post :update, params: {
       id: section.id,
-      script_id: Script.artist_script.id
+      script_id: @script.id
     }
 
-    assert_not_nil UserScript.find_by(script: Script.artist_script, user: student)
+    assert_not_nil UserScript.find_by(script: @script, user: student)
   end
 
   test "update: can set script from nested script param" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, as: :json, params: {
       id: section.id,
       script: {id: @script.id}
@@ -850,7 +924,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update_sharing_disabled updates sharing_disabled" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update_sharing_disabled, params: {
       id: section.id,
       sharing_disabled: true
@@ -897,15 +971,15 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :success
     ids = JSON.parse(@response.body)
-    assert_equal({'studentScriptIds' => [Script.flappy_script.id]}, ids)
+    assert_equal({'studentScriptIds' => [@script_in_preview_state.id]}, ids)
 
     # make sure we include other scripts which the student has progress in
-    create(:user_script, user: @student_with_script, script: Script.frozen_script)
+    create(:user_script, user: @student_with_script, script: @script)
 
     get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :success
     ids = JSON.parse(@response.body)
-    assert_equal({'studentScriptIds' => [Script.flappy_script.id, Script.frozen_script.id]}, ids)
+    assert_equal({'studentScriptIds' => [@script.id, @script_in_preview_state.id]}, ids)
   end
 
   test 'student cannot access student_script_ids' do
@@ -989,5 +1063,99 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in user
     get :require_captcha
     assert_equal(json_response["key"], GOOGLE_PROVIDED_TEST_KEY)
+  end
+
+  test 'can get all code review groups for a section' do
+    sign_in @teacher
+    set_up_code_review_groups
+    get :code_review_groups, params: {id: @code_review_group_section.id}
+    group1_members = [
+      {follower_id: @followers[0].id, name: @followers[0].student_user.name},
+      {follower_id: @followers[1].id, name: @followers[1].student_user.name}
+    ]
+    group2_members = [{follower_id: @followers[2].id, name: @followers[2].student_user.name}]
+    unassigned_members = [
+      {follower_id: @followers[3].id, name: @followers[3].student_user.name},
+      {follower_id: @followers[4].id, name: @followers[4].student_user.name}
+    ]
+    expected_response = {
+      groups: [
+        {id: @group1.id, name: @group1.name, members: group1_members},
+        {id: @group2.id, name: @group2.name, members: group2_members},
+        {unassigned: true, members: unassigned_members}
+      ]
+    }
+    assert_response :success
+    assert_equal(expected_response.as_json, json_response)
+  end
+
+  test 'can post code_review_groups for a valid group' do
+    sign_in @teacher
+    set_up_code_review_groups
+    new_groups = [
+      {name: 'new_group', members: [{follower_id: @followers[0].id}]}
+    ]
+    post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
+    assert_response :success
+  end
+
+  test 'post code_review_groups returns 400 for invalid group' do
+    sign_in @teacher
+    set_up_code_review_groups
+    new_group_name = 'new_group'
+    # delete follower 4 so it becomes invalid
+    invalid_follower_id = @followers[4].id
+    Follower.delete(@followers[4].id)
+    new_groups = [
+      {name: new_group_name, members: [{follower_id: invalid_follower_id}]}
+    ]
+    assert CodeReviewGroup.exists?(@group1.id)
+    post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
+    # check that the original group still exists
+    assert CodeReviewGroup.exists?(@group1.id)
+    assert_response 400
+  end
+
+  test 'can set code review enabled to true' do
+    sign_in @teacher
+    @section.code_review_expires_at = nil
+    @section.save
+    post :set_code_review_enabled, params: {id: @section.id, enabled: true}
+    @section.reload
+    assert_response :success
+    assert_not_nil json_response["expiration"]
+    assert_equal @section.code_review_expires_at, json_response["expiration"]
+  end
+
+  test 'can set code review enabled to false' do
+    sign_in @teacher
+    @section.code_review_expires_at = DateTime.now
+    @section.save
+    post :set_code_review_enabled, params: {id: @section.id, enabled: false}
+    @section.reload
+    assert_response :success
+    assert_nil json_response["expiration"]
+    assert_nil @section.code_review_expires_at
+  end
+
+  private
+
+  def set_up_code_review_groups
+    # create a new section to avoid extra unassigned students
+    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    @followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @followers << create(:follower, section: @code_review_group_section, student_user: student)
+    end
+
+    # Create 2 code review groups
+    @group1 = create :code_review_group, section: @code_review_group_section
+    @group2 = create :code_review_group, section: @code_review_group_section
+    # put student 0 and 1 in group 1, and student 2 in group 2
+    create :code_review_group_member, follower: @followers[0], code_review_group: @group1
+    create :code_review_group_member, follower: @followers[1], code_review_group: @group1
+    create :code_review_group_member, follower: @followers[2], code_review_group: @group2
   end
 end

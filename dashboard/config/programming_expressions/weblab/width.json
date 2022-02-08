@@ -1,5 +1,6 @@
 {
-  "func": "width",
+  "key": "width",
+  "name": "width",
   "category": "CSS Properties",
   "syntax": "width: value;"
 }

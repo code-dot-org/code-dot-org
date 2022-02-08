@@ -38,9 +38,12 @@ bn-BD:
   twentyhours_text: আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান
     এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।
   og_title: প্রতিটি শিশু সুযোগের দাবীদার
+  og_title_soon: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
   og_description: প্রতিটি স্কুলে প্রত্যেক শিক্ষার্থীর কম্পিউটার সায়েন্স পড়ার সুযোগের
     দাবীদার।
   csedweek_og_title: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
+  csedweek_og_description: প্রত্যেক স্কুলে প্রতিটি ছাত্র কম্পিউটার বিজ্ঞানের পড়াশোনা
+    করার সুযোগের দাবীদার।
   hoc2014_heading: যুক্ত হন <a href="http://hourofcode.com"> Hour of Code</a><br/>
     ডিসেম্বর 8-14, ২০১৪ <br/>
   hoc2014_students: ছাত্র
@@ -88,6 +91,7 @@ bn-BD:
   congratulations_volunteer: 'অভিনন্দন: আপনি এক ঘন্টার কোড চেষ্টা করেছেন, https://code.org/volunteer
     এখান থেকে শ্রেণীকক্ষে স্বেচ্ছাসেবক হবার জন্য নিবন্ধন করুন এবং ছাত্র এক ঘন্টার
     কোড শিখতে সহায়তা করুন!'
+  congratulations_on_completing_course: "%{course} টি সম্পূর্ণ করার জন্য অভিনন্দন"
   congrats_next_tutorials_title: পরবর্তী পাঠ সহায়িকা (টিউটোরিয়াল) গুলী চেষ্টা করুন
   congrats_next_tutorials_desc: এই ছোট, ১ ঘন্টা টিউটোরিয়াল চেষ্টা করুন বা <a href="%{current_path}/next">
     সঙ্গী টিউটোরিয়াল</a> চেষ্টা করুন।
@@ -255,6 +259,7 @@ bn-BD:
   learn_online: অনলাইনে অন্যান্য কোর্স করুন
   learn_classes: স্থানীয় শ্রেণি খুঁজুন
   learn_back_to_minecraft: Minecraft এর সঙ্গে শিখতে থাখুন
+  hoc_is_here: "#HourOfCode  এসেছে, @codeorg -এ দেখুন"
   just_did_hoc: "#HourOfCode সম্পন্ন করেছি @codeorg"
   just_did_course1: " দেখ আমি কেবল কোর্স ১ শেষ করছে! @codeorg"
   just_did_course2: " দেখ আমি কেবল কোর্স ২ শেষ করছে! @codeorg"
@@ -331,6 +336,8 @@ bn-BD:
   homepage_hero_text_stat_students: "#student_count  কোড স্টুডিওতে ছাত্রছাত্রীদের
     হিসাব"
   homepage_hero_text_stat_served: 'ঘন্টার কোড: #served সেবা'
+  homepage_hero_hoc_is_coming: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
+  homepage_hero_hoc_is_here: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
   homepage_slot_text_hoc: কোডিং এর এক ঘণ্টা
   homepage_slot_text_frozen: আন্না এবং এলসার সাথে ফ্রোজেন
   homepage_slot_text_teacher: শিক্ষক ড্যাশবোর্ড
@@ -468,6 +475,7 @@ bn-BD:
   sports_athlete_Draymond: Draymond Green, অলিম্পিকে স্বর্ণ জয়ী ও NBA চ্যাম্পিয়ন,
     গোল্ডেন স্টেট ওয়ারিয়র্স
   sports_athlete_Serena: সেরেনা উইলিয়ামস, অলিম্পিকে স্বর্ণ জয়ী ও টেনিস চ্যাম্পিয়ন
+  watch_inspirational_videos: আপনি শুরু করার আগে, অনুপ্রেরণীয় একটি ভিডিও দেখুন
   video_title_inspire_girl: একটি মেয়েকে অনুপ্রাণিত করুন
   video_title_obama: কম্পিউটার বিজ্ঞান বিষয়ে প্রেসিডেন্ট ওবামা
   video_title_hoc_is_here: Hour of Code কোড এখানে - যেকেউ শিখতে পারে
@@ -642,6 +650,7 @@ bn-BD:
     জন্য প্রস্তুত করে আমাদের হাই স্কুলের প্রোগ্রাম স্কুল জেলাকে পূর্ণ বছরের কম্পিউটার
     বিজ্ঞান শ্রেণীকে সহায়তা করে। পেশাগত উন্নয়ন কর্মশালা জন্য নিবন্ধন করতে, <a href="/educate/districts">
     জেলা ব্যাপী অংশীদারিত্ব</a> Code.org সাথে।
+  dashboard_course_csina: বীজগণিতে কম্পিউটার বিজ্ঞান
   dashboard_course_csina_desc: কম্পিউটার প্রোগ্রামিং এর মাধ্যমে বীজগাণীতিক এবং জ্যামিতির
     ধারণা দিবে এমন একটি পাঠ্যক্রম গড়া জন্য কোড.ওআরজি বুটস্ট্রাপের সাথে অংশীদার হয়েছে।
   dashboard_course_csins: বিজ্ঞানে কম্পিউটার বিজ্ঞান
@@ -945,6 +954,7 @@ bn-BD:
   coursee_name: কোর্স E
   coursef-draft_name: কোর্স F
   coursef_name: কোর্স F
+  gumball_name: গামবল
   iceage_name: বরফযুগ
   minecraft_name: মাইনক্র্যাফট
   hoc-encryption_name: সাধারণ এনক্রিপশন
@@ -1007,16 +1017,42 @@ bn-BD:
   course2_gradelevel: বয়স ৬-১৮
   course3_gradelevel: বয়স ৮-১৮
   course4_gradelevel: বয়স ১০-১৮
+  coursea_gradelevel: বয়স 4-7
+  courseb_gradelevel: বয়স 5-8
+  coursec_gradelevel: বয়স 6-10
   coursed_gradelevel: গ্রেড ৮ +
   coursee_gradelevel: বয়স 8-12
+  coursef_gradelevel: বয়স 9-13
+  coursea-2017_gradelevel: বয়স 4-7
+  courseb-2017_gradelevel: বয়স 5-8
+  coursec-2017_gradelevel: বয়স 6-10
   coursed-2017_gradelevel: গ্রেড ৮ +
   coursee-2017_gradelevel: বয়স 8-12
+  coursef-2017_gradelevel: বয়স 9-13
+  coursea-2018_gradelevel: বয়স 4-7
+  courseb-2018_gradelevel: বয়স 5-8
+  coursec-2018_gradelevel: বয়স 6-10
   coursed-2018_gradelevel: গ্রেড ৮ +
   coursee-2018_gradelevel: বয়স 8-12
+  coursef-2018_gradelevel: বয়স 9-13
+  coursea-2019_gradelevel: বয়স 4-7
+  courseb-2019_gradelevel: বয়স 5-8
+  coursec-2019_gradelevel: বয়স 6-10
   coursed-2019_gradelevel: গ্রেড ৮ +
   coursee-2019_gradelevel: বয়স 8-12
+  coursef-2019_gradelevel: বয়স 9-13
+  coursea-2020_gradelevel: বয়স 4-7
+  courseb-2020_gradelevel: বয়স 5-8
+  coursec-2020_gradelevel: বয়স 6-10
   coursed-2020_gradelevel: গ্রেড ৮ +
   coursee-2020_gradelevel: বয়স 8-12
+  coursef-2020_gradelevel: বয়স 9-13
+  coursea-2021_gradelevel: বয়স 4-7
+  courseb-2021_gradelevel: বয়স 5-8
+  coursec-2021_gradelevel: বয়স 6-10
+  coursed-2021_gradelevel: গ্রেড ৮ +
+  coursee-2021_gradelevel: বয়স 8-12
+  coursef-2021_gradelevel: বয়স 9-13
   accelerated_gradelevel: বয়স ১০-১৮
   codeorg_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   codeintl_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
@@ -1617,6 +1653,9 @@ bn-BD:
   user_header_settings: আমার একাউন্ট
   user_header_logout: সাইন আউট
   user_header_signin: সাইন ইন করুন
+  user_header_create: 'তৈরি করুন '
+  user_header_applab: 'অ্যাপ ল্যাব '
+  user_header_artist: 'কোড শিল্প '
   user_header_playlab: প্লে ল্যাব
   user_header_minecraft: মাইনক্র্যাফট
   user_header_flappy: ফ্লাপি
@@ -1627,6 +1666,7 @@ bn-BD:
   hoc2018_creativity_create: তৈরি করুন
   hoc2018_mc_start: শুরু করুন
   hoc2018_mc_no_internet: ইন্টারনেট নেই?
+  hoc2018_mc_watch_videos: আপনি শুরু করার আগে, অনুপ্রেরণীয় একটি ভিডিও দেখুন
   hoc2018_mc_video_1min: ১ মিনিট
   hoc2018_mc_video_2min: 2 মিনিট
   hoc2018_mc_video_5min: ৫ মিনিট

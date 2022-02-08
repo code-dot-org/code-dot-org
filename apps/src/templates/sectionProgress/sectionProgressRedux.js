@@ -1,4 +1,4 @@
-import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
+import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import {ViewType} from './sectionProgressConstants';
 
@@ -8,9 +8,7 @@ const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
 const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
-const ADD_DATA_BY_SCRIPT = 'sectionProgress/ADD_DATA_BY_SCRIPT';
-const SET_SHOW_SECTION_PROGRESS_DETAILS =
-  'teacherDashboard/SET_SHOW_SECTION_PROGRESS_DETAILS';
+const ADD_DATA_BY_UNIT = 'sectionProgress/ADD_DATA_BY_UNIT';
 
 // Action creators
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
@@ -26,13 +24,9 @@ export const setLessonOfInterest = lessonOfInterest => ({
   lessonOfInterest
 });
 export const setCurrentView = viewType => ({type: SET_CURRENT_VIEW, viewType});
-export const addDataByScript = data => ({
-  type: ADD_DATA_BY_SCRIPT,
+export const addDataByUnit = data => ({
+  type: ADD_DATA_BY_UNIT,
   data
-});
-export const setShowSectionProgressDetails = showSectionProgressDetails => ({
-  type: SET_SHOW_SECTION_PROGRESS_DETAILS,
-  showSectionProgressDetails
 });
 
 const INITIAL_LESSON_OF_INTEREST = 1;
@@ -40,15 +34,13 @@ const INITIAL_LESSON_OF_INTEREST = 1;
 const initialState = {
   section: {},
   currentView: ViewType.SUMMARY,
-  scriptDataByScript: {},
-  studentLevelProgressByScript: {},
-  studentLessonProgressByScript: {},
-  studentLastUpdateByScript: {},
+  unitDataByUnit: {},
+  studentLevelProgressByUnit: {},
+  studentLessonProgressByUnit: {},
+  studentLastUpdateByUnit: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
-  isRefreshingProgress: false,
-  // pilot flag for showing time spent and last updated in the progress table
-  showSectionProgressDetails: false
+  isRefreshingProgress: false
 };
 
 export default function sectionProgress(state = initialState, action) {
@@ -94,30 +86,24 @@ export default function sectionProgress(state = initialState, action) {
       lessonOfInterest: action.lessonOfInterest
     };
   }
-  if (action.type === SET_SHOW_SECTION_PROGRESS_DETAILS) {
+  if (action.type === ADD_DATA_BY_UNIT) {
     return {
       ...state,
-      showSectionProgressDetails: action.showSectionProgressDetails
-    };
-  }
-  if (action.type === ADD_DATA_BY_SCRIPT) {
-    return {
-      ...state,
-      scriptDataByScript: {
-        ...state.scriptDataByScript,
-        ...action.data.scriptDataByScript
+      unitDataByUnit: {
+        ...state.unitDataByUnit,
+        ...action.data.unitDataByUnit
       },
-      studentLevelProgressByScript: {
-        ...state.studentLevelProgressByScript,
-        ...action.data.studentLevelProgressByScript
+      studentLevelProgressByUnit: {
+        ...state.studentLevelProgressByUnit,
+        ...action.data.studentLevelProgressByUnit
       },
-      studentLessonProgressByScript: {
-        ...state.studentLessonProgressByScript,
-        ...action.data.studentLessonProgressByScript
+      studentLessonProgressByUnit: {
+        ...state.studentLessonProgressByUnit,
+        ...action.data.studentLessonProgressByUnit
       },
-      studentLastUpdateByScript: {
-        ...state.studentLastUpdateByScript,
-        ...action.data.studentLastUpdateByScript
+      studentLastUpdateByUnit: {
+        ...state.studentLastUpdateByUnit,
+        ...action.data.studentLastUpdateByUnit
       }
     };
   }
@@ -139,7 +125,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
           section_id: state.sectionData.section.id,
           old_view: ViewType.SUMMARY,
           new_view: ViewType.DETAIL,
-          script_id: state.scriptSelection.scriptId
+          script_id: state.unitSelection.scriptId
         })
       },
       {includeUserId: true}
@@ -150,11 +136,9 @@ export const jumpToLessonDetails = lessonOfInterest => {
 // Selector functions
 
 /**
- * Retrieves the script data for the section in the selected script
- * @returns {scriptDataPropType} object containing metadata about the script structure
+ * Retrieves the unit data for the section in the selected unit
+ * @returns {scriptDataPropType} object containing metadata about the unit structure
  */
-export const getCurrentScriptData = state => {
-  return state.sectionProgress.scriptDataByScript[
-    state.scriptSelection.scriptId
-  ];
+export const getCurrentUnitData = state => {
+  return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];
 };

@@ -4,13 +4,18 @@ import {shallow} from 'enzyme';
 import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import * as utils from '@cdo/apps/code-studio/utils';
+import sinon from 'sinon';
 
 const unpluggedLevel = {
   id: '1',
   kind: LevelKind.unplugged,
   isUnplugged: true,
   status: LevelStatus.perfect,
-  isLocked: false
+  isLocked: false,
+  teacherFeedbackReviewState: undefined
 };
 
 const assessmentLevel = {
@@ -18,7 +23,13 @@ const assessmentLevel = {
   kind: LevelKind.assessment,
   isUnplugged: false,
   status: LevelStatus.perfect,
-  isLocked: false
+  isLocked: false,
+  teacherFeedbackReviewState: undefined
+};
+
+const keepWorkingLevel = {
+  ...unpluggedLevel,
+  teacherFeedbackReviewState: ReviewStates.keepWorking
 };
 
 const levelWithUrl = {
@@ -75,6 +86,26 @@ describe('ProgressPill', () => {
     assert.equal(wrapper.find('a').props().href, '/foo/bar');
   });
 
+  it('includes section in href when selectedSectionId is present', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        levels={[levelWithUrl]}
+        text="Unplugged Activity"
+        selectedSectionId="1234"
+      />
+    );
+    assert.equal(wrapper.find('a').props().href, '/foo/bar?section_id=1234');
+  });
+
+  it('includes user_id in href when user_id query param is present', () => {
+    sinon.stub(utils, 'queryParams').returns('123');
+    const wrapper = shallow(
+      <ProgressPill levels={[levelWithUrl]} text="Unplugged Activity" />
+    );
+    assert.equal(wrapper.find('a').props().href, '/foo/bar?user_id=123');
+    utils.queryParams.restore();
+  });
+
   it('does not have an href when disabled', () => {
     const wrapper = shallow(
       <ProgressPill
@@ -86,19 +117,59 @@ describe('ProgressPill', () => {
     assert.equal(wrapper.find('a').props().href, undefined);
   });
 
+  it('has an keep working icon when single level has keepWorking feedback', () => {
+    const wrapper = shallow(
+      <ProgressPill {...DEFAULT_PROPS} levels={[keepWorkingLevel]} />
+    );
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
+  });
+
+  it('does not have an keep working icon when pill represents multiple levels', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        {...DEFAULT_PROPS}
+        levels={[keepWorkingLevel, keepWorkingLevel, keepWorkingLevel]}
+      />
+    );
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(0);
+  });
+
+  it('has an keep working icon when single level is assessment and has keepWorking feedback', () => {
+    const level = {
+      ...assessmentLevel,
+      teacherFeedbackReviewState: ReviewStates.keepWorking
+    };
+    const wrapper = shallow(
+      <ProgressPill {...DEFAULT_PROPS} levels={[level]} />
+    );
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
+  });
+
   it('has an assessment icon when single level is assessment', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
     );
-    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(1);
-    expect(wrapper.find('BubbleBadge').props().type).to.equal('assessment');
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.assessment);
   });
 
   it('does not have an assessment icon when single level is not assessment', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[unpluggedLevel]} />
     );
-    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(0);
   });
 
   it('does not have an assessment icon when multiple assessment levels', () => {
@@ -108,6 +179,8 @@ describe('ProgressPill', () => {
         levels={[assessmentLevel, assessmentLevel]}
       />
     );
-    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(0);
   });
 });

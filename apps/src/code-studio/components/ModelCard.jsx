@@ -52,12 +52,16 @@ export default class ModelCard extends React.Component {
             </div>
             <br />
             <div style={styles.subPanel}>
-              <div style={styles.heading}>Summary</div>
-              <p style={styles.details}>
-                Predict {metadata.label.id} based on{' '}
-                {selectedFeatures.join(', ')} with {metadata.summaryStat?.stat}%
-                accuracy.
-              </p>
+              <div style={styles.heading}>Accuracy</div>
+              <p style={styles.details}>{metadata.summaryStat?.stat}%</p>
+            </div>
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Intended Use</div>
+              <p style={styles.details}>{metadata.potentialUses}</p>
+            </div>
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Warnings and Limitations</div>
+              <p style={styles.details}>{metadata.potentialMisuses}</p>
             </div>
             <div style={styles.subPanel}>
               <div style={styles.heading}>About the Data</div>
@@ -72,12 +76,11 @@ export default class ModelCard extends React.Component {
               )}
             </div>
             <div style={styles.subPanel}>
-              <div style={styles.heading}>Intended Use</div>
-              <p style={styles.details}>{metadata.potentialUses}</p>
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>Warnings</div>
-              <p style={styles.details}>{metadata.potentialMisuses}</p>
+              <div style={styles.heading}>Features and Label</div>
+              <p style={styles.details}>
+                Predict {metadata.label.id} based on{' '}
+                {selectedFeatures.join(', ')}.
+              </p>
             </div>
             <div style={styles.subPanel}>
               <div style={styles.heading}>Label</div>

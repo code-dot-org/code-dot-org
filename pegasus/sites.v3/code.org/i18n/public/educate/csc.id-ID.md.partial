@@ -1,0 +1,56 @@
+---
+title: CS Connections
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Computer Science Connections
+
+Kurikulum terbaru kami membuat hubungan antara belajar ilmu komputer dan pelajaran lain seperti matematika, seni bahasa, sains, dan ilmu sosial. Melalui CS Connections, kelas K-12 mengeksplorasi pelajaran yang biasa mereka pelajari dengan cara yang seru!
+
+## Cobalah CS Connections dengan kegiatan ini untuk Hour of Code
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Seni Puisi", left_description: "Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mulai", right_heading: "Halo Dunia", right_description: "Pilih dari empat tema seru untuk membuat kode karakter interaktif di dunia yang kamu buat.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Mulai"}}
+{{ clearfix }}
+
+## Modul
+
+Modul CS Connections merupakan rangkaian pelajaran terstruktur yang mengintegrasikan pembelajaran ilmu komputer ke dalam mata pelajaran inti seperti matematika, seni bahasa, dan sains. Modul-modul ini diselaraskan dengan standar lintas pelajaran dan berujung pada proyek lintas kurikulum.
+
+Keduanya sangat cocok bagi guru yang ingin memasukkan ilmu komputer ke dalam paket pelajaran mereka untuk mata pelajaran lain dan bagi pendidik CS yang ingin memperkuat materi yang sudah dipelajari murid dalam mata pelajaran lain.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "Seni Bahasa", duration: "5 jam", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding dengan Puisi", right_description: "Hubungkan ilmu komputer dan puisi di kelas Anda dengan rangkaian pelajaran ini.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Lihat modul" }}
+
+## Proyek terbuka
+
+Lanjutkan membuat hubungan antara ilmu komputer dan pelajaran umum dengan proyek lintas kurikulum kami. Dapat diselesaikan hanya dalam waktu 1-2 jam pelajaran dan cocok bagi semua guru yang ingin mengembangkan proyek sesuai topik agar sesuai dengan kurikulum yang ada.
+
+<em>Tips: Proyek ini membutuhkan sedikit pemahaman tentang dasar-dasar ilmu komputer, maka kami sarankan penyelesaian aktivitas Hello World Hour of Code sebelum memulai!</em>
+
+{{ csc_module, title: "Ekosistem", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Sains", duration: "1-2 jam", description: "Dengan menggunakan keahlian coding dasar, siswa membuat model ekosistem yang interaktif yang mengeksplorasi bagaimana interaksi antara hewan, tumbuhan, dan organisme yang berbeda. Model ini juga dapat diadaptasi ke dalam interaksi antara geosfer, biosfer, hidrosfer, dan/atau atmosfer.", button_text: "Pelajari selengkapnya", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Siklus Hidup", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Sains", duration: "1-2 jam", description: "Beralih dari telur ke berudu dan menjadi katak dewasa dengan proyek ini, siswa menggunakan kode untuk membuat model siklus ilmiah - misalnya siklus hidup katak atau transfer energi!", button_text: "Pelajari selengkapnya", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Studi Karakter", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "Seni Bahasa", duration: "1-2 Jam", description: "Tiap tindakan memiliki reaksi! Ini bukan fisika - dengan proyek ini, siswa dapat menggunakan kode untuk membuat adegan dari cerita yang menunjukkan pengaruh tindakan dari satu karakter terhadap rangkaian peristiwa.", button_text: "Pelajari selengkapnya", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Moral Cerita", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "Seni Bahasa", duration: "1-2 Jam", description: "Apa antara \"Pada suatu waktu\" dan \"Sekian?\" Siswa membuat kode aplikasi yang interaktif code yang menceritakan sebuah kisah dan pesan moralnya. Siswa dapat menerapkan keahlian ini ke cerita, cerita rakyat, buku, atau dongeng apa pun.", button_text: "Pelajari selengkapnya", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Program Matrikulasi
+
+Program matrikulasi kami menyediakan cara yang cepat dan menarik untuk membuat hubungan antara ilmu komputer dan pelajaran lainnya. Pelajaran ini tidak memerlukan pengetahuan sebelumnya tentang ilmu komputer, sehingga sangat cocok untuk guru mana pun yang ingin memasukkan pembelajaran penting abad ke-21 ke dalam kurikulumnya atau memotivasi siswa dengan cara baru yang menarik untuk mempelajari pelajaran lama.
+
+
+{{ csc_module, title: "Mengeja bersama Lebah", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "Seni Bahasa", duration: "1 jam", description: "S-E-R-U! Dalam pelajaran ini, siswa menggunakan keahlian coding dasar untuk memberi tahu Lebah di mana harus mendengung untuk mengeja kata-kata pada kotak yang berisi huruf.", button_text: "Pelajari selengkapnya", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Menghitung bersama Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Matematika", duration: "1 jam", description: "Berburu harta karun! Siswa akan berlatih menghitung dan menjumlahkan ketika membuat kode dengan loop untuk membantu Laurel mengumpulkan permata pada kotak labirin.", button_text: "Pelajari selengkapnya", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Kode Etik AI", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "Seni Bahasa atau Humaniora", duration: "1 jam", description: "Setelah meneliti jebakan etika dari artificial intelligence (AI), siswa bekerja sama untuk mengembangkan kelas \"Kode Etik AI\" resource.", button_text: "Pelajari selengkapnya", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Visualisasi Data", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Matematika", duration: "1 jam", description: "Pelajaran ini memperkenalkan siswa pada alat Data Visualizer di App Lab serta dua jenis bagan penting: yakni bagan batang dan histogram. Selama proses belajar, siswa akan dibekali keahlian untuk menggunakan alat ini serta membaca data.", button_text: "Pelajari selengkapnya", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Menyelesaikan kegiatan CS Connection dan/atau mencari opsi lainnya untuk kelas Anda? Harap <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">sampaikan masukan Anda</a> atau ide-ide untuk pelajaran lainnya di sini!</em>

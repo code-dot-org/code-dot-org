@@ -1,0 +1,7 @@
+{
+  "key": "stopCollectingData",
+  "name": "stopCollectingData",
+  "category": "Math",
+  "block_name": "gamelab_stopCollectingData",
+  "syntax": "stopCollectingData"
+}

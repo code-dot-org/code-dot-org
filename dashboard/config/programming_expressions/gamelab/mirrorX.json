@@ -1,11 +1,11 @@
 {
-  "func": "mirrorX",
+  "key": "mirrorX",
+  "name": "mirrorX",
   "category": "Sprites",
-  "paletteParams": [
-    "dir"
+  "palette_params": [
+    {
+      "name": "dir"
+    }
   ],
-  "params": [
-    "-1"
-  ],
-  "modeOptionName": "*.mirrorX"
+  "syntax": "mirrorX(dir)"
 }

@@ -21,6 +21,9 @@
 #  hidden               :boolean          default(FALSE), not null
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
 #  restrict_section     :boolean          default(FALSE)
+#  code_review_enabled  :boolean          default(TRUE)
+#  properties           :text(65535)
+#  participant_type     :string(255)      default("student"), not null
 #
 # Indexes
 #
@@ -34,6 +37,7 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Section < ApplicationRecord
+  include SerializedProperties
   self.inheritance_column = :login_type
 
   class << self
@@ -45,6 +49,10 @@ class Section < ApplicationRecord
       name.underscore.sub('_section', '')
     end
   end
+
+  # Sets a class variable for student limit.
+  # Is passed to React and HAML 'add_student' alerts.
+  @@section_capacity = 500
 
   include Rails.application.routes.url_helpers
   acts_as_paranoid
@@ -65,10 +73,34 @@ class Section < ApplicationRecord
 
   has_many :section_hidden_lessons
   has_many :section_hidden_scripts
+  has_many :code_review_groups
 
   # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
+
+  validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+  validate :pl_sections_must_use_email_logins
+  validate :participant_type_not_changed
+
+  # PL courses which are run with adults should be set up with teacher accounts so they must use
+  # email logins
+  def pl_sections_must_use_email_logins
+    if participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && login_type != LOGIN_TYPE_EMAIL
+      errors.add(:login_type, 'must be email for professional learning sections.')
+    end
+  end
+
+  # Once a section is set with a certain participant type we do not want to allow changing it
+  # as that could cause a bad state where users in the section do not have permissions to view
+  # the course the section is assigned to
+  def participant_type_not_changed
+    if participant_type_changed? && persisted?
+      errors.add(:participant_type, "can not be update once set.")
+    end
+  end
+
+  serialized_attrs %w(code_review_expires_at)
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
@@ -92,7 +124,11 @@ class Section < ApplicationRecord
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_FULL = 'full'.freeze
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
+
+  CSA = 'csa'.freeze
+  CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -158,6 +194,20 @@ class Section < ApplicationRecord
     self.followers_attributes = follower_params
   end
 
+  # Checks if a user can join a section as a participant by
+  # checking if they meet the participant_type for the section
+  def can_join_section_as_participant?(user)
+    if participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      return user.permission?(UserPermission::FACILITATOR)
+    elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      return user.teacher?
+    elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      return true #if participant_type is student let anyone join
+    end
+
+    false
+  end
+
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
   # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
@@ -166,14 +216,20 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
-
+    return ADD_STUDENT_FAILURE unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
     # OAUTH login section (Google Classroom / clever).
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
     unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
-      return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+      return ADD_STUDENT_RESTRICTED if restrict_section == true && (!follower || follower.deleted?)
+    end
+
+    # Unless the sections login type is Google or Clever
+    unless externally_rostered?
+      # Return a full section error if the section is already at capacity.
+      return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
     end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
@@ -228,7 +284,7 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
-    base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+    base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
     title = ''
     link_to_assigned = base_url
@@ -265,7 +321,7 @@ class Section < ApplicationRecord
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
       numberOfStudents: num_students,
-      linkToStudents: "#{base_url}#{id}/manage",
+      linkToStudents: "#{base_url}#{id}/manage_students",
       code: code,
       lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
@@ -283,7 +339,12 @@ class Section < ApplicationRecord
       providerManaged: provider_managed?,
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
-      restrict_section: restrict_section
+      restrict_section: restrict_section,
+      code_review_enabled: code_review_enabled?,
+      is_assigned_csa: assigned_csa?,
+      # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+      post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+      code_review_expires_at: code_review_expires_at
     }
   end
 
@@ -299,8 +360,20 @@ class Section < ApplicationRecord
     false
   end
 
+  def at_capacity?
+    students.distinct(&:id).size >= @@section_capacity
+  end
+
+  def capacity
+    @@section_capacity
+  end
+
   def restricted?
     restrict_section
+  end
+
+  def will_be_over_capacity?(students_to_add)
+    students.distinct(&:id).size + students_to_add > @@section_capacity
   end
 
   # Hide or unhide a lesson for this section
@@ -310,6 +383,16 @@ class Section < ApplicationRecord
       hidden_lesson.delete
     elsif hidden_lesson.nil? && should_hide
       SectionHiddenLesson.create(stage_id: lesson.id, section_id: id)
+    end
+  end
+
+  # Hide or unhide a stage for this section
+  def toggle_hidden_stage(stage, should_hide)
+    hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
+    if hidden_stage && !should_hide
+      hidden_stage.delete
+    elsif hidden_stage.nil? && should_hide
+      SectionHiddenLesson.create(stage_id: stage.id, section_id: id)
     end
   end
 
@@ -359,6 +442,40 @@ class Section < ApplicationRecord
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
     Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
+  end
+
+  def code_review_enabled?
+    if DCDO.get('code_review_groups_enabled', false)
+      return false if code_review_expires_at.nil?
+      return code_review_expires_at > Time.now.utc
+    else
+      return code_review_enabled.nil? ? true : code_review_enabled
+    end
+  end
+
+  # A section can be assigned a course (aka unit_group) without being assigned a script,
+  # so we check both here.
+  def assigned_csa?
+    script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
+  end
+
+  def reset_code_review_groups(new_groups)
+    ActiveRecord::Base.transaction do
+      code_review_groups.destroy_all
+      new_groups.each do |group|
+        # skip any unassigned members
+        next if group[:unassigned]
+        new_group = CodeReviewGroup.create!(name: group[:name], section_id: id)
+        next unless group[:members]
+        group[:members].each do |member|
+          CodeReviewGroupMember.create!(follower_id: member[:follower_id], code_review_group_id: new_group.id)
+        end
+      end
+    end
+  end
+
+  def update_code_review_expiration(enable_code_review)
+    self.code_review_expires_at = enable_code_review ? Time.now.utc + 90.days : nil
   end
 
   private

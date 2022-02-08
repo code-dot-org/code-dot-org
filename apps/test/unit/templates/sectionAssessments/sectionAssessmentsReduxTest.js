@@ -34,7 +34,7 @@ import sectionAssessments, {
   notStartedFakeTimestamp
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
@@ -200,7 +200,7 @@ describe('sectionAssessmentsRedux', () => {
   describe('getCurrentScriptAssessmentList', () => {
     it('gets a list of assessments - script is not csd or csp', () => {
       const rootState = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: 123,
           validScripts: [{id: 123, script_name: 'learn-cs'}]
         },
@@ -232,7 +232,7 @@ describe('sectionAssessmentsRedux', () => {
 
     it('gets a list of assessments - script is csd or csp', () => {
       const rootState = {
-        scriptSelection: {
+        unitSelection: {
           scriptId: 123,
           validScripts: [{id: 123, script_name: 'csp8-2011'}]
         },
@@ -291,7 +291,7 @@ describe('sectionAssessmentsRedux', () => {
     beforeEach(() => {
       rootState = {
         sectionAssessments: initialState,
-        scriptSelection: {
+        unitSelection: {
           scriptId: 3
         }
       };
@@ -745,7 +745,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns true when the current script is CSD', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'csd8-2011'}]
           }
@@ -757,7 +757,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns false when the current script is not CSD', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'learn-cs'}]
           }
@@ -771,7 +771,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns true when the current script is CSD or CSP', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'csp8-2011'}]
           }
@@ -783,7 +783,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns false when the current script is not CSD or CSP', () => {
         const state = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2,
             validScripts: [{id: 2, script_name: 'learn-cs'}]
           }
@@ -1373,28 +1373,28 @@ describe('sectionAssessmentsRedux', () => {
             numberAnswered: 1,
             questionNumber: 1,
             questionText: 'question1',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'disagree',
             numberAnswered: 0,
             questionNumber: 1,
             questionText: 'question1',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'agree',
             numberAnswered: 0,
             questionNumber: 2,
             questionText: 'question2',
-            stage: 'name'
+            lesson: 'name'
           },
           {
             answer: 'disagree',
             numberAnswered: 1,
             questionNumber: 2,
             questionText: 'question2',
-            stage: 'name'
+            lesson: 'name'
           }
         ]);
       });
@@ -1431,7 +1431,7 @@ describe('sectionAssessmentsRedux', () => {
                           type: 'Multi'
                         }
                       ],
-                      stage: 'lesson 1',
+                      lesson: 'lesson 1',
                       timestamp: '1'
                     }
                   }
@@ -1449,7 +1449,7 @@ describe('sectionAssessmentsRedux', () => {
                           type: 'Multi'
                         }
                       ],
-                      stage: 'lesson 1',
+                      lesson: 'lesson 1',
                       timestamp: '1'
                     }
                   }
@@ -1465,7 +1465,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 1,
             response: 'A',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1473,7 +1473,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 2,
             response: 'B',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1481,7 +1481,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'unsubmitted',
             question: 3,
             response: '',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Saira',
             timestamp: '1'
           },
@@ -1489,7 +1489,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 1,
             response: 'A',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           },
@@ -1497,7 +1497,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'correct',
             question: 2,
             response: 'B',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           },
@@ -1505,7 +1505,7 @@ describe('sectionAssessmentsRedux', () => {
             correct: 'incorrect',
             question: 3,
             response: 'B',
-            stage: 'lesson 1',
+            lesson: 'lesson 1',
             studentName: 'Rebecca',
             timestamp: '1'
           }
@@ -1517,7 +1517,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns an array of objects', () => {
         const stateWithFeedback = {
           ...rootState,
-          scriptSelection: {
+          unitSelection: {
             scriptId: 2
           },
           sectionAssessments: {

@@ -8,7 +8,11 @@
     "csd5-2017",
     "csd6-2017"
   ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
   "properties": {
+    "family_name": "csd",
+    "has_verified_resources": true,
     "teacher_resources": [
       [
         "curriculum",
@@ -19,11 +23,7 @@
         "https://forum.code.org/c/csd"
       ]
     ],
-    "has_verified_resources": true,
-    "family_name": "csd",
-    "version_year": "2017",
-    "is_stable": true,
-    "visible": true
+    "version_year": "2017"
   },
   "resources": [
 

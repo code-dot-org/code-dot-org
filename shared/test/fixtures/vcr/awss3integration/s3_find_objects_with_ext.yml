@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/find_objects/1.test
+    body:
+      encoding: UTF-8
+      string: hello
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - XUFAKrxLKna5cZ2REBfFkg==
+      Content-Length:
+      - '5'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Jun 2021 18:08:48 GMT
+      Etag:
+      - '"5d41402abc4b2a76b9719d911017c592"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 11 Jun 2021 18:08:47 GMT
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/find_objects/2.test
+    body:
+      encoding: UTF-8
+      string: world
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - fXkwN6B2AYZXSwKC8vQ15w==
+      Content-Length:
+      - '5'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Jun 2021 18:08:49 GMT
+      Etag:
+      - '"7d793037a0760186574b0282f2f435e7"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 11 Jun 2021 18:08:47 GMT
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/find_objects/3.bad
+    body:
+      encoding: UTF-8
+      string: third value
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - JMy63MKK75+yFkpJPLyswg==
+      Content-Length:
+      - '11'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Jun 2021 18:08:49 GMT
+      Etag:
+      - '"24ccbadcc28aef9fb2164a493cbcacc2"'
+      Server:
+      - AmazonS3
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 11 Jun 2021 18:08:48 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/?list-type=2&prefix=find_objects
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Jun 2021 18:08:49 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-temp</Name><Prefix>find_objects</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>find_objects/1.test</Key><LastModified>2021-06-11T18:08:48.000Z</LastModified><ETag>&quot;5d41402abc4b2a76b9719d911017c592&quot;</ETag><Size>5</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>find_objects/2.test</Key><LastModified>2021-06-11T18:08:49.000Z</LastModified><ETag>&quot;7d793037a0760186574b0282f2f435e7&quot;</ETag><Size>5</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>find_objects/3.bad</Key><LastModified>2021-06-11T18:08:49.000Z</LastModified><ETag>&quot;24ccbadcc28aef9fb2164a493cbcacc2&quot;</ETag><Size>11</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 11 Jun 2021 18:08:48 GMT
+recorded_with: VCR 3.0.3

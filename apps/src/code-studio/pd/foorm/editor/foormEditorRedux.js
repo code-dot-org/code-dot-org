@@ -104,6 +104,10 @@ const initialState = {
   saveError: null,
   lastSaved: null,
   lastSavedQuestions: '',
+  // Represents either form ID or library question ID -- our database ID for the thing being edited.
+  // Needed for validation of library questions.
+  // to do would be to move references to formId and libraryQuestionId to use this.
+  foormEntityId: null,
   // State specific to Foorm Form editor
   formId: null,
   formName: null,
@@ -144,7 +148,8 @@ export default function foormEditorRedux(state = initialState, action) {
       isFormPublished: action.formData['published'],
       formName: action.formData['name'],
       formVersion: action.formData['version'],
-      formId: action.formData['id']
+      formId: action.formData['id'],
+      foormEntityId: action.formData['id']
     };
   }
   if (action.type === SET_LIBRARY_QUESTION_DATA) {
@@ -152,7 +157,8 @@ export default function foormEditorRedux(state = initialState, action) {
       ...state,
       questions: action.libraryQuestionData['question'],
       libraryQuestionName: action.libraryQuestionData['name'],
-      libraryQuestionId: action.libraryQuestionData['id']
+      libraryQuestionId: action.libraryQuestionData['id'],
+      foormEntityId: action.libraryQuestionData['id']
     };
   }
   if (action.type === SET_LIBRARY_DATA) {

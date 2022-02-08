@@ -12,22 +12,17 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
-  setLessonExtrasScriptIds,
-  setTextToSpeechScriptIds,
-  setPreReaderScriptIds,
+  setLessonExtrasUnitIds,
+  setTextToSpeechUnitIds,
   setValidGrades,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser, {
-  setCurrentUserId
-} from '@cdo/apps/templates/currentUserRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import locales, {
-  setLocaleCode,
-  setLocaleEnglishName
-} from '@cdo/apps/redux/localesRedux';
+import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showHomepage);
 
@@ -42,15 +37,12 @@ function showHomepage() {
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setLessonExtrasScriptIds(homepageData.lessonExtrasScriptIds));
-  store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
-  store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
+  store.dispatch(setLessonExtrasUnitIds(homepageData.lessonExtrasUnitIds));
+  store.dispatch(setTextToSpeechUnitIds(homepageData.textToSpeechUnitIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-  store.dispatch(setLocaleEnglishName(homepageData.locale));
-  store.dispatch(setCurrentUserId(homepageData.currentUserId));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
@@ -77,6 +69,10 @@ function showHomepage() {
 
   const announcement = getTeacherAnnouncement(announcementOverride);
 
+  const allowTeacherAppReopening = experiments.isEnabled(
+    experiments.TEACHER_APPLICATION_SAVING_REOPENING
+  );
+
   ReactDOM.render(
     <Provider store={store}>
       <div>
@@ -94,6 +90,10 @@ function showHomepage() {
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}
+            showFinishTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showFinishTeacherApplication
+            }
             donorBannerName={homepageData.donorBannerName}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}

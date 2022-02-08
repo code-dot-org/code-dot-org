@@ -5,7 +5,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {EventEmitter} from 'events';
 import _ from 'lodash';
-import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
 
@@ -24,11 +23,9 @@ import AbuseError from './code-studio/components/AbuseError';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
 import ChallengeDialog from './templates/ChallengeDialog';
-import DialogButtons from './templates/DialogButtons';
-import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
-import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
+import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
@@ -53,13 +50,15 @@ import {
   configCircuitPlayground,
   configMicrobit
 } from './lib/kits/maker/dropletConfig';
-import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
-import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {
+  getIdleTimeSinceLastReport,
+  resetIdleTime
+} from './redux/studioAppActivity';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
@@ -83,20 +82,21 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 1200;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var MAX_VISUALIZATION_WIDTH = 400;
-var MIN_VISUALIZATION_WIDTH = 200;
+const MIN_WIDTH = 1200;
+const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = 400;
+export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-var MAX_PHONE_WIDTH = 500;
+const MAX_PHONE_WIDTH = 500;
 
 class StudioApp extends EventEmitter {
   constructor() {
@@ -302,8 +302,6 @@ StudioApp.prototype.init = function(config) {
   }
   this.config = config;
 
-  this.hasContainedLevels = config.hasContainedLevels;
-
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -322,13 +320,12 @@ StudioApp.prototype.init = function(config) {
   if (!config.level.iframeEmbedAppAndCode) {
     ReactDOM.render(
       <Provider store={getStore()}>
-        <div>
-          <InstructionsDialogWrapper
-            showInstructionsDialog={autoClose => {
-              this.showInstructionsDialog_(config.level, autoClose);
-            }}
-          />
-        </div>
+        <InstructionsDialog
+          title={msg.puzzleTitle({
+            stage_total: config.level.lesson_total,
+            puzzle_number: config.level.puzzle_number
+          })}
+        />
       </Provider>,
       document.body.appendChild(document.createElement('div'))
     );
@@ -549,8 +546,6 @@ StudioApp.prototype.init = function(config) {
     this.setupLegacyShareView();
   }
 
-  initializeContainedLevel();
-
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
@@ -646,8 +641,15 @@ StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function() {
   }
 };
 
+// When pairing, source code is stored only with the driver. If the user completed
+// this level as a navigator, show an alert with a link to the (read-only) source
+// code stored in the driver's account.
 StudioApp.prototype.alertIfCompletedWhilePairing = function(config) {
-  if (!!config.level.pairingDriver) {
+  if (!config.level.isNavigator) {
+    return;
+  }
+
+  if (config.level.pairingDriver) {
     this.displayWorkspaceAlert(
       'warning',
       <div>
@@ -661,6 +663,14 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function(config) {
           </a>
         )}
       </div>
+    );
+  } else {
+    // This case -- where config.level.isNavigator is true but
+    // config.level.pairingDriver is null -- occurs when the driver's user
+    // account was deleted or the driver's progress was deleted.
+    this.displayWorkspaceAlert(
+      'warning',
+      <div>{msg.pairingNavigatorUnknownDriver()}</div>
     );
   }
 };
@@ -676,7 +686,10 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
     ReactDOM.render(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
-        useFilesApi: !!config.useFilesApi
+        isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
+        useFilesApi: !!config.useFilesApi,
+        selectedVersion: queryParams('version'),
+        isReadOnly: !!config.readonlyWorkspace
       }),
       contentDiv
     );
@@ -769,9 +782,9 @@ StudioApp.prototype.scaleLegacyShare = function() {
   }
 };
 
-StudioApp.prototype.getCode = function() {
+StudioApp.prototype.getCode = function(opt_showHidden) {
   if (!this.editCode) {
-    return codegen.workspaceCode(Blockly);
+    return Blockly.getWorkspaceCode(opt_showHidden);
   }
   if (this.hideSource) {
     return this.startBlocks_;
@@ -1003,8 +1016,7 @@ StudioApp.prototype.runChangeHandlers = function() {
 StudioApp.prototype.setupChangeHandlers = function() {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', runAllHandlers);
+    Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
@@ -1039,13 +1051,20 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   var run = document.getElementById('runButton');
-  var reset = document.getElementById('resetButton');
-  if (run || reset) {
-    run.style.display = showRun ? 'inline-block' : 'none';
+  if (run) {
+    // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
+    // want to show the "run" button (e.g., maze levels that are "stepOnly").
+    run.style.display =
+      showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
     run.disabled = !showRun;
+  }
+
+  var reset = document.getElementById('resetButton');
+  if (reset) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
+
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
     // toggle between different colors on run/reset or else, on run, the workspace
@@ -1280,119 +1299,6 @@ StudioApp.prototype.onReportComplete = function(response) {
 };
 
 /**
- * Show our instructions dialog. This should never be called directly, and will
- * instead be called when the state of our redux store changes.
- * @param {object} level
- * @param {boolean} autoClose - closes instructions after 32s if true
- */
-StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
-  const reduxState = getStore().getState();
-  const isMarkdownMode =
-    !!reduxState.instructions.longInstructions &&
-    !reduxState.instructionsDialog.imgOnly;
-
-  var instructionsDiv = document.createElement('div');
-  instructionsDiv.className = isMarkdownMode
-    ? 'markdown-instructions-container'
-    : 'instructions-container';
-
-  var headerElement;
-
-  var puzzleTitle = msg.puzzleTitle({
-    stage_total: level.lesson_total,
-    puzzle_number: level.puzzle_number
-  });
-
-  if (isMarkdownMode) {
-    headerElement = document.createElement('h1');
-    headerElement.className = 'markdown-level-header-text dialog-title';
-    headerElement.innerHTML = puzzleTitle;
-    if (!this.icon) {
-      headerElement.className += ' no-modal-icon';
-    }
-  }
-
-  // Create a div to eventually hold this content, and add it to the
-  // overall container. We don't want to render directly into the
-  // container just yet, because our React component could contain some
-  // elements that don't want to be rendered until they are in the DOM
-  var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className = 'instructions-content';
-  instructionsDiv.appendChild(instructionsReactContainer);
-
-  var buttons = document.createElement('div');
-  instructionsDiv.appendChild(buttons);
-  ReactDOM.render(<DialogButtons ok={true} />, buttons);
-
-  // If there is an instructions block on the screen, we want the instructions dialog to
-  // shrink down to that instructions block when it's dismissed.
-  // We then want to flash the instructions block.
-  var hideOptions = null;
-  var endTargetSelector = '#bubble';
-
-  if ($(endTargetSelector).length) {
-    hideOptions = {};
-    hideOptions.endTarget = endTargetSelector;
-  }
-
-  var hideFn = _.bind(function() {
-    // Set focus to ace editor when instructions close:
-    if (this.editCode && this.currentlyUsingBlocks()) {
-      this.editor.aceEditor.focus();
-    }
-
-    // update redux
-    getStore().dispatch(closeInstructionsDialog());
-  }, this);
-
-  this.instructionsDialog = this.createModalDialog({
-    markdownMode: isMarkdownMode,
-    contentDiv: instructionsDiv,
-    icon: this.icon,
-    defaultBtnSelector: '#ok-button',
-    onHidden: hideFn,
-    scrollContent: true,
-    scrollableSelector: '.instructions-content',
-    header: headerElement
-  });
-
-  // Now that our elements are guaranteed to be in the DOM, we can
-  // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', () => {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <DialogInstructions />
-      </Provider>,
-      instructionsReactContainer
-    );
-    resetAniGif(this.instructionsDialog.div.find('img.aniGif').get(0));
-  });
-
-  if (autoClose) {
-    setTimeout(
-      _.bind(function() {
-        this.instructionsDialog.hide();
-      }, this),
-      32000
-    );
-  }
-
-  var okayButton = buttons.querySelector('#ok-button');
-  if (okayButton) {
-    dom.addClickTouchEvent(
-      okayButton,
-      _.bind(function() {
-        if (this.instructionsDialog) {
-          this.instructionsDialog.hide();
-        }
-      }, this)
-    );
-  }
-
-  this.instructionsDialog.show({hideOptions: hideOptions});
-};
-
-/**
  *  Resizes the blockly workspace.
  */
 StudioApp.prototype.onResize = function() {
@@ -1441,7 +1347,8 @@ function resizePinnedBelowVisualizationArea() {
     'spelling-table-wrapper',
     'gameButtons',
     'gameButtonExtras',
-    'song-selector-wrapper'
+    'song-selector-wrapper',
+    'poemSelector'
   ];
   possibleElementsAbove.forEach(id => {
     let element = document.getElementById(id);
@@ -1786,36 +1693,6 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
   );
 };
 
-// Builds the dom to get more info from the user. After user enters info
-// and click "create level" onAttemptCallback is called to deliver the info
-// to the server.
-StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
-  var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html.ejs')();
-  var dialog = this.createModalDialog({
-    contentDiv: builderDetails,
-    icon: this.icon
-  });
-  var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
-    var instructions = builderDetails.querySelector('[name="instructions"]')
-      .value;
-    var name = builderDetails.querySelector('[name="level_name"]').value;
-    var query = url.parse(window.location.href, true).query;
-    onAttemptCallback(
-      utils.extend(
-        {
-          instructions: instructions,
-          name: name
-        },
-        query
-      )
-    );
-  });
-
-  dialog.show({backdrop: 'static'});
-};
-
 /**
  * Report back to the server, if available.
  * @param {MilestoneReport} options
@@ -1824,11 +1701,17 @@ StudioApp.prototype.report = function(options) {
   // We don't need to report again on reset.
   this.hasReported = true;
   const currentTime = new Date().getTime();
+
+  const idleTimeSinceLastReport = getIdleTimeSinceLastReport(
+    getStore().getState().studioAppActivity
+  );
+
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
     time: currentTime - this.initTime,
-    timeSinceLastMilestone: currentTime - this.milestoneStartTime,
+    timeSinceLastMilestone:
+      currentTime - this.milestoneStartTime - idleTimeSinceLastReport,
     attempt: this.attempts,
     lines: this.feedback_.getNumBlocksUsed()
   });
@@ -1836,6 +1719,8 @@ StudioApp.prototype.report = function(options) {
   // After we log the reported time we should update the start time of the milestone
   // otherwise if we don't leave the page we are compounding the total time
   this.milestoneStartTime = currentTime;
+
+  getStore().dispatch(resetIdleTime());
 
   this.lastTestResult = options.testResult;
 
@@ -1845,24 +1730,8 @@ StudioApp.prototype.report = function(options) {
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  var self = this;
   if (!(this.hideSource && this.share) && !readOnly) {
-    var onAttemptCallback = (function() {
-      return function(builderDetails) {
-        for (var option in builderDetails) {
-          report[option] = builderDetails[option];
-        }
-        self.onAttempt(report);
-      };
-    })();
-
-    // If this is the level builder, go to builderForm to get more info from
-    // the level builder.
-    if (options.builder) {
-      this.builderForm_(onAttemptCallback);
-    } else {
-      onAttemptCallback();
-    }
+    this.onAttempt(report);
   }
 };
 
@@ -2112,6 +1981,9 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function() {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;
+  this.hasContainedLevels = config.hasContainedLevels;
+
+  initializeContainedLevel();
 };
 
 // Overwritten by applab.
@@ -2401,8 +2273,12 @@ StudioApp.prototype.handleEditCode_ = function(config) {
     return;
   }
 
-  // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.getMakerAPIs()) {
+  // Remove maker API blocks from palette, unless project has maker enabled
+  // or level is in edit start mode and maker is enabled
+  if (
+    !project.getMakerAPIs() &&
+    !(config.isStartMode && config.level.makerlabEnabled)
+  ) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
       configCircuitPlayground.blocks.forEach(block => {
@@ -3236,7 +3112,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
         ReactDOM.unmountComponentAtNode(container[0]);
       },
       isBlockly: this.usingBlockly_,
-      isCraft: this.config && this.config.app === 'craft',
       displayBottom: bottom
     },
     alertContents
@@ -3421,6 +3296,9 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign(
     {
+      exampleSolutions: config.exampleSolutions,
+      isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
+      canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
       skinId: config.skinId,
@@ -3436,6 +3314,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
       displayNotStartedBanner: this.displayNotStartedBanner(config),
+      displayOldVersionBanner: !!queryParams('version'),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
@@ -3451,7 +3330,6 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       is13Plus: config.is13Plus,
       isSignedIn: config.isSignedIn,
       userId: config.userId,
-      verifiedTeacher: config.verifiedTeacher,
       textToSpeechEnabled: config.textToSpeechEnabled,
       isK1: config.level.isK1,
       appType: config.app,

@@ -1,0 +1,45 @@
+---
+title: موارد المعلم - اكتب أول برنامج كمبيوتر لك
+nav: hoc_teacher_resources_nav
+theme: responsive
+video_player: true
+---
+
+# اكتب أول برنامج كمبيوتر لك: دورة تعليمية لـAn Hour of Code
+
+{{ hoc_maze_video }}
+
+[col-50]
+
+## Teacher Resources
+
+### Lesson Plans:
+
+- [اكتب أول برنامج كمبيوتر لك]({{ hoc_hourofcode_cb_url }})
+
+### أنشطة الامتداد:
+
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+
+### موارد أخرى للمُعلِّم:
+
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+
+[/col-50]
+
+[col-50]
+
+## نظرة عامة
+
+تعلم المفاهيم الأساسية لعلوم الكمبيوتر من خلال برمجة السحب والإسقاط. هذه محاضرات فيديو تعليمية تشبه الألعاب وموجهة ذاتيًّا بقيادة Bill Gates وMark Zuckerberg وAngry Birds وPlants vs. Zombies. تعلَّم إعادة الحلقات والمتغيرات والخوارزميات الأساسية. متوفر في 37 لغة.
+
+**الفئة العمرية الموصى بها:** 4-104
+
+**متطلبات التكنولوجيا:** متصفحات حديثة، هواتف ذكية + هواتف لوحية
+
+<a href="http://studio.code.org/hoc/reset"><button>جرِّب الدورة التعليمية</button></a>
+
+[/col-50]

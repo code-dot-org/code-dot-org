@@ -1,12 +1,11 @@
 {
-  "func": "contains",
+  "key": "contains",
+  "name": "contains",
   "category": "Groups",
-  "paletteParams": [
-    "sprite"
+  "palette_params": [
+    {
+      "name": "sprite"
+    }
   ],
-  "params": [
-    "sprite"
-  ],
-  "modeOptionName": "*.contains",
-  "type": "value"
+  "syntax": "contains(sprite)"
 }

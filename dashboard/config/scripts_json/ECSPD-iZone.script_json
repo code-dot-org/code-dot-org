@@ -2,15 +2,19 @@
   "script": {
     "name": "ECSPD-iZone",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "deprecated": true,
+      "is_migrated": true,
       "professional_learning_course": "ECS Support Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:41 UTC",
+    "serialized_at": "2021-11-22 19:55:38 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ECSPD-iZone"
     }
@@ -121,23 +125,158 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ee82585a-3af4-4653-8289-b52a3f1144e2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee82585a-3af4-4653-8289-b52a3f1144e2",
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-iZone"
+      }
+    },
+    {
+      "key": "76443bfb-dad7-4f64-b635-a1c08b6d18b9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76443bfb-dad7-4f64-b635-a1c08b6d18b9",
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-iZone"
+      }
+    },
+    {
+      "key": "f6e84d23-7c79-4075-8b33-71590f818436",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6e84d23-7c79-4075-8b33-71590f818436",
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-iZone"
+      }
+    },
+    {
+      "key": "351eb143-08c3-4b10-bc5a-001341ed2722",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "351eb143-08c3-4b10-bc5a-001341ed2722",
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-iZone"
+      }
+    },
+    {
+      "key": "fad5ae71-c076-4ef4-b7ff-70dcdd623c45",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fad5ae71-c076-4ef4-b7ff-70dcdd623c45",
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-iZone"
+      }
+    },
+    {
+      "key": "1f44bfb9-7265-4bbe-b75f-4029147bcc6e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f44bfb9-7265-4bbe-b75f-4029147bcc6e",
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-iZone"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8e23ef53-b286-437b-83be-4805bd1f2ca6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6",
+        "lesson_activity.key": "ee82585a-3af4-4653-8289-b52a3f1144e2"
+      }
+    },
+    {
+      "key": "648b1101-7f1f-4465-b85c-b4110963aa1e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e",
+        "lesson_activity.key": "76443bfb-dad7-4f64-b635-a1c08b6d18b9"
+      }
+    },
+    {
+      "key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b",
+        "lesson_activity.key": "f6e84d23-7c79-4075-8b33-71590f818436"
+      }
+    },
+    {
+      "key": "97c57239-bbd0-4e7a-8524-56e74c232cef",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef",
+        "lesson_activity.key": "351eb143-08c3-4b10-bc5a-001341ed2722"
+      }
+    },
+    {
+      "key": "9703a2c9-fd59-42ee-8e68-c3aaa9a1e0c0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9703a2c9-fd59-42ee-8e68-c3aaa9a1e0c0",
+        "lesson_activity.key": "fad5ae71-c076-4ef4-b7ff-70dcdd623c45"
+      }
+    },
+    {
+      "key": "b241da71-fe67-4816-8e40-d25fb72c7715",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715",
+        "lesson_activity.key": "1f44bfb9-7265-4bbe-b75f-4029147bcc6e"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD presurvey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -145,7 +284,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       },
       "level_keys": [
         "ECSPD presurvey"
@@ -154,14 +294,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDECS Welcome Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -169,7 +308,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       },
       "level_keys": [
         "PDECS Welcome Video"
@@ -178,14 +318,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDECS tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -193,7 +332,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       },
       "level_keys": [
         "PDECS tour"
@@ -202,14 +342,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDECS commitment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -217,7 +356,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       },
       "level_keys": [
         "PDECS commitment"
@@ -226,14 +366,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDECS commitment match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +380,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       },
       "level_keys": [
         "PDECS commitment match"
@@ -250,14 +390,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDECS attendance commitment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -265,7 +404,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       },
       "level_keys": [
         "PDECS attendance commitment"
@@ -274,14 +414,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD pause"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -289,7 +428,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       },
       "level_keys": [
         "ECSPD pause"
@@ -298,14 +438,13 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD program overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -313,7 +452,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD program overview"
@@ -322,14 +462,13 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD curriculum overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -337,7 +476,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD curriculum overview"
@@ -346,14 +486,13 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD unit matching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,7 +500,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD unit matching"
@@ -370,14 +510,13 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD course goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -385,7 +524,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD course goals"
@@ -394,14 +534,13 @@
     {
       "chapter": 12,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD PD overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -409,7 +548,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD PD overview"
@@ -418,14 +558,13 @@
     {
       "chapter": 13,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD PD Phases"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -433,7 +572,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD PD Phases"
@@ -442,14 +582,13 @@
     {
       "chapter": 14,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD phase matching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -457,7 +596,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD phase matching"
@@ -466,14 +606,13 @@
     {
       "chapter": 15,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD PD goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -481,7 +620,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD PD goals"
@@ -490,14 +630,13 @@
     {
       "chapter": 16,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD program overlap"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -505,7 +644,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       },
       "level_keys": [
         "ECSPD program overlap"
@@ -514,14 +654,13 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD impact of CS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -529,7 +668,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       },
       "level_keys": [
         "ECSPD impact of CS"
@@ -538,14 +678,13 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD impact vid1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -553,7 +692,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       },
       "level_keys": [
         "ECSPD impact vid1"
@@ -562,14 +702,13 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD impact vid2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -577,7 +716,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       },
       "level_keys": [
         "ECSPD impact vid2"
@@ -586,14 +726,13 @@
     {
       "chapter": 20,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD impact vid2 question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -601,7 +740,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       },
       "level_keys": [
         "ECSPD impact vid2 question"
@@ -610,14 +750,13 @@
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD impact in program"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -625,7 +764,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       },
       "level_keys": [
         "ECSPD impact in program"
@@ -634,14 +774,13 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD what is growth mindset"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -649,7 +788,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       },
       "level_keys": [
         "ECSPD what is growth mindset"
@@ -658,14 +798,13 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD growth mindset in the classroom"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -673,7 +812,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       },
       "level_keys": [
         "ECSPD growth mindset in the classroom"
@@ -682,14 +822,13 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD growth mindset question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -697,7 +836,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       },
       "level_keys": [
         "ECSPD growth mindset question"
@@ -706,14 +846,13 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD growth mindset strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -721,7 +860,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       },
       "level_keys": [
         "ECSPD growth mindset strategies"
@@ -730,14 +870,13 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -745,7 +884,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       },
       "level_keys": [
         "ECSPD strategies"
@@ -754,14 +894,13 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD teaching strategies video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -769,7 +908,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "9703a2c9-fd59-42ee-8e68-c3aaa9a1e0c0"
       },
       "level_keys": [
         "ECSPD teaching strategies video"
@@ -778,14 +918,13 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -793,7 +932,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "9703a2c9-fd59-42ee-8e68-c3aaa9a1e0c0"
       },
       "level_keys": [
         "ECSPD strategies"
@@ -802,14 +942,13 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "facilitator test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -817,7 +956,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       },
       "level_keys": [
         "facilitator test"
@@ -826,14 +966,13 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD forum introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -841,7 +980,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       },
       "level_keys": [
         "ECSPD forum introduction"
@@ -850,14 +990,13 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD PD details"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -865,7 +1004,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       },
       "level_keys": [
         "ECSPD PD details"
@@ -874,14 +1014,13 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD postsurvey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -889,7 +1028,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       },
       "level_keys": [
         "ECSPD postsurvey"
@@ -898,14 +1038,13 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ECSPD end of p1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -913,7 +1052,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       },
       "level_keys": [
         "ECSPD end of p1"
@@ -929,7 +1069,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       }
     },
     {
@@ -940,7 +1081,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       }
     },
     {
@@ -951,7 +1093,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       }
     },
     {
@@ -962,7 +1105,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       }
     },
     {
@@ -973,7 +1117,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       }
     },
     {
@@ -984,7 +1129,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       }
     },
     {
@@ -995,7 +1141,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "8e23ef53-b286-437b-83be-4805bd1f2ca6"
       }
     },
     {
@@ -1006,7 +1153,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1017,7 +1165,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1028,7 +1177,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1039,7 +1189,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1050,7 +1201,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1061,7 +1213,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1072,7 +1225,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1083,7 +1237,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1094,7 +1249,8 @@
         ],
         "lesson.key": "What is ECS?",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "648b1101-7f1f-4465-b85c-b4110963aa1e"
       }
     },
     {
@@ -1105,7 +1261,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       }
     },
     {
@@ -1116,7 +1273,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       }
     },
     {
@@ -1127,7 +1285,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       }
     },
     {
@@ -1138,7 +1297,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       }
     },
     {
@@ -1149,7 +1309,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "e4f56b47-0b7b-4a6c-a9af-33daaeb42c4b"
       }
     },
     {
@@ -1160,7 +1321,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       }
     },
     {
@@ -1171,7 +1333,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       }
     },
     {
@@ -1182,7 +1345,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       }
     },
     {
@@ -1193,7 +1357,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       }
     },
     {
@@ -1204,7 +1369,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "97c57239-bbd0-4e7a-8524-56e74c232cef"
       }
     },
     {
@@ -1215,7 +1381,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "9703a2c9-fd59-42ee-8e68-c3aaa9a1e0c0"
       }
     },
     {
@@ -1226,7 +1393,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "9703a2c9-fd59-42ee-8e68-c3aaa9a1e0c0"
       }
     },
     {
@@ -1237,7 +1405,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       }
     },
     {
@@ -1248,7 +1417,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       }
     },
     {
@@ -1259,7 +1429,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       }
     },
     {
@@ -1270,7 +1441,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       }
     },
     {
@@ -1281,7 +1453,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "ECSPD-iZone"
+        "script.name": "ECSPD-iZone",
+        "activity_section.key": "b241da71-fe67-4816-8e40-d25fb72c7715"
       }
     }
   ],

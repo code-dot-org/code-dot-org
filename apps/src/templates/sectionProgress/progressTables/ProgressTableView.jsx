@@ -12,8 +12,9 @@ import {
   studentLessonProgressType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
+import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import {
-  getCurrentScriptData,
+  getCurrentUnitData,
   jumpToLessonDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -80,8 +81,7 @@ class ProgressTableView extends React.Component {
     onClickLesson: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
-    localeCode: PropTypes.string,
-    showSectionProgressDetails: PropTypes.bool
+    localeCode: PropTypes.string
   };
 
   constructor(props) {
@@ -336,7 +336,6 @@ class ProgressTableView extends React.Component {
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
               onToggleRow={this.onToggleRow}
-              showSectionProgressDetails={this.props.showSectionProgressDetails}
             />
           </div>
           <div style={styles.contentView} className="content-view">
@@ -355,7 +354,11 @@ class ProgressTableView extends React.Component {
           </div>
         </div>
         {this.props.currentView === ViewType.DETAIL ? (
-          <ProgressLegend excludeCsfColumn={!this.props.scriptData.csf} />
+          <ProgressLegend
+            includeCsfColumn={this.props.scriptData.csf}
+            includeReviewStates={shouldShowReviewStates(this.props.scriptData)}
+            includeProgressNotApplicable
+          />
         ) : (
           <SummaryViewLegend showCSFProgressBox={this.props.scriptData.csf} />
         )}
@@ -383,22 +386,21 @@ export const UnconnectedProgressTableView = ProgressTableView;
 export default connect(
   state => ({
     section: state.sectionData.section,
-    scriptData: getCurrentScriptData(state),
+    scriptData: getCurrentUnitData(state),
     lessonProgressByStudent:
-      state.sectionProgress.studentLessonProgressByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLessonProgressByUnit[
+        state.unitSelection.scriptId
       ],
     levelProgressByStudent:
-      state.sectionProgress.studentLevelProgressByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLevelProgressByUnit[
+        state.unitSelection.scriptId
       ],
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
     studentTimestamps:
-      state.sectionProgress.studentLastUpdateByScript[
-        state.scriptSelection.scriptId
+      state.sectionProgress.studentLastUpdateByUnit[
+        state.unitSelection.scriptId
       ],
-    localeCode: state.locales.localeCode,
-    showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {

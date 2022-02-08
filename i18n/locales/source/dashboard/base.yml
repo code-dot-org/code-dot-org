@@ -178,8 +178,16 @@ en:
     additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
     user_type_label: "Account Type"
-    user_type_teacher: "Teacher"
     user_type_student: "Student"
+    user_type_student_desc: "Explore all our courses and activities, plus:"
+    user_type_student_ability_1: "Save your progress and projects"
+    user_type_student_ability_2: "Join your teacher’s classroom section"
+    user_type_teacher: "Teacher"
+    user_type_teacher_desc: "Everything students have access to, plus:"
+    user_type_teacher_ability_1: "Create classroom sections"
+    user_type_teacher_ability_2: "Assign and track student work"
+    user_type_teacher_ability_3: "Enroll in professional learning"
+    user_type_teacher_ability_4: "Interact on our teacher forum"
     field_is_required: "is required"
     accept_terms: "You must agree to create an account."
     error: "An error occurred."
@@ -188,6 +196,10 @@ en:
     email_preference_yes: "Yes"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
+    share_teacher_email_reg_partner_question: "Would you like us to share your contact information with the [Code.org regional partner](%{cdo_regional_partner_desc}) in your state so that they may notify you about local professional development, resources, and events?"
+    share_teacher_email_reg_partner_preference_yes: "Yes"
+    share_teacher_email_reg_partner_preference_no: "No"
+    share_teacher_email_reg_partner_preference_required: "You must specify an email preference."
     parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
     parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
     parent_account_email_label: "Parent/Guardian Email"
@@ -331,7 +343,7 @@ en:
       help_support: "Help and support"
       report_bug: "Report a problem"
       report_abuse: "Report abuse"
-      teacher_community: "Teacher community"
+      teacher_community: "Teacher forum"
       professional_learning: "Professional Learning"
       documentation: "Documentation"
       tutorials: "Tutorials"
@@ -411,12 +423,15 @@ en:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (Pre-reader)'
+      poetry: 'Poetry'
+      poetry_hoc: 'Poem Art'
       scratch: 'Scratch'
       sports: 'Sports'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      loading: 'Loading...'
       weblab: 'Web Lab'
       view_all: 'View all projects...'
 
@@ -433,6 +448,7 @@ en:
       prizes_link: 'more info'
   teacher:
     answer: Answer
+    dashboard: 'Teacher Dashboard'
     for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
@@ -568,8 +584,8 @@ en:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: 'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.'
     help_from_html_old: 'Engineers from Amazon, Google, and Microsoft helped create these materials.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.'
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
     built_on_github: 'Built on GitHub from Microsoft'
@@ -591,6 +607,7 @@ en:
     make_my_own_app: 'Make my own app'
     how_it_works: 'How it Works (View Code)'
     try_hour_of_code: 'Try an Hour of Code!'
+    store: 'Store'
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
@@ -614,8 +631,6 @@ en:
       link: "Learn more"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      oceans_unsupported_browser: "This browser is not supported for this tutorial. Please try visiting this page using Edge, Chrome, Firefox, or another modern browser."
-      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
@@ -1046,13 +1061,18 @@ en:
       email: 'Email'
       email_alternate: 'Alternate Email'
       gender: 'Gender Identity'
+      school: 'School'
       school_name: 'School Name'
       school_city: 'School City'
+      school_city_district: 'School City/District'
       school_country: 'School Country'
+      school_department_region: 'School Department/Region'
       colombian_school_city: 'School City'
-      colombian_school_department: 'School Department'
+      colombian_chilean_school_department: 'School Department/Region'
       colombian_school_municipality: 'School Municipality'
-      colombian_school_name: 'School Name'
+      colombian_chilean_school_name: 'School Name'
+      chilean_school_commune: 'Commune'
+      chilean_school_id: 'School ID'
       ages: 'Which age(s) do you teach this year?'
       subjects: 'Which subject(s) do you teach this year?'
       resources: 'Which of the following CS education resources do you use?'

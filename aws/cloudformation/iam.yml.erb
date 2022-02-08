@@ -114,7 +114,7 @@ Resources:
               - cloudformation:UpdateStack
               - cloudformation:DeleteStack
               - cloudformation:CreateChangeSet
-            Resource: '*'
+            NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
@@ -235,6 +235,8 @@ Resources:
             Resource:
               - 'arn:aws:s3:::cdo-data-sharing-internal/*'
               - 'arn:aws:s3:::cdo-data-sharing-internal'
+              - 'arn:aws:s3:::cdo-census/*'
+              - 'arn:aws:s3:::cdo-census'
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
@@ -341,6 +343,15 @@ Resources:
               - ssmmessages:OpenDataChannel
               - ssm:UpdateInstanceInformation
             Resource: '*'
+  # Manually creating Service Linked Roles rather than granting CloudFormationService role permission
+  LambdaReplicatorRole:
+    Type: AWS::IAM::ServiceLinkedRole
+    Properties: 
+      AWSServiceName: replicator.lambda.amazonaws.com
+  CloudfrontLoggerRole:
+    Type: AWS::IAM::ServiceLinkedRole
+    Properties: 
+      AWSServiceName: logger.cloudfront.amazonaws.com
 Outputs:
   DevPermissions:
     Description: Developer Permissions

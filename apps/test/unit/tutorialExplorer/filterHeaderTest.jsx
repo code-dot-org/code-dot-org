@@ -5,6 +5,7 @@ import {expect} from '../../util/deprecatedChai';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
 import BackButton from '@cdo/apps/tutorialExplorer/backButton';
 import i18n from '@cdo/tutorialExplorer/locale';
+import {allowConsoleWarnings} from '../../util/testUtils';
 
 const FAKE_ON_USER_INPUT = () => {};
 const FAKE_ON_ORG_NAME = () => {};
@@ -24,6 +25,10 @@ const DEFAULT_PROPS = {
 };
 
 describe('FilterHeader', () => {
+  // TODO: (madelynkasula) Silences componentWillMount deprecation warning due to React 16 upgrade.
+  // This warning should be addressed after we've upgraded React.
+  allowConsoleWarnings();
+
   it('renders simplest mobile view', () => {
     const wrapper = mount(
       <StickyContainer>

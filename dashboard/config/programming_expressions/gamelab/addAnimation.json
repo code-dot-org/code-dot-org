@@ -1,14 +1,14 @@
 {
-  "func": "addAnimation",
+  "key": "addAnimation",
+  "name": "addAnimation",
   "category": "Sprites",
-  "paletteParams": [
-    "label",
-    "animation"
+  "palette_params": [
+    {
+      "name": "label"
+    },
+    {
+      "name": "animation"
+    }
   ],
-  "params": [
-    "\"animation_1\"",
-    "anim"
-  ],
-  "modeOptionName": "*.addAnimation",
-  "noAutocomplete": true
+  "syntax": "addAnimation(label, animation)"
 }

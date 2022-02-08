@@ -2,14 +2,18 @@
   "script": {
     "name": "csd5-old",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:11 UTC",
+    "serialized_at": "2021-11-22 19:56:25 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd5-old"
     }
@@ -253,23 +257,448 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3ae07346-ac5a-467b-9237-39df6acc3e9a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ae07346-ac5a-467b-9237-39df6acc3e9a",
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "98114ed7-bce1-4e44-87cd-2cf982e65130",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98114ed7-bce1-4e44-87cd-2cf982e65130",
+        "lesson.key": "Patterns and Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "6c64ef7e-2f3d-4694-a890-d033116cf2cc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c64ef7e-2f3d-4694-a890-d033116cf2cc",
+        "lesson.key": "ASCII and Binary Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "9f240924-0a79-49a4-b6fd-dc8a5588494d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f240924-0a79-49a4-b6fd-dc8a5588494d",
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "9c1aad28-92ef-4015-836f-eb5d9ef56ba0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c1aad28-92ef-4015-836f-eb5d9ef56ba0",
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "61676d40-a289-40f5-88ff-da0f3fa165fd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "61676d40-a289-40f5-88ff-da0f3fa165fd",
+        "lesson.key": "8-bit Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "46652bd6-020b-420c-b3b8-fec375cfc4e9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46652bd6-020b-420c-b3b8-fec375cfc4e9",
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "243e3558-ea5d-4708-83da-fcb23edcff04",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "243e3558-ea5d-4708-83da-fcb23edcff04",
+        "lesson.key": "Project - Create a Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "99536808-180f-498c-8f7d-1540137d6955",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99536808-180f-498c-8f7d-1540137d6955",
+        "lesson.key": "Problem Solving and Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "6d7a4796-4c68-4330-b988-63b0d1bb70aa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d7a4796-4c68-4330-b988-63b0d1bb70aa",
+        "lesson.key": "Making Decisions with Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "555773ca-a5d0-45bc-a2bf-647d5f1d9425",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "555773ca-a5d0-45bc-a2bf-647d5f1d9425",
+        "lesson.key": "Interpreting Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "723cb6af-1510-4206-9b1d-e5209fad9aee",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "723cb6af-1510-4206-9b1d-e5209fad9aee",
+        "lesson.key": "Automating Data Decisions",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "3cbc444e-7efa-423d-873c-9091ca05c314",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3cbc444e-7efa-423d-873c-9091ca05c314",
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-old"
+      }
+    },
+    {
+      "key": "6127caa8-0024-4729-bd43-2623379211e8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6127caa8-0024-4729-bd43-2623379211e8",
+        "lesson.key": "Project - Solve a Data Problem",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-old"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ef31ce98-6ffc-4f7c-b41d-6c778dbdd293",
+      "position": 1,
+      "properties": {
+        "name": "Unit 5 Lesson 1 Overview",
+        "progression_name": "Unit 5 Lesson 1 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef31ce98-6ffc-4f7c-b41d-6c778dbdd293",
+        "lesson_activity.key": "3ae07346-ac5a-467b-9237-39df6acc3e9a"
+      }
+    },
+    {
+      "key": "62c77f5e-a944-4c9c-8bae-716b261e92ea",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "62c77f5e-a944-4c9c-8bae-716b261e92ea",
+        "lesson_activity.key": "98114ed7-bce1-4e44-87cd-2cf982e65130"
+      }
+    },
+    {
+      "key": "fd189c08-d27c-4419-a791-19711fc04759",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd189c08-d27c-4419-a791-19711fc04759",
+        "lesson_activity.key": "6c64ef7e-2f3d-4694-a890-d033116cf2cc"
+      }
+    },
+    {
+      "key": "708f3798-8d68-4510-bfea-2bc0921a09c0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "708f3798-8d68-4510-bfea-2bc0921a09c0",
+        "lesson_activity.key": "9f240924-0a79-49a4-b6fd-dc8a5588494d"
+      }
+    },
+    {
+      "key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac",
+      "position": 2,
+      "properties": {
+        "name": "Representing Images",
+        "progression_name": "Representing Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac",
+        "lesson_activity.key": "9f240924-0a79-49a4-b6fd-dc8a5588494d"
+      }
+    },
+    {
+      "key": "65ac6e2d-549b-4e94-99d7-fe396543ade3",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "65ac6e2d-549b-4e94-99d7-fe396543ade3",
+        "lesson_activity.key": "9c1aad28-92ef-4015-836f-eb5d9ef56ba0"
+      }
+    },
+    {
+      "key": "10e64143-41cb-492e-a714-8cc8893a679d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "10e64143-41cb-492e-a714-8cc8893a679d",
+        "lesson_activity.key": "61676d40-a289-40f5-88ff-da0f3fa165fd"
+      }
+    },
+    {
+      "key": "a2b427fb-0251-4833-ad65-6aea374b9112",
+      "position": 2,
+      "properties": {
+        "name": "8-bit Numbers",
+        "progression_name": "8-bit Numbers"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2b427fb-0251-4833-ad65-6aea374b9112",
+        "lesson_activity.key": "61676d40-a289-40f5-88ff-da0f3fa165fd"
+      }
+    },
+    {
+      "key": "8a5f443b-a89b-4e74-8ad9-3b0b93b4fb20",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a5f443b-a89b-4e74-8ad9-3b0b93b4fb20",
+        "lesson_activity.key": "46652bd6-020b-420c-b3b8-fec375cfc4e9"
+      }
+    },
+    {
+      "key": "201b5448-8fb8-44a4-84a8-e2a165534518",
+      "position": 2,
+      "properties": {
+        "name": "Combining Representations",
+        "progression_name": "Combining Representations"
+      },
+      "seeding_key": {
+        "activity_section.key": "201b5448-8fb8-44a4-84a8-e2a165534518",
+        "lesson_activity.key": "46652bd6-020b-420c-b3b8-fec375cfc4e9"
+      }
+    },
+    {
+      "key": "572bdff4-d420-4846-9752-d09725a15caf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "572bdff4-d420-4846-9752-d09725a15caf",
+        "lesson_activity.key": "243e3558-ea5d-4708-83da-fcb23edcff04"
+      }
+    },
+    {
+      "key": "110cd677-2e61-44ca-bec0-44f0ff3049d3",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "110cd677-2e61-44ca-bec0-44f0ff3049d3",
+        "lesson_activity.key": "243e3558-ea5d-4708-83da-fcb23edcff04"
+      }
+    },
+    {
+      "key": "dd65fd8d-f452-47bf-a6f5-d129a182000b",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd65fd8d-f452-47bf-a6f5-d129a182000b",
+        "lesson_activity.key": "99536808-180f-498c-8f7d-1540137d6955"
+      }
+    },
+    {
+      "key": "3351f273-2e93-4232-a6ef-ba8cd5431653",
+      "position": 1,
+      "properties": {
+        "name": "Overview",
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3351f273-2e93-4232-a6ef-ba8cd5431653",
+        "lesson_activity.key": "6d7a4796-4c68-4330-b988-63b0d1bb70aa"
+      }
+    },
+    {
+      "key": "7b65c998-95ce-44d3-949e-f21ca0eb7482",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b65c998-95ce-44d3-949e-f21ca0eb7482",
+        "lesson_activity.key": "555773ca-a5d0-45bc-a2bf-647d5f1d9425"
+      }
+    },
+    {
+      "key": "bb0e39d5-eff6-440d-97c9-65ab978885e8",
+      "position": 2,
+      "properties": {
+        "name": "Data Visualization",
+        "progression_name": "Data Visualization"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb0e39d5-eff6-440d-97c9-65ab978885e8",
+        "lesson_activity.key": "555773ca-a5d0-45bc-a2bf-647d5f1d9425"
+      }
+    },
+    {
+      "key": "f75e90c3-e5aa-44dd-affd-0f48d0ff5e2b",
+      "position": 1,
+      "properties": {
+        "name": "Level Overview",
+        "progression_name": "Level Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f75e90c3-e5aa-44dd-affd-0f48d0ff5e2b",
+        "lesson_activity.key": "723cb6af-1510-4206-9b1d-e5209fad9aee"
+      }
+    },
+    {
+      "key": "40fb66f2-54a9-40ba-a1f2-1f3440cc1696",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "40fb66f2-54a9-40ba-a1f2-1f3440cc1696",
+        "lesson_activity.key": "3cbc444e-7efa-423d-873c-9091ca05c314"
+      }
+    },
+    {
+      "key": "0969e5af-4d9c-4807-ac61-f8ce9001149c",
+      "position": 2,
+      "properties": {
+        "name": "Problem Solving",
+        "progression_name": "Problem Solving"
+      },
+      "seeding_key": {
+        "activity_section.key": "0969e5af-4d9c-4807-ac61-f8ce9001149c",
+        "lesson_activity.key": "3cbc444e-7efa-423d-873c-9091ca05c314"
+      }
+    },
+    {
+      "key": "911fb1f5-d3b8-4795-8011-aa9d17f5fb1c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Level Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "911fb1f5-d3b8-4795-8011-aa9d17f5fb1c",
+        "lesson_activity.key": "6127caa8-0024-4729-bd43-2623379211e8"
+      }
+    },
+    {
+      "key": "fc251e8a-ac27-4861-9400-f563ef585e40",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc251e8a-ac27-4861-9400-f563ef585e40",
+        "lesson_activity.key": "6127caa8-0024-4729-bd43-2623379211e8"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representation Matters"
-        ]
+        ],
+        "progression": "Unit 5 Lesson 1 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -277,7 +706,8 @@
         ],
         "lesson.key": "Representation Matters",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "ef31ce98-6ffc-4f7c-b41d-6c778dbdd293"
       },
       "level_keys": [
         "CSD-U5-SFLP Representation Matters"
@@ -286,14 +716,14 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Patterns and Representation"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -301,7 +731,8 @@
         ],
         "lesson.key": "Patterns and Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "62c77f5e-a944-4c9c-8bae-716b261e92ea"
       },
       "level_keys": [
         "CSD-U5-SFLP Patterns and Representation"
@@ -310,14 +741,14 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP ASCII and Binary Representation"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -325,7 +756,8 @@
         ],
         "lesson.key": "ASCII and Binary Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "fd189c08-d27c-4419-a791-19711fc04759"
       },
       "level_keys": [
         "CSD-U5-SFLP ASCII and Binary Representation"
@@ -334,14 +766,14 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representing Images"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,7 +781,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "708f3798-8d68-4510-bfea-2bc0921a09c0"
       },
       "level_keys": [
         "CSD-U5-SFLP Representing Images"
@@ -358,7 +791,7 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -366,7 +799,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,7 +806,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       },
       "level_keys": [
         "CSD U5 black white images pixelation"
@@ -383,7 +816,7 @@
     {
       "chapter": 6,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -391,7 +824,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -399,7 +831,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       },
       "level_keys": [
         "CSD U5 black white images pixelation 2"
@@ -408,7 +841,7 @@
     {
       "chapter": 7,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -416,7 +849,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -424,7 +856,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       },
       "level_keys": [
         "CSD U5 black white images pixelation 3"
@@ -433,7 +866,7 @@
     {
       "chapter": 8,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -441,7 +874,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +881,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       },
       "level_keys": [
         "CSD U5 black white images pixelation 4"
@@ -458,7 +891,7 @@
     {
       "chapter": 9,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -466,7 +899,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +906,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       },
       "level_keys": [
         "CSD U5 black white images pixelation 5"
@@ -483,14 +916,14 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 1"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -498,7 +931,8 @@
         ],
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "65ac6e2d-549b-4e94-99d7-fe396543ade3"
       },
       "level_keys": [
         "CSD-U5-SFLP Representing Numbers Part 1"
@@ -507,14 +941,14 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 2"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +956,8 @@
         ],
         "lesson.key": "8-bit Numbers",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "10e64143-41cb-492e-a714-8cc8893a679d"
       },
       "level_keys": [
         "CSD-U5-SFLP Representing Numbers Part 2"
@@ -531,7 +966,7 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -539,7 +974,6 @@
         ],
         "progression": "8-bit Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -547,7 +981,8 @@
         ],
         "lesson.key": "8-bit Numbers",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "a2b427fb-0251-4833-ad65-6aea374b9112"
       },
       "level_keys": [
         "CSD U5 fixed-bits"
@@ -556,14 +991,14 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Combining Representations"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -571,7 +1006,8 @@
         ],
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "8a5f443b-a89b-4e74-8ad9-3b0b93b4fb20"
       },
       "level_keys": [
         "CSD-U5-SFLP Combining Representations"
@@ -580,7 +1016,7 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -588,7 +1024,6 @@
         ],
         "progression": "Combining Representations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -596,7 +1031,8 @@
         ],
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "201b5448-8fb8-44a4-84a8-e2a165534518"
       },
       "level_keys": [
         "CSD U3 combining rep"
@@ -605,7 +1041,7 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -613,7 +1049,6 @@
         ],
         "progression": "Combining Representations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -621,7 +1056,8 @@
         ],
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "201b5448-8fb8-44a4-84a8-e2a165534518"
       },
       "level_keys": [
         "CSD U5 student record"
@@ -630,14 +1066,14 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Create a Representation"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -645,7 +1081,8 @@
         ],
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "572bdff4-d420-4846-9752-d09725a15caf"
       },
       "level_keys": [
         "CSD-U5-SFLP Create a Representation"
@@ -654,7 +1091,7 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -662,7 +1099,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -670,7 +1106,8 @@
         ],
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "110cd677-2e61-44ca-bec0-44f0ff3049d3"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U5Ch1"
@@ -679,14 +1116,14 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Problem Solving and Data"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -694,7 +1131,8 @@
         ],
         "lesson.key": "Problem Solving and Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "dd65fd8d-f452-47bf-a6f5-d129a182000b"
       },
       "level_keys": [
         "CSD-U5-SFLP Problem Solving and Data"
@@ -703,14 +1141,14 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Making Decisions with Data"
-        ]
+        ],
+        "progression": "Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -718,7 +1156,8 @@
         ],
         "lesson.key": "Making Decisions with Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "3351f273-2e93-4232-a6ef-ba8cd5431653"
       },
       "level_keys": [
         "CSD-U5-SFLP Making Decisions with Data"
@@ -727,14 +1166,14 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Interpreting Data"
-        ]
+        ],
+        "progression": "Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -742,7 +1181,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "7b65c998-95ce-44d3-949e-f21ca0eb7482"
       },
       "level_keys": [
         "CSD-U5-SFLP Interpreting Data"
@@ -751,7 +1191,7 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -759,7 +1199,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,7 +1206,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "bb0e39d5-eff6-440d-97c9-65ab978885e8"
       },
       "level_keys": [
         "CSD U5 data visualization"
@@ -776,7 +1216,7 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -784,7 +1224,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -792,7 +1231,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "bb0e39d5-eff6-440d-97c9-65ab978885e8"
       },
       "level_keys": [
         "CSD U5 Pizza"
@@ -801,7 +1241,7 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -809,7 +1249,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -817,7 +1256,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "bb0e39d5-eff6-440d-97c9-65ab978885e8"
       },
       "level_keys": [
         "CSD U5 Pizza 2"
@@ -826,14 +1266,14 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Automating Data Decisions"
-        ]
+        ],
+        "progression": "Level Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -841,7 +1281,8 @@
         ],
         "lesson.key": "Automating Data Decisions",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "f75e90c3-e5aa-44dd-affd-0f48d0ff5e2b"
       },
       "level_keys": [
         "CSD-U5-SFLP Automating Data Decisions"
@@ -850,14 +1291,14 @@
     {
       "chapter": 25,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Problem Solving with Big Data"
-        ]
+        ],
+        "progression": "Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -865,7 +1306,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "40fb66f2-54a9-40ba-a1f2-1f3440cc1696"
       },
       "level_keys": [
         "CSD-U5-SFLP Problem Solving with Big Data"
@@ -874,7 +1316,7 @@
     {
       "chapter": 26,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -882,7 +1324,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -890,7 +1331,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "0969e5af-4d9c-4807-ac61-f8ce9001149c"
       },
       "level_keys": [
         "CSD U5 video2"
@@ -899,7 +1341,7 @@
     {
       "chapter": 27,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -907,7 +1349,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -915,7 +1356,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "0969e5af-4d9c-4807-ac61-f8ce9001149c"
       },
       "level_keys": [
         "CSD U5 collection UPS2"
@@ -924,7 +1366,7 @@
     {
       "chapter": 28,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -932,7 +1374,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -940,7 +1381,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "0969e5af-4d9c-4807-ac61-f8ce9001149c"
       },
       "level_keys": [
         "CSD U5 collection ads2"
@@ -949,14 +1391,14 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Solve a Data Problem"
-        ]
+        ],
+        "progression": "Level Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -964,7 +1406,8 @@
         ],
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "911fb1f5-d3b8-4795-8011-aa9d17f5fb1c"
       },
       "level_keys": [
         "CSD-U5-SFLP Solve a Data Problem"
@@ -973,7 +1416,7 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -981,7 +1424,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -989,7 +1431,8 @@
         ],
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "fc251e8a-ac27-4861-9400-f563ef585e40"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U5Ch2"
@@ -1005,7 +1448,8 @@
         ],
         "lesson.key": "Representation Matters",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "ef31ce98-6ffc-4f7c-b41d-6c778dbdd293"
       }
     },
     {
@@ -1016,7 +1460,8 @@
         ],
         "lesson.key": "Patterns and Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "62c77f5e-a944-4c9c-8bae-716b261e92ea"
       }
     },
     {
@@ -1027,7 +1472,8 @@
         ],
         "lesson.key": "ASCII and Binary Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "fd189c08-d27c-4419-a791-19711fc04759"
       }
     },
     {
@@ -1038,7 +1484,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "708f3798-8d68-4510-bfea-2bc0921a09c0"
       }
     },
     {
@@ -1049,7 +1496,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       }
     },
     {
@@ -1060,7 +1508,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       }
     },
     {
@@ -1071,7 +1520,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       }
     },
     {
@@ -1082,7 +1532,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       }
     },
     {
@@ -1093,7 +1544,8 @@
         ],
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "39a87ad8-161c-4c0f-a1c6-efaf51d880ac"
       }
     },
     {
@@ -1104,7 +1556,8 @@
         ],
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "65ac6e2d-549b-4e94-99d7-fe396543ade3"
       }
     },
     {
@@ -1115,7 +1568,8 @@
         ],
         "lesson.key": "8-bit Numbers",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "10e64143-41cb-492e-a714-8cc8893a679d"
       }
     },
     {
@@ -1126,7 +1580,8 @@
         ],
         "lesson.key": "8-bit Numbers",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "a2b427fb-0251-4833-ad65-6aea374b9112"
       }
     },
     {
@@ -1137,7 +1592,8 @@
         ],
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "8a5f443b-a89b-4e74-8ad9-3b0b93b4fb20"
       }
     },
     {
@@ -1148,7 +1604,8 @@
         ],
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "201b5448-8fb8-44a4-84a8-e2a165534518"
       }
     },
     {
@@ -1159,7 +1616,8 @@
         ],
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "201b5448-8fb8-44a4-84a8-e2a165534518"
       }
     },
     {
@@ -1170,7 +1628,8 @@
         ],
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "572bdff4-d420-4846-9752-d09725a15caf"
       }
     },
     {
@@ -1181,7 +1640,8 @@
         ],
         "lesson.key": "Project - Create a Representation",
         "lesson_group.key": "csd5_1",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "110cd677-2e61-44ca-bec0-44f0ff3049d3"
       }
     },
     {
@@ -1192,7 +1652,8 @@
         ],
         "lesson.key": "Problem Solving and Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "dd65fd8d-f452-47bf-a6f5-d129a182000b"
       }
     },
     {
@@ -1203,7 +1664,8 @@
         ],
         "lesson.key": "Making Decisions with Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "3351f273-2e93-4232-a6ef-ba8cd5431653"
       }
     },
     {
@@ -1214,7 +1676,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "7b65c998-95ce-44d3-949e-f21ca0eb7482"
       }
     },
     {
@@ -1225,7 +1688,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "bb0e39d5-eff6-440d-97c9-65ab978885e8"
       }
     },
     {
@@ -1236,7 +1700,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "bb0e39d5-eff6-440d-97c9-65ab978885e8"
       }
     },
     {
@@ -1247,7 +1712,8 @@
         ],
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "bb0e39d5-eff6-440d-97c9-65ab978885e8"
       }
     },
     {
@@ -1258,7 +1724,8 @@
         ],
         "lesson.key": "Automating Data Decisions",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "f75e90c3-e5aa-44dd-affd-0f48d0ff5e2b"
       }
     },
     {
@@ -1269,7 +1736,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "40fb66f2-54a9-40ba-a1f2-1f3440cc1696"
       }
     },
     {
@@ -1280,7 +1748,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "0969e5af-4d9c-4807-ac61-f8ce9001149c"
       }
     },
     {
@@ -1291,7 +1760,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "0969e5af-4d9c-4807-ac61-f8ce9001149c"
       }
     },
     {
@@ -1302,7 +1772,8 @@
         ],
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "0969e5af-4d9c-4807-ac61-f8ce9001149c"
       }
     },
     {
@@ -1313,7 +1784,8 @@
         ],
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "911fb1f5-d3b8-4795-8011-aa9d17f5fb1c"
       }
     },
     {
@@ -1324,7 +1796,8 @@
         ],
         "lesson.key": "Project - Solve a Data Problem",
         "lesson_group.key": "csd5_2",
-        "script.name": "csd5-old"
+        "script.name": "csd5-old",
+        "activity_section.key": "fc251e8a-ac27-4861-9400-f563ef585e40"
       }
     }
   ],

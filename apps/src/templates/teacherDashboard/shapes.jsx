@@ -17,7 +17,8 @@ export const sectionShape = PropTypes.shape({
   scriptId: PropTypes.number,
   grade: PropTypes.string,
   providerManaged: PropTypes.bool.isRequired,
-  restrictSection: PropTypes.bool
+  restrictSection: PropTypes.bool,
+  postMilestoneDisabled: PropTypes.bool
 });
 
 // Used on the Teacher Dashboard for components that
@@ -61,10 +62,11 @@ export const assignmentShape = PropTypes.shape({
   path: PropTypes.string.isRequired,
   script_name: PropTypes.string.isRequired,
   assignment_family_name: PropTypes.string.isRequired,
-  version_year: PropTypes.string.isRequired,
-  version_title: PropTypes.string.isRequired,
+  version_year: PropTypes.string,
+  version_title: PropTypes.string,
   is_stable: PropTypes.bool,
-  supported_locales: PropTypes.arrayOf(PropTypes.string)
+  supported_locales: PropTypes.arrayOf(PropTypes.string),
+  supported_locale_codes: PropTypes.arrayOf(PropTypes.string)
 });
 
 // An assignment family is a collection of versions of a course or script like
@@ -88,10 +90,11 @@ export const assignmentFamilyShape = PropTypes.shape({
 export const assignmentVersionShape = PropTypes.shape({
   year: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  isStable: PropTypes.bool.isRequired,
+  isStable: PropTypes.bool,
   isRecommended: PropTypes.bool,
   isSelected: PropTypes.bool,
   locales: PropTypes.arrayOf(PropTypes.string).isRequired,
+  localeCodes: PropTypes.arrayOf(PropTypes.string).isRequired,
   canViewVersion: PropTypes.bool
 });
 
@@ -105,6 +108,7 @@ export const convertAssignmentVersionShapeFromServer = serverVersions => {
       title: v.version_title,
       isStable: v.is_stable,
       locales: v.locales || [],
+      localeCodes: v.locale_codes || [],
       canViewVersion: v.can_view_version
     };
   });

@@ -2,13 +2,17 @@
   "script": {
     "name": "denny-science-copy",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:38 UTC",
+    "serialized_at": "2021-11-22 19:56:48 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "denny-science-copy"
     }
@@ -59,23 +63,66 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "6b722514-8155-44d8-b3bd-8c09fb8215ec",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b722514-8155-44d8-b3bd-8c09fb8215ec",
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "key": "7e86b53d-16a5-4441-b9be-0d33ed00b9eb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e86b53d-16a5-4441-b9be-0d33ed00b9eb",
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f54dca98-46a3-46bd-b0af-35b3ace836f3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3",
+        "lesson_activity.key": "6b722514-8155-44d8-b3bd-8c09fb8215ec"
+      }
+    },
+    {
+      "key": "75225809-9ef7-4497-9e5f-ddf77cc5619b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b",
+        "lesson_activity.key": "7e86b53d-16a5-4441-b9be-0d33ed00b9eb"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD mini design mode video_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -83,7 +130,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       },
       "level_keys": [
         "CSD mini design mode video_copy"
@@ -92,14 +140,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Design Mode Map_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -107,7 +154,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       },
       "level_keys": [
         "Design Mode Map_copy"
@@ -116,14 +164,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake 1_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -131,7 +178,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       },
       "level_keys": [
         "Science earthquake 1_copy"
@@ -140,14 +188,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake text_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -155,7 +202,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       },
       "level_keys": [
         "Science earthquake text_copy"
@@ -164,14 +212,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake images_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -179,7 +226,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       },
       "level_keys": [
         "Science earthquake images_copy"
@@ -188,14 +236,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake reflect_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -203,7 +250,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       },
       "level_keys": [
         "Science earthquake reflect_copy"
@@ -212,14 +260,13 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science change screen map_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -227,7 +274,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       },
       "level_keys": [
         "Science change screen map_copy"
@@ -236,14 +284,13 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science board event map_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -251,7 +298,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       },
       "level_keys": [
         "Science board event map_copy"
@@ -260,14 +308,13 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science Circuit Playground Test_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -275,7 +322,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       },
       "level_keys": [
         "Science Circuit Playground Test_copy"
@@ -284,14 +332,13 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science event demo_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -299,7 +346,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       },
       "level_keys": [
         "Science event demo_copy"
@@ -308,14 +356,13 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science event accel_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -323,7 +370,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       },
       "level_keys": [
         "Science event accel_copy"
@@ -332,14 +380,13 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science event test_copy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -347,7 +394,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       },
       "level_keys": [
         "Science event test_copy"
@@ -363,7 +411,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       }
     },
     {
@@ -374,7 +423,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       }
     },
     {
@@ -385,7 +435,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       }
     },
     {
@@ -396,7 +447,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       }
     },
     {
@@ -407,7 +459,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       }
     },
     {
@@ -418,7 +471,8 @@
         ],
         "lesson.key": "Collision Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "f54dca98-46a3-46bd-b0af-35b3ace836f3"
       }
     },
     {
@@ -429,7 +483,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       }
     },
     {
@@ -440,7 +495,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       }
     },
     {
@@ -451,7 +507,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       }
     },
     {
@@ -462,7 +519,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       }
     },
     {
@@ -473,7 +531,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       }
     },
     {
@@ -484,7 +543,8 @@
         ],
         "lesson.key": "Collision Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science-copy"
+        "script.name": "denny-science-copy",
+        "activity_section.key": "75225809-9ef7-4497-9e5f-ddf77cc5619b"
       }
     }
   ],

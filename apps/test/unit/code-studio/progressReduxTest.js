@@ -11,7 +11,6 @@ import reducer, {
   mergeResults,
   mergePeerReviewProgress,
   disablePostMilestone,
-  setIsHocScript,
   setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
@@ -193,7 +192,7 @@ const lockableLessonData = [
 
 // In the app, this is passed to the client as part of the initial page load. We
 // get this data by running Script::summarize
-const initialScriptOverviewProgress = {
+const initialUnitOverviewProgress = {
   currentLevelId: undefined,
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
@@ -219,7 +218,7 @@ describe('progressReduxTest', () => {
 
     it('can initialize progress on script overview page', () => {
       // Simulate progress initialization from script overview page
-      const action = initProgress(initialScriptOverviewProgress);
+      const action = initProgress(initialUnitOverviewProgress);
       const nextState = reducer(undefined, action);
 
       assert.equal(nextState.currentLevelId, undefined);
@@ -228,7 +227,7 @@ describe('progressReduxTest', () => {
 
       assert.deepEqual(
         nextState.lessons,
-        processedLessons(initialScriptOverviewProgress.lessons)
+        processedLessons(initialUnitOverviewProgress.lessons)
       );
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentLessonId, undefined);
@@ -252,7 +251,7 @@ describe('progressReduxTest', () => {
     it('can merge in fresh progress', () => {
       const initializedState = reducer(
         undefined,
-        initProgress(initialScriptOverviewProgress)
+        initProgress(initialUnitOverviewProgress)
       );
 
       // Create a mergeResults action with level progress, but no peer reviews
@@ -338,24 +337,10 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.postMilestoneDisabled, true);
     });
 
-    it('initially sets isHocScript to null', () => {
-      assert.equal(initialState.isHocScript, null);
-    });
-
-    it('can update isHocScript', () => {
-      const isHocScript = reducer(initialState, setIsHocScript(true));
-      assert.equal(isHocScript.isHocScript, true);
-
-      const isNotHocScript = reducer(initialState, setIsHocScript(false));
-      assert.equal(isNotHocScript.isHocScript, false);
-    });
-
     it('can update isAge13Required', () => {
+      assert.equal(initialState.isAge13Required, false);
       const state = reducer(initialState, setIsAge13Required(true));
       assert.equal(state.isAge13Required, true);
-
-      const nextState = reducer(initialState, setIsHocScript(false));
-      assert.equal(nextState.isAge13Required, false);
     });
 
     it('can update isSummaryView', () => {
@@ -391,12 +376,12 @@ describe('progressReduxTest', () => {
     // stuff like updating query param. We just want to test the core action
     // it ultimately dispatches.
     describe('setViewType', () => {
-      it('toggles to detail view when setting viewAs to Teacher', () => {
+      it('toggles to detail view when setting viewAs to instructor', () => {
         const state = {
           ...initialState,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -406,7 +391,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: true,
           isSummaryView: false
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -416,7 +401,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: false,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
     });
@@ -571,7 +556,7 @@ describe('progressReduxTest', () => {
     it('extracts relevant properties on a per level basis', () => {
       const initializedState = reducer(
         undefined,
-        initProgress(initialScriptOverviewProgress)
+        initProgress(initialUnitOverviewProgress)
       );
 
       // merge some progress so that we have statuses
@@ -604,7 +589,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '323',
@@ -625,7 +611,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '322',
@@ -646,7 +633,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: true,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           }
         ],
         [
@@ -669,7 +657,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '339',
@@ -690,7 +679,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '341',
@@ -711,7 +701,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           }
         ]
       ];
@@ -751,7 +742,7 @@ describe('progressReduxTest', () => {
             ]
           }
         ],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {}
       });
       assert.equal(results[0][0].isUnplugged, true);
@@ -763,7 +754,7 @@ describe('progressReduxTest', () => {
     it('sets isLocked to true if lesson is lockabe', () => {
       const results = levelsByLesson({
         lessons: lockableLessonData,
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {}
       });
       assert.equal(results[0][0].isLocked, true);
@@ -774,7 +765,7 @@ describe('progressReduxTest', () => {
     it('returns levels for the given lesson', () => {
       const initializedState = reducer(
         undefined,
-        initProgress(initialScriptOverviewProgress)
+        initProgress(initialUnitOverviewProgress)
       );
 
       const lessonId = lessonData[0].id;
@@ -784,7 +775,7 @@ describe('progressReduxTest', () => {
 
     it('sets isCurrentLevel to true for current level only', () => {
       const initializedState = {
-        ...reducer(undefined, initProgress(initialScriptOverviewProgress)),
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
         currentLevelId: lessonData[0].levels[1].activeId
       };
 
@@ -1032,7 +1023,7 @@ describe('progressReduxTest', () => {
           }
         ],
         lessons: [fakeLesson('Lesson Group', 'lesson1', 1)],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {},
         focusAreaLessonIds: []
       };
@@ -1060,7 +1051,7 @@ describe('progressReduxTest', () => {
           fakeLesson('Lesson Group', 'lesson2', 2),
           fakeLesson('Lesson Group', 'lesson3', 3)
         ],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {},
         focusAreaLessonIds: []
       };
@@ -1094,7 +1085,7 @@ describe('progressReduxTest', () => {
             lessons: []
           }
         ],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {},
         focusAreaLessonIds: []
       };
@@ -1353,7 +1344,7 @@ describe('progressReduxTest', () => {
 
     it('requests user progress and dispatches appropriate actions', () => {
       const responseData = {
-        isVerifiedTeacher: true,
+        isVerifiedInstructor: true,
         teacherViewingStudent: true,
         professionalLearningCourse: false,
         focusAreaLessonIds: [1, 2],
@@ -1361,7 +1352,7 @@ describe('progressReduxTest', () => {
         completed: true,
         progress: {},
         peerReviewsPerformed: true,
-        current_stage: 1
+        current_lesson: 1
       };
       serverResponse(responseData);
       const promise = userProgressFromServer(state, dispatch, 1);
@@ -1369,13 +1360,12 @@ describe('progressReduxTest', () => {
 
       const expectedDispatchActions = [
         'progress/CLEAR_RESULTS',
-        'verifiedTeacher/SET_VERIFIED',
+        'verifiedInstructor/SET_VERIFIED',
         'progress/SET_IS_SUMMARY_VIEW',
-        'progress/SHOW_TEACHER_INFO',
         'progress/UPDATE_FOCUS_AREAS',
         'lessonLock/AUTHORIZE_LOCKABLE',
-        'progress/SET_SCRIPT_COMPLETED',
-        'progress/SET_SCRIPT_PROGRESS',
+        'progress/SET_UNIT_COMPLETED',
+        'progress/SET_UNIT_PROGRESS',
         'progress/MERGE_RESULTS',
         'progress/MERGE_PEER_REVIEW_PROGRESS',
         'progress/SET_CURRENT_LESSON_ID'

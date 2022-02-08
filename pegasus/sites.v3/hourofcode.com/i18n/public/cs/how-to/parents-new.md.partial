@@ -2,7 +2,7 @@
 title: How-to guide for parents
 ---
 
-# How to do an Hour of Code with your child
+# Jak dělat Hodinu programování s Vaším dítětem
 Vyzkoušet „Hodinu programování“ je jednoduchý a zábavný způsob, jak dát svému dítěti úvod do počítačových věd, možná i ten úplně první. Počítačové vědy jsou nejen základem všech studijních oborů, ale <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">nedávné studie prokázaly, že</a>: děti, které studují počítačové vědy, se lépe učí v ostatních předmětech, vynikají v řešení problémů, a mají o <font color="00adbc"><b>17 % větší pravděpodobnost, že se dostanou na vysokou školu</b></font>.
 
 Můžete se stát jedním z desítek milionů studentů na světě, kteří se účastní této globální události. Společně můžeme inspirovat děti k tomu, aby se učily, prolamovaly stereotypy, a pomáhat dětem objevit v sobě nově nalezený zájem. A co je nejlepší, už teď máte vše co potřebujete k tomu, abyste „Hodinu programování“ přinesli k sobě domů!
@@ -68,7 +68,7 @@ Je v pořádku, jestliže jsou pro Vás i pro Vaše dítě počítačové vědy 
 
 <h3>Řešte problémy společně</h3>
 A konečně, když bude Vaše dítě narážet na problémy, je správné zareagovat:
-- “I don’t know. Let’s figure this out together.”
+- "Nevím. Přijďme na to společně.”
 - "Technologie nefunguje vždy tak, jak chceme."
 - "Učit se programovat je jako učit se nový jazyk; nejde hned mluvit plynule."
 
@@ -81,10 +81,10 @@ Počítačová věda je celá o tom jak „odlaďovat“ situace, které nevych�
 
 - Vytiskněte si <a href="https://staging.code.org/certificates">„Certifikáty hodiny programování,“</a> které budete udělovat, když Vaše dítě dokončí svoji aktivitu
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Vytiskněte si nálepky</a> doma nebo <a href="https://store.code.org/">si je kupte online</a>, aby sloužily jako další přídavné překvapení.
-- Sdílejte fotografie a videa ze své domácí „Hodiny programování“ na sociálních médiích. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Sdílejte fotografie a videa ze své domácí „Hodiny programování“ na sociálních médiích. Použijte #HourOfCode a @codeorg, abychom mohli zveřejnit i Váš úspěch!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Co následuje po Hodině kódu?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! Ačkoli 90 % rodičů chce, aby se jejich dítě učilo počítačovou vědu, většina škol ji dosud nevyučuje. Abychom Vám pomohli, je náš učební plán webový a bezplatný, a to navždy. <a href="https://code.org/yourschool">Zjistěte si, jak</a>  přinést do školy Vašeho dítěte počítačovou vědu hned dnes.
+Počítačová věda nemusí končit „Hodinou programování“! Ačkoli 90 % rodičů chce, aby se jejich dítě učilo počítačovou vědu, většina škol ji dosud nevyučuje. Abychom Vám pomohli, je náš učební plán webový a bezplatný, a to navždy. <a href="https://code.org/yourschool">Zjistěte si, jak</a>  přinést do školy Vašeho dítěte počítačovou vědu hned dnes.

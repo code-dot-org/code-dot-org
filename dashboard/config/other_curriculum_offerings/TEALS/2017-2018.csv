@@ -1,0 +1,408 @@
+School ID,Course,Year,School Name,City,Zip/Postal Code,School District,State/Province
+010039001468,Intro Full,2017,George Washington Carver High School,BIRMINGHAM,35207,Birmingham City,AL
+010039000141,Intro S2,2017,Huffman High School-Magnet,BIRMINGHAM,35215,Birmingham City,AL
+010039000164,Intro Full,2017,Jackson-Olin High School,BIRMINGHAM,35218,Birmingham City,AL
+010039000165,Intro Full,2017,Parker High School,BIRMINGHAM,35204,Birmingham City,AL
+010039000176,Intro Full,2017,Ramsay High School,BIRMINGHAM,35205,Birmingham City,AL
+010039000192,Intro Full,2017,Wenonah High School,BIRMINGHAM,35221,Birmingham City,AL
+010039000198,Intro Full,2017,Woodlawn High School-Magnet,BIRMINGHAM,35212,Birmingham City,AL
+010327001240,Intro Full,2017,Tarrant High School,TARRANT,35217,Tarrant City,AL
+010343001304,Other,2017,Vestavia Hills High School,VESTAVIA HILLS,35216,Vestavia Hills City,AL
+040045000001,Intro Full,2017,Agua Fria High School,AVONDALE,85323,Agua Fria Union High School District,AZ
+040083003253,AP,2017,BASIS Chandler,Chandler,85248,BASIS Chandler,AZ
+040083003253,AP CSP,2017,BASIS Chandler,Chandler,85248,BASIS Chandler,AZ
+040089703376,AP,2017,BASIS Ahwatukee,Phoenix,85044,BASIS Schools,AZ
+040084303351,AP,2017,BASIS Phoenix,Phoenix,85028,"BASIS Schools, Inc.",AZ
+040092303453,Intro Full,2017,SySTEM Phoenix,Phoenix,85006,SySTEM Schools,AZ
+040092403436,Intro Full,2017,Western School of Science and Technology: A Challenge Foundation Academy,Phoenix,85033,Western School of Science and Technology: A Challenge Foundation Academy Inc.,AZ
+040885003272,Intro Full,2017,Andrada Polytechnic High School,Tucson,85747,Vail School District,AZ
+040817001438,Intro Full,2017,Desert View High School,TUCSON,85706,Sunnyside Unified District,AZ
+040885002552,Intro Full,2017,Empire High School,TUCSON,85602,Vail Unified District,AZ
+040301000231,Intro Full,2017,Flowing Wells High School,TUCSON,85705,Flowing Wells Unified District,AZ
+040014701787,Intro Full,2017,Ha:San Preparatory & Leadership School,TUCSON,85719,Ha:San Educational Services,AZ
+040020102069,Intro Both,2017,Pima Vocational High School,TUCSON,85713,Pima County Board Of Supervisors,AZ
+040008101010,Intro Full,2017,Presidio High School,TUCSON,85719,Presidio School,AZ
+040817000743,AP CSP,2017,Sunnyside High School,TUCSON,85706,Sunnyside Unified District,AZ
+040817000743,Intro Full,2017,Sunnyside High School,TUCSON,85706,Sunnyside Unified District,AZ
+060177000041,AP CSP,2017,Alameda High School,ALAMEDA,94501,Alameda City Unified School District,CA
+060474000432,AP,2017,Berkeley High,BERKELEY,94704,Berkeley Unified School District,CA
+060474000432,AP CSP,2017,Berkeley High,BERKELEY,94704,Berkeley Unified School District,CA
+063498005920,Intro Full,2017,Burlingame High,BURLINGAME,94010,San Mateo Union High,CA
+061005001093,AP CSP,2017,Covina High School,COVINA,91723,Covina-Valley Unified School District,CA
+061263001426,AP CSP,2017,Emery Secondary,EMERYVILLE,94608,Emery Unified School District,CA
+061476001815,AP CSP,2017,Sunny Hills High School,FULLERTON,92833,Fullerton Joint Union High,CA
+062013002408,AP,2017,La Canada High School,LA CANADA,91011,La Canada Unified School District,CA
+062631003929,Intro Full,2017,Los Altos High School,LOS ALTOS,94022,Mountain View-Los Altos Union High,CA
+062631003929,AP,2017,Los Altos High School,LOS ALTOS,94022,Mountain View-Los Altos Union High,CA
+062271013737,Intro Full,2017,Nava College Preparatory Academy,Los Angeles,90011,LAUSD,CA
+062271013737,AP,2017,Nava College Preparatory Academy,Los Angeles,90011,LAUSD,CA
+062271012883,Intro Full,2017,Synergy Quantum Academy,Los Angeles,90011,Synergy Quantum Academy,CA
+062271012883,AP CSP,2017,Synergy Quantum Academy,Los Angeles,90011,Synergy Quantum Academy,CA
+062271003106,Intro Full,2017,Thomas Jefferson Senior High,LOS ANGELES,90011,Los Angeles Unified School District,CA
+063498005924,AP,2017,Mills High School,MILLBRAE,94030,San Mateo Union High,CA
+062631003930,Intro Full,2017,Mountain View High,MOUNTAIN VIEW,94040,Mountain View-Los Altos Union High,CA
+062631003930,AP,2017,Mountain View High,MOUNTAIN VIEW,94040,Mountain View-Los Altos Union High,CA
+062805010718,Intro Both,2017,Community Day School,oakland,94619,Oakland,CA
+062805004278,AP CSP,2017,Madison Park Academy,Oakland,94603,Oakland Unified,CA
+062805004304,AP CSP,2017,Oakland High,OAKLAND,94610,Oakland Unified School District,CA
+063025004715,AP,2017,Casa Grande High,PETALUMA,94954,Petaluma Joint Union High,CA
+063498005921,Intro Full,2017,Capuchino High,SAN BRUNO,94066,San Mateo Union High,CA
+063441005581,AP CSP,2017,Abraham Lincoln High School SF,SAN FRANCISCO,94116,San Francisco Unified School District,CA
+063441005587,AP CSP,2017,Balboa High School,SAN FRANCISCO,94112,San Francisco Unified School District,CA
+063441007725,Intro Full,2017,Gateway High,SAN FRANCISCO,94115,San Francisco Unified School District,CA
+063441005650,AP CSP,2017,Mission High,SAN FRANCISCO,94114,San Francisco Unified School District,CA
+063441008189,AP CSP,2017,Phillip And Sala Burton Academic High,SAN FRANCISCO,94134,San Francisco Unified School District,CA
+063441007845,AP CSP,2017,Raoul Wallenberg Traditional High School,SAN FRANCISCO,94115,San Francisco Unified School District,CA
+063441001276,AP CSP,2017,"Ruth Asawa San Francisco School of the Arts, A Public",SAN FRANCISCO,94131,San Francisco Unified School District,CA
+063459005696,AP,2017,Abraham Lincoln High School SJ,SAN JOSE,95126,San Jose Unified School District,CA
+061182001302,AP,2017,Independence High,SAN JOSE,95133,East Side Union High,CA
+061182001303,Intro Full,2017,James Lick High,SAN JOSE,95127,East Side Union High,CA
+061182001303,AP,2017,James Lick High,SAN JOSE,95127,East Side Union High,CA
+063459005725,AP,2017,Leland High School,SAN JOSE,95120,San Jose Unified School District,CA
+063459005725,Intro Full,2017,Leland High School,SAN JOSE,95120,San Jose Unified School District,CA
+063459005725,AP CSP,2017,Leland High School,SAN JOSE,95120,San Jose Unified School District,CA
+063498005919,Intro Full,2017,Aragon High School,SAN MATEO,94402,San Mateo Union High,CA
+063498005923,Intro Full,2017,Hillsdale High,SAN MATEO,94403,San Mateo Union High,CA
+063498005923,AP,2017,Hillsdale High,SAN MATEO,94403,San Mateo Union High,CA
+063498005926,Intro Full,2017,San Mateo High,SAN MATEO,94401,San Mateo Union High,CA
+063498005926,AP,2017,San Mateo High,SAN MATEO,94401,San Mateo Union High,CA
+063543006055,AP,2017,Adrian Wilcox High School,SANTA CLARA,95051,Santa Clara Unified School District,CA
+063543007868,AP,2017,Santa Clara High School,SANTA CLARA,95051,Santa Clara Unified School District,CA
+062271010865,Intro Both,2017,Champs - Charter High School of Arts-Multimedia & Performin,SHERMAN OAKS,91405,Los Angeles Unified School District,CA
+063753006342,AP,2017,El Camino High,SOUTH SAN FRANCISCO,94080,South San Francisco Unified School District,CA
+063753006352,Intro Full,2017,South San Francisco High,SOUTH SAN FRANCISCO,94080,South San Francisco Unified School District,CA
+063753006352,AP,2017,South San Francisco High,SOUTH SAN FRANCISCO,94080,South San Francisco Unified School District,CA
+063639006199,AP CSP,2017,Woodside High,WOODSIDE,94062,Sequoia Union High,CA
+063639006199,Intro Full,2017,Woodside High,WOODSIDE,94062,Sequoia Union High,CA
+063639006199,AP,2017,Woodside High,WOODSIDE,94062,Sequoia Union High,CA
+080345006493,AP,2017,STEM School and Academy,Highlands Ranch,80129,Douglas,CO
+080345006493,AP CSP,2017,STEM School and Academy,Highlands Ranch,80129,Douglas,CO
+090519001086,Intro Both,2017,Windham High School,WILLIMANTIC,06226,Windham School District,CT
+110000800496,AP,2017,Friendship Public Charter School Technology Preparatory High School Campus,Washington,20032,Friendship Public Charter School,DC
+110000800496,AP,2017,Friendship Public Charter School Woodson Collegiate Campus,WASHINGTON,20019,Friendship Pcs,DC
+130012003980,AP CSP,2017,Coretta Scott King Young Women’s Leadership academy,Atlanta,30318,Atlanta Public Schools,GA
+130174000707,Intro S1,2017,Cross Keys High School,ATLANTA,30319,DeKalb County School District,GA
+130174000707,Intro S2,2017,Cross Keys High School,ATLANTA,30319,DeKalb County School District,GA
+130174000665,Intro S1,2017,Druid Hills High School,ATLANTA,30307,DeKalb County School District,GA
+130174000665,AP,2017,Druid Hills High School,ATLANTA,30307,DeKalb County School District,GA
+130174000690,Intro S1,2017,Dunwoody High School,DUNWOODY,30338,DeKalb County School District,GA
+130174000690,AP,2017,Dunwoody High School,DUNWOODY,30338,DeKalb County School District,GA
+130174000639,Intro S1,2017,Cedar Grove High School,ELLENWOOD,30294,DeKalb County School District,GA
+130174000639,Intro S2,2017,Cedar Grove High School,ELLENWOOD,30294,DeKalb County School District,GA
+130123002067,AP CSP,2017,Lovejoy High School,HAMPTON,30228,Clayton County,GA
+130351001342,Other,2017,Marietta High School,MARIETTA,30064,Marietta City,GA
+130174001553,Other,2017,Stephenson High School,STONE MOUNTAIN,30087,DeKalb County School District,GA
+130174001553,Intro S2,2017,Stephenson High School,STONE MOUNTAIN,30087,DeKalb County School District,GA
+192124001275,Intro Both,2017,Norwalk Senior High School,NORWALK,50211,Norwalk Comm School District,IA
+180369000581,Intro Full,2017,Franklin Community High Sch,FRANKLIN,46131,Franklin Community School Corp,IN
+201200001644,AP,2017,Blue Valley North High School,OVERLAND PARK,66209,Blue Valley,KS
+201200000541,AP,2017,Blue Valley Northwest High School,OVERLAND PARK,66213,Blue Valley,KS
+201200001990,Other,2017,Blue Valley Southwest High School,OVERLAND PARK,66062,Blue Valley,KS
+201200001533,AP,2017,Blue Valley West High,OVERLAND PARK,66085,Blue Valley,KS
+201200000112,AP,2017,Blue Valley High School,STILWELL,66085,Blue Valley,KS
+00489531,Intro Full,2017,Kapaun Mt. Carmel Catholic High School,Wichita,67206,Kapaun Mt. Carmel Catholic High School,KS
+02160029,AP CSP,2017,The Independent School,Wichita,67207,Independent,KS
+210327002434,AP,2017,Lee County High School,BEATTYVILLE,41311,Lee County,KY
+250315000415,Intro Full,2017,Brookline High School,BROOKLINE,02445,Brookline,MA
+250327000436,AP,2017,Cambridge Rindge And Latin School,CAMBRIDGE,02138,Cambridge,MA
+250327000436,Intro Both,2017,Cambridge Rindge And Latin School,CAMBRIDGE,02138,Cambridge,MA
+250327000436,AP CSP,2017,Cambridge Rindge And Latin School,CAMBRIDGE,02138,Cambridge,MA
+250008601996,Intro S1,2017,Community Charter School Of Cambridge,CAMBRIDGE,02141,Community Charter School Of Cambridge (District),MA
+250008601996,AP CSP,2017,Community Charter School Of Cambridge,CAMBRIDGE,02141,Community Charter School Of Cambridge (District),MA
+250004600819,AP,2017,Prospect Hill Academy Charter School,CAMBRIDGE,02139,Prospect Hill Academy Charter (District),MA
+250279002015,AP CSP,2017,Boston International High School,Dorchester,02124,Boston Public Schools,MA
+250279000204,AP CSP,2017,Boston Latin Academy,DORCHESTER,02121,Boston Public Schools,MA
+250279001692,AP CSP,2017,Boston Community Leadership Academy,Hyde Park,02136,Boston Public Schools,MA
+250008201845,Intro Full,2017,KIPP Academy Lynn Collegiate,Lynn,01902,KIPP Academy Lynn,MA
+250756001176,Intro Both,2017,Medford Vocational Technical High School,MEDFORD,02155,Medford,MA
+251005001630,AP,2017,Revere High School,REVERE,02151,Revere,MA
+250279002016,Intro Both,2017,Excel High School,SOUTH BOSTON,02127,Boston Public Schools,MA
+251218002005,Intro Both,2017,Watertown High School,WATERTOWN,02472,Watertown,MA
+251218002005,AP,2017,Watertown High School,WATERTOWN,02472,Watertown,MA
+240051001027,Other,2017,Eleanor Roosevelt High School,GREENBELT,20770,Prince George's County Public Schools,MD
+240051002951,Other,2017,Charles Herbert Flowers High,SPRINGDALE,20774,Prince George's County Public Schools,MD
+260025507882,AP CSP,2017,Advanced Technology Academy,DEARBORN,48126,Advanced Technology Academy,MI
+260110304669,AP CSP,2017,Cass Technical High School,DETROIT,48201,Detroit Public Schools,MI
+260103008322,Intro Full,2017,Cornerstone Health and Technology High School,Detroit,48235,Cornerstone Health and Technology School District,MI
+260110307972,Intro Full,2017,Detroit International Academy For Young Women,DETROIT,48202,Detroit Public Schools,MI
+260110304906,AP CSP,2017,Renaissance High School,DETROIT,48235,Detroit Public Schools,MI
+260110301423,Intro Full,2017,West Side Academy Alt. Ed,DETROIT,48208,Detroit Public Schools,MI
+260110304857,Intro Full,2017,Western International High School,DETROIT,48209,Detroit Public Schools,MI
+261260004971,AP,2017,East Lansing High School,EAST LANSING,48823,East Lansing School District,MI
+260097708183,AP,2017,West Michigan Aviation Academy,Grand Rapids,49512,West Michigan Aviation Academy,MI
+260097708183,AP CSP,2017,West Michigan Aviation Academy,Grand Rapids,49512,West Michigan Aviation Academy,MI
+260022501195,Intro Full,2017,Summit Academy North High School,ROMULUS,48174,Summit Academy North,MI
+279144802318,Intro Full,2017,Norman County  West Secondary,HALSTAD,56548,Norman County West School District,MN
+273246001399,Intro S1,2017,Rothsay Secondary,ROTHSAY,56579,Rothsay Public School District,MN
+290531000085,Other,2017,Blue Springs High,BLUE SPRINGS,64015,Blue Springs R-Iv,MO
+290531000085,AP CSP,2017,Blue Springs High,BLUE SPRINGS,64015,Blue Springs R-Iv,MO
+291548000724,AP CSP,2017,William Chrisman High,INDEPENDENCE,64050,Independence 30,MO
+A0701409,AP CSP,2017,Cristo Rey Kansas City,Kansas City,64111,Cristo Rey Kansas City,MO
+290060803274,Intro Full,2017,Hawthorn Leadership School for Girls,Saint Louis,63113,Hawthorn Leadership School for Girls,MO
+01010845,Intro Full,2017,Saint Mary's School,Raleigh,27603,Saint Mary's School,NC
+380957000302,Intro Full,2017,Hillsboro High School,HILLSBORO,58045,Hillsboro 9,ND
+341134002194,AP CSP,2017,East Side High School,NEWARK,07105,Newark Public Schools,NJ
+340008300573,Intro Both,2017,Union   County TEAMS Charter School,Plainfield,07060,Plainfield,NJ
+360414000177,Intro Full,2017,Beacon High School,BEACON,12508,Beacon City School District,NY
+360008506388,AP CSP,2017,Bronx River High School,Bronx,10461,Bronx,NY
+360008605670,AP,2017,Eagle Academy For Young Men,BRONX,10457,New York City Public Schools,NY
+360008605693,AP CSP,2017,Morris Academy For Collaborative Studies,BRONX,10456,New York City Public Schools,NY
+360011901913,Intro Full,2017,Automotive High School,BROOKLYN,11222,New York City Public Schools,NY
+360009406122,AP CSP,2017,Brooklyn Academy of Global Finance,Brooklyn,11221,NYC DOE 16,NY
+360011905699,Intro Both,2017,Brooklyn Preparatory High School,BROOKLYN,11211,New York City Public Schools,NY
+360015203107,AP CSP,2017,Brooklyn Studio Secondary School,BROOKLYN,11214,New York City Public Schools,NY
+360012006031,Intro Full,2017,Cypress Hills Collegiate Preparatory School,BROOKLYN,11208,New York City Public Schools,NY
+360015101947,Intro Full,2017,Franklin D Roosevelt High School,BROOKLYN,11204,New York City Public Schools,NY
+360109306429,Intro Full,2017,"Math, Science and Engineering Academy Charter High School",Brooklyn,11221,NYC,NY
+360009500882,AP CSP,2017,Medgar Evers College Preperatory School,BROOKLYN,11225,New York City Public Schools,NY
+360012005931,AP CSP,2017,Multicultural High School,BROOKLYN,11208,New York City Public Schools,NY
+360012005931,Intro Full,2017,Multicultural High School,BROOKLYN,11208,New York City Public Schools,NY
+360009505709,AP CSP,2017,School For Human Rights (The),BROOKLYN,11203,New York City Public Schools,NY
+360009505709,Intro Full,2017,School For Human Rights (The),BROOKLYN,11203,New York City Public Schools,NY
+360011906033,AP CSP,2017,TYWLS of Brooklyn,Brooklyn,11206,NYC DOE District 14,NY
+360011906033,Intro Full,2017,TYWLS of Brooklyn,Brooklyn,11206,NYC DOE District 14,NY
+360109406404,Intro Full,2017,Unity Preparatory Charter School of Brooklyn,Brooklyn,11212,NYC Community School District 13,NY
+360011905704,Intro Full,2017,Williamsburg Preparatory School,BROOKLYN,11211,New York City Public Schools,NY
+360009806084,AP CSP,2017,Pan American International High School,ELMHURST,11373,New York City Public Schools,NY
+360012205879,AP CSP,2017,East-West School Of International Studies,FLUSHING,11355,New York City Public Schools,NY
+360010202887,AP CSP,2017,William Cullen Bryant High School,LONG ISLAND CITY,11103,New York City Public Schools,NY
+360104306268,Intro Full,2017,Broome Street Academy Charter High School,New York,10013,Charter,NY
+360007804458,AP CSP,2017,Fiorello H. LaGuardia High School of Music & Art and Performing Arts,NEW YORK,10023,New York City Public Schools,NY
+360007804458,Intro Full,2017,Fiorello H. LaGuardia High School of Music & Art and Performing Arts,NEW YORK,10023,New York City Public Schools,NY
+360008100701,AP,2017,Frederick Douglass Academy,NEW YORK,10039,New York City Public Schools,NY
+360008301265,AP,2017,Gregorio Luperon High School for Science and Mathematics,NEW YORK,10032,New York City Public Schools,NY
+360008301265,AP CSP,2017,Gregorio Luperon High School for Science and Mathematics,NEW YORK,10032,New York City Public Schools,NY
+360008301265,Intro Full,2017,Gregorio Luperon High School for Science and Mathematics,NEW YORK,10032,New York City Public Schools,NY
+360007700116,Intro Full,2017,High School For Environmental Studies,NEW YORK,10019,New York City Public Schools,NY
+360007702914,AP CSP,2017,Humanities Preparatory Academy,NEW YORK,10011,New York City Public Schools,NY
+360007902919,Intro Full,2017,The Young Women’s Leadership School of East Harlem,NEW YORK,10029,New York City Public Schools,NY
+360102406241,Intro Full,2017,Inwood Academy for Leadership,New York City,10034,NYCDOE D6,NY
+360009902030,AP CSP,2017,Martin Van Buren High School,QUEENS VILLAGE,11427,New York City Public Schools,NY
+362928003944,AP CSP,2017,Uniondale High School,UNIONDALE,11553,Uniondale Union Free School District,NY
+390437805946,Other,2017,Campus International High School,Cleveland,44114,Cleveland Metropolitan School District,OH
+390437805829,AP CSP,2017,JFK E3agle Academy,Cleveland,44128,Cleveland Metro School District,OH
+390437805829,Other,2017,JFK E3agle Academy,Cleveland,44128,Cleveland Metro School District,OH
+390437805561,AP,2017,John Hay School Of Science & Medicine,CLEVELAND,44106,Cleveland Metropolitan School District,OH
+390437805873,AP CSP,2017,Lincoln-West School of Global Studies,Cleveland,44109,Cleveland Metropolitan School District,OH
+390437805840,AP CSP,2017,PACT at JFK High School,Cleveland,44128,Cleveland Metro Schools,OH
+390437805840,Other,2017,PACT at JFK High School,Cleveland,44128,Cleveland Metro Schools,OH
+390437805831,AP CSP,2017,The Cleveland High School for Digital Arts,Cleveland,44114,Cleveland Metropolitan School District,OH
+390445301439,AP CSP,2017,North Ridgeville High School,NORTH RIDGEVILLE,44039,North Ridgeville City,OH
+390445401443,Other,2017,North Royalton High School,NORTH ROYALTON,44133,North Royalton City,OH
+410123001263,Intro Full,2017,Amity High School,AMITY,97101,Amity School District 4J,OR
+01931855,AP,2017,Trinity Lutheran High School,Bend,97701,Bend-LaPine School District,OR
+411004000968,Post AP,2017,Madison High School,PORTLAND,97220,Portland Public Schools,OR
+411110000163,Intro Both,2017,Seaside High School,SEASIDE,97138,Seaside School District 10,OR
+421896005083,AP CSP,2017,Peters Township High School,MCMURRAY,15317,Peters Township School District,PA
+421917000409,AP,2017,Pittsburgh Allderdice High School,PITTSBURGH,15217,Pittsburgh School District,PA
+421917000409,AP CSP,2017,Pittsburgh Allderdice High School,PITTSBURGH,15217,Pittsburgh School District,PA
+421917006915,AP,2017,Pittsburgh Brashear High School,PITTSBURGH,15216,Pittsburgh School District,PA
+421917006915,AP CSP,2017,Pittsburgh Brashear High School,PITTSBURGH,15216,Pittsburgh School District,PA
+421917007014,AP CSP,2017,Pittsburgh Capa 6-12,PITTSBURGH,15222,Pittsburgh School District,PA
+421917000412,AP CSP,2017,Pittsburgh Carrick High School,PITTSBURGH,15210,Pittsburgh School District,PA
+421917007345,Intro Full,2017,Pittsburgh Milliones 6-12,PITTSBURGH,15219,Pittsburgh School District,PA
+421917000416,Intro Full,2017,Pittsburgh Perry High School,PITTSBURGH,15214,Pittsburgh School District,PA
+421917006989,AP,2017,Pittsburgh Science and Technology Academy,Pittsburgh,15213,Pittsburgh Public Schools,PA
+421917006989,Other,2017,Pittsburgh Science and Technology Academy,Pittsburgh,15213,Pittsburgh Public Schools,PA
+421917007412,Intro Full,2017,Pittsburgh Westinghouse High School,PITTSBURGH,15208,Pittsburgh School District,PA
+422376006012,AP CSP,2017,Trinity Senior High School,WASHINGTON,15301,Trinity Area School District,PA
+440012000026,Intro S1,2017,Central Falls Senior High School,CENTRAL FALLS,02863,Central Falls,RI
+440012000026,Python S2,2017,Central Falls Senior High School,CENTRAL FALLS,02863,Central Falls,RI
+440021000032,Intro Full,2017,Coventry High School,COVENTRY,02816,Coventry,RI
+440021000032,AP,2017,Coventry High School,COVENTRY,02816,Coventry,RI
+440000400379,Intro Full,2017,Davies Career-Tech High School,LINCOLN,02865,Davies Career And Tech,RI
+440078000180,Intro Both,2017,North Providence High School,NORTH PROVIDENCE,02904,North Providence,RI
+440003200220,Intro Both,2017,Paul Cuffee Charter Upper School,Providence,02907,Paul Cuffee Charter School District,RI
+440002500487,Intro S1,2017,Village Green Virtual,Providence,02903,Village Green Virtual,RI
+440090000209,Intro Both,2017,William B. Cooley Senior Health and Science Technology High School,PROVIDENCE,02905,Providence Public School District,RI
+440099000259,AP,2017,Smithfield Senior High School,SMITHFIELD,02917,Smithfield,RI
+440111000301,Intro S2,2017,Pilgrim High School,WARWICK,02888,Warwick,RI
+440111000307,AP CSP,2017,Toll Gate High School,WARWICK,02886,Warwick,RI
+440111000307,Intro Full,2017,Toll Gate High School,WARWICK,02886,Warwick,RI
+450144000548,AP CSP,2017,West Ashley High,CHARLESTON,29414,Charleston County School District,SC
+450144000548,AP,2017,West Ashley High,CHARLESTON,29414,Charleston County School District,SC
+450117000178,Intro S1,2017,Hanahan High,HANAHAN,29406,Berkeley 01,SC
+450117000178,Intro S2,2017,Hanahan High,HANAHAN,29406,Berkeley 01,SC
+A0503243,AP CSP,2017,Oakbrook Preparatory School,SPARTANBURG,29301,Independent,SC
+480894008937,Other,2017,Akins High School,AUSTIN,78748,Austin Independent School District,TX
+480143112775,Intro Full,2017,Austin Achieve Public Schools,Austin,78723,Austin Achieve Public Schools,TX
+480894000294,AP,2017,Austin High School,AUSTIN,78703,Austin Independent School District,TX
+480024112787,Intro Full,2017,Harmony School of Political Science and Communication,Austin,78717,Harmony Science Academy (Austin),TX
+483483007467,Post AP,2017,John B Connally,AUSTIN,78753,Pflugerville Independent School District,TX
+480894011930,Intro Full,2017,Liberal Arts & Science Academy (LASA),AUSTIN,78724,Austin Independent School District,TX
+480894011930,AP,2017,Liberal Arts & Science Academy (LASA),AUSTIN,78724,Austin Independent School District,TX
+480005808056,Intro Full,2017,NYOS Charter School,AUSTIN,78753,NYOS Charter School District,TX
+480005808056,AP,2017,NYOS Charter School,AUSTIN,78753,NYOS Charter School District,TX
+481623001229,AP CSP,2017,David W Carter,DALLAS,75232,Dallas Independent School District,TX
+481623001358,AP CSP,2017,South Oak Cliff,DALLAS,75216,Dallas Independent School District,TX
+481623001367,AP,2017,Sunset High Sch,DALLAS,75208,Dallas Independent School District,TX
+481836001728,AP,2017,Elgin High School,ELGIN,78621,Elgin Independent School District,TX
+01325323,Intro S2,2017,Incarnate Word Academy,Houston,77002,Archdiocese of Galveston-Houston,TX
+482574005522,Intro Full,2017,Klein Forest H,HOUSTON,77066,Klein Independent School District,TX
+482364012618,AP,2017,Mickey Leland College Preparatory Academy,Houston,77020,Houston ISD,TX
+482364002536,Intro Both,2017,Milby High School,HOUSTON,77012,Houston Independent School District,TX
+482364002434,Intro Full,2017,Northside High School,Houston,77009,Houston ISD,TX
+482364012211,AP,2017,"Sam Houston Math, Science and Technology Center",HOUSTON,77076,Houston Independent School District,TX
+482364013032,Intro Full,2017,South Early College High School,Houston,77051,Houston,TX
+482364013032,AP CSP,2017,South Early College High School,Houston,77051,Houston,TX
+482364002592,AP,2017,Sterling High School,HOUSTON,77048,Houston Independent School District,TX
+482364002605,Other,2017,Washington B T,HOUSTON,77018,Houston Independent School District,TX
+482364002518,AP,2017,Wisdom High School,HOUSTON,77057,Houston Independent School District,TX
+482364012621,AP,2017,Young Women's College Preparatory Academy,Houston,77004,Houston ISD,TX
+482574002903,Other,2017,Klein High School,KLEIN,77379,Klein Independent School District,TX
+482904003277,Intro Full,2017,Marfa Junior/Se,MARFA,79843,Marfa Independent School District,TX
+483444011446,AP CSP,2017,Glenda Dawson High School,PEARLAND,77581,Pearland Independent School District,TX
+483444003863,AP CSP,2017,Pearland High School,PEARLAND,77581,Pearland Independent School District,TX
+483444012910,AP CSP,2017,Robert Turner College & Career High School,Pearland,77584,Pearland ISD,TX
+480024112260,AP,2017,Harmony Science Academy Pflugerville,Pflugerville,78660,Harmony Science Academy Austin,TX
+48348300953,AP CSP,2017,Hendrickson High School,PFLUGERVILLE,78660,Pflugerville Independent School District,TX
+483483003905,AP CSP,2017,Pflugerville High,PFLUGERVILLE,78660,Pflugerville Independent School District,TX
+483483013491,AP CSP,2017,Weiss High School,Pflugerville,78660,Pflugerville ISD,TX
+483294003659,Intro Full,2017,Design and Technology Academy @ Ed White,San Antonio,78218,North East ISD,TX
+483294003655,Intro Full,2017,Roosevelt High School,SAN ANTONIO,78218,North East Independent School District,TX
+482574008631,Other,2017,Klein Collins H,SPRING,77388,Klein Independent School District,TX
+482574005759,Other,2017,Klein Oak High School,SPRING,77389,Klein Independent School District,TX
+490042000346,Intro Full,2017,Copper Hills High,WEST JORDAN,84081,Jordan District,UT
+510225002865,Other,2017,John Champe High School,Aldie,20105,Loudoun County,VA
+510060000220,Intro Full,2017,Altavista High,ALTAVISTA,24517,Campbell County Public Schools,VA
+510225002451,Other,2017,Briar Woods High,ASHBURN,20148,Loudoun County Public Schools,VA
+510225000913,Other,2017,Broad Run High,ASHBURN,20147,Loudoun County Public Schools,VA
+510225003001,Other,2017,"Riverside High School, Leesburg, VA",Ashburn,20147,Loudoun County Public School,VA
+510225002969,Other,2017,Rock Ridge High School,Ashburn,20148,Loudoun,VA
+510225002538,Other,2017,Stone Bridge High,ASHBURN,20147,Loudoun County Public Schools,VA
+510225003027,Other,2017,Academy of Engineering and Technology,Leesburg,20176,Loudoun County Public Schools,VA
+510225002285,Other,2017,Heritage High,LEESBURG,20175,Loudoun County Public Schools,VA
+510225000923,Other,2017,Loudoun County High,LEESBURG,20175,Loudoun County Public Schools,VA
+510225002817,Other,2017,Tuscarora High,LEESBURG,20176,Loudoun County Public Schools,VA
+510084002006,AP CSP,2017,Midlothian High School,MIDLOTHIAN,23114,Chesterfield County Public Schools,VA
+510225001627,Other,2017,Potomac Falls High,POTOMAC FALLS,20165,Loudoun County Public Schools,VA
+510225000924,Other,2017,Loudoun Valley High,PURCELLVILLE,20132,Loudoun County Public Schools,VA
+510225002812,Other,2017,Woodgrove High,PURCELLVILLE,20132,Loudoun County Public Schools,VA
+510246000996,Intro Full,2017,Bluestone High,SKIPWITH,23968,Mecklenburg County Public Schools,VA
+510225002447,Other,2017,Freedom High,SOUTH RIDING,20152,Loudoun County Public Schools,VA
+510225002411,Other,2017,Dominion High,STERLING,20164,Loudoun County Public Schools,VA
+510225000928,Other,2017,Park View High,STERLING,20164,Loudoun County Public Schools,VA
+530015000016,AP,2017,Anacortes High School,ANACORTES,98221,Anacortes School District,WA
+530030002978,Post AP,2017,Auburn Mountainview High School,AUBURN,98092,Auburn School District,WA
+530030002445,AP,2017,Auburn Riverside High School,AUBURN,98092,Auburn School District,WA
+530030000032,AP,2017,Auburn Senior High School,AUBURN,98002,Auburn School District,WA
+530033000043,AP,2017,Bainbridge High School,BAINBRIDGE ISLAND,98110,Bainbridge Island School District,WA
+530039000060,Post AP,2017,Bellevue High School,BELLEVUE,98004,Bellevue School District,WA
+530039000060,AP,2017,Bellevue High School,BELLEVUE,98004,Bellevue School District,WA
+01461005,Intro Full,2017,Forest Ridge School of the Sacred Heart,Bellevue,98006,Independent,WA
+01461005,AP,2017,Forest Ridge School of the Sacred Heart,Bellevue,98006,Independent,WA
+530039000072,AP,2017,Interlake High School,BELLEVUE,98008,Bellevue School District,WA
+530039003149,AP,2017,International School,BELLEVUE,98005,Bellevue School District,WA
+530039000078,AP,2017,Newport High School,BELLEVUE,98006,Bellevue School District,WA
+530039000085,AP,2017,Sammamish Senior High,BELLEVUE,98005,Bellevue School District,WA
+530042000113,Intro Full,2017,Sehome High School,BELLINGHAM,98225,Bellingham School District,WA
+530591000876,Intro Both,2017,Bothell High School,BOTHELL,98011,Northshore School District,WA
+530591000876,Post AP,2017,Bothell High School,BOTHELL,98011,Northshore School District,WA
+530591003617,Intro Both,2017,North Creek High School,Bothell,98012,Northshore,WA
+530591003617,AP,2017,North Creek High School,Bothell,98012,Northshore,WA
+530066000139,AP CSP,2017,Bremerton High School,BREMERTON,98337,Bremerton School District,WA
+530120002058,Intro Both,2017,Chelan High School,CHELAN,98816,Lake Chelan School District,WA
+530129000233,Intro Both,2017,Chimacum High School,CHIMACUM,98325,Chimacum School District,WA
+01461978,Intro Both,2017,Bellevue Christian School,Clyde Hill,98004,Private,WA
+530198000301,Intro S1,2017,Darrington Sr High School,DARRINGTON,98241,Darrington School District,WA
+530456000716,Intro Full,2017,Cedarcrest High School,DUVALL,98019,Riverview School District,WA
+530456000716,AP,2017,Cedarcrest High School,DUVALL,98019,Riverview School District,WA
+530255000374,Intro Full,2017,Entiat Junior Senior High,ENTIAT,98822,Entiat School District,WA
+530267000391,AP,2017,Cascade High School (Everett),EVERETT,98203,Everett School District,WA
+530267000391,AP CSP,2017,Cascade High School (Everett),EVERETT,98203,Everett School District,WA
+530267000395,AP,2017,Everett High School,EVERETT,98201,Everett School District,WA
+530267000395,AP CSP,2017,Everett High School,EVERETT,98201,Everett School District,WA
+530669001793,Intro Both,2017,Gig Harbor High,GIG HARBOR,98335,Peninsula School District,WA
+530669001793,AP,2017,Gig Harbor High,GIG HARBOR,98335,Peninsula School District,WA
+530669000985,Intro Both,2017,Peninsula High School,GIG HARBOR,98332,Peninsula School District,WA
+530669000985,AP CSP,2017,Peninsula High School,GIG HARBOR,98332,Peninsula School District,WA
+530375003588,Intro Both,2017,Gibson Ek High School,ISSAQUAH,98027,Issaquah,WA
+530375003588,Post AP,2017,Gibson Ek High School,ISSAQUAH,98027,Issaquah,WA
+530375000574,AP,2017,Issaquah High School,ISSAQUAH,98027,Issaquah School District,WA
+530381000585,Intro Full,2017,Kalama Jr Sr High,KALAMA,98625,Kalama School District,WA
+530000300593,AP,2017,Kelso High School,KELSO,98626,Kelso School District,WA
+530423000670,Intro S1,2017,Juanita High School,KIRKLAND,98034,Lake Washington School District,WA
+530423000670,AP,2017,Juanita High School,KIRKLAND,98034,Lake Washington School District,WA
+530423000674,AP,2017,Lake Washington High,KIRKLAND,98033,Lake Washington School District,WA
+530423000674,Intro Both,2017,Lake Washington High,KIRKLAND,98033,Lake Washington School District,WA
+530095001935,Intro Full,2017,Cascade High School (Leavenworth),LEAVENWORTH,98826,Cascade School District,WA
+530240000352,AP,2017,Meadowdale High School,LYNNWOOD,98037,Edmonds School District,WA
+530471000726,Intro S1,2017,Mansfield Elem And High School,MANSFIELD,98830,Mansfield School District,WA
+530474000728,Intro Full,2017,Manson Junior Senior High School,MANSON,98831,Manson School District,WA
+530474000728,AP,2017,Manson Junior Senior High School,MANSON,98831,Manson School District,WA
+530876001519,AP,2017,Tahoma Senior High School,Maple Valley,98038,Tahoma School District,WA
+530498000761,AP,2017,Mercer Island High School,MERCER ISLAND,98040,Mercer Island School District,WA
+530267001726,AP,2017,Henry M. Jackson High School,MILL CREEK,98012,Everett School District,WA
+530267001726,Post AP,2017,Henry M. Jackson High School,MILL CREEK,98012,Everett School District,WA
+530513002760,AP,2017,Monroe High School,MONROE,98272,Monroe School District,WA
+530513002675,Intro Full,2017,Sky Valley Education Center,MONROE,98272,Monroe School District,WA
+530513002675,AP,2017,Sky Valley Education Center,MONROE,98272,Monroe School District,WA
+530543001188,AP,2017,Kamiak High School,MUKILTEO,98275,Mukilteo School District,WA
+530660000975,Intro Both,2017,Pateros High School,PATEROS,98846,Pateros School District,WA
+530816001357,AP,2017,South Kitsap High School,PORT ORCHARD,98366,South Kitsap School District,WA
+530708001055,Intro Full,2017,Quincy High School,QUINCY,98848,Quincy School District,WA
+530708001055,AP,2017,Quincy High School,QUINCY,98848,Quincy School District,WA
+530423003432,Post AP,2017,Nikola TESLA STEM High School,redmond,98053,Lake Washington School District,WA
+530423003432,AP CSP,2017,Nikola TESLA STEM High School,redmond,98053,Lake Washington School District,WA
+530423003432,Other,2017,Nikola TESLA STEM High School,redmond,98053,Lake Washington School District,WA
+01462326,Other,2017,The Overlake School,Redmond,98053,NWAIS,WA
+530375000576,AP,2017,Liberty Sr High School,RENTON,98059,Issaquah School District,WA
+530723001077,AP,2017,Lindbergh Senior High School,RENTON,98058,Renton School District,WA
+530723001082,Intro Full,2017,Renton Senior High School,RENTON,98055,Renton School District,WA
+530423001141,AP,2017,Eastlake High School,SAMMAMISH,98074,Lake Washington School District,WA
+530423001141,AP CSP,2017,Eastlake High School,SAMMAMISH,98074,Lake Washington School District,WA
+01603846,AP,2017,Eastside Catholic High School,Sammamish,98074,Independent,WA
+01603846,AP CSP,2017,Eastside Catholic High School,Sammamish,98074,Independent,WA
+530375002567,Other,2017,Skyline High School,SAMMAMISH,98075,Issaquah School District,WA
+530771001138,Post AP,2017,Ballard High School,SEATTLE,98117,Seattle Public Schools,WA
+01460737,Intro Both,2017,Bishop Blanchet High School,Seattle,98103,Seattle Archdiocese,WA
+01460737,AP,2017,Bishop Blanchet High School,Seattle,98103,Seattle Archdiocese,WA
+530771001150,AP,2017,Cleveland High School,SEATTLE,98108,Seattle Public Schools,WA
+530771001168,AP,2017,Franklin High School,SEATTLE,98144,Seattle Public Schools,WA
+530771001168,Intro Full,2017,Franklin High School,SEATTLE,98144,Seattle Public Schools,WA
+530771001171,Post AP,2017,Garfield High School,SEATTLE,98122,Seattle Public Schools,WA
+530771001187,AP,2017,Ingraham High School,SEATTLE,98133,Seattle Public Schools,WA
+530771001222,AP,2017,Nathan Hale High School,SEATTLE,98125,Seattle Public Schools,WA
+530771001236,Intro Full,2017,Rainier Beach High School,SEATTLE,98118,Seattle Public Schools,WA
+530771001239,Post AP,2017,Roosevelt High School,SEATTLE,98115,Seattle Public Schools,WA
+530771001262,AP,2017,West Seattle High School,SEATTLE,98116,Seattle Public Schools,WA
+530774001279,AP,2017,Sedro Woolley Senior High School,SEDRO-WOOLLEY,98284,Sedro-Woolley School District,WA
+530792001315,AP,2017,Shorecrest High School,SHORELINE,98155,Shoreline School District,WA
+530792001317,AP,2017,Shorewood High School,SHORELINE,98133,Shoreline School District,WA
+530802003217,AP,2017,Glacier Peak High School,SNOHOMISH,98296,Snohomish School District,WA
+530802001328,AP,2017,Snohomish High School,SNOHOMISH,98290,Snohomish School District,WA
+530804001330,AP,2017,Mount Si High School,SNOQUALMIE,98065,Snoqualmie Valley School District,WA
+530807001335,Intro Full,2017,Soap Lake Middle & High School,SOAP LAKE,98851,Soap Lake School District,WA
+530048000119,AP CSP,2017,Bethel High School,SPANAWAY,98387,Bethel School District,WA
+01460395,Intro S2,2017,Bellarmine Preparatory School,tacoma,98405,Private,WA
+01460395,AP,2017,Bellarmine Preparatory School,tacoma,98405,Private,WA
+530813001341,AP CSP,2017,Foster Senior High School,TUKWILA,98168,Tukwila School District,WA
+530927003415,AP,2017,iTech Preparatory School,Vancouver,98668,Vancouver School District #37,WA
+530927002555,AP,2017,Skyview High School,VANCOUVER,98685,Vancouver School District,WA
+530930001591,AP,2017,Vashon Island High School,VASHON,98070,Vashon Island School District,WA
+530945001609,AP,2017,Walla Walla High School,WALLA WALLA,99362,Walla Walla Public Schools,WA
+530960001628,Intro Full,2017,Waterville High School,Waterville,98858,Waterville,WA
+A0110177,Intro Both,2017,The River Academy,Wenatchee,98801,Wenatchee,WA
+530502000770,Intro Full,2017,Liberty Bell Jr Sr High,WINTHROP,98862,Methow Valley School District,WA
+530591001994,Intro Both,2017,Woodinville High School,WOODINVILLE,98072,Northshore School District,WA
+530591001994,AP,2017,Woodinville High School,WOODINVILLE,98072,Northshore School District,WA
+531005001682,Intro Both,2017,Woodland High School,WOODLAND,98674,Woodland School District,WA
+550039000047,Intro S1,2017,East High,APPLETON,54915,Appleton Area School District,WI
+550039000047,Intro S2,2017,East High,APPLETON,54915,Appleton Area School District,WI
+550039000047,AP CSP,2017,East High,APPLETON,54915,Appleton Area School District,WI
+550039000597,AP CSP,2017,North High,APPLETON,54913,Appleton Area School District,WI
+550039000597,Intro S1,2017,North High,APPLETON,54913,Appleton Area School District,WI
+550039000048,Intro S2,2017,West High School,APPLETON,54914,Appleton Area School District,WI
+550039000048,AP CSP,2017,West High School,APPLETON,54914,Appleton Area School District,WI
+550366000388,Intro Full,2017,Denmark High,DENMARK,54208,Denmark School District,WI
+550582000636,AP CSP,2017,Preble High,GREEN BAY,54302,Green Bay Area Public School District,WI
+550660000715,AP,2017,Hortonville High,HORTONVILLE,54944,Hortonville Area School District,WI
+550660000715,Intro S2,2017,Hortonville High,HORTONVILLE,54944,Hortonville Area School District,WI
+550747000850,Intro S2,2017,Kimberly High,KIMBERLY,54136,Kimberly Area School District,WI
+A9106937,Intro Full,2017,Messmer High School,Milwaukee,53206,Messmer Catholic Schools,WI
+550007402637,Intro Full,2017,Tenor High School,MILWAUKEE,53202,Tenor High School Agency,WI
+550007402496,Intro Full,2017,Veritas High School,Milwaukee,53215,Veritas High School,WI
+550007402496,Intro S1,2017,Veritas High School,Milwaukee,53215,Veritas High School,WI
+551059001384,Intro Full,2017,New London High,NEW LONDON,54961,New London School District,WI
+551086001415,Intro S1,2017,Oakfield Junior/Senior High,OAKFIELD,53065,Oakfield School District,WI
+551233001600,AP CSP,2017,Pulaski High,PULASKI,54162,Pulaski Community School District,WI

@@ -1,0 +1,11 @@
+{
+  "key": "group.bounceOff",
+  "name": "group.bounceOff",
+  "category": "Groups",
+  "palette_params": [
+    {
+      "name": "target"
+    }
+  ],
+  "syntax": "group.bounceOff(target)"
+}

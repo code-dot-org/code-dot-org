@@ -1,7 +1,6 @@
 {
-  "func": "looping",
+  "key": "looping",
+  "name": "looping",
   "category": "Animations",
-  "modeOptionName": "*.looping",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "looping"
 }

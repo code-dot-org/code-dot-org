@@ -1,9 +1,10 @@
 :ruby
   require 'cdo/language_dir'
 
-  script = local_assigns[:script] || Script.twenty_hour_script
+  script = local_assigns[:script] || Script.twenty_hour_unit
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
+  lesson = local_assigns[:lesson]
   full_width = local_assigns[:full_width]
 
   show_bug_links = script_level || (level && level.try(:is_project_level))
@@ -31,6 +32,7 @@
   hamburger_options = {}
   hamburger_options[:level] = level
   hamburger_options[:script_level] = script_level
+  hamburger_options[:lesson] = lesson
   hamburger_options[:user_type] = user_type
   hamburger_options[:language] = request.language
   hamburger_options[:show_gallery] = true
@@ -47,7 +49,7 @@
 
   sign_in_user = current_user || user_type && OpenStruct.new(
     id: nil,
-    short_name: I18n.t("nav.user.#{user_type}"),
+    short_name: I18n.t("nav.user.loading"),
     can_pair?: false
   )
   show_pairing_dialog = !!session.delete(:show_pairing_dialog)
@@ -116,7 +118,7 @@
       text = @lesson.localized_title
     else
       lesson = @lesson || @script_level.lesson
-      text = @script.professional_learning_course? ? lesson.localized_name : lesson.localized_title
+      text = @script.old_professional_learning_course? ? lesson.localized_name : lesson.localized_title
     end
 
     # Pass along section_id param so that when teacher moves between lesson
@@ -154,3 +156,9 @@
 - elsif level
   :javascript
     dashboard.header.buildProjectInfoOnly()
+
+-# If the page is cached, the sign-in button / user menu must be loaded separately
+-# by the client.
+- if @public_caching
+  :javascript
+    dashboard.header.buildUserMenu()

@@ -2,14 +2,18 @@
   "script": {
     "name": "csp6-support",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true,
       "professional_learning_course": "CSP Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:57 UTC",
+    "serialized_at": "2021-11-22 19:56:41 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp6-support"
     }

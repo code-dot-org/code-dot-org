@@ -1,0 +1,6 @@
+{
+  "key": "lightSensor.value",
+  "name": "lightSensor.value",
+  "category": "Circuit",
+  "syntax": "lightSensor.value"
+}

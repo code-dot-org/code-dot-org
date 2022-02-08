@@ -33,7 +33,12 @@ gl-ES:
   twentyhours_text: Remataches a túa primeira Hora do Código? Coñece máis sobre a
     informática e os conceptos de programación neste curso de seguimento.
   og_title: Todos os rapaces merecen unha oportunidade
+  og_title_soon: Semana da Educación en Informática
+  og_description: Todos os rapaces de todas as escolas merecen a oportunidade de estudar
+    informática e programación.
   csedweek_og_title: Semana da Educación en Informática
+  csedweek_og_description: Todos os rapaces de todas as escolas merecen a oportunidade
+    de estudar informática e programación.
   hoc2014_heading: Únete a <a href="http://hourofcode.com">Hora do Código</a><br/>Decembro
     8 - 14, 2014<br/>
   hoc2014_students: Alumnas/os
@@ -82,10 +87,15 @@ gl-ES:
   congratulations_volunteer: 'Noraboa: agora que xa probaches a Hora do Código, <a
     href="https://code.org/volunteer"> anótate como voluntario nunha clase</a> e axuda
     aos estudantes a aprender unha Hora do Código!'
+  congratulations_on_completing_course: Noraboa por completar %{course}
   congrats_next_tutorials_title: Proba agora estes titoriais
   congrats_next_tutorials_desc: Proba estes titoriais, máis curtos dunha hora, ou
     proba un <a href="%{current_path}/next">titorial para colaboradores</a>.
   get_a_certificate_of_achievement: Recibe un certificado do teu logro
+  third_party_gradelevel_2to8: Niveis 2-8
+  third_party_gradelevel_4to12: Niveis 4-12
+  third_party_gradelevel_5to12: Niveis 5-12
+  third_party_gradelevel_6plus: Niveis 6+
   third_party_curriculum: Currículo
   enter_valid_age: Por favor, selecciona unha idade válida
   enter_valid_email: Por favor introduce un correo electrónico válido
@@ -142,6 +152,7 @@ gl-ES:
   learn_next_level: Probar outro curso do Code Studio
   learn_online: Proba outros cursos online
   learn_classes: Atopa clases preto de ti
+  hoc_is_here: 'A #HourOfCode é aquí - Revisa! @codeorg'
   just_did_hoc: 'Eu xa rematei unha #HourofCode - Dalle un vistazo! @codeorg'
   learn_hoc: Aprende programación coa Hora do Código
   beyond_hoc: Mais aló dunha Hora
@@ -234,6 +245,8 @@ gl-ES:
     no Code Studio
   homepage_hero_text_stat_students: "#student_count contas de alumno no Code Studio"
   homepage_hero_text_stat_served: 'A hora do código: #served xa probaron'
+  homepage_hero_hoc_is_coming: Semana da Educación en Informática
+  homepage_hero_hoc_is_here: Semana da Educación en Informática
   homepage_slot_text_hoc: A Hora do Código
   homepage_slot_text_frozen: Frozen con Anna e Elsa
   homepage_slot_text_studio: Todos os nosos titoriais
@@ -289,6 +302,9 @@ gl-ES:
   homepage_header_donors: A Code.org agradece aos seus colaboradores
   homepage_donors_seall: Ver todos
   homepage_donors_donate: Fai unha doazón
+  homepage_below_hero_announcement_text: Impórtanos a tua privacidade así que estamos
+    facendo algunhas actualizacións na nosa Política de privacidade, que serán efectivos
+    a partir do 25 de Maio.
   homepage_below_hero_announcement_link_text: Aprender máis
   contact_form_topic_student: Son un estudante
   contact_form_topic_parent: Son un pai
@@ -358,7 +374,10 @@ gl-ES:
   minecraft_adventurer_button: Comezar
   minecraft_subtitle: Hora do Código Minecraft
   sports_watch_video: Mira o vídeo
+  watch_inspirational_videos: Antes de comezar, asiste a un destes vídeos inspiradores
   video_title_inspire_girl: Anima a unha nena
+  speak_another_language: Falas outra lingua?
+  help_translate: Axúdanos a traducir.
   are_you_teacher: É un profesor?
   volunteer_engineer_submission_title: Anima a alumnos e voluntarios para participar
     na Hora de Código
@@ -532,6 +551,7 @@ gl-ES:
     ofreceren clases de informática durante todo o ano, preparando o corpo docente
     para ofrecer esta nova disciplina. Para se rexistrar en obradoiros de desenvolvemento
     profesional, solicita unha <a href="/educate/districts">parcería</a> coa Code.org.
+  dashboard_course_csina: Informática na álxebra
   dashboard_course_csina_desc: A Code.org fixo unha parcería coa Bootstrap para desenvolver
     un currículo que ensina conceptos alxebraicos e xeométricos por medio da programación.
   dashboard_course_csins: informática en ciencias
@@ -564,6 +584,7 @@ gl-ES:
   dashboard_navigation_add_students: Engadir alumnas/os
   dashboard_navigation_manage_students: Administrar as alumnas/os
   dashboard_navigation_lesson_plans_resources: Plans e recursos da clase
+  dashboard_navigation_view_stats: Ver estatísticas
   dashboard_navigation_section: 'Clase: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
   dashboard_progress_not_started: non iniciado
@@ -572,6 +593,7 @@ gl-ES:
   dashboard_progress_completed_too_many_blocks: concluído, moitos bloques
   dashboard_progress_completed_perfect: concluído, perfecto
   dashboard_progress_furthest_level_attempted: tentativa para o nivel máis avanzado
+  dashboard_progress_pair_programming: programación por parellas
   dashboard_sections_new_section: Nova sección
   dashboard_sections_jumbotron_instruction: Crea novas seccións e agrega alumnos.
     As seccións axudan na organización dos alumnos en grupos menores para que poidas
@@ -811,6 +833,7 @@ gl-ES:
   course4_name: Curso 4
   accelerated_name: Curso acelerado
   20-hour_name: Curso acelerado
+  gumball_name: Gumball
   classicmaze_name: Labirinto clásico
   iceage_name: Era do Xeo
   minecraft_name: Minecraft
@@ -868,11 +891,42 @@ gl-ES:
   course2_gradelevel: Idades de 6 a 18 anos
   course3_gradelevel: Idades de 8 a 18 anos
   course4_gradelevel: Idades de 10 a 18 anos
+  coursea_gradelevel: De 4 a 7 anos
+  courseb_gradelevel: De 5 a 8 anos
+  coursec_gradelevel: Idades de 6 a 10 anos
+  coursed_gradelevel: De 7 a 11 anos
   coursee_gradelevel: De 8 a 12 anos
+  coursef_gradelevel: De 9 a 13 anos
+  coursea-2017_gradelevel: De 4 a 7 anos
+  courseb-2017_gradelevel: De 5 a 8 anos
+  coursec-2017_gradelevel: Idades de 6 a 10 anos
+  coursed-2017_gradelevel: De 7 a 11 anos
   coursee-2017_gradelevel: De 8 a 12 anos
+  coursef-2017_gradelevel: De 9 a 13 anos
+  coursea-2018_gradelevel: De 4 a 7 anos
+  courseb-2018_gradelevel: De 5 a 8 anos
+  coursec-2018_gradelevel: Idades de 6 a 10 anos
+  coursed-2018_gradelevel: De 7 a 11 anos
   coursee-2018_gradelevel: De 8 a 12 anos
+  coursef-2018_gradelevel: De 9 a 13 anos
+  coursea-2019_gradelevel: De 4 a 7 anos
+  courseb-2019_gradelevel: De 5 a 8 anos
+  coursec-2019_gradelevel: Idades de 6 a 10 anos
+  coursed-2019_gradelevel: De 7 a 11 anos
   coursee-2019_gradelevel: De 8 a 12 anos
+  coursef-2019_gradelevel: De 9 a 13 anos
+  coursea-2020_gradelevel: De 4 a 7 anos
+  courseb-2020_gradelevel: De 5 a 8 anos
+  coursec-2020_gradelevel: Idades de 6 a 10 anos
+  coursed-2020_gradelevel: De 7 a 11 anos
   coursee-2020_gradelevel: De 8 a 12 anos
+  coursef-2020_gradelevel: De 9 a 13 anos
+  coursea-2021_gradelevel: De 4 a 7 anos
+  courseb-2021_gradelevel: De 5 a 8 anos
+  coursec-2021_gradelevel: Idades de 6 a 10 anos
+  coursed-2021_gradelevel: De 7 a 11 anos
+  coursee-2021_gradelevel: De 8 a 12 anos
+  coursef-2021_gradelevel: De 9 a 13 anos
   accelerated_gradelevel: Idades de 10 a 18 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
@@ -1495,6 +1549,7 @@ gl-ES:
   sphero_beyond_longdescription: Se ti es educador ou pai, as leccións do SPRK dan
     aos nenos un curso divertido sobre programación de robots, e, ao mesmo tempo,
     melloran habilidades de matemática e ciencias.
+  compatibility_hide_this_warning: Ocultar este aviso
   flappy_shortcode: bata ás
   header_home: Inicio
   header_my_dashboard: O meu panel de control
@@ -1525,6 +1580,7 @@ gl-ES:
   header_about_faqs: Preguntas frecuentes
   header_learn: Aprenda
   header_teach: Ensinar
+  header_stats: Ver estatísticas
   header_help_us: Axúdenos
   header_about: Sobre
   header_teacher_community: Comunidade de profesorado
@@ -1536,6 +1592,9 @@ gl-ES:
   user_header_settings: A miña conta
   user_header_logout: Pechar sesión
   user_header_signin: Iniciar Sesión
+  user_header_create: 'Crear '
+  user_header_applab: 'Laboratorio de aplicacións '
+  user_header_artist: 'Artista '
   user_header_playlab: Laboratorio de Xogos
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy bird
@@ -1550,6 +1609,7 @@ gl-ES:
   hoc_overview_start_tutorial: Comezar
   hoc2018_creativity_create: Crear
   hoc2018_mc_start: Comezar
+  hoc2018_mc_watch_videos: Antes de comezar, asiste a un destes vídeos inspiradores
   hoc2018_mc_video_title_inspire_girl: Anima a unha nena
   hoc2018_mc_homepage_join_us: Participa
   hoc2018_mc_homepage_try_it: Próbao
@@ -1557,6 +1617,7 @@ gl-ES:
   hoc2018_dance_teacher_resources_tile1_button: Planificación da lección
   hoc2018_dance_teacher_resources_tile2_button: Actividade off-line
   hoc2018_dance_amazon_about_future_engineer_button: Aprender máis
+  page_not_found_title: Páxina non atopada
   footer_powered_by_aws: Sostido por Amazon Web Services
   footer_privacy_policy: Política de Privacidade
   footer_about: Sobre
@@ -1564,5 +1625,6 @@ gl-ES:
   footer_donate: Fai unha doazón
   footer_support: Axuda e Comunidade
   footer_terms: Termos
+  ai_for_oceans_lesson_plan: plan de estudos
   ai_activity: Actividade
   ai_description: Rango

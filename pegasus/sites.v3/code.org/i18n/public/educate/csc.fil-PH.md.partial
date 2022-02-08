@@ -1,0 +1,56 @@
+---
+title: Mga koneksiyon sa CS
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Mga koneksiyon sa Computer Science
+
+Ginagawa ng pinakabagong kurikulum namin ang mga koneksiyon sa pagitan ng pag-aaral ng computer science at iba pang mga paksa tulad ng matematika, sining ng wika, agham, at pag-aaral sa lipunan. Sa pamamagitan ng Mga koneksiyon sa CS, tinutuklas ng mga K-12 ang kanilang karaniwang paksa sa kapana-panabik na mga bagong paraan!
+
+## Subukan ang Mga koneksiyon sa CS sa mga aktibidad na ito sa Hour of Code
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Sining ng Tula", left_description: "Ipahayag ang sarili! Gumamit ng code upang lumikha ng mga animated na tula.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Simulan", right_heading: "Hello World", right_description: "Pumili mula sa apat na nakakatuwang theme upang mag-code ng mga interactive na karakter sa mundong nilikha mo.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## Mga module
+
+Isang nakabalangkas na serye ng mga aralin ang mga module ng Mga koneksiyon sa CS na pinagsama ang pag-aaral ng computer science sa mga pangunahing asignatura tulad ng matematika, ELA, at agham. Nakahanay ang mga module na ito sa mga pamantayan sa mga paksa at nagtatapos sa isang cross-curricular na proyekto.
+
+Perpekto ang mga ito sa mga guro na gustong isama ang computer science sa kanilang mga lesson plan sa iba pang mga paksa, pati na rin ang mga CS educator na gustong pagtibayin ang natututuhan ng mga mag-aaral sa ibang mga paksa.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "puti", mga baitang: "3+", paksa: "ELA", duration: "5 oras", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Pag-coding gamit ang Tula", right_description: "Ikonekta ang computer science at tula sa silid-aralan mo sa seryeng ito ng mga aralin.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+
+## Mga bukas na proyekto
+
+Magpatuloy sa paggawa ng mga koneksyon sa pagitan ng computer science at tradisyonal na mga paksa sa mga cross-curricular na proyekto namin. Tumatagal lang ito ng 1-2 oras ng pagtuturo upang makumpleto at mainam sa sinumang guro na gustong bumuo ng mga proyektong tukoy sa paksa na kasya sa kasalukuyang kurikulum nila.
+
+<em>Tip: Nangangailangan ang mga proyektong ito ng ilang pag-unawa sa mga pangunahing kaalaman sa computer science, kaya inirerekomenda namin na kumpletuhin ang aming aktibidad sa Hello World Hour of Code bago magsimula!</em>
+
+{{ csc_module, title: "Ecosystems", image: "/images/csc/landing/project_ecosystems.png", mga baitang: "3+", paksa: "Siyensya", tagal: "1-2 oras", paglalarawan: "Gamit ang mga pangunahing kasanayan sa coding, lumikha ang mga mag-aaral ng interactive na modelo ng ecosystem na tumutuklas kung paano nakakaapekto ang iba't ibang hayop, halaman, at organismo sa isa't isa. Maaari ding iakma ang modelong ito sa mga pakikipag-ugnayan sa pagitan ng geosphere, biosphere, hydrosphere, at/o atmosphere.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Mga Siklo ng Buhay", mga baitang: "3+", image: "/images/csc/landing/project_cycles.png", paksa: "Siyensiya", tagal: "1-2 oras", paglalarawan: "Mula sa itlog sa tadpole hanggang palaka sa proyektong ito, kung saan gumagamit ang mga mag-aaral ng code upang lumikha ng isang modelo ng siyentipikong cycle - tulad ng ikot ng buhay ng isang palaka o ang paglipat ng enerhiya!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Pag-aaral ng Karakter", imahe: "/images/csc/landing/project_characterstudy.png", mga baitang: "3+", paksa: "ELA", tagal: "1-2 oras", paglalarawan: "May reaksyon ang bawat aksyon! Hindi, hindi ito physics - binibigyang-daan ng proyektong ito ang mga mag-aaral na gumamit ng code upang bumuo ng isang eksena sa isang kuwento na nagpapakita kung paano nakakaapekto ang mga aksyon ng isang karakter sa hanay ng mga kaganapan.", button_text: "Matuto pa", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Kwentong Moral", imahe: "/images/csc/landing/project_storymorals.jpg", mga baitang: "3+", paksa: "ELA", tagal: "1-2 oras", paglalarawan: "Ano ang pagitan ng \"Noong unang panahon\" at \"Wakas?\" Nag-code ang mga mag-aaral ng isang interactive na app na nagsasalaysay ng isang kuwento at ang mga moral nito. Maaaring gamitin ng mga mag-aaral ang kasanayang ito sa anumang kuwento, kuwentong-bayan, aklat, o pabula.", button_text: "Matuto pa", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Pag-uugnay ng Mga Leksiyon
+
+Nagbibigay ang aming mga koneksiyon sa leksiyon ng mabilis at kawili-wiling paraan upang makagawa ng koneksiyon sa pagitan ng computer science at iba pang mga paksa. Hindi nangangailangan ng anumang paunang kaalaman sa computer science ang mga araling ito, kaya perpekto ang mga ito sa sinumang guro na gustong isama ang mahahalagang 21st century learning sa tradisyunal na kurikulum o hikayatin ang mga mag-aaral sa mga bagong kapana-panabik na paraan upang matuto ng mga mas lumang paksa.
+
+
+{{ csc_module, title: "Pagbaybay kasama si Bee", imahe: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", mga baitang: "K+", paksa: "ELA", tagal: "1 oras", paglalarwan: "F-U-N! Sa araling ito, gumagamit ang mga mag-aaral ng mga pangunahing kasanayan sa pag-coding upang sabihin kay Bee kung saan mag-B-U-Z-Z upang mabaybay ang mga salita sa grid na puno ng titik.", button_text: "Matuto pa", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Nagbibilang kasama si Laurel", imahe: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", mga baitang: "K+", paksa: "Matematika", tagal: "1 oras", paglalarawan: "Isang itong treasure hunt! Magsasanay ang mga mag-aaral sa pagbilang at pagdaragdag kapag nag-code sila gamit ang mga loop upang matulungan si Laurel na mangolekta ng mga hiyas sa isang maze grid.", button_text: "Matuto pa", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Mga kodigo ng etika ng AI", imahe: "/images/fill-400x100/csc/landing/lesson_aiethics.png", mga baitang: "9+", paksa: "ELA o Humanities", tagal: "1 oras", paglalarawan: "Pagkatapos magsaliksik ng mga potensyal na etikal na silo ng artificial intelligence (AI), nagtutulungan ang mga mag-aaral sa pagbuo ng klase \"Mga kodigo ng etika ng AI\" mapagkukunan.", button_text: "Matuto pa", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Visualization ng Data", imahe: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", mga baitang: "6+", paksa: "Matematika", tagal: "1 oras", paglalarawan: "Ipinakikilala ng araling ito sa mga mag-aaral ang tool na Data Visualizer sa App Lab pati na rin ang dalawang mahalagang uri ng chart: isang bar chart at histogram. Sa kabuuan ng aralin, bubuo ang mga mag-aaral ng mga kasanayan sa paggamit ng tool na ito at sa pagbabasa ng data.", button_text: "Matuto pa", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Natapos ang isang aktibidad sa Koneksiyon sa CS at/o naghahanap ng higit pang mga opsyon sa silid-aralan mo? Mangyaring <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">ibahagi ang puna mo</a> at mga ideya sa higit pang mga aralin dito!</em>

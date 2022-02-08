@@ -33,14 +33,15 @@ module Foorm
 
     test 'update succeeds on existing library' do
       library = create :foorm_library, :with_questions
-      library_question_id = library.library_questions.first.id
+      library_question = library.library_questions.first
+      library_question_id = library_question.id
 
       levelbuilder = create :levelbuilder
       sign_in levelbuilder
 
       put :update, params: {
         id: library_question_id,
-        question: {pages: [{elements: [{name: "test"}]}]}
+        question: {name: library_question.question_name, type: 'html'}
       }
 
       assert_response :success
@@ -54,7 +55,7 @@ module Foorm
 
       post :create, params: {
         library_id: library.id,
-        question: {pages: [{elements: [{name: "test"}]}]},
+        question: {name: 'test_question_name', type: 'html'},
         name: 'test_question_name'
       }
 
@@ -71,7 +72,7 @@ module Foorm
 
       post :create, params: {
         library_name: 'test_library_name',
-        question: {pages: [{elements: [{name: "test"}]}]},
+        question: {name: 'test_question_name', type: 'html'},
         name: 'test_question_name'
       }
 
@@ -86,7 +87,7 @@ module Foorm
       sign_in levelbuilder
 
       post :create, params: {
-        question: {pages: [{elements: [{name: "test"}]}]},
+        question: {name: 'test_question_name', type: 'html'},
         name: 'test_question_name'
       }
 
@@ -101,7 +102,7 @@ module Foorm
 
       post :create, params: {
         library_id: library.id,
-        question: {pages: [{elements: [{name: "test"}]}]}
+        question: {name: 'test_question_name', type: 'html'}
       }
 
       assert_includes JSON.parse(response.body)['question_name'], 'is required'

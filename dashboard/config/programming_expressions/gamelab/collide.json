@@ -1,12 +1,11 @@
 {
-  "func": "collide",
+  "key": "collide",
+  "name": "collide",
   "category": "Sprites",
-  "paletteParams": [
-    "target"
+  "palette_params": [
+    {
+      "name": "target"
+    }
   ],
-  "params": [
-    "target"
-  ],
-  "modeOptionName": "*.collide",
-  "type": "either"
+  "syntax": "collide(target)"
 }

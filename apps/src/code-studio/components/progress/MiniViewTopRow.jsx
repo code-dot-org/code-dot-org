@@ -48,7 +48,11 @@ export default class MiniViewTopRow extends React.Component {
           {linesOfCodeText}
         </span>
         <div style={isRtl ? styles.toggleRtl : styles.toggle}>
-          <ProgressDetailToggle activeColor={color.teal} whiteBorder={true} />
+          <ProgressDetailToggle
+            activeColor={color.teal}
+            whiteBorder={true}
+            toggleStudyGroup="mini-view"
+          />
         </div>
       </div>
     );

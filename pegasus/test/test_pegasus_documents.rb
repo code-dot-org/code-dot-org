@@ -31,8 +31,7 @@ class PegasusTest < Minitest::Test
     302 => %w[
       code.org/amazon-future-engineer
       code.org/educate
-      code.org/teacher-dashboard
-      code.org/teacher-dashboard/review-hociyskvuwa
+      code.org/review-hociyskvuwa
       code.org/teach
       code.org/student
     ],

@@ -1,6 +1,8 @@
-import {expect} from '../../../util/deprecatedChai';
-import dropdown from '@cdo/apps/applab/designElements/dropdown';
+import {expect} from '../../../util/reconfiguredChai';
 import library from '@cdo/apps/applab/designElements/library';
+
+const {elements, ElementType} = library;
+const dropdown = elements[ElementType.DROPDOWN];
 
 function setIndex(e, newIndex) {
   dropdown.onPropertyChange(e, 'index', newIndex);

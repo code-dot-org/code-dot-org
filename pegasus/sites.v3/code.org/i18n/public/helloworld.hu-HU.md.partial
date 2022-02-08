@@ -1,0 +1,37 @@
+---
+title: Helló világ
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# Helló világ!
+
+Az Informatika 101. órán sok diák első programja egy egyszerű program, amely egy ikonikus szövegsort ad ki: „Hello World!” Köszöntse az informatika világát ezzel a bevezető tevékenységgel, amely során a diákok megszerzik az alapvető kódolási készségeket és magabiztosságot alkalmazások létrehozásához. Válasszon négy szórakoztató téma közül, és kódoljon interaktív karaktereket a sajátmaga által létrehozott világban!
+
+# Helló világ téma kiválasztása
+
+{{ spritelab_module, title: "Ételek", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "Állatok", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "Retró", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "Tanári tájékoztatás", title: "Hogyan folytassuk a tanulást a Hello World után", description: "A Hello World tökéletes első lépés az osztályok számára, mielőtt kipróbálnák az új tantervünkben, a CS Connections-ben található nyílt végű projekteket! A kódolás alapjainak elsajátítása után a diákok továbbléphetnek a CS Connections tantárgyközi projektekhez.", button_text: "További információk", url: "/educate/csc" }}
+
+## Kiemelt diákalkotások
+
+{{ featured_project, title: "Ételek", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Emoji", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "Állatok", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

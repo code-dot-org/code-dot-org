@@ -1366,11 +1366,14 @@ pt-BR:
   coursed-2020_name: Curso D (2019)
   coursee-2020_name: Curso E (2019)
   coursef-2020_name: Curso F (2019)
+  coursed-2021_name: Curso D (2021)
   express-2018_name: Curso Expresso (2018)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
   pre-express-2019_name: Curso Pre-reader Express (2019)
   express-2020_name: Curso Expresso (2019)
+  pre-express-2020_name: Curso Expresso de Pré-Leitor (2020)
+  pre-express-2021_name: Curso Expresso de Pré-Leitor (2021)
   csd2_name: 'Unidade 2: Desenvolvimento para Web'
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: Curso acelerado
@@ -1483,6 +1486,12 @@ pt-BR:
   coursed-2020_gradelevel: Alunos a partir do 8º ano
   coursee-2020_gradelevel: De 8 a 12 anos
   coursef-2020_gradelevel: 'Idade: de 9 a 13 anos'
+  coursea-2021_gradelevel: 'Idade: de 4 a 7 anos'
+  courseb-2021_gradelevel: 'Idade: de 5 a 8 anos'
+  coursec-2021_gradelevel: 'Idade: de 6 a 10 anos'
+  coursed-2021_gradelevel: Alunos a partir do 8º ano
+  coursee-2021_gradelevel: De 8 a 12 anos
+  coursef-2021_gradelevel: 'Idade: de 9 a 13 anos'
   accelerated_gradelevel: 10-18 anos de idade
   codeorg_platformtext: Navegadores modernos, smartphones, tablets
   codeintl_platformtext: Navegadores modernos, smartphones, tablets
@@ -1691,6 +1700,28 @@ pt-BR:
     deste curso, projete e crie um projeto principal que você possa compartilhar com
     seus amigos e familiares.
   coursef-2020_shortdescription_congrats: Aprenda a usar diferentes tipos de loops,
+    eventos, funções e condicionais. Investigue diferentes técnicas de solução de
+    problemas e discuta os impactos sociais da computação e da Internet. Na segunda
+    parte deste curso, projete e crie um projeto principal que você possa compartilhar
+    com amigos e familiares.
+  coursea-2021_shortdescription_congrats: Aprenda o básixo de Ciências da Computação
+    e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou
+    história, que poderá ser compartilhada.
+  courseb-2021_shortdescription_congrats: Aprenda o básixo de Ciências da Computação
+    e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou
+    história, que poderá ser compartilhada.
+  coursec-2021_shortdescription_congrats: Crie programas com sequenciamento, loops
+    e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de
+    solução de problemas e aprenda a responder ao cyberbullying. No final do curso,
+    crie seu próprio jogo ou história que você pode compartilhar!
+  coursed-2021_shortdescription_congrats: Os alunos desenvolvem sua compreensão de
+    loops, condicionais e eventos. Além da codificação, os alunos aprendem sobre cidadania
+    digital.
+  coursee-2021_shortdescription_congrats: Comece a codificar com algoritmos, loops,
+    condicionais e eventos e, em seguida, você passará às funções. Na segunda parte
+    deste curso, projete e crie um projeto principal que você possa compartilhar com
+    seus amigos e familiares.
+  coursef-2021_shortdescription_congrats: Aprenda a usar diferentes tipos de loops,
     eventos, funções e condicionais. Investigue diferentes técnicas de solução de
     problemas e discuta os impactos sociais da computação e da Internet. Na segunda
     parte deste curso, projete e crie um projeto principal que você possa compartilhar
@@ -2266,6 +2297,7 @@ pt-BR:
   header_legal_privacy: Política de Privacidade
   header_legal_tos: Termos de Serviço
   header_tutorials: Tutoriais
+  header_screen_reader_hamburger: Menu
   app_lab_documentation: Documentação App Lab
   app_lab_tutorials: Tutoriais App Lab
   game_lab_documentation: Documentação Game Lab
@@ -2378,10 +2410,10 @@ pt-BR:
     pela Code.org e parceiros.
   hoc_overview_partner_activities_link: Exibir atividades
   hoc_overview_start_tutorial: Começar
-  hoc_overview_more_resources: Para obter mais recursos sobre como interagir com sua
-    sala de aula remota, consulte nosso guia para hospedar uma [Hora do Codigo virtual](](https://hourofcode.com/us/how-to/virtual).
-    Para alunos com tecnologia ou conectividade limitada ou nenhuma, compartilhe este
-    pacote de [atividades desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc_overview_more_resources: Para obter mais materiais sobre como melhorar a interação
+    com sua sala de aula virtual, consulte nosso guia sobre como hospedar uma [Hora
+    do Codigo virtual](https://hourofcode.com/us/how-to/virtual). Para alunos com
+    conectividade limitada ou nenhuma, compartilhe este pacote de [atividades desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Exibir Guia do Professor
   hoc2018_creativity: criatividade
   hoc2018_creativity_create: Criar
@@ -2581,8 +2613,19 @@ pt-BR:
   hoc2019_mc_more_coding_resources: Mais Recursos de Codificação
   hoc2019_dance_previous_versions: |-
     Procurando uma versão anterior de Festa Dançante?
-    Clique aqui para começar [Parte 1](%{dance_2018_link}) and [Parte 2](%{dance_extras_2018_link}) do último ano.
+    Clique aqui para começar [Parte 1](%{dance_2018_link}) e [Parte 2](%{dance_extras_2018_link}) de 2018.
   page_not_available_button: Volte para a página inicial
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Volte no tempo e aprenda a codificar! O novo tutorial
+    de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional
+    para Windows, Mac, Chromebook e iPad. Dê os primeiros passos para os recursos
+    gratuitos para educadores, treinamentos e vídeos.'
+  hoc2021_mc_mee_villages_title: Fábula das Duas Aldeias
+  hoc2021_mc_mee_villages_description: 'Aprenda a codificação básica e explore a diversidade
+    e a inclusão com os seus alunos em Minecraft: Edição Educacional.'
+  hoc2021_mc_mee_ai_title: IA para sempre
+  hoc2021_mc_mee_ai_description: 'Explore a IA com os seus alunos e aprenda a codificar
+    em Minecraft: Edição Educacional.'
   footer_powered_by_aws: Powered by Amazon Web Services
   codebytes_skinny_banner_english_only: Somente inglês
   footer_privacy_policy: Política de Privacidade
@@ -2592,9 +2635,15 @@ pt-BR:
   footer_support: Suporte
   footer_terms: Termos
   ai_for_oceans: IA para oceanos
+  ai_for_oceans_lesson_plan: plano de aula
   ai_in_partnership_with: Em parceria com
   ai_microsoft_thanks: Nós agradecemos à Microsoft por apoiar nossa visão e missão
     para que toda criança tenha a oportunidade de aprender ciência da computação e
     as habilidades necessárias para ter sucesso no século XXI.
   ai_activity: Atividade
   ai_description: Descrição
+  ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
+  outbreak_tile_title: Epidemia
+  outbreak_tile_subtitle: Um vírus infectou a Cidade dos Monstros! Codifique um simulador
+    de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos
+    Monstros.

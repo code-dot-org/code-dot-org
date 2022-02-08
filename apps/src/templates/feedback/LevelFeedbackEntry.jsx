@@ -1,226 +1,239 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import shapes from './shapes';
+import {feedbackShape} from './types';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 
-const measureElement = element => {
-  const DOMNode = ReactDOM.findDOMNode(element);
-  return {
-    height: DOMNode.offsetHeight
-  };
+const getElementHeight = element => {
+  return ReactDOM.findDOMNode(element).offsetHeight;
 };
 
-const initialCommentHeight = 40;
+const visibleCommentHeight = 46;
 
-export default class LevelFeedbackEntry extends Component {
-  state = {
-    expanded: false,
-    commentHeight: initialCommentHeight
-  };
+function LevelFeedbackEntry({feedback}) {
+  const {
+    id,
+    created_at,
+    comment,
+    performance,
+    review_state,
+    seen_on_feedback_page_at,
+    student_first_visited_at,
+    is_awaiting_teacher_review
+  } = feedback;
 
-  static propTypes = {feedback: shapes.feedback};
+  const feedbackSeenByStudent = !!(
+    seen_on_feedback_page_at || student_first_visited_at
+  );
 
-  expand = () => {
-    this.setState({expanded: true});
-    if (this.longComment()) {
-      firehoseClient.putRecord(
-        {
-          study: 'all-feedback',
-          event: 'expand-feedback',
-          data_json: {feedback_id: this.props.feedback.id}
-        },
-        {includeUserId: true}
-      );
-    }
-  };
+  const commentExists = comment.length > 2;
+  const commentSeenStyle = feedbackSeenByStudent ? styles.commentBlockSeen : {};
 
-  collapse = () => {
-    this.setState({expanded: false});
-  };
+  const displayReviewState =
+    review_state === ReviewStates.keepWorking ||
+    review_state === ReviewStates.completed;
 
-  componentDidMount() {
-    this.comment &&
-      this.setState({commentHeight: measureElement(this.comment).height});
-  }
+  return (
+    <div style={{...styles.commentBlock, ...commentSeenStyle}}>
+      <TimeAgo style={styles.time} dateString={created_at} />
+      {displayReviewState && (
+        <ReviewState
+          reviewState={review_state}
+          isAwaitingTeacherReview={is_awaiting_teacher_review}
+        />
+      )}
+      {performance && <Performance performance={performance} />}
+      {commentExists && (
+        <Comment
+          commentText={comment}
+          feedbackSeenByStudent={feedbackSeenByStudent}
+          feedbackId={id}
+        />
+      )}
+    </div>
+  );
+}
 
-  longComment = () => this.state.commentHeight > initialCommentHeight;
-
-  render() {
-    const {
-      seen_on_feedback_page_at,
-      student_first_visited_at,
-      lessonName,
-      lessonNum,
-      levelNum,
-      linkToLevel,
-      unitName,
-      created_at,
-      comment,
-      performance
-    } = this.props.feedback;
-
-    const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
-
-    const commentExists = comment.length > 2;
-
-    // These heights ensure that the initial line of the comment will be visible, and a 'sneak peak' of the second line for long comments.
-    var baseHeight;
-    switch (true) {
-      case commentExists && performance !== null:
-        baseHeight = 125;
-        break;
-      case commentExists || performance !== null:
-        baseHeight = 96;
-        break;
-      default:
-        baseHeight = 72;
-    }
-    // const baseHeight = performance && commentExists ? 132 : 112;
-
-    const style = {
-      backgroundColor: seenByStudent ? color.background_gray : color.white,
-      height: this.state.expanded ? 'auto' : baseHeight,
-      overflow: this.state.expanded ? 'none' : 'hidden',
-      ...styles.main
-    };
-
-    const rubricPerformance = {
-      performanceLevel1: i18n.rubricLevelOneHeader(),
-      performanceLevel2: i18n.rubricLevelTwoHeader(),
-      performanceLevel3: i18n.rubricLevelThreeHeader(),
-      performanceLevel4: i18n.rubricLevelFourHeader()
-    };
-
-    const showRightCaret = this.longComment() && !this.state.expanded;
-    const showDownCaret = this.longComment() && this.state.expanded;
-
+function ReviewState({reviewState, isAwaitingTeacherReview}) {
+  if (reviewState === ReviewStates.completed) {
+    return <div style={styles.reviewState}>{i18n.reviewedComplete()}</div>;
+  } else if (isAwaitingTeacherReview) {
     return (
-      <div
-        style={style}
-        onClick={this.state.expanded ? this.collapse : this.expand}
-      >
-        <div style={styles.lessonDetails}>
-          <a href={linkToLevel}>
-            <div style={styles.lessonLevel}>
-              {i18n.feedbackNotificationLesson({
-                lessonNum,
-                lessonName,
-                levelNum
-              })}
-            </div>
-          </a>
-          <div style={styles.unit}>
-            {i18n.feedbackNotificationUnit({unitName})}
-          </div>
-        </div>
-        <TimeAgo style={styles.time} dateString={created_at} />
-        {performance ? (
-          <div style={styles.rubricBox}>
-            <span>{i18n.feedbackRubricEvaluation()}</span>
-            <span style={styles.rubricPerformance}>
-              {rubricPerformance[performance]}
-            </span>
-          </div>
-        ) : null}
-        {showRightCaret ? (
-          <span style={styles.iconBox}>
-            <FontAwesome style={styles.icon} icon="caret-right" />
-          </span>
-        ) : null}
-        {showDownCaret ? (
-          <span style={styles.iconBox}>
-            <FontAwesome style={styles.icon} icon="caret-down" />
-          </span>
-        ) : null}
-        {commentExists ? (
-          <span style={styles.commentBox}>
-            <div ref={r => (this.comment = r)} style={styles.comment}>
-              &quot;{comment}&quot;
-            </div>
-          </span>
-        ) : null}
+      <div style={styles.reviewState}>{i18n.waitingForTeacherReview()}</div>
+    );
+  } else {
+    return (
+      <div style={styles.reviewState}>
+        <KeepWorkingBadge />
+        &nbsp;
+        <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
       </div>
     );
   }
 }
+ReviewState.propTypes = {
+  reviewState: PropTypes.string,
+  isAwaitingTeacherReview: PropTypes.bool
+};
+
+function Performance({performance}) {
+  const RubricPerformanceLabels = {
+    performanceLevel1: i18n.rubricLevelOneHeader(),
+    performanceLevel2: i18n.rubricLevelTwoHeader(),
+    performanceLevel3: i18n.rubricLevelThreeHeader(),
+    performanceLevel4: i18n.rubricLevelFourHeader()
+  };
+
+  return (
+    <div style={styles.feedbackText}>
+      <span>{i18n.feedbackRubricEvaluation()}</span>&nbsp;
+      <span style={styles.rubricPerformance}>
+        {RubricPerformanceLabels[performance]}
+      </span>
+    </div>
+  );
+}
+Performance.propTypes = {
+  performance: PropTypes.string
+};
+
+function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
+  const commentRef = useRef(null);
+  const [expanded, setExpanded] = useState(false);
+  const [commentHeight, setCommentHeight] = useState(0);
+
+  useEffect(() => {
+    commentRef.current &&
+      setCommentHeight(getElementHeight(commentRef.current));
+  });
+
+  const expandComment = () => {
+    setExpanded(true);
+    firehoseClient.putRecord(
+      {
+        study: 'all-feedback',
+        event: 'expand-feedback',
+        data_json: {feedback_id: feedbackId}
+      },
+      {includeUserId: true}
+    );
+  };
+
+  const collapseComment = () => {
+    setExpanded(false);
+  };
+
+  const isCommentExpandable = commentHeight > visibleCommentHeight;
+  const showCommentFade = isCommentExpandable && !expanded;
+
+  const commentContainerStyle = expanded
+    ? styles.commentContainer
+    : styles.commentContainerCollapsed;
+
+  return (
+    <div style={commentContainerStyle}>
+      {isCommentExpandable && (
+        <FontAwesome
+          style={styles.expanderIcon}
+          icon={expanded ? 'caret-down' : 'caret-right'}
+          onClick={expanded ? collapseComment : expandComment}
+        />
+      )}
+      <span style={styles.commentText}>
+        <div ref={commentRef} style={styles.feedbackText}>
+          &quot;{commentText}&quot;
+        </div>
+        {showCommentFade && (
+          <div
+            id="comment-fade"
+            style={{
+              ...styles.fadeout,
+              ...(feedbackSeenByStudent && styles.fadeoutSeen)
+            }}
+          />
+        )}
+      </span>
+    </div>
+  );
+}
+Comment.propTypes = {
+  commentText: PropTypes.string,
+  feedbackSeenByStudent: PropTypes.bool,
+  feedbackId: PropTypes.number
+};
 
 const styles = {
-  main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    minHeight: 72,
+  commentBlock: {
+    backgroundColor: color.lightest_gray,
+    borderRadius: '3px',
     width: '100%',
-    marginBottom: 20,
-    display: 'flex',
-    flexFlow: 'wrap',
-    boxSizing: 'border-box'
+    marginBottom: 8,
+    boxSizing: 'border-box',
+    padding: '8px 16px'
   },
-  lessonDetails: {
-    width: '75%',
-    marginLeft: 20,
-    marginTop: 8,
-    marginBottom: 4
-  },
-  lessonLevel: {
-    fontSize: 18,
-    lineHeight: '24px',
-    marginBottom: 4,
-    color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  unit: {
-    color: color.dark_charcoal,
-    fontSize: 14,
-    lineHeight: '17px',
-    marginBottom: 8
+  commentBlockSeen: {
+    opacity: '60%'
   },
   time: {
-    marginTop: 8,
     fontSize: 14,
     lineHeight: '17px',
     color: color.light_gray,
-    float: 'right',
-    textAlign: 'right',
-    marginRight: 20,
-    width: 200
+    float: 'right'
   },
-  comment: {
+  feedbackText: {
     color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 8,
+    marginTop: 8,
     fontSize: 14,
-    lineHeight: '21px',
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  rubricBox: {
-    color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 8,
-    fontSize: 14,
-    lineHeight: '21px',
-    width: '100%'
+    lineHeight: '21px'
   },
   rubricPerformance: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  reviewState: {
+    display: 'flex',
+    alignItems: 'center',
     fontFamily: '"Gotham 5r", sans-serif',
-    marginLeft: 5
+    fontSize: 14,
+    color: color.charcoal
   },
-  icon: {
-    fontSize: 18
+  keepWorkingText: {
+    color: color.red
   },
-  iconBox: {
-    float: 'left',
-    paddingLeft: 25,
+  commentContainer: {
+    display: 'flex'
+  },
+  commentContainerCollapsed: {
+    display: 'flex',
+    overflow: 'hidden',
+    maxHeight: visibleCommentHeight
+  },
+  expanderIcon: {
+    fontSize: 18,
+    paddingRight: 15,
+    paddingLeft: 5,
+    marginTop: 8,
     cursor: 'pointer'
   },
-  commentBox: {
-    float: 'left',
-    width: '96%'
+  commentText: {
+    position: 'relative', // for positioning fade over comment text
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  fadeout: {
+    bottom: 0,
+    height: 'calc(100% - 15px)',
+    background:
+      'linear-gradient(rgba(231, 232, 234, .1) 0%,rgba(231, 232, 234, 1) 100%)',
+    position: 'absolute',
+    width: '100%'
   }
 };
+
+LevelFeedbackEntry.propTypes = {feedback: feedbackShape};
+
+export default LevelFeedbackEntry;

@@ -2,13 +2,17 @@
   "script": {
     "name": "spritelab-validated",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:25 UTC",
+    "serialized_at": "2021-11-22 19:57:16 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "spritelab-validated"
     }
@@ -74,23 +78,89 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "6b9242fd-fc69-43cb-9439-ee714d059513",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b9242fd-fc69-43cb-9439-ee714d059513",
+        "lesson.key": "Fish Tank - Creating Sprites",
+        "lesson_group.key": "",
+        "script.name": "spritelab-validated"
+      }
+    },
+    {
+      "key": "e24b2ede-606e-43fd-9980-837cd5bb2303",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e24b2ede-606e-43fd-9980-837cd5bb2303",
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "spritelab-validated"
+      }
+    },
+    {
+      "key": "997e6bd0-3bc8-4739-862c-61a648abc421",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "997e6bd0-3bc8-4739-862c-61a648abc421",
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "spritelab-validated"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7149b747-30a2-4e02-b1fb-00adc78ba481",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481",
+        "lesson_activity.key": "6b9242fd-fc69-43cb-9439-ee714d059513"
+      }
+    },
+    {
+      "key": "1716a0df-89a6-4f54-b551-4b1f7cd76538",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538",
+        "lesson_activity.key": "e24b2ede-606e-43fd-9980-837cd5bb2303"
+      }
+    },
+    {
+      "key": "40da9bab-1a13-4626-94f1-0f1f23555cb0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0",
+        "lesson_activity.key": "997e6bd0-3bc8-4739-862c-61a648abc421"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Fish Tank 1-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -98,7 +168,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       },
       "level_keys": [
         "Fish Tank 1-validated"
@@ -107,14 +178,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Fish Tank 2-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -122,7 +192,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       },
       "level_keys": [
         "Fish Tank 2-validated"
@@ -131,14 +202,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Fish Tank 3-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -146,7 +216,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       },
       "level_keys": [
         "Fish Tank 3-validated"
@@ -155,14 +226,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Fish Tank 4-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -170,7 +240,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       },
       "level_keys": [
         "Fish Tank 4-validated"
@@ -179,14 +250,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Fish Tank 5-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -194,7 +264,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       },
       "level_keys": [
         "Fish Tank 5-validated"
@@ -203,14 +274,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Fish Tank 6-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -218,7 +288,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       },
       "level_keys": [
         "Fish Tank 6-validated"
@@ -227,14 +298,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Fish Tank 7-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -242,7 +312,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       },
       "level_keys": [
         "Fish Tank 7-validated"
@@ -251,14 +322,13 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party 1-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +336,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party 1-validated"
@@ -275,14 +346,13 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -290,7 +360,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party 2"
@@ -299,14 +370,13 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -314,7 +384,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party 3"
@@ -323,14 +394,13 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -338,7 +408,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party 4"
@@ -347,14 +418,13 @@
     {
       "chapter": 12,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -362,7 +432,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party 5"
@@ -371,14 +442,13 @@
     {
       "chapter": 13,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -386,7 +456,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party 6"
@@ -395,14 +466,13 @@
     {
       "chapter": 14,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -410,7 +480,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party 7"
@@ -419,14 +490,13 @@
     {
       "chapter": 15,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance Party Freeplay"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -434,7 +504,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       },
       "level_keys": [
         "Dance Party Freeplay"
@@ -443,14 +514,13 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Virtual Pet 1-validated"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -458,7 +528,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       },
       "level_keys": [
         "Virtual Pet 1-validated"
@@ -467,14 +538,13 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Virtual Pet 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -482,7 +552,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       },
       "level_keys": [
         "Virtual Pet 2"
@@ -491,14 +562,13 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Virtual Pet 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -506,7 +576,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       },
       "level_keys": [
         "Virtual Pet 3"
@@ -515,14 +586,13 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Virtual Pet 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -530,7 +600,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       },
       "level_keys": [
         "Virtual Pet 4"
@@ -539,14 +610,13 @@
     {
       "chapter": 20,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Virtual Pet 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +624,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       },
       "level_keys": [
         "Virtual Pet 5"
@@ -563,14 +634,13 @@
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Virtual Pet 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -578,7 +648,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       },
       "level_keys": [
         "Virtual Pet 6"
@@ -587,14 +658,13 @@
     {
       "chapter": 22,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Virtual Pet Freeplay"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -602,7 +672,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       },
       "level_keys": [
         "Virtual Pet Freeplay"
@@ -618,7 +689,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       }
     },
     {
@@ -629,7 +701,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       }
     },
     {
@@ -640,7 +713,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       }
     },
     {
@@ -651,7 +725,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       }
     },
     {
@@ -662,7 +737,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       }
     },
     {
@@ -673,7 +749,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       }
     },
     {
@@ -684,7 +761,8 @@
         ],
         "lesson.key": "Fish Tank - Creating Sprites",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "7149b747-30a2-4e02-b1fb-00adc78ba481"
       }
     },
     {
@@ -695,7 +773,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -706,7 +785,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -717,7 +797,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -728,7 +809,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -739,7 +821,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -750,7 +833,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -761,7 +845,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -772,7 +857,8 @@
         ],
         "lesson.key": "Alien Dance Party - Input",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "1716a0df-89a6-4f54-b551-4b1f7cd76538"
       }
     },
     {
@@ -783,7 +869,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       }
     },
     {
@@ -794,7 +881,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       }
     },
     {
@@ -805,7 +893,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       }
     },
     {
@@ -816,7 +905,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       }
     },
     {
@@ -827,7 +917,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       }
     },
     {
@@ -838,7 +929,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       }
     },
     {
@@ -849,7 +941,8 @@
         ],
         "lesson.key": "Virtual Pet - Interactions",
         "lesson_group.key": "",
-        "script.name": "spritelab-validated"
+        "script.name": "spritelab-validated",
+        "activity_section.key": "40da9bab-1a13-4626-94f1-0f1f23555cb0"
       }
     }
   ],

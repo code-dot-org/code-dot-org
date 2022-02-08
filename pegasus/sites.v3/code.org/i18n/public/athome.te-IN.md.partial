@@ -1,162 +1,318 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: ఇంటివద్ద కంప్యూటర్ సైన్స్
 video_player: true
 theme: responsive
 ---
 
-<a id="top"></a>
+<link href="/css/tools.css" rel="stylesheet" />
 
-# Learning computer science when schools are closed
+<a id="top"></a>
+<h1>ఇంటివద్ద కంప్యూటర్ సైన్స్</h1>
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
-{{ athome_vid_intro }}
+  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="తల్లి తన కుమార్తెకు ల్యాప్‌టాప్ ఉపయోగించడంలో సహాయం చేస్తుంది">
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>మీరు తల్లిదండ్రులు/సంరక్షకులు అయినా లేదా స్వంతంత్రంగా నేర్చుకుంటున్న విద్యార్థి అయినా, కంప్యూటర్ సైన్స్ గురించి మీ అన్వేషణ ప్రారంభించడానికి కింది వికల్పాలు ఎంగేజ్ చేసే, ప్రయత్నించడానికి సులువైన మార్గాలు.</p>
+<ul>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">అవర్ ఆఫ్ కోడ్ ప్రయత్నించండి</a></li>
+    <li><a class="linktag" id="videos-nav" href="#videos">CS ప్రాధమిక అంశాలను గురించి ఒక చిన్న వీడియో సీరీస్ చూడండి</a></li>
+    <li><a class="linktag" id="self-paced-nav" href="#express">ఒక పరిచయ, స్వీయ-గమన కోర్సు తీసుకోండి</a></li>
+    <li><a class="linktag" id="labs-nav" href="#labs">ఒక గేమ్ లేదా యాప్ సృష్టించండి</a></li>
+    <li><a class="linktag" id="unplugged-nav" href="#unplugged">కంప్యూటర్ లేకుండా CS ప్రయత్నించండి ('అన్‌ప్లగ్డ్' & మొబైల్ వికల్పాలు)</a></li>
+    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org బృందం మరియు ప్రత్యేక అతిథుల నుండి CS నేర్చుకోండి</a></li>
+</ul>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
-
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
-
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
-
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
-
-<p><a href="#top">[Back to top]</a></p>
-
-<div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
-
-## Videos: Watch these easy 3-5 minute educational videos
-
-{{ athome_videos }}
+<a id="hoc"></a>
+<h2>ఈ సరదాగా ఉండే పరిచయ ట్యుటోరియల్స్‌తో అవర్ ఆఫ్ కోడ్ ప్రయత్నించండి</h2>
+<p>Minecraft, Frozen మరియు Star Wars లాంటి ప్రసిద్ధ గేమ్స్ మరియు మూవీలు ఉన్న <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">ఒన్-అవర్ ట్యుటోరియల్</a> ప్రయత్నించండి. అనేక ట్యుటోరియల్స్ గేమ్స్‌లాగా నిర్మించబడ్డాయి, సరదాగా ఉండే, నిమగ్నం చేసే మార్గాలతో కంప్యూటర్ ప్రాధమిక కాన్సెప్ట్‌లను బోధించడానికి రూపొందించబడ్డాయి.</p>
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="danceparty" href="/dance" target="_blank">
+        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="డాన్స్ పార్టీ">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>డాన్స్ పార్టీ</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">స్నేహితులు మరియు కుటుంబంతో పంచుకోవడానికి ఒక డాన్స్ పార్టీ కోడ్ చేయండి. కాటి పెర్రీ, షాన్ మెండిస్, పానిక్‌లతో! డిస్కోలో, లిల్ నాస్ ఎక్స్, జోనాస్ బ్రదర్స్, నిక్కీ మినాజ్ మరియు మరో 34 మంది!</div>        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="minecraft" href="/minecraft" target="_blank">
+        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft అక్వేటిక్">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Minecraft అవర్ ఆఫ్ కోడ్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">సరికొత్త యాక్టివిటీతో అవర్ ఆఫ్ కోడ్ కోసం Minecraft మళ్లీ వచ్చింది! కోడ్‌తో Minecraft గుండా ప్రయాణం.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>యాక్టివిటీ ప్రయత్నించండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI ఫర్ ఓషన్స్">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI ఫర్ ఓషన్స్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">చెత్తను కనుగొనేలా శిక్షణ ఇవ్వడం ద్వారా ఓషన్స్ శుభ్రపరచడానికి A.I. కు తోడ్పడండి! శిక్షణ డేటా మరియు బయాస్ గురించి మరియు ప్రపంచ సమస్యలను AI ఎలా పరిష్కరిస్తుందో తెలుసుకోండి. చూడండి <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">పాఠం ప్రణాళిక</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>యాక్టివిటీ ప్రయత్నించండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<p><a href="#top">[తిరిగి పై భాగానికి]</a></p>
+
+<br>
+<br>
+
+<a id="videos"></a>
+<div class="col-100" style="padding:25px; border-radius: 15px; background-color: #ebe8f1">
+<h2 style="margin-top:0">కంప్యూటర్లు, ఇంటర్నెట్ మరియు AI ఎలా పనిచేస్తాయో తెలుసుకోవడానికి ఆకర్షించే చిన్న వీడయోల సీరీస్ చూడండి</h2>
+<p>బిల్ గేట్స్ మరియు సత్య నాదెళ్ల లాంటి ప్రసిద్ధ టెక్నాలజిస్ట్‌లతోపాటు అనేక పరిశ్రమలు మరియు సంస్థల నుండి విభిన్న ప్రజంటర్ల తారాగణం ఉన్న వీడియోలతో కంప్యూటర్ సైన్స్ ప్రాధమిక అంశాలు నేర్చుకోండి.</p>
+<br>
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="బిల్ గేట్స్‌తో కంప్యూటర్లు ఎలా పని చేస్తాయి">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>కంప్యూటర్లు ఎలా పని చేస్తాయి</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">బిల్ గేట్స్ ఇచ్చిన పరిచయంతో, ఆరు వీడియోల ఈ సీరీస్ ఒక కంప్యూటరును కంప్యూటరుగా ఏది చేస్తుంది మరియు కంప్యూటరు సర్క్యూట్లు ఎలా పని చేస్తాయో వివరిస్తుంది.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>వీడియో సీరీస్ చూడండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="ఇంటర్నెట్ ఎలా పనిచేస్తుంది">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ఇంటర్నెట్ ఎలా పని చేస్తుంది</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ఎనిమిది వీడియోల ఈ సీరీస్‌లో, ఇంటర్నెట్ ఎలా కనిపెట్టబడింది, HTML అంటే ఏమిటి మరియు Google లాంటి సర్చ్ ఇంజన్లు ఎలా పని చేస్తాయి అనేవాటిని తెలుసుకోండి.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>వీడియో సీరీస్ చూడండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-intro-2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" "How AI Works with Satya Nadella">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI ఎలా పని చేస్తుంది</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ఈ చిన్న వీడియోల సీరీస్‌తో AI ఎలా పని చేస్తుందో మరియు ఇది ఎందుకు ముఖ్యమైనదో తెలుసుకోండి. Microsoft సిఇఓ సత్య నాదెళ్ల మరియు విభిన్న నిపుణుల తారాగణంతో.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>వీడియో సీరీస్ చూడండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both"></div>
+
+<p>స్టెఫ్ కర్రీ మరియు షకీరా వంటి ప్రముఖుతో కూడిన చిన్న ప్రేరణాత్మక వీడియోలతో సహా మరిన్ని వీడియోలను చూడండి, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">ఇక్కడ</a>.</p>
+<br>
+<p><a href="#top">[తిరిగి పై భాగానికి]</a></p>
+
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
+<h2>స్వీయ-గమన కోర్సులతో ప్రాధమిక అంశాలను నేర్చుకోండి</h2>
+<h3>స్వీయ-గమన పరిచయ కోర్సులు</h3>
+<p>తమంత తాము ప్రారంభిస్తున్న విద్యార్థుల కోసం ఒక గొప్ప ఎంపిక. డ్రాగ్ & డ్రాప్ బ్లాక్స్‌తో మీరు కంప్యూటర్ సైన్స్ ప్రాధమిక అంశాలను నేర్చుకుంటారు. మీ సొంత డ్రాయింగ్‌లు మరియు గేమ్స్ సృష్టించండి. గమనిక: ఎక్స్‌ప్రెస్ కోర్సులు ప్రస్తుతం ఇంగ్లీషు, హిందీ, ఇటాలియన్ మరియు స్పానిష్‌లో అందుబాటులో ఉన్నాయి. ఇతర భాషల కోసం, మేము మా 20-గంటల <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">యాక్సిలరేటెర్ కోర్సు సిఫారసు చేస్తున్నాము</a>. మీ భాషలో ఏమి అందుబాటులో ఉందో చూడటానికి, సందర్శించండి మా <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">కోర్సు కేటలాగ్</a>.</p>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+<br>
 
-<div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="ఎక్స్‌ప్రెస్ కోర్సు"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Eఎక్స్‌ప్రెస్ కోర్సు</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="ప్రీ-రీడర్ ఎక్స్‌ప్రెస్ కోర్సు"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">ప్రీ-రీడర్ల కోసం ఎక్స్‌ప్రెస్ కోర్సు</a>
 
 </div>
 <div style="clear: both"></div>
 
+<h3>గేమ్ ల్యాబ్ మరియు యాప్ ల్యాబ్ కోసం స్వీయ-గమన పరిచయాలు</h3>
+<p>మా CS అన్వేషణలు మరియు CS సూత్రాల కోర్సుల నుండి తీసుకోబడిన ఈ చిన్న, స్వీయ-గమన మాడ్యూల్స్ అన్ని ప్రోగ్రామింగ్ భాషలు మరియు టూల్స్ వ్యాప్తంగా కాన్సెప్ట్‌లను నేర్చుకోవడానికి ఒక గొప్ప మార్గం. <i>యాక్సెస్ చేయడానికి Code.org అకౌంట్ అవసరం</i>.</p>
+
+<br>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="గేమ్ ల్యాబ్ పరిచయం">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>గేమ్ ల్యాబ్ పరిచయం</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">గేమ్ ల్యాబ్‌లో ప్రోగ్రామ్ అనిమేషన్స్, ఇంటరాక్టివ్ ఆర్ట్ మరియు గేమ్స్. సరళమైన ఆకృతులతో ప్రారంభించండి మరియు మరింత అధునాతన స్ప్రైట్-ఆధారిత యానిమేషన్‌లు మరియు గేమ్‌ల వరకు రూపొందించండి.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="యాప్ ల్యాబ్‌లో టర్టల్ ప్రోగ్రామింగ్">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>యాప్ ల్యాబ్‌లో టర్టల్ ప్రోగ్రామింగ్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ఒక వర్చువల్ "టర్టల్" ఉపయోగించి ఆకృతులు మరియు ఇమేజ్‌లు గీయడానికి సరళమైన JavaScript కమాండ్స్ ఉపయోగించండి. మీ సొంత డిజిటల్ సీన్ రూపొందించండి మరియు ప్రోగ్రామ్ చేయండి!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="యాప్ ల్యాబ్‌లో ఈవెంట్-డ్రివెన్ ప్రోగ్రామింగ్">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>యాప్ ల్యాబ్‌లో ఈవెంట్-డ్రివెన్ ప్రోగ్రామింగ్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">క్లిక్‌లు మరియు కీ ప్రెస్‌లకు ప్రతిస్పందించే యాప్‌లు రూపొందించడం నేర్చుకోండి. వెబ్‌లో లైవ్‌గా ఉండే సరళమైన అప్లికేషన్‌ల (యాప్స్) సీరీస్ సృష్టించండి!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<br>
+
+<p><a href="#top">[తిరిగి పై భాగానికి]</a></p>
+
 <hr />
 
-{{ athome_olderstudents }}
+<a id="labs"></a>
+<h2>ఏదైనా సృష్టించండి!</h2>
+<p>మొదట, ప్రేరణ పొందండి! చూడండి మా <a href="https://studio.code.org/projects" target="_blank">ప్రాజెక్ట్ గ్యాలరీ</a> — కొన్ని గేమ్స్ ఆడండి లేదా విద్యార్థులు సృష్టించిన కొన్ని యాప్స్ ప్రయత్నించండి. యాప్స్ ల్యాబ్, గేమ్ ల్యాబ్ లేదా వెబ్ ల్యాబ్‌లో మీరు ప్రాజెక్టును మీ సొంతమైనదిగా చేయడానికి "రీమిక్స్" చేయవచ్చు లేదా ఏదైనా కొత్తది సృష్టించవచ్చు.</p>
 
-<div style="clear: both; margin-bottom: 30px"></div>
+<br>
 
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-
-## Learn to design and build apps with App Lab
-
-<div class="col-33" style="padding-right: 20px;">
-
-<img src="/images/app-lab/applab-tool.png" style="width: 100%"/>
-
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>యాప్ ల్యాబ్</strong></h3></a>
+    <p style="color:#ffffff">మీరు సరళమైన యాప్స్ తయారు చేయగల వాతావరణం యాప్ ల్యాబ్ ప్రోగ్రామింగ్. ఒక యాప్ రూపొందించండి, అది పని చేసేలా చేయడానికి బ్లాక్స్ లేదా JavaScript తో కోడ్ చేయండి, తర్వాత మీ యాప్‌ను సెకండ్లలో షేర్ చేయండి.</p>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ఒక యాప్ నిర్మించండి</button></a>
+  </div>
+  <div style="clear: both"></div>
 </div>
 
-<div class="col-66">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>గేమ్ ల్యాబ్</strong></h3></a>
+    <p style="color:#ffffff">ఒకదానితో ఒకటి ఇంటరాక్ట్ అయ్యే వస్తువులు మరియు పాత్రలతో సరళమైన అనిమేషన్లు మరియు గేమ్స్ మీరు తయారు చేయగల ప్రోగ్రామింగ్ వాతావరణం గేమ్ ల్యాబ్.</p>
+    <br>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ఒక గేమ్ సృష్టించండి</button></a>
+  </div>
+  <div style="clear: both"></div>
+</div>
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>వెబ్ ల్యాబ్</strong></h3></a>
+    <p style="color:#ffffff">మీరు HTML మరియు CSS ఉపయోగించి సరళమైన వెబ్ పేజీలు తయారు చేయగల వాతావరణం వెబ్ ల్యాబ్. మీ వెబ్ పేజీలు రూపొందించండి మరియు మీ సైట్‌ను సెకండ్లలో షేర్ చేయండి.</p>
+    <br>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ఒక వెబ్ పేజీ తయారు చేయండి</button></a>
+  </div>
+  <div style="clear: both"></div>
+</div>
 
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<p><a href="#top">[తిరిగి పై భాగానికి]</a></p>
+
+<a id="unplugged"></a>
+<h2>‘అన్‌ప్లగ్డ్’ యాక్టివిటీలు: కంప్యూటర్ లేకుండా కంప్యూటర్ సైన్స్</h2>
+
+<div class="col-25" style="padding-bottom:15px; text-align:center">
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="అవర్ ఆఫ్ కోడ్ కోసం అన్‌ప్లగ్డ్ యాక్టివిటీలు">
+  </a>
+  <p><i>PDF గా చూడటానికి ఇమేజ్ క్లిక్ చేయండి</i></p>
+</div>
+<div class="col-75" style="padding-left:15px">
+  <p>స్క్రీన్ లేదా, సమస్య లేదు! ఒక పరికరం లేకుండా మీరు చేయగల శీఘ్ర, సరదా CS యాక్టివిటీల ’శాంప్లర్’ ను మేము కూర్చి ఉంచాము. ఈవెంట్స్ గురించి నేర్చుకునేటప్పుడు ఒక కుటుంబ డాన్స్ పార్టీ చేయండి లేదా చిత్రాలు గీయడానికి ఒకదానితో ఒకటి ’ప్రోగ్రామ్’ చేయండి!</p>
+  <br>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>అన్‌ప్లగ్డ్ యాక్టివిటీలు చూడండి</button></a>
+</div>
+
+<div style="clear: both; margin-bottom: 10px"></div>
+
+<p>లేదా ఇతర సంస్థల నుండి ఈ అన్‌ప్లగ్డ్ ఎంపికలు చూడండి:</p>
+<ul>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">హల్లో రూబీ</a> - కంప్యూటర్లు, టెక్నాలజీ మరియు ప్రోగ్రామింగ్ గురించి నేర్చుకోవడానికి ప్రపంచంలోనే విచిత్రమైన మార్గం. సమస్యను విడగొట్టే సామర్థ్యం, పాటర్న్‌లను గుర్తించడం, అల్గారిథమిక్‌గా ఆలోచించడం, సమస్యలను డీబగ్ చేయడం మరియు కలిసి పని చేయడం వంటి విస్తృత పరిధిలో CS అంశాల యాక్టివిటీలు. (4-10 వయస్సుల వారికి)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - కార్డులు, స్ట్రింగ్, క్రేయాన్‌లు ఉపయోగించే మరియు చాలా ఉరుకులు పరుగులతో కూడిన ఆకర్షణీయమైన గేమ్స్ మరియు ఫజిల్స్ ద్వారా కంప్యూటర్ సైన్స్ నేర్పించే ఉచిత బోధన సామగ్రి కలెక్షన్. (5-14 వయస్సుల వారికి)</li>
+</ul>
+
+<h2>ఇంట్లో కంప్యూటర్ లేదా? మా భాగస్వాముల ఈ యాప్స్‌తో మీ ఫోన్‌లో CS ప్రయత్నించండి</h2>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="బాక్స్ ఐలాండ్"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>బాక్స్ ఐలాండ్</strong></h3></a>అల్గారిథమ్‌లు, ప్యాటర్న్ గుర్తించడం, సీక్వెన్స్‌లు, లూప్‌లు మరియు కండిషనల్‌లు లాంటి కోడింగ్ ప్రాథమిక అంశాలను బోధిస్తూ, నేర్చుకునేవారు ఉత్తేజకరమైన సాహసం చేసే ఆకర్షణీయమైన మొబైల్ కోడింగ్ గేమ్. <i>(అని వయస్సుల వారికి)</i>
+</div>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>5-9 వయస్సుల పిల్లల కోసం కోడ్ చేయడం నేర్చుకునే అవార్డ్ గెలుచుకున్న ప్లాట్‌ఫామ్. కోడ్ చేయడం నేర్చుకుంటూ ద ఫూల్స్‌తో ఫజిల్స్ పరిష్కరించండి మరియు గేమ్స్ సృష్టించండి. <strong>గమనిక: codeSpark ఉచిత 3-నెలల ట్రయల్ అందిస్తున్నది. సైన్‌అప్‌లో తల్లిదండ్రుల ఇమెయిల్ అడ్రసు మరియు క్రెడిట్ కార్డు సమాచారం అవసరం.</strong> <i>(గ్రేడ్ 5 వరకు ప్రీ-రీడర్ల కోస)</i>
+</div>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>సరదాగా కోడింగ్ నేర్చకోండి, నిజమైన JavaScript రాయడం మీకు నేర్పించే త్వరిత పాఠాలు మీ ఫోన్‌లో. Google ప్రోగ్రామ్‌తో కోడ్. <i>(మిడిల్ స్కూల్ మరియు ఆపై వారికి)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-<a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+<p><a href="#top">[తిరిగి పై భాగానికి]</a></p>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+<a id="livecoding"></a>
+<h2>Code.org బృందం మరియు ప్రత్యేక అతిథుల నుండి నేర్చుకోండి!</h2>
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
-
+<div class="col-50">
+  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
+      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes లోగో">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>        <div class="smalltext" style="color: dimgray;">CodeBytes కంప్యూటర్ సైన్స్‌ను వాస్తవ-ప్రపంచ అంశాలతో సమ్మిశ్రమం చేసే సులభంగా అర్థం చేసుకోగల, 20 నిమిషాల ఇంటరాక్టివ్ పాఠాలు. సైన్ భాషను చదవడానికి, ఖచ్చితంగా యాప్ రూపొందించడానికి, Minecraft ప్రపంచాన్ని అన్వేషించడానికి మరియు మరెన్నో చేయడానికి AI కు శిక్షణ ఇవ్వండి!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+    </span>
+  </div>
+</div>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-
+<div class="col-50">
+  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
+      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="కోడ్ బ్రేక్">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>కోడ్ బ్రేక్</strong></h3>        <div class="smalltext" style="color: dimgray; ">కోడ్ బ్రేక్ తీసుకోవడం ద్వారా కంప్యూటర్ సైన్స్‌ను సరదాగా ఉంచండి! మీరు యాష్టన్ కుచర్‌తో సైఫర్‌ను సృష్టించవచ్చు, యారా షాహిదీతో వేరియబుల్స్ గురించి తెలుసుకోవచ్చు మరియు ఇంటర్నెట్ అసలు ఆవిష్కర్త,వింట్ సెర్ఫ్‌తో ఇంటర్నెట్ ఎలా పనిచేస్తుందో కూడా అన్వేషించవచ్చు, Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>కనెక్ట్ అవ్వండి</button></a>
+    </span>
+  </div>
+</div>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+<div style="clear: both; margin-bottom: 20px"></div>
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
-
-</div>
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Back to top]</a></p>
-
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
-
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-<a id="teacher-support"></a>
-
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
-</div>
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Back to top]</a></p>
-
-<div style="clear: both; padding-top: 40px; "></div>
+<a href="#top">[తిరిగి పై భాగానికి]</a>
+<br>

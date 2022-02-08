@@ -10,6 +10,18 @@ right '3'
 wrong '4'
 
 teacher_markdown <<MARKDOWN
+**Explanation:** See the diagram below showing which paths would need to be broken.
+
+![](https://images.code.org/5a0f89eb5899811064fa6bc4d21caff9-image-1624917437458.png)
+
+[Lesson 2 - Building a Network](https://studio.code.org/s/csp2-2021/lessons/2) gave students opportunities to build networks with the consideration that some connections might be broken. [Lesson 4 - Routers and Redundancy](https://studio.code.org/s/csp2-2021/lessons/4) introduced students to the concept of fault-tolerant networks.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.A.5: A path between two computing devices on a computer network (a sender or a receiver) is a sequence of directly-connected computing devices beginning at the sender and ending at the receiver
+
+* CSN-1.E.4: If a particular device or connection on the Internet fails, subsequent data will be sent via a different route, if possible.
+:::
 
 MARKDOWN
 

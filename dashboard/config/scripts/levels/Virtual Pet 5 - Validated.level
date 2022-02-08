@@ -72,7 +72,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">
@@ -234,7 +234,7 @@
               </value>
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
-                  <title name="VAR">wandering</title>
+                  <title name="VAR" id="wandering">wandering</title>
                 </block>
               </value>
             </block>
@@ -300,7 +300,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">shrinking</title>
+          <title name="NAME" id="shrinking">shrinking</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -322,7 +322,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>Moves back and forth in one direction. To change the direction a sprite is patrolling, change its "movement direction"</description>
           </mutation>
-          <title name="NAME">patrolling</title>
+          <title name="NAME" id="patrolling">patrolling</title>
           <statement name="STACK">
             <block type="gamelab_moveForward">
               <value name="SPRITE">
@@ -379,7 +379,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">growing</title>
+          <title name="NAME" id="growing">growing</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -400,7 +400,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -726,16 +726,16 @@
             <title name="VAR">spinning right</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">growing</title>
+            <title name="VAR" id="growing">growing</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">jittering</title>
+            <title name="VAR" id="jittering">jittering</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">shrinking</title>
+            <title name="VAR" id="shrinking">shrinking</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">patrolling</title>
+            <title name="VAR" id="patrolling">patrolling</title>
           </block>
           <block type="gamelab_behavior_get">
             <title name="VAR">moving north</title>
@@ -750,7 +750,7 @@
             <title name="VAR">moving west</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">wandering</title>
+            <title name="VAR" id="wandering">wandering</title>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE"/>

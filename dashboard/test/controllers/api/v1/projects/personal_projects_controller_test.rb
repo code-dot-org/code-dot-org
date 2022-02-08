@@ -21,6 +21,7 @@ class Api::V1::Projects::PersonalProjectsControllerTest < ActionDispatch::Integr
     sign_in(@project_owner)
     get "/api/v1/projects/personal/"
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
     personal_projects_list = JSON.parse(@response.body)
     assert_equal 1, personal_projects_list.size
     project_row = personal_projects_list.first

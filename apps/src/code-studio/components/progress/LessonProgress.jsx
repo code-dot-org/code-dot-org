@@ -45,16 +45,21 @@ class LessonProgress extends Component {
     this.setDesiredWidth();
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     for (
       let levelIndex = 0;
       levelIndex < this.props.levels.length;
       levelIndex++
     ) {
-      if (
+      const statusChanged =
         this.props.levels[levelIndex].status !==
-        nextProps.levels[levelIndex].status
-      ) {
+        nextProps.levels[levelIndex].status;
+
+      const badgeChanged =
+        this.props.levels[levelIndex].teacherFeedbackReviewState !==
+        nextProps.levels[levelIndex].teacherFeedbackReviewState;
+
+      if (statusChanged || badgeChanged) {
         return true;
       }
     }

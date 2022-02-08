@@ -1,4 +1,4 @@
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {sprites} from '@cdo/apps/p5lab/spritelab/blocks';
 import {
   registerReducers,

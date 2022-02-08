@@ -1,6 +1,6 @@
 {
-  "func": "mass",
+  "key": "mass",
+  "name": "mass",
   "category": "Sprites",
-  "modeOptionName": "*.mass",
-  "type": "property"
+  "syntax": "mass"
 }

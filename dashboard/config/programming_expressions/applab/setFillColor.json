@@ -1,18 +1,11 @@
 {
-  "func": "setFillColor",
+  "key": "setFillColor",
+  "name": "setFillColor",
   "category": "Canvas",
-  "paletteParams": [
-    "color"
+  "palette_params": [
+    {
+      "name": "color"
+    }
   ],
-  "params": [
-    "\"yellow\""
-  ],
-  "dropdown": {
-    "0": [
-      "\"yellow\"",
-      "rgb(255,255,0)",
-      "rgb(255,255,0,0.5)",
-      "\"#FFFF00\""
-    ]
-  }
+  "syntax": "setFillColor(color)"
 }

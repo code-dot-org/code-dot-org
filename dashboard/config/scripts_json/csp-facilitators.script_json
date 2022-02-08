@@ -2,15 +2,18 @@
   "script": {
     "name": "csp-facilitators",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "serialized_at": "2021-11-22 19:56:30 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp-facilitators"
     }
@@ -76,23 +79,89 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "9c04f6b3-85ef-44b1-9eac-f2e49ae4bea8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c04f6b3-85ef-44b1-9eac-f2e49ae4bea8",
+        "lesson.key": "Introduction to Text Compression",
+        "lesson_group.key": "",
+        "script.name": "csp-facilitators"
+      }
+    },
+    {
+      "key": "cc167983-21f6-48aa-ba1c-7f7abdd2ac6d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc167983-21f6-48aa-ba1c-7f7abdd2ac6d",
+        "lesson.key": "Turtle Programming",
+        "lesson_group.key": "",
+        "script.name": "csp-facilitators"
+      }
+    },
+    {
+      "key": "534b4032-6fb9-48c9-8bf1-6bfa206d2bdd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "534b4032-6fb9-48c9-8bf1-6bfa206d2bdd",
+        "lesson.key": "Introduction to Events",
+        "lesson_group.key": "",
+        "script.name": "csp-facilitators"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "bf7d2aee-f12d-499e-9510-2cba0fac4707",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bf7d2aee-f12d-499e-9510-2cba0fac4707",
+        "lesson_activity.key": "9c04f6b3-85ef-44b1-9eac-f2e49ae4bea8"
+      }
+    },
+    {
+      "key": "3b39212b-e4c6-4abe-ab06-152b3a22500c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c",
+        "lesson_activity.key": "cc167983-21f6-48aa-ba1c-7f7abdd2ac6d"
+      }
+    },
+    {
+      "key": "601311ae-2c68-40c4-8634-a90ec11f2274",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274",
+        "lesson_activity.key": "534b4032-6fb9-48c9-8bf1-6bfa206d2bdd"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "text compression intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -100,7 +169,8 @@
         ],
         "lesson.key": "Introduction to Text Compression",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "bf7d2aee-f12d-499e-9510-2cba0fac4707"
       },
       "level_keys": [
         "text compression intro"
@@ -109,14 +179,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U1L13 Text Compression"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -124,7 +193,8 @@
         ],
         "lesson.key": "Introduction to Text Compression",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "bf7d2aee-f12d-499e-9510-2cba0fac4707"
       },
       "level_keys": [
         "U1L13 Text Compression"
@@ -133,14 +203,13 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "introduction to turtle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -148,7 +217,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       },
       "level_keys": [
         "introduction to turtle"
@@ -157,14 +227,13 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L2 Using Simple Commands"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -172,7 +241,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       },
       "level_keys": [
         "U3L2 Using Simple Commands"
@@ -181,14 +251,13 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L2_TurtleSquare_right"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -196,7 +265,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       },
       "level_keys": [
         "U3L2_TurtleSquare_right"
@@ -205,14 +275,13 @@
     {
       "chapter": 6,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L2_Turtle3by3Grid"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -220,7 +289,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       },
       "level_keys": [
         "U3L2_Turtle3by3Grid"
@@ -229,14 +299,13 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "introduction to events"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -244,7 +313,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       },
       "level_keys": [
         "introduction to events"
@@ -253,14 +323,13 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L13 - Turtle move with button"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -268,7 +337,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       },
       "level_keys": [
         "U3L13 - Turtle move with button"
@@ -277,14 +347,13 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U313 drag Two Buttons"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -292,7 +361,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       },
       "level_keys": [
         "U313 drag Two Buttons"
@@ -301,14 +371,13 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L13 eventsDetails"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -316,7 +385,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       },
       "level_keys": [
         "U3L13 eventsDetails"
@@ -325,14 +395,13 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U313 Two Buttons with Ids"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -340,7 +409,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       },
       "level_keys": [
         "U313 Two Buttons with Ids"
@@ -349,14 +419,13 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L13 - Debug Id Problem"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -364,7 +433,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       },
       "level_keys": [
         "U3L13 - Debug Id Problem"
@@ -373,14 +443,13 @@
     {
       "chapter": 13,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L13 - Debugging 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -388,7 +457,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       },
       "level_keys": [
         "U3L13 - Debugging 1"
@@ -404,7 +474,8 @@
         ],
         "lesson.key": "Introduction to Text Compression",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "bf7d2aee-f12d-499e-9510-2cba0fac4707"
       }
     },
     {
@@ -415,7 +486,8 @@
         ],
         "lesson.key": "Introduction to Text Compression",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "bf7d2aee-f12d-499e-9510-2cba0fac4707"
       }
     },
     {
@@ -426,7 +498,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       }
     },
     {
@@ -437,7 +510,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       }
     },
     {
@@ -448,7 +522,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       }
     },
     {
@@ -459,7 +534,8 @@
         ],
         "lesson.key": "Turtle Programming",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "3b39212b-e4c6-4abe-ab06-152b3a22500c"
       }
     },
     {
@@ -470,7 +546,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       }
     },
     {
@@ -481,7 +558,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       }
     },
     {
@@ -492,7 +570,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       }
     },
     {
@@ -503,7 +582,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       }
     },
     {
@@ -514,7 +594,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       }
     },
     {
@@ -525,7 +606,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       }
     },
     {
@@ -536,7 +618,8 @@
         ],
         "lesson.key": "Introduction to Events",
         "lesson_group.key": "",
-        "script.name": "csp-facilitators"
+        "script.name": "csp-facilitators",
+        "activity_section.key": "601311ae-2c68-40c4-8634-a90ec11f2274"
       }
     }
   ],

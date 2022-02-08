@@ -7,6 +7,7 @@ import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 import $ from 'jquery';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 import {
   setDynamicInstructionsDefaults,
@@ -25,12 +26,17 @@ const MOBILE_PORTRAIT_WIDTH = 900;
 function getInstructionsDefaults() {
   var instructions = {
     selectDataset: 'Select the data set you would like to use.',
+    uploadedDataset: 'You just uploaded a dataset.',
+    selectedDataset: 'You just selected a dataset.',
     dataDisplayLabel: 'Choose one column to predict.',
     dataDisplayFeatures:
       'Choose one or more columns as inputs to help make the prediction.',
+    selectedFeatureNumerical: 'You just selected a numerical feature.',
+    selectedFeatureCategorical: 'You just selected a categorical feature.',
     trainModel: 'Your model is being trained.',
     generateResults: 'Your model is being tested.',
     results: 'Review the results.',
+    resultsDetails: 'Details of results are being shown.',
     saveModel: 'Save the trained model for use in App Lab.',
     modelSummary:
       "You've successfully trained and saved your model. Review your model \
@@ -176,6 +182,18 @@ Ailab.prototype.initMLActivities = function() {
     });
   };
 
+  const logMetric = (eventName, details) => {
+    firehoseClient.putRecord(
+      {
+        study: 'ai-ml',
+        study_group: 'ai-lab',
+        event: eventName,
+        data_json: JSON.stringify(details)
+      },
+      {includeUserId: true}
+    );
+  };
+
   setAssetPath('/blockly/media/skins/ailab/');
 
   const {
@@ -189,7 +207,8 @@ Ailab.prototype.initMLActivities = function() {
     onContinue,
     setInstructionsKey,
     i18n: ailabMsg,
-    saveTrainedModel
+    saveTrainedModel,
+    logMetric
   });
 
   if (instructionsDismissed) {

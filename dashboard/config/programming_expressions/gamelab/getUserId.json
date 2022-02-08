@@ -1,5 +1,6 @@
 {
-  "func": "getUserId",
+  "key": "getUserId",
+  "name": "getUserId",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "getUserId"
 }

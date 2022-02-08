@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 # Backfill existing TeacherFeedbacks to set script_level_id based on script
-# stability. Scripts have is_stable set to true when we launch curriculum.
-# Scripts that do not have is_stable set to true are used internally, usually
-# as drafts.
+# stability. Scripts have published_state of stable when we launch curriculum.
 
 require_relative '../../../dashboard/config/environment'
 
@@ -20,7 +18,7 @@ def update_script_level_ids_based_on_script_stability
     puts "*"
     associated_script_levels = feedback.level.script_levels
     if associated_script_levels.length > 1
-      script_levels_with_stable_scripts = associated_script_levels.select {|sl| sl.script.is_stable}
+      script_levels_with_stable_scripts = associated_script_levels.select {|sl| sl.script.stable?}
       if script_levels_with_stable_scripts.length == 1
         feedback.update_attributes(script_level_id: script_levels_with_stable_scripts.first.id)
       end

@@ -7,27 +7,27 @@ en:
           lessons:
             Report Lesson 1:
               name: report-lesson-1
-            Report Stage 2:
-              name: report-stage-2
+            Report Lesson 2:
+              name: report-lesson-2
         Milestone Script:
           lessons:
-            Milestone Stage 1:
-              name: milestone-stage-1
-            Milestone Stage 2:
-              name: milestone-stage-2
+            Milestone Lesson 1:
+              name: milestone-lesson-1
+            Milestone Lesson 2:
+              name: milestone-lesson-2
         laurel:
           title: custom-script-laurel
           lessons:
             Laurel Lesson 1:
-              name: laurel-stage-1
+              name: laurel-lesson-1
             Laurel Lesson 2:
-              name: laurel-stage-2
+              name: laurel-lesson-2
         text-response-script:
           lessons:
-            First Stage:
-              name: First Stage
-            Second Stage:
-              name: Second Stage
+            First Lesson:
+              name: First Lesson
+            Second Lesson:
+              name: Second Lesson
     unplugged:
       'OldUnplugged':
         title: 'Test title'

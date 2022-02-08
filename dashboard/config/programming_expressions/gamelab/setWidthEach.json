@@ -1,11 +1,11 @@
 {
-  "func": "setWidthEach",
+  "key": "setWidthEach",
+  "name": "setWidthEach",
   "category": "Groups",
-  "paletteParams": [
-    "width"
+  "palette_params": [
+    {
+      "name": "width"
+    }
   ],
-  "params": [
-    "50"
-  ],
-  "modeOptionName": "*.setWidthEach"
+  "syntax": "setWidthEach(width)"
 }

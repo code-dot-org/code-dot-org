@@ -1,11 +1,11 @@
 {
-  "func": "setFrame",
+  "key": "setFrame",
+  "name": "setFrame",
   "category": "Sprites",
-  "paletteParams": [
-    "frame"
+  "palette_params": [
+    {
+      "name": "frame"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "modeOptionName": "*.setFrame"
+  "syntax": "setFrame(frame)"
 }

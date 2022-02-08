@@ -1,0 +1,37 @@
+---
+title: 你好世界
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# 你好世界！
+
+在《電腦科學入門》中，多數學生創建的第一個程式便是一個簡單的程式，能夠輸出一行標誌性的文本：「Hello World!」 通過這個介紹活動，向電腦科學的世界問好，讓學生們具備基本的程式設計技能和創建應用程式的信心。 從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼！
+
+# 選擇你的你好世界主題
+
+{{ spritelab_module, title: "食物", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "動物", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "復古", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "表情符號", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "教師資訊", title: "在Hello World之後如何繼續學習", description: "Hello World是課堂內完美的第一步，然後可以嘗試我們新教材CS Connections內的各種開放性項目! 在學習了一些程式設計基礎知識後，學生將能夠進展到電腦科學聯繫的跨學科項目。", button_text: "Learn more", url: "/educate/csc" }}
+
+## 精選學生作品
+
+{{ featured_project, title: "食物", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "表情符號", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "動物", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "復古", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

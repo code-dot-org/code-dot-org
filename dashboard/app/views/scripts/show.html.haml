@@ -1,21 +1,10 @@
+- @page_title = @script.localized_title
+
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# This variable will get any data we need to pass along to scripts/show.js
-- script_data = @script.summarize(true, current_user)
-- additional_script_data = {course_name: @script.unit_group&.name,
-                            course_id: @script.unit_group&.id,
-                            show_redirect_warning: @show_redirect_warning,
-                            redirect_script_url: @redirect_script_url,
-                            section: @section,
-                            user_type: current_user&.user_type,
-                            user_id: current_user&.id,
-                            user_providers: current_user&.providers,
-                            is_verified_teacher: current_user&.authorized_teacher?,
-                            locale: Script.locale_english_name_map[request.locale],
-                            sections: @sections_with_assigned_info}
-- scriptOverviewData = {scriptData: script_data.merge(additional_script_data)}
-- if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
-  -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
+- scriptOverviewData = {scriptData: @script_data, plcBreadcrumb: @plc_breadcrumb}
+
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
@@ -28,27 +17,15 @@
 - if @current_user.try(:script_hidden?, @script)
   = render partial: 'hidden_script'
 - else
-  - course_link = @script.course_link(params[:section_id])
-  - if course_link
-    - course_title = @script.course_title || I18n.t('view_all_units')
-    #script-breadcrumb
-      %a{href: course_link}
-        %i.fa.fa-chevron-left
-        %span
-          = course_title
   #landingpage
     #notification
-    -# This div ends up being owned by ScriptOverviewHeader in react
+    -# This div ends up being owned by UnitOverviewHeader in react
     #lesson-heading-extras
       - if @script.banner_image
         %p
           - path = script_next_path(@script)
           - path += "?section_id=#{params[:section_id]}" if params[:section_id]
           = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
-
-      - if @script.beta?
-        .betacontainer
-          != t('landing.prerelease_tutorial', markdown: true)
 
     #stats
       .user-stats-block
@@ -63,7 +40,7 @@
         %br/
         %br/
 
-  - if can? :edit, @script
+  - if current_user.try(:levelbuilder?)
     -# Show all the levels, their names, and instructions in the extra links box.
     = render layout: 'shared/extra_links' do
       %strong= @script.name
@@ -79,3 +56,8 @@
         %ul
           - @script.unit_groups.each do |course|
             %li= link_to course_path(course)
+      - lesson_plans = @script.is_migrated && @script.use_legacy_lesson_plans && @script.lessons.select(&:has_lesson_plan).map {|lesson| {name: lesson.name, url: lesson.get_uncached_show_path}}
+      -if lesson_plans && lesson_plans.count > 0
+        ="There are #{lesson_plans.count} unlaunched code studio lesson plans in this unit:"
+        - lesson_plans.each do |lesson_plan|
+          %li= link_to lesson_plan[:name], lesson_plan[:url]

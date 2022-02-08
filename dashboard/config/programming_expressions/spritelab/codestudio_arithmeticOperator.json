@@ -1,7 +1,7 @@
 {
+  "key": "codestudio_arithmeticOperator",
+  "name": "math_arithmetic",
   "category": "Math",
-  "config": {
-    "docFunc": "codestudio_arithmeticOperator",
-    "func": "math_arithmetic"
-  }
+  "block_name": "math_arithmetic",
+  "syntax": "math_arithmetic"
 }

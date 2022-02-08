@@ -668,6 +668,7 @@ zh-CN:
   dashboard_high_courses: 为期一年的高中课程
   dashboard_high_courses_desc: 通过面向现有教学人员提供这一新领域的培训，我们的高中组项目能帮助学区提供全年计算机科学类编写课程。注册开发专业研讨会，申请与
     Code.org <a href="/educate/districts">建立全区域合作伙伴关系</a>。
+  dashboard_course_csina: 代数中的计算机科学
   dashboard_course_csina_desc: Code.org 与 Bootstrap 教程合作，开发一套通过计算机编程教授代数和几何概念的课程。
   dashboard_course_csins: 理科中的计算机科学
   dashboard_course_csins_desc: Code.org 与 GUTS 项目合作交付计算机科学概念导论，范围包括建模与仿真。
@@ -1012,12 +1013,14 @@ zh-CN:
   coursed-2020_name: 课程 D (2019)
   coursee-2020_name: 课程 E (2019)
   coursef-2020_name: 课程 F （2019）
+  coursed-2021_name: 课程 D （2021）
   express-2018_name: 速学课程 （2018）
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
   pre-express-2019_name: 学前儿童的速学课程（2019）
   express-2020_name: 速学课程 (2019)
   pre-express-2020_name: 学前儿童的速学课程（2020）
+  pre-express-2021_name: 学前儿童的速学课程（2021）
   csd2_name: 单元 2：网页开发
   csd3_name: 单元 3：动画和游戏
   accelerated_name: 加速课程
@@ -1032,6 +1035,8 @@ zh-CN:
   iceage_name: 冰河世纪
   minecraft_name: 我的世界
   starwarsblocks_name: 星球大战(块)
+  hoc-impact-study_name: 带调查的经典迷宫
+  flappy-impact-study_name: 带调查的 Flappy Code
   hoc-encryption_name: 简单加密
   text-compression_name: 文本压缩
   applab_name: 应用实验室
@@ -1123,6 +1128,12 @@ zh-CN:
   coursed-2020_gradelevel: 8年级以上
   coursee-2020_gradelevel: 年龄 8-12
   coursef-2020_gradelevel: 年龄 9-13
+  coursea-2021_gradelevel: 年龄 4-7
+  courseb-2021_gradelevel: 年龄 5-8
+  coursec-2021_gradelevel: 年龄 6-10
+  coursed-2021_gradelevel: 8年级以上
+  coursee-2021_gradelevel: 年龄 8-12
+  coursef-2021_gradelevel: 年龄 9-13
   accelerated_gradelevel: 10-18 岁
   codeorg_platformtext: 现代浏览器、智能手机、平板电脑
   codeintl_platformtext: 现代浏览器、智能手机、平板电脑
@@ -1255,6 +1266,12 @@ zh-CN:
   coursed-2020_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
   coursee-2020_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
   coursef-2020_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+  coursea-2021_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  courseb-2021_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  coursec-2021_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+  coursed-2021_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+  coursee-2021_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+  coursef-2021_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   khan_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
@@ -1781,6 +1798,13 @@ zh-CN:
   hoc2020_mc_available_mee: 在《我的世界》可用：教育版
   hoc2020_mc_mee_title: Minecraft两个村庄的故事
   hoc2020_mc_mee_description: 新的“Minecraft编程一小时教程”现在可以在Minecraft:教育版在Windows、Mac、Chromebook和iPad中使用。学习编码的基础知识，探索多样性和融入您的学生！免费获取资源，包括课程计划、视频、计算机科学课程、公平课程和教师培训。
+  hoc2021_mc_mee_title: 我的世界 timCraft
+  hoc2021_mc_mee_description: 时光倒流，学习编码！新的《我的世界编程一小时》教程现已在我的世界：适用于 Windows、Mac、Chromebook
+    和 iPad 的教育版中提供。开始使用免费的教育工作者资源、培训和视频。
+  hoc2021_mc_mee_villages_title: 两个村庄的故事
+  hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中学习编程基础知识，与学生一起探索多样性和包容性。
+  hoc2021_mc_mee_ai_title: 人工智能为好
+  hoc2021_mc_mee_ai_description: 与学生一起探索 AI，并在 Minecraft：教育版中学习编码。
   footer_powered_by_aws: 由亚马逊网络服务
   footer_built_on_github: 在微软的GitHub上构建
   codebytes_skinny_banner_title: 加入我们12月7-11日的CodeBytes直播迷你课程！
@@ -1798,7 +1822,52 @@ zh-CN:
   footer_support: 支持
   footer_terms: 条款
   ai_for_oceans: 海洋环保中的人工智能
+  ai_for_oceans_lesson_plan: 课程计划
+  ai_for_oceans_tile_description: 通过训练人工智能检测垃圾来帮助人工智能清洁海洋！了解训练数据和偏见，以及人工智能如何解决世界问题。查看
+  how_ai_works: AI 的工作原理
+  how_ai_works_tile_description: 观看这一系列短片，了解 AI 的工作原理以及它为何如此重要。由微软首席执行官萨蒂亚·纳德拉和各种各样的专家组成。
+  watch_the_videos: 观看视频
+  ai_and_ethics: 人工智能与道德
+  ai_and_ethics_tile_description: 学生们思考人工智能的道德含义，然后共同努力，为世界各地的 AI 创作者和立法者创建 “AI 道德准则”
+    资源。
+  view_lesson_plan: 查看课程计划
   ai_in_partnership_with: '与以下机构合作: '
   ai_microsoft_thanks: 我们感谢微软支持我们的理想和使命，以确保每个儿童有机会学习计算机科学和在21世纪取得成功的技能。
+  ai_ethics_panel_header: 探索人工智能伦理小组讨论
+  ai_ethics_panel_description_1: 与我们最喜欢的 AI 专家一起深入了解！本次小组讨论涉及算法偏见和工作的未来等重要问题。与我们的配对
+  ai_ethics_lesson_plan: 人工智能与道德课程计划
+  ai_ethics_panel_description_2: 很好地介绍人工智能的伦理学！
+  cs_for_good: CS 为好
+  cs_for_good_tile_description: 激发学生深入思考计算机科学在创造一个更加公平和可持续发展的世界中可以发挥的作用的资源。
+  view_resources: 查看资源
+  imagine_cup_junior: 想象一下杯少年
+  imagine_cup_junior_tile_description: 这项全球性的 “人工智能为善” 挑战向学生介绍了微软的 AI in Good 计划，使他们能够利用人工智能的力量解决世界上的问题。
   ai_activity: 活动
   ai_description: 描述
+  ai_seeing_ai: 看见 AI
+  ai_seeing_ai_description: 一个免费的应用程序，用多种语言讲述你周围的世界。
+  ai_quick_draw: 快点，画画！
+  ai_quick_draw_description: 神经网络能学会识别涂鸦吗？
+  ai_teachable_machine: 可教的机器
+  ai_teachable_machine_description: 训练计算机识别自己的图像、声音和姿势。
+  ai_google: 使用谷歌进行 AI 实验
+  ai_google_description: 开始通过图片、绘图、语言、音乐等探索机器学习。
+  ai_zooniverse: Zooniverse-快照山斑马
+  ai_zooniverse_description: 通过识别图像中的不同动物来帮助保护濒临灭绝的开普山斑马。
+  ai_audience: 观众
+  ai_minecraft_description: 获取免费资源，包括课程计划、视频、计算机科学课程和教师培训。（需要我的世界：教育版）
+  ai_k_12_audience: K-12（需要阅读）
+  ai_microsoft_workshop: 微软的免费虚拟研讨会
+  ai_microsoft_workshop_description: 通过免费 STEM 和编码研讨会激发好奇心。
+  ai_machine_learning_for_kids: 儿童机器学习
+  ai_machine_learning_for_kids_description: 使用文本、数字或图像训练机器学习模型，然后使用它在 Scratch 中制作游戏。
+  ai_ibm_machine_learning_for_kids: IBM：面向儿童的机器学习
+  ai_ecs: ECS：人工智能 (AI)
+  ai_ecs_description: 探索计算机科学（ECS）课程的新的替代课程单元。
+  ai_elements: 人工智能的要素
+  ai_elements_description: Reaktor 和赫尔辛基大学创建的一系列免费在线课程。
+  ai_cognimates: COGNIMATES
+  ai_cognimates_description: 一个用于构建游戏、编程机器人和训练的 AI 教育平台。
+  ai_try_activity: 尝试活动
+  outbreak_tile_title: 疫情爆发
+  outbreak_tile_subtitle: 有病毒感染了怪物城！编写一个爆发模拟器，并预测怪物城的邻居会发生什么。

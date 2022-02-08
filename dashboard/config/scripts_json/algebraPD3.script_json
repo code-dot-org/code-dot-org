@@ -2,15 +2,18 @@
   "script": {
     "name": "algebraPD3",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:41 UTC",
+    "serialized_at": "2021-11-22 19:55:44 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "algebraPD3"
     }
@@ -151,23 +154,204 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "05c30be6-f21f-4d98-95b7-58e5cb6b41f9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "05c30be6-f21f-4d98-95b7-58e5cb6b41f9",
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    },
+    {
+      "key": "7ebf65db-ca68-4241-bfc1-f2ef5e369791",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ebf65db-ca68-4241-bfc1-f2ef5e369791",
+        "lesson.key": "Computer Science Pedagogy",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    },
+    {
+      "key": "3c1434c9-2fd9-44f4-9482-6109b5294b94",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c1434c9-2fd9-44f4-9482-6109b5294b94",
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    },
+    {
+      "key": "afd8b9a7-28a5-4cf7-b9f5-9c3d443dece3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "afd8b9a7-28a5-4cf7-b9f5-9c3d443dece3",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    },
+    {
+      "key": "42426e36-d899-420a-a901-31894d9d3544",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42426e36-d899-420a-a901-31894d9d3544",
+        "lesson.key": "Strings and Images",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    },
+    {
+      "key": "d61208d2-0363-45ee-8444-54b7c6415070",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d61208d2-0363-45ee-8444-54b7c6415070",
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    },
+    {
+      "key": "2c88cfeb-0bd5-458b-99ce-e5b0cc8920dd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c88cfeb-0bd5-458b-99ce-e5b0cc8920dd",
+        "lesson.key": "The Big Game",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    },
+    {
+      "key": "b9a89e72-46c6-4662-b792-855a2529600f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9a89e72-46c6-4662-b792-855a2529600f",
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b",
+        "lesson_activity.key": "05c30be6-f21f-4d98-95b7-58e5cb6b41f9"
+      }
+    },
+    {
+      "key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5",
+        "lesson_activity.key": "7ebf65db-ca68-4241-bfc1-f2ef5e369791"
+      }
+    },
+    {
+      "key": "3fef7677-0313-41bf-8fe1-281d4510180a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3fef7677-0313-41bf-8fe1-281d4510180a",
+        "lesson_activity.key": "3c1434c9-2fd9-44f4-9482-6109b5294b94"
+      }
+    },
+    {
+      "key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23",
+        "lesson_activity.key": "afd8b9a7-28a5-4cf7-b9f5-9c3d443dece3"
+      }
+    },
+    {
+      "key": "ed9e8997-01e3-461e-9625-fb2b8efc838e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e",
+        "lesson_activity.key": "42426e36-d899-420a-a901-31894d9d3544"
+      }
+    },
+    {
+      "key": "badc489c-e52d-4374-ac20-2ff05d4171f7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7",
+        "lesson_activity.key": "d61208d2-0363-45ee-8444-54b7c6415070"
+      }
+    },
+    {
+      "key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab",
+        "lesson_activity.key": "2c88cfeb-0bd5-458b-99ce-e5b0cc8920dd"
+      }
+    },
+    {
+      "key": "219d2a39-d9bb-45f5-bb9c-01192cf97b09",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "219d2a39-d9bb-45f5-bb9c-01192cf97b09",
+        "lesson_activity.key": "b9a89e72-46c6-4662-b792-855a2529600f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg bootstrap"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -175,7 +359,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "PDAlg bootstrap"
@@ -184,14 +369,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg first forum"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -199,7 +383,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "PDAlg first forum"
@@ -208,14 +393,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "K5PD tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -223,7 +407,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "K5PD tour"
@@ -232,14 +417,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg circles to blocks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -247,7 +431,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "PDAlg circles to blocks"
@@ -256,14 +441,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg block match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -271,7 +455,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "PDAlg block match"
@@ -280,14 +465,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Scope"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -295,7 +479,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "PDAlg Scope"
@@ -304,14 +489,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg implementation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -319,7 +503,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "PDAlg implementation"
@@ -328,14 +513,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg course goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -343,7 +527,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       },
       "level_keys": [
         "PDAlg course goals"
@@ -352,14 +537,13 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Strategies O"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -367,7 +551,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       },
       "level_keys": [
         "PDK5 Strategies O"
@@ -376,14 +561,13 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Pair Programming 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -391,7 +575,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       },
       "level_keys": [
         "PDK5 Pair Programming 1"
@@ -400,14 +585,13 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Pair programming match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -415,7 +599,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       },
       "level_keys": [
         "PDK5 Pair programming match"
@@ -424,14 +609,13 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Problem Solving"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -439,7 +623,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       },
       "level_keys": [
         "PDK5 Problem Solving"
@@ -448,14 +633,13 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Classroom Culture C"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -463,7 +647,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       },
       "level_keys": [
         "PDK5 Classroom Culture C"
@@ -472,14 +657,13 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Classroom Culture 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -487,7 +671,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       },
       "level_keys": [
         "PDAlg Classroom Culture 2"
@@ -496,14 +681,13 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Strategies F"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -511,7 +695,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       },
       "level_keys": [
         "PDK5 Strategies F"
@@ -520,14 +705,13 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Teacher Dashboard 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -535,7 +719,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "3fef7677-0313-41bf-8fe1-281d4510180a"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 1"
@@ -544,14 +729,13 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Teacher Dashboard 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -559,7 +743,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "3fef7677-0313-41bf-8fe1-281d4510180a"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 2"
@@ -568,14 +753,13 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Teacher Dashboard"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -583,7 +767,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "3fef7677-0313-41bf-8fe1-281d4510180a"
       },
       "level_keys": [
         "PDAlg Teacher Dashboard"
@@ -592,14 +777,13 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Blocks Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -607,7 +791,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "PDAlg Blocks Video"
@@ -616,14 +801,13 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -631,7 +815,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 1"
@@ -640,14 +825,13 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -655,7 +839,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 2"
@@ -664,14 +849,13 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -679,7 +863,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 3"
@@ -688,14 +873,13 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -703,7 +887,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 5"
@@ -712,14 +897,13 @@
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -727,7 +911,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 6"
@@ -736,14 +921,13 @@
     {
       "chapter": 25,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -751,7 +935,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 7"
@@ -760,14 +945,13 @@
     {
       "chapter": 26,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -775,7 +959,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 8"
@@ -784,14 +969,13 @@
     {
       "chapter": 27,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -799,7 +983,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval 9"
@@ -808,14 +993,13 @@
     {
       "chapter": 28,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -823,7 +1007,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       },
       "level_keys": [
         "Calc Circles of Eval Free Play"
@@ -832,14 +1017,13 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Types Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -847,7 +1031,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "PDAlg Types Video"
@@ -856,14 +1041,13 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images .1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -871,7 +1055,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images .1"
@@ -880,14 +1065,13 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images .2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -895,7 +1079,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images .2"
@@ -904,14 +1089,13 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -919,7 +1103,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 1"
@@ -928,14 +1113,13 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -943,7 +1127,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 2"
@@ -952,14 +1137,13 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -967,7 +1151,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 3"
@@ -976,14 +1161,13 @@
     {
       "chapter": 35,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -991,7 +1175,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 4"
@@ -1000,14 +1185,13 @@
     {
       "chapter": 36,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1015,7 +1199,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 5"
@@ -1024,14 +1209,13 @@
     {
       "chapter": 37,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1039,7 +1223,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 6"
@@ -1048,14 +1233,13 @@
     {
       "chapter": 38,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1063,7 +1247,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 7"
@@ -1072,14 +1257,13 @@
     {
       "chapter": 39,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1087,7 +1271,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images 8"
@@ -1096,14 +1281,13 @@
     {
       "chapter": 40,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Eval Strings Images Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1111,7 +1295,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       },
       "level_keys": [
         "Eval Strings Images Free Play"
@@ -1120,14 +1305,13 @@
     {
       "chapter": 41,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Design Recipe Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1135,7 +1319,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "PDAlg Design Recipe Video"
@@ -1144,14 +1329,13 @@
     {
       "chapter": 42,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1159,7 +1343,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 1"
@@ -1168,14 +1353,13 @@
     {
       "chapter": 43,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Rocket Contract 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1183,7 +1367,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Rocket Contract 1"
@@ -1192,14 +1377,13 @@
     {
       "chapter": 44,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Rocket 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1207,7 +1391,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Calc Rocket 1"
@@ -1216,14 +1401,13 @@
     {
       "chapter": 45,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Rocket 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1231,7 +1415,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Calc Rocket 2"
@@ -1240,14 +1425,13 @@
     {
       "chapter": 46,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1255,7 +1439,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 2"
@@ -1264,14 +1449,13 @@
     {
       "chapter": 47,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1279,7 +1463,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 3"
@@ -1288,14 +1473,13 @@
     {
       "chapter": 48,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1303,7 +1487,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 4"
@@ -1312,14 +1497,13 @@
     {
       "chapter": 49,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1327,7 +1511,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 5"
@@ -1336,14 +1521,13 @@
     {
       "chapter": 50,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1351,7 +1535,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 6"
@@ -1360,14 +1545,13 @@
     {
       "chapter": 51,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1375,7 +1559,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 7"
@@ -1384,14 +1569,13 @@
     {
       "chapter": 52,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1399,7 +1583,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket 8"
@@ -1408,14 +1593,13 @@
     {
       "chapter": 53,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Play Lab Rocket Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1423,7 +1607,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       },
       "level_keys": [
         "Play Lab Rocket Free Play"
@@ -1432,14 +1617,13 @@
     {
       "chapter": 54,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Big Game"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1447,7 +1631,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "PDAlg Big Game"
@@ -1456,14 +1641,13 @@
     {
       "chapter": 55,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1471,7 +1655,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Vars 1"
@@ -1480,14 +1665,13 @@
     {
       "chapter": 56,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1495,7 +1679,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Vars 2"
@@ -1504,14 +1689,13 @@
     {
       "chapter": 57,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Vars 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1519,7 +1703,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Vars 3"
@@ -1528,14 +1713,13 @@
     {
       "chapter": 58,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1543,7 +1727,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Vars 4"
@@ -1552,14 +1737,13 @@
     {
       "chapter": 59,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Animation 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1567,7 +1751,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Animation 1"
@@ -1576,14 +1761,13 @@
     {
       "chapter": 60,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Animation 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1591,7 +1775,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Animation 2"
@@ -1600,14 +1785,13 @@
     {
       "chapter": 61,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Animation 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1615,7 +1799,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Animation 3"
@@ -1624,14 +1809,13 @@
     {
       "chapter": 62,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Animation 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1639,7 +1823,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Animation 4"
@@ -1648,14 +1833,13 @@
     {
       "chapter": 63,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Booleans 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1663,7 +1847,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Booleans 1"
@@ -1672,14 +1857,13 @@
     {
       "chapter": 64,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Booleans 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1687,7 +1871,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Booleans 4"
@@ -1696,14 +1881,13 @@
     {
       "chapter": 65,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Booleans 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1711,7 +1895,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Booleans 2"
@@ -1720,14 +1905,13 @@
     {
       "chapter": 66,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Booleans 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1735,7 +1919,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Booleans 3"
@@ -1744,14 +1929,13 @@
     {
       "chapter": 67,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Booleans 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1759,7 +1943,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Booleans 5"
@@ -1768,14 +1953,13 @@
     {
       "chapter": 68,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Player 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1783,7 +1967,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Player 1"
@@ -1792,14 +1977,13 @@
     {
       "chapter": 69,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Player 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1807,7 +1991,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Player 2"
@@ -1816,14 +2001,13 @@
     {
       "chapter": 70,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Collision 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1831,7 +2015,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Collision 1"
@@ -1840,14 +2025,13 @@
     {
       "chapter": 71,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Collision 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1855,7 +2039,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Collision 4"
@@ -1864,14 +2049,13 @@
     {
       "chapter": 72,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Collision 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1879,7 +2063,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Collision 3"
@@ -1888,14 +2073,13 @@
     {
       "chapter": 73,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 20,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Big Game Final"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1903,7 +2087,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       },
       "level_keys": [
         "Big Game Final"
@@ -1912,14 +2097,13 @@
     {
       "chapter": 74,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg end of P3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1927,7 +2111,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "219d2a39-d9bb-45f5-bb9c-01192cf97b09"
       },
       "level_keys": [
         "PDAlg end of P3"
@@ -1936,14 +2121,13 @@
     {
       "chapter": 75,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg whats next"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1951,7 +2135,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "219d2a39-d9bb-45f5-bb9c-01192cf97b09"
       },
       "level_keys": [
         "PDAlg whats next"
@@ -1967,7 +2152,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -1978,7 +2164,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -1989,7 +2176,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -2000,7 +2188,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -2011,7 +2200,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -2022,7 +2212,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -2033,7 +2224,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -2044,7 +2236,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "f7a0e0e1-6c1a-4bee-908a-9856d1445d8b"
       }
     },
     {
@@ -2055,7 +2248,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       }
     },
     {
@@ -2066,7 +2260,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       }
     },
     {
@@ -2077,7 +2272,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       }
     },
     {
@@ -2088,7 +2284,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       }
     },
     {
@@ -2099,7 +2296,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       }
     },
     {
@@ -2110,7 +2308,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       }
     },
     {
@@ -2121,7 +2320,8 @@
         ],
         "lesson.key": "Computer Science Pedagogy",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4e21d2bd-9a8f-47ed-a5e9-dfdf17b2a8a5"
       }
     },
     {
@@ -2132,7 +2332,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "3fef7677-0313-41bf-8fe1-281d4510180a"
       }
     },
     {
@@ -2143,7 +2344,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "3fef7677-0313-41bf-8fe1-281d4510180a"
       }
     },
     {
@@ -2154,7 +2356,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "3fef7677-0313-41bf-8fe1-281d4510180a"
       }
     },
     {
@@ -2165,7 +2368,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2176,7 +2380,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2187,7 +2392,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2198,7 +2404,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2209,7 +2416,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2220,7 +2428,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2231,7 +2440,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2242,7 +2452,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2253,7 +2464,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2264,7 +2476,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ba5bf3a1-5f79-4b2d-ac1a-0ef36b0fab23"
       }
     },
     {
@@ -2275,7 +2488,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2286,7 +2500,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2297,7 +2512,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2308,7 +2524,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2319,7 +2536,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2330,7 +2548,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2341,7 +2560,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2352,7 +2572,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2363,7 +2584,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2374,7 +2596,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2385,7 +2608,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2396,7 +2620,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "ed9e8997-01e3-461e-9625-fb2b8efc838e"
       }
     },
     {
@@ -2407,7 +2632,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2418,7 +2644,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2429,7 +2656,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2440,7 +2668,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2451,7 +2680,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2462,7 +2692,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2473,7 +2704,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2484,7 +2716,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2495,7 +2728,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2506,7 +2740,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2517,7 +2752,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2528,7 +2764,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2539,7 +2776,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "badc489c-e52d-4374-ac20-2ff05d4171f7"
       }
     },
     {
@@ -2550,7 +2788,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2561,7 +2800,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2572,7 +2812,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2583,7 +2824,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2594,7 +2836,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2605,7 +2848,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2616,7 +2860,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2627,7 +2872,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2638,7 +2884,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2649,7 +2896,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2660,7 +2908,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2671,7 +2920,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2682,7 +2932,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2693,7 +2944,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2704,7 +2956,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2715,7 +2968,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2726,7 +2980,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2737,7 +2992,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2748,7 +3004,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2759,7 +3016,8 @@
         ],
         "lesson.key": "The Big Game",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "4b4aa178-4a7e-4226-91b5-dad01dbefdab"
       }
     },
     {
@@ -2770,7 +3028,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "219d2a39-d9bb-45f5-bb9c-01192cf97b09"
       }
     },
     {
@@ -2781,7 +3040,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD3"
+        "script.name": "algebraPD3",
+        "activity_section.key": "219d2a39-d9bb-45f5-bb9c-01192cf97b09"
       }
     }
   ],

@@ -2,16 +2,19 @@
   "script": {
     "name": "test-serialize-seeding-json-script",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
       "curriculum_path": "my_curriculum_path",
-      "is_migrated": true,
       "is_course": true,
+      "is_migrated": true,
       "version_year": "1999"
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
@@ -217,7 +220,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -240,7 +242,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -262,7 +263,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -285,7 +285,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -307,7 +306,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -330,7 +328,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,7 +349,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -375,7 +371,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,7 +392,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -420,7 +414,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,7 +435,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -465,7 +457,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -487,7 +478,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -510,7 +500,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -532,7 +521,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -555,7 +543,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

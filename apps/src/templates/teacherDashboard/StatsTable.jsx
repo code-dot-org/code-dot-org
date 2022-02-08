@@ -7,15 +7,13 @@ import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
-import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 class StatsTable extends Component {
   static propTypes = {
-    section: PropTypes.shape({
-      id: PropTypes.number,
-      students: PropTypes.array
-    }).isRequired,
+    sectionId: PropTypes.number.isRequired,
+    students: PropTypes.array.isRequired,
     studentsCompletedLevelCount: PropTypes.object,
 
     // Provided by redux.
@@ -25,16 +23,16 @@ class StatsTable extends Component {
   state = {};
 
   studentsWithCompletedLevelCount = () => {
-    const {section, studentsCompletedLevelCount} = this.props;
-    return (section.students || []).map(student => ({
+    const {students, studentsCompletedLevelCount} = this.props;
+    return (students || []).map(student => ({
       ...student,
-      completed_levels_count: studentsCompletedLevelCount[student.id] || 0
+      completedLevelsCount: studentsCompletedLevelCount[student.id] || 0
     }));
   };
 
   nameFormatter = (name, {rowData}) => {
-    const {section, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(section.id, scriptName, rowData.id);
+    const {sectionId, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(sectionId, scriptName, rowData.id);
 
     if (studentUrl) {
       return (
@@ -81,7 +79,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'completed_levels_count',
+        property: 'completedLevelsCount',
         header: {
           label: i18n.completedLevels(),
           props: {
@@ -102,7 +100,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'total_lines',
+        property: 'totalLines',
         header: {
           label: i18n.linesOfCode(),
           props: {

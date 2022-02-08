@@ -40,7 +40,8 @@ const getVersion = assignment => ({
   year: assignment.version_year,
   title: assignment.version_title,
   isStable: assignment.is_stable,
-  locales: assignment.supported_locales || []
+  locales: assignment.supported_locales || [],
+  localeCodes: assignment.supported_locale_codes || []
 });
 
 /**
@@ -56,7 +57,7 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    localeEnglishName: PropTypes.string,
+    localeCode: PropTypes.string,
     isNewSection: PropTypes.bool
   };
 
@@ -87,7 +88,7 @@ export default class AssignmentSelector extends Component {
 
     return setRecommendedAndSelectedVersions(
       versions,
-      this.props.localeEnglishName,
+      this.props.localeCode,
       selectedVersionYear
     );
   };

@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_playSound",
+  "name": "playSound",
+  "category": "World",
+  "block_name": "gamelab_playSound",
+  "syntax": "playSound"
+}

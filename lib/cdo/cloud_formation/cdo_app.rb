@@ -2,6 +2,7 @@ require_relative './stack_template'
 require_relative './vpc'
 
 require 'aws-sdk-acm'
+require 'aws-sdk-route53'
 
 require 'active_support/core_ext/numeric/bytes'
 require 'ostruct'

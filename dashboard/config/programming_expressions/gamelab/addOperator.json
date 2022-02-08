@@ -1,5 +1,6 @@
 {
-  "func": "addOperator",
-  "block": "__ + __",
-  "category": "Math"
+  "key": "addOperator",
+  "name": "addOperator",
+  "category": "Math",
+  "syntax": "__ + __"
 }

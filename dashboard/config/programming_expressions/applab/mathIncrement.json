@@ -1,5 +1,6 @@
 {
-  "func": "mathIncrement",
-  "block": "__++",
-  "category": "Math"
+  "key": "mathIncrement",
+  "name": "mathIncrement",
+  "category": "Math",
+  "syntax": "__++"
 }

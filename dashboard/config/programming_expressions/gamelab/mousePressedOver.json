@@ -1,11 +1,11 @@
 {
-  "func": "mousePressedOver",
-  "paletteParams": [
-    "sprite"
-  ],
-  "params": [
-    "sprite"
-  ],
+  "key": "mousePressedOver",
+  "name": "mousePressedOver",
   "category": "World",
-  "type": "value"
+  "palette_params": [
+    {
+      "name": "sprite"
+    }
+  ],
+  "syntax": "mousePressedOver(sprite)"
 }

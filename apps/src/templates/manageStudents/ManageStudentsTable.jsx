@@ -22,7 +22,8 @@ import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
 import NoSectionCodeDialog from './NoSectionCodeDialog';
 import {
   sectionCode,
-  sectionName
+  sectionName,
+  selectedSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
@@ -41,10 +42,13 @@ import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
+import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
+import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import SafeMarkdown from '../SafeMarkdown';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -107,6 +111,53 @@ export const sortRows = (data, columnIndexList, orderList) => {
   return addRows.concat(newStudentRows).concat(studentRows);
 };
 
+export const ManageStudentsNotificationFull = ({manageStatus}) => {
+  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
+
+  const sectionSpotsRemaining =
+    sectionCapacity - sectionStudentCount > 0
+      ? sectionCapacity - sectionStudentCount
+      : 0;
+
+  const notificationParams = {
+    studentLimit: sectionCapacity,
+    currentStudentCount: sectionStudentCount,
+    sectionCode: sectionCode,
+    availableSpace: sectionSpotsRemaining
+  };
+
+  const notification = {
+    notice: i18n.manageStudentsNotificationCannotVerb({
+      numStudents: manageStatus.numStudents,
+      verb: manageStatus.verb || 'add'
+    }),
+    details: `${
+      sectionSpotsRemaining === 0
+        ? i18n.manageStudentsNotificationFull(notificationParams)
+        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
+    }
+          ${i18n.contactSupportFullSection({
+            supportLink: 'https://support.code.org/hc/en-us/requests/new'
+          })}`
+  };
+
+  return (
+    <Notification
+      type={NotificationType.failure}
+      notice={notification.notice}
+      details={
+        // SafeMarkedown required to convert i18n string to clickable link
+        <SafeMarkdown markdown={notification.details} />
+      }
+      dismissible={false}
+    />
+  );
+};
+
+ManageStudentsNotificationFull.propTypes = {
+  manageStatus: PropTypes.object.isRequired
+};
+
 class ManageStudentsTable extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
@@ -117,6 +168,7 @@ class ManageStudentsTable extends Component {
     sectionName: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
+    isSectionAssignedCSA: PropTypes.bool,
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
@@ -626,7 +678,7 @@ class ManageStudentsTable extends Component {
     const {sectionId} = this.props;
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
   }
 
   showSectionCodeDialog() {
@@ -677,7 +729,8 @@ class ManageStudentsTable extends Component {
       sectionId,
       sectionName,
       sectionCode,
-      studentData
+      studentData,
+      isSectionAssignedCSA
     } = this.props;
 
     const noSectionCode = [
@@ -696,6 +749,12 @@ class ManageStudentsTable extends Component {
             })}
             dismissible={false}
           />
+        )}
+        {addStatus.status === AddStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={addStatus} />
+        )}
+        {transferStatus.status === TransferStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={transferStatus} />
         )}
         {addStatus.status === AddStatus.FAIL && (
           <Notification
@@ -745,6 +804,16 @@ class ManageStudentsTable extends Component {
               }
             />
           </div>
+          {/* Passes button style to CodeReviewGroupsDialog to avoid extra div,
+            but is otherwise similar to other button/modal components here.
+            Despite being unused in this component, we pass the dataApi object
+            so that it can be more easily stubbed in tests. */}
+          {isSectionAssignedCSA && (
+            <CodeReviewGroupsDialog
+              dataApi={new CodeReviewGroupsDataApi(sectionId)}
+              buttonContainerStyle={styles.button}
+            />
+          )}
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
             <div
               style={styles.sectionCodeBox}
@@ -851,11 +920,12 @@ export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(
   state => ({
-    sectionId: state.sectionData.section.id,
-    sectionCode: sectionCode(state, state.sectionData.section.id),
-    sectionName: sectionName(state, state.sectionData.section.id),
+    sectionId: state.teacherSections.selectedSectionId,
+    sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
+    sectionName: sectionName(state, state.teacherSections.selectedSectionId),
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
+    isSectionAssignedCSA: selectedSection(state).isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

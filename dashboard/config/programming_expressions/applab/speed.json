@@ -1,18 +1,11 @@
 {
-  "func": "speed",
+  "key": "speed",
+  "name": "speed",
   "category": "Turtle",
-  "paletteParams": [
-    "value"
+  "palette_params": [
+    {
+      "name": "value"
+    }
   ],
-  "params": [
-    "50"
-  ],
-  "dropdown": {
-    "0": [
-      "25",
-      "50",
-      "75",
-      "100"
-    ]
-  }
+  "syntax": "speed(value)"
 }

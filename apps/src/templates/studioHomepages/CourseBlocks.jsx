@@ -140,7 +140,12 @@ const ViewMoreTile = () => (
   <div className="tutorial-block">
     <div className="courseblock-span3 courseblock-tall">
       <a href={pegasus('/hourofcode/overview')}>
-        <img src="/shared/images/more_arrow.png" width="100%" height="120px" />
+        <img
+          src="/shared/images/more_arrow.png"
+          width="100%"
+          height="120px"
+          alt={i18n.teacherCourseHocLinkText()}
+        />
         <div className="course-container">
           <h3 className="heading">{i18n.viewMore()}</h3>
           <div className="text smalltext">

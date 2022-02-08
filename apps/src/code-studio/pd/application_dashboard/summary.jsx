@@ -31,13 +31,13 @@ export class Summary extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
       this.load(nextProps.regionalPartnerFilter);
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.load(this.props.regionalPartnerFilter);
   }
 
@@ -100,6 +100,15 @@ export class Summary extends React.Component {
               caption="CS Principles Teachers"
               data={this.state.applications['csp_teachers']}
               path="csp_teachers"
+              applicationType="teacher"
+            />
+          </Col>
+          <Col sm={6}>
+            <SummaryTable
+              id="summary-csa-teachers"
+              caption="Computer Science A Teachers"
+              data={this.state.applications['csa_teachers']}
+              path="csa_teachers"
               applicationType="teacher"
             />
           </Col>

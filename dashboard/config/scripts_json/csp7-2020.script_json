@@ -2,36 +2,8 @@
   "script": {
     "name": "csp7-2020",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSP",
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit7/{LESSON}",
-      "project_sharing": true,
-      "hideable_lessons": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-20/unit7/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-20/unit7/standards/"
-        ]
-      ],
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
       "announcements": [
         {
           "notice": "",
@@ -54,11 +26,33 @@
           "type": "feedback",
           "visibility": "Student-only"
         }
-      ]
+      ],
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit7/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-20/unit7/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-20/unit7/standards/"
+        ]
+      ],
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:40 UTC",
+    "serialized_at": "2021-11-22 17:08:13 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp7-2020"
     }
@@ -284,16 +278,545 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "52a04b7e-ba24-461a-a574-96e531d0fa78",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52a04b7e-ba24-461a-a574-96e531d0fa78",
+        "lesson.key": "Parameters and Return Explore",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "7928d285-88b0-4266-bdf4-cc62ec8963aa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7928d285-88b0-4266-bdf4-cc62ec8963aa",
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "7f4ca782-472e-4ef7-a808-121f686b8b0a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f4ca782-472e-4ef7-a808-121f686b8b0a",
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "d0e909d6-498f-4479-b1df-9f874167ff60",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0e909d6-498f-4479-b1df-9f874167ff60",
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "7a8bc6b0-69b1-454a-99e5-47f00fc89911",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a8bc6b0-69b1-454a-99e5-47f00fc89911",
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "18d52de6-423d-4281-9d99-c41f7efcdb67",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18d52de6-423d-4281-9d99-c41f7efcdb67",
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "ecb20803-fba5-4dda-8426-632a7a040410",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecb20803-fba5-4dda-8426-632a7a040410",
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "735632b1-89cb-4fda-9dc4-2c4f9546cc64",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "735632b1-89cb-4fda-9dc4-2c4f9546cc64",
+        "lesson.key": "Project - Make a Library Part 1",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "17fd87f0-49da-4b80-8af6-8c59494aaf92",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17fd87f0-49da-4b80-8af6-8c59494aaf92",
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "a5b40a98-d17d-4de1-9451-cbf0bf9ea120",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5b40a98-d17d-4de1-9451-cbf0bf9ea120",
+        "lesson.key": "Project - Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "0954f161-921e-413d-b7e8-4cc0496cbece",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0954f161-921e-413d-b7e8-4cc0496cbece",
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "key": "48fde9ed-9212-4384-832b-49ac94707cbe",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48fde9ed-9212-4384-832b-49ac94707cbe",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp7-2020"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "10dc3a92-7de7-4e9e-b1e1-3d5c1e5db3b9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "10dc3a92-7de7-4e9e-b1e1-3d5c1e5db3b9",
+        "lesson_activity.key": "52a04b7e-ba24-461a-a574-96e531d0fa78"
+      }
+    },
+    {
+      "key": "fc124b74-da58-47a2-8b34-0283a64338e0",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc124b74-da58-47a2-8b34-0283a64338e0",
+        "lesson_activity.key": "52a04b7e-ba24-461a-a574-96e531d0fa78"
+      }
+    },
+    {
+      "key": "46d9362f-1a9c-466e-8526-30550ac941ed",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "46d9362f-1a9c-466e-8526-30550ac941ed",
+        "lesson_activity.key": "7928d285-88b0-4266-bdf4-cc62ec8963aa"
+      }
+    },
+    {
+      "key": "ce68c804-177a-43da-bbe1-94df1cdfb002",
+      "position": 2,
+      "properties": {
+        "progression_name": "App Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce68c804-177a-43da-bbe1-94df1cdfb002",
+        "lesson_activity.key": "7928d285-88b0-4266-bdf4-cc62ec8963aa"
+      }
+    },
+    {
+      "key": "568533f3-2d84-4d2f-9572-102563954cbc",
+      "position": 3,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "568533f3-2d84-4d2f-9572-102563954cbc",
+        "lesson_activity.key": "7928d285-88b0-4266-bdf4-cc62ec8963aa"
+      }
+    },
+    {
+      "key": "b0047c44-2069-4c84-8183-917b695fe269",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0047c44-2069-4c84-8183-917b695fe269",
+        "lesson_activity.key": "7f4ca782-472e-4ef7-a808-121f686b8b0a"
+      }
+    },
+    {
+      "key": "db40b030-d178-4653-98a4-d8d51c1abe13",
+      "position": 2,
+      "properties": {
+        "progression_name": "console.log Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13",
+        "lesson_activity.key": "7f4ca782-472e-4ef7-a808-121f686b8b0a"
+      }
+    },
+    {
+      "key": "b102a929-7d4d-4e5f-9fba-2a11868e2b7a",
+      "position": 3,
+      "properties": {
+        "progression_name": "App Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "b102a929-7d4d-4e5f-9fba-2a11868e2b7a",
+        "lesson_activity.key": "7f4ca782-472e-4ef7-a808-121f686b8b0a"
+      }
+    },
+    {
+      "key": "1ba84bca-c559-447c-a126-cfddf327defd",
+      "position": 4,
+      "properties": {
+        "progression_name": "MOD Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ba84bca-c559-447c-a126-cfddf327defd",
+        "lesson_activity.key": "7f4ca782-472e-4ef7-a808-121f686b8b0a"
+      }
+    },
+    {
+      "key": "3a574b62-f70a-4198-93ca-1abfe28c0300",
+      "position": 5,
+      "properties": {
+        "name": "Check For Understanding: AP Practice",
+        "progression_name": "Check For Understanding: AP Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a574b62-f70a-4198-93ca-1abfe28c0300",
+        "lesson_activity.key": "7f4ca782-472e-4ef7-a808-121f686b8b0a"
+      }
+    },
+    {
+      "key": "21f0c4b3-04c2-4c75-96fd-77cc9a146e80",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "21f0c4b3-04c2-4c75-96fd-77cc9a146e80",
+        "lesson_activity.key": "d0e909d6-498f-4479-b1df-9f874167ff60"
+      }
+    },
+    {
+      "key": "b20dfb40-d241-4d68-a9c2-dad25d35047a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Try the Rock Paper Scissors App"
+      },
+      "seeding_key": {
+        "activity_section.key": "b20dfb40-d241-4d68-a9c2-dad25d35047a",
+        "lesson_activity.key": "d0e909d6-498f-4479-b1df-9f874167ff60"
+      }
+    },
+    {
+      "key": "a5fb1df8-3f18-40a6-a6e0-61060e390f55",
+      "position": 3,
+      "properties": {
+        "name": "Make the Rock Paper Scissors App",
+        "progression_name": "Make the Rock Paper Scissors App"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5fb1df8-3f18-40a6-a6e0-61060e390f55",
+        "lesson_activity.key": "d0e909d6-498f-4479-b1df-9f874167ff60"
+      }
+    },
+    {
+      "key": "c911a878-499c-447e-8db5-2b66499c7f71",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c911a878-499c-447e-8db5-2b66499c7f71",
+        "lesson_activity.key": "7a8bc6b0-69b1-454a-99e5-47f00fc89911"
+      }
+    },
+    {
+      "key": "9e2f09dd-d996-4f7a-9cff-dead0e252a3d",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e2f09dd-d996-4f7a-9cff-dead0e252a3d",
+        "lesson_activity.key": "7a8bc6b0-69b1-454a-99e5-47f00fc89911"
+      }
+    },
+    {
+      "key": "572bed5f-60e6-484a-aebc-6b806f5f2a88",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "572bed5f-60e6-484a-aebc-6b806f5f2a88",
+        "lesson_activity.key": "18d52de6-423d-4281-9d99-c41f7efcdb67"
+      }
+    },
+    {
+      "key": "2bd03856-6df1-4d9b-a10c-282818e10d7a",
+      "position": 2,
+      "properties": {
+        "progression_name": "States App"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bd03856-6df1-4d9b-a10c-282818e10d7a",
+        "lesson_activity.key": "18d52de6-423d-4281-9d99-c41f7efcdb67"
+      }
+    },
+    {
+      "key": "b9ebefd0-ebe2-42ff-9be0-75bd12315f20",
+      "position": 3,
+      "properties": {
+        "progression_name": "Pigify App"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9ebefd0-ebe2-42ff-9be0-75bd12315f20",
+        "lesson_activity.key": "18d52de6-423d-4281-9d99-c41f7efcdb67"
+      }
+    },
+    {
+      "key": "62f3cbc7-01fd-4b35-a254-d822542a5319",
+      "position": 4,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "62f3cbc7-01fd-4b35-a254-d822542a5319",
+        "lesson_activity.key": "18d52de6-423d-4281-9d99-c41f7efcdb67"
+      }
+    },
+    {
+      "key": "8657039d-777d-4301-a85c-a666d210ae80",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8657039d-777d-4301-a85c-a666d210ae80",
+        "lesson_activity.key": "ecb20803-fba5-4dda-8426-632a7a040410"
+      }
+    },
+    {
+      "key": "3c3c1bcc-7954-4b4b-b32b-b7f97985f25d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Libraries"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c3c1bcc-7954-4b4b-b32b-b7f97985f25d",
+        "lesson_activity.key": "ecb20803-fba5-4dda-8426-632a7a040410"
+      }
+    },
+    {
+      "key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Testing Libraries"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b",
+        "lesson_activity.key": "ecb20803-fba5-4dda-8426-632a7a040410"
+      }
+    },
+    {
+      "key": "737b6b3e-0293-43a6-9540-c5c8849bbe8e",
+      "position": 4,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "737b6b3e-0293-43a6-9540-c5c8849bbe8e",
+        "lesson_activity.key": "ecb20803-fba5-4dda-8426-632a7a040410"
+      }
+    },
+    {
+      "key": "726a808b-a45d-4e61-98ad-f0334e132e58",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "726a808b-a45d-4e61-98ad-f0334e132e58",
+        "lesson_activity.key": "735632b1-89cb-4fda-9dc4-2c4f9546cc64"
+      }
+    },
+    {
+      "key": "de03adf2-06fe-41ff-ac82-f644c41f77eb",
+      "position": 2,
+      "properties": {
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
+      },
+      "seeding_key": {
+        "activity_section.key": "de03adf2-06fe-41ff-ac82-f644c41f77eb",
+        "lesson_activity.key": "735632b1-89cb-4fda-9dc4-2c4f9546cc64"
+      }
+    },
+    {
+      "key": "4e0e6b5d-666f-4a91-b53f-b25f9943bf7f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4e0e6b5d-666f-4a91-b53f-b25f9943bf7f",
+        "lesson_activity.key": "17fd87f0-49da-4b80-8af6-8c59494aaf92"
+      }
+    },
+    {
+      "key": "051975a8-052e-44d3-9093-940b0e5bcdb2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Build Your Library"
+      },
+      "seeding_key": {
+        "activity_section.key": "051975a8-052e-44d3-9093-940b0e5bcdb2",
+        "lesson_activity.key": "17fd87f0-49da-4b80-8af6-8c59494aaf92"
+      }
+    },
+    {
+      "key": "7ee8fde0-db8d-4e44-8d91-ee48f8dd1c75",
+      "position": 3,
+      "properties": {
+        "name": "Test a Classmate's Library",
+        "progression_name": "Test a Classmate's Library"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ee8fde0-db8d-4e44-8d91-ee48f8dd1c75",
+        "lesson_activity.key": "17fd87f0-49da-4b80-8af6-8c59494aaf92"
+      }
+    },
+    {
+      "key": "0f133c4c-9f79-432d-b8b1-57e24e98a4a7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f133c4c-9f79-432d-b8b1-57e24e98a4a7",
+        "lesson_activity.key": "a5b40a98-d17d-4de1-9451-cbf0bf9ea120"
+      }
+    },
+    {
+      "key": "ad2a06f5-94b6-47c6-9b76-1cd75f5cf773",
+      "position": 2,
+      "properties": {
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad2a06f5-94b6-47c6-9b76-1cd75f5cf773",
+        "lesson_activity.key": "a5b40a98-d17d-4de1-9451-cbf0bf9ea120"
+      }
+    },
+    {
+      "key": "4b5170d3-795f-4aac-b49a-443fa24f4be3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b5170d3-795f-4aac-b49a-443fa24f4be3",
+        "lesson_activity.key": "0954f161-921e-413d-b7e8-4cc0496cbece"
+      }
+    },
+    {
+      "key": "41a73e5b-fcfe-4e5d-b07c-b595ee297077",
+      "position": 2,
+      "properties": {
+        "name": "Unit 7 Exam",
+        "progression_name": "Unit 7 Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "41a73e5b-fcfe-4e5d-b07c-b595ee297077",
+        "lesson_activity.key": "0954f161-921e-413d-b7e8-4cc0496cbece"
+      }
+    },
+    {
+      "key": "a3ad0a64-245d-4588-9468-c4c001ef5bf1",
+      "position": 1,
+      "properties": {
+        "name": "Post-Course Survey Instructions",
+        "progression_name": "Post-Course Survey Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3ad0a64-245d-4588-9468-c4c001ef5bf1",
+        "lesson_activity.key": "48fde9ed-9212-4384-832b-49ac94707cbe"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -301,7 +824,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -309,7 +831,8 @@
         ],
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "10dc3a92-7de7-4e9e-b1e1-3d5c1e5db3b9"
       },
       "level_keys": [
         "CSP U7L1 SFLP 20-21"
@@ -318,7 +841,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -326,7 +849,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -334,7 +856,8 @@
         ],
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "fc124b74-da58-47a2-8b34-0283a64338e0"
       },
       "level_keys": [
         "U7L1 CFU Return"
@@ -343,7 +866,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -351,7 +874,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -359,7 +881,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "46d9362f-1a9c-466e-8526-30550ac941ed"
       },
       "level_keys": [
         "CSP U7L2 SFLP 20-21"
@@ -368,7 +891,7 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -376,7 +899,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -384,7 +906,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "ce68c804-177a-43da-bbe1-94df1cdfb002"
       },
       "level_keys": [
         "U7 Param Return Investigate Rock"
@@ -393,7 +916,7 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -401,7 +924,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -409,7 +931,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "ce68c804-177a-43da-bbe1-94df1cdfb002"
       },
       "level_keys": [
         "U7 Param Investigate Poetry App"
@@ -418,7 +941,7 @@
     {
       "chapter": 6,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -426,7 +949,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -434,7 +956,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "568533f3-2d84-4d2f-9572-102563954cbc"
       },
       "level_keys": [
         "U7L2 CSP CFU Param and Return"
@@ -443,7 +966,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -451,7 +974,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,7 +981,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b0047c44-2069-4c84-8183-917b695fe269"
       },
       "level_keys": [
         "CSP U7L3 SFLP 20-21"
@@ -468,7 +991,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -476,7 +999,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -484,7 +1006,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       },
       "level_keys": [
         "U7 Param Return Practice Part 1"
@@ -493,7 +1016,7 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -501,7 +1024,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -509,7 +1031,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       },
       "level_keys": [
         "U7 Param Return Practice Part 2"
@@ -518,7 +1041,7 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -526,7 +1049,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -534,7 +1056,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       },
       "level_keys": [
         "U7 Param Return Practice Part 4"
@@ -543,7 +1066,7 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -551,7 +1074,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -559,7 +1081,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       },
       "level_keys": [
         "U7 Param Return Practice Part 3"
@@ -568,7 +1091,7 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -576,7 +1099,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -584,7 +1106,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       },
       "level_keys": [
         "U7 Param Return Practice Part 5"
@@ -593,7 +1116,7 @@
     {
       "chapter": 13,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -601,7 +1124,6 @@
         ],
         "progression": "App Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -609,7 +1131,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b102a929-7d4d-4e5f-9fba-2a11868e2b7a"
       },
       "level_keys": [
         "U7 Param Investigate Calculator App"
@@ -618,7 +1141,7 @@
     {
       "chapter": 14,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -626,7 +1149,6 @@
         ],
         "progression": "App Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -634,7 +1156,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b102a929-7d4d-4e5f-9fba-2a11868e2b7a"
       },
       "level_keys": [
         "U7 Param Practice App 2"
@@ -643,7 +1166,7 @@
     {
       "chapter": 15,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -651,7 +1174,6 @@
         ],
         "progression": "MOD Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -659,7 +1181,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "1ba84bca-c559-447c-a126-cfddf327defd"
       },
       "level_keys": [
         "U7 Param Return Practice MOD"
@@ -668,7 +1191,7 @@
     {
       "chapter": 16,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -676,7 +1199,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -684,7 +1206,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "3a574b62-f70a-4198-93ca-1abfe28c0300"
       },
       "level_keys": [
         "U73 CFU Param Return AP"
@@ -693,7 +1216,7 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -701,7 +1224,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -709,7 +1231,8 @@
         ],
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "21f0c4b3-04c2-4c75-96fd-77cc9a146e80"
       },
       "level_keys": [
         "CSP U7L4 SFLP 20-21"
@@ -718,7 +1241,7 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -726,7 +1249,6 @@
         ],
         "progression": "Try the Rock Paper Scissors App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -734,7 +1256,8 @@
         ],
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b20dfb40-d241-4d68-a9c2-dad25d35047a"
       },
       "level_keys": [
         "U7 Param Return Make RPS App_2020"
@@ -743,7 +1266,7 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -751,7 +1274,6 @@
         ],
         "progression": "Make the Rock Paper Scissors App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -759,7 +1281,8 @@
         ],
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "a5fb1df8-3f18-40a6-a6e0-61060e390f55"
       },
       "level_keys": [
         "U7 Param Return Make RPS App Project_2020"
@@ -768,7 +1291,7 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -776,7 +1299,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -784,7 +1306,8 @@
         ],
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "c911a878-499c-447e-8db5-2b66499c7f71"
       },
       "level_keys": [
         "CSP U7L5 SFLP 20-21"
@@ -793,7 +1316,7 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -801,7 +1324,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -809,7 +1331,8 @@
         ],
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "9e2f09dd-d996-4f7a-9cff-dead0e252a3d"
       },
       "level_keys": [
         "U7 L04 Exit Ticket"
@@ -818,7 +1341,7 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -826,7 +1349,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -834,7 +1356,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "572bed5f-60e6-484a-aebc-6b806f5f2a88"
       },
       "level_keys": [
         "CSP U7L6 SFLP 20-21"
@@ -843,7 +1366,7 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -851,7 +1374,6 @@
         ],
         "progression": "States App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -859,7 +1381,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "2bd03856-6df1-4d9b-a10c-282818e10d7a"
       },
       "level_keys": [
         "U7L6 States App Investigation"
@@ -868,7 +1391,7 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -876,7 +1399,6 @@
         ],
         "progression": "Pigify App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -884,7 +1406,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b9ebefd0-ebe2-42ff-9be0-75bd12315f20"
       },
       "level_keys": [
         "U7L6 Pigify App Investigation"
@@ -893,7 +1416,7 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -901,7 +1424,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -909,7 +1431,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "62f3cbc7-01fd-4b35-a254-d822542a5319"
       },
       "level_keys": [
         "U7L6 CSP CFU Libraries"
@@ -918,7 +1441,7 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -926,7 +1449,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -934,7 +1456,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "8657039d-777d-4301-a85c-a666d210ae80"
       },
       "level_keys": [
         "CSP U7L7 SFLP 20-21"
@@ -943,7 +1466,7 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -951,7 +1474,6 @@
         ],
         "progression": "Using Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -959,7 +1481,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "3c3c1bcc-7954-4b4b-b32b-b7f97985f25d"
       },
       "level_keys": [
         "U7 Libraries Practice 3"
@@ -968,7 +1491,7 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -976,7 +1499,6 @@
         ],
         "progression": "Using Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -984,7 +1506,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "3c3c1bcc-7954-4b4b-b32b-b7f97985f25d"
       },
       "level_keys": [
         "U7 Libraries Practice 5"
@@ -993,7 +1516,7 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1001,7 +1524,6 @@
         ],
         "progression": "Testing Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1009,7 +1531,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b"
       },
       "level_keys": [
         "U7 Libraries Practice 2"
@@ -1018,7 +1541,7 @@
     {
       "chapter": 30,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1026,7 +1549,6 @@
         ],
         "progression": "Testing Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1034,7 +1556,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b"
       },
       "level_keys": [
         "U7 Libraries Practice 1"
@@ -1043,7 +1566,7 @@
     {
       "chapter": 31,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1051,7 +1574,6 @@
         ],
         "progression": "Testing Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1059,7 +1581,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b"
       },
       "level_keys": [
         "U7 Libraries Practice 4"
@@ -1068,7 +1591,7 @@
     {
       "chapter": 32,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1076,7 +1599,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1084,7 +1606,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "737b6b3e-0293-43a6-9540-c5c8849bbe8e"
       },
       "level_keys": [
         "U77 CFU Libraries AP"
@@ -1093,7 +1616,7 @@
     {
       "chapter": 33,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1101,7 +1624,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1109,7 +1631,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "726a808b-a45d-4e61-98ad-f0334e132e58"
       },
       "level_keys": [
         "CSP U7L8 SFLP 20-21"
@@ -1118,7 +1641,7 @@
     {
       "chapter": 34,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1126,7 +1649,6 @@
         ],
         "progression": "Build Your Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1134,7 +1656,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "de03adf2-06fe-41ff-ac82-f644c41f77eb"
       },
       "level_keys": [
         "U7 Libraries Project Part 1"
@@ -1143,7 +1666,7 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1151,7 +1674,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1159,7 +1681,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4e0e6b5d-666f-4a91-b53f-b25f9943bf7f"
       },
       "level_keys": [
         "CSP U7L9 SFLP 20-21"
@@ -1168,7 +1691,7 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1176,7 +1699,6 @@
         ],
         "progression": "Build Your Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1184,7 +1706,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "051975a8-052e-44d3-9093-940b0e5bcdb2"
       },
       "level_keys": [
         "U7 Libraries Project Part 2"
@@ -1193,7 +1716,7 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1201,7 +1724,6 @@
         ],
         "progression": "Test a Classmate's Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1209,7 +1731,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "7ee8fde0-db8d-4e44-8d91-ee48f8dd1c75"
       },
       "level_keys": [
         "U7 Libraries Project Test a Library"
@@ -1218,7 +1741,7 @@
     {
       "chapter": 38,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1226,7 +1749,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1234,7 +1756,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "0f133c4c-9f79-432d-b8b1-57e24e98a4a7"
       },
       "level_keys": [
         "CSP U7L10 SFLP 20-21"
@@ -1243,7 +1766,7 @@
     {
       "chapter": 39,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1251,7 +1774,6 @@
         ],
         "progression": "Build Your Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1259,7 +1781,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "ad2a06f5-94b6-47c6-9b76-1cd75f5cf773"
       },
       "level_keys": [
         "U7 Libraries Project Part 3"
@@ -1268,7 +1791,7 @@
     {
       "chapter": 40,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1276,7 +1799,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1284,7 +1806,8 @@
         ],
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b5170d3-795f-4aac-b49a-443fa24f4be3"
       },
       "level_keys": [
         "CSP U7L12 SFLP 20-21"
@@ -1293,7 +1816,7 @@
     {
       "chapter": 41,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1301,7 +1824,6 @@
         ],
         "progression": "Unit 7 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1309,7 +1831,8 @@
         ],
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "41a73e5b-fcfe-4e5d-b07c-b595ee297077"
       },
       "level_keys": [
         "CSP Unit 7 AP-Style Assessment _2020"
@@ -1318,7 +1841,7 @@
     {
       "chapter": 42,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1326,7 +1849,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1334,7 +1856,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "a3ad0a64-245d-4588-9468-c4c001ef5bf1"
       },
       "level_keys": [
         "csp-post-survey-2020-markdown-with-link-to-survey"
@@ -1350,7 +1873,8 @@
         ],
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "10dc3a92-7de7-4e9e-b1e1-3d5c1e5db3b9"
       }
     },
     {
@@ -1361,7 +1885,8 @@
         ],
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "fc124b74-da58-47a2-8b34-0283a64338e0"
       }
     },
     {
@@ -1372,7 +1897,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "46d9362f-1a9c-466e-8526-30550ac941ed"
       }
     },
     {
@@ -1383,7 +1909,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "ce68c804-177a-43da-bbe1-94df1cdfb002"
       }
     },
     {
@@ -1394,7 +1921,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "ce68c804-177a-43da-bbe1-94df1cdfb002"
       }
     },
     {
@@ -1405,7 +1933,8 @@
         ],
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "568533f3-2d84-4d2f-9572-102563954cbc"
       }
     },
     {
@@ -1416,7 +1945,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b0047c44-2069-4c84-8183-917b695fe269"
       }
     },
     {
@@ -1427,7 +1957,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       }
     },
     {
@@ -1438,7 +1969,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       }
     },
     {
@@ -1449,7 +1981,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       }
     },
     {
@@ -1460,7 +1993,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       }
     },
     {
@@ -1471,7 +2005,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "db40b030-d178-4653-98a4-d8d51c1abe13"
       }
     },
     {
@@ -1482,7 +2017,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b102a929-7d4d-4e5f-9fba-2a11868e2b7a"
       }
     },
     {
@@ -1493,7 +2029,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b102a929-7d4d-4e5f-9fba-2a11868e2b7a"
       }
     },
     {
@@ -1504,7 +2041,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "1ba84bca-c559-447c-a126-cfddf327defd"
       }
     },
     {
@@ -1515,7 +2053,8 @@
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "3a574b62-f70a-4198-93ca-1abfe28c0300"
       }
     },
     {
@@ -1526,7 +2065,8 @@
         ],
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "21f0c4b3-04c2-4c75-96fd-77cc9a146e80"
       }
     },
     {
@@ -1537,7 +2077,8 @@
         ],
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b20dfb40-d241-4d68-a9c2-dad25d35047a"
       }
     },
     {
@@ -1548,7 +2089,8 @@
         ],
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "a5fb1df8-3f18-40a6-a6e0-61060e390f55"
       }
     },
     {
@@ -1559,7 +2101,8 @@
         ],
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "c911a878-499c-447e-8db5-2b66499c7f71"
       }
     },
     {
@@ -1570,7 +2113,8 @@
         ],
         "lesson.key": "Libraries Explore",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "9e2f09dd-d996-4f7a-9cff-dead0e252a3d"
       }
     },
     {
@@ -1581,7 +2125,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "572bed5f-60e6-484a-aebc-6b806f5f2a88"
       }
     },
     {
@@ -1592,7 +2137,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "2bd03856-6df1-4d9b-a10c-282818e10d7a"
       }
     },
     {
@@ -1603,7 +2149,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "b9ebefd0-ebe2-42ff-9be0-75bd12315f20"
       }
     },
     {
@@ -1614,7 +2161,8 @@
         ],
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "62f3cbc7-01fd-4b35-a254-d822542a5319"
       }
     },
     {
@@ -1625,7 +2173,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "8657039d-777d-4301-a85c-a666d210ae80"
       }
     },
     {
@@ -1636,7 +2185,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "3c3c1bcc-7954-4b4b-b32b-b7f97985f25d"
       }
     },
     {
@@ -1647,7 +2197,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "3c3c1bcc-7954-4b4b-b32b-b7f97985f25d"
       }
     },
     {
@@ -1658,7 +2209,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b"
       }
     },
     {
@@ -1669,7 +2221,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b"
       }
     },
     {
@@ -1680,7 +2233,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b4583b2-ff2e-4d00-900c-bb8fcbf45f8b"
       }
     },
     {
@@ -1691,7 +2245,8 @@
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "737b6b3e-0293-43a6-9540-c5c8849bbe8e"
       }
     },
     {
@@ -1702,7 +2257,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "726a808b-a45d-4e61-98ad-f0334e132e58"
       }
     },
     {
@@ -1713,7 +2269,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "de03adf2-06fe-41ff-ac82-f644c41f77eb"
       }
     },
     {
@@ -1724,7 +2281,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4e0e6b5d-666f-4a91-b53f-b25f9943bf7f"
       }
     },
     {
@@ -1735,7 +2293,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "051975a8-052e-44d3-9093-940b0e5bcdb2"
       }
     },
     {
@@ -1746,7 +2305,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "7ee8fde0-db8d-4e44-8d91-ee48f8dd1c75"
       }
     },
     {
@@ -1757,7 +2317,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "0f133c4c-9f79-432d-b8b1-57e24e98a4a7"
       }
     },
     {
@@ -1768,7 +2329,8 @@
         ],
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "ad2a06f5-94b6-47c6-9b76-1cd75f5cf773"
       }
     },
     {
@@ -1779,7 +2341,8 @@
         ],
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "4b5170d3-795f-4aac-b49a-443fa24f4be3"
       }
     },
     {
@@ -1790,7 +2353,8 @@
         ],
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "41a73e5b-fcfe-4e5d-b07c-b595ee297077"
       }
     },
     {
@@ -1801,7 +2365,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp7-2020"
+        "script.name": "csp7-2020",
+        "activity_section.key": "a3ad0a64-245d-4588-9468-c4c001ef5bf1"
       }
     }
   ],

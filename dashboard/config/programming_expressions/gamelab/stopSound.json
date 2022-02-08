@@ -1,15 +1,11 @@
 {
-  "func": "stopSound",
+  "key": "stopSound",
+  "name": "stopSound",
   "category": "UI controls",
-  "paramButtons": {
-    "minArgs": 0,
-    "maxArgs": 1
-  },
-  "paletteParams": [
-    "url"
+  "palette_params": [
+    {
+      "name": "url"
+    }
   ],
-  "params": [
-    "\"sound://default.mp3\""
-  ],
-  "dropdown": {}
+  "syntax": "stopSound(url)"
 }

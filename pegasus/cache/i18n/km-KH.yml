@@ -879,6 +879,8 @@ km-KH:
   dashboard_navigation_view_stats: ស្ថិតិ
   dashboard_navigation_section: ផ្នែក%{section_name}
   dashboard_navigation_student: សិស្ស%{student_name}
+  dashboard_progress_not_started: មិន​បាន​ចាប់​ផ្តើ​ម
+  dashboard_progress_in_progress: កំពុង​ដំណើរការ
   dashboard_progress_not_completed: មិនបានបញ្ចប់
   dashboard_progress_view: មើលដំណើរការនៅក្នុង៖
   dashboard_progress_student_in_script: ព័ត៌មានដំណើរការសម្រាប់%{student_name}ក្នុង%{script_name}
@@ -1283,6 +1285,12 @@ km-KH:
   coursed-2020_gradelevel: ថ្នាក់ទី៨ ឡើងទៅ
   coursee-2020_gradelevel: អាយុពី ៨ ទៅ ១២ ឆ្នាំ
   coursef-2020_gradelevel: អាយុពី ៩ ទៅ ១៣ ឆ្នាំ
+  coursea-2021_gradelevel: អាយុពី ៤ ទៅ ៧ ឆ្នាំ
+  courseb-2021_gradelevel: អាយុពី ៥ ទៅ ៨ ឆ្នាំ
+  coursec-2021_gradelevel: អាយុពី ៦ ទៅ ១០ ឆ្នាំ
+  coursed-2021_gradelevel: ថ្នាក់ទី៨ ឡើងទៅ
+  coursee-2021_gradelevel: អាយុពី ៨ ទៅ ១២ ឆ្នាំ
+  coursef-2021_gradelevel: អាយុពី ៩ ទៅ ១៣ ឆ្នាំ
   codeorg_platformtext: កម្មវិធីរុករកគេហទំព័រទំនើប (browser) ទូរស័ព្ទស្មាតហ្វូន ថែបប្ល៊ែត
   codeintl_platformtext: កម្មវិធីរុករកគេហទំព័រទំនើប (browser) ទូរស័ព្ទស្មាតហ្វូន ថែបប្ល៊ែត
   thinkersmithspanish_platformtext: ផ្ដាច់ចេញ
@@ -2108,6 +2116,7 @@ km-KH:
   hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
   hoc2018_dance_teacher_resources_tile2_description: មិនត្រូវការកុំព្យូទ័រទេ! រៀនបែបផែននៃសរសេរកូដ
     ដើម្បីបង្កើតក្បាច់រាំសម្រាប់ពិធីជប់លៀងរាំជាមួយគ្នា។
+  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
   hoc2018_dance_featured_student_creations_title: Featured Student Creations
   hoc2018_dance_videos_section_heading: ទទួលបានការបំផុសគំនិត
   hoc2018_dance_video_title_what_is_creativity: តើការច្នៃប្រឌិតគឺជាអ្វី?
@@ -2218,6 +2227,7 @@ km-KH:
   footer_store: ហាង
   footer_support: ការ​គាំទ្រ
   footer_terms: លក្ខខណ្ឌ
+  ai_for_oceans_lesson_plan: គម្រោងមេរៀន
   ai_in_partnership_with: ជាដៃគូសហការជាមួយ
   ai_microsoft_thanks: យើងសូមថ្លែងអំណរគុណដល់ក្រុមហ៊ុន Microsoft ដែលគាំទ្រទស្សនវិស័យ
     និងបេសកកម្មរបស់យើង ដើម្បីធានាថាកុមារគ្រប់រូបមានឱកាសរៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ

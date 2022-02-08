@@ -36,6 +36,7 @@ sr-SP:
   twentyhours_text: Завршили сте свој први Час програмирања? Научите више основа информатике
     и концепте програмирања у курсу који следи.
   og_title: Свако дете заслужује шансу
+  og_title_soon: Hour of Code је стигао
   og_description: Сваки ученик у свакој школи треба да има прилику да учи рачунарске
     науке.
   csedweek_og_title: Hour of Code је стигао
@@ -95,6 +96,10 @@ sr-SP:
   view_unit: Погледај лекцију
   make_app: Креирај апликацију
   congrats_guest_speaker_title: Пронађите предавача за Ваш разред
+  third_party_gradelevel_2to8: Разреди 2-8
+  third_party_gradelevel_4to12: Разреди 4-12
+  third_party_gradelevel_5to12: Разреди 5-12
+  third_party_gradelevel_6plus: Разреди 6+
   third_party_curriculum: Наставни план
   enter_valid_age: Molimo da izaberete važeće godine
   enter_valid_email: Молимо да унесете валидну емаил адресу
@@ -235,6 +240,8 @@ sr-SP:
   homepage_hero_text_stat_loc: "#loc линија кода писане од стране ученика"
   homepage_hero_text_stat_students: "#student_count студент рачуни на коду Студио"
   homepage_hero_text_stat_served: 'Час Кода: #served served'
+  homepage_hero_hoc_is_coming: Hour of Code је стигао
+  homepage_hero_hoc_is_here: Hour of Code је стигао
   homepage_slot_text_hoc: сата кодирања
   homepage_slot_text_frozen: Залеђено краљевство са Аном и Елзом
   homepage_slot_text_teacher: Контролна табла за наставнике
@@ -297,6 +304,8 @@ sr-SP:
   homepage_header_donors: Code.org захваљује својим сарадницима
   homepage_donors_seall: Погледај све
   homepage_donors_donate: Донирај
+  homepage_below_hero_announcement_text: Ми бринемо о вашој приватности и вршимо неке
+    исправке у нашој политици приватности, које ће ступити на снагу 25. маја.
   homepage_below_hero_announcement_link_text: Сазнајте више
   contact_form_topic_student: Ја сам студент
   contact_form_topic_parent: Ја сам родитељ
@@ -362,6 +371,7 @@ sr-SP:
     кроз овај Мајнкрафт свет.
   mc_shortdescription: Користите блокове кода да поведете Стива или Алекс у авантуру
     кроз овај Мајнкрафт свет.
+  mc_gradelevel: Ages 6-106
   mc_platformtext: Модерни претраживачи, паметни телефони, таблети
   mc_specs: Више језика | Савремени прегледачи, паметни телефони, таблети | Узраст
     6-10
@@ -374,6 +384,8 @@ sr-SP:
   minecraft_no_internet: Немаш приступ интернету?
   minecraft_subtitle: Мајнкрафт час програмирања
   sports_watch_video: Погледајте видео
+  watch_inspirational_videos: Пре него што почнеш, погледај један од ових инспиративних
+    видео снимака
   video_title_inspire_girl: Inspirišimo devojčice
   video_title_anybody_can_learn: Свако може да научи
   video_title_draymond_green: Hour of Code са Драјмондом Грином
@@ -400,6 +412,8 @@ sr-SP:
   volunteer_engineer_submission_field_name_placeholder: Пуно име и презиме
   volunteer_engineer_submission_field_experience_level: Ниво искуства
   volunteer_engineer_submission_field_location: Место
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Опис
   volunteer_engineer_submission_field_email: Емаил адреса
   volunteer_engineer_submission_field_email_placeholder: Емаил адреса
@@ -427,6 +441,7 @@ sr-SP:
   volunteer_engineer_submission_num_volunteers_5: 5. Волонтера
   volunteer_engineer_submission_num_volunteers_10: 10. Болонтера
   volunteer_engineer_submission_num_volunteers_25: 25. Волонтера
+  volunteer_engineer_submission_num_volunteers_50: 50. Волонтера
   volunteer_engineer_submission_type_task_mentor: У потрази сам за ментором који би
     ме припремио за програмирање са мојим студентима
   petition_age: Узраст
@@ -465,6 +480,7 @@ sr-SP:
   dashboard_k5_courses: 20. часовни курс за К-5
   dashboard_middle_courses: двадесетчасовни средњошколски курс
   dashboard_high_courses: једногодишњи средњошколски курс
+  dashboard_course_csina: Наука информатике у Алгебри
   dashboard_course_csins: Информатика у науци
   dashboard_course_ecs: Истраживање компјутерске науке
   dashboard_course_csp: AP ® Информатички принципи науке
@@ -487,6 +503,7 @@ sr-SP:
   dashboard_navigation_add_students: Додајте ученике
   dashboard_navigation_manage_students: Управљање ученицима
   dashboard_navigation_lesson_plans_resources: План лекција и ресурса
+  dashboard_navigation_view_stats: Статистика
   dashboard_navigation_section: Секција:%{section_name}
   dashboard_navigation_student: Ученик:%{student_name}
   dashboard_progress_not_completed: није завршено
@@ -513,6 +530,8 @@ sr-SP:
     којима су подаци о налозима. Картице поделите  појединачно сваком ученику.
   dashboard_sections_switch_section: 'Промените групу:'
   dashboard_sections_close: Затвори
+  dashboard_sections_yes_both: Да, желим да копирам ученика(е) како би били у овој
+    и у новој секцији
   dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком
     реду по једног:'
   dashboard_students_new_section: Направили сте нову групу! Сада додајте ваше ученике
@@ -614,10 +633,13 @@ sr-SP:
   carousel_heading_domestic: Водичи на Енглеском
   carousel_heading_beginners: Водичи за почетнике
   carousel_heading_javascript: Туторијали за JavaScript
+  carousel_heading_beyond_javascript: Туторијали за JavaScript
   carousel_heading_unplugged: Без уређаја или интернета? Пробајте компјутерску науку
     у стварном свету
   carousel_heading_devices: Апликације водичи за телефоне и таблете
+  carousel_heading_beyond_devices: Апликације водичи за телефоне и таблете
   carousel_heading_languages: Водичи у другим програмским језицима
+  carousel_heading_beyond_languages: Водичи у другим програмским језицима
   carousel_heading_apps_games: Направите сопствене апликације или игрице
   carousel_heading_university: Унивезетски курсеви на интернету
   carousel_heading_webpages: Научите да правите интернет странице
@@ -661,6 +683,7 @@ sr-SP:
   robomindnl_name: Програмирајте виртуелног робота
   flappy_name: Направите флапи игру
   bitsbox_name: Bitsbox - напрабите игру
+  makeschool_name: Направите Ајфон игру у вашем браузеру!
   blockly_name: Blockly
   projguts_name: Лист, камен, маказе
   playlab_name: Играоница
@@ -670,18 +693,39 @@ sr-SP:
   course3_name: Курс 3
   course4_name: Course 4
   iceage_name: Ледено доба
+  codeorg_gradelevel: Узраст од 4 до 104 година
+  codeintl_gradelevel: Узраст од 4 до 104 година
+  tynker_gradelevel: Узраста 5.-13.
+  scratch_gradelevel: Узраста 8+
   lightbot_gradelevel: Сви узрасти
   thinkersmith_gradelevel: Сви узрасти
+  condcards_gradelevel: Годишта 8.-12.
   lightbotintl_gradelevel: Сви узрасти
   codehs_gradelevel: Средња школа
   codecademy_gradelevel: Средња школа
   processing_gradelevel: Средња школа
+  robomind_gradelevel: Узраста 8.-13.
   codespark_gradelevel: Основна школа (од 1. до 4. разреда)
   kodable_gradelevel: Основна школа (од 1. до 4. разреда)
+  tynkerapp_gradelevel: Узраста 5.-13.
+  robomindnl_gradelevel: Узраста 8.-13.
+  flappy_gradelevel: Ages 6-106
   bitsbox_gradelevel: Основна школа (од 1. до 4. разреда)
   makeschool_gradelevel: Средња школа
   touchdevelop_gradelevel: Средња школа
   blockly_gradelevel: Сви узрасти
+  thinkersmith2_gradelevel: Узраста 8+
+  kodableunplugged_gradelevel: Узраста 8.-13.
+  projguts_gradelevel: Узраста 10.-13.
+  hourofcode_gradelevel: Ages 6-106
+  frozen_gradelevel: За године од 8 до 108
+  starwars_gradelevel: Ages 6-106
+  playlab_gradelevel: Годишта 6.-14.
+  infinity_gradelevel: Годишта 6.-14.
+  artist_gradelevel: За године од 8 до 108
+  monstercoding_gradelevel: Узраста 5.-13.
+  allcancode_gradelevel: Узраст од 5 до 10 година
+  csfirst_gradelevel: Годишта 9.-14.
   boxisland_gradelevel: Основна школа (од 1. до 4. разреда)
   codesters_gradelevel: Годишта 12.-14.
   texasinstruments_gradelevel: Узраста 13.-16.
@@ -690,6 +734,42 @@ sr-SP:
   course2_gradelevel: Ages 6-18
   course3_gradelevel: За године од 8 до 18
   course4_gradelevel: Узраст од 10 до 18 година
+  coursea_gradelevel: Узраст од 4 до 7 година
+  courseb_gradelevel: За године од 5 до 8
+  coursec_gradelevel: Ages 6-10
+  coursed_gradelevel: Узраст од 7 до 11 година
+  coursee_gradelevel: Годишта 8.-12.
+  coursef_gradelevel: Узраста 9.-13.
+  coursea-2017_gradelevel: Узраст од 4 до 7 година
+  courseb-2017_gradelevel: За године од 5 до 8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Узраст од 7 до 11 година
+  coursee-2017_gradelevel: Годишта 8.-12.
+  coursef-2017_gradelevel: Узраста 9.-13.
+  coursea-2018_gradelevel: Узраст од 4 до 7 година
+  courseb-2018_gradelevel: За године од 5 до 8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Узраст од 7 до 11 година
+  coursee-2018_gradelevel: Годишта 8.-12.
+  coursef-2018_gradelevel: Узраста 9.-13.
+  coursea-2019_gradelevel: Узраст од 4 до 7 година
+  courseb-2019_gradelevel: За године од 5 до 8
+  coursec-2019_gradelevel: Ages 6-10
+  coursed-2019_gradelevel: Узраст од 7 до 11 година
+  coursee-2019_gradelevel: Годишта 8.-12.
+  coursef-2019_gradelevel: Узраста 9.-13.
+  coursea-2020_gradelevel: Узраст од 4 до 7 година
+  courseb-2020_gradelevel: За године од 5 до 8
+  coursec-2020_gradelevel: Ages 6-10
+  coursed-2020_gradelevel: Узраст од 7 до 11 година
+  coursee-2020_gradelevel: Годишта 8.-12.
+  coursef-2020_gradelevel: Узраста 9.-13.
+  coursea-2021_gradelevel: Узраст од 4 до 7 година
+  courseb-2021_gradelevel: За године од 5 до 8
+  coursec-2021_gradelevel: Ages 6-10
+  coursed-2021_gradelevel: Узраст од 7 до 11 година
+  coursee-2021_gradelevel: Годишта 8.-12.
+  coursef-2021_gradelevel: Узраста 9.-13.
   accelerated_gradelevel: Узраст од 10 до 18 година
   codeorg_platformtext: Модерни претраживачи, паметни телефони, таблети
   codeintl_platformtext: Модерни претраживачи, паметни телефони, таблети
@@ -844,6 +924,7 @@ sr-SP:
     и петље!
   codecombat_longdescription: Порази предрасуде о Пајтон и ЈаваСкрипту у овом незаборавном
     програмирању!
+  hourofcode_longdescription: Напиши свој први компјутерски програм
   frozen_longdescription: Хајде да искористимо програмирање да би се придружили Ани
     и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце док клижете
     по леду и направићете зимску чаролију коју можете поделити са својим пријатељима!
@@ -851,17 +932,29 @@ sr-SP:
     Ратова звезда у галаксији далеко, далеко.
   scratch_beyond_name: Будите креативни с програмирањем
   robomind_beyond_name: Програмирајте виртуелног робота
+  makeschool_beyond_name: Направите Ајфон игру у вашем браузеру!
   codehs_beyond_name: Научите да програмирате са Карелом псом
   teachingtree_beyond_name: Унивезетски курсеви на интернету
+  codeorg_beyond_gradelevel: Узраст од 4 до 104 година
+  tynker_beyond_gradelevel: Узраста 5.-13.
+  scratch_beyond_gradelevel: Узраста 8+
   lightbot_beyond_gradelevel: Сви узрасти
   codecademy_beyond_gradelevel: Средња школа
   kodable_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
   scratchjr_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
   hacketyhack_beyond_gradelevel: Средња школа
+  robomind_beyond_gradelevel: Узраста 8.-13.
   makeschool_beyond_gradelevel: Средња школа
   touchdevelop_beyond_gradelevel: Средња школа
   codehs_beyond_gradelevel: Средња школа
+  kodu_beyond_gradelevel: Узраста 8+
+  cargobot_beyond_gradelevel: Узраста 8+
+  kidsruby_beyond_gradelevel: Узраста 12+
+  w3schools_beyond_gradelevel: Узраста 12+
+  mozilla_beyond_gradelevel: Узраста 12+
+  finch_beyond_gradelevel: Узраста 8+
   processing_beyond_gradelevel: Средња школа
+  sphero_beyond_gradelevel: Узраста 8+
   khan_beyond_platformtext: Модерни интернет претраживач
   tynker_beyond_platformtext: Модерни интернет претраживач ($$ required)
   scratch_beyond_platformtext: Било који претраживач
@@ -917,6 +1010,7 @@ sr-SP:
     врло основног програмирања, за децу од 4 године, на iOS-у или Androidu (или у
     веб читачима). Научите да распоредите команде, уочите шаблоне, као и да искористите
     процедуре и петље!
+  compatibility_hide_this_warning: Сакриј ова обавештења
   flappy_shortcode: маши крилима
   header_courses: курсеви
   header_sections: Секције
@@ -929,6 +1023,7 @@ sr-SP:
   header_about_contact: Контактирајте нас
   header_about_faqs: Често постављана питања
   header_learn: Научи
+  header_stats: Статистика
   header_help_us: Помози нам
   header_teacher_community: Заједница учитеља
   header_report_bug: Пријави проблем
@@ -939,6 +1034,8 @@ sr-SP:
   user_header_settings: Мој налог
   user_header_logout: Одјави се
   user_header_signin: Пријави се
+  user_header_create: 'Креирај '
+  user_header_artist: 'Уметник '
   user_header_playlab: Играоница
   user_header_flappy: Флапи
   applab_tile_start_tutorial: Покрени
@@ -966,6 +1063,8 @@ sr-SP:
   hoc2018_mc_start: Покрени
   hoc2018_mc_no_internet: Немаш приступ интернету?
   hoc2018_mc_educators_box2_button: Преузимање
+  hoc2018_mc_watch_videos: Пре него што почнеш, погледај један од ових инспиративних
+    видео снимака
   hoc2018_mc_video_1min: 1 мин
   hoc2018_mc_video_2min: 2 мин
   hoc2018_mc_video_5min: 5 мин
@@ -973,13 +1072,48 @@ sr-SP:
   hoc2018_mc_video_title_anybody_can_learn: Свако може да научи
   hoc2018_mc_homepage_join_us: Pridruži nam se
   hoc2018_mc_homepage_try_it: Пробајте
+  hoc2018_dance_party_landing_title: Плес
+  hoc2018_dance_party_subheading: Помози у превођењу Плесне журке
+  hoc2018_dance_create_your_own_dance_title: Направи своју плесну журку
+  hoc2018_dance_party_box_description: Направи Плесну журку и подели је са пријатељима!
+  hoc2018_dance_party_specs: Језик | Формат | Старост 6-106
   hoc2018_dance_party_button: Покрени
+  hoc2018_dance_keep_on_dancing_box_title: Настави плес
+  hoc2018_dance_keep_on_dancing_description: Иди даље од првог часа са новим идејама
+    за пројекте.
+  hoc2018_dance_keep_on_dancing_specs: Језик | Формат | Старост 13+
+  hoc2018_dance_keep_on_dancing_button: Започни Други део
+  hoc2018_dance_teacher_resources_title: Ресурси за учитеље
+  hoc2018_dance_teacher_resources_tile1_description: Планови часова, сертификати,
+    филтери за музику.
+  hoc2018_dance_teacher_resources_tile2_title: Плесна журка без интернета
+  hoc2018_dance_teacher_resources_tile2_description: Без рачунара! Научимо концепте
+    програмирања кроз креирање сопствене кореографије.
   hoc2018_dance_teacher_resources_tile2_button: Активност ван мреже
+  hoc2018_dance_featured_student_creations_title: Одабрани пројекти ученика
+  hoc2018_dance_videos_section_heading: Потражи инспирацију
+  hoc2018_dance_video_title_what_is_creativity: Шта је креативност?
+  hoc2018_dance_view_creativity_video_playlist: Шта је креативност? Погледај све примере
+    (5 мин)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: Уз партнерство са
   hoc2018_dance_amazon_about_future_engineer_button: Сазнајте више
+  hoc2018_dance_amazon_try_coding_this_summer_title: Пробај да програмираш овог лета
+  hoc2018_dance_amazon_try_coding_this_summer_button: Придружи се кампу
+  hoc2018_dance_amazon_scholarship_programs_title: Стипендије
+  hoc2018_dance_amazon_scholarship_programs_button: Пријавите се
+  hoc2018_dance_measure: Такт
+  hoc2018_dance_measure_colon: 'Такт:'
+  hoc2018_dance_video1: Плесна журка - Увод
+  hoc2018_dance_video2: Плесна журка - Догађаји
+  hoc2018_dance_video3: Плесна журка - Својства
+  hoc2018_dance_video4: Плесна журка - Честитамо
+  hoc2018_mc_with_microsoft: Уз партнерство са
   footer_privacy_policy: Политика приватности
   footer_partners: Партнери
   footer_donate: Донирај
   footer_support: Помоћ и заједница
   footer_terms: Услови
+  ai_for_oceans_lesson_plan: план лекције
+  ai_in_partnership_with: Уз партнерство са
   ai_activity: Активност
   ai_description: Опис

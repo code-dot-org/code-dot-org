@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2020-12-04T21:55:52.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -190,7 +186,7 @@
     ],
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "onEvent(\"on\", \"click\", function(event) {\r\n  led.on();\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r\n});\r\nonEvent(\"off\", \"click\", function(event) {\r\n  led.off();\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r\n});\r\nonEvent(\"blink\", \"click\", function(event) {\r\n  led.blink(200);\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r\n});\r\nonEvent(\"pulse\", \"click\", function(event) {\r\n  led.pulse(200);\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r\n});",
+    "start_blocks": "onEvent(\"on\", \"click\", function() {\r\n  led.on();\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"off\", \"click\", function() {\r\n  led.off();\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"blink\", \"click\", function() {\r\n  led.blink(200);\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"pulse\", \"click\", function() {\r\n  led.pulse(200);\r\n  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -231,11 +227,24 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSDUDL03P09\",\r\n  \"callout_text\": \"What does this line do?\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"setProperty(\\\"screen\\\",\\\"background-color\\\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255))) });\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 20402,
     "name_suffix": "_2021",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2020-12-04T21:55:52.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-24 23:28:03 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 23:28:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-25 00:00:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:03:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:53:14 +0000\",\"changed\":[\"code_functions\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 01:43:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-24 23:28:03 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 23:28:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-25 00:00:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:03:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:53:14 +0000\",\"changed\":[\"code_functions\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 01:43:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2021-08-25 16:31:04 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

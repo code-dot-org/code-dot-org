@@ -2,43 +2,8 @@
   "script": {
     "name": "csp3-2020",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSP",
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit3/{LESSON}",
-      "project_sharing": true,
-      "hideable_lessons": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-20/unit3/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-20/unit3/standards/"
-        ]
-      ],
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        },
-        {
-          "notice": "Looking for the Lesson Activities?",
-          "details": "Teachers, some lessons in this unit contain activities that are not located on Code Studio. Make sure to read the Lesson Plans and check out the unit slides. ",
-          "link": "https://curriculum.code.org/csp-20/unit3/",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
       "announcements": [
         {
           "notice": "",
@@ -68,11 +33,33 @@
           "type": "feedback",
           "visibility": "Student-only"
         }
-      ]
+      ],
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit3/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-20/unit3/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-20/unit3/standards/"
+        ]
+      ],
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:47 UTC",
+    "serialized_at": "2021-11-22 17:08:25 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp3-2020"
     }
@@ -286,16 +273,512 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "206126ef-745c-408b-9895-e3c7be3f0763",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "206126ef-745c-408b-9895-e3c7be3f0763",
+        "lesson.key": "Introduction to Apps",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "7272beb6-4604-490e-8516-4b2ecb6a3899",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7272beb6-4604-490e-8516-4b2ecb6a3899",
+        "lesson.key": "Introduction to Design Mode",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "8fb05747-37f2-4649-a024-1ced6b134ce6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8fb05747-37f2-4649-a024-1ced6b134ce6",
+        "lesson.key": "Project - Designing an App Part 1",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "65478c7e-25ac-4fe9-89e8-dfe39c01b266",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65478c7e-25ac-4fe9-89e8-dfe39c01b266",
+        "lesson.key": "Project - Designing an App Part 2",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "76c20093-c849-4511-943c-560d3325495a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76c20093-c849-4511-943c-560d3325495a",
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "c3ed7bee-828a-4f14-aa23-98ea04922a03",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3ed7bee-828a-4f14-aa23-98ea04922a03",
+        "lesson.key": "Intro to Programming",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "ea87b75c-ffdd-4437-8b47-4b9fd20e2b6c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea87b75c-ffdd-4437-8b47-4b9fd20e2b6c",
+        "lesson.key": "Debugging",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "23fa5e4c-0cfd-4a3a-a2ad-21d7367655a5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "23fa5e4c-0cfd-4a3a-a2ad-21d7367655a5",
+        "lesson.key": "Project - Designing an App Part 3",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "9b057e03-4c70-4363-abac-de5dcade3b7f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b057e03-4c70-4363-abac-de5dcade3b7f",
+        "lesson.key": "Project - Designing an App Part 4",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "425e75f4-8336-4c11-bd06-f0fc1de0abd0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "425e75f4-8336-4c11-bd06-f0fc1de0abd0",
+        "lesson.key": "Project - Designing an App Part 5",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "0191c35c-e915-4d64-bc4f-63c160891985",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0191c35c-e915-4d64-bc4f-63c160891985",
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2020"
+      }
+    },
+    {
+      "key": "a9cc9e60-fd01-4e09-9a62-fbdee597c08d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9cc9e60-fd01-4e09-9a62-fbdee597c08d",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp3-2020"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b16669cd-e97c-469a-80d4-3aa73bacf953",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b16669cd-e97c-469a-80d4-3aa73bacf953",
+        "lesson_activity.key": "206126ef-745c-408b-9895-e3c7be3f0763"
+      }
+    },
+    {
+      "key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7",
+      "position": 2,
+      "properties": {
+        "progression_name": "App Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7",
+        "lesson_activity.key": "206126ef-745c-408b-9895-e3c7be3f0763"
+      }
+    },
+    {
+      "key": "14d74a1c-a8b1-496e-a95a-bc65478797f3",
+      "position": 3,
+      "properties": {
+        "progression_name": "How Computers Work"
+      },
+      "seeding_key": {
+        "activity_section.key": "14d74a1c-a8b1-496e-a95a-bc65478797f3",
+        "lesson_activity.key": "206126ef-745c-408b-9895-e3c7be3f0763"
+      }
+    },
+    {
+      "key": "6082bcfc-a415-4168-945c-5abc342f5f32",
+      "position": 4,
+      "properties": {
+        "progression_name": "App Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32",
+        "lesson_activity.key": "206126ef-745c-408b-9895-e3c7be3f0763"
+      }
+    },
+    {
+      "key": "80943db6-9ae3-42dd-9dd8-8154cb6dcf91",
+      "position": 5,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "80943db6-9ae3-42dd-9dd8-8154cb6dcf91",
+        "lesson_activity.key": "206126ef-745c-408b-9895-e3c7be3f0763"
+      }
+    },
+    {
+      "key": "3a9f45c7-f029-42df-9e1e-f34ee9c61d79",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a9f45c7-f029-42df-9e1e-f34ee9c61d79",
+        "lesson_activity.key": "7272beb6-4604-490e-8516-4b2ecb6a3899"
+      }
+    },
+    {
+      "key": "59984d60-8e84-4c71-87f0-770c1e576404",
+      "position": 2,
+      "properties": {
+        "progression_name": "Design Mode Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404",
+        "lesson_activity.key": "7272beb6-4604-490e-8516-4b2ecb6a3899"
+      }
+    },
+    {
+      "key": "b9aacb87-dcb2-450d-b715-39113ba03818",
+      "position": 3,
+      "properties": {
+        "progression_name": "Copy an App"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9aacb87-dcb2-450d-b715-39113ba03818",
+        "lesson_activity.key": "7272beb6-4604-490e-8516-4b2ecb6a3899"
+      }
+    },
+    {
+      "key": "f2cc8a02-d770-492c-975e-28dd634e527e",
+      "position": 4,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2cc8a02-d770-492c-975e-28dd634e527e",
+        "lesson_activity.key": "7272beb6-4604-490e-8516-4b2ecb6a3899"
+      }
+    },
+    {
+      "key": "c424553a-8c2f-4881-9680-2a8f2d493de7",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c424553a-8c2f-4881-9680-2a8f2d493de7",
+        "lesson_activity.key": "8fb05747-37f2-4649-a024-1ced6b134ce6"
+      }
+    },
+    {
+      "key": "6694352f-61dd-4e28-8cab-d5c3da8e86ab",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6694352f-61dd-4e28-8cab-d5c3da8e86ab",
+        "lesson_activity.key": "65478c7e-25ac-4fe9-89e8-dfe39c01b266"
+      }
+    },
+    {
+      "key": "3be1f8f0-cc28-4359-8f86-d48afe06dc1f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sample Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "3be1f8f0-cc28-4359-8f86-d48afe06dc1f",
+        "lesson_activity.key": "65478c7e-25ac-4fe9-89e8-dfe39c01b266"
+      }
+    },
+    {
+      "key": "58726772-355f-4738-8129-4542bf65c6f2",
+      "position": 3,
+      "properties": {
+        "name": "Build Your Screens",
+        "progression_name": "Build Your Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "58726772-355f-4738-8129-4542bf65c6f2",
+        "lesson_activity.key": "65478c7e-25ac-4fe9-89e8-dfe39c01b266"
+      }
+    },
+    {
+      "key": "580b0a21-27b4-4a41-9062-bb4866aaf676",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "580b0a21-27b4-4a41-9062-bb4866aaf676",
+        "lesson_activity.key": "76c20093-c849-4511-943c-560d3325495a"
+      }
+    },
+    {
+      "key": "99cd1bc2-2abf-43a0-938c-3961171ddf69",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "99cd1bc2-2abf-43a0-938c-3961171ddf69",
+        "lesson_activity.key": "76c20093-c849-4511-943c-560d3325495a"
+      }
+    },
+    {
+      "key": "38dbce2e-9258-4107-8272-fcddd3e3120a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "38dbce2e-9258-4107-8272-fcddd3e3120a",
+        "lesson_activity.key": "c3ed7bee-828a-4f14-aa23-98ea04922a03"
+      }
+    },
+    {
+      "key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Code Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4",
+        "lesson_activity.key": "c3ed7bee-828a-4f14-aa23-98ea04922a03"
+      }
+    },
+    {
+      "key": "7136c8d8-3cde-4763-abd9-4d81677899ca",
+      "position": 3,
+      "properties": {
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7136c8d8-3cde-4763-abd9-4d81677899ca",
+        "lesson_activity.key": "c3ed7bee-828a-4f14-aa23-98ea04922a03"
+      }
+    },
+    {
+      "key": "fff4ca3e-8391-4d50-80d8-6b608d3f76f9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "fff4ca3e-8391-4d50-80d8-6b608d3f76f9",
+        "lesson_activity.key": "ea87b75c-ffdd-4437-8b47-4b9fd20e2b6c"
+      }
+    },
+    {
+      "key": "5407566c-a8fd-407c-ba64-c1d1902efad0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0",
+        "lesson_activity.key": "ea87b75c-ffdd-4437-8b47-4b9fd20e2b6c"
+      }
+    },
+    {
+      "key": "4dc4b892-1790-497c-8bdb-ba2ebc833393",
+      "position": 3,
+      "properties": {
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4dc4b892-1790-497c-8bdb-ba2ebc833393",
+        "lesson_activity.key": "ea87b75c-ffdd-4437-8b47-4b9fd20e2b6c"
+      }
+    },
+    {
+      "key": "f6f4de3e-4a00-400e-bc3a-c1be73912243",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6f4de3e-4a00-400e-bc3a-c1be73912243",
+        "lesson_activity.key": "23fa5e4c-0cfd-4a3a-a2ad-21d7367655a5"
+      }
+    },
+    {
+      "key": "daab5b6f-a8c3-4606-86f5-8fccf04d16c3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pair Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "daab5b6f-a8c3-4606-86f5-8fccf04d16c3",
+        "lesson_activity.key": "23fa5e4c-0cfd-4a3a-a2ad-21d7367655a5"
+      }
+    },
+    {
+      "key": "68ebabbd-18d1-4970-a48c-d8b96c030438",
+      "position": 3,
+      "properties": {
+        "name": "Add Code",
+        "progression_name": "Add Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "68ebabbd-18d1-4970-a48c-d8b96c030438",
+        "lesson_activity.key": "23fa5e4c-0cfd-4a3a-a2ad-21d7367655a5"
+      }
+    },
+    {
+      "key": "f80e39a3-d944-4123-9516-cb80137b8fb7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f80e39a3-d944-4123-9516-cb80137b8fb7",
+        "lesson_activity.key": "9b057e03-4c70-4363-abac-de5dcade3b7f"
+      }
+    },
+    {
+      "key": "04e62220-ad76-4564-b970-6e012c192d09",
+      "position": 2,
+      "properties": {
+        "name": "Add More Code",
+        "progression_name": "Add More Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "04e62220-ad76-4564-b970-6e012c192d09",
+        "lesson_activity.key": "9b057e03-4c70-4363-abac-de5dcade3b7f"
+      }
+    },
+    {
+      "key": "a687ff61-bc69-425d-910c-b4b0b6e805fd",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a687ff61-bc69-425d-910c-b4b0b6e805fd",
+        "lesson_activity.key": "425e75f4-8336-4c11-bd06-f0fc1de0abd0"
+      }
+    },
+    {
+      "key": "299d9f58-9847-4537-a872-777ba1aeab14",
+      "position": 2,
+      "properties": {
+        "name": "Submit Your App",
+        "progression_name": "Submit Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "299d9f58-9847-4537-a872-777ba1aeab14",
+        "lesson_activity.key": "425e75f4-8336-4c11-bd06-f0fc1de0abd0"
+      }
+    },
+    {
+      "key": "bb426cb5-5438-4760-ae30-3facd1ffba76",
+      "position": 1,
+      "properties": {
+        "name": "Unit 3 Exam",
+        "progression_name": "Unit 3 Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb426cb5-5438-4760-ae30-3facd1ffba76",
+        "lesson_activity.key": "0191c35c-e915-4d64-bc4f-63c160891985"
+      }
+    },
+    {
+      "key": "8c46bf82-29e0-4110-9c06-184d2ee0c1f5",
+      "position": 1,
+      "properties": {
+        "name": "Post-Course Survey Instructions",
+        "progression_name": "Post-Course Survey Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c46bf82-29e0-4110-9c06-184d2ee0c1f5",
+        "lesson_activity.key": "a9cc9e60-fd01-4e09-9a62-fbdee597c08d"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -303,7 +786,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -311,7 +793,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "b16669cd-e97c-469a-80d4-3aa73bacf953"
       },
       "level_keys": [
         "CSP U3L1 SFLP 20-21"
@@ -320,7 +803,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -328,7 +811,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -336,7 +818,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       },
       "level_keys": [
         "CSP U3 Water Conservation Sample App"
@@ -345,7 +828,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -353,7 +836,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,7 +843,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       },
       "level_keys": [
         "CSP U3 Bird Quiz App"
@@ -370,7 +853,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -378,7 +861,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -386,7 +868,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       },
       "level_keys": [
         "CSP U3 Hamilton Township App"
@@ -395,7 +878,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -403,7 +886,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -411,7 +893,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       },
       "level_keys": [
         "CSP U3 Four Square App"
@@ -420,7 +903,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -428,7 +911,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -436,7 +918,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       },
       "level_keys": [
         "CSP U3 Monarch Butterfly App"
@@ -445,7 +928,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -453,7 +936,6 @@
         ],
         "progression": "How Computers Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -461,7 +943,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "14d74a1c-a8b1-496e-a95a-bc65478797f3"
       },
       "level_keys": [
         "How Computers Work part 1 CSP"
@@ -470,7 +953,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -478,7 +961,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -486,7 +968,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       },
       "level_keys": [
         "CSP U3 Water Conservation Sample App Investigate"
@@ -495,7 +978,7 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -503,7 +986,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -511,7 +993,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       },
       "level_keys": [
         "CSP U3 Bird Quiz App Investigation"
@@ -520,7 +1003,7 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -528,7 +1011,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -536,7 +1018,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       },
       "level_keys": [
         "CSP U3 Hamilton Township App Investigation"
@@ -545,7 +1028,7 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -553,7 +1036,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +1043,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       },
       "level_keys": [
         "CSP U3 Four Square App Investigation"
@@ -570,7 +1053,7 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -578,7 +1061,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -586,7 +1068,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       },
       "level_keys": [
         "CSP U3 Monarch Butterfly App Investigation"
@@ -595,7 +1078,7 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -603,7 +1086,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -611,7 +1093,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "80943db6-9ae3-42dd-9dd8-8154cb6dcf91"
       },
       "level_keys": [
         "CSP U3 L1 Input Output Matching"
@@ -620,7 +1103,7 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -628,7 +1111,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -636,7 +1118,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "3a9f45c7-f029-42df-9e1e-f34ee9c61d79"
       },
       "level_keys": [
         "CSP U3L2 SFLP 20-21"
@@ -645,7 +1128,7 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -653,7 +1136,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -661,7 +1143,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       },
       "level_keys": [
         "CSP U3 Hamilton Township Design Mode"
@@ -670,7 +1153,7 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -678,7 +1161,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -686,7 +1168,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       },
       "level_keys": [
         "CSP U3 L2 Design Mode Themes"
@@ -695,7 +1178,7 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -703,7 +1186,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -711,7 +1193,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       },
       "level_keys": [
         "CSP U3 L2 Design Mode Colors"
@@ -720,7 +1203,7 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -728,7 +1211,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -736,7 +1218,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       },
       "level_keys": [
         "CSP U3 L2 Design Mode Images"
@@ -745,7 +1228,7 @@
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -753,7 +1236,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -761,7 +1243,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       },
       "level_keys": [
         "CSP U3 L2 Design Mode Icons"
@@ -770,7 +1253,7 @@
     {
       "chapter": 20,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -778,7 +1261,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -786,7 +1268,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       },
       "level_keys": [
         "CSP U3 L2 Design Mode ids"
@@ -795,7 +1278,7 @@
     {
       "chapter": 21,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -803,7 +1286,6 @@
         ],
         "progression": "Copy an App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -811,7 +1293,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "b9aacb87-dcb2-450d-b715-39113ba03818"
       },
       "level_keys": [
         "CSP U3 L2 Copy an App"
@@ -820,7 +1303,7 @@
     {
       "chapter": 22,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -828,7 +1311,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -836,7 +1318,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "f2cc8a02-d770-492c-975e-28dd634e527e"
       },
       "level_keys": [
         "U3L2 CSP CFU ID names"
@@ -845,7 +1328,7 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -853,7 +1336,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -861,7 +1343,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 1",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "c424553a-8c2f-4881-9680-2a8f2d493de7"
       },
       "level_keys": [
         "CSP U3L3 SFLP 20-21"
@@ -870,7 +1353,7 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -878,7 +1361,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -886,7 +1368,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6694352f-61dd-4e28-8cab-d5c3da8e86ab"
       },
       "level_keys": [
         "CSP U3L4 SFLP 20-21"
@@ -895,7 +1378,7 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -903,7 +1386,6 @@
         ],
         "progression": "Sample Prototype"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -911,7 +1393,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "3be1f8f0-cc28-4359-8f86-d48afe06dc1f"
       },
       "level_keys": [
         "CSP U3 Bird Quiz Storyboard"
@@ -920,7 +1403,7 @@
     {
       "chapter": 26,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -928,7 +1411,6 @@
         ],
         "progression": "Build Your Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -936,7 +1418,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "58726772-355f-4738-8129-4542bf65c6f2"
       },
       "level_keys": [
         "CSP U3 L4 Design Screens"
@@ -945,7 +1428,7 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -953,7 +1436,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -961,7 +1443,8 @@
         ],
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "580b0a21-27b4-4a41-9062-bb4866aaf676"
       },
       "level_keys": [
         "CSP U3L5 SFLP 20-21"
@@ -970,7 +1453,7 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -978,7 +1461,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -986,7 +1468,8 @@
         ],
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "99cd1bc2-2abf-43a0-938c-3961171ddf69"
       },
       "level_keys": [
         "U3L5 CSP CFU natural language"
@@ -995,7 +1478,7 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1003,7 +1486,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1011,7 +1493,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "38dbce2e-9258-4107-8272-fcddd3e3120a"
       },
       "level_keys": [
         "CSP U3L6 SFLP 20-21"
@@ -1020,7 +1503,7 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1028,7 +1511,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1036,7 +1518,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       },
       "level_keys": [
         "U3 Program Investigate Sequential 1"
@@ -1045,7 +1528,7 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1053,7 +1536,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1061,7 +1543,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       },
       "level_keys": [
         "U3 Program Investigate Sequential 2"
@@ -1070,7 +1553,7 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1078,7 +1561,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1086,7 +1568,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       },
       "level_keys": [
         "U3 Program Investigate Event-Driven 1"
@@ -1095,7 +1578,7 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1103,7 +1586,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1111,7 +1593,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       },
       "level_keys": [
         "U3 Program Investigate Event-Driven 2"
@@ -1120,7 +1603,7 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1128,7 +1611,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1136,7 +1618,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       },
       "level_keys": [
         "U3 Program Investigate Event-Driven 3"
@@ -1145,7 +1628,7 @@
     {
       "chapter": 35,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1153,7 +1636,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1161,7 +1643,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "7136c8d8-3cde-4763-abd9-4d81677899ca"
       },
       "level_keys": [
         "U3L6 CSP CFU Sequential vs Event Driven"
@@ -1170,7 +1653,7 @@
     {
       "chapter": 36,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1178,7 +1661,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1186,7 +1668,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "fff4ca3e-8391-4d50-80d8-6b608d3f76f9"
       },
       "level_keys": [
         "CSP U3L7 SFLP 20-21"
@@ -1195,7 +1678,7 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1203,7 +1686,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1211,7 +1693,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       },
       "level_keys": [
         "U3 Program Practice Pt 1"
@@ -1220,7 +1703,7 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1228,7 +1711,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1236,7 +1718,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       },
       "level_keys": [
         "U3 Program Practice Pt 2"
@@ -1245,7 +1728,7 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1253,7 +1736,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1261,7 +1743,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       },
       "level_keys": [
         "U3 Program Practice Pt 3"
@@ -1270,7 +1753,7 @@
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1278,7 +1761,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1286,7 +1768,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       },
       "level_keys": [
         "U3 Program Practice Pt 4"
@@ -1295,7 +1778,7 @@
     {
       "chapter": 41,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1303,7 +1786,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1311,7 +1793,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       },
       "level_keys": [
         "U3 Program Practice Pt 5"
@@ -1320,7 +1803,7 @@
     {
       "chapter": 42,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1328,7 +1811,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1336,7 +1818,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       },
       "level_keys": [
         "U3 Program Practice Pt 6"
@@ -1345,7 +1828,7 @@
     {
       "chapter": 43,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1353,7 +1836,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1361,7 +1843,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       },
       "level_keys": [
         "U3 Program Practice Pt 8"
@@ -1370,7 +1853,7 @@
     {
       "chapter": 44,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1378,7 +1861,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1386,7 +1868,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "4dc4b892-1790-497c-8bdb-ba2ebc833393"
       },
       "level_keys": [
         "U3L7 CSP CFU What was confusing"
@@ -1395,7 +1878,7 @@
     {
       "chapter": 45,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1403,7 +1886,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1411,7 +1893,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "f6f4de3e-4a00-400e-bc3a-c1be73912243"
       },
       "level_keys": [
         "CSP U3L8 SFLP 20-21"
@@ -1420,7 +1903,7 @@
     {
       "chapter": 46,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1428,7 +1911,6 @@
         ],
         "progression": "Pair Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1436,7 +1918,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "daab5b6f-a8c3-4606-86f5-8fccf04d16c3"
       },
       "level_keys": [
         "U3 L08 Pair Programming Video"
@@ -1445,7 +1928,7 @@
     {
       "chapter": 47,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1453,7 +1936,6 @@
         ],
         "progression": "Add Code"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1461,7 +1943,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "68ebabbd-18d1-4970-a48c-d8b96c030438"
       },
       "level_keys": [
         "CSP U3 L4 Add Code"
@@ -1470,7 +1953,7 @@
     {
       "chapter": 48,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1478,7 +1961,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1486,7 +1968,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "f80e39a3-d944-4123-9516-cb80137b8fb7"
       },
       "level_keys": [
         "CSP U3L9 SFLP 20-21"
@@ -1495,7 +1978,7 @@
     {
       "chapter": 49,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1503,7 +1986,6 @@
         ],
         "progression": "Add More Code"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1511,7 +1993,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "04e62220-ad76-4564-b970-6e012c192d09"
       },
       "level_keys": [
         "CSP U3 L9 Add More Code"
@@ -1520,7 +2003,7 @@
     {
       "chapter": 50,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1528,7 +2011,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1536,7 +2018,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "a687ff61-bc69-425d-910c-b4b0b6e805fd"
       },
       "level_keys": [
         "CSP U3L10 SFLP 20-21"
@@ -1545,7 +2028,7 @@
     {
       "chapter": 51,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1553,7 +2036,6 @@
         ],
         "progression": "Submit Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1561,7 +2043,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "299d9f58-9847-4537-a872-777ba1aeab14"
       },
       "level_keys": [
         "CSP U3 L10 Submit App"
@@ -1570,7 +2053,7 @@
     {
       "chapter": 52,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1578,7 +2061,6 @@
         ],
         "progression": "Unit 3 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1586,7 +2068,8 @@
         ],
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "bb426cb5-5438-4760-ae30-3facd1ffba76"
       },
       "level_keys": [
         "CSP Unit 3 MC Assessment _2020"
@@ -1595,7 +2078,7 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1603,7 +2086,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1611,7 +2093,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "8c46bf82-29e0-4110-9c06-184d2ee0c1f5"
       },
       "level_keys": [
         "csp-post-survey-2020-markdown-with-link-to-survey"
@@ -1627,7 +2110,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "b16669cd-e97c-469a-80d4-3aa73bacf953"
       }
     },
     {
@@ -1638,7 +2122,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       }
     },
     {
@@ -1649,7 +2134,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       }
     },
     {
@@ -1660,7 +2146,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       }
     },
     {
@@ -1671,7 +2158,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       }
     },
     {
@@ -1682,7 +2170,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "ca669c0d-5e94-4a86-8306-8b567e7e5ba7"
       }
     },
     {
@@ -1693,7 +2182,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "14d74a1c-a8b1-496e-a95a-bc65478797f3"
       }
     },
     {
@@ -1704,7 +2194,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       }
     },
     {
@@ -1715,7 +2206,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       }
     },
     {
@@ -1726,7 +2218,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       }
     },
     {
@@ -1737,7 +2230,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       }
     },
     {
@@ -1748,7 +2242,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6082bcfc-a415-4168-945c-5abc342f5f32"
       }
     },
     {
@@ -1759,7 +2254,8 @@
         ],
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "80943db6-9ae3-42dd-9dd8-8154cb6dcf91"
       }
     },
     {
@@ -1770,7 +2266,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "3a9f45c7-f029-42df-9e1e-f34ee9c61d79"
       }
     },
     {
@@ -1781,7 +2278,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       }
     },
     {
@@ -1792,7 +2290,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       }
     },
     {
@@ -1803,7 +2302,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       }
     },
     {
@@ -1814,7 +2314,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       }
     },
     {
@@ -1825,7 +2326,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       }
     },
     {
@@ -1836,7 +2338,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "59984d60-8e84-4c71-87f0-770c1e576404"
       }
     },
     {
@@ -1847,7 +2350,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "b9aacb87-dcb2-450d-b715-39113ba03818"
       }
     },
     {
@@ -1858,7 +2362,8 @@
         ],
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "f2cc8a02-d770-492c-975e-28dd634e527e"
       }
     },
     {
@@ -1869,7 +2374,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 1",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "c424553a-8c2f-4881-9680-2a8f2d493de7"
       }
     },
     {
@@ -1880,7 +2386,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "6694352f-61dd-4e28-8cab-d5c3da8e86ab"
       }
     },
     {
@@ -1891,7 +2398,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "3be1f8f0-cc28-4359-8f86-d48afe06dc1f"
       }
     },
     {
@@ -1902,7 +2410,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "58726772-355f-4738-8129-4542bf65c6f2"
       }
     },
     {
@@ -1913,7 +2422,8 @@
         ],
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "580b0a21-27b4-4a41-9062-bb4866aaf676"
       }
     },
     {
@@ -1924,7 +2434,8 @@
         ],
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "99cd1bc2-2abf-43a0-938c-3961171ddf69"
       }
     },
     {
@@ -1935,7 +2446,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "38dbce2e-9258-4107-8272-fcddd3e3120a"
       }
     },
     {
@@ -1946,7 +2458,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       }
     },
     {
@@ -1957,7 +2470,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       }
     },
     {
@@ -1968,7 +2482,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       }
     },
     {
@@ -1979,7 +2494,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       }
     },
     {
@@ -1990,7 +2506,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "d5d203c8-f020-47b7-b0cf-e952e2b5c7b4"
       }
     },
     {
@@ -2001,7 +2518,8 @@
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "7136c8d8-3cde-4763-abd9-4d81677899ca"
       }
     },
     {
@@ -2012,7 +2530,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "fff4ca3e-8391-4d50-80d8-6b608d3f76f9"
       }
     },
     {
@@ -2023,7 +2542,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       }
     },
     {
@@ -2034,7 +2554,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       }
     },
     {
@@ -2045,7 +2566,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       }
     },
     {
@@ -2056,7 +2578,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       }
     },
     {
@@ -2067,7 +2590,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       }
     },
     {
@@ -2078,7 +2602,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       }
     },
     {
@@ -2089,7 +2614,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "5407566c-a8fd-407c-ba64-c1d1902efad0"
       }
     },
     {
@@ -2100,7 +2626,8 @@
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "4dc4b892-1790-497c-8bdb-ba2ebc833393"
       }
     },
     {
@@ -2111,7 +2638,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "f6f4de3e-4a00-400e-bc3a-c1be73912243"
       }
     },
     {
@@ -2122,7 +2650,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "daab5b6f-a8c3-4606-86f5-8fccf04d16c3"
       }
     },
     {
@@ -2133,7 +2662,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "68ebabbd-18d1-4970-a48c-d8b96c030438"
       }
     },
     {
@@ -2144,7 +2674,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "f80e39a3-d944-4123-9516-cb80137b8fb7"
       }
     },
     {
@@ -2155,7 +2686,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "04e62220-ad76-4564-b970-6e012c192d09"
       }
     },
     {
@@ -2166,7 +2698,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "a687ff61-bc69-425d-910c-b4b0b6e805fd"
       }
     },
     {
@@ -2177,7 +2710,8 @@
         ],
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "299d9f58-9847-4537-a872-777ba1aeab14"
       }
     },
     {
@@ -2188,7 +2722,8 @@
         ],
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "bb426cb5-5438-4760-ae30-3facd1ffba76"
       }
     },
     {
@@ -2199,7 +2734,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp3-2020"
+        "script.name": "csp3-2020",
+        "activity_section.key": "8c46bf82-29e0-4110-9c06-184d2ee0c1f5"
       }
     }
   ],

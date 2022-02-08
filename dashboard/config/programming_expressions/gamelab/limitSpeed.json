@@ -1,12 +1,11 @@
 {
-  "func": "limitSpeed",
+  "key": "limitSpeed",
+  "name": "limitSpeed",
   "category": "Sprites",
-  "paletteParams": [
-    "max"
+  "palette_params": [
+    {
+      "name": "max"
+    }
   ],
-  "params": [
-    "3"
-  ],
-  "modeOptionName": "*.limitSpeed",
-  "noAutocomplete": true
+  "syntax": "limitSpeed(max)"
 }

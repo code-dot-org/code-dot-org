@@ -1,15 +1,17 @@
 {
-  "func": "norm",
+  "key": "norm",
+  "name": "norm",
   "category": "Math",
-  "paletteParams": [
-    "value",
-    "start",
-    "stop"
+  "palette_params": [
+    {
+      "name": "value"
+    },
+    {
+      "name": "start"
+    },
+    {
+      "name": "stop"
+    }
   ],
-  "params": [
-    "90",
-    "0",
-    "100"
-  ],
-  "type": "value"
+  "syntax": "norm(value, start, stop)"
 }

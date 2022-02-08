@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -19,14 +19,16 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 require 'cdo/shared_constants'
 
 class Level < ApplicationRecord
   include SharedConstants
+  include Levels::LevelsWithinLevels
 
   belongs_to :game
   has_and_belongs_to_many :concepts
@@ -37,22 +39,20 @@ class Level < ApplicationRecord
   has_many :level_sources
   has_many :hint_view_requests
 
-  # We store parent-child relationships in a self-referential join table.
-  # In order to define a has_many / through relationship in both directions,
-  # we must define two separate associations to the same join table.
-
-  has_many :levels_parent_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :child_level_id
-  has_many :parent_levels, through: :levels_parent_levels, inverse_of: :child_levels
-
-  has_many :levels_child_levels, -> {order('position ASC')}, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
-  has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels
-
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+
+  # Together, these validations prevent collisions between level keys, including
+  # level keys which differ only by case, between all 3 categories of levels:
+  # custom levels, DSLDefined levels, and deprecated blockly levels. For more
+  # context on these categories and level keys, see:
+  # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
+  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
+  validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+
   validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
@@ -75,7 +75,8 @@ class Level < ApplicationRecord
     map_reference
     reference_links
     name_suffix
-    parent_level_id
+    contained_level_names
+    project_template_level_name
     hint_prompt_attempts_threshold
     short_instructions
     long_instructions
@@ -92,57 +93,6 @@ class Level < ApplicationRecord
     bubble_choice_description
     thumbnail_url
   )
-
-  def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
-    levels_by_key = script.levels.index_by(&:key)
-
-    raw_levels.map do |raw_level|
-      raw_level.symbolize_keys!
-
-      # Concepts are comma-separated, indexed by name
-      raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-      end
-
-      raw_level_data = raw_level.dup
-
-      key = raw_level.delete(:name)
-
-      if raw_level[:level_num] && !key.starts_with?('blockly')
-        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-        key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
-      end
-
-      level =
-        if new_suffix && !key.starts_with?('blockly')
-          Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
-        else
-          levels_by_key[key] || Level.find_by_key(key)
-        end
-
-      if key.starts_with?('blockly')
-        # this level is defined in levels.js. find/create the reference to this level
-        level = Level.
-          create_with(name: 'blockly').
-          find_or_create_by!(Level.key_to_params(key))
-        level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
-        if level.video_key && !raw_level[:video_key]
-          raw_level[:video_key] = nil
-        end
-
-        level.update(raw_level)
-      elsif raw_level[:video_key]
-        level.update(video_key: raw_level[:video_key])
-      end
-
-      unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
-      end
-
-      level.save! if level.changed?
-      level
-    end
-  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -202,10 +152,6 @@ class Level < ApplicationRecord
     "<xml id='toolbox' style='display: none;'>#{toolbox(type)}</xml>"
   end
 
-  def host_level
-    project_template_level || self
-  end
-
   # Overriden by different level types.
   def toolbox(type)
   end
@@ -252,14 +198,10 @@ class Level < ApplicationRecord
   def self.palette_categories
   end
 
-  def self.custom_levels
-    Naturally.sort_by(Level.where.not(user_id: nil), :name)
-  end
-
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
-  # All custom levels will have a user_id, except for DSLDefined levels.
+  # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
   def custom?
-    user_id.present? || is_a?(DSLDefined)
+    level_num == 'custom' || is_a?(DSLDefined)
   end
 
   def should_localize?
@@ -314,8 +256,7 @@ class Level < ApplicationRecord
   end
 
   def should_write_custom_level_file?
-    changed = saved_changes? || (level_concept_difficulty && level_concept_difficulty.saved_changes?)
-    changed && write_to_file? && published
+    write_to_file? && published
   end
 
   def write_custom_level_file
@@ -422,6 +363,7 @@ class Level < ApplicationRecord
     'NetSim', # widget
     'Odometer', # widget
     'Pixelation', # widget
+    'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
@@ -496,14 +438,6 @@ class Level < ApplicationRecord
     else
       ["blockly", game.name, level_num].join(':')
     end
-  end
-
-  # Project template levels are used to persist use progress
-  # across multiple levels, using a single level name as the
-  # storage key for that user.
-  def project_template_level
-    return nil if try(:project_template_level_name).nil?
-    Level.find_by_key(project_template_level_name)
   end
 
   def strip_name
@@ -591,14 +525,15 @@ class Level < ApplicationRecord
     ["Applab", "Gamelab", "Weblab"].include?(type)
   end
 
-  # Returns an array of all the contained levels
-  # (based on the contained_level_names property)
-  def contained_levels
-    names = try('contained_level_names')
-    return [] unless names.present?
-    names.map do |contained_level_name|
-      Script.cache_find_level(contained_level_name)
-    end
+  # Currently only Javalab can have code review
+  def can_have_code_review?
+    ["Javalab"].include?(type)
+  end
+
+  # We hide this feature for contained levels because contained levels are currently not
+  # editable by students so setting the feedback review_state to keepWorking doesn't make sense.
+  def can_have_feedback_review_state?
+    contained_levels.empty?
   end
 
   def display_as_unplugged?
@@ -620,7 +555,7 @@ class Level < ApplicationRecord
     {
       id: id.to_s,
       type: self.class.to_s,
-      name: name,
+      name: key,
       updated_at: updated_at.localtime.strftime("%D at %r"),
       owner: user&.name,
       url: "/levels/#{id}/edit",
@@ -681,24 +616,28 @@ class Level < ApplicationRecord
     false
   end
 
-  # Create a copy of this level named new_name, and store the id of the original
-  # level in parent_level_id.
+  def uses_google_blockly?
+    false
+  end
+
+  # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
   def clone_with_name(new_name, editor_experiment: nil)
     level = dup
     # specify :published to make should_write_custom_level_file? return true
-    level_params = {name: new_name, parent_level_id: id, published: true}
+    level_params = {name: new_name, published: true}
     level_params[:editor_experiment] = editor_experiment if editor_experiment
+    level_params[:audit_log] = [{changed_at: Time.now, changed: ["cloned from #{name.dump}"], cloned_from: name}].to_json
     level.update!(level_params)
     level
   end
 
   # Create a copy of this level by appending new_suffix to the name, removing
-  # any previous suffix from the name first. Store the id of the original
-  # level in parent_level_id, and store the suffix in name_suffix. If a level
-  # with the same name already exists, us that instead of creating a new one.
+  # any previous suffix from the name first and storing the suffix in
+  # name_suffix. If a level with the same name already exists, us that instead
+  # of creating a new one.
   #
   # Also, copy over any project template level. If two levels with the same
   # project template level are copied using the same new_suffix, then the new
@@ -710,36 +649,37 @@ class Level < ApplicationRecord
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
+    # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
+    return self if key.start_with?('blockly:')
+
     # Make sure we don't go over the 70 character limit.
-    max_index = 70 - new_suffix.length - 1
-    new_name = "#{base_name[0..max_index]}#{new_suffix}"
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    max_index = 70 - suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{suffix}"
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = clone_with_name(new_name, editor_experiment: editor_experiment)
+    begin
+      level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
-    update_params = {name_suffix: new_suffix}
-    update_params[:editor_experiment] = editor_experiment if editor_experiment
+      update_params = {name_suffix: suffix}
+      update_params[:editor_experiment] = editor_experiment if editor_experiment
 
-    if project_template_level
-      new_template_level = project_template_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
-      update_params[:project_template_level_name] = new_template_level.name
+      child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+      update_params.merge!(child_params_to_update)
+
+      level.update!(update_params)
+
+      # Copy the level_concept_difficulty of the parent level to the new level
+      new_lcd = level_concept_difficulty.dup
+      level.level_concept_difficulty = new_lcd
+      # trigger a save to rewrite the custom level file
+      level.save!
+
+      level
+    rescue Exception => e
+      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
     end
-
-    unless contained_levels.empty?
-      update_params[:contained_level_names] = contained_levels.map do |contained_level|
-        contained_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
-      end
-    end
-
-    level.update!(update_params)
-
-    # Copy the level_concept_difficulty of the parent level to the new level
-    new_lcd = level_concept_difficulty.dup
-    level.level_concept_difficulty = new_lcd
-    level.save! if level.changed?
-
-    level
   end
 
   def age_13_required?
@@ -764,21 +704,6 @@ class Level < ApplicationRecord
     end
   end
 
-  # we must search recursively for child levels, because some bubble choice
-  # sublevels have project template levels.
-  def all_descendant_levels
-    my_child_levels = all_child_levels
-    child_descendant_levels = my_child_levels.map(&:all_descendant_levels).flatten
-    my_child_levels + child_descendant_levels
-  end
-
-  # Returns all child levels of this level, which could include contained levels,
-  # project template levels, BubbleChoice sublevels, or LevelGroup sublevels.
-  # This method may be overridden by subclasses.
-  def all_child_levels
-    (contained_levels + [project_template_level] - [self]).compact
-  end
-
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -791,7 +716,7 @@ class Level < ApplicationRecord
     {
       levelOptions: [
         ['All types', ''],
-        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.push(['Blockly', 'Blockly']).sort_by {|a| a[0]}
       ],
       scriptOptions: [
         ['All scripts', ''],
@@ -802,6 +727,19 @@ class Level < ApplicationRecord
         *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| !a[0].blank? && !a[1].blank?}.sort_by {|a| a[0]}
       ]
     }
+  end
+
+  def get_level_for_progress(student, script)
+    if is_a?(BubbleChoice)
+      sublevel_for_progress = try(:get_sublevel_for_progress, student, script)
+      return sublevel_for_progress || self
+    elsif contained_levels.any?
+      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
+      # We only display our first contained level, display progress for that level.
+      return contained_levels.first
+    else
+      return self
+    end
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
@@ -840,10 +778,10 @@ class Level < ApplicationRecord
     base_name
   end
 
-  # repeatedly strip any version year suffix of the form _NNNN ()e.g. _2017)
+  # repeatedly strip any version year suffix of the form _NNNN or -NNNN ()e.g. _2017 or -2017)
   # from the input string.
   def strip_version_year_suffixes(str)
-    year_suffix_regex = /^(.*)_[0-9]{4}$/
+    year_suffix_regex = /^(.*)[_-][0-9]{4}$/
     loop do
       matchdata = str.match(year_suffix_regex)
       break unless matchdata

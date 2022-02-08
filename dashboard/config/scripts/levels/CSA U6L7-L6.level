@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U6 Neighborhood Lit Fest Project Template",
+    "long_instructions": "Import `LitProcessor.java` and `LitAnalyzer.java` from your **Backpack**.\r\n\r\nIn `LitProcessor.java`, write the method `findPartOfSpeech()` to find a specified word in the `partsOfSpeech.txt` file and return its part of speech.\r\n\r\n```\r\npublic String findPartOfSpeech(String wordToFind) throws FileNotFoundException\r\n```\r\n\r\n1. Create an `ArrayList` to contain the contents of the `partsOfSpeech.txt` file using the `readFile()` method.\r\n\r\n2. For each element in this `ArrayList`,\r\n\r\n   a. Find the index of the colon `:` in the current element.\r\n   \r\n   b. Obtain the word from the current element using the `substring()` method and the index of the colon `:`.\r\n   \r\n   c. Use the `equals()` method to compare the current word in the list to the `wordToFind`. If they are equal, use the `substring()` method and the index of the colon `:` to obtain the part of speech from the current element.\r\n\r\n3. Return the part of speech.\r\n\r\nIn `MyConsole.java`, test your `findPartOfSpeech()` method.\r\n\r\n1. Create a `LitAnalyzer` object with the files `story.txt` and `stopWords.txt`.\r\n\r\n2. Call the `findPartOfSpeech()` method with a word to find.\r\n\r\n3. Print the part of speech that is returned from calling the method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tM9E9IspvpSby6P4e/Z\n1tOrNzanuokR2pEsCGdvYXnHWIUiPRmizm1KoyIgVgu4+F8=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-11-03T20:19:17.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-11-03 20:19:20 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-29 17:18:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 18:06:05 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 18:16:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 18:20:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 18:24:35 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 20:43:05 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 20:57:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-30 14:27:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-30 14:31:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-30 14:32:32 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-02 16:56:59 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

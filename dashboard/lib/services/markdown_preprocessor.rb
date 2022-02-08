@@ -37,45 +37,32 @@ module Services
       end
     end
 
-    # Returns the key which can be used to create the reference syntax for the
-    # given Vocabulary object.
-    def self.build_vocab_key(vocab)
-      return unless vocab&.course_version&.course_offering.present?
-      [vocab.key, vocab.course_version.course_offering.key, vocab.course_version.key].join('/')
-    end
-
+    VOCAB_HTML = proc {|vocab| "<span class=\"vocab\" title=#{vocab.definition.inspect}>#{vocab.word}</span>"}
     # Returns a copy of `content` with all occurrences of Vocabulary references
     # substituted with the equivalent HTML span.
     #
     # Vocabulary references take the form of:
     # `[v vocab_key/course_offering_key/course_version_key]`
     # For example: `[v loops/coursea/2020]`
-    def self.sub_vocab_definitions(content)
-      sub_vocab_definitions!(content.dup)
+    def self.sub_vocab_definitions(content, replace_func = VOCAB_HTML)
+      sub_vocab_definitions!(content.dup, replace_func)
     end
 
     # Performs the substitutions of MarkdownPreprocessor#sub_vocab_definitions
     # in place
-    def self.sub_vocab_definitions!(content)
-      vocab_def_re = build_key_re('v', [Vocabulary, CourseOffering, CourseVersion])
-      content.gsub!(vocab_def_re) do |match|
-        course_version = CourseVersion.joins(:course_offering).
-          find_by(key: $3, "course_offerings.key": $2)
-        vocab = Vocabulary.find_by(key: $1, course_version: course_version)
+    def self.sub_vocab_definitions!(content, replace_func = VOCAB_HTML)
+      @@vocab_def_re ||= /\[v (?<key>#{Services::GloballyUniqueIdentifiers.vocab_key_re})\]/
+      content.gsub!(@@vocab_def_re) do |match|
+        vocab = Services::GloballyUniqueIdentifiers.find_vocab($~[:key])
         if vocab.present?
-          "<span class=\"vocab\" title=#{vocab.definition.inspect}>#{vocab.word}</span>"
+          replace_func.call(vocab)
         else
           match
         end
       end
     end
 
-    # Returns the key which can be used to create the reference syntax for the
-    # given Resource object.
-    def self.build_resource_key(resource)
-      return unless resource&.course_version&.course_offering.present?
-      [resource.key, resource.course_version.course_offering.key, resource.course_version.key].join('/')
-    end
+    RESOURCE_LINK_MARKDOWN = proc {|resource| "[#{resource.name}](#{resource.url})"}
 
     # Returns a copy of `content` with all occurrences of Resource links
     # substituted with the equivalent Markdown links
@@ -83,37 +70,22 @@ module Services
     # Resource links take the form of:
     # `[r resource_key/course_offering_key/course_version_key]`
     # For example: `[r example-video/csd/2021]`
-    def self.sub_resource_links(content)
-      sub_resource_links!(content.dup)
+    def self.sub_resource_links(content, replace_func = RESOURCE_LINK_MARKDOWN)
+      sub_resource_links!(content.dup, replace_func)
     end
 
     # Performs the substitutions of MarkdownPreprocessor#sub_resource_links in
     # place
-    def self.sub_resource_links!(content)
-      resource_link_re = build_key_re('r', [Resource, CourseOffering, CourseVersion])
-      content.gsub!(resource_link_re) do |match|
-        course_version = CourseVersion.joins(:course_offering).
-          find_by(key: $3, "course_offerings.key": $2)
-        resource = Resource.find_by(key: $1, course_version: course_version)
+    def self.sub_resource_links!(content, replace_func = RESOURCE_LINK_MARKDOWN)
+      @@resource_link_re ||= /\[r (?<key>#{Services::GloballyUniqueIdentifiers.resource_key_re})\]/
+      content.gsub!(@@resource_link_re) do |match|
+        resource = Services::GloballyUniqueIdentifiers.find_resource($~[:key])
         if resource.present?
-          "[#{resource.name}](#{resource.url})"
+          replace_func.call(resource)
         else
           match
         end
       end
-    end
-
-    # Simple helper which builds out a regex from the given identifier and
-    # models. Requires that the models define a KEY_CHAR_RE which can be used
-    # to identify valid `key` values for the model.
-    #
-    # Specifically, given an identifier "foo" and models Bar and Baz, we will
-    # get a regex which matches strings of the form `[foo bar_key/baz_key]`
-    def self.build_key_re(identifier, models)
-      keys = models.map do |model|
-        "(#{model::KEY_CHAR_RE}+)"
-      end
-      return /\[#{identifier} #{keys.join('/')}\]/
     end
   end
 end

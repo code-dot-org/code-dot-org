@@ -1,11 +1,11 @@
 {
-  "func": "abs",
+  "key": "abs",
+  "name": "abs",
   "category": "Math",
-  "paletteParams": [
-    "num"
+  "palette_params": [
+    {
+      "name": "num"
+    }
   ],
-  "params": [
-    "-1"
-  ],
-  "type": "value"
+  "syntax": "abs(num)"
 }

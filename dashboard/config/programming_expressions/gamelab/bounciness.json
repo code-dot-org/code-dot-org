@@ -1,6 +1,6 @@
 {
-  "func": "bounciness",
+  "key": "bounciness",
+  "name": "bounciness",
   "category": "Sprites",
-  "modeOptionName": "*.bounciness",
-  "type": "property"
+  "syntax": "bounciness"
 }

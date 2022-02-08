@@ -153,6 +153,7 @@ th-TH:
   if_you_enjoyed: หากคุณชื่นชอบกับการเรียน ไม่ลองชวนเพื่อนๆมาเรียนด้วยหละ! เราอยากให้ทุกคนบนโลกได้เรียนแบบคุณ
   personalize_certificate: ออกแบบประกาศนียบัตรของคุณ
   print_certificates: พิมพ์ใบรับรอง
+  print_ice_art_from_frozen: พิมพ์ผลงานศิลปะน้ำแข็งจากบทเรียน "โฟรเซ่น"
   share_achievement: แบ่งปันความสำเร็จของคุณ
   beyond_hour_message: เรียนรู้เพิ่มเติมกับ<a href='http://studio.code.org'>คอร์สอื่นๆ</a>
     หรือศึกษาข้อมูล<a href='/learn/beyond'>การเรียนมากกว่า 1 ชั่วโมง</a>.
@@ -195,6 +196,7 @@ th-TH:
   learn_online: ลองดูหลักสูตรออนไลน์อื่นๆ
   learn_classes: ค้นหาชั้นเรียนในท้องถิ่น
   learn_back_to_minecraft: เรียนรู้ไปด้วยกันกับ Minecraft
+  hoc_is_here: " นี่คือ #HourOfCode - เข้าร่วมเรียน! @codeorg"
   just_did_hoc: 'ฉันเพิ่งเรียน #HourOfCode - เข้าร่วมเรียน! @codeorg'
   just_did_accelerated: ฉันเพิ่งเรียนหลักสูตรเร่งรัดเสร็จ - ดูผลงานได้ที่ @codeorg
   learn_hoc: เข้าร่วมเรียน Hour of Code
@@ -226,11 +228,12 @@ th-TH:
   studiobar_dance_body: สร้างและแชร์เกม Dance Party ของคุณเอง
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: เรียนรู้การเขียนโค้ดกับเกม Angry Birds
+  studiobar_flappy_title: แฟลปปี้โค้ด
   studiobar_flappy_body: สร้างและแชร์เกม Flappy Bird ของคุณ
   studiobar_teacher_title: สร้างมาเพื่อคุณครู
   studiobar_teacher_body: แนะนำสถานที่หรือห้องเขียนโปรแกรม ในชั้นเรียนของคุณ
   studiobar_frozen_title: ช่วงเวลาของ Code
-  studiobar_frozen_body: สร้างเมืองน้ำแข็งกับ Anna และ Elsa
+  studiobar_frozen_body: สร้างเมืองน้ำแข็งไปพร้อมกับแอนนาและเอลซ่า
   studiobar_donate_title: ร่วมบริจาค
   studiobar_donate_body: เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค
   studiobar_shop_title: ร้านค้า
@@ -290,10 +293,11 @@ th-TH:
   homepage_hero_hoc_is_coming: ชั่วโมงของการเขียนโค้ดกำลังมา
   homepage_hero_hoc_is_here: ชั่วโมงของการเขียนโค้ดมาถึงแล้ว
   homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า
+  homepage_slot_text_frozen: โฟรเซ่นกับแอนนาและเอลซ่า
   homepage_slot_text_studio: บทเรียนของเราทั้งหมด
   homepage_slot_text_course4: คอร์ส 4
   homepage_slot_text_shop: ร้านค้า
+  homepage_slot_text_flappy: แฟลปปี้โค้ด
   homepage_action_text_hoc: ชั่วโมงแห่งการเขียนโค้ดสำหรับนักเรียนทุกคน
   homepage_action_text_num_served: "# คน เข้าร่วมแล้ว"
   homepage_action_text_join_us: ร่วมกับเรา
@@ -303,7 +307,7 @@ th-TH:
   homepage_action_text_codevideo: ดูวีดีโอ
   homepage_action_text_teachervideo: ดูวีดีโอ
   homepage_action_text_watchvideo: ดูวีดีโอ
-  homepage_action_text_girlvideo: แรงบันดาลใจให้ผู้หญิง
+  homepage_action_text_girlvideo: แรงบันดาลใจให้เด็กผู้หญิง
   homepage_action_text_learn: เริ่มต้นการเรียนรู้กันเลย
   homepage_action_text_signpetition: ลงนามในคำร้อง
   homepage_action_text_wincelebritychat: ได้รับรางวัลเพื่อพูดคุยกับดารา
@@ -389,6 +393,10 @@ th-TH:
   class_submission_level_college: มหาวิทยาลัย
   class_submission_level_vocational: อาชีวศึกษา
   class_submission_languages_other: ภาษาอื่น ๆ
+  videos_more: ดู<a href='%{inspiring_videos_playlist}'>วิดีโอที่สร้างแรงบันดาลใจ</a>
+    เพิ่มเติมที่รวบรวมบุคคลต้นแบบและคนดังไว้มากมาย
+  videos_more_markdown: ดู[วิดีโอที่สร้างแรงบันดาลใจ](%{inspiring_videos_playlist})
+    เพิ่มเติมที่รวบรวมบุคคลต้นแบบและคนดังไว้มากมาย
   playlab_choose_theme: เปลี่ยนหน้าตา Play Lab ของคุณ
   playlab_classic_title: คลาสสิค
   playlab_gumball_title: โลกมหัศจรรย์ของ Gumball
@@ -423,11 +431,36 @@ th-TH:
   minecraft_adventurer_description: ใช้โค้ดเพื่อนำแอเล็กซ์หรือสตีฟสู่การผจญภัย
   minecraft_adventurer_button: เริ่มต้น
   minecraft_no_internet: ไม่มีอินเทอร์เน็ตใช่หรือไม่
-  minecraft_download_adventurer: ดาวน์โหลด ผจญภัยใน Minecraft แบบออฟไลน์
+  minecraft_download_adventurer: ดาวน์โหลดผจญภัยในไมน์คราฟท์เวอร์ชั่นออฟไลน์
   minecraft_subtitle: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">ลงทะเบียน</a> ค่ายชั่วโมงแห่งการโค้ด
+    ได้ฟรี ที่ร้านค้าของไมโครซอฟท์ ในออสเตรเลีย แคนาดา เปอร์โตริโก หรือสหรัฐอเมริกา
+    ได้เรียนรู้วิธีการรวบรวมความคิดสร้างสรรค์ไว้ด้วยกัน ด้วยการเขียนโค้ด
+  minecraft_host_event: เจ้าภาพงาน Minecraft Hour of Code
   minecraft_teach_resources: แหล่งข้อมูลและแผนการเรียนสำหรับครู
+  minecraft_leader_guide: ดาวน์โหลดทรัพยากรที่ช่วยให้คุณวางแผน และเข้าสู่งาน
+  minecraft_og_designer: ไมน์คราฟท์กลับมาอีกครั้งพร้อมกิจกรรมใหม่สำหรับชั่วโมงเขียนโค้ด
+    มาช่วยกันเขียนโปรแกรมให้กับสัตว์ต่าง ๆ และตัวละครอื่น ๆ ของไมน์คราฟท์ในเกมไมน์คราฟท์ที่เป็นเวอร์ชันของคุณเอง
+  minecraft_og_agent: ไมน์คราฟท์กลับมาอีกครั้งสำหรับชั่วโมงเขียนโค้ด และคุณรับบทพระเอกนะ!
+    ได้เวลาเขียนโค้ดเพื่อท่องไปในโลกชีวนิเวศของไมน์คราฟท์กันแล้ว
+  sports_page_title: ชั่วโมงเขียนโค้ดตอนกีฬา
+  sports_og_title: ผลักดันตัวเองนะ เพราะใคร ๆ ก็เรียนรู้ได้
   sports_watch_video: ดูวีดีโอ
-  video_title_inspire_girl: แรงบันดาลใจให้ผู้หญิง
+  sports_video_title: ผลักดันตัวเองนะ เพราะใคร ๆ ก็เรียนรู้ได้
+  sports_select_theme: เลือกธีมสำหรับบทเรียนของคุณ
+  sports_basketball_title: สร้างเกมบาสเก็ตบอล
+  sports_featured_athletes: ดูนักกีฬาคนเก่ง
+  sports_athletes_title: นักกีฬาคนเก่ง
+  watch_inspirational_videos: ก่อนเริ่มต้น แนะนำให้เปิดวิดีโอสร้างแรงบันดาลใจเหล่านี้ดูสักหนึ่งวิดีโอ
+  video_title_cs_is_everything: วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกสรรพสิ่ง
+  video_title_inspire_girl: แรงบันดาลใจให้เด็กผู้หญิง
+  video_title_cs_intro: วิทยาการคอมพิวเตอร์เบื้องต้น
+  video_title_schools_dont_teach: เรื่องอะไรที่โรงเรียนส่วนใหญ่ไม่ได้สอน
+  video_title_obama: อดีตประธานาธิบดีโอบามากับวิทยาการคอมพิวเตอร์
+  video_title_hoc_is_here: ชั่วโมงเขียนโค้ดอยู่ที่นี่แล้ว - ใคร ๆ ก็เรียนรู้ได้
+  video_title_anybody_can_learn: ใคร ๆ ก็เรียนรู้ได้
+  video_title_steph_curry: ชั่วโมงของการเขียนโค้ดและสตีเฟน เคอร์รี
+  video_title_my_name_is_aracely: ฉันชื่ออาราเซลี
   video_1min: 1 นาที
   video_2min: 2 นาที
   video_5min: 5 นาที
@@ -569,11 +602,13 @@ th-TH:
   dashboard_navigation_section: กลุ่ม %{section_name}
   dashboard_navigation_student: นักเรียน %{student_name}
   dashboard_progress_not_started: ยังไม่ได้เริ่ม
+  dashboard_progress_in_progress: อยู่ระหว่างการดำเนินการ
   dashboard_progress_not_completed: ไม่เสร็จสมบูรณ์
   dashboard_progress_completed_too_many_blocks: เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป
   dashboard_progress_completed_perfect: เสร็จ สมบูรณ์
   dashboard_progress_submitted: ส่งคำตอบแล้ว
   dashboard_progress_view: ดูความคืบหน้า
+  dashboard_progress_pair_programming: การจับคู่เพื่อเขียนโปรแกรม
   dashboard_sections_new_section: กลุ่มใหม่
   dashboard_sections_jumbotron_instruction: สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม
     กลุ่มจะช่วยคุณจัดการนักเรียนให้อยู่ในกลุ่มย่อย ซึ่งคุณจะสามารถติดตามผลการเรียนและจัดการบัญชีได้ง่ายขึ้น
@@ -686,15 +721,18 @@ th-TH:
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">เรียนรู้เพิ่มเติม</a>เกี่ยวกับรางวัลสำหรับนักศึกษาทุกคน
   hoc2014_try_new_tutorials: ลองเรียน Hour of Code หลักสูตรใหม่
   hoc2014_try_scrat: Angry Birds, PvZ, และ Scrat
+  hoc2014_try_frozen: ศิลปินร่วมกับแอนนาและเอลซ่าจากโฟรเซ่น
   carousel_heading_international: ฝึกฝนในภาษาของคุณ
   carousel_heading_domestic: การสอนเป็นภาษาอังกฤษ
   carousel_heading_beginners: บทเรียนสำหรับผู้เริ่มต้น
   carousel_heading_javascript: บทเรียนที่สอน JavaScript
+  carousel_heading_beyond_javascript: บทเรียนที่สอน JavaScript
   carousel_heading_unplugged: ไม่มีอุปกรณ์ หรือ อินเทอร์เน็ตใช่หรือไม่? ให้ลองเรียน
     วิทยาการคอมพิวเตอร์สำหรับผู้ไม่มีคอมพิวเตอร์
   carousel_heading_devices: บทเรียนแอปพลิเคชันสำหรับโทรศัพท์มือถือและแท็บเล็ต
   carousel_heading_beyond_devices: แอปสำหรับโทรศัพท์มือถือและแท็ปเล็ต
   carousel_heading_languages: บทเรียนภาษาโปรแกรมอื่น ๆ
+  carousel_heading_beyond_languages: บทเรียนภาษาโปรแกรมอื่น ๆ
   carousel_heading_apps_games: สร้างแอปหรือเกม ของคุณเอง
   carousel_heading_university: หลักสูตรมหาวิทยาลัยออนไลน์
   carousel_heading_webpages: เรียนรู้การทำเว็บเพจ
@@ -712,7 +750,10 @@ th-TH:
   older_systems_subheading: 'เหล่านี้ควรทำงานในเบราว์เซอร์รุ่นเก่า อัพเกรดเป็น <a
     href="http://browsehappy.com/" target="_blank"> เว็บเบราเซอร์ที่ทันสมัย</a> เพื่อที่จะเข้าถึงบทเรียนทั้งหมด '
   mobile_devices: บทเรียนสำหรับอุปกรณ์มือถือ
+  frozen_name: เขียนโค้ดไปพร้อมกับแอนนาและเอลซ่า
   starwars_name: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด'
+  codeorg_name: เขาวงกตสุดคลาสสิค
+  codeintl_name: เขาวงกตสุดคลาสสิค
   khan_name: พื้นฐาน JavaScript
   khanes_name: พื้นฐาน JavaScript
   khanpt_name: พื้นฐาน JavaScript
@@ -736,10 +777,13 @@ th-TH:
   robomindnl_name: โปรแกรมหุ่นยนต์จำลอง
   flappy_name: สร้างเกม Flappy bird
   bitsbox_name: Bitsbox - สร้างเกม
+  makeschool_name: สร้างเกมสำหรับ iPhone ในเบราว์เซอร์ของคุณ
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
   projguts_name: ค้อน กรรไกร กระดาษ เป่ายิ้งฉุบ
-  infinity_name: เรื่องราวและเกม
+  hourofcode_name: เขาวงกตสุดคลาสสิค
+  playlab_name: เรื่องราวและเกม
+  infinity_name: เพลย์แลปแบบไม่สิ้นสุด
   artist_name: ศิลปิน
   course1_name: คอร์ส 1
   course2_name: คอร์ส 2
@@ -780,18 +824,31 @@ th-TH:
   coursed-2020_name: หลักสูตร D (2020)
   coursee-2020_name: หลักสูตร E (2020)
   coursef-2020_name: หลักสูตร F (2020)
+  coursea-2021_name: หลักสูตร A (2021)
+  courseb-2021_name: หลักสูตร B (2021)
+  coursec-2021_name: หลักสูตร C (2021)
+  coursed-2021_name: หลักสูตร D (2021)
+  coursee-2021_name: หลักสูตร E (2021)
+  coursef-2021_name: หลักสูตร F (2021)
   pre-express-2018_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2018)
   express-2019_name: หลักสูตร Express (2019)
   pre-express-2019_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2019)
+  express-2020_name: หลักสูตร Express (2020)
   pre-express-2020_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2020)
+  pre-express-2021_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2021)
   accelerated_name: หลักสูตรเร่งรัด
   pre-express_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้
   20-hour_name: หลักสูตรเร่งรัด
+  gumball_name: โลกมหัศจรรย์ของ Gumball
+  classicmaze_name: เขาวงกตสุดคลาสสิค
   iceage_name: ยุคน้ำแข็ง (Ice Age)
   minecraft_name: ไมน์คราฟท์
   starwarsblocks_name: สตาร์วอร์ส (บล็อก)
+  hoc-encryption_name: การเข้ารหัสแบบง่าย ๆ
+  text-compression_name: การบีบอัดข้อความ
   applab_name: แอ๊ปแล็บ
   gamelab_name: เกมแล๊บ (Game Lab)
+  basketball_name: สร้างเกมบาสเก็ตบอล
   applab_gradelevel: อายุ 13+
   codeorg_gradelevel: อายุ 4 - 104 ปี
   codeintl_gradelevel: อายุ 4 - 104 ปี
@@ -846,16 +903,42 @@ th-TH:
   course2_gradelevel: อายุ 6-18 ปี
   course3_gradelevel: อายุ 8-18 ปี
   course4_gradelevel: อายุ 10-18 ปี
+  coursea_gradelevel: อายุ 4 - 7 ปี
+  courseb_gradelevel: อายุ 5-8 ปี
+  coursec_gradelevel: อายุ 6-10 ปี
   coursed_gradelevel: เกรด 8 +
   coursee_gradelevel: อายุ 8-12 ปี
+  coursef_gradelevel: อายุ 9 - 13 ปี
+  coursea-2017_gradelevel: อายุ 4 - 7 ปี
+  courseb-2017_gradelevel: อายุ 5-8 ปี
+  coursec-2017_gradelevel: อายุ 6-10 ปี
   coursed-2017_gradelevel: เกรด 8 +
   coursee-2017_gradelevel: อายุ 8-12 ปี
+  coursef-2017_gradelevel: อายุ 9 - 13 ปี
+  coursea-2018_gradelevel: อายุ 4 - 7 ปี
+  courseb-2018_gradelevel: อายุ 5-8 ปี
+  coursec-2018_gradelevel: อายุ 6-10 ปี
   coursed-2018_gradelevel: เกรด 8 +
   coursee-2018_gradelevel: อายุ 8-12 ปี
+  coursef-2018_gradelevel: อายุ 9 - 13 ปี
+  coursea-2019_gradelevel: อายุ 4 - 7 ปี
+  courseb-2019_gradelevel: อายุ 5-8 ปี
+  coursec-2019_gradelevel: อายุ 6-10 ปี
   coursed-2019_gradelevel: เกรด 8 +
   coursee-2019_gradelevel: อายุ 8-12 ปี
+  coursef-2019_gradelevel: อายุ 9 - 13 ปี
+  coursea-2020_gradelevel: อายุ 4 - 7 ปี
+  courseb-2020_gradelevel: อายุ 5-8 ปี
+  coursec-2020_gradelevel: อายุ 6-10 ปี
   coursed-2020_gradelevel: เกรด 8 +
   coursee-2020_gradelevel: อายุ 8-12 ปี
+  coursef-2020_gradelevel: อายุ 9 - 13 ปี
+  coursea-2021_gradelevel: อายุ 4 - 7 ปี
+  courseb-2021_gradelevel: อายุ 5-8 ปี
+  coursec-2021_gradelevel: อายุ 6-10 ปี
+  coursed-2021_gradelevel: เกรด 8 +
+  coursee-2021_gradelevel: อายุ 8-12 ปี
+  coursef-2021_gradelevel: อายุ 9 - 13 ปี
   accelerated_gradelevel: อายุ 10-18 ปี
   codeorg_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeintl_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
@@ -934,6 +1017,7 @@ th-TH:
   flappy_shortdescription: สร้างเกมของคุณเอง - Flappy Bird, Shark, หรือ Submarine
   bitsbox_shortdescription: " เขียนโค้ดสำหรับแอปพลิเคชั่นเกม เล่นและแชร์ ด้วยภาษา
     Javascript"
+  makeschool_shortdescription: สร้างเกม iPhone!  ด้วยการเขียนโค้ดให้มอนสเตอร์ของคุณเคลื่อนไหวได้!
   touchdevelop_shortdescription: แก้ปริศนา สร้างเกม และเรียนรู้การเขียนโค้ด ทั้งหมดนี้ในโทรศัพท์ของคุณ
   appinventor_shortdescription: สร้างแอปของคุณ! (เฉพาะ Android)
   blockly_shortdescription: ดาวน์โหลดไฟล์ ZIP เพื่อเรียนแบบออฟไลน์
@@ -944,7 +1028,9 @@ th-TH:
     Birds!
   frozen_shortdescription: ลองใช้โค้ดเพื่อเข้าช่วยแอนนาและเอลซ่าสำรวจความมหัศจรรย์และความงามของเมืองน้ำแข็ง
   starwars_shortdescription: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
-  artist_shortdescription: Draw cool pictures and designs with the ศิลปิน!
+  infinity_shortdescription: ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney
+    Infinity
+  artist_shortdescription: วาดภาพและออกแบบสุดเจ๋งด้วยกิจกรรม "ศิลปิน"!
   coursea_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
   courseb_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
     (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีอายุมากขึ้น)
@@ -1001,6 +1087,21 @@ th-TH:
   coursee-2020_shortdescription_congrats: เริ่มต้นเขียนโค้ดด้วยอัลกอริทึม ลูป เงื่อนไขและเหตุการณ์
     ก่อนดูรายละเอียดของฟังก์ชั่น และในส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดเพื่อแชร์กับเพื่อนและครอบครัว
   coursef-2020_shortdescription_congrats: ศึกษาวิธีการใช้รูปแบบต่างๆ ของลูป เหตุการณ์
+    ฟังก์ชั่นและเงื่อนไข ทำความเข้าใจเทคนิคการแก้ไขปัญหาแบบต่าง ๆ และพูดถึงผลกระทบของการใช้คอมพิวเตอร์และอินเทอร์เน็ตที่มีต่อสังคม
+    สำหรับส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดที่นำมาแชร์กับเพื่อนและครอบครัวได้
+  coursea-2021_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+    ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  courseb-2021_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+    ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  coursec-2021_shortdescription_congrats: ใช้การจัดลำดับ ลูปและเหตุการณ์สร้างโปรแกรม
+    แปลความคิดสร้างสรรเป็นไบนารี สำรวจเทคนิคการแก้ไขปัญหาในแบบต่าง ๆ และศึกษาวิธีตอบโต้การเหยียดบนโลกไซเบอร์
+    และในตอนท้ายของหลักสูตร คุณจะได้สร้างเกมหรือเรื่องราวของคุณก่อนนำมาแชร์!
+  coursed-2021_shortdescription_congrats: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป
+    (nested loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events)
+    นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
+  coursee-2021_shortdescription_congrats: เริ่มต้นเขียนโค้ดด้วยอัลกอริทึม ลูป เงื่อนไขและเหตุการณ์
+    ก่อนดูรายละเอียดของฟังก์ชั่น และในส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดเพื่อแชร์กับเพื่อนและครอบครัว
+  coursef-2021_shortdescription_congrats: ศึกษาวิธีการใช้รูปแบบต่างๆ ของลูป เหตุการณ์
     ฟังก์ชั่นและเงื่อนไข ทำความเข้าใจเทคนิคการแก้ไขปัญหาแบบต่าง ๆ และพูดถึงผลกระทบของการใช้คอมพิวเตอร์และอินเทอร์เน็ตที่มีต่อสังคม
     สำหรับส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดที่นำมาแชร์กับเพื่อนและครอบครัวได้
   codeorg_longdescription: เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน
@@ -1076,12 +1177,20 @@ th-TH:
   flappy_longdescription: ใช้โปรแกรมแบบลากและวาง (Drag -Drop) เพื่อสร้างเกม Flappy
     Bird และปรับแต่งให้มีหน้าตาที่แตกต่างออกไปเป็นแบบของคุณเอง เช่น เปลี่ยนนกให้เป็นปลาฉลาม
     ซานตาครอส หรืออะไรก็ตาม เมื่อเสร็จแล้วนำเกมของคุณเข้าสู่มือถือในหนึ่งคลิก
+  makeschool_longdescription: เรียนรู้วิธีการโค้ด ผ่านการสร้างเกมใน iPhone ด้วยภาษาโปรแกรมมิ่งภาษาใหม่ที่เรียกว่า
+    Swift! สร้างเกมที่ได้แรงบันดาลใจจากเกม Pok&eacute;mon แล้วสอนมอนสเตอร์ของคุณให้เคลื่อนย้าย
+    คุณจะได้เรียนรู้เกี่ยวกับการใช้ตัวแปร เมธอด และวัตถุ (ออบเจ็กต์) เพื่อช่วยให่มอนสเตอร์ของคุณชนะ!
   touchdevelop_longdescription: เครื่องมือแก้ไขนี้จะช่วยแนะนำคุณในการสร้างเม็ดสี แก้ปัญหาของหมี
     รวมทั้งสร้างเกมของคุณเอง
   projguts_longdescription: กิจกรรมอันปลั๊ก (ไม่ใช่คอมพิวเตอร์) นี้ช่วยให้นักเรียนเรียนรู้วิธีสร้างแบบจำลองและการจำลองการทำงาน
     โดยมีกลุ่มนักเรียนเล่นเป่ายิ้งฉุบ และเห็นผลการทดลองเป็นแบบจำลองต่าง ๆ
   hourofcode_longdescription: พื้นที่สำหรับ code.org/hoc ใหม่
+  frozen_longdescription: ลองใช้โค้ดเพื่อร่วมเดินทางสำรวจโลกแห่งเวทมนตร์และความงดงามของน้ำแข็งกับแอนนาและเอลซ่า
+    คุณจะได้สร้างเกล็ดหิมะและรูปแบบต่าง ๆ ขณะเล่นสเก็ตน้ำแข็ง และสร้างดินแดนสุดมหัศจรรย์ประจำฤดูหนาวที่คุณนำมาแชร์กับเพื่อน
+    ๆ ได้!
   starwars_longdescription: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
+  playlab_longdescription: สร้างเรื่องราวหรือเกมด้วยเพลย์แลป! ทำให้สัตว์ โจรสลัด ซอมบี้  นินจา
+    และตัวละครอีกมากมายเคลื่อนไหว ทำเสียงให้ดังเบา ทำแต้มคะแนน หรือแม้แต่โยนลูกไฟ!
   codeorg_beyond_name: วิทยาการคอมพิวเตอร์เบื้องต้น (ประถมศึกษา)
   khan_beyond_name: เรียนรู้การเขียนโปรแกรมคอมพิวเตอร์
   tynker_beyond_name: เรียนรู้การเขียนโปรแกรมที่บ้าน
@@ -1093,6 +1202,7 @@ th-TH:
   groklearning_beyond_name: เรียนรู้การเขียนโปรแกรมภาษา Python
   hacketyhack_beyond_name: เรียนรู้ Ruby
   robomind_beyond_name: โปรแกรมหุ่นยนต์จำลอง
+  makeschool_beyond_name: สร้างเกมสำหรับ iPhone ในเบราว์เซอร์ของคุณ
   appinventor_beyond_name: AppInventor Hour of Code
   codehs_beyond_name: เรียนรู้การโค้ดกับ Karel
   udemy_beyond_name: หลักสูตรการเขียนโปรแกรมออนไลน์
@@ -1187,6 +1297,7 @@ th-TH:
   groklearning_beyond_shortdescription: วิดีโอแนะนำพื้นฐานการเขียนโปรแกรม python
   hacketyhack_beyond_shortdescription: เรียนรู้  Ruby จากพื้นฐาน
   robomind_beyond_shortdescription: เขียนโค้ดสำหรับหุ่นยนต์เสมือน
+  makeschool_beyond_shortdescription: เรียนรู้ที่จะสร้างเกม iPhone ในหนึ่งชั่วโมง
   appinventor_beyond_shortdescription: สร้างแอปของคุณ! (เฉพาะ Android)
   touchdevelop_beyond_shortdescription: เขียนโปรแกรมมือถือโดยตรงบนโทรศัพท์ แท็บเล็ต
     หรือแล็ปท็อป
@@ -1267,6 +1378,7 @@ th-TH:
     3D โครงการ Alice มีเครื่องมือและวัสดุสำหรับการสอนและการเรียนเรียนรู้เกี่ยวกับ
     การคิดคำนวณ การแก้ปัญหา และการเขียนโปรแกรมสำหรับทุกเพศทุกวัย
   sphero_beyond_longdescription: ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน
+  compatibility_hide_this_warning: ซ่อนคำเตือน
   compatibility_unsupported_browser: เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน
     กรุณาอัพเกรดเบราเซอร์เป็น <a href='%{supported_browsers_url}', target='_blank'>
     ซึ่งเป็นหนึ่งในเบาร์เซอร์ที่เราแนะนำ</a> คุณอาจจะลองดูหน้าเพจได้ แต่การทำงานบางอย่างจะไม่สมบูรณ์
@@ -1292,6 +1404,7 @@ th-TH:
   header_help_us: ช่วยเรา
   header_about: เกี่ยวกับ
   header_teacher_community: ชุมชนครูผู้สอน
+  header_help_support: 'การช่วยเหลือและสนับสนุน '
   header_legal_privacy: นโยบายความเป็นส่วนตัว
   header_legal_tos: เงื่อนไขการให้บริการ
   user_header_label: สวัสดี %{username}
@@ -1299,35 +1412,54 @@ th-TH:
   user_header_settings: บัญชีของฉัน
   user_header_logout: ออกจากระบบ
   user_header_signin: เข้าสู่ระบบ
+  user_header_create: 'สร้าง '
+  user_header_applab: 'แอ๊ปแล็บ '
+  user_header_artist: ศิลปิน
   user_header_gamelab: เกมแล๊บ (Game Lab)
+  user_header_playlab: เรื่องราวและเกม
   user_header_dance: Dance Party
   user_header_minecraft: ไมน์คราฟท์
+  user_header_view_project_gallery: ดูโปรเจกต์ต่าง ๆ
   user_header_view_my_projects: ดูโปรเจกต์ต่าง ๆของฉัน
   signing_in: เข้าสู่ระบบ
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
+  applab_tile_subtitle: สร้างแอปของคุณเองในจาวาสคริปต์โดยใช้การเขียนโปรแกรมบนบล็อกเป็นหลัก
+    หรือนำทักษะต่าง ๆ ที่ต่อยอดขึ้นไปอีกระดับด้วยการเขียนโปรแกรมที่ใช้ข้อความเป็นหลัก
+    (ภาษาอังกฤษเท่านั้น)
   applab_tile_start_tutorial: เริ่มต้น
-  applab_tile_teacher_guide: ดูคำแนะนำสำหรับครู
+  applab_tile_teacher_guide: ดูคำแนะนำสำหรับผู้สอน
   aquatic_name: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
   account_sign_up_child_accept_terms: ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ
     Code.org ได้
   hoc_overview_dance_title: Dance Party
-  hoc_overview_dance_subtitle: สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ ของคุณฟีเจอริ่งกับ
-    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara และอีก 25 คน!
-  hoc_overview_dance_2019_subtitle: สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ
-    ของคุณฟีเจอริ่งกับ Katy Perry, Shawn Mendes Panic! At The Disco, Lil Nas X, Jonas
-    Brothers, Nicki Minaj, และอีก 34 คน!
+  hoc_overview_dance_subtitle: เขียนโค้ดให้กับเกมปาร์ตี้เต้นรำเพื่อแชร์กับเพื่อน ๆ
+    ก่อนฟีเจอริ่งกับนักร้องชื่อดังไม่ว่าจะเป็น Katy Perry, Madonna, J. Balvin, Sia,
+    Keith Urban, Ciara และอีก 25 คน!
+  hoc_overview_dance_2019_subtitle: เขียนโค้ดให้กับเกมปาร์ตี้เต้นรำเพื่อแชร์กับเพื่อน
+    ๆ ก่อนฟีเจอริ่งกับนักร้องชื่อดังไม่ว่าจะเป็น Katy Perry, Shawn Mendes Panic! At
+    The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, และอีก 34 คน!
+  hoc_overview_title: กิจกรรมของชั่วโมงเขียนโค้ดจาก Code.org
+  hoc_overview_subtitle_markdown: '[ชั่วโมงเขียนโค้ด](https://hourofcode.com) คือความเคลื่อนไหวในทั่วโลกเพื่อเข้าถึงผู้เรียนหลายสิบล้านคนในกว่า
+    180 ประเทศ ไม่ว่าจะเป็นใครหรืออยู่ที่ไหนก็สามารถจัดกิจกรรม "ชั่วโมงเขียนโค้ด"
+    ขึ้นมาได้ หรือจะลองใช้บทช่วยสอนความยาว 1 ชั่วโมงที่มีมากกว่า 500 บทที่แปลเป็นภาษาต่าง
+    ๆ มากกว่า 45 ภาษา'
   hoc_overview_partner_activities_title: กิจกรรมเพิ่มเติมจากพันธมิตร
-  hoc_overview_partner_activities_body: เว็บไซต์ Hour of Code มีกิจกรรมที่เกี่ยวกับวิทยาการด้านคอมพิวเตอร์มากกว่า
-    100 กิจกรรมสำหรับทุกวัยและทุกระดับประสบการณ์ ได้รับการพัฒนาโดย Code.org และพันธมิตร
+  hoc_overview_partner_activities_body: เว็บไซต์ Hour of Code (ชั่วโมงเขียนโค้ด) รวบรวมกิจกรรมที่เกี่ยวกับวิทยาการคอมพิวเตอร์มากกว่า
+    100 กิจกรรมสำหรับผู้เรียนทุกวัยและทุกระดับประสบการณ์ ซึ่งเป็นการพัฒนาร่วมกันระหว่าง
+    Code.org และพันธมิตร
   hoc_overview_partner_activities_link: ดูกิจกรรม
   hoc_overview_start_tutorial: เริ่มต้น
-  hoc_overview_view_teacher_guide: ดูคำแนะนำสำหรับครู
+  hoc_overview_view_teacher_guide: ดูคำแนะนำสำหรับผู้สอน
   hoc2018_creativity_create: สร้าง
+  hoc2018_creativity_hoc_coming: Hour of Code กำลังมา…
   hoc2018_creativity_what_will_you_create: คุณจะสร้างอะไร
   hoc2018_creativity_courses_link: ก้าวไปอีกขั้นด้วย<a href="https://studio.code.org/courses">หลักสูตรต่าง
     ๆ ของ Code.org</a>
   hoc2018_mc_page_title: สอนชั่วโมงแห่งโค้ดด้วย Minecraft
   hoc2018_mc_details: หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+
+  hoc2018_mc_aquatic_announcement: มาลงทะเบียนเพื่อลองทำกิจกรรมใหม่ ๆ กว่า 150 รายการสำหรับชั่วโมงแห่งการเขียนโค้ด-Hour
+    of Code (ระหว่างวันที่ 3-9 ธันวาคม) อย่าลืมเช็คดูกิจกรรมใหม่ๆของไมน์คราฟท์สำหรับปี
+    พ. ศ. 2561 เรื่อง การผจญภัยใต้ทะเล! ลงทะเบียนเรียนได้ตั้งแต่วันนี้
   hoc2018_mc_aquatic_description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด
     ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
   hoc2018_mc_hero_title: ไมน์คราฟท์ ภาคการเดินทางของฮีโร่
@@ -1339,12 +1471,31 @@ th-TH:
   hoc2018_mc_adventurer_description: ใช้โค้ดเพื่อนำแอเล็กซ์หรือสตีฟสู่การผจญภัย
   hoc2018_mc_start: เริ่มต้น
   hoc2018_mc_no_internet: ไม่มีอินเทอร์เน็ตใช่หรือไม่
-  hoc2018_mc_download_adventurer: ดาวน์โหลด ผจญภัยใน Minecraft แบบออฟไลน์
+  hoc2018_mc_download_adventurer: ดาวน์โหลดผจญภัยในไมน์คราฟท์เวอร์ชั่นออฟไลน์
   hoc2018_mc_educators_box2_button: ดาวน์โหลด
+  hoc2018_mc_educators_box3_title: เข้าร่วมเวิร์คช็อปฟรีสำหรับผู้เรียน
+  hoc2018_mc_educators_box3_desc: แวะไปที่ร้านไมโครซอฟท์ในพื้นที่ของคุณเพื่อเข้าร่วมเวิร์คช็อป
+    "ชั่วโมงของการเขียนโค้ด" ที่จัดขึ้นฟรี และเปิดรับผู้สนใจทุกระดับทักษะ อายุตั้งแต่
+    6 ขวบขึ้นไป
+  hoc2018_mc_educators_box3_button: ค้นหาเวิร์คช็อป
+  hoc2018_mc_educators_box4_title: เข้าถึงแหล่งข้อมูลอื่น ๆ ของวิทยาการคอมพิวเตอร์
+  hoc2018_mc_educators_box4_button: สำรวจแหล่งข้อมูล
+  hoc2018_mc_watch_videos: ก่อนเริ่มต้น แนะนำให้เปิดวิดีโอสร้างแรงบันดาลใจเหล่านี้ดูสักหนึ่งวิดีโอ
+  hoc2018_mc_videos_more: ดู<a href='%{inspiring_videos_playlist}'>วิดีโอที่สร้างแรงบันดาลใจ</a>
+    เพิ่มเติมที่รวบรวมบุคคลต้นแบบและคนดังไว้มากมาย
   hoc2018_mc_video_1min: 1 นาที
   hoc2018_mc_video_2min: 2 นาที
   hoc2018_mc_video_5min: 5 นาที
-  hoc2018_mc_video_title_inspire_girl: แรงบันดาลใจให้ผู้หญิง
+  hoc2018_mc_video_title_steph_curry: ชั่วโมงของการเขียนโค้ดและสตีเฟน เคอร์รี
+  hoc2018_mc_video_title_sports: ผลักดันตัวเองนะ เพราะใคร ๆ ก็เรียนรู้ได้
+  hoc2018_mc_video_title_cs_is_everything: วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกสรรพสิ่ง
+  hoc2018_mc_video_title_inspire_girl: แรงบันดาลใจให้เด็กผู้หญิง
+  hoc2018_mc_video_title_cs_intro: วิทยาการคอมพิวเตอร์เบื้องต้น
+  hoc2018_mc_video_title_schools_dont_teach: เรื่องอะไรที่โรงเรียนส่วนใหญ่ไม่ได้สอน
+  hoc2018_mc_video_title_obama: อดีตประธานาธิบดีโอบามากับวิทยาการคอมพิวเตอร์
+  hoc2018_mc_video_title_hoc_is_here: ชั่วโมงเขียนโค้ดอยู่ที่นี่แล้ว - ใคร ๆ ก็เรียนรู้ได้
+  hoc2018_mc_video_title_anybody_can_learn: ใคร ๆ ก็เรียนรู้ได้
+  hoc2018_mc_video_title_my_name_is_aracely: ฉันชื่ออาราเซลี
   hoc2018_mc_homepage_hoc_coming: ชั่วโมงของการเขียนโค้ดกำลังมา.....
   hoc2018_mc_homepage_what_create: คุณจะสร้างอะไร
   hoc2018_mc_homepage_watch_video: ชมวิดีโอของเรา
@@ -1352,27 +1503,49 @@ th-TH:
   hoc2018_mc_homepage_try_it: ลอง
   hoc2018_mc_back_journey: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
     มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
-  hoc2018_mc_teacher_guide: ดูคำแนะนำสำหรับครู
+  hoc2018_mc_teacher_guide: ดูคำแนะนำสำหรับผู้สอน
   hoc2018_mc_short_description_shorter: ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ
     เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!
   hoc2018_mc_journey: ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
   hoc2018_dance_party_main_heading: Dance Party
+  hoc2018_dance_party_subheading: ช่วยแปลเกมปาร์ตี้เต้นรำ
   hoc2018_dance_create_your_own_dance_title: สร้างเกม Dance Party ของคุณเอง
   hoc2018_dance_party_box_title: Dance Party
-  hoc2018_dance_party_box_description: สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ
+  hoc2018_dance_party_box_description: สร้างโค้ดของเกมปาร์ตี้เต้นรำเพื่อแชร์กับเพื่อนๆ
     ของคุณ
   hoc2018_dance_party_button: เริ่มต้น
   hoc2018_dance_keep_on_dancing_box_title: สร้างโค้ดเต้นรำกันต่อไป
-  hoc2018_dance_keep_on_dancing_description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
+  hoc2018_dance_keep_on_dancing_description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโปรเจ็กต์
+  hoc2018_dance_keep_on_dancing_specs: ภาษา | รูปแบบ | อายุ 13 ปีขึ้นไป
   hoc2018_dance_keep_on_dancing_button: เริ่มส่วนที่ 2
-  hoc2018_dance_teacher_resources_title: แหล่งข้อมูลสำหรับครู
-  hoc2018_dance_teacher_resources_tile1_description: แผนการเรียน ใบรับรอง และการกรองเพลง
+  hoc2018_dance_teacher_resources_title: แหล่งข้อมูลสำหรับผู้สอน
+  hoc2018_dance_teacher_resources_tile1_description: แผนการเรียนการสอน ใบรับรอง และการกรองเพลง
   hoc2018_dance_teacher_resources_tile1_button: แผนการเรียนการสอน
-  hoc2018_dance_teacher_resources_tile2_title: สร้างเกม Dance Party แบบไม่ใช้เครื่อง
-  hoc2018_dance_teacher_resources_tile2_description: ไม่จำเป็นต้องมีคอมพิวเตอร์  เรียนรู้แนวคิดการเขียนโปรแกรมเพื่อออกแบบท่าเต้นรำไปด้วยกัน
+  hoc2018_dance_teacher_resources_tile2_title: สร้างเกมปาร์ตี้เต้นรำแบบออฟไลน์
+  hoc2018_dance_teacher_resources_tile2_description: ไม่จำเป็นต้องมีคอมพิวเตอร์!  เรียนรู้แนวคิดการเขียนโปรแกรมเพื่อออกแบบท่าเต้นไปด้วยกัน
   hoc2018_dance_teacher_resources_tile2_button: กิจกรรมถอดปลั๊ก
+  hoc2018_dance_featured_student_creations_title: เน้นผลงานสร้างสรรค์ของนักเรียน
+  hoc2018_dance_videos_section_heading: ขอแรงบันดาลใจ
+  hoc2018_dance_video_title_what_is_creativity: ความคิดสร้างสรรค์คืออะไร
+  hoc2018_dance_view_creativity_video_playlist: ความคิดสร้างสรรค์คืออะไร ดูทั้งซีรีส์
+    (5 นาที)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: 'ด้วยความร่วมมือกับ: '
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* คือโปรแกรมปูทางช่วงวัยเด็กสู่วัยสร้างอาชีพที่มีเนื้อหาครอบคลุม สำหรับใช้เป็นแรงบันดาลใจ
+    ให้ความรู้ และจัดการฝึกอบรมให้กับเด็กยากจนและเด็กด้อยโอกาส ตลอดจนคนรุ่นใหม่ได้เดินหน้าสานต่ออาชีพในฝันในแขนงวิทยาการคอมพิวเตอร์
+    <a href='%{amazon_future_engineer_link}' target='_blank'>เร่ียนรู้เพิ่มเติม</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* คือโปรแกรมปูทางช่วงวัยเด็กสู่วัยสร้างอาชีพที่มีเนื้อหาครอบคลุม
+    สำหรับใช้เป็นแรงบันดาลใจ ให้ความรู้ และจัดการฝึกอบรมให้กับเด็กยากจนและเด็กด้อยโอกาส
+    ตลอดจนคนรุ่นใหม่ได้เดินหน้าสานต่ออาชีพในฝันในแขนงวิทยาการคอมพิวเตอร์ [เรียนรู้เพิ่มเติม](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: เรียนรู้เพิ่มเติมเกี่ยวกับ
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: ทำความรู้จักกับโปรแกรมของ
+    Amazon ที่มีขึ้นสำหรับระดับชั้นอนุบาลจนถึงขั้นการประกอบอาชีพ เพื่อเพิ่มการเข้าถึงการศึกษาด้านวิทยาการคอมพิวเตอร์
+    ค้นหาข้อมูลวิธีเข้าร่วมค่ายฤดูร้อนของเรา ชั้นเรียน CS ในระดับมัธยมปลาย ทุนการศึกษาและการฝึกงาน
   hoc2018_dance_amazon_about_future_engineer_button: สิ่งที่น่าเรียนรู้ยังมีอีก
+  hoc2018_dance_amazon_future_engineer_footer: "* ศิลปินที่งานเพลงถูกนำมาใช้ในบทช่วยสอนนี้ไม่ใช่ผู้ให้การสนัสนุนหรือรับรองว่า
+    Amazon เป็นส่วนหนึ่งที่มีสิทธิ์ใช้งานเพลงบน Code.org อย่างถูกต้อง\n\n"
   hoc2018_dance_measure: ห้องดนตรี
   hoc2018_dance_measure_colon: 'ห้องดนตรี:'
   page_not_found_header: '404: ไม่พบหน้าดังกล่าว'
@@ -1380,17 +1553,103 @@ th-TH:
     เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา
   page_not_found_button: กลับไปที่หน้าแรก
   hoc2018_mc_with_microsoft: 'ด้วยความร่วมมือกับ: '
-  hoc2018_mc_thank_microsoft: "  เราขอขอบคุณ Microsoft ที่ให้การสนับสนุนวิสัยทัศน์และภารกิจของเราที่มีขึ้นเพื่อสร้างหลักประกันว่าเด็กทุกคนจะมีโอกาสได้ทำความรู้จักกับวิทยาการคอมพิวเตอร์และทักษะเพื่อความสำเร็จในศตวรรษที่
-    21  "
+  hoc2018_mc_thank_microsoft: 'เราขอขอบคุณ Microsoft ที่ให้การสนับสนุนวิสัยทัศน์และภารกิจของเราที่มีขึ้นเพื่อสร้างหลักประกันว่าเด็กทุกคนจะมีโอกาสได้ทำความรู้จักกับวิทยาการคอมพิวเตอร์และทักษะเพื่อความสำเร็จในศตวรรษที่
+    21  '
+  hoc2019_mc_mee_description1: 'บทเรียนใหม่ "ชั่วโมงของการเขียนโค้ดตอนไมน์คราฟท์"
+    มีให้ลองด้วยตัวเองแล้วภายใน Minecraft: Education Edition สำหรับ Windows, Mac และ
+    iPad แนะนำให้ศึกษาพื้นฐานของการเขียนโค้ดและปัญญาประดิษฐ์ไปพร้อม ๆ กับนักเรียนของคุณ!'
+  hoc2019_mc_more_coding_resources: แหล่งข้อมูลการเขียนโค้ดเพิ่มเติม
+  hoc2019_dance_previous_versions: "อยากจะเห็นเกมปาร์ตี้เต้นรำเวอร์ชั่นเก่าใช่รึเปล่า
+    \ \nคลิกที่นี่เพื่อเริ่มต้น [ส่วนที่ 1](%{dance_2018_link}) และ [ส่วนที่ 2](%{dance_extras_2018_link})
+    จากปี 2018"
   page_not_available_button: กลับไปที่หน้าแรก
+  hoc2020_mc_available_code_org: พร้อมให้เรียนรู้แล้วบน Code.org
+  hoc2020_mc_available_mee: 'พร้อมให้เรียนรู้แล้วใน Minecraft: Education Edition'
+  hoc2020_mc_mee_description: 'บทช่วยสอนชั่วโมงเขียนโค้ดตอนไมน์คราฟท์ใหม่รวมอยู่ใน
+    Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook และ iPad เรียบร้อยแล้ว
+    ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับนักเรียนของคุณ!
+    เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์  บทเรียนเรื่องความเท่าเทียม
+    และการฝึกอบรมผู้สอน'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'เดินทางย้อนเวลา และเรียนรู้เรื่องโค้ด! บทช่วยสอนของชั่วโมงเขียนโค้ดตอนไมน์คราฟท์ใหม่ตอนนี้เปิดให้ศึกษาแล้วใน
+    Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook และ iPad ลองดูโดยใช้แหล่งข้อมูล
+    การฝึกอบรมและวิดีโอฟรีสำหรับนักการศึกษา'
+  hoc2021_mc_mee_villages_title: Tale of Two Villages
+  hoc2021_mc_mee_villages_description: 'ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับผู้เรียนของคุณใน
+    Minecraft: Education Edition'
+  hoc2021_mc_mee_ai_title: AI For Good
+  hoc2021_mc_mee_ai_description: 'ดูเรื่องปัญญาประดิษฐ์ไปพร้อม ๆ กับผู้เรียนของคุณ
+    และเรียนรู้วิธีเขียนโค้ดจากภายใน Minecraft: Education Edition'
   footer_powered_by_aws: ขับเคลื่อนระบบด้วย Amazon Web Services
   footer_privacy_policy: นโยบายความเป็นส่วนตัว
   footer_about: เกี่ยวกับ
   footer_donate: ร่วมบริจาค
   footer_support: ศูนย์ช่วยเหลือและชุมชน
   footer_terms: เงื่อนไข
+  ai_for_oceans: ปัญญาประดิษฐ์สำหรับท้องทะเล
+  ai_for_oceans_lesson_plan: แผนการเรียนการสอน
+  ai_for_oceans_tile_description: ช่วย A.I. ทำความสะอาดท้องทะเลด้วยการฝึกให้ A.I.
+    ตรวจจับขยะ! เรียนรู้เรื่องข้อมูลการฝึกและอคติ และวิธีที่ A.I. ระบุถึงปัญหาต่าง
+    ๆ ที่เกิดขึ้นในทั่วโลก ดู
+  how_ai_works: AI ทำงานอย่างไร
+  how_ai_works_tile_description: ศึกษาวิธีการทำงานของ AI และเหตุผลที่เรื่องนี้มีความสำคัญได้จากวิดีโอสั้นชุดนี้
+    ที่เปิดตัวผ่าน Satya Nadella ซีอีโอของ Microsoft และผู้เชี่ยวชาญคนสำคัญมากมาย
+  watch_the_videos: ดูวิดีโอ
+  ai_and_ethics: AI และจริยธรรม
+  ai_and_ethics_tile_description: นักเรียนทบทวนถึงนัยยะทางจริยธรรมที่สำคัญของ AI ก่อนช่วยกันจัดทำแหล่งข้อมูล
+    “หลักจรรยาบรรณของ AI” ให้กับผู้สร้าง AI และผู้ออกกฎหมายในทุก ๆ ที่
+  view_lesson_plan: ดูแผนการเรียนการสอน
   ai_in_partnership_with: 'ด้วยความร่วมมือกับ: '
-  ai_microsoft_thanks: "  เราขอขอบคุณ Microsoft ที่ให้การสนับสนุนวิสัยทัศน์และภารกิจของเราที่มีขึ้นเพื่อสร้างหลักประกันว่าเด็กทุกคนจะมีโอกาสได้ทำความรู้จักกับวิทยาการคอมพิวเตอร์และทักษะเพื่อความสำเร็จในศตวรรษที่
-    21  "
+  ai_microsoft_thanks: 'เราขอขอบคุณ Microsoft ที่ให้การสนับสนุนวิสัยทัศน์และภารกิจของเราที่มีขึ้นเพื่อสร้างหลักประกันว่าเด็กทุกคนจะมีโอกาสได้ทำความรู้จักกับวิทยาการคอมพิวเตอร์และทักษะเพื่อความสำเร็จในศตวรรษที่
+    21  '
+  ai_ethics_panel_header: การศึกษาข้อมูลการหารือเรื่องจริยธรรมของคณะกรรมการ AI
+  ai_ethics_panel_description_1: ทำความรู้จักเหล่าผู้เชี่ยวชาญด้าน AI บางคนที่เราชื่นชอบให้มากขึ้น
+    การพูดคุยของคณะกรรมการชุดนี้โยงเรื่องที่สำคัญบางเรื่อง ไม่ว่าจะเป็นอคติเชิงอัลกอริทึมและอนาคตของงาน
+    จับคู่กับ
+  ai_ethics_lesson_plan: แผนการเรียนการสอนเรื่อง AI และจริยธรรม
+  ai_ethics_panel_description_2: เพื่อการแนะนำเรื่องจริยธรรมของปัญญาประดิษฐ์ได้อย่างเหมาะสม!
+  cs_for_good: CS for Good
+  cs_for_good_tile_description: แหล่งข้อมูลที่จะสร้างแรงบันดาลใจให้นักเรียนคิดพิเคราะห์ถึงบทบาทของวิทยาการคอมพิวเตอร์ที่มีต่อการสร้างโลกที่เท่าเทียมและยั่งยืนมากยิ่งขึ้น
+  view_resources: "  ดูแหล่งข้อมูล  "
+  imagine_cup_junior: Imagine Cup Junior
+  imagine_cup_junior_tile_description: การแข่งขันรายการ AI for Good ที่จัดขึ้นในทั่วโลกมีขึ้นเพื่อแนะนำให้นักเรียนรู้จักกับแนวคิดเรื่อง
+    AI for Good ของ Microsoft เพื่อเพิ่มความสามารถในการแก้ไขปัญหาต่าง ๆ ด้วยพลังของ
+    AI
   ai_activity: กิจกรรม
   ai_description: รายละเอียด
+  ai_seeing_ai: แอป Seeing AI
+  ai_seeing_ai_description: แอปฟรีที่จะแปลโลกรอบตัวคุณออกมาเป็นภาษาต่าง ๆ
+  ai_quick_draw: เกม Quick, Draw!
+  ai_quick_draw_description: โครงข่ายประสาทเทียมเรียนรู้เพื่อจดจำเส้นขยุกขยิกได้ใช่หรือไม่
+  ai_teachable_machine: Teachable Machine
+  ai_teachable_machine_description: ฝึกคอมพิวเตอร์ให้จดจำภาพ เสียงและการโพสต์ท่าของคุณ
+  ai_google: การทดสอบ AI ด้วย Google
+  ai_google_description: เริ่มต้นทำความเข้าใจการเรียนรู้ของระบบผ่านทางรูปภาพ การวาด
+    ภาษา เพลงและอีกมากมาย
+  ai_zooniverse: Zooniverse - สแน็ปช็อตม้าลายภูเขา
+  ai_zooniverse_description: ช่วยปกป้องม้าลายภูเขาเคปที่ใกล้สูญพันธุ์ได้ด้วยการระบุถึงสัตว์ชนิดต่าง
+    ๆ ที่อยู่ในภาพ
+  ai_audience: ผู้ฟัง
+  ai_minecraft_description: 'เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน
+    วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์ และการฝึกอบรมผู้สอน (จำเป็นต้องมี Minecraft:
+    Education Edition)'
+  ai_k_12_audience: K-12 (ต้องอ่านได้)
+  ai_microsoft_workshop: เวิร์คช็อปเสมือนจริงฟรีจาก Microsoft
+  ai_microsoft_workshop_description: จุดกระแสความสนใจด้วยเวิร์คช็อปฟรีทั้งในส่วนของ
+    STEM และการเขียนโค้ด
+  ai_machine_learning_for_kids: การเรียนรู้ของระบบสำหรับเด็กเล็ก
+  ai_machine_learning_for_kids_description: ฝึกต้นแบบการเรียนรู้ของระบบด้วยข้อความ
+    ตัวเลข หรือภาพ ก่อนใช้ต้นแบบนี้เพื่อคิดเกมใน Scratch
+  ai_ibm_machine_learning_for_kids: 'IBM: การเรียนรู้ของระบบสำหรับเด็กเล็ก'
+  ai_ecs: 'ECS: ปัญญาประดิษฐ์ (AI)'
+  ai_ecs_description: หน่วยการเรียนรู้หนึ่งของหลักสูตรทางเลือกใหม่สำหรับหลักสูตรทำความรู้จักกับวิทยาการคอมพิวเตอร์
+    (Exploring Computer Science (ECS))
+  ai_elements: องค์ประกอบของ AI
+  ai_elements_description: ชุดของหลักสูตรออนไลน์ฟรีที่พัฒนาขึ้นจากความร่วมมือของบริษัท
+    Reaktor และมหาวิทยาลัยเฮลซิงกิ
+  ai_cognimates: Cognimates
+  ai_cognimates_description: แพล็ตฟอร์มวิชาการ AI เพื่อสร้างเกม ตั้งโปรแกรมให้กับหุ่นยนต์และฝึกความชำนาญ
+  ai_try_activity: ลองกิจกรรมนี้
+  outbreak_tile_title: การระบาด
+  outbreak_tile_subtitle: Monster Town กำลังติดไวรัส! เขียนโค้ดเครื่องจำลองการแพร่ระบาดของไวรัส
+    และคาดการณ์สิ่งที่จะเกิดขึ้นกับเมืองที่อยู่กับเมืองนี้

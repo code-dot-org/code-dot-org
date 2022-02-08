@@ -34,6 +34,7 @@ ne-NP:
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
   og_title: 'Code.org: Anybody can Learn'
+  og_title_soon: Computer Science Education Week
   og_description: Every student in every school deserves the opportunity to study
     computer science.
   csedweek_og_title: Computer Science Education Week
@@ -343,6 +344,8 @@ ne-NP:
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_hoc_is_coming: Computer Science Education Week
+  homepage_hero_hoc_is_here: Computer Science Education Week
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -410,6 +413,8 @@ ne-NP:
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
   homepage_donors_donate: Make a donation
+  homepage_below_hero_announcement_text: हामी तपाइँको गोपनीयता बारे ख्याल राख्दछौं
+    र हाम्रो गोपनीयता नीतिमा केहि अपडेटहरू गर्दैछौं, जुन  25 मे देखि लागू हुनेछ।
   homepage_below_hero_announcement_link_text: थप जान्नुहोस्
   contact_form_topic_student: I'm a student
   contact_form_topic_parent: I'm a parent
@@ -462,7 +467,7 @@ ne-NP:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_blocks_title: Blocks
+  starwars_blocks_title: खण्डहरु
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-106
@@ -715,6 +720,7 @@ ne-NP:
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
     a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
   dashboard_course_csins: Computer Science in Science
@@ -1137,16 +1143,42 @@ ne-NP:
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ages 8-18
   course4_gradelevel: Ages 10-18
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursec_gradelevel: Ages 6-10
   coursed_gradelevel: Grade 8+
   coursee_gradelevel: Ages 8-12
+  coursef_gradelevel: Ages 9-13
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
   coursed-2017_gradelevel: Grade 8+
   coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
   coursed-2018_gradelevel: Grade 8+
   coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
+  coursea-2019_gradelevel: Ages 4-7
+  courseb-2019_gradelevel: Ages 5-8
+  coursec-2019_gradelevel: Ages 6-10
   coursed-2019_gradelevel: Grade 8+
   coursee-2019_gradelevel: Ages 8-12
+  coursef-2019_gradelevel: Ages 9-13
+  coursea-2020_gradelevel: Ages 4-7
+  courseb-2020_gradelevel: Ages 5-8
+  coursec-2020_gradelevel: Ages 6-10
   coursed-2020_gradelevel: Grade 8+
   coursee-2020_gradelevel: Ages 8-12
+  coursef-2020_gradelevel: Ages 9-13
+  coursea-2021_gradelevel: Ages 4-7
+  courseb-2021_gradelevel: Ages 5-8
+  coursec-2021_gradelevel: Ages 6-10
+  coursed-2021_gradelevel: Grade 8+
+  coursee-2021_gradelevel: Ages 8-12
+  coursef-2021_gradelevel: Ages 9-13
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
@@ -1742,20 +1774,33 @@ ne-NP:
     to be broken.
   flappy_shortcode: flap
   header_courses: पाठ्यक्रम
-  header_project_gallery: Projects
+  header_course_catalog: पाठ्यक्रम विवरण
+  header_project_gallery: |2-
+
+    परियोजनाहरु
   header_educate_hoc: Hour of Code
   header_stats: Stats
-  header_legal_privacy: Privacy Policy
-  header_legal_tos: Terms of Service
+  header_about: बारेमा
+  header_report_bug: समस्या प्रतिवेदन गर्नुहोस्
+  header_legal_privacy: गोपनीयता नीति
+  header_legal_tos: सेवाका सर्तहरु
   user_header_label: Hi %{username}
   user_header_team: Team
   user_header_settings: My account
   user_header_logout: साइन आउट गर्नुहोस्
-  user_header_signin: साइन इन
+  user_header_signin: साइन इन गर्नुहोस्
+  user_header_create: सिर्जना गर्नुहोस्
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Artist '
   user_header_playlab: Play Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   applab_tile_start_tutorial: Start
+  hoc_overview_dance_subtitle: 'नृत्य पार्टी आफ्नो साथीहरूसँग साझा गर्न  कोड गर्नुहोस्
+    । केटी पेरी, म्याडोना, जे. बाल्भिन, सिया, कीथ अर्बन, सियारा र अरू २५ जनाको अभिनय
+    !
+
+'
   hoc_overview_start_tutorial: Start
   hoc2018_creativity_create: बनाउनुहोस्
   hoc2018_mc_page_title: Minecraft Hour of Code Tutorials
@@ -1790,10 +1835,21 @@ ne-NP:
   hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
   hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
   hoc2018_dance_amazon_about_future_engineer_button: थप जान्नुहोस्
+  hoc2018_dance_measure: मापन गर्नुहोस्
+  hoc2018_dance_measure_colon: 'मापन गर्नुहोस्:'
+  hoc2018_mc_thank_microsoft: "प्रत्येक बच्चालाई कम्प्युटर विज्ञान सिकाउने र २१ औं
+    शताब्दीमा सफल हुने सीपहरु सुनिश्चित गर्न हाम्रो दृष्टि र मिशनलाई समर्थन गरेकोमा
+    हामी माइक्रोसफ्टलाई धन्यवाद दिन्छौं ।\n\n"
   footer_powered_by_aws: Powered by Amazon Web Services
-  footer_privacy_policy: Privacy Policy
+  footer_privacy_policy: गोपनीयता नीति
+  footer_about: बारेमा
   footer_donate: Make a donation
   footer_support: Support
   footer_terms: Terms
+  ai_for_oceans: महासागरका लागि A.I
+  ai_for_oceans_lesson_plan: lesson plan
+  ai_microsoft_thanks: "प्रत्येक बच्चालाई कम्प्युटर विज्ञान सिकाउने र २१ औं शताब्दीमा
+    सफल हुने सीपहरु सुनिश्चित गर्न हाम्रो दृष्टि र मिशनलाई समर्थन गरेकोमा हामी माइक्रोसफ्टलाई
+    धन्यवाद दिन्छौं ।\n\n"
   ai_activity: गतिविधि
   ai_description: वर्णन

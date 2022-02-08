@@ -12,3 +12,11 @@
 # Scripts controlling the internationalization sync
 /bin/i18n/ @code-dot-org/i18n
 /bin/i18n-codeorg/ @code-dot-org/i18n
+
+# Database schema and migrations
+/dashboard/db/         @code-dot-org/red-team
+/pegasus/migrations/   @code-dot-org/red-team
+# Redshift database SQL
+/aws/redshift/         @code-dot-org/red-team
+# Database Migration Service (Redshift replication) configuration
+/aws/dms/              @code-dot-org/red-team

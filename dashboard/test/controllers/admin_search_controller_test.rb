@@ -135,17 +135,17 @@ class AdminSearchControllerTest < ActionController::TestCase
   test 'admin can create pilot' do
     post :create_pilot, params: {
       pilot: {
-        name: 'test-pilot-1',
-        display_name: 'Test Pilot 1',
+        name: 'test-pilot-2',
+        display_name: 'Test Pilot 2',
         allow_joining_via_url: true
       }
     }
     assert_response :redirect
 
-    pilot = Pilot.find_by(name: 'test-pilot-1')
+    pilot = Pilot.find_by(name: 'test-pilot-2')
     assert pilot
-    assert_equal 'test-pilot-1', pilot.name
-    assert_equal 'Test Pilot 1', pilot.display_name
+    assert_equal 'test-pilot-2', pilot.name
+    assert_equal 'Test Pilot 2', pilot.display_name
     assert_equal true, pilot.allow_joining_via_url
   end
 
@@ -192,20 +192,24 @@ class AdminSearchControllerTest < ActionController::TestCase
     create :teacher, pilot_experiment: pilot2.name, email: 'cspnot@example.com'
     get :show_pilot, params: {pilot_name: pilot1.name}
     assert_response :success
-    assert_select 'table tr td', 1
-    assert_select 'table tr td', 'csp@example.com'
+    assert_select 'table tr td.email', {count: 1, text: "csp@example.com"}
+    assert_select 'table tr td.actions form input.btn-primary', 1
   end
 
   #
   # add_to_pilot tests
   #
 
-  test 'can add teacher to pilot' do
+  test 'can add and remove teacher from pilot' do
     teacher = create :teacher
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {email: teacher.email, pilot_name: pilot_name}
 
     assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+
+    post :remove_from_pilot, params: {email: teacher.email, pilot_name: pilot_name}
+
+    refute SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
   end
 
   test 'can add multiple teachers to pilot' do

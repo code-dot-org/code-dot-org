@@ -1,15 +1,17 @@
 {
-  "func": "animation",
+  "key": "animation",
+  "name": "animation",
   "category": "Animations",
-  "paletteParams": [
-    "animation",
-    "x",
-    "y"
+  "palette_params": [
+    {
+      "name": "animation"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "anim",
-    "50",
-    "50"
-  ],
-  "noAutocomplete": true
+  "syntax": "animation(animation, x, y)"
 }

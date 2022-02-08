@@ -1,0 +1,42 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is a sample Playground level that demonstrates the basics of the mini-app by making a slide puzzle game!\r\n\r\n**Note**: you'll need to change the value of the boolean `shuffleTiles` in the `Game.java` file to `true` if you want to play.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "playground",
+    "starter_assets": {
+      "empty.png": "eb979d27-83db-4de1-bd3e-8cb852b84d9c.png",
+      "tile_1_2.png": "119ec326-0dc5-4763-aa56-0b7b8c2ba557.png",
+      "tile_0_2.png": "743b52dc-a800-4abb-a40d-0e9e24172ef9.png",
+      "tile_2_1.png": "a472fe6f-c3fc-4e0b-b459-221185ecf003.png",
+      "tile_1_1.png": "9c5136f6-3b85-4a89-acc9-a274acdae07c.png",
+      "tile_0_1.png": "f8c7c870-49c9-4f05-9b17-78c2f50a7192.png",
+      "tile_2_0.png": "9859a915-2573-4312-a4fe-4410bb271ff1.png",
+      "tile_1_0.png": "311aa598-8ccd-4a36-9001-281a332706ca.png",
+      "tile_0_0.png": "5eddcea7-7eaf-4981-a001-2455f4a49f03.png"
+    },
+    "start_sources": {
+      "Game.java": {
+        "text": "// NOTE: tiles are not randomized by default on this level so it can be used in an eyes test.\n// If you want to play the game, set the boolean shuffleTiles to true instead of false below.\n\nimport org.code.playground.*;\nimport java.util.Random;\nimport java.io.FileNotFoundException;\n\npublic final class Game {\n  // Set this to true if you want to play!\n  private static final boolean shuffleTiles = false;\n\tprivate static final Board board = Playground.board;\n  private static Tile[] tiles;\n\n  public static void main(String[] args) {\n      Game.play();\n  }\n\n  public static void swap(ImageItem a, ImageItem b) {\n  \tint x = a.getX();\n    int y = a.getY();\n    a.setX(b.getX());\n    a.setY(b.getY());\n    b.setX(x);\n    b.setY(y);\n  }\n\n  public static void createTiles() {\n    try {\n      tiles = new Tile[9];\n      tiles[0] = new Tile(\"tile_0_0.png\", 0, 0);\n      tiles[1] = new Tile(\"tile_1_0.png\", 133, 0);\n      tiles[2] = new Tile(\"tile_2_0.png\", 266, 0);\n      tiles[3] = new Tile(\"tile_0_1.png\", 0, 133);\n      tiles[4] = new Tile(\"tile_1_1.png\", 133, 133);\n      tiles[5] = new Tile(\"tile_2_1.png\", 266, 133);\n      tiles[6] = new Tile(\"tile_0_2.png\", 0, 266);\n      tiles[7] = new Tile(\"tile_1_2.png\", 133, 266);\n      tiles[8] = new Tile(\"empty.png\", 266, 266);\n    } catch (FileNotFoundException e) {\n      System.out.println(\"Something went wrong loading the tiles.\");\n    }\n  }\n\n  public static void play() {\n    createTiles();\n\n    if (shuffleTiles) {\n      // Shuffle the tiles\n      for (int i = 0; i < 20; i++) {\n        Random r = new Random();\n        int a = r.nextInt(8);\n        int b = r.nextInt(8);\n        swap(tiles[a], tiles[b]);\n      }\n    }\n\n    for (int i = 0; i < 8; i++) {\n      board.addClickableImage(tiles[i]);\n    }\n    board.addImageItem(tiles[8]);\n    \n\t\ttry {\n      board.setBackgroundImage(\"empty.png\");\n    \tboard.start();\n    } catch (Exception e) {\n      System.out.println(\"Something went wrong running the game.\");\n    }\n  }\n\n  public static void move(Tile t) {\n    int x = t.getX() / 133;\n    int y = t.getY() / 133;\n\n    int emptyX = tiles[8].getX() / 133;\n    int emptyY = tiles[8].getY() / 133;\n\n    if ((emptyX == x && emptyY >= y-1 && emptyY <= y+1) ||\n        (emptyY == y && emptyX >= x-1 && emptyX <= x+1)) {\n      swap(t, tiles[8]);\n    }\n  }\n}",
+        "isVisible": true
+      },
+      "Tile.java": {
+        "text": "import org.code.playground.*;\nimport java.io.FileNotFoundException;\n\npublic class Tile extends ClickableImage {\n  public Tile(String filename, int x, int y) throws FileNotFoundException {\n    super(filename, x, y, 133, 133);\n  }\n\n  public void onClick() {\n    Game.move(this);\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "submittable": "false",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-08-23T22:37:02.000Z",
+  "level_num": "custom",
+  "user_id": 22,
+  "audit_log": "[{\"changed_at\":\"2021-10-07 23:39:49 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2021-10-07 23:41:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2021-10-07 23:41:17 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2021-10-07 23:41:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2021-10-07 23:42:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2021-10-13 15:20:06 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":611,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2021-10-13 15:20:14 -0700\",\"changed\":[],\"changed_by_id\":611,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2021-10-13 15:24:21 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":611,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2021-10-14 09:27:38 -0700\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":611,\"changed_by_email\":\"ben+levelbuilder@code.org\"}]"
+}]]></config>
+</Javalab>

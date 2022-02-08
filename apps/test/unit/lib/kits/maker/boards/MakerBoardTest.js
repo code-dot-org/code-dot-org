@@ -1,7 +1,7 @@
 /** @file Exports a set of tests that verify the MakerBoard interface */
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
-import {expect} from '../../../../../util/deprecatedChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
@@ -254,7 +254,6 @@ export function itImplementsTheMakerBoardInterface(
         // Check the basic button shape
         expect(button).to.be.an.instanceOf(EventEmitter);
         expect(button).to.have.property('isPressed');
-        expect(button).to.have.property('holdtime');
       });
     });
 

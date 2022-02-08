@@ -84,7 +84,7 @@ class ResourceTest < ActiveSupport::TestCase
     summary = resource.summarize_for_resources_dropdown
     assert summary.key?(:markdownKey)
     assert_equal(
-      Services::MarkdownPreprocessor.build_resource_key(resource),
+      Services::GloballyUniqueIdentifiers.build_resource_key(resource),
       summary[:markdownKey]
     )
   end
@@ -111,6 +111,7 @@ class ResourceTest < ActiveSupport::TestCase
 
   test 'serialize scripts that resource is in' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     @levelbuilder = create :levelbuilder
 
     course_version = create :course_version, :with_unit_group
@@ -126,5 +127,45 @@ class ResourceTest < ActiveSupport::TestCase
     resource = create :resource, course_version: course_version
     resource.lessons = [lesson1, lesson2]
     resource.serialize_scripts
+  end
+
+  test 'creates new resource when copying to a course version without a matching resource' do
+    course_version = create :course_version
+    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
+    destination_course_version = create :course_version
+    create :resource, name: 'Fake Slides', url: 'slides.fake', course_version: destination_course_version
+
+    resource.copy_to_course_version(destination_course_version)
+    assert_equal 2, destination_course_version.resources.count
+  end
+
+  test 'return existing resource when copying to a course version with a matching resource' do
+    course_version = create :course_version
+    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
+    destination_course_version = create :course_version
+    existing_resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: destination_course_version
+
+    copied_resource = resource.copy_to_course_version(destination_course_version)
+    assert_equal 1, destination_course_version.resources.count
+    assert_equal existing_resource, copied_resource
+  end
+
+  test "summarize retrives translations" do
+    resource = create(:resource, name: "English name")
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "resources" => {
+          Services::GloballyUniqueIdentifiers.build_resource_key(resource) => {
+            "name" => "Translated name"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English name", resource.summarize_for_lesson_plan[:name])
+    I18n.locale = test_locale
+    assert_equal("Translated name", resource.summarize_for_lesson_plan[:name])
+    I18n.locale = I18n.default_locale
   end
 end

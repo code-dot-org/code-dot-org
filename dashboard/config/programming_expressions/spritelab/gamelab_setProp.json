@@ -1,0 +1,7 @@
+{
+  "key": "gamelab_setProp",
+  "name": "setProp",
+  "category": "Sprites",
+  "block_name": "gamelab_setProp",
+  "syntax": "setProp"
+}

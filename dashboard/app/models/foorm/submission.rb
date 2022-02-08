@@ -18,6 +18,8 @@ class Foorm::Submission < ApplicationRecord
 
   belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 
+  before_save :handle_empty_answers
+
   # Returns a hash similar to a submission's answer, with the following changes:
   #   - flattens matrix questions
   #   - returns readable answer, instead of a key representing a user's answer.
@@ -126,5 +128,11 @@ class Foorm::Submission < ApplicationRecord
         [question_id + "_#{number}", answer_text]
       end
     ]
+  end
+
+  # Store the JSON parsable "{}" if we attempt to store a blank submission,
+  # which is typically stored as the string "null", which is the result of nil.to_json
+  def handle_empty_answers
+    self.answers = '{}' if answers == 'null'
   end
 end

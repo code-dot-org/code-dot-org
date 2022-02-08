@@ -1,5 +1,6 @@
 ---
 en-GB:
+  hour_of_code: The Hour of Code
   hello: Hello World
   'yes': 'Yes'
   'no': 'No'
@@ -27,6 +28,7 @@ en-GB:
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
+  og_title_soon: Computer Science Education Week
   csedweek_og_title: Computer Science Education Week
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
@@ -77,6 +79,8 @@ en-GB:
     Text for Translation
     Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!
   third_party_khan_btn_forum: Khan Academy CS Forum
+  support_url: http://support.code.org/
+  city: city
   gender: Gender
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   learn_hoc: Learn an Hour of Code
@@ -109,6 +113,7 @@ en-GB:
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_frozen_title: The Hour of Code
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
@@ -161,43 +166,124 @@ en-GB:
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_hoc_is_coming: Computer Science Education Week
+  homepage_hero_hoc_is_here: Computer Science Education Week
   homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_action_text_try_it: Try it
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_slot_text_title_hoc: The Hour of Code
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_donate: Donate
   homepage_donors_donate: Donate
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
   starwars_blocks_title: Blocks
   volunteer_engineer_submission_field_name: Name
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Description
   volunteer_engineer_submission_field_email_preference_yes: 'Yes'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_submit: Submit
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
   petition_age: Age
   dashboard_action_cancel: Cancel
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
+  dashboard_students_add_multiple: 'Type or paste the names of your students, one
+    per line:'
   dashboard_students_name: Name
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
   dashboard_login_none: Email
   learn_more: Try now
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
     prizes for every educator.
   blockly_name: Blockly
   course1_name: Course 1
+  course2_name: Course 2
+  course3_name: Course 3
+  course4_name: Course 4
+  codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
+  tynker_gradelevel: Ages 5-13
+  scratch_gradelevel: Ages 8+
   lightbot_gradelevel: All ages
   thinkersmith_gradelevel: All ages
+  condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: All ages
+  robomind_gradelevel: Ages 8-13
+  tynkerapp_gradelevel: Ages 5-13
+  robomindnl_gradelevel: Ages 8-13
   blockly_gradelevel: All ages
+  thinkersmith2_gradelevel: Ages 8+
+  kodableunplugged_gradelevel: Ages 8-13
+  projguts_gradelevel: Ages 10-13
+  frozen_gradelevel: Ages 8-108
+  artist_gradelevel: Ages 8-108
+  monstercoding_gradelevel: Ages 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   course1_gradelevel: Ages 4-6
+  course3_gradelevel: Ages 8-18
+  course4_gradelevel: Ages 10-18
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursed_gradelevel: Ages 7-11
+  coursee_gradelevel: Ages 8-12
+  coursef_gradelevel: Ages 9-13
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursed-2017_gradelevel: Ages 7-11
+  coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursed-2018_gradelevel: Ages 7-11
+  coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
+  coursea-2019_gradelevel: Ages 4-7
+  courseb-2019_gradelevel: Ages 5-8
+  coursed-2019_gradelevel: Ages 7-11
+  coursee-2019_gradelevel: Ages 8-12
+  coursef-2019_gradelevel: Ages 9-13
+  coursea-2020_gradelevel: Ages 4-7
+  courseb-2020_gradelevel: Ages 5-8
+  coursed-2020_gradelevel: Ages 7-11
+  coursee-2020_gradelevel: Ages 8-12
+  coursef-2020_gradelevel: Ages 9-13
+  coursea-2021_gradelevel: Ages 4-7
+  courseb-2021_gradelevel: Ages 5-8
+  coursed-2021_gradelevel: Ages 7-11
+  coursee-2021_gradelevel: Ages 8-12
+  coursef-2021_gradelevel: Ages 9-13
+  accelerated_gradelevel: Ages 10-18
   monsterocding_shortdescription: A colourful self-guided programming adventure for
     children.
+  hourofcode_longdescription: Write your first computer program
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
     offers a fun filled self guided adventure that teaches several key programming
     concepts to children. Each block based activity builds on the previous, introducing
     kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
     colourful animated graphics, audio instructions.
+  codeorg_beyond_gradelevel: Ages 4-104
+  tynker_beyond_gradelevel: Ages 5-13
+  scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: All ages
+  robomind_beyond_gradelevel: Ages 8-13
+  kodu_beyond_gradelevel: Ages 8+
+  cargobot_beyond_gradelevel: Ages 8+
+  kidsruby_beyond_gradelevel: Ages 12+
+  w3schools_beyond_gradelevel: Ages 12+
+  mozilla_beyond_gradelevel: Ages 12+
+  finch_beyond_gradelevel: Ages 8+
+  sphero_beyond_gradelevel: Ages 8+
   codea_beyond_longdescription: Codea for iPad lets you create games and simulations
     &mdash; or just about any visual idea you have. Turn your thoughts into interactive
     creations that make use of iPad features like Multi-Touch and the accelerometer.
@@ -206,6 +292,8 @@ en-GB:
     drag it. How about a colour, or an image? Tapping will bring up visual editors
     that let you choose exactly what you want.
   flappy_shortcode: flap
+  header_educate_hoc: The Hour of Code
+  user_header_create: 'Create '
   hoc2018_creativity_create: Create
   hoc2018_mc_homepage_try_it: Try it
   footer_donate: Donate

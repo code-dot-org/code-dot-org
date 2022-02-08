@@ -145,6 +145,8 @@ class FilesApi < Sinatra::Base
   # GET /v3/(animations|assets|sources|files|libraries)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
+  # Note: we depend on this URL in Javabuilder
+  # https://github.com/code-dot-org/javabuilder/blob/main/org-code-javabuilder/protocol/src/main/java/org/code/protocol/GlobalProtocol.java
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     if endpoint == 'libraries'
@@ -273,7 +275,11 @@ class FilesApi < Sinatra::Base
     end
 
     return body_string unless parsed_json.key?('source')
-    blockly_xml = Nokogiri::XML(parsed_json['source'])
+    source_json = parsed_json['source']
+    if source_json.is_a?(Hash)
+      source_json = source_json.to_s
+    end
+    blockly_xml = Nokogiri::XML(source_json)
     return body_string unless blockly_xml.errors.empty?
 
     # first, remove all comment blocks by replacing them with the next block in
@@ -600,7 +606,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename).to_json
+    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
   end
 
   #

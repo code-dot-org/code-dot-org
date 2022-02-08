@@ -1,0 +1,111 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "panel",
+          "name": "module_6_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "visible": false,
+              "html": "COURSE: {workshop_course}"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit5csd_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "I feel prepared to teach Unit 5 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "opportunities_discuss_peers_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "find_resources_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "I know where to find resources to help me teach the units we have covered.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "assess_cpt_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I am confident I can explain how students will be assessed on content and skills on the Create Performance Task of the AP exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "make_lessons_cpt_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "After attending this workshop, I have strategies to lead my students through the Make lessons in Unit 7 to adequately prepare them for the Create Performance Task.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "troublepoints_cpt_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "Through my participation in this workshop, I feel prepared to support my students for the AP Exam’s Create Performance Task by identifying potential trouble points in their project ideas.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "mvp_cpt_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I am confident I can help students keep their projects within the scope of the Create Performance Task while defining project ideas that fit the criteria of a minimum viable product.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "learning_in_context_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "After attending this workshop I feel prepared to incorporate strategies to promote learning in context in my CS classroom.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "differentiation_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "After attending this workshop I understand how to apply differentiation strategies when teaching Unit 5.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "data_analysis_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "Through this workshop, I feel ready to guide students in the use of the Problem Solving Process for Data to draw conclusions about data.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

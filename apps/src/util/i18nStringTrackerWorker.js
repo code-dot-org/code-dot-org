@@ -46,7 +46,7 @@ class I18nStringTrackerWorker {
     }
 
     this.buffer[source] = this.buffer[source] || new Set();
-    this.buffer[source].add(stringKey);
+    this.buffer[source].add(`${source}.${stringKey}`);
 
     // schedule a buffer flush if there isn't already one.
     if (!this.pendingFlush) {
@@ -66,8 +66,11 @@ class I18nStringTrackerWorker {
     this.buffer = {};
     this.pendingFlush = null;
 
-    // Record the i18n string usage data.
-    sendRecords(records);
+    // RNG to send only 1% of the time
+    if (Math.floor(Math.random() * 100) === 0) {
+      // Record the i18n string usage data.
+      sendRecords(records);
+    }
   }
 }
 

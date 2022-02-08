@@ -2,15 +2,18 @@
   "script": {
     "name": "algebraPD1",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:47 UTC",
+    "serialized_at": "2021-11-22 19:55:43 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "algebraPD1"
     }
@@ -121,23 +124,158 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3f05c437-9617-4e4d-a5e8-f5c2442ea7ec",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f05c437-9617-4e4d-a5e8-f5c2442ea7ec",
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "d1aa4769-9897-439a-a0db-61834b04ca17",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1aa4769-9897-439a-a0db-61834b04ca17",
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "0e474457-38dc-4dea-bbe3-1015a8daa17b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e474457-38dc-4dea-bbe3-1015a8daa17b",
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "844aa1e3-da51-48e3-94d0-936192fcd324",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "844aa1e3-da51-48e3-94d0-936192fcd324",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "e56b701e-66cb-483d-b831-8027ff558759",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e56b701e-66cb-483d-b831-8027ff558759",
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "bee2ed1c-07dd-40b7-8b8e-64478165486e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bee2ed1c-07dd-40b7-8b8e-64478165486e",
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d",
+        "lesson_activity.key": "3f05c437-9617-4e4d-a5e8-f5c2442ea7ec"
+      }
+    },
+    {
+      "key": "246663ae-925a-4f77-a0c0-770cccb44201",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201",
+        "lesson_activity.key": "d1aa4769-9897-439a-a0db-61834b04ca17"
+      }
+    },
+    {
+      "key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9",
+        "lesson_activity.key": "0e474457-38dc-4dea-bbe3-1015a8daa17b"
+      }
+    },
+    {
+      "key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd",
+        "lesson_activity.key": "844aa1e3-da51-48e3-94d0-936192fcd324"
+      }
+    },
+    {
+      "key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b",
+        "lesson_activity.key": "e56b701e-66cb-483d-b831-8027ff558759"
+      }
+    },
+    {
+      "key": "df0ff4bd-5344-4019-9ef9-95aa9320cde5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "df0ff4bd-5344-4019-9ef9-95aa9320cde5",
+        "lesson_activity.key": "bee2ed1c-07dd-40b7-8b8e-64478165486e"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -145,7 +283,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       },
       "level_keys": [
         "PDAlg Intro"
@@ -154,14 +293,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDECS tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -169,7 +307,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       },
       "level_keys": [
         "PDECS tour"
@@ -178,14 +317,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg commitment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -193,7 +331,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       },
       "level_keys": [
         "PDAlg commitment"
@@ -202,14 +341,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg commitment match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -217,7 +355,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       },
       "level_keys": [
         "PDAlg commitment match"
@@ -226,14 +365,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Teacher Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +379,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       },
       "level_keys": [
         "PDAlg Teacher Introduction"
@@ -250,14 +389,13 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Scope"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -265,7 +403,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       },
       "level_keys": [
         "PDAlg Scope"
@@ -274,14 +413,13 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg implementation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -289,7 +427,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       },
       "level_keys": [
         "PDAlg implementation"
@@ -298,14 +437,13 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg course goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -313,7 +451,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       },
       "level_keys": [
         "PDAlg course goals"
@@ -322,14 +461,13 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "AlgPD Break"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -337,7 +475,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       },
       "level_keys": [
         "AlgPD Break"
@@ -346,14 +485,13 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg functions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,7 +499,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9"
       },
       "level_keys": [
         "PDAlg functions"
@@ -370,14 +509,13 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg hard video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -385,7 +523,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9"
       },
       "level_keys": [
         "PDAlg hard video"
@@ -394,14 +533,13 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg functional"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -409,7 +547,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9"
       },
       "level_keys": [
         "PDAlg functional"
@@ -418,14 +557,13 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Blocks Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -433,7 +571,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "PDAlg Blocks Video"
@@ -442,14 +581,13 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -457,7 +595,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 1"
@@ -466,14 +605,13 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -481,7 +619,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 2"
@@ -490,14 +629,13 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -505,7 +643,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 3"
@@ -514,14 +653,13 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -529,7 +667,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 5"
@@ -538,14 +677,13 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -553,7 +691,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 6"
@@ -562,14 +701,13 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -577,7 +715,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 7"
@@ -586,14 +725,13 @@
     {
       "chapter": 20,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -601,7 +739,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 8"
@@ -610,14 +749,13 @@
     {
       "chapter": 21,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -625,7 +763,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval 9"
@@ -634,14 +773,13 @@
     {
       "chapter": 22,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Calc Circles of Eval Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -649,7 +787,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       },
       "level_keys": [
         "Calc Circles of Eval Free Play"
@@ -658,14 +797,13 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Teacher Dashboard 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -673,7 +811,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 1"
@@ -682,14 +821,13 @@
     {
       "chapter": 24,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDK5 Teacher Dashboard 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -697,7 +835,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 2"
@@ -706,14 +845,13 @@
     {
       "chapter": 25,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Teacher Dashboard"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -721,7 +859,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b"
       },
       "level_keys": [
         "PDAlg Teacher Dashboard"
@@ -730,14 +869,13 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg End of P1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -745,7 +883,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "df0ff4bd-5344-4019-9ef9-95aa9320cde5"
       },
       "level_keys": [
         "PDAlg End of P1"
@@ -754,14 +893,13 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PDAlg Post Survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -769,7 +907,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "df0ff4bd-5344-4019-9ef9-95aa9320cde5"
       },
       "level_keys": [
         "PDAlg Post Survey"
@@ -785,7 +924,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       }
     },
     {
@@ -796,7 +936,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       }
     },
     {
@@ -807,7 +948,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       }
     },
     {
@@ -818,7 +960,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       }
     },
     {
@@ -829,7 +972,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "ec801393-9a9f-4e3e-91c7-a822e065ee5d"
       }
     },
     {
@@ -840,7 +984,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       }
     },
     {
@@ -851,7 +996,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       }
     },
     {
@@ -862,7 +1008,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       }
     },
     {
@@ -873,7 +1020,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "246663ae-925a-4f77-a0c0-770cccb44201"
       }
     },
     {
@@ -884,7 +1032,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9"
       }
     },
     {
@@ -895,7 +1044,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9"
       }
     },
     {
@@ -906,7 +1056,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d4970d5d-5c11-4d47-8cd6-25b8e4af75b9"
       }
     },
     {
@@ -917,7 +1068,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -928,7 +1080,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -939,7 +1092,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -950,7 +1104,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -961,7 +1116,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -972,7 +1128,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -983,7 +1140,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -994,7 +1152,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -1005,7 +1164,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -1016,7 +1176,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "9932eacd-73ee-4eef-8fd6-cfd3d3fbe9fd"
       }
     },
     {
@@ -1027,7 +1188,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b"
       }
     },
     {
@@ -1038,7 +1200,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b"
       }
     },
     {
@@ -1049,7 +1212,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "d557549a-b34e-428a-83a9-bb9ee2f1c98b"
       }
     },
     {
@@ -1060,7 +1224,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "df0ff4bd-5344-4019-9ef9-95aa9320cde5"
       }
     },
     {
@@ -1071,7 +1236,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD1"
+        "script.name": "algebraPD1",
+        "activity_section.key": "df0ff4bd-5344-4019-9ef9-95aa9320cde5"
       }
     }
   ],

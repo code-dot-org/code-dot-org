@@ -13,13 +13,12 @@ Scenario: Starwars Flow
   And I type "Code Ninja III: Revenge of the Semicolon" into "input.project_name"
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
-  Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
-  And I press "runButton"
+  Then I should see title includes "Code Ninja III: Revenge of the Semicolon - Play Lab - Code.org"
 
   When I open the project share dialog
   Then the project is unpublished
 
   When I navigate to the share URL
   And I wait to see "#footerDiv"
-  Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
+  Then I should see title includes "Code Ninja III: Revenge of the Semicolon - Play Lab - Code.org"
   And element "#codeWorkspace" is hidden

@@ -3,8 +3,13 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import sinon from 'sinon';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('ObjectivesEditor', () => {
+  // Warnings allowed due to usage of deprecated componentWillReceiveProps
+  // lifecycle method.
+  allowConsoleWarnings();
+
   let defaultProps, updateObjectives;
   beforeEach(() => {
     updateObjectives = sinon.spy();

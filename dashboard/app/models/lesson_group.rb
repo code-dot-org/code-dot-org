@@ -20,6 +20,10 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
   has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
@@ -50,14 +54,14 @@ class LessonGroup < ApplicationRecord
   # for that key matches the already saved display name
   # 3. PLC courses use certain lesson group keys for module types. We reserve those
   # keys so they can only map to the display_name for their PLC purpose
-  def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+  def self.add_lesson_groups(raw_lesson_groups, script)
     lesson_group_position = 0
 
     counters = Counters.new(0, 0, 0, 0)
 
-    raw_lesson_groups&.map do |raw_lesson_group|
-      if raw_lesson_group[:key].nil?
-        lesson_group = LessonGroup.find_or_create_by(
+    raw_lesson_groups&.map(&:deep_symbolize_keys)&.map do |raw_lesson_group|
+      if !raw_lesson_group[:user_facing]
+        lesson_group = LessonGroup.find_or_create_by!(
           key: '',
           script: script,
           user_facing: false,
@@ -68,11 +72,13 @@ class LessonGroup < ApplicationRecord
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
         LessonGroup.prevent_changing_stable_i18n_key(script, raw_lesson_group)
 
-        lesson_group = LessonGroup.find_or_create_by(
+        lesson_group = LessonGroup.find_or_create_by!(
           key: raw_lesson_group[:key],
           script: script,
-          user_facing: true
-        )
+          user_facing: true,
+        ) do |lg|
+          lg.position = 1 # will be updated below, but can't be nil
+        end
 
         lesson_group.assign_attributes(
           position: lesson_group_position += 1,
@@ -85,9 +91,8 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group, raw_lesson_group[:lessons].length)
-
-      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
+      new_lessons =
+        Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters)
       lesson_group.lessons = new_lessons
       lesson_group.save!
 
@@ -96,7 +101,7 @@ class LessonGroup < ApplicationRecord
   end
 
   def self.prevent_changing_stable_i18n_key(script, raw_lesson_group)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
+    if script.stable? && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
       raise "Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: #{raw_lesson_group[:key]}"
     end
   end
@@ -113,11 +118,6 @@ class LessonGroup < ApplicationRecord
         raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
       end
     end
-  end
-
-  # All lesson groups should have lessons in them
-  def self.prevent_lesson_group_with_no_lessons(lesson_group, num_lessons)
-    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if num_lessons < 1
   end
 
   def localized_display_name
@@ -144,11 +144,15 @@ class LessonGroup < ApplicationRecord
     }
   end
 
-  def summarize_for_script_edit
+  def summarize_for_unit_edit
     summary = summarize
+    summary[:display_name] = display_name
     summary[:description] = description
     summary[:big_questions] = big_questions
-    summary[:lessons] = lessons.map(&:summarize_for_script_edit)
+    summary[:lessons] =
+      script.is_migrated ?
+        lessons.map(&:summarize_for_migrated_unit_edit) :
+        lessons.map(&:summarize_for_unit_edit)
     summary
   end
 
@@ -226,5 +230,24 @@ class LessonGroup < ApplicationRecord
     else
       {}
     end
+  end
+
+  def copy_to_unit(destination_script, new_level_suffix = nil)
+    return if script == destination_script
+    raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil?
+
+    copied_lesson_group = dup
+    copied_lesson_group.script = destination_script
+    copied_lesson_group.lessons = []
+    copied_lesson_group.position = destination_script.lesson_groups.count + 1
+    copied_lesson_group.save!
+
+    lessons.each do |original_lesson|
+      copied_lesson = original_lesson.copy_to_unit(destination_script, new_level_suffix)
+      raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
+    end
+    Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
+    copied_lesson_group
   end
 end

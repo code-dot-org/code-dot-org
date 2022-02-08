@@ -1,20 +1,11 @@
 {
-  "func": "fill",
+  "key": "fill",
+  "name": "fill",
   "category": "Drawing",
-  "paletteParams": [
-    "color"
+  "palette_params": [
+    {
+      "name": "color"
+    }
   ],
-  "params": [
-    "\"yellow\""
-  ],
-  "dropdown": {
-    "0": [
-      "\"red\"",
-      "\"green\"",
-      "\"blue\"",
-      "\"yellow\"",
-      "rgb(255, 0, 0)",
-      "rgb(255, 0, 0, 0.5)"
-    ]
-  }
+  "syntax": "fill(color)"
 }

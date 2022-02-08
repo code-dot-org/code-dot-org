@@ -41,6 +41,7 @@ fa-IR:
   twentyhours_text: اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
     برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید.
   og_title: هر کودک فرصت سزاوار
+  og_title_soon: هفته‌ی آموزش علوم رایانه
   og_title_here: ساعت کد اینجاست!
   og_description: هر دانش آموز در هر مدرسه فرصت مطالعه علوم کامپیوتر سزاوار. آن همه
     چیز در حال تغییر است.
@@ -224,6 +225,7 @@ fa-IR:
   learn_next_level: به مرحله بعدی برو
   learn_online: درس های آنلاین دیگری را امتحان کن
   learn_classes: پیدا کردن کلاس های محلی
+  hoc_is_here: زمانِ HourOfCode# رسید - امتحانش کنید! codeorg@
   just_did_hoc: من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
@@ -308,6 +310,8 @@ fa-IR:
   homepage_hero_text_stat_students: "#دانش آموز- حساب کاربری نگه دارنده سوابق و اطلاعات
     دانش آموز در استودیو ی کد"
   homepage_hero_text_stat_served: 'ساعت کد نویسی: #served طی شده گذرانده'
+  homepage_hero_hoc_is_coming: هفته‌ی آموزش علوم رایانه
+  homepage_hero_hoc_is_here: هفته‌ی آموزش علوم رایانه
   homepage_slot_text_hoc: ساعتی با کدنویسی
   homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_studio: تمام آموزش های ما
@@ -360,6 +364,8 @@ fa-IR:
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
   homepage_donors_seall: تمامش را ببینید
   homepage_donors_donate: کمک مالی بدهید
+  homepage_below_hero_announcement_text: ما به حریم شخصی شما اهمیت می دهیم و برخی
+    از به روز رسانی های مربوط به سیاست حفظ حریم خصوصی را انجام می دهیم.
   homepage_below_hero_announcement_link_text: بیشتر بیاموزید
   contact_form_topic_student: من یک دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
@@ -423,6 +429,8 @@ fa-IR:
   minecraft_designer_button: شروع
   minecraft_adventurer_button: شروع
   sports_watch_video: فیلم را تماشا کنید
+  speak_another_language: به یک زبان دیگر صحبت کنید?
+  help_translate: کمک به ما در ترجمه.
   are_you_teacher: آیا شما یک معلم هستید؟
   volunteer_engineer_submission_update_information: به روز رسانی اطلاعات شما
   volunteer_engineer_submission_field_name: نام
@@ -440,6 +448,7 @@ fa-IR:
   volunteer_engineer_submission_field_linkedin: پروفایل لینکداین
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/نام_شما
   volunteer_engineer_submission_field_facebook: پروفایل فیس بوک
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name/
   volunteer_engineer_submission_field_description: توضیحات
   volunteer_engineer_submission_field_email: نشانی رایانامه
   volunteer_engineer_submission_field_email_placeholder: نشانی رایانامه
@@ -551,9 +560,11 @@ fa-IR:
   dashboard_navigation_section_speakers: علوم کامپیوتر <br/> سخنرانا مهمان
   dashboard_navigation_all_sections: حساب کاربری دانش‌ آموزان و پیشرفت آنها
   dashboard_navigation_view_progress: پیشرفت
+  dashboard_navigation_view_assessments: ارزیابی
   dashboard_navigation_add_students: افزودن دانش آموز
   dashboard_navigation_manage_students: مدیریت دانش آموزان
   dashboard_navigation_lesson_plans_resources: برنامه‌ها و منابع درس
+  dashboard_navigation_view_stats: آمار
   dashboard_navigation_section: 'بخش: %{section_name}'
   dashboard_navigation_student: 'دانش آموز: %{student_name}'
   dashboard_progress_not_started: شروع نشده
@@ -564,6 +575,7 @@ fa-IR:
   dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج
     از محدوده '
   dashboard_progress_submitted: ثبت شده
+  dashboard_progress_pair_programming: برنامه نویسی دونفره
   dashboard_sections_new_section: بخش تازه
   dashboard_sections_jumbotron_instruction: ایجاد بخش های جدید و افزودن دانش آموزان
     به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی
@@ -702,10 +714,13 @@ fa-IR:
   carousel_heading_domestic: آموزش به زبان انگلیسی
   carousel_heading_beginners: آموزش برای مبتدیان
   carousel_heading_javascript: آموزش جاوا اسکریپت
+  carousel_heading_beyond_javascript: آموزش جاوا اسکریپت
   carousel_heading_unplugged: هیچ وسیله ای یا اینترنت ندارید؟ علوم کامپیوتر روی کاغذ
     را امتحان کنید
   carousel_heading_devices: برنامه های آموزشی برای تلفن های همراه و تبلت ها
+  carousel_heading_beyond_devices: برنامه های آموزشی برای تلفن های همراه و تبلت ها
   carousel_heading_languages: آموزش ها به زبان های برنامه نویسی دیگر
+  carousel_heading_beyond_languages: آموزش ها به زبان های برنامه نویسی دیگر
   carousel_heading_apps_games: بازی یا نرم افزار خود را بسازید
   carousel_heading_university: دوره های دانشگاهی آنلاین
   carousel_heading_webpages: یادگیری ساخت صفحات وب
@@ -828,16 +843,42 @@ fa-IR:
   course2_gradelevel: سنین 6 به بالا (خواندن لازم است)
   course3_gradelevel: سنین 8 به بالا (پس از دوره 2)
   course4_gradelevel: سنین 10 به بالا (پس از دوره 3)
+  coursea_gradelevel: سنین 4 تا 7
+  courseb_gradelevel: سنین 5-8
+  coursec_gradelevel: سنین 6-10
   coursed_gradelevel: رده ی سنی 8+
   coursee_gradelevel: سنین 8-12
+  coursef_gradelevel: سنین 9 تا 13
+  coursea-2017_gradelevel: سنین 4 تا 7
+  courseb-2017_gradelevel: سنین 5-8
+  coursec-2017_gradelevel: سنین 6-10
   coursed-2017_gradelevel: رده ی سنی 8+
   coursee-2017_gradelevel: سنین 8-12
+  coursef-2017_gradelevel: سنین 9 تا 13
+  coursea-2018_gradelevel: سنین 4 تا 7
+  courseb-2018_gradelevel: سنین 5-8
+  coursec-2018_gradelevel: سنین 6-10
   coursed-2018_gradelevel: رده ی سنی 8+
   coursee-2018_gradelevel: سنین 8-12
+  coursef-2018_gradelevel: سنین 9 تا 13
+  coursea-2019_gradelevel: سنین 4 تا 7
+  courseb-2019_gradelevel: سنین 5-8
+  coursec-2019_gradelevel: سنین 6-10
   coursed-2019_gradelevel: رده ی سنی 8+
   coursee-2019_gradelevel: سنین 8-12
+  coursef-2019_gradelevel: سنین 9 تا 13
+  coursea-2020_gradelevel: سنین 4 تا 7
+  courseb-2020_gradelevel: سنین 5-8
+  coursec-2020_gradelevel: سنین 6-10
   coursed-2020_gradelevel: رده ی سنی 8+
   coursee-2020_gradelevel: سنین 8-12
+  coursef-2020_gradelevel: سنین 9 تا 13
+  coursea-2021_gradelevel: سنین 4 تا 7
+  courseb-2021_gradelevel: سنین 5-8
+  coursec-2021_gradelevel: سنین 6-10
+  coursed-2021_gradelevel: رده ی سنی 8+
+  coursee-2021_gradelevel: سنین 8-12
+  coursef-2021_gradelevel: سنین 9 تا 13
   accelerated_gradelevel: سنین 10 به بالا (پس از دوره 3)
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
@@ -927,6 +968,8 @@ fa-IR:
   flappy_shortdescription: بازی خودتان را بسازید- فلپی برد, شرک,یا زیردریایی
   bitsbox_shortdescription: کد یک سری برنامه را، با استفاده از جاوا اسکریپت حقیقی
     برای بازی و اشتراک بنویسید.
+  makeschool_shortdescription: یک بازی آی فون بسازید! با نوشتن کدی که به هیولای شما
+    حرکات جدید آموزش بدهد خودتان هم بیشتر یاد بگیرید!
   touchdevelop_shortdescription: حل کردن پازل, ایجاد بازی, و یادگیری برنامه تویسی
     همه ی این ها بر روی موبایل شما.
   appinventor_shortdescription: برنامه خودت را بساز( فقط آندروید)
@@ -1060,6 +1103,11 @@ fa-IR:
     سری برنامه برای بازی و به اشتراک گذاری را بنویسید. راهنمایی های ساده برنامه نویسی
     جاوا اسکریپت حقیقی را حتی برای کودکان امکان پذیر ساخته، و هرچه ماهرتر باشید جلوتر
     خواهید رفت.
+  makeschool_longdescription: کد نویسی را با ساختن یک بازی آی فون با زبان برنامه نویسی
+    جدید و مناسب برای مبتدیان سویفت بیاموزید! یک بازی&eacute; اکشن با الهام گرفتن
+    از Pokemon بسازید و کد نویسی کنید تا به هیولایتان حرکات جدید بیاموزید. شماخواهید
+    آموخت چگونه از متغیر ها، تابع ها، و اشیا استفاده کنید تا به هیولایتان کمک کنید
+    برنده شود!
   touchdevelop_longdescription: 'ویرایشگر touch-friendly شما را در ایجاد هنر پیکسلی،
     حل معمای خرس، یا ساختن بازی پرنده ی جهنده ی خودتان هدایت خواهد کرد. '
   appinventor_longdescription: ویدئو های آموزشی سریع، و سرگرم کننده شما را در مسیر
@@ -1397,6 +1445,7 @@ fa-IR:
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
+  compatibility_hide_this_warning: مخفی کردن هشدار
   flappy_shortcode: پریدن
   header_my_dashboard: دَشبورد من
   header_courses: مراحل
@@ -1413,6 +1462,7 @@ fa-IR:
   header_about_faqs: سوال‌های متداول
   header_learn: یادگیری
   header_teach: آموزش
+  header_stats: آمار
   header_help_us: به ما کمک کنید
   header_about: درباره
   header_report_bug: گزارش مشکل
@@ -1423,6 +1473,9 @@ fa-IR:
   user_header_settings: حساب کاربری من
   user_header_logout: خروج
   user_header_signin: ورود
+  user_header_create: 'ایجاد '
+  user_header_applab: 'آزمایشگاه نرم افزار '
+  user_header_artist: 'هنرمند '
   user_header_gamelab: کارگاه بازی سازی
   user_header_playlab: آزمایشگاه بازی
   user_header_dance: جشن و رقص
@@ -1435,6 +1488,12 @@ fa-IR:
   hoc_overview_dance_title: جشن و رقص
   hoc_overview_start_tutorial: شروع
   hoc2018_creativity_create: ایجاد
+  hoc2018_creativity_homepage: به تخیل بال پرواز بده و نوآروری را متولد کن. با یک
+    ساعت برنامه‌نویسی و نسخه ویژه خلاقیت خودت، هر چیزی که ممکن است باشد، شروع کن.
+    ویدیو را مشاهده کن.
+  hoc2018_creativity_courses: با دوره‌های Code.org ادامه دهید
+  hoc2018_creativity_courses_link: با <a href="https://studio.code.org/courses">دوره‌های
+    Code.org </a>ادامه دهید
   hoc2018_mc_aquatic_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
   hoc2018_mc_hero_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
@@ -1451,6 +1510,7 @@ fa-IR:
   hoc2018_dance_teacher_resources_tile1_button: طرح درس
   hoc2018_dance_teacher_resources_tile2_button: فعالیت کلاسی
   hoc2018_dance_amazon_about_future_engineer_button: بیشتر بیاموزید
+  page_not_found_title: صفحه پیدا نشد
   footer_powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
   footer_privacy_policy: قوانین حفظ حریم خصوصی
   footer_about: درباره
@@ -1458,5 +1518,6 @@ fa-IR:
   footer_donate: کمک مالی بدهید
   footer_support: پشتیبانی
   footer_terms: شرایط
+  ai_for_oceans_lesson_plan: طرح درس
   ai_activity: فعالیت
   ai_description: توضیحات

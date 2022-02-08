@@ -1,27 +1,35 @@
 {
-  "func": "image",
+  "key": "image",
+  "name": "image",
   "category": "Drawing",
-  "paletteParams": [
-    "image",
-    "srcX",
-    "srcY",
-    "srcW",
-    "srcH",
-    "x",
-    "y",
-    "w",
-    "h"
+  "palette_params": [
+    {
+      "name": "image"
+    },
+    {
+      "name": "srcX"
+    },
+    {
+      "name": "srcY"
+    },
+    {
+      "name": "srcW"
+    },
+    {
+      "name": "srcH"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "w"
+    },
+    {
+      "name": "h"
+    }
   ],
-  "params": [
-    "img",
-    "0",
-    "0",
-    "img.width",
-    "img.height",
-    "0",
-    "0",
-    "img.width",
-    "img.height"
-  ],
-  "noAutocomplete": true
+  "syntax": "image(image, srcX, srcY, srcW, srcH, x, y, w, h)"
 }

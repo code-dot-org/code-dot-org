@@ -2,24 +2,26 @@
   "script": {
     "name": "csp3-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-25 22:56:49 UTC",
+    "serialized_at": "2022-01-25 15:07:28 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -270,8 +272,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "d7f9b27e-f879-43c4-b300-631ce64fb37a",
+      "key": "78117ccc-ceea-45a1-84bd-d838a81b0681",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "78117ccc-ceea-45a1-84bd-d838a81b0681",
+        "lesson.key": "Introduction to Apps",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "d7f9b27e-f879-43c4-b300-631ce64fb37a",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -285,7 +300,7 @@
     },
     {
       "key": "b9e3b7e4-186b-4571-8992-df088523a6b0",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -299,7 +314,7 @@
     },
     {
       "key": "a04fa0df-3746-420e-ba6e-f18831286901",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -312,8 +327,21 @@
       }
     },
     {
-      "key": "f414eeb9-6684-42cb-8d3f-7688bfa4d976",
+      "key": "579f7f50-f019-46be-b017-87cbdfaad4d7",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "579f7f50-f019-46be-b017-87cbdfaad4d7",
+        "lesson.key": "Introduction to Design Mode",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "f414eeb9-6684-42cb-8d3f-7688bfa4d976",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -327,7 +355,7 @@
     },
     {
       "key": "e53f6522-b019-41fb-94c3-27ca5d089328",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -341,7 +369,7 @@
     },
     {
       "key": "5eed3b99-c28a-4147-b057-ca97b928d8fd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -354,8 +382,21 @@
       }
     },
     {
-      "key": "8f2f0ed8-0281-4593-8c9a-2830b0f4f357",
+      "key": "8c870e25-24b4-461b-b59a-e7159f55b053",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c870e25-24b4-461b-b59a-e7159f55b053",
+        "lesson.key": "Project - Designing an App Part 1",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "8f2f0ed8-0281-4593-8c9a-2830b0f4f357",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -369,7 +410,7 @@
     },
     {
       "key": "359ea193-1806-4826-8844-966d2ccd5d2c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -383,7 +424,7 @@
     },
     {
       "key": "28371efc-696b-45f9-9bf8-f18096045421",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -396,8 +437,21 @@
       }
     },
     {
-      "key": "d62a1a8e-f36a-4983-853e-454dbeb4edbd",
+      "key": "4562adf5-5ffc-40ca-a75c-a59335972359",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4562adf5-5ffc-40ca-a75c-a59335972359",
+        "lesson.key": "Project - Designing an App Part 2",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "d62a1a8e-f36a-4983-853e-454dbeb4edbd",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -411,7 +465,7 @@
     },
     {
       "key": "4f2f24f3-399f-40eb-9645-2cad55162ff6",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -425,7 +479,7 @@
     },
     {
       "key": "ac46cec7-6532-4ec7-8e21-4df5c14702ae",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -438,8 +492,21 @@
       }
     },
     {
-      "key": "b2014db7-e5c2-4aaf-ac23-7c578f000603",
+      "key": "e251db70-6c75-49af-994e-57282783458c",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e251db70-6c75-49af-994e-57282783458c",
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "b2014db7-e5c2-4aaf-ac23-7c578f000603",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -453,7 +520,7 @@
     },
     {
       "key": "09668df8-b019-4a33-9c17-8508fbc287e2",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -467,7 +534,7 @@
     },
     {
       "key": "fe1020bc-d0e6-4435-be19-de318ec56a4b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -481,7 +548,7 @@
     },
     {
       "key": "7d514ef2-df67-4a32-9c71-565301aa8fd4",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -492,8 +559,21 @@
       }
     },
     {
-      "key": "16f7ef75-6617-4400-84dd-de184d79e671",
+      "key": "29727218-aebd-43bd-8c6f-9d4e22faa3c9",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "29727218-aebd-43bd-8c6f-9d4e22faa3c9",
+        "lesson.key": "Intro to Programming",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "16f7ef75-6617-4400-84dd-de184d79e671",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -506,7 +586,7 @@
     },
     {
       "key": "c9646a01-dac6-46ce-a321-906893945b12",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -520,7 +600,7 @@
     },
     {
       "key": "f26603a5-2d5c-4c3c-a8b4-df6b31260953",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 15,
         "name": "Wrap Up"
@@ -533,8 +613,21 @@
       }
     },
     {
-      "key": "c63c366d-6172-4791-b452-4d8509321c34",
+      "key": "4a436417-a413-4e9c-a62f-51870f75134d",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a436417-a413-4e9c-a62f-51870f75134d",
+        "lesson.key": "Debugging",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "c63c366d-6172-4791-b452-4d8509321c34",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -548,7 +641,7 @@
     },
     {
       "key": "a4cc4a73-59c1-4c6f-87aa-34afb719c5a3",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -562,7 +655,7 @@
     },
     {
       "key": "e34f1661-810d-4f17-b846-9e3a548ae185",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -576,7 +669,7 @@
     },
     {
       "key": "3542470a-5acc-47f6-877f-2610901d7ecd",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -587,8 +680,21 @@
       }
     },
     {
-      "key": "e17a0358-20ff-4ead-8744-80ca73da29b5",
+      "key": "39215776-7b83-4fa4-bdb0-74a714c27eb1",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39215776-7b83-4fa4-bdb0-74a714c27eb1",
+        "lesson.key": "Project - Designing an App Part 3",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "e17a0358-20ff-4ead-8744-80ca73da29b5",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -602,7 +708,7 @@
     },
     {
       "key": "a55d44ec-65a7-48d7-9c19-c345f5657618",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -616,7 +722,7 @@
     },
     {
       "key": "6b676ed1-0a6b-43c1-acc2-2abb59284c25",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -630,7 +736,7 @@
     },
     {
       "key": "7ec24eef-b6f6-42a8-87ac-9ec0f678c159",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -641,8 +747,21 @@
       }
     },
     {
-      "key": "79d46d7b-f132-4ace-a745-3c6a8534e5bc",
+      "key": "4b5fd920-8872-4189-bf9e-1acf826dd0a5",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b5fd920-8872-4189-bf9e-1acf826dd0a5",
+        "lesson.key": "Project - Designing an App Part 4",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "79d46d7b-f132-4ace-a745-3c6a8534e5bc",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -656,7 +775,7 @@
     },
     {
       "key": "1a50f8ed-259b-4c8f-80a8-c07341ff37c9",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -670,7 +789,7 @@
     },
     {
       "key": "d549a316-998c-4ae3-8c5f-7071f18569ea",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -683,8 +802,21 @@
       }
     },
     {
-      "key": "79cdcae1-6799-473d-abe4-1c8a3c718f56",
+      "key": "22028d8f-28fa-4293-902a-398887605c35",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22028d8f-28fa-4293-902a-398887605c35",
+        "lesson.key": "Project - Designing an App Part 5",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "79cdcae1-6799-473d-abe4-1c8a3c718f56",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -698,7 +830,7 @@
     },
     {
       "key": "b27e1762-a478-4e02-ad48-bee500825909",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -712,7 +844,7 @@
     },
     {
       "key": "7d1b9071-d913-48a7-8e53-9d96be549dff",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -725,8 +857,21 @@
       }
     },
     {
-      "key": "cab51909-149f-4a96-839e-ea0425187e17",
+      "key": "a45aa7c8-ea65-4d4b-8a86-0b3854af8b78",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a45aa7c8-ea65-4d4b-8a86-0b3854af8b78",
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "key": "cab51909-149f-4a96-839e-ea0425187e17",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -739,7 +884,7 @@
     },
     {
       "key": "2ef4fa0d-6feb-4088-b698-1370efe31599",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -753,7 +898,7 @@
     },
     {
       "key": "b55eb866-7103-4452-ba05-dfc6804486ee",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -767,7 +912,7 @@
     },
     {
       "key": "dfe0d8f3-2557-48ff-9640-27d04121e52a",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -779,6 +924,17 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "02ba68de-1d50-4784-9980-070d4ffd23d7",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/146Dvs9RY0cvTDOaSWtxZAxBB3-c6yp993ap6gY_ocFQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "02ba68de-1d50-4784-9980-070d4ffd23d7",
+        "lesson_activity.key": "78117ccc-ceea-45a1-84bd-d838a81b0681"
+      }
+    },
     {
       "key": "32dfb4a2-fe62-4a94-bc27-6b8e241c2456",
       "position": 1,
@@ -984,6 +1140,17 @@
       }
     },
     {
+      "key": "26389a0e-b653-4670-bc3a-fe5a8b241b21",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/19sZq9TrPXas5dhs2ZjhwhXX500ljGM50MHP5zbQjbHs/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "26389a0e-b653-4670-bc3a-fe5a8b241b21",
+        "lesson_activity.key": "579f7f50-f019-46be-b017-87cbdfaad4d7"
+      }
+    },
+    {
       "key": "3c2ed0ae-b83d-4f69-9a43-5f55dada7a69",
       "position": 1,
       "properties": {
@@ -1104,6 +1271,17 @@
       }
     },
     {
+      "key": "f86bc7e6-440b-4ea7-8191-47449163c2e7",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1XA7mXpjzcvOeihfrU4WckgTxSQLpi2gSDseFOZnmgNc/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "f86bc7e6-440b-4ea7-8191-47449163c2e7",
+        "lesson_activity.key": "8c870e25-24b4-461b-b59a-e7159f55b053"
+      }
+    },
+    {
       "key": "5f20bf23-eb13-4af0-b61d-588821d0d451",
       "position": 1,
       "properties": {
@@ -1221,6 +1399,17 @@
       "seeding_key": {
         "activity_section.key": "afdcd5f9-3a2f-404f-bba9-b9c6e2e57f89",
         "lesson_activity.key": "28371efc-696b-45f9-9bf8-f18096045421"
+      }
+    },
+    {
+      "key": "5b8dbad2-1d9f-4ff4-b0b8-5f365fd43f16",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ll3y-flunEOVSk3iBBOkCG35yUuaxuSfm0LLm9i022g/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "5b8dbad2-1d9f-4ff4-b0b8-5f365fd43f16",
+        "lesson_activity.key": "4562adf5-5ffc-40ca-a75c-a59335972359"
       }
     },
     {
@@ -1371,6 +1560,17 @@
       "seeding_key": {
         "activity_section.key": "97d67aa6-8667-4f51-8d13-e412f4a4a798",
         "lesson_activity.key": "ac46cec7-6532-4ec7-8e21-4df5c14702ae"
+      }
+    },
+    {
+      "key": "09c06cc8-11b1-46e4-8689-3fea7ac54f7f",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ro6_apaSbhb3Ff16xK9fVyJX3vszVcknaEdjnzemVP8/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "09c06cc8-11b1-46e4-8689-3fea7ac54f7f",
+        "lesson_activity.key": "e251db70-6c75-49af-994e-57282783458c"
       }
     },
     {
@@ -1527,6 +1727,17 @@
       }
     },
     {
+      "key": "0cad6309-b9d0-4ca3-9196-8616db2cc25c",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1TfLlWANuZcXn4tljTl6_Mp9FqUAYnLQXkTwmaG0_Sgk/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "0cad6309-b9d0-4ca3-9196-8616db2cc25c",
+        "lesson_activity.key": "29727218-aebd-43bd-8c6f-9d4e22faa3c9"
+      }
+    },
+    {
       "key": "9d01dfb1-b52f-4196-8145-26e3323715b3",
       "position": 1,
       "properties": {
@@ -1658,6 +1869,17 @@
       "seeding_key": {
         "activity_section.key": "6da3cf97-c93c-4ba6-b29b-e26653cfba5f",
         "lesson_activity.key": "f26603a5-2d5c-4c3c-a8b4-df6b31260953"
+      }
+    },
+    {
+      "key": "afcc9442-d797-4eb9-a9c6-dfea7cf01dc7",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1yvj_9HkeZY2xKw-xDm1rnfk7zkZ_W_vceHnyx15EkI0/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "afcc9442-d797-4eb9-a9c6-dfea7cf01dc7",
+        "lesson_activity.key": "4a436417-a413-4e9c-a62f-51870f75134d"
       }
     },
     {
@@ -1822,6 +2044,17 @@
       }
     },
     {
+      "key": "2eae48e6-21df-4ce5-a518-030427c98044",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1kBx4fXvt8obUsTbzGc70qhwbMubp1Pg7e59FbLqbvYs/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "2eae48e6-21df-4ce5-a518-030427c98044",
+        "lesson_activity.key": "39215776-7b83-4fa4-bdb0-74a714c27eb1"
+      }
+    },
+    {
       "key": "2a809eea-fd5d-4c2d-a316-f01fb956607d",
       "position": 1,
       "properties": {
@@ -1955,6 +2188,17 @@
       }
     },
     {
+      "key": "2588af61-535d-4b3c-83dd-84bed07120fe",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1hrU8a61iIz-tKlzmTTdFYS7-RDmak0NGtL3gfUXu9gA/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "2588af61-535d-4b3c-83dd-84bed07120fe",
+        "lesson_activity.key": "4b5fd920-8872-4189-bf9e-1acf826dd0a5"
+      }
+    },
+    {
       "key": "e73973b6-2a2e-45f0-bf06-482fae5e854d",
       "position": 1,
       "properties": {
@@ -2067,6 +2311,17 @@
       }
     },
     {
+      "key": "9656864a-7a52-482d-92c9-a1c2fab57aef",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1G7PK2YHIn3n84VNrk3yskWRhMtmGUFYedoI9A7u9PGc/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "9656864a-7a52-482d-92c9-a1c2fab57aef",
+        "lesson_activity.key": "22028d8f-28fa-4293-902a-398887605c35"
+      }
+    },
+    {
       "key": "8337c699-e3a8-4097-941b-5351820a8e32",
       "position": 1,
       "properties": {
@@ -2142,6 +2397,17 @@
       "seeding_key": {
         "activity_section.key": "239b6d98-edc4-4a2c-b18d-ef16e4df533d",
         "lesson_activity.key": "7d1b9071-d913-48a7-8e53-9d96be549dff"
+      }
+    },
+    {
+      "key": "15875815-7c65-49b4-b872-9b9e4b7bc303",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1PgE-pMa_iGneFOXdHuITtFyeGYG_9Fpc2hCCCA3Nw8I/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "15875815-7c65-49b4-b872-9b9e4b7bc303",
+        "lesson_activity.key": "a45aa7c8-ea65-4d4b-8a86-0b3854af8b78"
       }
     },
     {
@@ -2230,7 +2496,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2256,7 +2521,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2282,7 +2546,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2308,7 +2571,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2334,7 +2596,6 @@
         ],
         "progression": "App Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2360,7 +2621,6 @@
         ],
         "progression": "How Computers Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2386,7 +2646,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2412,7 +2671,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2438,7 +2696,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2464,7 +2721,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2490,7 +2746,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2516,7 +2771,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2542,7 +2796,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2568,7 +2821,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2594,7 +2846,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2620,7 +2871,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2646,7 +2896,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2672,7 +2921,6 @@
         ],
         "progression": "Design Mode Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2698,7 +2946,6 @@
         ],
         "progression": "Copy an App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2724,7 +2971,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2750,7 +2996,6 @@
         ],
         "progression": "Sample Prototype"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2776,7 +3021,6 @@
         ],
         "progression": "Build Your Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2802,7 +3046,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2828,7 +3071,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2854,7 +3096,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2880,7 +3121,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2906,7 +3146,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2932,7 +3171,6 @@
         ],
         "progression": "Code Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2958,7 +3196,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2984,7 +3221,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3010,7 +3246,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3036,7 +3271,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3062,7 +3296,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3088,7 +3321,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3114,7 +3346,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3140,7 +3371,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3166,7 +3396,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3192,7 +3421,6 @@
         ],
         "progression": "Pair Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3218,7 +3446,6 @@
         ],
         "progression": "Add Code"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3244,7 +3471,6 @@
         ],
         "progression": "Add More Code"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3270,7 +3496,6 @@
         ],
         "progression": "Submit your app"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3295,7 +3520,6 @@
           "CSP Unit 3 MC Assessment _2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3819,13 +4043,35 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp3-2021/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp3-2021/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
       "name": "App Development Planning Guide",
       "url": "https://docs.google.com/document/d/1JXIaQGRKzsw9UvZh58yLfkriV2QH7fTE51Omr8OJ1aM/edit?usp=sharing",
       "key": "app_development_planning_guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "app_development_planning_guide"
@@ -3836,8 +4082,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -3848,11 +4094,23 @@
       "url": "https://docs.google.com/presentation/d/1lAs01DpAfG_i-BG641zLahDQ_P3RrsJWnkdpwwmTTFA/edit?usp=sharing",
       "key": "csp-unit-3-intro-to-app-design",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3860,8 +4118,9 @@
       "url": "https://www.youtube.com/watch?v=mCq8-xTH7jA&feature=youtu.be",
       "key": "how_computers_work_-_what_makes_a_computer_a_computer",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/02_WhatMakesAComputer_sm.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "how_computers_work_-_what_makes_a_computer_a_computer"
@@ -3872,8 +4131,9 @@
       "url": "https://youtu.be/auv10y-dN4s",
       "key": "how_to_debug",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "how_to_debug"
@@ -3884,8 +4144,9 @@
       "url": "https://youtu.be/q7d_JtyCq1A",
       "key": "pair_programming",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/pairprogramming-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pair_programming"
@@ -3896,11 +4157,59 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "U3 High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/82d6E4UAb6YG4psuAnKVtGVR4bGp1thGQ5IJXYux8uM",
+      "key": "u3_high_score_sample_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u3_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U3 High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1TRZwaqBMKFIp8FuKMd0bnFZP3OJhV6YrUFWrU8RF0kM/edit?usp=sharing",
+      "key": "u3_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u3_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U3 Mid Score Sample App",
+      "url": "https://studio.code.org/projects/applab/ylMrNrR86gj9RiHJ1qcoAgf3bJfgU79XCM09yJn7DWQ",
+      "key": "u3_mid_score_sample_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u3_mid_score_sample_app"
+      }
+    },
+    {
+      "name": "U3 Mid Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1kk2G4pPOr8wfN0tQzOm_mFvwMDbcmvreehC5QA3y91c/edit?usp=sharing",
+      "key": "u3_mid_score_sample_planning_guide_rubric",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u3_mid_score_sample_planning_guide_rubric"
       }
     },
     {
@@ -3908,8 +4217,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -3917,6 +4226,24 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "how_to_debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
@@ -3937,13 +4264,31 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
+        "lesson.key": "Lesson 11: Assessment Day",
+        "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Assessment Day",
         "resource.key": "csp-unit-3-intro-to-app-design"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 1",
+        "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 2",
         "resource.key": "app_development_planning_guide"
       }
     },
@@ -3955,44 +4300,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
+        "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "app_development_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "how_to_debug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
-        "resource.key": "app_development_planning_guide"
       }
     },
     {
@@ -4004,12 +4319,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 4",
-        "resource.key": "csp-unit-3-intro-to-app-design"
+        "resource.key": "app_development_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 4",
+        "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
         "resource.key": "app_development_planning_guide"
       }
     },
@@ -4022,26 +4343,56 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
-        "resource.key": "app_development_planning_guide"
+        "resource.key": "u3_high_score_sample_app"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
         "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: Assessment Day",
-        "resource.key": "app_development_planning_guide"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp3-2021"
       }
     },
@@ -4072,116 +4423,6 @@
   ],
   "objectives": [
     {
-      "key": "fded048a-81f1-443c-a03a-ef0349972e7a",
-      "properties": {
-        "description": "Identify the inputs of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "objective.key": "fded048a-81f1-443c-a03a-ef0349972e7a"
-      }
-    },
-    {
-      "key": "89ac3322-6332-41b1-8f73-a02df4ea7aa2",
-      "properties": {
-        "description": "Identify the outputs of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "objective.key": "89ac3322-6332-41b1-8f73-a02df4ea7aa2"
-      }
-    },
-    {
-      "key": "d4a059b7-93f5-4128-affb-b772d55e6c94",
-      "properties": {
-        "description": "Identify the purpose of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "objective.key": "d4a059b7-93f5-4128-affb-b772d55e6c94"
-      }
-    },
-    {
-      "key": "7310d28b-6fe3-428d-83f6-e0fefd0e1721",
-      "properties": {
-        "description": "Use meaningful names to for element ids"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Design Mode",
-        "objective.key": "7310d28b-6fe3-428d-83f6-e0fefd0e1721"
-      }
-    },
-    {
-      "key": "10d14170-fbad-438c-a832-aa0fd45ec743",
-      "properties": {
-        "description": "Set up the User Interface of an app including buttons, text, and images"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Design Mode",
-        "objective.key": "10d14170-fbad-438c-a832-aa0fd45ec743"
-      }
-    },
-    {
-      "key": "b6fd1773-b237-48c5-b997-3827717f9e28",
-      "properties": {
-        "description": "Brainstorm and choose a topic to develop into an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "objective.key": "b6fd1773-b237-48c5-b997-3827717f9e28"
-      }
-    },
-    {
-      "key": "37a8fefd-5fdb-4659-a08a-a22a6dd3e3e4",
-      "properties": {
-        "description": "Use feedback to help guide the design of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "objective.key": "37a8fefd-5fdb-4659-a08a-a22a6dd3e3e4"
-      }
-    },
-    {
-      "key": "8ce76780-5007-4d64-bcb8-7141a561622c",
-      "properties": {
-        "description": "Design the user interface of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "objective.key": "8ce76780-5007-4d64-bcb8-7141a561622c"
-      }
-    },
-    {
-      "key": "35ec1a98-a0d1-40dc-9358-5000a6026f20",
-      "properties": {
-        "description": "Create a user interface based on a prototype"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "objective.key": "35ec1a98-a0d1-40dc-9358-5000a6026f20"
-      }
-    },
-    {
-      "key": "c37caa2b-c9f0-4bee-a706-33517ef78331",
-      "properties": {
-        "description": "Justify the existence of programming languages to precisely communicate instructions"
-      },
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "objective.key": "c37caa2b-c9f0-4bee-a706-33517ef78331"
-      }
-    },
-    {
-      "key": "9f605dbd-1bdb-498d-8eb8-dd48f189b361",
-      "properties": {
-        "description": "Explain the qualities that differentiate natural languages and programming languages"
-      },
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "objective.key": "9f605dbd-1bdb-498d-8eb8-dd48f189b361"
-      }
-    },
-    {
       "key": "0a843b51-cd94-4cfb-8816-161fffffca9b",
       "properties": {
         "description": "Define a program as a sequence of commands that are executed or run by a computer"
@@ -4202,6 +4443,86 @@
       }
     },
     {
+      "key": "10d14170-fbad-438c-a832-aa0fd45ec743",
+      "properties": {
+        "description": "Set up the User Interface of an app including buttons, text, and images"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
+        "objective.key": "10d14170-fbad-438c-a832-aa0fd45ec743"
+      }
+    },
+    {
+      "key": "154d73c0-d5ad-4292-b6b3-bad3fcea71d7",
+      "properties": {
+        "description": "Use the debugging process and Identify specific best practices for debugging programs "
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "objective.key": "154d73c0-d5ad-4292-b6b3-bad3fcea71d7"
+      }
+    },
+    {
+      "key": "1b156d4f-f668-47fb-8e36-6c962e468182",
+      "properties": {
+        "description": "Test an app's functionality by attempting to use features and behavior described in a program specification"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 4",
+        "objective.key": "1b156d4f-f668-47fb-8e36-6c962e468182"
+      }
+    },
+    {
+      "key": "2aafeae0-5730-4a0a-8772-aba11d190f56",
+      "properties": {
+        "description": "Create the code and user interface of an app based on a program specification"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 3",
+        "objective.key": "2aafeae0-5730-4a0a-8772-aba11d190f56"
+      }
+    },
+    {
+      "key": "3384f290-06c7-4f6c-830c-c79fbead8ef1",
+      "properties": {
+        "description": "Iteratively improve an app based on feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 4",
+        "objective.key": "3384f290-06c7-4f6c-830c-c79fbead8ef1"
+      }
+    },
+    {
+      "key": "35ec1a98-a0d1-40dc-9358-5000a6026f20",
+      "properties": {
+        "description": "Create a user interface based on a prototype"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 2",
+        "objective.key": "35ec1a98-a0d1-40dc-9358-5000a6026f20"
+      }
+    },
+    {
+      "key": "37a8fefd-5fdb-4659-a08a-a22a6dd3e3e4",
+      "properties": {
+        "description": "Use feedback to help guide the design of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "objective.key": "37a8fefd-5fdb-4659-a08a-a22a6dd3e3e4"
+      }
+    },
+    {
+      "key": "46e895d3-edb6-4e24-9995-34f78b3ba1c3",
+      "properties": {
+        "description": "Reflect on the value of different stages of a development process in creating an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "objective.key": "46e895d3-edb6-4e24-9995-34f78b3ba1c3"
+      }
+    },
+    {
       "key": "68d8799a-23a7-4501-8d22-7744a15b722b",
       "properties": {
         "description": "Define comments as notes or documentation into a program that do not affect how the program executes"
@@ -4209,6 +4530,26 @@
       "seeding_key": {
         "lesson.key": "Intro to Programming",
         "objective.key": "68d8799a-23a7-4501-8d22-7744a15b722b"
+      }
+    },
+    {
+      "key": "7310d28b-6fe3-428d-83f6-e0fefd0e1721",
+      "properties": {
+        "description": "Use meaningful names to for element ids"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
+        "objective.key": "7310d28b-6fe3-428d-83f6-e0fefd0e1721"
+      }
+    },
+    {
+      "key": "802cfd1b-a6af-429b-b188-bcb1e7b854e3",
+      "properties": {
+        "description": "Reflect on the value of different stages of a development process in creating an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Assessment Day",
+        "objective.key": "802cfd1b-a6af-429b-b188-bcb1e7b854e3"
       }
     },
     {
@@ -4222,13 +4563,53 @@
       }
     },
     {
-      "key": "154d73c0-d5ad-4292-b6b3-bad3fcea71d7",
+      "key": "89ac3322-6332-41b1-8f73-a02df4ea7aa2",
       "properties": {
-        "description": "Use the debugging process and Identify specific best practices for debugging programs "
+        "description": "Identify the outputs of an app"
       },
       "seeding_key": {
-        "lesson.key": "Debugging",
-        "objective.key": "154d73c0-d5ad-4292-b6b3-bad3fcea71d7"
+        "lesson.key": "Introduction to Apps",
+        "objective.key": "89ac3322-6332-41b1-8f73-a02df4ea7aa2"
+      }
+    },
+    {
+      "key": "8ce76780-5007-4d64-bcb8-7141a561622c",
+      "properties": {
+        "description": "Design the user interface of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "objective.key": "8ce76780-5007-4d64-bcb8-7141a561622c"
+      }
+    },
+    {
+      "key": "9f605dbd-1bdb-498d-8eb8-dd48f189b361",
+      "properties": {
+        "description": "Explain the qualities that differentiate natural languages and programming languages"
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "objective.key": "9f605dbd-1bdb-498d-8eb8-dd48f189b361"
+      }
+    },
+    {
+      "key": "b6fd1773-b237-48c5-b997-3827717f9e28",
+      "properties": {
+        "description": "Brainstorm and choose a topic to develop into an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "objective.key": "b6fd1773-b237-48c5-b997-3827717f9e28"
+      }
+    },
+    {
+      "key": "c37caa2b-c9f0-4bee-a706-33517ef78331",
+      "properties": {
+        "description": "Justify the existence of programming languages to precisely communicate instructions"
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "objective.key": "c37caa2b-c9f0-4bee-a706-33517ef78331"
       }
     },
     {
@@ -4252,23 +4633,13 @@
       }
     },
     {
-      "key": "2aafeae0-5730-4a0a-8772-aba11d190f56",
+      "key": "d4a059b7-93f5-4128-affb-b772d55e6c94",
       "properties": {
-        "description": "Create the code and user interface of an app based on a program specification"
+        "description": "Identify the purpose of an app"
       },
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
-        "objective.key": "2aafeae0-5730-4a0a-8772-aba11d190f56"
-      }
-    },
-    {
-      "key": "1b156d4f-f668-47fb-8e36-6c962e468182",
-      "properties": {
-        "description": "Test an app's functionality by attempting to use features and behavior described in a program specification"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 4",
-        "objective.key": "1b156d4f-f668-47fb-8e36-6c962e468182"
+        "lesson.key": "Introduction to Apps",
+        "objective.key": "d4a059b7-93f5-4128-affb-b772d55e6c94"
       }
     },
     {
@@ -4282,37 +4653,150 @@
       }
     },
     {
-      "key": "3384f290-06c7-4f6c-830c-c79fbead8ef1",
+      "key": "fded048a-81f1-443c-a03a-ef0349972e7a",
       "properties": {
-        "description": "Iteratively improve an app based on feedback"
+        "description": "Identify the inputs of an app"
       },
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 4",
-        "objective.key": "3384f290-06c7-4f6c-830c-c79fbead8ef1"
-      }
-    },
-    {
-      "key": "46e895d3-edb6-4e24-9995-34f78b3ba1c3",
-      "properties": {
-        "description": "Reflect on the value of different stages of a development process in creating an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 5",
-        "objective.key": "46e895d3-edb6-4e24-9995-34f78b3ba1c3"
-      }
-    },
-    {
-      "key": "802cfd1b-a6af-429b-b188-bcb1e7b854e3",
-      "properties": {
-        "description": "Reflect on the value of different stages of a development process in creating an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 11: Assessment Day",
-        "objective.key": "802cfd1b-a6af-429b-b188-bcb1e7b854e3"
+        "lesson.key": "Introduction to Apps",
+        "objective.key": "fded048a-81f1-443c-a03a-ef0349972e7a"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
@@ -4360,41 +4844,6 @@
         "lesson.key": "Introduction to Design Mode",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
       }
     },
     {
@@ -4490,6 +4939,41 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-16"
@@ -4519,209 +5003,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-CS-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.G.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.G.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.G.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.G.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.I.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-23"
       }
@@ -4735,35 +5016,35 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 4",
+        "lesson.key": "Project - Designing an App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-16"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 4",
+        "lesson.key": "Project - Designing an App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-19"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 4",
+        "lesson.key": "Project - Designing an App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-21"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 4",
+        "lesson.key": "Project - Designing an App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-22"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 4",
+        "lesson.key": "Project - Designing an App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-23"
       }
@@ -4805,6 +5086,41 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-16"
@@ -4834,6 +5150,41 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-23"
       }

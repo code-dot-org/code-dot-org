@@ -2,16 +2,19 @@
   "script": {
     "name": "csp-apprentice-18",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Principles Facilitator in Training 2018-2019",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:25 UTC",
+    "serialized_at": "2021-11-22 19:56:29 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "csp-apprentice-18"
     }
@@ -135,23 +138,163 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "dba93738-0f4a-44e1-875b-139226c59a69",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dba93738-0f4a-44e1-875b-139226c59a69",
+        "lesson.key": "Apprentice Reflection Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp-apprentice-18"
+      }
+    },
+    {
+      "key": "9214548d-a1f0-481a-93db-37cd4e552bbe",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9214548d-a1f0-481a-93db-37cd4e552bbe",
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csp-apprentice-18"
+      }
+    },
+    {
+      "key": "2ac0d107-cc2d-4a89-8faa-c8d4ad0471b6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ac0d107-cc2d-4a89-8faa-c8d4ad0471b6",
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csp-apprentice-18"
+      }
+    },
+    {
+      "key": "27476632-2e07-40e0-a376-d63ff42317f2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "27476632-2e07-40e0-a376-d63ff42317f2",
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csp-apprentice-18"
+      }
+    },
+    {
+      "key": "af8d9c65-ca3e-4c22-8a88-76108cf730c9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af8d9c65-ca3e-4c22-8a88-76108cf730c9",
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csp-apprentice-18"
+      }
+    },
+    {
+      "key": "65753472-9f3a-4cc0-9234-5583aa83f086",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65753472-9f3a-4cc0-9234-5583aa83f086",
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "csp-apprentice-18"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "c6f95274-10e9-446f-aba7-e09f02674c34",
+      "position": 1,
+      "properties": {
+        "name": "Welcome Apprentice Facilitators!",
+        "progression_name": "Welcome Apprentice Facilitators!"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6f95274-10e9-446f-aba7-e09f02674c34",
+        "lesson_activity.key": "dba93738-0f4a-44e1-875b-139226c59a69"
+      }
+    },
+    {
+      "key": "8513ec46-43c0-43c0-b514-afb13d25843c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8513ec46-43c0-43c0-b514-afb13d25843c",
+        "lesson_activity.key": "9214548d-a1f0-481a-93db-37cd4e552bbe"
+      }
+    },
+    {
+      "key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f",
+        "lesson_activity.key": "2ac0d107-cc2d-4a89-8faa-c8d4ad0471b6"
+      }
+    },
+    {
+      "key": "0e0d3088-5152-48b9-9862-bb1843b3ce67",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67",
+        "lesson_activity.key": "27476632-2e07-40e0-a376-d63ff42317f2"
+      }
+    },
+    {
+      "key": "afb43363-9dd2-4cd9-a40d-31f98bd70593",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593",
+        "lesson_activity.key": "af8d9c65-ca3e-4c22-8a88-76108cf730c9"
+      }
+    },
+    {
+      "key": "b55a1fb5-cff6-4bb6-9429-0ac2c262d037",
+      "position": 1,
+      "properties": {
+        "name": "Congrats on completing the apprentice program!",
+        "progression_name": "Congrats on completing the apprentice program!"
+      },
+      "seeding_key": {
+        "activity_section.key": "b55a1fb5-cff6-4bb6-9429-0ac2c262d037",
+        "lesson_activity.key": "65753472-9f3a-4cc0-9234-5583aa83f086"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "welcome-apprentice-18"
-        ]
+        ],
+        "progression": "Welcome Apprentice Facilitators!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -159,7 +302,8 @@
         ],
         "lesson.key": "Apprentice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "c6f95274-10e9-446f-aba7-e09f02674c34"
       },
       "level_keys": [
         "welcome-apprentice-18"
@@ -168,14 +312,13 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "morning-prep-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -183,7 +326,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "8513ec46-43c0-43c0-b514-afb13d25843c"
       },
       "level_keys": [
         "morning-prep-monday"
@@ -192,14 +336,13 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "feel-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -207,7 +350,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "8513ec46-43c0-43c0-b514-afb13d25843c"
       },
       "level_keys": [
         "feel-monday"
@@ -216,14 +360,13 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csp-pushDL-unit1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -231,7 +374,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "8513ec46-43c0-43c0-b514-afb13d25843c"
       },
       "level_keys": [
         "csp-pushDL-unit1"
@@ -240,14 +384,13 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "morning-prep-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -255,7 +398,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       },
       "level_keys": [
         "morning-prep-tuesday"
@@ -264,14 +408,13 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "feel-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -279,7 +422,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       },
       "level_keys": [
         "feel-tuesday"
@@ -288,14 +432,13 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "instructional-strategy-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -303,7 +446,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       },
       "level_keys": [
         "instructional-strategy-tuesday"
@@ -312,14 +456,13 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csp-pushDL-unit1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -327,7 +470,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       },
       "level_keys": [
         "csp-pushDL-unit1"
@@ -336,14 +480,13 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "morning-prep-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -351,7 +494,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       },
       "level_keys": [
         "morning-prep-wednesday"
@@ -360,14 +504,13 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "feel-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -375,7 +518,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       },
       "level_keys": [
         "feel-wednesday"
@@ -384,14 +528,13 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "getting-buy-in-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -399,7 +542,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       },
       "level_keys": [
         "getting-buy-in-wednesday"
@@ -408,14 +552,13 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csp-pushDL-unit1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -423,7 +566,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       },
       "level_keys": [
         "csp-pushDL-unit1"
@@ -432,14 +576,13 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csp-pushDL-unit2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -447,7 +590,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       },
       "level_keys": [
         "csp-pushDL-unit2"
@@ -456,14 +600,13 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "morning-prep-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -471,7 +614,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       },
       "level_keys": [
         "morning-prep-thursday"
@@ -480,14 +624,13 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "feel-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -495,7 +638,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       },
       "level_keys": [
         "feel-thursday"
@@ -504,14 +648,13 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "recruiting-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -519,7 +662,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       },
       "level_keys": [
         "recruiting-thursday"
@@ -528,14 +672,13 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csp-pushDL-unit2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -543,7 +686,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       },
       "level_keys": [
         "csp-pushDL-unit2"
@@ -552,14 +696,13 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csp-pushDL-unit3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -567,7 +710,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       },
       "level_keys": [
         "csp-pushDL-unit3"
@@ -576,14 +720,14 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "apprentice-congrats"
-        ]
+        ],
+        "progression": "Congrats on completing the apprentice program!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -591,7 +735,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "b55a1fb5-cff6-4bb6-9429-0ac2c262d037"
       },
       "level_keys": [
         "apprentice-congrats"
@@ -607,7 +752,8 @@
         ],
         "lesson.key": "Apprentice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "c6f95274-10e9-446f-aba7-e09f02674c34"
       }
     },
     {
@@ -618,7 +764,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "8513ec46-43c0-43c0-b514-afb13d25843c"
       }
     },
     {
@@ -629,7 +776,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "8513ec46-43c0-43c0-b514-afb13d25843c"
       }
     },
     {
@@ -640,7 +788,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "8513ec46-43c0-43c0-b514-afb13d25843c"
       }
     },
     {
@@ -651,7 +800,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       }
     },
     {
@@ -662,7 +812,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       }
     },
     {
@@ -673,7 +824,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       }
     },
     {
@@ -684,7 +836,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "d0fd64ab-62dd-4d0f-95ea-5d530a188d1f"
       }
     },
     {
@@ -695,7 +848,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       }
     },
     {
@@ -706,7 +860,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       }
     },
     {
@@ -717,7 +872,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       }
     },
     {
@@ -728,7 +884,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       }
     },
     {
@@ -739,7 +896,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "0e0d3088-5152-48b9-9862-bb1843b3ce67"
       }
     },
     {
@@ -750,7 +908,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       }
     },
     {
@@ -761,7 +920,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       }
     },
     {
@@ -772,7 +932,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       }
     },
     {
@@ -783,7 +944,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       }
     },
     {
@@ -794,7 +956,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "afb43363-9dd2-4cd9-a40d-31f98bd70593"
       }
     },
     {
@@ -805,7 +968,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "csp-apprentice-18"
+        "script.name": "csp-apprentice-18",
+        "activity_section.key": "b55a1fb5-cff6-4bb6-9429-0ac2c262d037"
       }
     }
   ],

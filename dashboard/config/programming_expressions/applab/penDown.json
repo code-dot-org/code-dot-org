@@ -1,4 +1,6 @@
 {
-  "func": "penDown",
-  "category": "Turtle"
+  "key": "penDown",
+  "name": "penDown",
+  "category": "Turtle",
+  "syntax": "penDown"
 }

@@ -2,25 +2,39 @@
   "script": {
     "name": "coursef-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
       "hideable_lessons": true,
-      "project_widget_visible": true,
+      "is_course": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "lesson_extras_available": true,
-      "version_year": "2021",
-      "curriculum_umbrella": "CSF",
-      "is_course": true,
-      "is_migrated": true,
-      "has_lesson_plan": true
+      "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-26 19:07:25 UTC",
+    "serialized_at": "2022-01-20 17:45:38 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -185,9 +199,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAs kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.",
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAs kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.",
         "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare a long string (or rope) and paper for class.",
-        "purpose": "Common Sense Education created this lesson to teach students what they should do when someone uses mean or hurtful language on the internet.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.",
         "student_overview": "Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.",
         "unplugged": true
       },
@@ -2130,7 +2144,7 @@
       "key": "9038d6a6-1ea1-4e38-8252-06e5cd610fad",
       "position": 1,
       "properties": {
-        "description": "* **empathy**: to imagine the feelings that someone else is experiencing\n* **interpret**: to understand something based on our point of view\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Project** [Slide 4](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_1_0) and ask students: *Imagine when you walked in, I said to you* [in a friendly tone, with a big smile] *\"Hello!\" Which emoji would fit?*\n\nHave students show their answer by holding up fingers (1, 2, 3, or 4). If anyone holds up a number other than 1, ask them to share out why.\n\n**Repeat** this two more times, saying *Hello* differently each time: once with an angry tone and a scowl, and once with a nervous or scared tone.\n\n**Project** [Slide 5](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_2_13) and ask: *What about if you're just reading it? How does it make you feel now?*\n\nPoint out how when something is just in text, it can be even more difficult to interpret what someone means. Explain that their responses might be different depending on who they are because we all interpret the world a little differently. Clarify that interpret means *to understand something based on our point of view.* ([Slide 6](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_4))\n\n**Say**: *Because words can be interpreted differently by different people, it's important to think about the words we use and how they affect people. We might say something just to be funny, but someone might take it seriously, and it might hurt their feelings. This can happen in person, and it can also happen online. It may even happen more online, because the words are just text -- we're not actually face-to-face with other people.*",
+        "description": "* **empathy**: to imagine the feelings that someone else is experiencing\n* **interpret**: to understand something based on our point of view\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Project** [Slide 4](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3da8846a99_1_0) and ask students: *Imagine when you walked in, I said to you* [in a friendly tone, with a big smile] *\"Hello!\" Which emoji would fit?*\n\nHave students show their answer by holding up fingers (1, 2, 3, or 4). If anyone holds up a number other than 1, ask them to share out why.\n\n**Repeat** this two more times, saying *Hello* differently each time: once with an angry tone and a scowl, and once with a nervous or scared tone.\n\n**Project** [Slide 5](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3da8846a99_2_13) and ask: *What about if you're just reading it? How does it make you feel now?*\n\nPoint out how when something is just in text, it can be even more difficult to interpret what someone means. Explain that their responses might be different depending on who they are because we all interpret the world a little differently. Clarify that interpret means *to understand something based on our point of view.* ([Slide 6](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_4))\n\n**Say**: *Because words can be interpreted differently by different people, it's important to think about the words we use and how they affect people. We might say something just to be funny, but someone might take it seriously, and it might hurt their feelings. This can happen in person, and it can also happen online. It may even happen more online, because the words are just text -- we're not actually face-to-face with other people.*",
         "name": "Key Vocabulary"
       },
       "seeding_key": {
@@ -2142,7 +2156,7 @@
       "key": "d9d67048-27b2-49cf-9f30-26daf2aa25d1",
       "position": 1,
       "properties": {
-        "description": "**Ask**: *Who has heard of the saying \"Sticks and stones may break my bones, but words can never hurt me\"?*\n\nInvite students to respond. Answers will vary. Follow up by asking students if they think the saying is true.\n\n**Project** [Slide 7](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_117) and say: *We're going to watch a video now called \"The Power of Words.\" As we watch, continue to think about whether that statement is true or not.*\n\nShow the video [The Power of Words](https://www.commonsense.org/education/videos/the-power-of-words) and then call on students to share out what it says about whether the statement is true or not. Emphasize that sometimes it is hard to ignore what someone is saying when it's a mean name. Names CAN make you feel sad or hurt.\n\n**Ask**: *Why do you think those other players said those things to Guts?* ([Slide 8](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_0))\n\nInvite students to respond. Answers will vary, but possible reasons include *they were trying to joke around* or *they feel badly themselves and are taking it out on someone*.\n\n**Ask**: *What does Guts do in response to the mean words?*\n\nInvite students to respond and clarify that Guts talked to someone he trusted, who was able to empathize with him and give him some good advice. Define empathy as *imagining the feelings that someone else is experiencing*. ([Slide 9](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_109))\n\n**Project** [Slide 10](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_157) and review the acronym S-T-O-P for responding to mean words online."
+        "description": "**Ask**: *Who has heard of the saying \"Sticks and stones may break my bones, but words can never hurt me\"?*\n\nInvite students to respond. Answers will vary. Follow up by asking students if they think the saying is true.\n\n**Project** [Slide 7](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_117) and say: *We're going to watch a video now called \"The Power of Words.\" As we watch, continue to think about whether that statement is true or not.*\n\nShow the video [The Power of Words](https://www.commonsense.org/education/videos/the-power-of-words) and then call on students to share out what it says about whether the statement is true or not. Emphasize that sometimes it is hard to ignore what someone is saying when it's a mean name. Names CAN make you feel sad or hurt.\n\n**Ask**: *Why do you think those other players said those things to Guts?* ([Slide 8](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3e3f96c340_0_0))\n\nInvite students to respond. Answers will vary, but possible reasons include *they were trying to joke around* or *they feel badly themselves and are taking it out on someone*.\n\n**Ask**: *What does Guts do in response to the mean words?*\n\nInvite students to respond and clarify that Guts talked to someone he trusted, who was able to empathize with him and give him some good advice. Define empathy as *imagining the feelings that someone else is experiencing*. ([Slide 9](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_109))\n\n**Project** [Slide 10](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_157) and review the acronym S-T-O-P for responding to mean words online."
       },
       "seeding_key": {
         "activity_section.key": "d9d67048-27b2-49cf-9f30-26daf2aa25d1",
@@ -2164,7 +2178,7 @@
       "key": "06057973-b621-4a48-a991-4f99aafdedca",
       "position": 1,
       "properties": {
-        "description": "**Place** a string across the length of the classroom. Mark one half of the room \"OK.\" Mark the other half \"Not OK.\" Have students all stand on the OK side of the line.\n\n**Project** [Slide 11](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_106) and read the directions aloud.\n\n**Have** students read the statements on [Slides 12-15](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_14). After each statement, allow time for students to move or stay. Call on students to explain their thinking. If possible, choose students from each side to debate reasons why the statement is or isn't okay.\n\nFor the examples where students say it's Not OK, follow-up by asking them what they could do if they received that message from someone.\n\n**Review** that kids like to go online to chat, watch videos, send messages, play games, and do homework. Sometimes people say mean or scary things. Messages that make people feel bad cross the line.\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy).",
+        "description": "**Place** a string across the length of the classroom. Mark one half of the room \"OK.\" Mark the other half \"Not OK.\" Have students all stand on the OK side of the line.\n\n**Project** [Slide 11](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_106) and read the directions aloud.\n\n**Have** students read the statements on [Slides 12-15](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3e3f96c340_0_14). After each statement, allow time for students to move or stay. Call on students to explain their thinking. If possible, choose students from each side to debate reasons why the statement is or isn't okay.\n\nFor the examples where students say it's Not OK, follow-up by asking them what they could do if they received that message from someone.\n\n**Review** that kids like to go online to chat, watch videos, send messages, play games, and do homework. Sometimes people say mean or scary things. Messages that make people feel bad cross the line.\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy).",
         "progression_name": "The Power of Words - Unplugged Activity"
       },
       "seeding_key": {
@@ -2187,7 +2201,7 @@
       "key": "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1",
       "position": 1,
       "properties": {
-        "description": "**Do this:** Display the lesson slides for the class.\n\nAsk students to think about we organize and store things. Do students ever keep things in boxes? Are those boxes labeled? Why? If students do not have this experience, ask them to imagine helping you pack up the classroom for the summer.\n\nInform students that today we will be playing a word game, similar to Mad Libs®, where you will be prompted for words that will then be placed into a silly story."
+        "description": "**Do this:** Display the lesson slides for the class.\n\nAsk students to think about how we organize and store things. Do students ever keep things in boxes? Are those boxes labeled? Why? If students do not have this experience, ask them to imagine helping you pack up the classroom for the summer.\n\nInform students that today we will be playing a word game, similar to Mad Libs®, where you will be prompted for words that will then be placed into a silly story."
       },
       "seeding_key": {
         "activity_section.key": "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1",
@@ -2210,7 +2224,7 @@
       "key": "7a4a67f6-dfb0-42ee-a28c-b6604100abde",
       "position": 3,
       "properties": {
-        "description": "\nIn a moment, I’ll have volunteers to help us fill in the blank. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n",
+        "description": "\nIn a moment, I’ll have volunteers to help us fill in the blanks. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3356,8 +3370,8 @@
       "key": "76fe757f-0aa5-4dc0-9864-861f6023828e",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Show the “Lots of Sprites” video and discuss how the special blocks inside the event blocks work.",
-        "progression_name": "Video: Lots of Sprites",
+        "description": "**Do This:** Show the “Outbreak Simulator: Introduction” video.",
+        "progression_name": "Video: Outbreak Simulator: Introduction",
         "tips": [
           {
             "type": "teachingTip",
@@ -3386,7 +3400,7 @@
       "key": "6a891356-b6da-4faa-bb30-f79f23f2bbcb",
       "position": 7,
       "properties": {
-        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.*",
+        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.* You can also show the next video in Level 8.",
         "progression_name": "Learning from Simulations"
       },
       "seeding_key": {
@@ -4021,7 +4035,6 @@
         ],
         "progression": "Video: Introducing Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4047,7 +4060,6 @@
         ],
         "progression": "Exploration: Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4073,7 +4085,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4099,7 +4110,6 @@
         ],
         "progression": "Video: How to Make a Sprite"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4125,7 +4135,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4151,7 +4160,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4177,7 +4185,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4203,7 +4210,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4229,7 +4235,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4255,7 +4260,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4281,7 +4285,6 @@
         ],
         "progression": "Free Play: Make a Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4307,7 +4310,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4333,7 +4335,6 @@
         ],
         "progression": "Video: Sprites in Action"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4359,7 +4360,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4385,7 +4385,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4411,7 +4410,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4437,7 +4435,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4463,7 +4460,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4489,7 +4485,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4515,7 +4510,6 @@
         ],
         "progression": "Free Play: Make an Interactive Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4541,7 +4535,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4567,7 +4560,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4593,7 +4585,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4619,7 +4610,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4645,7 +4635,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4671,7 +4660,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4697,7 +4685,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4723,7 +4710,6 @@
         ],
         "progression": "The Power of Words - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4749,7 +4735,6 @@
         ],
         "progression": "Video: Unplugged Variables in Envelopes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4775,7 +4760,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4801,7 +4785,6 @@
         ],
         "progression": "Video: Text and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4827,7 +4810,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4853,7 +4835,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4879,7 +4860,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4905,7 +4885,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4931,7 +4910,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4957,7 +4935,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4983,7 +4960,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5009,7 +4985,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5035,7 +5010,6 @@
         ],
         "progression": "Exploration: Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5061,7 +5035,6 @@
         ],
         "progression": "Planning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5087,7 +5060,6 @@
         ],
         "progression": "Mini-Project: User Input Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5113,7 +5085,6 @@
         ],
         "progression": "Video: Artist Intro with JR Hildebrande"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5139,7 +5110,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5165,7 +5135,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5191,7 +5160,6 @@
         ],
         "progression": "Video: Loops with the Artist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5217,7 +5185,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5243,7 +5210,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5269,7 +5235,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5295,7 +5260,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5321,7 +5285,6 @@
         ],
         "progression": "Video: Variables in Artist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5347,7 +5310,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5373,7 +5335,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5399,7 +5360,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5425,7 +5385,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5451,7 +5410,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5477,7 +5435,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5503,7 +5460,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5529,7 +5485,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5555,7 +5510,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5581,7 +5535,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5607,7 +5560,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5633,7 +5585,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5659,7 +5610,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5685,7 +5635,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5711,7 +5660,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5737,7 +5685,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5763,7 +5710,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5789,7 +5735,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5815,7 +5760,6 @@
         ],
         "progression": "For Loop Fun - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5841,7 +5785,6 @@
         ],
         "progression": "Review"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5867,7 +5810,6 @@
         ],
         "progression": "Review"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5893,7 +5835,6 @@
         ],
         "progression": "Exploration: For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5919,7 +5860,6 @@
         ],
         "progression": "Video: For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5945,7 +5885,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5971,7 +5910,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5997,7 +5935,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6023,7 +5960,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6049,7 +5985,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6075,7 +6010,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6101,7 +6035,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6127,7 +6060,6 @@
         ],
         "progression": "Video: For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6153,7 +6085,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6179,7 +6110,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6205,7 +6135,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6231,7 +6160,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6257,7 +6185,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6283,7 +6210,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6309,7 +6235,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6335,7 +6260,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6361,7 +6285,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6387,7 +6310,6 @@
         ],
         "progression": "Run a simulation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6413,7 +6335,6 @@
         ],
         "progression": "Modify simulation variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6439,7 +6360,6 @@
         ],
         "progression": "Customize"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6465,7 +6385,6 @@
         ],
         "progression": "Welcome to Monster Town"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6489,9 +6408,8 @@
         "level_keys": [
           "courseF_lotsofsprites_video"
         ],
-        "progression": "Video: Lots of Sprites"
+        "progression": "Video: Outbreak Simulator: Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6517,7 +6435,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6543,7 +6460,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6569,7 +6485,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6595,7 +6510,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6621,7 +6535,6 @@
         ],
         "progression": "Learning from Simulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6647,7 +6560,6 @@
         ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6673,7 +6585,6 @@
         ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6699,7 +6610,6 @@
         ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6725,7 +6635,6 @@
         ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6751,7 +6660,6 @@
         ],
         "progression": "Video: AI: What is Machine Learning?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6777,7 +6685,6 @@
         ],
         "progression": "Train AI to Clean the Ocean"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6803,7 +6710,6 @@
         ],
         "progression": "Train AI to Clean the Ocean"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6829,7 +6735,6 @@
         ],
         "progression": "Train AI to Clean the Ocean"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6855,7 +6760,6 @@
         ],
         "progression": "Video: Training Data & Bias"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6881,7 +6785,6 @@
         ],
         "progression": "Using Training Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6907,7 +6810,6 @@
         ],
         "progression": "Video: Impacts on Society"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6933,7 +6835,6 @@
         ],
         "progression": "Teach A.I. a new word"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6959,7 +6860,6 @@
         ],
         "progression": "The Internet - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6985,7 +6885,6 @@
         ],
         "progression": "Example projects"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7011,7 +6910,6 @@
         ],
         "progression": "Create your project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8427,8 +8325,8 @@
       "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
       "key": "2021_change_log",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "2021_change_log"
@@ -8439,9 +8337,9 @@
       "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit",
       "key": "activity-answer-for-loop-fun",
       "properties": {
-        "type": "Worksheet Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet Answer Key"
       },
       "seeding_key": {
         "resource.key": "activity-answer-for-loop-fun"
@@ -8452,9 +8350,9 @@
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai-ml",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-ml"
@@ -8465,9 +8363,9 @@
       "url": "https://youtu.be/ng4c1g3COfs",
       "key": "ai-societal",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-societal"
@@ -8478,9 +8376,9 @@
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "ai-training",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-training"
@@ -8491,9 +8389,9 @@
       "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
       "key": "assessment-answer-internet",
       "properties": {
-        "type": "Assessment Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment Answer Key"
       },
       "seeding_key": {
         "resource.key": "assessment-answer-internet"
@@ -8504,8 +8402,8 @@
       "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
       "key": "blank_space_stories",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "blank_space_stories"
@@ -8528,8 +8426,8 @@
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
       "key": "common_core_and_ngss_guidance",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "common_core_and_ngss_guidance"
@@ -8540,8 +8438,8 @@
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
       "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Manipulatives"
       },
       "seeding_key": {
         "resource.key": "course-cf-blockly-blocks"
@@ -8552,8 +8450,8 @@
       "url": "https://studio.code.org/s/coursef-2021/vocab",
       "key": "course_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -8564,8 +8462,8 @@
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "cross-curricular_extension_activities_1"
@@ -8576,9 +8474,9 @@
       "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
       "key": "csf-for-loop-fun-assessment",
       "properties": {
-        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment"
       },
       "seeding_key": {
         "resource.key": "csf-for-loop-fun-assessment"
@@ -8589,9 +8487,9 @@
       "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit",
       "key": "csf-for-loop-fun-worksheet",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "csf-for-loop-fun-worksheet"
@@ -8602,9 +8500,9 @@
       "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
       "key": "csf-internet-assessment",
       "properties": {
-        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment"
       },
       "seeding_key": {
         "resource.key": "csf-internet-assessment"
@@ -8615,9 +8513,9 @@
       "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
       "key": "csf-ip-address-cards-and-delivery-type-cards",
       "properties": {
-        "type": "Manipulatives",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Manipulatives"
       },
       "seeding_key": {
         "resource.key": "csf-ip-address-cards-and-delivery-type-cards"
@@ -8628,8 +8526,8 @@
       "url": "https://studio.code.org/s/coursef-2021/standards",
       "key": "csta_standards_mapping",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csta_standards_mapping"
@@ -8640,8 +8538,8 @@
       "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview\t",
       "key": "curriculum_guide_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide_1"
@@ -8652,8 +8550,8 @@
       "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
       "key": "debugging_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "debugging_guide"
@@ -8664,9 +8562,9 @@
       "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
       "key": "design-process",
       "properties": {
-        "type": "Teacher Prep Guide",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Teacher Prep Guide"
       },
       "seeding_key": {
         "resource.key": "design-process"
@@ -8677,8 +8575,8 @@
       "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
       "key": "exploring_apps",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "exploring_apps"
@@ -8689,8 +8587,8 @@
       "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
       "key": "exploring_apps_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "exploring_apps_1"
@@ -8701,9 +8599,9 @@
       "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/",
       "key": "final-project-design-worksheet",
       "properties": {
-        "type": "Worksheet",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "final-project-design-worksheet"
@@ -8714,9 +8612,9 @@
       "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
       "key": "flf-assessment-teacher-key",
       "properties": {
-        "type": "Teacher Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Teacher Key"
       },
       "seeding_key": {
         "resource.key": "flf-assessment-teacher-key"
@@ -8727,8 +8625,8 @@
       "url": "http://get-site-ip.com/",
       "key": "get-site-ip-com",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "get-site-ip-com"
@@ -8739,8 +8637,8 @@
       "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
       "key": "implementation_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
@@ -8751,8 +8649,8 @@
       "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview",
       "key": "introducing_sprite_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "introducing_sprite_lab"
@@ -8763,8 +8661,8 @@
       "url": "https://youtu.be/yd-9xZ275dM",
       "key": "introducing_sprite_lab_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introducing_sprite_lab_1"
@@ -8775,8 +8673,8 @@
       "url": "https://www.youtube.com/watch?v=HO4uhoahtjM",
       "key": "lesson-in-action-for-loop-fun",
       "properties": {
-        "type": "Lesson in Action Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Lesson in Action Video"
       },
       "seeding_key": {
         "resource.key": "lesson-in-action-for-loop-fun"
@@ -8787,8 +8685,8 @@
       "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
       "key": "lesson_type_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
@@ -8799,8 +8697,8 @@
       "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
       "key": "making_sprites",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "making_sprites"
@@ -8811,8 +8709,8 @@
       "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68",
       "key": "mini_project_user_input_programs",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "mini_project_user_input_programs"
@@ -8823,8 +8721,8 @@
       "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
       "key": "mini_project_user_input_programs_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "mini_project_user_input_programs_1"
@@ -8835,8 +8733,8 @@
       "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
       "key": "pause_and_think_online",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pause_and_think_online"
@@ -8847,8 +8745,8 @@
       "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
       "key": "rubric-csf-final-projects",
       "properties": {
-        "type": "Rubric",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "rubric-csf-final-projects"
@@ -8859,9 +8757,9 @@
       "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
       "key": "running-simulations",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "running-simulations"
@@ -8872,8 +8770,8 @@
       "url": "https://studio.code.org/docs/spritelab/",
       "key": "sprite_lab_documentation",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
@@ -8884,8 +8782,8 @@
       "url": "https://studio.code.org/docs/spritelab/",
       "key": "sprite_lab_documentation_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation_1"
@@ -8896,8 +8794,8 @@
       "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
       "key": "sprites_in_action",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "sprites_in_action"
@@ -8908,8 +8806,8 @@
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
@@ -8920,8 +8818,8 @@
       "url": "https://studio.code.org/levels/27300",
       "key": "teacher_sandbox_level",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_sandbox_level"
@@ -8932,8 +8830,8 @@
       "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
       "key": "text_and_prompts",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "text_and_prompts"
@@ -8944,8 +8842,8 @@
       "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
       "key": "the_power_of_words_lesson_quiz",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "the_power_of_words_lesson_quiz"
@@ -8956,8 +8854,8 @@
       "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
       "key": "the_power_of_words_lesson_quiz_answer_key",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "the_power_of_words_lesson_quiz_answer_key"
@@ -8968,8 +8866,8 @@
       "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
       "key": "the_power_of_words_lesson_slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "the_power_of_words_lesson_slides"
@@ -8980,8 +8878,8 @@
       "url": "https://www.commonsense.org/education/videos/the-power-of-words",
       "key": "the_power_of_words_the_power_of_words",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_power_of_words_the_power_of_words"
@@ -8992,8 +8890,8 @@
       "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
       "key": "the_power_of_words_words_can_hurt",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "the_power_of_words_words_can_hurt"
@@ -9004,9 +8902,9 @@
       "url": "https://youtu.be/mX857v5B4gE",
       "key": "unplugged-video-for-loop-fun",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Teacher",
-        "download_url": "http://videos.code.org/2014/C4-unplugged-forloops.mp4"
+        "download_url": "http://videos.code.org/2014/C4-unplugged-forloops.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-for-loop-fun"
@@ -9017,9 +8915,9 @@
       "url": "https://youtu.be/mFOUbqYv1Sc",
       "key": "unplugged-video-internet",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C3-internet.mp4"
+        "download_url": "http://videos.code.org/2014/C3-internet.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-internet"
@@ -9030,8 +8928,8 @@
       "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
       "key": "user_input_programs",
       "properties": {
-        "type": "Activity Guide",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "user_input_programs"
@@ -9042,19 +8940,217 @@
       "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview",
       "key": "variables_blank_space_stories",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "variables_blank_space_stories"
+      }
+    },
+    {
+      "name": "Virtual Lesson Modifications",
+      "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
+      "key": "virtual_lesson_modifications",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications"
       }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "introducing_sprite_lab"
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai-ml"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai-societal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai-training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "design-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "final-project-design-worksheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "rubric-csf-final-projects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "activity-answer-for-loop-fun"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "csf-for-loop-fun-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "csf-for-loop-fun-worksheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "flf-assessment-teacher-key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "lesson-in-action-for-loop-fun"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "unplugged-video-for-loop-fun"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Bee",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "assessment-answer-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "csf-internet-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "csf-ip-address-cards-and-delivery-type-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "get-site-ip-com"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "unplugged-video-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "resource.key": "running-simulations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "text_and_prompts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "teacher_sandbox_level"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_power_of_words_lesson_quiz"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_power_of_words_lesson_quiz_answer_key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_power_of_words_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_power_of_words_the_power_of_words"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_power_of_words_words_can_hurt"
       }
     },
     {
@@ -9066,13 +9162,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "introducing_sprite_lab_1"
+        "resource.key": "exploring_apps_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "exploring_apps_1"
+        "resource.key": "introducing_sprite_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "introducing_sprite_lab_1"
       }
     },
     {
@@ -9095,44 +9197,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_power_of_words_lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_power_of_words_the_power_of_words"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_power_of_words_words_can_hurt"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_power_of_words_lesson_quiz"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_power_of_words_lesson_quiz_answer_key"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "variables_blank_space_stories"
+        "resource.key": "blank_space_stories"
       }
     },
     {
@@ -9144,170 +9210,14 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "blank_space_stories"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "text_and_prompts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "user_input_programs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "mini_project_user_input_programs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "teacher_sandbox_level"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "mini_project_user_input_programs_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "unplugged-video-for-loop-fun"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "flf-assessment-teacher-key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "lesson-in-action-for-loop-fun"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "csf-for-loop-fun-worksheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "activity-answer-for-loop-fun"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "csf-for-loop-fun-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Bee",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "resource.key": "running-simulations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "resource.key": "ai-ml"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "resource.key": "ai-training"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "resource.key": "ai-societal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "unplugged-video-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "csf-ip-address-cards-and-delivery-type-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "csf-internet-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "assessment-answer-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "get-site-ip-com"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "design-process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "final-project-design-worksheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "rubric-csf-final-projects"
+        "resource.key": "variables_blank_space_stories"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "2021_change_log",
         "script.name": "coursef-2021"
       }
     },
@@ -9319,13 +9229,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities_1",
         "script.name": "coursef-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "coursef-2021"
       }
     },
@@ -9343,19 +9271,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "debugging_guide",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide_1",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2021_change_log",
+        "resource.key": "sprite_lab_documentation_1",
         "script.name": "coursef-2021"
       }
     },
@@ -9367,7 +9283,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "sprite_lab_documentation_1",
+        "resource.key": "virtual_lesson_modifications",
         "script.name": "coursef-2021"
       }
     }
@@ -9377,76 +9293,6 @@
   ],
   "vocabularies": [
     {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "user",
-      "word": "User",
-      "definition": "Someone who uses an object, including software and hardware.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user"
-      }
-    },
-    {
-      "key": "behavior",
-      "word": "Behavior",
-      "definition": "An action that a sprite performs continuously until it’s told to stop.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to complete a task.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to complete a task.",
@@ -9464,296 +9310,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "prompt",
-      "word": "Prompt",
-      "definition": "A message on the computer screen that waits for input from the user.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "prompt"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "prompt",
-      "word": "Prompt",
-      "definition": "A message on the computer screen that waits for input from the user.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "prompt"
-      }
-    },
-    {
-      "key": "input",
-      "word": "Input",
-      "definition": "The information computers get from users.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "input"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "for_loop",
-      "word": "For Loop",
-      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "key": "for_loop",
-      "word": "For Loop",
-      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "key": "for_loop",
-      "word": "For Loop",
-      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "key": "models_and_simulations",
-      "word": "Models and Simulations",
-      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "models_and_simulations"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "models_and_simulations",
-      "word": "Models and Simulations",
-      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "models_and_simulations"
-      }
-    },
-    {
-      "key": "machine_learning",
-      "word": "Machine Learning",
-      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "machine_learning"
-      }
-    },
-    {
-      "key": "dns",
-      "word": "DNS",
-      "definition": "short for Domain Name System, this system translates domain names (like example.com) to IP addresses (like 93.184.216.34)",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dns"
-      }
-    },
-    {
-      "key": "internet",
-      "word": "Internet",
-      "definition": "A group of computers and servers that are connected to each other.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "internet"
-      }
-    },
-    {
-      "key": "packets",
-      "word": "Packets",
-      "definition": "Small chunks of information that have been carefully formed from larger chunks of information.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "packets"
-      }
-    },
-    {
-      "key": "servers",
-      "word": "Servers",
-      "definition": "Computers that exist only to provide things to others.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "servers"
-      }
-    },
-    {
-      "key": "url",
-      "word": "URL",
-      "definition": "An easy-to-remember address for calling a web page (like www.code.org).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "url"
-      }
-    },
-    {
-      "key": "dsl_cable",
-      "word": "DSL/Cable",
-      "definition": "A method of sending information using telephone or television cables.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dsl_cable"
-      }
-    },
-    {
-      "key": "fiber_optic_cable",
-      "word": "Fiber Optic Cable",
-      "definition": "A connection that uses light to transmit information",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "fiber_optic_cable"
-      }
-    },
-    {
-      "key": "ip_address",
-      "word": "IP Address",
-      "definition": "A number assigned to any item that is connected to the Internet.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ip_address"
-      }
-    },
-    {
-      "key": "wi_fi",
-      "word": "Wi-Fi",
-      "definition": "A wireless method of sending information using radio waves.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "wi_fi"
       }
     },
     {
@@ -9767,6 +9323,126 @@
       }
     },
     {
+      "key": "dns",
+      "word": "DNS",
+      "definition": "short for Domain Name System, this system translates domain names (like example.com) to IP addresses (like 93.184.216.34)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dns"
+      }
+    },
+    {
+      "key": "dsl_cable",
+      "word": "DSL/Cable",
+      "definition": "A method of sending information using telephone or television cables.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dsl_cable"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "fiber_optic_cable",
+      "word": "Fiber Optic Cable",
+      "definition": "A connection that uses light to transmit information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "fiber_optic_cable"
+      }
+    },
+    {
+      "key": "for_loop",
+      "word": "For Loop",
+      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "key": "input",
+      "word": "Input",
+      "definition": "The information computers get from users.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "internet",
+      "word": "Internet",
+      "definition": "A group of computers and servers that are connected to each other.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "internet"
+      }
+    },
+    {
+      "key": "ip_address",
+      "word": "IP Address",
+      "definition": "A number assigned to any item that is connected to the Internet.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "key": "models_and_simulations",
+      "word": "Models and Simulations",
+      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "models_and_simulations"
+      }
+    },
+    {
+      "key": "packets",
+      "word": "Packets",
+      "definition": "Small chunks of information that have been carefully formed from larger chunks of information.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "packets"
+      }
+    },
+    {
       "key": "prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
@@ -9774,6 +9450,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "prepare"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "A message on the computer screen that waits for input from the user.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
       }
     },
     {
@@ -9787,6 +9483,36 @@
       }
     },
     {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "servers",
+      "word": "Servers",
+      "definition": "Computers that exist only to provide things to others.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "servers"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
       "key": "try",
       "word": "Try",
       "definition": "Attempt to do something",
@@ -9795,235 +9521,53 @@
       "seeding_key": {
         "vocabulary.key": "try"
       }
+    },
+    {
+      "key": "url",
+      "word": "URL",
+      "definition": "An easy-to-remember address for calling a web page (like www.code.org).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "url"
+      }
+    },
+    {
+      "key": "user",
+      "word": "User",
+      "definition": "Someone who uses an object, including software and hardware.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "wi_fi",
+      "word": "Wi-Fi",
+      "definition": "A wireless method of sending information using radio waves.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "wi_fi"
+      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "vocabulary.key": "user"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "vocabulary.key": "prompt"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "vocabulary.key": "prompt"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "vocabulary.key": "input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with the Artist",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with the Artist",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Bee",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Bee",
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Artist",
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "vocabulary.key": "models_and_simulations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "vocabulary.key": "models_and_simulations"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "AI for Oceans",
         "vocabulary.key": "machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "dns"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "packets"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "servers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "url"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "dsl_cable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "fiber_optic_cable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "ip_address"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "wi_fi"
       }
     },
     {
@@ -10049,6 +9593,228 @@
         "lesson.key": "End of Course Project",
         "vocabulary.key": "try"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Artist",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Bee",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "dns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "dsl_cable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "fiber_optic_cable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "packets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "servers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "url"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "wi_fi"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with the Artist",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with the Artist",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "vocabulary.key": "models_and_simulations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Artist",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Bee",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "models_and_simulations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "user"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "variable"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -10056,33 +9822,43 @@
   ],
   "objectives": [
     {
-      "key": "5b8eb232-7326-4c4d-8507-0c2da9642581",
+      "key": "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06",
       "properties": {
-        "description": "Describe the importance of the user in the design process."
+        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
       },
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "5b8eb232-7326-4c4d-8507-0c2da9642581"
+        "lesson.key": "For Loops in Bee",
+        "objective.key": "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06"
       }
     },
     {
-      "key": "d67e0be9-d618-464a-9f80-4549d63a2e03",
+      "key": "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b",
       "properties": {
-        "description": "Identify sprites in a running computer program."
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
       },
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "d67e0be9-d618-464a-9f80-4549d63a2e03"
+        "lesson.key": "Loops with the Artist",
+        "objective.key": "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b"
       }
     },
     {
-      "key": "b827b751-3ba7-4042-a8b4-8fed0ccceb21",
+      "key": "03137644-b4a2-4c28-8a6a-9de5c407a8f1",
       "properties": {
-        "description": "Create new sprites and assign them costumes and behaviors."
+        "description": "Learn about the complexity of sending messages over the internet."
       },
       "seeding_key": {
-        "lesson.key": "lesson-7",
-        "objective.key": "b827b751-3ba7-4042-a8b4-8fed0ccceb21"
+        "lesson.key": "Internet",
+        "objective.key": "03137644-b4a2-4c28-8a6a-9de5c407a8f1"
+      }
+    },
+    {
+      "key": "059b2997-3d05-4186-8450-066fceeb8c5b",
+      "properties": {
+        "description": "Identify areas where they can use variables to modify quantities during runtime. "
+      },
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Bee",
+        "objective.key": "059b2997-3d05-4186-8450-066fceeb8c5b"
       }
     },
     {
@@ -10096,13 +9872,173 @@
       }
     },
     {
-      "key": "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380",
+      "key": "081b1c52-9a72-44ac-a10e-86f0ebec4c43",
       "properties": {
-        "description": "Develop programs that respond to timed events."
+        "description": "Use a computer simulation to collect data about a model"
       },
       "seeding_key": {
-        "lesson.key": "lesson-8",
-        "objective.key": "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380"
+        "lesson.key": "Simulating Experiments",
+        "objective.key": "081b1c52-9a72-44ac-a10e-86f0ebec4c43"
+      }
+    },
+    {
+      "key": "106cae6e-93eb-48ca-b7bf-c8017b52139d",
+      "properties": {
+        "description": "Declare a variable"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "106cae6e-93eb-48ca-b7bf-c8017b52139d"
+      }
+    },
+    {
+      "key": "12412b47-e83e-43a9-ad42-e98cba364913",
+      "properties": {
+        "description": "Recognize large repeated patterns as made from smaller repeated patterns."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "objective.key": "12412b47-e83e-43a9-ad42-e98cba364913"
+      }
+    },
+    {
+      "key": "12c53e25-70d7-4192-a97a-da08dd673338",
+      "properties": {
+        "description": "Learn to plan in advance for an ongoing assignment."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "12c53e25-70d7-4192-a97a-da08dd673338"
+      }
+    },
+    {
+      "key": "16dabf47-0051-4143-834c-067bb8fb605c",
+      "properties": {
+        "description": "Make and test a prediction by modifying simulation variables"
+      },
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "objective.key": "16dabf47-0051-4143-834c-067bb8fb605c"
+      }
+    },
+    {
+      "key": "1e676bcd-e312-4827-88ce-d6befc87d61c",
+      "properties": {
+        "description": "Illustrate the counter values hit each time through a \"for loop\" during runtime."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "objective.key": "1e676bcd-e312-4827-88ce-d6befc87d61c"
+      }
+    },
+    {
+      "key": "28d3cc79-4aea-431d-a445-745e75e747d8",
+      "properties": {
+        "description": "Use variables to hold words and phrases."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "28d3cc79-4aea-431d-a445-745e75e747d8"
+      }
+    },
+    {
+      "key": "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65",
+      "properties": {
+        "description": "Articulate the design process and how it helped shape the finished culminating project."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65"
+      }
+    },
+    {
+      "key": "41ddf297-8c92-42c1-8157-97ba0660483d",
+      "properties": {
+        "description": "Call a variable multiple times in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "41ddf297-8c92-42c1-8157-97ba0660483d"
+      }
+    },
+    {
+      "key": "519c1444-230e-4182-a4eb-09414a7d09fb",
+      "properties": {
+        "description": "Create double line graph to compare data about two different sources"
+      },
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "objective.key": "519c1444-230e-4182-a4eb-09414a7d09fb"
+      }
+    },
+    {
+      "key": "550ac608-922b-468f-a69d-08cc1f20799e",
+      "properties": {
+        "description": "Utilize variables in place of repetitive values inside of a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Artist",
+        "objective.key": "550ac608-922b-468f-a69d-08cc1f20799e"
+      }
+    },
+    {
+      "key": "55e42aa4-7f88-4f0f-9d90-97716ef3ab75",
+      "properties": {
+        "description": "Determine the relationship between how a variable is defined, stored, and retrieved when we press “Run” on a program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "55e42aa4-7f88-4f0f-9d90-97716ef3ab75"
+      }
+    },
+    {
+      "key": "5936ef50-add4-4fbb-a911-224d5c1e9fcc",
+      "properties": {
+        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with the Artist",
+        "objective.key": "5936ef50-add4-4fbb-a911-224d5c1e9fcc"
+      }
+    },
+    {
+      "key": "5b8eb232-7326-4c4d-8507-0c2da9642581",
+      "properties": {
+        "description": "Describe the importance of the user in the design process."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "5b8eb232-7326-4c4d-8507-0c2da9642581"
+      }
+    },
+    {
+      "key": "6638c886-891e-4d59-820a-227e37274e49",
+      "properties": {
+        "description": "Reason about how human bias plays a role in machine learning."
+      },
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "objective.key": "6638c886-891e-4d59-820a-227e37274e49"
+      }
+    },
+    {
+      "key": "66e1fe88-3957-437f-a065-66909844fcd1",
+      "properties": {
+        "description": "Use variables in conjunction with prompts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "66e1fe88-3957-437f-a065-66909844fcd1"
+      }
+    },
+    {
+      "key": "68c038c1-990a-4009-ad61-619ba6ea71af",
+      "properties": {
+        "description": "Use for loops to change loop several times with different values."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops in Artist",
+        "objective.key": "68c038c1-990a-4009-ad61-619ba6ea71af"
       }
     },
     {
@@ -10116,6 +10052,96 @@
       }
     },
     {
+      "key": "7ad09074-8899-4330-bb54-6a00c5164299",
+      "properties": {
+        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops in Artist",
+        "objective.key": "7ad09074-8899-4330-bb54-6a00c5164299"
+      }
+    },
+    {
+      "key": "7c2d78e6-377a-491c-9be0-3378e4a9357e",
+      "properties": {
+        "description": "Assign a variable a value"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "7c2d78e6-377a-491c-9be0-3378e4a9357e"
+      }
+    },
+    {
+      "key": "82bb0282-0550-4779-9a86-a15fbb93215f",
+      "properties": {
+        "description": "Train and test a machine learning model."
+      },
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "objective.key": "82bb0282-0550-4779-9a86-a15fbb93215f"
+      }
+    },
+    {
+      "key": "8cba8ac9-820e-48fd-b726-f7926ecf3348",
+      "properties": {
+        "description": "Assign values to existing variables."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Artist",
+        "objective.key": "8cba8ac9-820e-48fd-b726-f7926ecf3348"
+      }
+    },
+    {
+      "key": "8cbf109a-b450-420b-973a-db9efd47f61f",
+      "properties": {
+        "description": "Decide what kinds of statements are OK to say online and which are not."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "8cbf109a-b450-420b-973a-db9efd47f61f"
+      }
+    },
+    {
+      "key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d",
+      "properties": {
+        "description": "Use variables in conjunction with prompts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d"
+      }
+    },
+    {
+      "key": "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b",
+      "properties": {
+        "description": "Describe how compromise can help keep a project on track and inspire creativity."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b"
+      }
+    },
+    {
+      "key": "931f4770-e471-4bf8-a79a-b9a7c9d14890",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "objective.key": "931f4770-e471-4bf8-a79a-b9a7c9d14890"
+      }
+    },
+    {
+      "key": "9d4ac105-0b5b-4e05-9a32-af6177abfb6c",
+      "properties": {
+        "description": "Examine code to find places where variables can be substituted for specific values."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Bee",
+        "objective.key": "9d4ac105-0b5b-4e05-9a32-af6177abfb6c"
+      }
+    },
+    {
       "key": "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7",
       "properties": {
         "description": "Create an interactive animation using events."
@@ -10123,6 +10149,86 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "objective.key": "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7"
+      }
+    },
+    {
+      "key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957",
+      "properties": {
+        "description": "Create an interactive computer program that responds to user input."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957"
+      }
+    },
+    {
+      "key": "a4f6a65a-de1d-4d51-9429-b3b381919b84",
+      "properties": {
+        "description": "Determine starting value, stopping value, and stepping value for a for loop."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops in Bee",
+        "objective.key": "a4f6a65a-de1d-4d51-9429-b3b381919b84"
+      }
+    },
+    {
+      "key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8",
+      "properties": {
+        "description": "Use variables to hold words and phrases."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8"
+      }
+    },
+    {
+      "key": "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f",
+      "properties": {
+        "description": "Use variables to change values inside of a loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Artist",
+        "objective.key": "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f"
+      }
+    },
+    {
+      "key": "ad877f06-ef7d-4a69-8217-1e593cfac32f",
+      "properties": {
+        "description": "Draft and implement plans to resolve any issues in their code."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "ad877f06-ef7d-4a69-8217-1e593cfac32f"
+      }
+    },
+    {
+      "key": "b76f1811-9865-416d-bd06-601301120384",
+      "properties": {
+        "description": "Be able to explain how system limitations can affect project design."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "b76f1811-9865-416d-bd06-601301120384"
+      }
+    },
+    {
+      "key": "b827b751-3ba7-4042-a8b4-8fed0ccceb21",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and behaviors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "b827b751-3ba7-4042-a8b4-8fed0ccceb21"
+      }
+    },
+    {
+      "key": "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380",
+      "properties": {
+        "description": "Develop programs that respond to timed events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380"
       }
     },
     {
@@ -10146,162 +10252,13 @@
       }
     },
     {
-      "key": "7a69d6de-1a75-41da-a511-9cb735e02a5c",
+      "key": "d67e0be9-d618-464a-9f80-4549d63a2e03",
       "properties": {
+        "description": "Identify sprites in a running computer program."
       },
       "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "7a69d6de-1a75-41da-a511-9cb735e02a5c"
-      }
-    },
-    {
-      "key": "8cbf109a-b450-420b-973a-db9efd47f61f",
-      "properties": {
-        "description": "Decide what kinds of statements are OK to say online and which are not."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "8cbf109a-b450-420b-973a-db9efd47f61f"
-      }
-    },
-    {
-      "key": "106cae6e-93eb-48ca-b7bf-c8017b52139d",
-      "properties": {
-        "description": "Declare a variable"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "106cae6e-93eb-48ca-b7bf-c8017b52139d"
-      }
-    },
-    {
-      "key": "7c2d78e6-377a-491c-9be0-3378e4a9357e",
-      "properties": {
-        "description": "Assign a variable a value"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "7c2d78e6-377a-491c-9be0-3378e4a9357e"
-      }
-    },
-    {
-      "key": "41ddf297-8c92-42c1-8157-97ba0660483d",
-      "properties": {
-        "description": "Call a variable multiple times in a program."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "41ddf297-8c92-42c1-8157-97ba0660483d"
-      }
-    },
-    {
-      "key": "55e42aa4-7f88-4f0f-9d90-97716ef3ab75",
-      "properties": {
-        "description": "Determine the relationship between how a variable is defined, stored, and retrieved when we press “Run” on a program."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "55e42aa4-7f88-4f0f-9d90-97716ef3ab75"
-      }
-    },
-    {
-      "key": "28d3cc79-4aea-431d-a445-745e75e747d8",
-      "properties": {
-        "description": "Use variables to hold words and phrases."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "28d3cc79-4aea-431d-a445-745e75e747d8"
-      }
-    },
-    {
-      "key": "66e1fe88-3957-437f-a065-66909844fcd1",
-      "properties": {
-        "description": "Use variables in conjunction with prompts."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "66e1fe88-3957-437f-a065-66909844fcd1"
-      }
-    },
-    {
-      "key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8",
-      "properties": {
-        "description": "Use variables to hold words and phrases."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "objective.key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8"
-      }
-    },
-    {
-      "key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d",
-      "properties": {
-        "description": "Use variables in conjunction with prompts."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "objective.key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d"
-      }
-    },
-    {
-      "key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957",
-      "properties": {
-        "description": "Create an interactive computer program that responds to user input."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "objective.key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957"
-      }
-    },
-    {
-      "key": "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with the Artist",
-        "objective.key": "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b"
-      }
-    },
-    {
-      "key": "5936ef50-add4-4fbb-a911-224d5c1e9fcc",
-      "properties": {
-        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with the Artist",
-        "objective.key": "5936ef50-add4-4fbb-a911-224d5c1e9fcc"
-      }
-    },
-    {
-      "key": "8cba8ac9-820e-48fd-b726-f7926ecf3348",
-      "properties": {
-        "description": "Assign values to existing variables."
-      },
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
-        "objective.key": "8cba8ac9-820e-48fd-b726-f7926ecf3348"
-      }
-    },
-    {
-      "key": "550ac608-922b-468f-a69d-08cc1f20799e",
-      "properties": {
-        "description": "Utilize variables in place of repetitive values inside of a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
-        "objective.key": "550ac608-922b-468f-a69d-08cc1f20799e"
-      }
-    },
-    {
-      "key": "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f",
-      "properties": {
-        "description": "Use variables to change values inside of a loop."
-      },
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
-        "objective.key": "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f"
+        "lesson.key": "lesson-6",
+        "objective.key": "d67e0be9-d618-464a-9f80-4549d63a2e03"
       }
     },
     {
@@ -10315,43 +10272,13 @@
       }
     },
     {
-      "key": "12412b47-e83e-43a9-ad42-e98cba364913",
+      "key": "e94042c1-9793-4fe8-8ce9-1a76bc63f161",
       "properties": {
-        "description": "Recognize large repeated patterns as made from smaller repeated patterns."
+        "description": "Translate URLs into IP Addresses."
       },
       "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "objective.key": "12412b47-e83e-43a9-ad42-e98cba364913"
-      }
-    },
-    {
-      "key": "931f4770-e471-4bf8-a79a-b9a7c9d14890",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "objective.key": "931f4770-e471-4bf8-a79a-b9a7c9d14890"
-      }
-    },
-    {
-      "key": "059b2997-3d05-4186-8450-066fceeb8c5b",
-      "properties": {
-        "description": "Identify areas where they can use variables to modify quantities during runtime. "
-      },
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Bee",
-        "objective.key": "059b2997-3d05-4186-8450-066fceeb8c5b"
-      }
-    },
-    {
-      "key": "9d4ac105-0b5b-4e05-9a32-af6177abfb6c",
-      "properties": {
-        "description": "Examine code to find places where variables can be substituted for specific values."
-      },
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Bee",
-        "objective.key": "9d4ac105-0b5b-4e05-9a32-af6177abfb6c"
+        "lesson.key": "Internet",
+        "objective.key": "e94042c1-9793-4fe8-8ce9-1a76bc63f161"
       }
     },
     {
@@ -10365,86 +10292,6 @@
       }
     },
     {
-      "key": "1e676bcd-e312-4827-88ce-d6befc87d61c",
-      "properties": {
-        "description": "Illustrate the counter values hit each time through a \"for loop\" during runtime."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "objective.key": "1e676bcd-e312-4827-88ce-d6befc87d61c"
-      }
-    },
-    {
-      "key": "a4f6a65a-de1d-4d51-9429-b3b381919b84",
-      "properties": {
-        "description": "Determine starting value, stopping value, and stepping value for a for loop."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops in Bee",
-        "objective.key": "a4f6a65a-de1d-4d51-9429-b3b381919b84"
-      }
-    },
-    {
-      "key": "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06",
-      "properties": {
-        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops in Bee",
-        "objective.key": "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06"
-      }
-    },
-    {
-      "key": "68c038c1-990a-4009-ad61-619ba6ea71af",
-      "properties": {
-        "description": "Use for loops to change loop several times with different values."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops in Artist",
-        "objective.key": "68c038c1-990a-4009-ad61-619ba6ea71af"
-      }
-    },
-    {
-      "key": "7ad09074-8899-4330-bb54-6a00c5164299",
-      "properties": {
-        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops in Artist",
-        "objective.key": "7ad09074-8899-4330-bb54-6a00c5164299"
-      }
-    },
-    {
-      "key": "081b1c52-9a72-44ac-a10e-86f0ebec4c43",
-      "properties": {
-        "description": "Use a computer simulation to collect data about a model"
-      },
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "objective.key": "081b1c52-9a72-44ac-a10e-86f0ebec4c43"
-      }
-    },
-    {
-      "key": "519c1444-230e-4182-a4eb-09414a7d09fb",
-      "properties": {
-        "description": "Create double line graph to compare data about two different sources"
-      },
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "objective.key": "519c1444-230e-4182-a4eb-09414a7d09fb"
-      }
-    },
-    {
-      "key": "16dabf47-0051-4143-834c-067bb8fb605c",
-      "properties": {
-        "description": "Make and test a prediction by modifying simulation variables"
-      },
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "objective.key": "16dabf47-0051-4143-834c-067bb8fb605c"
-      }
-    },
-    {
       "key": "f748f186-f152-468e-9f51-48bee23c44db",
       "properties": {
         "description": "Discuss the role artificial intelligence plays in their lives."
@@ -10453,374 +10300,11 @@
         "lesson.key": "AI for Oceans",
         "objective.key": "f748f186-f152-468e-9f51-48bee23c44db"
       }
-    },
-    {
-      "key": "82bb0282-0550-4779-9a86-a15fbb93215f",
-      "properties": {
-        "description": "Train and test a machine learning model."
-      },
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "objective.key": "82bb0282-0550-4779-9a86-a15fbb93215f"
-      }
-    },
-    {
-      "key": "6638c886-891e-4d59-820a-227e37274e49",
-      "properties": {
-        "description": "Reason about how human bias plays a role in machine learning."
-      },
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "objective.key": "6638c886-891e-4d59-820a-227e37274e49"
-      }
-    },
-    {
-      "key": "03137644-b4a2-4c28-8a6a-9de5c407a8f1",
-      "properties": {
-        "description": "Learn about the complexity of sending messages over the internet."
-      },
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "objective.key": "03137644-b4a2-4c28-8a6a-9de5c407a8f1"
-      }
-    },
-    {
-      "key": "e94042c1-9793-4fe8-8ce9-1a76bc63f161",
-      "properties": {
-        "description": "Translate URLs into IP Addresses."
-      },
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "objective.key": "e94042c1-9793-4fe8-8ce9-1a76bc63f161"
-      }
-    },
-    {
-      "key": "12c53e25-70d7-4192-a97a-da08dd673338",
-      "properties": {
-        "description": "Learn to plan in advance for an ongoing assignment."
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "12c53e25-70d7-4192-a97a-da08dd673338"
-      }
-    },
-    {
-      "key": "b76f1811-9865-416d-bd06-601301120384",
-      "properties": {
-        "description": "Be able to explain how system limitations can affect project design."
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "b76f1811-9865-416d-bd06-601301120384"
-      }
-    },
-    {
-      "key": "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b",
-      "properties": {
-        "description": "Describe how compromise can help keep a project on track and inspire creativity."
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b"
-      }
-    },
-    {
-      "key": "ad877f06-ef7d-4a69-8217-1e593cfac32f",
-      "properties": {
-        "description": "Draft and implement plans to resolve any issues in their code."
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "ad877f06-ef7d-4a69-8217-1e593cfac32f"
-      }
-    },
-    {
-      "key": "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65",
-      "properties": {
-        "description": "Articulate the design process and how it helped shape the finished culminating project."
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65"
-      }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-18"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-NI-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with the Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-DA-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-DA-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-18"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "AI for Oceans",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-DA-07"
@@ -10831,13 +10315,6 @@
         "lesson.key": "AI for Oceans",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-18"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-NI-04"
       }
     },
     {
@@ -10908,6 +10385,286 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with the Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
       }
     }
   ],

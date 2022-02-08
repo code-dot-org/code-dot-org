@@ -2,40 +2,40 @@
 title: பங்காளர்கள்
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+குறியீடு நேரம் கணினி மற்றும் கணினி அறிவியல் கல்வி வார ஆலோசனை மற்றும் மறுஆய்வுக் குழுக்களால் இயக்கப்படுகிறது.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. இக்குழு குறியீடு மணி பிரச்சார யுக்திகள் வழிகாட்டுகிறது.
+K-12, கல்வித்துறை, இலாப நோக்கற்ற நிறுவனங்கள், இலாப நோக்கற்ற நிறுவனங்கள் மற்றும் சர்வதேச அமைப்புகளின் பிரதிநிதிகளால் [ஆலோசனைக் குழு ]({{ urls/advisory_committee }}) ஆனது. இக்குழு குறியீடு மணி பிரச்சார யுக்திகள் வழிகாட்டுகிறது.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. இந்த ஆசிரியர்கள் மாணவர் தலைமையிலான நடவடிக்கைகள் மற்றும் ஆசிரியர் தலைமையிலான பாடம் திட்டங்கள், செயல்பாடுகள் கல்வி மதிப்பு, கற்போர் மற்றும் சாத்தியமான வேண்டுகோள் மாணவர்கள் பல்வேறு இணை திறன் மதிப்பிடும் செயல் கூட்டாளிகள் நூற்றுக்கணக்கான சமர்ப்பிக்கப்பட்ட ஆய்வு.
+ஆலோசனைக் குழுவின் சொற்களைப் பயன்படுத்தி நடவடிக்கைகளை மதிப்பிட்டுப் பரிந்துரைக்கும் கே -12 தர இசைக்குழுக்களில் உள்ள 15 கல்வியாளர்களால் [ மறுஆய்வுக் குழு ]({{ urls/review_committee }}) ஆனது. இந்த ஆசிரியர்கள் மாணவர் தலைமையிலான நடவடிக்கைகள் மற்றும் ஆசிரியர் தலைமையிலான பாடம் திட்டங்கள், செயல்பாடுகள் கல்வி மதிப்பு, கற்போர் மற்றும் சாத்தியமான வேண்டுகோள் மாணவர்கள் பல்வேறு இணை திறன் மதிப்பிடும் செயல் கூட்டாளிகள் நூற்றுக்கணக்கான சமர்ப்பிக்கப்பட்ட ஆய்வு.
 
 இரு குழுக்கள் உழைப்பு மற்றும் குறியீட்டு மணி வெற்றி மற்றும் கணினி அறிவியல் அறிமுகம் வழங்கும் ஒவ்வொரு மாணவனும் அதன் பார்வை பங்களிப்பு செய்துள்ளன.
 
-# Major Partners and Corporate Supporters
+# முக்கிய கூட்டாளர்கள் மற்றும் கார்ப்பரேட் ஆதரவாளர்கள்
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# சர்வதேச கூட்டாளர்கள்
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# பாடத்திட்டம் மற்றும் பயிற்சி கூட்டாளர்கள்
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# உள்கட்டமைப்பு கூட்டாளர்கள் மற்றும் கருவிகள்
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# கூடுதல் கூட்டாளர்கள்
 
 {{ partners/additional_partners }}
 
-{{signup_button}}
+{{ signup_button }}

@@ -1,11 +1,20 @@
 {
-  "func": "getImageData",
+  "key": "getImageData",
+  "name": "getImageData",
   "category": "Canvas",
-  "paletteParams": [
-    "x",
-    "y",
-    "width",
-    "height"
+  "palette_params": [
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "width"
+    },
+    {
+      "name": "height"
+    }
   ],
-  "type": "value"
+  "syntax": "getImageData(x, y, width, height)"
 }

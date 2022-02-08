@@ -1,4 +1,4 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
@@ -12,7 +12,7 @@ const defaultProps = {
   studentResources: [],
   showAssignButton: true,
   useMigratedResources: false,
-  isTeacher: true
+  isInstructor: true
 };
 
 describe('CourseOverviewTopRow', () => {
@@ -23,7 +23,7 @@ describe('CourseOverviewTopRow', () => {
 
   it('does not contain a SectionAssigner for a student', () => {
     const wrapper = shallow(
-      <CourseOverviewTopRow {...defaultProps} isTeacher={false} />
+      <CourseOverviewTopRow {...defaultProps} isInstructor={false} />
     );
     assert.equal(wrapper.find('Connect(SectionAssigner)').length, 0);
   });
@@ -152,7 +152,7 @@ describe('CourseOverviewTopRow', () => {
           }
         ]}
         useMigratedResources
-        isTeacher={false}
+        isInstructor={false}
       />
     );
     assert.equal(wrapper.find('ResourcesDropdown').length, 0);
@@ -180,7 +180,7 @@ describe('CourseOverviewTopRow', () => {
           }
         ]}
         useMigratedResources
-        isTeacher={false}
+        isInstructor={false}
       />
     );
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);

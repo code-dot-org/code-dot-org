@@ -2,16 +2,20 @@
   "script": {
     "name": "dlp19-csp-mod-w4",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "CS Principles Deeper Learning 2019 - 2020",
+      "is_migrated": true,
       "peer_reviews_to_complete": 6,
+      "professional_learning_course": "CS Principles Deeper Learning 2019 - 2020",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:37 UTC",
+    "serialized_at": "2021-11-22 19:56:49 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "dlp19-csp-mod-w4"
     }
@@ -90,16 +94,129 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a8fb6bbe-37c6-485b-8f19-7a35cd36191b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8fb6bbe-37c6-485b-8f19-7a35cd36191b",
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csp-mod-w4"
+      }
+    },
+    {
+      "key": "21d596b1-b702-4524-bc27-7dfe6976b607",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "21d596b1-b702-4524-bc27-7dfe6976b607",
+        "lesson.key": "Step 1: Develop Understanding",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csp-mod-w4"
+      }
+    },
+    {
+      "key": "562896b8-4b33-4b2d-9cd3-682b355f934c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "562896b8-4b33-4b2d-9cd3-682b355f934c",
+        "lesson.key": "Step 2: Demonstrate Understanding",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csp-mod-w4"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ecbbc1e4-1624-4b5c-9f6c-96df141b0dd8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Background"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecbbc1e4-1624-4b5c-9f6c-96df141b0dd8",
+        "lesson_activity.key": "a8fb6bbe-37c6-485b-8f19-7a35cd36191b"
+      }
+    },
+    {
+      "key": "e135b2f9-b764-487a-b924-254d30414610",
+      "position": 2,
+      "properties": {
+        "progression_name": "Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "e135b2f9-b764-487a-b924-254d30414610",
+        "lesson_activity.key": "a8fb6bbe-37c6-485b-8f19-7a35cd36191b"
+      }
+    },
+    {
+      "key": "d45069c7-831a-42c2-828a-99865fb05830",
+      "position": 3,
+      "properties": {
+        "progression_name": "Preparation"
+      },
+      "seeding_key": {
+        "activity_section.key": "d45069c7-831a-42c2-828a-99865fb05830",
+        "lesson_activity.key": "a8fb6bbe-37c6-485b-8f19-7a35cd36191b"
+      }
+    },
+    {
+      "key": "da79ecdf-c8f9-415e-b7c8-a04ff921f8ce",
+      "position": 4,
+      "properties": {
+        "progression_name": "Evaluation"
+      },
+      "seeding_key": {
+        "activity_section.key": "da79ecdf-c8f9-415e-b7c8-a04ff921f8ce",
+        "lesson_activity.key": "a8fb6bbe-37c6-485b-8f19-7a35cd36191b"
+      }
+    },
+    {
+      "key": "5517d77d-bec5-4c5f-ae89-aec3c615e704",
+      "position": 5,
+      "properties": {
+        "name": "Due Dates",
+        "progression_name": "Due Dates"
+      },
+      "seeding_key": {
+        "activity_section.key": "5517d77d-bec5-4c5f-ae89-aec3c615e704",
+        "lesson_activity.key": "a8fb6bbe-37c6-485b-8f19-7a35cd36191b"
+      }
+    },
+    {
+      "key": "c4fe5104-f0ee-4b26-9f12-de5121051b02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c4fe5104-f0ee-4b26-9f12-de5121051b02",
+        "lesson_activity.key": "21d596b1-b702-4524-bc27-7dfe6976b607"
+      }
+    },
+    {
+      "key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a",
+        "lesson_activity.key": "562896b8-4b33-4b2d-9cd3-682b355f934c"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -107,7 +224,6 @@
         ],
         "progression": "Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -115,7 +231,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "ecbbc1e4-1624-4b5c-9f6c-96df141b0dd8"
       },
       "level_keys": [
         "dlp19_overview1"
@@ -124,7 +241,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -132,7 +249,6 @@
         ],
         "progression": "Process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +256,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "e135b2f9-b764-487a-b924-254d30414610"
       },
       "level_keys": [
         "dlp19_overview2"
@@ -149,7 +266,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -157,7 +274,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -165,7 +281,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "d45069c7-831a-42c2-828a-99865fb05830"
       },
       "level_keys": [
         "dlp19_overview3"
@@ -174,7 +291,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +299,6 @@
         ],
         "progression": "Evaluation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -190,7 +306,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "da79ecdf-c8f9-415e-b7c8-a04ff921f8ce"
       },
       "level_keys": [
         "dlp19_overview4"
@@ -199,7 +316,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -207,7 +324,6 @@
         ],
         "progression": "Due Dates"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -215,7 +331,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "5517d77d-bec5-4c5f-ae89-aec3c615e704"
       },
       "level_keys": [
         "dlp19_overview5"
@@ -224,14 +341,13 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-prework-mod4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -239,7 +355,8 @@
         ],
         "lesson.key": "Step 1: Develop Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "c4fe5104-f0ee-4b26-9f12-de5121051b02"
       },
       "level_keys": [
         "dlp19-csp-prework-mod4"
@@ -248,14 +365,13 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-mod4-q1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -263,7 +379,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a"
       },
       "level_keys": [
         "dlp19-csp-mod4-q1"
@@ -272,14 +389,13 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-mod4-q2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -287,7 +403,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a"
       },
       "level_keys": [
         "dlp19-csp-mod4-q2"
@@ -296,14 +413,13 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-mod4-q3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -311,7 +427,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a"
       },
       "level_keys": [
         "dlp19-csp-mod4-q3"
@@ -327,7 +444,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "ecbbc1e4-1624-4b5c-9f6c-96df141b0dd8"
       }
     },
     {
@@ -338,7 +456,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "e135b2f9-b764-487a-b924-254d30414610"
       }
     },
     {
@@ -349,7 +468,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "d45069c7-831a-42c2-828a-99865fb05830"
       }
     },
     {
@@ -360,7 +480,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "da79ecdf-c8f9-415e-b7c8-a04ff921f8ce"
       }
     },
     {
@@ -371,7 +492,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "5517d77d-bec5-4c5f-ae89-aec3c615e704"
       }
     },
     {
@@ -382,7 +504,8 @@
         ],
         "lesson.key": "Step 1: Develop Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "c4fe5104-f0ee-4b26-9f12-de5121051b02"
       }
     },
     {
@@ -393,7 +516,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a"
       }
     },
     {
@@ -404,7 +528,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a"
       }
     },
     {
@@ -415,7 +540,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csp-mod-w4"
+        "script.name": "dlp19-csp-mod-w4",
+        "activity_section.key": "67a188df-c3e6-4ab1-a677-f9b4b42c7c9a"
       }
     }
   ],

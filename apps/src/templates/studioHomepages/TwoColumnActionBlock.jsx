@@ -7,60 +7,6 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import shapes from './shapes';
 
-const styles = {
-  heading: {
-    paddingRight: 5,
-    paddingTop: 10,
-    paddingBottom: 20,
-    fontSize: 24,
-    lineHeight: '26px',
-    fontFamily: 'Gotham 3r',
-    color: color.charcoal
-  },
-  textItem: {
-    backgroundColor: color.teal,
-    padding: 25,
-    minHeight: 281,
-    boxSizing: 'border-box'
-  },
-  subHeading: {
-    paddingRight: 0,
-    paddingBottom: 20,
-    fontSize: 27,
-    lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
-  },
-  subHeadingSmallFont: {
-    paddingRight: 0,
-    paddingBottom: 20,
-    fontSize: 25,
-    lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
-  },
-  image: {
-    width: 485,
-    minHeight: 260,
-    height: 281
-  },
-  description: {
-    paddingRight: 10,
-    paddingBottom: 20,
-    fontSize: 14,
-    fontFamily: 'Gotham 4r',
-    lineHeight: '22px',
-    color: color.white
-  },
-  clear: {
-    clear: 'both'
-  },
-  container: {
-    width: '100%',
-    position: 'relative'
-  }
-};
-
 export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     id: PropTypes.string,
@@ -113,7 +59,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
             <div style={{float, width}}>
-              <img src={imageUrl} style={styles.image} />
+              <img src={imageUrl} style={styles.image} alt={heading} />
               {imageExtra}
             </div>
           )}
@@ -126,6 +72,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                       ? styles.subHeadingSmallFont
                       : styles.subHeading
                   }
+                  id="two-column-action-block--sub-heading"
                 >
                   {subHeading}
                 </div>
@@ -140,6 +87,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     text={button.text}
                     target={button.target}
                     id={button.id}
+                    onClick={button.onClick}
                   />
                   &nbsp; &nbsp; &nbsp;
                 </span>
@@ -212,6 +160,25 @@ export class AdministratorResourcesActionBlock extends Component {
   }
 }
 
+export class CscInfoActionBlock extends Component {
+  render() {
+    return (
+      <TwoColumnActionBlock
+        imageUrl={'/shared/images/fit-970/banners/csc-banner.png'}
+        heading={i18n.courseInfoCscHeading()}
+        description={i18n.courseInfoCscDescription()}
+        buttons={[
+          {
+            id: 'course_info_csc',
+            url: pegasus('/educate/csc'),
+            text: i18n.learnMore()
+          }
+        ]}
+      />
+    );
+  }
+}
+
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
     announcement: shapes.specialAnnouncement,
@@ -258,3 +225,57 @@ export class SpecialAnnouncementActionBlock extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    paddingRight: 5,
+    paddingTop: 10,
+    paddingBottom: 20,
+    fontSize: 24,
+    lineHeight: '26px',
+    fontFamily: 'Gotham 3r',
+    color: color.charcoal
+  },
+  textItem: {
+    backgroundColor: color.teal,
+    padding: 25,
+    minHeight: 281,
+    boxSizing: 'border-box'
+  },
+  subHeading: {
+    paddingRight: 0,
+    paddingBottom: 20,
+    fontSize: 27,
+    lineHeight: 1.2,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white
+  },
+  subHeadingSmallFont: {
+    paddingRight: 0,
+    paddingBottom: 20,
+    fontSize: 25,
+    lineHeight: 1.2,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white
+  },
+  image: {
+    width: 485,
+    minHeight: 260,
+    height: 281
+  },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 20,
+    fontSize: 14,
+    fontFamily: 'Gotham 4r',
+    lineHeight: '22px',
+    color: color.white
+  },
+  clear: {
+    clear: 'both'
+  },
+  container: {
+    width: '100%',
+    position: 'relative'
+  }
+};

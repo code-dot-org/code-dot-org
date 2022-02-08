@@ -1,4 +1,6 @@
 {
-  "func": "noFill",
-  "category": "Drawing"
+  "key": "noFill",
+  "name": "noFill",
+  "category": "Drawing",
+  "syntax": "noFill"
 }

@@ -12,33 +12,33 @@ class ScriptConstantsTest < Minitest::Test
   end
 
   def test_minecraft?
-    assert ScriptConstants.script_in_category?(:minecraft, ScriptConstants::MINECRAFT_NAME)
-    refute ScriptConstants.script_in_category?(:minecraft, ScriptConstants::FROZEN_NAME)
+    assert ScriptConstants.unit_in_category?(:minecraft, ScriptConstants::MINECRAFT_NAME)
+    refute ScriptConstants.unit_in_category?(:minecraft, ScriptConstants::FROZEN_NAME)
   end
 
   def test_flappy?
-    assert ScriptConstants.script_in_category?(:flappy, ScriptConstants::FLAPPY_NAME)
-    refute ScriptConstants.script_in_category?(:flappy, ScriptConstants::FROZEN_NAME)
+    assert ScriptConstants.unit_in_category?(:flappy, ScriptConstants::FLAPPY_NAME)
+    refute ScriptConstants.unit_in_category?(:flappy, ScriptConstants::FROZEN_NAME)
   end
 
   def test_hoc?
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::HOC_2013_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::HOC_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::FROZEN_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::FLAPPY_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::PLAYLAB_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::STARWARS_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::STARWARS_BLOCKS_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::MINECRAFT_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::MINECRAFT_AQUATIC_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::INFINITY_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ARTIST_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::GUMBALL_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ICEAGE_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::DANCE_PARTY_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::DANCE_PARTY_EXTRAS_NAME)
-    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::OCEANS_NAME)
-    refute ScriptConstants.script_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::HOC_2013_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::HOC_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::FROZEN_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::FLAPPY_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::PLAYLAB_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::STARWARS_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::STARWARS_BLOCKS_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::MINECRAFT_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::MINECRAFT_AQUATIC_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::INFINITY_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::ARTIST_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::GUMBALL_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::ICEAGE_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::DANCE_PARTY_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::DANCE_PARTY_EXTRAS_NAME)
+    assert ScriptConstants.unit_in_category?(:hoc, ScriptConstants::OCEANS_NAME)
+    refute ScriptConstants.unit_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
   end
 
   def test_category
@@ -62,18 +62,20 @@ class ScriptConstantsTest < Minitest::Test
   end
 
   def test_category_priority
-    assert_equal 6, ScriptConstants.category_priority(:csf_international)
-    assert_equal 8, ScriptConstants.category_priority(:research_studies)
+    assert_equal 8, ScriptConstants.category_priority(:csf_international)
+    assert_equal 10, ScriptConstants.category_priority(:research_studies)
   end
 
   def test_assignable_info
-    assert_equal 1, ScriptConstants.assignable_info({name: 'dance-2019'})[:position]
-    assert_equal 2, ScriptConstants.assignable_info({name: 'dance-extras-2019'})[:position]
-    assert_equal 3, ScriptConstants.assignable_info({name: 'oceans'})[:position]
-    assert_equal 4, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
-    assert_equal 5, ScriptConstants.assignable_info({name: 'hero'})[:position]
-    assert_equal 6, ScriptConstants.assignable_info({name: 'mc'})[:position]
-    assert_equal 7, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
+    dance_index = 6
+    assert_equal dance_index, ScriptConstants.assignable_info({name: 'dance-2019'})[:position]
+    assert_equal dance_index + 1, ScriptConstants.assignable_info({name: 'dance-extras-2019'})[:position]
+    assert_equal dance_index + 2, ScriptConstants.assignable_info({name: 'oceans'})[:position]
+    assert_equal dance_index + 3, ScriptConstants.assignable_info({name: 'outbreak'})[:position]
+    assert_equal dance_index + 4, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
+    assert_equal dance_index + 5, ScriptConstants.assignable_info({name: 'hero'})[:position]
+    assert_equal dance_index + 6, ScriptConstants.assignable_info({name: 'mc'})[:position]
+    assert_equal dance_index + 7, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
   end
 
   def test_congrats_page
@@ -129,17 +131,6 @@ class ScriptConstantsTest < Minitest::Test
     end
 
     assert_nil ScriptConstants.csf_next_course_recommendation("something-unknown")
-  end
-
-  describe 'ScriptConstants::script_in_any_category?' do
-    it 'finds artist and csd1' do
-      assert ScriptConstants.script_in_any_category?('artist')
-      assert ScriptConstants.script_in_any_category?('csd1-2017')
-    end
-
-    it 'does not find nonexistent scripts' do
-      refute ScriptConstants.script_in_any_category?('foo')
-    end
   end
 
   describe 'ScriptConstants::i18n' do

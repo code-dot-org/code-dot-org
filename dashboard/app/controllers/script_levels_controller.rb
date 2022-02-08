@@ -6,7 +6,6 @@ require 'cdo/script_constants'
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include ScriptConstants
   include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
@@ -19,6 +18,7 @@ class ScriptLevelsController < ApplicationController
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   before_action :disable_session_for_cached_pages
+  before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
 
   def disable_session_for_cached_pages
@@ -74,14 +74,11 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
-  use_database_pool show: :persistent
+  use_reader_connection_for_route(:show)
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
-
-    # will be true if the user is in any unarchived section where tts autoplay is enabled
-    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
@@ -94,7 +91,8 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+      if Script.family_names.include?(params[:script_id])
+        session[:show_unversioned_redirect_warning] = true unless new_script.is_course
         Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
@@ -108,7 +106,13 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    configure_caching(@script)
+    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning]
+    session[:show_unversioned_redirect_warning] = false
+
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
+
+    @public_caching = configure_caching(@script)
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
@@ -120,10 +124,6 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # If the lesson is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that lesson
-    return head(:forbidden) unless @script_level.lesson.published?(current_user)
-
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
@@ -133,11 +133,11 @@ class ScriptLevelsController < ApplicationController
     extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
-    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
+    override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script_level&.script)
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
+      @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
     elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
@@ -150,14 +150,15 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    load_user
-    return if performed?
-    load_section
+    if current_user
+      load_user
+      load_section
+    end
 
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
 
-    @body_classes = @script_level.script.background
+    @body_classes = @level.properties['background']
 
     present_level
   end
@@ -226,11 +227,8 @@ class ScriptLevelsController < ApplicationController
       @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
-    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
-    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
-
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
@@ -302,14 +300,14 @@ class ScriptLevelsController < ApplicationController
 
   def self.get_script(request)
     script_id = request.params[:script_id]
-    # Due to a programming error, we have been inadvertently passing user: nil
-    # to Script.get_script_family_redirect_for_user . Since end users may be
-    # depending on this incorrect behavior, and we are trying to deprecate this
-    # codepath anyway, the current plan is to not fix this bug.
-    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
-      Script.get_from_cache(script_id)
-
+    script = Script.get_from_cache(script_id, raise_exceptions: false)
+    if script.nil? && Script.family_names.include?(script_id)
+      # Due to a programming error, we have been inadvertently passing user: nil
+      # to Script.get_unit_family_redirect_for_user . Since end users may be
+      # depending on this incorrect behavior, and we are trying to deprecate this
+      # codepath anyway, the current plan is to not fix this bug.
+      script = Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+    end
     raise ActiveRecord::RecordNotFound unless script
     script
   end
@@ -330,8 +328,10 @@ class ScriptLevelsController < ApplicationController
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
+      return true
     else
       prevent_caching
+      return false
     end
   end
 
@@ -394,19 +394,24 @@ class ScriptLevelsController < ApplicationController
     @last_attempt = level_source.try(:data)
   end
 
+  # Sets @user to the user object corresponding to the 'user_id' request
+  # param if the current_user is allowed to view the page as the requested
+  # user. This method should only be called when current_user is present.
   def load_user
     return if params[:user_id].blank?
 
-    if current_user.nil?
-      render html: I18n.t('teacher.student_code_view_diabled'), layout: true
-      return
-    end
+    # Grab bubble choice level that will be shown (if any),
+    # so we can check whether a student should be able to view
+    # another student's work for code review.
+    sublevel_to_view = select_bubble_choice_level
 
-    user = User.find(params[:user_id])
+    user_to_view = User.find(params[:user_id])
+    if can?(:view_as_user, @script_level, user_to_view, sublevel_to_view)
+      @user = user_to_view
 
-    # TODO: This should use cancan/authorize.
-    if user.student_of?(current_user) || current_user.project_validator?
-      @user = user
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
+        view_options(is_code_reviewing: true)
+      end
     end
   end
 
@@ -423,12 +428,15 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
+  def select_bubble_choice_level
+    return unless @script_level.bubble_choice? && params[:sublevel_position]
+    @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+  end
+
   def select_level
     # If a BubbleChoice level's sublevel has been requested, return it.
-    if @script_level.bubble_choice? && params[:sublevel_position]
-      sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
-      return sublevel if sublevel
-    end
+    bubble_choice_level = select_bubble_choice_level
+    return bubble_choice_level if bubble_choice_level
 
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
@@ -467,7 +475,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def present_level
-    # All database look-ups should have already been cached by Script::script_cache_from_db
+    # All database look-ups should have already been cached by Script::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
 
@@ -502,23 +510,34 @@ class ScriptLevelsController < ApplicationController
       )
     end
 
+    @code_review_enabled_for_level = if DCDO.get('code_review_groups_enabled', false)
+                                       @level.is_a?(Javalab) &&
+                                        current_user.present? &&
+                                        (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+                                     else
+                                       @level.is_a?(Javalab) &&
+                                         current_user.present? &&
+                                         (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+                                     end
+
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      blocklyVersion: params[:blocklyVersion],
       azure_speech_service_voices: azure_speech_service_options[:voices],
       authenticity_token: form_authenticity_token,
       disallowed_html_tags: disallowed_html_tags
     )
-    readonly_view_options if @level.channel_backed? && params[:version]
+
+    readonly_view_options if @level.channel_backed? && params[:version].present?
 
     # Add video generation URL for only the last level of Dance
     # If we eventually want to add video generation for other levels or level
     # types, this is the condition that should be extended.
-    replay_video_view_options(get_channel_for(@level, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
+    replay_video_view_options(get_channel_for(@level, @script_level.script_id, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
@@ -535,7 +554,7 @@ class ScriptLevelsController < ApplicationController
 
   def set_redirect_override
     if params[:script_id] && params[:no_redirect]
-      VersionRedirectOverrider.set_script_redirect_override(session, params[:script_id])
+      VersionRedirectOverrider.set_unit_redirect_override(session, params[:script_id])
     end
   end
 

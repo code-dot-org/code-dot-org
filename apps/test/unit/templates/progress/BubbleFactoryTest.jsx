@@ -70,7 +70,7 @@ describe('BubbleFactory', () => {
 
     const setUp = (overrideProps = {}) => {
       const props = {...DEFAULT_PROPS, ...overrideProps};
-      return shallow(<BubbleTooltip {...props} />);
+      return mount(<BubbleTooltip {...props} />);
     };
 
     it('renders children', () => {

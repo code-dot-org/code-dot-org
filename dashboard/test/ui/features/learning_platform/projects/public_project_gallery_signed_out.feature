@@ -10,8 +10,9 @@ Scenario: Public Gallery Shows Expected Elements
 Scenario: Public Gallery Shows Expected Project Types
   Then I wait until element "#uitest-public-projects" is visible
   Then I wait until element ".ui-project-app-type-area" is in the DOM
-  And the project gallery contains 9 project types
+  And the project gallery contains 10 project types
   And element ".ui-dance" contains text "Dance Party"
+  And element ".ui-poetry" contains text "Poetry"
   And element ".ui-gamelab" contains text "Game Lab"
   And element ".ui-applab" contains text "App Lab"
   And element ".ui-spritelab" contains text "Sprite Lab"
@@ -23,5 +24,5 @@ Scenario: Public Gallery Shows Expected Project Types
 
 Scenario: View More Links for App Lab and Game Lab Based on DCDO
   Then I wait until element ".ui-project-app-type-area" is in the DOM
-  And the project gallery contains 9 project types
+  And the project gallery contains 10 project types
   And I confirm correct visibility of view more links

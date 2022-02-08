@@ -2,20 +2,8 @@
   "script": {
     "name": "K5PD",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
-      "pd": true,
-      "professional_learning_course": "K5 Support",
-      "script_announcements": [
-        {
-          "notice": "This Online PD Resource is no longer available",
-          "details": "Click \"Learn More\" to find out about the new Online PD Resources.",
-          "link": "https://studio.code.org/s/k5-onlinepd-2019",
-          "type": "failure",
-          "visibility": "Teacher and student"
-        }
-      ],
       "announcements": [
         {
           "notice": "This Online PD Resource is no longer available",
@@ -24,11 +12,17 @@
           "type": "failure",
           "visibility": "Teacher and student"
         }
-      ]
+      ],
+      "is_migrated": true,
+      "professional_learning_course": "K5 Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:38 UTC",
+    "serialized_at": "2021-11-22 19:55:41 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "K5PD"
     }

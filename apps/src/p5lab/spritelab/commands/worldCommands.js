@@ -1,10 +1,10 @@
-import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../../redux/textConsole';
 import {
   addTextPrompt,
   addMultipleChoicePrompt
 } from '../../redux/spritelabInput';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 export const commands = {
   comment(text) {
@@ -12,73 +12,111 @@ export const commands = {
   },
 
   drawTitle() {
-    this.fill('black');
-    this.stroke('white');
-    this.strokeWeight(3);
-    this.textAlign(this.CENTER, this.CENTER);
-    this.textSize(50);
-    this.text(coreLibrary.screenText.title, 0, 0, 400, 200);
-    this.textSize(35);
-    this.text(coreLibrary.screenText.subtitle, 0, 200, 400, 200);
+    this.p5.fill('black');
+    this.p5.stroke('white');
+    this.p5.strokeWeight(3);
+    this.p5.textAlign(this.p5.CENTER, this.p5.CENTER);
+    this.p5.textSize(50);
+    this.p5.text(this.screenText.title, 0, 0, 400, 200);
+    this.p5.textSize(35);
+    this.p5.text(this.screenText.subtitle, 0, 200, 400, 200);
   },
 
   getTime(unit) {
     if (unit === 'seconds') {
-      return coreLibrary.getAdjustedWorldTime(this) || 0;
+      return this.getUnpausedWorldTime() - this.timerResetTime.seconds || 0;
     } else if (unit === 'frames') {
-      return this.World.frameCount || 0;
+      return this.p5.World.frameCount - this.timerResetTime.frames || 0;
     }
     return 0;
   },
 
+  resetTimer() {
+    this.timerResetTime.seconds = this.getUnpausedWorldTime();
+    this.timerResetTime.frames = this.currentFrame();
+  },
+
   hideTitleScreen() {
-    coreLibrary.screenText = {};
+    this.screenText = {};
+  },
+
+  playSound(url) {
+    this.soundLog.push(url);
+    audioCommands.playSound({url, loop: false});
+  },
+
+  playSpeech(speech) {
+    audioCommands.playSpeech({
+      text: speech,
+      gender: 'female',
+      language: 'English'
+    });
   },
 
   printText(text) {
-    coreLibrary.printLog.push(text);
+    this.printLog.push(text);
     getStore().dispatch(addConsoleMessage({text: text}));
   },
 
   setBackground(color) {
-    coreLibrary.background = color;
+    this.setBackground(color);
   },
 
   // Deprecated. The new background block is setBackgroundImageAs
-  setBackgroundImage(img) {
-    if (this._preloadedBackgrounds && this._preloadedBackgrounds[img]) {
-      let backgroundImage = this._preloadedBackgrounds[img];
-      coreLibrary.background = backgroundImage;
+  setBackgroundImage(imageName) {
+    if (
+      this.p5._preloadedBackgrounds &&
+      this.p5._preloadedBackgrounds[imageName]
+    ) {
+      let backgroundImage = this.p5._preloadedBackgrounds[imageName];
+      backgroundImage.name = imageName;
+      this.setBackground(backgroundImage);
     }
   },
 
-  setBackgroundImageAs(img) {
+  setBackgroundImageAs(imageName) {
     if (
-      this._predefinedSpriteAnimations &&
-      this._predefinedSpriteAnimations[img]
+      this.p5._predefinedSpriteAnimations &&
+      this.p5._predefinedSpriteAnimations[imageName]
     ) {
-      let backgroundImage = this._predefinedSpriteAnimations[img];
-      coreLibrary.background = backgroundImage;
+      let backgroundImage = this.p5._predefinedSpriteAnimations[imageName];
+      backgroundImage.name = imageName;
+      this.setBackground(backgroundImage);
     }
   },
 
   setPrompt(promptText, variableName, setterCallback) {
-    coreLibrary.registerPrompt(promptText, variableName, setterCallback);
+    this.registerPrompt(promptText, variableName, setterCallback);
     getStore().dispatch(addTextPrompt(promptText, variableName));
   },
 
-  setPromptWithChoices(promptText, variableName, choices, setterCallback) {
-    coreLibrary.registerPrompt(promptText, variableName, setterCallback);
+  setPromptWithChoices(
+    promptText,
+    variableName,
+    choice1,
+    choice2,
+    choice3,
+    setterCallback
+  ) {
+    this.registerPrompt(promptText, variableName, setterCallback);
     getStore().dispatch(
-      addMultipleChoicePrompt(promptText, variableName, choices)
+      addMultipleChoicePrompt(promptText, variableName, [
+        choice1,
+        choice2,
+        choice3
+      ])
     );
   },
 
   showTitleScreen(title, subtitle) {
-    coreLibrary.screenText = {title: title || '', subtitle: subtitle || ''};
+    this.screenText = {title: title || '', subtitle: subtitle || ''};
   },
 
   textJoin(text1, text2) {
+    return [text1, text2].join('');
+  },
+
+  textVariableJoin(text1, text2) {
     return [text1, text2].join('');
   }
 };

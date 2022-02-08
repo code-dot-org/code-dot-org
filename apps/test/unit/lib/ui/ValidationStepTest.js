@@ -1,6 +1,6 @@
 /** @file Test SetupStep component */
 import React from 'react';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 

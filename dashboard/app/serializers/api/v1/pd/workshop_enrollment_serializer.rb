@@ -12,7 +12,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   end
 
   def alternate_email
-    application_id = object.application_id
+    application_id = object.try(:application_id)
     return unless application_id
 
     # Note: Use dig instead of [] because RuboCop doesn't like chaining ordinary method call after safe navigation operator.

@@ -1,7 +1,6 @@
 {
-  "func": "images",
+  "key": "images",
+  "name": "images",
   "category": "Animations",
-  "modeOptionName": "*.images",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "images"
 }

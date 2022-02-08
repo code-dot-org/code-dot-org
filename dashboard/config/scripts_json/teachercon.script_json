@@ -2,13 +2,17 @@
   "script": {
     "name": "teachercon",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "serialized_at": "2021-11-22 19:57:16 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "teachercon"
     }
@@ -249,23 +253,577 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "fe5a9133-7c78-44e2-ae8d-0a7f141a6dba",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe5a9133-7c78-44e2-ae8d-0a7f141a6dba",
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "e0ebfc79-ef1e-44d7-b0d8-f355d729dbc4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0ebfc79-ef1e-44d7-b0d8-f355d729dbc4",
+        "lesson.key": "Lesson 1,4",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "fc431153-d294-48cb-bd95-035ab047e109",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc431153-d294-48cb-bd95-035ab047e109",
+        "lesson.key": "Lesson 1,6",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "5ead8555-ccd1-42c5-97f8-31d09e1a10de",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5ead8555-ccd1-42c5-97f8-31d09e1a10de",
+        "lesson.key": "Lesson 1,9",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "1cdb059a-b4e2-42a6-bb26-b24cbc827746",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1cdb059a-b4e2-42a6-bb26-b24cbc827746",
+        "lesson.key": "Lesson 1,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "2978e980-eab8-4c1a-836f-71f162207c25",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2978e980-eab8-4c1a-836f-71f162207c25",
+        "lesson.key": "Lesson 1,11",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "77299352-d857-4ffe-b069-5e5c1c9fabb2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77299352-d857-4ffe-b069-5e5c1c9fabb2",
+        "lesson.key": "Lesson 2,2",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "a4918a5d-691d-487c-8568-fcad4dbe76b3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4918a5d-691d-487c-8568-fcad4dbe76b3",
+        "lesson.key": "Lesson 2,3",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "6bdb1e91-d46e-4ff3-8132-425f85a328a1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bdb1e91-d46e-4ff3-8132-425f85a328a1",
+        "lesson.key": "Lesson 2,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "5edd079b-7600-44b0-9d60-035c3931e0ad",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad",
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "77a956b3-b203-4f06-ba2c-b9986884f3b7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77a956b3-b203-4f06-ba2c-b9986884f3b7",
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "346da767-59c9-4dc9-8b74-64308374f0ba",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "346da767-59c9-4dc9-8b74-64308374f0ba",
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "7d026f58-2dff-4fe5-85af-a697f1851248",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d026f58-2dff-4fe5-85af-a697f1851248",
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "431495bb-e75e-4934-ae78-4df8950e5736",
+      "position": 1,
+      "properties": {
+        "progression_name": "Welcome to TeacherCon!"
+      },
+      "seeding_key": {
+        "activity_section.key": "431495bb-e75e-4934-ae78-4df8950e5736",
+        "lesson_activity.key": "fe5a9133-7c78-44e2-ae8d-0a7f141a6dba"
+      }
+    },
+    {
+      "key": "bed1f62b-5560-477b-9d08-890664e48689",
+      "position": 2,
+      "properties": {
+        "progression_name": "TeacherCon Agenda"
+      },
+      "seeding_key": {
+        "activity_section.key": "bed1f62b-5560-477b-9d08-890664e48689",
+        "lesson_activity.key": "fe5a9133-7c78-44e2-ae8d-0a7f141a6dba"
+      }
+    },
+    {
+      "key": "1f4256df-b356-4d3d-96fc-275e3e15216a",
+      "position": 3,
+      "properties": {
+        "name": "TeacherCon Self-Assessment",
+        "progression_name": "TeacherCon Self-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f4256df-b356-4d3d-96fc-275e3e15216a",
+        "lesson_activity.key": "fe5a9133-7c78-44e2-ae8d-0a7f141a6dba"
+      }
+    },
+    {
+      "key": "f3f68710-1c32-4bc9-a949-3a1fd55e7e01",
+      "position": 1,
+      "properties": {
+        "name": "U1L4 Lesson Overview",
+        "progression_name": "U1L4 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3f68710-1c32-4bc9-a949-3a1fd55e7e01",
+        "lesson_activity.key": "e0ebfc79-ef1e-44d7-b0d8-f355d729dbc4"
+      }
+    },
+    {
+      "key": "55a9f35a-9845-4213-b335-35571bf49c95",
+      "position": 1,
+      "properties": {
+        "name": "U1L6 Lesson Overview",
+        "progression_name": "U1L6 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "55a9f35a-9845-4213-b335-35571bf49c95",
+        "lesson_activity.key": "fc431153-d294-48cb-bd95-035ab047e109"
+      }
+    },
+    {
+      "key": "e53d7b1e-4e7d-44e6-a0ab-490a895a5dc2",
+      "position": 1,
+      "properties": {
+        "name": "U1L9 Lesson Overview",
+        "progression_name": "U1L9 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e53d7b1e-4e7d-44e6-a0ab-490a895a5dc2",
+        "lesson_activity.key": "5ead8555-ccd1-42c5-97f8-31d09e1a10de"
+      }
+    },
+    {
+      "key": "210fe18c-51af-48aa-a44d-04029448f07d",
+      "position": 1,
+      "properties": {
+        "name": "U1L10 Lesson Overview",
+        "progression_name": "U1L10 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "210fe18c-51af-48aa-a44d-04029448f07d",
+        "lesson_activity.key": "1cdb059a-b4e2-42a6-bb26-b24cbc827746"
+      }
+    },
+    {
+      "key": "e539444c-d5ac-4f03-aac0-bc5fa176fe59",
+      "position": 1,
+      "properties": {
+        "name": "U1L11 Lesson Overview",
+        "progression_name": "U1L11 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e539444c-d5ac-4f03-aac0-bc5fa176fe59",
+        "lesson_activity.key": "2978e980-eab8-4c1a-836f-71f162207c25"
+      }
+    },
+    {
+      "key": "1c98a515-baf5-4ea2-96e8-c4217b23ff64",
+      "position": 1,
+      "properties": {
+        "name": "U2L2 Lesson Overview",
+        "progression_name": "U2L2 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c98a515-baf5-4ea2-96e8-c4217b23ff64",
+        "lesson_activity.key": "77299352-d857-4ffe-b069-5e5c1c9fabb2"
+      }
+    },
+    {
+      "key": "77f2a47c-cfd9-485c-9d8a-fa44b5312045",
+      "position": 1,
+      "properties": {
+        "name": "U2L3 Lesson Overview",
+        "progression_name": "U2L3 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "77f2a47c-cfd9-485c-9d8a-fa44b5312045",
+        "lesson_activity.key": "a4918a5d-691d-487c-8568-fcad4dbe76b3"
+      }
+    },
+    {
+      "key": "af832bc6-8a64-448e-aac8-b5ff20bd4628",
+      "position": 1,
+      "properties": {
+        "name": "U2L10 Lesson Overview",
+        "progression_name": "U2L10 Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "af832bc6-8a64-448e-aac8-b5ff20bd4628",
+        "lesson_activity.key": "6bdb1e91-d46e-4ff3-8132-425f85a328a1"
+      }
+    },
+    {
+      "key": "c585955d-b9fd-4c83-abfc-34d6b4e5c67c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Exploring Practices and Strategies during TeacherCon"
+      },
+      "seeding_key": {
+        "activity_section.key": "c585955d-b9fd-4c83-abfc-34d6b4e5c67c",
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad"
+      }
+    },
+    {
+      "key": "35129c4d-8d05-46fc-a32d-0ba85a72f81d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview: Group Work and Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "35129c4d-8d05-46fc-a32d-0ba85a72f81d",
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad"
+      }
+    },
+    {
+      "key": "04349af1-1344-44d5-939d-a838c3b8ee87",
+      "position": 3,
+      "properties": {
+        "progression_name": "Collaborative Learning and Group Work: Description and Strategies"
+      },
+      "seeding_key": {
+        "activity_section.key": "04349af1-1344-44d5-939d-a838c3b8ee87",
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad"
+      }
+    },
+    {
+      "key": "8b997ce9-dae4-4aa3-875a-46138ed6bc99",
+      "position": 4,
+      "properties": {
+        "progression_name": "The Official Peer Instruction Blog"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b997ce9-dae4-4aa3-875a-46138ed6bc99",
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad"
+      }
+    },
+    {
+      "key": "7740cfe7-eb4c-464c-9aa1-961463083073",
+      "position": 5,
+      "properties": {
+        "progression_name": "the Journal of Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "7740cfe7-eb4c-464c-9aa1-961463083073",
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad"
+      }
+    },
+    {
+      "key": "051589d0-120c-41d2-8d25-e71bc58883ca",
+      "position": 6,
+      "properties": {
+        "progression_name": "Tuesday Report: Group Work and Peer Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "051589d0-120c-41d2-8d25-e71bc58883ca",
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad"
+      }
+    },
+    {
+      "key": "a3a97643-7edd-4902-b644-382f908f04da",
+      "position": 7,
+      "properties": {
+        "name": "Wednesday Report: Group Work and Peer Learning in Unit 1",
+        "progression_name": "Wednesday Report: Group Work and Peer Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3a97643-7edd-4902-b644-382f908f04da",
+        "lesson_activity.key": "5edd079b-7600-44b0-9d60-035c3931e0ad"
+      }
+    },
+    {
+      "key": "9f483689-ca22-495a-bc03-a9cef57c9146",
+      "position": 1,
+      "properties": {
+        "progression_name": "Exploring Practices and Strategies during TeacherCon"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f483689-ca22-495a-bc03-a9cef57c9146",
+        "lesson_activity.key": "77a956b3-b203-4f06-ba2c-b9986884f3b7"
+      }
+    },
+    {
+      "key": "723aa3cf-f932-4b7c-8e28-edad94e53a13",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview: Balancing Teachers and Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "723aa3cf-f932-4b7c-8e28-edad94e53a13",
+        "lesson_activity.key": "77a956b3-b203-4f06-ba2c-b9986884f3b7"
+      }
+    },
+    {
+      "key": "03c1c47d-08d0-470f-a077-ab0f5bbb808f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Tuesday Report: Balancing Teachers and Tools in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "03c1c47d-08d0-470f-a077-ab0f5bbb808f",
+        "lesson_activity.key": "77a956b3-b203-4f06-ba2c-b9986884f3b7"
+      }
+    },
+    {
+      "key": "a212d3a5-d8e0-445b-ad51-385bc6b49086",
+      "position": 4,
+      "properties": {
+        "name": "Wednesday Report: Balancing Teachers and Tools in Unit 1",
+        "progression_name": "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "a212d3a5-d8e0-445b-ad51-385bc6b49086",
+        "lesson_activity.key": "77a956b3-b203-4f06-ba2c-b9986884f3b7"
+      }
+    },
+    {
+      "key": "43b1164d-008e-4fcb-a5d1-841d9f066bd1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Exploring Practices and Strategies during TeacherCon"
+      },
+      "seeding_key": {
+        "activity_section.key": "43b1164d-008e-4fcb-a5d1-841d9f066bd1",
+        "lesson_activity.key": "346da767-59c9-4dc9-8b74-64308374f0ba"
+      }
+    },
+    {
+      "key": "fc440c14-0c42-4cc5-9771-8ae55472bf01",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview: Discovery Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc440c14-0c42-4cc5-9771-8ae55472bf01",
+        "lesson_activity.key": "346da767-59c9-4dc9-8b74-64308374f0ba"
+      }
+    },
+    {
+      "key": "53bd7be7-7bec-474f-bfc6-fa6df7b19e75",
+      "position": 3,
+      "properties": {
+        "progression_name": "Discovery learning definition and history"
+      },
+      "seeding_key": {
+        "activity_section.key": "53bd7be7-7bec-474f-bfc6-fa6df7b19e75",
+        "lesson_activity.key": "346da767-59c9-4dc9-8b74-64308374f0ba"
+      }
+    },
+    {
+      "key": "7fa55a6f-84fd-42a6-9337-137cdf2943c6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Discovery learning techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "7fa55a6f-84fd-42a6-9337-137cdf2943c6",
+        "lesson_activity.key": "346da767-59c9-4dc9-8b74-64308374f0ba"
+      }
+    },
+    {
+      "key": "3fa7fd0d-1c05-437e-83ed-7f7e6dfa042a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Tuesday Report: Discovery Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fa7fd0d-1c05-437e-83ed-7f7e6dfa042a",
+        "lesson_activity.key": "346da767-59c9-4dc9-8b74-64308374f0ba"
+      }
+    },
+    {
+      "key": "3bd7e83b-f513-427c-b9a8-843bfdfaadc8",
+      "position": 6,
+      "properties": {
+        "name": "Wednesday Report: Discovery Learning in Unit 1",
+        "progression_name": "Wednesday Report: Discovery Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd7e83b-f513-427c-b9a8-843bfdfaadc8",
+        "lesson_activity.key": "346da767-59c9-4dc9-8b74-64308374f0ba"
+      }
+    },
+    {
+      "key": "5b9da338-8ebd-4f7f-b910-7f81e9912eda",
+      "position": 1,
+      "properties": {
+        "progression_name": "Exploring Practices and Strategies during TeacherCon"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b9da338-8ebd-4f7f-b910-7f81e9912eda",
+        "lesson_activity.key": "7d026f58-2dff-4fe5-85af-a697f1851248"
+      }
+    },
+    {
+      "key": "2d4f1c20-7c26-4209-9490-b3d831e0850e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview: Capturing Student Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d4f1c20-7c26-4209-9490-b3d831e0850e",
+        "lesson_activity.key": "7d026f58-2dff-4fe5-85af-a697f1851248"
+      }
+    },
+    {
+      "key": "84d82f96-15a6-448c-992a-259c6f90bc0b",
+      "position": 3,
+      "properties": {
+        "progression_name": "What is the difference between formative and summative assessment?"
+      },
+      "seeding_key": {
+        "activity_section.key": "84d82f96-15a6-448c-992a-259c6f90bc0b",
+        "lesson_activity.key": "7d026f58-2dff-4fe5-85af-a697f1851248"
+      }
+    },
+    {
+      "key": "c625ce04-680b-47f9-b8bf-17fb42a02f81",
+      "position": 4,
+      "properties": {
+        "progression_name": "Classroom Assessment Techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "c625ce04-680b-47f9-b8bf-17fb42a02f81",
+        "lesson_activity.key": "7d026f58-2dff-4fe5-85af-a697f1851248"
+      }
+    },
+    {
+      "key": "a282e047-d9d2-4ed1-a8c6-de8a712191d7",
+      "position": 5,
+      "properties": {
+        "progression_name": "Tuesday Report: Measuring Student Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "a282e047-d9d2-4ed1-a8c6-de8a712191d7",
+        "lesson_activity.key": "7d026f58-2dff-4fe5-85af-a697f1851248"
+      }
+    },
+    {
+      "key": "d32f36ff-332f-4d64-ad31-70eabd4753cf",
+      "position": 6,
+      "properties": {
+        "name": "Wednesday Report: Measuring Student Learning in Unit 1",
+        "progression_name": "Wednesday Report: Measuring Student Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "d32f36ff-332f-4d64-ad31-70eabd4753cf",
+        "lesson_activity.key": "7d026f58-2dff-4fe5-85af-a697f1851248"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Welcome to TeacherCon!"
-        ]
+        ],
+        "progression": "Welcome to TeacherCon!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -273,7 +831,8 @@
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "431495bb-e75e-4934-ae78-4df8950e5736"
       },
       "level_keys": [
         "Welcome to TeacherCon!"
@@ -282,14 +841,14 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "TeacherCon Agenda"
-        ]
+        ],
+        "progression": "TeacherCon Agenda"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -297,7 +856,8 @@
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "bed1f62b-5560-477b-9d08-890664e48689"
       },
       "level_keys": [
         "TeacherCon Agenda"
@@ -306,14 +866,14 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "TeacherCon Self-Assessment"
-        ]
+        ],
+        "progression": "TeacherCon Self-Assessment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -321,7 +881,8 @@
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "1f4256df-b356-4d3d-96fc-275e3e15216a"
       },
       "level_keys": [
         "TeacherCon Self-Assessment"
@@ -330,14 +891,14 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U1L4 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L4 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -345,7 +906,8 @@
         ],
         "lesson.key": "Lesson 1,4",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "f3f68710-1c32-4bc9-a949-3a1fd55e7e01"
       },
       "level_keys": [
         "U1L4 Lesson Overview"
@@ -354,14 +916,14 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U1L6 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L6 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -369,7 +931,8 @@
         ],
         "lesson.key": "Lesson 1,6",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "55a9f35a-9845-4213-b335-35571bf49c95"
       },
       "level_keys": [
         "U1L6 Lesson Overview"
@@ -378,14 +941,14 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U1L9 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L9 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -393,7 +956,8 @@
         ],
         "lesson.key": "Lesson 1,9",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "e53d7b1e-4e7d-44e6-a0ab-490a895a5dc2"
       },
       "level_keys": [
         "U1L9 Lesson Overview"
@@ -402,14 +966,14 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U1L10 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L10 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -417,7 +981,8 @@
         ],
         "lesson.key": "Lesson 1,10",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "210fe18c-51af-48aa-a44d-04029448f07d"
       },
       "level_keys": [
         "U1L10 Lesson Overview"
@@ -426,14 +991,14 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U1L11 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L11 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -441,7 +1006,8 @@
         ],
         "lesson.key": "Lesson 1,11",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "e539444c-d5ac-4f03-aac0-bc5fa176fe59"
       },
       "level_keys": [
         "U1L11 Lesson Overview"
@@ -450,14 +1016,14 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2L2 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L2 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -465,7 +1031,8 @@
         ],
         "lesson.key": "Lesson 2,2",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "1c98a515-baf5-4ea2-96e8-c4217b23ff64"
       },
       "level_keys": [
         "U2L2 Lesson Overview"
@@ -474,14 +1041,14 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2L3 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L3 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -489,7 +1056,8 @@
         ],
         "lesson.key": "Lesson 2,3",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "77f2a47c-cfd9-485c-9d8a-fa44b5312045"
       },
       "level_keys": [
         "U2L3 Lesson Overview"
@@ -498,14 +1066,14 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2L10 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L10 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -513,7 +1081,8 @@
         ],
         "lesson.key": "Lesson 2,10",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "af832bc6-8a64-448e-aac8-b5ff20bd4628"
       },
       "level_keys": [
         "U2L10 Lesson Overview"
@@ -522,14 +1091,14 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -537,7 +1106,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "c585955d-b9fd-4c83-abfc-34d6b4e5c67c"
       },
       "level_keys": [
         "Exploring Practices and Strategies during TeacherCon"
@@ -546,14 +1116,14 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Overview: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +1131,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "35129c4d-8d05-46fc-a32d-0ba85a72f81d"
       },
       "level_keys": [
         "Overview: Group Work and Peer Learning"
@@ -570,14 +1141,14 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
-        ]
+        ],
+        "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -585,7 +1156,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "04349af1-1344-44d5-939d-a838c3b8ee87"
       },
       "level_keys": [
         "Collaborative Learning and Group Work: Description and Strategies"
@@ -594,14 +1166,14 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "The Official Peer Instruction Blog"
-        ]
+        ],
+        "progression": "The Official Peer Instruction Blog"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -609,7 +1181,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "8b997ce9-dae4-4aa3-875a-46138ed6bc99"
       },
       "level_keys": [
         "The Official Peer Instruction Blog"
@@ -618,14 +1191,14 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "the Journal of Peer Learning"
-        ]
+        ],
+        "progression": "the Journal of Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -633,7 +1206,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "7740cfe7-eb4c-464c-9aa1-961463083073"
       },
       "level_keys": [
         "the Journal of Peer Learning"
@@ -642,14 +1216,14 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Tuesday Report: Group Work and Peer Learning in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Group Work and Peer Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -657,7 +1231,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "051589d0-120c-41d2-8d25-e71bc58883ca"
       },
       "level_keys": [
         "Tuesday Report: Group Work and Peer Learning in Unit 1"
@@ -666,14 +1241,14 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Wednesday Report: Group Work and Peer Learning in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Group Work and Peer Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -681,7 +1256,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "a3a97643-7edd-4902-b644-382f908f04da"
       },
       "level_keys": [
         "Wednesday Report: Group Work and Peer Learning in Unit 1"
@@ -690,14 +1266,14 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -705,7 +1281,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "9f483689-ca22-495a-bc03-a9cef57c9146"
       },
       "level_keys": [
         "Exploring Practices and Strategies during TeacherCon"
@@ -714,14 +1291,14 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Balancing Teachers and Tools"
-        ]
+        ],
+        "progression": "Overview: Balancing Teachers and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -729,7 +1306,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "723aa3cf-f932-4b7c-8e28-edad94e53a13"
       },
       "level_keys": [
         "Overview: Balancing Teachers and Tools"
@@ -738,14 +1316,14 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Tuesday Report: Balancing Teachers and Tools in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Balancing Teachers and Tools in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -753,7 +1331,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "03c1c47d-08d0-470f-a077-ab0f5bbb808f"
       },
       "level_keys": [
         "Tuesday Report: Balancing Teachers and Tools in Unit 1"
@@ -762,14 +1341,14 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Wednesday Report: Balancing Teachers and Tools in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Balancing Teachers and Tools in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -777,7 +1356,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "a212d3a5-d8e0-445b-ad51-385bc6b49086"
       },
       "level_keys": [
         "Wednesday Report: Balancing Teachers and Tools in Unit 1"
@@ -786,14 +1366,14 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -801,7 +1381,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "43b1164d-008e-4fcb-a5d1-841d9f066bd1"
       },
       "level_keys": [
         "Exploring Practices and Strategies during TeacherCon"
@@ -810,14 +1391,14 @@
     {
       "chapter": 24,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Discovery Learning"
-        ]
+        ],
+        "progression": "Overview: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -825,7 +1406,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "fc440c14-0c42-4cc5-9771-8ae55472bf01"
       },
       "level_keys": [
         "Overview: Discovery Learning"
@@ -834,14 +1416,14 @@
     {
       "chapter": 25,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Discovery learning definition and history"
-        ]
+        ],
+        "progression": "Discovery learning definition and history"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -849,7 +1431,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "53bd7be7-7bec-474f-bfc6-fa6df7b19e75"
       },
       "level_keys": [
         "Discovery learning definition and history"
@@ -858,14 +1441,14 @@
     {
       "chapter": 26,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Discovery learning techniques"
-        ]
+        ],
+        "progression": "Discovery learning techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -873,7 +1456,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "7fa55a6f-84fd-42a6-9337-137cdf2943c6"
       },
       "level_keys": [
         "Discovery learning techniques"
@@ -882,14 +1466,14 @@
     {
       "chapter": 27,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Tuesday Report: Discovery Learning in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Discovery Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -897,7 +1481,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "3fa7fd0d-1c05-437e-83ed-7f7e6dfa042a"
       },
       "level_keys": [
         "Tuesday Report: Discovery Learning in Unit 1"
@@ -906,14 +1491,14 @@
     {
       "chapter": 28,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Wednesday Report: Discovery Learning in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Discovery Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -921,7 +1506,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "3bd7e83b-f513-427c-b9a8-843bfdfaadc8"
       },
       "level_keys": [
         "Wednesday Report: Discovery Learning in Unit 1"
@@ -930,14 +1516,14 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -945,7 +1531,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "5b9da338-8ebd-4f7f-b910-7f81e9912eda"
       },
       "level_keys": [
         "Exploring Practices and Strategies during TeacherCon"
@@ -954,14 +1541,14 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Capturing Student Learning"
-        ]
+        ],
+        "progression": "Overview: Capturing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -969,7 +1556,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "2d4f1c20-7c26-4209-9490-b3d831e0850e"
       },
       "level_keys": [
         "Overview: Capturing Student Learning"
@@ -978,14 +1566,14 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "What is the difference between formative and summative assessment?"
-        ]
+        ],
+        "progression": "What is the difference between formative and summative assessment?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -993,7 +1581,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "84d82f96-15a6-448c-992a-259c6f90bc0b"
       },
       "level_keys": [
         "What is the difference between formative and summative assessment?"
@@ -1002,14 +1591,14 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Classroom Assessment Techniques"
-        ]
+        ],
+        "progression": "Classroom Assessment Techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1017,7 +1606,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "c625ce04-680b-47f9-b8bf-17fb42a02f81"
       },
       "level_keys": [
         "Classroom Assessment Techniques"
@@ -1026,14 +1616,14 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Tuesday Report: Measuring Student Learning in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Measuring Student Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1041,7 +1631,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "a282e047-d9d2-4ed1-a8c6-de8a712191d7"
       },
       "level_keys": [
         "Tuesday Report: Measuring Student Learning in Unit 1"
@@ -1050,14 +1641,14 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Wednesday Report: Measuring Student Learning in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Measuring Student Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1065,7 +1656,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "d32f36ff-332f-4d64-ad31-70eabd4753cf"
       },
       "level_keys": [
         "Wednesday Report: Measuring Student Learning in Unit 1"
@@ -1081,7 +1673,8 @@
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "431495bb-e75e-4934-ae78-4df8950e5736"
       }
     },
     {
@@ -1092,7 +1685,8 @@
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "bed1f62b-5560-477b-9d08-890664e48689"
       }
     },
     {
@@ -1103,7 +1697,8 @@
         ],
         "lesson.key": "Introduction to Teachercon",
         "lesson_group.key": "required",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "1f4256df-b356-4d3d-96fc-275e3e15216a"
       }
     },
     {
@@ -1114,7 +1709,8 @@
         ],
         "lesson.key": "Lesson 1,4",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "f3f68710-1c32-4bc9-a949-3a1fd55e7e01"
       }
     },
     {
@@ -1125,7 +1721,8 @@
         ],
         "lesson.key": "Lesson 1,6",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "55a9f35a-9845-4213-b335-35571bf49c95"
       }
     },
     {
@@ -1136,7 +1733,8 @@
         ],
         "lesson.key": "Lesson 1,9",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "e53d7b1e-4e7d-44e6-a0ab-490a895a5dc2"
       }
     },
     {
@@ -1147,7 +1745,8 @@
         ],
         "lesson.key": "Lesson 1,10",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "210fe18c-51af-48aa-a44d-04029448f07d"
       }
     },
     {
@@ -1158,7 +1757,8 @@
         ],
         "lesson.key": "Lesson 1,11",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "e539444c-d5ac-4f03-aac0-bc5fa176fe59"
       }
     },
     {
@@ -1169,7 +1769,8 @@
         ],
         "lesson.key": "Lesson 2,2",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "1c98a515-baf5-4ea2-96e8-c4217b23ff64"
       }
     },
     {
@@ -1180,7 +1781,8 @@
         ],
         "lesson.key": "Lesson 2,3",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "77f2a47c-cfd9-485c-9d8a-fa44b5312045"
       }
     },
     {
@@ -1191,7 +1793,8 @@
         ],
         "lesson.key": "Lesson 2,10",
         "lesson_group.key": "content",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "af832bc6-8a64-448e-aac8-b5ff20bd4628"
       }
     },
     {
@@ -1202,7 +1805,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "c585955d-b9fd-4c83-abfc-34d6b4e5c67c"
       }
     },
     {
@@ -1213,7 +1817,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "35129c4d-8d05-46fc-a32d-0ba85a72f81d"
       }
     },
     {
@@ -1224,7 +1829,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "04349af1-1344-44d5-939d-a838c3b8ee87"
       }
     },
     {
@@ -1235,7 +1841,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "8b997ce9-dae4-4aa3-875a-46138ed6bc99"
       }
     },
     {
@@ -1246,7 +1853,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "7740cfe7-eb4c-464c-9aa1-961463083073"
       }
     },
     {
@@ -1257,7 +1865,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "051589d0-120c-41d2-8d25-e71bc58883ca"
       }
     },
     {
@@ -1268,7 +1877,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "a3a97643-7edd-4902-b644-382f908f04da"
       }
     },
     {
@@ -1279,7 +1889,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "9f483689-ca22-495a-bc03-a9cef57c9146"
       }
     },
     {
@@ -1290,7 +1901,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "723aa3cf-f932-4b7c-8e28-edad94e53a13"
       }
     },
     {
@@ -1301,7 +1913,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "03c1c47d-08d0-470f-a077-ab0f5bbb808f"
       }
     },
     {
@@ -1312,7 +1925,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "a212d3a5-d8e0-445b-ad51-385bc6b49086"
       }
     },
     {
@@ -1323,7 +1937,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "43b1164d-008e-4fcb-a5d1-841d9f066bd1"
       }
     },
     {
@@ -1334,7 +1949,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "fc440c14-0c42-4cc5-9771-8ae55472bf01"
       }
     },
     {
@@ -1345,7 +1961,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "53bd7be7-7bec-474f-bfc6-fa6df7b19e75"
       }
     },
     {
@@ -1356,7 +1973,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "7fa55a6f-84fd-42a6-9337-137cdf2943c6"
       }
     },
     {
@@ -1367,7 +1985,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "3fa7fd0d-1c05-437e-83ed-7f7e6dfa042a"
       }
     },
     {
@@ -1378,7 +1997,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "3bd7e83b-f513-427c-b9a8-843bfdfaadc8"
       }
     },
     {
@@ -1389,7 +2009,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "5b9da338-8ebd-4f7f-b910-7f81e9912eda"
       }
     },
     {
@@ -1400,7 +2021,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "2d4f1c20-7c26-4209-9490-b3d831e0850e"
       }
     },
     {
@@ -1411,7 +2033,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "84d82f96-15a6-448c-992a-259c6f90bc0b"
       }
     },
     {
@@ -1422,7 +2045,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "c625ce04-680b-47f9-b8bf-17fb42a02f81"
       }
     },
     {
@@ -1433,7 +2057,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "a282e047-d9d2-4ed1-a8c6-de8a712191d7"
       }
     },
     {
@@ -1444,7 +2069,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "teachercon"
+        "script.name": "teachercon",
+        "activity_section.key": "d32f36ff-332f-4d64-ad31-70eabd4753cf"
       }
     }
   ],

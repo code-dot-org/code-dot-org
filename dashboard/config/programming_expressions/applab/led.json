@@ -1,6 +1,6 @@
 {
-  "func": "led",
+  "key": "led",
+  "name": "led",
   "category": "Circuit",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "led"
 }

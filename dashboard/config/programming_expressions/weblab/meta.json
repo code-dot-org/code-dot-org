@@ -1,5 +1,6 @@
 {
-  "func": "meta",
+  "key": "meta",
+  "name": "meta",
   "category": "HTML Tags",
   "syntax": "<meta>"
 }

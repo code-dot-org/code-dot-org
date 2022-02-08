@@ -2,7 +2,6 @@
   "script": {
     "name": "test-migrated-models",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "peer_reviews_to_complete": 0,
@@ -10,6 +9,10 @@
     },
     "new_name": null,
     "family_name": null,
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "test-migrated-models"
     }
@@ -83,7 +86,6 @@
       "properties": {
         "progression": "My Activity Section"
       },
-      "named_level": null,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

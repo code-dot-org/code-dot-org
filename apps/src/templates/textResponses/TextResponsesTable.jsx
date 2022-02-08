@@ -106,7 +106,7 @@ class TextResponsesTable extends Component {
         }
       },
       {
-        property: 'stage',
+        property: 'lesson',
         header: {
           label: i18n.lesson(),
           props: {

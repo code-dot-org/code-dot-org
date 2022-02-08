@@ -3,38 +3,82 @@ en:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" with the Bee'
+      AI Machine Learning - Video: AI Machine Learning - Video
+      'AI: Impact on Society - Video': 'AI: Impact on Society - Video'
+      'AI: Training Data & Bias - Video': 'AI: Training Data & Bias - Video'
       Accelerometer Events: Accelerometer Events
       Adding Images: Adding Images
       Adding Screens: Adding Screens
+      Alien Defender: Alien Defender
+      Analog Sensors: Analog Sensors
       Animate Your Scene: Animate Your Scene
       Animating Sprites: Animating Sprites
+      App Lab Intro - Video: App Lab Intro - Video
+      'App Project: Bugs and Features': 'App Project: Bugs and Features'
+      'App Project: Linking Screens': 'App Project: Linking Screens'
       'App Project: Screen Design': 'App Project: Screen Design'
+      'App Project: Screen Import': 'App Project: Screen Import'
+      Arrays: Arrays
       Artist Intro with JR Hildebrand: Artist Intro with JR Hildebrand
       Artist Intro with JR Hildebrande: Artist Intro with JR Hildebrande
       Artist Project: Artist Project
       'Artist: Variables': 'Artist: Variables'
       Attribution: Attribution
+      Back and Forth: Back and Forth
       Basic Conditionals: Basic Conditionals
+      Bass, Mid, and Treble: Bass, Mid, and Treble
       Be a Super Digital Citizen: Be a Super Digital Citizen
+      Begin planning your project: Begin planning your project
+      Begin planning your project_2018: Begin planning your project_2018
       Binary Bracelets - Unplugged Activity: Binary Bracelets - Unplugged Activity
       Binary Numbers: Binary Numbers
+      Binary and Data: Binary and Data
       Board Events: Board Events
       Board Input and Output: Board Input and Output
       Boolean Comparison: Boolean Comparison
+      Booleans and Comparison Operators: Booleans and Comparison Operators
+      Build a Platform Jumper: Build a Platform Jumper
       Build a Screen: Build a Screen
+      Building a UI with Design Mode: Building a UI with Design Mode
       Building an App: Building an App
+      'Bunny ': 'Bunny '
+      Bunny Jumper: Bunny Jumper
       Button Circuits: Button Circuits
+      Buttons and Switch: Buttons and Switch
       CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
       CS Discoveries Post-course Survey: CS Discoveries Post-course Survey
+      CSD U3 Interactive Card Exemplar: CSD U3 Interactive Card Exemplar
+      CSD U3 platform intro: CSD U3 platform intro
+      'CSD: For Loop': 'CSD: For Loop'
+      CSS Classes: CSS Classes
+      CSS Text Properties: CSS Text Properties
+      CSS and Style Sheets: CSS and Style Sheets
       Cake Defender: Cake Defender
+      Cake Survey: Cake Survey
       Challenge: Challenge
       Challenge Levels: Challenge Levels
+      'Challenge: Add More Inputs': 'Challenge: Add More Inputs'
+      'Challenge: Checking for Multiple Conditions': 'Challenge: Checking for Multiple Conditions'
+      'Challenge: Draw an Image': 'Challenge: Draw an Image'
+      'Challenge: Extend Your Scene': 'Challenge: Extend Your Scene'
+      'Challenge: Making Sense of Sensors': 'Challenge: Making Sense of Sensors'
+      'Challenge: Updating Variables': 'Challenge: Updating Variables'
       Challenges: Challenges
-      Chance: Chance
       Change: Change
+      Changing Screens: Changing Screens
+      Changing Sensor Scale: Changing Sensor Scale
       Checking for a Winner: Checking for a Winner
+      Choose Your Own Adventure: Choose Your Own Adventure
+      Choosing Good IDs: Choosing Good IDs
+      'Circuit Playground: Buzzer': 'Circuit Playground: Buzzer'
+      'Circuit Playground: Color LEDs': 'Circuit Playground: Color LEDs'
+      'Circuit Playground: Introduction': 'Circuit Playground: Introduction'
+      'Circuit Playground: LEDs': 'Circuit Playground: LEDs'
+      Circuits and Logic: Circuits and Logic
       Code Your Own Flappy Game: Code Your Own Flappy Game
       Collector Game: Collector Game
+      Collision Detection: Collision Detection
+      Collision Detection Review: Collision Detection Review
       Collisions: Collisions
       Collisions in Games: Collisions in Games
       Color LEDs: Color LEDs
@@ -43,35 +87,71 @@ en:
       Conditionals with Cards - Unplugged Activity: Conditionals with Cards - Unplugged Activity
       'Conditionals: If Statements': 'Conditionals: If Statements'
       'Conditionals: If and If/Else Statements': 'Conditionals: If and If/Else Statements'
+      Course E Artist Project: Course E Artist Project
+      Course E Sprite Lab Project: Course E Sprite Lab Project
+      'Course E: Play Lab Project': 'Course E: Play Lab Project'
+      Course F Artist Project: Course F Artist Project
+      Course F Sprite Lab Project: Course F Sprite Lab Project
+      'Course F: Artist Project': 'Course F: Artist Project'
+      'Course F: Artist Project - Revise': 'Course F: Artist Project - Revise'
+      'Course F: Play Lab Project': 'Course F: Play Lab Project'
+      'Course F: Play Lab Project - Revise': 'Course F: Play Lab Project - Revise'
+      Crack Random Substitution: Crack Random Substitution
+      Crack a Caesar Cipher: Crack a Caesar Cipher
       Create Your Own Animation: Create Your Own Animation
       Create a Story: Create a Story
       Create your project: Create your project
-      Creating a Simulation: Creating a Simulation
+      Creating Sprites: Creating Sprites
+      Creative Commons Search: Creative Commons Search
       Customize: Customize
+      Dance Crews: Dance Crews
       Data Visualization: Data Visualization
       De-bugging with the Step Button: De-bugging with the Step Button
       Debugging: Debugging
+      Debugging with Watchers: Debugging with Watchers
       Debugging with the Step Button: Debugging with the Step Button
+      Demo - Bug Grab: Demo - Bug Grab
       Demo Apps: Demo Apps
       Design Mode: Design Mode
+      Design Mode Elements: Design Mode Elements
+      Design Your Game: Design Your Game
+      Design Your Prototype: Design Your Prototype
+      Design a Screen for your App: Design a Screen for your App
+      Designing Screens with Code: Designing Screens with Code
       Designing for Accessibility: Designing for Accessibility
       Digital Sharing - Unplugged Activity: Digital Sharing - Unplugged Activity
+      Dogger Example: Dogger Example
       Drawing: Drawing
+      Drawing Shapes: Drawing Shapes
+      Editing Images: Editing Images
+      Emotion Machine Example: Emotion Machine Example
+      End of Course Projects: End of Course Projects
+      Escape Room Example: Escape Room Example
+      Event Types: Event Types
       Events: Events
       Events and Linking Screens: Events and Linking Screens
       Events and Properties: Events and Properties
+      Example: Example
+      Example App Types: Example App Types
       Example Projects: Example Projects
       Example projects: Example projects
+      Exemplar Personal Websites: Exemplar Personal Websites
       Expanding Personal Website: Expanding Personal Website
       Expanding Your Website: Expanding Your Website
       Experiment with Web Lab: Experiment with Web Lab
       Exploration: Exploration
+      'Exploration: Adding Style': 'Exploration: Adding Style'
       'Exploration: For Loops': 'Exploration: For Loops'
       'Exploration: Rikki''s Poster': 'Exploration: Rikki''s Poster'
       'Exploration: Sample Apps': 'Exploration: Sample Apps'
       'Exploration: Sample Programs': 'Exploration: Sample Programs'
       'Exploration: Sample Project': 'Exploration: Sample Project'
+      Explore HTML: Explore HTML
+      Exploring CS in Entertainment: Exploring CS in Entertainment
       Exploring more CSS: Exploring more CSS
+      Final Personal Website: Final Personal Website
+      Final Room Escape App: Final Room Escape App
+      Find the Wizard: Find the Wizard
       Finish a Screen: Finish a Screen
       Finish the Prototype: Finish the Prototype
       Finishing Functions: Finishing Functions
@@ -80,56 +160,91 @@ en:
       Follow the Algorithm - Unplugged Activity: Follow the Algorithm - Unplugged Activity
       Follow the Mouse: Follow the Mouse
       Fonts and Style: Fonts and Style
+      FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: For Loop Fun - Unplugged Activity
       For Loops: For Loops
       For Loops and Color LEDs: For Loops and Color LEDs
       For Loops and Repeat Blocks: For Loops and Repeat Blocks
+      Formatting HTML: Formatting HTML
       Free Play: Free Play
       'Free Play: Make a Scene': 'Free Play: Make a Scene'
       'Free Play: Make an Interactive Scene': 'Free Play: Make an Interactive Scene'
       Functions: Functions
+      Functions Review: Functions Review
       Functions with Parameters: Functions with Parameters
+      Geometric Sun: Geometric Sun
+      Get In Formation: Get In Formation
+      Getters and Setters: Getters and Setters
       Getting Properties: Getting Properties
       Graph Paper Programming - Unplugged Activity: Graph Paper Programming - Unplugged Activity
+      Guess The Number: Guess The Number
+      HTML Tags: HTML Tags
+      Hardware and Software: Hardware and Software
       Headings: Headings
+      Headings in HTML: Headings in HTML
+      Hello World: Hello World
       How to Create a Simple Function: How to Create a Simple Function
       How to Make a Sprite: How to Make a Sprite
+      Hyperlinks: Hyperlinks
       Ice Age Loops: Ice Age Loops
+      If Statements: If Statements
+      If-Else Statements: If-Else Statements
       Images and Sounds: Images and Sounds
+      Images in HTML: Images in HTML
+      Importing Screens: Importing Screens
+      Improve Your Game: Improve Your Game
+      Innovation Research: Innovation Research
       Input Examples: Input Examples
       Input with If-Else: Input with If-Else
+      Inspiration!: Inspiration!
+      InspirationalArtwork: InspirationalArtwork
+      Interactive Card: Interactive Card
+      Intro to Design Mode: Intro to Design Mode
       Intro to For Loops: Intro to For Loops
       Intro to Sprites: Intro to Sprites
       Intro to Variables: Intro to Variables
       Introducing Sprite Lab: Introducing Sprite Lab
       Introduction to Arrays: Introduction to Arrays
+      Introduction to Game Lab: Introduction to Game Lab
+      Introduction to Variables: Introduction to Variables
+      Introduction to Variables - Part 1: Introduction to Variables - Part 1
       Iteration and Parameters: Iteration and Parameters
+      Keep On Dancing!: Keep On Dancing!
       Keeping Data Secret: Keeping Data Secret
       Keyboard Input: Keyboard Input
       LED Apps: LED Apps
+      Layout Properties: Layout Properties
       Layout with CSS: Layout with CSS
       Learning from Simulations: Learning from Simulations
       Lesson Extras: Lesson Extras
+      Lesson Overview: Lesson Overview
+      Level Overview: Level Overview
+      Levels: Levels
       Light Show: Light Show
       Linking Pages: Linking Pages
       Linking Screens: Linking Screens
       Lists: Lists
+      Lists in HTML: Lists in HTML
       Loops with the Artist: Loops with the Artist
       Make a Prediction: Make a Prediction
       Make it Interactive: Make it Interactive
+      Make it Your Own: Make it Your Own
+      Making Music: Making Music
       Making Scenes: Making Scenes
       Making Songs: Making Songs
       Making Sounds: Making Sounds
+      Making an Interactive Card: Making an Interactive Card
       'Maze Intro: Programming with Blocks': 'Maze Intro: Programming with Blocks'
       Measures: Measures
+      'Minecraft: Hero''s Journey': 'Minecraft: Hero''s Journey'
       'Mini-Project: About Me': 'Mini-Project: About Me'
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-Project: Alien Dance Party'
       'Mini-Project: Create a Virtual Pet': 'Mini-Project: Create a Virtual Pet'
       'Mini-Project: Outbreak Simulator': 'Mini-Project: Outbreak Simulator'
       'Mini-Project: Royal Battle': 'Mini-Project: Royal Battle'
-      'Mini-Project: Snowflake #1': 'Mini-Project: Snowflake #1'
-      'Mini-Project: Snowflake #2': 'Mini-Project: Snowflake #2'
+      "Mini-Project: Snowflake #1": "Mini-Project: Snowflake #1"
+      "Mini-Project: Snowflake #2": "Mini-Project: Snowflake #2"
       'Mini-Project: Swimming Fish': 'Mini-Project: Swimming Fish'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Swimming Fish (continued)'
       'Mini-Project: User Input Programs': 'Mini-Project: User Input Programs'
@@ -141,22 +256,35 @@ en:
       'Mini-project: Sticker Art': 'Mini-project: Sticker Art'
       'Mini-project: Sticker Design': 'Mini-project: Sticker Design'
       Modify simulation variables: Modify simulation variables
+      Modifying Arrays: Modifying Arrays
+      Modifying and Creating Arrays: Modifying and Creating Arrays
+      More Buttons: More Buttons
       More Input: More Input
-      More Monsters: More Monsters
       More Parameters: More Parameters
       Motorcycle: Motorcycle
       Move It Move it Video  - Unplugged Activity: Move It Move it Video  - Unplugged Activity
       Movement with the Counter Pattern: Movement with the Counter Pattern
+      Multi-Screen Apps: Multi-Screen Apps
       Multiframe Animations: Multiframe Animations
       Musical Arrays: Musical Arrays
       My Loopy Robotic Friends - Unplugged Activity: My Loopy Robotic Friends - Unplugged Activity
       My Online Neighborhood: My Online Neighborhood
       My Robotic Friends - Unplugged Activity: My Robotic Friends - Unplugged Activity
+      Naming Variables: Naming Variables
       Nested Loops with the Bee: Nested Loops with the Bee
+      New Challenge Introduction: New Challenge Introduction
       New Shapes: New Shapes
       Orientation: Orientation
+      Overview: Overview
+      'Overview: Design Mode': 'Overview: Design Mode'
+      'Overview: If Statements': 'Overview: If Statements'
+      'Overview: Images': 'Overview: Images'
+      'Overview: onEvent': 'Overview: onEvent'
+      'Overview: setPosition': 'Overview: setPosition'
       Pair Programming: Pair Programming
       Picturing Data: Picturing Data
+      Plan Your Project: Plan Your Project
+      Plane Jumper: Plane Jumper
       Planning: Planning
       Platform Jumper - Background and Variables: Platform Jumper - Background and Variables
       Platform Jumper - Items: Platform Jumper - Items
@@ -164,23 +292,31 @@ en:
       Platform Jumper - Player: Platform Jumper - Player
       Playing Notes: Playing Notes
       Playing with Notes: Playing with Notes
+      Plotting Shapes in Game Lab: Plotting Shapes in Game Lab
+      Polling Events: Polling Events
       Post-Course Survey Instructions: Post-Course Survey Instructions
       Practice: Practice
       Predict: Predict
       Prediction: Prediction
+      Prepare for your presentation: Prepare for your presentation
+      Prepare for your presentation_2018: Prepare for your presentation_2018
       Problem Solving: Problem Solving
-      Programming with Events: Programming with Events
+      Problem Solving Process for Programming: Problem Solving Process for Programming
       Programming with Rey and BB-8: Programming with Rey and BB-8
       Programs that Repeat: Programs that Repeat
       Project: Project
       Project - Background and Variables: Project - Background and Variables
+      Project - Finishing Touches: Project - Finishing Touches
       Project - Sprites and Interactions: Project - Sprites and Interactions
+      Project Guide: Project Guide
       Project Work: Project Work
       Properties: Properties
       Publishing Your Website: Publishing Your Website
+      Quarter Notes: Quarter Notes
       RGB Exploration: RGB Exploration
+      RGB Widget: RGB Widget
+      Random Numbers: Random Numbers
       Reading Sensors: Reading Sensors
-      Recovery: Recovery
       Reflection: Reflection
       Relay Programming - Unplugged Activity: Relay Programming - Unplugged Activity
       Repeat Blocks: Repeat Blocks
@@ -189,62 +325,102 @@ en:
       Repeat Unit Statements: Repeat Unit Statements
       Repeat Until Statements: Repeat Until Statements
       Representing Images: Representing Images
+      Responding to Board Events: Responding to Board Events
+      Responding to User Input: Responding to User Input
       Review: Review
+      Revise Artist Project: Revise Artist Project
+      Revise Sprite Lab Project: Revise Sprite Lab Project
+      Revisiting the Counter Pattern: Revisiting the Counter Pattern
+      Robot Doodle: Robot Doodle
       Run a simulation: Run a simulation
+      Sample App: Sample App
+      Sample Game: Sample Game
+      Sample Platform Jumper Game: Sample Platform Jumper Game
+      Sample Program: Sample Program
       Sample Programs: Sample Programs
       Screen Design: Screen Design
       Sensor Events: Sensor Events
+      Sensor Experiment: Sensor Experiment
       Sensors to Colors: Sensors to Colors
       Setting Properties: Setting Properties
+      Shapes and Parameters: Shapes and Parameters
       Shapes and the Draw Loop: Shapes and the Draw Loop
       Share Your App: Share Your App
-      Share Your Message: Share Your Message
       Side Scroller: Side Scroller
       Simple Circuits: Simple Circuits
       Skill Building: Skill Building
       Skill-Building: Skill-Building
       Sliders: Sliders
       Smart Bike - Blinkers: Smart Bike - Blinkers
+      Social Sleuth: Social Sleuth
       Songwriting - Functions Unplugged Activity: Songwriting - Functions Unplugged Activity
+      Speed it Up, Slow it Down: Speed it Up, Slow it Down
+      Sprite Interactions: Sprite Interactions
+      Sprite Interactions Review: Sprite Interactions Review
+      Sprite Lab Example Project: Sprite Lab Example Project
       Sprite Lab Project: Sprite Lab Project
+      Sprite Properties: Sprite Properties
+      Sprite Scenes: Sprite Scenes
+      Sprite Velocity: Sprite Velocity
       Sprites and the Draw Loop: Sprites and the Draw Loop
       Star Chaser: Star Chaser
-      Stopping the Outbreak with Masks: Stopping the Outbreak with Masks
       Styling Text: Styling Text
       Styling with Classes: Styling with Classes
       Styling your Website: Styling your Website
       Teach A.I. a new word: Teach A.I. a new word
+      Teach AI a New Word: Teach AI a New Word
+      'Technique: Frequency Analysis': 'Technique: Frequency Analysis'
+      Terminology Recap: Terminology Recap
+      Text Compression: Text Compression
+      The Accelerometer: The Accelerometer
+      The Animation Tab: The Animation Tab
       The Artist in Code Studio: The Artist in Code Studio
       The Big Event - Unplugged Activity: The Big Event - Unplugged Activity
+      The Body Element: The Body Element
       The Buzzer: The Buzzer
       The Collector: The Collector
+      The Counter Pattern: The Counter Pattern
+      The Draw Loop: The Draw Loop
       The Harvester: The Harvester
       The Internet - Unplugged Activity: The Internet - Unplugged Activity
       The Power of Words - Unplugged Activity: The Power of Words - Unplugged Activity
       The Right App - Unplugged Activity: The Right App - Unplugged Activity
+      Top Websites: Top Websites
+      Tour of Design Mode: Tour of Design Mode
       Train AI to Clean the Ocean: Train AI to Clean the Ocean
       UI Element Properties: UI Element Properties
+      Unit 5 Lesson 1 Overview: Unit 5 Lesson 1 Overview
       User Interface: User Interface
+      Using Accelerometer Events: Using Accelerometer Events
+      Using Arrays: Using Arrays
       Using Getters and Setters: Using Getters and Setters
       Using HTML Tags: Using HTML Tags
       Using Random Numbers: Using Random Numbers
       Using Training Data: Using Training Data
+      Using the Grid: Using the Grid
       Using the LED: Using the LED
       Using the Repeat Block: Using the Repeat Block
       Using the Switch: Using the Switch
-      Vaccines: Vaccines
+      Variables: Variables
       Velocity: Velocity
       Velocity and the Counter Pattern: Velocity and the Counter Pattern
+      Velocity and the Counter Pattern Review: Velocity and the Counter Pattern Review
       Video: Video
+      Video - Encryption and Public Keys: Video - Encryption and Public Keys
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programming with Blocks'
       'Video:  Debugging with the Step Button': 'Video:  Debugging with the Step Button'
       'Video:  Minecraft - The Agent': 'Video:  Minecraft - The Agent'
       'Video:  Text  and Prompts': 'Video:  Text  and Prompts'
       'Video: "If/Else"': 'Video: "If/Else"'
+      'Video: "If/Else" Statements': 'Video: "If/Else" Statements'
       'Video: AI: What is Machine Learning?': 'Video: AI: What is Machine Learning?'
       'Video: Artist Intro with JR Hildebrand': 'Video: Artist Intro with JR Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Video: Artist Intro with JR Hildebrande'
+      'Video: Booleans': 'Video: Booleans'
+      'Video: CS Matters': 'Video: CS Matters'
       'Video: Code Your Own Flappy Game': 'Video: Code Your Own Flappy Game'
+      'Video: Conditional Statements': 'Video: Conditional Statements'
+      'Video: Conditionals': 'Video: Conditionals'
       'Video: Conditionals: If Statements': 'Video: Conditionals: If Statements'
       'Video: Conditionals: If and If/Else Statements': 'Video: Conditionals: If and If/Else Statements'
       'Video: Dance Party Events': 'Video: Dance Party Events'
@@ -255,21 +431,31 @@ en:
       'Video: De-bugging with the Step Button': 'Video: De-bugging with the Step Button'
       'Video: Debugging with Scrat ': 'Video: Debugging with Scrat '
       'Video: Debugging with the Step Button': 'Video: Debugging with the Step Button'
+      'Video: Drawing in Game Lab - Part 1': 'Video: Drawing in Game Lab - Part 1'
+      'Video: Drawing in Game Lab - Part 2': 'Video: Drawing in Game Lab - Part 2'
       'Video: Events': 'Video: Events'
       'Video: Follow The Digital Trail': 'Video: Follow The Digital Trail'
       'Video: For Loops': 'Video: For Loops'
+      'Video: Functions': 'Video: Functions'
       'Video: Getting Loopy': 'Video: Getting Loopy'
       'Video: Happy Maps - Unplugged Activity': 'Video: Happy Maps - Unplugged Activity'
       'Video: Harvesting with Conditionals': 'Video: Harvesting with Conditionals'
       'Video: How to Create a Simple Function': 'Video: How to Create a Simple Function'
       'Video: How to Make a Sprite': 'Video: How to Make a Sprite'
       'Video: Ice Age Loops': 'Video: Ice Age Loops'
+      'Video: If/Else Statements': 'Video: If/Else Statements'
       'Video: Impacts on Society': 'Video: Impacts on Society'
+      'Video: Intro to CSS': 'Video: Intro to CSS'
+      'Video: Intro to CSS Part 2': 'Video: Intro to CSS Part 2'
+      'Video: Intro to Web Lab - Part 1': 'Video: Intro to Web Lab - Part 1'
+      'Video: Intro to Web Lab - Part 2': 'Video: Intro to Web Lab - Part 2'
       'Video: Introducing Sprite Lab': 'Video: Introducing Sprite Lab'
+      'Video: Introduction to Arrays': 'Video: Introduction to Arrays'
       'Video: Introduction to Play Lab': 'Video: Introduction to Play Lab'
+      'Video: Introduction to Sprites': 'Video: Introduction to Sprites'
+      'Video: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
       'Video: Loops in Artist': 'Video: Loops in Artist'
       'Video: Loops with the Artist': 'Video: Loops with the Artist'
-      'Video: Lots of Sprites': 'Video: Lots of Sprites'
       'Video: Maze Intro - Programming with Blocks': 'Video: Maze Intro - Programming with Blocks'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Maze Intro - Programming with Blocks '
       'Video: Maze Intro: Programming with Blocks': 'Video: Maze Intro: Programming with Blocks'
@@ -284,8 +470,10 @@ en:
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Voyage Aquatic Repeat Until'
       'Video: Nested Loops': 'Video: Nested Loops'
       'Video: Nested Loops with the Bee': 'Video: Nested Loops with the Bee'
+      'Video: Outbreak Simulator: Introduction': 'Video: Outbreak Simulator: Introduction'
       'Video: Pair Programming': 'Video: Pair Programming'
       'Video: Pair Programming ': 'Video: Pair Programming '
+      'Video: Problem Solving Process': 'Video: Problem Solving Process'
       'Video: Programming with Blocks': 'Video: Programming with Blocks'
       'Video: Programming with Rey and BB-8': 'Video: Programming with Rey and BB-8'
       'Video: Properties': 'Video: Properties'
@@ -294,9 +482,11 @@ en:
       'Video: Repeat Blocks with the Artist': 'Video: Repeat Blocks with the Artist'
       'Video: Repeat Until Blocks': 'Video: Repeat Until Blocks'
       'Video: Repeat Until Statements': 'Video: Repeat Until Statements'
+      'Video: Sprite Movement': 'Video: Sprite Movement'
       'Video: Sprites in Action': 'Video: Sprites in Action'
       'Video: Star Wars Project': 'Video: Star Wars Project'
       'Video: Text and Prompts': 'Video: Text and Prompts'
+      'Video: The Animation Tab': 'Video: The Animation Tab'
       'Video: The Artist in Code Studio': 'Video: The Artist in Code Studio'
       'Video: The Big Event - Unplugged Activity': 'Video: The Big Event - Unplugged Activity'
       'Video: The Collector': 'Video: The Collector'
@@ -305,13 +495,21 @@ en:
       'Video: Unplugged Variables in Envelopes': 'Video: Unplugged Variables in Envelopes'
       'Video: Using the Repeat Block': 'Video: Using the Repeat Block'
       'Video: Variables in Artist': 'Video: Variables in Artist'
+      'Video: Velocity': 'Video: Velocity'
       'Video: Warm Up': 'Video: Warm Up'
+      'Video: What Makes a Computer, a Computer?': 'Video: What Makes a Computer, a Computer?'
       'Video: While Loops with the Farmer': 'Video: While Loops with the Farmer'
       'Video: Wrap-up': 'Video: Wrap-up'
       Warm Up: Warm Up
       Website Project: Website Project
       Welcome to Monster Town: Welcome to Monster Town
+      Where'd They Go?: Where'd They Go?
       While Loops with the Farmer: While Loops with the Farmer
+      'Widget: Text Compression': 'Widget: Text Compression'
       Wrap-up: Wrap-up
       Your Personal Website: Your Personal Website
+      getNumber: getNumber
+      getProperty: getProperty
+      getText vs getNumber: getText vs getNumber
       isTouching: isTouching
+      setProperty: setProperty

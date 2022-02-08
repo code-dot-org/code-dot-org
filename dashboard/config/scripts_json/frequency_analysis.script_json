@@ -2,13 +2,17 @@
   "script": {
     "name": "frequency_analysis",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:45 UTC",
+    "serialized_at": "2021-11-22 19:56:59 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "frequency_analysis"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a83c07a8-61ea-4017-b41d-725d1bd7b425",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a83c07a8-61ea-4017-b41d-725d1bd7b425",
+        "lesson.key": "Frequency Analysis",
+        "lesson_group.key": "",
+        "script.name": "frequency_analysis"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "484c2e23-04a9-4d7c-8e5c-60ae0e85fbd6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "484c2e23-04a9-4d7c-8e5c-60ae0e85fbd6",
+        "lesson_activity.key": "a83c07a8-61ea-4017-b41d-725d1bd7b425"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Frequency Analysis"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "Frequency Analysis",
         "lesson_group.key": "",
-        "script.name": "frequency_analysis"
+        "script.name": "frequency_analysis",
+        "activity_section.key": "484c2e23-04a9-4d7c-8e5c-60ae0e85fbd6"
       },
       "level_keys": [
         "Frequency Analysis"
@@ -84,7 +109,8 @@
         ],
         "lesson.key": "Frequency Analysis",
         "lesson_group.key": "",
-        "script.name": "frequency_analysis"
+        "script.name": "frequency_analysis",
+        "activity_section.key": "484c2e23-04a9-4d7c-8e5c-60ae0e85fbd6"
       }
     }
   ],

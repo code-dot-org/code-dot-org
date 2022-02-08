@@ -13,25 +13,24 @@ import {
   getLevelResult
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
-const SET_SCRIPT_PROGRESS = 'progress/SET_SCRIPT_PROGRESS';
+const SET_UNIT_PROGRESS = 'progress/SET_UNIT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
-const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
-const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
+const SET_IS_MINI_VIEW = 'progress/SET_IS_MINI_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
   'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_LESSON_ID = 'progress/SET_CURRENT_LESSON_ID';
-const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
+const SET_UNIT_COMPLETED = 'progress/SET_UNIT_COMPLETED';
 const SET_LESSON_EXTRAS_ENABLED = 'progress/SET_LESSON_EXTRAS_ENABLED';
 const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
 const OVERWRITE_RESULTS = 'progress/OVERWRITE_RESULTS';
@@ -49,27 +48,27 @@ const initialState = {
   lessonGroups: null,
   scriptId: null,
   scriptName: null,
-  scriptTitle: null,
+  unitTitle: null,
   courseId: null,
   isLessonExtras: false,
 
   // The remaining fields do change after initialization
-  // scriptProgress is of type scriptProgressType (a map of levelId ->
+  // unitProgress is of type unitProgressType (a map of levelId ->
   // studentLevelProgressType)
-  scriptProgress: {},
+  unitProgress: {},
+  unitProgressHasLoaded: false,
   // levelResults is a map of levelId -> TestResult
-  // note: eventually, we expect usage of this field to be replaced with scriptProgress
+  // note: eventually, we expect usage of this field to be replaced with unitProgress
   levelResults: {},
   focusAreaLessonIds: [],
   peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
-  showTeacherInfo: false,
   postMilestoneDisabled: false,
-  isHocScript: null,
   isAge13Required: false,
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
   isSummaryView: true,
+  isMiniView: false,
   hasFullProgress: false,
   lessonExtrasEnabled: false,
   // Note: usingDbProgress === "user is logged in". However, it is
@@ -101,10 +100,9 @@ export default function reducer(state = initialState, action) {
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
-      scriptTitle: action.scriptTitle,
-      scriptDescription: action.scriptDescription,
-      scriptStudentDescription: action.scriptStudentDescription,
-      betaTitle: action.betaTitle,
+      unitTitle: action.unitTitle,
+      unitDescription: action.unitDescription,
+      unitStudentDescription: action.unitStudentDescription,
       courseId: action.courseId,
       currentLessonId: currentLessonId,
       hasFullProgress: action.isFullProgress,
@@ -113,10 +111,11 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_SCRIPT_PROGRESS) {
+  if (action.type === SET_UNIT_PROGRESS) {
     return {
       ...state,
-      scriptProgress: processServerStudentProgress(action.scriptProgress)
+      unitProgress: processServerStudentProgress(action.unitProgress),
+      unitProgressHasLoaded: true
     };
   }
 
@@ -181,24 +180,10 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === SHOW_TEACHER_INFO) {
-    return {
-      ...state,
-      showTeacherInfo: true
-    };
-  }
-
   if (action.type === DISABLE_POST_MILESTONE) {
     return {
       ...state,
       postMilestoneDisabled: true
-    };
-  }
-
-  if (action.type === SET_IS_HOC_SCRIPT) {
-    return {
-      ...state,
-      isHocScript: action.isHocScript
     };
   }
 
@@ -216,6 +201,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_IS_MINI_VIEW) {
+    return {
+      ...state,
+      isMiniView: action.isMiniView
+    };
+  }
+
   if (action.type === SET_STUDENT_DEFAULTS_SUMMARY_VIEW) {
     return {
       ...state,
@@ -228,7 +220,7 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isSummaryView:
-        viewType === ViewType.Student && state.studentDefaultsSummaryView
+        viewType === ViewType.Participant && state.studentDefaultsSummaryView
     };
   }
 
@@ -246,10 +238,10 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_SCRIPT_COMPLETED) {
+  if (action.type === SET_UNIT_COMPLETED) {
     return {
       ...state,
-      scriptCompleted: true
+      unitCompleted: true
     };
   }
 
@@ -338,9 +330,11 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     method: 'GET',
     data: {user_id: userId}
   }).done(data => {
-    data = data || {};
+    if (!data || _.isEmpty(data)) {
+      return;
+    }
 
-    if (data.isVerifiedTeacher) {
+    if (data.isVerifiedInstructor) {
       dispatch(setVerified());
     }
 
@@ -354,7 +348,6 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     ) {
       // Default to summary view if teacher is viewing their student, otherwise default to detail view.
       dispatch(setIsSummaryView(data.teacherViewingStudent));
-      dispatch(showTeacherInfo());
     }
 
     if (data.focusAreaLessonIds) {
@@ -363,9 +356,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
       );
     }
 
-    if (data.lockableAuthorized) {
-      dispatch(authorizeLockable());
-    }
+    dispatch(authorizeLockable(data.lockableAuthorized));
 
     if (data.completed) {
       dispatch(setScriptCompleted());
@@ -377,7 +368,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
       // Note that we set the full progress object above in redux but also set
       // a map containing just level results. This is the legacy code path and
-      // the goal is to eventually update all code paths to use scriptProgress
+      // the goal is to eventually update all code paths to use unitProgress
       // instead of levelResults.
       const levelResults = _.mapValues(data.progress, getLevelResult);
       dispatch(mergeResults(levelResults));
@@ -386,8 +377,8 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
         dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
       }
 
-      if (data.current_stage) {
-        dispatch(setCurrentLessonId(data.current_stage));
+      if (data.current_lesson) {
+        dispatch(setCurrentLessonId(data.current_lesson));
       }
     }
   });
@@ -403,10 +394,9 @@ export const initProgress = ({
   peerReviewLessonInfo,
   scriptId,
   scriptName,
-  scriptTitle,
-  scriptDescription,
-  scriptStudentDescription,
-  betaTitle,
+  unitTitle,
+  unitDescription,
+  unitStudentDescription,
   courseId,
   isFullProgress,
   isLessonExtras,
@@ -421,10 +411,9 @@ export const initProgress = ({
   peerReviewLessonInfo,
   scriptId,
   scriptName,
-  scriptTitle,
-  scriptDescription,
-  scriptStudentDescription,
-  betaTitle,
+  unitTitle,
+  unitDescription,
+  unitStudentDescription,
   courseId,
   isFullProgress,
   isLessonExtras,
@@ -432,14 +421,14 @@ export const initProgress = ({
 });
 
 /**
- * Returns action that sets (overwrites) scriptProgress in the redux store.
+ * Returns action that sets (overwrites) unitProgress in the redux store.
  *
- * @param {scriptProgressType} scriptProgress
+ * @param {unitProgressType} unitProgress
  * @returns action
  */
-export const setScriptProgress = scriptProgress => ({
-  type: SET_SCRIPT_PROGRESS,
-  scriptProgress: scriptProgress
+export const setScriptProgress = unitProgress => ({
+  type: SET_UNIT_PROGRESS,
+  unitProgress: unitProgress
 });
 
 export const clearResults = () => ({
@@ -471,13 +460,7 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaLessonIds) => ({
   focusAreaLessonIds
 });
 
-export const showTeacherInfo = () => ({type: SHOW_TEACHER_INFO});
-
 export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
-export const setIsHocScript = isHocScript => ({
-  type: SET_IS_HOC_SCRIPT,
-  isHocScript
-});
 export const setIsAge13Required = isAge13Required => ({
   type: SET_IS_AGE_13_REQUIRED,
   isAge13Required
@@ -485,6 +468,10 @@ export const setIsAge13Required = isAge13Required => ({
 export const setIsSummaryView = isSummaryView => ({
   type: SET_IS_SUMMARY_VIEW,
   isSummaryView
+});
+export const setIsMiniView = isMiniView => ({
+  type: SET_IS_MINI_VIEW,
+  isMiniView
 });
 export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => ({
   type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW,
@@ -494,7 +481,7 @@ export const setCurrentLessonId = lessonId => ({
   type: SET_CURRENT_LESSON_ID,
   lessonId
 });
-export const setScriptCompleted = () => ({type: SET_SCRIPT_COMPLETED});
+export const setScriptCompleted = () => ({type: SET_UNIT_COMPLETED});
 export const setLessonExtrasEnabled = lessonExtrasEnabled => ({
   type: SET_LESSON_EXTRAS_ENABLED,
   lessonExtrasEnabled
@@ -530,6 +517,7 @@ const lessonFromLesson = lesson =>
     'id',
     'lockable',
     'lessonNumber',
+    'lessonStartUrl',
     'lesson_plan_html_url',
     'student_lesson_plan_html_url',
     'description_student',
@@ -566,13 +554,13 @@ const peerReviewLevels = state =>
   }));
 
 /**
- * The level object passed down to use via the server (and stored in stage.lessons.levels)
+ * The level object passed down to use via the server (and stored in lesson.lessons.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of
  * state.levelResults
  */
 const levelWithProgress = (
-  {levelResults, scriptProgress, levelPairing = {}, currentLevelId},
+  {levelResults, unitProgress, levelPairing = {}, currentLevelId},
   level,
   isLockable
 ) => {
@@ -585,8 +573,9 @@ const levelWithProgress = (
   // default values
   let status = LevelStatus.not_tried;
   let locked = isLockable;
+  let teacherFeedbackReviewState = null;
 
-  let levelProgress = scriptProgress[normalizedLevel.id];
+  let levelProgress = unitProgress[normalizedLevel.id];
   if (levelProgress?.pages) {
     levelProgress = levelProgress.pages[normalizedLevel.pageNumber - 1];
   }
@@ -594,6 +583,7 @@ const levelWithProgress = (
     // if we have levelProgress, overwrite default values
     status = levelProgress.status;
     locked = levelProgress.locked;
+    teacherFeedbackReviewState = levelProgress.teacherFeedbackReviewState;
   } else if (level.kind !== LevelKind.assessment) {
     // if we don't have levelProgress, get the status from `levelResults`.
     // however, `levelResults` doesn't track per-page results for multi-page
@@ -611,7 +601,8 @@ const levelWithProgress = (
     status: status,
     isCurrentLevel: isCurrent,
     paired: levelPairing[level.activeId],
-    isLocked: locked
+    isLocked: locked,
+    teacherFeedbackReviewState: teacherFeedbackReviewState
   };
 };
 
@@ -621,21 +612,21 @@ const levelWithProgress = (
 export const levelsByLesson = ({
   lessons,
   levelResults,
-  scriptProgress,
+  unitProgress,
   levelPairing,
   currentLevelId
 }) =>
   lessons.map(lesson =>
     lesson.levels.map(level => {
       let statusLevel = levelWithProgress(
-        {levelResults, scriptProgress, levelPairing, currentLevelId},
+        {levelResults, unitProgress, levelPairing, currentLevelId},
         level,
         lesson.lockable
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
           levelWithProgress(
-            {levelResults, scriptProgress, levelPairing, currentLevelId},
+            {levelResults, unitProgress, levelPairing, currentLevelId},
             sublevel,
             lesson.lockable
           )
@@ -670,7 +661,7 @@ export const isPerfect = (state, levelId) =>
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames
- * {Object[]} Object.stageLevels
+ * {Object[]} Object.lessonLevels
  */
 export const groupedLessons = (state, includeBonusLevels = false) => {
   let byGroup = {};

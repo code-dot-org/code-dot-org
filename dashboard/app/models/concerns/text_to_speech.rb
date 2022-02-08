@@ -123,7 +123,13 @@ module TextToSpeech
     TextToSpeech.tts_upload_to_s3(text, filename, context)
   end
 
-  def tts_url(text)
+  # Returns the URL where the TTS audio file can be downloaded for the given text and locale
+  # @param text [String] The text which is being read aloud in the TTS file.
+  # @param locale [Symbol] The locale of the language being spoken e.g. :'en-US', :'es-MX'
+  # @return [String] URL where the TTS audio file can be downloaded from. `nil` is returned if any of
+  # the params are blank or if TTS is not supported for the given locale.
+  def tts_url(text, locale = I18n.locale)
+    return nil unless TextToSpeech.locale_supported?(locale) && !text.blank?
     "https://tts.code.org/#{tts_path(text)}"
   end
 
@@ -133,9 +139,9 @@ module TextToSpeech
     "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{name}.mp3"
   end
 
-  def tts_should_update(property)
+  def tts_should_update(property, update_all = false)
     changed = property_changed?(property)
-    changed && write_to_file? && published
+    (changed || update_all) && write_to_file? && published
   end
 
   def tts_short_instructions_text
@@ -148,9 +154,9 @@ module TextToSpeech
     end
   end
 
-  def tts_should_update_short_instructions?
+  def tts_should_update_short_instructions?(update_all = false)
     relevant_property = tts_short_instructions_override ? 'tts_short_instructions_override' : 'short_instructions'
-    return tts_should_update(relevant_property)
+    return tts_should_update(relevant_property, update_all)
   end
 
   def tts_long_instructions_text
@@ -199,13 +205,13 @@ module TextToSpeech
     end
   end
 
-  def tts_should_update_long_instructions?
+  def tts_should_update_long_instructions?(update_all = false)
     # Long instruction audio should be updated if the relevant long
     # instructions property on the level itself was updated, or if the levels
     # contained by this level were updated (since we treat contained level
     # content as long instructions for TTS purposes)
     relevant_property = tts_long_instructions_override ? 'tts_long_instructions_override' : 'long_instructions'
-    return tts_should_update(relevant_property) || tts_should_update('contained_level_names')
+    return tts_should_update(relevant_property, update_all) || tts_should_update('contained_level_names', update_all)
   end
 
   def tts_authored_hints_texts
@@ -214,13 +220,13 @@ module TextToSpeech
     end
   end
 
-  def tts_update
+  def tts_update(update_all = false)
     context = 'update_level'
-    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?
+    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all)
 
-    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?
+    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?(update_all)
 
-    if authored_hints && tts_should_update('authored_hints')
+    if authored_hints && (tts_should_update('authored_hints', update_all))
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TextToSpeech.sanitize(hint["hint_markdown"])
@@ -228,6 +234,13 @@ module TextToSpeech
         hint["tts_url"] = tts_url(text)
       end
       self.authored_hints = JSON.dump(hints)
+    end
+
+    # if this level is contained in another level, updating it should also
+    # trigger updates in its parents, since their content is likely at least
+    # partially based on this
+    parent_levels.contained.each do |containing_level|
+      containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text, context)
     end
   end
 end

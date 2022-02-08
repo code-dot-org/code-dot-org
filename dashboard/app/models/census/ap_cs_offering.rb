@@ -90,6 +90,28 @@ class Census::ApCsOffering < ApplicationRecord
     end
   end
 
+  # Deconstructs an object key into multiple variables.
+  # @param [string] object_key - the AWS object name
+  # @return [array] [course, start_year, extension]
+  def self.deconstruct_object_key(object_key)
+    # "ap_cs_offerings/<course>-<start_year>-<end_year>.<file_extension>"
+    _, filename = object_key.split('/')
+    name, extension = filename.rpartition('.')
+    course, start_year = name.split('-')
+    [
+      course,
+      start_year.to_i,
+      extension
+    ]
+  end
+
+  # Extracts parameters for and dry runs a file from an s3 object key
+  # @param [string] object_key - the AWS object name
+  def self.dry_run_new_test_file(object_key)
+    course, start_year, file_extension = deconstruct_object_key(object_key)
+    dry_seed_s3_object(course, start_year, file_extension)
+  end
+
   # Test seeding an object from S3 to find issues.
   # This method does not check if the object had been seeded before
   # and does not write to the database.
@@ -98,7 +120,7 @@ class Census::ApCsOffering < ApplicationRecord
   #   Census::ApCsOffering.dry_seed_s3_object('CSP', 2017)
   #   will seed from ap_cs_offerings/CSP-2017-2028.csv object.
   #
-  #   Census::StateCsOffering.dry_seed_s3_object('CSA', 2019, 'txt')
+  #   Census::ApCsOffering.dry_seed_s3_object('CSA', 2019, 'txt')
   #   will seed from ap_cs_offerings/CSA-2019-2020.txt object.
   #
   # @note: A CSV file with a right format name in S3 will be automatically

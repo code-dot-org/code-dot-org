@@ -2,15 +2,18 @@
   "script": {
     "name": "cspunit1-tools",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "serialized_at": "2021-11-22 19:56:44 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspunit1-tools"
     }
@@ -46,23 +49,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "1fad3ec3-f85a-4419-ac43-0e4e484fd43d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1fad3ec3-f85a-4419-ac43-0e4e484fd43d",
+        "lesson.key": "netsim",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-tools"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b10931a8-b6af-4e2c-82a2-39e67f2e3880",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b10931a8-b6af-4e2c-82a2-39e67f2e3880",
+        "lesson_activity.key": "1fad3ec3-f85a-4419-ac43-0e4e484fd43d"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "plc csp1 intro to tools"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -70,7 +93,8 @@
         ],
         "lesson.key": "netsim",
         "lesson_group.key": "",
-        "script.name": "cspunit1-tools"
+        "script.name": "cspunit1-tools",
+        "activity_section.key": "b10931a8-b6af-4e2c-82a2-39e67f2e3880"
       },
       "level_keys": [
         "plc csp1 intro to tools"
@@ -86,7 +110,8 @@
         ],
         "lesson.key": "netsim",
         "lesson_group.key": "",
-        "script.name": "cspunit1-tools"
+        "script.name": "cspunit1-tools",
+        "activity_section.key": "b10931a8-b6af-4e2c-82a2-39e67f2e3880"
       }
     }
   ],

@@ -34,9 +34,12 @@ hr-HR:
   twentyhours_text: Završio si svoj prvi Sat Kodiranja? Nauči više o Informatici i
     konceptima programiranja u narednom tečaju.
   og_title: Svako dijete zaslužuje priliku
+  og_title_soon: Tjedan podučavanja Računalstva
   og_description: Svaki učenik u svakoj školi zaslužuje priliku studirati informatiku.
     Ona mijenja sve.
   csedweek_og_title: Tjedan podučavanja Računalstva
+  csedweek_og_description: Svaki učenik u svakoj školi zaslužuje priliku studirati
+    informatiku. Ona mijenja sve.
   hoc2014_heading: Pridružite se <a href="http://hourofcode.com">Satu Kodiranja</a><br/>8.
     - 14. prosinca 2014.<br/>
   hoc2014_students: Učenici
@@ -82,6 +85,10 @@ hr-HR:
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   get_a_certificate_of_achievement: Preuzmi potvrdu o postignuću
+  third_party_gradelevel_2to8: Uzrast 2-8
+  third_party_gradelevel_4to12: Uzrast 4-12
+  third_party_gradelevel_5to12: Uzrast 5-12
+  third_party_gradelevel_6plus: Uzrast 6+
   third_party_curriculum: Nastavni plan
   enter_valid_age: Molimo odaberite valjanu dob
   enter_valid_email: Unesite ispravnu e-mail adresu, molim
@@ -141,6 +148,7 @@ hr-HR:
   learn_next_level: Prijeđi na sljedeći nivo
   learn_online: Isprobajte druge online tečajeve
   learn_classes: Pronađi lokalne nastave
+  hoc_is_here: "#HourOfCode je ovdje - pogledaj! @codeorg"
   just_did_hoc: 'Upravo sam završio #HourOfCode - pogledaj! @codeorg'
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Prije sat vremena
@@ -218,6 +226,8 @@ hr-HR:
   homepage_hero_text_stat_loc: "#loc linije koda napisane od učenika"
   homepage_hero_text_stat_students: "#student_count učeničkih računa na Code Studiu"
   homepage_hero_text_stat_served: 'The Hour of Code: #served održanih'
+  homepage_hero_hoc_is_coming: Tjedan podučavanja Računalstva
+  homepage_hero_hoc_is_here: Tjedan podučavanja Računalstva
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Snježno kraljevstvo s Anom i Elsom
   homepage_slot_text_studio: Svi priručnici
@@ -312,6 +322,7 @@ hr-HR:
   class_submission_level_college: Fakultet
   class_submission_level_vocational: Strukovni
   class_submission_languages_other: Drugi jezik/jezici
+  playlab_iceage_title_live: Ledeno Doba
   starwars_subtitle: Izgradnja galaksije pomoću koda
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Koristi povuci-ispusti blokove i JavaScript.
@@ -333,7 +344,11 @@ hr-HR:
   minecraft_adventurer_button: Početak
   minecraft_subtitle: Minecraft Sat Kodiranja
   sports_watch_video: Pogledajte video
+  watch_inspirational_videos: Prije nego što počneš, pogledaj jedan od ovih inspirativnih
+    videa
   video_title_inspire_girl: Inspiriraj djevojku
+  speak_another_language: Govoriš drugi jezik?
+  help_translate: Pomozi nam prevesti.
   are_you_teacher: Jeste li učitelj?
   volunteer_engineer_submission_title: Potakni učenike i volontere na Sat Kodiranja.
   volunteer_engineer_submission_subtitle_generic: '100,000 učitelja će ove godine
@@ -437,6 +452,7 @@ hr-HR:
   dashboard_navigation_add_students: Dodavanje učenika
   dashboard_navigation_manage_students: Upravljanje učenicima
   dashboard_navigation_lesson_plans_resources: Nastavni planovi i resursi
+  dashboard_navigation_view_stats: Prikaz statistike
   dashboard_navigation_section: 'Odjeljenje: %{section_name}'
   dashboard_navigation_student: 'Učenik: %{student_name}'
   dashboard_progress_not_started: nije započelo
@@ -526,6 +542,7 @@ hr-HR:
   dashboard_teacher_worksheet: učiteljski radni list
   dashboard_curriculum_csina: 'Računarstvo u algebri:'
   dashboard_curriculum_csins: 'Računarstvo u znanosti:'
+  dashboard_curriculum_ecs: 'Upoznavanje računalstva:'
   dashboard_grade_k: predškolski
   dashboard_grade_other: Ostalo
   dashboard_login_word: Riječ
@@ -578,10 +595,13 @@ hr-HR:
   carousel_heading_domestic: Upute dostupne na engleskom
   carousel_heading_beginners: Tutorijali za početnike
   carousel_heading_javascript: Tutorijali za učenje JavaScripta
+  carousel_heading_beyond_javascript: Tutorijali za učenje JavaScripta
   carousel_heading_unplugged: Nemate uređaje ili Internet? Isprobajte 'odspojenu'
     informatiku
   carousel_heading_devices: Tutorijalne aplikacije za mobitele i tablete
+  carousel_heading_beyond_devices: Tutorijalne aplikacije za mobitele i tablete
   carousel_heading_languages: Tutorijali u drugim programskim jezicima
+  carousel_heading_beyond_languages: Tutorijali u drugim programskim jezicima
   carousel_heading_apps_games: Izradi svoje vlastite aplikacije ili igrice
   carousel_heading_university: Sveučilišni tečajevi online
   carousel_heading_webpages: Nauči izrađivati web stranice
@@ -626,6 +646,7 @@ hr-HR:
   robomindnl_name: Programiraj virtualnog robota
   flappy_name: Napravi Flappy igricu
   bitsbox_name: Bitsbox - napravi igru
+  makeschool_name: Napravi iPhone igru u svom pregledniku!
   appinventor_name: AppInventor Sat Kodiranja
   blockly_name: Blockly
   projguts_name: Kamen, škare, papir
@@ -640,6 +661,7 @@ hr-HR:
   accelerated_name: Ubrzani tečaj
   20-hour_name: Ubrzani tečaj
   classicmaze_name: Klasični labirint
+  iceage_name: Ledeno Doba
   minecraft_name: Minecraft
   applab_name: Laboratorij aplikacija
   gamelab_name: Game Lab
@@ -687,16 +709,52 @@ hr-HR:
   infinity_gradelevel: Dob 4-104
   artist_gradelevel: Dob 8+
   monstercoding_gradelevel: Dob 5-13
+  allcancode_gradelevel: Dob 5-10
+  csfirst_gradelevel: Dob 9-14
   boxisland_gradelevel: Osnovna škola
+  codesters_gradelevel: Dob 12-14
+  texasinstruments_gradelevel: Dob 13-16
+  teacherled_gradelevel: Dob 5+
   course1_gradelevel: Uzrast 4+ (nečitači)
   course2_gradelevel: Dob 6+ (potrebno čitanje)
   course3_gradelevel: Godine 8-18
   course4_gradelevel: Dob 10+ (nakon Tečaja 3)
+  coursea_gradelevel: Dob 4-7
+  courseb_gradelevel: Dob 5-8
+  coursec_gradelevel: Dob 6-10
+  coursed_gradelevel: Dob 7-11
   coursee_gradelevel: Dob 8-12
+  coursef_gradelevel: Dob 9-13
+  coursea-2017_gradelevel: Dob 4-7
+  courseb-2017_gradelevel: Dob 5-8
+  coursec-2017_gradelevel: Dob 6-10
+  coursed-2017_gradelevel: Dob 7-11
   coursee-2017_gradelevel: Dob 8-12
+  coursef-2017_gradelevel: Dob 9-13
+  coursea-2018_gradelevel: Dob 4-7
+  courseb-2018_gradelevel: Dob 5-8
+  coursec-2018_gradelevel: Dob 6-10
+  coursed-2018_gradelevel: Dob 7-11
   coursee-2018_gradelevel: Dob 8-12
+  coursef-2018_gradelevel: Dob 9-13
+  coursea-2019_gradelevel: Dob 4-7
+  courseb-2019_gradelevel: Dob 5-8
+  coursec-2019_gradelevel: Dob 6-10
+  coursed-2019_gradelevel: Dob 7-11
   coursee-2019_gradelevel: Dob 8-12
+  coursef-2019_gradelevel: Dob 9-13
+  coursea-2020_gradelevel: Dob 4-7
+  courseb-2020_gradelevel: Dob 5-8
+  coursec-2020_gradelevel: Dob 6-10
+  coursed-2020_gradelevel: Dob 7-11
   coursee-2020_gradelevel: Dob 8-12
+  coursef-2020_gradelevel: Dob 9-13
+  coursea-2021_gradelevel: Dob 4-7
+  courseb-2021_gradelevel: Dob 5-8
+  coursec-2021_gradelevel: Dob 6-10
+  coursed-2021_gradelevel: Dob 7-11
+  coursee-2021_gradelevel: Dob 8-12
+  coursef-2021_gradelevel: Dob 9-13
   accelerated_gradelevel: Dob 10+ (nakon Tečaja 3)
   codeorg_platformtext: Suvremeni preglednici, mobiteli, tableti
   codeintl_platformtext: Suvremeni preglednici, mobiteli, tableti
@@ -778,6 +836,8 @@ hr-HR:
   flappy_shortdescription: Napravi svoju igru - Flappy Bird, Morskog Psa ili Podmornicu
   bitsbox_shortdescription: Kodiraj niz aplikacija za igru i dijeljenje korištenjem
     pravog JavaScripta.
+  makeschool_shortdescription: Napravi igricu za iPhone! Uči kodiranjem naučiti svoja
+    čudovišta nove pokrete!
   touchdevelop_shortdescription: 'Rješavaj zadatke, stvaraj igre i uči programirati,
     sve na svom mobitelu. '
   appinventor_shortdescription: Napravi svoj program! (Samo za Android)
@@ -901,6 +961,11 @@ hr-HR:
     niz aplikacija za igranje i dijeljenje. Jednostavne upute korak po korak omogućuju
     da čak i mala djeca programiraju u pravom JavaScriptu, a što si napredniji, dalje
     ćeš stići.
+  makeschool_longdescription: Nauči programirati kroz izradu iPhone igrice korištenjem
+    sasvim novog programskog jezika prilagođenog početnicima zvanog Swift! Napravi
+    akcijsku igru inspiriranu Pokemonima i napiši kôd da bi naučio svojeg lika novim
+    pokretima. Naučit ćeš kako koristiti varijable, metode i objekte da bi pomogao
+    svom liku da pobijedi!
   touchdevelop_longdescription: 'Uređivač prilagođen dodirivanju će te voditi u stvaranju
     pikselaste slike, rješavanju medvjeđe zagonetke ili stvaranju igre sa skakutavom
     pticom. '
@@ -944,6 +1009,7 @@ hr-HR:
   groklearning_beyond_name: Nauči programirati u Pythonu
   hacketyhack_beyond_name: Nauči Ruby
   robomind_beyond_name: Programiraj virtualnog robota
+  makeschool_beyond_name: Napravi iPhone igru u svom pregledniku!
   appinventor_beyond_name: AppInventor Sat Kodiranja
   codehs_beyond_name: Nauči programirati s psom Karelom
   udemy_beyond_name: Online tečajevi programiranja
@@ -1118,6 +1184,11 @@ hr-HR:
     svojim vlastitim virtualnim robotom. Online tečaj je cjelina sastavljena od kratkih
     prezentacija, filmova, kvizova i automatiziranih voditelja i uputa koji pomažu
     tijekom vježbi iz programiranja. '
+  makeschool_beyond_longdescription: Znaš li malo ObjectiveC? Nauči kako napraviti
+    iPhone igru za sat vremena! Vodit ćemo te kroz proces da iskodiraš, testiraš i
+    igraš svoju igru, sve u pregledniku, a zatim je podijeli s prijateljima na Facebooku
+    da je isprobaju. Nije potrebno prethodno iskustvo programiranja za iPhone, no
+    trebaš znati što su varijable, metode i objekti.
   appinventor_beyond_longdescription: Zabavni, kratki video tutorijali vode te kroz
     izradu tri jednostavne aplikacije za tvoj Android mobitel ili tablet. Dizajniran
     i za početnike i za znalce, ovaj sat kodiranja će te osposobiti da počneš stvarati
@@ -1227,6 +1298,7 @@ hr-HR:
   sphero_beyond_longdescription: Bilo da ste učitelj ili roditelj, SPRK lekcije daju
     djeci zabavan brzinski tečaj programiranja robota dok usput poboljšavaju matematičke
     i znanstvene vještine.
+  compatibility_hide_this_warning: Sakrij ovo upozorenje
   flappy_shortcode: mahni krilima
   header_courses: Tečajevi
   header_course_catalog: Katalog tečajeva
@@ -1239,17 +1311,31 @@ hr-HR:
   header_about_jobs: Zapošljavanje
   header_about_contact: Kontaktiraj nas
   header_about_faqs: ČPP
+  header_stats: Prikaz statistike
   header_about: O
+  header_help_support: 'Pomoć i podrška '
   header_legal_privacy: Politika privatnosti
   header_legal_tos: Uvjeti
+  app_lab_documentation: Dokumentacija za App Lab
+  app_lab_tutorials: Upute za App Lab
+  game_lab_documentation: Dokumentacija za Lab igrica
+  game_lab_tutorials: Upute za Lab igrica
+  sprite_lab_documentation: Dokumentacija za Lab likova
+  sprite_lab_tutorials: Upute za Lab likova
   user_header_label: Zdravo, %{username}
+  user_header_my_projects: Moji projekti
   user_header_settings: Moj račun
   user_header_logout: Odjava
   user_header_signin: Prijava
+  user_header_create: 'Stvori '
+  user_header_applab: 'Laboratorij aplikacija '
+  user_header_artist: 'Umjetnik '
   user_header_gamelab: Game Lab
   user_header_playlab: Laboratorij igara
+  user_header_spritelab: Lab likova
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_all: Prikaz svih projekata...
   applab_tile_start_tutorial: Početak
   hoc_overview_start_tutorial: Početak
   hoc_overview_more_resources: Za više informacija o interakciji s virtualnom učionicom,
@@ -1259,6 +1345,8 @@ hr-HR:
   hoc2018_creativity_create: Stvori
   hoc2018_mc_start: Početak
   hoc2018_mc_educators_box2_button: Preuzmi
+  hoc2018_mc_watch_videos: Prije nego što počneš, pogledaj jedan od ovih inspirativnih
+    videa
   hoc2018_mc_video_title_inspire_girl: Inspiriraj djevojku
   hoc2018_mc_homepage_join_us: Pridružite nam se
   hoc2018_mc_homepage_try_it: Isprobaj
@@ -1266,11 +1354,15 @@ hr-HR:
   hoc2018_dance_teacher_resources_tile1_button: Nastavni plan
   hoc2018_dance_teacher_resources_tile2_button: Izvanmrežna aktivnost
   hoc2018_dance_amazon_about_future_engineer_button: Doznaj više
+  hoc2018_dance_video2: Plesna zabava - događaji
+  hoc2018_dance_video3: Plesna zabava - svojstva
   footer_powered_by_aws: Potpomognuto s Amazon Web Services
   footer_privacy_policy: Politika privatnosti
+  footer_privacy_policy_updated: Politika privatnosti (ažurirana)
   footer_about: O
   footer_partners: Partneri
   footer_donate: Donirajte
   footer_support: Pomoć i zajedništvo
   footer_terms: Uvjeti
+  ai_for_oceans_lesson_plan: nastavni plan
   ai_description: Opis

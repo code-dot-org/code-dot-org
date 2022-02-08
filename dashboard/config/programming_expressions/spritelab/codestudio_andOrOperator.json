@@ -1,7 +1,7 @@
 {
+  "key": "codestudio_andOrOperator",
+  "name": "logic_operation",
   "category": "Logic",
-  "config": {
-    "docFunc": "codestudio_andOrOperator",
-    "func": "logic_operation"
-  }
+  "block_name": "logic_operation",
+  "syntax": "logic_operation"
 }

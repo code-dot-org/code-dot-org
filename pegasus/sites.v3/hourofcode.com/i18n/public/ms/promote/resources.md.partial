@@ -8,9 +8,9 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Mempromosikan Hour of Code
+# Promosikan Jam Kod
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### Cari semua sumber yang anda perlukan untuk membawa perhatian kepada acara Jam Kod anda. Tidak pasti di mana hendak bermula? Mulakan dengan [panduan cara untuk menganjurkan acara Jam Kod]({{ how_to_url }}) kami!
 
 * * *
 
@@ -18,168 +18,168 @@ nav: promote_nav
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Gantungkan poster ini di sekolah anda
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+Set poster baharu tersedia yang menampilkan Malala, Stephen Curry, Shakira dan ramai lagi! Tahun ini, setiap set akan dilengkapi dengan 6 poster dan 126 pelekat "Saya telah melaksanakan Jam Kod". Bekalan terhad, oleh itu [sila pesan poster anda](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) dengan segera. Untuk mencetak sendiri, hanya perlu klik imej di bawah untuk melihat dan menyimpan versi yang boleh dicetak.
 
 {{ promote_new_posters }}
 
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* Mencari poster kami dari tahun sebelumnya? [Temui poster tersebut di sini]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
-## Post these on social media
+## Siarkan ini di dalam media sosial
 
-[![imej](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imej](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![imej](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imej](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![imej](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Gunakan logo Jam Kod untuk menyebarkan berita
 
 [![imej]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imej]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Muat turun versi resolusi tinggi](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+**"Hour of Code" dan "Hora del Código" sudah menjadi tanda dagangan. Kami tidak mahu menghalang penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang ditentukan:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. Mana-mana rujukan kepada "Hour of Code" atau "Hora del Código" sepatutnya digunakan di dalam fesyen yang tidak menunjukkan ia merupakan nama jenama anda, tetapi lebih merujuk kepada Jam Kod sebagai pergerakan akar umbi.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong>Contoh yang baik</strong>: "Menyertai Hour of Code™ (Jam Kod) di YOUR-COMPANY.com."
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong>Contoh tidak baik</strong>: "Cuba Jam Kod oleh YOUR-COMPANY."
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Gunakan superskrip "TM" di tempat paling utama anda menyebut "Hour of Code" (Jam Kod) dan superskrip "Ⓡ" di tempat paling utama anda menyebut "Hora del Código", kedua-duanya pada laman web anda dan huraian di dalam aplikasi.
+2. Termasuk bahasa pada halaman anda (atau di bahagian pengaki), termasuk pautan kepada CSEdWeek dan laman web [Code.org]({{ codeorg_link }}), yang mengatakan perkara berikut:
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *“'Hour of Code™'/'Hora del Código®' ialah inisiatif global oleh Minggu Pendidikan Sains Komputer [csedweek.org] and Code.org [code.org] untuk memperkenalkan jutaan pelajar kepada sejam sains komputer dan pengaturcaraan komputer.”*
 
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+3. Tidak menggunakan "Hour of Code" atau "Hora del Código" di dalam nama aplikasi.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Cetak pelekat ini untuk diberikan kepada pelajar anda
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+(Pelekat berdiameter 1", 63 setiap helaian) <br />
 
 [![imej](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## Jemput individu di dalam komuniti anda ke acara Jam Kod dan promosikan acara anda melalui e-mel
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### Cari [lebih banyak maklumat dan bahasa yang boleh anda gunakan]({{ promote/stats_url }}) apabila bercakap tentang Jam Kod.
 
 * * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### Minta pihak sekolah, majikan, atau rakan anda mendaftarkan diri:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+**Tajuk subjek:** Sertai saya dan lebih daripada 100 juta pelajar untuk acara Jam Kod <br />
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Komputer berada di mana-mana sahaja, mengubah setiap industri di dalam planet ini. But only 51% of all high schools offer computer science. Berita baiknya ialah, kita sedang berusaha mengubahnya! Jika anda pernah mendengar tentang Jam Kod sebelum ini, anda mungkin tahu bahawa ia pernah mencipta sejarah. Lebih daripada 100 juta pelajar telah mencuba Jam Kod.
 
-Dengan Hour of Code, sains komputer telah dipaparkan pada laman Google, MSN, Yahoo!, dan Disney. Lebih daripada 100 rakan kongsi telah bekerjasama untuk menyokong gerakan ini. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Dengan Jam Kod, sains komputer dipaparkan pada laman utama Google, MSN, Yahoo! dan Disney. Lebih daripada 100 rakan kongsi bekerjasama menyokong pergerakan ini. Setiap Kedai Apple di dunia telah menganjurkan Jam Kod dan pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis baris pertama kod mereka sebagai sebahagian daripada kempen.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+Tahun ini, mari kita lakukan secara besar-besaran. Saya meminta anda menyertai Jam Kod {{ campaign_date/year }}. Sila libatkan diri dengan acara Jam Kod semasa Minggu Pendidikan Sains Komputer, {{ campaign_date/full }}.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Sebarkan berita. Anjurkan acara. Minta sekolah tempatan untuk mendaftarkan diri. Atau cuba lakukan Jam Kod anda sendiri—semua individu boleh mendapat manfaat daripada mempelajari asasnya.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### Menjadi sukarelawan di sekolah:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### [Cari lebih banyak sumber dan maklumat tentang sukarelawan di sekolah di sini]({{ how_to_volunteers_url }}).
 
-**Subject line:** Can we help you host an Hour of Code?
+**Tajuk subjek:** Bolehkah kami membantu anda menganjurkan Jam Kod?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Antara {{ campaign_date/short }}, sepuluh peratus daripada pelajar di seluruh dunia akan menyambut Minggu Pendidikan Sains Komputer dengan melakukan Jam Kod di sekolah mereka. Ini ialah peluang untuk setiap kanak-kanak mengetahui cara teknologi di sekitar kita berfungsi.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[Our organization/My name] ingin membantu [school name] menjalankan acara Jam Kod. Kami boleh membantu guru menganjurkan Jam Kod di dalam kelas mereka (malah kami tidak memerlukan komputer!) atau sekiranya anda ingin menganjurkan perhimpunan sekolah, kami boleh menguruskan penceramah untuk bercakap tentang cara teknologi berfungsi dan perasaan menjadi jurutera perisian.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+Pelajar akan mencipta aplikasi atau permainan mereka sendiri yang boleh ditunjukkan kepada ibu bapa mereka dan kami juga akan mencetak sijil Jam Kod yang dapat mereka bawa pulang. Dan, ia menyeronokkkan! Bersama aktiviti berinteraktif dan praktikal, pelajar akan belajar kemahiran pemikiran pengiraan dengan cara yang mudah didekati.
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Komputer berada di mana-mana sahaja, mengubah setiap industri di dalam planet ini. But only 51% of all high schools offer computer science. Berita baiknya ialah, kami sedang dalam proses mengubahnya! Jika anda pernah mendengar tentang Jam Kod sebelum ini, anda mungkin tahu ia telah mencipta sejarah - lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Malah pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis barisan kod pertama mereka sebagai sebahagian daripada kempen itu.
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+Anda boleh membaca tentang acara tersebut dengan lebih lanjut di http://hourofcode.com. Atau, beritahulah kami jika anda ingin menjadualkan sedikit masa anda untuk berbincang tentang cara [school name] boleh menyertainya.<br />
 
 * * *
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### Beritahu ibu bapa tentang acara sekolah anda:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**Tajuk subjek:** Pelajar kita sedang mengubah masa depan dengan Jam Kod
 
-Dear Parents,
+Ibu Bapa yang Dihormati,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+Kita hidup di dunia yang dikelilingi dengan teknologi. Dan kita tahu bahawa apa sahaja bidang yang dipilih oleh pelajar kita sebagai orang dewasa, kemampuan mereka untuk berjaya akan bergantung pada pemahaman cara teknologi berfungsi.
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Itu menjadi antara sebab seluruh sekolah kita menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer ({{ campaign_date/full }}). Lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Jam Kod kita membuat pernyataan bahawa [SCHOOL NAME] sudah bersedia mengajar kemahiran asas abad ke-21 ini. Untuk terus membawa aktiviti pengaturcaraan kepada pelajar anda, kita mahu menjadikan Jam Kod kita acara yang amat besar. Saya menggalakkan anda menjadi sukarelawan, menghubungi media tempatan, berkongsi berita di dalam saluran media sosial dan mempertimbang untuk menganjurkan acara Jam Kod tambahan di dalam komuniti.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+Ini ialah peluang untuk mengubah masa depan pendidikan di [TOWN/CITY NAME].
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### Jemput media menghadiri acara anda:
 
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
+#### [Lihat kumpulan risalah akhbar untuk maklumat lebih lanjut mengenai menjemput pihak media ke acara anda.]({{ promote/press_kit_url }})
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**Tajuk subjek**: Sekolah tempatan menyertai misi memperkenalkan pelajar kepada sains komputer
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Berita baiknya ialah, kita sedang berada di perjalanan untuk mengubah situasi ini.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Wanita muda dan pelajar daripada kumpulan kaum dan etnik terpinggir terlalu dipencilkan di dalam kelas sains komputer dan industri teknologi. Berita baiknya ialah, kami sedang dalam proses mengubahnya.
 
-Dengan Hour of Code, sains komputer telah dipaparkan pada laman Google, MSN, Yahoo!, dan Disney. Lebih daripada 100 rakan kongsi telah bekerjasama untuk menyokong gerakan ini. Setiap Stor Apple di dunia ini telah menganjurkan suatu Hour of Code. Malah Presiden Obama telah menulis barisan kod beliau yang pertama sebagai salah satu bahagian kempen ini.
+Dengan Jam Kod, sains komputer dipaparkan pada laman utama Google, MSN, Yahoo! dan Disney. Lebih daripada 100 rakan kongsi bekerjasama menyokong pergerakan ini. Setiap Kedai Apple di dunia telah menganjurkan Jam Kod. Malah Presiden Obama telah menulis barisan kod beliau yang pertama sebagai sebahagian daripada kempen ini.
 
-Itulah sebabnya setiap pelajar [X number] di [SCHOOL NAME] menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer (3-9 Disember).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
 
-Saya sedang menulis untuk menjemput anda supaya menghadiri perhimpunan permulaan kita dan melihat kanak-kanak memulakan aktiviti pada [DATE].
+Saya menulis untuk menjemput anda menghadiri perhimpunan pelancaran kita dan melihat kanak-kanak memulakan aktiviti pada [DATE].
 
-Hour of Code, anjuran oleh Code.org dan 100 rakan lain yang bukan berasaskan keuntungan, merupakan suatu pergerakan seluruh dunia yang percaya bahawa pelajar-pelajar kini sudah bersedia untuk belajar kemahiran kritikal untuk kejayaan di abad ke-21. Sila sertai kita.
+Acara Jam Kod, yang dianjurkan oleh Code.org bukan untung dan lebih daripada 100 yang lain, ialah pergerakan global yang percaya para pelajar masa kini bersedia mempelajari kemahiran kritikal untuk kejayaan pada abad ke-21. Sila sertai kami.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Hubungi: [YOUR NAME], [TITLE], Telefon mudah alih: (212) 555-5555 Bila: [DATE and TIME of your event] Di mana: [ADDRESS and DIRECTIONS]
 
-I look forward to being in touch. <br />
+Saya berharap kita akan terus berhubung. <br />
 
 * * *
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### Jemput ahli politik tempatan hadir ke acara sekolah anda:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [Perlukan lebih banyak maklumat? Lihat sumber kami untuk menjemput ahli politik menghadiri acara anda]({{ how_to_public_officials_url }}).
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**Tajuk subjek**: Sertai sekolah kami kerana kami mengubah masa depan dengan Jam Kod
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+[Mayor/Governor/Representative/Senator LAST NAME] yang dihormati:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+Adakah anda tahu bahawa pengkomputeran merupakan sumber upah #1 di Amerika Syarikat? Terdapat lebih daripada 500,000 pekerjaan pengkomputeran dibuka di seluruh negara, tetapi pada tahun lepas hanya 42,969 pelajar sains komputer tamat pengajian untuk diambil sebagai tenaga kerja.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+Itu menjadi antara sebab seluruh sekolah kita menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer ({{ campaign_date/full }}). Lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+Saya menulis untuk menjemput anda menyertai acara Jam Kod dan berucap semasa perhimpunan pelancaran kami. Acara ini akan berlangsung pada [DATE, TIME, PLACE] dan akan membuat pernyataan yang kukuh bahawa [State or City name] sudah bersedia mengajar pelajar kita kemahiran abad ke-21 yang kritikal. Kita mahu memastikan bahawa pelajar kita berada di barisan hadapan dalam mencipta teknologi masa depan—bukan sekadar menggunakannya.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+Sila hubungi saya di [PHONE NUMBER OR EMAIL ADDRESS]. Saya menantikan jawapan daripada anda.
 
 {{ signup_button }}

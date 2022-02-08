@@ -2,13 +2,17 @@
   "script": {
     "name": "csp-ca-a",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:57 UTC",
+    "serialized_at": "2021-11-22 19:56:29 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp-ca-a"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "69bc61d8-5f51-40d8-a6bf-df871ca084d2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69bc61d8-5f51-40d8-a6bf-df871ca084d2",
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "0f27dc6c-bf30-47b2-b6bd-59699980f857",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0f27dc6c-bf30-47b2-b6bd-59699980f857",
+        "lesson_activity.key": "69bc61d8-5f51-40d8-a6bf-df871ca084d2"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "CSP Cumulative Assess A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "Commutative Assessment A",
         "lesson_group.key": "",
-        "script.name": "csp-ca-a"
+        "script.name": "csp-ca-a",
+        "activity_section.key": "0f27dc6c-bf30-47b2-b6bd-59699980f857"
       },
       "level_keys": [
         "CSP Cumulative Assess A"
@@ -84,7 +109,8 @@
         ],
         "lesson.key": "Commutative Assessment A",
         "lesson_group.key": "",
-        "script.name": "csp-ca-a"
+        "script.name": "csp-ca-a",
+        "activity_section.key": "0f27dc6c-bf30-47b2-b6bd-59699980f857"
       }
     }
   ],

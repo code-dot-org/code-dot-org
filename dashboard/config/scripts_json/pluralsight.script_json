@@ -2,13 +2,17 @@
   "script": {
     "name": "pluralsight",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:36 UTC",
+    "serialized_at": "2021-11-22 19:57:10 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "pluralsight"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0e50ef1b-3b6d-4717-8575-0d258f261782",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e50ef1b-3b6d-4717-8575-0d258f261782",
+        "lesson.key": "Pluralsight LevelGroup",
+        "lesson_group.key": "",
+        "script.name": "pluralsight"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "bfcc2fc1-8b40-45da-b5ea-9327b6edf8f7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bfcc2fc1-8b40-45da-b5ea-9327b6edf8f7",
+        "lesson_activity.key": "0e50ef1b-3b6d-4717-8575-0d258f261782"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "Pluralsight for CSP"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "Pluralsight LevelGroup",
         "lesson_group.key": "",
-        "script.name": "pluralsight"
+        "script.name": "pluralsight",
+        "activity_section.key": "bfcc2fc1-8b40-45da-b5ea-9327b6edf8f7"
       },
       "level_keys": [
         "Pluralsight for CSP"
@@ -84,7 +109,8 @@
         ],
         "lesson.key": "Pluralsight LevelGroup",
         "lesson_group.key": "",
-        "script.name": "pluralsight"
+        "script.name": "pluralsight",
+        "activity_section.key": "bfcc2fc1-8b40-45da-b5ea-9327b6edf8f7"
       }
     }
   ],

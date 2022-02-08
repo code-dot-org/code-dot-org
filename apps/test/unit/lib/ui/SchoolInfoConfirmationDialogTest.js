@@ -128,20 +128,24 @@ describe('SchoolInfoConfirmationDialog', () => {
   });
 
   describe('when to render school info confirmation dialog', () => {
-    const onClose = sinon.spy();
-    const wrapper = mount(
-      <SchoolInfoConfirmationDialog
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            country: 'US'
-          }
-        }}
-        onClose={onClose}
-        isOpen={true}
-      />
-    );
+    let onClose, wrapper;
+
+    beforeEach(() => {
+      onClose = sinon.spy();
+      wrapper = mount(
+        <SchoolInfoConfirmationDialog
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'US'
+            }
+          }}
+          onClose={onClose}
+          isOpen={true}
+        />
+      );
+    });
 
     it('renders school info form when school info interstitial is set to true', () => {
       const wrapperInstance = wrapper.instance();

@@ -2,25 +2,39 @@
   "script": {
     "name": "express-2021",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
       "hideable_lessons": true,
-      "project_widget_visible": true,
+      "is_course": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "lesson_extras_available": true,
-      "version_year": "2021",
-      "curriculum_umbrella": "CSF",
-      "is_course": true,
-      "is_migrated": true,
-      "has_lesson_plan": true
+      "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-26 17:30:20 UTC",
+    "serialized_at": "2022-01-20 17:49:21 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -5288,7 +5302,6 @@
         ],
         "progression": "Video: Maze Intro - Programming with Blocks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5314,7 +5327,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5340,7 +5352,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5366,7 +5377,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5392,7 +5402,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5418,7 +5427,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5444,7 +5452,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5470,7 +5477,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5496,7 +5502,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5522,7 +5527,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5548,7 +5552,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5574,7 +5577,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5600,7 +5602,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5626,7 +5627,6 @@
         ],
         "progression": "Video: Debugging with Scrat "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5652,7 +5652,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5678,7 +5677,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5704,7 +5702,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5730,7 +5727,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5756,7 +5752,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5782,7 +5777,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5809,7 +5803,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5835,7 +5828,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5861,7 +5853,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5887,7 +5878,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5913,7 +5903,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5939,7 +5928,6 @@
         ],
         "progression": "Video: The Collector"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5965,7 +5953,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5991,7 +5978,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6017,7 +6003,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6043,7 +6028,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6069,7 +6053,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6095,7 +6078,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6122,7 +6104,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6148,7 +6129,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6174,7 +6154,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6200,7 +6179,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6226,7 +6204,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6252,7 +6229,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6278,7 +6254,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6304,7 +6279,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6330,7 +6304,6 @@
         ],
         "progression": "Video: Artist Intro with JR Hildebrand"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6356,7 +6329,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6382,7 +6354,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6408,7 +6379,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6434,7 +6404,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6460,7 +6429,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6486,7 +6454,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6513,7 +6480,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6539,7 +6505,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6565,7 +6530,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6591,7 +6555,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6617,7 +6580,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6643,7 +6605,6 @@
         ],
         "progression": "Video: Introducing Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6669,7 +6630,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6695,7 +6655,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6721,7 +6680,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6747,7 +6705,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6773,7 +6730,6 @@
         ],
         "progression": "Video: How to Make a Sprite"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6799,7 +6755,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6825,7 +6780,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6851,7 +6805,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6877,7 +6830,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6903,7 +6855,6 @@
         ],
         "progression": "Video: How to Make a Sprite"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6929,7 +6880,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6955,7 +6905,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6981,7 +6930,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7007,7 +6955,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7033,7 +6980,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7059,7 +7005,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7085,7 +7030,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7111,7 +7055,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7137,7 +7080,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7163,7 +7105,6 @@
         ],
         "progression": "Free Play: Make a Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7189,7 +7130,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7215,7 +7155,6 @@
         ],
         "progression": "Video: Sprites in Action"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7241,7 +7180,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7267,7 +7205,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7293,7 +7230,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7319,7 +7255,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7345,7 +7280,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7371,7 +7305,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7397,7 +7330,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7423,7 +7355,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7449,7 +7380,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7475,7 +7405,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7501,7 +7430,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7522,9 +7450,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_freeplay_blank"
+        ],
         "progression": "Free Play: Make an Interactive Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7550,7 +7480,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7576,7 +7505,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7602,7 +7530,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7628,7 +7555,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7654,7 +7580,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7680,7 +7605,6 @@
         ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7706,7 +7630,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7732,7 +7655,6 @@
         ],
         "progression": "Video: Dance Party Warm Up"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7758,7 +7680,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7784,7 +7705,6 @@
         ],
         "progression": "Video: Dance Party Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7810,7 +7730,6 @@
         ],
         "progression": "Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7836,7 +7755,6 @@
         ],
         "progression": "Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7862,7 +7780,6 @@
         ],
         "progression": "Video: Dance Party Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7888,7 +7805,6 @@
         ],
         "progression": "Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7914,7 +7830,6 @@
         ],
         "progression": "Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7940,7 +7855,6 @@
         ],
         "progression": "Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7966,7 +7880,6 @@
         ],
         "progression": "Video: Dance Party Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7992,7 +7905,6 @@
         ],
         "progression": "Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8018,7 +7930,6 @@
         ],
         "progression": "Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8044,7 +7955,6 @@
         ],
         "progression": "Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8070,7 +7980,6 @@
         ],
         "progression": "Video: Dance Party Party On!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8096,7 +8005,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8122,7 +8030,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8148,7 +8055,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8174,7 +8080,6 @@
         ],
         "progression": "Video: Programming with Rey and BB-8"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8200,7 +8105,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8226,7 +8130,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8252,7 +8155,6 @@
         ],
         "progression": "Video: Repeat Blocks with BB-8"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8278,7 +8180,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8304,7 +8205,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8330,7 +8230,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8356,7 +8255,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8382,7 +8280,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8409,7 +8306,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8435,7 +8331,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8461,7 +8356,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8487,7 +8381,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8513,7 +8406,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8539,7 +8431,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8565,7 +8456,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8591,7 +8481,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8617,7 +8506,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8643,7 +8531,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8669,7 +8556,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8695,7 +8581,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8721,7 +8606,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8747,7 +8631,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8773,7 +8656,6 @@
         ],
         "progression": "Mini-project: Sticker Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8799,7 +8681,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8825,7 +8706,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8851,7 +8731,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8877,7 +8756,6 @@
         ],
         "progression": "Video: Nested Loops with the Bee"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8903,7 +8781,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8929,7 +8806,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8955,7 +8831,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8981,7 +8856,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9007,7 +8881,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9033,7 +8906,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9060,7 +8932,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9086,7 +8957,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9112,7 +8982,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9138,7 +9007,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9164,7 +9032,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9190,7 +9057,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9216,7 +9082,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9242,7 +9107,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9268,7 +9132,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9294,7 +9157,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9320,7 +9182,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9346,7 +9207,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9372,7 +9232,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9398,7 +9257,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9424,7 +9282,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9450,7 +9307,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9476,7 +9332,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9502,7 +9357,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9528,7 +9382,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9554,7 +9407,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9580,7 +9432,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9606,7 +9457,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9633,7 +9483,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9660,7 +9509,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9686,7 +9534,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9712,7 +9559,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9738,7 +9584,6 @@
         ],
         "progression": "Video: Conditionals: If Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9764,7 +9609,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9790,7 +9634,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9816,7 +9659,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9842,7 +9684,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9868,7 +9709,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9894,7 +9734,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9920,7 +9759,6 @@
         ],
         "progression": "Video: Conditionals: If and If/Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9946,7 +9784,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9972,7 +9809,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9999,7 +9835,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10025,7 +9860,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10051,7 +9885,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10077,7 +9910,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10103,7 +9935,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10129,7 +9960,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10155,7 +9985,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10181,7 +10010,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10207,7 +10035,6 @@
         ],
         "progression": "Video: While Loops with the Farmer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10233,7 +10060,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10259,7 +10085,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10285,7 +10110,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10311,7 +10135,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10337,7 +10160,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10364,7 +10186,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10390,7 +10211,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10416,7 +10236,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10442,7 +10261,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10468,7 +10286,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10494,7 +10311,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10520,7 +10336,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10546,7 +10361,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10572,7 +10386,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10598,7 +10411,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10624,7 +10436,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10650,7 +10461,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10676,7 +10486,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10702,7 +10511,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10728,7 +10536,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10754,7 +10561,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10780,7 +10586,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10806,7 +10611,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10832,7 +10636,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10858,7 +10661,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10884,7 +10686,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10910,7 +10711,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10936,7 +10736,6 @@
         ],
         "progression": "Video: Repeat Until Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10962,7 +10761,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10988,7 +10786,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11014,7 +10811,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11040,7 +10836,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11066,7 +10861,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11092,7 +10886,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11119,7 +10912,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11145,7 +10937,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11171,7 +10962,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11197,7 +10987,6 @@
         ],
         "progression": "Video: Harvesting with Conditionals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11223,7 +11012,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11249,7 +11037,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11275,7 +11062,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11301,7 +11087,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11327,7 +11112,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11353,7 +11137,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11380,7 +11163,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11406,7 +11188,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11432,7 +11213,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11458,7 +11238,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11484,7 +11263,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11510,7 +11288,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11536,7 +11313,6 @@
         ],
         "progression": "Video:  Minecraft - The Agent"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11562,7 +11338,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11588,7 +11363,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11614,7 +11388,6 @@
         ],
         "progression": "Video: Minecraft - Repeat Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11640,7 +11413,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11666,7 +11438,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11692,7 +11463,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11718,7 +11488,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11744,7 +11513,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11770,7 +11538,6 @@
         ],
         "progression": "Video: Minecraft - Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11796,7 +11563,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11822,7 +11588,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11848,7 +11613,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11874,7 +11638,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11900,7 +11663,6 @@
         ],
         "progression": "Video: Minecraft - Congratulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11926,7 +11688,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11952,7 +11713,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -11978,7 +11738,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12004,7 +11763,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12030,7 +11788,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12056,7 +11813,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12082,7 +11838,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12108,7 +11863,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12134,7 +11888,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12160,7 +11913,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12187,7 +11939,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12213,7 +11964,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12239,7 +11989,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12265,7 +12014,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12291,7 +12039,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12317,7 +12064,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12343,7 +12089,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12369,7 +12114,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12395,7 +12139,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12421,7 +12164,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12447,7 +12189,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12473,7 +12214,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12499,7 +12239,6 @@
         ],
         "progression": "Video: How to Create a Simple Function"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12525,7 +12264,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12551,7 +12289,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12577,7 +12314,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12604,7 +12340,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12630,7 +12365,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12656,7 +12390,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12682,7 +12415,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12708,7 +12440,6 @@
         ],
         "progression": "Video:  Text  and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12734,7 +12465,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12760,7 +12490,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12786,7 +12515,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12812,7 +12540,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12838,7 +12565,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12864,7 +12590,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12890,7 +12615,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12916,7 +12640,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12942,7 +12665,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12968,7 +12690,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -12994,7 +12715,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13020,7 +12740,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13046,7 +12765,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13072,7 +12790,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13098,7 +12815,6 @@
         ],
         "progression": "Video: Variables in Artist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13124,7 +12840,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13150,7 +12865,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13176,7 +12890,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13202,7 +12915,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13228,7 +12940,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13254,7 +12965,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13280,7 +12990,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13306,7 +13015,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13332,7 +13040,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13358,7 +13065,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13384,7 +13090,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13410,7 +13115,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13436,7 +13140,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13462,7 +13165,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13488,7 +13190,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13514,7 +13215,6 @@
         ],
         "progression": "Review"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13540,7 +13240,6 @@
         ],
         "progression": "Review"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13566,7 +13265,6 @@
         ],
         "progression": "Exploration: For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13592,7 +13290,6 @@
         ],
         "progression": "Video: For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13618,7 +13315,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13644,7 +13340,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13670,7 +13365,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13696,7 +13390,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13722,7 +13415,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13748,7 +13440,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13774,7 +13465,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13800,7 +13490,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13826,7 +13515,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13852,7 +13540,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13878,7 +13565,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13904,7 +13590,6 @@
         ],
         "progression": "Video: For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13930,7 +13615,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13956,7 +13640,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -13982,7 +13665,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14008,7 +13690,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14034,7 +13715,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14060,7 +13740,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14086,7 +13765,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14112,7 +13790,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14138,7 +13815,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14164,7 +13840,6 @@
         ],
         "progression": "Example Projects"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -14190,7 +13865,6 @@
         ],
         "progression": "Create your project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -18342,8 +18016,8 @@
       "url": "https://studio.code.org/s/express-2021/vocab",
       "key": "course_vocabulary_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary_1"
@@ -18354,9 +18028,9 @@
       "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
       "key": "csf-express-end-of-course-project-planning-guide",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "csf-express-end-of-course-project-planning-guide"
@@ -18367,8 +18041,8 @@
       "url": "https://studio.code.org/s/express-2021/standards",
       "key": "csta_standards_mapping",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csta_standards_mapping"
@@ -18390,9 +18064,9 @@
       "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
       "key": "dance-party-project-guide",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "dance-party-project-guide"
@@ -18414,8 +18088,8 @@
       "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview\t",
       "key": "making_sprites",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "making_sprites"
@@ -18426,8 +18100,8 @@
       "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
       "key": "open-ended_programming_levels",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "open-ended_programming_levels"
@@ -18450,8 +18124,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair_programming_video",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pair_programming_video"
@@ -18462,8 +18136,8 @@
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pause_and_think_online"
@@ -18474,8 +18148,8 @@
       "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
       "key": "rubric-csf-final-projects",
       "properties": {
-        "type": "Rubric",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "rubric-csf-final-projects"
@@ -18486,8 +18160,8 @@
       "url": "https://studio.code.org/docs/spritelab/",
       "key": "sprite_lab_documentation",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
@@ -18498,8 +18172,8 @@
       "url": "https://studio.code.org/docs/spritelab/",
       "key": "sprite_lab_documentation_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation_1"
@@ -18510,8 +18184,8 @@
       "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview\t",
       "key": "sprites_in_action",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "sprites_in_action"
@@ -18533,8 +18207,8 @@
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
@@ -18545,8 +18219,8 @@
       "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
       "key": "text_and_prompts",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "text_and_prompts"
@@ -18558,7 +18232,7 @@
       "key": "turns_angles",
       "properties": {
         "audience": "Student",
-        "type": "Handout"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "turns_angles"
@@ -18570,7 +18244,7 @@
       "key": "turns_angles_1",
       "properties": {
         "audience": "Student",
-        "type": "Video"
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "turns_angles_1"
@@ -18647,8 +18321,8 @@
       "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit\t",
       "key": "unplugged_maze_blocks",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unplugged_maze_blocks"
@@ -18659,9 +18333,9 @@
       "url": "https://youtu.be/DI7DprN4FtE",
       "key": "variables_video",
       "properties": {
-        "type": "Student Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/course4/C4-Variables-in-envelopes-JIE-2015_720.mp4"
+        "download_url": "http://videos.code.org/2015/course4/C4-Variables-in-envelopes-JIE-2015_720.mp4",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "variables_video"
@@ -18669,18 +18343,6 @@
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "resource.key": "unplugged_maze_blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "resource.key": "pair_programming"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
@@ -18707,122 +18369,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Swimming Fish in Sprite Lab",
-        "resource.key": "swimming_fish_teacher_sandbox"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Swimming Fish in Sprite Lab",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "sprite_lab_documentation_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "making_sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "sprites_in_action"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "dance-party-project-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "dance-party-playlist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "open-ended_programming_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "resource.key": "pair_programming_video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "resource.key": "unplugged_blocks_courses_c-f__1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "If/Else with Bee",
-        "resource.key": "unplugged_blocks_courses_c-f__2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
-        "resource.key": "unplugged_blocks_courses_c-f__3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "resource.key": "unplugged_blocks_courses_c-f__4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Artist",
-        "resource.key": "unplugged_blocks_courses_c-f__5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "text_and_prompts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables with Artist",
-        "resource.key": "variables_video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Bee",
-        "resource.key": "unplugged_blocks_courses_c-f_"
+        "lesson.key": "Debugging with Scrat",
+        "resource.key": "pair_programming"
       }
     },
     {
@@ -18842,15 +18390,135 @@
         "lesson.key": "End of Course Project",
         "resource.key": "sprite_lab_documentation"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "resource.key": "unplugged_blocks_courses_c-f__4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "resource.key": "unplugged_blocks_courses_c-f__5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
+        "resource.key": "unplugged_blocks_courses_c-f__2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "resource.key": "pair_programming_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "resource.key": "unplugged_blocks_courses_c-f__1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "unplugged_maze_blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "resource.key": "swimming_fish_teacher_sandbox"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with Artist",
+        "resource.key": "variables_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "resource.key": "unplugged_blocks_courses_c-f__3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "dance-party-playlist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "dance-party-project-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "making_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "sprite_lab_documentation_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "sprites_in_action"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "text_and_prompts"
+      }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping",
-        "script.name": "express-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "course_vocabulary_1",
@@ -18859,13 +18527,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "teacher_forum_1",
+        "resource.key": "csta_standards_mapping",
         "script.name": "express-2021"
       }
     },
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "express-2021"
       }
     }
@@ -18885,33 +18559,13 @@
       }
     },
     {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "sequencing",
-      "word": "Sequencing",
-      "definition": "Putting commands in correct order so computers can read the commands.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequencing"
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -18922,146 +18576,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "key": "behavior",
-      "word": "Behavior",
-      "definition": "An action that a sprite performs continuously until it’s told to stop.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "behavior",
-      "word": "Behavior",
-      "definition": "An action that a sprite performs continuously until it’s told to stop.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "behavior",
-      "word": "Behavior",
-      "definition": "An action that a sprite performs continuously until it’s told to stop.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "behavior"
       }
     },
     {
@@ -19075,86 +18589,6 @@
       }
     },
     {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
       "key": "command",
       "word": "Command",
       "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs. ",
@@ -19165,26 +18599,6 @@
       }
     },
     {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
       "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
@@ -19205,263 +18619,13 @@
       }
     },
     {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "while_loop",
-      "word": "While Loop",
-      "definition": "A loop that continues to repeat while a condition is true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "while_loop"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "until",
-      "word": "Until",
-      "definition": "A command that tells you to do something only up to the point that something becomes true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "until"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "while_loop",
-      "word": "While Loop",
-      "definition": "A loop that continues to repeat while a condition is true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "while_loop"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can easily call over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can easily call over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can easily call over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "prompt",
-      "word": "prompt",
-      "definition": "A message on the computer screen that waits for input from the user.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "prompt"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "for_loop",
-      "word": "For Loop",
-      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "key": "for_loop",
-      "word": "For Loop",
-      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "for_loop"
+        "vocabulary.key": "debugging"
       }
     },
     {
@@ -19475,6 +18639,46 @@
       }
     },
     {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "for_loop",
+      "word": "For Loop",
+      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "key": "function",
+      "word": "Function",
+      "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
       "key": "prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
@@ -19482,6 +18686,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "prepare"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "prompt",
+      "definition": "A message on the computer screen that waits for input from the user.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
       }
     },
     {
@@ -19495,6 +18729,36 @@
       }
     },
     {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "Putting commands in correct order so computers can read the commands.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
       "key": "try",
       "word": "Try",
       "definition": "Attempt to do something",
@@ -19503,55 +18767,55 @@
       "seeding_key": {
         "vocabulary.key": "try"
       }
+    },
+    {
+      "key": "until",
+      "word": "Until",
+      "definition": "A command that tells you to do something only up to the point that something becomes true.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "until"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "while_loop",
+      "word": "While Loop",
+      "definition": "A loop that continues to repeat while a condition is true.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "while_loop"
+      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
+        "lesson.key": "Changing Variables with Bee",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
         "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "sequencing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
         "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collecting Treasure with Laurel",
-        "vocabulary.key": "algorithm"
       }
     },
     {
@@ -19562,180 +18826,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Swimming Fish in Sprite Lab",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Swimming Fish in Sprite Lab",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Maze",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Maze",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Maze",
-        "vocabulary.key": "command"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Snowflakes with Anna and Elsa",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Snowflakes with Anna and Elsa",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Looking Ahead with Minecraft ",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Looking Ahead with Minecraft ",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "If/Else with Bee",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "while_loop"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "vocabulary.key": "condition"
       }
@@ -19748,62 +18838,50 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "loop"
+        "lesson.key": "Debugging with Scrat",
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "repeat"
+        "lesson.key": "Debugging with Scrat",
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "condition"
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "define"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "conditionals"
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "prepare"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "until"
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "reflect"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "loop"
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "try"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "repeat"
+        "lesson.key": "For Loops with Artist",
+        "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "while_loop"
+        "lesson.key": "For Loops with Bee",
+        "vocabulary.key": "for_loop"
       }
     },
     {
@@ -19826,14 +18904,170 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "variable"
+        "lesson.key": "Harvesting with Conditionals",
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "prompt"
+        "lesson.key": "Harvesting with Conditionals",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Harvesting with Conditionals",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Harvesting with Conditionals",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Harvesting with Conditionals",
+        "vocabulary.key": "while_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft ",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft ",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "vocabulary.key": "command"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Snowflakes with Anna and Elsa",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Snowflakes with Anna and Elsa",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "until"
       }
     },
     {
@@ -19844,44 +19078,104 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Changing Variables with Bee",
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "vocabulary.key": "while_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Bee",
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Artist",
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "vocabulary.key": "define"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "vocabulary.key": "prepare"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "vocabulary.key": "reflect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "vocabulary.key": "try"
       }
     }
   ],
@@ -19890,103 +19184,43 @@
   ],
   "objectives": [
     {
-      "key": "8c021568-46ed-4243-a4d1-f2037138c01a",
+      "key": "0174cd8f-0a91-423b-b643-2b8a0290fcff",
       "properties": {
-        "description": "Translate movements into a series of commands."
+        "description": "Pair a loop and conditional statement together."
       },
       "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "objective.key": "8c021568-46ed-4243-a4d1-f2037138c01a"
+        "lesson.key": "Harvesting with Conditionals",
+        "objective.key": "0174cd8f-0a91-423b-b643-2b8a0290fcff"
       }
     },
     {
-      "key": "0b8dec87-ba78-4165-9d84-f91dc1fbc6df",
+      "key": "06be5715-7c67-4b13-816d-acb7253a13b2",
       "properties": {
-        "description": "Identify and locate bugs in a program."
+        "description": "Break complex tasks into smaller repeatable sections."
       },
       "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "objective.key": "0b8dec87-ba78-4165-9d84-f91dc1fbc6df"
+        "lesson.key": "Nested Loops in Maze",
+        "objective.key": "06be5715-7c67-4b13-816d-acb7253a13b2"
       }
     },
     {
-      "key": "f0852e8e-a4ab-49a6-8fc4-0c805f14999a",
+      "key": "077a5626-d78c-4ae2-9620-e0558a2ab8cf",
       "properties": {
-        "description": "Predict where a program will fail."
+        "description": "Use variables in conjunction with prompts."
       },
       "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "objective.key": "f0852e8e-a4ab-49a6-8fc4-0c805f14999a"
+        "lesson.key": "lesson-4",
+        "objective.key": "077a5626-d78c-4ae2-9620-e0558a2ab8cf"
       }
     },
     {
-      "key": "857073db-dcda-4868-8be6-e0fba5f981d7",
+      "key": "08f476a4-492c-47ee-8291-a435761059ac",
       "properties": {
-        "description": "Modify an existing program to solve errors."
+        "description": "Solve puzzles using a combination of looped sequences and conditionals."
       },
       "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "objective.key": "857073db-dcda-4868-8be6-e0fba5f981d7"
-      }
-    },
-    {
-      "key": "600f66d5-9725-4f4d-bd15-ba25f428d5cd",
-      "properties": {
-        "description": "Reflect on the debugging process in an age-appropriate way."
-      },
-      "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "objective.key": "600f66d5-9725-4f4d-bd15-ba25f428d5cd"
-      }
-    },
-    {
-      "key": "4d4f7faa-e380-483d-b873-b04e114e077e",
-      "properties": {
-        "description": "Order movement commands as sequential steps in a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Collecting Treasure with Laurel",
-        "objective.key": "4d4f7faa-e380-483d-b873-b04e114e077e"
-      }
-    },
-    {
-      "key": "6a4a4515-9250-4ad0-b943-afef3d26df68",
-      "properties": {
-        "description": "Represent an algorithm as a computer program."
-      },
-      "seeding_key": {
-        "lesson.key": "Collecting Treasure with Laurel",
-        "objective.key": "6a4a4515-9250-4ad0-b943-afef3d26df68"
-      }
-    },
-    {
-      "key": "48b6e566-4a4b-424e-b104-33ce83bd2184",
-      "properties": {
-        "description": "Develop problem solving and critical thinking skills by reviewing debugging practices."
-      },
-      "seeding_key": {
-        "lesson.key": "Collecting Treasure with Laurel",
-        "objective.key": "48b6e566-4a4b-424e-b104-33ce83bd2184"
-      }
-    },
-    {
-      "key": "500825a3-b44f-4b99-ab77-2271fdcbb867",
-      "properties": {
-        "description": "Create a program to complete an image using sequential steps."
-      },
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "objective.key": "500825a3-b44f-4b99-ab77-2271fdcbb867"
-      }
-    },
-    {
-      "key": "36081e5f-1a5d-4102-a1de-27865168ee09",
-      "properties": {
-        "description": "Break complex shapes into simple parts."
-      },
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "objective.key": "36081e5f-1a5d-4102-a1de-27865168ee09"
+        "lesson.key": "If/Else with Bee",
+        "objective.key": "08f476a4-492c-47ee-8291-a435761059ac"
       }
     },
     {
@@ -20010,193 +19244,13 @@
       }
     },
     {
-      "key": "30a80046-d715-46b1-8b89-65c410d04690",
+      "key": "0b8dec87-ba78-4165-9d84-f91dc1fbc6df",
       "properties": {
-        "description": "Create new sprites and assign them costumes and behaviors."
+        "description": "Identify and locate bugs in a program."
       },
       "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "30a80046-d715-46b1-8b89-65c410d04690"
-      }
-    },
-    {
-      "key": "e0d4a883-51dc-4647-8c9f-59652f699aec",
-      "properties": {
-        "description": "Create an animation using sprites, and behaviors."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "e0d4a883-51dc-4647-8c9f-59652f699aec"
-      }
-    },
-    {
-      "key": "6ba64af5-a4d3-4473-b004-166dfdc6bd71",
-      "properties": {
-        "description": "Create an interactive animation using events."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "6ba64af5-a4d3-4473-b004-166dfdc6bd71"
-      }
-    },
-    {
-      "key": "d9604b08-064f-43e3-83ac-d3a91f321627",
-      "properties": {
-        "description": "Develop programs that respond to timed events."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "d9604b08-064f-43e3-83ac-d3a91f321627"
-      }
-    },
-    {
-      "key": "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969",
-      "properties": {
-        "description": "Develop programs that respond to user input."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969"
-      }
-    },
-    {
-      "key": "203638b5-ded8-4023-be3e-f66dfbdc6f8f",
-      "properties": {
-        "description": "Create an interactive virtual pet using events, behaviors, variables, and custom art."
-      },
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "objective.key": "203638b5-ded8-4023-be3e-f66dfbdc6f8f"
-      }
-    },
-    {
-      "key": "f5e7cf67-bc19-4175-82b0-f449d09551d4",
-      "properties": {
-        "description": "Program solutions to problems that arise when designing a virtual pet, like feeding it or monitoring its happiness."
-      },
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "objective.key": "f5e7cf67-bc19-4175-82b0-f449d09551d4"
-      }
-    },
-    {
-      "key": "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09",
-      "properties": {
-        "description": "Develop programs that respond to timed events"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09"
-      }
-    },
-    {
-      "key": "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c",
-      "properties": {
-        "description": "Develop programs that respond to user input"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c"
-      }
-    },
-    {
-      "key": "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2",
-      "properties": {
-        "description": "Create dance animations with code"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2"
-      }
-    },
-    {
-      "key": "f66d5b0d-f5b6-441f-b3c0-c24a7a857912",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "objective.key": "f66d5b0d-f5b6-441f-b3c0-c24a7a857912"
-      }
-    },
-    {
-      "key": "d41cb934-ead6-42d0-a3c6-3a692fa53626",
-      "properties": {
-        "description": "Break down a long sequence of instructions into the largest repeatable sequence."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "objective.key": "d41cb934-ead6-42d0-a3c6-3a692fa53626"
-      }
-    },
-    {
-      "key": "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656",
-      "properties": {
-        "description": "Employ a combination of sequential and looped commands to reach the end of a maze."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "objective.key": "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656"
-      }
-    },
-    {
-      "key": "7304a528-6a3a-4670-9e66-1438d26c3fc2",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "objective.key": "7304a528-6a3a-4670-9e66-1438d26c3fc2"
-      }
-    },
-    {
-      "key": "32250c07-4872-43ce-9968-33e17f779cf3",
-      "properties": {
-        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
-      },
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "objective.key": "32250c07-4872-43ce-9968-33e17f779cf3"
-      }
-    },
-    {
-      "key": "06be5715-7c67-4b13-816d-acb7253a13b2",
-      "properties": {
-        "description": "Break complex tasks into smaller repeatable sections."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Maze",
-        "objective.key": "06be5715-7c67-4b13-816d-acb7253a13b2"
-      }
-    },
-    {
-      "key": "b884b12d-1247-42f3-a907-652dd25566f2",
-      "properties": {
-        "description": "Recognize large repeated patterns as made from smaller repeated patterns."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Maze",
-        "objective.key": "b884b12d-1247-42f3-a907-652dd25566f2"
-      }
-    },
-    {
-      "key": "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Maze",
-        "objective.key": "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f"
-      }
-    },
-    {
-      "key": "f35a3857-a630-4783-98c3-c0e6304af48f",
-      "properties": {
-        "description": "Break apart code into the largest repeatable sequences using both loops and nested loops."
-      },
-      "seeding_key": {
-        "lesson.key": "Snowflakes with Anna and Elsa",
-        "objective.key": "f35a3857-a630-4783-98c3-c0e6304af48f"
+        "lesson.key": "Programming with Angry Birds",
+        "objective.key": "0b8dec87-ba78-4165-9d84-f91dc1fbc6df"
       }
     },
     {
@@ -20210,213 +19264,13 @@
       }
     },
     {
-      "key": "d1ca506b-d694-4c2b-bcc5-38af2ce425dd",
+      "key": "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2",
       "properties": {
-        "description": "Describe when a loop, nested loop, or no loop is needed."
+        "description": "Determine starting value, stopping value, and stepping value for a for loop."
       },
       "seeding_key": {
-        "lesson.key": "Snowflakes with Anna and Elsa",
-        "objective.key": "d1ca506b-d694-4c2b-bcc5-38af2ce425dd"
-      }
-    },
-    {
-      "key": "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "Looking Ahead with Minecraft ",
-        "objective.key": "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6"
-      }
-    },
-    {
-      "key": "feac1e8e-b6f7-466e-9727-d62bdfaf4f09",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "Looking Ahead with Minecraft ",
-        "objective.key": "feac1e8e-b6f7-466e-9727-d62bdfaf4f09"
-      }
-    },
-    {
-      "key": "7002da51-158a-4849-b733-48282a764b82",
-      "properties": {
-        "description": "Translate spoken language conditional statements into a program."
-      },
-      "seeding_key": {
-        "lesson.key": "If/Else with Bee",
-        "objective.key": "7002da51-158a-4849-b733-48282a764b82"
-      }
-    },
-    {
-      "key": "08f476a4-492c-47ee-8291-a435761059ac",
-      "properties": {
-        "description": "Solve puzzles using a combination of looped sequences and conditionals."
-      },
-      "seeding_key": {
-        "lesson.key": "If/Else with Bee",
-        "objective.key": "08f476a4-492c-47ee-8291-a435761059ac"
-      }
-    },
-    {
-      "key": "e85d8d23-86c2-4644-9449-94af8b02f763",
-      "properties": {
-        "description": "Distinguish between loops that repeat a fixed number of times and loops that repeat as long as a condition is true."
-      },
-      "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
-        "objective.key": "e85d8d23-86c2-4644-9449-94af8b02f763"
-      }
-    },
-    {
-      "key": "8bee7277-31d3-4032-a8ea-2d2c820425ec",
-      "properties": {
-        "description": "Use a while loop to create programs that can solve problems with unknown values."
-      },
-      "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
-        "objective.key": "8bee7277-31d3-4032-a8ea-2d2c820425ec"
-      }
-    },
-    {
-      "key": "e6f6f67a-369a-4a9d-8197-e3abf61af68e",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "objective.key": "e6f6f67a-369a-4a9d-8197-e3abf61af68e"
-      }
-    },
-    {
-      "key": "b932c234-ce5d-429e-9c70-cf6d0b28570c",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "objective.key": "b932c234-ce5d-429e-9c70-cf6d0b28570c"
-      }
-    },
-    {
-      "key": "ed2d18ce-a51e-4d24-b821-05c631de2b55",
-      "properties": {
-        "description": "Build programs with the understanding of multiple strategies to implement conditionals."
-      },
-      "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "objective.key": "ed2d18ce-a51e-4d24-b821-05c631de2b55"
-      }
-    },
-    {
-      "key": "8c19055d-8287-441c-8c20-c0bb9e68aba3",
-      "properties": {
-        "description": "Translate spoken language conditional statements and loops into a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "objective.key": "8c19055d-8287-441c-8c20-c0bb9e68aba3"
-      }
-    },
-    {
-      "key": "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700",
-      "properties": {
-        "description": "Nest conditionals to analyze multiple value conditions using if, else if, else logic."
-      },
-      "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "objective.key": "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700"
-      }
-    },
-    {
-      "key": "0174cd8f-0a91-423b-b643-2b8a0290fcff",
-      "properties": {
-        "description": "Pair a loop and conditional statement together."
-      },
-      "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "objective.key": "0174cd8f-0a91-423b-b643-2b8a0290fcff"
-      }
-    },
-    {
-      "key": "1ece8579-425f-4324-a041-8f47ce736f42",
-      "properties": {
-        "description": "Use functions to simplify complex programs."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "objective.key": "1ece8579-425f-4324-a041-8f47ce736f42"
-      }
-    },
-    {
-      "key": "4f16bc65-a8b7-485b-b34e-5b67c0c68259",
-      "properties": {
-        "description": "Use pre-determined functions to complete commonly repeated tasks."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "objective.key": "4f16bc65-a8b7-485b-b34e-5b67c0c68259"
-      }
-    },
-    {
-      "key": "ae435e31-012f-4ad5-aeb4-028f25f5671d",
-      "properties": {
-        "description": "Categorize and generalize code into useful functions."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Artist",
-        "objective.key": "ae435e31-012f-4ad5-aeb4-028f25f5671d"
-      }
-    },
-    {
-      "key": "36a2f4e1-f9df-4115-a898-a7d96ee60c27",
-      "properties": {
-        "description": "Recognize when a function could help to simplify a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Artist",
-        "objective.key": "36a2f4e1-f9df-4115-a898-a7d96ee60c27"
-      }
-    },
-    {
-      "key": "22b69133-d5b3-407a-9c18-7b4841daffa7",
-      "properties": {
-        "description": "Recognize when a function could help to simplify a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "objective.key": "22b69133-d5b3-407a-9c18-7b4841daffa7"
-      }
-    },
-    {
-      "key": "5bbd5970-dd02-4100-b9c4-6d051ec9bba2",
-      "properties": {
-        "description": "Use pre-determined functions to complete commonly repeated tasks."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "objective.key": "5bbd5970-dd02-4100-b9c4-6d051ec9bba2"
-      }
-    },
-    {
-      "key": "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49",
-      "properties": {
-        "description": "Actions Use variables to hold words and phrases."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49"
-      }
-    },
-    {
-      "key": "077a5626-d78c-4ae2-9620-e0558a2ab8cf",
-      "properties": {
-        "description": "Use variables in conjunction with prompts."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "077a5626-d78c-4ae2-9620-e0558a2ab8cf"
+        "lesson.key": "For Loops with Bee",
+        "objective.key": "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2"
       }
     },
     {
@@ -20430,63 +19284,13 @@
       }
     },
     {
-      "key": "4fe2cf70-9f34-41b0-bae1-9c5af60706de",
+      "key": "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656",
       "properties": {
-        "description": "Utilize variables in place of repetitive values inside of a program."
+        "description": "Employ a combination of sequential and looped commands to reach the end of a maze."
       },
       "seeding_key": {
-        "lesson.key": "Variables with Artist",
-        "objective.key": "4fe2cf70-9f34-41b0-bae1-9c5af60706de"
-      }
-    },
-    {
-      "key": "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4",
-      "properties": {
-        "description": "Use variables to change values inside of a loop."
-      },
-      "seeding_key": {
-        "lesson.key": "Variables with Artist",
-        "objective.key": "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4"
-      }
-    },
-    {
-      "key": "a80a4857-3cff-46f5-9fc5-63a3969a4631",
-      "properties": {
-        "description": "Identify areas where they can use variables to modify quantities during runtime. "
-      },
-      "seeding_key": {
-        "lesson.key": "Changing Variables with Bee",
-        "objective.key": "a80a4857-3cff-46f5-9fc5-63a3969a4631"
-      }
-    },
-    {
-      "key": "dd4add89-b2d6-4b12-a073-6ec56b4c6de1",
-      "properties": {
-        "description": "Examine code to find places where variables can be substituted for specific values."
-      },
-      "seeding_key": {
-        "lesson.key": "Changing Variables with Bee",
-        "objective.key": "dd4add89-b2d6-4b12-a073-6ec56b4c6de1"
-      }
-    },
-    {
-      "key": "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2",
-      "properties": {
-        "description": "Determine starting value, stopping value, and stepping value for a for loop."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops with Bee",
-        "objective.key": "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2"
-      }
-    },
-    {
-      "key": "3abab07c-e404-45d4-ab89-f92a34c68356",
-      "properties": {
-        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops with Bee",
-        "objective.key": "3abab07c-e404-45d4-ab89-f92a34c68356"
+        "lesson.key": "Loops with Rey and BB-8",
+        "objective.key": "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656"
       }
     },
     {
@@ -20500,6 +19304,286 @@
       }
     },
     {
+      "key": "1ece8579-425f-4324-a041-8f47ce736f42",
+      "properties": {
+        "description": "Use functions to simplify complex programs."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "objective.key": "1ece8579-425f-4324-a041-8f47ce736f42"
+      }
+    },
+    {
+      "key": "203638b5-ded8-4023-be3e-f66dfbdc6f8f",
+      "properties": {
+        "description": "Create an interactive virtual pet using events, behaviors, variables, and custom art."
+      },
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "objective.key": "203638b5-ded8-4023-be3e-f66dfbdc6f8f"
+      }
+    },
+    {
+      "key": "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09"
+      }
+    },
+    {
+      "key": "22b69133-d5b3-407a-9c18-7b4841daffa7",
+      "properties": {
+        "description": "Recognize when a function could help to simplify a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "objective.key": "22b69133-d5b3-407a-9c18-7b4841daffa7"
+      }
+    },
+    {
+      "key": "30a80046-d715-46b1-8b89-65c410d04690",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and behaviors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "30a80046-d715-46b1-8b89-65c410d04690"
+      }
+    },
+    {
+      "key": "32250c07-4872-43ce-9968-33e17f779cf3",
+      "properties": {
+        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
+      },
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "objective.key": "32250c07-4872-43ce-9968-33e17f779cf3"
+      }
+    },
+    {
+      "key": "36081e5f-1a5d-4102-a1de-27865168ee09",
+      "properties": {
+        "description": "Break complex shapes into simple parts."
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "objective.key": "36081e5f-1a5d-4102-a1de-27865168ee09"
+      }
+    },
+    {
+      "key": "36a2f4e1-f9df-4115-a898-a7d96ee60c27",
+      "properties": {
+        "description": "Recognize when a function could help to simplify a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "objective.key": "36a2f4e1-f9df-4115-a898-a7d96ee60c27"
+      }
+    },
+    {
+      "key": "3abab07c-e404-45d4-ab89-f92a34c68356",
+      "properties": {
+        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "objective.key": "3abab07c-e404-45d4-ab89-f92a34c68356"
+      }
+    },
+    {
+      "key": "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969",
+      "properties": {
+        "description": "Develop programs that respond to user input."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969"
+      }
+    },
+    {
+      "key": "48b6e566-4a4b-424e-b104-33ce83bd2184",
+      "properties": {
+        "description": "Develop problem solving and critical thinking skills by reviewing debugging practices."
+      },
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
+        "objective.key": "48b6e566-4a4b-424e-b104-33ce83bd2184"
+      }
+    },
+    {
+      "key": "4d4f7faa-e380-483d-b873-b04e114e077e",
+      "properties": {
+        "description": "Order movement commands as sequential steps in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
+        "objective.key": "4d4f7faa-e380-483d-b873-b04e114e077e"
+      }
+    },
+    {
+      "key": "4f16bc65-a8b7-485b-b34e-5b67c0c68259",
+      "properties": {
+        "description": "Use pre-determined functions to complete commonly repeated tasks."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "objective.key": "4f16bc65-a8b7-485b-b34e-5b67c0c68259"
+      }
+    },
+    {
+      "key": "4fe2cf70-9f34-41b0-bae1-9c5af60706de",
+      "properties": {
+        "description": "Utilize variables in place of repetitive values inside of a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables with Artist",
+        "objective.key": "4fe2cf70-9f34-41b0-bae1-9c5af60706de"
+      }
+    },
+    {
+      "key": "500825a3-b44f-4b99-ab77-2271fdcbb867",
+      "properties": {
+        "description": "Create a program to complete an image using sequential steps."
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "objective.key": "500825a3-b44f-4b99-ab77-2271fdcbb867"
+      }
+    },
+    {
+      "key": "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2",
+      "properties": {
+        "description": "Create dance animations with code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2"
+      }
+    },
+    {
+      "key": "5bbd5970-dd02-4100-b9c4-6d051ec9bba2",
+      "properties": {
+        "description": "Use pre-determined functions to complete commonly repeated tasks."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "objective.key": "5bbd5970-dd02-4100-b9c4-6d051ec9bba2"
+      }
+    },
+    {
+      "key": "600f66d5-9725-4f4d-bd15-ba25f428d5cd",
+      "properties": {
+        "description": "Reflect on the debugging process in an age-appropriate way."
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "objective.key": "600f66d5-9725-4f4d-bd15-ba25f428d5cd"
+      }
+    },
+    {
+      "key": "6a4a4515-9250-4ad0-b943-afef3d26df68",
+      "properties": {
+        "description": "Represent an algorithm as a computer program."
+      },
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
+        "objective.key": "6a4a4515-9250-4ad0-b943-afef3d26df68"
+      }
+    },
+    {
+      "key": "6ba64af5-a4d3-4473-b004-166dfdc6bd71",
+      "properties": {
+        "description": "Create an interactive animation using events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "6ba64af5-a4d3-4473-b004-166dfdc6bd71"
+      }
+    },
+    {
+      "key": "7002da51-158a-4849-b733-48282a764b82",
+      "properties": {
+        "description": "Translate spoken language conditional statements into a program."
+      },
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
+        "objective.key": "7002da51-158a-4849-b733-48282a764b82"
+      }
+    },
+    {
+      "key": "7304a528-6a3a-4670-9e66-1438d26c3fc2",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "objective.key": "7304a528-6a3a-4670-9e66-1438d26c3fc2"
+      }
+    },
+    {
+      "key": "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700",
+      "properties": {
+        "description": "Nest conditionals to analyze multiple value conditions using if, else if, else logic."
+      },
+      "seeding_key": {
+        "lesson.key": "Harvesting with Conditionals",
+        "objective.key": "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700"
+      }
+    },
+    {
+      "key": "857073db-dcda-4868-8be6-e0fba5f981d7",
+      "properties": {
+        "description": "Modify an existing program to solve errors."
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "objective.key": "857073db-dcda-4868-8be6-e0fba5f981d7"
+      }
+    },
+    {
+      "key": "8bee7277-31d3-4032-a8ea-2d2c820425ec",
+      "properties": {
+        "description": "Use a while loop to create programs that can solve problems with unknown values."
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "objective.key": "8bee7277-31d3-4032-a8ea-2d2c820425ec"
+      }
+    },
+    {
+      "key": "8c021568-46ed-4243-a4d1-f2037138c01a",
+      "properties": {
+        "description": "Translate movements into a series of commands."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "objective.key": "8c021568-46ed-4243-a4d1-f2037138c01a"
+      }
+    },
+    {
+      "key": "8c19055d-8287-441c-8c20-c0bb9e68aba3",
+      "properties": {
+        "description": "Translate spoken language conditional statements and loops into a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "objective.key": "8c19055d-8287-441c-8c20-c0bb9e68aba3"
+      }
+    },
+    {
+      "key": "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c",
+      "properties": {
+        "description": "Develop programs that respond to user input"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c"
+      }
+    },
+    {
       "key": "a5169230-8faf-4492-bc49-ca11dca864fa",
       "properties": {
         "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
@@ -20507,6 +19591,96 @@
       "seeding_key": {
         "lesson.key": "For Loops with Artist",
         "objective.key": "a5169230-8faf-4492-bc49-ca11dca864fa"
+      }
+    },
+    {
+      "key": "a80a4857-3cff-46f5-9fc5-63a3969a4631",
+      "properties": {
+        "description": "Identify areas where they can use variables to modify quantities during runtime. "
+      },
+      "seeding_key": {
+        "lesson.key": "Changing Variables with Bee",
+        "objective.key": "a80a4857-3cff-46f5-9fc5-63a3969a4631"
+      }
+    },
+    {
+      "key": "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "objective.key": "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f"
+      }
+    },
+    {
+      "key": "ae435e31-012f-4ad5-aeb4-028f25f5671d",
+      "properties": {
+        "description": "Categorize and generalize code into useful functions."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "objective.key": "ae435e31-012f-4ad5-aeb4-028f25f5671d"
+      }
+    },
+    {
+      "key": "b884b12d-1247-42f3-a907-652dd25566f2",
+      "properties": {
+        "description": "Recognize large repeated patterns as made from smaller repeated patterns."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "objective.key": "b884b12d-1247-42f3-a907-652dd25566f2"
+      }
+    },
+    {
+      "key": "b932c234-ce5d-429e-9c70-cf6d0b28570c",
+      "properties": {
+        "description": "Determine whether a conditional is met based on criteria."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "objective.key": "b932c234-ce5d-429e-9c70-cf6d0b28570c"
+      }
+    },
+    {
+      "key": "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6",
+      "properties": {
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
+      },
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft ",
+        "objective.key": "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6"
+      }
+    },
+    {
+      "key": "d1ca506b-d694-4c2b-bcc5-38af2ce425dd",
+      "properties": {
+        "description": "Describe when a loop, nested loop, or no loop is needed."
+      },
+      "seeding_key": {
+        "lesson.key": "Snowflakes with Anna and Elsa",
+        "objective.key": "d1ca506b-d694-4c2b-bcc5-38af2ce425dd"
+      }
+    },
+    {
+      "key": "d41cb934-ead6-42d0-a3c6-3a692fa53626",
+      "properties": {
+        "description": "Break down a long sequence of instructions into the largest repeatable sequence."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "objective.key": "d41cb934-ead6-42d0-a3c6-3a692fa53626"
+      }
+    },
+    {
+      "key": "d9604b08-064f-43e3-83ac-d3a91f321627",
+      "properties": {
+        "description": "Develop programs that respond to timed events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "d9604b08-064f-43e3-83ac-d3a91f321627"
       }
     },
     {
@@ -20518,152 +19692,286 @@
         "lesson.key": "End of Course Project",
         "objective.key": "db7a8439-bc00-43ef-a9a8-2067da8dbda6"
       }
+    },
+    {
+      "key": "dd4add89-b2d6-4b12-a073-6ec56b4c6de1",
+      "properties": {
+        "description": "Examine code to find places where variables can be substituted for specific values."
+      },
+      "seeding_key": {
+        "lesson.key": "Changing Variables with Bee",
+        "objective.key": "dd4add89-b2d6-4b12-a073-6ec56b4c6de1"
+      }
+    },
+    {
+      "key": "e0d4a883-51dc-4647-8c9f-59652f699aec",
+      "properties": {
+        "description": "Create an animation using sprites, and behaviors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "e0d4a883-51dc-4647-8c9f-59652f699aec"
+      }
+    },
+    {
+      "key": "e6f6f67a-369a-4a9d-8197-e3abf61af68e",
+      "properties": {
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "objective.key": "e6f6f67a-369a-4a9d-8197-e3abf61af68e"
+      }
+    },
+    {
+      "key": "e85d8d23-86c2-4644-9449-94af8b02f763",
+      "properties": {
+        "description": "Distinguish between loops that repeat a fixed number of times and loops that repeat as long as a condition is true."
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "objective.key": "e85d8d23-86c2-4644-9449-94af8b02f763"
+      }
+    },
+    {
+      "key": "ed2d18ce-a51e-4d24-b821-05c631de2b55",
+      "properties": {
+        "description": "Build programs with the understanding of multiple strategies to implement conditionals."
+      },
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "objective.key": "ed2d18ce-a51e-4d24-b821-05c631de2b55"
+      }
+    },
+    {
+      "key": "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49",
+      "properties": {
+        "description": "Actions Use variables to hold words and phrases."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49"
+      }
+    },
+    {
+      "key": "f0852e8e-a4ab-49a6-8fc4-0c805f14999a",
+      "properties": {
+        "description": "Predict where a program will fail."
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "objective.key": "f0852e8e-a4ab-49a6-8fc4-0c805f14999a"
+      }
+    },
+    {
+      "key": "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4",
+      "properties": {
+        "description": "Use variables to change values inside of a loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables with Artist",
+        "objective.key": "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4"
+      }
+    },
+    {
+      "key": "f35a3857-a630-4783-98c3-c0e6304af48f",
+      "properties": {
+        "description": "Break apart code into the largest repeatable sequences using both loops and nested loops."
+      },
+      "seeding_key": {
+        "lesson.key": "Snowflakes with Anna and Elsa",
+        "objective.key": "f35a3857-a630-4783-98c3-c0e6304af48f"
+      }
+    },
+    {
+      "key": "f5e7cf67-bc19-4175-82b0-f449d09551d4",
+      "properties": {
+        "description": "Program solutions to problems that arise when designing a virtual pet, like feeding it or monitoring its happiness."
+      },
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "objective.key": "f5e7cf67-bc19-4175-82b0-f449d09551d4"
+      }
+    },
+    {
+      "key": "f66d5b0d-f5b6-441f-b3c0-c24a7a857912",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "objective.key": "f66d5b0d-f5b6-441f-b3c0-c24a7a857912"
+      }
+    },
+    {
+      "key": "feac1e8e-b6f7-466e-9727-d62bdfaf4f09",
+      "properties": {
+        "description": "Determine whether a conditional is met based on criteria."
+      },
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft ",
+        "objective.key": "feac1e8e-b6f7-466e-9727-d62bdfaf4f09"
+      }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collecting Treasure with Laurel",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collecting Treasure with Laurel",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Art with Code",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Swimming Fish in Sprite Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Changing Variables with Bee",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Changing Variables with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Harvesting with Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft ",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
       }
@@ -20692,34 +20000,6 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
       }
@@ -20747,6 +20027,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Snowflakes with Anna and Elsa",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
@@ -20761,30 +20055,37 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Looking Ahead with Minecraft ",
+        "lesson.key": "Sticker Art with Loops",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
+        "standard.shortcode": "1A-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "If/Else with Bee",
+        "lesson.key": "Sticker Art with Loops",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
+        "standard.shortcode": "1A-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "While Loops with the Farmer",
+        "lesson.key": "Sticker Art with Loops",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
+        "standard.shortcode": "1A-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson.key": "Sticker Art with Loops",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     },
     {
@@ -20796,51 +20097,100 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
+        "lesson.key": "Variables with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-08"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
+        "lesson.key": "lesson-3",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions with Artist",
+        "lesson.key": "lesson-3",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
+        "standard.shortcode": "1B-AP-12"
       }
     },
     {
@@ -20867,62 +20217,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables with Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables with Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Changing Variables with Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Changing Variables with Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }

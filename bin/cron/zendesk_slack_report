@@ -31,16 +31,19 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
+  'ap-csa-dev' => ['CSA Engineering'],
+  'ap-csa-pilot' => ['CSA Curric.'],
   'csf' => ['CSF'],
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
   'disco-party' => ['CSD'],
+  'edpop' => ['EdPop Jess', 'EdPop Desiree', 'EdPop Tawny', 'EdPop Rosie'],
+  'facilitator-things' => ['PnP Andrea'],
   'foundations' => ['Accounts'],
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],
-  'pdot' => ['PDOT Amy', 'PDOT Laura', 'PDOT MeganH', 'PDOT Rosie', 'PDOT Tawny'],
-  'plc-engineering' => ['PLC Tools'],
+  'pdot' => ['PDOT Amy', 'PDOT Desiree', 'PDOT Jess', 'PDOT Rosie', 'PDOT Tawny'],
   'product' => ['Product'],
   'regional_managers' => ['Outreach'],
   'star-labs-cabal' => ['*Labs']
@@ -49,6 +52,7 @@ MONITORING_GROUPS = {
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
 GROUP_FILTERS = {
   'Account' => '360086130792',
+  'CSA Engineering' => '360217870791',
   'CSD' => '83142177',
   'CSF' => '278602768',
   'CSP' => '45749787',
@@ -63,7 +67,9 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'pl-team-only' => ['zendesk-pl'],
+  'ed-programs-tools' => ['zendesk-plctools'],
+  'outreach_honky-tonk' => ['zendesk-outreach'],
+  'pl-team-only' => ['zendesk-pl']
 }
 
 class Zendesk

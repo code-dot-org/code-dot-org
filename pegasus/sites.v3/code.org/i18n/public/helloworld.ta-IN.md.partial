@@ -1,0 +1,37 @@
+---
+title: ஹலோ வேர்ல்டு
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# வணக்கம், உலகம்!
+
+கணினியியல் 101 -இல், பல மாணவர்கள் உருவாக்கும் முதல் நிரலானது ஒரு சின்னமான உரையை வெளியிடும் வகையில் எளிமையானது: "ஹலோ வோர்ல்ட்!" இந்த அறிமுகச் செயல்பாட்டின் மூலம் கணினி அறிவியல் உலகிற்கு வணக்கம் சொல்லுங்கள், இது மாணவர்களுக்கு அடிப்படை குறியீட்டு திறன்கள் மற்றும் பயன்பாடுகளை உருவாக்குவதற்கான நம்பிக்கையை அளிக்கிறது. நீங்கள் உருவாக்கும் உலகில் ஊடாடும் எழுத்துக்களைக் குறியிட நான்கு வேடிக்கையான தீம்களில் இருந்து தேர்வு செய்யவும்!
+
+# உங்கள் ஹலோ வேர்ல்ட் தீம் தேர்வு செய்யவும்
+
+{{ spritelab_module, title: "உணவு", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "விலங்குகள்", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "ரெட்ரோ", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "ஈமோஜி", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "ஆசியர் தகவல்", title: "ஹலோ வோர்ல்டு-க்குப் பிறகு எவ்வாறு தொடர்ந்து கற்றுக்கொள்வது", description: "ஹலோ வேர்ல்ட் என்பது எங்கள் புதிய பாடத்திட்டமான சிஎஸ் இணைப்புகளுக்குள் திறந்தநிலை திட்டப்பணிகளை முயற்சிக்கும் முன் வகுப்பறைகளுக்கான சரியான முதல் படியாகும்! After learning some coding basics, students will be able to progress to CS Connections' cross-curricular projects.", button_text: "மேலும் அறிக", url: "/educate/csc" }}
+
+## சிறப்பு மாணவர் படைப்புகள்
+
+{{ featured_project, title: "உணவு", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "ஈமோஜி", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "விலங்குகள்", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "ரெட்ரோ", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

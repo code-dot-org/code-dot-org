@@ -56,34 +56,37 @@ describe('initViewAs', function() {
     mockQueryStringParse.restore();
   });
 
-  it('defaults to Student', function() {
-    initViewAs(mockStore, {});
-    assert(mockSetViewType.calledWith('Student'));
+  it('defaults to Participant', function() {
+    initViewAs(mockStore, null);
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 
-  it('defaults to Teacher iff current user is a teacher', function() {
-    initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith('Teacher'));
+  // TODO(dmcavoy): Update so it is based on instructor instead of account type
+  it('defaults to instructor if current user is a teacher', function() {
+    initViewAs(mockStore, 'teacher');
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
   });
 
+  // TODO(dmcavoy): Update so it is based on participant instead of account type
   it('prevents overriding default if current user is a student', function() {
-    mockQueryStringParse.returns({viewAs: 'Teacher'});
-    initViewAs(mockStore, {user_type: 'student'});
-    assert(mockSetViewType.calledWith('Student'));
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
+    initViewAs(mockStore, 'student');
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 
+  // TODO(dmcavoy): Update so it is based on participant instead of account type
   it('allows overriding default if current user is not a student', function() {
-    mockQueryStringParse.returns({viewAs: 'Teacher'});
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
 
-    initViewAs(mockStore, {});
-    assert(mockSetViewType.calledWith('Teacher'));
+    initViewAs(mockStore, null);
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
 
-    initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith('Teacher'));
+    initViewAs(mockStore, 'teacher');
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
 
-    mockQueryStringParse.returns({viewAs: 'Student'});
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Participant});
 
-    initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith('Student'));
+    initViewAs(mockStore, 'teacher');
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 });

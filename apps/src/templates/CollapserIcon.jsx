@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 const styles = {
   icon: {
-    fontSize: '18px'
+    fontSize: 18,
+    fontWeight: 400
   }
 };
 
 function CollapserIcon({
+  id,
   isCollapsed,
   onClick,
   collapsedIconClass,
@@ -18,17 +20,18 @@ function CollapserIcon({
 
   return (
     <i
-      id="ui-test-collapser"
+      id={id}
       onClick={onClick}
       role="button"
       className={iconClass + ' fa'}
-      style={{...styles.icon, ...style}}
+      style={{...style, ...styles.icon}}
     />
   );
 }
 
 CollapserIcon.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  id: PropTypes.string,
+  onClick: PropTypes.func,
   isCollapsed: PropTypes.bool.isRequired,
   collapsedIconClass: PropTypes.string,
   expandedIconClass: PropTypes.string,

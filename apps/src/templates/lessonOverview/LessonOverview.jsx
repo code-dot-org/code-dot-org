@@ -24,6 +24,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -34,7 +35,7 @@ class LessonOverview extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
-    isVerifiedTeacher: PropTypes.bool.isRequired,
+    isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired
   };
 
@@ -62,9 +63,14 @@ class LessonOverview extends Component {
   };
 
   compilePdfDropdownOptions = () => {
-    const {lessonPlanPdfUrl, scriptResourcesPdfUrl} = this.props.lesson;
+    const {lessonPlanPdfUrl, scriptResourcesPdfUrl, unit} = this.props.lesson;
+
+    const showOverviewPDFOption =
+      unit.publishedState !== PublishedState.pilot &&
+      unit.publishedState !== PublishedState.in_development;
+
     const options = [];
-    if (lessonPlanPdfUrl) {
+    if (lessonPlanPdfUrl && showOverviewPDFOption) {
       options.push({
         key: 'singleLessonPlan',
         name: i18n.printLessonPlan(),
@@ -87,12 +93,14 @@ class LessonOverview extends Component {
       announcements,
       isSignedIn,
       viewAs,
-      isVerifiedTeacher,
+      isVerifiedInstructor,
       hasVerifiedResources
     } = this.props;
 
     const displayVerifiedResourcesNotification =
-      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
+      viewAs === ViewType.Instructor &&
+      !isVerifiedInstructor &&
+      hasVerifiedResources;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
@@ -360,6 +368,6 @@ export default connect(state => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
-  isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources
 }))(LessonOverview);

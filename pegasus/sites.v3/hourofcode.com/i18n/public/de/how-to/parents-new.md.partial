@@ -43,7 +43,7 @@ Sie haben sich nun einige Tutorials ausgesucht. Dabei kann es sinnvoll sein, die
 <h3>Mehrere Kinder im Haus?</h3>
 Vielleicht ist es sinnvoll, jedem Kind einen Kopfhörer zu geben, wenn sie an separaten Geräten arbeiten wollen. So können sie die Aktivitäten mit Ton spielen, ohne die anderen zu stören.
 
-Wenn Sie nur ein Gerät verwenden oder Ihre "Hour of Code" einfach interaktiver gestalten wollen, versuchen Sie es mit der <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">Programmierung zu zweit</a>. Die Programmierung zu zweit ermutigt die Kinder zur Zusammenarbeit. Wenn sie gemeinsam arbeiten, helfen sie sich bei der Lösung von Aufgaben gegenseitig. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
+Wenn Sie nur ein Gerät verwenden oder Ihre "Hour of Code" einfach interaktiver gestalten wollen, versuchen Sie es mit der <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">Programmierung zu zweit</a>. Die Programmierung zu zweit ermutigt die Kinder zur Zusammenarbeit. Wenn sie gemeinsam arbeiten, helfen sie sich bei der Lösung von Aufgaben gegenseitig. Sie werden dann auch feststellen, dass Informatik sozial und kooperativ ist.
 
 <h3>Begeistern Sie Ihre Kinder! </h3>
 Dies ist eine großartige Gelegenheit, dem Tagesablauf Ihres Kindes eine ganz neue Aktivität hinzuzufügen. Mit diesen Vorschlägen können Sie den Spaß über ein Tutorial hinaus fortführen:

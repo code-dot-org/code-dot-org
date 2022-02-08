@@ -1,18 +1,14 @@
 {
-  "func": "setChecked",
+  "key": "setChecked",
+  "name": "setChecked",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "checked"
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "checked"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "true"
-  ],
-  "dropdown": {
-    "1": [
-      "true",
-      "false"
-    ]
-  }
+  "syntax": "setChecked(id, checked)"
 }

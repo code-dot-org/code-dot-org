@@ -1,12 +1,11 @@
 {
-  "func": "digitalRead",
+  "key": "digitalRead",
+  "name": "digitalRead",
   "category": "Maker",
-  "type": "value",
-  "nativeIsAsync": true,
-  "paletteParams": [
-    "pin"
+  "palette_params": [
+    {
+      "name": "pin"
+    }
   ],
-  "params": [
-    "\"D4\""
-  ]
+  "syntax": "digitalRead(pin)"
 }

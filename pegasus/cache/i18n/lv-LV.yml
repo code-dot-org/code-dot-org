@@ -35,6 +35,7 @@ lv-LV:
   twentyhours_heading: Izmēģiniet mūsu datorzinību kursa ievadu
   twentyhours_text: Pabeidzi savu pirmo "Programmēšanas stundu"? Apgūsti pamatzināšanas
     datorzinībās un programmēšanas pamatlietas nākamajos kursos.
+  og_title_soon: Datorzinātnes Izglītības nedēļa
   csedweek_og_title: Datorzinātnes Izglītības nedēļa
   hoc2014_heading: Pievienojies  <a href="http://hourofcode.com">"Programmēšanas stundai"
     </a><br/>2014. gada 8. - 14. decembrī<br/>
@@ -74,6 +75,10 @@ lv-LV:
   congratulations: Apsveicu!
   congratulations_on_completing_hoc: Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
+  third_party_gradelevel_2to8: Klases 2-8
+  third_party_gradelevel_4to12: Klases 4-12
+  third_party_gradelevel_5to12: Klases 5-12
+  third_party_gradelevel_6plus: Klases 6+
   third_party_organization: Organizācija
   third_party_curriculum: Mācību programmas
   enter_valid_age: Lūdzu norādiet derīgu vecumu
@@ -130,6 +135,7 @@ lv-LV:
   learn_next_level: Turpināt nākamo līmeni
   learn_online: Izmēģiniet citus kursus tiešsaistē
   learn_classes: Atrast vietējās klases
+  hoc_is_here: "#Programmēšanas_stunda ir šeit - pārbaudi @codeorg"
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   learn_hoc: Mācies "Programmēšanas skolu"
   beyond_hoc: Pārsniedz vienu stundu
@@ -222,6 +228,8 @@ lv-LV:
   homepage_hero_text_stat_students: "#student_count skolēnu profili kodēšanas studijā"
   homepage_hero_text_stat_served: 'Programmēšanas stundas: #served notikušas līdz
     šim'
+  homepage_hero_hoc_is_coming: Datorzinātnes Izglītības nedēļa
+  homepage_hero_hoc_is_here: Datorzinātnes Izglītības nedēļa
   homepage_slot_text_hoc: Programmēšanas stunda
   homepage_slot_text_frozen: Ledus sirds ar Annu un Elzu
   homepage_slot_text_teacher: Skolotāju darba galds
@@ -320,8 +328,13 @@ lv-LV:
   minecraft_designer_button: Sākt
   minecraft_adventurer_button: Sākt
   sports_watch_video: Noskaties video
+  video_1min: 1 minūtes
+  video_2min: 2 minūtes
+  video_5min: 5 minūtes
   are_you_teacher: Vai jūs esat skolotājs?
   volunteer_engineer_submission_field_name: Vārds
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Apraksts
   volunteer_engineer_submission_field_email: E-pasta adrese
   volunteer_engineer_submission_field_email_placeholder: E-pasta adrese
@@ -398,6 +411,7 @@ lv-LV:
     vesela gada datorzinātnes nodarbības, sagatavojot pašreizējo mācību saturu, lai
     piedāvātu šo jauno lauciņu. Lai reģistrētos profesionāliem attīstības semināriem,
     noslēdz <a href="/educate/districts">novada mēroga  sadarbību</a> ae Code.org.
+  dashboard_course_csina: Datorzinātne Algebrā
   dashboard_course_csina_desc: Code.org sadarbojas ar Bootstrap, lai izstrādātu mācību
     programmas, kas māca ģeometriskās un algebriskās koncepcijas, izmantojot datoru
     programmēšanu.
@@ -427,9 +441,11 @@ lv-LV:
   dashboard_navigation_section_speakers: Datorzinātņu<br/>Vieslektori
   dashboard_navigation_all_sections: Skolēnu konti un progress
   dashboard_navigation_view_progress: Progress
+  dashboard_navigation_view_assessments: Novērtējumi
   dashboard_navigation_add_students: Pievienot skolēnus
   dashboard_navigation_manage_students: Pārvaldīt skolēnus
   dashboard_navigation_lesson_plans_resources: Stundu plāni un resursi
+  dashboard_navigation_view_stats: Statistika
   dashboard_navigation_section: 'Sadaļa: %{section_name}'
   dashboard_navigation_student: 'Skolēns: %{student_name}'
   dashboard_progress_not_completed: Nav pabeigts
@@ -527,6 +543,7 @@ lv-LV:
   dashboard_login_none: E-pasts
   dashboard_stage: Posms
   dashboard_puzzle: Puzle
+  dashboard_question: Jautājums
   dashboard_correctness_correct: Pareizi
   stats_hoc_2013_heading: 'Neticama statistika no pagāšā gada "Programmēšanas Stundas".
     Nieka nedēļā:'
@@ -561,9 +578,12 @@ lv-LV:
   carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
   carousel_heading_beginners: Pamācības iesācējiem
   carousel_heading_javascript: Pamācības tiem, kas māca JavaScript
+  carousel_heading_beyond_javascript: Pamācības tiem, kas māca javaskriptu
   carousel_heading_unplugged: Nav ierīces vai interneta? Mēģiniet 'atvienotās' datorzinātnes
   carousel_heading_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
+  carousel_heading_beyond_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
   carousel_heading_languages: Pamācības citās programēsanas valodās
+  carousel_heading_beyond_languages: Pamācības citās programēsanas valodās
   carousel_heading_apps_games: Izveido pats savas aplikācijas vai spēles
   carousel_heading_university: Universitāšu kursi tiešsaistē
   carousel_heading_webpages: Iemācies veidot mājas lapas
@@ -606,6 +626,7 @@ lv-LV:
   robomindnl_name: Programmē virtuālo robotu
   flappy_name: Izveido Flappy spēli
   bitsbox_name: Bitsbox - izveidot spēli
+  makeschool_name: Izveidot iPhone spēli savā pārlūkā!
   appinventor_name: AppInventor Programmēšanas stunda
   blockly_name: Blockly
   projguts_name: Akmens, Šķēres, Papīrīts
@@ -615,6 +636,19 @@ lv-LV:
   course2_name: Kurss 2
   course3_name: Kurss 3
   course4_name: 4. kurss
+  coursea-draft_name: A kurss
+  coursea_name: A kurss
+  courseb-draft_name: B kurss
+  courseb_name: B kurss
+  coursec-draft_name: C kurss
+  coursec_name: C kurss
+  coursed-draft_name: D kurss
+  coursed_name: D kurss
+  coursee-draft_name: E kurss
+  coursee_name: E kurss
+  coursef-draft_name: F kurss
+  coursef_name: F kurss
+  express_name: Ekspress kurss
   applab_name: Aplikāciju laborotorija
   applab_gradelevel: Vecums 13+
   codeorg_gradelevel: Vecums no 4-104
@@ -660,16 +694,52 @@ lv-LV:
   infinity_gradelevel: Vecums no 4-104
   artist_gradelevel: Vecumā no 8+
   monstercoding_gradelevel: Vecumā 5-13
+  allcancode_gradelevel: Vecumā no 5-10
+  csfirst_gradelevel: Vecums 9-14
   boxisland_gradelevel: Sākumskola
+  codesters_gradelevel: Vecums 12-14
+  texasinstruments_gradelevel: Vecumā 13-16
+  teacherled_gradelevel: Vecumā 5+
   course1_gradelevel: No 4 gadiem (nav jālasa)
   course2_gradelevel: No 6 gadiem (jāprot lasīt)
   course3_gradelevel: Vecumā no 8 gadiem (pēc 2. kursa)
   course4_gradelevel: Vecumā no 10 gadiem (pēc 3. kursa)
+  coursea_gradelevel: Vecums no 4-7
+  courseb_gradelevel: Vecumā no 5-8
+  coursec_gradelevel: Vecumā no 6-10
+  coursed_gradelevel: Vecums 7-11
   coursee_gradelevel: Vecumā no 8-12
+  coursef_gradelevel: Vecumā 9-13
+  coursea-2017_gradelevel: Vecums no 4-7
+  courseb-2017_gradelevel: Vecumā no 5-8
+  coursec-2017_gradelevel: Vecumā no 6-10
+  coursed-2017_gradelevel: Vecums 7-11
   coursee-2017_gradelevel: Vecumā no 8-12
+  coursef-2017_gradelevel: Vecumā 9-13
+  coursea-2018_gradelevel: Vecums no 4-7
+  courseb-2018_gradelevel: Vecumā no 5-8
+  coursec-2018_gradelevel: Vecumā no 6-10
+  coursed-2018_gradelevel: Vecums 7-11
   coursee-2018_gradelevel: Vecumā no 8-12
+  coursef-2018_gradelevel: Vecumā 9-13
+  coursea-2019_gradelevel: Vecums no 4-7
+  courseb-2019_gradelevel: Vecumā no 5-8
+  coursec-2019_gradelevel: Vecumā no 6-10
+  coursed-2019_gradelevel: Vecums 7-11
   coursee-2019_gradelevel: Vecumā no 8-12
+  coursef-2019_gradelevel: Vecumā 9-13
+  coursea-2020_gradelevel: Vecums no 4-7
+  courseb-2020_gradelevel: Vecumā no 5-8
+  coursec-2020_gradelevel: Vecumā no 6-10
+  coursed-2020_gradelevel: Vecums 7-11
   coursee-2020_gradelevel: Vecumā no 8-12
+  coursef-2020_gradelevel: Vecumā 9-13
+  coursea-2021_gradelevel: Vecums no 4-7
+  courseb-2021_gradelevel: Vecumā no 5-8
+  coursec-2021_gradelevel: Vecumā no 6-10
+  coursed-2021_gradelevel: Vecums 7-11
+  coursee-2021_gradelevel: Vecumā no 8-12
+  coursef-2021_gradelevel: Vecumā 9-13
   accelerated_gradelevel: Vecumā no 10 gadiem (pēc 3. kursa)
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
@@ -753,6 +823,8 @@ lv-LV:
   flappy_shortdescription: Izveido pats savu spēli - Putns Flapijs, Haizivs vai Zemūdene
   bitsbox_shortdescription: Kodē lietotnes ar ko spēlēties un dalīties, izmantojot
     īstu JavaScript
+  makeschool_shortdescription: Izveido Iphone spēli! Mācies rakstot kodu, lai iemācītu
+    savam monstram jaunas kustības!
   touchdevelop_shortdescription: Saliec puzles, veido spēles un mācies programmēt
     ar savu telefonu.
   appinventor_shortdescription: Izveido savu lietotni! (Tikai uz Android)
@@ -872,6 +944,10 @@ lv-LV:
     vairākas lietotnes, kuras spēlēt un ar kurām dalīties. Vienkāršās pamācības ļauj
     pat maziem bērniem programmēt JavaScript un, paaugstinoties Tavam zināšanu līmenim,
     tu nokļūsi arvien tālāk.
+  makeschool_longdescription: Mācies programmēt un taisi IPhone spēli izmantojot pavisam
+    jaunu un iesācējiem draudzīgu programmēšanas valodu Swift! Izveido Pokemonu iedvesmotu
+    spēli un raksti kodu, lai iemācītu savam briesmonim jaunas kustības. Tu iemācīsies
+    izmantot mainīgos, metodes, un objektus, lai palīdzētu savam briesmonim uzvarēt!
   touchdevelop_longdescription: Pieskāriendraudzīgais koda redaktors vadīs tevi, veidojot
     attēlus no pikseļiem, risinot puzles vai veidojot spēlīti ar lēkājošiem putniem.
   appinventor_longdescription: Interesantās un īsās video pamācībās parādīts, kā izveidot
@@ -909,6 +985,7 @@ lv-LV:
   groklearning_beyond_name: Mācies Python programmēšanu
   hacketyhack_beyond_name: Mācies Ruby
   robomind_beyond_name: Programmē virtuālo robotu
+  makeschool_beyond_name: Izveidot iPhone spēli savā pārlūkā!
   appinventor_beyond_name: AppInventor Programmēšanas stunda
   codehs_beyond_name: Iemācies programmēt ar suni Karelu
   udemy_beyond_name: Programmēšanas kursi tiešsaistē
@@ -1006,6 +1083,7 @@ lv-LV:
   groklearning_beyond_shortdescription: Python programmēšanas pamatu ievads
   hacketyhack_beyond_shortdescription: Apgūt Ruby no pamatiem
   robomind_beyond_shortdescription: Rakstīt kodu virtuālam robotam
+  makeschool_beyond_shortdescription: Mācīties izveidot iPhone spēli stundas laikā
   appinventor_beyond_shortdescription: Izveido savu lietotni! (Tikai uz Android)
   touchdevelop_beyond_shortdescription: Kodē mobilās lietotnes tieši savā telefonā,
     planšetē vai datorā
@@ -1078,6 +1156,11 @@ lv-LV:
   robomind_beyond_longdescription: Skolēni apgūst programmēšanas pamatus vadot virtuālu
     robotu. Tiešsaistes kurs ir izmantojams pašmācībā ar īsām prezentācijām, video,
     testiem un pamācībām, kas palīdzēs atrisināt uzdevumus.
+  makeschool_beyond_longdescription: Mazliet proti ObjectiveC? Iemācies izveidot iPhone
+    spēli stundas laikā. Mēs tevi izvedīsim cauri kodēšanas procesu, testēšanu un
+    spēlēšanu tieši pārlūkprogrammā, un tad rezultātu varēsi publicēt Facebook! Nav
+    nepieciešama iepriekšēja pieredze iPhone lietotņu izstrādē. Tev ir jāsaprot, kas
+    ir mainīgiem, metodes un objekti.
   appinventor_beyond_longdescription: Interesantās un īsās video pamācībās parādīts,
     kā izveidot trīs vienkāršas lietotnes tavai Android ierīcei. Izstrādāts iesācējiem,
     izskatās kā lietpratējiem - šī programmēšanas stunda tevi sagatavos izstrādāt
@@ -1175,12 +1258,15 @@ lv-LV:
   sphero_beyond_longdescription: Nav svarīgi vai esiet skolotājs vai vecāks, SPRK
     nodarbības piedāvā bērniem atraktīvu robotu programmēšanas kursu vienlaikus uzlabojot
     zināšanas matemātikā un dabaszinībās.
+  compatibility_hide_this_warning: Nerādīt šo brīdinājumu
   flappy_shortcode: vicināt
   header_courses: Kursi
   header_course_catalog: Kursu katalogs
   header_educate_hoc: Programmēšanas stunda
   header_about_us: Par mums
   header_about_partners: Partneri
+  header_stats: Statistika
+  header_help_support: 'Palīdzība un atbalsts '
   header_legal_privacy: Privātuma politika
   header_legal_tos: Nosacījumi
   header_documentation: Dokumentācija
@@ -1189,6 +1275,9 @@ lv-LV:
   user_header_settings: Mans konts
   user_header_logout: Izrakstīties
   user_header_signin: Pierakstīties
+  user_header_create: 'Izveidot '
+  user_header_applab: 'Aplikāciju laborotorija '
+  user_header_artist: 'Mākslinieks '
   user_header_playlab: Spēles laboratorija
   user_header_flappy: Flapijs
   applab_tile_start_tutorial: Sākt
@@ -1196,6 +1285,9 @@ lv-LV:
   hoc2018_creativity_create: Izveidot
   hoc2018_mc_start: Sākt
   hoc2018_mc_educators_box2_button: Lejuplādēt
+  hoc2018_mc_video_1min: 1 minūtes
+  hoc2018_mc_video_2min: 2 minūtes
+  hoc2018_mc_video_5min: 5 minūtes
   hoc2018_mc_homepage_try_it: Izmēģini
   hoc2018_dance_party_button: Sākt
   hoc2018_dance_teacher_resources_tile1_button: Nodarbību plāns

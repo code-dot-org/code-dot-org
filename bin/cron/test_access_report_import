@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+require 'time'
+
+CENSUS_BUCKET = 'cdo-census'.freeze
+
+def resolved_object_key(object_key, valid)
+  object_key.chomp(".test") + ".#{Time.now.utc.iso8601}" + ".#{valid ? 'valid' : 'invalid'}"
+end
+
+def find_and_process(folder)
+  AWS::S3.find_objects_with_ext(CENSUS_BUCKET, 'test', folder).each do |object_key|
+    ChatClient.log("Attempting dry run seed of #{folder} file: #{object_key}")
+    yield object_key
+
+    # update object key to reflect valid file
+    new_key = resolved_object_key(object_key, true)
+    AWS::S3.rename_object(CENSUS_BUCKET, object_key, new_key)
+    ChatClient.log("Dry run seeding of #{folder} file succeeded: #{new_key}", color: 'green')
+  rescue => e
+    new_key = resolved_object_key(object_key, false)
+    ChatClient.log("Dry run seeding of #{folder} file failed: #{new_key}", color: 'red')
+    ChatClient.log(e.message, color: 'red')
+
+    # update object key to reflect invalid file
+    AWS::S3.rename_object(CENSUS_BUCKET, object_key, new_key)
+  end
+end
+
+def main
+  find_and_process('state_cs_offerings') do |object_key|
+    Census::StateCsOffering.dry_run_new_test_file(object_key)
+  end
+  find_and_process('ap_cs_offerings') do |object_key|
+    Census::ApCsOffering.dry_run_new_test_file(object_key)
+  end
+  find_and_process('ap_school_codes') do |object_key|
+    Census::ApSchoolCode.dry_run_new_test_file(object_key)
+  end
+  find_and_process('ib_cs_offerings') do |object_key|
+    Census::IbCsOffering.dry_seed_s3_object(object_key)
+  end
+  find_and_process('other_curriculum_offerings') do |object_key|
+    Census::OtherCurriculumOffering.dry_seed_s3_object(object_key)
+  end
+end
+
+main

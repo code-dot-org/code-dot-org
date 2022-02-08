@@ -24,11 +24,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -62,11 +62,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={noStudentsSection}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -100,11 +100,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -138,11 +138,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -179,11 +179,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -205,11 +205,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -228,11 +228,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -254,11 +254,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -277,11 +277,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -300,11 +300,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
-        textToSpeechScriptIds={[]}
+        textToSpeechUnitIds={[]}
         lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');

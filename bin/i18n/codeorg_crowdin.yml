@@ -2,7 +2,8 @@
 # Your crowdin's credentials
 #
 "project_identifier" : "codeorg"
-"base_path" : "../../i18n/locales"
+"project_id" : "26074"
+"base_path" : "i18n/locales"
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
@@ -32,6 +33,7 @@ files: [
   # hourofcode content is handled by the hourofcode-specific sync
   "ignore" : [
     "/source/hourofcode/**",
+    "/source/dashboard/restricted.yml"
   ],
 
   #

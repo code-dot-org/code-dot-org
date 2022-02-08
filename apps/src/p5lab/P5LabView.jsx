@@ -8,16 +8,21 @@ import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
 import AnimationJsonViewer from './AnimationJsonViewer';
-import {P5LabInterfaceMode, APP_WIDTH, APP_HEIGHT} from './constants';
+import {
+  P5LabInterfaceMode,
+  P5LabType,
+  APP_WIDTH,
+  APP_HEIGHT
+} from './constants';
 import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
-import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
+import {allowAnimationMode} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
-import AnimationPicker from './AnimationPicker/AnimationPicker';
+import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 /**
@@ -30,6 +35,9 @@ class P5LabView extends React.Component {
     onMount: PropTypes.func.isRequired,
     pauseHandler: PropTypes.func.isRequired,
     hidePauseButton: PropTypes.bool.isRequired,
+    onPromptAnswer: PropTypes.func,
+    labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
+
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
@@ -39,16 +47,26 @@ class P5LabView extends React.Component {
     hideSource: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
-    showVisualizationHeader: PropTypes.bool.isRequired,
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired,
-    isBackground: PropTypes.bool
+    isBlockly: PropTypes.bool.isRequired,
+    isBackground: PropTypes.bool,
+    currentUserType: PropTypes.string
   };
 
-  state = {
-    libraryManifest: {}
-  };
+  constructor(props) {
+    super(props);
+
+    // Indicate the context of the animation picker
+    let projectType = this.props.isBlockly
+      ? PICKER_TYPE.spritelab
+      : PICKER_TYPE.gamelab;
+
+    this.state = {
+      libraryManifest: {},
+      projectType
+    };
+  }
 
   getChannelId() {
     if (dashboard && dashboard.project) {
@@ -60,10 +78,19 @@ class P5LabView extends React.Component {
   componentDidMount() {
     this.props.onMount();
     const locale = window.appOptions.locale;
-    const app = this.props.spriteLab ? 'spritelab' : 'gamelab';
+    const app = this.props.isBlockly ? 'spritelab' : 'gamelab';
     getManifest(app, locale).then(libraryManifest => {
       this.setState({libraryManifest});
     });
+  }
+
+  shouldHideAnimationUpload() {
+    // Teachers should always be allowed to upload animations.
+    if (this.props.currentUserType === 'teacher') {
+      return false;
+    }
+
+    return this.props.isBlockly;
   }
 
   renderCodeMode() {
@@ -99,7 +126,7 @@ class P5LabView extends React.Component {
     // we don't want them to be able to navigate to all categories if we're only showing backgrounds
     const navigable = !this.props.isBackground;
     // we don't want to show backgrounds if we're looking for sprites in spritelab
-    const hideBackgrounds = !this.props.isBackground && this.props.spriteLab;
+    const hideBackgrounds = !this.props.isBackground && this.props.isBlockly;
     // we don't want students to be able to draw their own backgrounds in spritelab so if we're showing
     // backgrounds alone, we must be in spritelab and we should get rid of the draw your own option
     const canDraw = !this.props.isBackground;
@@ -110,23 +137,28 @@ class P5LabView extends React.Component {
           className={visualizationColumnClassNames}
           style={visualizationColumnStyle}
         >
-          {this.props.showVisualizationHeader && <P5LabVisualizationHeader />}
+          <P5LabVisualizationHeader labType={this.props.labType} />
           <P5LabVisualizationColumn
             finishButton={showFinishButton}
             pauseHandler={this.props.pauseHandler}
             hidePauseButton={this.props.hidePauseButton}
+            onPromptAnswer={this.props.onPromptAnswer}
           />
           {this.getChannelId() && (
             <AnimationPicker
               channelId={this.getChannelId()}
-              allowedExtensions=".png,.jpg,.jpeg"
               libraryManifest={this.state.libraryManifest}
-              hideUploadOption={this.props.spriteLab}
-              hideAnimationNames={this.props.spriteLab}
+              hideUploadOption={this.shouldHideAnimationUpload()}
+              hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
               hideBackgrounds={hideBackgrounds}
               canDraw={canDraw}
+              pickerType={
+                this.props.isBackground
+                  ? PICKER_TYPE.backgrounds
+                  : this.state.projectType
+              }
             />
           )}
         </div>
@@ -140,7 +172,7 @@ class P5LabView extends React.Component {
         )}
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
-          <CodeWorkspace withSettingsCog={!this.props.spriteLab} />
+          <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
         </InstructionsWithWorkspace>
       </div>
     );
@@ -153,9 +185,11 @@ class P5LabView extends React.Component {
       <AnimationTab
         channelId={this.getChannelId()}
         libraryManifest={this.state.libraryManifest}
-        hideUploadOption={this.props.spriteLab}
-        hideAnimationNames={this.props.spriteLab}
-        hideBackgrounds={this.props.spriteLab}
+        hideUploadOption={this.shouldHideAnimationUpload()}
+        hideAnimationNames={this.props.isBlockly}
+        hideBackgrounds={this.props.isBlockly}
+        labType={this.props.labType}
+        pickerType={this.state.projectType}
       />
     ) : (
       undefined
@@ -179,9 +213,9 @@ export default connect(state => ({
   isResponsive: isResponsiveFromState(state),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
   allowAnimationMode: allowAnimationMode(state),
-  showVisualizationHeader: showVisualizationHeader(state),
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
-  spriteLab: state.pageConstants.isBlockly,
-  isBackground: state.animationPicker.isBackground
+  isBlockly: state.pageConstants.isBlockly,
+  isBackground: state.animationPicker.isBackground,
+  currentUserType: state.currentUser?.userType
 }))(P5LabView);

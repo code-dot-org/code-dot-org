@@ -22,7 +22,7 @@ import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import {
   setVerified,
   setVerifiedResources
-} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
@@ -52,10 +52,10 @@ function showCourseOverview() {
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 
   if (isTeacher) {
-    store.dispatch(setViewType(ViewType.Teacher));
+    store.dispatch(setViewType(ViewType.Instructor));
     store.dispatch(setSections(scriptData.sections));
 
-    if (scriptData.is_verified_teacher) {
+    if (scriptData.is_verified_instructor) {
       store.dispatch(setVerified());
     }
 
@@ -101,11 +101,7 @@ function showCourseOverview() {
         teacherResources={teacherResources}
         migratedTeacherResources={courseSummary.migrated_teacher_resources}
         studentResources={courseSummary.student_resources}
-        isTeacher={isTeacher}
-        viewAs={ViewType.Teacher}
         scripts={courseSummary.scripts}
-        isVerifiedTeacher={!!scriptData.is_verified_teacher}
-        hasVerifiedResources={!!courseSummary.has_verified_resources}
         versions={convertAssignmentVersionShapeFromServer(versions)}
         showVersionWarning={
           !!scriptData.show_version_warning && versions.length > 1
@@ -114,7 +110,9 @@ function showCourseOverview() {
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
         userId={userId}
-        useMigratedResources={courseSummary.is_migrated}
+        useMigratedResources={
+          courseSummary.is_migrated && !teacherResources.length
+        }
       />
     </Provider>,
     document.getElementById('course_overview')

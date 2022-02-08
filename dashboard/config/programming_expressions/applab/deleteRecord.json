@@ -1,18 +1,17 @@
 {
-  "func": "deleteRecord",
+  "key": "deleteRecord",
+  "name": "deleteRecord",
   "category": "Data",
-  "paletteParams": [
-    "table",
-    "record",
-    "callback"
+  "palette_params": [
+    {
+      "name": "table"
+    },
+    {
+      "name": "record"
+    },
+    {
+      "name": "callback"
+    }
   ],
-  "params": [
-    "\"mytable\"",
-    "{id:1}",
-    "function(success) {\n  \n}"
-  ],
-  "allowFunctionDrop": {
-    "2": true,
-    "3": true
-  }
+  "syntax": "deleteRecord(table, record, callback)"
 }

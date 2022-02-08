@@ -23,11 +23,12 @@ class LevelBuilderSaveButton extends React.Component {
 
     $.ajax({
       type: 'POST',
-      url: '../update_properties',
+      url: '../update_start_code',
       data: JSON.stringify(this.props.getChanges()),
       dataType: 'json',
       error: this.props.setProjectUpdatedError,
-      success: this.props.setProjectUpdatedSaved
+      success: this.props.setProjectUpdatedSaved,
+      contentType: 'application/json'
     });
   };
 

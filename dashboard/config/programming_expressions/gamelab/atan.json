@@ -1,11 +1,11 @@
 {
-  "func": "atan",
+  "key": "atan",
+  "name": "atan",
   "category": "Math",
-  "paletteParams": [
-    "value"
+  "palette_params": [
+    {
+      "name": "value"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "value"
+  "syntax": "atan(value)"
 }

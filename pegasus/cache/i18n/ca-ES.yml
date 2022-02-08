@@ -39,11 +39,14 @@ ca-ES:
   twentyhours_text: Heu acabat la primera Hora del Codi? Apreneu més informàtica i
     programació en el curs següent.
   og_title: Cada nen mereix oportunitat
+  og_title_soon: Setmana de l'Educació en Informàtica
   og_title_here: L'Hora de Codi és aquí!
   og_description: Cada alumne de cada escola es mereix l'oportunitat d'estudiar informàtica.
   og_description_celeb: Prova els nous tutorials i guanya un xat de vídeo d'una celebritat
     per a tu o la teva classe!
   csedweek_og_title: Setmana de l'Educació en Informàtica
+  csedweek_og_description: Cada alumne de cada escola mereix l'oportunitat d'estudiar
+    informàtica.
   hoc2014_heading: Uniu-vos a<a href="http://hourofcode.com">Hora del Codi</a><br/>Desembre
     8 - 14, 2014<br/>
   hoc2014_students: Alumnes
@@ -91,6 +94,7 @@ ca-ES:
   congratulations_volunteer: 'Felicitacions: ara que has provat l''Hora del Codi,
     <a href="https://code.org/volunteer"> registra''t com a voluntari en una aula</a>
     i ajuda els alumnes a aprendre una Hora del Codi!'
+  congratulations_on_completing_course: Enhorabona per completar %{course}
   congrats_next_tutorials_title: Prova els següents tutorials
   congrats_next_tutorials_desc: Proveu aquestes classes més curtes, de 1 hora, o proveu
     una <a href="%{current_path}/next"> classe de soci</a>.
@@ -199,6 +203,7 @@ ca-ES:
   learn_next_level: Continua al següent nivell
   learn_online: Prova altres cursos online
   learn_classes: Troba classes locals
+  hoc_is_here: 'La #HourOfCode és aquí - prova-ho! @codeorg'
   just_did_hoc: 'Acabo de fer la #HourOfCode - Fes-ho! @codeorg'
   learn_hoc: Aprendre una hora del codi
   beyond_hoc: Més enllà d'una hora
@@ -274,6 +279,8 @@ ca-ES:
   homepage_hero_text_stat_loc: "#loc línies de codi escrites pels alumnes"
   homepage_hero_text_stat_students: comptes d'estudiant a Code Studio
   homepage_hero_text_stat_served: 'L''Hora del Codi: #served servit'
+  homepage_hero_hoc_is_coming: Setmana de l'Educació en Informàtica
+  homepage_hero_hoc_is_here: Setmana de l'Educació en Informàtica
   homepage_slot_text_hoc: L'Hora de Codi
   homepage_slot_text_frozen: Frozen amb l'Anna i l'Elsa
   homepage_slot_text_studio: Tots els nostres tutorials
@@ -377,6 +384,7 @@ ca-ES:
   careers_page_more: Més <a href='%{careers_url}' target='_blank'>vídeos motivadors</a>
     protagonitzats per professionals de l'àmbit de la tecnologia
   playlab_classic_title: Clàssic
+  playlab_iceage_title_live: Edat de gel
   starwars_javascript_title: JavaScript
   starwars_javascript_specs: Només en anglès | Navegadors moderns | Edats 11 +
   starwars_blocks_title: Blocs
@@ -422,6 +430,8 @@ ca-ES:
   video_2min: 2 min
   video_3min: 3 min
   video_5min: 5 min
+  speak_another_language: Parles una altra llengua?
+  help_translate: Ajuda'ns amb les traduccions.
   no_internet: No teniu Internet?
   are_you_teacher: Sou mestre?
   volunteer_engineer_submission_title: Inspira alumnes i voluntaris per a l'Hora del
@@ -438,6 +448,8 @@ ca-ES:
     d'alumnes en és de 180 països. Si us plau, involucra't durant la setmana de l'educació
     en la informàtica, del 7 al 13 de desembre.
   volunteer_engineer_submission_field_name: Nom
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Descripció
   volunteer_engineer_submission_field_email: Correu electrònic
   volunteer_engineer_submission_field_email_placeholder: Correu electrònic
@@ -516,6 +528,7 @@ ca-ES:
     i poder ofertar aquesta nova matèria. Per a inscriure's en els tallers de desenvolupament
     professional cal fer una sol·licitud a <a href="/educate/districts">districtes
     associats</a> de Code.org.
+  dashboard_course_csina: Informàtica en àlgebra
   dashboard_course_csina_desc: Code.org s'ha associat amb Bootstrap  per desenvolupar
     un currículum per ensenyar conceptes algebraics i geomètrics mitjançant la programació
     d'ordinadors.
@@ -546,9 +559,11 @@ ca-ES:
   dashboard_navigation_section_speakers: Informàtica <br/> Oradors convidats
   dashboard_navigation_all_sections: Comptes i progrés dels alumnes
   dashboard_navigation_view_progress: Progrés
+  dashboard_navigation_view_assessments: Avaluacions
   dashboard_navigation_add_students: Afegeix estudiants
   dashboard_navigation_manage_students: Gestiona els alumnes
   dashboard_navigation_lesson_plans_resources: Plans docents i recursos
+  dashboard_navigation_view_stats: Estadístiques
   dashboard_navigation_section: 'Secció: %{section_name}'
   dashboard_navigation_student: 'Alumne: %{student_name}'
   dashboard_progress_not_started: no començat
@@ -557,6 +572,7 @@ ca-ES:
   dashboard_progress_completed_too_many_blocks: completat, massa blocs
   dashboard_progress_completed_perfect: completat, perfecte
   dashboard_progress_furthest_level_attempted: nivell més alt intentat
+  dashboard_progress_pair_programming: programació per parelles
   dashboard_sections_new_section: Nova secció
   dashboard_sections_jumbotron_instruction: Crea noves seccions i afegeix-hi alumnes.
     Les seccions t'ajuden a organitzar els estudiants en grups més petits de manera
@@ -659,6 +675,7 @@ ca-ES:
   dashboard_login_none: Correu electrònic
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
+  dashboard_question: Pregunta
   dashboard_correctness_correct: Correcte
   stats_hoc_2013_heading: 'Increïbles estadístiques d''Hora de Codi de l''any passat.
     En només una setmana:'
@@ -693,10 +710,13 @@ ca-ES:
   carousel_heading_domestic: Tutorials disponibles en anglès
   carousel_heading_beginners: Tutorials per a principiants
   carousel_heading_javascript: Tutorials que ensenyen Javascript
+  carousel_heading_beyond_javascript: Tutorials que ensenyen Javascript
   carousel_heading_unplugged: Cap dispositiu o sense connexió a internet? Intenta
     informàtica "sense connexió"
   carousel_heading_devices: Tutorials d' aplicacions per a telèfons i tablets
+  carousel_heading_beyond_devices: Tutorials d' aplicacions per a telèfons i tablets
   carousel_heading_languages: Tutorials en altres llenguatges de programació
+  carousel_heading_beyond_languages: Tutorials en altres llenguatges de programació
   carousel_heading_apps_games: Fes les teves pròpies apps o jocs
   carousel_heading_university: Cursos universitaris en línia
   carousel_heading_webpages: Aprèn a fer pàgines web
@@ -741,6 +761,7 @@ ca-ES:
   robomindnl_name: Programa un robot virtual
   flappy_name: Fes un joc Flappy
   bitsbox_name: Bitsbox - fes un joc
+  makeschool_name: Construeix un joc d'iPhone al teu navegador!
   appinventor_name: AppInventor Hora del Codi
   blockly_name: Blockly
   projguts_name: Pedra, Paper, tisora
@@ -765,11 +786,16 @@ ca-ES:
   coursef-draft_name: Curs F
   coursef_name: Curs F
   accelerated_name: Curs accelerat
+  express_name: Curs exprés
   20-hour_name: Curs accelerat
   classicmaze_name: Laberint clàssic
+  iceage_name: Edat de gel
   minecraft_name: Minecraft
   applab_name: Laboratori d'aplicacions
   gamelab_name: Laboratori de jocs
+  applab_shortdescription_congrats: El Laboratori d'aplicacions és un entorn de programació
+    on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb
+    blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   khan_gradelevel: ESO +
@@ -813,21 +839,52 @@ ca-ES:
   infinity_gradelevel: Edat 4-104
   artist_gradelevel: Edat 8 +
   monstercoding_gradelevel: Edats 5-13
+  allcancode_gradelevel: Edats de 5-10
+  csfirst_gradelevel: De 9 a 14 anys
   boxisland_gradelevel: Primària
+  codesters_gradelevel: Edats 12-14
+  texasinstruments_gradelevel: Edats 13-16
+  teacherled_gradelevel: Edats 5+
   course1_gradelevel: De 4 a 6 anys
   course2_gradelevel: Edat +6 (es requereix lectura)
   course3_gradelevel: De 8 a 18 anys
   course4_gradelevel: Edat 10 + (després del curs 3)
+  coursea_gradelevel: Edat 4-7
+  courseb_gradelevel: Edats 5-8
+  coursec_gradelevel: Edats de 6-10
   coursed_gradelevel: Qualificacions 8+
   coursee_gradelevel: Edats 8-12
+  coursef_gradelevel: Edats 9-13
+  coursea-2017_gradelevel: Edat 4-7
+  courseb-2017_gradelevel: Edats 5-8
+  coursec-2017_gradelevel: Edats de 6-10
   coursed-2017_gradelevel: Qualificacions 8+
   coursee-2017_gradelevel: Edats 8-12
+  coursef-2017_gradelevel: Edats 9-13
+  coursea-2018_gradelevel: Edat 4-7
+  courseb-2018_gradelevel: Edats 5-8
+  coursec-2018_gradelevel: Edats de 6-10
   coursed-2018_gradelevel: Qualificacions 8+
   coursee-2018_gradelevel: Edats 8-12
+  coursef-2018_gradelevel: Edats 9-13
+  coursea-2019_gradelevel: Edat 4-7
+  courseb-2019_gradelevel: Edats 5-8
+  coursec-2019_gradelevel: Edats de 6-10
   coursed-2019_gradelevel: Qualificacions 8+
   coursee-2019_gradelevel: Edats 8-12
+  coursef-2019_gradelevel: Edats 9-13
+  coursea-2020_gradelevel: Edat 4-7
+  courseb-2020_gradelevel: Edats 5-8
+  coursec-2020_gradelevel: Edats de 6-10
   coursed-2020_gradelevel: Qualificacions 8+
   coursee-2020_gradelevel: Edats 8-12
+  coursef-2020_gradelevel: Edats 9-13
+  coursea-2021_gradelevel: Edat 4-7
+  courseb-2021_gradelevel: Edats 5-8
+  coursec-2021_gradelevel: Edats de 6-10
+  coursed-2021_gradelevel: Qualificacions 8+
+  coursee-2021_gradelevel: Edats 8-12
+  coursef-2021_gradelevel: Edats 9-13
   accelerated_gradelevel: Edat 10 + (després del curs 3)
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
@@ -914,6 +971,8 @@ ca-ES:
   flappy_shortdescription: Fes el teu propi joc - ocell Flappy, tauró o submarí
   bitsbox_shortdescription: Programa una sèrie d'apps per jugar i compartir, utilitzant
     real JavaScript.
+  makeschool_shortdescription: Fes un joc per a iPhone! Aprèn programant per ensenyar
+    als teus monstres nous moviments!
   touchdevelop_shortdescription: 'Resol puzzles, crea jocs i aprèn programació tot
     al teu telèfon. '
   appinventor_shortdescription: Fes la teva pròpia app! (només Android)
@@ -1094,6 +1153,10 @@ ca-ES:
     una sèrie d'aplicacions per jugar i compartir. Tutorials simples fan possible
     fins i tot per als nens mes petits de programar en Javascript i  com més sàpiguen
     més lluny arribaran.
+  makeschool_longdescription: Apreneu a programar fent un joc per a iPhone utilitzant
+    un nou i agradable llenguatge de programació anomenat Swift! Creeu un joc d'acció
+    inspirat en Pok&eacute; i programeuper ensenyar al monstre nous moviments. Aprendreu
+    com utilitzar variables, mètodes i objectes per ajudar al monstre a guanyar!
   touchdevelop_longdescription: 'L''editor tàctil et guiarà en la creació d''art digital,
     resolent el trencaclosques de l''ós o fent el teu propi joc d''Angry birds. '
   appinventor_longdescription: Divertits, ràpids tutorials en vídeo et guiaran a través
@@ -1137,6 +1200,7 @@ ca-ES:
   groklearning_beyond_name: Aprèn programació amb Python
   hacketyhack_beyond_name: Aprèn Ruby
   robomind_beyond_name: Programa un robot virtual
+  makeschool_beyond_name: Construeix un joc d'iPhone al teu navegador!
   appinventor_beyond_name: AppInventor Hora del Codi
   codehs_beyond_name: Aprendre a programar amb Karel el gos
   udemy_beyond_name: Cursos de programació en línia
@@ -1233,6 +1297,7 @@ ca-ES:
   groklearning_beyond_shortdescription: Introducció bàsica a la programació python
   hacketyhack_beyond_shortdescription: Aprèn Ruby des de zero
   robomind_beyond_shortdescription: Programa per a un robot virtual
+  makeschool_beyond_shortdescription: Aprèn a fer un joc per l'iPhone en una hora
   appinventor_beyond_shortdescription: Fes la teva pròpia app! (només Android)
   touchdevelop_beyond_shortdescription: Programa aplicacions per a mòbils directament
     al teu telèfon, tableta o portàtil
@@ -1315,6 +1380,11 @@ ca-ES:
     controlant el seu propi robot virtual. Curs en línia totalment autònom amb presentacions
     breus, vídeos, qüestionaris i pistes automàtiques per ajudar amb els exercicis
     de programació. '
+  makeschool_beyond_longdescription: Coneixes una mica d'ObjectiveC? Aprèn a fer un
+    joc per a iPhone en una hora! Et guiarem durant el procés, a programar, provar
+    i jugar al teu joc íntegrament des del navegador i després a compartir-lo a Facebook
+    perquè els teus amics el provin! No cal cap experiència prèvia de desenvolupament
+    per a iPhone. Cal que sàpigues que són les variables, els mètodes i els objectes.
   appinventor_beyond_longdescription: Divertits, ràpids tutorials en vídeo et guiaran
     a través de la construcció de tres simples apps per al teu mòbil Android o tablet.
     Dissenyat per principiants i experts per igual, aquesta Hora del codi et tindrà
@@ -1433,6 +1503,7 @@ ca-ES:
   sphero_beyond_longdescription: Si ets educador o un pare, les lliçons SPRK donen
     als nens un divertit curs accelerat a la programació de robots de mentre  milloren
     les seves habilitats en matemàtiques i ciències.
+  compatibility_hide_this_warning: Amaga aquest avís
   flappy_shortcode: aleteig
   header_courses: cursos
   header_course_catalog: Catàleg de cursos
@@ -1450,8 +1521,10 @@ ca-ES:
   header_about_faqs: Preguntes freqüents
   header_learn: Aprèn
   header_teach: Ensenya
+  header_stats: Estadístiques
   header_help_us: Ajuda'ns
   header_about: Quant a
+  header_help_support: 'Ajuda i suport '
   header_legal_privacy: Política de privadesa
   header_legal_tos: Condicions d'ús
   user_header_label: Hola %{username}
@@ -1581,6 +1654,7 @@ ca-ES:
   footer_donate: Feu una donació
   footer_support: Suport
   footer_terms: Condicions
+  ai_for_oceans_lesson_plan: unitat didàctica/lliço
   ai_in_partnership_with: En associació amb
   ai_activity: Activitat
   ai_description: Descripció

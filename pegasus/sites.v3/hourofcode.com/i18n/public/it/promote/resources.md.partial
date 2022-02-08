@@ -30,9 +30,9 @@ nav: promote_nav
 
 ## Pubblica queste immagini sui social network
 
-[![immagine](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![immagine](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![immagine](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![immagine](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![immagine](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -42,7 +42,7 @@ nav: promote_nav
 
 [![immagine]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![immagine]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Scarica le versioni ad alta risoluzione](http://images.code.org/share/hour-of-code-logo.zip)
+[Scarica le versioni ad alta risoluzione](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" e "Ora del Codice" sono marchi di fabbrica. Non vogliamo impedire il loro utilizzo, ma vogliamo assicurarci che l'utilizzo rientri entro alcuni limiti:**
 
@@ -127,7 +127,7 @@ nav: promote_nav
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma solo il 47% di tutte le scuole superiori insegna informatica (negli Stati Uniti). La buona notizia è che intendiamo cambiare rotta! Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato un'Ora del Codice.
+      I computer sono ovunque e stanno cambiando ogni industria del pianeta. But only 51% of all high schools offer computer science. La buona notizia è che intendiamo cambiare rotta! Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato un'Ora del Codice.
     </p>
     
     <p>
@@ -143,7 +143,7 @@ nav: promote_nav
     </p>
     
     <p>
-      Per iniziare leggi l'introduzione all'Ora del Codice sul sito italiano <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">Programma il Futuro</a> <br />
+      Per iniziare leggi l'introduzione all'Ora del Codice sul sito italiano http://hourofcode.com/{{ country_language }} <br />
     </p>
     
     <hr />
@@ -180,7 +180,7 @@ nav: promote_nav
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma solo il 47% di tutte le scuole superiori insegna informatica (negli Stati Uniti). La buona notizia è che intendiamo cambiare rotta! Se avete già sentito parlare dell'Ora del Codice, forse sapete che ha fatto storia - più di 100 milioni gli studenti nel mondo hanno provato un'Ora del Codice. Anche leader come il presidente Obama e il primo ministro canadese Justin Trudeau hanno scritto le loro prime righe di codice durante questa campagna.
+      I computer sono ovunque e stanno cambiando ogni industria del pianeta. But only 51% of all high schools offer computer science. La buona notizia è che intendiamo cambiare rotta! Se avete già sentito parlare dell'Ora del Codice, forse sapete che ha fatto storia - più di 100 milioni gli studenti nel mondo hanno provato un'Ora del Codice. Anche leader come il presidente Obama e il primo ministro canadese Justin Trudeau hanno scritto le loro prime righe di codice durante questa campagna.
     </p>
     
     <p>
@@ -213,7 +213,7 @@ nav: promote_nav
     </p>
     
     <p>
-      Ma solo una piccola parte di noi sta imparando <strong>come</strong> funziona la tecnologia. Solo il 47% di tutte le scuole insegna informatica (negli Stati Uniti).
+      But only a fraction of us are learning <strong>how</strong> technology works. Only 51% of all high schools offer computer science.
     </p>
     
     <p>
@@ -225,7 +225,7 @@ nav: promote_nav
     </p>
     
     <p>
-      Andata alla pagina <a href="http://programmailfuturo.it">programmailfuturo.it</a> per i dettagli e contribuire a diffondere la notizia. <br />
+      Visita la pagina http://hourofcode.com/{{ country_language }} per i dettagli e contribuisci a diffondere la notizia.<br />
     </p>
     
     <hr />
@@ -250,7 +250,7 @@ nav: promote_nav
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta, ma solo il 47% delle scuole superiori insegna informatica (negli Stati Uniti). Le ragazze e le minoranze sono molto poco rappresentate negli studi informatici e nelle aziende tecnologiche. La buona notizia è che intendiamo cambiare rotta.
+      Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Le ragazze e le minoranze sono molto poco rappresentate negli studi informatici e nelle aziende tecnologiche. La buona notizia è che intendiamo cambiare rotta.
     </p>
     
     <p>
@@ -258,7 +258,7 @@ nav: promote_nav
     </p>
     
     <p>
-      Ecco perché ognuno dei [NUMERO] studenti della scuola [NOME SCUOLA] sta per prendere parte al più grande evento nella storia dell'apprendimento: l'Ora del Codice, durante la Settimana di Educazione all'Informatica (<%= campaign_date('full') %>).
+      Ecco perché ognuno dei [X numero] studenti della scuola [NOME SCUOLA] sta prendendo parte al più grande evento nella storia dell'apprendimento: l'Ora del Codice, durante la Settimana di Educazione all'Informatica (dal 6 al 12 dicembre).
     </p>
     
     <p>
@@ -307,7 +307,7 @@ nav: promote_nav
     </p>
     
     <p>
-      L'informatica è oggi fondamentale per ogni settore. Eppure la maggior parte delle scuole non la insegnano. Alla scuola [NOME DELLA SCUOLA], stiamo cercando di cambiare la situazione.
+      Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>

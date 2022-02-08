@@ -2,13 +2,17 @@
   "script": {
     "name": "dance-extras-gallery",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:29 UTC",
+    "serialized_at": "2021-11-22 19:56:47 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "dance-extras-gallery"
     }
@@ -44,23 +48,46 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "80421726-a76a-4854-9593-1b512528b288",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80421726-a76a-4854-9593-1b512528b288",
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-gallery"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7bf06656-1181-4db2-afb9-ef82f86ea764",
+      "position": 1,
+      "properties": {
+        "name": "Keep On Dancing!",
+        "progression_name": "Keep On Dancing!"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bf06656-1181-4db2-afb9-ef82f86ea764",
+        "lesson_activity.key": "80421726-a76a-4854-9593-1b512528b288"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Dance_Party_extras_gallery_intro"
-        ]
+        ],
+        "progression": "Keep On Dancing!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +95,8 @@
         ],
         "lesson.key": "Dance Party - Go Further",
         "lesson_group.key": "",
-        "script.name": "dance-extras-gallery"
+        "script.name": "dance-extras-gallery",
+        "activity_section.key": "7bf06656-1181-4db2-afb9-ef82f86ea764"
       },
       "level_keys": [
         "Dance_Party_extras_gallery_intro"
@@ -84,7 +112,8 @@
         ],
         "lesson.key": "Dance Party - Go Further",
         "lesson_group.key": "",
-        "script.name": "dance-extras-gallery"
+        "script.name": "dance-extras-gallery",
+        "activity_section.key": "7bf06656-1181-4db2-afb9-ef82f86ea764"
       }
     }
   ],

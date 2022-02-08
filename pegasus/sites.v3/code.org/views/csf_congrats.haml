@@ -57,7 +57,16 @@
     ScriptConstants::COURSEE_2020_NAME => "csf_next",
     ScriptConstants::COURSEF_2020_NAME => "csf_next",
     ScriptConstants::EXPRESS_2020_NAME => "csf_next",
-    ScriptConstants::PRE_READER_EXPRESS_2020_NAME => "csf_next"
+    ScriptConstants::PRE_READER_EXPRESS_2020_NAME => "csf_next",
+
+    ScriptConstants::COURSEA_2021_NAME => "csf_next",
+    ScriptConstants::COURSEB_2021_NAME => "csf_next",
+    ScriptConstants::COURSEC_2021_NAME => "csf_next",
+    ScriptConstants::COURSED_2021_NAME => "csf_next",
+    ScriptConstants::COURSEE_2021_NAME => "csf_next",
+    ScriptConstants::COURSEF_2021_NAME => "csf_next",
+    ScriptConstants::EXPRESS_2021_NAME => "csf_next",
+    ScriptConstants::PRE_READER_EXPRESS_2021_NAME => "csf_next"
   }
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
@@ -67,7 +76,7 @@
   #toprow
     #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
       %a{:href=>"/printcertificate?s=#{cert_script}", :target=>'_blank'}
-        %img{:src=>"/images/fit-540/#{certificate_template_for(cert_script)}", :width=>"100%"}
+        %img{:src=>"/images/fit-540/#{CertificateImage.certificate_template_for(cert_script)}", :width=>"100%"}
 
     #certificate.col-50
       = view :csf_congrats_certificate, course: course

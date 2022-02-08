@@ -1,0 +1,454 @@
+{
+  "script": {
+    "name": "explore-data-1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
+      "is_migrated": true,
+      "redirect_to": "explore-data-1-2021",
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "explore-data-1",
+    "serialized_at": "2021-11-22 19:57:47 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "explore-data-1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "explore-data-1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Exploring Box Plots and Histograms",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.\n\n\n\nThe lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.\n\n####Prerequisite Skills and Vocabulary\n\nThis lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:\n\n\n- Know how to read a bar chart, understanding what the values on the x and y axes represent\n- Know how to read a histogram, understanding what the range of values represent\n",
+        "preparation": "- Students will need accounts on Code.org to engage with certain aspects of this lesson. If you’ve ever done an Hour of Code activity with Code.org, the steps to set up your class are similar. You can use the following resources to prepare for introducing students to the Code.org platform:\n  - [Creating a Class Section](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)\n   - [Creating Accounts for Students](https://support.code.org/hc/en-us/articles/202114633-Creating-accounts-for-students-and-adding-them-to-your-section)\n  - [The Student Experience on Code.org](https://support.code.org/hc/en-us/articles/115001347791-The-student-experience-on-Code-org)\n\n- Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson.\n\n- If needed, reserve computers to use in class during this lesson.\n",
+        "student_overview": "Create bar charts and histograms in App Lab's Data Visualizer.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "a27f1394-ac35-4462-88ac-35372f934fa7",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a27f1394-ac35-4462-88ac-35372f934fa7",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1"
+      }
+    },
+    {
+      "key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1"
+      }
+    },
+    {
+      "key": "546a962f-6904-41b7-83b8-0344558adf9f",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "546a962f-6904-41b7-83b8-0344558adf9f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "fb1c8076-0e95-40f1-8eda-f53f7272f9d0",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces prior knowledge around reading bar charts or histograms. \n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fb1c8076-0e95-40f1-8eda-f53f7272f9d0",
+        "lesson_activity.key": "a27f1394-ac35-4462-88ac-35372f934fa7"
+      }
+    },
+    {
+      "key": "dbf6b0ab-aea7-41e5-b549-9b251b0336a1",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** *Why do people make visualizations out of data?*\n\nHave students brainstorm silently on their own, then have them share with neighbors. Finally, have them share out with the room.\n\n**Discussion Goal:** This discussion should be quick to kick off today's activity. Try to quickly guide the conversation towards some of the takeaways on the following slide, then move on to the day's activity.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbf6b0ab-aea7-41e5-b549-9b251b0336a1",
+        "lesson_activity.key": "a27f1394-ac35-4462-88ac-35372f934fa7"
+      }
+    },
+    {
+      "key": "fb4e0fa3-417c-4455-a55f-a05fea996b23",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> People make visualizations for a number of reasons. They help humans see lots of data at once and help us find patterns that might otherwise be \"invisible\". Today we’re going to use a program called App Lab to create our own charts from real-world data. We’ll learn how to use this program to create charts, then we’ll be able to pick our own data and create our own charts that explain patterns or trends in the data.\n\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fb4e0fa3-417c-4455-a55f-a05fea996b23",
+        "lesson_activity.key": "a27f1394-ac35-4462-88ac-35372f934fa7"
+      }
+    },
+    {
+      "key": "51210a6a-e15c-41b4-a995-544dd2b61c56",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the \n[r data_visualizer_in_app_lab_part_1/explore-data-1/unversioned]",
+        "name": "Making Bar Charts and Histograms",
+        "progression_name": "Video: Data Visualizer in App Lab Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "51210a6a-e15c-41b4-a995-544dd2b61c56",
+        "lesson_activity.key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe"
+      }
+    },
+    {
+      "key": "52ed69a5-ec3b-4e88-9a4f-8367bb910f0e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_2/explore-data-1/unversioned] - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.",
+        "progression_name": "Data Visualizer",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Re-Watching the Video:** If students have questions about navigating App Lab and the Data Visualizer, they can click on the Help and Tips tab at the top of their screen and re-watch the video."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "52ed69a5-ec3b-4e88-9a4f-8367bb910f0e",
+        "lesson_activity.key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe"
+      }
+    },
+    {
+      "key": "cfad6d6c-7f04-47ea-b2a8-f40c9760f436",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and follow the steps on the slide to examine the Dogs dataset and view the Maximum Life Span column. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students complete side-one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart that they find is useful and answer a pair of discussion questions.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Fill Out the Activity Guide Digitally:** The Data Visualizer allows students to quickly copy and paste visuals into documents and slide shows using the View Snapshot button. If at all possible in your classroom environment, have students complete this activity guide digitally."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cfad6d6c-7f04-47ea-b2a8-f40c9760f436",
+        "lesson_activity.key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe"
+      }
+    },
+    {
+      "key": "0d53fe99-b686-42d9-9c69-f6d755d86d3f",
+      "position": 4,
+      "properties": {
+        "description": "**Discuss:** Optionally discuss the different columns that students chose as useful.\n\n**Discussion Goal:** Use this discussion for two purposes. First, use it to build a shared comfort with what a bar chart shows. Have students share which charts they think are useful and what pieces of information are represented. Remind students that bar charts are particularly good at finding common values in a column. The second goal is to prepare students to see the value of a histogram. Many bar charts are not at all useful because they have too many unique values. Using a histogram to group these values can help make more useful charts.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d53fe99-b686-42d9-9c69-f6d755d86d3f",
+        "lesson_activity.key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe"
+      }
+    },
+    {
+      "key": "28eb50d0-3e6d-4d99-9b05-533bd8cae070",
+      "position": 5,
+      "properties": {
+        "description": "####Reading a Histogram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining why some bar charts are not useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.\n- Which of these makes it easier to understand the data?\n\n- How is data in the “histogram” arranged to cause the data to be visualized differently?\n\n**Discuss** how the histogram seems to be displaying the data differently from the bar chart.\n\n**Discussion Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer, but wider\" bars in the histogram. They should also notice how the values are sorted. This makes the chart, overall, easier to read.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the slide explaining what a histogram is useful for.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students complete side 2 of their activity guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "28eb50d0-3e6d-4d99-9b05-533bd8cae070",
+        "lesson_activity.key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe"
+      }
+    },
+    {
+      "key": "c6fa3eb1-6c8e-403b-b534-b304b4d5811b",
+      "position": 6,
+      "properties": {
+        "description": "####Investigate Your Own Data\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students complete the third page of their activity guide, where they can choose their own dataset to investigate and create bar charts and histograms.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6fa3eb1-6c8e-403b-b534-b304b4d5811b",
+        "lesson_activity.key": "d73e3988-fa61-49aa-9ab9-8b7c30c83efe"
+      }
+    },
+    {
+      "key": "2730ae78-70c3-4327-9828-75ea3f7ea539",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share out the datasets they selected, the charts they created, and the information that can be learned from the chart. Here are a few options for how students might complete this:\n\n-  Gallery Walk: Have students keep the third page of their activity guide open, then allow students to walk around the room to explore the charts that their peers created. Students can use post-it notes to leave comments on the charts they visit.\n\n- Speed Networking: Set a timer and have students pair up with a peer close by. Each person has a set amount of time to share the chart they created. Once the timer is over, they find a new partner. This can be repeated several times.\n\n- Digital Bulletin Board: Create a shared digital space for students to paste their charts, then encourage students to leave comments on each other’s charts describing the piece of information they notice most about each chart.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2730ae78-70c3-4327-9828-75ea3f7ea539",
+        "lesson_activity.key": "546a962f-6904-41b7-83b8-0344558adf9f"
+      }
+    },
+    {
+      "key": "04e3017c-6fed-4bec-ac70-ce4be673b5c7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reflection:** Review the key takeaways from the lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "04e3017c-6fed-4bec-ac70-ce4be673b5c7",
+        "lesson_activity.key": "546a962f-6904-41b7-83b8-0344558adf9f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BarCharts1"
+        ],
+        "progression": "Video: Data Visualizer in App Lab Part 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BarCharts1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1",
+        "activity_section.key": "51210a6a-e15c-41b4-a995-544dd2b61c56"
+      },
+      "level_keys": [
+        "BarCharts1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Bar Charts and HistogramsPart2"
+        ],
+        "progression": "Data Visualizer"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Bar Charts and HistogramsPart2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1",
+        "activity_section.key": "52ed69a5-ec3b-4e88-9a4f-8367bb910f0e"
+      },
+      "level_keys": [
+        "Bar Charts and HistogramsPart2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "BarCharts1",
+        "script_level.level_keys": [
+          "BarCharts1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1",
+        "activity_section.key": "51210a6a-e15c-41b4-a995-544dd2b61c56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Bar Charts and HistogramsPart2",
+        "script_level.level_keys": [
+          "Bar Charts and HistogramsPart2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "explore-data-1",
+        "activity_section.key": "52ed69a5-ec3b-4e88-9a4f-8367bb910f0e"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Data Visualizer in App Lab Part 1",
+      "url": "https://youtu.be/4vaWVvrnsFk",
+      "key": "data_visualizer_in_app_lab_part_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "data_visualizer_in_app_lab_part_1"
+      }
+    },
+    {
+      "name": "Exploring Bar Charts and Histograms",
+      "url": "https://docs.google.com/presentation/d/1vHtip4atGgbT6xRiR12FtKcVLs26wgDGLJxmnuTeRnI/edit",
+      "key": "exploring_bar_charts_and_histograms",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_bar_charts_and_histograms"
+      }
+    },
+    {
+      "name": "Exploring Bar Charts and Histograms",
+      "url": "https://docs.google.com/document/d/15oXKCaqWYPaiBZGW-xW-HFsnwbFsMMdbVwQmxD9K3UY/edit",
+      "key": "exploring_bar_charts_and_histograms_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_bar_charts_and_histograms_2"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_visualizer_in_app_lab_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exploring_bar_charts_and_histograms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exploring_bar_charts_and_histograms_2"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "07480f45-2aa9-4a62-9b93-b60c5541be5f",
+      "properties": {
+        "description": "Create a bar chart and a histogram in App Lab's data visualizer."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "07480f45-2aa9-4a62-9b93-b60c5541be5f"
+      }
+    },
+    {
+      "key": "a6fcac21-f9da-40dd-902d-80c9035d79b5",
+      "properties": {
+        "description": "Explain the reasons that someone would create either a bar chart or a histogram in order to explore a single column of data."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "a6fcac21-f9da-40dd-902d-80c9035d79b5"
+      }
+    },
+    {
+      "key": "d543a88f-695a-4555-b054-4e9a910136b1",
+      "properties": {
+        "description": "Draw conclusions by reading bar charts and histograms."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "d543a88f-695a-4555-b054-4e9a910136b1"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "6.SP.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

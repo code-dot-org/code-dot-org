@@ -40,37 +40,30 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.using_text_mode
   end
 
-  test 'a get request to using_dark_mode returns using_dark_mode attribute of user object' do
+  test 'a get request to display_theme returns display_theme attribute of user object' do
     sign_in(@user)
-    get :get_using_dark_mode, params: {user_id: 'me'}
+    get :get_display_theme, params: {user_id: 'me'}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal false, response["using_dark_mode"]
+    assert_nil response["display_theme"]
   end
 
   test_user_gets_response_for(
-    :update_using_dark_mode,
+    :update_display_theme,
     user: nil,
-    params: {user_id: 'me', using_dark_mode: 'true'},
+    params: {user_id: 'me', display_theme: 'dark'},
     response: :forbidden
   )
 
-  test 'a post request to using_dark_mode updates using_dark_mode' do
+  test 'a post request to display_theme updates display_theme' do
     sign_in(@user)
-    assert !@user.using_dark_mode
-    post :update_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'true'}
+    assert !@user.display_theme
+    post :update_display_theme, params: {user_id: 'me', display_theme: 'dark'}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert response["using_dark_mode"]
+    assert_equal "dark", response["display_theme"]
     @user.reload
-    assert @user.using_dark_mode
-
-    post :update_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'false'}
-    assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal false, response["using_dark_mode"]
-    @user.reload
-    assert_equal false, !!@user.using_dark_mode
+    assert_equal "dark", @user.display_theme
   end
 
   test 'will 403 if given a user id other than the person logged in' do
@@ -170,6 +163,29 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response :success
     test_user.reload
     assert_equal true, test_user.has_seen_standards_report_info_dialog
+  end
+
+  test "a get request to get current returns signed out user info" do
+    get :current
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+    response = JSON.parse(@response.body)
+    assert_equal false, response["is_signed_in"]
+  end
+
+  test "a get request to get current returns signed in user info" do
+    teacher = create :teacher
+    sign_in(teacher)
+    get :current
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+    response = JSON.parse(@response.body)
+    assert_equal true, response["is_signed_in"]
+    assert_equal teacher.id, response["id"]
+    assert_equal teacher.username, response["username"]
+    assert_equal "teacher", response["user_type"]
+    assert_equal teacher.short_name, response["short_name"]
+    assert_equal false, response["is_verified_instructor"]
   end
 
   test "a get request to get school_name returns school object" do

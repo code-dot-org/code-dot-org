@@ -1,5 +1,6 @@
 {
-  "func": "moduloOperator",
-  "block": "__ % __",
-  "category": "Math"
+  "key": "moduloOperator",
+  "name": "moduloOperator",
+  "category": "Math",
+  "syntax": "__ % __"
 }

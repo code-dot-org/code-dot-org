@@ -2,13 +2,17 @@
   "script": {
     "name": "gamelab-demo",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:57 UTC",
+    "serialized_at": "2021-11-22 19:57:00 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "gamelab-demo"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "6d86188e-5ce1-41a3-8097-0694ee1f4186",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d86188e-5ce1-41a3-8097-0694ee1f4186",
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8",
+        "lesson_activity.key": "6d86188e-5ce1-41a3-8097-0694ee1f4186"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "GameLab Livecode Demo 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       },
       "level_keys": [
         "GameLab Livecode Demo 1"
@@ -77,14 +102,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "GameLab Livecode Demo 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -92,7 +116,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       },
       "level_keys": [
         "GameLab Livecode Demo 2"
@@ -101,14 +126,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "GameLab Livecode Demo 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +140,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       },
       "level_keys": [
         "GameLab Livecode Demo 3"
@@ -125,14 +150,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "GameLab Livecode Demo 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +164,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       },
       "level_keys": [
         "GameLab Livecode Demo 4"
@@ -156,7 +181,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       }
     },
     {
@@ -167,7 +193,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       }
     },
     {
@@ -178,7 +205,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       }
     },
     {
@@ -189,7 +217,8 @@
         ],
         "lesson.key": "Simple Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "gamelab-demo"
+        "script.name": "gamelab-demo",
+        "activity_section.key": "189c9c8e-2f0c-403c-b279-b0d6aef587f8"
       }
     }
   ],

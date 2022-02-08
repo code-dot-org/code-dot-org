@@ -1,17 +1,20 @@
 {
-  "func": "setGreen",
+  "key": "setGreen",
+  "name": "setGreen",
   "category": "Canvas",
-  "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "g"
+  "palette_params": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "g"
+    }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0",
-    "255"
-  ],
-  "dontMarshal": true
+  "syntax": "setGreen(imgData, x, y, g)"
 }

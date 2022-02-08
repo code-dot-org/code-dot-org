@@ -2,25 +2,39 @@
   "script": {
     "name": "pre-express-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
       "hideable_lessons": true,
-      "project_widget_visible": true,
+      "is_course": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "lesson_extras_available": true,
-      "version_year": "2021",
-      "curriculum_umbrella": "CSF",
-      "is_course": true,
-      "is_migrated": true,
-      "has_lesson_plan": true
+      "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-05-26 19:49:46 UTC",
+    "serialized_at": "2022-01-20 18:35:55 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -2278,7 +2292,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2304,7 +2317,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2330,7 +2342,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2356,7 +2367,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2382,7 +2392,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2408,7 +2417,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2434,7 +2442,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2460,7 +2467,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2486,7 +2492,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2512,7 +2517,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2538,7 +2542,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2564,7 +2567,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2590,7 +2592,6 @@
         ],
         "progression": "Video: Programming with Blocks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2616,7 +2617,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2642,7 +2642,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2668,7 +2667,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2694,7 +2692,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2720,7 +2717,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2746,7 +2742,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2772,7 +2767,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2798,7 +2792,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2824,7 +2817,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2850,7 +2842,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2876,7 +2867,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2903,7 +2893,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2929,7 +2918,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2955,7 +2943,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2981,7 +2968,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3007,7 +2993,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3033,7 +3018,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3059,7 +3043,6 @@
         ],
         "progression": "Video: Programming with Rey and BB-8"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3085,7 +3068,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3111,7 +3093,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3137,7 +3118,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3163,7 +3143,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3189,7 +3168,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3215,7 +3193,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3241,7 +3218,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3268,7 +3244,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3294,7 +3269,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3320,7 +3294,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3346,7 +3319,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3372,7 +3344,6 @@
         ],
         "progression": "Video: The Harvester"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3398,7 +3369,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3424,7 +3394,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3450,7 +3419,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3476,7 +3444,6 @@
         ],
         "progression": "Video: Debugging with the Step Button"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3502,7 +3469,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3528,7 +3494,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3554,7 +3519,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3580,7 +3544,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3606,7 +3569,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3632,7 +3594,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3659,7 +3620,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3685,7 +3645,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3711,7 +3670,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3737,7 +3695,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3763,7 +3720,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3789,7 +3745,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3815,7 +3770,6 @@
         ],
         "progression": "Video: Ice Age Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3841,7 +3795,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3867,7 +3820,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3893,7 +3845,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3919,7 +3870,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3945,7 +3895,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3971,7 +3920,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3998,7 +3946,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4024,7 +3971,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4050,7 +3996,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4076,7 +4021,6 @@
         ],
         "progression": "Video: The Collector"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4102,7 +4046,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4128,7 +4071,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4154,7 +4096,6 @@
         ],
         "progression": "Video: Using the Repeat Block"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4180,7 +4121,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4206,7 +4146,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4232,7 +4171,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4258,7 +4196,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4284,7 +4221,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4311,7 +4247,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4337,7 +4272,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4363,7 +4297,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4389,7 +4322,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4415,7 +4347,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4436,9 +4367,11 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops_challenge1_2021"
+        ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4464,7 +4397,6 @@
         ],
         "progression": "Video: The Artist in Code Studio"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4490,7 +4422,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4516,7 +4447,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4542,7 +4472,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4568,7 +4497,6 @@
         ],
         "progression": "Video: Loops in Artist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4594,7 +4522,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4620,7 +4547,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4646,7 +4572,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4672,7 +4597,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4698,7 +4622,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4725,7 +4648,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4751,7 +4673,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4777,7 +4698,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4803,7 +4723,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4829,7 +4748,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4855,7 +4773,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4881,7 +4798,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4907,7 +4823,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4933,7 +4848,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4959,7 +4873,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4985,7 +4898,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5012,7 +4924,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5038,7 +4949,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5064,7 +4974,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5090,7 +4999,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5116,7 +5024,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5142,7 +5049,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5168,7 +5074,6 @@
         ],
         "progression": "Video: Introduction to Play Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5194,7 +5099,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5220,7 +5124,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5246,7 +5149,6 @@
         ],
         "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5272,7 +5174,6 @@
         ],
         "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5298,7 +5199,6 @@
         ],
         "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5324,7 +5224,6 @@
         ],
         "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5350,7 +5249,6 @@
         ],
         "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5376,7 +5274,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5402,7 +5299,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5428,7 +5324,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5454,7 +5349,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5480,7 +5374,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5506,7 +5399,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5532,7 +5424,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5558,7 +5449,6 @@
         ],
         "progression": "Mini-Project: Royal Battle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5584,7 +5474,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5610,7 +5499,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5636,7 +5524,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7220,8 +7107,8 @@
       "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
       "key": "20_20_20_rule",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "20_20_20_rule"
@@ -7232,8 +7119,8 @@
       "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
       "key": "class-section-video",
       "properties": {
-        "type": "Teacher Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Teacher Video"
       },
       "seeding_key": {
         "resource.key": "class-section-video"
@@ -7244,8 +7131,8 @@
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "common-sense-media-pause-think",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "common-sense-media-pause-think"
@@ -7256,8 +7143,8 @@
       "url": "https://studio.code.org/s/pre-express-2021/vocab",
       "key": "course_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -7268,8 +7155,8 @@
       "url": "https://studio.code.org/s/pre-express-2021/standards",
       "key": "csta_standards_mapping",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csta_standards_mapping"
@@ -7291,9 +7178,9 @@
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling-faces-image",
       "properties": {
-        "type": "Emotion Images",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Emotion Images"
       },
       "seeding_key": {
         "resource.key": "feeling-faces-image"
@@ -7304,8 +7191,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
@@ -7316,8 +7203,8 @@
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
@@ -7328,8 +7215,8 @@
       "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
       "key": "wiggles_-_go_noodle",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "wiggles_-_go_noodle"
@@ -7339,8 +7226,32 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "pair-programming-vid"
+        "resource.key": "20_20_20_rule"
       }
     },
     {
@@ -7358,7 +7269,7 @@
     {
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "20_20_20_rule"
+        "resource.key": "pair-programming-vid"
       }
     },
     {
@@ -7369,55 +7280,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "20_20_20_rule"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "wiggles_-_go_noodle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
+        "lesson.key": "Loops with Laurel",
         "resource.key": "feeling-faces-image"
       }
     },
@@ -7429,32 +7292,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
         "resource.key": "common-sense-media-pause-think"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
+        "lesson.key": "Ocean Scene with Loops",
         "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -7465,24 +7310,60 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
+        "lesson.key": "Programming in Harvester",
         "resource.key": "feeling-faces-image"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
-        "resource.key": "common-sense-media-pause-think"
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "wiggles_-_go_noodle"
       }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping",
-        "script.name": "pre-express-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
@@ -7491,13 +7372,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "teacher_forum_1",
+        "resource.key": "csta_standards_mapping",
         "script.name": "pre-express-2021"
       }
     },
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "pre-express-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "pre-express-2021"
       }
     }
@@ -7507,6 +7394,26 @@
   ],
   "vocabularies": [
     {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
+      }
+    },
+    {
       "key": "click",
       "word": "Click",
       "definition": "Press the mouse button",
@@ -7514,6 +7421,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "click"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "double_click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -7537,163 +7464,23 @@
       }
     },
     {
-      "key": "double_click",
-      "word": "Double-Click",
-      "definition": "Press the mouse button very quickly",
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "double_click"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -7707,13 +7494,23 @@
       }
     },
     {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "loop"
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
       }
     },
     {
@@ -7724,84 +7521,170 @@
       },
       "seeding_key": {
         "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
       }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "On the Move with Events",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "persistence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "vocabulary.key": "click"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -7815,168 +7698,22 @@
         "lesson.key": "Sequencing with Scrat",
         "vocabulary.key": "drop"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "vocabulary.key": "double_click"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "persistence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "On the Move with Events",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
-        "vocabulary.key": "event"
-      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
+    {
+      "key": "066b586a-0b6b-4a9f-875d-ce788d7f2197",
+      "properties": {
+        "description": "Decompose a shape into its largest repeatable sequence."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "objective.key": "066b586a-0b6b-4a9f-875d-ce788d7f2197"
+      }
+    },
     {
       "key": "14f085e6-a0a8-4218-9060-00d7b0dfbf07",
       "properties": {
@@ -7988,103 +7725,43 @@
       }
     },
     {
-      "key": "d1485387-01e4-484d-9935-75f7c14b9d76",
+      "key": "15115c43-46c8-4ab4-93e4-947e2fd42703",
       "properties": {
-        "description": "Use appropriate terminology when referring to a computer mouse, trackpad, or touchscreen."
+        "description": "Identify actions that correlate to input events."
       },
       "seeding_key": {
-        "lesson.key": "Learn to Drag and Drop",
-        "objective.key": "d1485387-01e4-484d-9935-75f7c14b9d76"
+        "lesson.key": "On the Move with Events",
+        "objective.key": "15115c43-46c8-4ab4-93e4-947e2fd42703"
       }
     },
     {
-      "key": "565151fd-85db-44eb-9cfc-ccbe279cf49a",
+      "key": "22d77ea2-3a62-4e21-b71f-f484fe90ec39",
       "properties": {
-        "description": "Model proper computer lab behaviors"
+        "description": "Share a creative artifact with other students."
       },
       "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "objective.key": "565151fd-85db-44eb-9cfc-ccbe279cf49a"
+        "lesson.key": "On the Move with Events",
+        "objective.key": "22d77ea2-3a62-4e21-b71f-f484fe90ec39"
       }
     },
     {
-      "key": "af0ee86d-cae1-4a66-93c6-8030f2c36f47",
+      "key": "2ebb5323-fe4a-4611-9fbf-01444afb8720",
       "properties": {
-        "description": "Experiment with standard block-based programming actions such as: clicking, drag and drop, etc."
+        "description": "Count the number of times an action should be repeated and represent it as a loop."
       },
       "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "objective.key": "af0ee86d-cae1-4a66-93c6-8030f2c36f47"
+        "lesson.key": "Ocean Scene with Loops",
+        "objective.key": "2ebb5323-fe4a-4611-9fbf-01444afb8720"
       }
     },
     {
-      "key": "a5a52414-42a7-4b32-897b-819a70572328",
+      "key": "2fa04500-f1d4-4924-aa39-70292711d432",
       "properties": {
-        "description": "Translate movements into a series of commands."
+        "description": "Create an animated, interactive story using sequence and event-handlers."
       },
       "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "objective.key": "a5a52414-42a7-4b32-897b-819a70572328"
-      }
-    },
-    {
-      "key": "7ef6d077-67aa-4a8b-b27b-ab3697654abc",
-      "properties": {
-        "description": "Construct a program by reorganizing sequential movements"
-      },
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "objective.key": "7ef6d077-67aa-4a8b-b27b-ab3697654abc"
-      }
-    },
-    {
-      "key": "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0",
-      "properties": {
-        "description": "Build a computer program from a set of written instructions"
-      },
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "objective.key": "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0"
-      }
-    },
-    {
-      "key": "f4ccea6b-5333-454a-8b7a-e9d680967cef",
-      "properties": {
-        "description": "Sequence commands in a logical order."
-      },
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "objective.key": "f4ccea6b-5333-454a-8b7a-e9d680967cef"
-      }
-    },
-    {
-      "key": "b881f284-2988-49e1-aaf2-f8baf12e5bb5",
-      "properties": {
-        "description": "Recognize problems or \"bugs\" in a program and develop a plan to resolve the issues."
-      },
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "objective.key": "b881f284-2988-49e1-aaf2-f8baf12e5bb5"
-      }
-    },
-    {
-      "key": "620da514-ad6e-4049-a9d3-d189a79af01e",
-      "properties": {
-        "description": "Translate movements into a series of commands."
-      },
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "objective.key": "620da514-ad6e-4049-a9d3-d189a79af01e"
-      }
-    },
-    {
-      "key": "adabe26f-78e0-47f4-92b2-535a38f53f15",
-      "properties": {
-        "description": "Identify and locate bugs in a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "objective.key": "adabe26f-78e0-47f4-92b2-535a38f53f15"
+        "lesson.key": "On the Move with Events",
+        "objective.key": "2fa04500-f1d4-4924-aa39-70292711d432"
       }
     },
     {
@@ -8098,13 +7775,13 @@
       }
     },
     {
-      "key": "b6f41a7c-0967-4986-b7b6-910819b28396",
+      "key": "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0",
       "properties": {
-        "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
+        "description": "Build a computer program from a set of written instructions"
       },
       "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "objective.key": "b6f41a7c-0967-4986-b7b6-910819b28396"
+        "lesson.key": "Programming in with Angry Birds",
+        "objective.key": "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0"
       }
     },
     {
@@ -8118,23 +7795,33 @@
       }
     },
     {
-      "key": "8fef5927-aacf-4340-b4c3-d221ebe3f13a",
+      "key": "565151fd-85db-44eb-9cfc-ccbe279cf49a",
       "properties": {
-        "description": "Break down a long sequence of instructions into the smallest repeatable sequence possible."
+        "description": "Model proper computer lab behaviors"
       },
       "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "objective.key": "8fef5927-aacf-4340-b4c3-d221ebe3f13a"
+        "lesson.key": "Sequencing with Scrat",
+        "objective.key": "565151fd-85db-44eb-9cfc-ccbe279cf49a"
       }
     },
     {
-      "key": "2ebb5323-fe4a-4611-9fbf-01444afb8720",
+      "key": "57f261f3-7603-47fc-b704-9d99a4c4c00a",
       "properties": {
         "description": "Count the number of times an action should be repeated and represent it as a loop."
       },
       "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "objective.key": "2ebb5323-fe4a-4611-9fbf-01444afb8720"
+        "lesson.key": "Drawing Gardens with Loops",
+        "objective.key": "57f261f3-7603-47fc-b704-9d99a4c4c00a"
+      }
+    },
+    {
+      "key": "620da514-ad6e-4049-a9d3-d189a79af01e",
+      "properties": {
+        "description": "Translate movements into a series of commands."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "objective.key": "620da514-ad6e-4049-a9d3-d189a79af01e"
       }
     },
     {
@@ -8158,63 +7845,23 @@
       }
     },
     {
-      "key": "57f261f3-7603-47fc-b704-9d99a4c4c00a",
+      "key": "70e87cab-0d62-4974-9061-425a179bcb2d",
       "properties": {
-        "description": "Count the number of times an action should be repeated and represent it as a loop."
+        "description": "Create an animated, interactive story using sequences and event-handlers."
       },
       "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "objective.key": "57f261f3-7603-47fc-b704-9d99a4c4c00a"
+        "lesson.key": "A Royal Battle with Events",
+        "objective.key": "70e87cab-0d62-4974-9061-425a179bcb2d"
       }
     },
     {
-      "key": "066b586a-0b6b-4a9f-875d-ce788d7f2197",
+      "key": "7ef6d077-67aa-4a8b-b27b-ab3697654abc",
       "properties": {
-        "description": "Decompose a shape into its largest repeatable sequence."
+        "description": "Construct a program by reorganizing sequential movements"
       },
       "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "objective.key": "066b586a-0b6b-4a9f-875d-ce788d7f2197"
-      }
-    },
-    {
-      "key": "dc83123d-d493-40aa-a543-9daa1421c2c8",
-      "properties": {
-        "description": "Create a program that draws complex shapes by repeating simple sequences."
-      },
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "objective.key": "dc83123d-d493-40aa-a543-9daa1421c2c8"
-      }
-    },
-    {
-      "key": "15115c43-46c8-4ab4-93e4-947e2fd42703",
-      "properties": {
-        "description": "Identify actions that correlate to input events."
-      },
-      "seeding_key": {
-        "lesson.key": "On the Move with Events",
-        "objective.key": "15115c43-46c8-4ab4-93e4-947e2fd42703"
-      }
-    },
-    {
-      "key": "2fa04500-f1d4-4924-aa39-70292711d432",
-      "properties": {
-        "description": "Create an animated, interactive story using sequence and event-handlers."
-      },
-      "seeding_key": {
-        "lesson.key": "On the Move with Events",
-        "objective.key": "2fa04500-f1d4-4924-aa39-70292711d432"
-      }
-    },
-    {
-      "key": "22d77ea2-3a62-4e21-b71f-f484fe90ec39",
-      "properties": {
-        "description": "Share a creative artifact with other students."
-      },
-      "seeding_key": {
-        "lesson.key": "On the Move with Events",
-        "objective.key": "22d77ea2-3a62-4e21-b71f-f484fe90ec39"
+        "lesson.key": "Programming in with Angry Birds",
+        "objective.key": "7ef6d077-67aa-4a8b-b27b-ab3697654abc"
       }
     },
     {
@@ -8228,13 +7875,13 @@
       }
     },
     {
-      "key": "70e87cab-0d62-4974-9061-425a179bcb2d",
+      "key": "8fef5927-aacf-4340-b4c3-d221ebe3f13a",
       "properties": {
-        "description": "Create an animated, interactive story using sequences and event-handlers."
+        "description": "Break down a long sequence of instructions into the smallest repeatable sequence possible."
       },
       "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
-        "objective.key": "70e87cab-0d62-4974-9061-425a179bcb2d"
+        "lesson.key": "Loops with Laurel",
+        "objective.key": "8fef5927-aacf-4340-b4c3-d221ebe3f13a"
       }
     },
     {
@@ -8246,9 +7893,131 @@
         "lesson.key": "A Royal Battle with Events",
         "objective.key": "9ea5d8fd-1b7d-4655-b4b1-75fd09545838"
       }
+    },
+    {
+      "key": "a5a52414-42a7-4b32-897b-819a70572328",
+      "properties": {
+        "description": "Translate movements into a series of commands."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "objective.key": "a5a52414-42a7-4b32-897b-819a70572328"
+      }
+    },
+    {
+      "key": "adabe26f-78e0-47f4-92b2-535a38f53f15",
+      "properties": {
+        "description": "Identify and locate bugs in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "objective.key": "adabe26f-78e0-47f4-92b2-535a38f53f15"
+      }
+    },
+    {
+      "key": "af0ee86d-cae1-4a66-93c6-8030f2c36f47",
+      "properties": {
+        "description": "Experiment with standard block-based programming actions such as: clicking, drag and drop, etc."
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "objective.key": "af0ee86d-cae1-4a66-93c6-8030f2c36f47"
+      }
+    },
+    {
+      "key": "b6f41a7c-0967-4986-b7b6-910819b28396",
+      "properties": {
+        "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "objective.key": "b6f41a7c-0967-4986-b7b6-910819b28396"
+      }
+    },
+    {
+      "key": "b881f284-2988-49e1-aaf2-f8baf12e5bb5",
+      "properties": {
+        "description": "Recognize problems or \"bugs\" in a program and develop a plan to resolve the issues."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "objective.key": "b881f284-2988-49e1-aaf2-f8baf12e5bb5"
+      }
+    },
+    {
+      "key": "d1485387-01e4-484d-9935-75f7c14b9d76",
+      "properties": {
+        "description": "Use appropriate terminology when referring to a computer mouse, trackpad, or touchscreen."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "d1485387-01e4-484d-9935-75f7c14b9d76"
+      }
+    },
+    {
+      "key": "dc83123d-d493-40aa-a543-9daa1421c2c8",
+      "properties": {
+        "description": "Create a program that draws complex shapes by repeating simple sequences."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "objective.key": "dc83123d-d493-40aa-a543-9daa1421c2c8"
+      }
+    },
+    {
+      "key": "f4ccea6b-5333-454a-8b7a-e9d680967cef",
+      "properties": {
+        "description": "Sequence commands in a logical order."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "objective.key": "f4ccea6b-5333-454a-8b7a-e9d680967cef"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
@@ -8286,189 +8055,147 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "On the Move with Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "On the Move with Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "On the Move with Events",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "On the Move with Events",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }

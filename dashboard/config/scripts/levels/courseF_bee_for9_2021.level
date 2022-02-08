@@ -1,5 +1,9 @@
 <Karel>
   <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:40:33.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "properties": {
     "skin": "bee",
     "maze": "[[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,2,0,1,0,0],[0,1,0,1,1,1,0,0],[0,1,0,0,0,0,0,0],[0,1,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
@@ -45,15 +49,17 @@
     "display_name": "Math Blocks",
     "bubble_choice_description": "Let's combine variables with a little math!",
     "thumbnail_url": "https://images.code.org/917f8f09d687e24c8d6008047b5dfb6b-image-1615822935255.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
-  "game_id": 25,
   "published": true,
-  "created_at": "2020-12-04T22:40:33.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-25 15:40:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-18 00:47:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-07 20:53:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:35:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-03-15 15:34:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"disable_variable_editing\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-15 15:43:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-15 15:47:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"display_name\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:40:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-18 00:47:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-07 20:53:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:35:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-03-15 15:34:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"disable_variable_editing\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-15 15:43:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-15 15:47:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"display_name\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "for_loops": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -1,26 +1,14 @@
 {
-  "func": "arcLeft",
+  "key": "arcLeft",
+  "name": "arcLeft",
   "category": "Turtle",
-  "paletteParams": [
-    "angle",
-    "radius"
+  "palette_params": [
+    {
+      "name": "angle"
+    },
+    {
+      "name": "radius"
+    }
   ],
-  "params": [
-    "90",
-    "25"
-  ],
-  "dropdown": {
-    "0": [
-      "30",
-      "45",
-      "60",
-      "90"
-    ],
-    "1": [
-      "25",
-      "50",
-      "100",
-      "200"
-    ]
-  }
+  "syntax": "arcLeft(angle, radius)"
 }

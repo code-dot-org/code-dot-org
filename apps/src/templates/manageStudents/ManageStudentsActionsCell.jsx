@@ -192,7 +192,7 @@ class ManageStudentsActionsCell extends Component {
     const {id, sectionId} = this.props;
     const url =
       teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',

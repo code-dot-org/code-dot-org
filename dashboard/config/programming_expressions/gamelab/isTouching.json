@@ -1,12 +1,11 @@
 {
-  "func": "isTouching",
+  "key": "isTouching",
+  "name": "isTouching",
   "category": "Sprites",
-  "paletteParams": [
-    "target"
+  "palette_params": [
+    {
+      "name": "target"
+    }
   ],
-  "params": [
-    "target"
-  ],
-  "modeOptionName": "*.isTouching",
-  "type": "value"
+  "syntax": "isTouching(target)"
 }

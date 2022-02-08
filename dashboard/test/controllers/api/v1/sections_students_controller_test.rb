@@ -286,4 +286,18 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     post :remove, params: {section_id: @section.id, id: @student.id}
     assert_response :forbidden
   end
+
+  test 'teacher can not add students to a section at capacity' do
+    sign_in @teacher
+    @section = create(:section, user: @teacher, login_type: 'word')
+    500.times do
+      create(:follower, section: @section)
+    end
+    post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
+    assert_response :forbidden
+    assert_equal(
+      "full",
+      json_response["result"]
+    )
+  end
 end

@@ -7,7 +7,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
       course_offering: course_offering,
       key: '1999'
 
-    @first_resource = create :resource,
+    create :resource,
       key: 'first-resource',
       name: "First Resource",
       url: "example.com/first",
@@ -18,7 +18,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
       url: "example.com/second",
       course_version: course_version
 
-    @first_vocabulary = create :vocabulary,
+    create :vocabulary,
       key: 'first_vocab',
       word: "First Vocabulary",
       definition: "The first of the vocabulary entries.",
@@ -101,6 +101,15 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     expected = "this string has a resource [First Resource](example.com/first) link. And a [regular](link)"
 
     result = Services::MarkdownPreprocessor.sub_resource_links(input)
+    assert_equal expected, result
+  end
+
+  test 'sub_resource_links can substitute using a provided proc' do
+    input = "this string has a resource [r first-resource/test-course/1999] link. And a [regular](link)"
+    replace_proc = proc {|r| "RESOURCE: #{r.name}"}
+    expected = "this string has a resource RESOURCE: First Resource link. And a [regular](link)"
+
+    result = Services::MarkdownPreprocessor.sub_resource_links(input, replace_proc)
     assert_equal expected, result
   end
 
@@ -220,31 +229,12 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     assert_equal input, result
   end
 
-  test 'build_key_re' do
-    module Foo
-      KEY_CHAR_RE = /f/
-    end
+  test 'sub_vocab_definitions uses passed in proc if one provided' do
+    input = "this string has a vocab [v first_vocab/test-course/1999] definition."
+    replace_proc = proc {|v| "VOCABULARY: #{v.word}"}
+    expected = "this string has a vocab VOCABULARY: First Vocabulary definition."
 
-    basic_re = Services::MarkdownPreprocessor.build_key_re('test', [Foo])
-    # see https://stackoverflow.com/a/34026971/1810460 for an explanation of `?-mix`
-    assert_equal(/\[test ((?-mix:f)+)\]/, basic_re)
-    assert_match(basic_re, "[test ffffffff]")
-
-    module Bar
-      KEY_CHAR_RE = /b/
-    end
-
-    assert_equal(/\[test ((?-mix:f)+)\/((?-mix:b)+)\]/, Services::MarkdownPreprocessor.build_key_re('test', [Foo, Bar]))
-    assert_equal(/\[test ((?-mix:b)+)\/((?-mix:f)+)\]/, Services::MarkdownPreprocessor.build_key_re('test', [Bar, Foo]))
-  end
-
-  test 'build_vocab_key' do
-    assert_equal 'first_vocab/test-course/1999',
-      Services::MarkdownPreprocessor.build_vocab_key(@first_vocabulary)
-  end
-
-  test 'build_resource_key' do
-    assert_equal 'first-resource/test-course/1999',
-      Services::MarkdownPreprocessor.build_resource_key(@first_resource)
+    result = Services::MarkdownPreprocessor.sub_vocab_definitions(input, replace_proc)
+    assert_equal expected, result
   end
 end

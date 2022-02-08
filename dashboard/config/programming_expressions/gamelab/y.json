@@ -1,6 +1,6 @@
 {
-  "func": "y",
+  "key": "y",
+  "name": "y",
   "category": "Sprites",
-  "modeOptionName": "*.y",
-  "type": "property"
+  "syntax": "y"
 }

@@ -4,8 +4,8 @@ const PROGRAM_CSD =
   'Computer Science Discoveries (appropriate for 6th - 10th grade)';
 const PROGRAM_CSP =
   'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)';
-
-const YEAR = '2021-2022';
+const PROGRAM_CSA =
+  'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)';
 
 const styles = {
   indented: {
@@ -16,7 +16,7 @@ const styles = {
   },
   questionText: {
     fontSize: 14,
-    lineHeight: '20px',
+    lineHeight: 1.5,
     fontWeight: 'bold'
   },
   checkBoxAfterButtonList: {
@@ -35,4 +35,4 @@ const styles = {
   }
 };
 
-export {PROGRAM_CSD, PROGRAM_CSP, YEAR, styles};
+export {PROGRAM_CSD, PROGRAM_CSP, PROGRAM_CSA, styles};

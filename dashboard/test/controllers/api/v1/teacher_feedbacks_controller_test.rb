@@ -8,7 +8,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   PERFORMANCE1 = 'performanceLevel1'
   PERFORMANCE2 = 'performanceLevel3'
   PERFORMANCE3 = 'performanceLevel4'
-  REVIEW_STATE = 'keepWorking'
+  REVIEW_STATE = TeacherFeedback::REVIEW_STATES.keepWorking
 
   self.use_transactional_test_case = true
   setup_all do
@@ -31,6 +31,13 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal @level.id, teacher_feedback.level_id
     assert_equal @teacher.id, teacher_feedback.teacher_id
     assert_equal @section.id, teacher_feedback.analytics_section_id
+  end
+
+  test 'create - when review state is keepWorking, calls update_best_result with expected params' do
+    UserLevel.expects(:update_best_result).once.
+      with(@student.id, @level.id, @script.id, ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING, false)
+
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
   end
 
   test 'retrieves no content when no feedback is available' do
@@ -239,12 +246,15 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     section2 = create :section, user: teacher2
     section2.add_student(@student)
 
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    sign_out @teacher
-    teacher_sign_in_and_give_feedback(teacher2, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
-    sign_out teacher2
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT3, PERFORMANCE3)
-    sign_out @teacher
+    create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT1, performance: PERFORMANCE1
+
+    feedback2 = create :teacher_feedback, teacher: teacher2, student: @student, script: @script_level.script, level: @level, comment: COMMENT2, performance: PERFORMANCE2
+    feedback2.created_at = feedback2.created_at + 1
+    feedback2.save validate: false
+
+    feedback3 = create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT3, performance: PERFORMANCE3
+    feedback3.created_at = feedback3.created_at + 2
+    feedback3.save validate: false
 
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
@@ -300,19 +310,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_empty parsed_response
   end
 
-  test 'serializer returns teacher name' do
-    @teacher1 = create :teacher, name: 'Test Name'
-    @section1 = create :section, user: @teacher1
-    @section1.add_student(@student)
-
-    teacher_sign_in_and_give_feedback(@teacher1, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
-
-    assert_equal 'Test Name', parsed_response[0]['teacher_name']
-  end
-
-  test 'serializer returns student_last_updated and student_updated_since_feedback' do
+  test 'serializer returns student_last_updated and is_awaiting_teacher_review' do
     @teacher1 = create :teacher, name: 'Test Name'
     @section1 = create :section, user: @teacher1
     @section1.add_student(@student)
@@ -324,7 +322,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
 
     assert_equal user_level.updated_at, parsed_response[0]['student_last_updated']
-    assert_equal false, parsed_response[0]['student_updated_since_feedback']
+    assert_equal false, parsed_response[0]['is_awaiting_teacher_review']
   end
 
   test 'increment_visit_count returns no_content on successful save' do

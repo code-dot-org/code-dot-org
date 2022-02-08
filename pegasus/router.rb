@@ -381,17 +381,47 @@ class Documents < Sinatra::Base
     end
 
     def render_partials(template_content)
-      # Template types that do not have thier own way of rendering partials
+      # Template types that do not have their own way of rendering partials
       # (ie, markdown) can include other partials with the syntax:
       #
       #     {{ path/to/partial }}
+      #     {{ path/to/partial, param1: "value1", param2: "value2" }}
       #
       # Because such content can be translated, we want to make sure that if a
       # translator accidentally translates the path to the template, we simply
       # render nothing rather than throwing an error
       template_content.
+        # Extract anything between {{ and }}.
         gsub(/{{([^}]*)}}/) do
-          view($1.strip)
+          # Extract the partial name, and possibly a string with all the parameters.
+          split = $1.scan(/\s*([^ ,]*)[, ]*(.*)/)[0]
+
+          uri = split[0]
+
+          # Parse the parameters.  Adapted from https://stackoverflow.com/a/23612782.
+          #
+          # Most notably: because these parameters are being read from
+          # templates that we allow anonymous third parties to make
+          # unsupervised edits to, we need to be extremely careful to prevent
+          # code injection. Specifically, we sanitize the parameters to prevent
+          # against HTML injection and examine the template being rendered to
+          # ensure that we never pass parameters to templates which are capable
+          # of serverside database or filesystem access (ie, **never under any
+          # circumstances** ERB or HAML).
+          locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
+            map(&:compact).
+            to_h.
+            transform_values {|v| @actionview.sanitize(v.delete_prefix('"').delete_suffix('"').gsub('\"', '"'))}
+
+          if locals.present?
+            path = resolve_view_template(uri)
+            template_is_only_html = MultipleExtnameFileUtils.all_extnames(path).all?('.html')
+            raise "Only HTML Partials may be passed parameters; got #{locals.inspect} for #{path.inspect}" unless template_is_only_html
+          end
+
+          result = view(uri)
+          locals.each {|k, v| result.gsub!("%#{k}%", v)}
+          result
         rescue
           ''
         end
@@ -586,9 +616,14 @@ class Documents < Sinatra::Base
       metadata
     end
 
-    def view(uri, locals={})
+    def resolve_view_template(uri)
       path = resolve_template('views', settings.template_extnames, uri.to_s)
       raise "View '#{uri}' not found." unless path
+      return path
+    end
+
+    def view(uri, locals={})
+      path = resolve_view_template(uri)
       render_template(path, locals)
     end
 

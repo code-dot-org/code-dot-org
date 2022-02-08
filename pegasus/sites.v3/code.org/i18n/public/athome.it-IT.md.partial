@@ -1,162 +1,344 @@
 ---
-title: Imparare l'informatica quando le scuole sono chiuse in risposta al Covid19
+title: L'informatica a casa
 video_player: true
 theme: responsive
 ---
 
-<a id="top"></a>
+<link href="/css/tools.css" rel="stylesheet" />
 
-# Imparare l'informatica quando le scuole sono chiuse
+<a id="top"></a>
+<h1>L'informatica a casa</h1>
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
-{{ athome_vid_intro }}
+  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="La madre aiuta la figlia a usare un computer portatile">
 </div>
 
-<p>Stiamo affrontando un momento incredibilmente difficile con l'epidemia globale del COVID-19, alle prese con crescenti preoccupazioni per la salute, le nostre comunità e l'economia. Le misure di sicurezza hanno portato alla chiusura diffusa delle scuole in tutto il paese. </p>
-<p>Vogliamo supportare insegnanti, studenti e famiglie in ogni modo possibile. Di seguito è riportato un insieme di risorse per aiutare lo studente a imparare l'informatica da casa. <strong>Genitori: se stai pensando di creare un account Code.org per il tuo studente o di aiutarlo ad accedere a un account esistente, <a href="https://support.code.org/hc/en-us/articles/360040703792">leggi questo testo base</a>.</strong></p>
-<p>Stiamo lavorando anche sulle <a href="#teacher-support">risorse per aiutare gli insegnanti a metà corso </a> a continuare a insegnare informatica quando i loro studenti sono a casa. </p>
-<p><a href="#apps">Non hai un computer a casa? Vedi le opzioni dello smartphone</a></p>
+<p>Che tu sia un genitore/tutore o uno studente che sta imparando autonomamente, le opzioni qui sotto sono modi coinvolgenti e facili da provare per iniziare la tua esplorazione dell'informatica.</p>
+<ul>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">Prova Hour of Code</a></li>
+    <li><a class="linktag" id="videos-nav" href="#videos">Guarda una breve serie di video sulle basi di CS</a></li>
+    <li><a class="linktag" id="self-paced-nav" href="#express">Segui un corso introduttivo da autodidatta</a></li>
+    <li><a class="linktag" id="labs-nav" href="#labs">Crea un gioco o un’app</a></li>
+    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Prova CS senza un computer ('unplugged' e opzioni mobile)</a></li>
+    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Apprendi CS dal team di Code.org e dagli ospiti speciali</a></li>
+</ul>
 
 <br>
 
-## Code Break: impara dal team di Code.org e dagli ospiti speciali!
-
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Gli ospiti speciali si uniscono all'Amministratore di Code.org Hadi Partovi in un'aula interattiva settimanale per apprendere concetti di informatica come algoritmi, intelligenza artificiale e crittografia.</p>
-<p>Se non hai verificato tutti gli episodi di Code Break, non è troppo tardi! Gli episodi dal vivo non vengono più trasmessi, ma puoi visualizzare tutti gli episodi e attività personalizzate <a href="https://code.org/break">qui</a>.</p>
-
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
-
-## L'ora del codice: prova questi interessanti tutorial introduttivi
-Prova un tutorial di un'ora progettato per tutte le età. Ci sono centinaia di attività e tutorial in oltre 45 lingue.
-* [Dance Party](https://code.org/dance)  - Programma una festa da ballo con la musica di Katy Perry, Shawn Mendes e altro.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Usa la tua creatività e capacità di risoluzione dei problemi per viaggiare ed esplorare nuovi mondi.
-* [IA per i Mari](https://code.org/oceans) -Scopri come l'IA e l'apprendimento automatico possono essere utilizzati per affrontare i problemi del mondo.
-* [ Codice Flappy ](http://studio.code.org/s/flappy/reset) - Scrivi il tuo codice di gioco flappy.
-* [Programmazione per l'astronomia](https://quorumlanguage.com/hourofcode/astro1.html) - Scopri l'astronomia usando Quorum, un linguaggio di programmazione accessibile a studenti non vedenti o ipovedenti.
-* E molti [altri tutorial](https://code.org/hourofcode/overview)!
-
-<p><a href="#top">[Back to top]</a></p>
-
-<div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
-
-## Video: guarda questi video educativi di 3-5 minuti
-
-{{ athome_videos }}
+<a id="hoc"></a>
+<h2>Prova Hour of Code con questi divertenti tutorial introduttivi</h2>
+<p>Prova un <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank”>tutorial di un’ora</a> con giochi e film popolari come Minecraft, Frozen e Star Wars. Molti tutorial sono strutturati come giochi, progettati per insegnare concetti informatici di base in modo divertente e coinvolgente.</p>
 
 <br>
 
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="danceparty" href="/dance" target="_blank">
+        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Dance Party">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Codifica un Dance Party da condividere con amici e familiari. Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj e altri 34!</div>
+        <a class="linktag" id="danceparty" href="/dance" target=”_blank”><button>Prova attività</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="minecraft" href="/minecraft" target="_blank">
+        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft Aquatic">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hour of Code di Minecraft</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft è tornato per l’Hour of Code con una nuova attività! Viaggio attraverso Minecraft con il codice.</div>
+        <br>
+        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Prova attività</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI Per gli oceani">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI Per gli oceani</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Aiuta A.I. a pulire gli oceani istruendola a rilevare la spazzatura! Impara a conoscere i dati di allenamento e i bias, e come l'AI può affrontare i problemi del mondo. Visualizza <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target=”_blank”>schema della lezione</a>.</div>
+        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target=”_blank”><button>Prova attività</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
 <p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+<br>
+<br>
+
+<a id="videos"></a>
+<div class="col-100" style="padding:25px; border-radius: 15px; background-color: #ebe8f1">
+<h2 style="margin-top:0">Guarda una serie coinvolgente di brevi video per imparare come funzionano i computer, internet e l’AI</h2>
+<p>Impara le basi dell'informatica con video con tecnologi famosi come Bill Gates e Satya Nadella, oltre a un cast diverso di presentatori di diverse aziende e organizzazioni.</p>
+<br>
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Come funzionano i computer con Bill Gates">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Come funzionano i computer</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Con un'introduzione di Bill Gates, questa serie di sei brevi video spiega cosa rende un computer un computer e come funzionano i circuiti dei computer.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Guarda la serie di video</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Come funziona Internet">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Come funziona Internet</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">In questa serie di otto brevi video, apprenderai come è stato inventato internet, cos'è l'HTML e come funzionano i motori di ricerca come Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Guarda la serie di video</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-intro-2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" "How AI Works with Satya Nadella">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Come funziona l'AI</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Impara come funziona l'AI e perché è importante con questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e un cast diverso di esperti.</div>
+        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Guarda la serie di video</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both"></div>
+
+<p>Visualizza altri video, compresi brevi video ispiratori con celebrità come Steph Curry e Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target=”_blank”>qui</a>.</p>
+<br>
+<p><a href="#top">[Back to top]</a></p>
+
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
+<h2>Impara i concetti fondamentali con i nostri corsi da autodidatta</h2>
+<h3>Corsi introduttivi da autodidatta</h3>
+<p>Un'ottima opzione per gli studenti che iniziano da soli. Imparerai i fondamenti dell'informatica con i blocchi drag & drop. Crea i tuoi disegni e giochi. Nota: i corsi Express sono attualmente disponibili in inglese, hindi, italiano e spagnolo. Per altre lingue, raccomandiamo il nostro <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Corso accelerato</a> di 20 ore. Per vedere cosa è disponibile nella tua lingua, visita il nostro <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target=”_blank”>catalogo dei corsi</a>.</p>
 
-## Impara i fondamenti con i nostri corsi personalizzati
-### **Corsi rapidi**
-Un'ottima opzione per gli studenti che iniziano da soli. Imparerai i principi base dell'informatica con i blocchi trascina & rilascia. Crea i tuoi propri disegni e giochi. <strong>Nota: I corsi rapidi, attualmente, sono disponibili solo in inglese, hindi, italiano e spagnolo. Per altre lingue, consigliamo il nostro<a href="https://studio.code.org/s/20-hour">Corso accelerato</a>di 20 ore. Per vedere cosa è disponibile nella tua lingua, visita il nostro <a href="https://studio.code.org/courses">catalogo dei corsi</a>.</strong>
+<br>
 
-<div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Corso rapido</a>
+<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="Corso Express"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Corso Express</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Corso rapido prescolare</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Corso Express per pre-lettori"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Corso Express per pre-lettori</a>
 
 </div>
 <div style="clear: both"></div>
 
+<h3>Introduzioni da autodidatta a Game Lab e App Lab</h3>
+<p>Adattati dai nostri corsi CS Discoveries e CS Principles, questi brevi moduli da autodidatta sono un ottimo modo per imparare concetti che abbracciano tutti i linguaggi e gli strumenti di programmazione. <i>Richiede un account Code.org per accedere</i>.</p>
+
+<br>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Introduzione a Game Lab">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"Introduzione a Game Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programma animazioni, arte interattiva e giochi in Game Lab. Comincia con forme semplici e costruisci fino ad animazioni e giochi più sofisticati basati su sprite.</div>
+        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Prova il modulo</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Programmazione di tartarughe in App Lab">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmazione di tartarughe in App Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Usa semplici comandi JavaScript per disegnare forme e immagini usando una "tartaruga" virtuale. Progetta e programma la tua scena digitale!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Prova il modulo</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Programmazione guidata degli eventi in App Lab">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmazione guidata degli eventi in App Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Impara a progettare applicazioni che rispondono ai clic e alla pressione dei tasti. Crea una serie di semplici applicazioni (app) che vivono sul web!</div>
+        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Prova il modulo</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<br>
+
+<p><a href="#top">[Back to top]</a></p>
+
 <hr />
 
-{{ athome_olderstudents }}
+<a id="labs"></a>
+<h2>Crea qualcosa!</h2>
+<p>Per prima cosa, lasciati ispirare! Guarda la nostra <a href="https://studio.code.org/projects" target="_blank">galleria dei progetti</a>: gioca con alcuni dei giochi o prova alcune delle applicazioni che gli studenti hanno creato. Puoi "remixare" il progetto per renderlo tuo, o costruire qualcosa di nuovo in App Lab, Game Lab o Web Lab.</p>
 
-<div style="clear: both; margin-bottom: 30px"></div>
+<br>
 
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-
-## Impara a progettare e costruire app con App Lab
-
-<div class="col-33" style="padding-right: 20px;">
-
-<img src="/images/app-lab/applab-tool.png" style="width: 100%"/>
-
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <p style="color:#ffffff">App Lab è un ambiente di programmazione dove si possono creare semplici applicazioni. Progetta un'app, codifica con blocchi o JavaScript per farla funzionare, poi condividi la tua app in pochi secondi.</p>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Costruisci un’app</button></a>
+  </div>
+  <div style="clear: both"></div>
 </div>
 
-<div class="col-66">
-
-<p>App Lab è un ambiente di programmazione in cui è possibile creare app semplici. Progetta un'app, codifica in JavaScript con blocchi o testo e condividi la tua creazione con la famiglia e gli amici.</p>
-<p>Almeno 13 anni, tutti i browser moderni, solo in inglese</p>
-<a href="https://code.org/educate/applab"><button>Provalo</button></a>
-
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <p style="color:#ffffff">Game Lab è un ambiente di programmazione dove si possono realizzare semplici animazioni e giochi con oggetti e personaggi che interagiscono tra loro.</p>
+    <br>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Crea un gioco</button></a>
+  </div>
+  <div style="clear: both"></div>
 </div>
 
-<div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-<a id="apps"></a>
-
-## Non hai un computer a casa? Prova queste app per smartphone
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>L'isola delle scatole</strong></h3></a>Un affascinante gioco di codifica per dispositivi mobili che porta gli studenti in un'avventura emozionante, mentre insegna i principi base della programmazione, come algoritmi, riconoscimento di schemi, sequenze, loop e istruzioni condizionali. <i>(per tutte le età)</i>
-
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <p style="color:#ffffff">Web Lab è un ambiente di programmazione in cui è possibile creare semplici pagine web utilizzando HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi.</p>
+    <br>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Crea una pagina web</button></a>
+  </div>
+  <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Piattaforma pluripremiata per imparare a programmare per bambini dai 5 ai 9 anni. Risolvi i puzzle e crea giochi con The Foos mentre impari a programmare. <strong>Nota: codeSpark offre una prova gratuita di 3 mesi. Per iscriversi sono necessari l'indirizzo e-mail dei genitori e le informazioni sulla carta di credito.</strong> <i>(da prescolare a 5° primaria)</i>
-
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Cavalletta</strong></h3></a>Impara i codici della programmazione con divertenti e veloci lezioni sul tuo telefono che ti insegnano a scrivere veri JavaScript. Un codice con il programma Google. <i> (dalle scuole medie in poi) </i>
-
-</div>
-<div style="clear: both; margin-bottom: 15px"></div>
+<div style="clear: both; margin-bottom: 20px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
 
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+<a id="unplugged"></a>
+<h2>Attività 'Unplugged': informatica senza il computer</h2>
 
-## Accesso a Internet limitato o assente? Dai un'occhiata a queste attività scollegate
-* [Ciao Ruby](https://www.helloruby.com/play)  - Il modo più stravagante del mondo per conoscere computer, tecnologia e programmazione. Attività su una vasta gamma di argomenti d'informatica, come la capacità di scomporre un problema, individuare schemi, pensare in modo algoritmico, eseguire il debug dei problemi e lavorare insieme. *(dai 4 ai 10 anni)*
-* [Informatica scollegata](https://csunplugged.org/en/) - Una raccolta di materiale didattico gratuito che insegna Informatica attraverso giochi e puzzle avvincenti che utilizzano carte, spaghi, pastelli e tanto divertimento. *(dai 5 ai 14 anni)*
+<div class="col-25" style="padding-bottom:15px; text-align:center">
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Attività unplugged per l'Hour of Code">
+  </a>
+  <p><i>Fai clic sull'immagine per visualizzarla in formato PDF</i></p>
+</div>
+<div class="col-75" style="padding-left:15px">
+  <p>Nessuna schermata, nessun problema! Abbiamo messo insieme un "campionario" di attività CS veloci e divertenti che puoi fare senza un dispositivo. Organizza una festa Dance Party in famiglia imparando gli eventi, o “programma” a vicenda per disegnare immagini!</p>
+  <br>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Visualizza le attività unplugged</button></a>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
-<div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-<a id="teacher-support"></a>
+<div style="clear: both; margin-bottom: 10px"></div>
 
-## Supporto per insegnanti a metà corso
-Stiamo lavorando per creare supporti per gli insegnanti che attualmente insegnano qui i nostri corsi e li aggiorneremo con risorse e suggerimenti quando disponibili.
+<p>Oppure guarda queste opzioni unplugged di altre organizzazioni:</p>
+<ul>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target=”_blank”>Salve Ruby</a> - Il modo più stravagante del mondo per imparare i computer, la tecnologia e la programmazione. Attività su una vasta gamma di argomenti d'informatica, come la capacità di scomporre un problema, individuare schemi, pensare in modo algoritmico, eseguire il debug dei problemi e lavorare insieme. (per 4-10 anni)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Una raccolta di materiale didattico gratuito che insegna l'informatica attraverso giochi coinvolgenti e puzzle che usano carte, spago, pastelli e un sacco di corse. (per 5-14 anni)</li>
+</ul>
+
+<h2>Non hai il computer a casa? Prova CS sul tuo telefono con queste app dei nostri partner</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p> Principi di informatica </p></a></div>
-Una guida per insegnanti con risorse su materiali che gli studenti possono usare a casa per continuare a studiare e prepararsi per il prossimo esame AP
-
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Un affascinante gioco di codifica mobile che porta gli studenti in un'avventura emozionante, insegnando i fondamenti della codifica, come algoritmi, riconoscimento di modelli, sequenze, cicli e condizionali. <i>(per tutte le età)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p> Scoperte di informatica </p></a></div>
-Una guida per insegnanti con risorse su materiali che gli studenti possono utilizzare a casa per continuare ad apprendere Scoperte di informatica
-
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Premiata piattaforma di apprendimento del codice per bambini dai 5 ai 9 anni. Risolvi i puzzle e crea giochi con The Foos mentre impari a codificare. <strong>Nota: codeSpark offre una prova gratuita di 3 mesi. L'indirizzo e-mail del genitore e le informazioni sulla carta di credito sono richieste al momento dell'iscrizione. <strong> <i>(per prelettori fino alla quinta elementare)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p> Fondamenti di Informatica </p></a></div>
-Una guida per insegnanti con risorse su materiali che gli studenti possono utilizzare a casa per continuare ad apprendere Fondamenti d'Informatica
-
+  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Impara il coding con lezioni divertenti e veloci sul tuo telefono che ti insegnano a scrivere con JavaScript. Un programma Code with Google. <i>(per le scuole medie inferiori e superiori)</i>
 </div>
+
 <div style="clear: both; margin-bottom: 15px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
 
-<div style="clear: both; padding-top: 40px; "></div>
+<a id="livecoding"></a>
+<h2>Apprendi dal team di Code.org e dagli ospiti speciali!</h2>
+
+<div class="col-50">
+  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
+      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo CodeBytes">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes sono lezioni interattive di 20 minuti, facili da capire, che mescolano l'informatica con argomenti del mondo reale. Istruisci un'intelligenza artificiale a leggere il linguaggio dei segni, progetta un'app a scopo benefico, esplora il mondo di Minecraft e altro ancora!</div>
+        <br>
+        <br>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target=”_blank”><button>Visualizza episodi</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-50">
+  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
+      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Pausa codice">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px”><strong>Pausa codice</strong></h3>
+        <div class="smalltext" style="color: dimgray; ">Continua a divertirti con l'informatica con una pausa codice! Puoi creare un cifrario con Ashton Kutcher, imparare le variabili con Yara Shahidi, e persino esplorare come funziona Internet con il vero inventore di Internet, Vint Cerf!</div>
+        <br>
+        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Collegati</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<a href="#top">[Back to top]</a>
+<br>

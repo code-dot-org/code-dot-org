@@ -58,6 +58,30 @@ export function quote(str) {
 }
 
 /**
+ * Splits a string into chunks of a certain length.
+ *
+ * @param {String} str
+ * @param {Number} maxLength Max length of each chunk.
+ * @param {String} delimiter
+ * @returns Array<String>
+ */
+export function stringToChunks(str, maxLength, delimiter = ' ') {
+  return str.split(delimiter).reduce(
+    (acc, val) => {
+      let lastVal = '';
+      if (acc[acc.length - 1].length + val.length < maxLength) {
+        lastVal = acc.pop() + delimiter;
+      }
+
+      lastVal += val;
+      acc.push(lastVal.trim());
+      return acc;
+    },
+    ['']
+  );
+}
+
+/**
  * Returns a new object with the properties from defaults overridden by any
  * properties in options. Leaves defaults and options unchanged.
  * NOTE: For new code, use Object.assign({}, defaults, options) instead
@@ -821,10 +845,6 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
   };
 }
 
-export function escapeRegExp(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
 /**
  * Detects profanity in a string.
  * @param {string} text
@@ -865,4 +885,8 @@ export function tooltipifyVocabulary() {
   $('.vocab').each(function() {
     $(this).tooltip({placement: 'bottom'});
   });
+}
+
+export function isBlank(str) {
+  return !!(!str || str.trim() === '');
 }

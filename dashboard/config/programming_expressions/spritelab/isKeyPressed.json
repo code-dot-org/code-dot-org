@@ -1,0 +1,7 @@
+{
+  "key": "isKeyPressed",
+  "name": "isKeyPressed",
+  "category": "World",
+  "block_name": "gamelab_isKeyPressed",
+  "syntax": "isKeyPressed"
+}

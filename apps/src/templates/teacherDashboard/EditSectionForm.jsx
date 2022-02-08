@@ -9,7 +9,7 @@ import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
-  assignedScriptName,
+  assignedUnitName,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
@@ -24,32 +24,6 @@ import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const style = {
-  root: {
-    width: styleConstants['content-width'],
-    height: '80vh',
-    left: 20,
-    right: 20
-  },
-  dropdown: {
-    padding: '0.3em'
-  },
-  sectionNameInput: {
-    // Full-width, large happy text, lots of space.
-    display: 'block',
-    width: '98%',
-    boxSizing: 'border-box',
-    fontSize: 'large',
-    padding: '0.5em'
-  },
-  scroll: {
-    position: 'absolute',
-    top: 80,
-    overflowY: 'scroll',
-    height: 'calc(80vh - 200px)'
-  }
-};
-
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
  */
@@ -60,7 +34,7 @@ class EditSectionForm extends Component {
     isNewSection: PropTypes.bool,
 
     //Comes from redux
-    initialScriptId: PropTypes.number,
+    initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
@@ -70,12 +44,11 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     lessonExtrasAvailable: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
-    assignedScriptName: PropTypes.string.isRequired,
+    assignedUnitName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
-    localeEnglishName: PropTypes.string,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
@@ -165,11 +138,10 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       lessonExtrasAvailable,
-      textToSpeechScriptIds,
-      assignedScriptName,
-      localeEnglishName,
-      isNewSection,
+      textToSpeechUnitIds,
+      assignedUnitName,
       localeCode,
+      isNewSection,
       showLockSectionField // DCDO Flag - show/hide Lock Section field
     } = this.props;
 
@@ -239,7 +211,7 @@ class EditSectionForm extends Component {
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
-            localeEnglishName={localeEnglishName}
+            localeCode={localeCode}
             isNewSection={isNewSection}
           />
           {lessonExtrasAvailable(section.scriptId) && (
@@ -254,7 +226,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {textToSpeechScriptIds.indexOf(section.scriptId) > -1 && (
+          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -299,7 +271,7 @@ class EditSectionForm extends Component {
         {this.state.showHiddenUnitWarning && (
           <ConfirmHiddenAssignment
             sectionName={section.name}
-            assignmentName={assignedScriptName}
+            assignmentName={assignedUnitName}
             onClose={handleClose}
             onConfirm={this.handleConfirmAssign}
           />
@@ -403,7 +375,7 @@ const AssignmentField = ({
   validAssignments,
   assignmentFamilies,
   disabled,
-  localeEnglishName,
+  localeCode,
   isNewSection
 }) => (
   <div>
@@ -417,7 +389,7 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      localeEnglishName={localeEnglishName}
+      localeCode={localeCode}
       isNewSection={isNewSection}
     />
   </div>
@@ -428,7 +400,7 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  localeEnglishName: PropTypes.string,
+  localeCode: PropTypes.string,
   isNewSection: PropTypes.bool
 };
 
@@ -570,17 +542,16 @@ YesNoDropdown.propTypes = FieldProps;
 
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
-  initialScriptId: state.teacherSections.initialScriptId,
+  initialUnitId: state.teacherSections.initialUnitId,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
+  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
   lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
-  assignedScriptName: assignedScriptName(state),
-  localeEnglishName: state.locales.localeEnglishName,
+  assignedUnitName: assignedUnitName(state),
   localeCode: state.locales.localeCode,
 
   // DCDO Flag - show/hide Lock Section field
@@ -608,3 +579,29 @@ export default connect(
     handleClose: cancelEditingSection
   }
 )(EditSectionForm);
+
+const style = {
+  root: {
+    width: styleConstants['content-width'],
+    height: '80vh',
+    left: 20,
+    right: 20
+  },
+  dropdown: {
+    padding: '0.3em'
+  },
+  sectionNameInput: {
+    // Full-width, large happy text, lots of space.
+    display: 'block',
+    width: '98%',
+    boxSizing: 'border-box',
+    fontSize: 'large',
+    padding: '0.5em'
+  },
+  scroll: {
+    position: 'absolute',
+    top: 80,
+    overflowY: 'scroll',
+    height: 'calc(80vh - 200px)'
+  }
+};

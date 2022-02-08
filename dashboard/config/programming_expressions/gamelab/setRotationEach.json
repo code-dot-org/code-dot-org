@@ -1,11 +1,11 @@
 {
-  "func": "setRotationEach",
+  "key": "setRotationEach",
+  "name": "setRotationEach",
   "category": "Groups",
-  "paletteParams": [
-    "angle"
+  "palette_params": [
+    {
+      "name": "angle"
+    }
   ],
-  "params": [
-    "90"
-  ],
-  "modeOptionName": "*.setRotationEach"
+  "syntax": "setRotationEach(angle)"
 }

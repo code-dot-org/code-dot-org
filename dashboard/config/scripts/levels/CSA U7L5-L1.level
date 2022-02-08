@@ -1,0 +1,37 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    ClassY y = new ClassY();\n    y.checkAccess();\n    \n  }\n}",
+        "isVisible": true
+      },
+      "ClassX.java": {
+        "text": "public class ClassX {\n  \n  public String hasAccess() {\n      return \"Access Granted!\";\n  }\n  \n}",
+        "isVisible": true
+      },
+      "ClassY.java": {
+        "text": "public class ClassY {\n  \n  public void checkAccess() {\n     ClassX x = new ClassX();\n     System.out.println(x.hasAccess()); \n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "contained_level_names": [
+      "CSA U7L5-L1 Predict"
+    ],
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-12-05T20:32:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2021-12-05 20:32:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 20:34:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 20:35:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

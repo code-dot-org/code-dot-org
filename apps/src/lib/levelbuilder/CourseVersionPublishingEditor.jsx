@@ -2,95 +2,184 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-
-const publishedStates = ['Pilot', 'Beta', 'Preview', 'Recommended'];
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
-    visible: PropTypes.bool.isRequired,
-    isStable: PropTypes.bool.isRequired,
     pilotExperiment: PropTypes.string,
     versionYear: PropTypes.string,
     familyName: PropTypes.string,
-    updateVisible: PropTypes.func.isRequired,
-    updateIsStable: PropTypes.func.isRequired,
     updatePilotExperiment: PropTypes.func.isRequired,
     updateFamilyName: PropTypes.func.isRequired,
     updateVersionYear: PropTypes.func.isRequired,
     families: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isCourse: PropTypes.bool,
-    publishedState: PropTypes.string.isRequired,
-    updatePublishedState: PropTypes.func.isRequired
+    updateIsCourse: PropTypes.func,
+    showIsCourseSelector: PropTypes.bool,
+    initialPublishedState: PropTypes.string.isRequired,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
+    updatePublishedState: PropTypes.func.isRequired,
+    preventCourseVersionChange: PropTypes.bool
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      addingFamilyName: false,
+      selectedFamilyName: props.familyName,
+      newFamilyName: ''
+    };
+  }
 
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
+
     this.props.updatePublishedState(newPublishedState);
-    switch (newPublishedState) {
-      case 'Pilot':
-        this.props.updateVisible(false);
-        this.props.updateIsStable(false);
-        break;
-      case 'Preview':
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(true);
-        this.props.updateIsStable(false);
-        break;
-      case 'Recommended':
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(true);
-        this.props.updateIsStable(true);
-        break;
-      case 'Beta':
-      default:
-        this.props.updatePilotExperiment('');
-        this.props.updateVisible(false);
-        this.props.updateIsStable(false);
-        break;
+    if (newPublishedState !== PublishedState.pilot) {
+      this.props.updatePilotExperiment('');
     }
+  };
+
+  handleNewFamilyNameChange = e => {
+    if (e.target.value === '') {
+      this.props.updateFamilyName(this.state.selectedFamilyName);
+      this.setState({newFamilyName: '', addingFamilyName: false});
+    } else {
+      this.props.updateFamilyName(e.target.value);
+      this.setState({newFamilyName: e.target.value, addingFamilyName: true});
+    }
+  };
+
+  onFamilyNameSelect = e => {
+    this.setState({selectedFamilyName: e.target.value});
+    this.props.updateFamilyName(e.target.value);
+  };
+
+  /*
+   * We only want a course to be able to progress
+   * forward in published states. So as the editor updates the
+   * published start of the course the options to update in the
+   * future should get smaller.
+   */
+  getAvailablePublishedStates = currentState => {
+    const availablePublishedStates = {
+      in_development: [
+        PublishedState.in_development,
+        PublishedState.pilot,
+        PublishedState.beta,
+        PublishedState.preview,
+        PublishedState.stable
+      ],
+      pilot: [PublishedState.pilot],
+      beta: [
+        PublishedState.beta,
+        PublishedState.preview,
+        PublishedState.stable
+      ],
+      preview: [PublishedState.preview, PublishedState.stable],
+      stable: [PublishedState.stable]
+    };
+
+    return availablePublishedStates[currentState];
   };
 
   render() {
     return (
       <div>
-        <label>
-          Family Name
-          <select
-            value={this.props.familyName}
-            style={styles.dropdown}
-            onChange={event => this.props.updateFamilyName(event.target.value)}
-          >
-            {!this.props.isCourse && <option value="">(None)</option>}
-            {this.props.families.map(familyOption => (
-              <option key={familyOption} value={familyOption}>
-                {familyOption}
-              </option>
-            ))}
-          </select>
-          <HelpTip>
-            <p>
-              The family name is used to group together courses that are
-              different version years of the same course so that users can be
-              redirected between different version years.
-            </p>
-          </HelpTip>
-        </label>
-        <label>
-          Version Year
-          <select
-            value={this.props.versionYear}
-            style={styles.dropdown}
-            onChange={event => this.props.updateVersionYear(event.target.value)}
-          >
-            <option value="">(None)</option>
-            {this.props.versionYearOptions.map(year => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
-        </label>
+        {this.props.showIsCourseSelector && (
+          <label>
+            Is a Standalone Unit
+            <input
+              className="isCourseCheckbox"
+              type="checkbox"
+              checked={this.props.isCourse}
+              disabled={this.props.preventCourseVersionChange}
+              style={styles.checkbox}
+              onChange={this.props.updateIsCourse}
+            />
+            {this.props.familyName && (
+              <HelpTip>
+                <p>
+                  If checked, indicates that this Unit represents a standalone
+                  unit. Examples of such Units include CourseA-F, Express, and
+                  Pre-Express.
+                </p>
+              </HelpTip>
+            )}
+            {!this.props.familyName && (
+              <HelpTip>
+                <p>
+                  You must select a family name in order to mark something as a
+                  standalone unit.
+                </p>
+              </HelpTip>
+            )}
+          </label>
+        )}
+
+        {this.props.isCourse && (
+          <div>
+            <label>
+              Family Name
+              <select
+                value={this.state.selectedFamilyName}
+                style={styles.dropdown}
+                className="familyNameSelector"
+                disabled={
+                  this.props.preventCourseVersionChange ||
+                  !!this.state.newFamilyName
+                }
+                onChange={this.onFamilyNameSelect}
+              >
+                <option value="">(None)</option>
+                {this.props.families.map(familyOption => (
+                  <option key={familyOption} value={familyOption}>
+                    {familyOption}
+                  </option>
+                ))}
+              </select>
+              {!this.props.preventCourseVersionChange && (
+                <span>
+                  or{' '}
+                  <input
+                    type="text"
+                    value={this.state.newFamilyName}
+                    style={styles.smallInput}
+                    onChange={this.handleNewFamilyNameChange}
+                  />
+                </span>
+              )}
+              <HelpTip>
+                <p>
+                  The family name is used to group together courses that are
+                  different version years of the same course so that users can
+                  be redirected between different version years. Family names
+                  should only contain letters, numbers, and dashes.
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Version Year
+              <select
+                value={this.props.versionYear}
+                style={styles.dropdown}
+                className="versionYearSelector"
+                onChange={event =>
+                  this.props.updateVersionYear(event.target.value)
+                }
+                disabled={this.props.preventCourseVersionChange}
+              >
+                <option value="">(None)</option>
+                {this.props.versionYearOptions.map(year => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        )}
         <label>
           Published State
           <select
@@ -99,7 +188,9 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
-            {publishedStates.map(state => (
+            {this.getAvailablePublishedStates(
+              this.props.initialPublishedState
+            ).map(state => (
               <option key={state} value={state}>
                 {state}
               </option>
@@ -114,6 +205,13 @@ export default class CourseVersionPublishingEditor extends Component {
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td style={styles.tableBorder}>In-Development</td>
+                  <td style={styles.tableBorder}>
+                    Only levelbuilder can see this course. Used for creating new
+                    content you don't want anyone to access.
+                  </td>
+                </tr>
                 <tr>
                   <td style={styles.tableBorder}>Pilot</td>
                   <td style={styles.tableBorder}>
@@ -132,21 +230,21 @@ export default class CourseVersionPublishingEditor extends Component {
                   <td style={styles.tableBorder}>Preview</td>
                   <td style={styles.tableBorder}>
                     The course is now a choice in the dropdown that is
-                    assignable but is not the recommended course.
+                    assignable.
                   </td>
                 </tr>
                 <tr>
-                  <td style={styles.tableBorder}>Recommended</td>
+                  <td style={styles.tableBorder}>Stable</td>
                   <td style={styles.tableBorder}>
-                    The course is the recommended course. It is assignable and
-                    we try to get teachers to use this course.
+                    A course that is not changing. If it is the most recent
+                    course in your language it will be the recommended course.
                   </td>
                 </tr>
               </tbody>
             </table>
           </HelpTip>
         </label>
-        {this.props.publishedState === 'Pilot' && (
+        {this.props.publishedState === PublishedState.pilot && (
           <label>
             Pilot Experiment
             <HelpTip>
@@ -159,6 +257,7 @@ export default class CourseVersionPublishingEditor extends Component {
             <input
               value={this.props.pilotExperiment}
               style={styles.input}
+              className="pilotExperimentInput"
               onChange={event =>
                 this.props.updatePilotExperiment(event.target.value)
               }
@@ -180,8 +279,20 @@ const styles = {
     borderRadius: 4,
     margin: 0
   },
+  smallInput: {
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0,
+    height: '100%'
+  },
   dropdown: {
     margin: '0 6px'
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
   },
   tableBorder: {
     border: '1px solid ' + color.white,

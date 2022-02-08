@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U6L3 Template",
+    "long_instructions": "Look at the constructors and methods available in the `Scanner` class in the [**Java API**](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html).\r\n\r\nIn `DataReader.java`,\r\n\r\n1. In the constructor,\r\n   \r\n   a. Initialize the `Scanner` instance variable using the `File` object parameter.\r\n\r\n   b. Initialize the `ArrayList` instance variable using its default constructor.\r\n\r\n2. Write the method `createList()` to add each line of the `File` to the `ArrayList` instance variable.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tM9E9IspvpSby6P4e/Z\n1tOrL4VoGdtnrNGKDBmfQggeSnzlBgWbqeQXBKluETtjlBo=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-11-03T18:25:19.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-11-03 18:25:22 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-20 15:31:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-20 15:33:38 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-02 16:51:06 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

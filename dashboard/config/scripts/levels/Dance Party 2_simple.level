@@ -102,7 +102,7 @@
               </value>
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
-                  <title name="VAR">moving</title>
+                  <title name="VAR" id="moving">moving</title>
                 </block>
               </value>
             </block>
@@ -134,7 +134,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>Moves back and forth in one direction. To change the direction a sprite is moving, change its "movement direction"</description>
           </mutation>
-          <title name="NAME">moving</title>
+          <title name="NAME" id="moving">moving</title>
           <statement name="STACK">
             <block type="gamelab_moveForward" inline="true">
               <value name="SPRITE">
@@ -191,7 +191,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if" inline="false">
               <value name="IF0">
@@ -533,7 +533,7 @@
             <title name="VAR">getting smaller</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">moving</title>
+            <title name="VAR" id="moving">moving</title>
           </block>
           <block type="gamelab_behavior_get">
             <title name="VAR">moving north</title>
@@ -548,7 +548,7 @@
             <title name="VAR">moving west</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">wandering</title>
+            <title name="VAR" id="wandering">wandering</title>
           </block>
         </category>
         <category name="Events">

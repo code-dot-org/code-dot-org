@@ -1,7 +1,7 @@
 <StandaloneVideo>
   <config><![CDATA[{
   "properties": {
-    "video_key": "csp_applab_processing_lists",
+    "video_key": "csp_tutorial_datavis1",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -15,6 +15,8 @@
   "level_num": "custom",
   "user_id": 566,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-05-19 00:07:03 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-19 00:12:37 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-19 00:13:26 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-19 00:15:03 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-05-19 00:07:03 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-19 00:12:37 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-19 00:13:26 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-05-19 00:15:03 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-07-06 19:04:25 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-07-26 17:52:23 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

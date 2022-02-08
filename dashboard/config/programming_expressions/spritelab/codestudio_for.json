@@ -1,7 +1,7 @@
 {
+  "key": "codestudio_for",
+  "name": "controls_for",
   "category": "Loops",
-  "config": {
-    "docFunc": "codestudio_for",
-    "func": "controls_for"
-  }
+  "block_name": "controls_for",
+  "syntax": "controls_for"
 }

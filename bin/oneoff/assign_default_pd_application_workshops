@@ -15,7 +15,7 @@ def update_teacher_application_workshops
     updated: 0,
     no_workshop: 0
   }
-  Pd::Application::Teacher1819Application.find_each do |teacher_application|
+  Pd::Application::TeacherApplication.find_each do |teacher_application|
     if teacher_application.pd_workshop_id
       counts[:skipped] += 1
     else

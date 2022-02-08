@@ -1,6 +1,6 @@
 {
-  "func": "previousFrame",
+  "key": "previousFrame",
+  "name": "previousFrame",
   "category": "Animations",
-  "modeOptionName": "anim_previousFrame",
-  "noAutocomplete": true
+  "syntax": "previousFrame"
 }

@@ -17,12 +17,6 @@
     "w3c": true
   },
   {
-    "name": "IE11",
-    "browserName": "Internet Explorer",
-    "version": "11.0",
-    "platform": "Windows 10"
-  },
-  {
     "name": "Firefox",
     "browserName": "firefox",
     "browserVersion": "79.0",

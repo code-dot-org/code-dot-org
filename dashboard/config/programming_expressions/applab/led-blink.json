@@ -1,0 +1,11 @@
+{
+  "key": "led.blink",
+  "name": "led.blink",
+  "category": "Circuit",
+  "palette_params": [
+    {
+      "name": "interval"
+    }
+  ],
+  "syntax": "led.blink(interval)"
+}

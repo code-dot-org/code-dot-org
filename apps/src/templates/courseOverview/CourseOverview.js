@@ -52,10 +52,9 @@ class CourseOverview extends Component {
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
-    isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
-    isVerifiedTeacher: PropTypes.bool.isRequired,
+    isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showVersionWarning: PropTypes.bool,
@@ -126,10 +125,9 @@ class CourseOverview extends Component {
       teacherResources,
       migratedTeacherResources,
       studentResources,
-      isTeacher,
       viewAs,
       scripts,
-      isVerifiedTeacher,
+      isVerifiedInstructor,
       hasVerifiedResources,
       versions,
       showVersionWarning,
@@ -142,9 +140,8 @@ class CourseOverview extends Component {
     } = this.props;
 
     const showNotification =
-      viewAs === ViewType.Teacher &&
-      isTeacher &&
-      !isVerifiedTeacher &&
+      viewAs === ViewType.Instructor &&
+      !isVerifiedInstructor &&
       hasVerifiedResources;
 
     // Only display viewable versions in course version dropdown.
@@ -214,7 +211,7 @@ class CourseOverview extends Component {
           style={styles.description}
           openExternalLinksInNewTab={true}
           markdown={
-            viewAs === ViewType.Student
+            viewAs === ViewType.Participant
               ? descriptionStudent
               : descriptionTeacher
           }
@@ -230,7 +227,7 @@ class CourseOverview extends Component {
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             useMigratedResources={useMigratedResources}
-            isTeacher={isTeacher}
+            isInstructor={viewAs === ViewType.Instructor}
           />
         </div>
         {scripts.map((script, index) => (
@@ -288,5 +285,8 @@ export default connect((state, ownProps) => ({
     true
   ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+  viewAs: state.viewAs,
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
   announcements: state.announcements || []
 }))(CourseOverview);

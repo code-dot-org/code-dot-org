@@ -6,82 +6,82 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# Cara menarik perhatian media ke acara Jam Kod anda
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+### Tarik banyak perhatian dengan acara Jam Kod anda dan jemput media tempatan untuk melihat kepentingan sains komputer di sekolah anda.
 
-*Untuk segala pertanyaan media dan akhbar, sila hubungi <press@code.org>*
+*Untuk semua pertanyaan pihak akhbar dan media, sila hubungi <press@code.org>*
 
 * * *
 
-## Key Tips
+## Tip Utama
 
-- Menjemput media dua minggi sebelum acara anda melalui e-mel. Mengambil tindakan susulan dengan e-mel dan telefon jika anda tidak menerima maklum balas pada mulanya.
-- Minta seorang ahli staf sekolah atau sukarelawan untuk mengambil gambar bagi dikongsikan dalam talian atau dihantarkan kepada pihak akhbar.
-- Menulis mengenai Hour of Code pada halaman laman sesawang anda dan surat khabar sekolah anda. Tulis tentang butiran acara anda, dan gambar-gambar aktiviti pelajar.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Hubungi pihak media dua minggu sebelum acara anda melalui e-mel. Membuat tindakan susulan melalui e-mel dan telefon jika anda tidak menerima jawapan awal.
+- Minta ahli kakitangan sekolah atau sukarelawan mengambil foto untuk dikongsikan dalam talian atau hantar kepada pihak akhbar.
+- Tulis tentang Jam Kod pada laman utama bagi laman web anda dan di dalam surat khabar sekolah anda. Siarkan perincian acara anda dan gambar aktiviti pelajar.
+- Di dalam Facebook dan Twitter, kongsikan kemas kini rancangan anda, umumkan acara anda dan siarkan gambar semasa {{ campaign_date/year }}. Gunakan tanda pagar **#HourOfCode** supaya Code.org dapat melihat dan mempromosikan acara anda.
 
-## Step-by-step guide
+## Panduan langkah demi langkah
 
-### 1. Plan your event
+### 1. Rancangkan acara anda
 
-- Rancangkan suatu perhimpunan untuk memulakan Hour of Code.
-- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
-- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
-- Menganjurkan aktiviti kumpulan (seperti suatu demonstrasi aktiviti pengaturcaraan 'tercabut'), atau mempamerkan aktiviti yang dicipta serta dipimpin oleh pelajar.
-- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
+- Rancangkan perhimpunan untuk melancarkan Jam Kod.
+- Hantarkan [surat]({{ promote/sample_emails }}) kepada ibu bapa dan meminta mereka menyebarkan berita.
+- Hantarkan [surat]({{ promote/sample_emails }}) untuk menjemput datuk bandar tempatan anda, ahli Kongres, gabenor, atau ahli perniagaan yang berpengaruh untuk menghadiri dan berucap kepada pelajar anda.
+- Anjurkan aktiviti kumpulan (seperti demonstrasi aktiviti pengaturcaraan ‘nirplag’), atau menunjukkan aktiviti yang dicipta dan dipimpin oleh pelajar.
+- Tunjukkan [video Jam Kod]({{ urls/home }}) Code.org atau satu daripada [video ini]({{ promote/videos }}) bertujuan memberikan inspirasi kepada pelajar. <br />
 
-### 2. Identify specific reporters that cover education or local events
+### 2. Kenal pasti wartawan tertentu yang membuat liputan mengenai pendidikan atau acara tempatan
 
-Like local newspapers, TV station or radio stations, or blogs. <br />
+Seperti surat khabar, stesen TV atau stesen radio tempatan, atau blog.<br />
 
-### 3. Contact local media
+### 3. Hubungi media tempatan
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+Cara terbaik untuk menghubungi ialah melalui e-mel. Acara ini seharusnya pendek dan perlu dikomunikasikan "mengapakah individu lain perlu mengambil berat tentang acara ini"? Masukkan maklumat hubungan (termasuklah nombor telefon mudah alih) untuk sesiapa yang akan berada di tapak lokasi acara. **[Lihat contoh pembentangan kepada media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Lihat dalam talian untuk mencari maklumat hubungan wartawan. Jika anda tidak dapat menemuinya, sila hubungi bahagian penerbitan untuk bertanya, atau hantarkan alamat e-mel umum organisasi dan minta mesej anda diarahkan terus kepada wartawan yang betul. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. Bersedia mengemukakan soalan tentang acara sekolah anda. Berikut ialah beberapa contoh:
 
-#### Mengapakah sekolah anda melaksanakan suatu Hour of Code?
+#### Mengapakah sekolah anda menjalankan acara Jam Kod?
 
-Sementara kita semua tahu bahawa adalah penting bagi pelajar untuk mempelajari bagaimana untuk menavigasi dalam dunia kini yang penuh dengan teknologi, ramai guru tidak berpengalaman dalam sains komputer dan tidak tahu di mana untuk memulakannya. Acara ini merupakan suatu peluang bagi kita semua untuk melihat apakah sebenarnya sains komputer.
+Meskipun kita semua tahu bahawa adalah penting bagi pelajar mempelajari cara menavigasi dunia hari ini yang penuh dengan teknologi, ramai guru tidak berpengalaman di dalam sains komputer dan tidak tahu tempat untuk bermula. Acara ini merupakan peluang untuk kita semua melihat perkara sebenar mengenai sains komputer.
 
-Kita mengharapkan ia akan mencetuskan minat pelajar untuk terus belajar. Penyelidikan juga menunjukkan bahawa kanak-kanak boleh belajar konsep pengaturcaraan sebelum mereka tahu bagaimana untuk membaca dan menulis. Sebenarnya, otak mereka lebih mudah untuk menerima bahasa komputer pada usia yang muda, sama seperti bahasa asing. <br /> <br />
+Kami berharap ia akan mencetuskan minat dalam pelajar untuk terus belajar. Penyelidikan juga menunjukkan bahawa kanak-kanak boleh mengambil konsep pengaturcaraan sebelum mereka tahu cara membaca dan menulis. Sebenarnya, otak mereka lebih mudah menerima bahasa komputer pada usia muda, sama seperti bahasa asing. <br /> <br />
 
 #### Mengapakah perkara ini penting?
 
-Teknologi sedang mentransformasikan setiap industri di planet ini. Pada tahun 2015, sebanyak 7 juta peluang pekerjaan di Amerika Syarikat berada di kerjaya—termasuklah kesenian dan seni reka—yang menaksirkan kemahiran koding. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Kita tahu bahawa tidak kira apa yang dilakukan oleh pelajar-pelajar kita apabila mereka membesar, sama ada mereka menceburi bidang perubatan, perniagaan, politik, atau kesenian, mengetahui bagaimana untuk membina teknologi akan memberi keyakinan dan kelebihan daya saing kepada mereka. <br />
+Teknologi sedang mengubah setiap industri di planet ini. Pada tahun 2015, sebanyak 7 juta peluang pekerjaan di Amerika Syarikat ialah dalam kerjaya—termasuklah kesenian dan seni reka—yang menilai kemahiran pengekodan. Tetapi 60 peratus sekolah di Amerika Syarikat tidak mengajar sains komputer. Kini, sudah tiba masanya untuk kita mengejar abad ke-21. Kami tahu bahawa tanpa mengambil kira perkara yang dilakukan oleh pelajar kita apabila mereka membesar, sama ada mereka memasuki jurusan perubatan, perniagaan, politik, atau kesenian, mengetahui cara membina teknologi akan memberikan keyakinan dan kelebihan daya saing kepada mereka. <br />
 
 <a id="sample-emails"></a>
 
-## Sample email to send to invite local media to your event
+## Contoh e-mel untuk dihantarkan bagi menjemput media tempatan ke acara anda
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**Tajuk subjek**: Sekolah tempatan menyertai misi memperkenalkan pelajar kepada sains komputer
 
-Komputer berada di mana-mana sahaja, mengubah setiap industri di planet ini, tetapi kurang daripada separuh daripada semua sekolah mengajar sains komputer. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Berita baiknya ialah, kita sedang berada di perjalanan untuk mengubah situasi ini.
+Komputer berada di mana-mana sahaja, mengubah setiap industri di planet ini, tetapi kurang daripada separuh bilangan semua sekolah yang mengajar sains komputer Wanita muda dan pelajar daripada kumpulan kaum dan etnik terpinggir terlalu dipencilkan di dalam kelas sains komputer dan industri teknologi. Berita baiknya ialah, kami sedang dalam proses mengubahnya.
 
-Dengan Hour of Code, sains komputer telah dipaparkan pada laman Google, MSN, Yahoo!, dan Disney. Lebih daripada 100 rakan kongsi telah bekerjasama untuk menyokong gerakan ini. Setiap Stor Apple di dunia ini telah menganjurkan suatu Hour of Code. Malah Presiden Obama telah menulis barisan kod beliau yang pertama sebagai salah satu bahagian kempen ini.
+Dengan Jam Kod, sains komputer dipaparkan pada laman utama Google, MSN, Yahoo! dan Disney. Lebih daripada 100 rakan kongsi bekerjasama menyokong pergerakan ini. Setiap Kedai Apple di dunia telah menganjurkan Jam Kod. Malah Presiden Obama telah menulis barisan kod beliau yang pertama sebagai sebahagian daripada kempen ini.
 
 Itulah sebabnya setiap pelajar [X number] di [SCHOOL NAME] menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer (3-9 Disember).
 
-Saya sedang menulis untuk menjemput anda supaya menghadiri perhimpunan permulaan kita dan melihat kanak-kanak memulakan aktiviti pada [DATE].
+Saya menulis untuk menjemput anda menghadiri perhimpunan pelancaran kita dan melihat kanak-kanak memulakan aktiviti pada [DATE].
 
-Hour of Code, anjuran oleh Code.org dan 100 rakan lain yang bukan berasaskan keuntungan, merupakan suatu pergerakan seluruh dunia yang percaya bahawa pelajar-pelajar kini sudah bersedia untuk belajar kemahiran kritikal untuk kejayaan di abad ke-21. Sila sertai kita.
+Acara Jam Kod, yang dianjurkan oleh Code.org bukan untung dan lebih daripada 100 yang lain, ialah pergerakan global yang percaya para pelajar masa kini bersedia mempelajari kemahiran kritikal untuk kejayaan pada abad ke-21. Sila sertai kami.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Hubungi: [YOUR NAME], [TITLE], Telefon mudah alih: (212) 555-5555 Bila: [DATE and TIME of your event] Di mana: [ADDRESS and DIRECTIONS]
 
-I look forward to being in touch. <br />
+Saya berharap kita akan terus berhubung. <br />
 
-## Additional details and a quote you can use in materials
+## Maklumat tambahan dan petikan yang boleh digunakan sebagai bahan 
 
-"Hour of Code direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan sains komputer bukanlah sains yang sukar difahami—sesiapa sahaja boleh mempelajari asas-asasnya," kata Hadi Partovi, pengasas dan Ketua Pengawai Eksekutif Code.org. "Lebih daripada 100 juta pelajar dari seluruh dunia sudah telah mencuba suatu Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"Jam Kod direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan bahawa sains komputer bukanlah sesuatu yang sukar difahami—sesiapa sahaja boleh mempelajari asasnya," kata Hadi Partovi, pengasas dan Ketua Pengawai Eksekutif Code.org. "Lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Permintaan untuk pendidikan sains komputer yang berkaitan dengan abad ke-21 merentasi semua sempadan dan tidak mempunyai batasan." <br /> <br />
 
 #### Mengenai Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Selepas dilancarkan pada tahun 2013, Code.org telah menganjurkan kempen Hour of Code – yang telah memperkenalkan lebih daripada 100 juta orang pelajar kepada sains komputer sehingga masa ini – dan bekerjasama dengan 70 buah sekolah awam daerah di seluruh negara untuk mengembangkan program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org ialah pertubuhan awam bukan untung 501c3 yang secara khusus mengembangkan penyertaan di dalam sains komputer dan meningkatkan penyertaan oleh wanita muda dan pelajar yang datang daripada kumpulan terpencil yang lain. Visinya ialah setiap pelajar di setiap sekolah mempunyai peluang untuk mempelajari pengaturcaraan komputer. Selepas pelancaran pada tahun 2013, Code.org telah menganjurkan kempen Jam Kod – yang telah memperkenalkan lebih daripada 100 juta pelajar kepada sains komputer sehingga masa kini – dan bekerjasama dengan 70 sekolah awam daerah di seluruh negara untuk mengembangkan atur cara sains komputer. Code.org disokong oleh sumbangan bersifat dermawan daripada syarikat, yayasan dan individu yang pemurah, termasuk Microsoft, Facebook, Infosys Foundation USA, Amazon dan lain-lain. Untuk maklumat lanjut, sila kunjungi: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here]({{ promote/sample_emails }}).
+Cari lebih banyak sumber dan contoh e-mel [here]({{ promote/sample_emails }}).
 
 {{ signup_button }}

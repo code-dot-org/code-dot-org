@@ -1,0 +1,37 @@
+---
+title: Merhaba Dünya
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# Merhaba Dünya!
+
+Bilgisayar Bilimi 101'de, birçok öğrencinin oluşturduğu ilk program, ikonik bir metin satırı veren basit bir programdır: "Merhaba Dünya!" Öğrencilere temel kodlama becerileri ve uygulama yaratma özgüveni kazandıran bu giriş etkinliğiyle bilgisayar bilimi dünyasına merhaba deyin. Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli temadan birini seçin!
+
+# Merhaba Dünya temanızı seçin
+
+{{ spritelab_module, title: "Yemek", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "Hayvanlar", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "Öğretmen Bilgileri", title: "Merhaba Dünya'dan sonra öğrenmeye nasıl devam etmeliyim", description: "Merhaba Dünya, yeni müfredatımız BB Bağlantıları içindeki açık uçlu projeleri denemeden önce sınıflar için mükemmel bir ilk adımdır! Bazı temel kodlama bilgilerini öğrendikten sonra, öğrenciler CS Bağlantılarının müfredatlar arası projelerinde ilerleyebilecekler.", button_text: "Daha fazla bilgi", url: "/educate/csc" }}
+
+## Öğrencilerin Oluşturduklarından Öne Çıkanlar
+
+{{ featured_project, title: "Yemek", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Emoji", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "Hayvanlar", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

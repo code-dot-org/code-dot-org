@@ -7,7 +7,7 @@ nav: how_to_nav
 {{ signup_button }}
 
 # Cum poti aduce evenimentul Hour of Code in compania ta
-### Find out how you and your employees can inspire students to try computer science!
+### Află cum tu și angajații tăi puteți fi surse de inspirație pentru elevii care vor încerca să învețe știința calculatoarelor!
 
 ***
 
@@ -29,11 +29,11 @@ Pentru mai multe informații despre cum pot deveni angajații tăi voluntari ai 
 
 # Cum să organizezi O ora de cod cu elevii
 
-## 1. Promote your Hour of Code
+## 1. Promovează evenimentul Hour of Code
 - Promovează Ora ta de cod și încurajeaza-i si pe alții
 - Încurajează IT-iștii companiei tale să ajute o scoală cu organizarea unei Ore de cod și astfel sa-i inspire pe elevi să studieze Tehnologia informatiei Ei se pot înscrie pentru a fi puși în legătură cu o clasă
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Urmărește acest clip video instructiv <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
 ## 3. Alege o activitate
 Avem o mare varietate de activități amuzante, pentru participanți de toate vârstele, create de diverși parteneri Încearcă-le acum!
@@ -69,29 +69,29 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 - Dacă ești o companie producătoare de tehnologii, prezintă-le produsele
 - Dacă nu ești o companie producătoare de tehnologii, prezintă felul în care compania ta folosește tehnologia în rezolvarea problemelor și atingerea scopurilor.
 - Invită IT-iști din compania ta să vorbească despre motivul alegerii carierei lor și despre proiectele la care lucrează.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Consultă [această pagină]({{ urls/girls }}) pentru sfaturi cu privire la modul în care le poți convinge pe fete să fie interesate de știința calculatoarelor.
 
 ## 6. Programează!
 **Directionati participanţii catre activitate**
 
-- Scrieți link-ul activității pe tablă Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Scrieți link-ul activității pe tablă Fă clic pe linkul din lista cu [informații cu privire la activitatea selectată]({{ urls/learn }}), aflat sub numărul de participanți.
+- Pentru elevii mai mici, încarcă pagina de activitate din timp sau salveaz-o sub forma unui marcaj.
 
-**When participants come across difficulties it's okay to respond:**
+**Atunci când participanții întâmpină dificultăți, este normal să răspunzi:**
 
-- “I don’t know. Let’s figure this out together.”
+- „Nu știu. Haideți să rezolvăm asta împreună.”
 - "Învăţarea programarii este ca învăţarea unei limbi noi; nu veţi fi fluent imediat."
 
 **Ce să fac dacă cineva termină mai devreme?**
 
-- They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- Cei care termină mai devreme pot încerca o altă activitate Hour of Code pe hourofcode.com/learn.
+- Sau roagă-i să-și ajute prietenii care întâmpină probleme cu această activitate.
 
 ## 7) Sărbătoriti
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [Imprimă certificate]({{ urls/certificates }}) pentru participanți și cursanți.
+- [Imprimă autocolante cu mesajul „Am participat la Hour of Code!”]({{ promote/resources_stickers }}).
+- [Comandă tricouri personalizate pentru](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) angajați.
+- Distribuie fotografii și clipuri video ale evenimentului Hour of Code pe rețelele de socializare. Folosește #HourOfCode și @codeorg pentru ca și noi să le spunem altora despre succesul tău!
 
 {{ signup_button }}

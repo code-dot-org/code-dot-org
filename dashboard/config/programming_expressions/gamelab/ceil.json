@@ -1,11 +1,11 @@
 {
-  "func": "ceil",
+  "key": "ceil",
+  "name": "ceil",
   "category": "Math",
-  "paletteParams": [
-    "num"
+  "palette_params": [
+    {
+      "name": "num"
+    }
   ],
-  "params": [
-    "0.1"
-  ],
-  "type": "value"
+  "syntax": "ceil(num)"
 }

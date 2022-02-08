@@ -1,11 +1,11 @@
 {
-  "func": "createButton",
+  "key": "createButton",
+  "name": "createButton",
   "category": "Maker",
-  "paletteParams": [
-    "pin"
+  "palette_params": [
+    {
+      "name": "pin"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "either"
+  "syntax": "createButton(pin)"
 }

@@ -1,7 +1,6 @@
 {
-  "func": "keyPressed",
-  "block": "function keyPressed() {}",
-  "expansion": "function keyPressed() {\n  __;\n}",
+  "key": "keyPressed",
+  "name": "keyPressed",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "function keyPressed() {}"
 }

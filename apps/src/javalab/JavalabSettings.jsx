@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
+import JavalabDropdown from './components/JavalabDropdown';
 
 /**
  * A button that drops down to a set of clickable links, and closes itself if
@@ -67,28 +69,25 @@ export class JavalabSettings extends Component {
 
     return (
       <div style={styles.main}>
-        <JavalabButton
-          icon={<FontAwesome icon="cog" />}
-          style={btnStyle}
-          onClick={this.toggleDropdown}
-        />
-
         {dropdownOpen && (
-          <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
+          <JavalabDropdown style={styles.dropdown}>
             {React.Children.map(this.props.children, (child, index) => (
               <a
                 {...child.props}
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
-                style={{
-                  ...styles.anchor,
-                  ...(index > 0 && styles.nonFirstAnchor),
-                  ...child.props.style
-                }}
+                style={child.props.style}
               />
             ))}
-          </div>
+          </JavalabDropdown>
         )}
+        <JavalabButton
+          icon={<FontAwesome icon="cog" />}
+          text={i18n.settings()}
+          style={btnStyle}
+          onClick={this.toggleDropdown}
+          isHorizontal
+        />
       </div>
     );
   }
@@ -98,41 +97,32 @@ export default onClickOutside(Radium(JavalabSettings));
 
 const styles = {
   main: {
-    display: 'inline-block'
+    display: 'inline-block',
+    float: 'left'
   },
   button: {
-    color: color.darkest_gray,
-    borderColor: color.darkest_gray,
-    padding: 5,
-    margin: '0 0 10px 0',
+    fontSize: 15,
+    width: 140,
+    backgroundColor: color.white,
+    borderColor: color.dark_charcoal,
+    color: color.dark_charcoal,
+    fontFamily: '"Gotham 5r"',
+    padding: '5px 12px',
+    margin: '5px 0 5px 5px',
+    justifyContent: 'center',
+    ':hover': {
+      color: color.dark_charcoal,
+      boxShadow: 'none'
+    },
+
     selected: {
-      backgroundColor: color.cyan,
-      color: color.white,
-      borderColor: color.cyan
+      backgroundColor: color.lightest_gray,
+      borderColor: color.lightest_gray,
+      color: color.dark_charcoal
     }
   },
   dropdown: {
-    border: `1px solid ${color.charcoal}`,
-    position: 'absolute',
-    // A hack to make sure this renders in front of later absolutely-positioned elements
-    // (e.g., the instructions panel).
-    zIndex: 100
-  },
-  anchor: {
-    padding: 10,
-    color: color.charcoal,
-    backgroundColor: color.white,
-    fontFamily: '"Gotham 5r", sans-serif',
-    display: 'block',
-    textDecoration: 'none',
-    lineHeight: '20px',
-    transition: 'background-color .2s ease-out',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-      cursor: 'pointer'
-    }
-  },
-  nonFirstAnchor: {
-    borderTop: `1px solid ${color.charcoal}`
+    bottom: 40,
+    marginLeft: 5
   }
 };

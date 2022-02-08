@@ -9,6 +9,7 @@ class TransfersControllerTest < ActionController::TestCase
 
   setup do
     @teacher = create(:teacher)
+    @facilitator = create(:facilitator)
     sign_in(@teacher)
 
     @word_section = create(:section, user: @teacher, login_type: 'word')
@@ -26,6 +27,8 @@ class TransfersControllerTest < ActionController::TestCase
 
     @other_teacher = create :teacher
     @other_teacher_section = create :section, user: @other_teacher, login_type: 'word'
+
+    @pl_email_section = create(:section, user: @facilitator, login_type: 'email', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
   end
 
   test "returns an error when student ids are not provided" do
@@ -201,6 +204,17 @@ class TransfersControllerTest < ActionController::TestCase
     end
   end
 
+  test "student cannot be transferred to another section where they do not meet the participant type" do
+    @params[:new_section_code] = @pl_email_section.code
+
+    assert_does_not_create(Follower) do
+      post :create, params: @params
+      assert_response :forbidden
+      assert_equal "You cannot move these users because they do not have permissions to be participants in the new section.",
+        json_response["error"]
+    end
+  end
+
   test "students cannot be transferred to other soft-deleted teachers" do
     @other_teacher.destroy
 
@@ -222,5 +236,18 @@ class TransfersControllerTest < ActionController::TestCase
 
     post :create, params: @params
     assert_response :forbidden
+  end
+
+  test "returns an error when the new_section will be over it's section capacity" do
+    500.times do
+      create(:follower, section: @picture_section)
+    end
+
+    post :create, params: @params
+    assert_response :forbidden
+    assert_equal(
+      "full",
+      json_response["result"]
+    )
   end
 end

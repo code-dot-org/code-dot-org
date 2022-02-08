@@ -1,18 +1,14 @@
 {
-  "func": "checkbox",
+  "key": "checkbox",
+  "name": "checkbox",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "checked"
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "checked"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "false"
-  ],
-  "dropdown": {
-    "1": [
-      "true",
-      "false"
-    ]
-  }
+  "syntax": "checkbox(id, checked)"
 }

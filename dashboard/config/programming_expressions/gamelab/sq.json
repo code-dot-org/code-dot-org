@@ -1,11 +1,11 @@
 {
-  "func": "sq",
+  "key": "sq",
+  "name": "sq",
   "category": "Math",
-  "paletteParams": [
-    "num"
+  "palette_params": [
+    {
+      "name": "num"
+    }
   ],
-  "params": [
-    "2"
-  ],
-  "type": "value"
+  "syntax": "sq(num)"
 }

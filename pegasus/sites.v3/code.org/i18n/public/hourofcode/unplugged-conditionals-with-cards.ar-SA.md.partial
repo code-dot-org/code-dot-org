@@ -1,0 +1,46 @@
+---
+title: موارد المعلم - متغيرات ببطاقات
+nav: hoc_teacher_resources_nav
+theme: responsive
+video_player: true
+---
+
+# متغيرات ببطاقات: دورة تعليمية لـAn Hour of Code
+
+{{ hoc_unplugged_video }}
+
+[col-50]
+
+## Teacher Resources
+
+### Lesson Plans:
+
+- [متغيرات ببطاقات](/files/ConditionalsHoC.pdf)
+- مقطع فيديو:[كيف تبسط المتغيرات بالبطاقات في فصلك](https://youtu.be/IcEL5ibSvTs)
+
+### أنشطة الامتداد:
+
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+
+### موارد أخرى للمُعلِّم:
+
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+
+[/col-50]
+
+[col-50]
+
+## نظرة عامة
+
+تعلم عن الخوارزميات والعبارات الشرطية في هذا النشاط "غير الموصول" باستخدام حزمة من البطاقات. يقوم الدارسون بهذا النشاط في فرق وكل فريق يحتاج حزمة من البطاقات.
+
+**الفئة العمرية الموصى بها:** 8-12
+
+**متطلبات التكنولوجيا:** لا شيء! يمكن أن يتم تدريس هذا النشاط "غير الموصول" باستخدام حزمة من البطاقات فحسب.
+
+<a href="/files/ConditionalsHoC.pdf"><button>حمِّل هذا النشاط</button></a>
+
+[/col-50]

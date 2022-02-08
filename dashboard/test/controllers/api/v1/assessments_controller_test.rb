@@ -689,4 +689,23 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_equal expected_response[level1.id.to_s]['levelgroup_results'],
       actual_response[level1.id.to_s]['levelgroup_results']
   end
+
+  test "section_feedback assert query count" do
+    sign_in @teacher
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    weblab_level = create :weblab
+    create :script_level, script: script, levels: [weblab_level], lesson: lesson
+
+    [@student_1, @student_2, @student_3, @student_4].each do |student|
+      create :teacher_feedback, script: script, level: weblab_level, student: student, teacher: @teacher
+    end
+
+    assert_queries 13 do
+      get :section_feedback, params: {section_id: @section.id, script_id: script.id}
+    end
+
+    assert_response :success
+  end
 end

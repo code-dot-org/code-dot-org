@@ -9,6 +9,7 @@ import AnimationPreview from './AnimationPreview';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
+const HOVER_PLUS_SIZE = 24;
 
 class AnimationPickerListItem extends React.Component {
   static propTypes = {
@@ -17,66 +18,105 @@ class AnimationPickerListItem extends React.Component {
     label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
-    category: PropTypes.string
+    category: PropTypes.string,
+    selected: PropTypes.bool
   };
 
   state = {
-    loaded: false
+    loaded: false,
+    hover: false
   };
 
   render() {
-    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
+    const {
+      icon,
+      animationProps,
+      category,
+      onClick,
+      playAnimations,
+      label,
+      selected
+    } = this.props;
+    const {loaded, hover} = this.state;
+    const rootStyle = [styles.root, !label && styles.noLabel];
 
     const thumbnailStyle = [
       styles.thumbnail,
-      this.props.icon && styles.thumbnailIcon,
-      this.props.animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
+      icon && styles.thumbnailIcon,
+      animationProps && {
+        display: loaded ? 'block' : 'none'
       }
     ];
 
     const labelStyle = [
       styles.label,
-      this.props.icon && styles.labelIcon,
-      this.props.animationProps && {
-        display: this.state.loaded ? 'block' : 'none'
+      icon && styles.labelIcon,
+      animationProps && {
+        display: loaded ? 'block' : 'none'
       }
     ];
-    const iconImageSrc = this.props.category
-      ? `/blockly/media/p5lab/animation-previews/category_${
-          this.props.category
-        }.png`
+    const iconImageSrc = category
+      ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
       : '';
+
+    const thumbnailStyleWithHover = [
+      thumbnailStyle,
+      hover && styles.multiSelectBorder,
+      hover && styles.hoverBorder,
+      selected && styles.selectBorder
+    ];
+
+    const multiSelectIconClassName = `fa ${
+      selected ? 'fa-check' : 'fa-plus'
+    } fa-2x`;
+    const multiSelectIconStyle = [
+      styles.multiSelectIcon,
+      hover && styles.hoverIcon,
+      selected && styles.selectIcon
+    ];
 
     return (
       <div
         style={rootStyle}
-        onClick={this.props.onClick}
-        className="uitest-animation-picker-item"
+        onFocus={() => this.setState({hover: true})}
+        onBlur={() => this.setState({hover: false})}
+        onMouseEnter={() => this.setState({hover: true})}
+        onMouseLeave={() => this.setState({hover: false})}
       >
-        <div style={thumbnailStyle}>
-          {this.props.animationProps && (
-            <AnimationPreview
-              animationProps={this.props.animationProps}
-              sourceUrl={this.props.animationProps.sourceUrl}
-              width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              playBehavior={
-                !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
-              }
-              onPreviewLoad={() => this.setState({loaded: true})}
+        <button
+          style={thumbnailStyleWithHover}
+          onClick={onClick}
+          className={category}
+          type="button"
+        >
+          <div>
+            {animationProps && (
+              <AnimationPreview
+                animationProps={animationProps}
+                sourceUrl={animationProps.sourceUrl}
+                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
+                onPreviewLoad={() => this.setState({loaded: true})}
+              />
+            )}
+            {icon && <i className={'fa fa-' + icon} />}
+            {category && (
+              <img
+                className={category}
+                style={styles.categoryImage}
+                src={iconImageSrc}
+              />
+            )}
+          </div>
+          {animationProps && loaded && (hover || selected) && (
+            <i
+              className={multiSelectIconClassName}
+              style={multiSelectIconStyle}
             />
           )}
-          {this.props.icon && <i className={'fa fa-' + this.props.icon} />}
-          {this.props.category && (
-            <img
-              className={this.props.category}
-              style={styles.categoryImage}
-              src={iconImageSrc}
-            />
-          )}
-        </div>
-        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
+        </button>
+        {label && <div style={labelStyle}>{label}</div>}
       </div>
     );
   }
@@ -87,19 +127,25 @@ const styles = {
     float: 'left',
     width: THUMBNAIL_SIZE,
     textAlign: 'center',
-    marginRight: 10,
-    marginBottom: 10
+    margin: '1px 1px 10px 1px',
+    position: 'relative',
+    border: 0,
+    paddingRight: 10,
+    outline: 'none'
   },
   thumbnail: {
     height: THUMBNAIL_SIZE,
+    width: '100%',
     borderStyle: 'solid',
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
+    padding: '2px',
     cursor: 'pointer',
-    ':hover': {
-      borderColor: color.purple
-    }
+    background: 'none',
+    boxShadow: 'none',
+    margin: '0px 0px 0px 0px',
+    outline: 'none'
   },
   thumbnailIcon: {
     color: color.white,
@@ -110,11 +156,15 @@ const styles = {
     ':hover': {
       backgroundColor: color.light_purple,
       borderColor: color.light_purple
+    },
+    ':focus': {
+      backgroundColor: color.light_purple,
+      borderColor: color.light_purple
     }
   },
   label: {
     marginTop: 3,
-    fontSize: '90%',
+    fontSize: 12,
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   },
@@ -126,6 +176,42 @@ const styles = {
   },
   categoryImage: {
     borderRadius: 10
+  },
+  multiSelectIcon: {
+    position: 'absolute',
+    borderStyle: 'solid',
+    borderWidth: '2px',
+    fontSize: HOVER_PLUS_SIZE,
+    height: HOVER_PLUS_SIZE,
+    width: HOVER_PLUS_SIZE,
+    borderRadius: 5,
+    top: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2,
+    left: THUMBNAIL_SIZE / 2 - HOVER_PLUS_SIZE / 2
+  },
+  hoverIcon: {
+    color: color.purple,
+    backgroundColor: color.white,
+    borderColor: color.purple
+  },
+  selectIcon: {
+    color: color.white,
+    backgroundColor: color.level_perfect,
+    borderColor: color.level_perfect
+  },
+  multiSelectBorder: {
+    borderStyle: 'solid',
+    borderRadius: 12,
+    cursor: 'pointer',
+    borderWidth: '3px',
+    padding: 0
+  },
+  hoverBorder: {
+    borderColor: color.purple
+  },
+  selectBorder: {
+    borderWidth: '3px',
+    padding: 0,
+    borderColor: color.level_perfect
   }
 };
 

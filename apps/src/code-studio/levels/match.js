@@ -1,7 +1,7 @@
 /* global jQuery, CDOSounds */
 
 import React from 'react';
-import {MatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
 
 jQuery.fn.swap = function(b) {
@@ -82,7 +82,7 @@ export default class Match {
     return {
       response: response,
       result: !wrongAnswer,
-      errorDialog: wrongAnswer ? <MatchErrorDialog /> : null,
+      errorDialog: wrongAnswer ? <LegacyMatchErrorDialog /> : null,
       valid
     };
   }
@@ -158,7 +158,7 @@ export default class Match {
       });
   }
 
-  moveAnswerToSlot(slot, answer) {
+  moveAnswerToSlot(slot, answer, updateSavedAnswer = true) {
     // replace target with this new item
     slot.replaceWith(answer);
 
@@ -180,7 +180,7 @@ export default class Match {
     // Once all answers have been dropped into a slot, let anyone
     // listening know that an answer has been selected.
     if ($(this.container).find('.match_answers .answer').length === 0) {
-      onAnswerChanged(this.levelId, true);
+      onAnswerChanged(this.levelId, updateSavedAnswer);
     }
   }
 
@@ -232,7 +232,7 @@ export default class Match {
         const answer = $(this.container).find(
           `.answer[originalIndex=${originalIndex}]`
         );
-        this.moveAnswerToSlot(slot, answer);
+        this.moveAnswerToSlot(slot, answer, false);
       }
     }
   }

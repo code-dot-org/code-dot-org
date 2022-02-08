@@ -6,86 +6,86 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How-to Guide for Volunteers
-### Make a difference in a classroom today!
+# 志愿者的操作指南
+### 让我们马上让课堂变得不一样！
 
 ***
 
-## Why volunteer?
-Check out some testimony from past volunteers:
+## 为什么做志愿者？
+看看来自以前的志愿者的话：
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “我喜欢看到这些孩子这么兴奋！” One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- “我喜欢看到这些孩子这么兴奋！” 有个让人惊讶的发现是，有的老师发现有些在学习上不是很好的学生却有着和开发者一样的超凡思考能力，而且在帮着其他人学习的过程中找到了自信。
 
-## Anyone can volunteer
-### Volunteers and speakers in tech:
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+## 任何人都可以做志愿者
+### 技术志愿者和演讲者：
+Do you have a connection to CS or tech? 任何在技术公司从事软件工程开发，不论职位（工程师或非工程师），或者是由上过计算机科学课程的人都可以激励我们的学生。 很多学生从没有遇过在科技行业工作的人，我们的老师也乐意让他们班级的学生和专业人士和大学学生联系起来。
 
 You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
 <br>
 <br>
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button>
+<a href="https://code.org/volunteer"><button>马上注册成为科技志愿者</button>
 
 <br>
 <br>
 
 ### Anyone passionate about expanding opportunity:
-Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+Do you believe that learning computer science can open doors of opportunity for students? 在当地课堂里帮忙，或组织课后活动。 无需要深入学习过计算机科学的内容，你也可以主办编程一小时的活动。 而且，仅是提供些帮助，便足以说服你孩子的老师、你的朋友或某个社团来尝试一小时。
 
-### How do you get started?
+### 如何开始？
 
 1. [Send this email]({{ promote/help_schools }}) to your child’s teacher offering to help them run an Hour of Code.
 2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
 
-## Recruit your co-workers to volunteer
-Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
+## 招募你的同事作为志愿者
+把编程一小时告诉给你的朋友和同事们。 成千的老师在寻找志愿者，所以让他们[注册](https://code.org/volunteer)以成为一名志愿者。 亦可邀请你的老板一起参加。 [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
-## How to prepare
+## 如何准备
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
-- Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+- 查阅[编程一小时志愿者工具册](/files/hoc-volunteer-toolkit.pdf)，它含有教程概括，时间准备材料和推广材料。 所有你需要的志愿服务资料都在其中！
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
-- If you're visiting a school, complete any background checks or required paperwork.
-- [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students.
-- Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
-- Connect with the teacher to discuss what you plan to speak about during your session.
-- If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+- 如果你要参观学校，请先完成背景调查或提供其他要求的文件。
+- [阅读这些贴士](https://code.org/files/CSTT_Volunteers.pdf)，了解如何和学生互动。
+- 在脸谱，推特，Instagram和 Tumblr  加入#HourOfCode讨论
+- 和教师探讨你要演讲的内容
+- 如果你是网络远程志愿者，在开始前请测试A/V和屏幕共享的功能。
 
-## Day-of Hour of Code Event
-When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+## 编程一小时活动的一天
+当你将要主持编程一小时活动，请参照以下示范日程安排来帮助指导你的一天。 在开始前，先到学校登记，并和老师打好招呼。 并确认最终的日程安排和讨论要点。
 
-### Sample agenda:
+### 活动安排示例：
 
-| 时长            | Agenda item                                                                                                                                                                                                                                                                                                               |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                      |
-| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>什么/或谁启发你？</li><li>你是如何对计算机科学感兴趣的？</li><li>你有导师吗？</li><li>Share a story about how tech affects everyone.</li><br>问学生提问，并留下学生提问时间</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
-| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. 互相学习是一个很好的学习机会。                         |
-| 1-3 minutes   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                           |
-| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.       |
+| 时长      | 活动内容                                                                                                                                                                                                                                                                                        |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 分钟  | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                        |
+| 5-10 分钟 | Introduce yourself and learn more about the students: </ul><li>你的工作，具体做什么和你最喜欢你工作的那方面。</li><li>什么/或谁启发你？</li><li>你是如何对计算机科学感兴趣的？</li><li>你有导师吗？</li><li>分享一个技术如何影响每个人的故事。</li><br>问学生提问，并留下学生提问时间</br> <li> 他们对什么工作感兴趣？他们主喜欢的科技产品或应用程序时什么？以及他们认为这些东西是怎么制作的？ </li><li> 学生们有什么问题要问你吗？</ul> |
+| 30-60分钟 | **Code!** Walk around, answer questions, and guide them through tough puzzles. 尽量不要马上给学生答案。试着问他们问题，这样他们自己可以回答哪里出错了，并鼓励学生相互间问问题。  互相学习是一个很好的学习机会。                                                                                                                                            |
+| 1-3 分钟  | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                             |
+| 之后      | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! 和老师一起到[code.org/yourschool](https://code.org/yourschool)  上填写现在这家学校教什么，并鼓励他们保证把计算机科学带到他们的课程里。                                                                            |
 
-### After the Event:
-- Share your photos and stories with Code.org at giving@code.org.
-- Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
-- Share about your experience on social media #HourOfCode!
+### 活动结束后：
+- @code.org 和Code.org 分享你的相片和故事。
+- 记得在你们公司志愿者追踪登记上记录下你做志愿的时长。
+- 在社交媒体 #HourOfCode! 上分享你的经历。
 - If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
-- And, check back in a month: Is the teacher interested in offering a computer science course? Share [resources and professional learning opportunities to help them do this](https://code.org/yourschool).
+- 并且，在一个月后跟进：看老师是否有兴趣提供计算机科学课程？ 分享[资源和专业学习机会来帮他们达成这项目标。](https://code.org/yourschool)
 
-## How you get selected as a technical volunteer of guest speaker
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Try to make your profile as complete as possible to increase the chance that a teacher will select you.
-- A teacher will contact you through this form (your email address will never be shared with the teacher). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
+## 如何被选为特邀客座演讲的技术志愿者
+- 老师们会在我们[志愿者地图](https://code.org/volunteer/local)上寻找志愿者。
+- 尽量完善你的个人资料, 这样可以增加教师选择你的机会。
+- 老师将会通过这种形式联系你 (你的电子邮件地址将不会被透露给老师)。 *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
-## Volunteering during the Hour of Code FAQ
+## 在编程一小时活动中做志愿服务时的常见问题
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+尝试搜索当地学校，打电话给校长/老师/前台，询问你可以如何带来帮助。
 
-### How long do classroom visits last for?
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+### 课堂访问持续多长时间？
+面对面课堂访问通常为60-90分钟，而网络课堂通常为20-30分钟。
 
-### What age group is the Hour of Code activity appropriate for?
+### 编程一小时活动适合哪个年龄段？
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

@@ -19,7 +19,7 @@ import {createStore, combineReducers} from 'redux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
@@ -49,7 +49,7 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
       progress,
       sectionData,
       sectionProgress,
-      scriptSelection,
+      unitSelection,
       locales
     }),
     _.merge({}, initialState, overrideState)
@@ -95,14 +95,6 @@ describe('ProgressTableView', () => {
 
     expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.be
       .false;
-  });
-
-  it('passes showSectionProgressDetails down to ProgressTableStudentList', () => {
-    const overrideState = {sectionProgress: {showSectionProgressDetails: true}};
-    const wrapper = setUp(ViewType.SUMMARY, overrideState);
-    expect(
-      wrapper.find(ProgressTableStudentList).props().showSectionProgressDetails
-    ).to.be.true;
   });
 
   describe('summary view', () => {
@@ -175,6 +167,12 @@ describe('ProgressTableView', () => {
     it('renders the ProgressLegend', () => {
       const wrapper = setUp(ViewType.DETAIL);
       expect(wrapper.find(ProgressLegend)).to.have.length(1);
+    });
+
+    it('passes `includeReviewStates` to ProgressLegend when unit is CSD', () => {
+      const wrapper = setUp(ViewType.DETAIL);
+      expect(wrapper.find(ProgressLegend).props().includeReviewStates).to.be
+        .true;
     });
 
     it('renders ProgressTableDetailCells', () => {

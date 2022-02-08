@@ -2,25 +2,38 @@
   "script": {
     "name": "coursee-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
       "hideable_lessons": true,
-      "project_widget_visible": true,
+      "is_course": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "lesson_extras_available": true,
-      "version_year": "2021",
-      "curriculum_umbrella": "CSF",
-      "is_course": true,
-      "is_migrated": true,
-      "has_lesson_plan": true
+      "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU"
+      ],
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-05-26 18:27:03 UTC",
+    "serialized_at": "2022-01-20 17:44:09 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -182,9 +195,9 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-ND",
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
         "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare colored pencils or markers for students.",
-        "purpose": "Common Sense Education created this lesson to teach students how they can be upstanders when they see cyberbullying.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.",
         "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
         "unplugged": true
       },
@@ -203,9 +216,9 @@
       "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-ND",
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nIt's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.",
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nIt's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.",
-        "purpose": "Common Sense Education created this lesson to teach students what information about them is OK to share online.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Privacy and Security. Students learn how to protect personal information and gain a deeper understanding of their data privacy rights so they can advocate for themselves and others.",
         "student_overview": "The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.",
         "unplugged": true
       },
@@ -1907,7 +1920,7 @@
       "key": "fe0cef4a-d3fd-446e-9874-8270ccda6a52",
       "position": 1,
       "properties": {
-        "description": "* **cyberbullying**: using digital devices, sites, and apps to intimidate, harm, and upset someone\n* **digital citizen**: someone who uses technology responsibly to learn, create, and participate\n* **upstander**: a person who supports and stands up for someone else\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _Do you have a favorite superhero? If so, who is it and why? If not, why not? Take turns sharing with your partner._ ([Slide 4](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_16))\n\nInvite students to share out. Follow up by asking students to name specific super powers from their favorite superhero. Point out that one thing that all superheroes have in common is that they use their powers to help other people.\n\n**Say**: _Today we're going to talk about how we can all be superheroes and help others. We're going to watch a video about being super digital citizens. As we watch, think about the question, \"What does a super digital citizen do?\"_\n\n**Show** the video [Super Digital Citizen](https://www.commonsense.org/education/videos/super-digital-citizen) on [Slide 5](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_18).\n\n**Invite** students to share out their responses. Their answers should be based on what the Super Digital Citizen helps Guts do:\n\n* _Changes his password to be secure._\n* _Protects his tablet with a case and carries it in his backpack so that it won't break._\n* _Asks permission from Heart first before sharing a photo of her online._\n\n**Ask**: _You might have noticed that Guts became a superhero too. How did he do that?_\n\nInvite students to respond. Explain that Guts became a superhero because he took steps to help himself and others be responsible online. Define **digital citizen** as _someone who uses technology responsibly to learn, create, and participate._ ([Slide 6](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_30))",
+        "description": "* **cyberbullying**: using digital devices, sites, and apps to intimidate, harm, and upset someone\n* **digital citizen**: someone who uses technology responsibly to learn, create, and participate\n* **upstander**: a person who supports and stands up for someone else\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _Do you have a favorite superhero? If so, who is it and why? If not, why not? Take turns sharing with your partner._ ([Slide 4](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3e441b4e86_1_16))\n\nInvite students to share out. Follow up by asking students to name specific super powers from their favorite superhero. Point out that one thing that all superheroes have in common is that they use their powers to help other people.\n\n**Say**: _Today we're going to talk about how we can all be superheroes and help others. We're going to watch a video about being super digital citizens. As we watch, think about the question, \"What does a super digital citizen do?\"_\n\n**Show** the video [Super Digital Citizen](https://www.commonsense.org/education/videos/super-digital-citizen) on [Slide 5](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_18).\n\n**Invite** students to share out their responses. Their answers should be based on what the Super Digital Citizen helps Guts do:\n\n* _Changes his password to be secure._\n* _Protects his tablet with a case and carries it in his backpack so that it won't break._\n* _Asks permission from Heart first before sharing a photo of her online._\n\n**Ask**: _You might have noticed that Guts became a superhero too. How did he do that?_\n\nInvite students to respond. Explain that Guts became a superhero because he took steps to help himself and others be responsible online. Define **digital citizen** as _someone who uses technology responsibly to learn, create, and participate._ ([Slide 6](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_30))",
         "name": "Key Vocabulary"
       },
       "seeding_key": {
@@ -1919,7 +1932,7 @@
       "key": "7e360811-1e9b-4495-b285-e2c0f955383a",
       "position": 1,
       "properties": {
-        "description": "**Say**: _One situation a super digital citizen might see online is cyberbullying. **Cyberbullying** is when someone uses digital devices, sites, or apps to intimidate, harm, or upset someone._ ([Slide 7](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_43))\n\nExplain that cyberbullying can take many forms, including:\n\n* Someone making fun of or pressuring someone else repeatedly\n* Comments, memes, private messages, or chatting\n* The person being bullied not knowing everyone who's doing the bullying (as people can hide their identity online)\n* A group of people ganging up on someone\n\n**Ask**: _So if you saw someone being cyberbullied, what's something you could do to stop it? Take turns sharing with your partner._\n\nInvite students to respond. Point out three ways that cyberbullying can be addressed:\n\n* Defending or supporting the person being bullied\n* Telling a trusted adult\n* Addressing it directly with the bully\n\n**Explain** to students that doing any of these things makes you an upstander. An **upstander** is _a person who supports and stands up for someone else._ ([Slide 8](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_124))\n\n**Distribute** the [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) to each student and have a student read the directions for Part 1 aloud. Allow students five minutes to complete the activity. ([Slide 9](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_0_0))"
+        "description": "**Say**: _One situation a super digital citizen might see online is cyberbullying. **Cyberbullying** is when someone uses digital devices, sites, or apps to intimidate, harm, or upset someone._ ([Slide 7](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3e441b4e86_1_43))\n\nExplain that cyberbullying can take many forms, including:\n\n* Someone making fun of or pressuring someone else repeatedly\n* Comments, memes, private messages, or chatting\n* The person being bullied not knowing everyone who's doing the bullying (as people can hide their identity online)\n* A group of people ganging up on someone\n\n**Ask**: _So if you saw someone being cyberbullied, what's something you could do to stop it? Take turns sharing with your partner._\n\nInvite students to respond. Point out three ways that cyberbullying can be addressed:\n\n* Defending or supporting the person being bullied\n* Telling a trusted adult\n* Addressing it directly with the bully\n\n**Explain** to students that doing any of these things makes you an upstander. An **upstander** is _a person who supports and stands up for someone else._ ([Slide 8](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3d894fa21b_0_124))\n\n**Distribute** the [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) to each student and have a student read the directions for Part 1 aloud. Allow students five minutes to complete the activity. ([Slide 9](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3dbf0be0a2_0_0))"
       },
       "seeding_key": {
         "activity_section.key": "7e360811-1e9b-4495-b285-e2c0f955383a",
@@ -1930,7 +1943,7 @@
       "key": "f5c5daf1-2eb7-48dc-900b-5a97b914ac0b",
       "position": 1,
       "properties": {
-        "description": "**Distribute** colored pencils or markers and tell students: _You're going to create your own digital citizen superhero, who will help people like Guts to become super digital citizens._\n\n**Distribute** the [Digital Citizen Superhero Student Handout](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) and read the directions aloud. ([Slide 10](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g410938bbc1_132_0))\n\n**Optional**: Have students use [Marvel's Create Your Own Superhero](https://www.marvelhq.com/create-your-own-super-hero), save the image, and paste the image into the handout.\n\n**Allow** students 10 minutes to work on their superheroes. If time permits, have students share out their superheroes with the class, or have them on display for a gallery walk."
+        "description": "**Distribute** colored pencils or markers and tell students: _You're going to create your own digital citizen superhero, who will help people like Guts to become super digital citizens._\n\n**Distribute** the [Digital Citizen Superhero Student Handout](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) and read the directions aloud. ([Slide 10](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g410938bbc1_132_0))\n\n**Optional**: Have students use [Marvel's Create Your Own Superhero](https://www.marvelhq.com/create-your-own-super-hero), save the image, and paste the image into the handout.\n\n**Allow** students 10 minutes to work on their superheroes. If time permits, have students share out their superheroes with the class, or have them on display for a gallery walk."
       },
       "seeding_key": {
         "activity_section.key": "f5c5daf1-2eb7-48dc-900b-5a97b914ac0b",
@@ -1941,7 +1954,7 @@
       "key": "b9be51e8-d7f3-4be9-977b-de93c09c9a67",
       "position": 1,
       "properties": {
-        "description": "**Have** students go back to their [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) and go to Part 2. Have a student read the directions aloud before students create their comic strip stories. ([Slide 11](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_1_0))\n\n**Optional**: Have students use a digital comic creation tool. See our recommendations: [Classroom-Friendly Websites and Apps for Making Comics](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
+        "description": "**Have** students go back to their [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) and go to Part 2. Have a student read the directions aloud before students create their comic strip stories. ([Slide 11](https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit#slide=id.g3dbf0be0a2_1_0))\n\n**Optional**: Have students use a digital comic creation tool. See our recommendations: [Classroom-Friendly Websites and Apps for Making Comics](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
       },
       "seeding_key": {
         "activity_section.key": "b9be51e8-d7f3-4be9-977b-de93c09c9a67",
@@ -1974,7 +1987,7 @@
       "key": "bec84680-216c-4711-b91f-5b37260fd598",
       "position": 1,
       "properties": {
-        "description": "* **hardwired**: something you are born with\r\n* **personal information**: information about you that cannot be used to identify you because it is also true for many other people (e.g. your hair color or the city you live in)\r\n* **private information**: information about you that can be used to identify you because it is unique to you (e.g. your full name or your address)\r\n* **register (online)**: to enter your information in order to sign up and get access to a website or app\r\n\r\n**Before the lesson**: As an optional activity before the lesson, have students play the [Share Jumper](https://www.digitalpassport.org/share-jumper.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\r\n\r\n**Say**: _Today we're going to start with a little game. For each statement that I read, if it is true about you, stand up. If it isn't true, stay seated. After each statement, look around to see who else is standing or sitting._ ([Slide 4](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_283))\r\n\r\n**Read** the statements below to your class, allowing time for students to stand or sit after each one. Prompt all students to sit back down before moving on to the next statement.\r\n\r\n* _Stand up if you or your family speak another language besides English._\r\n* _Stand up if you have two or more siblings._\r\n* _Stand up if you have a pet._\r\n* _Stand up if you have ever been on YouTube._\r\n* _Stand up if you have ever shared something about yourself online._\r\n \r\n**Have** students all sit back down and ask: _What did you learn from doing that activity? Did you enjoy it? Why or why not?_\r\n\r\nInvite volunteers to share out. If necessary, follow up with students who share by asking to explain what they found fun or not fun about it.\r\n\r\n**Say**: _The purpose of that activity was to have some fun getting to know each other better. There are many situations where sharing information about yourself can be fun and positive. One of those situations is on the internet, where sharing your likes, opinions, and other personal information -- but not private information -- can be positive and fun._",
+        "description": "* **hardwired**: something you are born with\n* **personal information**: information about you that cannot be used to identify you because it is also true for many other people (e.g. your hair color or the city you live in)\n* **private information**: information about you that can be used to identify you because it is unique to you (e.g. your full name or your address)\n* **register (online)**: to enter your information in order to sign up and get access to a website or app\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [Share Jumper](https://www.digitalpassport.org/share-jumper.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Say**: _Today we're going to start with a little game. For each statement that I read, if it is true about you, stand up. If it isn't true, stay seated. After each statement, look around to see who else is standing or sitting._ ([Slide 4](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_283))\n\n**Read** the statements below to your class, allowing time for students to stand or sit after each one. Prompt all students to sit back down before moving on to the next statement.\n\n* _Stand up if you or your family speak another language besides English._\n* _Stand up if you have two or more siblings._\n* _Stand up if you have a pet._\n* _Stand up if you have ever been on YouTube._\n* _Stand up if you have ever shared something about yourself online._\n \n**Have** students all sit back down and ask: _What did you learn from doing that activity? Did you enjoy it? Why or why not?_\n\nInvite volunteers to share out. If necessary, follow up with students who share by asking to explain what they found fun or not fun about it.\n\n**Say**: _The purpose of that activity was to have some fun getting to know each other better. There are many situations where sharing information about yourself can be fun and positive. One of those situations is on the internet, where sharing your likes, opinions, and other personal information -- but not private information -- can be positive and fun._",
         "name": "Key Vocabulary\r"
       },
       "seeding_key": {
@@ -1986,7 +1999,7 @@
       "key": "d27c13c6-7296-49ce-a80c-b1a33cd4f57a",
       "position": 1,
       "properties": {
-        "description": "**Say**: _In today's lesson, we're going to talk about being online -- and ways that you can share things about yourself that are fun and that connect you with others. We're also going to talk about ways that you can protect yourself so that you don't share more than you should._\r\n\r\n**Project** \"Did You Know?\" on [Slide 5](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_93).\r\n\r\n**Ask**: _What do you observe in this slide? What's the main idea it's trying to show? Share your ideas with your partner._\r\n\r\nInvite students to share their responses. If necessary, clarify the meaning of **hardwired** as _something you're born with_, that sharing is something humans do naturally, and that there are many benefits to it.\r\n\r\n**Say**: _What is something about you that you might share with others that would give you one of these benefits? Take turns sharing your idea with your partner._\r\n\r\nInvite students to share out their answers. Follow up by asking them to explain which benefit the example would give them (feel good, learn, connect, or persuade). If the student isn't sure, open it up to the rest of the class. Examples may connect to more than one benefit."
+        "description": "**Say**: _In today's lesson, we're going to talk about being online -- and ways that you can share things about yourself that are fun and that connect you with others. We're also going to talk about ways that you can protect yourself so that you don't share more than you should._\n\n**Project** \"Did You Know?\" on [Slide 5](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_93).\n\n**Ask**: _What do you observe in this slide? What's the main idea it's trying to show? Share your ideas with your partner._\n\nInvite students to share their responses. If necessary, clarify the meaning of **hardwired** as _something you're born with_, that sharing is something humans do naturally, and that there are many benefits to it.\n\n**Say**: _What is something about you that you might share with others that would give you one of these benefits? Take turns sharing your idea with your partner._\n\nInvite students to share out their answers. Follow up by asking them to explain which benefit the example would give them (feel good, learn, connect, or persuade). If the student isn't sure, open it up to the rest of the class. Examples may connect to more than one benefit."
       },
       "seeding_key": {
         "activity_section.key": "d27c13c6-7296-49ce-a80c-b1a33cd4f57a",
@@ -1997,7 +2010,7 @@
       "key": "5fdf93a4-2be8-4e07-9b54-85fd0daa04ce",
       "position": 1,
       "properties": {
-        "description": "**Say**: _So there are lots of reasons to share information about yourself. However, not everything about you is OK to share. We're going to watch a short video about sharing online. As we watch, think about what information is OK to share and what isn't._\r\n\r\n**Project** [Slide 6](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3ed1f0b992_10_0) and show the video **Private and Personal Information**. After the video, invite students to respond to the discussion question and prompt them to give examples of private and personal information. Clarify that **private information** is the most risky to share because it can be used to identify you individually. ([Slide 7](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_376))\r\n\r\n**Say**: _Now, we're going to play another little game. For each example that I say, discuss with your partner whether it is private or personal. To decide, ask yourself, \"Is this information that would also be true for many other people?\" If so, it is personal. If not, it is private._ ([Slide 8](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_501))\r\n\r\nRead aloud the first example, \"Age.\" Remind students to consider whether this is information that would be true of many others. If it is, then it is personal. If not, it is private. Give students one minute to discuss and decide.\r\n\r\n**Say**: _If you think this is private information, stand up. If you think it is personal, stay seated._\r\n\r\nAfter students stand or stay seated, invite students to explain why they chose the answer they did. Follow up by prompting them to refer back to the definitions of private and personal. If necessary, help students clarify that there are many people (in their school, in their city, even in the class) who are the same age as them.\r\n\r\n**Say**: _Everyone who is still seated, you are correct! This information is personal, not private._\r\n\r\nRepeat the game above for each of the examples:\r\n\r\n* home address (**private**)\r\n* email address (**private**)\r\n* date of birth (**private**)\r\n* favorite music (**personal**)\r\n* how many brothers and sisters you have (**personal**)\r\n* phone numbers (**private**)\r\n* credit card information (**private**)\r\n* favorite food (**personal**)\r\n* name of your pet (**personal**)\r\n* name of your school (**private**) (Explain that although school name is something that is true for many people, it is risky to share it with someone you don't know, and you should get permission from a trusted adult first.)"
+        "description": "**Say**: _So there are lots of reasons to share information about yourself. However, not everything about you is OK to share. We're going to watch a short video about sharing online. As we watch, think about what information is OK to share and what isn't._\n\n**Project** [Slide 6](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3ed1f0b992_10_0) and show the video **Private and Personal Information**. After the video, invite students to respond to the discussion question and prompt them to give examples of private and personal information. Clarify that **private information** is the most risky to share because it can be used to identify you individually. ([Slide 7](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_376))\n\n**Say**: _Now, we're going to play another little game. For each example that I say, discuss with your partner whether it is private or personal. To decide, ask yourself, \"Is this information that would also be true for many other people?\" If so, it is personal. If not, it is private._ ([Slide 8](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_501))\n\nRead aloud the first example, \"Age.\" Remind students to consider whether this is information that would be true of many others. If it is, then it is personal. If not, it is private. Give students one minute to discuss and decide.\n\n**Say**: _If you think this is private information, stand up. If you think it is personal, stay seated._\n\nAfter students stand or stay seated, invite students to explain why they chose the answer they did. Follow up by prompting them to refer back to the definitions of private and personal. If necessary, help students clarify that there are many people (in their school, in their city, even in the class) who are the same age as them.\n\n**Say**: _Everyone who is still seated, you are correct! This information is personal, not private._\n\nRepeat the game above for each of the examples:\n\n* home address (**private**)\n* email address (**private**)\n* date of birth (**private**)\n* favorite music (**personal**)\n* how many brothers and sisters you have (**personal**)\n* phone numbers (**private**)\n* credit card information (**private**)\n* favorite food (**personal**)\n* name of your pet (**personal**)\n* name of your school (**private**) (Explain that although school name is something that is true for many people, it is risky to share it with someone you don't know, and you should get permission from a trusted adult first.)"
       },
       "seeding_key": {
         "activity_section.key": "5fdf93a4-2be8-4e07-9b54-85fd0daa04ce",
@@ -2008,7 +2021,7 @@
       "key": "9f4ae2e6-eed6-4ef0-902f-7034d56a22bd",
       "position": 1,
       "properties": {
-        "description": "**Distribute** the [Exit Ticket Student Handout](https://drive.google.com/open?id=1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA) to students.\r\n\r\n**Say**: _To close out, you're going to complete two short reflection questions about what we learned today. You'll have five minutes to write._ ([Slide 9](https://docs.google.com/presentation/d/1P0Tx1SFou3XvAfgiL_JzNIv329degBTvO0APtk2vg3w/edit#slide=id.g3c5590bcca_0_594))\r\n\r\n**Give** students five minutes to write their reflection. Invite volunteers to share with the class.\r\n\r\n**Collect** everyone's handout before they leave to assess their understanding of private versus personal information.\r\n\r\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/u/2/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy)."
+        "description": "**Distribute** the [Exit Ticket Student Handout](https://drive.google.com/open?id=1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA) to students.\n\n**Say**: _To close out, you're going to complete two short reflection questions about what we learned today. You'll have five minutes to write._ ([Slide 9](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_594))\n\n**Give** students five minutes to write their reflection. Invite volunteers to share with the class.\n\n**Collect** everyone's handout before they leave to assess their understanding of private versus personal information.\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/u/2/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy)."
       },
       "seeding_key": {
         "activity_section.key": "9f4ae2e6-eed6-4ef0-902f-7034d56a22bd",
@@ -3666,7 +3679,6 @@
         ],
         "progression": "Follow the Algorithm - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3692,7 +3704,6 @@
         ],
         "progression": "Video: Introducing Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3718,7 +3729,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3744,7 +3754,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3770,7 +3779,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3796,7 +3804,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3822,7 +3829,6 @@
         ],
         "progression": "Video: How to Make a Sprite"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3848,7 +3854,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3874,7 +3879,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3900,7 +3904,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3926,7 +3929,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3952,7 +3954,6 @@
         ],
         "progression": "Video: Sprites in Action"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3978,7 +3979,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4004,7 +4004,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4030,7 +4029,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4056,7 +4054,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4082,7 +4079,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4108,7 +4104,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4134,7 +4129,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4160,7 +4154,6 @@
         ],
         "progression": "Be a Super Digital Citizen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4185,7 +4178,6 @@
           "PrivatePersonalInformation-Unplugged_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4211,7 +4203,6 @@
         ],
         "progression": "Exploration: Rikki's Poster"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4237,7 +4228,6 @@
         ],
         "progression": "Mini-Project: About Me"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4263,7 +4253,6 @@
         ],
         "progression": "Mini-Project: About Me"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4289,7 +4278,6 @@
         ],
         "progression": "Mini-Project: About Me"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4315,7 +4303,6 @@
         ],
         "progression": "Mini-Project: About Me"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4341,7 +4328,6 @@
         ],
         "progression": "Mini-Project: About Me"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4367,7 +4353,6 @@
         ],
         "progression": "Digital Sharing - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4393,7 +4378,6 @@
         ],
         "progression": "Video: Artist Intro with JR Hildebrande"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4419,7 +4403,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4445,7 +4428,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4471,7 +4453,6 @@
         ],
         "progression": "Video: Loops with the Artist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4497,7 +4478,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4523,7 +4503,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4550,7 +4529,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4576,7 +4554,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4602,7 +4579,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4628,7 +4604,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4655,7 +4630,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4681,7 +4655,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4707,7 +4680,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4733,7 +4705,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4759,7 +4730,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4785,7 +4755,6 @@
         ],
         "progression": "Video: Nested Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4811,7 +4780,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4837,7 +4805,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4863,7 +4830,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4889,7 +4855,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4915,7 +4880,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4941,7 +4905,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4968,7 +4931,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4994,7 +4956,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5020,7 +4981,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5046,7 +5006,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5072,7 +5031,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5098,7 +5056,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5124,7 +5081,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5150,7 +5106,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5176,7 +5131,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5202,7 +5156,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5228,7 +5181,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5254,7 +5206,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5280,7 +5231,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5306,7 +5256,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5332,7 +5281,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5358,7 +5306,6 @@
         ],
         "progression": "Songwriting - Functions Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5384,7 +5331,6 @@
         ],
         "progression": "Video: Minecraft - The Agent"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5410,7 +5356,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5436,7 +5381,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5462,7 +5406,6 @@
         ],
         "progression": "Video: Minecraft - Repeat Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5488,7 +5431,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5514,7 +5456,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5540,7 +5481,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5566,7 +5506,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5592,7 +5531,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5618,7 +5556,6 @@
         ],
         "progression": "Video: Minecraft - Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5644,7 +5581,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5670,7 +5606,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5696,7 +5631,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5722,7 +5656,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5748,7 +5681,6 @@
         ],
         "progression": "Video: Minecraft - Congratulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5774,7 +5706,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5800,7 +5731,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5826,7 +5756,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5852,7 +5781,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5878,7 +5806,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5904,7 +5831,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5930,7 +5856,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5956,7 +5881,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5982,7 +5906,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6008,7 +5931,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6035,7 +5957,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6061,7 +5982,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6087,7 +6007,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6113,7 +6032,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6139,7 +6057,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6165,7 +6082,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6191,7 +6107,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6217,7 +6132,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6243,7 +6157,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6269,7 +6182,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6295,7 +6207,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6321,7 +6232,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6347,7 +6257,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6373,7 +6282,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6399,7 +6307,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6425,7 +6332,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6451,7 +6357,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6477,7 +6382,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6503,7 +6407,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6529,7 +6432,6 @@
         ],
         "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6555,7 +6457,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6581,7 +6482,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6607,7 +6507,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6633,7 +6532,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6659,7 +6557,6 @@
         ],
         "progression": "Video: While Loops with the Farmer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6685,7 +6582,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6711,7 +6607,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6737,7 +6632,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6763,7 +6657,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6789,7 +6682,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6815,7 +6707,6 @@
         ],
         "progression": "Video: Repeat Until Blocks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6841,7 +6732,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6867,7 +6757,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6893,7 +6782,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6919,7 +6807,6 @@
         ],
         "progression": "Video: \"If/Else\""
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6946,7 +6833,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6972,7 +6858,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6998,7 +6883,6 @@
         ],
         "progression": "Video: The Harvester"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7024,7 +6908,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7050,7 +6933,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7076,7 +6958,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7102,7 +6983,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7128,7 +7008,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7154,7 +7033,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7180,7 +7058,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7206,7 +7083,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7232,7 +7108,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7259,7 +7134,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7285,7 +7159,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7311,7 +7184,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7337,7 +7209,6 @@
         ],
         "progression": "Designing for Accessibility"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7363,7 +7234,6 @@
         ],
         "progression": "Example Projects"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7389,7 +7259,6 @@
         ],
         "progression": "Create your project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9141,8 +9010,8 @@
       "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
       "key": "2021_change_log",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "2021_change_log"
@@ -9153,8 +9022,8 @@
       "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
       "key": "72_creative_ways_for_your_students_to_show_what_they_know",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "72_creative_ways_for_your_students_to_show_what_they_know"
@@ -9165,9 +9034,9 @@
       "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
       "key": "about_me_planning_guide",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "about_me_planning_guide"
@@ -9178,8 +9047,8 @@
       "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
       "key": "assessment-answer-songwriting",
       "properties": {
-        "type": "Assessment Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Assessment Answer Key"
       },
       "seeding_key": {
         "resource.key": "assessment-answer-songwriting"
@@ -9201,8 +9070,8 @@
       "url": "https://www.commonsense.org/education/videos/super-digital-citizen",
       "key": "be_a_super_digital_citizen_super_digital_citizen",
       "properties": {
-        "download_url": "https://www.commonsense.org/education/video-download/4141361",
-        "audience": "Student"
+        "audience": "Student",
+        "download_url": "https://www.commonsense.org/education/video-download/4141361"
       },
       "seeding_key": {
         "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
@@ -9213,8 +9082,8 @@
       "url": "https://youtu.be/X_duZ-1LApg",
       "key": "common-sense-media-pause-think",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "common-sense-media-pause-think"
@@ -9225,8 +9094,8 @@
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
       "key": "common_core_and_ngss_guidance",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "common_core_and_ngss_guidance"
@@ -9237,8 +9106,8 @@
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
       "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Manipulatives"
       },
       "seeding_key": {
         "resource.key": "course-cf-blockly-blocks"
@@ -9249,8 +9118,8 @@
       "url": "https://studio.code.org/s/coursee-2021/vocab",
       "key": "course_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -9261,8 +9130,8 @@
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "cross-curricular_extension_activities"
@@ -9273,9 +9142,9 @@
       "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
       "key": "csf-songwriting-assessment",
       "properties": {
-        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment"
       },
       "seeding_key": {
         "resource.key": "csf-songwriting-assessment"
@@ -9286,9 +9155,9 @@
       "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit",
       "key": "csf-songwriting-worksheets",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "csf-songwriting-worksheets"
@@ -9299,9 +9168,9 @@
       "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
       "key": "csf-turns-angles-doc",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "csf-turns-angles-doc"
@@ -9312,8 +9181,8 @@
       "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
       "key": "csf-turns-angles-video",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "csf-turns-angles-video"
@@ -9324,8 +9193,8 @@
       "url": "https://studio.code.org/s/coursee-2021/standards",
       "key": "csta_standards_mapping",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csta_standards_mapping"
@@ -9336,8 +9205,8 @@
       "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide_1"
@@ -9348,8 +9217,8 @@
       "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
       "key": "debugging_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "debugging_guide"
@@ -9360,9 +9229,9 @@
       "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
       "key": "design-process",
       "properties": {
-        "type": "Teacher Prep Guide",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Teacher Prep Guide"
       },
       "seeding_key": {
         "resource.key": "design-process"
@@ -9373,8 +9242,8 @@
       "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
       "key": "designing_for_accessibility_1",
       "properties": {
-        "type": "Slides",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "designing_for_accessibility_1"
@@ -9397,8 +9266,8 @@
       "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
       "key": "digital-sharing-video",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "digital-sharing-video"
@@ -9409,9 +9278,9 @@
       "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit",
       "key": "end-of-course-project-guide",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "end-of-course-project-guide"
@@ -9422,8 +9291,8 @@
       "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
       "key": "follow_the_algorithm",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "follow_the_algorithm"
@@ -9434,8 +9303,8 @@
       "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
       "key": "implementation_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
@@ -9446,8 +9315,8 @@
       "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
       "key": "lesson-in-action-songwriting",
       "properties": {
-        "type": "Lesson in Action Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Lesson in Action Video"
       },
       "seeding_key": {
         "resource.key": "lesson-in-action-songwriting"
@@ -9458,8 +9327,8 @@
       "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
       "key": "lesson_type_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
@@ -9470,9 +9339,9 @@
       "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
       "key": "private-and-personal-information-exit-ticket",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "private-and-personal-information-exit-ticket"
@@ -9483,8 +9352,8 @@
       "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
       "key": "private-and-personal-information-lesson-quiz",
       "properties": {
-        "type": "Form",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Form"
       },
       "seeding_key": {
         "resource.key": "private-and-personal-information-lesson-quiz"
@@ -9495,8 +9364,8 @@
       "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
       "key": "private-and-personal-information-lesson-quiz-answer-key",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "private-and-personal-information-lesson-quiz-answer-key"
@@ -9507,8 +9376,8 @@
       "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
       "key": "private-and-personal-information-lesson-slides",
       "properties": {
-        "type": "Slide Deck",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slide Deck"
       },
       "seeding_key": {
         "resource.key": "private-and-personal-information-lesson-slides"
@@ -9519,9 +9388,9 @@
       "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
       "key": "private-and-personal-information-private-and-personal-information",
       "properties": {
-        "type": "Student Video",
         "audience": "Student",
-        "download_url": "https://www.commonsense.org/education/video-download/4654856"
+        "download_url": "https://www.commonsense.org/education/video-download/4654856",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "private-and-personal-information-private-and-personal-information"
@@ -9532,8 +9401,8 @@
       "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
       "key": "rubric-csf-final-projects",
       "properties": {
-        "type": "Rubric",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "rubric-csf-final-projects"
@@ -9544,8 +9413,8 @@
       "url": "https://studio.code.org/docs/spritelab/",
       "key": "sprite_lab_documentation",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
@@ -9567,8 +9436,8 @@
       "url": "https://studio.code.org/levels/18623",
       "key": "swimming-fish-teacher-sandbox",
       "properties": {
-        "type": "Programming Level",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Programming Level"
       },
       "seeding_key": {
         "resource.key": "swimming-fish-teacher-sandbox"
@@ -9579,8 +9448,8 @@
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
@@ -9591,8 +9460,8 @@
       "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
       "key": "types_of_disabilities",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "types_of_disabilities"
@@ -9603,80 +9472,32 @@
       "url": "https://youtu.be/5iDCKkI6y2Y",
       "key": "unplugged-video-songwriting-functions",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C3-songwriting-with-parameters.mp4"
+        "download_url": "http://videos.code.org/2014/C3-songwriting-with-parameters.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-songwriting-functions"
+      }
+    },
+    {
+      "name": "Virtual Lesson Modifications",
+      "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit",
+      "key": "virtual_lesson_modifications",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications"
       }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Simon Says",
-        "resource.key": "follow_the_algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "resource.key": "swimming-fish-teacher-sandbox"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "be_a_super_digital_citizen_lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "resource.key": "private-and-personal-information-lesson-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "resource.key": "private-and-personal-information-private-and-personal-information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "resource.key": "private-and-personal-information-exit-ticket"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "resource.key": "private-and-personal-information-lesson-quiz"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "resource.key": "private-and-personal-information-lesson-quiz-answer-key"
+        "lesson.key": "About Me",
+        "resource.key": "about_me_planning_guide"
       }
     },
     {
@@ -9688,13 +9509,19 @@
     {
       "seeding_key": {
         "lesson.key": "About Me",
-        "resource.key": "about_me_planning_guide"
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "About Me",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -9707,6 +9534,84 @@
       "seeding_key": {
         "lesson.key": "Digital Sharing",
         "resource.key": "digital-sharing-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "72_creative_ways_for_your_students_to_show_what_they_know"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "design-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "end-of-course-project-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "rubric-csf-final-projects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "resource.key": "assessment-answer-songwriting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "resource.key": "csf-songwriting-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "resource.key": "csf-songwriting-worksheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "resource.key": "lesson-in-action-songwriting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "resource.key": "unplugged-video-songwriting-functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "resource.key": "swimming-fish-teacher-sandbox"
       }
     },
     {
@@ -9729,50 +9634,38 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "resource.key": "unplugged-video-songwriting-functions"
+        "lesson.key": "Private and Personal Information",
+        "resource.key": "private-and-personal-information-exit-ticket"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "resource.key": "lesson-in-action-songwriting"
+        "lesson.key": "Private and Personal Information",
+        "resource.key": "private-and-personal-information-lesson-quiz"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "resource.key": "csf-songwriting-worksheets"
+        "lesson.key": "Private and Personal Information",
+        "resource.key": "private-and-personal-information-lesson-quiz-answer-key"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "resource.key": "csf-songwriting-assessment"
+        "lesson.key": "Private and Personal Information",
+        "resource.key": "private-and-personal-information-lesson-slides"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "resource.key": "assessment-answer-songwriting"
+        "lesson.key": "Private and Personal Information",
+        "resource.key": "private-and-personal-information-private-and-personal-information"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Artist",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "common-sense-media-pause-think"
+        "lesson.key": "Simon Says",
+        "resource.key": "follow_the_algorithm"
       }
     },
     {
@@ -9789,33 +9682,21 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "end-of-course-project-guide"
+        "lesson.key": "lesson-4",
+        "resource.key": "be_a_super_digital_citizen_lesson_slides"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "rubric-csf-final-projects"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "design-process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "72_creative_ways_for_your_students_to_show_what_they_know"
+        "lesson.key": "lesson-4",
+        "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "2021_change_log",
         "script.name": "coursee-2021"
       }
     },
@@ -9827,13 +9708,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
         "script.name": "coursee-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "coursee-2021"
       }
     },
@@ -9851,19 +9750,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "debugging_guide",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide_1",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2021_change_log",
+        "resource.key": "sprite_lab_documentation_1",
         "script.name": "coursee-2021"
       }
     },
@@ -9875,7 +9762,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "sprite_lab_documentation_1",
+        "resource.key": "virtual_lesson_modifications",
         "script.name": "coursee-2021"
       }
     }
@@ -9884,16 +9771,6 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "behavior",
-      "word": "Behavior",
-      "definition": "An action that a sprite performs continuously until it’s told to stop.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "behavior"
-      }
-    },
     {
       "key": "algorithm",
       "word": "algorithm",
@@ -9915,23 +9792,23 @@
       }
     },
     {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "key": "condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "sprite"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "event"
+        "vocabulary.key": "conditionals"
       }
     },
     {
@@ -9945,166 +9822,6 @@
       }
     },
     {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can easily call over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can easily call over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can easily call over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "while_loop",
-      "word": "While Loop",
-      "definition": "A loop that continues to repeat while a condition is true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "while_loop"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can easily call over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
       "key": "define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
@@ -10112,6 +9829,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "define"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "function",
+      "word": "Function",
+      "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -10135,6 +9882,26 @@
       }
     },
     {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
       "key": "try",
       "word": "Try",
       "definition": "Attempt to do something",
@@ -10143,97 +9910,23 @@
       "seeding_key": {
         "vocabulary.key": "try"
       }
+    },
+    {
+      "key": "while_loop",
+      "word": "While Loop",
+      "definition": "A loop that continues to repeat while a condition is true.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "while_loop"
+      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Simon Says",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simon Says",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Digital Sharing",
-        "vocabulary.key": "copyright"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming and Loops with the Artist",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming and Loops with the Artist",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Artist",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Artist",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Frozen",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Frozen",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Artist",
-        "vocabulary.key": "function"
       }
     },
     {
@@ -10268,14 +9961,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions in Harvester",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Harvester",
-        "vocabulary.key": "function"
+        "lesson.key": "Digital Sharing",
+        "vocabulary.key": "copyright"
       }
     },
     {
@@ -10301,6 +9988,96 @@
         "lesson.key": "End of Course Project",
         "vocabulary.key": "try"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "vocabulary.key": "behavior"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -10308,103 +10085,13 @@
   ],
   "objectives": [
     {
-      "key": "a937dee9-2cd3-4978-8f88-09f8af577395",
+      "key": "0709575a-e9e6-4856-a4f4-02b290f86975",
       "properties": {
-        "description": "begin to make connections about a new way to write programs"
+        "description": "Understand their own rights regarding materials that they have created"
       },
       "seeding_key": {
-        "lesson.key": "Simon Says",
-        "objective.key": "a937dee9-2cd3-4978-8f88-09f8af577395"
-      }
-    },
-    {
-      "key": "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae",
-      "properties": {
-        "description": "Define “sprite” as a character or object on the screen that can be moved and changed."
-      },
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "objective.key": "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae"
-      }
-    },
-    {
-      "key": "bd575116-1370-4f4c-bc5a-a81472d6ab61",
-      "properties": {
-        "description": "Create new sprites and assign them costumes and behaviors."
-      },
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "objective.key": "bd575116-1370-4f4c-bc5a-a81472d6ab61"
-      }
-    },
-    {
-      "key": "57a5eb7e-bd65-420e-b1b5-65a796565f9b",
-      "properties": {
-        "description": "Identify actions that correlate to input events."
-      },
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "objective.key": "57a5eb7e-bd65-420e-b1b5-65a796565f9b"
-      }
-    },
-    {
-      "key": "ce28bc63-1bc8-4239-985b-43ff3a8b98ea",
-      "properties": {
-        "description": "Create an interactive animation using sprites, behaviors, and events."
-      },
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "objective.key": "ce28bc63-1bc8-4239-985b-43ff3a8b98ea"
-      }
-    },
-    {
-      "key": "33b4a09f-5e7c-4e05-84e6-414b2424ef68",
-      "properties": {
-        "description": "Identify the reasons why people share information about themselves online."
-      },
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "objective.key": "33b4a09f-5e7c-4e05-84e6-414b2424ef68"
-      }
-    },
-    {
-      "key": "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac",
-      "properties": {
-        "description": "Explain the difference between private and personal information."
-      },
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "objective.key": "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac"
-      }
-    },
-    {
-      "key": "ffeaa29c-8d0a-47c0-be5b-275f8a01e138",
-      "properties": {
-        "description": "Explain why it is risky to share private information online."
-      },
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "objective.key": "ffeaa29c-8d0a-47c0-be5b-275f8a01e138"
-      }
-    },
-    {
-      "key": "c217a50f-4aa2-4eb7-998d-7d06b38bdd93",
-      "properties": {
-        "description": "Choose what information about themselves is safe to share online."
-      },
-      "seeding_key": {
-        "lesson.key": "About Me",
-        "objective.key": "c217a50f-4aa2-4eb7-998d-7d06b38bdd93"
-      }
-    },
-    {
-      "key": "3ab2d965-5fe5-4a1e-b745-8118e6815776",
-      "properties": {
-        "description": "Create an interactive computer program that expresses who they are with text and custom images."
-      },
-      "seeding_key": {
-        "lesson.key": "About Me",
-        "objective.key": "3ab2d965-5fe5-4a1e-b745-8118e6815776"
+        "lesson.key": "Digital Sharing",
+        "objective.key": "0709575a-e9e6-4856-a4f4-02b290f86975"
       }
     },
     {
@@ -10418,243 +10105,23 @@
       }
     },
     {
-      "key": "0709575a-e9e6-4856-a4f4-02b290f86975",
+      "key": "2594052b-3b87-4d83-9038-56175058c1c2",
       "properties": {
-        "description": "Understand their own rights regarding materials that they have created"
+        "description": "Articulate the design process and how it helped shape the finished culminating project."
       },
       "seeding_key": {
-        "lesson.key": "Digital Sharing",
-        "objective.key": "0709575a-e9e6-4856-a4f4-02b290f86975"
+        "lesson.key": "End of Course Project",
+        "objective.key": "2594052b-3b87-4d83-9038-56175058c1c2"
       }
     },
     {
-      "key": "5d061773-3d1d-4dc1-866b-66a878b9b5e4",
+      "key": "33b4a09f-5e7c-4e05-84e6-414b2424ef68",
       "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+        "description": "Identify the reasons why people share information about themselves online."
       },
       "seeding_key": {
-        "lesson.key": "Programming and Loops with the Artist",
-        "objective.key": "5d061773-3d1d-4dc1-866b-66a878b9b5e4"
-      }
-    },
-    {
-      "key": "c94bf0ed-de3d-428d-b6af-f3d9283d6b81",
-      "properties": {
-        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
-      },
-      "seeding_key": {
-        "lesson.key": "Programming and Loops with the Artist",
-        "objective.key": "c94bf0ed-de3d-428d-b6af-f3d9283d6b81"
-      }
-    },
-    {
-      "key": "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8",
-      "properties": {
-        "description": "Combine simple shapes into complex designs with nested loops."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Artist",
-        "objective.key": "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8"
-      }
-    },
-    {
-      "key": "da653a73-7c1c-4402-ab24-e14e4adf72d1",
-      "properties": {
-        "description": "Count the number of times an action should be repeated and represent it as a loop."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Artist",
-        "objective.key": "da653a73-7c1c-4402-ab24-e14e4adf72d1"
-      }
-    },
-    {
-      "key": "5b77c883-5479-4cfe-a31a-605957dd083d",
-      "properties": {
-        "description": "Break complex tasks into smaller repeatable sections."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Artist",
-        "objective.key": "5b77c883-5479-4cfe-a31a-605957dd083d"
-      }
-    },
-    {
-      "key": "6174da85-eb3a-4c0e-925d-360b04604fdb",
-      "properties": {
-        "description": "Describe when a loop, nested loop, or no loop is needed."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Frozen",
-        "objective.key": "6174da85-eb3a-4c0e-925d-360b04604fdb"
-      }
-    },
-    {
-      "key": "90591bd7-cbd5-46c4-95dc-59e16e5a949c",
-      "properties": {
-        "description": "Recognize the difference between using a loop and a nested loop."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Frozen",
-        "objective.key": "90591bd7-cbd5-46c4-95dc-59e16e5a949c"
-      }
-    },
-    {
-      "key": "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d",
-      "properties": {
-        "description": "Break apart code into the largest repeatable sequences using both loops and nested loops."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Frozen",
-        "objective.key": "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d"
-      }
-    },
-    {
-      "key": "e26d818e-81fd-43c6-8558-fc69835e693a",
-      "properties": {
-        "description": "Locate repeating phrases inside song lyrics."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "objective.key": "e26d818e-81fd-43c6-8558-fc69835e693a"
-      }
-    },
-    {
-      "key": "815c91bc-4848-43ba-a234-d1b184ab120b",
-      "properties": {
-        "description": "Identify sections of a song to pull into a function."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "objective.key": "815c91bc-4848-43ba-a234-d1b184ab120b"
-      }
-    },
-    {
-      "key": "77ee523c-1e51-4c99-beda-c0e53812a1e7",
-      "properties": {
-        "description": "Describe how functions can make programs easier to write."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "objective.key": "77ee523c-1e51-4c99-beda-c0e53812a1e7"
-      }
-    },
-    {
-      "key": "4a6b973a-63cc-4c8d-8e25-e10648ccaa20",
-      "properties": {
-        "description": "Use functions to simplify complex programs."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "objective.key": "4a6b973a-63cc-4c8d-8e25-e10648ccaa20"
-      }
-    },
-    {
-      "key": "763f0ac3-d0b3-487a-b83d-151e2b3bee94",
-      "properties": {
-        "description": "Use pre-determined functions to complete commonly repeated tasks."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "objective.key": "763f0ac3-d0b3-487a-b83d-151e2b3bee94"
-      }
-    },
-    {
-      "key": "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56",
-      "properties": {
-        "description": "Categorize and generalize code into useful functions."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Artist",
-        "objective.key": "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56"
-      }
-    },
-    {
-      "key": "75ef4b25-6f64-4795-9a13-f0d27662040e",
-      "properties": {
-        "description": "Recognize when a function could help to simplify a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Artist",
-        "objective.key": "75ef4b25-6f64-4795-9a13-f0d27662040e"
-      }
-    },
-    {
-      "key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "objective.key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91"
-      }
-    },
-    {
-      "key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "objective.key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870"
-      }
-    },
-    {
-      "key": "9c7ff713-c208-4acf-9691-da7a4a152565",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "objective.key": "9c7ff713-c208-4acf-9691-da7a4a152565"
-      }
-    },
-    {
-      "key": "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "objective.key": "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc"
-      }
-    },
-    {
-      "key": "dc1b604a-9814-45f4-aed5-b76776ad818c",
-      "properties": {
-        "description": "Recognize when a function could help to simplify a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Harvester",
-        "objective.key": "dc1b604a-9814-45f4-aed5-b76776ad818c"
-      }
-    },
-    {
-      "key": "cff52f84-5090-495e-a37b-02cf8b666ad6",
-      "properties": {
-        "description": "Use pre-determined functions to complete commonly repeated tasks."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions in Harvester",
-        "objective.key": "cff52f84-5090-495e-a37b-02cf8b666ad6"
-      }
-    },
-    {
-      "key": "87094122-056f-4fa4-83b7-e3d6abb52e67",
-      "properties": {
-        "description": "Describe the impact of mobile apps on the modern world."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "87094122-056f-4fa4-83b7-e3d6abb52e67"
-      }
-    },
-    {
-      "key": "b672db1b-ee05-44b3-9f82-73b1b1f94e1a",
-      "properties": {
-        "description": "Explain why accessibility is an important part of designing an app for users."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "b672db1b-ee05-44b3-9f82-73b1b1f94e1a"
+        "lesson.key": "Private and Personal Information",
+        "objective.key": "33b4a09f-5e7c-4e05-84e6-414b2424ef68"
       }
     },
     {
@@ -10668,23 +10135,23 @@
       }
     },
     {
-      "key": "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc",
+      "key": "3ab2d965-5fe5-4a1e-b745-8118e6815776",
       "properties": {
-        "description": "Learn to plan in advance for an ongoing assignment."
+        "description": "Create an interactive computer program that expresses who they are with text and custom images."
       },
       "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc"
+        "lesson.key": "About Me",
+        "objective.key": "3ab2d965-5fe5-4a1e-b745-8118e6815776"
       }
     },
     {
-      "key": "63070ef2-2aab-4493-a65f-7516e7aadb98",
+      "key": "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc",
       "properties": {
-        "description": "Explain how system limitations can affect project design."
+        "description": "Determine whether a conditional is met based on criteria."
       },
       "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "63070ef2-2aab-4493-a65f-7516e7aadb98"
+        "lesson.key": "Conditionals",
+        "objective.key": "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc"
       }
     },
     {
@@ -10698,6 +10165,266 @@
       }
     },
     {
+      "key": "4a6b973a-63cc-4c8d-8e25-e10648ccaa20",
+      "properties": {
+        "description": "Use functions to simplify complex programs."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "objective.key": "4a6b973a-63cc-4c8d-8e25-e10648ccaa20"
+      }
+    },
+    {
+      "key": "57a5eb7e-bd65-420e-b1b5-65a796565f9b",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "objective.key": "57a5eb7e-bd65-420e-b1b5-65a796565f9b"
+      }
+    },
+    {
+      "key": "5b77c883-5479-4cfe-a31a-605957dd083d",
+      "properties": {
+        "description": "Break complex tasks into smaller repeatable sections."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "objective.key": "5b77c883-5479-4cfe-a31a-605957dd083d"
+      }
+    },
+    {
+      "key": "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d",
+      "properties": {
+        "description": "Break apart code into the largest repeatable sequences using both loops and nested loops."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "objective.key": "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d"
+      }
+    },
+    {
+      "key": "5d061773-3d1d-4dc1-866b-66a878b9b5e4",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "objective.key": "5d061773-3d1d-4dc1-866b-66a878b9b5e4"
+      }
+    },
+    {
+      "key": "6174da85-eb3a-4c0e-925d-360b04604fdb",
+      "properties": {
+        "description": "Describe when a loop, nested loop, or no loop is needed."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "objective.key": "6174da85-eb3a-4c0e-925d-360b04604fdb"
+      }
+    },
+    {
+      "key": "63070ef2-2aab-4493-a65f-7516e7aadb98",
+      "properties": {
+        "description": "Explain how system limitations can affect project design."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "63070ef2-2aab-4493-a65f-7516e7aadb98"
+      }
+    },
+    {
+      "key": "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8",
+      "properties": {
+        "description": "Combine simple shapes into complex designs with nested loops."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "objective.key": "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8"
+      }
+    },
+    {
+      "key": "75ef4b25-6f64-4795-9a13-f0d27662040e",
+      "properties": {
+        "description": "Recognize when a function could help to simplify a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "objective.key": "75ef4b25-6f64-4795-9a13-f0d27662040e"
+      }
+    },
+    {
+      "key": "763f0ac3-d0b3-487a-b83d-151e2b3bee94",
+      "properties": {
+        "description": "Use pre-determined functions to complete commonly repeated tasks."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "objective.key": "763f0ac3-d0b3-487a-b83d-151e2b3bee94"
+      }
+    },
+    {
+      "key": "77ee523c-1e51-4c99-beda-c0e53812a1e7",
+      "properties": {
+        "description": "Describe how functions can make programs easier to write."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "objective.key": "77ee523c-1e51-4c99-beda-c0e53812a1e7"
+      }
+    },
+    {
+      "key": "815c91bc-4848-43ba-a234-d1b184ab120b",
+      "properties": {
+        "description": "Identify sections of a song to pull into a function."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "objective.key": "815c91bc-4848-43ba-a234-d1b184ab120b"
+      }
+    },
+    {
+      "key": "87094122-056f-4fa4-83b7-e3d6abb52e67",
+      "properties": {
+        "description": "Describe the impact of mobile apps on the modern world."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "87094122-056f-4fa4-83b7-e3d6abb52e67"
+      }
+    },
+    {
+      "key": "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae",
+      "properties": {
+        "description": "Define “sprite” as a character or object on the screen that can be moved and changed."
+      },
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "objective.key": "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae"
+      }
+    },
+    {
+      "key": "90591bd7-cbd5-46c4-95dc-59e16e5a949c",
+      "properties": {
+        "description": "Recognize the difference between using a loop and a nested loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "objective.key": "90591bd7-cbd5-46c4-95dc-59e16e5a949c"
+      }
+    },
+    {
+      "key": "9c7ff713-c208-4acf-9691-da7a4a152565",
+      "properties": {
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "objective.key": "9c7ff713-c208-4acf-9691-da7a4a152565"
+      }
+    },
+    {
+      "key": "a937dee9-2cd3-4978-8f88-09f8af577395",
+      "properties": {
+        "description": "begin to make connections about a new way to write programs"
+      },
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "objective.key": "a937dee9-2cd3-4978-8f88-09f8af577395"
+      }
+    },
+    {
+      "key": "b672db1b-ee05-44b3-9f82-73b1b1f94e1a",
+      "properties": {
+        "description": "Explain why accessibility is an important part of designing an app for users."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b672db1b-ee05-44b3-9f82-73b1b1f94e1a"
+      }
+    },
+    {
+      "key": "bd575116-1370-4f4c-bc5a-a81472d6ab61",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and behaviors."
+      },
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "objective.key": "bd575116-1370-4f4c-bc5a-a81472d6ab61"
+      }
+    },
+    {
+      "key": "c217a50f-4aa2-4eb7-998d-7d06b38bdd93",
+      "properties": {
+        "description": "Choose what information about themselves is safe to share online."
+      },
+      "seeding_key": {
+        "lesson.key": "About Me",
+        "objective.key": "c217a50f-4aa2-4eb7-998d-7d06b38bdd93"
+      }
+    },
+    {
+      "key": "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac",
+      "properties": {
+        "description": "Explain the difference between private and personal information."
+      },
+      "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "objective.key": "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac"
+      }
+    },
+    {
+      "key": "c94bf0ed-de3d-428d-b6af-f3d9283d6b81",
+      "properties": {
+        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "objective.key": "c94bf0ed-de3d-428d-b6af-f3d9283d6b81"
+      }
+    },
+    {
+      "key": "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc",
+      "properties": {
+        "description": "Learn to plan in advance for an ongoing assignment."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc"
+      }
+    },
+    {
+      "key": "ce28bc63-1bc8-4239-985b-43ff3a8b98ea",
+      "properties": {
+        "description": "Create an interactive animation using sprites, behaviors, and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "objective.key": "ce28bc63-1bc8-4239-985b-43ff3a8b98ea"
+      }
+    },
+    {
+      "key": "cff52f84-5090-495e-a37b-02cf8b666ad6",
+      "properties": {
+        "description": "Use pre-determined functions to complete commonly repeated tasks."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "objective.key": "cff52f84-5090-495e-a37b-02cf8b666ad6"
+      }
+    },
+    {
+      "key": "da653a73-7c1c-4402-ab24-e14e4adf72d1",
+      "properties": {
+        "description": "Count the number of times an action should be repeated and represent it as a loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "objective.key": "da653a73-7c1c-4402-ab24-e14e4adf72d1"
+      }
+    },
+    {
       "key": "db7d248b-f06c-475c-8413-f1ea08fae35b",
       "properties": {
         "description": "Draft and implement plans to resolve any issues in their code."
@@ -10708,52 +10435,67 @@
       }
     },
     {
-      "key": "2594052b-3b87-4d83-9038-56175058c1c2",
+      "key": "dc1b604a-9814-45f4-aed5-b76776ad818c",
       "properties": {
-        "description": "Articulate the design process and how it helped shape the finished culminating project."
+        "description": "Recognize when a function could help to simplify a program."
       },
       "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "objective.key": "2594052b-3b87-4d83-9038-56175058c1c2"
+        "lesson.key": "Functions in Harvester",
+        "objective.key": "dc1b604a-9814-45f4-aed5-b76776ad818c"
+      }
+    },
+    {
+      "key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91",
+      "properties": {
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "objective.key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91"
+      }
+    },
+    {
+      "key": "e26d818e-81fd-43c6-8558-fc69835e693a",
+      "properties": {
+        "description": "Locate repeating phrases inside song lyrics."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "objective.key": "e26d818e-81fd-43c6-8558-fc69835e693a"
+      }
+    },
+    {
+      "key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870",
+      "properties": {
+        "description": "Determine whether a conditional is met based on criteria."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "objective.key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870"
+      }
+    },
+    {
+      "key": "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56",
+      "properties": {
+        "description": "Categorize and generalize code into useful functions."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "objective.key": "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56"
+      }
+    },
+    {
+      "key": "ffeaa29c-8d0a-47c0-be5b-275f8a01e138",
+      "properties": {
+        "description": "Explain why it is risky to share private information online."
+      },
+      "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "objective.key": "ffeaa29c-8d0a-47c0-be5b-275f8a01e138"
       }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Simon Says",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-NI-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Private and Personal Information",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-NI-05"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "About Me",
@@ -10770,79 +10512,9 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Sharing",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming and Loops with the Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Frozen",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Frozen",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions: Songwriting",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Minecraft",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
       }
     },
     {
@@ -10861,58 +10533,9 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Digital Sharing",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-CS-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-18"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-20"
       }
     },
     {
@@ -10962,6 +10585,160 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
       }
     }
   ],

@@ -55,7 +55,7 @@ When you [sign-up your Hour of Code event](/), you’ll receive helpful email co
 
 Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
-{{ promote_new_posters }}
+{{ nové_propagačné_plagáty }}
 
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
@@ -79,17 +79,17 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ## 6. Get Coding!
 
-Direct students to the activity
+Nasmerujte študentov na aktivity
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-When your students come across difficulties it's okay to respond:
+Ak sa budú študenti potýkať s ťažkosťami, môžete im odpovedať nasledovne:
 
 - “I don’t know. Let’s figure this out together.”
 - “Technológie nefungujú vždy tak, ako by sme práve chceli.”
 - “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
 
-What if a student finishes early?
+Čo ak študent skončí skôr?
 
 - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - Alebo požiadajte študentov, ktorí skončili skôr, aby pomohli ostatným spolužiakom, ktorí ešte neskončili.

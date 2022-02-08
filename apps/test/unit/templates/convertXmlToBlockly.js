@@ -1,9 +1,15 @@
 /** @file Tests for convertXmlToBlockly utility */
-import {expect} from '../../util/deprecatedChai';
-
+import {expect} from '../../util/reconfiguredChai';
+import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
 describe('convertXmlToBlockly', function() {
+  beforeEach(() => {
+    // Make sure Blockly is setup in the global namespace because convertXmlToBlockly
+    // depends on it.
+    setupBlocklyGlobal();
+  });
+
   it("does nothing if there's no xml", function() {
     const container = document.createElement('div');
     const content = '<p>Some random content</p>';

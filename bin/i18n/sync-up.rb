@@ -4,6 +4,7 @@
 # 1. from i18n/locales/source to Code.org project
 # 2. from pegasus/sites.v3/code.org/public to Code.org - Markdown project
 # 3. from i18n/locales/source/hourofcode to Hourofcode project
+# 4. from i18n/locales/source/**/restricted.yml to Code.org - Restricted project
 
 require_relative 'i18n_script_utils'
 
@@ -12,7 +13,7 @@ def sync_up
     puts "Sync up starting"
     CROWDIN_PROJECTS.each do |name, options|
       puts "Uploading source strings to #{name} project"
-      command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} upload sources"
+      command = "crowdin upload sources --config #{options[:config_file]} --identity #{options[:identity_file_v2]}"
       Open3.popen2(command) do |_stdin, stdout, status_thread|
         while line = stdout.gets
           # skip lines detailing individual file upload, unless that file

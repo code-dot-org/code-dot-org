@@ -989,12 +989,20 @@
   coursed-2020_name: Course D (2020)
   coursee-2020_name: Course E (2020)
   coursef-2020_name: Course F (2020)
+  coursea-2021_name: Course A (2021)
+  courseb-2021_name: Course B (2021)
+  coursec-2021_name: Course C (2021)
+  coursed-2021_name: Course D (2021)
+  coursee-2021_name: Course E (2021)
+  coursef-2021_name: Course F (2021)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
   express-2019_name: Express Course (2019)
   pre-express-2019_name: Pre-reader Express Course (2019)
   express-2020_name: Express Course (2020)
   pre-express-2020_name: Pre-reader Express Course (2020)
+  express-2021_name: Express Course (2021)
+  pre-express-2021_name: Pre-reader Express Course (2021)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Accelerated Course"
@@ -1103,6 +1111,12 @@
   coursed-2020_gradelevel: Ages 7-11
   coursee-2020_gradelevel: Ages 8-12
   coursef-2020_gradelevel: Ages 9-13
+  coursea-2021_gradelevel: Ages 4-7
+  courseb-2021_gradelevel: Ages 5-8
+  coursec-2021_gradelevel: Ages 6-10
+  coursed-2021_gradelevel: Ages 7-11
+  coursee-2021_gradelevel: Ages 8-12
+  coursef-2021_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1235,6 +1249,12 @@
   coursed-2020_shortdescription_congrats: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
   coursee-2020_shortdescription_congrats: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
   coursef-2020_shortdescription_congrats: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+  coursea-2021_shortdescription_congrats: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+  courseb-2021_shortdescription_congrats: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+  coursec-2021_shortdescription_congrats: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+  coursed-2021_shortdescription_congrats: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+  coursee-2021_shortdescription_congrats: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+  coursef-2021_shortdescription_congrats: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1741,6 +1761,12 @@
   hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
   hoc2020_mc_mee_description: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Learn the basics of coding and explore diversity and inclusion with your students! Access free resources including a lesson plan, videos, computer science curriculum, equity lessons, and teacher trainings.'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Travel back in time and learn to code! The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Get started with free educator resources, trainings, and videos.'
+  hoc2021_mc_mee_villages_title: "Tale of Two Villages"
+  hoc2021_mc_mee_villages_description: 'Learn coding basics and explore diversity and inclusion with your students in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "AI For Good"
+  hoc2021_mc_mee_ai_description: 'Explore AI with your students and learn to code in Minecraft: Education Edition.'
   footer_powered_by_aws: "Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries."
   footer_built_on_github: "Built on GitHub from Microsoft"
   codebytes_skinny_banner_title: "Join us December 7-11 for our CodeBytes live mini-lessons!"
@@ -1803,3 +1829,6 @@
   ai_cognimates: "Cognimates"
   ai_cognimates_description: "An AI education platform for building games, programming robots and training."
   ai_try_activity: "Try activity"
+  outbreak_tile_title: "Outbreak"
+  outbreak_tile_subtitle: "A virus has infected Monster Town! Code an outbreak simulator and make predictions about what will happen to the neighbors of Monster Town."
+  outbreak_tile_alt: "A simulation of how a virus spreads through a group of purple monsters."

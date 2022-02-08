@@ -12,15 +12,18 @@
 #  created_at       :datetime
 #  updated_at       :datetime
 #  properties       :text(65535)
+#  deleted_at       :datetime
 #
 # Indexes
 #
-#  index_user_scripts_on_script_id              (script_id)
-#  index_user_scripts_on_user_id_and_script_id  (user_id,script_id) UNIQUE
+#  index_user_scripts_on_script_id                             (script_id)
+#  index_user_scripts_on_user_id_and_script_id_and_deleted_at  (user_id,script_id,deleted_at) UNIQUE
 #
 
 class UserScript < ApplicationRecord
   include SerializedProperties
+
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user
   belongs_to :script

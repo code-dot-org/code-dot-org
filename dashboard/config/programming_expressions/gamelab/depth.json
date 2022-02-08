@@ -1,6 +1,6 @@
 {
-  "func": "depth",
+  "key": "depth",
+  "name": "depth",
   "category": "Sprites",
-  "modeOptionName": "*.depth",
-  "type": "property"
+  "syntax": "depth"
 }

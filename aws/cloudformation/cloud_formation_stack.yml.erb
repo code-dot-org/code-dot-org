@@ -144,6 +144,14 @@ Resources:
       LoadBalancerAttributes:
         - Key: deletion_protection.enabled
           Value: true
+        - Key: access_logs.s3.enabled
+          Value: true
+        - Key: access_logs.s3.bucket
+          Value: cdo-logs
+        - Key: access_logs.s3.prefix
+          Value: !Sub ${AWS::StackName}-alb-access-logs
+        - Key: waf.fail_open.enabled
+          Value: true
 
   HTTPListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
@@ -205,6 +213,7 @@ Resources:
 <%=   component 'scaling_schedule' -%>
 <%  end -%>
 <% end -%>
+
 # Route53 (DNS) and CloudFront (CDN) resources:
 # TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
 <%
@@ -230,13 +239,20 @@ Resources:
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
+
 <%   if cdn_enabled -%>
   <%=app%>CDN:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig: <%= cloudfront_config(app) %>
 <%   end -%>
+
+<%   if cdn_enabled && app == 'Pegasus' -%>
+<%=    component 'www_redirect', app: app -%>
+<%  end -%>
+
 <% end -%>
+
 <% if cdn_enabled -%>
   OriginDNS:
     Type: AWS::Route53::RecordSetGroup
@@ -254,9 +270,11 @@ Resources:
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <% end -%>
+
 <% if frontends-%>
 <%=  component 'cache'%>
 <% end -%>
+
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
@@ -272,6 +290,11 @@ Resources:
                   - 'cloudfront:ListDistributions'
                   - 'cloudfront:CreateInvalidation'
                   - 'cloudfront:GetInvalidation'
+                Resource: '*'
+              # Lookup Route53 Hosted Zones to get Hosted Zone ID when rendering updated CloudFormation templates during ci_build process.
+              - Effect: Allow
+                Action:
+                  - 'route53:ListHostedZonesByName'
                 Resource: '*'
               # Lookup ACM certificate for ELB and CloudFront SSL.
               - Effect: Allow
@@ -415,6 +438,7 @@ Resources:
   DaemonInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref DaemonRole]}
+
 <% if daemon -%>
   <%=daemon%>:
     Type: AWS::EC2::Instance
@@ -432,6 +456,9 @@ Resources:
       Tags:
         - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : "!Ref 'AWS::StackName'"%>}
       BlockDeviceMappings:
+        # BlockDeviceMappings cannot be modified after instance creation, doing so will DELETE the instance and recreate it.
+        # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
+        # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
@@ -466,10 +493,12 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
+      DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 <% if database %>
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
+
 <% if options.console -%>
   Console:
     Type: AWS::EC2::Instance
@@ -511,12 +540,15 @@ Resources:
     DependsOn: Aurora1
 <%   end -%>
 <% end-%>
+
 <% if alarms-%>
 <%=  component 'alarms'%>
 <% end -%>
+
 <% if database-%>
 <%=  component 'database'%>
 <% end -%>
+
   ChefConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
@@ -525,6 +557,7 @@ Resources:
       # Update this secret manually after the stack is created to customize Chef configuration.
       # The value should never be changed in the stack itself, since it would clobber all other changes.
       SecretString: '{}'
+
 Outputs:
   DashboardURL:
     Value: "https://<%=studio_subdomain%>"

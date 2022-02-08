@@ -1,5 +1,6 @@
 {
-  "func": "bottomEdge",
+  "key": "bottomEdge",
+  "name": "bottomEdge",
   "category": "Sprites",
-  "type": "readonlyproperty"
+  "syntax": "bottomEdge"
 }

@@ -1,0 +1,114 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "name": "feed me"
+        },
+        {
+          "type": "panel",
+          "name": "module_8_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "visible": false,
+              "html": "COURSE: {workshop_course}"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit6csd_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "I feel prepared to teach Unit 6 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "unit6_level_types_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "I recognize different lesson level types and how to use each of them to support Unit 6 instruction.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "problem_solve_proc_prog_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "Through this workshop, I feel prepared to use the Problem Solving Process for Programming to reinforce persistence and support students when facing challenges.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csp_multiple_choice_apexam_m8",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I know how and when to prepare students for the multiple-choice section of the AP exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "opportunities_discuss_peers_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "find_resources_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "I know where to find resources to help me teach the units we have covered.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "strategies_ensure_inclusion_m8",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "next_steps_commitment_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "As a result of this workshop series I feel empowered to take next steps to implement my commitment to foster equitable access, diversity, and inclusion in my CS classroom.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "plan_measure_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "I know how to track the progress of my commitment to ensuring my CS classroom is equitable and inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "resources_equity_m8",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "Through the academic year workshops, I now know where to find information and resources to implement my commitment to foster an equitable and inclusive CS classroom.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

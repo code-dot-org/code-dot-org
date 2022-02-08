@@ -800,6 +800,7 @@ no-NO:
     å tilby helårige datavitenskapskurs ved å sette eksisterende pedagogisk ansatte
     i gang med å tilby dette fagområdet. For å melde deg på de profesjonelle utviklingsverkstedene,
     søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.
+  dashboard_course_csina: Datavitenskap i Algebra
   dashboard_course_csina_desc: Code.org har inngått et samarbeid med Bootstrap om
     å utvikle en skoleplan som lærer bort algebraiske og geometriske konsepter gjennom
     dataprogrammering.
@@ -1198,9 +1199,26 @@ no-NO:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  coursea-2019_name: Kurs A (2019)
+  courseb-2019_name: Kurs B (2019)
+  coursec-2019_name: Kurs C (2019)
+  coursed-2019_name: Kurs D (2019)
+  coursee-2019_name: Kurs E (2019)
+  coursef-2019_name: Kurs F (2019)
+  coursea-2020_name: Kurs A (2020)
+  courseb-2020_name: Kurs B (2020)
+  coursec-2020_name: Kurs C (2020)
+  coursed-2020_name: Kurs D (2020)
+  coursee-2020_name: Kurs E (2020)
+  coursef-2020_name: Kurs F (2020)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Ekspress kurs (2018)
   pre-express-2018_name: Førskole ekspress kurs (2018)
+  express-2019_name: Ekspress kurs (2019)
   pre-express-2019_name: Førskole ekspress kurs (2019)
+  express-2020_name: Ekspress kurs (2020)
+  pre-express-2020_name: Førskole ekspress kurs (2020)
+  pre-express-2021_name: Førskole ekspress kurs (2021)
   csd2_name: 'Enhet 2: Web utvikling'
   csd3_name: 'Enhet 3: Animasjon og spill'
   accelerated_name: Framskyndet kurs
@@ -1218,7 +1236,7 @@ no-NO:
   applab_name: App Lab
   gamelab_name: Spill-lab
   basketball_name: Lag et basketball-spill
-  sports_name: Kod ditt eget sportsspill
+  sports_name: Kode ditt eget sportsspill
   applab_gradelevel: Minstealder 13 år
   applab_shortdescription_congrats: App Lab er et programmeringsmiljø hvor du kan
     lage enkle apper. Design en app, programmer med blokker eller JavaScript for å
@@ -1306,6 +1324,12 @@ no-NO:
   coursed-2020_gradelevel: 8.+ klasse
   coursee-2020_gradelevel: Alder 8–12
   coursef-2020_gradelevel: Alder 9-13
+  coursea-2021_gradelevel: Alder 4-7
+  courseb-2021_gradelevel: Alder 5-8
+  coursec-2021_gradelevel: Alder 6-10
+  coursed-2021_gradelevel: 8.+ klasse
+  coursee-2021_gradelevel: Alder 8–12
+  coursef-2021_gradelevel: Alder 9-13
   accelerated_gradelevel: Alder 10+ (etter kurs 3)
   codeorg_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   codeintl_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
@@ -2184,5 +2208,6 @@ no-NO:
   footer_donate: Gi bidrag
   footer_support: Brukerstøtte
   footer_terms: Vilkår
+  ai_for_oceans_lesson_plan: oppgaveplan
   ai_activity: Aktivitet
   ai_description: Beskrivelse

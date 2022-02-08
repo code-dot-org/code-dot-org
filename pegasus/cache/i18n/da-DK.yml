@@ -39,6 +39,8 @@ da-DK:
   og_description: Alle elever i alle skoler fortjener mulighed for at lære seg at
     programmere. Det forandrer det hele.
   csedweek_og_title: Computer Science Education Week
+  csedweek_og_description: Alle elever i alle skoler fortjener mulighed for at lære
+    seg at programmere. Det forandrer det hele.
   hoc2014_heading: Vær med i <a href="http://hourofcode.com">Hour of Code</a> <br/>8.
     - 14. December 2014 <br/>
   hoc2014_students: Elever
@@ -86,6 +88,7 @@ da-DK:
   congratulations_volunteer: Tillykke, nu hvor du har prøvet Hour of Code <a href="https://code.org/volunteer">
     kan du tilmelde dig som frivillig i et klasselokale</a> og hjælpe andre studerende
     med at lære Hour of Code!
+  congratulations_on_completing_course: Tillykke. Du har nu klaret %{course}
   congrats_next_tutorials_title: Prøv dissse øvelser nu
   congrats_next_tutorials_desc: Prøv disse kortere, 1 times øvelser eller prøv en
     <a href="%{current_path}/next">partner-øvelse</a>.
@@ -166,6 +169,7 @@ da-DK:
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
+  hoc_is_here: "#HourOfCode er her - tjek det ud! @codeorg"
   just_did_hoc: 'Jeg fuldførte lige #HourOfCode - tjek det ud! @codeorg'
   twitter_teach_cs: 9 ud af 10 mennesker er enige om, skoler bør undervise datalogi.
     http://youtu.be/nKIu9yen5nc. Besøg https://code.org/.
@@ -252,6 +256,7 @@ da-DK:
   homepage_hero_text_stat_students: "#student_count elever oprettet på Code Studio"
   homepage_hero_text_stat_served: 'Hour of Code: #served har prøvet'
   homepage_hero_hoc_is_coming: Hour of Code kommer
+  homepage_hero_hoc_is_here: Computer Science Education Week
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frozen med Anna og Elsa
   homepage_slot_text_studio: Alle vores øvelser
@@ -605,9 +610,11 @@ da-DK:
   dashboard_navigation_section_speakers: Find en<br/> gæstetaler
   dashboard_navigation_all_sections: Elevernes konti og fremskridt
   dashboard_navigation_view_progress: Fremskridt
+  dashboard_navigation_view_assessments: Vurderinger
   dashboard_navigation_add_students: Tilføj elever
   dashboard_navigation_manage_students: Administrer elever
   dashboard_navigation_lesson_plans_resources: Lektionsplaner og ressourcer
+  dashboard_navigation_view_stats: Statistikker
   dashboard_navigation_section: 'Hold: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
   dashboard_progress_not_started: ikke startet
@@ -617,6 +624,7 @@ da-DK:
   dashboard_progress_completed_perfect: Afsluttet, perfekt
   dashboard_progress_furthest_level_attempted: længst opnåede niveau
   dashboard_progress_submitted: indsendt
+  dashboard_progress_pair_programming: par-programmering
   dashboard_sections_new_section: Nyt hold
   dashboard_sections_jumbotron_instruction: Opret nye hold og tilføj elever. Hold
     hjælper dig til at organisere eleverne i mindre grupper, så du kan følge deres
@@ -641,6 +649,8 @@ da-DK:
     kontooplysninger til at blive distribueret til eleverne individuelt.
   dashboard_sections_switch_section: 'Skift hold:'
   dashboard_sections_close: Luk
+  dashboard_sections_yes_both: Ja, Jeg vil gerne kopiere elev(er) til at være både
+    i den nuværende sektion OG den nye sektion
   dashboard_students_add_multiple: 'Skriv eller indsæt navnene på dine elever, en
     per linje:'
   dashboard_students_new_section: Du har oprettet et nyt hold! Tilføj nu dine elever
@@ -859,6 +869,7 @@ da-DK:
   course4_name: Kursus 4
   accelerated_name: Accelereret kursus
   20-hour_name: Accelereret kursus
+  gumball_name: Gumball
   classicmaze_name: Klassisk labyrint
   iceage_name: Is-tid
   minecraft_name: Minecraft
@@ -867,6 +878,9 @@ da-DK:
   applab_name: App Lab
   gamelab_name: Spil Laboratoriet
   applab_gradelevel: Alder 13+
+  applab_shortdescription_congrats: App Lab er et programmeringsmiljø, hvor du kan
+    lave simple apps. Design en app, kod med blokke eller brug JavaScript for at få
+    det til at virke, og så derefter del din app på få sekunder
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
   khan_gradelevel: Mellemskolen +
@@ -950,6 +964,12 @@ da-DK:
   coursed-2020_gradelevel: 8. klasse+
   coursee-2020_gradelevel: Alder 8-12
   coursef-2020_gradelevel: Alder 9 -13
+  coursea-2021_gradelevel: Alder 4-7
+  courseb-2021_gradelevel: Alder 5-8
+  coursec-2021_gradelevel: Alder 6-10
+  coursed-2021_gradelevel: 8. klasse+
+  coursee-2021_gradelevel: Alder 8-12
+  coursef-2021_gradelevel: Alder 9 -13
   accelerated_gradelevel: Fra 10 år (efter kursus 3)
   codeorg_platformtext: Moderne browsere, smartphones, tabletter
   codeintl_platformtext: Moderne browsere, smartphones, tabletter
@@ -1567,6 +1587,7 @@ da-DK:
   header_about_faqs: Ofte stillede spørgsmål
   header_learn: Lær
   header_teach: Undervis
+  header_stats: Statistikker
   header_help_us: Hjælp os
   header_about: Om
   header_teacher_community: Lærer-fælleskab
@@ -1579,13 +1600,16 @@ da-DK:
   user_header_settings: Min konto
   user_header_logout: Log ud
   user_header_signin: Log ind
+  user_header_create: 'Opret '
   user_header_applab: AppLab
+  user_header_artist: 'Kunstner '
   user_header_gamelab: Spil Laboratoriet
   user_header_playlab: Play Lab
   user_header_dance: Dance Party
   user_header_spritelab: SpriteLab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_project_gallery: View project gallery
   user_header_view_my_projects: Vis mine projekter
   view_all_sections: Vis alle sektioner
   applab_tile_start_tutorial: Start
@@ -1642,6 +1666,8 @@ da-DK:
   hoc2018_mc_back_journey: Minecraft er tilbage med en splinterny aktivitet i En Times
     Kodning! En rejse gennem Minecraft ved hjælp af kode.
   hoc2018_mc_teacher_guide: Vis lærervejledning
+  hoc2018_mc_short_description_shorter: Minecraft er tilbage med en splinterny aktivitet
+    for En Times Kodning.
   hoc2018_dance_party_main_heading: Dance Party
   hoc2018_dance_create_your_own_dance_title: Lav din egen dansefest
   hoc2018_dance_party_box_title: Dance Party
@@ -1668,6 +1694,7 @@ da-DK:
   hoc2018_dance_video2: Danse fest - Events
   hoc2018_dance_video3: Danse fest - Indstillinger
   hoc2018_dance_video4: Danse fest - Lykønskninger
+  page_not_found_title: Siden blev ikke fundet
   hoc2018_mc_with_microsoft: I partnerskab med
   hoc2018_mc_thank_microsoft: Vi takker Microsoft for at støtte vores vision og mission
     for at sikre, at hvert barn har mulighed for at lære datalogi og få færdighederne
@@ -1679,9 +1706,11 @@ da-DK:
   footer_donate: Donér
   footer_support: Support
   footer_terms: Vilkår
+  ai_for_oceans_lesson_plan: lektionsplan
   ai_in_partnership_with: I partnerskab med
   ai_microsoft_thanks: Vi takker Microsoft for at støtte vores vision og mission for
     at sikre, at hvert barn har mulighed for at lære datalogi og få færdighederne
     til at få succes i det 21. århundrede.
   ai_activity: Aktivitet
   ai_description: Beskrivelse
+  outbreak_tile_title: Udbrud

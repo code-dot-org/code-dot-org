@@ -1,11 +1,11 @@
 {
-  "func": "setDepthEach",
+  "key": "setDepthEach",
+  "name": "setDepthEach",
   "category": "Groups",
-  "paletteParams": [
-    "depth"
+  "palette_params": [
+    {
+      "name": "depth"
+    }
   ],
-  "params": [
-    "1"
-  ],
-  "modeOptionName": "*.setDepthEach"
+  "syntax": "setDepthEach(depth)"
 }

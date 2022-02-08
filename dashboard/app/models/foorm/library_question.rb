@@ -19,10 +19,13 @@
 class Foorm::LibraryQuestion < ApplicationRecord
   include Seeded
 
+  class InvalidFoormConfigurationError < StandardError; end
+
   belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], required: true
 
-  validate :validate_library_question
+  validate :validate_question
   validates :question_name, :question, presence: true
+  validates_uniqueness_of :question_name, scope: [:library_name, :library_version]
 
   after_commit :write_to_file
 
@@ -42,10 +45,12 @@ class Foorm::LibraryQuestion < ApplicationRecord
     end
   end
 
-  # TO DO: names need to be tracked in the question column (and JSON) to make sure libraries continue to be valid SurveyJS.
-  # TO DO: check that the library question has the same name in the question as in the question_name field.
-  # TO DO: check that the library question name is unique within the library (there is DB validation for this)
-  def validate_library_question
+  def validate_question
+    # Keep question name stored in the question JSON field in sync with what's in the database
+    if JSON.parse(question)['name'] != question_name
+      raise InvalidFoormConfigurationError, 'library question name in question JSON must match name of library question name in database.'
+    end
+
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
   rescue StandardError => e
     errors.add(:question, e.message)

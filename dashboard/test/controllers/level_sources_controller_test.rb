@@ -165,13 +165,16 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'artist levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: Artist.first)
+    level_source = create(:level_source, level: create(:artist))
+
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/sharing_drawing.png')
+
     get :show, params: {id: level_source.id}
 
     assert_response :success
     assert_sharing_meta_tags(
       url: "http://test.host/c/#{level_source.id}",
-      image: 'http://test.host/assets/sharing_drawing.png',
+      image_url: 'http://test.host/assets/sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       small_thumbnail: true
@@ -179,14 +182,17 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'playlab levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: Studio.first)
+    level_source = create(:level_source, level: create(:playlab))
+
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/studio_sharing_drawing.png')
+
     get :show, params: {id: level_source.id}
 
     assert_response :success
 
     assert_sharing_meta_tags(
       url: "http://test.host/c/#{level_source.id}",
-      image: 'http://test.host/assets/sharing_drawing.png',
+      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true

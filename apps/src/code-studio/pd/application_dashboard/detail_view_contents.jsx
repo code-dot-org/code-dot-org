@@ -38,6 +38,7 @@ import {
   ValidScores as FacilitatorValidScores
 } from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import _ from 'lodash';
 import {
   getApplicationStatuses,
@@ -50,69 +51,6 @@ import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-
-const styles = {
-  notes: {
-    height: '95px'
-  },
-  statusSelect: {
-    width: 250 // wide enough for the widest status
-  },
-  editMenuContainer: {
-    display: 'inline-block' // fit contents
-  },
-  editMenu: {
-    display: 'flex'
-  },
-  // React-Bootstrap components don't play well inside a flex box,
-  // so this is required to get the contained split button to stay together.
-  flexSplitButtonContainer: {
-    flex: '0 0 auto'
-  },
-  detailViewHeader: {
-    marginLeft: 'auto'
-  },
-  headerWrapper: {
-    display: 'flex',
-    alignItems: 'baseline'
-  },
-  saveButton: {
-    marginRight: '5px'
-  },
-  statusSelectGroup: {
-    marginRight: 5,
-    marginLeft: 5
-  },
-  editButton: {
-    width: 'auto'
-  },
-  lockedStatus: {
-    fontFamily: '"Gotham 7r"',
-    marginTop: 10
-  },
-  caption: {
-    color: 'black'
-  },
-  detailViewTable: {
-    width: '80%'
-  },
-  questionColumn: {
-    width: '50%'
-  },
-  answerColumn: {
-    width: '30%'
-  },
-  scoringColumn: {
-    width: '20%'
-  },
-  scoringDropdown: {
-    marginTop: '10px',
-    marginBottom: '10px'
-  },
-  scoreBreakdown: {
-    marginLeft: '30px'
-  }
-};
 
 const NA = 'N/A';
 
@@ -129,7 +67,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
-      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
+      course: PropTypes.oneOf(Object.values(CourseKeyMap)),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
       update_emails_sent_by_system: PropTypes.bool,
@@ -248,7 +186,7 @@ export class DetailViewContents extends React.Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (
       this.props.applicationData.application_type ===
         ApplicationTypes.facilitator &&
@@ -743,7 +681,7 @@ export class DetailViewContents extends React.Component {
   renderHeader = () => {
     const rubricURL =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view'
+        ? 'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view'
         : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
 
     return (
@@ -1330,6 +1268,69 @@ export class DetailViewContents extends React.Component {
     );
   }
 }
+
+const styles = {
+  notes: {
+    height: '95px'
+  },
+  statusSelect: {
+    width: 250 // wide enough for the widest status
+  },
+  editMenuContainer: {
+    display: 'inline-block' // fit contents
+  },
+  editMenu: {
+    display: 'flex'
+  },
+  // React-Bootstrap components don't play well inside a flex box,
+  // so this is required to get the contained split button to stay together.
+  flexSplitButtonContainer: {
+    flex: '0 0 auto'
+  },
+  detailViewHeader: {
+    marginLeft: 'auto'
+  },
+  headerWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  saveButton: {
+    marginRight: '5px'
+  },
+  statusSelectGroup: {
+    marginRight: 5,
+    marginLeft: 5
+  },
+  editButton: {
+    width: 'auto'
+  },
+  lockedStatus: {
+    fontFamily: '"Gotham 7r"',
+    marginTop: 10
+  },
+  caption: {
+    color: 'black'
+  },
+  detailViewTable: {
+    width: '80%'
+  },
+  questionColumn: {
+    width: '50%'
+  },
+  answerColumn: {
+    width: '30%'
+  },
+  scoringColumn: {
+    width: '20%'
+  },
+  scoringDropdown: {
+    marginTop: '10px',
+    marginBottom: '10px'
+  },
+  scoreBreakdown: {
+    marginLeft: '30px'
+  }
+};
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,

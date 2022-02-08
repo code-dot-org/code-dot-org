@@ -111,10 +111,6 @@ module ApplicationHelper
     '/home'
   end
 
-  def teacher_dashboard_url
-    CDO.code_org_url '/teacher-dashboard'
-  end
-
   def teacher_dashboard_section_progress_url(section)
     "/teacher_dashboard/sections/#{section.id}/progress"
   end
@@ -166,7 +162,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB].include? app
       asset_url "#{app}_sharing_drawing.png"
     elsif app == Game::BOUNCE
       if ["basketball", "sports"].include? skin
@@ -203,7 +199,7 @@ module ApplicationHelper
   end
 
   def script_certificate_image_url(user, script)
-    certificate_image_url(
+    CertificateImage.certificate_image_url(
       name: user.name,
       course: script.name,
       course_title: data_t_suffix('script.name', script.name, 'title')

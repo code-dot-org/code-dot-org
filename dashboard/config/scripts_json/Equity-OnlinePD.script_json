@@ -2,15 +2,18 @@
   "script": {
     "name": "Equity-OnlinePD",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "Equity Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:43 UTC",
+    "serialized_at": "2021-11-22 19:55:40 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "Equity-OnlinePD"
     }
@@ -91,23 +94,112 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "727203e0-4dd0-4262-92df-ff6ddc963bec",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "727203e0-4dd0-4262-92df-ff6ddc963bec",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "key": "dec0d586-8b36-4690-99fe-2ef813fe077e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dec0d586-8b36-4690-99fe-2ef813fe077e",
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "key": "377a4fd6-a186-419c-982c-e222f1959de3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "377a4fd6-a186-419c-982c-e222f1959de3",
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "key": "5c3f9945-dfa2-4ef2-91ad-276cacf6c56b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c3f9945-dfa2-4ef2-91ad-276cacf6c56b",
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "47fe38fd-3f2c-438b-911e-7c792b955f34",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34",
+        "lesson_activity.key": "727203e0-4dd0-4262-92df-ff6ddc963bec"
+      }
+    },
+    {
+      "key": "e365b595-20e6-4d23-bf87-c80f6873fd14",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14",
+        "lesson_activity.key": "dec0d586-8b36-4690-99fe-2ef813fe077e"
+      }
+    },
+    {
+      "key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a",
+        "lesson_activity.key": "377a4fd6-a186-419c-982c-e222f1959de3"
+      }
+    },
+    {
+      "key": "03604c2a-0835-4dfe-933c-4dcb236970a8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "03604c2a-0835-4dfe-933c-4dcb236970a8",
+        "lesson_activity.key": "5c3f9945-dfa2-4ef2-91ad-276cacf6c56b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Welcome"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -115,7 +207,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       },
       "level_keys": [
         "Equity Welcome"
@@ -124,14 +217,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity About"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -139,7 +231,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       },
       "level_keys": [
         "Equity About"
@@ -148,14 +241,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Participation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -163,7 +255,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       },
       "level_keys": [
         "Equity Participation"
@@ -172,14 +265,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Stage1Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -187,7 +279,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       },
       "level_keys": [
         "Equity Stage1Go"
@@ -196,14 +289,13 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Define"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -211,7 +303,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       },
       "level_keys": [
         "Equity Define"
@@ -220,14 +313,13 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity CS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -235,7 +327,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       },
       "level_keys": [
         "Equity CS"
@@ -244,14 +337,13 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -259,7 +351,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       },
       "level_keys": [
         "Equity Strategies"
@@ -268,14 +361,13 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Stage2Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -283,7 +375,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       },
       "level_keys": [
         "Equity Stage2Go"
@@ -292,14 +385,13 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Self Assess"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -307,7 +399,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       },
       "level_keys": [
         "Equity Self Assess"
@@ -316,14 +409,13 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -331,7 +423,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       },
       "level_keys": [
         "Equity Goals"
@@ -340,14 +433,13 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Resources"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -355,7 +447,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       },
       "level_keys": [
         "Equity Resources"
@@ -364,14 +457,13 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -379,7 +471,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       },
       "level_keys": [
         "Equity Reflection"
@@ -388,14 +481,13 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Stage3Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -403,7 +495,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       },
       "level_keys": [
         "Equity Stage3Go"
@@ -412,14 +505,13 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Review"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -427,7 +519,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "03604c2a-0835-4dfe-933c-4dcb236970a8"
       },
       "level_keys": [
         "Equity Review"
@@ -436,14 +529,13 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Keep Learning"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -451,7 +543,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "03604c2a-0835-4dfe-933c-4dcb236970a8"
       },
       "level_keys": [
         "Equity Keep Learning"
@@ -460,14 +553,13 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Equity Celebrate"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -475,7 +567,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "03604c2a-0835-4dfe-933c-4dcb236970a8"
       },
       "level_keys": [
         "Equity Celebrate"
@@ -491,7 +584,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       }
     },
     {
@@ -502,7 +596,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       }
     },
     {
@@ -513,7 +608,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       }
     },
     {
@@ -524,7 +620,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "47fe38fd-3f2c-438b-911e-7c792b955f34"
       }
     },
     {
@@ -535,7 +632,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       }
     },
     {
@@ -546,7 +644,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       }
     },
     {
@@ -557,7 +656,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       }
     },
     {
@@ -568,7 +668,8 @@
         ],
         "lesson.key": "Introduction to Equity",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "e365b595-20e6-4d23-bf87-c80f6873fd14"
       }
     },
     {
@@ -579,7 +680,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       }
     },
     {
@@ -590,7 +692,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       }
     },
     {
@@ -601,7 +704,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       }
     },
     {
@@ -612,7 +716,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       }
     },
     {
@@ -623,7 +728,8 @@
         ],
         "lesson.key": "Creating Equitable Learning Environments",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "719b6f6e-42b7-4198-8a71-f6d96d868f2a"
       }
     },
     {
@@ -634,7 +740,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "03604c2a-0835-4dfe-933c-4dcb236970a8"
       }
     },
     {
@@ -645,7 +752,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "03604c2a-0835-4dfe-933c-4dcb236970a8"
       }
     },
     {
@@ -656,7 +764,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "Equity-OnlinePD"
+        "script.name": "Equity-OnlinePD",
+        "activity_section.key": "03604c2a-0835-4dfe-933c-4dcb236970a8"
       }
     }
   ],

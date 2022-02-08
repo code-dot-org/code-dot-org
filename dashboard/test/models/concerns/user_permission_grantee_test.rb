@@ -67,11 +67,11 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     refute user.levelbuilder?
   end
 
-  test 'authorized_teacher?' do
+  test 'verified_teacher?' do
     user = create :teacher
-    refute user.authorized_teacher?
+    refute user.verified_teacher?
     user.permission = UserPermission::AUTHORIZED_TEACHER
-    assert user.authorized_teacher?
+    assert user.verified_teacher?
   end
 
   test 'census_reviewer?' do

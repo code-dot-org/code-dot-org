@@ -3,6 +3,7 @@ require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
+  before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
   protect_from_forgery except: :export_config
@@ -141,7 +142,13 @@ class ProjectsController < ApplicationController
     },
     javalab: {
       name: 'New Java Lab Project',
-      levelbuilder_required: true
+      login_required: true
+    },
+    poetry: {
+      name: 'New Poetry Project'
+    },
+    poetry_hoc: {
+      name: 'New Poetry HOC Project'
     }
   }.with_indifferent_access.freeze
 
@@ -152,7 +159,7 @@ class ProjectsController < ApplicationController
   def index
     unless params[:tab_name] == 'public'
       return redirect_to '/projects/public' unless current_user
-      return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
+      redirect_admin_from_labs
     end
 
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
@@ -177,7 +184,7 @@ class ProjectsController < ApplicationController
     storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
-      join(storage_apps, id: :storage_app_id).all
+      join(storage_apps, id: :storage_app_id, state: 'active').all
     extract_data_for_tables(project_featured_project_combo_data)
   end
 
@@ -230,10 +237,6 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
-    end
     return if redirect_under_13_without_tos_teacher(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_current_user).most_recent(params[:key])
@@ -247,10 +250,6 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
-    end
     return if redirect_under_13_without_tos_teacher(@level)
     channel = ChannelToken.create_channel(
       request.ip,
@@ -268,7 +267,7 @@ class ProjectsController < ApplicationController
   private def initial_data
     data = {
       name: 'Untitled Project',
-      level: polymorphic_url([params[:key], 'project_projects'])
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
     }
     default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
     data[:thumbnailUrl] = default_image_url if default_image_url
@@ -276,10 +275,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
-    end
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
@@ -325,11 +320,12 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
+      app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
       disallowed_html_tags: disallowed_html_tags
     )
 
-    if params[:key] == 'artist'
+    if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 
@@ -365,19 +361,11 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
-    end
     return if redirect_under_13_without_tos_teacher(@level)
     show
   end
 
   def remix
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
-    end
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
     begin
@@ -394,6 +382,7 @@ class ProjectsController < ApplicationController
       remix_parent_id: remix_parent_id,
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
+    AssetBucket.new.copy_level_starter_assets src_channel_id, new_channel_id if uses_starter_assets?(project_type)
     animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
@@ -401,7 +390,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab).include? project_type
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
   end
 
   private def uses_animation_bucket?(project_type)
@@ -410,6 +399,10 @@ class ProjectsController < ApplicationController
 
   private def uses_file_bucket?(project_type)
     %w(weblab).include? project_type
+  end
+
+  private def uses_starter_assets?(project_type)
+    %w(javalab).include? project_type
   end
 
   def export_create_channel

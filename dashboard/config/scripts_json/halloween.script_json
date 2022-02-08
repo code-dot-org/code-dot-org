@@ -2,13 +2,17 @@
   "script": {
     "name": "halloween",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:12 UTC",
+    "serialized_at": "2021-11-22 19:57:01 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "halloween"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "eb204c9c-b31d-462d-91a0-7e8f45be7621",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb204c9c-b31d-462d-91a0-7e8f45be7621",
+        "lesson.key": "Halloween Artist",
+        "lesson_group.key": "",
+        "script.name": "halloween"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4",
+        "lesson_activity.key": "eb204c9c-b31d-462d-91a0-7e8f45be7621"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "October15 ghost 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "Halloween Artist",
         "lesson_group.key": "",
-        "script.name": "halloween"
+        "script.name": "halloween",
+        "activity_section.key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4"
       },
       "level_keys": [
         "October15 ghost 1"
@@ -77,14 +102,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "October15 stars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -92,7 +116,8 @@
         ],
         "lesson.key": "Halloween Artist",
         "lesson_group.key": "",
-        "script.name": "halloween"
+        "script.name": "halloween",
+        "activity_section.key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4"
       },
       "level_keys": [
         "October15 stars 1"
@@ -101,14 +126,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "October15 JoL 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +140,8 @@
         ],
         "lesson.key": "Halloween Artist",
         "lesson_group.key": "",
-        "script.name": "halloween"
+        "script.name": "halloween",
+        "activity_section.key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4"
       },
       "level_keys": [
         "October15 JoL 1"
@@ -132,7 +157,8 @@
         ],
         "lesson.key": "Halloween Artist",
         "lesson_group.key": "",
-        "script.name": "halloween"
+        "script.name": "halloween",
+        "activity_section.key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4"
       }
     },
     {
@@ -143,7 +169,8 @@
         ],
         "lesson.key": "Halloween Artist",
         "lesson_group.key": "",
-        "script.name": "halloween"
+        "script.name": "halloween",
+        "activity_section.key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4"
       }
     },
     {
@@ -154,7 +181,8 @@
         ],
         "lesson.key": "Halloween Artist",
         "lesson_group.key": "",
-        "script.name": "halloween"
+        "script.name": "halloween",
+        "activity_section.key": "fe7b2f43-5998-4d13-92f9-dc67c0cf35b4"
       }
     }
   ],

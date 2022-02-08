@@ -25,9 +25,7 @@ export default class SmallFooter extends React.Component {
       help_from_html: PropTypes.string.isRequired,
       art_from_html: PropTypes.string.isRequired,
       code_from_html: PropTypes.string.isRequired,
-      powered_by_aws: PropTypes.string.isRequired,
       trademark: PropTypes.string.isRequired,
-      google_copyright: PropTypes.string.isRequired,
       built_on_github: PropTypes.string.isRequired
     }),
     baseCopyrightString: PropTypes.string,
@@ -207,15 +205,9 @@ export default class SmallFooter extends React.Component {
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <SafeMarkdown
-              markdown={
-                decodeURIComponent(this.props.copyrightStrings.art_from_html) +
-                '<br />' +
-                decodeURIComponent(
-                  this.props.copyrightStrings.google_copyright
-                ) +
-                '<br />' +
-                this.props.copyrightStrings.powered_by_aws
-              }
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.art_from_html
+              )}
             />
             <SafeMarkdown
               markdown={decodeURIComponent(

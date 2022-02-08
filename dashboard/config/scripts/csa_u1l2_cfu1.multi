@@ -1,5 +1,5 @@
 name 'CSA U1L2 CFU1'
-editor_experiment ''
+title 'Check for Understanding'
 
 
 wrong 'class'
@@ -7,7 +7,7 @@ right 'object'
 
 
 markdown <<MARKDOWN
-Look at the underlined code snippet below. Which of the following correctly identifies the code?
+Look at the code segment below. Which of the following correctly identifies the code?
 
 ```
 Painter art = new Painter();

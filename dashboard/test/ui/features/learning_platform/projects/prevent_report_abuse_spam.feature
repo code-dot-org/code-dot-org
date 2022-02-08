@@ -1,3 +1,4 @@
+@dashboard_db_access
 @no_mobile
 @no_firefox
 Feature: Prevent Report Abuse Spam
@@ -62,7 +63,6 @@ Scenario: Report Abuse link hidden if the user already reported Game Lab project
   And element ".ui-test-how-it-works" is visible
   And element ".ui-test-report-abuse" is not visible
 
-@no_ie @no_chrome
 Scenario: Abuse reports block a project for other viewers
   Given I create a student named "Creator"
   And I make a "applab" project named "Regular Project"
@@ -93,7 +93,6 @@ Scenario: Abuse reports block a project for other viewers
   And I navigate to the last shared URL
   And I wait until element ".exclamation-abuse" is visible
 
-@no_ie @no_chrome
 Scenario: Projects made by project validators are protected from abuse reports
   Given I create a teacher named "Project Validator"
   And I give user "Project Validator" project validator permission

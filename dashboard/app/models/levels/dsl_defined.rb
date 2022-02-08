@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 require 'cdo/script_constants'
@@ -30,6 +31,13 @@ require 'cdo/script_constants'
 class DSLDefined < Level
   include Seeded
   after_destroy :delete_level_file
+  validate :validate_level_name
+
+  DEFAULT_LEVEL_NAME = 'unique level name here'
+
+  def validate_level_name
+    errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
+  end
 
   def dsl_default
     "Enter the level definition here.\n"
@@ -117,6 +125,9 @@ class DSLDefined < Level
 
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
+        if level.existing_filename.blank? && File.exist?(Rails.root.join(level.canonical_filename))
+          raise ArgumentError, "Cannot create level named #{level.name.dump} because file #{level.canonical_filename.dump} already exists"
+        end
         level.rewrite_dsl_file(text)
       end
 
@@ -131,9 +142,17 @@ class DSLDefined < Level
 
   def filename
     return nil if name.blank?
+    existing_filename.presence || canonical_filename
+  end
+
+  def existing_filename
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
     grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
-    `#{grep_string}`.chomp.presence || "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
+    `#{grep_string}`.chomp
+  end
+
+  def canonical_filename
+    "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
   def file_path

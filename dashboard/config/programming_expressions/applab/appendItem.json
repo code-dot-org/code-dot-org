@@ -1,13 +1,14 @@
 {
-  "func": "appendItem",
+  "key": "appendItem",
+  "name": "appendItem",
   "category": "Variables",
-  "paletteParams": [
-    "list",
-    "item"
+  "palette_params": [
+    {
+      "name": "list"
+    },
+    {
+      "name": "item"
+    }
   ],
-  "params": [
-    "list",
-    "\"f\""
-  ],
-  "dontMarshal": true
+  "syntax": "appendItem(list, item)"
 }

@@ -8,7 +8,7 @@ import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {Goal, show, showBackground} from '../redux/animationPicker';
+import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 function animations(areBackgrounds) {
@@ -79,8 +79,8 @@ const customInputTypes = {
         `${inputConfig.label}(0, 0)`,
         `${inputConfig.name}_LABEL`
       );
-      const label =
-        currentInputRow.titleRow[currentInputRow.titleRow.length - 1];
+      const fieldRow = currentInputRow.getFieldRow();
+      const label = fieldRow[fieldRow.length - 1];
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = '\uf276';
@@ -98,7 +98,7 @@ const customInputTypes = {
           if (value) {
             try {
               const loc = JSON.parse(value);
-              label.setText(
+              label.setValue(
                 `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
               );
             } catch (e) {
@@ -183,20 +183,11 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: i18n.draw(),
+            text: i18n.costumeMode(),
             action: () => {
               getStore().dispatch(
-                changeInterfaceMode(
-                  P5LabInterfaceMode.ANIMATION,
-                  true /* spritelabDraw */
-                )
+                changeInterfaceMode(P5LabInterfaceMode.ANIMATION)
               );
-            }
-          },
-          {
-            text: i18n.more(),
-            action: () => {
-              getStore().dispatch(show(Goal.NEW_ANIMATION, true));
             }
           }
         ];
@@ -448,7 +439,9 @@ export default {
     };
     generator.sprite_variables_get = function() {
       return [
-        `{name: '${this.getTitleValue('VAR')}'}`,
+        `{name: '${Blockly.JavaScript.translateVarName(
+          this.getTitleValue('VAR')
+        )}'}`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };
@@ -616,6 +609,7 @@ export default {
           block.setHSV(136, 0.84, 0.8);
           block.parameterNames_ = [i18n.thisSprite()];
           block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
+          block.setUserVisible(false);
         },
         overrides: {
           getVars(category) {

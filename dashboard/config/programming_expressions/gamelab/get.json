@@ -1,12 +1,11 @@
 {
-  "func": "get",
+  "key": "get",
+  "name": "get",
   "category": "Groups",
-  "paletteParams": [
-    "i"
+  "palette_params": [
+    {
+      "name": "i"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "modeOptionName": "*.get",
-  "type": "value"
+  "syntax": "get(i)"
 }

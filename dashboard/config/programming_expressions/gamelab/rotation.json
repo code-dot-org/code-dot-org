@@ -1,6 +1,6 @@
 {
-  "func": "rotation",
+  "key": "rotation",
+  "name": "rotation",
   "category": "Sprites",
-  "modeOptionName": "*.rotation",
-  "type": "property"
+  "syntax": "rotation"
 }

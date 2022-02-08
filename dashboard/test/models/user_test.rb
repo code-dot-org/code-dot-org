@@ -36,10 +36,20 @@ class UserTest < ActiveSupport::TestCase
       parent_email_preference_request_ip: '127.0.0.1',
       parent_email_preference_source: EmailPreference::ACCOUNT_SIGN_UP
     }
+
+    @csf_script = create :csf_script
+    @csf_lesson_group = create(:lesson_group, script: @csf_script)
+    @csf_lesson = create(:lesson, script: @csf_script, lesson_group: @csf_lesson_group)
+    @csf_script_level = create(:script_level, script: @csf_script)
+
     @admin = create :admin
     @user = create :user
     @teacher = create :teacher
     @student = create :student
+    @facilitator = create :facilitator
+    @universal_instructor = create :universal_instructor
+    @plc_reviewer = create :plc_reviewer
+    @levelbuilder = create :levelbuilder
   end
 
   test 'from_identifier finds user by id' do
@@ -814,108 +824,109 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next_unpassed_visible_progression_level, no progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
-    assert twenty_hour.script_levels.first.level.unplugged?
-    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    script = create(:script, :with_levels, levels_count: 3)
+    assert_equal(1, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level, progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
-    second_script_level = twenty_hour.get_script_level_by_chapter(2)
+    script = create(:script, :with_levels, levels_count: 3)
+    second_script_level = script.get_script_level_by_chapter(2)
     UserLevel.create(
       user: user,
       level: second_script_level.level,
-      script: twenty_hour,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
-    assert_equal(3, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(3, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level, user skips level, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
-    first_script_level = twenty_hour.get_script_level_by_chapter(1)
+    script = create(:script, :with_levels, levels_count: 3)
+
+    first_script_level = script.get_script_level_by_chapter(1)
     UserLevel.create(
       user: user,
       level: first_script_level.level,
-      script: twenty_hour,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    third_script_level = twenty_hour.get_script_level_by_chapter(3)
+    third_script_level = script.get_script_level_by_chapter(3)
     UserLevel.create(
       user: user,
       level: third_script_level.level,
-      script: twenty_hour,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(2, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level, out of order progress, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
-    first_script_level = twenty_hour.get_script_level_by_chapter(1)
+    script = create(:script, :with_levels, levels_count: 5)
+
+    first_script_level = script.get_script_level_by_chapter(1)
     UserLevel.create(
       user: user,
       level: first_script_level.level,
-      script: twenty_hour,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    third_script_level = twenty_hour.get_script_level_by_chapter(3)
+    third_script_level = script.get_script_level_by_chapter(3)
     UserLevel.create(
       user: user,
       level: third_script_level.level,
-      script: twenty_hour,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    second_script_level = twenty_hour.get_script_level_by_chapter(2)
+    second_script_level = script.get_script_level_by_chapter(2)
     UserLevel.create(
       user: user,
       level: second_script_level.level,
-      script: twenty_hour,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(4, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level, completed script, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    script = create(:script, :with_levels, levels_count: 5)
 
-    twenty_hour.script_levels.each do |sl|
+    script.script_levels.each do |sl|
       UserLevel.create(
         user: user,
         level: sl.level,
-        script: twenty_hour,
+        script: script,
         attempts: 1,
         best_result: Activity::MINIMUM_PASS_RESULT
       )
     end
-    assert twenty_hour.script_levels.first.level.unplugged?
-    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+
+    assert_equal(1, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, none hidden' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    script = create(:script, :with_levels, levels_count: 5)
 
-    twenty_hour.script_levels.take(3).each do |sl|
+    script.script_levels.take(3).each do |sl|
       UserLevel.create(
         user: user,
         level: sl.level,
-        script: twenty_hour,
+        script: script,
         attempts: 1,
         best_result: Activity::MINIMUM_PASS_RESULT
       )
@@ -923,59 +934,64 @@ class UserTest < ActiveSupport::TestCase
 
     UserLevel.create(
       user: user,
-      level: twenty_hour.script_levels.last.level,
-      script: twenty_hour,
+      level: script.script_levels.last.level,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    assert_equal(4, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+    assert_equal(4, user.next_unpassed_visible_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_progression_level if not completed any unplugged levels' do
-    user = create :user
-    twenty_hour = Script.twenty_hour_script
-    twenty_hour.script_levels.each do |script_level|
+    user = create(:user)
+    script = create(:script)
+    [:unplugged, :level, :unplugged, :level, :unplugged].each do |type|
+      level = create(type)
+      script_level = create(:script_level, levels: [level], script: script)
+      create(:lesson_group, lessons: [script_level.lesson], script: script)
+    end
+
+    script.script_levels.each do |script_level|
+      #next if script_level.chapter > 4
       next if script_level.level.game.unplugged? # skip all unplugged
-      next if script_level.chapter > 33
       UserLevel.create(
         user: user,
         level: script_level.level,
-        script: twenty_hour,
+        script: script,
         attempts: 1,
         best_result: Activity::MINIMUM_PASS_RESULT
       )
     end
-    assert_equal(35, user.next_unpassed_progression_level(twenty_hour).chapter)
+    assert_equal(4, user.next_unpassed_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_progression_level, not tainted by other user progress' do
     user = create :user
     other_user = create :user
-    twenty_hour = Script.twenty_hour_script
-    twenty_hour.script_levels.each do |script_level|
-      next if script_level.chapter > 33
+    script = create(:script, :with_levels, levels_count: 5)
+    script.script_levels.each do |script_level|
       UserLevel.create(
         user: other_user,
         level: script_level.level,
-        script: twenty_hour,
+        script: script,
         attempts: 1,
         best_result: Activity::MINIMUM_PASS_RESULT
       )
     end
-    assert_equal(2, user.next_unpassed_progression_level(twenty_hour).chapter)
+    assert_equal(1, user.next_unpassed_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_progression_level when most recent level is not passed' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    script = create(:script, :with_levels, levels_count: 5)
 
-    twenty_hour.script_levels.each do |script_level|
+    script.script_levels.each do |script_level|
       next if script_level.chapter != 3
       UserLevel.create(
         user: user,
         level: script_level.level,
-        script: twenty_hour,
+        script: script,
         attempts: 1,
         best_result: Activity::MINIMUM_FINISHED_RESULT
       )
@@ -983,25 +999,25 @@ class UserTest < ActiveSupport::TestCase
 
     # The level we most recently had progress on we did not pass, so that's
     # where we should go
-    assert_equal(3, user.next_unpassed_progression_level(twenty_hour).chapter)
+    assert_equal(3, user.next_unpassed_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_progression_level when most recent level is last level' do
     user = create :user
-    twenty_hour = Script.twenty_hour_script
+    script = create(:script, :with_levels, levels_count: 5)
 
-    script_level = twenty_hour.script_levels.last
+    script_level = script.script_levels.last
     UserLevel.create(
       user: user,
       level: script_level.level,
-      script: twenty_hour,
+      script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
     # User's most recent progress is on last level in script. There's nothing
     # following it, so just return to the last level
-    assert_equal(script_level.chapter, user.next_unpassed_progression_level(twenty_hour).chapter)
+    assert_equal(script_level.chapter, user.next_unpassed_progression_level(script).chapter)
   end
 
   test 'can get next_unpassed_progression_level when most recent level is only followed by unplugged levels' do
@@ -1163,13 +1179,15 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress records progress for partner when pairing' do
     user = create :user
     partner = create :user
-    script_level = Script.get_from_cache('20-hour').script_levels.third
+    level = create(:level, :with_script)
+    script_level = level.script_levels.first
+    script = script_level.script
 
     track_progress(user.id, script_level, 100, pairings: [partner.id])
 
-    user_level = UserLevel.find_by(user: user, script: script_level.script, level: script_level.level)
+    user_level = UserLevel.find_by(user: user, script: script, level: level)
     assert_equal 100, user_level.best_result
-    partner_level = UserLevel.find_by(user: partner, script: script_level.script, level: script_level.level)
+    partner_level = UserLevel.find_by(user: partner, script: script, level: level)
     assert_equal 100, partner_level.best_result
   end
 
@@ -1498,6 +1516,34 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     # password was changed
     assert old_password != student.encrypted_password
+  end
+
+  test 'send localized password reset email for student' do
+    test_locale = :"te-ST"
+    translated_subject = 'subject in te-ST'
+    translated_hello = 'hello in te-ST'
+    custom_i18n = {
+      devise: {
+        mailer: {
+          reset_password_instructions: {
+            subject: translated_subject,
+            hello: translated_hello
+          }
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    email = 'email@email.xx'
+    create :student, password: 'current_password', email: email
+
+    assert User.send_reset_password_instructions(email: email)
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal [email], mail.to
+    assert_equal translated_subject, mail.subject
+    assert mail.body.to_s =~ /#{translated_hello}/
   end
 
   test 'send reset password for student with parent email' do
@@ -2502,13 +2548,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'track_level_progress calls track_proficiency if new perfect csf score' do
     user = create :user
-    csf_script = create :csf_script
-    csf_lesson_group = create(:lesson_group, script: csf_script)
-    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
-    csf_script_level = create(:script_level, script: csf_script)
-
     User.expects(:track_proficiency).once
-    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100)
   end
 
   test 'track_level_progress does not call track_proficiency if new perfect non-csf score' do
@@ -2521,100 +2562,91 @@ class UserTest < ActiveSupport::TestCase
 
   test 'track_level_progress does not call track_proficiency if old perfect score' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :user_level,
       user_id: user.id,
-      script_id: csf_script_level.script_id,
-      level_id: csf_script_level.level_id,
+      script_id: @csf_script_level.script_id,
+      level_id: @csf_script_level.level_id,
       best_result: 100
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100)
   end
 
   test 'track_level_progress does not call track_proficiency if new passing csf score' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
-
     User.expects(:track_proficiency).never
-    track_progress(user.id, csf_script_level, 25)
+    track_progress(user.id, @csf_script_level, 25)
   end
 
   test 'track_level_progress does not call track_proficiency if hint used' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :hint_view_request,
       user_id: user.id,
-      level_id: csf_script_level.level_id,
-      script_id: csf_script_level.script_id
+      level_id: @csf_script_level.level_id,
+      script_id: @csf_script_level.script_id
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100)
   end
 
   test 'track_level_progress does not call track_proficiency if authored hint used' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     AuthoredHintViewRequest.create(
       user_id: user.id,
-      level_id: csf_script_level.level_id,
-      script_id: csf_script_level.script_id
+      level_id: @csf_script_level.level_id,
+      script_id: @csf_script_level.script_id
     )
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100)
   end
 
   test 'track_level_progress does not call track_proficiency when pairing' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
+    track_progress(user.id, @csf_script_level, 100, pairings: [create(:user).id])
   end
 
   test 'track_level_progress does call track_profiency when manual_pass to perfect' do
     user = create :user
-    csf_script = create :csf_script
-    csf_lesson_group = create(:lesson_group, script: csf_script)
-    create(:lesson, script: csf_script, lesson_group: csf_lesson_group)
-    csf_script_level = create(:script_level, script: csf_script)
 
     UserLevel.create!(
       user: user,
-      level: csf_script_level.level,
-      script: csf_script_level.script,
+      level: @csf_script_level.level,
+      script: @csf_script_level.script,
       best_result: ActivityConstants::MANUAL_PASS_RESULT
     )
 
     User.expects(:track_proficiency).once
-    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100)
   end
 
   test 'track_level_progress stops incrementing attempts for perfect results' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    level = create(:level, :with_script)
+    script_level = level.script_levels.first
     ul = UserLevel.create!(
       user: user,
-      level: csf_script_level.level,
-      script: Script.get_from_cache('20-hour'),
+      level: level,
+      script: script_level.script,
       best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
     )
 
-    track_progress(user.id, csf_script_level, 10)
-    track_progress(user.id, csf_script_level, 20)
-    track_progress(user.id, csf_script_level, 30)
+    track_progress(user.id, script_level, 10)
+    track_progress(user.id, script_level, 20)
+    track_progress(user.id, script_level, 30)
 
     assert_equal 3, ul.reload.attempts
 
-    track_progress(user.id, csf_script_level, 31)
+    track_progress(user.id, script_level, 31)
 
     assert_equal 4, ul.reload.attempts
 
-    track_progress(user.id, csf_script_level, 31)
-    track_progress(user.id, csf_script_level, 31)
-    track_progress(user.id, csf_script_level, 100)
-    track_progress(user.id, csf_script_level, 101)
+    track_progress(user.id, script_level, 31)
+    track_progress(user.id, script_level, 31)
+    track_progress(user.id, script_level, 100)
+    track_progress(user.id, script_level, 101)
 
     assert_equal 4, ul.reload.attempts
   end
@@ -2754,25 +2786,62 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair?
   end
 
-  test "authorized teacher" do
+  test "verified teacher" do
     # you can't just create your own authorized teacher account
     assert @teacher.teacher?
-    refute @teacher.authorized_teacher?
+    refute @teacher.verified_teacher?
 
     # you have to be in a cohort
     real_teacher = create(:teacher)
     real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert real_teacher.teacher?
-    assert real_teacher.authorized_teacher?
+    assert real_teacher.verified_teacher?
 
     # or you have to be in a plc course
     create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
     assert plc_teacher.teacher?
-    assert plc_teacher.authorized_teacher?
+    assert plc_teacher.verified_teacher?
+  end
 
-    # admins should be authorized teachers too
+  test "verified instructor" do
+    # normal teacher accounts are not automatically verified instructors
+    assert @teacher.teacher?
+    refute @teacher.verified_instructor?
+
+    # you need to be given the verified permission
+    real_teacher = create(:teacher)
+    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+    assert real_teacher.teacher?
+    assert real_teacher.verified_instructor?
+
+    # or you have to be in a plc course
+    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+    assert plc_teacher.teacher?
+    assert plc_teacher.verified_instructor?
+
+    # admins are not verified instructorsg
     assert @admin.teacher?
-    assert @admin.authorized_teacher?
+    refute @admin.verified_instructor?
+
+    # facilitators should be verified instructors too
+    assert @facilitator.teacher?
+    assert @facilitator.verified_instructor?
+
+    # universal instructors should be verified instructors too
+    assert @universal_instructor.teacher?
+    assert @universal_instructor.verified_instructor?
+
+    #plc reviewers should be verified instructors too
+    assert @plc_reviewer.teacher?
+    assert @plc_reviewer.verified_instructor?
+
+    #levelbuilders should be verified instructors too
+    assert @levelbuilder.teacher?
+    assert @levelbuilder.verified_instructor?
+
+    #students should not be verified instructors
+    refute @student.teacher?
+    refute @student.verified_instructor?
   end
 
   test 'terms_of_service_version for teacher without version' do
@@ -3030,13 +3099,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'deleting user deletes dependent pd applications' do
     teacher = create :teacher
-    application = create :pd_teacher1819_application, user: teacher
+    application = create :pd_teacher_application, user: teacher
     assert_equal application.id, teacher.pd_applications.first.id
 
     teacher.destroy
 
     assert teacher.reload.deleted?
-    refute Pd::Application::Teacher1819Application.exists?(application.id)
+    refute Pd::Application::TeacherApplication.exists?(application.id)
   end
 
   test 'deleting teacher deletes dependent sections and followers' do
@@ -3196,13 +3265,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.any_visible_assigned_scripts?
     end
 
     test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script'
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       @student.assign_script(visible_script)
       assert @student.any_visible_assigned_scripts?
     end
@@ -3212,13 +3281,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script'
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
@@ -3310,12 +3379,12 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      unit_group = create :unit_group, name: 'testcourse'
-      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1'), position: 1
-      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2'), position: 2
+      unit_group = create :unit_group, name: 'testcourse', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 2
       create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
-      other_script = create :script, name: 'otherscript'
+      other_script = create :script, name: 'otherscript', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
       section = create :section, user_id: teacher.id, unit_group: unit_group
@@ -3662,6 +3731,10 @@ class UserTest < ActiveSupport::TestCase
       create :unit_group_unit, position: 1, unit_group: @unit_group, script: @script
       create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script2
       create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script3
+      @unit_group.reload
+      @script.reload
+      @script2.reload
+      @script3.reload
     end
 
     def put_student_in_section(student, teacher, script, unit_group=nil)
@@ -3699,54 +3772,53 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, progress, hidden' do
       student = create :student
       teacher = create :teacher
-      twenty_hour = Script.twenty_hour_script
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
 
-      # User completed the second lesson
-      twenty_hour.lessons[1].script_levels.each do |sl|
+      # User completed the first lesson
+      script.lessons[0].script_levels.each do |sl|
         UserLevel.create(
           user: student,
           level: sl.level,
-          script: twenty_hour,
+          script: script,
           attempts: 1,
           best_result: Activity::MINIMUM_PASS_RESULT
         )
       end
 
-      # Hide the fifth lesson/lesson
+      # Hide the second lesson
       SectionHiddenLesson.create(
-        section_id: put_student_in_section(student, teacher, twenty_hour).id,
-        stage_id: 5
+        section_id: put_student_in_section(student, teacher, script).id,
+        stage_id: script.lessons[1].id
       )
 
-      # Find the seventh lesson, since the 5th is hidden and 6th is unplugged
-      next_visible_lesson = twenty_hour.lessons.find {|lesson| lesson.relative_position == 7}
-
-      assert_equal(next_visible_lesson.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
+      # Should get the third lesson, since the second is hidden
+      assert_equal(script.lessons[2].script_levels.first, student.next_unpassed_visible_progression_level(script))
     end
 
     test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
       student = create :student
       teacher = create :teacher
-      twenty_hour = Script.twenty_hour_script
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
+
+      refute_empty student.visible_script_levels(script)
 
       UserLevel.create(
         user: student,
-        level: twenty_hour.script_levels.last.level,
-        script: twenty_hour,
+        level: script.script_levels.last.level,
+        script: script,
         attempts: 1,
         best_result: Activity::MINIMUM_PASS_RESULT
       )
 
-      # Hide the first lesson/lesson
+      # Hide the first lesson
       SectionHiddenLesson.create(
-        section_id: put_student_in_section(student, teacher, twenty_hour).id,
-        stage_id: 1
+        section_id: put_student_in_section(student, teacher, script).id,
+        stage_id: script.lessons.first.id
       )
 
       # Find the second lesson, since the 1st is hidden
-      next_visible_lesson = twenty_hour.lessons.find {|lesson| lesson.relative_position == 2}
-
-      assert_equal(next_visible_lesson.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
+      refute_nil student.next_unpassed_visible_progression_level(script)
+      assert_equal(2, student.next_unpassed_visible_progression_level(script).chapter)
     end
 
     test "user in two sections, both attached to script" do
@@ -3985,7 +4057,7 @@ class UserTest < ActiveSupport::TestCase
 
     # No UserScript if we only have channel tokens elsewhere
     user = create :student
-    channel_token = create :channel_token, level: Script.twenty_hour_script.levels.first, storage_user: user
+    channel_token = create :channel_token, level: create(:level), storage_user: user
     user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
 
     user_scripts = UserScript.where(user: user)
@@ -4043,9 +4115,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'user_levels_by_user_by_level' do
     users = (1..3).map {create :user}
-    script = Script.twenty_hour_script
-    script_levels = script.script_levels.first(2)
-    script_levels.each do |script_level|
+    script = create(:script, :with_levels, levels_count: 2)
+    script.script_levels.each do |script_level|
       users.first(2).each do |user|
         create :user_level, user: user, level: script_level.level, script: script
       end
@@ -4059,12 +4130,12 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(
       {
         users[0].id => {
-          script_levels[0].level_id => UserLevel.find_by(user: users[0], level: script_levels[0].level),
-          script_levels[1].level_id => UserLevel.find_by(user: users[0], level: script_levels[1].level)
+          script.script_levels[0].level_id => UserLevel.find_by(user: users[0], level: script.script_levels[0].level),
+          script.script_levels[1].level_id => UserLevel.find_by(user: users[0], level: script.script_levels[1].level)
         },
         users[1].id => {
-          script_levels[0].level_id => UserLevel.find_by(user: users[1], level: script_levels[0].level),
-          script_levels[1].level_id => UserLevel.find_by(user: users[1], level: script_levels[1].level)
+          script.script_levels[0].level_id => UserLevel.find_by(user: users[1], level: script.script_levels[0].level),
+          script.script_levels[1].level_id => UserLevel.find_by(user: users[1], level: script.script_levels[1].level)
         },
         users[2].id => {}
       },
@@ -4484,5 +4555,120 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     user.increment_section_attempts
     assert_equal 1, user.properties['section_attempts']
+  end
+
+  test 'school_info_school returns the school associated with the user' do
+    school = create :school
+    school_info = create :school_info, school: school
+    user = create :teacher, school_info: school_info
+
+    assert_equal school.id, user.school_info_school.id
+  end
+
+  test 'school_info_school returns nil if user has no school association' do
+    user = create :teacher
+    assert_nil user.school_info_school
+  end
+
+  test 'marketing_segment_data returns nil if user is not a teacher' do
+    student = create :student
+    assert_nil student.marketing_segment_data
+  end
+
+  test 'marketing_segment_data returns expected account age for teacher' do
+    teacher = create :teacher, created_at: 20.months.ago
+    # 20 months = 1.66 years rounds to 2 years
+    assert_equal 2, teacher.marketing_segment_data[:account_age_in_years]
+  end
+
+  test 'marketing_segment_data returns expected locale' do
+    locale = "en-US"
+    teacher = create :teacher, locale: locale
+    assert_equal locale, teacher.marketing_segment_data[:locale]
+  end
+
+  test 'marketing_segment_data returns expected grades for teacher with sections' do
+    teacher = create :teacher
+    create :section, user: teacher, grade: "6"
+    create :section, user: teacher, grade: "6"
+    create :section, user: teacher, grade: "7"
+
+    expected_grades = ["6", "7"]
+    marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
+    assert_equal expected_grades.sort, marketing_segment_grades.sort
+  end
+
+  test 'marketing_segment_data does not return grades for teacher with no sections' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:grades]
+  end
+
+  test 'marketing_segment_data returns expected curriculums for teacher with sections' do
+    teacher = create :teacher
+    csf_script = create :csf_script
+    csd_script = create :csd_script
+    create :section, user: teacher, script: csf_script
+    create :section, user: teacher, script: csd_script
+
+    expected_curriculums = ["CSF", "CSD"]
+    marketing_segment_curriculums = JSON.parse(teacher.marketing_segment_data[:curriculums])
+    assert_equal expected_curriculums.sort, marketing_segment_curriculums.sort
+  end
+
+  test 'marketing_segment_data does not return curriculums for teacher with no sections' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:curriculums]
+  end
+
+  test 'marketing_segment_data returns expected value for has_attended_pd' do
+    teacher = create :teacher
+    create :pd_attendance, teacher: teacher
+    assert teacher.marketing_segment_data[:has_attended_pd]
+  end
+
+  test 'marketing_segment_data returns expected value for within_us' do
+    teacher = create :teacher
+    create :user_geo, country: "United States", user: teacher
+    assert teacher.marketing_segment_data[:within_us]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus' do
+    frl_eligible_total = 45
+    school = create :school
+    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total, students_total: 100
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert teacher.marketing_segment_data[:school_percent_frl_40_plus]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus when no school stats' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_percent_frl_40_plus]
+  end
+
+  test 'marketing_segment_data returns expected value for school_title_i' do
+    title_i_status = '5'
+    school = create :school
+    create :school_stats_by_year, school: school, title_i_status: title_i_status
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal title_i_status, teacher.marketing_segment_data[:school_title_i]
+  end
+
+  test 'marketing_segment_data returns expected value for school_state when there is a school and state' do
+    school = create :school, state: 'WA'
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal 'WA', teacher.marketing_segment_data[:school_state]
+  end
+
+  test 'marketing_segment_data returns expected value for school_state when there is no school' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_state]
+  end
+
+  test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
+    teacher = create :teacher
+    assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
 end

@@ -2,18 +2,24 @@
   "script": {
     "name": "course4",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
-      "has_lesson_plan": true,
       "curriculum_path": "https://code.org/curriculum/course4/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
       "tts": true,
-      "hideable_lessons": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-05-03 23:54:37 UTC",
+    "family_name": "course4",
+    "serialized_at": "2021-11-22 19:55:54 UTC",
+    "published_state": "preview",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "course4"
     }
@@ -370,23 +376,526 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "5bd3ade6-65a6-4cf4-b2dc-1194febc8ca3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5bd3ade6-65a6-4cf4-b2dc-1194febc8ca3",
+        "lesson.key": "Unplugged: Tangrams",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "28a8fbc4-34ad-4ba7-a9ba-300932a123b9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "28a8fbc4-34ad-4ba7-a9ba-300932a123b9",
+        "lesson.key": "Maze and Bee",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "6d871264-43ec-4c18-b398-a872c60624c5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d871264-43ec-4c18-b398-a872c60624c5",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "ae2d2ae4-f520-4c01-b54d-4ab20f03bbeb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae2d2ae4-f520-4c01-b54d-4ab20f03bbeb",
+        "lesson.key": "Unplugged: Envelope Variables",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "5522c8a3-d2d0-4826-90d8-8a4231001849",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5522c8a3-d2d0-4826-90d8-8a4231001849",
+        "lesson.key": "Unplugged: Madlibs",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "6a6787f4-386d-4063-9f49-f3479df9a320",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a6787f4-386d-4063-9f49-f3479df9a320",
+        "lesson.key": "Artist: Variables",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "71fdb336-59e8-4f2f-b551-23c506314d89",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71fdb336-59e8-4f2f-b551-23c506314d89",
+        "lesson.key": "Play Lab: Variables",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "698c5b88-5178-46cf-8290-afde33f9365d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "698c5b88-5178-46cf-8290-afde33f9365d",
+        "lesson.key": "Unplugged: For Loop Fun",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "60164c8d-139a-46c2-8797-963eb33c37d3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "60164c8d-139a-46c2-8797-963eb33c37d3",
+        "lesson.key": "Bee: For Loops",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "14458c99-fb05-4339-8438-aabb1da1aa04",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14458c99-fb05-4339-8438-aabb1da1aa04",
+        "lesson.key": "Artist: For Loops",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "19ed8d15-28ad-4b0f-a441-8040b84e3eec",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19ed8d15-28ad-4b0f-a441-8040b84e3eec",
+        "lesson.key": "Play Lab: For Loops",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "7b1f1de8-68ef-404c-8eef-676f64eda415",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b1f1de8-68ef-404c-8eef-676f64eda415",
+        "lesson.key": "Artist: Functions",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "e1f6d6ee-e14d-43e0-a54c-2ed911e02617",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1f6d6ee-e14d-43e0-a54c-2ed911e02617",
+        "lesson.key": "Unplugged: Songwriting with Parameters",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "45f33433-84b9-4c32-af7a-9a7187f6dd4d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45f33433-84b9-4c32-af7a-9a7187f6dd4d",
+        "lesson.key": "Artist: Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "2207148d-2cdc-4ef2-a4a0-51d1d3d459ff",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2207148d-2cdc-4ef2-a4a0-51d1d3d459ff",
+        "lesson.key": "Play Lab: Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "ec425479-6dc7-443d-b92d-3cce06d137ea",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec425479-6dc7-443d-b92d-3cce06d137ea",
+        "lesson.key": "Bee: Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "d79b4b8b-e50a-403d-82f2-e7925d9a5a1b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d79b4b8b-e50a-403d-82f2-e7925d9a5a1b",
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "06c18eed-6e68-46cf-915c-6677cf00904a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "06c18eed-6e68-46cf-915c-6677cf00904a",
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "5858343d-b949-4dc2-985b-d8a71f55dc08",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5858343d-b949-4dc2-985b-d8a71f55dc08",
+        "lesson.key": "Super Challenge - Variables",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "4ce7789f-b926-49bd-a70a-fafe3648286f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4ce7789f-b926-49bd-a70a-fafe3648286f",
+        "lesson.key": "Super Challenge - For Loops",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "c79a87a5-99eb-494f-941e-4ba51db9e567",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c79a87a5-99eb-494f-941e-4ba51db9e567",
+        "lesson.key": "Super Challenge - Functions and Parameters",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    },
+    {
+      "key": "be9e33f3-3345-4909-9c2b-5f4f5b40daed",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be9e33f3-3345-4909-9c2b-5f4f5b40daed",
+        "lesson.key": "Extreme Challenge - Comprehensive",
+        "lesson_group.key": "",
+        "script.name": "course4"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "bb5cef4e-837f-40d7-9ab8-b0624a48b342",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb5cef4e-837f-40d7-9ab8-b0624a48b342",
+        "lesson_activity.key": "5bd3ade6-65a6-4cf4-b2dc-1194febc8ca3"
+      }
+    },
+    {
+      "key": "5eb0634e-b50d-438d-b807-89184b119b9d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d",
+        "lesson_activity.key": "28a8fbc4-34ad-4ba7-a9ba-300932a123b9"
+      }
+    },
+    {
+      "key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36",
+        "lesson_activity.key": "6d871264-43ec-4c18-b398-a872c60624c5"
+      }
+    },
+    {
+      "key": "b1a447a4-6014-45a5-9c3a-863aba1d5614",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b1a447a4-6014-45a5-9c3a-863aba1d5614",
+        "lesson_activity.key": "ae2d2ae4-f520-4c01-b54d-4ab20f03bbeb"
+      }
+    },
+    {
+      "key": "770313ce-4cff-425a-9cb8-c5ef4f3f3bce",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "770313ce-4cff-425a-9cb8-c5ef4f3f3bce",
+        "lesson_activity.key": "5522c8a3-d2d0-4826-90d8-8a4231001849"
+      }
+    },
+    {
+      "key": "4646ba78-d3a8-4449-832b-46344378195f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f",
+        "lesson_activity.key": "6a6787f4-386d-4063-9f49-f3479df9a320"
+      }
+    },
+    {
+      "key": "721ad513-48bf-4993-bacc-77a817e4c674",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674",
+        "lesson_activity.key": "71fdb336-59e8-4f2f-b551-23c506314d89"
+      }
+    },
+    {
+      "key": "551bad70-8720-41eb-811e-674c83cb3471",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "551bad70-8720-41eb-811e-674c83cb3471",
+        "lesson_activity.key": "698c5b88-5178-46cf-8290-afde33f9365d"
+      }
+    },
+    {
+      "key": "274484c4-3357-4240-8109-2564205b8b70",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70",
+        "lesson_activity.key": "60164c8d-139a-46c2-8797-963eb33c37d3"
+      }
+    },
+    {
+      "key": "958ab196-7c0d-40f0-acae-4639b72471c8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8",
+        "lesson_activity.key": "14458c99-fb05-4339-8438-aabb1da1aa04"
+      }
+    },
+    {
+      "key": "63e7aba2-da10-4bce-aa3e-c56c40709a93",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93",
+        "lesson_activity.key": "19ed8d15-28ad-4b0f-a441-8040b84e3eec"
+      }
+    },
+    {
+      "key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8",
+        "lesson_activity.key": "7b1f1de8-68ef-404c-8eef-676f64eda415"
+      }
+    },
+    {
+      "key": "c8a2e050-b372-4f4c-934f-b11060f19de5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c8a2e050-b372-4f4c-934f-b11060f19de5",
+        "lesson_activity.key": "e1f6d6ee-e14d-43e0-a54c-2ed911e02617"
+      }
+    },
+    {
+      "key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d",
+        "lesson_activity.key": "45f33433-84b9-4c32-af7a-9a7187f6dd4d"
+      }
+    },
+    {
+      "key": "33248374-2a6b-477e-8440-3943313cc13f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f",
+        "lesson_activity.key": "2207148d-2cdc-4ef2-a4a0-51d1d3d459ff"
+      }
+    },
+    {
+      "key": "a5a13662-2426-4aba-9128-2246787235bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd",
+        "lesson_activity.key": "ec425479-6dc7-443d-b92d-3cce06d137ea"
+      }
+    },
+    {
+      "key": "9a4d90a5-0377-4607-b014-7835100c8660",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9a4d90a5-0377-4607-b014-7835100c8660",
+        "lesson_activity.key": "d79b4b8b-e50a-403d-82f2-e7925d9a5a1b"
+      }
+    },
+    {
+      "key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3",
+        "lesson_activity.key": "06c18eed-6e68-46cf-915c-6677cf00904a"
+      }
+    },
+    {
+      "key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130",
+        "lesson_activity.key": "5858343d-b949-4dc2-985b-d8a71f55dc08"
+      }
+    },
+    {
+      "key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5",
+        "lesson_activity.key": "4ce7789f-b926-49bd-a70a-fafe3648286f"
+      }
+    },
+    {
+      "key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3",
+        "lesson_activity.key": "c79a87a5-99eb-494f-941e-4ba51db9e567"
+      }
+    },
+    {
+      "key": "55375ae9-24b8-46b3-8d1b-03636998bfdf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf",
+        "lesson_activity.key": "be9e33f3-3345-4909-9c2b-5f4f5b40daed"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "TangramAlgorithms"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -394,7 +903,8 @@
         ],
         "lesson.key": "Unplugged: Tangrams",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "bb5cef4e-837f-40d7-9ab8-b0624a48b342"
       },
       "level_keys": [
         "TangramAlgorithms"
@@ -403,14 +913,13 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Maze 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -418,7 +927,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Maze 2"
@@ -427,14 +937,13 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Maze 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,7 +951,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Maze 3"
@@ -451,14 +961,13 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Maze 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -466,7 +975,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Maze 4"
@@ -475,14 +985,13 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Maze 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -490,7 +999,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Maze 5"
@@ -499,14 +1009,13 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Loops 5 NEW"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -514,7 +1023,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Bee Loops 5 NEW"
@@ -523,14 +1033,13 @@
     {
       "chapter": 7,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Loops 5a NEW"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -538,7 +1047,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Bee Loops 5a NEW"
@@ -547,14 +1057,13 @@
     {
       "chapter": 8,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -562,7 +1071,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Bee 1"
@@ -571,14 +1081,13 @@
     {
       "chapter": 9,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -586,7 +1095,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Bee 3"
@@ -595,14 +1105,13 @@
     {
       "chapter": 10,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -610,7 +1119,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "Course 4 Bee 2"
@@ -619,14 +1129,13 @@
     {
       "chapter": 11,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_harvester_nested_loops_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -634,7 +1143,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "course4_harvester_nested_loops_challenge1"
@@ -643,14 +1153,13 @@
     {
       "chapter": 12,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_collector_nested_loops_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -658,7 +1167,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       },
       "level_keys": [
         "course4_collector_nested_loops_challenge2"
@@ -667,14 +1177,13 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -682,7 +1191,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 1"
@@ -691,14 +1201,13 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -706,7 +1215,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 2"
@@ -715,14 +1225,13 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -730,7 +1239,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 3"
@@ -739,14 +1249,13 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -754,7 +1263,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 4"
@@ -763,14 +1273,13 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -778,7 +1287,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 5"
@@ -787,14 +1297,13 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -802,7 +1311,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 6"
@@ -811,14 +1321,13 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -826,7 +1335,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 7"
@@ -835,14 +1345,13 @@
     {
       "chapter": 20,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -850,7 +1359,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 8"
@@ -859,14 +1369,13 @@
     {
       "chapter": 21,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 8a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -874,7 +1383,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 8a"
@@ -883,14 +1393,13 @@
     {
       "chapter": 22,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -898,7 +1407,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 9"
@@ -907,14 +1417,13 @@
     {
       "chapter": 23,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -922,7 +1431,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 10"
@@ -931,14 +1441,13 @@
     {
       "chapter": 24,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -946,7 +1455,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 11"
@@ -955,14 +1465,13 @@
     {
       "chapter": 25,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -970,7 +1479,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 12"
@@ -979,14 +1489,13 @@
     {
       "chapter": 26,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -994,7 +1503,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       },
       "level_keys": [
         "Course 4 Artist 13"
@@ -1003,14 +1513,13 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "EnvelopeVariables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1018,7 +1527,8 @@
         ],
         "lesson.key": "Unplugged: Envelope Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "b1a447a4-6014-45a5-9c3a-863aba1d5614"
       },
       "level_keys": [
         "EnvelopeVariables"
@@ -1027,14 +1537,13 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MadGlibs"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1042,7 +1551,8 @@
         ],
         "lesson.key": "Unplugged: Madlibs",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "770313ce-4cff-425a-9cb8-c5ef4f3f3bce"
       },
       "level_keys": [
         "MadGlibs"
@@ -1051,14 +1561,13 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1066,7 +1575,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 1"
@@ -1075,14 +1585,13 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1090,7 +1599,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 2"
@@ -1099,14 +1609,13 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1114,7 +1623,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "NEW Course 4 Artist Vars 2"
@@ -1123,14 +1633,13 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1138,7 +1647,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "NEW Course 4 Artist Vars 4"
@@ -1147,14 +1657,13 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Vars 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1162,7 +1671,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "NEW Course 4 Artist Vars 6"
@@ -1171,14 +1681,13 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1186,7 +1695,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 4"
@@ -1195,14 +1705,13 @@
     {
       "chapter": 35,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1210,7 +1719,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 6"
@@ -1219,14 +1729,13 @@
     {
       "chapter": 36,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1234,7 +1743,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 7"
@@ -1243,14 +1753,13 @@
     {
       "chapter": 37,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Vars 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1258,7 +1767,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "NEW Course 4 Artist Vars 12"
@@ -1267,14 +1777,13 @@
     {
       "chapter": 38,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1282,7 +1791,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 8"
@@ -1291,14 +1801,13 @@
     {
       "chapter": 39,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1306,7 +1815,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 11"
@@ -1315,14 +1825,13 @@
     {
       "chapter": 40,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1330,7 +1839,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 12"
@@ -1339,14 +1849,13 @@
     {
       "chapter": 41,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1354,7 +1863,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 13"
@@ -1363,14 +1873,13 @@
     {
       "chapter": 42,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Vars 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1378,7 +1887,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Vars 14"
@@ -1387,14 +1897,13 @@
     {
       "chapter": 43,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Inspire"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1402,7 +1911,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist Inspire"
@@ -1411,14 +1921,13 @@
     {
       "chapter": 44,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist 20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1426,7 +1935,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "Course 4 Artist 20"
@@ -1435,14 +1945,13 @@
     {
       "chapter": 45,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_artist_variables_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1450,7 +1959,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       },
       "level_keys": [
         "course4_artist_variables_challenge1"
@@ -1459,14 +1969,13 @@
     {
       "chapter": 46,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1474,7 +1983,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 1"
@@ -1483,14 +1993,13 @@
     {
       "chapter": 47,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1498,7 +2007,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 2"
@@ -1507,14 +2017,13 @@
     {
       "chapter": 48,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1522,7 +2031,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 3"
@@ -1531,14 +2041,13 @@
     {
       "chapter": 49,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1546,7 +2055,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 4"
@@ -1555,14 +2065,13 @@
     {
       "chapter": 50,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1570,7 +2079,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 5"
@@ -1579,14 +2089,13 @@
     {
       "chapter": 51,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1594,7 +2103,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 6"
@@ -1603,14 +2113,13 @@
     {
       "chapter": 52,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1618,7 +2127,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 7"
@@ -1627,14 +2137,13 @@
     {
       "chapter": 53,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Vars 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1642,7 +2151,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 9"
@@ -1651,14 +2161,13 @@
     {
       "chapter": 54,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_playlab_variables_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1666,7 +2175,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       },
       "level_keys": [
         "course4_playlab_variables_challenge1"
@@ -1675,14 +2185,13 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ForLoopFun"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1690,7 +2199,8 @@
         ],
         "lesson.key": "Unplugged: For Loop Fun",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "551bad70-8720-41eb-811e-674c83cb3471"
       },
       "level_keys": [
         "ForLoopFun"
@@ -1699,14 +2209,13 @@
     {
       "chapter": 56,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1714,7 +2223,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 1"
@@ -1723,14 +2233,13 @@
     {
       "chapter": 57,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1738,7 +2247,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 2"
@@ -1747,14 +2257,13 @@
     {
       "chapter": 58,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1762,7 +2271,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 3"
@@ -1771,14 +2281,13 @@
     {
       "chapter": 59,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1786,7 +2295,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 4"
@@ -1795,14 +2305,13 @@
     {
       "chapter": 60,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 4 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1810,7 +2319,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 4 4"
@@ -1819,14 +2329,13 @@
     {
       "chapter": 61,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1834,7 +2343,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 5"
@@ -1843,14 +2353,13 @@
     {
       "chapter": 62,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1858,7 +2367,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 6"
@@ -1867,14 +2377,13 @@
     {
       "chapter": 63,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1882,7 +2391,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 8"
@@ -1891,14 +2401,13 @@
     {
       "chapter": 64,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1906,7 +2415,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 7"
@@ -1915,14 +2425,13 @@
     {
       "chapter": 65,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1930,7 +2439,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 9"
@@ -1939,14 +2449,13 @@
     {
       "chapter": 66,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Bee For Loops 10a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1954,7 +2463,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "NEW Course 4 Bee For Loops 10a"
@@ -1963,14 +2473,13 @@
     {
       "chapter": 67,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_bee_for_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1978,7 +2487,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       },
       "level_keys": [
         "course4_bee_for_challenge1"
@@ -1987,14 +2497,13 @@
     {
       "chapter": 68,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2002,7 +2511,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 1"
@@ -2011,14 +2521,13 @@
     {
       "chapter": 69,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2026,7 +2535,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 2"
@@ -2035,14 +2545,13 @@
     {
       "chapter": 70,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2050,7 +2559,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 3"
@@ -2059,14 +2569,13 @@
     {
       "chapter": 71,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2074,7 +2583,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 4"
@@ -2083,14 +2593,13 @@
     {
       "chapter": 72,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2098,7 +2607,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 8"
@@ -2107,14 +2617,13 @@
     {
       "chapter": 73,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2122,7 +2631,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 14"
@@ -2131,14 +2641,13 @@
     {
       "chapter": 74,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 6a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2146,7 +2655,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 6a"
@@ -2155,14 +2665,13 @@
     {
       "chapter": 75,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2170,7 +2679,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 11"
@@ -2179,14 +2689,13 @@
     {
       "chapter": 76,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 11a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2194,7 +2703,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 11a"
@@ -2203,14 +2713,13 @@
     {
       "chapter": 77,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops Challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2218,7 +2727,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops Challenge"
@@ -2227,14 +2737,13 @@
     {
       "chapter": 78,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops inspire"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2242,7 +2751,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops inspire"
@@ -2251,14 +2761,13 @@
     {
       "chapter": 79,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist For Loops 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2266,7 +2775,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       },
       "level_keys": [
         "Course 4 Artist For Loops 15"
@@ -2275,14 +2785,13 @@
     {
       "chapter": 80,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Labs For Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2290,7 +2799,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       },
       "level_keys": [
         "Course 4 Play Labs For Loops 1"
@@ -2299,14 +2809,13 @@
     {
       "chapter": 81,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Labs For Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2314,7 +2823,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       },
       "level_keys": [
         "Course 4 Play Labs For Loops 2"
@@ -2323,14 +2833,13 @@
     {
       "chapter": 82,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Labs For Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2338,7 +2847,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       },
       "level_keys": [
         "Course 4 Play Labs For Loops 3"
@@ -2347,14 +2857,13 @@
     {
       "chapter": 83,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Playlab For Loops 4b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2362,7 +2871,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       },
       "level_keys": [
         "Course 4 Playlab For Loops 4b"
@@ -2371,14 +2881,13 @@
     {
       "chapter": 84,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Playlab For Loops 5b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2386,7 +2895,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       },
       "level_keys": [
         "Course 4 Playlab For Loops 5b"
@@ -2395,14 +2905,13 @@
     {
       "chapter": 85,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Playlab For Loops 6b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2410,7 +2919,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       },
       "level_keys": [
         "Course 4 Playlab For Loops 6b"
@@ -2419,14 +2929,13 @@
     {
       "chapter": 86,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Playlab For Loop Freeplay"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2434,7 +2943,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       },
       "level_keys": [
         "Course 4 Playlab For Loop Freeplay"
@@ -2443,14 +2953,13 @@
     {
       "chapter": 87,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2458,7 +2967,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 1"
@@ -2467,14 +2977,13 @@
     {
       "chapter": 88,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2482,7 +2991,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 2"
@@ -2491,14 +3001,13 @@
     {
       "chapter": 89,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2506,7 +3015,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 3"
@@ -2515,14 +3025,13 @@
     {
       "chapter": 90,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2530,7 +3039,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 4"
@@ -2539,14 +3049,13 @@
     {
       "chapter": 91,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2554,7 +3063,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 7"
@@ -2563,14 +3073,13 @@
     {
       "chapter": 92,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2578,7 +3087,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 8"
@@ -2587,14 +3097,13 @@
     {
       "chapter": 93,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2602,7 +3111,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 9"
@@ -2611,14 +3121,13 @@
     {
       "chapter": 94,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2626,7 +3135,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 11"
@@ -2635,14 +3145,13 @@
     {
       "chapter": 95,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2650,7 +3159,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 12"
@@ -2659,14 +3169,13 @@
     {
       "chapter": 96,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2674,7 +3183,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 13"
@@ -2683,14 +3193,13 @@
     {
       "chapter": 97,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Functions challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2698,7 +3207,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "Course 4 Artist Functions challenge"
@@ -2707,14 +3217,13 @@
     {
       "chapter": 98,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Functions Inspiration"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2722,7 +3231,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "Course 4 Artist Functions Inspiration"
@@ -2731,14 +3241,13 @@
     {
       "chapter": 99,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Functions 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2746,7 +3255,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "NEW Course 4 Artist Functions 14"
@@ -2755,14 +3265,13 @@
     {
       "chapter": 100,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_artist_concept_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2770,7 +3279,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "course4_artist_concept_challenge2"
@@ -2779,14 +3289,13 @@
     {
       "chapter": 101,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_artist_functions_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2794,7 +3303,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       },
       "level_keys": [
         "course4_artist_functions_challenge2"
@@ -2803,14 +3313,13 @@
     {
       "chapter": 102,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SongwritingWithParameters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2818,7 +3327,8 @@
         ],
         "lesson.key": "Unplugged: Songwriting with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c8a2e050-b372-4f4c-934f-b11060f19de5"
       },
       "level_keys": [
         "SongwritingWithParameters"
@@ -2827,14 +3337,13 @@
     {
       "chapter": 103,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2842,7 +3351,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 1"
@@ -2851,14 +3361,13 @@
     {
       "chapter": 104,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2866,7 +3375,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 2"
@@ -2875,14 +3385,13 @@
     {
       "chapter": 105,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2890,7 +3399,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 3"
@@ -2899,14 +3409,13 @@
     {
       "chapter": 106,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2914,7 +3423,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 4"
@@ -2923,14 +3433,13 @@
     {
       "chapter": 107,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2938,7 +3447,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 5"
@@ -2947,14 +3457,13 @@
     {
       "chapter": 108,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2962,7 +3471,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 6"
@@ -2971,14 +3481,13 @@
     {
       "chapter": 109,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2986,7 +3495,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 7"
@@ -2995,14 +3505,13 @@
     {
       "chapter": 110,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3010,7 +3519,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 8"
@@ -3019,14 +3529,13 @@
     {
       "chapter": 111,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3034,7 +3543,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 9"
@@ -3043,14 +3553,13 @@
     {
       "chapter": 112,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3058,7 +3567,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 10"
@@ -3067,14 +3577,13 @@
     {
       "chapter": 113,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3082,7 +3591,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 11"
@@ -3091,14 +3601,13 @@
     {
       "chapter": 114,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3106,7 +3615,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 12"
@@ -3115,14 +3625,13 @@
     {
       "chapter": 115,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 12a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3130,7 +3639,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 12a"
@@ -3139,14 +3649,13 @@
     {
       "chapter": 116,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3154,7 +3663,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 13"
@@ -3163,14 +3673,13 @@
     {
       "chapter": 117,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3178,7 +3687,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 14"
@@ -3187,14 +3697,13 @@
     {
       "chapter": 118,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params inspire"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3202,7 +3711,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params inspire"
@@ -3211,14 +3721,13 @@
     {
       "chapter": 119,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Artist Params 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3226,7 +3735,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "NEW Course 4 Artist Params 15"
@@ -3235,14 +3745,13 @@
     {
       "chapter": 120,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_artist_fwp_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3250,7 +3759,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       },
       "level_keys": [
         "course4_artist_fwp_challenge1"
@@ -3259,14 +3769,13 @@
     {
       "chapter": 121,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3274,7 +3783,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 1"
@@ -3283,14 +3793,13 @@
     {
       "chapter": 122,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3298,7 +3807,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 2"
@@ -3307,14 +3817,13 @@
     {
       "chapter": 123,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3322,7 +3831,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 3"
@@ -3331,14 +3841,13 @@
     {
       "chapter": 124,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3346,7 +3855,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 4"
@@ -3355,14 +3865,13 @@
     {
       "chapter": 125,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3370,7 +3879,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 5"
@@ -3379,14 +3889,13 @@
     {
       "chapter": 126,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3394,7 +3903,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 6"
@@ -3403,14 +3913,13 @@
     {
       "chapter": 127,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3418,7 +3927,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 7"
@@ -3427,14 +3937,13 @@
     {
       "chapter": 128,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3442,7 +3951,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 8"
@@ -3451,14 +3961,13 @@
     {
       "chapter": 129,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3466,7 +3975,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 9"
@@ -3475,14 +3985,13 @@
     {
       "chapter": 130,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Play Lab Params 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3490,7 +3999,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "Course 4 Play Lab Params 10"
@@ -3499,14 +4009,13 @@
     {
       "chapter": 131,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "NEW Course 4 Play Lab Params 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3514,7 +4023,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       },
       "level_keys": [
         "NEW Course 4 Play Lab Params 11"
@@ -3523,14 +4033,13 @@
     {
       "chapter": 132,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3538,7 +4047,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 1"
@@ -3547,14 +4057,13 @@
     {
       "chapter": 133,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3562,7 +4071,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 2"
@@ -3571,14 +4081,13 @@
     {
       "chapter": 134,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3586,7 +4095,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 3"
@@ -3595,14 +4105,13 @@
     {
       "chapter": 135,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3610,7 +4119,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 4"
@@ -3619,14 +4129,13 @@
     {
       "chapter": 136,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3634,7 +4143,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 5"
@@ -3643,14 +4153,13 @@
     {
       "chapter": 137,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3658,7 +4167,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 6"
@@ -3667,14 +4177,13 @@
     {
       "chapter": 138,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3682,7 +4191,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 7"
@@ -3691,14 +4201,13 @@
     {
       "chapter": 139,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Bee Params 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3706,7 +4215,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "Course 4 Bee Params 8"
@@ -3715,14 +4225,13 @@
     {
       "chapter": 140,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_bee_fwp_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3730,7 +4239,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "course4_bee_fwp_challenge1"
@@ -3739,14 +4249,13 @@
     {
       "chapter": 141,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_bee_fwp_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3754,7 +4263,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       },
       "level_keys": [
         "course4_bee_fwp_challenge2"
@@ -3763,14 +4273,13 @@
     {
       "chapter": 142,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "BinaryImages"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3778,7 +4287,8 @@
         ],
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "9a4d90a5-0377-4607-b014-7835100c8660"
       },
       "level_keys": [
         "BinaryImages"
@@ -3787,14 +4297,13 @@
     {
       "chapter": 143,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary pre1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3802,7 +4311,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary pre1"
@@ -3811,14 +4321,13 @@
     {
       "chapter": 144,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3826,7 +4335,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary 1"
@@ -3835,14 +4345,13 @@
     {
       "chapter": 145,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3850,7 +4359,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary 2"
@@ -3859,14 +4369,13 @@
     {
       "chapter": 146,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3874,7 +4383,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary 3"
@@ -3883,14 +4393,13 @@
     {
       "chapter": 147,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3898,7 +4407,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary 4"
@@ -3907,14 +4417,13 @@
     {
       "chapter": 148,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3922,7 +4431,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary 5"
@@ -3931,14 +4441,13 @@
     {
       "chapter": 149,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3946,7 +4455,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary 6"
@@ -3955,14 +4465,13 @@
     {
       "chapter": 150,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3970,7 +4479,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary 7"
@@ -3979,14 +4489,13 @@
     {
       "chapter": 151,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary Free Play 2a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3994,7 +4503,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary Free Play 2a"
@@ -4003,14 +4513,13 @@
     {
       "chapter": 152,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary Free Play 2b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4018,7 +4527,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary Free Play 2b"
@@ -4027,14 +4537,13 @@
     {
       "chapter": 153,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 Artist Binary Free Play 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4042,7 +4551,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "Course 4 Artist Binary Free Play 2"
@@ -4051,14 +4561,13 @@
     {
       "chapter": 154,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_artist_binary_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4066,7 +4575,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "course4_artist_binary_challenge1"
@@ -4075,14 +4585,13 @@
     {
       "chapter": 155,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "course4_artist_binary_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4090,7 +4599,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       },
       "level_keys": [
         "course4_artist_binary_challenge2"
@@ -4099,14 +4609,13 @@
     {
       "chapter": 156,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCV 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4114,7 +4623,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       },
       "level_keys": [
         "Course 4 SCV 3"
@@ -4123,14 +4633,13 @@
     {
       "chapter": 157,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCV 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4138,7 +4647,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       },
       "level_keys": [
         "Course 4 SCV 5"
@@ -4147,14 +4657,13 @@
     {
       "chapter": 158,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCV 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4162,7 +4671,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       },
       "level_keys": [
         "Course 4 SCV 4"
@@ -4171,14 +4681,13 @@
     {
       "chapter": 159,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCV 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4186,7 +4695,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       },
       "level_keys": [
         "Course 4 SCV 1"
@@ -4195,14 +4705,13 @@
     {
       "chapter": 160,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCV 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4210,7 +4719,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       },
       "level_keys": [
         "Course 4 SCV 2"
@@ -4219,14 +4729,13 @@
     {
       "chapter": 161,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCV 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4234,7 +4743,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       },
       "level_keys": [
         "Course 4 SCV 6"
@@ -4243,14 +4753,13 @@
     {
       "chapter": 162,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 1b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4258,7 +4767,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 1b"
@@ -4267,14 +4777,13 @@
     {
       "chapter": 163,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4282,7 +4791,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 1a"
@@ -4291,14 +4801,13 @@
     {
       "chapter": 164,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4306,7 +4815,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 1"
@@ -4315,14 +4825,13 @@
     {
       "chapter": 165,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4330,7 +4839,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 2"
@@ -4339,14 +4849,13 @@
     {
       "chapter": 166,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4354,7 +4863,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 3"
@@ -4363,14 +4873,13 @@
     {
       "chapter": 167,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4378,7 +4887,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 4"
@@ -4387,14 +4897,13 @@
     {
       "chapter": 168,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4402,7 +4911,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 6"
@@ -4411,14 +4921,13 @@
     {
       "chapter": 169,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCFL 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4426,7 +4935,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       },
       "level_keys": [
         "Course 4 SCFL 7"
@@ -4435,14 +4945,13 @@
     {
       "chapter": 170,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCF 1b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4450,7 +4959,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       },
       "level_keys": [
         "Course 4 SCF 1b"
@@ -4459,14 +4969,13 @@
     {
       "chapter": 171,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCF 1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4474,7 +4983,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       },
       "level_keys": [
         "Course 4 SCF 1a"
@@ -4483,14 +4993,13 @@
     {
       "chapter": 172,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCF 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4498,7 +5007,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       },
       "level_keys": [
         "Course 4 SCF 1"
@@ -4507,14 +5017,13 @@
     {
       "chapter": 173,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCF 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4522,7 +5031,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       },
       "level_keys": [
         "Course 4 SCF 2"
@@ -4531,14 +5041,13 @@
     {
       "chapter": 174,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 SCF 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4546,7 +5055,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       },
       "level_keys": [
         "Course 4 SCF 3"
@@ -4555,14 +5065,13 @@
     {
       "chapter": 175,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 EC 1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4570,7 +5079,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       },
       "level_keys": [
         "Course 4 EC 1a"
@@ -4579,14 +5089,13 @@
     {
       "chapter": 176,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 EC 1b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4594,7 +5103,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       },
       "level_keys": [
         "Course 4 EC 1b"
@@ -4603,14 +5113,13 @@
     {
       "chapter": 177,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 EC 2a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4618,7 +5127,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       },
       "level_keys": [
         "Course 4 EC 2a"
@@ -4627,14 +5137,13 @@
     {
       "chapter": 178,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 EC 2c"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4642,7 +5151,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       },
       "level_keys": [
         "Course 4 EC 2c"
@@ -4651,14 +5161,13 @@
     {
       "chapter": 179,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Course 4 EC 2b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4666,7 +5175,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       },
       "level_keys": [
         "Course 4 EC 2b"
@@ -4682,7 +5192,8 @@
         ],
         "lesson.key": "Unplugged: Tangrams",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "bb5cef4e-837f-40d7-9ab8-b0624a48b342"
       }
     },
     {
@@ -4693,7 +5204,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4704,7 +5216,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4715,7 +5228,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4726,7 +5240,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4737,7 +5252,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4748,7 +5264,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4759,7 +5276,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4770,7 +5288,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4781,7 +5300,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4792,7 +5312,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4803,7 +5324,8 @@
         ],
         "lesson.key": "Maze and Bee",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "5eb0634e-b50d-438d-b807-89184b119b9d"
       }
     },
     {
@@ -4814,7 +5336,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4825,7 +5348,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4836,7 +5360,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4847,7 +5372,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4858,7 +5384,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4869,7 +5396,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4880,7 +5408,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4891,7 +5420,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4902,7 +5432,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4913,7 +5444,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4924,7 +5456,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4935,7 +5468,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4946,7 +5480,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4957,7 +5492,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "78fc54e9-c9d2-418e-90c0-6e51bcca5e36"
       }
     },
     {
@@ -4968,7 +5504,8 @@
         ],
         "lesson.key": "Unplugged: Envelope Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "b1a447a4-6014-45a5-9c3a-863aba1d5614"
       }
     },
     {
@@ -4979,7 +5516,8 @@
         ],
         "lesson.key": "Unplugged: Madlibs",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "770313ce-4cff-425a-9cb8-c5ef4f3f3bce"
       }
     },
     {
@@ -4990,7 +5528,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5001,7 +5540,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5012,7 +5552,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5023,7 +5564,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5034,7 +5576,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5045,7 +5588,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5056,7 +5600,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5067,7 +5612,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5078,7 +5624,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5089,7 +5636,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5100,7 +5648,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5111,7 +5660,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5122,7 +5672,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5133,7 +5684,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5144,7 +5696,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5155,7 +5708,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5166,7 +5720,8 @@
         ],
         "lesson.key": "Artist: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "4646ba78-d3a8-4449-832b-46344378195f"
       }
     },
     {
@@ -5177,7 +5732,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5188,7 +5744,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5199,7 +5756,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5210,7 +5768,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5221,7 +5780,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5232,7 +5792,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5243,7 +5804,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5254,7 +5816,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5265,7 +5828,8 @@
         ],
         "lesson.key": "Play Lab: Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "721ad513-48bf-4993-bacc-77a817e4c674"
       }
     },
     {
@@ -5276,7 +5840,8 @@
         ],
         "lesson.key": "Unplugged: For Loop Fun",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "551bad70-8720-41eb-811e-674c83cb3471"
       }
     },
     {
@@ -5287,7 +5852,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5298,7 +5864,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5309,7 +5876,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5320,7 +5888,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5331,7 +5900,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5342,7 +5912,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5353,7 +5924,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5364,7 +5936,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5375,7 +5948,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5386,7 +5960,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5397,7 +5972,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5408,7 +5984,8 @@
         ],
         "lesson.key": "Bee: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "274484c4-3357-4240-8109-2564205b8b70"
       }
     },
     {
@@ -5419,7 +5996,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5430,7 +6008,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5441,7 +6020,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5452,7 +6032,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5463,7 +6044,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5474,7 +6056,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5485,7 +6068,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5496,7 +6080,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5507,7 +6092,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5518,7 +6104,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5529,7 +6116,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5540,7 +6128,8 @@
         ],
         "lesson.key": "Artist: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "958ab196-7c0d-40f0-acae-4639b72471c8"
       }
     },
     {
@@ -5551,7 +6140,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       }
     },
     {
@@ -5562,7 +6152,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       }
     },
     {
@@ -5573,7 +6164,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       }
     },
     {
@@ -5584,7 +6176,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       }
     },
     {
@@ -5595,7 +6188,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       }
     },
     {
@@ -5606,7 +6200,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       }
     },
     {
@@ -5617,7 +6212,8 @@
         ],
         "lesson.key": "Play Lab: For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "63e7aba2-da10-4bce-aa3e-c56c40709a93"
       }
     },
     {
@@ -5628,7 +6224,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5639,7 +6236,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5650,7 +6248,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5661,7 +6260,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5672,7 +6272,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5683,7 +6284,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5694,7 +6296,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5705,7 +6308,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5716,7 +6320,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5727,7 +6332,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5738,7 +6344,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5749,7 +6356,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5760,7 +6368,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5771,7 +6380,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5782,7 +6392,8 @@
         ],
         "lesson.key": "Artist: Functions",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "0f8f0509-01a5-4c4b-84a7-ea9d0ed8c6b8"
       }
     },
     {
@@ -5793,7 +6404,8 @@
         ],
         "lesson.key": "Unplugged: Songwriting with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c8a2e050-b372-4f4c-934f-b11060f19de5"
       }
     },
     {
@@ -5804,7 +6416,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5815,7 +6428,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5826,7 +6440,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5837,7 +6452,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5848,7 +6464,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5859,7 +6476,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5870,7 +6488,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5881,7 +6500,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5892,7 +6512,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5903,7 +6524,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5914,7 +6536,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5925,7 +6548,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5936,7 +6560,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5947,7 +6572,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5958,7 +6584,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5969,7 +6596,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5980,7 +6608,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -5991,7 +6620,8 @@
         ],
         "lesson.key": "Artist: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "06594c5e-9f37-4df8-9e54-7f486c7dc78d"
       }
     },
     {
@@ -6002,7 +6632,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6013,7 +6644,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6024,7 +6656,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6035,7 +6668,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6046,7 +6680,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6057,7 +6692,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6068,7 +6704,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6079,7 +6716,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6090,7 +6728,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6101,7 +6740,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6112,7 +6752,8 @@
         ],
         "lesson.key": "Play Lab: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "33248374-2a6b-477e-8440-3943313cc13f"
       }
     },
     {
@@ -6123,7 +6764,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6134,7 +6776,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6145,7 +6788,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6156,7 +6800,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6167,7 +6812,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6178,7 +6824,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6189,7 +6836,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6200,7 +6848,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6211,7 +6860,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6222,7 +6872,8 @@
         ],
         "lesson.key": "Bee: Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "a5a13662-2426-4aba-9128-2246787235bd"
       }
     },
     {
@@ -6233,7 +6884,8 @@
         ],
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "9a4d90a5-0377-4607-b014-7835100c8660"
       }
     },
     {
@@ -6244,7 +6896,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6255,7 +6908,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6266,7 +6920,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6277,7 +6932,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6288,7 +6944,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6299,7 +6956,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6310,7 +6968,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6321,7 +6980,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6332,7 +6992,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6343,7 +7004,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6354,7 +7016,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6365,7 +7028,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6376,7 +7040,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "c695e5d2-cdc8-449f-be2c-dd35f70beec3"
       }
     },
     {
@@ -6387,7 +7052,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       }
     },
     {
@@ -6398,7 +7064,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       }
     },
     {
@@ -6409,7 +7076,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       }
     },
     {
@@ -6420,7 +7088,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       }
     },
     {
@@ -6431,7 +7100,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       }
     },
     {
@@ -6442,7 +7112,8 @@
         ],
         "lesson.key": "Super Challenge - Variables",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "f8e00d6b-3ed3-4129-bf14-032bcbe63130"
       }
     },
     {
@@ -6453,7 +7124,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6464,7 +7136,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6475,7 +7148,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6486,7 +7160,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6497,7 +7172,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6508,7 +7184,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6519,7 +7196,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6530,7 +7208,8 @@
         ],
         "lesson.key": "Super Challenge - For Loops",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "da09f2a9-9fe1-4365-9f39-23a81e69e7f5"
       }
     },
     {
@@ -6541,7 +7220,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       }
     },
     {
@@ -6552,7 +7232,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       }
     },
     {
@@ -6563,7 +7244,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       }
     },
     {
@@ -6574,7 +7256,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       }
     },
     {
@@ -6585,7 +7268,8 @@
         ],
         "lesson.key": "Super Challenge - Functions and Parameters",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "15f5ae43-4f60-4284-bea6-fa80f88de1e3"
       }
     },
     {
@@ -6596,7 +7280,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       }
     },
     {
@@ -6607,7 +7292,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       }
     },
     {
@@ -6618,7 +7304,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       }
     },
     {
@@ -6629,7 +7316,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       }
     },
     {
@@ -6640,7 +7328,8 @@
         ],
         "lesson.key": "Extreme Challenge - Comprehensive",
         "lesson_group.key": "",
-        "script.name": "course4"
+        "script.name": "course4",
+        "activity_section.key": "55375ae9-24b8-46b3-8d1b-03636998bfdf"
       }
     }
   ],

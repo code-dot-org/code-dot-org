@@ -9,7 +9,7 @@ describe('RelatedLessons', () => {
     defaultProps = {
       relatedLessons: [
         {
-          scriptTitle: 'Course A',
+          unitTitle: 'Course A',
           versionYear: '2017',
           lockable: false,
           relativePosition: 3,
@@ -17,7 +17,7 @@ describe('RelatedLessons', () => {
           editUrl: '/lessons/123/edit'
         },
         {
-          scriptTitle: 'Express (2019)',
+          unitTitle: 'Express (2019)',
           versionYear: '2019',
           lockable: null,
           relativePosition: 2,
@@ -25,7 +25,7 @@ describe('RelatedLessons', () => {
           editUrl: '/lessons/456/edit'
         },
         {
-          scriptTitle: 'Course 1',
+          unitTitle: 'Course 1',
           lockable: null,
           relativePosition: 4,
           id: 789,

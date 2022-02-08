@@ -15,8 +15,7 @@
   - if current_user.teacher?
     #teacher_reminders
       - unless current_user.accepted_latest_terms?
-        = render template: 'api/accept_terms_reminder'
-        = render partial: 'layouts/terms_interstitial'
+        = render partial: 'layouts/implicit_new_user_terms_interstitial'
       - if show_diversity_survey? SurveyResult::DIVERSITY_2021
         = render partial: 'home/survey_diversity'
 

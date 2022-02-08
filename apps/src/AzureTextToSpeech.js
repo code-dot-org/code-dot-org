@@ -10,11 +10,25 @@ import Sounds from '@cdo/apps/Sounds';
  * @param {Array<string>} profaneWords Any profanity in the response. Used to determine whether the response should be cached and played.
  * @param {Error} error Any error that occurs while requesting the sound or checking for profanity.
  */
-export class SoundResponse {
-  constructor(id, bytes, playbackOptions, profaneWords = [], error = null) {
+class SoundResponse {
+  constructor(
+    id,
+    bytes,
+    profaneWords = [],
+    error = null,
+    onEnded = null,
+    playbackOptions = {}
+  ) {
     this.id = id;
     this.bytes = bytes;
-    this.playbackOptions = playbackOptions;
+    this.playbackOptions = {
+      volume: 1.0,
+      loop: false,
+      forceHTML5: false,
+      allowHTML5Mobile: true,
+      onEnded,
+      ...playbackOptions
+    };
     this.profaneWords = profaneWords;
     this.error = error;
   }
@@ -70,13 +84,6 @@ export default class AzureTextToSpeech {
     this.playing = false;
     this.queue_ = [];
     this.cachedSounds_ = {};
-    this.playbackOptions_ = {
-      volume: 1.0,
-      loop: false,
-      forceHTML5: false,
-      allowHTML5Mobile: true,
-      onEnded: this.onSoundComplete_
-    };
 
     Sounds.getSingleton().onStopAllAudio(this.onAudioEnded_);
   }
@@ -99,12 +106,20 @@ export default class AzureTextToSpeech {
    * @param {string} opts.locale
    * @param {string} opts.authenticityToken Rails authenticity token. Optional.
    * @param {function(string)} opts.onFailure Called with an error message if the sound will not be played.
+   * @param {function()} opts.onComplete Called when the sound is finished playing.
    * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse. Example usage:
    * const soundPromise = createSoundPromise(options);
    * const soundResponse = await soundPromise();
    */
   createSoundPromise = opts => () => {
-    const {text, gender, locale, authenticityToken, onFailure} = opts;
+    const {
+      text,
+      gender,
+      locale,
+      authenticityToken,
+      onFailure,
+      onComplete
+    } = opts;
     const id = this.cacheKey_(locale, gender, text);
     const cachedSound = this.getCachedSound_(locale, gender, text);
     const wrappedSetCachedSound = soundResponse => {
@@ -118,11 +133,14 @@ export default class AzureTextToSpeech {
 
       return new Promise(resolve => {
         if (profaneWords && profaneWords.length > 0) {
-          const soundResponse = wrappedCreateSoundResponse({profaneWords});
+          const soundResponse = wrappedCreateSoundResponse({
+            onComplete,
+            profaneWords
+          });
           onFailure(soundResponse.profanityMessage());
           resolve(soundResponse);
         } else {
-          resolve(wrappedCreateSoundResponse({id, bytes}));
+          resolve(wrappedCreateSoundResponse({onComplete, id, bytes}));
         }
       });
     }
@@ -136,7 +154,10 @@ export default class AzureTextToSpeech {
           authenticityToken
         );
         if (profaneWords && profaneWords.length > 0) {
-          const soundResponse = wrappedCreateSoundResponse({profaneWords});
+          const soundResponse = wrappedCreateSoundResponse({
+            onComplete,
+            profaneWords
+          });
           onFailure(soundResponse.profanityMessage());
           wrappedSetCachedSound(soundResponse);
           resolve(soundResponse);
@@ -149,11 +170,15 @@ export default class AzureTextToSpeech {
           locale,
           authenticityToken
         );
-        const soundResponse = wrappedCreateSoundResponse({id, bytes});
+        const soundResponse = wrappedCreateSoundResponse({
+          onComplete,
+          id,
+          bytes
+        });
         wrappedSetCachedSound(soundResponse);
         resolve(soundResponse);
       } catch (error) {
-        const soundResponse = wrappedCreateSoundResponse({error});
+        const soundResponse = wrappedCreateSoundResponse({onComplete, error});
         onFailure(soundResponse.errorMessage());
         resolve(soundResponse);
       }
@@ -314,12 +339,16 @@ export default class AzureTextToSpeech {
    * @private
    */
   createSoundResponse_ = opts => {
+    const onEnded = () => {
+      opts.onComplete?.();
+      this.onSoundComplete_();
+    };
     return new SoundResponse(
       opts.id,
       opts.bytes,
-      this.playbackOptions_,
       opts.profaneWords,
-      opts.error
+      opts.error,
+      onEnded
     );
   };
 }

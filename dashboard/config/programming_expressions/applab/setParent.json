@@ -1,8 +1,6 @@
 {
-  "func": "setParent",
+  "key": "setParent",
+  "name": "setParent",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"parentId\""
-  ]
+  "syntax": "setParent"
 }

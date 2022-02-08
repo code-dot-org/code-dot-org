@@ -58,9 +58,12 @@ export default class CreateNewLevelInputs extends Component {
         })
         .fail(error => {
           console.log(error.responseText);
+          const details =
+            error.responseText && error.responseText.split('\n')[0];
+          const message = `Could not create level: ${details}`;
           this.setState({
             creatingLevel: false,
-            error: 'Could not create level'
+            error: message
           });
         });
     }

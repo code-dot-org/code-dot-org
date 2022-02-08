@@ -1,6 +1,6 @@
 {
-  "func": "comment_Variables",
-  "block": "// Comment",
-  "expansion": "// ",
-  "category": "Variables"
+  "key": "comment_Variables",
+  "name": "comment_Variables",
+  "category": "Variables",
+  "syntax": "// Comment"
 }

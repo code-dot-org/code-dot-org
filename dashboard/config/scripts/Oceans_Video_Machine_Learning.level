@@ -8,7 +8,8 @@
     "video_key": "oceans_machine_learning",
     "display_name": "Video: Machine Learning",
     "video_rounded_corners": true,
-    "video_full_width": true
+    "video_full_width": true,
+    "background": "oceans-blue"
   },
   "published": true,
   "notes": "",

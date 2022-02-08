@@ -6,7 +6,7 @@ class UsersHelperTest < ActionView::TestCase
   include SharedConstants
 
   def test_summarize_user_progress
-    script = Script.twenty_hour_script
+    script = create(:script, :with_levels, levels_count: 3)
     user = create :user, total_lines: 42
 
     # Verify results for no completed levels.
@@ -16,8 +16,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
         progress: {},
-        # second lesson because first is unplugged
-        current_stage: script.lessons[1].id,
+        current_lesson: script.lessons.first.id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -25,7 +24,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # Verify results for two completed levels for one script.
     ul1 = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level
-    ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
+    ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[2].level
 
     assert_equal(
       {
@@ -36,7 +35,7 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_stage: script.lessons[1].id,
+        current_lesson: ul3.level.script_levels.first.lesson.id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -53,7 +52,7 @@ class UsersHelperTest < ActionView::TestCase
       summarize_user_progress(script, user, exclude_level_progress)
     )
 
-    assert_in_delta 1.83, percent_complete_total(script, user)
+    assert_in_delta 66.67, percent_complete_total(script, user)
   end
 
   def test_summarize_user_progress_with_pages
@@ -114,7 +113,7 @@ class UsersHelperTest < ActionView::TestCase
           }
         },
         # second lesson because first is unplugged
-        current_stage: script_level.lesson.id,
+        current_lesson: script_level.lesson.id,
         completed: false
       },
       summarize_user_progress(script, user)
@@ -154,7 +153,7 @@ class UsersHelperTest < ActionView::TestCase
           result: 20
         }
       },
-      current_stage: script_level.lesson.id,
+      current_lesson: script_level.lesson.id,
       completed: false
     }
     assert_equal expected_summary, summarize_user_progress(script, user)
@@ -188,7 +187,7 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal({level.id => {status: "not_tried"}}, summarize_user_progress(script, user)[:progress], 'not_tried status since we dont have a result')
 
     # put in in "view answers" mode
-    user_level.delete
+    user_level.really_destroy!
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: true, submitted: true
     assert_equal(
       {
@@ -198,7 +197,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # now submit it
-    user_level.delete
+    user_level.really_destroy!
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: true
     assert_equal(
       {
@@ -214,7 +213,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # unlock it again
-    user_level.delete
+    user_level.really_destroy!
     level_source = create :level_source, data: "{}"
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: false, submitted: false, level_source: level_source
     assert_equal(
@@ -226,7 +225,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # now lock it
-    user_level.delete
+    user_level.really_destroy!
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: false
     assert_equal(
       {
@@ -237,7 +236,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # appears submitted while viewing answers
-    user_level.delete
+    user_level.really_destroy!
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, readonly_answers: true, submitted: true
     assert_equal(
       {
@@ -284,7 +283,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # now create a submitted user level
-    user_level.delete
+    user_level.really_destroy!
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: true
     assert_equal(
       {
@@ -298,6 +297,11 @@ class UsersHelperTest < ActionView::TestCase
     user_1 = create :user
     user_2 = create :user
 
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << user_1 # we query for feedback where student is currently in section
+    section.students << user_2
+
     # set up progress
     script = create :script
 
@@ -310,11 +314,20 @@ class UsersHelperTest < ActionView::TestCase
     level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
     create :script_level, script: script, levels: [level], lesson: lesson
 
+    # for user_1
     sublevel1_user_level = create :user_level, user: user_1, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
     sublevel2_user_level = create :user_level, user: user_1, level: sublevel2, script: script, best_result: 20, time_spent: 300
 
     sublevel1_last_progress = UserLevel.find(sublevel1_user_level.id).updated_at.to_i
     sublevel2_last_progress = UserLevel.find(sublevel2_user_level.id).updated_at.to_i
+
+    # for user_2
+    sublevel1_user_level_2 = create :user_level, user: user_2, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
+    sublevel2_user_level_2 = create :user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300
+    create :teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    sublevel1_last_progress_2 = UserLevel.find(sublevel1_user_level_2.id).updated_at.to_i
+    sublevel2_last_progress_2 = UserLevel.find(sublevel2_user_level_2.id).updated_at.to_i
 
     expected_progress = [
       {
@@ -338,11 +351,32 @@ class UsersHelperTest < ActionView::TestCase
             time_spent: 480 # sum of time spent on sublevels
           }
         },
-        user_2.id => {}
+        user_2.id => {
+          sublevel1.id => {
+            status: LEVEL_STATUS.perfect,
+            result: ActivityConstants::BEST_PASS_RESULT,
+            last_progress_at: sublevel1_last_progress_2,
+            time_spent: 180
+          },
+          sublevel2.id => {
+            status: LEVEL_STATUS.passed,
+            result: 20,
+            last_progress_at: sublevel2_last_progress_2,
+            time_spent: 300,
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+          },
+          level.id => {
+            status: LEVEL_STATUS.passed,
+            result: 20,
+            last_progress_at: sublevel2_last_progress_2,
+            time_spent: 480, # sum of time spent on sublevels
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+          }
+        }
       },
       {
         user_1.id => sublevel1_last_progress,
-        user_2.id => nil
+        user_2.id => sublevel2_last_progress_2
       }
     ]
 

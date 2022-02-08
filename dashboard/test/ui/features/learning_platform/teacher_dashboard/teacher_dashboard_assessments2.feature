@@ -21,7 +21,7 @@ Feature: Using the assessments tab in the teacher dashboard
     And I join the section
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"
 
-    # Assign a script with an unlocked survey
+    # Assign a unit with an unlocked survey
     When I sign in as "Teacher_Sally" and go home
     And I get hidden script access
     And I click selector ".ui-test-section-dropdown" once I see it

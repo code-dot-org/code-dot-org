@@ -56,7 +56,7 @@ const ArrowIds = {
 };
 
 /**
- * An instantiable GameLab class
+ * An instantiable Dance class
  * @constructor
  * @implements LogTarget
  */
@@ -94,13 +94,13 @@ Dance.prototype.injectStudioApp = function(studioApp) {
 };
 
 /**
- * Initialize Blockly and this GameLab instance.  Called on page load.
+ * Initialize Blockly and this Dance instance.  Called on page load.
  * @param {!AppOptionsConfig} config
- * @param {!GameLabLevel} config.level
+ * @param {!Dancelab} config.level
  */
 Dance.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error('GameLab requires a StudioApp');
+    throw new Error('Dance requires a StudioApp');
   }
 
   this.level = config.level;
@@ -691,7 +691,6 @@ Dance.prototype.displayFeedback_ = function() {
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.'
     },
-    disablePrinting: true,
     twitter: {text: twitterText}
   };
 

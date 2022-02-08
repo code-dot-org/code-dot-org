@@ -2,7 +2,7 @@ class Queries::ScriptActivity
   # Retrieve all scripts this user has started but not yet completed
   # return [Script]
   def self.working_on_scripts(user)
-    user.scripts.where('user_scripts.completed_at is null').map(&:cached)
+    user.scripts.where('user_scripts.completed_at is null').map(&:cached).select {|s| [SharedCourseConstants::PUBLISHED_STATE.stable, SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Retrieve all UserScripts for scripts this user has started but not yet

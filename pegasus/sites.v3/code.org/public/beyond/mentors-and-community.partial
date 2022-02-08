@@ -13,7 +13,7 @@ social:
   "twitter:image": "/images/csjourneys/og-mentorships.jpg"
 ---  
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Mentorships and Community</h1>
+<h1><a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/></a><br/>Mentorships and Community</h1>
 <p>Mentors and communities can support you on your CS Journey in a number of ways — they can provide guidance and support, and connect you to opportunities and resources like networking events, internship and job opportunities, and professional development.</p>
 
 <ul>
@@ -21,6 +21,7 @@ social:
   <li><a href="#black-students">For Black students</a></li>
   <li><a href="#hispanic-latino-students">For Hispanic / Latino/a/x students</a></li>
   <li><a href="#youngwomen">For young women</a></li>
+  <li><a href="#students-with-disabilities">For students with disabilities</a></li>
   <li><a href="#allstudents">For all students</a></li>
 </ul>
 
@@ -52,6 +53,17 @@ social:
   <p><i>Application period: Join anytime</i></p>
 </div>
 <div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="natives-rising" href="http://www.joinnativesrising.com/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/natives-rising.png" alt="Natives Rising logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="natives-rising" href="http://www.joinnativesrising.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Natives Rising</strong></h3></a>
+  <p>Natives Rising promotes visibility of Native Americans in the tech industry, highlighting their accomplishments, and provides mentorship, job training, and networking opportunities for Native Americans interested in tech.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
 </div>
 
 <div style="clear:both; margin-bottom:35px"></div>
@@ -61,11 +73,11 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Black students</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="nsbe" href="http://www.nsbe.org/home.aspx" target="_blank">
+<a class="linktag" id="nsbe" href="https://www.nsbe.org/membership/nsbe-jr-membership" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/nsbe.png" alt="NSBE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="nsbe" href="http://www.nsbe.org/home.aspx" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>National Society of Black Engineers</strong></h3></a>
+  <a class="linktag" id="nsbe" href="https://www.nsbe.org/membership/nsbe-jr-membership" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>National Society of Black Engineers</strong></h3></a>
   <p>Membership includes tutorial programs, group study sessions, high school/junior high outreach programs, technical seminars and workshops, a national communications network, banquets, an annual national convention, and more.</p>
   <p><i>Application period: Join anytime</i></p>
 </div>
@@ -135,28 +147,28 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="girlswhocode-loops" href="https://girlswhocode.com/programs/college-loops" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Girls Who Code College Loops</strong></h3></a>
-  <p>College Loops are university-level networks for college-aged women interested in tech to support one another and help each other persist and succeed in the field. College Loops build belonging and community through weekly meetings during the school year. Find a College Loop near you by visiting <a href="https://girlswhocode/locations" target="_blank">girlswhocode.com/locations</a></p>
+  <p>College Loops are university-level networks for college-aged women interested in tech to support one another and help each other persist and succeed in the field. College Loops build belonging and community through weekly meetings during the school year. Find a College Loop near you by visiting <a href="https://girlswhocode.com/locations" target="_blank">girlswhocode.com/locations</a></p>
   <p><i>Application period: Join anytime</i></p>
 </div>
 <div style="clear:both"></div>
 <br>
 
-<a class="linktag" id="rewritingthecode" href="https://rewritingthecode.org/bridge-program/" target="_blank">
+<a class="linktag" id="rewritingthecode" href="https://rewritingthecode.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/rtc.png" alt="Rewriting the Code logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="rewritingthecode" href="https://rewritingthecode.org/bridge-program/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Rewriting the Code</strong></h3></a>
+  <a class="linktag" id="rewritingthecode" href="https://rewritingthecode.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Rewriting the Code</strong></h3></a>
   <p>The High School Bridge program connects rising college freshmen with a community of peers. Also includes technical training, career pathway exploration, and mentorships.</p>
   <p><i>Application period: April-May</i></p>
 </div>
 <div style="clear:both"></div>
 <br>
 
-<a class="linktag" id="swe" href="https://swe.org/" target="_blank">
+<a class="linktag" id="swe" href="https://swe.org/membership/benefits/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/swe.png" alt="SWE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="swe" href="https://swe.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Society of Women Engineers</strong></h3></a>
+  <a class="linktag" id="swe" href="https://swe.org/membership/benefits//" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Society of Women Engineers</strong></h3></a>
   <p>Membership includes training and development programs, networking opportunities, scholarships, and outreach and advocacy activities.</p>
   <p><i>Application period: Join anytime</i></p>
 </div>
@@ -176,17 +188,35 @@ social:
 
 <div style="clear:both; margin-bottom:35px"></div>
 
+<a id="students-with-disabilities"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For students with disabilities</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="accesscomputingteam" href="https://www.washington.edu/accesscomputing/accesscomputing-team-application" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/accesscomputing.png" alt="AccessComputing logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="accesscomputingteam" href="https://www.washington.edu/accesscomputing/accesscomputing-team-application" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>AccessComputing Team</strong></h3></a>
+  <p>Students with disabilities in computing fields can join the AccessComputing team.  Team members participate in an online mentoring community, learn about scholarship and internship opportunities, and are eligible to request funding for conference attendance, tutoring, and more.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
 <a id="allstudents"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For all students</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 
-<a class="linktag" id="acm" href="https://www.acm.org/" target="_blank">
+<a class="linktag" id="acm" href="https://www.acm.org/membership/membership-benefits" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/association_for_computing_machinery.png" alt="ACM logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="acm" href="https://www.acm.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Association for Computing Machinery</strong></h3></a>
+  <a class="linktag" id="acm" href="https://www.acm.org/membership/membership-benefits" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Association for Computing Machinery</strong></h3></a>
   <p>ACM membership offers resources to help you shape the future – with lifelong learning programs, publications providing original research and practical content, special interest groups and local chapters to meet peers, delve deeper into technical areas, and leadership opportunities on stimulating projects.</p>
   <p><i>Application period: Join anytime</i></p>
 </div>
@@ -204,11 +234,11 @@ social:
 <div style="clear:both"></div>
 <br>
 
-<a class="linktag" id="ieee" href="https://www.ieee.org/" target="_blank">
+<a class="linktag" id="ieee" href="https://students.ieee.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/ieee.png" alt="IEEE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="ieee" href="https://www.ieee.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Institute of Electrical and Electronics Engineers</strong></h3></a>
+  <a class="linktag" id="ieee" href="https://students.ieee.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Institute of Electrical and Electronics Engineers</strong></h3></a>
   <p>Membership includes networking opportunities, job and internship opportunities, local events, and a national conference.</p>
   <p><i>Application period: Join anytime</i></p>
 </div>

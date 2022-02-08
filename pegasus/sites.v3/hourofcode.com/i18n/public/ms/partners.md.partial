@@ -2,39 +2,39 @@
 title: Rakan kongsi
 ---
 
-'Jam Kod' diselia oleh Jawatankuasa Penasihat dan Jawatankuasa Pemantauan Minggu Pendidikan Sains Komputer dan Jam Kod.
+Acara Jam Kod didorong oleh Jam Kod dan Jawatankuasa Penasihat dan Penilaian Minggu Pendidikan Sains Komputer.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Jawatankuasa ini membentuk strategi untuk kempen Jam Kod.
+[Jawatankuasa Penasihat]({{ urls/advisory_committee }}) terdiri daripada wakil K-12 iaitu ahli akademik, organisasi bukan untung, organisasi berorientasikan keuntungan dan pertubuhan antarabangsa. Jawatankuasa ini membimbing strategi untuk kempen Jam Kod.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+The [Jawatankuasa Penilaian]({{ urls/review_committee }}) terdiri daripada 15 pendidik seluruh kumpulan gred K-12 yang menilai dan menyarankan aktiviti dengan menggunakan rubrik pemarkahan Jawatankuasa Penasihat. Para pendidik ini menilai aktiviti dipimpin pelajar dan rancangan pelajaran dipimpin guru yang dihantar oleh ratusan rakan kongsi aktiviti, menaksir nilai pendidikan aktiviti, kemampuan menarik minat pelajar dan daya tarikan yang berpotensi kepada kumpulan pelajar yang pelbagai.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Usaha dan dedikasi kedua-dua jawatankuasa telah menyumbang kepada kejayaan Jam Kod dan visinya dalam menawarkan pengenalan kepada sains komputer untuk setiap pelajar.
 
-# Major Partners and Corporate Supporters
+# Rakan Kongsi dan Penyokong Korporat Utama
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Rakan Kongsi Antarabangsa
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Rakan Kongsi Kurikulum dan Tutorial
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Rakan Kongsi Infrastruktur dan Alatan
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Rakan Kongsi Tambahan
 
 {{ partners/additional_partners }}
 

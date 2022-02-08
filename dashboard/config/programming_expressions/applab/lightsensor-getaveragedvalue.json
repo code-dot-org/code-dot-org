@@ -1,0 +1,11 @@
+{
+  "key": "lightSensor.getAveragedValue",
+  "name": "lightSensor.getAveragedValue",
+  "category": "Circuit",
+  "palette_params": [
+    {
+      "name": "ms"
+    }
+  ],
+  "syntax": "lightSensor.getAveragedValue(ms)"
+}

@@ -18,6 +18,7 @@ class XhrProxyController < ApplicationController
   ALLOWED_CONTENT_TYPES = Set.new(
     %w(
       application/json
+      application/geo+json
       text/javascript
       text/json
       text/plain
@@ -27,7 +28,9 @@ class XhrProxyController < ApplicationController
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     apex.oracle.com
+    api.amadeus.com
     api.blizzard.com
+    api.census.gov
     api.coinlayer.com
     api.datamuse.com
     api.duckduckgo.com
@@ -36,6 +39,7 @@ class XhrProxyController < ApplicationController
     api.football-data.org
     api.foursquare.com
     api.github.com
+    api.mathjs.org
     api.mojang.com
     api.nasa.gov
     api.nookipedia.com
@@ -44,6 +48,7 @@ class XhrProxyController < ApplicationController
     api.openrouteservice.org
     api.openweathermap.org
     api.pegelalarm.at
+    api.quotable.io
     api.randomuser.me
     api.rebrandly.com
     api.scryfall.com
@@ -64,17 +69,24 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    data.weather.gov.hk
     dataservice.accuweather.com
+    deckofcardsapi.com
     distanza.org
     dweet.io
     enclout.com
+    googleapis.com
+    grobchess.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
+    itunes.apple.com
+    io.adafruit.com
     isenseproject.org
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    newsapi.org
     noaa.gov
     numbersapi.com
     opentdb.com
@@ -86,6 +98,7 @@ class XhrProxyController < ApplicationController
     random.org
     rejseplanen.dk
     restcountries.eu
+    roblox.com
     runescape.com
     sessionserver.mojang.com
     spreadsheets.google.com
@@ -99,6 +112,8 @@ class XhrProxyController < ApplicationController
     vpic.nhtsa.dot.gov
     wikipedia.org
     worldclockapi.com
+    worldtimeapi.org
+    xeno-canto.org
   ).freeze
 
   # How long the content is allowed to be cached

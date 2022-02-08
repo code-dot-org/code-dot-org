@@ -4,17 +4,17 @@ layout: wide
 nav: promote_nav
 ---
 
-{{ signup_button }}
+サインアップ
 
-# How to attract media to your Hour of Code event
+# メディアを Hour of Code イベントに惹きつけるには
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
-*For all press and media inquiries, contact <press@code.org>*
+*報道・メディア関係のお問い合わせはすべて、<press@code.org>までご連絡ください。*
 
 * * *
 
-## Key Tips
+## 重要なヒント
 
 - イベントの2週間前にメールでメディアに連絡を取りましょう。もし最初の返事がなければメールや電話でフォローアップしましょう。
 - 学校の先生やボランティアの人に、写真をとってオンラインで共有したり報道機関に送ってもらうようお願いしましょう。
@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. イベントを計画しましょう
 
 - Hour of Code を始める集まりを計画しましょう。
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -35,17 +35,17 @@ nav: promote_nav
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. 地元のメディアに連絡する
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+一番の方法はメールです。 It should be short and should communicate "why should other people care about this event"? 連絡先には、このイベントを現場でサポートする人の情報(携帯電話の番号を含む)を含めます。 **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+オンラインで報道記者の連絡先情報を探しましょう。 If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. 学校のイベントへの質問に対して準備しましょう。例えば:
 
 #### なぜあなたの学校はHour of Codeをやっているのですか？
 
-今日の技術に満ちあふれた世界をどう生き抜いてゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの先生たちはコンピューターサイエンスの経験がなく、どこから始めればよいのか分かりません。 This event is a chance for all of us to see what computer science is about.
+今日の技術に満ちあふれた世界をどう生き抜いてゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの先生たちはコンピューターサイエンスの経験がなく、どこから始めればよいのか分かりません。 このイベントは私たち全てが「コンピューターサイエンスとはどのようなものか」を知る機会になるのです。
 
 私たちはこれをきっかけに学生たちの興味が刺激されて学び続けることを願っています。 子供たちは、読み書きを覚える前にプログラミングの概念を習得できるという研究結果もあります。 実際に、若い時に外国語の学習が容易なように、子どもたちの脳はコンピューター言語の習得も早いのです。 <br /> <br />
 
@@ -67,7 +67,7 @@ With the Hour of Code, computer science has been on homepages of Google, MSN, Ya
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. ぜひご参加ください。
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 
@@ -79,9 +79,9 @@ Code.orgの創始者兼CEOであるHadi Partovi曰く、「Hour of Codeはコー
 
 #### Code.orgについて
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. すべての学校のすべての生徒がコンピュータープログラミングを学ぶ機会を得るというビジョンを持っています。 Code.orgは2013年に設立された後、Hour of Codeのキャンペーンを行いました。キャンペーンでは1億人以上の学生にコンピューターサイエンスを紹介することができ、全米で70もの公立の学区とコンピューターサイエンスのプログラムを広げるための提携を結ぶことができました。 Code.org は、マイクロソフト、フェイスブック、インフォシス財団、アマゾンなどを含む企業や組織、そして寛大な個人からの慈善の寄付によってサポートされています。 For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org は501(c)(3)法人です。コンピュータサイエンスに関わる人材を増やし、そして女性や人種的マイノリティ出身の生徒へのコンピュータサイエンスの普及拡大の取り組みをしています。 すべての学校のすべての生徒がコンピュータープログラミングを学ぶ機会を得るというビジョンを持っています。 Code.orgは2013年に設立された後、Hour of Codeのキャンペーンを行いました。キャンペーンでは1億人以上の学生にコンピューターサイエンスを紹介することができ、全米で70もの公立の学区とコンピューターサイエンスのプログラムを広げるための提携を結ぶことができました。 Code.org は、マイクロソフト、フェイスブック、インフォシス財団、アマゾンなどを含む企業や組織、そして寛大な個人からの慈善の寄付によってサポートされています。 For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-{{ signup_button }}
+サインアップ

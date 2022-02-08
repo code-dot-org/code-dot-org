@@ -20,7 +20,7 @@ export const SongTitlesToArtistTwitterHandle = {
   levelup_ciara: 'Ciara',
   macarena_losdelrio: 'LosDelRioMusic',
   migente_jbalvin: 'JBalvin',
-  needyounow_ladyantebellum: 'LadyAntebellum',
+  needyounow_ladya: 'LadyA',
   notearslefttocry_arianagrande: 'ArianaGrande',
   shapeofyou_edsheeran: 'EdSheeran',
   somebodylikeyou_keithurban: 'KeithUrban',
@@ -62,6 +62,7 @@ export const SongTitlesToArtistTwitterHandle = {
   sayso_dojacat: 'DojaCat',
   // 2021 Songs
   aire_jessejoy: 'jesseyjoy',
+  despedidaycierre_vanesamartin: 'vanesamartin_',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',
@@ -82,5 +83,12 @@ export const SongTitlesToArtistTwitterHandle = {
   showdaspoderosas_anitta: 'Anitta',
   janti_muratboz: 'MuratBoz',
   gee_girlsgen: 'GirlsGeneration',
-  growingpains_alessiacara: 'AlessiaCara'
+  growingpains_alessiacara: 'AlessiaCara',
+  astronautintheocean_maskedwolf: 'MaskedWolfMusic',
+  good4u_oliviarodrigo: 'OliviaRodrigo',
+  heatwaves_glassanimals: 'GlassAnimals',
+  levitating_dualipa: 'DUALIPA',
+  stay_thekidlaroi: 'TheKidLaroi',
+  watermelonsugar_harrystyles: 'Harry_Styles',
+  higherpower_coldplay: 'Coldplay'
 };

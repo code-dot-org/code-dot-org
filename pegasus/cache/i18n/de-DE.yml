@@ -1308,12 +1308,19 @@ de-DE:
   coursed-2020_name: Kurs D (2019)
   coursee-2020_name: Kurs E (2019)
   coursef-2020_name: Kurs F (2019)
+  coursea-2021_name: Kurs A (2021)
+  courseb-2021_name: Kurs B (2021)
+  coursec-2021_name: Kurs C (2021)
+  coursed-2021_name: Kurs D (2021)
+  coursee-2021_name: Kurs E (2021)
+  coursef-2021_name: Kurs F (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
   express-2020_name: Expresskurs (2019)
   pre-express-2020_name: Leseanfänger-Expresskurs (2020)
+  pre-express-2021_name: Leseanfänger-Expresskurs (2021)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: Beschleunigter Kurs
@@ -1328,6 +1335,8 @@ de-DE:
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bausteine)
+  hoc-impact-study_name: Klassisches Labyrinth mit Umfrage
+  flappy-impact-study_name: Flappy Code mit Umfrage
   hoc-encryption_name: Einfache Verschlüsselung
   text-compression_name: Text-Kompression
   applab_name: App-Labor
@@ -1421,6 +1430,12 @@ de-DE:
   coursed-2020_gradelevel: Ab 8. Klasse
   coursee-2020_gradelevel: Alter 8-12
   coursef-2020_gradelevel: Alter 9-13
+  coursea-2021_gradelevel: Alter 4-7
+  courseb-2021_gradelevel: Alter 5-8
+  coursec-2021_gradelevel: Alter 6-10
+  coursed-2021_gradelevel: Ab 8. Klasse
+  coursee-2021_gradelevel: Alter 8-12
+  coursef-2021_gradelevel: Alter 9-13
   accelerated_gradelevel: 'Alter: 10-18'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
@@ -1622,6 +1637,29 @@ de-DE:
     Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
     das du mit deinen Freunden und deiner Familie teilen kannst.
   coursef-2020_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
+    von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
+    Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
+    Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
+    Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+  coursea-2021_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2021_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2021_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen
+    und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie
+    verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing
+    umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre
+    eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2021_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis
+    für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen
+    auch etwas über digitale Bürgerschaft.
+  coursee-2021_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen,
+    Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen.
+    Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
+    das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2021_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
     von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
     Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
     Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
@@ -2173,6 +2211,8 @@ de-DE:
   header_legal_privacy: Datenschutzerklärung
   header_legal_tos: AGBs
   header_tutorials: Einführungen
+  header_screen_reader_hamburger: Speisekarte
+  header_screen_reader_help: Hilfe Menu
   app_lab_documentation: App Lab Dokumentation
   app_lab_tutorials: App Lab Tutorials
   game_lab_documentation: Game Lab Dokumentation
@@ -2263,9 +2303,9 @@ de-DE:
   account_sign_up_child_accept_terms: Ich bestätige, dass ich die Erlaubnis meines
     Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen.
   hoc_overview_dance_title: Tanzparty
-  hoc_overview_dance_subtitle: Codieren Sie eine Tanzparty, um sie mit Ihren Freunden
-    zu teilen. Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25
-    mehr!
+  hoc_overview_dance_subtitle: Programmiere eine Tanzparty, die du mit deinen Freunden
+    teilen kannst. Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und
+    25 weiteren!
   hoc_overview_dance_2019_subtitle: Programmiere eine Tanzparty, die du mit deinen
     Freunden teilen kannst. Mit Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 weiteren!
@@ -2394,7 +2434,7 @@ de-DE:
   hoc2018_mc_journey: Reise durch Minecraft mit Code.
   hoc2018_dance_party_main_heading: Tanzparty
   hoc2018_dance_party_landing_title: Tanz
-  hoc2018_dance_party_subheading: Hilf mit bei der Übersetzung von Dance Party
+  hoc2018_dance_party_subheading: Hilf mit bei der Übersetzung von Tanzparty
   hoc2018_dance_create_your_own_dance_title: Erstelle deine eigene Tanzparty
   hoc2018_dance_party_box_title: Tanzparty
   hoc2018_dance_party_box_description: Programmiere eine Tanzparty, um sie mit deinen
@@ -2412,7 +2452,7 @@ de-DE:
   hoc2018_dance_teacher_resources_tile1_button: Stundenplan
   hoc2018_dance_teacher_resources_tile2_title: Unplugged-Tanzparty
   hoc2018_dance_teacher_resources_tile2_description: Keine Computer erforderlich!  Lerne
-    Codier-Konzepte, um gemeinsam eine Tanzparty zu choreografieren.
+    Programmierkonzepte, um gemeinsam eine Tanzparty zu choreografieren.
   hoc2018_dance_teacher_resources_tile2_button: Aktivität ohne Computer
   hoc2018_dance_featured_student_creations_title: Projekte von Studenten im Blickpunkt
   hoc2018_dance_videos_section_heading: Lass dich inspirieren
@@ -2429,6 +2469,9 @@ de-DE:
     Future Engineer* ist ein umfassendes Kinder-Karriere Programm, mit dem einkommensschwache
     und andere benachteiligte Kinder und Jugendliche für Berufe in der Informatik
     inspiriert und ausgebildet werden sollen. [Weitere Informationen] (%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Wenn Sie ein Schüler
+    oder Lehrer in Frankreich sind, besuchen Sie [Amazon Future Engineer - Frankreich]
+    (%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Erfahren Sie mehr
     über Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Über Amazon Future Engineer
@@ -2491,7 +2534,7 @@ de-DE:
     einen Unterrichtsplan, Videos, einen Lehrplan für Informatik und Lehrerausbildungen.
   hoc2019_mc_more_coding_resources: Mehr Quellcode Ressourcen
   hoc2019_dance_previous_versions: |-
-    Möchtest du eine frühere Version von Dance Party?
+    Möchtest du eine frühere Version von Tanzparty?
     Klicke hier um [Part 1](%{dance_2018_link}) und [Part 2](%{dance_extras_2018_link}) vom letzten Jahr zu starten.
   homepage_slot_text_title_at_home: 'Zu Hause lernen
 
@@ -2501,20 +2544,128 @@ de-DE:
   homepage_slot_text_link_do_hoc: Probiere die Hour of Code aus (deutsch "Stunde des
     Codes")
   homepage_slot_text_link_express_course: Versuche einen Express-Kurs
+  page_not_available_title: Seite nicht verfügbar
+  page_not_available_description: Es tut uns leid, die von Ihnen angeforderte Seite
+    ist unter dieser Adresse nicht mehr verfügbar. Wenn Sie weiterhin Zugang benötigen,
+    senden Sie bitte eine E-Mail an [support@code.org] (%{support_email_link}).
   page_not_available_button: Zurück zur Homepage
   ! '': " "
+  hoc2020_mc_available_code_org: Erhältlich auf Code.org
+  hoc2020_mc_available_mee: 'Erhältlich in Minecraft: Education Edition'
+  hoc2020_mc_mee_title: Minecraft-Geschichte von zwei Dörfern
+  hoc2020_mc_mee_description: 'Das neue Minecraft Hour of Code Tutorial ist jetzt
+    in Minecraft: Education Edition für Windows, Mac, Chromebook und iPad verfügbar.
+    Lernen Sie die Grundlagen des Programmierens kennen und erkunden Sie mit Ihren
+    Studierenden Vielfalt und Inklusion! Greifen Sie auf kostenlose Ressourcen zu,
+    darunter einen Unterrichtsplan, Videos, Informatik-Lehrplan, Equity-Unterricht
+    und Lehrerschulungen.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Reisen Sie zurück in der Zeit und lernen Sie zu programmieren!
+    Das neue Minecraft Hour of Code-Tutorial ist jetzt in einer Minecraft-Ausgabe
+    verfügbar: Eine Unterrichts-Edition für Windows, Mac, Chromebook und iPad. Beginnen
+    Sie jetzt mit kostenlosen Ressourcen für Pädagogen mit tollen Schulungen und Videos.'
+  hoc2021_mc_mee_villages_title: Die Geschichte von zwei Dörfern
+  hoc2021_mc_mee_villages_description: 'Machen Sie sich mit den Grundlagen des Programmierens
+    vertraut und erforschen Sie mit Ihren SchülerInnen in Minecraft Vielfalt und Integration:
+    Alles in dieser Unterrichts-Edition.'
+  hoc2021_mc_mee_ai_title: KI für die Zukunft
+  hoc2021_mc_mee_ai_description: 'Erforschen Sie KI mit Ihren Schülern und lernen
+    Sie programmieren mit Minecraft: Alles in dieser Unterrichts-Edition.'
   footer_powered_by_aws: Betrieben von Amazon Web Services
+  footer_built_on_github: Gebaut auf GitHub von Microsoft
+  codebytes_skinny_banner_title: Besuchen Sie uns vom 7. bis 11. Dezember für unsere
+    CodeBytes Live-Mini-Lektionen!
+  codebytes_skinny_banner_description: 'Besuchen Sie uns jeden Tag der CS Education
+    Week for CodeBytes, 20-minütiger interaktiver Informatikunterricht. CodeBytes,
+    das zweimal täglich live streamt, ist eine großartige Möglichkeit für Schüler,
+    an einem virtuellen #HourOfCode teilzunehmen!'
   codebytes_skinny_banner_english_only: Nur Englisch
+  codebytes_skinny_banner_learn: Erfahren Sie mehr unter [code.org/codebytes] (%{code_bytes_url}).
   footer_privacy_policy: Datenschutzerklärung
+  footer_privacy_policy_updated: Datenschutzrichtlinie (aktualisiert)
   footer_about: Über
   footer_partners: Partner
+  footer_blog: Bloggen
   footer_donate: Spenden
+  footer_store: Geschäft
   footer_support: Unterstützung
   footer_terms: Bedingungen
   ai_for_oceans: KI für Meere
+  ai_for_oceans_lesson_plan: Arbeitsplan
+  ai_for_oceans_tile_description: Hilf der KI, die Ozeane zu reinigen, indem du sie
+    trainierst, Müll zu entdecken! Erfahren Sie mehr über Trainingsdaten und Voreingenommenheit
+    und wie KI Probleme der Welt angehen kann. Ansicht
+  how_ai_works: So funktioniert KI
+  how_ai_works_tile_description: Erfahren Sie in dieser Serie von kurzen Videos, wie
+    KI funktioniert und warum sie wichtig ist. Mit Satya Nadella, CEO von Microsoft,
+    und einer Vielzahl von Experten.
+  watch_the_videos: Sehen Sie sich die Videos an
+  ai_and_ethics: KI und Ethik
+  ai_and_ethics_tile_description: Die Studierenden reflektieren die ethischen Implikationen
+    von KI und arbeiten dann zusammen, um eine Ressource zum „KI-Ethikkodex“ für KI-Schöpfer
+    und Gesetzgeber überall zu schaffen.
+  view_lesson_plan: Unterrichtsplan anzeigen
   ai_in_partnership_with: In Zusammenarbeit mit
   ai_microsoft_thanks: Wir danken Microsoft für die Unterstützung unserer Vision und
     Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und
     die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein.
+  ai_ethics_panel_header: Erkundung der Ethik der KI-Podiumsdiskussion
+  ai_ethics_panel_description_1: Gehen Sie tiefer mit einigen unserer bevorzugten
+    KI-Experten! Diese Podiumsdiskussion berührt wichtige Themen wie algorithmische
+    Voreingenommenheit und die Zukunft der Arbeit. Kombiniere es mit unserem
+  ai_ethics_lesson_plan: Unterrichtsplan für KI und Ethik
+  ai_ethics_panel_description_2: für eine großartige Einführung in die Ethik der künstlichen
+    Intelligenz!
+  cs_for_good: CS für immer
+  cs_for_good_tile_description: Ressourcen, die die Schüler dazu inspirieren, tief
+    über die Rolle nachzudenken, die Informatik bei der Schaffung einer gerechteren
+    und nachhaltigeren Welt spielen kann.
+  view_resources: Ressourcen anzeigen
+  imagine_cup_junior: Stellen Sie sich Cup Junior
+  imagine_cup_junior_tile_description: Diese globale Herausforderung für KI für Good
+    führt die Schüler in die AI for Good-Initiativen von Microsoft ein und ermöglicht
+    es ihnen, ein Problem auf der Welt mit der Kraft der KI zu lösen.
   ai_activity: Aufgabe
   ai_description: Beschreibung
+  ai_seeing_ai: KI sehen
+  ai_seeing_ai_description: Eine kostenlose App, die die Welt um Sie herum in einer
+    Vielzahl von Sprachen erzählt.
+  ai_quick_draw: Schnell, zeichnen!
+  ai_quick_draw_description: Kann ein neuronales Netzwerk lernen, Kritzeln zu erkennen?
+  ai_teachable_machine: Lehrbare Maschine
+  ai_teachable_machine_description: Trainieren Sie einen Computer, um Ihre eigenen
+    Bilder, Töne und Posen zu erkennen.
+  ai_google: KI-Experimente mit Google
+  ai_google_description: Erkunden Sie das maschinelle Lernen anhand von Bildern, Zeichnungen,
+    Sprache, Musik und vielem mehr.
+  ai_zooniverse: Zooniverse - Schnappschuss-Bergzebra
+  ai_zooniverse_description: Schützen Sie das gefährdete Kapbergzebra, indem Sie die
+    verschiedenen Tiere auf den Bildern identifizieren.
+  ai_audience: Publikum
+  ai_minecraft_description: 'Greifen Sie auf kostenlose Ressourcen zu, darunter einen
+    Unterrichtsplan, Videos, einen Informatik-Lehrplan und Lehrerschulungen. (Benötigt
+    Minecraft: Education Edition)'
+  ai_k_12_audience: K-12 (Lesung erforderlich)
+  ai_microsoft_workshop: Kostenlose virtuelle Workshops von Microsoft
+  ai_microsoft_workshop_description: Erwecken Sie Neugier mit kostenlosen STEM- und
+    Codierungsworkshops.
+  ai_machine_learning_for_kids: Maschinelles Lernen für Kinder
+  ai_machine_learning_for_kids_description: Trainieren Sie ein Modell für maschinelles
+    Lernen mit Text, Zahlen oder Bildern und erstellen Sie damit Spiele in Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: Maschinelles Lernen für Kinder'
+  ai_ecs: 'ECS: Künstliche Intelligenz (KI)'
+  ai_ecs_description: Eine neue alternative Lehrplaneinheit für das Curriculum Exploring
+    Computer Science (ECS).
+  ai_elements: Elemente der KI
+  ai_elements_description: Eine Reihe kostenloser Online-Kurse, die von Reaktor und
+    der Universität Helsinki erstellt wurden.
+  ai_cognimates: Cognimate
+  ai_cognimates_description: Eine KI-Bildungsplattform für den Aufbau von Spielen,
+    das Programmieren von Robotern und das Training.
+  ai_try_activity: Aktivität ausprobieren
+  outbreak_tile_title: Ausbruch
+  outbreak_tile_subtitle: Ein Virus hat Monster-Town infiziert! Programmieren Sie
+    einen Ausbruchssimulator und prognostizieren Sie, was mit den Nachbarn von Monster-Town
+    geschehen wird.
+  outbreak_tile_alt: Eine Simulation, wie ein Virus sich in einer Gruppe violetter
+    Monster verbreitet.

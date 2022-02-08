@@ -32,38 +32,26 @@ def verify_progress(selector, test_result, no_wait=false)
     border_color = color_string('assessment')
   end
 
-  if no_wait
+  # The data for progress bubbles can be loaded synchronously or
+  # asynchronously, therefore unless we know the colors are set (such as when
+  # we're checking multiple not_tried bubbles in a row) we wait a bit before
+  # checking to ensure progress is loaded and the bubble is the correct color.
+  unless no_wait
     steps %{
-      And element "#{selector}" is visible
-      And element "#{selector}" has css property "background-color" equal to "#{background_color}"
-      And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
+      And I wait for 2 seconds
+      And I wait until jQuery Ajax requests are finished
     }
-  else
-    # The data for progress bubbles can be loaded synchronously or asynchronously.
-    # For 'not_tried', it is difficult to tell whether the bubble is just in its
-    # default state or if progress data was loaded and the bubble was explicitly
-    # set to 'not_tried'. In this case, we'll just wait a bit before checking to
-    # reduce the likelihood of false positives.
-    # For all other test_result values, we know that progress has been loaded if
-    # the bubble changes color so we can just poll for the expected color.
-    if test_result == 'not_tried'
-      steps %{
-        And I wait for 2 seconds
-        And I wait until jQuery Ajax requests are finished
-        And I wait until element "#{selector}" is visible
-        And element "#{selector}" has css property "background-color" equal to "#{background_color}"
-        And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
-      }
-    else
-      steps %{ And I wait until element "#{selector}" is visible }
-      wait_short_until do
-        steps %{
-          And element "#{selector}" has css property "background-color" equal to "#{background_color}"
-          And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
-        }
-      end
-    end
   end
+
+  verify_bubble_color(selector, background_color, border_color)
+end
+
+def verify_bubble_color(selector, background_color, border_color)
+  steps %{
+    And I wait until element "#{selector}" is visible
+    And element "#{selector}" has css property "background-color" equal to "#{background_color}"
+    And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
+  }
 end
 
 def verify_bubble_type(selector, type)
@@ -93,7 +81,7 @@ end
 Then /^I open the progress drop down of the current page$/ do
   steps %{
     Then I click selector ".header_popup_link"
-    And I wait to see ".user-stats-block"
+    And I wait to see ".uitest-summary-progress-table"
   }
 end
 
@@ -121,4 +109,16 @@ end
 # PLC Progress
 Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, progress|
   element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
+end
+
+# Note: only works for levels other than the current one
+Then(/^check that level (\d+) on this lesson is done$/) do |level|
+  undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
+  !undone
+end
+
+# Note: only works for levels other than the current one
+Then(/^check that level (\d+) on this lesson is not done$/) do |level|
+  undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
+  undone
 end

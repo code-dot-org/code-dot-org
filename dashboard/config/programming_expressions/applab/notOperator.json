@@ -1,5 +1,6 @@
 {
-  "func": "notOperator",
-  "block": "!__",
-  "category": "Math"
+  "key": "notOperator",
+  "name": "notOperator",
+  "category": "Math",
+  "syntax": "!__"
 }

@@ -1,0 +1,11 @@
+{
+  "key": "console.log",
+  "name": "console.log",
+  "category": "Variables",
+  "palette_params": [
+    {
+      "name": "message"
+    }
+  ],
+  "syntax": "console.log(message)"
+}

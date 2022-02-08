@@ -2,20 +2,34 @@
   "script": {
     "name": "coursed-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
-      "lesson_extras_available": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "lesson_extras_available": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-05-26 18:18:03 UTC",
+    "serialized_at": "2022-01-20 17:42:56 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -103,9 +117,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nStronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.",
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nStronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.",
         "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare writing paper or notebooks for students.",
-        "purpose": "Common Sense Education created this lesson to teach students about how strong passwords can help protect their privacy.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Privacy and Security. Students learn how to protect personal information and gain a deeper understanding of their data privacy rights so they can advocate for themselves and others.\n",
         "student_overview": "In this lesson, you'll learn about how passwords protect your information, and how to make a good password.",
         "unplugged": true
       },
@@ -1441,7 +1455,7 @@
       "key": "b8f03681-d01e-4384-b88f-5e562eab172f",
       "position": 1,
       "properties": {
-        "description": "* **password**: a secret string of letters, symbols, and numbers that you can use to restrict who can access something digital\n* **phrase**: a group of words that go together and are easy to remember\n* **symbol**: a character other than a number or letter, such as #, !, or @.\n* **username**: a name you create to sign into a website, app, or game\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [Password Protect](https://www.digitalpassport.org/password-protect.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _What is something in your life that you take steps to protect? Why and how do you protect it?_ ([Slide 4](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3c3d552210_0_3))\n\nHave students think-pair-share, and then call on students to share out. Examples might include _hiding a diary_, _using a bike lock_, _keeping a toy in a safe place_, etc. Clarify that one of the ways people protect something is by restricting who can access it.\n\n**Ask**: _Let's think about when we use devices, like a phone or computer. How do you limit who can access something that you want to protect, and why would you limit access?_\n\nExamples might include password-protection, device-lock, fingerprint scanner, not letting others use the device.\n\n**Say**: _One of the most common ways to protect your devices and information online is by using a password. A **password** is a secret string of letters, symbols, and numbers that you can use to restrict who can access something digital. Some passwords, however, are stronger than others because they are harder for someone to figure out. Let's investigate why strong passwords are important and how you can make sure yours are strong._ ([Slide 5](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3b037fe8d8_1_103))",
+        "description": "* **password**: a secret string of letters, symbols, and numbers that you can use to restrict who can access something digital\n* **phrase**: a group of words that go together and are easy to remember\n* **symbol**: a character other than a number or letter, such as #, !, or @.\n* **username**: a name you create to sign into a website, app, or game\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [Password Protect](https://www.digitalpassport.org/password-protect.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _What is something in your life that you take steps to protect? Why and how do you protect it?_ ([Slide 4](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3c3d552210_0_3))\n\nHave students think-pair-share, and then call on students to share out. Examples might include _hiding a diary_, _using a bike lock_, _keeping a toy in a safe place_, etc. Clarify that one of the ways people protect something is by restricting who can access it.\n\n**Ask**: _Let's think about when we use devices, like a phone or computer. How do you limit who can access something that you want to protect, and why would you limit access?_\n\nExamples might include password-protection, device-lock, fingerprint scanner, not letting others use the device.\n\n**Say**: _One of the most common ways to protect your devices and information online is by using a password. A **password** is a secret string of letters, symbols, and numbers that you can use to restrict who can access something digital. Some passwords, however, are stronger than others because they are harder for someone to figure out. Let's investigate why strong passwords are important and how you can make sure yours are strong._ ([Slide 5](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3b037fe8d8_1_103))",
         "name": "Key Vocabulary"
       },
       "seeding_key": {
@@ -1453,7 +1467,7 @@
       "key": "379be0a3-0e9d-4c13-95e7-bb981bb48d50",
       "position": 1,
       "properties": {
-        "description": "**Distribute** [If ... Then Scenarios Student Handout](https://drive.google.com/open?id=1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4). Tell students that they will be doing a jigsaw activity to understand WHY passwords are important.\n\n**Divide** the class into five groups and tell students this is their \"home\" group. Call on a student to read the handout directions aloud. ([Slide 6](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3b037fe8d8_1_90))\n\n**Assign** each group one of the scenarios from the handout. Allow groups to work for five to seven minutes.\n\n**Re-divide** the class into new groups so that each  group includes at least one student from each scenario (1, 2, 3, 4, and 5). If necessary, there can be more than one person from a particular \"home\" group in an \"expert\" group. Allow five to seven minutes for each \"expert\" to present while the rest of the group takes notes. ([Slide 6](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3b037fe8d8_1_90))\n\n**Reconvene** and ask: _Based on these scenarios, why do you think it's important to have a strong password? Take turns sharing your idea with your partner._ Allow one minute to pair-share.\n\nInvite students to share out their answers. If necessary, prompt students to refer directly to the scenarios and to the consequences that would happen if someone's password was compromised. Examples could include loss of money, people knowing your private information, identity theft, and other unknown future consequences."
+        "description": "**Distribute** [If ... Then Scenarios Student Handout](https://drive.google.com/open?id=1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4). Tell students that they will be doing a jigsaw activity to understand WHY passwords are important.\n\n**Divide** the class into five groups and tell students this is their \"home\" group. Call on a student to read the handout directions aloud. ([Slide 6](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3b037fe8d8_1_90))\n\n**Assign** each group one of the scenarios from the handout. Allow groups to work for five to seven minutes.\n\n**Re-divide** the class into new groups so that each  group includes at least one student from each scenario (1, 2, 3, 4, and 5). If necessary, there can be more than one person from a particular \"home\" group in an \"expert\" group. Allow five to seven minutes for each \"expert\" to present while the rest of the group takes notes. ([Slide 6](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3b037fe8d8_1_90))\n\n**Reconvene** and ask: _Based on these scenarios, why do you think it's important to have a strong password? Take turns sharing your idea with your partner._ Allow one minute to pair-share.\n\nInvite students to share out their answers. If necessary, prompt students to refer directly to the scenarios and to the consequences that would happen if someone's password was compromised. Examples could include loss of money, people knowing your private information, identity theft, and other unknown future consequences."
       },
       "seeding_key": {
         "activity_section.key": "379be0a3-0e9d-4c13-95e7-bb981bb48d50",
@@ -1464,7 +1478,7 @@
       "key": "cb138589-db0b-4443-b830-110582e4733a",
       "position": 1,
       "properties": {
-        "description": "**Say**: _The consequences we just talked about might seem scary. But there is something you can do to make sure no one can ever guess your password. Here are some important steps to power up your password._\n\n**Distribute** and project the [Power Up Your Password Student Handout](https://drive.google.com/open?id=1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178). Say: _One way to make a strong password is to start with a memorable phrase. A **phrase** is a group of words that go together and are easy to remember. We're going to do a practice round together using the phrase \"There's no way I'm kissing a frog.\" So we've already completed step one, which is to come up with a phrase._ ([Slide 7](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3cf30f4dfd_1_114))\n\n**Invite** a student to read step two. Ask: _What word would our example phrase make?_ Invite a student to answer and add \"tnwikaf\" on the projected handout.\n\n**Repeat** steps three through five: reading the step aloud, calling on students to answer, and completing the \"Practice Round\" section of the handout. Student answers will vary as students will choose to capitalize different letters and insert different numbers. If necessary, clarify that students can insert numbers anywhere in the password.\n\n**Say**: _Now you will follow these steps to come up with a password of your own. Work independently to complete the \"Your Turn\" section of the handout._ Allow students five minutes to complete the handout."
+        "description": "**Say**: _The consequences we just talked about might seem scary. But there is something you can do to make sure no one can ever guess your password. Here are some important steps to power up your password._\n\n**Distribute** and project the [Power Up Your Password Student Handout](https://drive.google.com/open?id=1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178). Say: _One way to make a strong password is to start with a memorable phrase. A **phrase** is a group of words that go together and are easy to remember. We're going to do a practice round together using the phrase \"There's no way I'm kissing a frog.\" So we've already completed step one, which is to come up with a phrase._ ([Slide 7](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3cf30f4dfd_1_114))\n\n**Invite** a student to read step two. Ask: _What word would our example phrase make?_ Invite a student to answer and add \"tnwikaf\" on the projected handout.\n\n**Repeat** steps three through five: reading the step aloud, calling on students to answer, and completing the \"Practice Round\" section of the handout. Student answers will vary as students will choose to capitalize different letters and insert different numbers. If necessary, clarify that students can insert numbers anywhere in the password.\n\n**Say**: _Now you will follow these steps to come up with a password of your own. Work independently to complete the \"Your Turn\" section of the handout._ Allow students five minutes to complete the handout."
       },
       "seeding_key": {
         "activity_section.key": "cb138589-db0b-4443-b830-110582e4733a",
@@ -1475,7 +1489,7 @@
       "key": "8d87fed2-e793-40e8-899f-18e8ff3313c4",
       "position": 1,
       "properties": {
-        "description": "**Project** the **Password Tips** and read each one aloud. Direct students to fill in the blanks on their handout as you read them. For the last tip, clarify that a **symbol** is _a character other than a number or letter, such as #, !, or @._  ([Slide 8](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3d416ba77f_0_21))\n\n**Say**: _As you get older, having a strong password will become even more important. Passwords will help you protect your social networking profiles when you are in high school, keep your grades private when you are in college, and protect your bank accounts and online store accounts when you are an adult._\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/u/2/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy)."
+        "description": "**Project** the **Password Tips** and read each one aloud. Direct students to fill in the blanks on their handout as you read them. For the last tip, clarify that a **symbol** is _a character other than a number or letter, such as #, !, or @._  ([Slide 8](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3d416ba77f_0_21))\n\n**Say**: _As you get older, having a strong password will become even more important. Passwords will help you protect your social networking profiles when you are in high school, keep your grades private when you are in college, and protect your bank accounts and online store accounts when you are an adult._\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/u/2/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy)."
       },
       "seeding_key": {
         "activity_section.key": "8d87fed2-e793-40e8-899f-18e8ff3313c4",
@@ -3566,7 +3580,6 @@
           "csf_password_power-up_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3592,7 +3605,6 @@
         ],
         "progression": "Graph Paper Programming - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3618,7 +3630,6 @@
         ],
         "progression": "Video: Maze Intro: Programming with Blocks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3644,7 +3655,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3670,7 +3680,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3696,7 +3705,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3722,7 +3730,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3748,7 +3755,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3774,7 +3780,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3801,7 +3806,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3827,7 +3831,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3853,7 +3856,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3879,7 +3881,6 @@
         ],
         "progression": "Relay Programming - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3905,7 +3906,6 @@
         ],
         "progression": "Video: De-bugging with the Step Button"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3931,7 +3931,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3957,7 +3956,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3983,7 +3981,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4009,7 +4006,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4035,7 +4031,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4062,7 +4057,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4088,7 +4082,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4114,7 +4107,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4140,7 +4132,6 @@
         ],
         "progression": "Skill-Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4166,7 +4157,6 @@
         ],
         "progression": "Skill-Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4192,7 +4182,6 @@
         ],
         "progression": "Skill-Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4218,7 +4207,6 @@
         ],
         "progression": "Skill-Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4244,7 +4232,6 @@
         ],
         "progression": "Skill-Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4270,7 +4257,6 @@
         ],
         "progression": "Skill-Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4296,7 +4282,6 @@
         ],
         "progression": "Skill-Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4322,7 +4307,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4348,7 +4332,6 @@
         ],
         "progression": "Video: Star Wars Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4374,7 +4357,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4400,7 +4382,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4426,7 +4407,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4452,7 +4432,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4478,7 +4457,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4504,7 +4482,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4530,7 +4507,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4556,7 +4532,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4582,7 +4557,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4608,7 +4582,6 @@
         ],
         "progression": "Video: Warm Up"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4634,7 +4607,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4660,7 +4632,6 @@
         ],
         "progression": "Video: Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4686,7 +4657,6 @@
         ],
         "progression": "Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4712,7 +4682,6 @@
         ],
         "progression": "Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4738,7 +4707,6 @@
         ],
         "progression": "Video: Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4764,7 +4732,6 @@
         ],
         "progression": "Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4790,7 +4757,6 @@
         ],
         "progression": "Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4816,7 +4782,6 @@
         ],
         "progression": "Measures"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4842,7 +4807,6 @@
         ],
         "progression": "Video: Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4868,7 +4832,6 @@
         ],
         "progression": "Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4894,7 +4857,6 @@
         ],
         "progression": "Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4920,7 +4882,6 @@
         ],
         "progression": "Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4946,7 +4907,6 @@
         ],
         "progression": "Video: Wrap-up"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4972,7 +4932,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4998,7 +4957,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5024,7 +4982,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5050,7 +5007,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5076,7 +5032,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5102,7 +5057,6 @@
         ],
         "progression": "Video: Using the Repeat Block"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5128,7 +5082,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5154,7 +5107,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5180,7 +5132,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5206,7 +5157,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5232,7 +5182,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5258,7 +5207,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5285,7 +5233,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5311,7 +5258,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5337,7 +5283,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5363,7 +5308,6 @@
         ],
         "progression": "Video: Artist Intro with JR Hildebrand"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5389,7 +5333,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5415,7 +5358,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5441,7 +5383,6 @@
         ],
         "progression": "Video: Loops with the Artist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5467,7 +5408,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5493,7 +5433,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5519,7 +5458,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5545,7 +5483,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5571,7 +5508,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5598,7 +5534,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5624,7 +5559,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5650,7 +5584,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5676,7 +5609,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5702,7 +5634,6 @@
         ],
         "progression": "Video: Nested Loops with the Bee"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5728,7 +5659,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5754,7 +5684,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5780,7 +5709,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5806,7 +5734,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5832,7 +5759,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5858,7 +5784,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5885,7 +5810,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5911,7 +5835,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5937,7 +5860,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5963,7 +5885,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5989,7 +5910,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6015,7 +5935,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6041,7 +5960,6 @@
         ],
         "progression": "Conditionals with Cards - Unplugged Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6067,7 +5985,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6093,7 +6010,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6119,7 +6035,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6145,7 +6060,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6171,7 +6085,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6197,7 +6110,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6223,7 +6135,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6249,7 +6160,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6275,7 +6185,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6301,7 +6210,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6328,7 +6236,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6355,7 +6262,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6381,7 +6287,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6407,7 +6312,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6433,7 +6337,6 @@
         ],
         "progression": "Video: Conditionals: If Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6459,7 +6362,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6485,7 +6387,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6511,7 +6412,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6537,7 +6437,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6563,7 +6462,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6589,7 +6487,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6615,7 +6512,6 @@
         ],
         "progression": "Video: Conditionals: If and If/Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6641,7 +6537,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6667,7 +6562,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6694,7 +6588,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6720,7 +6613,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6746,7 +6638,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6772,7 +6663,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6798,7 +6688,6 @@
         ],
         "progression": "Lesson Extras"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6824,7 +6713,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6850,7 +6738,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6876,7 +6763,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6902,7 +6788,6 @@
         ],
         "progression": "Video: While Loops with the Farmer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6928,7 +6813,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6954,7 +6838,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6980,7 +6863,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7006,7 +6888,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7032,7 +6913,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7059,7 +6939,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7085,7 +6964,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7111,7 +6989,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7137,7 +7014,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7163,7 +7039,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7189,7 +7064,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7215,7 +7089,6 @@
         ],
         "progression": "Video: Repeat Until Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7241,7 +7114,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7267,7 +7139,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7293,7 +7164,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7319,7 +7189,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7345,7 +7214,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7371,7 +7239,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7398,7 +7265,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7424,7 +7290,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7450,7 +7315,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7476,7 +7340,6 @@
         ],
         "progression": "Example projects"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7502,7 +7365,6 @@
         ],
         "progression": "Create your project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9350,8 +9212,8 @@
       "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
       "key": "2021_change_log",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "2021_change_log"
@@ -9362,9 +9224,9 @@
       "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit",
       "key": "activity-answer-graph-paper",
       "properties": {
-        "type": "Worksheet Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet Answer Key"
       },
       "seeding_key": {
         "resource.key": "activity-answer-graph-paper"
@@ -9375,9 +9237,9 @@
       "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit",
       "key": "assessment-answer-conditionals-cards",
       "properties": {
-        "type": "Assessment Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment Answer Key"
       },
       "seeding_key": {
         "resource.key": "assessment-answer-conditionals-cards"
@@ -9388,9 +9250,9 @@
       "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit",
       "key": "assessment-answer-graph-paper",
       "properties": {
-        "type": "Assessment Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment Answer Key"
       },
       "seeding_key": {
         "resource.key": "assessment-answer-graph-paper"
@@ -9401,8 +9263,8 @@
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
       "key": "common_core_and_ngss_guidance",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "common_core_and_ngss_guidance"
@@ -9413,8 +9275,8 @@
       "url": "https://youtu.be/TbUaEnAYPjI",
       "key": "conditionals-with-cards-assessment-video",
       "properties": {
-        "type": "Assessment Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Assessment Video"
       },
       "seeding_key": {
         "resource.key": "conditionals-with-cards-assessment-video"
@@ -9425,8 +9287,8 @@
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
       "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Manipulatives"
       },
       "seeding_key": {
         "resource.key": "course-cf-blockly-blocks"
@@ -9437,9 +9299,9 @@
       "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
       "key": "course-d-project-planning-guide-1",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "course-d-project-planning-guide-1"
@@ -9450,8 +9312,8 @@
       "url": "https://studio.code.org/s/coursed-2021/vocab",
       "key": "course_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -9462,8 +9324,8 @@
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "cross-curricular_extension_activities"
@@ -9474,9 +9336,9 @@
       "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
       "key": "csf-conditionals-with-cards-assessment",
       "properties": {
-        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment"
       },
       "seeding_key": {
         "resource.key": "csf-conditionals-with-cards-assessment"
@@ -9487,9 +9349,9 @@
       "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
       "key": "csf-conditionals-with-cards-sample-program",
       "properties": {
-        "type": "Teacher Prep Guide",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Teacher Prep Guide"
       },
       "seeding_key": {
         "resource.key": "csf-conditionals-with-cards-sample-program"
@@ -9500,9 +9362,9 @@
       "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
       "key": "csf-graph-paper-programming-assessment",
       "properties": {
-        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment"
       },
       "seeding_key": {
         "resource.key": "csf-graph-paper-programming-assessment"
@@ -9513,9 +9375,9 @@
       "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
       "key": "csf-relay-programming-activity-packet",
       "properties": {
-        "type": "Activity Packet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Packet"
       },
       "seeding_key": {
         "resource.key": "csf-relay-programming-activity-packet"
@@ -9526,8 +9388,8 @@
       "url": "https://studio.code.org/s/coursed-2021/standards",
       "key": "csta_standards_mapping",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csta_standards_mapping"
@@ -9538,8 +9400,8 @@
       "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide_1"
@@ -9561,9 +9423,9 @@
       "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
       "key": "dance-party-project-guide",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "dance-party-project-guide"
@@ -9574,8 +9436,8 @@
       "url": "https://curriculum.code.org/hoc/unplugged/4/",
       "key": "dance_party_unplugged",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "dance_party_unplugged"
@@ -9586,8 +9448,8 @@
       "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
       "key": "debugging_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "debugging_guide"
@@ -9609,9 +9471,9 @@
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling-faces-image",
       "properties": {
-        "type": "Emotion Images",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Emotion Images"
       },
       "seeding_key": {
         "resource.key": "feeling-faces-image"
@@ -9622,9 +9484,9 @@
       "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
       "key": "graph-paper-programming",
       "properties": {
-        "type": "Activity Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Worksheet"
       },
       "seeding_key": {
         "resource.key": "graph-paper-programming"
@@ -9635,8 +9497,8 @@
       "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
       "key": "implementation_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
@@ -9647,8 +9509,8 @@
       "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
       "key": "lesson-in-action-conditional-cards",
       "properties": {
-        "type": "Lesson in Action Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Lesson in Action Video"
       },
       "seeding_key": {
         "resource.key": "lesson-in-action-conditional-cards"
@@ -9659,8 +9521,8 @@
       "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
       "key": "lesson-in-action-graph-paper",
       "properties": {
-        "type": "Lesson in Action Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Lesson in Action Video"
       },
       "seeding_key": {
         "resource.key": "lesson-in-action-graph-paper"
@@ -9671,8 +9533,8 @@
       "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
       "key": "lesson_type_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
@@ -9683,8 +9545,8 @@
       "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
       "key": "open-ended_programming_levels",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "open-ended_programming_levels"
@@ -9695,8 +9557,8 @@
       "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
       "key": "open-ended_programming_levels_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "open-ended_programming_levels_1"
@@ -9707,8 +9569,8 @@
       "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
       "key": "open-ended_programming_levels_2",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "open-ended_programming_levels_2"
@@ -9719,8 +9581,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
@@ -9731,8 +9593,8 @@
       "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
       "key": "password_power-up_if_then_scenarios",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "password_power-up_if_then_scenarios"
@@ -9743,9 +9605,9 @@
       "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
       "key": "password_power-up_if_then_scenarios_answer_key",
       "properties": {
-        "type": "Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "password_power-up_if_then_scenarios_answer_key"
@@ -9756,8 +9618,8 @@
       "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
       "key": "password_power-up_lesson_quiz",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "password_power-up_lesson_quiz"
@@ -9768,8 +9630,8 @@
       "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
       "key": "password_power-up_lesson_quiz_answer_key",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "password_power-up_lesson_quiz_answer_key"
@@ -9805,9 +9667,9 @@
       "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
       "key": "password_power-up_power-up_your_password_answer_key",
       "properties": {
-        "type": "Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "password_power-up_power-up_your_password_answer_key"
@@ -9818,8 +9680,8 @@
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pause_and_think_online"
@@ -9830,8 +9692,8 @@
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pause_and_think_online_1"
@@ -9842,9 +9704,9 @@
       "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
       "key": "relay-assessment",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "relay-assessment"
@@ -9855,9 +9717,9 @@
       "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
       "key": "relay-programming-assessment-answer-key",
       "properties": {
-        "type": "Worksheet Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet Answer Key"
       },
       "seeding_key": {
         "resource.key": "relay-programming-assessment-answer-key"
@@ -9868,9 +9730,9 @@
       "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
       "key": "relay-programming-teacher-debugging",
       "properties": {
-        "type": "Teacher Debugging Image",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Teacher Debugging Image"
       },
       "seeding_key": {
         "resource.key": "relay-programming-teacher-debugging"
@@ -9881,8 +9743,8 @@
       "url": "https://youtu.be/ZULpfAVJOBo",
       "key": "teacher-video-relay-programming-2",
       "properties": {
-        "type": "Teacher Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Teacher Video"
       },
       "seeding_key": {
         "resource.key": "teacher-video-relay-programming-2"
@@ -9893,8 +9755,8 @@
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
@@ -9905,9 +9767,9 @@
       "url": "https://youtu.be/UymN4lTL50s",
       "key": "unplugged-video-conditionals-cards",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C2-conditionals-with-cards.mp4"
+        "download_url": "http://videos.code.org/2014/C2-conditionals-with-cards.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-conditionals-cards"
@@ -9918,9 +9780,9 @@
       "url": "https://youtu.be/Y_paSrH2ffw",
       "key": "unplugged-video-graph-paper",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C2-graph-paper.mp4"
+        "download_url": "http://videos.code.org/2014/C2-graph-paper.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-graph-paper"
@@ -9931,32 +9793,260 @@
       "url": "https://youtu.be/l5MKkXbzOsk",
       "key": "unplugged-video-relay-programming",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C2-relay-programming.mp4"
+        "download_url": "http://videos.code.org/2014/C2-relay-programming.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-relay-programming"
+      }
+    },
+    {
+      "name": "Virtual Lesson Modifications",
+      "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit",
+      "key": "virtual_lesson_modifications",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications"
       }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_lesson_slides"
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "resource.key": "activity-answer-graph-paper"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "resource.key": "assessment-answer-graph-paper"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "resource.key": "csf-graph-paper-programming-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "resource.key": "graph-paper-programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "resource.key": "lesson-in-action-graph-paper"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "resource.key": "unplugged-video-graph-paper"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Bee",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "assessment-answer-conditionals-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "conditionals-with-cards-assessment-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "csf-conditionals-with-cards-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "csf-conditionals-with-cards-sample-program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "lesson-in-action-conditional-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "unplugged-video-conditionals-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance-party-playlist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance-party-project-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "open-ended_programming_levels_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "resource.key": "csf-relay-programming-activity-packet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "course-d-project-planning-guide-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "events-in-bounce-how-do-they-happen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "pause_and_think_online_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "resource.key": "csf-relay-programming-activity-packet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "resource.key": "relay-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "resource.key": "relay-programming-assessment-answer-key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "resource.key": "relay-programming-teacher-debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "resource.key": "teacher-video-relay-programming-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "resource.key": "unplugged-video-relay-programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "resource.key": "csf-conditionals-with-cards-sample-program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_power-up_your_password"
+        "resource.key": "password_power-up_if_then_scenarios"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_power-up_your_password_answer_key"
+        "resource.key": "password_power-up_if_then_scenarios_answer_key"
       }
     },
     {
@@ -9974,242 +10064,26 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_if_then_scenarios"
+        "resource.key": "password_power-up_lesson_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_if_then_scenarios_answer_key"
+        "resource.key": "password_power-up_power-up_your_password"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "resource.key": "graph-paper-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "resource.key": "unplugged-video-graph-paper"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "resource.key": "lesson-in-action-graph-paper"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "resource.key": "activity-answer-graph-paper"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "resource.key": "csf-graph-paper-programming-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "resource.key": "assessment-answer-graph-paper"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Online Puzzles",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay-programming-assessment-answer-key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay-programming-teacher-debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "unplugged-video-relay-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "teacher-video-relay-programming-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "csf-relay-programming-activity-packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "resource.key": "csf-relay-programming-activity-packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "resource.key": "events-in-bounce-how-do-they-happen"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "resource.key": "open-ended_programming_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Star Wars Game",
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Star Wars Game",
-        "resource.key": "open-ended_programming_levels_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "resource.key": "dance-party-project-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "resource.key": "dance-party-playlist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "resource.key": "dance_party_unplugged"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "resource.key": "open-ended_programming_levels_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "pause_and_think_online_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "resource.key": "unplugged-video-conditionals-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "resource.key": "lesson-in-action-conditional-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "resource.key": "csf-conditionals-with-cards-sample-program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "resource.key": "csf-conditionals-with-cards-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "resource.key": "conditionals-with-cards-assessment-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "resource.key": "assessment-answer-conditionals-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals in Bee",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops in Farmer",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops in Farmer",
-        "resource.key": "csf-conditionals-with-cards-sample-program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "course-d-project-planning-guide-1"
+        "lesson.key": "lesson-5",
+        "resource.key": "password_power-up_power-up_your_password_answer_key"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "2021_change_log",
         "script.name": "coursed-2021"
       }
     },
@@ -10221,13 +10095,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursed-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
         "script.name": "coursed-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "coursed-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursed-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "coursed-2021"
       }
     },
@@ -10245,25 +10137,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "debugging_guide",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide_1",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2021_change_log",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "teacher_forum_1",
+        "script.name": "coursed-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications",
         "script.name": "coursed-2021"
       }
     }
@@ -10283,26 +10163,6 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
@@ -10310,156 +10170,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "frustrated",
-      "word": "Frustrated",
-      "definition": "Feeling annoyed or angry because something is not the way you want it.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "frustrated"
-      }
-    },
-    {
-      "key": "persistence",
-      "word": "Persistence",
-      "definition": "Trying again and again, even when something is very hard.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "persistence"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
       }
     },
     {
@@ -10473,66 +10183,6 @@
       }
     },
     {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
       "key": "command",
       "word": "Command",
       "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs. ",
@@ -10543,6 +10193,16 @@
       }
     },
     {
+      "key": "condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
       "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
@@ -10550,6 +10210,76 @@
       },
       "seeding_key": {
         "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "frustrated",
+      "word": "Frustrated",
+      "definition": "Feeling annoyed or angry because something is not the way you want it.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "frustrated"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "persistence",
+      "word": "Persistence",
+      "definition": "Trying again and again, even when something is very hard.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "persistence"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
       }
     },
     {
@@ -10563,46 +10293,6 @@
       }
     },
     {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
@@ -10610,66 +10300,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "while_loop",
-      "word": "While Loop",
-      "definition": "A loop that continues to repeat while a condition is true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "while_loop"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
       }
     },
     {
@@ -10680,6 +10310,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "until"
+      }
+    },
+    {
+      "key": "while_loop",
+      "word": "While Loop",
+      "definition": "A loop that continues to repeat while a condition is true.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "while_loop"
       }
     }
   ],
@@ -10698,8 +10338,62 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Introduction to Online Puzzles",
+        "lesson.key": "Build a Star Wars Game",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Bee",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "vocabulary.key": "pseudocode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "vocabulary.key": "event"
       }
     },
     {
@@ -10723,19 +10417,61 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
         "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "command"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
         "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "program"
       }
     },
     {
@@ -10764,134 +10500,56 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Star Wars Game",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
+        "lesson.key": "Relay Programming",
         "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Dance Party",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "vocabulary.key": "code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "vocabulary.key": "command"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "vocabulary.key": "pseudocode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
+        "lesson.key": "Until Loops in Maze",
         "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals in Bee",
+        "lesson.key": "Until Loops in Maze",
         "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "While Loops in Farmer",
+        "lesson.key": "Until Loops in Maze",
         "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "While Loops in Farmer",
+        "lesson.key": "Until Loops in Maze",
         "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "until"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "vocabulary.key": "repeat"
       }
     },
     {
@@ -10902,32 +10560,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
+        "lesson.key": "lesson-6",
         "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "until"
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "conditionals"
       }
     }
   ],
@@ -10936,72 +10576,13 @@
   ],
   "objectives": [
     {
-      "key": "e546a87d-131a-4d75-b2c6-d5942ee4a0c0",
+      "key": "079d7fb4-c8a7-4319-80d6-53037ad705eb",
       "properties": {
-        "description": "Define the term \"password\" and describe a password's purpose."
+        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
       },
       "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "e546a87d-131a-4d75-b2c6-d5942ee4a0c0"
-      }
-    },
-    {
-      "key": "88fe1860-9696-445b-b15d-ea9f5b71352d",
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "88fe1860-9696-445b-b15d-ea9f5b71352d"
-      }
-    },
-    {
-      "key": "ea9adc1d-dc64-4a08-a97f-19eec1e448e6",
-      "properties": {
-        "description": "Practice creating a memorable and strong password."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "ea9adc1d-dc64-4a08-a97f-19eec1e448e6"
-      }
-    },
-    {
-      "key": "3c4b51d5-b72f-42df-a55a-86c146214424",
-      "properties": {
-        "description": "Reframe a sequence of steps as an encoded program"
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "objective.key": "3c4b51d5-b72f-42df-a55a-86c146214424"
-      }
-    },
-    {
-      "key": "16d1e174-7b4d-4b5e-a7be-9d4399743d19",
-      "properties": {
-        "description": "Explain constraints of translating problems from human language to machine language"
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithms: Graph Paper Programming",
-        "objective.key": "16d1e174-7b4d-4b5e-a7be-9d4399743d19"
-      }
-    },
-    {
-      "key": "69023643-6dd6-4d71-b31a-d2dff7952ea7",
-      "properties": {
-        "description": "Order movement commands as sequential steps in a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Online Puzzles",
-        "objective.key": "69023643-6dd6-4d71-b31a-d2dff7952ea7"
-      }
-    },
-    {
-      "key": "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a",
-      "properties": {
-        "description": "Modify an existing program to solve errors."
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Online Puzzles",
-        "objective.key": "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a"
+        "lesson.key": "Loops in Artist",
+        "objective.key": "079d7fb4-c8a7-4319-80d6-53037ad705eb"
       }
     },
     {
@@ -11015,123 +10596,13 @@
       }
     },
     {
-      "key": "8a0addda-b47f-4551-8c82-9115be3c130d",
+      "key": "16d1e174-7b4d-4b5e-a7be-9d4399743d19",
       "properties": {
-        "description": "Define ideas using code and symbols."
+        "description": "Explain constraints of translating problems from human language to machine language"
       },
       "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "objective.key": "8a0addda-b47f-4551-8c82-9115be3c130d"
-      }
-    },
-    {
-      "key": "dfde2f15-333a-4ca0-942e-eb7642ea3239",
-      "properties": {
-        "description": "Verify work done by teammates."
-      },
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "objective.key": "dfde2f15-333a-4ca0-942e-eb7642ea3239"
-      }
-    },
-    {
-      "key": "8dba466d-d809-49c6-8f60-218c27964411",
-      "properties": {
-        "description": "Identify signs of frustration "
-      },
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "objective.key": "8dba466d-d809-49c6-8f60-218c27964411"
-      }
-    },
-    {
-      "key": "2d84b5eb-70d6-4f6d-88c5-7838a4983a78",
-      "properties": {
-        "description": "Read and comprehend given code."
-      },
-      "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "objective.key": "2d84b5eb-70d6-4f6d-88c5-7838a4983a78"
-      }
-    },
-    {
-      "key": "71cede4e-3e93-41d6-a422-f2443f756a61",
-      "properties": {
-        "description": "Identify a bug and the problems it causes in a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "objective.key": "71cede4e-3e93-41d6-a422-f2443f756a61"
-      }
-    },
-    {
-      "key": "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e",
-      "properties": {
-        "description": "Describe and implement a plan to debug a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "objective.key": "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e"
-      }
-    },
-    {
-      "key": "3b4a2468-e182-4060-861f-2a922730445b",
-      "properties": {
-        "description": "Identify actions that correlate to input events."
-      },
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "objective.key": "3b4a2468-e182-4060-861f-2a922730445b"
-      }
-    },
-    {
-      "key": "ed6bda58-2e92-4a38-8847-7f739a13385e",
-      "properties": {
-        "description": "Create an interactive game using sequence and event-handlers."
-      },
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "objective.key": "ed6bda58-2e92-4a38-8847-7f739a13385e"
-      }
-    },
-    {
-      "key": "aadd56d2-f62b-43b9-861e-a59eb6c364b1",
-      "properties": {
-        "description": "Share a creative artifact with other students."
-      },
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "objective.key": "aadd56d2-f62b-43b9-861e-a59eb6c364b1"
-      }
-    },
-    {
-      "key": "bafea2a8-7a23-4046-9360-77d760c54c2b",
-      "properties": {
-        "description": "Create an animated, interactive game using sequence and events."
-      },
-      "seeding_key": {
-        "lesson.key": "Build a Star Wars Game",
-        "objective.key": "bafea2a8-7a23-4046-9360-77d760c54c2b"
-      }
-    },
-    {
-      "key": "e3dce354-a602-47d1-99d1-dc729d0f4ff4",
-      "properties": {
-        "description": "Identify actions that correlate to input events."
-      },
-      "seeding_key": {
-        "lesson.key": "Build a Star Wars Game",
-        "objective.key": "e3dce354-a602-47d1-99d1-dc729d0f4ff4"
-      }
-    },
-    {
-      "key": "6a6abb8f-e710-4a5e-9979-38e6fef573de",
-      "properties": {
-        "description": "Develop programs that respond to timed events"
-      },
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "objective.key": "6a6abb8f-e710-4a5e-9979-38e6fef573de"
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "objective.key": "16d1e174-7b4d-4b5e-a7be-9d4399743d19"
       }
     },
     {
@@ -11145,163 +10616,23 @@
       }
     },
     {
-      "key": "891d87fb-2024-4ecc-828e-fa4f12dbbb05",
+      "key": "2d84b5eb-70d6-4f6d-88c5-7838a4983a78",
       "properties": {
-        "description": "Create dance animations with code"
+        "description": "Read and comprehend given code."
       },
       "seeding_key": {
-        "lesson.key": "Dance Party",
-        "objective.key": "891d87fb-2024-4ecc-828e-fa4f12dbbb05"
+        "lesson.key": "Debugging in Collector",
+        "objective.key": "2d84b5eb-70d6-4f6d-88c5-7838a4983a78"
       }
     },
     {
-      "key": "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744",
+      "key": "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e",
       "properties": {
-        "description": "Construct a program using structures that repeat areas of code"
+        "description": "Describe and implement a plan to debug a program."
       },
       "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "objective.key": "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744"
-      }
-    },
-    {
-      "key": "982d25cd-d5ff-491b-8505-be2606ba0a5e",
-      "properties": {
-        "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "objective.key": "982d25cd-d5ff-491b-8505-be2606ba0a5e"
-      }
-    },
-    {
-      "key": "d0dae7ad-246b-4f90-8800-8cc9f1de25aa",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "objective.key": "d0dae7ad-246b-4f90-8800-8cc9f1de25aa"
-      }
-    },
-    {
-      "key": "079d7fb4-c8a7-4319-80d6-53037ad705eb",
-      "properties": {
-        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "objective.key": "079d7fb4-c8a7-4319-80d6-53037ad705eb"
-      }
-    },
-    {
-      "key": "3a50aae3-6e0f-4821-9539-d06669eba0b1",
-      "properties": {
-        "description": "Break complex tasks into smaller repeatable sections."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "objective.key": "3a50aae3-6e0f-4821-9539-d06669eba0b1"
-      }
-    },
-    {
-      "key": "a19b271e-27b4-410c-bd3f-20c07f3ce2f0",
-      "properties": {
-        "description": "Recognize large repeated patterns as made from smaller repeated patterns."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "objective.key": "a19b271e-27b4-410c-bd3f-20c07f3ce2f0"
-      }
-    },
-    {
-      "key": "673ddc56-5217-45a9-919c-b42024f7de2b",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "objective.key": "673ddc56-5217-45a9-919c-b42024f7de2b"
-      }
-    },
-    {
-      "key": "fd3464fd-5921-4873-a850-c0799c55eecd",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "objective.key": "fd3464fd-5921-4873-a850-c0799c55eecd"
-      }
-    },
-    {
-      "key": "494526f8-7392-4788-9126-b2e2dd53b241",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "objective.key": "494526f8-7392-4788-9126-b2e2dd53b241"
-      }
-    },
-    {
-      "key": "3f9795a0-e52c-4fcd-ade0-d436facf382c",
-      "properties": {
-        "description": "Traverse a program and predict the outcome, given a set of input."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals with Cards",
-        "objective.key": "3f9795a0-e52c-4fcd-ade0-d436facf382c"
-      }
-    },
-    {
-      "key": "f3746860-8db9-414b-bd6e-5d2503fc81b4",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "f3746860-8db9-414b-bd6e-5d2503fc81b4"
-      }
-    },
-    {
-      "key": "83b6020a-2273-4966-abd6-0049afa1eb4e",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "83b6020a-2273-4966-abd6-0049afa1eb4e"
-      }
-    },
-    {
-      "key": "4a1dcde3-13a7-47d1-859a-b29ade558f5d",
-      "properties": {
-        "description": "Translate spoken language conditional statements into a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Bee",
-        "objective.key": "4a1dcde3-13a7-47d1-859a-b29ade558f5d"
-      }
-    },
-    {
-      "key": "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f",
-      "properties": {
-        "description": "Solve puzzles using a combination of looped sequences and conditionals."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Bee",
-        "objective.key": "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f"
-      }
-    },
-    {
-      "key": "f06bf36a-d520-4a73-b194-6d1e131a07ec",
-      "properties": {
-        "description": "Distinguish between loops that repeat a fixed number of times and loops that repeat as long as a condition is true."
-      },
-      "seeding_key": {
-        "lesson.key": "While Loops in Farmer",
-        "objective.key": "f06bf36a-d520-4a73-b194-6d1e131a07ec"
+        "lesson.key": "Debugging in Collector",
+        "objective.key": "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e"
       }
     },
     {
@@ -11315,13 +10646,63 @@
       }
     },
     {
-      "key": "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3",
+      "key": "3a50aae3-6e0f-4821-9539-d06669eba0b1",
       "properties": {
-        "description": "Build programs with the understanding of multiple strategies to implement conditionals."
+        "description": "Break complex tasks into smaller repeatable sections."
       },
       "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
-        "objective.key": "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3"
+        "lesson.key": "Nested Loops in Bee",
+        "objective.key": "3a50aae3-6e0f-4821-9539-d06669eba0b1"
+      }
+    },
+    {
+      "key": "3b4a2468-e182-4060-861f-2a922730445b",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "objective.key": "3b4a2468-e182-4060-861f-2a922730445b"
+      }
+    },
+    {
+      "key": "3c4b51d5-b72f-42df-a55a-86c146214424",
+      "properties": {
+        "description": "Reframe a sequence of steps as an encoded program"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "objective.key": "3c4b51d5-b72f-42df-a55a-86c146214424"
+      }
+    },
+    {
+      "key": "3f9795a0-e52c-4fcd-ade0-d436facf382c",
+      "properties": {
+        "description": "Traverse a program and predict the outcome, given a set of input."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "objective.key": "3f9795a0-e52c-4fcd-ade0-d436facf382c"
+      }
+    },
+    {
+      "key": "494526f8-7392-4788-9126-b2e2dd53b241",
+      "properties": {
+        "description": "Determine whether a conditional is met based on criteria."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "objective.key": "494526f8-7392-4788-9126-b2e2dd53b241"
+      }
+    },
+    {
+      "key": "4a1dcde3-13a7-47d1-859a-b29ade558f5d",
+      "properties": {
+        "description": "Translate spoken language conditional statements into a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Bee",
+        "objective.key": "4a1dcde3-13a7-47d1-859a-b29ade558f5d"
       }
     },
     {
@@ -11335,6 +10716,86 @@
       }
     },
     {
+      "key": "673ddc56-5217-45a9-919c-b42024f7de2b",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "objective.key": "673ddc56-5217-45a9-919c-b42024f7de2b"
+      }
+    },
+    {
+      "key": "69023643-6dd6-4d71-b31a-d2dff7952ea7",
+      "properties": {
+        "description": "Order movement commands as sequential steps in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "objective.key": "69023643-6dd6-4d71-b31a-d2dff7952ea7"
+      }
+    },
+    {
+      "key": "6a6abb8f-e710-4a5e-9979-38e6fef573de",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "6a6abb8f-e710-4a5e-9979-38e6fef573de"
+      }
+    },
+    {
+      "key": "71cede4e-3e93-41d6-a422-f2443f756a61",
+      "properties": {
+        "description": "Identify a bug and the problems it causes in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "objective.key": "71cede4e-3e93-41d6-a422-f2443f756a61"
+      }
+    },
+    {
+      "key": "83b6020a-2273-4966-abd6-0049afa1eb4e",
+      "properties": {
+        "description": "Determine whether a conditional is met based on criteria."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "83b6020a-2273-4966-abd6-0049afa1eb4e"
+      }
+    },
+    {
+      "key": "891d87fb-2024-4ecc-828e-fa4f12dbbb05",
+      "properties": {
+        "description": "Create dance animations with code"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "891d87fb-2024-4ecc-828e-fa4f12dbbb05"
+      }
+    },
+    {
+      "key": "8a0addda-b47f-4551-8c82-9115be3c130d",
+      "properties": {
+        "description": "Define ideas using code and symbols."
+      },
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "objective.key": "8a0addda-b47f-4551-8c82-9115be3c130d"
+      }
+    },
+    {
+      "key": "8dba466d-d809-49c6-8f60-218c27964411",
+      "properties": {
+        "description": "Identify signs of frustration "
+      },
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "objective.key": "8dba466d-d809-49c6-8f60-218c27964411"
+      }
+    },
+    {
       "key": "92ad0a98-e2e5-4104-8a9f-1dee9409f300",
       "properties": {
         "description": "Overcome obstacles such as time constraints or bugs."
@@ -11343,77 +10804,184 @@
         "lesson.key": "End of Course Project",
         "objective.key": "92ad0a98-e2e5-4104-8a9f-1dee9409f300"
       }
+    },
+    {
+      "key": "982d25cd-d5ff-491b-8505-be2606ba0a5e",
+      "properties": {
+        "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "objective.key": "982d25cd-d5ff-491b-8505-be2606ba0a5e"
+      }
+    },
+    {
+      "key": "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744",
+      "properties": {
+        "description": "Construct a program using structures that repeat areas of code"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "objective.key": "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744"
+      }
+    },
+    {
+      "key": "a19b271e-27b4-410c-bd3f-20c07f3ce2f0",
+      "properties": {
+        "description": "Recognize large repeated patterns as made from smaller repeated patterns."
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "objective.key": "a19b271e-27b4-410c-bd3f-20c07f3ce2f0"
+      }
+    },
+    {
+      "key": "aadd56d2-f62b-43b9-861e-a59eb6c364b1",
+      "properties": {
+        "description": "Share a creative artifact with other students."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "objective.key": "aadd56d2-f62b-43b9-861e-a59eb6c364b1"
+      }
+    },
+    {
+      "key": "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f",
+      "properties": {
+        "description": "Solve puzzles using a combination of looped sequences and conditionals."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Bee",
+        "objective.key": "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f"
+      }
+    },
+    {
+      "key": "bafea2a8-7a23-4046-9360-77d760c54c2b",
+      "properties": {
+        "description": "Create an animated, interactive game using sequence and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "objective.key": "bafea2a8-7a23-4046-9360-77d760c54c2b"
+      }
+    },
+    {
+      "key": "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a",
+      "properties": {
+        "description": "Modify an existing program to solve errors."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "objective.key": "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a"
+      }
+    },
+    {
+      "key": "d0dae7ad-246b-4f90-8800-8cc9f1de25aa",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "objective.key": "d0dae7ad-246b-4f90-8800-8cc9f1de25aa"
+      }
+    },
+    {
+      "key": "dfde2f15-333a-4ca0-942e-eb7642ea3239",
+      "properties": {
+        "description": "Verify work done by teammates."
+      },
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "objective.key": "dfde2f15-333a-4ca0-942e-eb7642ea3239"
+      }
+    },
+    {
+      "key": "e3dce354-a602-47d1-99d1-dc729d0f4ff4",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "objective.key": "e3dce354-a602-47d1-99d1-dc729d0f4ff4"
+      }
+    },
+    {
+      "key": "e546a87d-131a-4d75-b2c6-d5942ee4a0c0",
+      "properties": {
+        "description": "Define the term \"password\" and describe a password's purpose."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "e546a87d-131a-4d75-b2c6-d5942ee4a0c0"
+      }
+    },
+    {
+      "key": "ea9adc1d-dc64-4a08-a97f-19eec1e448e6",
+      "properties": {
+        "description": "Practice creating a memorable and strong password."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "ea9adc1d-dc64-4a08-a97f-19eec1e448e6"
+      }
+    },
+    {
+      "key": "ed6bda58-2e92-4a38-8847-7f739a13385e",
+      "properties": {
+        "description": "Create an interactive game using sequence and event-handlers."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "objective.key": "ed6bda58-2e92-4a38-8847-7f739a13385e"
+      }
+    },
+    {
+      "key": "f06bf36a-d520-4a73-b194-6d1e131a07ec",
+      "properties": {
+        "description": "Distinguish between loops that repeat a fixed number of times and loops that repeat as long as a condition is true."
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "objective.key": "f06bf36a-d520-4a73-b194-6d1e131a07ec"
+      }
+    },
+    {
+      "key": "f3746860-8db9-414b-bd6e-5d2503fc81b4",
+      "properties": {
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "f3746860-8db9-414b-bd6e-5d2503fc81b4"
+      }
+    },
+    {
+      "key": "fd3464fd-5921-4873-a850-c0799c55eecd",
+      "properties": {
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "objective.key": "fd3464fd-5921-4873-a850-c0799c55eecd"
+      }
+    },
+    {
+      "key": "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3",
+      "properties": {
+        "description": "Build programs with the understanding of multiple strategies to implement conditionals."
+      },
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "objective.key": "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3"
+      }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-NI-05"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Algorithms: Graph Paper Programming",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Online Puzzles",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Collector",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-CS-01"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Bounce",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-CS-02"
       }
     },
     {
@@ -11425,93 +10993,9 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Dance Party",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
+        "lesson.key": "Conditionals in Bee",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -11523,28 +11007,21 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
+        "lesson.key": "Dance Party",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals in Bee",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops in Farmer",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Until Loops in Maze",
+        "lesson.key": "Debugging in Collector",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
@@ -11583,19 +11060,173 @@
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-21"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
     }
   ],
   "lessons_opportunity_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Events in Bounce",
+        "lesson.key": "Build a Star Wars Game",
         "framework.shortcode": "ngss",
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Build a Star Wars Game",
+        "lesson.key": "Events in Bounce",
         "framework.shortcode": "ngss",
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }

@@ -40,9 +40,13 @@ si-LK:
   twentyhours_text: ඔබගේ පළමු  Hour of Code වැඩසටහන අවසන්ද? මෙම පාඨමාලාවේ පසුවට මූලික
     පරිගණක විද්‍යාව සහ  ක්‍රමලේඛන සංකලප තව දුරටත් ඉගෙනගන්න.
   og_title: Hour of Code වැඩසටහන ළඟදීම
+  og_title_soon: Hour of Code ළඟදීම
   og_description: පරිගණක විද්‍යාව හැදෑරීමේ අවස්තාව, සෑම පාසලකම සිටින සෑම දරුවෙකුටම
     ලැබිය යුතු වේ. එය සෑමදෙයක්ම වෙනස් කරමින් පවතී.
   csedweek_og_title: Hour of Code ළඟදීම
+  csedweek_og_description: Hour of Code යනු රටවල් 180කට වැඩිගණනක් හා භාෂා 45කට අධික
+    සංඛ්‍යාවකින් අන්තර්ජාතිකව සිසුන් දහස් ගණනින් පරිගණක විද්‍යාවට සමීපකිරීමට පවත්වනු
+    ලබන වැඩසටහණකි.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> වැඩසටහන සමග එක්වන්න<br/>දෙසැම්බර්
     8 - 14, 2014<br/>
   hoc2014_students: සිසුන්
@@ -91,6 +95,7 @@ si-LK:
   congratulations_volunteer: 'සුභපැතුම්: Hour of Code වැඩසටහන සාර්ථකව නිම කල ඔබ, තවත්
     සිසුන්ට ඒ සඳහා උපකාර කිරීමට <a href="https://code.org/volunteer">ස්වේචාවෙන් ඉදිරිපත්
     වන්න</a>!'
+  congratulations_on_completing_course: "%{course} සම්පුර්ණ කළාට සුභ පැතුම්"
   congrats_next_tutorials_title: මීළඟ අදියරට යන්න
   congrats_next_tutorials_desc: මෙම කෙටි නිබන්දන හෝ අපගේ <a href="%{current_path}/next">හවුල්කරුවන්ගේ
     නිබන්දනයක්</a> උත්සාහ කරන්න.
@@ -345,6 +350,8 @@ si-LK:
   homepage_hero_text_stat_students: "#student_count ශිෂ්‍ය ගිණුම් Code Studio හි,
     තිබෙන"
   homepage_hero_text_stat_served: 'Hour of Code: #served දෙනා සහභාගී වී ඇත'
+  homepage_hero_hoc_is_coming: Hour of Code ළඟදීම
+  homepage_hero_hoc_is_here: Hour of Code ළඟදීම
   homepage_slot_text_hoc: Hour of Code වැඩසටහන
   homepage_slot_text_frozen: Anna සහ Elsa සමග Frozen
   homepage_slot_text_teacher: ගුරු උපකරණ පුවරුව
@@ -490,6 +497,9 @@ si-LK:
   minecraft_no_internet: අන්තර්ජාල පහසුකම් නොමැති ද?
   minecraft_download_adventurer: Minecraft Adventurer නොබැඳි අනුවාදය බාගන්න.
   minecraft_subtitle: Minecraft Hour of Code
+  minecraft_host_event: Minecraft Hour of Code වැඩසටහනක් සංවිධානය කරන්න
+  minecraft_teach_resources: ගුරු සම්පත් සහ පාඩම් සැලසුම.
+  minecraft_leader_guide: වැඩසටහනක් සංවිධානය කිරීමට අවශ්‍ය සම්පත් බාගත කරන්න.
   sports_watch_video: වීඩියෝව නරඹන්න
   watch_inspirational_videos: ඔබ ආරම්භ කිරීමට පෙර, මෙම ප්‍රබෝධමත් කරවන වීඩියෝ එකක්
     බලන්න
@@ -1107,16 +1117,42 @@ si-LK:
   course2_gradelevel: අවුරුදු 6 සිට 18 දක්වා
   course3_gradelevel: වයස අවුරුදු 8-18
   course4_gradelevel: වයස අවුරුදු 10-18
+  coursea_gradelevel: වයස 4-7
+  courseb_gradelevel: වයස අවුරුදු 5-8
+  coursec_gradelevel: අවුරුදු 6 සිට 10 දක්වා
   coursed_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee_gradelevel: වයස 8-12
+  coursef_gradelevel: වයස අවුරුදු 9-13
+  coursea-2017_gradelevel: වයස 4-7
+  courseb-2017_gradelevel: වයස අවුරුදු 5-8
+  coursec-2017_gradelevel: අවුරුදු 6 සිට 10 දක්වා
   coursed-2017_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2017_gradelevel: වයස 8-12
+  coursef-2017_gradelevel: වයස අවුරුදු 9-13
+  coursea-2018_gradelevel: වයස 4-7
+  courseb-2018_gradelevel: වයස අවුරුදු 5-8
+  coursec-2018_gradelevel: අවුරුදු 6 සිට 10 දක්වා
   coursed-2018_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2018_gradelevel: වයස 8-12
+  coursef-2018_gradelevel: වයස අවුරුදු 9-13
+  coursea-2019_gradelevel: වයස 4-7
+  courseb-2019_gradelevel: වයස අවුරුදු 5-8
+  coursec-2019_gradelevel: අවුරුදු 6 සිට 10 දක්වා
   coursed-2019_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2019_gradelevel: වයස 8-12
+  coursef-2019_gradelevel: වයස අවුරුදු 9-13
+  coursea-2020_gradelevel: වයස 4-7
+  courseb-2020_gradelevel: වයස අවුරුදු 5-8
+  coursec-2020_gradelevel: අවුරුදු 6 සිට 10 දක්වා
   coursed-2020_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2020_gradelevel: වයස 8-12
+  coursef-2020_gradelevel: වයස අවුරුදු 9-13
+  coursea-2021_gradelevel: වයස 4-7
+  courseb-2021_gradelevel: වයස අවුරුදු 5-8
+  coursec-2021_gradelevel: අවුරුදු 6 සිට 10 දක්වා
+  coursed-2021_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2021_gradelevel: වයස 8-12
+  coursef-2021_gradelevel: වයස අවුරුදු 9-13
   accelerated_gradelevel: වයස අවුරුදු 10-18
   codeorg_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
   codeintl_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
@@ -1759,12 +1795,16 @@ si-LK:
   user_header_settings: මගේ ගිණුම
   user_header_logout: නික්මෙන්න
   user_header_signin: පුරන්න
+  user_header_create: 'තනන්න '
+  user_header_applab: 'මෘදුකාංග විද්‍යාගාරය '
+  user_header_artist: 'කේත කලාව '
   user_header_playlab: ක්‍රීඩා පරීක්ෂණාගාරය
   user_header_minecraft: Minecraft
   user_header_flappy: ෆ්ලැපි
   applab_tile_start_tutorial: ආරම්භ කරන්න
   hoc_overview_start_tutorial: ආරම්භ කරන්න
   hoc2018_creativity_create: තනන්න
+  hoc2018_creativity_hoc_coming: Hour of Code ළඟදීම…
   hoc2018_mc_page_title: Minecraft Hour of Code නිබන්ධන
   hoc2018_mc_designer_title: Minecraft Designer
   hoc2018_mc_adventurer_title: Minecraft Adventurer
@@ -1783,9 +1823,11 @@ si-LK:
   hoc2018_dance_teacher_resources_tile1_button: පාඩම් සැලැස්ම
   hoc2018_dance_teacher_resources_tile2_button: අපේනුගත ක්‍රියාකාරකම
   hoc2018_dance_amazon_about_future_engineer_button: වැඩිදුර ඉගෙන ගන්න
+  page_not_found_title: පිටුව සොයාගත නොහැක
   footer_powered_by_aws: ඇමේසන් වෙබ් සේවා මඟින් බලගැන්වේ
   footer_privacy_policy: රහස්‍යතා ප්‍රතිපත්තිය
   footer_donate: පරිත්‍යාග
   footer_support: සහාය
   footer_terms: නියම
+  ai_for_oceans_lesson_plan: පාඩම් සැලැස්ම
   ai_description: විස්තරය

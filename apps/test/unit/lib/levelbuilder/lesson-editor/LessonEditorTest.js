@@ -9,7 +9,8 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import reducers, {
-  init
+  initActivities,
+  initLevelSearching
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
   initResources
@@ -29,8 +30,13 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import _ from 'lodash';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('LessonEditor', () => {
+  // Warnings allowed due to usage of deprecated  componentWillReceiveProps
+  // lifecycle method.
+  allowConsoleWarnings();
+
   let defaultProps, store, clock;
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
@@ -45,7 +51,13 @@ describe('LessonEditor', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(initActivities(sampleActivities));
+    store.dispatch(
+      initLevelSearching({
+        searchOptions: searchOptions,
+        programmingEnvironments: []
+      })
+    );
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
     store.dispatch(initProgrammingExpressions([]));
@@ -53,6 +65,12 @@ describe('LessonEditor', () => {
     defaultProps = {
       relatedLessons: [],
       initialObjectives: [],
+      unitInfo: {
+        isLaunched: false,
+        courseVersionId: 1,
+        unitPath: '/s/my-script/',
+        isProfessionalLearningCourse: false
+      },
       initialLessonData: {
         id: 1,
         name: 'Lesson Name',
@@ -67,10 +85,7 @@ describe('LessonEditor', () => {
         preparation: '- One',
         announcements: [],
         assessmentOpportunities: 'Assessment Opportunities',
-        courseVersionId: 1,
-        scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        scriptIsVisible: false,
         frameworks: []
       }
     };
@@ -129,9 +144,9 @@ describe('LessonEditor', () => {
   });
 
   it('disables editing of lockable and has lesson plan for visible script', () => {
-    let initialLessonDataCopy = _.cloneDeep(defaultProps.initialLessonData);
-    initialLessonDataCopy.scriptIsVisible = true;
-    const wrapper = createWrapper({initialLessonData: initialLessonDataCopy});
+    let unitInfoCopy = _.cloneDeep(defaultProps.unitInfo);
+    unitInfoCopy.isLaunched = true;
+    const wrapper = createWrapper({unitInfo: unitInfoCopy});
     expect(
       wrapper
         .find('input')
@@ -243,6 +258,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
     expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+    server.restore();
   });
 
   it('shows error when save and keep editing has error saving', () => {

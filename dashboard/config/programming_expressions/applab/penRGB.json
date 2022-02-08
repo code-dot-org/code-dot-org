@@ -1,18 +1,17 @@
 {
-  "func": "penRGB",
+  "key": "penRGB",
+  "name": "penRGB",
   "category": "Turtle",
-  "paramButtons": {
-    "minArgs": 3,
-    "maxArgs": 4
-  },
-  "paletteParams": [
-    "r",
-    "g",
-    "b"
+  "palette_params": [
+    {
+      "name": "r"
+    },
+    {
+      "name": "g"
+    },
+    {
+      "name": "b"
+    }
   ],
-  "params": [
-    "120",
-    "180",
-    "200"
-  ]
+  "syntax": "penRGB(r, g, b)"
 }

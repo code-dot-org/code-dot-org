@@ -3,7 +3,7 @@ import React, {Component, Children} from 'react';
 import PropTypes from 'prop-types';
 
 import Radium from 'radium';
-import Portal from 'react-portal';
+import {PortalWithState} from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 
@@ -54,29 +54,37 @@ export default class PopUpMenu extends Component {
     children: PropTypes.any,
     className: PropTypes.string,
     isOpen: PropTypes.bool,
-    beforeClose: PropTypes.func,
+    onClose: PropTypes.func,
     showTail: PropTypes.bool,
     style: PropTypes.object
   };
 
   render() {
     return (
-      <Portal
-        closeOnEsc
-        closeOnOutsideClick
-        isOpened={this.props.isOpen}
-        beforeClose={this.props.beforeClose}
-      >
-        <MenuBubble
-          targetPoint={this.props.targetPoint}
-          offset={this.props.offset}
-          className={this.props.className}
-          showTail={this.props.showTail}
-          style={this.props.style}
+      this.props.isOpen && (
+        <PortalWithState
+          closeOnOutsideClick
+          closeOnEsc
+          onClose={this.props.onClose}
+          defaultOpen={this.props.isOpen}
         >
-          {this.props.children}
-        </MenuBubble>
-      </Portal>
+          {({openPortal, closePortal, isOpen, portal}) => (
+            <div>
+              {portal(
+                <MenuBubble
+                  targetPoint={this.props.targetPoint}
+                  offset={this.props.offset}
+                  className={this.props.className}
+                  showTail={this.props.showTail}
+                  style={this.props.style}
+                >
+                  {this.props.children}
+                </MenuBubble>
+              )}
+            </div>
+          )}
+        </PortalWithState>
+      )
     );
   }
 }

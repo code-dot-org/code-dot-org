@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeSectionData = {
@@ -18,7 +18,8 @@ const fakeSectionData = {
     name: 'csp2'
   },
   lesson_extras: false,
-  tts_autoplay_enabled: false
+  tts_autoplay_enabled: false,
+  is_assigned_csa: false
 };
 
 const sortedFakeSectionData = {
@@ -37,6 +38,7 @@ const sortedFakeSectionData = {
     id: 300,
     name: 'csp2'
   },
+  isAssignedCSA: false,
   lessonExtras: false,
   ttsAutoplayEnabled: false
 };

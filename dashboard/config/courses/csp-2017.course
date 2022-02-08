@@ -11,7 +11,7 @@
     "csppostap-2017",
     "csp-post-survey"
   ],
-  "alternate_scripts": [
+  "alternate_units": [
     {
       "experiment_name": "subgoals-group-a",
       "alternate_script": "csp3-a",
@@ -23,7 +23,11 @@
       "default_script": "csp3-2017"
     }
   ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
   "properties": {
+    "family_name": "csp",
+    "has_verified_resources": true,
     "teacher_resources": [
       [
         "curriculum",
@@ -38,11 +42,7 @@
         "https://studio.code.org/courses/CSP%20Support"
       ]
     ],
-    "has_verified_resources": true,
-    "family_name": "csp",
-    "version_year": "2017",
-    "is_stable": true,
-    "visible": true
+    "version_year": "2017"
   },
   "resources": [
 

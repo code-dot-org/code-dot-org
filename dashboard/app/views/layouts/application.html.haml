@@ -1,15 +1,16 @@
 !!! 5
 %html{dir: locale_dir}
   %head
-    // The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows us to view original & translated strings in Crowdin.
-    // "in-TL" is a pseudo-language locale where the Crowdin strings are stored
+    -# The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows
+    -# us to view original & translated strings in Crowdin.
+    -# "in-TL" is a pseudo-language locale where the Crowdin strings are stored
     - if request.locale === "in-TL"
       :javascript
         var _jipt = [];
         _jipt.push(['project', 'codeorg']);
       %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
-    - title = @page_title ? "#{appname} - #{@page_title}" : appname
+    - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
     - if view_options[:responsive_content]
@@ -21,9 +22,12 @@
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/analytics'
-    // webpack-runtime.js must appear exactly once on any page containing webpack entries
+    -# data needed for dcdo.js. This tag is needed on every page because our translation code is
+    -# making use of the dcdo feature.
+    %script{data: {'dcdo': DCDO.frontend_config.to_json}}
+    -# webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
-    // essential.js is ordered above application.js to filter new relic errors
+    -# essential.js is ordered above application.js to filter new relic errors
     %script{src: webpack_asset_path('js/essential.js')}
     %script{src: webpack_asset_path('js/vendors.js')}
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'answerdash.haml')), type: :haml if view_options[:answerdash]
@@ -65,7 +69,7 @@
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]
-        = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, full_width: view_options[:full_width]}
+        = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}
       - if view_options[:code_studio_logo]
         = render partial: 'layouts/logo'
       - page = yield

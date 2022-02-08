@@ -1,6 +1,6 @@
 {
-  "func": "stop",
+  "key": "stop",
+  "name": "stop",
   "category": "Animations",
-  "modeOptionName": "*.stop",
-  "noAutocomplete": true
+  "syntax": "stop"
 }

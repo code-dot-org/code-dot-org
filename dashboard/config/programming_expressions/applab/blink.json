@@ -1,11 +1,11 @@
 {
-  "func": "blink",
+  "key": "blink",
+  "name": "blink",
   "category": "Circuit",
-  "paletteParams": [
-    "interval"
+  "palette_params": [
+    {
+      "name": "interval"
+    }
   ],
-  "params": [
-    "100"
-  ],
-  "modeOptionName": "*.blink"
+  "syntax": "blink(interval)"
 }

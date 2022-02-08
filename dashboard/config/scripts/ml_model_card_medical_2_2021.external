@@ -3,13 +3,17 @@ title 'Introduction to Machine Learning'
 description ''
 
 markdown <<MARKDOWN
-# Medical Priority Model Card #2
+# Northern Lights ER Priority
 
-<a href="https://images.code.org/43688a0088b23f581a0ddb0c46acbeba-image-1615862850035.png" target="_blank">
-<img src="https://images.code.org/43688a0088b23f581a0ddb0c46acbeba-image-1615862850035.png" width="45%" style="float:left; margin: 2px;"></a>
+Click on the model card to zoom in and see a larger version
 
-<a href="https://images.code.org/18efaad15b6c045c952881cc1c38cd2c-image-1615862871698.png" target="_blank">
-<img src="https://images.code.org/18efaad15b6c045c952881cc1c38cd2c-image-1615862871698.png" width="45%" style="float:right; margin: 2px"></a>
+<a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+<img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+<a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+<img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+![]()
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

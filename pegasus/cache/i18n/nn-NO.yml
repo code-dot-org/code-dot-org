@@ -807,6 +807,7 @@ nn-NO:
     i datavitskap ved å førebu lærarar til å tilby dette nye fagområdet. For å melde
     deg på de profesjonelle utviklingsverkstadene, søk etter <a href="/educate/districts">partnar
     i distriktet</a> med Code.org.
+  dashboard_course_csina: Datavitskap i Algebra
   dashboard_course_csina_desc: Code.org har inngått eit samarbeid med Bootstrap om
     å utvikle pensum som lærer bort algebraiske og geometriske konsept gjennom dataprogrammering.
   dashboard_course_csins: Datavitenskap i Vitskap
@@ -1200,12 +1201,30 @@ nn-NO:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  coursea-2019_name: Kurs A (2019)
+  courseb-2019_name: Kurs B (2019)
+  coursec-2019_name: Kurs C (2019)
+  coursed-2019_name: Kurs D (2019)
+  coursee-2019_name: Kurs E (2019)
+  coursef-2019_name: Kurs F (2019)
+  coursea-2020_name: Kurs A (2020)
+  courseb-2020_name: Kurs B (2020)
+  coursec-2020_name: Kurs C (2020)
+  coursed-2020_name: Kurs D (2020)
+  coursee-2020_name: Kurs E (2020)
+  coursef-2020_name: Kurs F (2020)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Ekspresskurs (2018)
   pre-express-2018_name: Ekspresskurs før ein kan lese (2018)
+  express-2019_name: Ekspresskurs (2019)
   pre-express-2019_name: Ekspresskurs før ein kan lese (2019)
+  express-2020_name: Ekspresskurs (2020)
+  pre-express-2020_name: Ekspresskurs før ein kan lese (2020)
+  pre-express-2021_name: Ekspresskurs før ein kan lese (2021)
   csd2_name: 'Eining 2: Nettutvikling'
   csd3_name: 'Eining 3: Animasjonar og spel'
   accelerated_name: Framskunda kurs
+  express_name: Ekspresskurs
   pre-express_name: Programmeringskurs før ein kan lese
   20-hour_name: Framskunda kurs
   algebra_name: Heilt kurs i algebra for datavitskap
@@ -1308,6 +1327,12 @@ nn-NO:
   coursed-2020_gradelevel: 8.+ klasse
   coursee-2020_gradelevel: Alder 8–12 år
   coursef-2020_gradelevel: Alder 9-13 år
+  coursea-2021_gradelevel: Alder 4-7 år
+  courseb-2021_gradelevel: Alder 5-8 år
+  coursec-2021_gradelevel: Alder 6-10 år
+  coursed-2021_gradelevel: 8.+ klasse
+  coursee-2021_gradelevel: Alder 8–12 år
+  coursef-2021_gradelevel: Alder 9-13 år
   accelerated_gradelevel: Frå 10+ år (etter Kurs 3)
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
@@ -2298,6 +2323,7 @@ nn-NO:
   footer_donate: Gi eit bidrag
   footer_support: Brukarstøtte
   footer_terms: Vilkår for bruk
+  ai_for_oceans_lesson_plan: oppgåveplan
   ai_in_partnership_with: I samarbeid med
   ai_microsoft_thanks: Vi takkar Microsoft for å støtte visjonen og målet vårt om
     å sikre at kvar barn har høvet til å lære programmering og dei ferdigheitene for

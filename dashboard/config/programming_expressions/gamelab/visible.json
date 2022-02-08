@@ -1,7 +1,6 @@
 {
-  "func": "visible",
+  "key": "visible",
+  "name": "visible",
   "category": "Animations",
-  "modeOptionName": "anim_visible",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "visible"
 }

@@ -1356,12 +1356,20 @@ es-ES:
   coursed-2020_name: Curso D (2019)
   coursee-2020_name: Curso E (2019)
   coursef-2020_name: Curso F (2019)
+  coursea-2021_name: Curso A (2021)
+  courseb-2021_name: Curso B (2021)
+  coursec-2021_name: Curso C (2021)
+  coursed-2021_name: Curso D (2021)
+  coursee-2021_name: Curso E (2021)
+  coursef-2021_name: Curso F (2021)
   express-2018_name: Curso Express (2018)
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
   express-2020_name: Curso Express (2019)
   pre-express-2020_name: Curso exprés para prelectores (2020)
+  express-2021_name: Curso Express (2021)
+  pre-express-2021_name: Curso rápido prescolar (2021)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
@@ -1376,6 +1384,8 @@ es-ES:
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
   starwarsblocks_name: La guerra de las galaxias (bloques)
+  hoc-impact-study_name: Laberinto Clásico con Encuesta
+  flappy-impact-study_name: Código Flappy con Encuesta
   hoc-encryption_name: Cifrado simple
   text-compression_name: Compresión de texto
   applab_name: Laboratorio de Aplicaciones
@@ -1471,6 +1481,12 @@ es-ES:
   coursed-2020_gradelevel: Grado 8 +
   coursee-2020_gradelevel: Edad 8-12
   coursef-2020_gradelevel: De 9 a 13 años
+  coursea-2021_gradelevel: De 4 a 7 años
+  courseb-2021_gradelevel: De 5 a 8 años
+  coursec-2021_gradelevel: Edades de 6 a 10 años
+  coursed-2021_gradelevel: Grado 8 +
+  coursee-2021_gradelevel: Edad 8-12
+  coursef-2021_gradelevel: De 9 a 13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -1684,6 +1700,28 @@ es-ES:
     este curso, diseñarás y crearás un proyecto final que puedes compartir con tus
     amigos y familiares.
   coursef-2020_shortdescription_congrats: Aprende a usar diferentes tipos de bucles,
+    eventos, funciones y condicionales. Investiga distintas técnicas de resolución
+    de problemas y debate sobre el impacto de la computación y de Internet en la sociedad.
+    En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir
+    con tus amigos y familiares.
+  coursea-2021_shortdescription_congrats: Aprende los fundamentos de las ciencias
+    de la computación y la seguridad en Internet. Al final del curso, crea tu propio
+    juego o historia para compartir.
+  courseb-2021_shortdescription_congrats: Aprende los fundamentos de las ciencias
+    de la computación y la seguridad en Internet. Al final del curso, crea tu propio
+    juego o historia para compartir.
+  coursec-2021_shortdescription_congrats: Crea programas con secuencias, bucles y
+    eventos. Traduce tus iniciales a código binario, investiga distintas técnicas
+    de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del
+    curso podrás crear tu propio juego o historia para compartir!
+  coursed-2021_shortdescription_congrats: Los estudiantes desarrollan su comprensión
+    de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes
+    no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
+  coursee-2021_shortdescription_congrats: Empieza a programar con algoritmos, bucles,
+    condicionales y eventos, y pasa luego a las funciones. En la segunda parte de
+    este curso, diseñarás y crearás un proyecto final que puedes compartir con tus
+    amigos y familiares.
+  coursef-2021_shortdescription_congrats: Aprende a usar diferentes tipos de bucles,
     eventos, funciones y condicionales. Investiga distintas técnicas de resolución
     de problemas y debate sobre el impacto de la computación y de Internet en la sociedad.
     En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir
@@ -2607,6 +2645,18 @@ es-ES:
     inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de
     clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de
     igualdad y formación para profesores.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: "¡Viaja en el tiempo y aprende a codificar! El nuevo
+    tutorial de Minecraft Hour of Code ya está disponible en Minecraft: Education
+    Edition para Windows, Mac, Chromebook y iPad. Empieza con los recursos gratuitos
+    para educadores, formaciones y vídeos."
+  hoc2021_mc_mee_villages_title: Historia de Dos Pueblos
+  hoc2021_mc_mee_villages_description: 'Aprende los fundamentos de la codificación
+    y explora la diversidad y la inclusión con tus alumnos en Minecraft: Education
+    Edition.'
+  hoc2021_mc_mee_ai_title: Inteligencia Artificial para el Bienestar
+  hoc2021_mc_mee_ai_description: 'Explora la Inteligencia Artificial con tus alumnos
+    y aprende a codificar en Minecraft: Education Edition.'
   footer_powered_by_aws: Impulsado por Amazon Web Services
   footer_built_on_github: Creado en GitHub de Microsoft
   codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
@@ -2704,3 +2754,9 @@ es-ES:
   ai_cognimates_description: Una plataforma educativa de IA para crear juegos, programar
     robots y entrenar.
   ai_try_activity: Prueba la actividad
+  outbreak_tile_title: Brote
+  outbreak_tile_subtitle: "¡Un virus ha infectado Monster Town! Codifica un simulador
+    de brote y haz predicciones sobre lo que les ocurrirá a los vecinos de Monster
+    Town."
+  outbreak_tile_alt: Una simulación de cómo se propaga un virus a través de un grupo
+    de monstruos morados.

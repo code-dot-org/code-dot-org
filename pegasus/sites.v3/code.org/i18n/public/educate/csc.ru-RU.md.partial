@@ -1,0 +1,56 @@
+---
+title: Связь с информатикой
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Связь с информатикой
+
+В нашем новом учебном курсе мы показываем связь между информатикой и другими предметами, например математикой, филологией, естественными науками и социологией. Благодаря курсу "CS Connections" (Связь с информатикой), ученики классов K-12 смогут познакомиться с новыми увлекательными способами изучения обычных школьных предметов!
+
+## Попробуйте занятия из курса CS Connections в течение Часа кода
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Поэтическое искусство", left_description: "Научитесь выражать свои мысли и чувства! Используйте программирование, чтобы дополнить поэзию анимацией.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Привет, мир!", right_description: "Выберите одну из четырех увлекательных тем, чтобы запрограммировать интерактивных персонажей в создаваемом вами мире.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Начать"}}
+{{ clearfix }}
+
+## Модули
+
+Модули CS Connections структурированы в серию уроков, которые интегрируют изучение информатики в основные предметы школьной программы: математику, филологию и естественные науки. Эти модули соответствуют стандартам изучения других предметов и находят кульминацию в проектах, реализуемых на стыке разных предметов.
+
+Они идеально подходят для преподавателей, которые хотели бы включить информатику в свои планы занятий по другим предметам, а также для преподавателей информатики, которые хотят укрепить знания учащихся по другим предметам.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 часа", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Поэтическое искусство", left_description: "В ходе этого урока Часа кода вы дополните классическое стихотворение рисунками и анимацией!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Начать", right_heading: "Coding with Poetry", right_description: "В этой серии уроков вы научитесь объединять информатику и поэзию.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Посмотрить модуль" }}
+
+## Открытые проекты
+
+Создавайте связи между информатикой и традиционными школьными предметами с помощью проектов, реализуемых на стыке разных школьных предметов. Они занимают всего 1-2 академических часа и идеально подойдут для всех учителей, которые хотели бы разработать проекты по определенным темам, которые впишутся в имеющийся учебный план.
+
+<em>Совет: эти проекты требуют некоторого понимания основ информатики, поэтому мы рекомендуем пройти наше занятие по работе с кодом "Привет, мир!" перед началом работы!</em>
+
+{{ csc_module, title: "Экосистема", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Естественные науки", duration: "1-2 часа", description: "Используя базовые навыки программирования, учащиеся создают интерактивную модель экосистемы, в которой демонстрируется, как разные животные, растения и организмы влияют друг на друга. Эта модель также может быть адаптирована применительно к взаимодействию между геосферой, биосферой, гидросферой и/или атмосферой.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Жизненные циклы", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Естественные науки", duration: "1-2 часов", description: "В этом проекте учащиеся увидят жизненный цикл от яйца до головастика и лягушки. Используя программирование, учащиеся создадут научную модель жизненного цикла лягушки или передачи энергии!", button_text: "Подробнее", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Изучение персонажа", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "Филология", duration: "1-2 часа", description: "На каждое действие следует реакция! Нет, это не физика - этот проект позволит учащимся использовать программирование, чтобы построить сцену из истории, которая показывает, как действия одного персонажа влияют на цепочку событий.", button_text: "Подробнее", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Мораль истории", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "Филология", duration: "1-2 часа", description: "Что происходит между \"Жили-были\" и \"Конец?\" Учащиеся программируют интерактивное приложение, которое рассказывает историю и ее мораль. Учащиеся могут применить этот навык к любой истории, сказке, книге или сказке.", button_text: "Подробнее", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Уроки, объединяющие разные предметы
+
+Наши уроки, объединяющие разные предметы, — это быстрый и интересный способ объединения информатики с другими школьными предметами. Эти уроки не требуют предварительных знаний информатики, поэтому идеально подходят для любого учителя, который хотел бы использовать обучение предмету, который имеет огромную важность в 21 веке, в традиционную школьную программу и мотивировать учащихся, давая им новые увлекательные способы изучения старых предметов.
+
+
+{{ csc_module, title: "Проговариваем слова по буквам с пчелой", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "Филология", duration: "1 час", description: "В-Е-С-Е-Л-О! В этом уроке учащиеся используют базовые навыки программирования, чтобы указать пчеле, где говорить Б-З-З-З, чтобы проговорить по буквам слова, вписанные в клетки.", button_text: "Подробнее", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Счет с Лорель", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Математика", duration: "1 час", description: "Поиск сокровища! Учащиеся научатся счету и сложению, программируя циклы, которые помогут Лорель собрать драгоценные камни в maze сетке лабиринта.", button_text: "Подробнее", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Этический код искуственного интеллекта", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "Филология и гуманитарные науки", duration: "1 час", description: "После исследования потенциальных этических проблем, связанных с искусственным интеллектом (ИИ), учащиеся совместно разрабатывают ресурс класса по \"Этическому кодексу искусственнного интеллекта\".", button_text: "Подробнее", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Визуализация данных", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Математика", duration: "1 час", description: "В этом уроке учащиеся знакомятся с инструментом Data Visualizer в App Lab и двумя важными типами графиков: столбиковой диаграммой и гистограммой. В ходе этого урока учащиеся разовьют навыки использования этого инструмента и считывания данных.", button_text: "Подробнее", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Прошли кусры в CS Connection и/или хотите больше вариантов для обучения? Пожалуйста, <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">оставьте отзыв</a> и поделитесь своими идеями новых уроков!</em>

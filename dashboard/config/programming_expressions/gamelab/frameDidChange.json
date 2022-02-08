@@ -1,6 +1,6 @@
 {
-  "func": "frameDidChange",
+  "key": "frameDidChange",
+  "name": "frameDidChange",
   "category": "Sprites",
-  "modeOptionName": "*.frameDidChange",
-  "type": "value"
+  "syntax": "frameDidChange"
 }

@@ -621,6 +621,55 @@ en:
         csf_lots_of_sprites: 'Sprite Lab: Lots of Sprites'
         playlab_2021: Introduction to Play Lab
         playlab_2021_reader: Introduction to Play Lab
+        csp_defining_calling_functions: Defining and Calling Functions
+        csp_tutorial_datatab: Data Tab in App Lab
+        csp_tutorial_libraries: Libraries in App Lab
+        PL-Video-21: Welcome to Code.org's Professional Learning!
+        csp_tutorial_datavis1: Data Visualizer in App Lab - Part 1
+        csp_tutorial_datavis2: Data Visualizer in App Lab - Part 2
+        csd_ml_intro_ai_lab_july2021: Introduction to AI Lab
+        csd_ml_training_testing_ai_lan: Training and Testing in AI Lab
+        csd_ml_model_cards_july2021: Model Cards in AI Lab
+        csd_ml_numerical_ai_lab: Numerical Data in AI Lab
+        Gettting_Started_Progress: Progress, Feedback, and Assessment
+        Gettting_Started_ClassSection: Creating a Class Section
+        Gettting_Started_StudentExperience: The Student Experience
+        Getting_Started_BasicFeatures: Basic Features of Code.org
+        PL_overview_CSD: What is Computer Science Discoveries?
+        PL_CSD_TeacherTips_Advise: Teacher Tips - Advice to New Teachers
+        PL_CSD_TeacherTips_IntroToCSD: Teacher Tips - Introduction to CS Discoveries
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Teacher Tips - The Problem Solving Process
+        PL_CSD_TeacherTips_PairProgramming: Teacher Tips - Pair Programming
+        PL_CSD_TeacherTips_Debugging: Teacher Tips - Debugging
+        PL_CSD_TeacherTips_LeadLearner: Teacher Tips - Lead Learner
+        poembot-playtest-intro: PoemBot Playtest Intro
+        poembot-playtest-sprites: PoemBot Playtest Sprites
+        poembot-playtest-events: PoemBot Playtest Events
+        hello_world_intro: Hello World - Welcome to Sprite Lab
+        hello_world_events: Hello World - Programming with Events
+        hello_world_congrats: Hello World - Do What You Want
+        csp_global_vs_local: Debugging Global vs. Local Variables
+        rough_poemart_intro: v1 Poem Art Intro
+        rough_poemart_events: v1 Poem Art Events
+        rough_poemart_imagery: v1 Poem Art Imagery
+        rough_poemart_congrats: v1 Poem Art Congrats
+        poetry_module_variables: Variables - Coding with Poetry
+        poetry_module_textandvariables: Text & Variables - Coding with Poetry
+        poetry_module_planningapp: Planning Your Poem Generator App - Coding with Poetry
+        poetry_module_multichoiceprompts: Multiple Choice Prompts - Coding with Poetry
+        poetry_module_conditionals: Conditionals - Coding with Poetry
+        poemart_intro: Poem Art Introduction
+        poemart_events: Poem Art Events
+        poemart_imagery: Poem Art Imagery
+        poemart_celebration: Poem Art Celebration
+        csd_u6_variables_part2: Variables - Part 2
+        csd_ml_ethics_ai: 'Ethics and AI '
+        outbreak_intro: 'Outbreak Simulation: Introduction'
+        outbreak_events: 'Outbreak: Events'
+        outbreak_scientist: 'Outbreak Simulator: Thinking Like a Scientist'
+        outbreak_outro: 'Outbreak Simulator: Free Play'
+        PL_overview_CSP: What is Computer Science Principles?
+        PL_CSP_EIPMOverview: Guide to EIPM Lessons
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

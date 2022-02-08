@@ -13,7 +13,10 @@ import i18n from '@cdo/locale';
 export default class VersionHistory extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
-    useFilesApi: PropTypes.bool.isRequired
+    isProjectTemplateLevel: PropTypes.bool.isRequired,
+    useFilesApi: PropTypes.bool.isRequired,
+    selectedVersion: PropTypes.string,
+    isReadOnly: PropTypes.bool.isRequired
   };
 
   /**
@@ -35,7 +38,7 @@ export default class VersionHistory extends React.Component {
     confirmingClearPuzzle: false
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.useFilesApi) {
       filesApi.getVersionHistory(
         this.onVersionListReceived,
@@ -119,6 +122,7 @@ export default class VersionHistory extends React.Component {
           isOwner: project.isOwner(),
           currentUrl: window.location.href,
           shareUrl: project.getShareUrl(),
+          isProjectTemplateLevel: this.props.isProjectTemplateLevel,
           currentSourceVersionId: project.getCurrentSourceVersionId()
         })
       },
@@ -132,21 +136,30 @@ export default class VersionHistory extends React.Component {
   };
 
   render() {
+    let title;
     let body;
     if (this.state.showSpinner) {
+      title = i18n.versionHistory_header();
       body = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
     } else if (this.state.confirmingClearPuzzle) {
+      title = i18n.versionHistory_clearProgress_header();
       body = (
         <div>
           <p>{i18n.versionHistory_clearProgress_prompt()}</p>
+          {this.props.isProjectTemplateLevel && (
+            <p className="template-level-warning">
+              {i18n.versionHistory_clearProgress_templateLevelWarning()}
+            </p>
+          )}
           <button
             type="button"
-            id="confirm-button"
-            style={{float: 'right'}}
+            className="btn-danger"
+            id="start-over-button"
+            style={{marginLeft: 0}}
             onClick={this.onClearPuzzle}
           >
             {i18n.versionHistory_clearProgress_confirm()}
@@ -154,6 +167,7 @@ export default class VersionHistory extends React.Component {
           <button
             type="button"
             id="again-button"
+            style={{float: 'right'}}
             onClick={this.onCancelClearPuzzle}
           >
             {i18n.versionHistory_clearProgress_cancel()}
@@ -161,6 +175,8 @@ export default class VersionHistory extends React.Component {
         </div>
       );
     } else {
+      title = i18n.versionHistory_header();
+
       const rows = this.state.versions.map(
         function(version) {
           return (
@@ -169,6 +185,12 @@ export default class VersionHistory extends React.Component {
               versionId={version.versionId}
               lastModified={new Date(version.lastModified)}
               isLatest={version.isLatest}
+              isSelectedVersion={
+                this.props.selectedVersion
+                  ? version.versionId === this.props.selectedVersion
+                  : version.isLatest
+              }
+              isReadOnly={this.props.isReadOnly}
               onChoose={this.onChooseVersion.bind(this, version.versionId)}
             />
           );
@@ -181,21 +203,23 @@ export default class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                <tr>
-                  <td>
-                    <p>{i18n.versionHistory_initialVersion_label()}</p>
-                  </td>
-                  <td width="250" style={{textAlign: 'right'}}>
-                    <button
-                      type="button"
-                      className="btn-danger"
-                      onClick={this.onConfirmClearPuzzle}
-                      style={{float: 'right'}}
-                    >
-                      {i18n.versionHistory_clearProgress_confirm()}
-                    </button>
-                  </td>
-                </tr>
+                {!this.props.isReadOnly && (
+                  <tr>
+                    <td>
+                      <p>{i18n.versionHistory_initialVersion_label()}</p>
+                    </td>
+                    <td width="250" style={{textAlign: 'right'}}>
+                      <button
+                        type="button"
+                        className="btn-danger"
+                        onClick={this.onConfirmClearPuzzle}
+                        style={{float: 'right'}}
+                      >
+                        {i18n.versionHistory_clearProgress_confirm()}
+                      </button>
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
@@ -205,7 +229,7 @@ export default class VersionHistory extends React.Component {
 
     return (
       <div className="modal-content" style={{margin: 0}}>
-        <h1 className="dialog-title">{i18n.versionHistory_header()}</h1>
+        <h1 className="dialog-title">{title}</h1>
         {body}
         {this.state.statusMessage}
       </div>

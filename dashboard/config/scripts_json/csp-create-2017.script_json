@@ -2,11 +2,14 @@
   "script": {
     "name": "csp-create-2017",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -21,17 +24,16 @@
           "https://curriculum.code.org/csp/csp-create/standards/"
         ]
       ],
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp-create",
-      "hideable_lessons": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "2017"
     },
     "new_name": "csp-create-2017",
     "family_name": "csp-create",
-    "serialized_at": "2021-05-03 23:55:12 UTC",
+    "serialized_at": "2021-11-22 17:07:36 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp-create-2017"
     }
@@ -125,16 +127,136 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c429301d-daf3-4744-b93c-7b34c8b7307f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c429301d-daf3-4744-b93c-7b34c8b7307f",
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2017"
+      }
+    },
+    {
+      "key": "1cdb22c3-3e2d-4531-b5b0-e57be3ddd62b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1cdb22c3-3e2d-4531-b5b0-e57be3ddd62b",
+        "lesson.key": "Create PT Prep - Making a Plan",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2017"
+      }
+    },
+    {
+      "key": "da2662a0-67bb-483e-8088-8fe1123047b5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da2662a0-67bb-483e-8088-8fe1123047b5",
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2017"
+      }
+    },
+    {
+      "key": "5da053ce-88e7-49b8-a695-8c961a99d1e1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5da053ce-88e7-49b8-a695-8c961a99d1e1",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-create-2017"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f35ad258-a581-4586-ac80-23759631e094",
+      "position": 1,
+      "properties": {
+        "progression_name": "Create PT -  Review - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "f35ad258-a581-4586-ac80-23759631e094",
+        "lesson_activity.key": "c429301d-daf3-4744-b93c-7b34c8b7307f"
+      }
+    },
+    {
+      "key": "8642e20e-9ff8-429a-b02c-617141b9eaab",
+      "position": 2,
+      "properties": {
+        "name": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos",
+        "progression_name": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
+      },
+      "seeding_key": {
+        "activity_section.key": "8642e20e-9ff8-429a-b02c-617141b9eaab",
+        "lesson_activity.key": "c429301d-daf3-4744-b93c-7b34c8b7307f"
+      }
+    },
+    {
+      "key": "0e5e15ab-9d0b-4be1-8a46-eecc3393c438",
+      "position": 1,
+      "properties": {
+        "name": "Create PT - Make a Plan - Student Links",
+        "progression_name": "Create PT - Make a Plan - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e5e15ab-9d0b-4be1-8a46-eecc3393c438",
+        "lesson_activity.key": "1cdb22c3-3e2d-4531-b5b0-e57be3ddd62b"
+      }
+    },
+    {
+      "key": "056604a7-fb86-4e42-8917-f1b3197d2bd9",
+      "position": 1,
+      "properties": {
+        "name": "Create PT - Complete the Task - Student Links",
+        "progression_name": "Create PT - Complete the Task - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "056604a7-fb86-4e42-8917-f1b3197d2bd9",
+        "lesson_activity.key": "da2662a0-67bb-483e-8088-8fe1123047b5"
+      }
+    },
+    {
+      "key": "2bdee23b-8454-48a9-a108-10055aee670f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Click here! Complete the CS Principles post-course survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bdee23b-8454-48a9-a108-10055aee670f",
+        "lesson_activity.key": "5da053ce-88e7-49b8-a695-8c961a99d1e1"
+      }
+    },
+    {
+      "key": "4590a0b0-7b65-406f-a487-bd7bdbc10478",
+      "position": 2,
+      "properties": {
+        "name": "Participate in a longitudinal study!",
+        "progression_name": "Participate in a longitudinal study!"
+      },
+      "seeding_key": {
+        "activity_section.key": "4590a0b0-7b65-406f-a487-bd7bdbc10478",
+        "lesson_activity.key": "5da053ce-88e7-49b8-a695-8c961a99d1e1"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -142,7 +264,6 @@
         ],
         "progression": "Create PT -  Review - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -150,7 +271,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "f35ad258-a581-4586-ac80-23759631e094"
       },
       "level_keys": [
         "U6 Create PT Review - Student Links"
@@ -159,7 +281,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -167,7 +289,6 @@
         ],
         "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -175,7 +296,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "8642e20e-9ff8-429a-b02c-617141b9eaab"
       },
       "level_keys": [
         "csp-pt-tech-setup-and-tools"
@@ -184,7 +306,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -192,7 +314,6 @@
         ],
         "progression": "Create PT - Make a Plan - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -200,7 +321,8 @@
         ],
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "0e5e15ab-9d0b-4be1-8a46-eecc3393c438"
       },
       "level_keys": [
         "U6 Create PT - Make a Plan - Student Links"
@@ -209,7 +331,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -217,7 +339,6 @@
         ],
         "progression": "Create PT - Complete the Task - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -225,7 +346,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "056604a7-fb86-4e42-8917-f1b3197d2bd9"
       },
       "level_keys": [
         "U6 Create PT - Complete the Task - Student Links"
@@ -234,7 +356,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -242,7 +364,6 @@
         ],
         "progression": "Click here! Complete the CS Principles post-course survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -250,7 +371,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "2bdee23b-8454-48a9-a108-10055aee670f"
       },
       "level_keys": [
         "csp-post-survey-2018-markdown-with-link-to-survey"
@@ -259,7 +381,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -267,7 +389,6 @@
         ],
         "progression": "Participate in a longitudinal study!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -275,7 +396,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "4590a0b0-7b65-406f-a487-bd7bdbc10478"
       },
       "level_keys": [
         "Click Here!"
@@ -291,7 +413,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "f35ad258-a581-4586-ac80-23759631e094"
       }
     },
     {
@@ -302,7 +425,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "8642e20e-9ff8-429a-b02c-617141b9eaab"
       }
     },
     {
@@ -313,7 +437,8 @@
         ],
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "0e5e15ab-9d0b-4be1-8a46-eecc3393c438"
       }
     },
     {
@@ -324,7 +449,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "056604a7-fb86-4e42-8917-f1b3197d2bd9"
       }
     },
     {
@@ -335,7 +461,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "2bdee23b-8454-48a9-a108-10055aee670f"
       }
     },
     {
@@ -346,7 +473,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-create-2017"
+        "script.name": "csp-create-2017",
+        "activity_section.key": "4590a0b0-7b65-406f-a487-bd7bdbc10478"
       }
     }
   ],

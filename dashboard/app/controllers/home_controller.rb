@@ -5,6 +5,7 @@ require_dependency 'queries/script_activity'
 class HomeController < ApplicationController
   include UsersHelper
   include SurveyResultsHelper
+  include TeacherApplicationHelper
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -18,13 +19,16 @@ class HomeController < ApplicationController
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
-    if params[:i18npath]
-      redirect_to "/#{params[:i18npath]}"
-    elsif params[:user_return_to]
-      redirect_to URI.parse(params[:user_return_to].to_s).path
-    else
-      redirect_to '/'
-    end
+    redirect_path = if params[:i18npath]
+                      "/#{params[:i18npath]}"
+                    elsif params[:user_return_to]
+                      URI.parse(params[:user_return_to].to_s).path
+                    else
+                      '/'
+                    end
+    # Query parameter for browser cache to be avoided and load new locale
+    redirect_path = "#{redirect_path}?lang=#{params[:locale]}" if params[:locale]
+    redirect_to redirect_path
   rescue URI::InvalidURIError
     redirect_to '/'
   end
@@ -78,9 +82,16 @@ class HomeController < ApplicationController
 
   private
 
+  # Determine where student should be redirected upon logging in:
+  # true (redirect to script overview page) - if the user is a student && can access the script
+  #   they were most recently assigned && they either have no recorded recent progress, their most
+  #   recent progress was in the most recently assigned script, or they were assigned the script
+  #   more recently than their last progress in another section.
+  # false (redirect to student homepage) - otherwise.
   def should_redirect_to_script_overview?
     current_user.student? &&
     current_user.can_access_most_recently_assigned_script? &&
+    current_user.most_recent_assigned_script_in_live_section? &&
     (
       !current_user.user_script_with_most_recent_progress ||
       current_user.most_recent_progress_in_recently_assigned_script? ||
@@ -97,7 +108,7 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
+    @homepage_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
@@ -121,9 +132,7 @@ class HomeController < ApplicationController
     exclude_primary_script = true
     @homepage_data[:courses] = current_user.recent_courses_and_scripts(exclude_primary_script)
 
-    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.where(
-      student_id: current_user.id
-    ).count > 0
+    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
 
     script = Queries::ScriptActivity.primary_script(current_user)
     if script
@@ -147,6 +156,12 @@ class HomeController < ApplicationController
       donor_banner_name ||= params[:forceDonorTeacherBanner]
       show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
 
+      # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
+      # specific banner content.
+      current_user.marketing_segment_data&.compact&.each do |segment_name, value|
+        cookies[environment_specific_cookie_name("_teacher_#{segment_name}")] = {value: value, domain: :all}
+      end
+
       @homepage_data[:isTeacher] = true
       @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
       @homepage_data[:joined_sections] = student_sections
@@ -154,10 +169,10 @@ class HomeController < ApplicationController
       @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
+      @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
-      @homepage_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
-      @homepage_data[:preReaderScriptIds] = Script.pre_reader_script_ids
+      @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school

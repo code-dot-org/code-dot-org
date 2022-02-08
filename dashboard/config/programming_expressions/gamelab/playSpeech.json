@@ -1,19 +1,17 @@
 {
-  "func": "playSpeech",
+  "key": "playSpeech",
+  "name": "playSpeech",
   "category": "UI controls",
-  "paramButtons": {
-    "minArgs": 2,
-    "maxArgs": 3
-  },
-  "paletteParams": [
-    "text",
-    "gender",
-    "language"
+  "palette_params": [
+    {
+      "name": "text"
+    },
+    {
+      "name": "gender"
+    },
+    {
+      "name": "language"
+    }
   ],
-  "params": [
-    "\"Hello World!\"",
-    "\"female\"",
-    "\"English\""
-  ],
-  "nativeCallsBackInterpreter": true
+  "syntax": "playSpeech(text, gender, language)"
 }

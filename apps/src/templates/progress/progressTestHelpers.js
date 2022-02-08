@@ -18,12 +18,14 @@ export const fakeLesson = (
   name,
   id,
   lockable = false,
-  lessonNumber = undefined
+  lessonNumber = undefined,
+  lessonStartUrl = 'code.org'
 ) => ({
   name,
   id,
   lockable,
   lessonNumber,
+  lessonStartUrl,
   isFocusArea: false
 });
 
@@ -82,10 +84,29 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       lessonsBySectionId: {
         '11': {}
       },
-      lockableAuthorized: false
+      lockableAuthorized: false,
+      lockableAuthorizedLoaded: true,
+      lessonsBySectionIdLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {
+      sectionIds: ['11'],
+      sectionsAreLoaded: true,
+      sections: {
+        '11': {
+          id: 11,
+          name: 'test section',
+          lesson_extras: true,
+          pairing_allowed: true,
+          studentCount: 4,
+          code: 'TQGSJR',
+          providerManaged: false,
+          lessons: {},
+          ttsAutoplayEnabled: false,
+          lessonExtras: false,
+          pairingAllowed: true
+        }
+      },
       selectedSectionId: '11'
     },
     hiddenLesson: Immutable.fromJS({
@@ -94,7 +115,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       }
     }),
     progress: {
-      showTeacherInfo: false
+      scriptName: 'script-name',
+      unitProgressHasLoaded: true
     },
     currentUser: {
       userId: 1
@@ -116,7 +138,9 @@ export const createStoreWithLockedLesson = (
       lessonsBySectionId: {
         '11': {}
       },
-      lockableAuthorized: lockableAuthorized
+      lessonsBySectionIdLoaded: true,
+      lockableAuthorized: lockableAuthorized,
+      lockableAuthorizedLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {
@@ -128,7 +152,7 @@ export const createStoreWithLockedLesson = (
       }
     }),
     progress: {
-      showTeacherInfo: false
+      unitProgressHasLoaded: true
     },
     currentUser: {
       userId: 1
@@ -176,6 +200,9 @@ export const fakeScriptData = (overrideFields = {}) => {
     id: 1,
     name: 'csd1-2020',
     title: 'CSD Unit 1 - Problem Solving and Computing (20-21)',
+    csf: false,
+    isCsd: true,
+    isCsp: false,
     lessons: [],
     ...overrideFields
   };
@@ -241,23 +268,23 @@ export const fakeProgressTableReduxInitialState = (
       section: fakeSection(students)
     },
     sectionProgress: {
-      scriptDataByScript: {[scriptData.id]: scriptData},
-      studentLevelProgressByScript: {
+      unitDataByUnit: {[scriptData.id]: scriptData},
+      studentLevelProgressByUnit: {
         [scriptData.id]: levelProgressData
       },
-      studentLessonProgressByScript: {
+      studentLessonProgressByUnit: {
         [scriptData.id]: lessonProgressForSection(
           levelProgressData,
           scriptData.lessons
         )
       },
-      studentLastUpdateByScript: fakeStudentLastUpdateByScript(
+      studentLastUpdateByUnit: fakeStudentLastUpdateByScript(
         scriptData,
         students
       ),
       lessonOfInterest: 1
     },
-    scriptSelection: {scriptId: scriptData.id},
+    unitSelection: {scriptId: scriptData.id},
     locales: {localeCode: 'en-US'}
   };
 };

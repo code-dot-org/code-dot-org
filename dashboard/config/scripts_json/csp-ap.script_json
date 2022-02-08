@@ -2,21 +2,8 @@
   "script": {
     "name": "csp-ap",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "script_announcements": [
-        {
-          "notice": "This unit is being replaced....",
-          "details": "As part of improving Performance Task prep, this unit has been split into separate units \"Explore PT Prep\" and \"Create PT Prep\" which can now be found in the pull down menu where you assign units to one of your sections.  Please go there and assign your section to the appropriate unit to see improved activities and resources.  The lesson plan for the Explore PT prep will link to the new lessons. Click the Learn More button to read about the changes and updates.",
-          "link": "http://forum.code.org/t/curriculum-updates-2017-18/10762/52",
-          "type": "bullhorn"
-        }
-      ],
-      "has_lesson_plan": true,
-      "hideable_lessons": true,
       "announcements": [
         {
           "notice": "This unit is being replaced....",
@@ -24,11 +11,20 @@
           "link": "http://forum.code.org/t/curriculum-updates-2017-18/10762/52",
           "type": "bullhorn"
         }
-      ]
+      ],
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:03 UTC",
+    "serialized_at": "2021-11-22 19:56:29 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp-ap"
     }
@@ -179,16 +175,189 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7143caa1-c79c-4c4b-8c1a-5d5b8bbdef4e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7143caa1-c79c-4c4b-8c1a-5d5b8bbdef4e",
+        "lesson.key": "Tech Setup - Your AP Digital Portfolio and Other Tools",
+        "lesson_group.key": "csp_ap_1",
+        "script.name": "csp-ap"
+      }
+    },
+    {
+      "key": "d6d5c056-b056-4ca5-aabc-0b9b1a7db2cd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6d5c056-b056-4ca5-aabc-0b9b1a7db2cd",
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-ap"
+      }
+    },
+    {
+      "key": "88930e8a-696f-4a7c-8afd-c0381898e83a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88930e8a-696f-4a7c-8afd-c0381898e83a",
+        "lesson.key": "Create PT Prep - Making a Plan",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-ap"
+      }
+    },
+    {
+      "key": "137af6e1-b3f5-4dd0-9028-06573fd9fb96",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "137af6e1-b3f5-4dd0-9028-06573fd9fb96",
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-ap"
+      }
+    },
+    {
+      "key": "8a7eec23-59b8-40f9-ba68-a6d312c811bf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8a7eec23-59b8-40f9-ba68-a6d312c811bf",
+        "lesson.key": "Explore PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_2",
+        "script.name": "csp-ap"
+      }
+    },
+    {
+      "key": "de548bb5-fd3c-496e-bdfd-06ff8d2b20ed",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de548bb5-fd3c-496e-bdfd-06ff8d2b20ed",
+        "lesson.key": "Explore PT - Making a Plan",
+        "lesson_group.key": "csp_ap_2",
+        "script.name": "csp-ap"
+      }
+    },
+    {
+      "key": "b218413a-e08f-45f3-93f6-6f63a8ab39b6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b218413a-e08f-45f3-93f6-6f63a8ab39b6",
+        "lesson.key": "Explore PT - Complete the Task",
+        "lesson_group.key": "csp_ap_2",
+        "script.name": "csp-ap"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "de154945-ed7d-4b0b-bba9-7729b34ee760",
+      "position": 1,
+      "properties": {
+        "name": "AP Performance Task Tech Setup - Student Links",
+        "progression_name": "AP Performance Task Tech Setup - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "de154945-ed7d-4b0b-bba9-7729b34ee760",
+        "lesson_activity.key": "7143caa1-c79c-4c4b-8c1a-5d5b8bbdef4e"
+      }
+    },
+    {
+      "key": "0a0c52a3-ae41-4b9e-b454-136a9397a4ec",
+      "position": 1,
+      "properties": {
+        "name": "Create PT -  Review - Student Links",
+        "progression_name": "Create PT -  Review - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a0c52a3-ae41-4b9e-b454-136a9397a4ec",
+        "lesson_activity.key": "d6d5c056-b056-4ca5-aabc-0b9b1a7db2cd"
+      }
+    },
+    {
+      "key": "54c2b0c8-5c09-4175-9827-fe96e570c2a8",
+      "position": 1,
+      "properties": {
+        "name": "Create PT - Make a Plan - Student Links",
+        "progression_name": "Create PT - Make a Plan - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "54c2b0c8-5c09-4175-9827-fe96e570c2a8",
+        "lesson_activity.key": "88930e8a-696f-4a7c-8afd-c0381898e83a"
+      }
+    },
+    {
+      "key": "f28b8bbf-8943-4544-a023-0555f2c02c22",
+      "position": 1,
+      "properties": {
+        "name": "Create PT - Complete the Task - Student Links",
+        "progression_name": "Create PT - Complete the Task - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "f28b8bbf-8943-4544-a023-0555f2c02c22",
+        "lesson_activity.key": "137af6e1-b3f5-4dd0-9028-06573fd9fb96"
+      }
+    },
+    {
+      "key": "100f137b-b923-4c4e-b447-81b362c02ff4",
+      "position": 1,
+      "properties": {
+        "name": "Explore PT - Review - Student Links",
+        "progression_name": "Explore PT - Review - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "100f137b-b923-4c4e-b447-81b362c02ff4",
+        "lesson_activity.key": "8a7eec23-59b8-40f9-ba68-a6d312c811bf"
+      }
+    },
+    {
+      "key": "991e0bd1-e81f-4bc4-a7e3-6b2f4f43e19d",
+      "position": 1,
+      "properties": {
+        "name": "Explore PT - Make a Plan - Student Links",
+        "progression_name": "Explore PT - Make a Plan - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "991e0bd1-e81f-4bc4-a7e3-6b2f4f43e19d",
+        "lesson_activity.key": "de548bb5-fd3c-496e-bdfd-06ff8d2b20ed"
+      }
+    },
+    {
+      "key": "559c3a23-c13b-4428-8697-98363c45d06c",
+      "position": 1,
+      "properties": {
+        "name": "Explore PT - Complete the Task - Student Links",
+        "progression_name": "Explore PT - Complete the Task - Student Links"
+      },
+      "seeding_key": {
+        "activity_section.key": "559c3a23-c13b-4428-8697-98363c45d06c",
+        "lesson_activity.key": "b218413a-e08f-45f3-93f6-6f63a8ab39b6"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -196,7 +365,6 @@
         ],
         "progression": "AP Performance Task Tech Setup - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +372,8 @@
         ],
         "lesson.key": "Tech Setup - Your AP Digital Portfolio and Other Tools",
         "lesson_group.key": "csp_ap_1",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "de154945-ed7d-4b0b-bba9-7729b34ee760"
       },
       "level_keys": [
         "U6 AP Performance Task Tech Setup - Student Links"
@@ -213,7 +382,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -221,7 +390,6 @@
         ],
         "progression": "Create PT -  Review - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -229,7 +397,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "0a0c52a3-ae41-4b9e-b454-136a9397a4ec"
       },
       "level_keys": [
         "U6 Create PT Review - Student Links"
@@ -238,7 +407,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -246,7 +415,6 @@
         ],
         "progression": "Create PT - Make a Plan - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,7 +422,8 @@
         ],
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "54c2b0c8-5c09-4175-9827-fe96e570c2a8"
       },
       "level_keys": [
         "U6 Create PT - Make a Plan - Student Links"
@@ -263,7 +432,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -271,7 +440,6 @@
         ],
         "progression": "Create PT - Complete the Task - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -279,7 +447,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "f28b8bbf-8943-4544-a023-0555f2c02c22"
       },
       "level_keys": [
         "U6 Create PT - Complete the Task - Student Links"
@@ -288,7 +457,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -296,7 +465,6 @@
         ],
         "progression": "Explore PT - Review - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -304,7 +472,8 @@
         ],
         "lesson.key": "Explore PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_2",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "100f137b-b923-4c4e-b447-81b362c02ff4"
       },
       "level_keys": [
         "U6 Explore PT Review - Student Links"
@@ -313,7 +482,7 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -321,7 +490,6 @@
         ],
         "progression": "Explore PT - Make a Plan - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +497,8 @@
         ],
         "lesson.key": "Explore PT - Making a Plan",
         "lesson_group.key": "csp_ap_2",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "991e0bd1-e81f-4bc4-a7e3-6b2f4f43e19d"
       },
       "level_keys": [
         "U6 Explore PT - Make a Plan - Student Links"
@@ -338,7 +507,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -346,7 +515,6 @@
         ],
         "progression": "Explore PT - Complete the Task - Student Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -354,7 +522,8 @@
         ],
         "lesson.key": "Explore PT - Complete the Task",
         "lesson_group.key": "csp_ap_2",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "559c3a23-c13b-4428-8697-98363c45d06c"
       },
       "level_keys": [
         "U6 Explore PT - Complete the Task - Student Links"
@@ -370,7 +539,8 @@
         ],
         "lesson.key": "Tech Setup - Your AP Digital Portfolio and Other Tools",
         "lesson_group.key": "csp_ap_1",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "de154945-ed7d-4b0b-bba9-7729b34ee760"
       }
     },
     {
@@ -381,7 +551,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "0a0c52a3-ae41-4b9e-b454-136a9397a4ec"
       }
     },
     {
@@ -392,7 +563,8 @@
         ],
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "54c2b0c8-5c09-4175-9827-fe96e570c2a8"
       }
     },
     {
@@ -403,7 +575,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "f28b8bbf-8943-4544-a023-0555f2c02c22"
       }
     },
     {
@@ -414,7 +587,8 @@
         ],
         "lesson.key": "Explore PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_2",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "100f137b-b923-4c4e-b447-81b362c02ff4"
       }
     },
     {
@@ -425,7 +599,8 @@
         ],
         "lesson.key": "Explore PT - Making a Plan",
         "lesson_group.key": "csp_ap_2",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "991e0bd1-e81f-4bc4-a7e3-6b2f4f43e19d"
       }
     },
     {
@@ -436,7 +611,8 @@
         ],
         "lesson.key": "Explore PT - Complete the Task",
         "lesson_group.key": "csp_ap_2",
-        "script.name": "csp-ap"
+        "script.name": "csp-ap",
+        "activity_section.key": "559c3a23-c13b-4428-8697-98363c45d06c"
       }
     }
   ],

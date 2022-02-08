@@ -1,10 +1,6 @@
 {
-  "func": "setAttribute",
+  "key": "setAttribute",
+  "name": "setAttribute",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"scrollHeight\"",
-    "200"
-  ],
-  "noAutocomplete": true
+  "syntax": "setAttribute"
 }

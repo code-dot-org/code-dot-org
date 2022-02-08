@@ -3,6 +3,7 @@ require 'test_helper'
 class BubbleChoiceTest < ActiveSupport::TestCase
   include Rails.application.routes.url_helpers
   self.use_transactional_test_case = true
+  include SharedConstants
 
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -205,6 +206,26 @@ DSL
     assert_equal expected_summary, sublevel_summary
   end
 
+  test 'summarize_sublevels includes exampleSolutions' do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    script_with_examples = create(:script)
+    lesson_group_with_examples = create(:lesson_group, script: script_with_examples)
+    lesson_with_examples = create(:lesson, lesson_group: lesson_group_with_examples, script: script_with_examples)
+    sublevel1_with_examples = create :dance, :with_example_solutions
+    sublevel2_with_examples = create :dance, :with_example_solutions
+    sublevels_with_examples = [sublevel1_with_examples, sublevel2_with_examples]
+    bubble_choice_with_examples = create :bubble_choice_level, name: 'bubble_choices_with_examples', display_name: 'Bubble Choices With Examples', description: 'Choose one or more!', sublevels: sublevels_with_examples
+    script_level_with_examples = create :script_level, levels: [bubble_choice_with_examples], script: script_with_examples, lesson: lesson_with_examples
+
+    authorized_teacher = create :authorized_teacher
+    sublevels_summary = bubble_choice_with_examples.summarize_sublevels(script_level: script_level_with_examples, user_id: authorized_teacher.id)
+
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[0][:exampleSolutions]
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[1][:exampleSolutions]
+  end
+
   test 'summarize_sublevels with script_level' do
     sublevel_summary = @bubble_choice.summarize_sublevels(script_level: @script_level)
     assert_equal 2, sublevel_summary.length
@@ -215,10 +236,13 @@ DSL
   test 'summarize_sublevels with user_id' do
     student = create :student
     create :user_level, user: student, level: @sublevel1, best_result: ActivityConstants::BEST_PASS_RESULT
+    create :user_level, user: student, level: @sublevel2, best_result: 1
     sublevel_summary = @bubble_choice.summarize_sublevels(user_id: student.id)
     assert_equal 2, sublevel_summary.length
     assert sublevel_summary.first[:perfect]
-    assert_nil sublevel_summary.last[:perfect]
+    assert_equal LEVEL_STATUS.perfect, sublevel_summary.first[:status]
+    assert_equal false, sublevel_summary.last[:perfect]
+    assert_equal LEVEL_STATUS.attempted, sublevel_summary.last[:status]
   end
 
   test 'summarize_sublevels does not leak progress between scripts' do
@@ -243,12 +267,32 @@ DSL
     refute sublevel_summary.last[:perfect]
   end
 
-  test 'best_result_sublevel returns sublevel with highest best_result for user' do
+  test 'get_sublevel_for_progress returns sublevel with highest best_result for user when there is no teacher feedback' do
     student = create :student
-    create :user_level, user: student, level: @sublevel2, best_result: 100
-    create :user_level, user: student, level: @sublevel1, best_result: 20
+    script = @script_level.script
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
 
-    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student, nil)
+    assert_equal @sublevel2, @bubble_choice.get_sublevel_for_progress(student, script)
+  end
+
+  test 'get_sublevel_for_progress returns sublevel where the latest feedback has keepWorking review state' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    script = @script_level.script
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
+    create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    assert_equal @sublevel1, @bubble_choice.get_sublevel_for_progress(student, script)
+  end
+
+  test 'get_sublevel_for_progress returns nil if no sublevels have progress or feedback' do
+    student = create :student
+    assert_nil @bubble_choice.get_sublevel_for_progress(student, @script_level.script)
   end
 
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do
@@ -326,7 +370,56 @@ DSL
   test 'all_descendant_levels includes template levels of sublevels' do
     template = create :artist, name: 'template'
     artist = create :artist, name: 'artist', properties: {project_template_level_name: template.name}
-    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', sublevels: [artist]
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices_level', sublevels: [artist]
     assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
+  end
+
+  test 'parent_levels will retrieve all parent levels' do
+    parents = []
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1, @sublevel2])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel2])
+
+    assert_equal [@bubble_choice, parents[0], parents[1]], BubbleChoice.parent_levels(@sublevel1.name)
+    assert_equal [@bubble_choice, parents[0], parents[2]], BubbleChoice.parent_levels(@sublevel2.name)
+  end
+
+  test 'only actual sublevels are considered sublevels' do
+    sublevel = create :level
+    contained_level = create :level
+    bubble_choice = create :bubble_choice_level, sublevels: [sublevel]
+    ParentLevelsChildLevel.create(
+      parent_level: bubble_choice,
+      child_level: contained_level,
+      kind: ParentLevelsChildLevel::CONTAINED,
+      position: 2
+    )
+    bubble_choice.reload
+    assert_equal [sublevel, contained_level], bubble_choice.child_levels.to_a
+    assert_equal [sublevel], bubble_choice.sublevels.to_a
+  end
+
+  test 'setup_sublevels will remove old sublevels' do
+    bubble_choice = create :bubble_choice_level
+    bubble_choice.setup_sublevels([@sublevel1.name, @sublevel2.name])
+    assert_equal [@sublevel1, @sublevel2], bubble_choice.sublevels
+    bubble_choice.setup_sublevels([@sublevel1.name])
+    assert_equal [@sublevel1], bubble_choice.sublevels
+    bubble_choice.setup_sublevels([@sublevel2.name])
+    assert_equal [@sublevel2], bubble_choice.sublevels
+  end
+
+  test 'setup_sublevels will not remove non-sublevel child levels' do
+    bubble_choice = create :bubble_choice_level
+    contained_level = create :level
+    ParentLevelsChildLevel.create(
+      parent_level: bubble_choice,
+      child_level: contained_level,
+      kind: ParentLevelsChildLevel::CONTAINED
+    )
+    assert_equal [contained_level], bubble_choice.child_levels.to_a
+    bubble_choice.setup_sublevels([@sublevel1.name])
+    assert_equal [@sublevel1], bubble_choice.sublevels
+    assert_equal [contained_level, @sublevel1], bubble_choice.child_levels.to_a
   end
 end

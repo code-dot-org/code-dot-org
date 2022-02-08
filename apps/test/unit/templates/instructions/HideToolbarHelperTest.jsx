@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';

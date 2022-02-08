@@ -1,12 +1,11 @@
 {
-  "func": "changeFrame",
+  "key": "changeFrame",
+  "name": "changeFrame",
   "category": "Animations",
-  "paletteParams": [
-    "frame"
+  "palette_params": [
+    {
+      "name": "frame"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "modeOptionName": "*.changeFrame",
-  "noAutocomplete": true
+  "syntax": "changeFrame(frame)"
 }

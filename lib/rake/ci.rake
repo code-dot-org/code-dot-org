@@ -7,6 +7,11 @@ require 'tempfile'
 namespace :ci do
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
   task :chef_update do
+    # Replace root certificates in the installation of OpenSSL embedded in Chef client with a newer list from our repository
+    # that we periodically obtain and commit to our repository from https://curl.se/docs/caextract.html
+    Dir.chdir(cookbooks_dir) do
+      RakeUtils.sudo 'cp cacert.pem /opt/chef/embedded/ssl/certs/cacert.pem'
+    end
     if CDO.chef_local_mode
       # Update local cookbooks from repository in local mode.
       ChatClient.log 'Updating local <b>chef</b> cookbooks...'

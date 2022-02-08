@@ -33,6 +33,11 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
+    # [MEG] TODO: Add different kinds of users, teachers can't access an application they don't own
+    test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
+    test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
+    test_user_gets_response_for :update, user: :teacher, params: -> {{id: @application.id}}, response: :forbidden
+
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
@@ -114,6 +119,32 @@ module Api::V1::Pd::Application
 
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+    end
+
+    # [MEG] TODO: verify update of params with fewer (and no) params
+    test 'updating an application modifies form data' do
+      sign_in @applicant
+      @updated_form_data = build(TEACHER_APPLICATION_HASH_FACTORY).merge(
+        {
+          "firstName": "Harry",
+          "program": "Computer Science Discoveries (appropriate for 6th - 10th grade)",
+          "csdWhichGrades": ["8"]
+        }.stringify_keys
+      )
+
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      put :update, params: {id: application.id, form_data: @updated_form_data}
+      application.reload
+      assert_equal @updated_form_data, application.form_data_hash
+      assert_response :ok
+    end
+
+    test 'updating an application with an error renders bad_request' do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
+
+      assert_response :bad_request
     end
 
     test 'send_principal_approval queues up an email if none exist' do

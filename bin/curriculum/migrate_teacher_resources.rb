@@ -33,16 +33,19 @@ def migrate_resources_for_scripts
     next unless course_version
     script.resources =
       script.teacher_resources.map {|tr| create_resource_from_teacher_resource(tr, course_version.id)}
-    script.teacher_resources = []
+
+    # For translated scripts, we must keep serving the legacy teacher resources
+    # until migrated teacher resources have been translated.
+    script.teacher_resources = [] unless ScriptConstants.i18n?(script.name)
+
     script.save!
-    script.write_script_dsl
     script.write_script_json
     puts "Migrated teacher resources for #{script.name}"
   end
 end
 
 def migrate_resources_for_unit_groups
-  UnitGroup.all.to_a.select(&:has_migrated_script?).each do |unit_group|
+  UnitGroup.all.to_a.select(&:has_migrated_unit?).each do |unit_group|
     next if unit_group.teacher_resources.blank?
     course_version = unit_group.course_version
     next unless course_version

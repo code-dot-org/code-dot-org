@@ -2,13 +2,17 @@
   "script": {
     "name": "craft17-kiki",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:11 UTC",
+    "serialized_at": "2021-11-22 19:56:18 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "craft17-kiki"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "04b563aa-ecfb-4c33-a91a-49d74b48badf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04b563aa-ecfb-4c33-a91a-49d74b48badf",
+        "lesson.key": "craft17 stage",
+        "lesson_group.key": "",
+        "script.name": "craft17-kiki"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e",
+        "lesson_activity.key": "04b563aa-ecfb-4c33-a91a-49d74b48badf"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_01_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_01_Kiki"
@@ -77,14 +102,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_02_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -92,7 +116,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_02_Kiki"
@@ -101,14 +126,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_03_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +140,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_03_Kiki"
@@ -125,14 +150,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_04_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +164,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_04_Kiki"
@@ -149,14 +174,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_05_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -164,7 +188,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_05_Kiki"
@@ -173,14 +198,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_06_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -188,7 +212,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_06_Kiki"
@@ -197,14 +222,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_07a_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -212,7 +236,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_07a_Kiki"
@@ -221,14 +246,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_07_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,7 +260,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_07_Kiki"
@@ -245,14 +270,13 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_08_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -260,7 +284,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_08_Kiki"
@@ -269,14 +294,13 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_09_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -284,7 +308,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_09_Kiki"
@@ -293,14 +318,13 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_10_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -308,7 +332,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_10_Kiki"
@@ -317,14 +342,13 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MC_HOC_2017_11_Kiki"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -332,7 +356,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       },
       "level_keys": [
         "MC_HOC_2017_11_Kiki"
@@ -348,7 +373,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -359,7 +385,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -370,7 +397,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -381,7 +409,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -392,7 +421,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -403,7 +433,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -414,7 +445,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -425,7 +457,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -436,7 +469,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -447,7 +481,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -458,7 +493,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     },
     {
@@ -469,7 +505,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17-kiki"
+        "script.name": "craft17-kiki",
+        "activity_section.key": "34b5d203-a6aa-4fdf-9fd0-b4d9db09ce8e"
       }
     }
   ],

@@ -872,6 +872,7 @@ el-GR:
   dashboard_progress_view: 'Προβολή προόδου σε:'
   dashboard_progress_student_in_script: Πληροφορίες προόδου για τον/την %{student_name}
     στο %{script_name}
+  dashboard_progress_pair_programming: προγραμματισμός κατά ζεύγη
   dashboard_responses_view: 'Δείτε τις απαντήσεις κειμένου σε:'
   dashboard_responses_none: Δεν υπάρχουν απαντήσεις κειμένου
   dashboard_sections_new_section: Νέα ενότητα
@@ -1186,11 +1187,25 @@ el-GR:
   coursed-2017_name: Μάθημα D (2017)
   coursee-2017_name: Μάθημα E (2017)
   coursef-2017_name: Μάθημα F (2017)
+  coursea-2019_name: Μάθημα A (2019)
+  courseb-2019_name: Μάθημα B (2019)
+  coursec-2019_name: Μάθημα C (2019)
+  coursed-2019_name: Μάθημα D (2019)
+  coursee-2019_name: Μάθημα E (2019)
+  coursef-2019_name: Μάθημα F (2019)
+  coursea-2020_name: Μάθημα A (2020)
+  courseb-2020_name: Μάθημα B (2020)
+  coursec-2020_name: Μάθημα C (2020)
+  coursed-2020_name: Μάθημα D (2020)
+  coursee-2020_name: Μάθημα E (2020)
+  coursef-2020_name: Μάθημα F (2020)
+  coursed-2021_name: Μάθημα D (2021)
   accelerated_name: Επιταχυνόμενη πορεία μάθησης
   20-hour_name: Επιταχυνόμενη πορεία μάθησης
   algebra_name: Επιστήμη Υπολογιστών στην Αλγεβρα
   AlgebraA_name: Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Α
   AlgebraB_name: Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Β
+  gumball_name: Τσιχλόμπαλα
   classicmaze_name: Κλασικός λαβύρινθος
   iceage_name: Εποχή των Παγετώνων
   minecraft_name: Minecraft
@@ -1260,30 +1275,41 @@ el-GR:
   course3_gradelevel: Ηλικίες 8-18
   course4_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   coursea_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb_gradelevel: Ηλικίες 5-8
   coursec_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2017_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2017_gradelevel: Ηλικίες 5-8
   coursec-2017_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2017_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2017_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2017_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2018_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2018_gradelevel: Ηλικίες 5-8
   coursec-2018_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2018_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2018_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2018_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2019_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2019_gradelevel: Ηλικίες 5-8
   coursec-2019_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2019_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2019_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2019_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2020_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2020_gradelevel: Ηλικίες 5-8
   coursec-2020_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2020_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2020_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2020_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2021_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2021_gradelevel: Ηλικίες 5-8
+  coursec-2021_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2021_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2021_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2021_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
@@ -2174,6 +2200,7 @@ el-GR:
   footer_donate: Κάντε μια δωρεά
   footer_support: Βοήθεια και Κοινότητα
   footer_terms: Όροι
+  ai_for_oceans_lesson_plan: πλάνο μαθήματος
   ai_in_partnership_with: Σε συνεργασία με
   ai_microsoft_thanks: Ευχαριστούμε πολύ την Microsoft για την υποστήριξη του οράματός
     και της αποστολής μας για εξασφάλιση της ευκαιρίας για κάθε παιδί να μαθαίνει
@@ -2181,3 +2208,4 @@ el-GR:
     αιώνα.
   ai_activity: Δραστηριότητα
   ai_description: Περιγραφή
+  outbreak_tile_title: Έξαρση

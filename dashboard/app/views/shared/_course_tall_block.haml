@@ -8,12 +8,7 @@
     = link_to block_data[:url] do
       = image_tag block_data[:image_url], height: '120px', width: '100%'
       .course-container
-        - if Script.beta? id
-          .beta
-            %h3.betatitle= block_data[:title]
-            %h3.betatext= t('beta')
-        - else
-          %h3.heading= block_data[:title]
+        %h3.heading= block_data[:title]
         - if block_data[:audience]
           .text= block_data[:audience]
         .text.smalltext= block_data[:body]

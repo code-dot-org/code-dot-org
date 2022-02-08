@@ -1,8 +1,7 @@
 Feature: Make sure we can see the finish button for all LEVEL TYPE levels on small screens
 
   Background:
-    Given I create an authorized teacher-associated student named "Sally"
-    And I sign in as "Teacher_Sally" and go home
+    Given I create a student named "Sally"
 
   @no_mobile
   Scenario: can see finish button on "Dance Party"

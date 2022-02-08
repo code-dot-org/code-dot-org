@@ -6,17 +6,27 @@ import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import {courses, topCourse} from './homepagesTestData';
 
-describe('TeacherHomepage', () => {
-  const TEST_PROPS = {
-    announcements: [],
-    courses,
-    topCourse,
-    codeOrgUrlPrefix: 'http://localhost:3000',
-    joinedSections: [],
-    isEnglish: true,
-    showCensusBanner: false
-  };
+const DEFAULT_PROPS = {
+  announcements: [],
+  censusQuestion: 'how_many_10_hours',
+  courses,
+  topCourse,
+  isEnglish: true,
+  joinedSections: [],
+  ncesSchoolId: 'school-id',
+  schoolYear: 2021,
+  showCensusBanner: false,
+  teacherId: 1,
+  teacherEmail: 'teacher@code.org',
+  teacherName: 'Teacher'
+};
 
+const setUp = (overrideProps = {}) => {
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return shallow(<TeacherHomepage {...props} />);
+};
+
+describe('TeacherHomepage', () => {
   let server;
   const successResponse = () => [
     200,
@@ -31,7 +41,7 @@ describe('TeacherHomepage', () => {
   afterEach(() => server.restore());
 
   it('shows a non-extended Header Banner that says My Dashboard', () => {
-    const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
+    const wrapper = setUp();
     const headerBanner = wrapper.find('Connect(HeaderBanner)');
     assert.deepEqual(headerBanner.props(), {
       headingText: 'My Dashboard',
@@ -40,23 +50,72 @@ describe('TeacherHomepage', () => {
     });
   });
 
-  it('references 2 ProtectedStatefulDivs', () => {
-    const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
+  it('renders 2 ProtectedStatefulDivs', () => {
+    const wrapper = setUp();
     assert.lengthOf(wrapper.find('ProtectedStatefulDiv'), 2);
   });
 
+  it('renders a NpsSurveyBlock if showNpsSurvey is true', () => {
+    const wrapper = setUp({showNpsSurvey: true});
+    assert(wrapper.find('NpsSurveyBlock').exists());
+  });
+
+  it('renders a Finish Application call to action if showFinishTeacherApplication is true', () => {
+    const wrapper = setUp({showFinishTeacherApplication: true});
+    assert.equal(
+      wrapper.find('BorderedCallToAction').props().buttonText,
+      'Finish Application'
+    );
+  });
+
+  it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
+    const specialAnnouncement = {
+      title: 'An announcement',
+      image: '/image',
+      body: 'body',
+      buttonUrl: '/button',
+      buttonText: 'press me'
+    };
+    const wrapper = setUp({
+      isEnglish: true,
+      specialAnnouncement
+    });
+    assert(wrapper.find('MarketingAnnouncementBanner').exists());
+  });
+
+  // Notifications are configured not to be rendered right now with showAnnouncement = false
+  it('does not render a Notification', () => {
+    const announcement = {
+      heading: 'heading',
+      buttonText: 'press me',
+      description: 'description',
+      link: '/link',
+      image: '/image',
+      id: 'id'
+    };
+    const wrapper = setUp({
+      announcement
+    });
+    assert(!wrapper.find('Notification').exists());
+  });
+
+  it('renders a CensusTeacherBanner if showCensusBanner is true', () => {
+    const wrapper = setUp({showCensusBanner: true});
+    assert(wrapper.find('CensusTeacherBanner').exists());
+  });
+
+  it('renders a DonorTeacherBanner if isEnglish and donorBannerName exists', () => {
+    const wrapper = setUp({isEnglish: true, donorBannerName: 'Donor Name'});
+    assert(wrapper.find('DonorTeacherBanner').exists());
+  });
+
   it('renders a TeacherSections component', () => {
-    const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
+    const wrapper = setUp();
     assert(wrapper.containsMatchingElement(<TeacherSections />));
   });
 
-  it('renders a StudentSections component', () => {
-    const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
-    assert(wrapper.find('StudentSections').exists());
-  });
-
   it('renders a RecentCourses component', () => {
-    const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
+    const wrapper = setUp();
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
       showAllCoursesLink: true,
@@ -67,8 +126,18 @@ describe('TeacherHomepage', () => {
     });
   });
 
-  it('shows ProjectWidgetWithData component', () => {
-    const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
+  it('renders a TeacherResources component', () => {
+    const wrapper = setUp();
+    assert(wrapper.find('TeacherResources').exists());
+  });
+
+  it('renders a StudentSections component', () => {
+    const wrapper = setUp();
+    assert(wrapper.find('StudentSections').exists());
+  });
+
+  it('renders ProjectWidgetWithData component', () => {
+    const wrapper = setUp();
     assert(wrapper.find('ProjectWidgetWithData').exists());
   });
 });

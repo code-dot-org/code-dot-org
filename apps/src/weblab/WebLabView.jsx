@@ -10,10 +10,6 @@ import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
 import CompletionButton from '../templates/CompletionButton';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import styleConstants from '../styleConstants';
-import {changeShowError} from './actions';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
-import {getStore} from '../redux';
 import Meter from '@cdo/apps/templates/Meter';
 
 // Helper for converting bytes to megabytes.
@@ -43,17 +39,13 @@ class WebLabView extends React.Component {
     isInspectorOn: PropTypes.bool.isRequired,
     isFullScreenPreviewOn: PropTypes.bool.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-    shouldShowError: PropTypes.bool.isRequired,
+    dialog: PropTypes.element,
     maxProjectCapacity: PropTypes.number.isRequired,
     projectSize: PropTypes.number.isRequired
   };
 
   componentDidMount() {
     this.props.onMount();
-  }
-
-  closeErrorDialog() {
-    getStore().dispatch(changeShowError(false));
   }
 
   projectCapacityLabel = () => {
@@ -138,17 +130,19 @@ class WebLabView extends React.Component {
                   }
                   label=""
                 />
+                {!this.props.isFullScreenPreviewOn && (
+                  <PaneButton
+                    id="versions-header"
+                    iconClass="fa fa-clock-o"
+                    leftJustified={true}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    label={msg.showVersionsHeader()}
+                  />
+                )}
                 {!this.props.isFullScreenPreviewOn &&
                   !this.props.isReadOnlyWorkspace && (
                     <div>
-                      <PaneButton
-                        id="versions-header"
-                        iconClass="fa fa-clock-o"
-                        leftJustified={true}
-                        headerHasFocus={true}
-                        isRtl={false}
-                        label={msg.showVersionsHeader()}
-                      />
                       {maxProjectCapacity > 0 && projectSize > 0 && (
                         <Meter
                           id="weblab-project-capacity"
@@ -203,30 +197,7 @@ class WebLabView extends React.Component {
               style={iframeStyles}
             />
             {!this.props.isProjectLevel && <CompletionButton />}
-            <BaseDialog
-              isOpen={this.props.shouldShowError}
-              handleClose={this.closeErrorDialog}
-              useUpdatedStyles
-              style={{padding: 12}}
-            >
-              <h1>{weblabMsg.uploadError()}</h1>
-              <p>{weblabMsg.errorSavingProject()}</p>
-              <div style={{position: 'relative'}}>
-                <Button
-                  __useDeprecatedTag
-                  onClick={() => window.location.reload()}
-                  text={msg.reloadPage()}
-                  color={Button.ButtonColor.gray}
-                />
-                <Button
-                  __useDeprecatedTag
-                  style={{position: 'absolute', right: 0}}
-                  onClick={this.closeErrorDialog}
-                  text={msg.dialogOK()}
-                  color={Button.ButtonColor.orange}
-                />
-              </div>
-            </BaseDialog>
+            {this.props.dialog}
           </div>
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
@@ -235,7 +206,7 @@ class WebLabView extends React.Component {
 }
 
 export default connect(state => ({
-  shouldShowError: state.showError,
+  dialog: state.dialog,
   isProjectLevel: state.pageConstants.isProjectLevel,
   isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isInspectorOn: state.inspectorOn,

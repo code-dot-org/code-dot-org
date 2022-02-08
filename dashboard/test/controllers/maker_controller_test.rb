@@ -20,6 +20,8 @@ class MakerControllerTest < ActionController::TestCase
     @csd6_2018 = ensure_script Script::CSD6_2018_NAME, '2018'
     @csd6_2019 = ensure_script Script::CSD6_2019_NAME, '2019'
     @csd6_2020_unstable = ensure_script 'csd6-2020-unstable', '2020', false
+
+    Script.clear_cache
   end
 
   test_redirect_to_sign_in_for :home
@@ -501,7 +503,7 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_stable: is_stable).tap do |script|
+      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_maker_unit: true, published_state: is_stable ? SharedCourseConstants::PUBLISHED_STATE.stable : SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group
         create :script_level, script: script, lesson: lesson
@@ -510,6 +512,6 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_course(course_name, version_year)
     UnitGroup.find_by_name(course_name) ||
-      create(:unit_group, name: course_name, version_year: version_year, family_name: UnitGroup::CSD)
+      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 end

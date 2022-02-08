@@ -46,7 +46,6 @@
                   <title name="VALUE">188</title>
                   <next>
                     <block type="controls_for_counter" inline="true">
-                      <mutation counter="counter"/>
                       <value name="FROM">
                         <block type="math_number">
                           <title name="NUM">1</title>
@@ -156,7 +155,6 @@
           <title name="VALUE">100</title>
         </block>
         <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>

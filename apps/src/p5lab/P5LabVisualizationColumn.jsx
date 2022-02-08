@@ -7,7 +7,6 @@ import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
-import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -21,7 +20,6 @@ import TooltipOverlay, {
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
-import PoemBank from './spritelab/PoemBank';
 import TextConsole from './spritelab/TextConsole';
 import SpritelabInput from './spritelab/SpritelabInput';
 import {
@@ -34,12 +32,14 @@ import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MODAL_Z_INDEX = 1050;
+const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;
 
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
     pauseHandler: PropTypes.func.isRequired,
     hidePauseButton: PropTypes.bool.isRequired,
+    onPromptAnswer: PropTypes.func,
 
     // From redux
     isResponsive: PropTypes.bool.isRequired,
@@ -48,6 +48,7 @@ class P5LabVisualizationColumn extends React.Component {
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
+    requestTime: PropTypes.number,
     showGrid: PropTypes.bool.isRequired,
     toggleShowGrid: PropTypes.func.isRequired,
     cancelPicker: PropTypes.func.isRequired,
@@ -56,13 +57,6 @@ class P5LabVisualizationColumn extends React.Component {
     consoleMessages: PropTypes.array.isRequired,
     isRtl: PropTypes.bool
   };
-
-  constructor(props) {
-    super(props);
-    this.spritelabPoemBotExperiment = experiments.isEnabled(
-      experiments.POEM_BOT
-    );
-  }
 
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
@@ -98,7 +92,7 @@ class P5LabVisualizationColumn extends React.Component {
     }
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     // Use jQuery to turn on and off the grid since it lives in a protected div
     if (nextProps.showGrid !== this.props.showGrid) {
       if (nextProps.showGrid) {
@@ -180,6 +174,7 @@ class P5LabVisualizationColumn extends React.Component {
               onPointerMove={this.pickerPointerMove}
               onPointerUp={this.pickerPointerUp}
               elementRef={el => (this.divGameLab = el)}
+              onMouseUp={this.pickerPointerUp}
             />
             <VisualizationOverlay
               width={APP_WIDTH}
@@ -194,7 +189,9 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {isSpritelab && <SpritelabInput />}
+          {isSpritelab && (
+            <SpritelabInput onPromptAnswer={this.props.onPromptAnswer} />
+          )}
         </div>
 
         <GameButtons>
@@ -210,7 +207,6 @@ class P5LabVisualizationColumn extends React.Component {
 
           {!isSpritelab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {isSpritelab && this.spritelabPoemBotExperiment && <PoemBank />}
         {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}
@@ -225,7 +221,18 @@ class P5LabVisualizationColumn extends React.Component {
         {this.props.pickingLocation && (
           <div
             className={'modal-backdrop'}
-            onClick={() => this.props.cancelPicker()}
+            onClick={() => {
+              // On some mobile devices, we get a duplicate click event that
+              // would cancel the location picker immediately. Throttle canceling
+              // with a time threshold to avoid this issue.
+              if (
+                Date.now() - this.props.requestTime <
+                LOCATION_PICKER_CANCEL_THRESHOLD_MS
+              ) {
+                return;
+              }
+              this.props.cancelPicker();
+            }}
           />
         )}
       </div>
@@ -251,6 +258,7 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
+    requestTime: state.locationPicker.requestTime,
     consoleMessages: state.textConsole,
     isRtl: state.isRtl
   }),

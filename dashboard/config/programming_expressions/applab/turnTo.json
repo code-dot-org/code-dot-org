@@ -1,18 +1,11 @@
 {
-  "func": "turnTo",
+  "key": "turnTo",
+  "name": "turnTo",
   "category": "Turtle",
-  "paletteParams": [
-    "angle"
+  "palette_params": [
+    {
+      "name": "angle"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "dropdown": {
-    "0": [
-      "0",
-      "90",
-      "180",
-      "270"
-    ]
-  }
+  "syntax": "turnTo(angle)"
 }

@@ -2,14 +2,18 @@
   "script": {
     "name": "denny-science",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "pilot_experiment": "denny-science-piloters"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:37 UTC",
+    "serialized_at": "2021-11-22 19:56:48 UTC",
+    "published_state": "pilot",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "denny-science"
     }
@@ -60,23 +64,66 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "cf4c6d93-0683-4e1f-bb0b-a809e86df3aa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf4c6d93-0683-4e1f-bb0b-a809e86df3aa",
+        "lesson.key": "Earthquake Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science"
+      }
+    },
+    {
+      "key": "0def9281-8ee6-44ce-b4b8-1a808b5d9877",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0def9281-8ee6-44ce-b4b8-1a808b5d9877",
+        "lesson.key": "Earthquake Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "05ebc317-dbc5-430b-8827-166cb31f1c44",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44",
+        "lesson_activity.key": "cf4c6d93-0683-4e1f-bb0b-a809e86df3aa"
+      }
+    },
+    {
+      "key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be",
+        "lesson_activity.key": "0def9281-8ee6-44ce-b4b8-1a808b5d9877"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD mini design mode video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +131,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       },
       "level_keys": [
         "CSD mini design mode video"
@@ -93,14 +141,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Design Mode Map"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +155,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       },
       "level_keys": [
         "Design Mode Map"
@@ -117,14 +165,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +179,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       },
       "level_keys": [
         "Science earthquake 1"
@@ -141,14 +189,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake text"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +203,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       },
       "level_keys": [
         "Science earthquake text"
@@ -165,14 +213,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake images"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +227,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       },
       "level_keys": [
         "Science earthquake images"
@@ -189,14 +237,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science earthquake reflect"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +251,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       },
       "level_keys": [
         "Science earthquake reflect"
@@ -213,14 +261,13 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science change screen map"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +275,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       },
       "level_keys": [
         "Science change screen map"
@@ -237,14 +285,13 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science board event map"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +299,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       },
       "level_keys": [
         "Science board event map"
@@ -261,14 +309,13 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science Circuit Playground Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +323,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       },
       "level_keys": [
         "Science Circuit Playground Test"
@@ -285,14 +333,13 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science event demo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +347,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       },
       "level_keys": [
         "Science event demo"
@@ -309,14 +357,13 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science event accel"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +371,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       },
       "level_keys": [
         "Science event accel"
@@ -333,14 +381,13 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Science event test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +395,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       },
       "level_keys": [
         "Science event test"
@@ -364,7 +412,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       }
     },
     {
@@ -375,7 +424,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       }
     },
     {
@@ -386,7 +436,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       }
     },
     {
@@ -397,7 +448,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       }
     },
     {
@@ -408,7 +460,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       }
     },
     {
@@ -419,7 +472,8 @@
         ],
         "lesson.key": "Earthquake Detector: Designing Screens",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "05ebc317-dbc5-430b-8827-166cb31f1c44"
       }
     },
     {
@@ -430,7 +484,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       }
     },
     {
@@ -441,7 +496,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       }
     },
     {
@@ -452,7 +508,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       }
     },
     {
@@ -463,7 +520,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       }
     },
     {
@@ -474,7 +532,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       }
     },
     {
@@ -485,7 +544,8 @@
         ],
         "lesson.key": "Earthquake Detector: Processing with Events",
         "lesson_group.key": "",
-        "script.name": "denny-science"
+        "script.name": "denny-science",
+        "activity_section.key": "04d1681e-813a-4e10-8dfd-7f8f5ea032be"
       }
     }
   ],

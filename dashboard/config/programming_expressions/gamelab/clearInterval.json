@@ -1,10 +1,11 @@
 {
-  "func": "clearInterval",
+  "key": "clearInterval",
+  "name": "clearInterval",
   "category": "Control",
-  "paletteParams": [
-    "__"
+  "palette_params": [
+    {
+      "name": "__"
+    }
   ],
-  "params": [
-    "__"
-  ]
+  "syntax": "clearInterval(__)"
 }

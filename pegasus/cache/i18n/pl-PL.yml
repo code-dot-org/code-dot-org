@@ -48,7 +48,7 @@ pl-PL:
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
   og_title: 'Code.org: Każdy może się uczyć'
-  og_title_soon: Zbliża się Godzina Kodowania
+  og_title_soon: Nadchodzi Godzina Kodowania.
   og_title_here: Oto Godzina Kodowania!
   og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
     informatyki.
@@ -410,7 +410,7 @@ pl-PL:
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt zapisało się, aby uczyć się na Code.org
   homepage_hero_text_stat_students: "#student_count kont uczniów na Code.org"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
-  homepage_hero_hoc_is_coming: Zbliża się Godzina Kodowania
+  homepage_hero_hoc_is_coming: Nadchodzi Godzina Kodowania.
   homepage_hero_hoc_is_here: Godzina Kodowania jest tutaj
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
@@ -877,6 +877,7 @@ pl-PL:
     pracujących nauczycieli do prowadzenia zajęć z informatyki przez cały rok. Aby
     zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href="/educate/districts">
     do partnerstwa w Twoim okregu</a> z Code.org.
+  dashboard_course_csina: Informatyka w algebrze
   dashboard_course_csina_desc: Code.org współpracuje z Bootstrap przy opracowaniu
     programu nauczania, który uczy pojęć algebraicznych i geometrycznych z wykorzystaniem
     programowania.
@@ -1317,12 +1318,14 @@ pl-PL:
   coursed-2020_name: Kurs D (2020)
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Szybki Kurs (2018)
   pre-express-2018_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2018)
   express-2019_name: Kurs ekspresowy (2019)
   pre-express-2019_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2019)
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
+  pre-express-2021_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2021)
   csd2_name: 'Jednostka 2: Tworzenie stron'
   csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: Przyspieszony kurs
@@ -1432,6 +1435,12 @@ pl-PL:
   coursed-2020_gradelevel: Klasa 8+
   coursee-2020_gradelevel: W wieku 8-12
   coursef-2020_gradelevel: W wieku 9-13
+  coursea-2021_gradelevel: W wieku 4-7
+  courseb-2021_gradelevel: W wieku 5-8
+  coursec-2021_gradelevel: W wieku 6-10
+  coursed-2021_gradelevel: Klasa 8+
+  coursee-2021_gradelevel: W wieku 8-12
+  coursef-2021_gradelevel: W wieku 9-13
   accelerated_gradelevel: W wieku 10-18
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
@@ -1644,6 +1653,28 @@ pl-PL:
     drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
     udostępnić znajomym i rodzinie.
   coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
+    wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
+    tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
+    znajomym i rodzinie.
+  coursea-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
+    w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+    udostępnić.
+  courseb-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
+    w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+    udostępnić.
+  coursec-2021_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji,
+    pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+    rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
+    utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursed-2021_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
+    zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą
+    się o obywatelstwie cyfrowym.
+  coursee-2021_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów,
+    pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W
+    drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
+    udostępnić znajomym i rodzinie.
+  coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
     wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
     oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
     tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
@@ -2233,7 +2264,7 @@ pl-PL:
   user_header_applab: 'App Lab '
   user_header_artist: 'Artysta '
   user_header_gamelab: Laboratorium Gier (Game Lab)
-  user_header_playlab: Play Lab
+  user_header_playlab: Lab Gier
   user_header_dance: Potańcówka
   user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
@@ -2338,7 +2369,7 @@ pl-PL:
   hoc_overview_view_teacher_guide: Zobacz przewodnik nauczyciela
   hoc2018_creativity: kreatywność
   hoc2018_creativity_create: Utwórz
-  hoc2018_creativity_hoc_coming: Zbliża się Godzina Kodowania…
+  hoc2018_creativity_hoc_coming: Nadchodzi Godzina Kodowania.…
   hoc2018_creativity_what_will_you_create: Co będziesz tworzyć?
   hoc2018_creativity_homepage: Uwolnij wyobraźnię i rodzące się pomysły. Zacznij z
     Godziną kodowania i z własnym pomysłem, cokolwiek by to nie było. Obejrzyj nasze
@@ -2412,7 +2443,7 @@ pl-PL:
   hoc2018_mc_video_title_hoc_is_here: Godzina Kodowania jest tutaj - każdy może się uczyć
   hoc2018_mc_video_title_anybody_can_learn: Każdy może się uczyć
   hoc2018_mc_video_title_my_name_is_aracely: Nazywam się Aracely
-  hoc2018_mc_homepage_hoc_coming: Zbliża się Godzina Kodowania...
+  hoc2018_mc_homepage_hoc_coming: Nadchodzi Godzina Kodowania....
   hoc2018_mc_homepage_what_create: Co będziesz tworzyć?
   hoc2018_mc_homepage_give_flight: Uwolnij wyobraźnię i rodzące się pomysły. Zacznij
     z Godziną Kodowania i z własnym pomysłem na kreatywność, cokolwiek by to nie było.
@@ -2548,6 +2579,17 @@ pl-PL:
     iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi
     uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu
     nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Cofnij się w czasie i naucz się kodować! Nowy samouczek
+    Minecraft w ramach Godziny Kodowania jest już dostępny w grze Minecraft: Education
+    Edition dla systemów Windows, Mac, Chromebook i iPad. Zacznij od bezpłatnych zasobów,
+    szkoleń i filmów dla nauczycieli.'
+  hoc2021_mc_mee_villages_title: Opowieść o dwóch wioskach
+  hoc2021_mc_mee_villages_description: 'Naucz się podstaw kodowania i odkrywaj różnorodność
+    oraz integrację ze swoimi uczniami w Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: AI Na dobre
+  hoc2021_mc_mee_ai_description: 'Odkrywaj sztuczną inteligencję ze swoimi uczniami
+    i naucz się kodować w grze Minecraft: Education Edition.'
   footer_powered_by_aws: 'Amazon Web Services i logo “Powered by AWS” są znakami towarowymi
     Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych
     krajach.
@@ -2643,3 +2685,8 @@ pl-PL:
   ai_cognimates_description: Platforma edukacyjna AI do tworzenia gier, programowania
     robotów i szkolenia.
   ai_try_activity: Spróbuj aktywności
+  outbreak_tile_title: Epidemia
+  outbreak_tile_subtitle: Wirus zainfekował Miasto Potworów! Zakoduj symulator epidemii
+    i przewiduj, co stanie się z sąsiadami tego miasta.
+  outbreak_tile_alt: Symulacja rozprzestrzeniania się wirusa przez grupę fioletowych
+    potworów.

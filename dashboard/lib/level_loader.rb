@@ -60,6 +60,11 @@ class LevelLoader
         changed_levels.reject!(&:encrypted?)
       end
 
+      dsl_levels = changed_levels.select {|l| l.is_a? DSLDefined}
+      if dsl_levels.any?
+        raise "cannot define DSLDefined level types in .level files: #{dsl_levels.map {|l| "#{l.name}.level".dump}.join(',')}"
+      end
+
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.
       changed_lcds = changed_levels.map(&:level_concept_difficulty).compact
@@ -128,18 +133,6 @@ class LevelLoader
     level.assign_attributes(level.load_level_xml(xml_node))
 
     level
-  end
-
-  def self.update_unplugged
-    # Unplugged level data is specified in 'unplugged.en.yml' file
-    unplugged = YAML.load_file(Rails.root.join('config/locales/unplugged.en.yml'))['en']['data']['unplugged'].keys
-    unplugged_game = Game.find_by(name: 'Unplugged')
-    unplugged.map do |name, _|
-      Level.where(name: name).first_or_create.update(
-        type: 'Unplugged',
-        game: unplugged_game
-      )
-    end
   end
 
   private_class_method def self.level_name_from_path(path)

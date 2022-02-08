@@ -8,9 +8,9 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Ilunsad ang Hour of Code
+# Isulong ang Hour of Code
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### Hanapin ang lahat ng mga mapagkukunan na kailangan mo upang bigyang pansin ang Hour of Code mo. Hindi sigurado kung saan magsisimula? Magsimula sa aminggabay sa paggamit para sa pagho-host ng Hour of Code!</h3> 
 
 * * *
 
@@ -18,139 +18,139 @@ nav: promote_nav
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Isabit ang mga poster na ito sa paaralan mo
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakira at iba pa! Sa taong ito, magkakaroon din ang bawat set ng 6 na poster at 126 na "Ginawa ko ang Hour of Code" na mga sticker. Limitado ang mga supply, kaya[mag-order na ng](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)mga poster mo. Upang i-print, i-click lang ang isang imahe sa ibaba upang tingnan at i-save ang isang pwedeng i-print na bersyon.
 
 {{ promote_new_posters }}
 
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* Hinahanap ang mga poster namin sa mga nakaraang taon? [Hanapin sila dito]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
-## Post these on social media
+## I-post ang mga ito sa social media
 
-[![larawan](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imahe](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imahe](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![larawan](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imahe](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imahe](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![larawan](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imahe](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imahe](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imahe](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Gamitin ang logo ng Hour of Code ng maikalat ang balita
 
-[![larawan]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![larawan]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
+[![imahe]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imahe]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[I-download ang mga hi-res na bersiyon](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+**Naka-trademark ang "Hour of Code" at "Hora del Código". Ayaw nating mapigilan ang pag gamit nito, ngunit gusto nating masiguro na akma ito sa loob ng ilang limitasyon:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. Dapat gamitin ang anumang sanggunian sa "Hour of Code" na hindi nagmumungkahing sarili mong brand ang tatak nito, ngunit sa halip ay sinasanggunian ang Hour of Code tulad ng isang kilusang grassroots.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong>Magandang halimbawa</strong>: "Makilahok sa Hour of Code™ sa YOUR-COMPANY.com." 
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong>Masamang halimbawa</strong>: "Subukan ang Hour of Code ng YOUR-COMPANY." 
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Gumamit ng "TM" superskripsiyon sa mga prominenteng dako na binanggit mo ang "Hour of Code" at isang "Ⓡ" superskripsiyon sa mga prominenteng dako na binanggit mo ang "Hora del Código", sa parehong web site at sa mga paglalarawan ng app mo.
+2. Isama ang wika sa pahina mo (o sa footer), kasama ang mga link sa CSEdWeek at [Code.org]({{ codeorg_link }}) web sites, na sinasabi ang sumusunod:
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *"Buong bansang inisyatibo ng Linggo ng Edukasyon ng Computer Science ang 'Hour of Code™'/'Hora del Código®' [csedweek.org] at Code.org[code.org] upang ipakilala ang milyong estudyante sa isang oras ng computer science at computer programming."*
 
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+3. Walang paggamit ng "Hour of Code" o "Hora del Código" sa mga pangalan ng app.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## I-print itong mga stickers upang ibigay sa mga estudyante mo
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+(1" diameter ang mga sticker, 63 bawat sheet)<br />
 
-[![larawan](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![imahe](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## Mag-imbita ng mga tao sa komunidad mo sa iyong Hour of Code at i-promote ang event mo sa pamamagitan ng email
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### Maghanap ng [higit pang impormasyon at wikang magagamit mo]({{ promote/stats_url }}) kapag pinag-uusapan ang Hour of Code.
 
 * * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### Hilingin sa paaralan, employer, o mga kaibigan mo na mag-sign up:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+**Linya ng paksa:** Samahan ako at ang mahigit 100 milyong estudyante sa isang Hour of Code <br />
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Nasa lahat ng dako ang mga computer, binabago ang bawat industriya sa planeta. But only 51% of all high schools offer computer science. Ang magandang balita ay papunta na tayo upang baguhin ito! Kung narinig mo na dati ang tungkol sa Hour of Code, baka alam mo nang gumawa ito ng kasaysayan. Mahigit 100 milyong mga estudyante na ang sumubok sa Hour of Code.
 
-Sa Hour of Code, ang computer science ay nasa hompages ng Google, MSN, Yahoo!, at Disney. Mahigit 100 na mga kasosyo ang nagsama-sama upang suportahan itong kilusan. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Sa Hour of Code, ang computer science ay nasa hompages ng Google, MSN, Yahoo!, at Disney. Mahigit 100 na mga kasosyo ang nagsama-sama upang suportahan itong kilusan. Nakapag-host na ng Hour of Code ang bawat Apple Store sa buong mundo, at sumulat ng kanilang unang mga linya ng code bilang bahagi ng kampanya ang mga lider gaya ni Presidente Obama at Canadian Prime Minister Justin Trudeau.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+Ngayong taon, gawin natin mas malaki ito. Hinihiling kong sumali ka sa Hour of Code {{ campaign_date/year }}. Makisali sa isang Hour of Code na event sa panahon ng Linggo ng Edukasyon ng Computer Science, {{ campaign_date/full }}.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Ipamalita ito. Mag-host ng event. Hilingin ang lokal na paaralan na mag-sign up. O subukan mo ang Hour of Code—makikinabang ang lahat mula sa pag-aaral ng mga pangunahing kaalaman.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Magsimula sa http://hourofcode.com/{{ country_language }}<br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### Magboluntaryo sa isang paaralan:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### [Maghanap ng higit pang mga mapagkukunan at impormasyon tungkol sa pagboboluntaryo sa mga paaralan dito]({{ how_to_volunteers_url }}).
 
-**Subject line:** Can we help you host an Hour of Code?
+**Linya ng paksa:** Matutulungan ka ba naming mag-host ng Hour of Code?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Sa pagitan ng {{ campaign_date/short }}, magdiriwang ng Linggo ng Edukasyon ng Computer Science ang sampung porsyento ng mga mag-aaral sa buong mundo sa pamamagitan ng paggawa ng Hour of Code sa paaralan nila. Ito'y isang pagkakataon sa bawat bata na matuto kung paano gumagana ang teknolohiya.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[Organisasyon natin/Pangalan ko] ay gustong tumulong sa [pangalan ng paaralan] na magpatakbo ng event ng Hour of Code. Pwede natin tulungan ang mga guro na mag-host ng Hour of Code sa kanilang mga silid-aralan (hindi na natin kailangan ng computer!) o kung nais mong mag-host ng isang pagtitipon sa paaralan, maaari tayong magsaayos ng tagapagsalita upang pag-usapan kung paano gumagana ang teknolohiya at kung ano ang pakiramdam na maging isang software engineer.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+Gagawa ang mga estudyante ng sarili nilang mga app o mga laro na ipapakita sa kanilang mga magulang, at magpi-print din kami ng mga sertipiko sa Hour of Code na pwede nilang dalhin sa bahay. At, masaya ito! Sa interaktibo, hands-on na aktibidad, matututunan ng mga estudyante ang computational na pag-iisip sa madaling paraan.
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Nasa lahat ng dako ang mga computer, binabago ang bawat industriya sa planeta. But only 51% of all high schools offer computer science. Ang mabuting balita ay papunta na tayo upang baguhin ito! Kung narinig mo na dati ang tungkol sa Hour of Code, maaaring alam mong gumawa na ito ng ksaysayan - mahigit 100 milyong mga estudyante sa buong mundo ang sumubok na sa Hour of Code. At sumulat na ng kanilang unang mga linya ng code bilang bahagi ng kampanya ang mga lider gaya ni Presidente Obama at Canadian Prime Minister Justin Trudeau.
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+Mababasa mo ang higit pang tungkol sa kaganapan sa http://hourofcode.com/. O, ipaalam mo sa amin kung nais mong mag-schedule ng ilang oras upang pag-usapan ang tungkol sa kung paano makikibahagi ang [pangalan ng paaralan].<br />
 
 * * *
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### Sabihin sa mga magulang ang tungkol sa event ng paaralan:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**Linya ng paksa:** Binabago ng ating mga estudyante ang kinabukasan sa Hour of Code
 
-Dear Parents,
+Mahal na mga Magulang,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+Nabubuhay tayo sa mundong napapalibutan ng teknolohiya. At alam natin na kahit anong larangan man ang piliin ng ating mga estudyante pagtanda nila, nakadepende ang abilidad nilang magtagumpay sa kaunawaan kung paano gumagana ang teknolohiya.
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Kaya naman sumasali ang ating buong paaralan sa pinakamalaking kaganapan sa pag-aaral sa kasaysayan: Ang Hour of Code, sa panahon ng Linggo ng Edukasyon ng Computer Science ({{ campaign_date/full }}). Mahigit 100 milyong mga estudyante sa buong mundo ang sumubok na ng Hour of Code. Gumagawa ang aming Hour of Code ng pahayag na handa ng magturo nitong batayang mga kasanayan ang [PANGALAN NG PAARALAN] sa ika-21 na siglo. Upang patuloy na magdala ng mga aktibidad sa programming sa mga mag-aaral mo, gusto naming gawing malaking event ang Hour of Code. Hinihikayat kitang mag-boluntaryo, makipag-ugnayan sa lokal na media, ibahagi ang mga balita sa mga social media channel at isiping mag-host ng karagdagang event sa Hour of Code sa komunidad.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+Pagkakataon na itong mabago ang kinabukasan ng edukasyon sa [PANGALAN NH BAYAN/LUNGSOD].
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+Tignan ang http://hourofcode.com/{{ country_language }} para sa mga detalye at tumulong na ikalat ang balita.<br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### Imbitahin ang media na dumalo sa event mo:
 
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
+#### [Tingnan ang press kit namin para sa karagdagang impormasyon sa pag-imbita ng media sa event mo.]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Ang mabuting balita ay, tayo patungo sa daan upang baguhin ito.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Ang magandang balita ay, patungo tayo sa daan upang baguhin ito.
 
 Sa Hour of Code, ang computer science ay nasa hompages ng Google, MSN, Yahoo!, at Disney. Mahigit 100 na mga kasosyo ang nagsama-sama upang suportahan itong kilusan. Bawat Apple Store sa mundo ay nag-host na ng Hour of Code. Kahit si Presidente Obama ay sumulat ng kanyang unang linya ng code bilang bahagi ng kmpanya.
 
-Kaya ang bawat isa sa \[X number\] (na) estudyante sa [SCHOOL NAME] ay sumasali sa pinakamalaking event na pampagkatuto sa kasaysayan. Ang Oras ng Code, sa Linggo ng Edukasyon ng Computer Science (Disyembre 3-9).
+Kaya ang bawat isa sa \[X number\] (na) estudyante sa [PANGALAN NG PAARALAN] ay sumali sa pinakamalaking event sa pag-aaral sa kasaysayan: Ang Hour of Code, sa Linggo ng Edukasyon ng Computer Science (Disyembre 3-9).
 
 Sumulat ako para imbitahin ka na dumalo sa aming kickoff na pagtitipon at makita ang mga batang mag-umpisa ng gawain sa [DATE].
 
@@ -164,22 +164,22 @@ I look forward to being in touch. <br />
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### Imbitahin ang lokal na pulitiko sa event mo sa paaralan:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [Kailangan ng karagdagang impormasyon?Tingnan ang mga mapagkukunan namin para sa pag-imbita ng mga pulitiko na dumalo sa event mo]({{ how_to_public_officials_url }}).
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**Paksa na linya:**: Sumali sa paaralan namin habang binabago natin ang hinaharap kasama ang Hour of Code
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+Mahal na [APELYIDO ng Alkalde/Gobernador/Kinatawan/Senador]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+Alam mo ba na ang computing ang #1 na pinagmulan ng mga sahod sa U.S.? Mayroong higit 500,000 computing ang bukas na mga trabaho sa buong bansa, ngunit 42,969 na computer science na mga estudyante lang sa nakaraang taon ang nagtapos sa workforce.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+Kaya naman sumasali ang ating buong paaralan sa pinakamalaking kaganapan sa pag-aaral sa kasaysayan: Ang Hour of Code, sa panahon ng Linggo ng Edukasyon ng Computer Science ({{ campaign_date/full }}). Mahigit 100 milyong mga estudyante sa buong mundo ang sumubok na ng Hour of Code.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+Sumulat ako upang imbitahin ka na sumali sa event namin sa Hour of Code at magsalita sa aming kickoff na pagtitipon. Ito ay gaganapin sa [PETSA, ORAS, LUGAR], at gagawa ng malakas na pahayag na ang [pangalan ng Estado o Lungsod] ay handa na upang turuan ang mga estudyante ng kritikal na kasanayan sa ika-21 na siglo. Gusto naming masiguro na nasa unahan ng paggawa ng teknolohiya ang mga estudyante namin sa hinaharap—hindi lang ginagamit ito.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+Kontakin ako sa [NUMERO NG TELEPONO O EMAIL ADDRESS]. Inaasahan ko ang pagtugon mo.
 
 {{ signup_button }}

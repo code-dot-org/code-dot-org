@@ -1,13 +1,14 @@
 {
-  "func": "pointToEach",
+  "key": "pointToEach",
+  "name": "pointToEach",
   "category": "Groups",
-  "paletteParams": [
-    "x",
-    "y"
+  "palette_params": [
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "200",
-    "200"
-  ],
-  "modeOptionName": "*.pointToEach"
+  "syntax": "pointToEach(x, y)"
 }

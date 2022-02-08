@@ -1,6 +1,6 @@
 {
-  "func": "toUpperCase",
+  "key": "toUpperCase",
+  "name": "toUpperCase",
   "category": "Variables",
-  "modeOptionName": "*.toUpperCase",
-  "type": "value"
+  "syntax": "toUpperCase"
 }

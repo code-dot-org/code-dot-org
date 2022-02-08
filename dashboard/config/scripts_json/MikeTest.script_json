@@ -2,14 +2,18 @@
   "script": {
     "name": "MikeTest",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true,
       "professional_learning_course": "Other plc course"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:51 UTC",
+    "serialized_at": "2021-11-22 19:55:41 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "MikeTest"
     }
@@ -75,23 +79,89 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "96e2f2dc-63ee-4273-80a8-b65eec11554a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96e2f2dc-63ee-4273-80a8-b65eec11554a",
+        "lesson.key": "Sample Stage",
+        "lesson_group.key": "",
+        "script.name": "MikeTest"
+      }
+    },
+    {
+      "key": "e8f752af-320f-4dc0-8fa2-08ae8a863b2b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8f752af-320f-4dc0-8fa2-08ae8a863b2b",
+        "lesson.key": "Artist Functions",
+        "lesson_group.key": "",
+        "script.name": "MikeTest"
+      }
+    },
+    {
+      "key": "52920698-d1bc-4197-a153-fb2d2cc694df",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52920698-d1bc-4197-a153-fb2d2cc694df",
+        "lesson.key": "You are a coding STAR",
+        "lesson_group.key": "",
+        "script.name": "MikeTest"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d",
+        "lesson_activity.key": "96e2f2dc-63ee-4273-80a8-b65eec11554a"
+      }
+    },
+    {
+      "key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03",
+        "lesson_activity.key": "e8f752af-320f-4dc0-8fa2-08ae8a863b2b"
+      }
+    },
+    {
+      "key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d",
+        "lesson_activity.key": "52920698-d1bc-4197-a153-fb2d2cc694df"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MikeTest1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +169,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       },
       "level_keys": [
         "MikeTest1"
@@ -108,14 +179,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MikeTest2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +193,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       },
       "level_keys": [
         "MikeTest2"
@@ -132,14 +203,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MikeTest3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +217,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       },
       "level_keys": [
         "MikeTest3"
@@ -156,14 +227,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "MikeAssessment1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +241,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       },
       "level_keys": [
         "MikeAssessment1"
@@ -180,14 +251,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -195,7 +265,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       },
       "level_keys": [
         "bounce_12"
@@ -204,14 +275,13 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "2-3 Artist Functions 12 Mike"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +289,8 @@
         ],
         "lesson.key": "Artist Functions",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03"
       },
       "level_keys": [
         "2-3 Artist Functions 12 Mike"
@@ -228,14 +299,13 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "2-3 Artist Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +313,8 @@
         ],
         "lesson.key": "Artist Functions",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03"
       },
       "level_keys": [
         "2-3 Artist Free Play"
@@ -252,14 +323,13 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Mike Pair Programming"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +337,8 @@
         ],
         "lesson.key": "Artist Functions",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03"
       },
       "level_keys": [
         "Mike Pair Programming"
@@ -276,14 +347,13 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MikeStarNested"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +361,8 @@
         ],
         "lesson.key": "You are a coding STAR",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d"
       },
       "level_keys": [
         "MikeStarNested"
@@ -300,14 +371,13 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MikeStarHard"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -315,7 +385,8 @@
         ],
         "lesson.key": "You are a coding STAR",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d"
       },
       "level_keys": [
         "MikeStarHard"
@@ -324,14 +395,13 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "MikeStar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +409,8 @@
         ],
         "lesson.key": "You are a coding STAR",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d"
       },
       "level_keys": [
         "MikeStar"
@@ -355,7 +426,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       }
     },
     {
@@ -366,7 +438,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       }
     },
     {
@@ -377,7 +450,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       }
     },
     {
@@ -388,7 +462,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       }
     },
     {
@@ -399,7 +474,8 @@
         ],
         "lesson.key": "Sample Stage",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "beaf690b-4fbe-4ba3-b3a4-5e46ac13a06d"
       }
     },
     {
@@ -410,7 +486,8 @@
         ],
         "lesson.key": "Artist Functions",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03"
       }
     },
     {
@@ -421,7 +498,8 @@
         ],
         "lesson.key": "Artist Functions",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03"
       }
     },
     {
@@ -432,7 +510,8 @@
         ],
         "lesson.key": "Artist Functions",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "86932bb2-9ac4-44a0-a5de-53350f0a3f03"
       }
     },
     {
@@ -443,7 +522,8 @@
         ],
         "lesson.key": "You are a coding STAR",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d"
       }
     },
     {
@@ -454,7 +534,8 @@
         ],
         "lesson.key": "You are a coding STAR",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d"
       }
     },
     {
@@ -465,7 +546,8 @@
         ],
         "lesson.key": "You are a coding STAR",
         "lesson_group.key": "",
-        "script.name": "MikeTest"
+        "script.name": "MikeTest",
+        "activity_section.key": "8fe9331e-17c9-476a-9dee-13d0c02ff48d"
       }
     }
   ],

@@ -38,6 +38,7 @@ tg-TJ:
   third_party_gradelevel_2to8: Синфҳои 2-8
   third_party_gradelevel_4to12: Синфҳои 4-12
   third_party_gradelevel_5to12: Синфҳои 5-12
+  third_party_gradelevel_6plus: Синфҳои 6+
   third_party_organization: Созмондиҳӣ
   country: Кишвар
   city: Шаҳр
@@ -97,13 +98,18 @@ tg-TJ:
   volunteer_engineer_submission_submit: Пешниҳод кардан
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 соат дар як ҳафта
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 соат дар як ҳафта
+  volunteer_engineer_submission_commitment_more: БЕШТАР
+  volunteer_engineer_submission_distance_8: 5 км
+  volunteer_engineer_submission_distance_16: 10 км
   volunteer_engineer_submission_distance_24: 15 км
+  volunteer_engineer_submission_distance_32: 20 км
   volunteer_engineer_submission_num_volunteers_5: 5 волонтёр
   volunteer_engineer_submission_num_volunteers_10: 10 волонтёр
   volunteer_engineer_submission_num_volunteers_25: 25 волонтёр
   volunteer_engineer_submission_num_volunteers_50: 50 волонтёр
   dashboard_announce_learn_more_button: Маълумоти бештар
   dashboard_course_ecs: Омӯзиши илми компютерӣ
+  dashboard_action_delete: Нест мекунед
   dashboard_action_confirm: Нест мекунед?
   dashboard_surveys_answers: Тадқиқҳо
   dashboard_percent: Фоиз
@@ -111,6 +117,7 @@ tg-TJ:
   dashboard_navigation_section_community: Дастгирӣ
   dashboard_navigation_view_progress: Пешрафт
   dashboard_navigation_view_stats: Омор
+  dashboard_progress_in_progress: иҷро мешавад
   dashboard_progress_not_completed: иҷро нашуд
   dashboard_sections_table_students: Хонандагон
   dashboard_sections_close: Пӯшидан
@@ -124,6 +131,7 @@ tg-TJ:
   dashboard_course3: 'Дарси 3:'
   dashboard_course4: 'Дарси 4:'
   dashboard_glossary: Вожанома
+  dashboard_curriculum_ecs: 'Омӯзиши илми компютерӣ:'
   dashboard_grade_other: Дигар
   dashboard_login_word: Калима
   dashboard_login_none: Почтаи электронӣ
@@ -200,12 +208,47 @@ tg-TJ:
   codesters_gradelevel: 'Синну сол: 12-14'
   texasinstruments_gradelevel: 'Синну сол: 13-16'
   teacherled_gradelevel: 'Синну сол: 5+'
+  course1_gradelevel: 'Синну сол: 4-6'
   course2_gradelevel: 'Синну сол: 6-18'
+  course3_gradelevel: 'Синну сол: 8-18'
+  course4_gradelevel: 'Синну сол: 10-18'
+  coursea_gradelevel: 'Синну сол: 4-7'
+  courseb_gradelevel: 'Синну сол: 5-8'
+  coursec_gradelevel: 'Синну сол: 6-10'
+  coursed_gradelevel: 'Синну сол: 7-11'
   coursee_gradelevel: 'Синну сол: 8-12'
+  coursef_gradelevel: 'Синну сол: 9-13'
+  coursea-2017_gradelevel: 'Синну сол: 4-7'
+  courseb-2017_gradelevel: 'Синну сол: 5-8'
+  coursec-2017_gradelevel: 'Синну сол: 6-10'
+  coursed-2017_gradelevel: 'Синну сол: 7-11'
   coursee-2017_gradelevel: 'Синну сол: 8-12'
+  coursef-2017_gradelevel: 'Синну сол: 9-13'
+  coursea-2018_gradelevel: 'Синну сол: 4-7'
+  courseb-2018_gradelevel: 'Синну сол: 5-8'
+  coursec-2018_gradelevel: 'Синну сол: 6-10'
+  coursed-2018_gradelevel: 'Синну сол: 7-11'
   coursee-2018_gradelevel: 'Синну сол: 8-12'
+  coursef-2018_gradelevel: 'Синну сол: 9-13'
+  coursea-2019_gradelevel: 'Синну сол: 4-7'
+  courseb-2019_gradelevel: 'Синну сол: 5-8'
+  coursec-2019_gradelevel: 'Синну сол: 6-10'
+  coursed-2019_gradelevel: 'Синну сол: 7-11'
   coursee-2019_gradelevel: 'Синну сол: 8-12'
+  coursef-2019_gradelevel: 'Синну сол: 9-13'
+  coursea-2020_gradelevel: 'Синну сол: 4-7'
+  courseb-2020_gradelevel: 'Синну сол: 5-8'
+  coursec-2020_gradelevel: 'Синну сол: 6-10'
+  coursed-2020_gradelevel: 'Синну сол: 7-11'
   coursee-2020_gradelevel: 'Синну сол: 8-12'
+  coursef-2020_gradelevel: 'Синну сол: 9-13'
+  coursea-2021_gradelevel: 'Синну сол: 4-7'
+  courseb-2021_gradelevel: 'Синну сол: 5-8'
+  coursec-2021_gradelevel: 'Синну сол: 6-10'
+  coursed-2021_gradelevel: 'Синну сол: 7-11'
+  coursee-2021_gradelevel: 'Синну сол: 8-12'
+  coursef-2021_gradelevel: 'Синну сол: 9-13'
+  accelerated_gradelevel: 'Синну сол: 10-18'
   khan_platformtext: Браузерҳои веби ҳозиразамон
   khanes_platformtext: Браузерҳои веби ҳозиразамон
   khanpt_platformtext: Браузерҳои веби ҳозиразамон
@@ -297,6 +340,7 @@ tg-TJ:
   user_header_settings: Ҳисоби ман
   user_header_logout: Хориҷ шудан
   user_header_signin: Ворид шудан
+  user_header_create: 'Сохтан '
   hoc2018_creativity_create: Сохтан
   hoc2018_mc_homepage_join_us: Ба мо ҳамроҳ шавед
   hoc2018_mc_homepage_try_it: Дида бароед

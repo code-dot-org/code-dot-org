@@ -2,13 +2,18 @@
   "script": {
     "name": "testtess",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:12 UTC",
+    "serialized_at": "2022-01-27 20:42:46 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "testtess"
     }
@@ -42,19 +47,87 @@
         "lesson_group.key": "lesson group",
         "script.name": "testtess"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "new lesson 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess"
+      }
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c811c038-b5ac-497d-81cb-f5599061941f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c811c038-b5ac-497d-81cb-f5599061941f",
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "bab00d26-4696-400a-a596-3a3cf79ef7d6",
+      "position": 1,
+      "properties": {
+        "description": "tess testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "bab00d26-4696-400a-a596-3a3cf79ef7d6",
+        "lesson_activity.key": "c811c038-b5ac-497d-81cb-f5599061941f"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "tess - self paced"
+        ],
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess",
+        "activity_section.key": "bab00d26-4696-400a-a596-3a3cf79ef7d6"
+      },
+      "level_keys": [
+        "tess - self paced"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "tess - self paced",
+        "script_level.level_keys": [
+          "tess - self paced"
+        ],
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess",
+        "activity_section.key": "bab00d26-4696-400a-a596-3a3cf79ef7d6"
+      }
+    }
   ],
   "resources": [
 

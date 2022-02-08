@@ -66,8 +66,14 @@ ky-KG:
   third_party_gradelevel_4to12: 4-12-класстарга
   third_party_gradelevel_5to12: 5-12-класстарга
   third_party_gradelevel_6plus: 6+ класстарга
+  support_url: http://support.code.org/
+  city: шаар
   get_started: Башта
+  just_did_hoc_donor: "#HourOfCode өттүм - көргүлө! (@codeorg колдогону үчүн %{donor_twitter}
+    ыраазычылык билдиребиз)"
   start_hoc: Код саатын азыр башта
+  stats_michael: '"Окуучуларым окууга ушунчалык шыктанганын <b>эч качан</b> көргөн
+    эмесмин" - Майкл Кларк, мугалим'
   studiobar_hoc_title: Код сааты
   studiobar_flappy_title: Flappy Code
   studiobar_frozen_title: Код сааты
@@ -203,7 +209,9 @@ ky-KG:
     видеолор</a>
   careers_page_more: Технологиялар жаатындагы адистер катышкан <a href='%{careers_url}'
     target='_blank'>шыктандыруучу видеолор</a>
+  playlab_iceage_title_live: Муз доору
   mc_name: Minecraft код сааты
+  mc_gradelevel: 6-106 жаштагылар
   minecraft_agent: 'Minecraft: Баатырдын сапары'
   minecraft_designer: Minecraft дизайнери
   minecraft_adventurer: Minecraft тентек
@@ -235,6 +243,8 @@ ky-KG:
   video_title_my_name_is_aracely: Менин атым Арасели
   no_internet: Интернет жокпу?
   volunteer_engineer_submission_field_name: Аты
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Түшүндүрмөсү
   volunteer_engineer_submission_field_email_preference_privacy: "(Купуялуулук саясатыбызды
     карагыла)"
@@ -248,11 +258,19 @@ ky-KG:
   dashboard_action_delete_yes: Ооба
   dashboard_action_delete_no: Жок
   dashboard_filter_all: Баары
+  dashboard_navigation_add_students: Окуучуларды кошуу
   dashboard_progress_not_started: баштала элек
   dashboard_sections_table_section: Секция
   dashboard_sections_table_students: Студенттер
   dashboard_sections_close: Жабуу
+  dashboard_sections_move_to_section: 'Секцияга өтүү:'
+  dashboard_sections_enter_code: 'Секциянын кодун киргизгиле:'
+  dashboard_students_add_multiple: 'Бир сапка бирден окуучунун атын тергиле же көчүрүп
+    койгула:'
   dashboard_students_name: Аты
+  dashboard_course1: 'Курс 1:'
+  dashboard_course2: 'Курс 2:'
+  dashboard_course3: 'Курс 3:'
   dashboard_sequence: Ирет
   dashboard_grade_other: Башка
   dashboard_login_none: Эмейл
@@ -269,50 +287,142 @@ ky-KG:
   artist_name: Сүрөтчү
   course1_name: Курс 1
   course2_name: Курс 2
+  course3_name: Курс 3
   course4_name: Курс 4
   classicmaze_name: Классикалык лабиринт
+  iceage_name: Муз доору
   applab_name: App Lab
   gamelab_name: Оюн лабы
+  codeorg_gradelevel: 4-104 жаштагылар
+  codeintl_gradelevel: 4-104 жаштагылар
+  tynker_gradelevel: 5-13 жаштагылар
   lightbot_gradelevel: Бардык курак
   thinkersmith_gradelevel: Бардык курак
+  condcards_gradelevel: 8-12 жаштагылар
   lightbotintl_gradelevel: Бардык курак
   codehs_gradelevel: Жогорку мектеп
   codecademy_gradelevel: Жогорку мектеп
   processing_gradelevel: Жогорку мектеп
+  robomind_gradelevel: 8-13 жаштагылар
+  tynkerapp_gradelevel: 5-13 жаштагылар
+  robomindnl_gradelevel: 8-13 жаштагылар
+  flappy_gradelevel: 6-106 жаштагылар
   makeschool_gradelevel: Жогорку мектеп
   touchdevelop_gradelevel: Жогорку мектеп
   blockly_gradelevel: Бардык курак
+  kodableunplugged_gradelevel: 8-13 жаштагылар
+  projguts_gradelevel: 10-13 жаштагылар
+  hourofcode_gradelevel: 6-106 жаштагылар
+  frozen_gradelevel: 8-108 жаштагылар
+  starwars_gradelevel: 6-106 жаштагылар
+  playlab_gradelevel: 6-14 жаштагылар
+  infinity_gradelevel: 6-14 жаштагылар
+  artist_gradelevel: 8-108 жаштагылар
+  monstercoding_gradelevel: 5-13 жаштагылар
   allcancode_gradelevel: 5-10 жаштагылар
+  csfirst_gradelevel: 9-14 жаштагылар
+  codesters_gradelevel: 12-14 жаштагылар
+  texasinstruments_gradelevel: 13-16 жаштагылар
+  course1_gradelevel: 4-6 жаштагылар
+  course2_gradelevel: 6-18 жаштагылар
+  course3_gradelevel: 8-18 жаштагылар
+  course4_gradelevel: 10-18 жаштагылар
+  coursea_gradelevel: 4-7 жаштагылар
+  courseb_gradelevel: 5-8 жаштагылар
+  coursec_gradelevel: 6-10 жаштагылар
+  coursed_gradelevel: 7-11 жаштагылар
+  coursee_gradelevel: 8-12 жаштагылар
+  coursef_gradelevel: 9-13 жаштагылар
+  coursea-2017_gradelevel: 4-7 жаштагылар
+  courseb-2017_gradelevel: 5-8 жаштагылар
+  coursec-2017_gradelevel: 6-10 жаштагылар
+  coursed-2017_gradelevel: 7-11 жаштагылар
+  coursee-2017_gradelevel: 8-12 жаштагылар
+  coursef-2017_gradelevel: 9-13 жаштагылар
+  coursea-2018_gradelevel: 4-7 жаштагылар
+  courseb-2018_gradelevel: 5-8 жаштагылар
+  coursec-2018_gradelevel: 6-10 жаштагылар
+  coursed-2018_gradelevel: 7-11 жаштагылар
+  coursee-2018_gradelevel: 8-12 жаштагылар
+  coursef-2018_gradelevel: 9-13 жаштагылар
+  coursea-2019_gradelevel: 4-7 жаштагылар
+  courseb-2019_gradelevel: 5-8 жаштагылар
+  coursec-2019_gradelevel: 6-10 жаштагылар
+  coursed-2019_gradelevel: 7-11 жаштагылар
+  coursee-2019_gradelevel: 8-12 жаштагылар
+  coursef-2019_gradelevel: 9-13 жаштагылар
+  coursea-2020_gradelevel: 4-7 жаштагылар
+  courseb-2020_gradelevel: 5-8 жаштагылар
+  coursec-2020_gradelevel: 6-10 жаштагылар
+  coursed-2020_gradelevel: 7-11 жаштагылар
+  coursee-2020_gradelevel: 8-12 жаштагылар
+  coursef-2020_gradelevel: 9-13 жаштагылар
+  coursea-2021_gradelevel: 4-7 жаштагылар
+  courseb-2021_gradelevel: 5-8 жаштагылар
+  coursec-2021_gradelevel: 6-10 жаштагылар
+  coursed-2021_gradelevel: 7-11 жаштагылар
+  coursee-2021_gradelevel: 8-12 жаштагылар
+  coursef-2021_gradelevel: 9-13 жаштагылар
+  accelerated_gradelevel: 10-18 жаштагылар
   touchdevelop_platformtext: Жаңы браузерлер, смартфондор, бардык түзмөктөр
+  codehs_shortdescription: Карэл ит менен коддоп башта, програмдоого көңүлдүү жана
+    визуалдык киришүү!
+  robomind_shortdescription: Виртуалдык роботтун кодун жазгыла
+  tynkerapp_shortdescription: 'Кызыктуу башкатырмаларды чечип, програмдоону үйрөнгүлө. '
+  robomindnl_shortdescription: Виртуалдык роботтун кодун жазгыла
   infinity_shortdescription: Play Lab колдонуп, Disney Infinity каармандары катышкан
     окуя же оюн түзгүлө.
   artist_shortdescription: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
+  codeorg_longdescription: Компүтер илиминин негизги концепттерин сүйрөп-коюу програмдоо
+    аркылуу үйрөнгүлө. Бул оюн сымал өз алдынчалык иш жетектемесинде Билл Гейтстин,
+    Марк Цукербергтин, Angry Birds жана Plants vs. Zombies’ тин видео лекциялары тартылган.
+    Кайталанган циклдарды, шарттуулуктарды жана негизги алгоритмдерди үйрөнгүлө. 34
+    тилде жеткиликтүү.
+  codeintl_longdescription: Компүтер илиминин негизги концепттерин сүйрөп-коюу програмдоо
+    аркылуу үйрөнгүлө. Бул оюн сымал өз алдынчалык иш жетектемесинде Билл Гейтстин,
+    Марк Цукербергтин, Angry Birds жана Plants vs. Zombies’ тин видео лекциялары тартылган.
+    Кайталанган циклдарды, шарттуулуктарды жана негизги алгоритмдерди үйрөнгүлө. 34
+    тилде жеткиликтүү.
+  hourofcode_longdescription: Алгачкы компүтердик программаңарды жазгыла
   frozen_longdescription: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага
     кошулуу үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан
     кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
+  codeorg_beyond_gradelevel: 4-104 жаштагылар
+  tynker_beyond_gradelevel: 5-13 жаштагылар
   lightbot_beyond_gradelevel: Бардык курак
   codecademy_beyond_gradelevel: Жогорку мектеп
   hacketyhack_beyond_gradelevel: Жогорку мектеп
+  robomind_beyond_gradelevel: 8-13 жаштагылар
   makeschool_beyond_gradelevel: Жогорку мектеп
   touchdevelop_beyond_gradelevel: Жогорку мектеп
   codehs_beyond_gradelevel: Жогорку мектеп
+  edx_beyond_gradelevel: Университет
+  coursera_beyond_gradelevel: Университет
+  udacity_beyond_gradelevel: Университет
+  teachingtree_beyond_gradelevel: Университет
   processing_beyond_gradelevel: Жогорку мектеп
   hacketyhack_beyond_platformtext: Компүтерге орнотуу
   touchdevelop_beyond_platformtext: Жаңы браузерлер, смартфондор, бардык түзмөктөр
   kidsruby_beyond_platformtext: Компүтерге орнотуу
   alice_beyond_platformtext: Windows же Mac (орнотуу керек)
+  robomind_beyond_shortdescription: Виртуалдык роботтун кодун жазгыла
   flappy_shortcode: серпүү
   header_my_dashboard: Менин тактам
   header_sections: Класс секциялары
   header_educate_hoc: Код сааты
   header_about_news: Жаңылыктар
   user_header_signin: Кирүү
+  user_header_create: 'Түзүү '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Сүрөтчү '
   user_header_gamelab: Оюн лабы
+  user_header_view_project_gallery: Долбоорлору карагыла
   user_header_view_my_projects: Долбоорлорумду көрүү
   view_all_sections: Секциялардын баарын көрүү
   applab_tile_start_tutorial: Башта
   hoc_overview_start_tutorial: Башта
   hoc2018_creativity_create: Түзүү
+  hoc2018_creativity_hoc_coming: Код сааты жакындап келатат…
   hoc2018_mc_page_title: Код сааты, Minecraft жетектемелери
   hoc2018_mc_details: Көп тилдүү | Заманбап браузерлер жана планшеттер | 2-класс +
   hoc2018_mc_aquatic_description: Minecraft Код саатына жаңы тапшырма менен кайтып
@@ -352,6 +462,8 @@ ky-KG:
   hoc2018_mc_go_to_mc_education: Minecraft окутууга өтүү
   hoc2018_dance_party_button: Башта
   hoc2018_dance_amazon_about_future_engineer_button: Дагы кара
+  page_not_found_title: Барак табылган жок
   footer_donate: Колдоо
+  ai_for_oceans_lesson_plan: окуу планы
   ai_activity: Тапшырмалар
   ai_description: Түшүндүрмөсү

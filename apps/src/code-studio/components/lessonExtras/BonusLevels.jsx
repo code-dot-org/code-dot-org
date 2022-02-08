@@ -25,37 +25,44 @@ class BonusLevels extends React.Component {
   }
 
   nextLesson = () => {
-    if (this.state.lessonIndex < this.props.bonusLevels.length - 1) {
+    if (!this.isRightArrowDisabled()) {
       this.setState({lessonIndex: this.state.lessonIndex + 1});
     }
   };
 
   previousLesson = () => {
-    if (this.state.lessonIndex > 0) {
+    if (!this.isLeftArrowDisabled()) {
       this.setState({lessonIndex: this.state.lessonIndex - 1});
     }
   };
 
+  isLeftArrowDisabled = () => {
+    return this.state.lessonIndex === 0;
+  };
+
+  isRightArrowDisabled = () => {
+    return this.state.lessonIndex === this.props.bonusLevels.length - 1;
+  };
+
   render() {
+    const currLessonNum = this.props.bonusLevels[this.state.lessonIndex]
+      .lessonNumber;
+
     const previousNumLessons = this.props.bonusLevels.filter(
-      lesson =>
-        lesson.lessonNumber <
-        this.props.bonusLevels[this.state.lessonIndex].lessonNumber
+      lesson => lesson.lessonNumber < currLessonNum
     ).length;
     const scrollAmount = -1 * previousNumLessons * CARD_AREA_SIZE;
 
-    const leftDisabled = this.state.lessonIndex === 0;
-    const rightDisabled =
-      this.state.lessonIndex === this.props.bonusLevels.length - 1;
+    const leftDisabled = this.isLeftArrowDisabled();
+    const rightDisabled = this.isRightArrowDisabled();
 
     return (
       <div>
-        <div style={styles.lessonNumberHeading}>
+        <h2 style={styles.lessonNumberHeading}>
           {i18n.extrasStageNChallenges({
-            lessonNumber: this.props.bonusLevels[this.state.lessonIndex]
-              .lessonNumber
+            lessonNumber: currLessonNum
           })}
-        </div>
+        </h2>
         <div style={styles.scroller}>
           <RadiumFontAwesome
             icon="caret-left"
@@ -126,7 +133,9 @@ const styles = {
     textAlign: 'center',
     color: color.white,
     fontSize: 20,
-    lineHeight: '35px'
+    lineHeight: '35px',
+    fontFamily: '"Gotham 4r"',
+    margin: 0
   },
   arrow: {
     fontSize: 40,

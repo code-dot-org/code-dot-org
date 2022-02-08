@@ -1,11 +1,11 @@
 {
-  "func": "loadImage",
+  "key": "loadImage",
+  "name": "loadImage",
   "category": "Drawing",
-  "paletteParams": [
-    "url"
+  "palette_params": [
+    {
+      "name": "url"
+    }
   ],
-  "params": [
-    "\"https://code.org/images/logo.png\""
-  ],
-  "noAutocomplete": true
+  "syntax": "loadImage(url)"
 }

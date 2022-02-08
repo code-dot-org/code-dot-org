@@ -22,7 +22,8 @@ class HeightResizer extends React.Component {
      * @param {number} desiredHeight - the height we'd like to resize to
      */
     onResize: PropTypes.func.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
+    vertical: PropTypes.bool
   };
 
   state = {
@@ -71,8 +72,12 @@ class HeightResizer extends React.Component {
       event.preventDefault();
     }
 
+    const pageX = event.pageX || (event.touches && event.touches[0].pageX);
     const pageY = event.pageY || (event.touches && event.touches[0].pageY);
-    this.setState({dragging: true, dragStart: pageY});
+    this.setState({
+      dragging: true,
+      dragStart: this.props.vertical ? pageX : pageY
+    });
   };
 
   onMouseUp = event => {
@@ -94,20 +99,37 @@ class HeightResizer extends React.Component {
       return;
     }
 
+    const pageX = event.pageX || (event.touches && event.touches[0].pageX);
     const pageY = event.pageY || (event.touches && event.touches[0].pageY);
-    const desiredHeight = pageY - this.props.resizeItemTop();
+    const desiredHeight =
+      (this.props.vertical ? pageX : pageY) - this.props.resizeItemTop();
 
     this.props.onResize(desiredHeight);
   };
 
   render() {
-    const mainStyle = [
-      styles.main,
-      {
-        top: this.props.position - RESIZER_HEIGHT
-      },
-      this.props.style
-    ];
+    let mainStyle, ellipsisStyle, ellipsisClassName;
+    if (this.props.vertical) {
+      mainStyle = [
+        styles.mainWidth,
+        {
+          left: this.props.position - RESIZER_HEIGHT
+        },
+        this.props.style
+      ];
+      ellipsisStyle = styles.ellipsisVertical;
+      ellipsisClassName = 'fa fa-ellipsis-v';
+    } else {
+      mainStyle = [
+        styles.main,
+        {
+          top: this.props.position - RESIZER_HEIGHT
+        },
+        this.props.style
+      ];
+      ellipsisStyle = styles.ellipsis;
+      ellipsisClassName = 'fa fa-ellipsis-h';
+    }
 
     return (
       <div
@@ -115,7 +137,7 @@ class HeightResizer extends React.Component {
         style={mainStyle}
         ref={ref => (this.resizerRef = ref)}
       >
-        <div style={styles.ellipsis} className="fa fa-ellipsis-h" />
+        <div style={ellipsisStyle} className={ellipsisClassName} />
       </div>
     );
   }
@@ -128,6 +150,12 @@ const styles = {
     left: 0,
     right: 0
   },
+  mainWidth: {
+    position: 'absolute',
+    width: RESIZER_HEIGHT,
+    top: 0,
+    bottom: 0
+  },
   ellipsis: {
     width: '100%',
     color: color.lighter_gray,
@@ -137,6 +165,18 @@ const styles = {
     whiteSpace: 'nowrap',
     lineHeight: RESIZER_HEIGHT + 'px',
     paddingTop: 1 // results in a slightly better centering
+  },
+  ellipsisVertical: {
+    width: '100%',
+    color: color.lighter_gray,
+    fontSize: 24,
+    textAlign: 'center',
+    cursor: 'ew-resize',
+    whiteSpace: 'nowrap',
+    lineHeight: RESIZER_HEIGHT + 'px',
+    top: '50%',
+    position: 'absolute',
+    transform: 'translateY(-50%)'
   }
 };
 

@@ -23,14 +23,24 @@ hi-IN:
   n_have_learned_an_hoc: |-
     का प्रयास एक कोड के घंटे सेवा की
      code ke ek ghante dha koshish karo
+  try_hoc_num_served: "<h1>एक</h1><h2>घंटे कोड</h2><h3>%{num} सर्व</h3>का प्रयास करें"
+  try_hoc_num_served_markdown: |-
+    # एक
+
+    ## ऑवर ऑफ़ कोड
+
+    ### %{num} सर्व करने का प्रयास करें #Try an
   anybody_can_learn: हर कोई सीख सकता है
   learn_now: अब जानें
   petition_message: हर स्कूल में हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर होना चाहिए
   petition_sign_message: यदि आप सहमत हैं, तो अपना नाम साइन करें और ऑवर ऑफ़ कोड अन्य
     लोगों के साथ हमारी मेलिंग सूची में शामिल हों।
+  petition_sign_message_num: यदि आप सहमत हैं, तो अपने नाम पर हस्ताक्षर करें और %{num}
+    अन्य लोगों के साथ हमारी मेलिंग सूची में शामिल हों।
   petition_join_others: |-
     # दूसरों में शामिल हों
     Log nal shaamil ho
+  petition_join_others_num: "%{num} अन्य लोगों से जुड़ें"
   name: नाम
   email: ईमेल
   zipcode: ज़िप कोड या देश
@@ -65,6 +75,7 @@ hi-IN:
   csedweek_map_header: |-
     घंटा कोड की घटनाओं दुनिया भर
     dhuniya bhar mein code kee ghatanaon ke ghante
+  csedweek_map_header_num: "%{num} csedWeek /ऑवर ऑफ़ कोड इवेंट्स दुनिया भर में"
   csedweek_map_signup: |-
     साइन अप आपके ईवेंट
     Upne ghatana ko sankhet karo
@@ -228,15 +239,31 @@ hi-IN:
     पर क्लिक करें। अब, हमारे <a href='http://studio.code.org'>अन्य कोर्सों के साथ
     आगे बढ़ते रहें</a>, या <a href='/learn/beyond'>घंटे से आगे कैसे सीखें</a> के और
     विकल्प देखें।
+  get_a_certificate_message_after_markdown: इसे डाउनलोड करने या प्रिंट करने के लिए
+    सर्टिफिकेट पर क्लिक करें। अब, हमारे [अन्य पाठ्यक्रम] (http://studio.code.org)
+    के साथ चलते रहें, या [एक घंटे से परे जानें] (/सीखने/परे) के लिए और विकल्प देखें।
   thanks_for_submitting: सबमिट करने के लिए धन्यवाद!
   if_you_enjoyed: यदि आपको सीखने में मज़ा आया, तो अपने दोस्तों से भी इसे आजमाने को
     कहें!  हम चाहते हैं कि पूरी दुनिया इसे सीखे।
   personalize_certificate: आपके प्रमाण पत्र को व्यक्तिगत करें
+  print_batch_certificates: प्रमाणपत्रों का एक बैच प्रिंट करें
   print_certificates: प्रमाण-पत्र प्रिंट करें
+  certificate_sponsor_message: "%{sponsor_name} ने आपके सीखने को प्रायोजित करने के
+    लिए उदार उपहार दिया।"
+  print_ice_art_from_frozen: फ्रोजन ट्यूटोरियल्स से आइस आर्ट प्रिंट करें
+  want_a_blank_certificate_template: अपने छात्रों के नाम में लिखने के लिए रिक्त प्रमाणपत्र
+    टेम्पलेट चाहते हैं?
+  landscape_recommended_certificates: यह अनुशंसा की जाती है कि जब आप प्रमाणपत्र प्रिंट
+    करते हैं तो आप**लैंडस्केप** चुनें।
+  print_one_here_certificates: यहां एक प्रिंट करें।
+  enter_certificate_names: 30 नाम दर्ज करें, **एक प्रति लाइन**। वैयक्तिकृत %{script_name}
+    प्रमाणपत्रों वाला एक प्रिंट करने योग्य पृष्ठ जनरेट किया जाएगा।
   share_achievement: आपकी उपलब्धि साझा करें
   beyond_hour_message: हमारे <a href='http://studio.code.org'>अन्य कोर्सों के साथ
     आगे बढ़ते रहें</a>, या <a href='/learn/beyond'>घंटे से आगे कैसे सीखें</a> के और
     विकल्प देखें।
+  beyond_hour_message_markdown: हमारे [अन्य पाठ्यक्रम] (http://studio.code.org) के
+    साथ चलते रहें, या [एक घंटे से परे जानें] (/सीखने/परे) के लिए और विकल्प देखें।
   leaderboards_for_hoc: Leaderboards ऑवर ऑफ़ कोड के लिए।
   support_url: http://support.code.org/
   country: देश
@@ -320,6 +347,12 @@ hi-IN:
     - मैरियाना अल्ज़ाटे (Mariana Alzate), पांचवें ग्रेड की छात्रा'
   stats_michael: '"मैंने अपने छात्रों को <b>पहले कभी भी</b> सीखने के लिए इतना उत्साहित
     नहीं देखा।" - फ्रैंक मार्टिनेज़ (Frank Martinez), अध्यापक'
+  stats_nina_markdown: "“हर एक दिन एक ही परिणाम प्राप्त करता था- 100% सगाई।” - नीना
+    निकोल्स पीरी, टीचर"
+  stats_student_markdown: "“मुझे पता था कि यह एक बार-इन-ए-लाइफटाइम** मौका था।” - मारियाना
+    अल्ज़ेट, 5 वीं ग्रेडर"
+  stats_michael_markdown: "“मैं**कभी नहीं, कभी** मेरे छात्रों को सीखने के बारे में
+    इतना उत्साहित देखा है।” - फ्रैंक मार्टिनेज, शिक्षक"
   studiobar_title: "<a href='http://studio.code.org'>Code.org के कोर्सों की पड़ताल
     करें</a>"
   studiobar_title_nolink: Code.org के कोर्सों की पड़ताल करें
@@ -500,8 +533,12 @@ hi-IN:
   class_submission_languages_other: अन्य भाषा(एं)
   videos_more: रोल मॉडल्स और जानी-मानी हस्तियों के और <a href='%{inspiring_videos_playlist}'>प्रेरणादायक
     वीडियो</a>
+  videos_more_markdown: अधिक [प्रेरणादायक वीडियो] (%{inspiring_videos_playlist}) रोल
+    मॉडल और मशहूर हस्तियों की विशेषता
   careers_page_more: प्रौद्योगिकी क्षेत्रों में पेशेवरों के और <a href='%{careers_url}'
     target='_blank'>प्रेरणादायक वीडियो</a>
+  careers_page_more_markdown: अधिक [प्रेरणादायक वीडियो] (%{careers_url}) प्रौद्योगिकी
+    क्षेत्रों में पेशेवरों की विशेषता
   playlab_choose_theme: अपना प्ले लैब विषय चुनें
   playlab_classic_title: क्लासिक
   playlab_gumball_title: गम्बॉल की अद्भुत दुनिया
@@ -665,17 +702,33 @@ hi-IN:
     व्यक्ति को, जो कंप्यूटर साइंस के साथ संभावनाओं के विस्तार के बारे में बात करके
     अपने छात्रों को <span style="font-family: ''Gotham 7r'', sans-serif;">प्रेरित</span>
     कर सके (जो वीडियो चैट के माध्यम से किया जा सकता है)।'
+  volunteer_engineer_submission_intro_recruit_markdown: शिक्षक किसी को कंप्यूटर विज्ञान
+    शिक्षा के बारे में भावुक होना पसंद करेंगे** जो कक्षा में मदद कर सकता है, या किसी
+    ऐसे व्यक्ति के लिए जो कंप्यूटर विज्ञान के साथ संभावनाओं की चौड़ाई के बारे में
+    बात करके** अपने छात्रों को प्रेरित कर सकता है (जो एक वीडियो चैट के माध्यम से किया
+    जा सकता है)।
   volunteer_engineer_submission_intro_guide: यहां हमारे <a href="%{volunteer_guide}">स्वयं
     सेवक प्रोग्राम के बारे में जानें</a>।
+  volunteer_engineer_submission_intro_guide_markdown: हमारे [स्वयंसेवक कार्यक्रम के
+    बारे में यहाँ] (%{volunteer_guide}) के बारे में और जानें।
   volunteer_engineer_submission_intro_signup: यदि आप कंप्यूटर साइंस के छात्र या सॉफ्टवेयर
     पेशेवर हैं तो निम्न जानकारी दर्ज करें। स्वयं सेवक के तौर पर साइन अप करने के लिए
     आपकी आयु कम से कम 18 वर्ष होनी आवश्यक है। ध्यान दें कि इस सेक्शन में आपके द्वारा
     भरे जाने वाले सभी भाग <a href="/volunteer/local">स्वयं सेवक मानचित्र</a> पर किसी
     के भी देखने के लिए सावर्जनिक तौर पर उपलब्ध होंगे। <span class="form-required-field">*</span>
     से चिन्हित किए गए भाग आवश्यक हैं।
+  volunteer_engineer_submission_intro_signup_markdown: यदि आप कंप्यूटर विज्ञान के
+    छात्र या सॉफ्टवेयर पेशेवर हैं तो कृपया निम्नलिखित जानकारी दर्ज करें। स्वयंसेवक
+    के रूप में साइन अप करने के लिए आपकी आयु कम से कम 18 वर्ष होनी चाहिए। ध्यान दें
+    कि इस खंड में आपके द्वारा भरे गए सभी फ़ील्ड सार्वजनिक रूप से [स्वयंसेवक मानचित्र]
+    (/स्वयंसेवक/स्थानीय) को देखने वाले किसी भी व्यक्ति के लिए उपलब्ध होंगे। _*_ के
+    साथ चिह्नित फ़ील्ड आवश्यक हैं।
   volunteer_engineer_submission_intro_links: क्या आप ऐसे अध्यापक हैं, जिन्हें स्वयं
     सेवकों की तलाश है? हमारे<a href="%{volunteer_local}">स्वयं सेवक मानचित्र पर स्थानीय
     स्वयं सेवक ढूंढें</a>।
+  volunteer_engineer_submission_intro_links_markdown: क्या आप एक शिक्षक हैं जो स्वयंसेवकों
+    की तलाश कर रहे हैं? हमारे [स्वयंसेवक मानचित्र] (%{volunteer_local}) पर एक स्थानीय
+    स्वयंसेवक खोजें।
   volunteer_engineer_submission_update_information: अपनी जानकारी का अद्यतन करें
   volunteer_engineer_submission_header_shared: स्वयं सेवक मानचित्र पर अध्यापकों के
     साथ साझा की गई जानकारी
@@ -733,6 +786,10 @@ hi-IN:
     प्रस्तुत की गई थी। अध्यापक आप जैसे स्वयं सेवकों को खोजने और संपर्क करने के लिए
     <a href="%{url}">इस मानचित्र</a> का उपयोग करेंगे। कृपया मानचित्र पर आपकी जानकारी
     को ठीक ढंग से दिखाई देने के लिए 48 घंटे का समय दें।
+  volunteer_engineer_submission_thankyou_markdown: शुक्रिया! आपकी स्वयंसेवक जानकारी
+    सफलतापूर्वक सबमिट की गई थी। शिक्षक आपके जैसे स्वयंसेवकों को खोजने और संपर्क करने
+    के लिए [this map] (%{url}) का उपयोग करेंगे। कृपया अपनी जानकारी को मानचित्र पर
+    सही तरीके से प्रदर्शित करने के लिए 48 घंटे का समय दें।
   volunteer_engineer_submission_commitment_uncertain: अनिश्चित
   volunteer_engineer_submission_commitment_one_hr_per_week: प्रति सप्ताह 1 घंटे
   volunteer_engineer_submission_commitment_three_hrs_per_week: प्रति सप्ताह 3 घंटे
@@ -835,6 +892,7 @@ hi-IN:
     पेश करने में स्कूल डिस्ट्रिक्ट की मदद करता है। पेशेवर विकास वर्कशॉप्स के लिए पंजीकरण
     करने हेतु, Code.org के साथ <a href="/educate/districts">पूरे डिस्ट्रिक्ट में भागीदारी
     के लिए</a> आवेदन करें।
+  dashboard_course_csina: बीजगणित में कंप्यूटर साइंस
   dashboard_course_csina_desc: Code.org ने ऐसा पाठ्यक्रम विकसित करने के लिए Bootstrap
     के साथ साझेदारी की है, जो कंप्यूटर प्रोग्रामिंग के माध्यम से बीजगणित और रेखागणितीय
     अवधारणाएं सिखाता है।
@@ -1031,6 +1089,8 @@ hi-IN:
   dashboard_express: 'एक्सप्रेस कोर्स: '
   dashboard_unplugged: यदि आपके पास कंप्यूटर नहीं हैं, तो अपनी कक्षा में <a href='%{unplugged_url}'>ये
     अनप्लग्ड पाठ आजमाएं</a>।
+  dashboard_unplugged_markdown: यदि आपके पास कंप्यूटर नहीं है, तो [इन अनप्लग्ड पाठों
+    को आजमाएं] (%{unplugged_url}) अपनी कक्षा में।
   dashboard_tools: 'टूल्स: '
   dashboard_curriculum: पाठ्यक्रम
   dashboard_curriculum_overview: K-5 पाठ्यक्रम की रूपरेखा
@@ -1262,10 +1322,15 @@ hi-IN:
   coursed-2020_name: कोर्स D (2019)
   coursee-2020_name: कोर्स E (2019)
   coursef-2020_name: कोर्स F (2019)
+  coursed-2021_name: कोर्स D (2021)
+  express-2018_name: एक्सप्रेस कोर्स (2018)
   pre-express-2018_name: पूर्व-पाठक एक्सप्रेस कोर्स (2018)
   express-2019_name: एक्सप्रेस कोर्स (2019)
   pre-express-2019_name: पूर्व-पाठक एक्सप्रेस कोर्स (2019)
   express-2020_name: एक्सप्रेस कोर्स (2019)
+  pre-express-2020_name: पूर्व-पाठक एक्सप्रेस कोर्स (2020)
+  pre-express-2021_name: पूर्व-पाठक एक्सप्रेस कोर्स (2021)
+  csd2_name: 'यूनिट 2: वेब डेवलपमेंट'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: त्वरित पाठ्यक्रम
   express_name: एक्सप्रेस कोर्स
@@ -1279,6 +1344,8 @@ hi-IN:
   iceage_name: हिम युग
   minecraft_name: माइनक्राफ्ट
   starwarsblocks_name: Star Wars (ब्लॉक्स)
+  hoc-impact-study_name: सर्वे के साथ क्लासिक भूलभुलैया
+  flappy-impact-study_name: सर्वेक्षण के साथ फ्लैपी कोड
   hoc-encryption_name: सरल एन्क्रिप्शन
   text-compression_name: टेक्स्ट कम्प्रेशन
   applab_name: ऐप लैब
@@ -1372,6 +1439,12 @@ hi-IN:
   coursed-2020_gradelevel: आयु 7-11
   coursee-2020_gradelevel: उम्र 8-12
   coursef-2020_gradelevel: आयु 9-13
+  coursea-2021_gradelevel: आयु 4-7
+  courseb-2021_gradelevel: आयु 5-8
+  coursec-2021_gradelevel: आयु 6-10
+  coursed-2021_gradelevel: आयु 7-11
+  coursee-2021_gradelevel: उम्र 8-12
+  coursef-2021_gradelevel: आयु 9-13
   accelerated_gradelevel: आयु 10-18
   codeorg_platformtext: आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स
   codeintl_platformtext: आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स
@@ -1555,11 +1628,11 @@ hi-IN:
   coursef-2019_shortdescription_congrats: कंप्यूटर विज्ञान के बुनियादी बातों में सभी
     अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
   coursea-2020_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
-    में बुनियादी बातें सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे
-    आप साझा कर सकते हैं।
+    में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप
+    साझा कर सकते हैं।
   courseb-2020_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
-    में बुनियादी बातें सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे
-    आप साझा कर सकते हैं।
+    में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप
+    साझा कर सकते हैं।
   coursec-2020_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
     और सापेक्षों का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें,
     सवाल हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का जवाब
@@ -1570,11 +1643,33 @@ hi-IN:
     सीखते हैं।
   coursee-2020_shortdescription_congrats: कलन विधियों, लूप्स, सापेक्षों और इवेंट्स
     के साथ कूटलेखन करना शुरू करें। इस कोर्स के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट
-    डिज़ाइन करें और बनाएं, जिसे आप अपने दोस्तों व परिवार के साथ साझा कर सकें।
+    डिजाइन करें और बनाएं, जिसे आप अपने दोस्तों व परिवार के साथ साझा कर सकें।
   coursef-2020_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
     और सापेक्षों का उपयोग करना सीखें। सवाल हल करने की विभिन्न तकनीकों का निरीक्षण
     करें और कंप्यूटिंग व इंटरनेट के समाज पर पड़ने पर प्रभावों की चर्चा करें। इस कोर्स
-    के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिज़ाइन करें और बनाएं, जिसे आप दोस्तों
+    के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिजाइन करें और बनाएं, जिसे आप दोस्तों
+    व परिवार के साथ साझा कर सकें।
+  coursea-2021_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
+    में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप
+    साझा कर सकते हैं।
+  courseb-2021_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
+    में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप
+    साझा कर सकते हैं।
+  coursec-2021_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
+    और सापेक्षों का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें,
+    सवाल हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का जवाब
+    कैसे देना है। कोर्स के अंत में, अपनी खुद की गेम या कहानी तैयार करें, जिसे आप साझा
+    कर सकें।
+  coursed-2021_shortdescription_congrats: छात्र, लूप्स, सापेक्षों और इवेंट्स के बारे
+    में अपनी समझ विकसित करते हैं। कूटलेखन से आगे, छात्र डिजीटल नागरिकता के बारे में
+    सीखते हैं।
+  coursee-2021_shortdescription_congrats: कलन विधियों, लूप्स, सापेक्षों और इवेंट्स
+    के साथ कूटलेखन करना शुरू करें। इस कोर्स के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट
+    डिजाइन करें और बनाएं, जिसे आप अपने दोस्तों व परिवार के साथ साझा कर सकें।
+  coursef-2021_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
+    और सापेक्षों का उपयोग करना सीखें। सवाल हल करने की विभिन्न तकनीकों का निरीक्षण
+    करें और कंप्यूटिंग व इंटरनेट के समाज पर पड़ने पर प्रभावों की चर्चा करें। इस कोर्स
+    के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिजाइन करें और बनाएं, जिसे आप दोस्तों
     व परिवार के साथ साझा कर सकें।
   codeorg_longdescription: खींचें और छोड़ें प्रोग्रामिंग के साथ कंप्यूटर साइंस की
     मूल अवधारणाएं सीखें। यह गेम-जैसा, स्व-निर्देशित ट्यूटोरियल है, जिसमें बिल गेट्स,
@@ -2102,13 +2197,19 @@ hi-IN:
   header_teacher_community: अध्यापक समुदाय
   header_help_support: 'सहायता और समर्थन '
   header_report_bug: समस्या की रिपोर्ट करें
+  header_report_abuse: दुरुपयोग की रिपोर्ट करें
+  header_legal: निजता और कानूनी
   header_legal_privacy: गोपनीयता नीति
   header_legal_tos: सेवा की शर्तें
   header_tutorials: ट्यूटोरियल
+  header_screen_reader_hamburger: मेन्यू
+  header_screen_reader_help: मदद मेन्यू
   app_lab_documentation: ऐप लैब दस्तावेज
   app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
   game_lab_documentation: गेम लैब दस्तावेज
   game_lab_tutorials: गेम लैब ट्यूटोरियल्स
+  sprite_lab_documentation: स्प्राइट लैब दस्तावेज़ीकरण
+  sprite_lab_tutorials: स्प्राइट लैब ट्यूटोरियल
   header_documentation: दस्तावेजीकरण
   user_header_label: हेलो %{username}
   user_header_team: टीम
@@ -2204,12 +2305,21 @@ hi-IN:
     अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं
     भी आवर ऑफ़ कोड इवेंट आयोजित कर सकता है या 200 से अधिक एक-घंटे के ट्यूटोरिल्स को
     आजमा सकता है, जो 45 से अधिक भाषाओं में उपलब्ध हैं।
+  hoc_overview_subtitle_markdown: "[आवर ऑफ कोड] (https://hourofcode.com) एक वैश्विक
+    आंदोलन है जो 180+ देशों में लाखों छात्रों तक पहुंचता है। कोई भी, कहीं भी ऑवर ऑफ़
+    कोड इवेंट को व्यवस्थित कर सकता है या 45 से अधिक भाषाओं में उपलब्ध 500+ एक घंटे
+    के ट्यूटोरियल में से किसी एक को आज़मा सकता है।"
   hoc_overview_partner_activities_title: साझेदारों से और गतिविधियां
   hoc_overview_partner_activities_body: आवर ऑफ़ कोड वेबसाइट पर हर आयु वर्ग और अनुभव
     स्तर के व्यक्तियों के लिए 100 से अधिक कंप्यूटर साइंस की गतिविधियां हैं, जो Code.org
     और साझेदारों द्वारा विकसित की गई हैं।
   hoc_overview_partner_activities_link: गतिविधियां देखें
   hoc_overview_start_tutorial: शुरू करें
+  hoc_overview_more_resources: अपने दूरस्थ कक्षा के साथ जुड़ने के तरीके के बारे में
+    अधिक संसाधनों के लिए, [आभासी घंटे का कोड] होस्ट करने के लिए हमारी मार्गदर्शिका
+    देखें (https://hourofcode.com/us/how-to/virtual)। सीमित या कोई तकनीक या कनेक्टिविटी
+    वाले छात्रों के लिए, [अनप्लग्ड ऑवर ऑफ कोड गतिविधियों] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    के इस पैकेट को साझा करें।
   hoc_overview_view_teacher_guide: अध्यापक गाइड देखें
   hoc2018_creativity: रचनात्मकता
   hoc2018_creativity_create: बनाए
@@ -2238,6 +2348,8 @@ hi-IN:
   hoc2018_mc_aquatic_title: 'Minecraft: समुद्री यात्रा जलचर'
   hoc2018_mc_aquatic_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड
     के लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
+  hoc2019_mc_aquatic_description: कोड के साथ पानी के नीचे की दुनिया का अन्वेषण करें
+    और बनाएं।
   hoc2018_mc_hero_title: Minecraft Hour of Code
   hoc2018_mc_hero_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के
     लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
@@ -2341,6 +2453,13 @@ hi-IN:
     में कैरियर बनाने के लिए प्रेरित करने, शिक्षित व प्रशिक्षित करने के लिए एक व्यापक
     बचपन के कैरियर तक का प्रोग्राम है। <a href='%{amazon_future_engineer_link}' target='_blank'>और
     जानें</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: अमेज़ॅन
+    फ्यूचर इंजीनियर* कंप्यूटर विज्ञान में करियर बनाने के लिए कम आय वाले और अन्य वंचित
+    बच्चों और युवाओं को प्रेरित करने, शिक्षित करने और प्रशिक्षित करने के लिए एक व्यापक
+    बचपन-से-कैरियर कार्यक्रम है। [और जानें] (%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: यदि आप फ्रांस में एक
+    छात्र या शिक्षक हैं, तो [अमेज़ॅन फ्यूचर इंजीनियर - फ्रांस] (%{amazon_future_engineer_france_link})
+    पर जाएं
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Amazon Future
     Engineer के बारे में और जानें
   hoc2018_dance_amazon_about_future_engineer_title: Amazon Future Engineer के बारे
@@ -2393,22 +2512,138 @@ hi-IN:
   hoc2018_mc_thank_microsoft: हम Microsoft का धन्यवाद करते हैं कि उन्हें यह सुनिश्चित
     करने के हमारे दृष्टिकोण और उद्देश्य को सहयोग किया कि प्रत्येक बच्चे के पास कंप्यूटर
     साइंस सीखने और 21वीं सदी में सफल होने के लिए कौशल हों।
+  hoc2019_mc_mee_title: अच्छे के लिए माइनक्राफ्ट एआई
+  hoc2019_mc_mee_description1: 'नया Minecraft Hour of Code ट्यूटोरियल अब Minecraft:
+    एजुकेशन एडिशन फॉर विंडोज, मैक और आईपैड में उपलब्ध है। कोडिंग की मूल बातें जानें
+    और अपने छात्रों के साथ एआई का पता लगाएं!'
+  hoc2019_mc_mee_description2: एक पाठ योजना, वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम और
+    शिक्षक प्रशिक्षण सहित मुफ्त संसाधनों तक पहुंचें।
+  hoc2019_mc_more_coding_resources: अधिक कोडिंग संसाधन
+  hoc2019_dance_previous_versions: "डांस पार्टी के पिछले संस्करण की तलाश है?  \n2018
+    से [भाग 1] (%{dance_2018_link}) और [भाग 2] (%{dance_extras_2018_link}) शुरू करने
+    के लिए यहां क्लिक करें"
   homepage_slot_text_title_at_home: 'घर पर सीखें
 
 '
+  homepage_slot_text_blurb_at_home: ये संसाधन इसे आसान बनाते हैं
+  homepage_slot_text_link_code_break: एक कोड ब्रेक लें
+  homepage_slot_text_link_do_hoc: ऑवर ऑफ़ कोड करें
+  homepage_slot_text_link_express_course: एक्सप्रेस कोर्स ट्राई करें
+  page_not_available_title: पृष्ठ उपलब्ध नहीं है
+  page_not_available_description: हमें खेद है, आपके द्वारा अनुरोधित पृष्ठ अब इस पते
+    पर उपलब्ध नहीं है। यदि आपको अभी भी पहुंच की आवश्यकता है, तो कृपया [support@code.org]
+    (%{support_email_link}) ईमेल करें।
   page_not_available_button: मुख्य पृष्ठ पर वापस जाएं
+  hoc2020_mc_available_code_org: Code.org पर उपलब्ध
+  hoc2020_mc_available_mee: 'Minecraft में उपलब्ध: शिक्षा संस्करण'
+  hoc2020_mc_mee_title: माइनक्राफ्ट टेल ऑफ़ टू विलेज
+  hoc2020_mc_mee_description: 'नया Minecraft Hour of Code ट्यूटोरियल अब Minecraft:
+    एजुकेशन एडिशन फॉर विंडोज, मैक, क्रोमबुक और आईपैड में उपलब्ध है। कोडिंग की मूल
+    बातें जानें और अपने छात्रों के साथ विविधता और समावेश का पता लगाएं! एक पाठ योजना,
+    वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम, इक्विटी पाठ और शिक्षक प्रशिक्षण सहित मुफ्त
+    संसाधनों तक पहुंचें।'
+  hoc2021_mc_mee_title: माइनक्राफ्ट टाइमक्राफ्ट
+  hoc2021_mc_mee_description: 'कोड सीखने के लिए समय में वापस जाएं! नया Minecraft आवर
+    ऑफ कोड ट्यूटोरियल Minecraft में उपलब्ध है: Windows, Mac, Chromebook, और iPad के
+    लिए एजुकेशन एडिशन। फ्री एजुकेटर संसाधन, ट्रेनिंग और वीडियो के साथ शुरुआत करें।'
+  hoc2021_mc_mee_villages_title: दो गांवों की कथा
+  hoc2021_mc_mee_villages_description: 'Minecraft में अपने छात्रों के साथ कोडिंग के
+    बेसिक्स सीखें और विविधता एवं समावेशन को एक्सप्लोर करें: एजुकेशन एडमिशन। '
+  hoc2021_mc_mee_ai_title: भलाई के लिए AI
+  hoc2021_mc_mee_ai_description: 'AI को एक्सप्लोर करें और Minecraft में कोड करना सीखें:
+    एजुकेशन एडिशन। '
   footer_powered_by_aws: अमेज़ॅन वेब सर्विसेज द्वारा संचालित
+  footer_built_on_github: माइक्रोसॉफ्ट से गिटहब पर बनाया गया
+  codebytes_skinny_banner_title: हमारे CodeBytes लाइव मिनी-पाठ के लिए 7-11 दिसंबर
+    को हमसे जुड़ें!
+  codebytes_skinny_banner_description: 'कोडबाइट्स के लिए सीएस एजुकेशन वीक के प्रत्येक
+    दिन हमसे जुड़ें, 20 मिनट इंटरैक्टिव कंप्यूटर साइंस सबक। प्रतिदिन दो बार लाइव स्ट्रीमिंग,
+    CodeBytes छात्रों के लिए एक आभासी #HourOfCode में भाग लेने का एक शानदार तरीका
+    है!'
   codebytes_skinny_banner_english_only: केवल-अंग्रेजी
+  codebytes_skinny_banner_learn: "[code.org/codebytes] (%{code_bytes_url}) पर और जानें"
   footer_privacy_policy: गोपनीयता नीति
+  footer_privacy_policy_updated: गोपनीयता नीति (अपडेट किया गया)
   footer_about: के बारे में
   footer_partners: साझेदार
+  footer_blog: ब्लॉग
   footer_donate: दान करे
+  footer_store: स्टोर
   footer_support: सहयोग
   footer_terms: शर्तें
   ai_for_oceans: समुद्रों के लिए AI
+  ai_for_oceans_lesson_plan: पाठ योजना
+  ai_for_oceans_tile_description: कचरे का पता लगाने के लिए इसे प्रशिक्षित करके महासागरों
+    को साफ करने में मदद करें! प्रशिक्षण डेटा और पूर्वाग्रह के बारे में जानें, और एआई
+    दुनिया की समस्याओं को कैसे संबोधित कर सकता है। व्यू
+  how_ai_works: AI कैसे काम करता है
+  how_ai_works_tile_description: इस बारे में जानें कि AI कैसे काम करता है और यह लघु
+    वीडियो की इस श्रृंखला के साथ क्यों मायने रखता है। माइक्रोसॉफ्ट के सीईओ सत्या नडेला
+    और विशेषज्ञों की एक विविध कलाकारों की विशेषता है।
+  watch_the_videos: वीडियो देखें
+  ai_and_ethics: एआई एंड एथिक्स
+  ai_and_ethics_tile_description: छात्र एआई के नैतिक निहितार्थों पर प्रतिबिंबित करते
+    हैं, फिर एआई रचनाकारों और विधायकों के लिए हर जगह “एआई कोड ऑफ एथिक्स” संसाधन बनाने
+    के लिए मिलकर काम करते हैं।
+  view_lesson_plan: पाठ योजना देखें
   ai_in_partnership_with: साझेदारी में साथ
   ai_microsoft_thanks: हम Microsoft का धन्यवाद करते हैं कि उन्हें यह सुनिश्चित करने
     के हमारे दृष्टिकोण और उद्देश्य को सहयोग किया कि प्रत्येक बच्चे के पास कंप्यूटर
     साइंस सीखने और 21वीं सदी में सफल होने के लिए कौशल हों।
+  ai_ethics_panel_header: एआई पैनल चर्चा की नैतिकता की खोज
+  ai_ethics_panel_description_1: हमारे कुछ पसंदीदा AI विशेषज्ञों के साथ गहराई से जाएं!
+    यह पैनल चर्चा एल्गोरिदमिक पूर्वाग्रह और काम के भविष्य जैसे महत्वपूर्ण मुद्दों
+    पर छूती है। इसे हमारे साथ पेयर करें
+  ai_ethics_lesson_plan: एआई एंड एथिक्स लेसन प्लान
+  ai_ethics_panel_description_2: आर्टिफिशियल इंटेलिजेंस की नैतिकता के लिए एक महान
+    परिचय के लिए!
+  cs_for_good: सीएस फॉर गुड
+  cs_for_good_tile_description: छात्रों को कंप्यूटर विज्ञान की भूमिका के बारे में
+    गहराई से सोचने के लिए प्रेरित करने के लिए संसाधन एक अधिक न्यायसंगत और टिकाऊ दुनिया
+    बनाने में खेल सकते हैं।
+  view_resources: संसाधन देखें
+  imagine_cup_junior: इमेजिन कप जूनियर
+  imagine_cup_junior_tile_description: गुड चैलेंज के लिए यह वैश्विक एआई छात्रों को
+    अच्छी पहल के लिए माइक्रोसॉफ्ट के एआई से परिचित कराता है, जिससे उन्हें एआई की शक्ति
+    के साथ दुनिया में एक समस्या को हल करने के लिए सशक्त बनाया जाता है।
   ai_activity: गतिविधि
   ai_description: विवरण 
+  ai_seeing_ai: एआई को देखकर
+  ai_seeing_ai_description: एक मुफ्त ऐप जो आपके आसपास की दुनिया को विभिन्न भाषाओं
+    में सुनाता है।
+  ai_quick_draw: क्विक, ड्रा!
+  ai_quick_draw_description: क्या एक तंत्रिका नेटवर्क डूडलिंग को पहचानना सीख सकता
+    है?
+  ai_teachable_machine: टीचेबल मशीन
+  ai_teachable_machine_description: अपनी खुद की छवियों, ध्वनियों और पोज़ को पहचानने
+    के लिए कंप्यूटर को प्रशिक्षित करें।
+  ai_google: Google के साथ AI प्रयोग
+  ai_google_description: चित्र, चित्र, भाषा, संगीत, आदि के माध्यम से मशीन लर्निंग
+    की खोज शुरू करें।
+  ai_zooniverse: ज़ूनिवर्स - स्नैपशॉट माउंटेन ज़ेबरा
+  ai_zooniverse_description: छवियों में विभिन्न जानवरों की पहचान करके लुप्तप्राय केप
+    माउंटेन ज़ेबरा की रक्षा करने में मदद करें।
+  ai_audience: ऑडियंस
+  ai_minecraft_description: 'एक पाठ योजना, वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम और शिक्षक
+    प्रशिक्षण सहित मुफ्त संसाधनों तक पहुंचें। (Minecraft की आवश्यकता है: शिक्षा संस्करण)'
+  ai_k_12_audience: K-12 (पढ़ना आवश्यक)
+  ai_microsoft_workshop: Microsoft से निःशुल्क आभासी कार्यशालाएँ
+  ai_microsoft_workshop_description: मुक्त STEM और कोडिंग कार्यशालाओं के साथ स्पार्क
+    जिज्ञासा।
+  ai_machine_learning_for_kids: बच्चों के लिए मशीन लर्निंग
+  ai_machine_learning_for_kids_description: टेक्स्ट, नंबर या इमेज के साथ मशीन लर्निंग
+    मॉडल को प्रशिक्षित करें, और स्क्रैच में गेम बनाने के लिए इसका उपयोग करें।
+  ai_ibm_machine_learning_for_kids: 'IBM: बच्चों के लिए मशीन लर्निंग'
+  ai_ecs: 'ECS: आर्टिफिशियल इंटेलिजेंस (AI)'
+  ai_ecs_description: एक्सप्लोरिंग कंप्यूटर साइंस (ईसीएस) पाठ्यक्रम के लिए एक नई वैकल्पिक
+    पाठ्यक्रम इकाई।
+  ai_elements: एआई के तत्व
+  ai_elements_description: रेक्टर और हेलसिंकी विश्वविद्यालय द्वारा बनाए गए मुफ्त ऑनलाइन
+    पाठ्यक्रमों की एक श्रृंखला।
+  ai_cognimates: कॉग्निमेट्स
+  ai_cognimates_description: गेम बनाने, प्रोग्रामिंग रोबोट और प्रशिक्षण के लिए एक
+    AI शिक्षा मंच।
+  ai_try_activity: गतिविधि का प्रयास करें
+  outbreak_tile_title: प्रकोप
+  outbreak_tile_subtitle: Monster Town को एक वायरस ने संक्रमित किया है! एक आउटब्रेक
+    सिमुलेटर को कोड करें और भविष्यवाणी करें कि Monster Town के आस पड़ोस का क्या होगा। 

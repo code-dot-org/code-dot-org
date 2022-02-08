@@ -4,13 +4,13 @@ layout: wide
 nav: promote_nav
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # கோடரியின் மணிநேர ஊக்குவிக்க
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### உங்கள் குறியீட்டு நேரத்திற்கு நீங்கள் கவனம் செலுத்த வேண்டிய அனைத்து ஆதாரங்களையும் கண்டறியவும். எங்கு தொடங்குவது என்று தெரியவில்லையா? எங்கள் [ ஒரு மணிநேர குறியீட்டை ஹோஸ்ட் செய்வதற்கான வழிகாட்டல் ]({{ how_to_url }}) உடன் தொடங்கவும்!
 
 * * *
 
@@ -18,168 +18,168 @@ nav: promote_nav
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## இந்த சுவரொட்டிகளை உங்கள் பள்ளியில் தொங்க விடுங்கள்
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+மலாலா, ஸ்டீபன் கறி, ஷகிரா மற்றும் பலவற்றைக் கொண்ட புதிய சுவரொட்டி தொகுப்பு கிடைக்கிறது! இந்த ஆண்டு, ஒவ்வொரு தொகுப்பிலும் 6 சுவரொட்டிகள் மற்றும் 126 "நான் செய்தேன் மணிநேர குறியீடு" ஸ்டிக்கர்கள். வழங்கல்கள் குறைவாக உள்ளன, எனவே [ உங்கள் சுவரொட்டிகளை விரைவில் ஆர்டர் செய்யுங்கள் ](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH). சொந்தமாக அச்சிட, அச்சிடக்கூடிய பதிப்பைக் காணவும் சேமிக்கவும் கீழே உள்ள படத்தைக் கிளிக் செய்க.
 
 {{ promote_new_posters }}
 
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* முந்தைய ஆண்டுகளிலிருந்து எங்கள் சுவரொட்டிகளைத் தேடுகிறீர்களா? [ அவற்றை இங்கே கண்டுபிடிக்கவும் ]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
-## Post these on social media
+## இவற்றை சமூக ஊடகங்களில் இடுங்கள்
 
-[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## இதைப் பரப்புவதற்கு மணிநேர குறியீட்டு சின்னத்தைப் பயன்படுத்தவும்
 
 [![[உங்கள் பெயர்], [தலைப்பு]]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![[உங்கள் பெயர்], [தலைப்பு]]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[ஹை-ரெஸ் பதிப்புகளைப் பதிவிறக்கவும்](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+**"ஹவர் ஆஃப் கோட்" மற்றும் "ஹோரா டெல் செடிகோ" ஆகியவை வர்த்தக முத்திரை. அவற்றின் பயன்பாட்டைத் தடுக்க நாங்கள் விரும்பவில்லை, ஆனால் பயன்பாடு சில வரம்புகளுக்குள் பொருந்துகிறது என்பதை உறுதிப்படுத்த விரும்புகிறோம்:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. "ஹவர் ஆஃப் கோட்" அல்லது "ஹோரா டெல் செடிகோ" பற்றிய எந்தவொரு குறிப்பும் ஒரு பாணியில் பயன்படுத்தப்பட வேண்டும், அது உங்கள் சொந்த பிராண்ட் பெயர் என்று பரிந்துரைக்கவில்லை, மாறாக ஹவர் ஆஃப் கோட் ஒரு அடிமட்ட இயக்கம் என்று குறிப்பிடுகிறது.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong> நல்ல எடுத்துக்காட்டு </strong>: "உங்கள்- COMPANY.com இல் மணிநேர குறியீட்டில் பங்கேற்கவும்."
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong> மோசமான எடுத்துக்காட்டு </strong> "உங்கள் நிறுவனத்தால் மணிநேர குறியீட்டை முயற்சிக்கவும்."
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. உங்கள் வலைத்தளத்திலும் பயன்பாட்டு விளக்கங்களிலும் "ஹோரா டெல் கெடிகோ" என்று நீங்கள் குறிப்பிடும் மிக முக்கியமான இடங்களில் "டி.எம்" சூப்பர்ஸ்கிரிப்டை "ஹவர் ஆஃப் கோட்" மற்றும் "Ⓡ" சூப்பர்ஸ்கிரிப்டைப் பயன்படுத்தவும்.
+2. உங்கள் பக்கத்தில் (அல்லது அடிக்குறிப்பில்) மொழியைச் சேர்க்கவும், இதில் CSEdWeek மற்றும் [Code.org]({{ codeorg_link }}) வலைத்தளங்களுக்கான இணைப்புகள் அடங்கும், அவை பின்வருவனவற்றைக் கூறுகின்றன:
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *“'ஹவர் ஆஃப் கோட் ™' / 'ஹோரா டெல் செடிகோ®' என்பது கணினி அறிவியல் கல்வி வாரம் [csedweek.org] மற்றும் Code.org [code.org] ஆகியவற்றின் உலகளாவிய முன்முயற்சியாகும், இது மில்லியன் கணக்கான மாணவர்களை ஒரு மணிநேர கணினி அறிவியலுக்கு அறிமுகப்படுத்துகிறது கணனி செய்நிரலாக்கம்."*
 
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+3. பயன்பாட்டு பெயர்களில் "ஹவர் ஆஃப் கோட்" அல்லது "ஹோரா டெல் செடிகோ" பயன்படுத்தப்படவில்லை.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## உங்கள் மாணவர்களுக்கு வழங்க இந்த ஸ்டிக்கர்களை அச்சிடுங்கள்
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+ஸ்டிக்கர்கள் 1 "விட்டம், ஒரு தாளுக்கு 63)<br />
 
 [![[உங்கள் பெயர்], [தலைப்பு]](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## உங்கள் சமூகத்தில் உள்ளவர்களை உங்கள் குறியீட்டு நேரத்திற்கு அழைக்கவும், மின்னஞ்சல் மூலம் உங்கள் நிகழ்வை விளம்பரப்படுத்தவும்
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### குறியீட்டு நேரத்தைப் பற்றி பேசும்போது [ நீங்கள் பயன்படுத்தக்கூடிய கூடுதல் தகவல் மற்றும் மொழியை ]({{ promote/stats_url }}) கண்டறியவும்.
 
 * * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### பதிவுபெற உங்கள் பள்ளி, முதலாளி அல்லது நண்பர்களைக் கேளுங்கள்:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+** பொருள் வரி: :** என்னையும் 100 மில்லியனுக்கும் அதிகமான மாணவர்களையும் ஒரு மணிநேர குறியீட்டிற்கு சேரவும் <br />
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+கணினிகள் எல்லா இடங்களிலும் உள்ளன, கிரகத்தின் ஒவ்வொரு தொழிற்துறையையும் மாற்றுகின்றன. But only 51% of all high schools offer computer science. நல்ல செய்தி என்னவென்றால், இதை மாற்றுவதற்கான பாதையில் நாங்கள் இருக்கிறோம்! குறியீட்டு நேரத்தைப் பற்றி நீங்கள் முன்பு கேள்விப்பட்டிருந்தால், அது வரலாற்றை உருவாக்கியது உங்களுக்குத் தெரியும். 100 மில்லியனுக்கும் அதிகமான மாணவர்கள் ஒரு மணிநேர குறியீட்டை முயற்சித்தனர்.
 
-கோட் ஹவர் உடன், கணினி அறிவியல் Google, MSN, Yahoo !, டிஸ்னி ஆகியவற்றின் முகப்புகளில் உள்ளது. இந்த இயக்கத்தை ஆதரிக்க 100 க்கும் மேற்பட்ட பங்காளிகள் ஒன்று சேர்ந்துள்ளனர். Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+கோட் ஹவர் உடன், கணினி அறிவியல் Google, MSN, Yahoo !, டிஸ்னி ஆகியவற்றின் முகப்புகளில் உள்ளது. இந்த இயக்கத்தை ஆதரிக்க 100 க்கும் மேற்பட்ட பங்காளிகள் ஒன்று சேர்ந்துள்ளனர். உலகின் ஒவ்வொரு ஆப்பிள் ஸ்டோரும் ஒரு மணிநேர குறியீட்டை நடத்தியது, ஜனாதிபதி ஒபாமா மற்றும் கனேடிய பிரதமர் ஜஸ்டின் ட்ரூடோ போன்ற தலைவர்கள் பிரச்சாரத்தின் ஒரு பகுதியாக தங்கள் முதல் குறியீடுகளை எழுதினர்.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+இந்த ஆண்டு, அதை இன்னும் பெரிதாக்குவோம் மணிநேர குறியீட்டில் சேருமாறு நான் உங்களிடம் கேட்கிறேன்{{ campaign_date/year }}. கணினி அறிவியல் கல்வி வாரத்தில் ஒரு மணிநேர குறியீடு நிகழ்வில் ஈடுபடுங்கள்,{{ campaign_date/full }}
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+வார்த்தையை வெளியேற்றுங்கள். ஒரு நிகழ்வை நடத்துங்கள். பதிவு செய்ய உள்ளூர் பள்ளியைக் கேளுங்கள். அல்லது மணிநேர குறியீட்டை நீங்களே முயற்சிக்கவும் - எல்லோரும் அடிப்படைகளை கற்றுக்கொள்வதன் மூலம் பயனடையலாம்.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+http://hourofcode.com/{{ country_language }} இல் தொடங்கவும்<br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### ஒரு பள்ளியில் தன்னார்வலர்:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### [பள்ளிகளில் தன்னார்வத் தொண்டு பற்றிய கூடுதல் ஆதாரங்களையும் தகவல்களையும் இங்கே காணலாம்]({{ how_to_volunteers_url }}).
 
-**Subject line:** Can we help you host an Hour of Code?
+**பொருள்: **ஒரு மணிநேர குறியீட்டை ஹோஸ்ட் செய்ய நாங்கள் உங்களுக்கு உதவ முடியுமா?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+{{ campaign_date/short }}, க்கு இடையில், உலகெங்கிலும் உள்ள பத்து சதவீத மாணவர்கள் தங்கள் பள்ளியில் ஒரு மணிநேர குறியீடு செய்து கணினி அறிவியல் கல்வி வாரத்தை கொண்டாடுவார்கள். நம்மைச் சுற்றியுள்ள தொழில்நுட்பம் எவ்வாறு செயல்படுகிறது என்பதை ஒவ்வொரு குழந்தைக்கும் அறிய இது ஒரு வாய்ப்பு.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+\[எங்கள் அமைப்பு / எனது பெயர்\] \[பள்ளி பெயர்\] ஒரு மணிநேர குறியீடு நிகழ்வை இயக்க உதவ விரும்புகிறேன். ஆசிரியர்கள் தங்கள் வகுப்பறைகளில் ஒரு மணிநேர குறியீட்டை ஹோஸ்ட் செய்ய நாங்கள் உதவலாம் (எங்களுக்கு கணினிகள் கூட தேவையில்லை!) அல்லது நீங்கள் ஒரு பள்ளி சட்டசபை நடத்த விரும்பினால், தொழில்நுட்பம் எவ்வாறு இயங்குகிறது மற்றும் அது என்ன என்பதைப் பற்றி பேச ஒரு பேச்சாளரை நாங்கள் ஏற்பாடு செய்யலாம். ஒரு மென்பொருள் பொறியாளராக இருங்கள்.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+மாணவர்கள் தங்கள் பெற்றோருக்குக் காட்டக்கூடிய சொந்த பயன்பாடுகள் அல்லது கேம்களை உருவாக்குவார்கள், மேலும் அவர்கள் வீட்டிற்கு கொண்டு வரக்கூடிய மணிநேர குறியீடு சான்றிதழ்களையும் அச்சிடுவோம். மேலும், இது வேடிக்கையானது! ஊடாடும், கைகோர்த்து செயல்படுவதன் மூலம், மாணவர்கள் கணக்கீட்டு சிந்தனை திறன்களை அணுகக்கூடிய வகையில் கற்றுக்கொள்வார்கள்.
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+கணினிகள் எல்லா இடங்களிலும் உள்ளன, கிரகத்தின் ஒவ்வொரு தொழிற்துறையையும் மாற்றுகின்றன. But only 51% of all high schools offer computer science. நல்ல செய்தி என்னவென்றால், இதை மாற்றுவதற்கான பாதையில் நாங்கள் இருக்கிறோம்! குறியீட்டு நேரத்தைப் பற்றி நீங்கள் முன்பே கேள்விப்பட்டிருந்தால், அது வரலாற்றை உருவாக்கியது என்பது உங்களுக்குத் தெரிந்திருக்கலாம் - உலகெங்கிலும் 100 மில்லியனுக்கும் அதிகமான மாணவர்கள் ஒரு மணிநேர குறியீட்டை முயற்சித்திருக்கிறார்கள். ஜனாதிபதி ஒபாமா மற்றும் கனேடிய பிரதமர் ஜஸ்டின் ட்ரூடோ போன்ற தலைவர்கள் கூட பிரச்சாரத்தின் ஒரு பகுதியாக தங்கள் முதல் குறியீடுகளை எழுதினர்.
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+நிகழ்வைப் பற்றி மேலும் http://hourofcode.com இல் படிக்கலாம். அல்லது, [பள்ளி பெயர்] எவ்வாறு பங்கேற்கலாம் என்பதைப் பற்றி பேச சிறிது நேரம் திட்டமிட விரும்பினால் எங்களுக்குத் தெரியப்படுத்துங்கள்.<br />
 
 * * *
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### உங்கள் பள்ளியின் நிகழ்வு பற்றி பெற்றோரிடம் சொல்லுங்கள்:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**பொருள்:**எங்கள் மாணவர்கள் ஒரு மணிநேர குறியீட்டைக் கொண்டு எதிர்காலத்தை மாற்றுகிறார்கள்
 
-Dear Parents,
+அன்பான பெற்றோர்கள்,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+தொழில்நுட்பத்தால் சூழப்பட்ட உலகில் நாம் வாழ்கிறோம். எங்கள் மாணவர்கள் பெரியவர்களாக செல்ல எந்தத் துறையைத் தேர்வுசெய்தாலும், அவர்களின் வெற்றி திறன் தொழில்நுட்பம் எவ்வாறு செயல்படுகிறது என்பதைப் புரிந்துகொள்வதைப் பொறுத்தது என்பதை நாங்கள் அறிவோம்.
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+அதனால்தான் எங்கள் முழு பள்ளியும் வரலாற்றில் மிகப்பெரிய கற்றல் நிகழ்வில் இணைகிறது: கணினி அறிவியல் கல்வி வாரத்தில் குறியீட்டு நேரம்{{ campaign_date/full }} உலகளவில் 100 மில்லியனுக்கும் அதிகமான மாணவர்கள் ஏற்கனவே ஒரு மணிநேர குறியீட்டை முயற்சித்திருக்கிறார்கள். 21 ஆம் நூற்றாண்டின் இந்த அடித்தள திறன்களை கற்பிக்க [SCHOOL NAME] தயாராக உள்ளது என்று எங்கள் மணிநேர குறியீடு ஒரு அறிக்கையை வெளியிடுகிறது. உங்கள் மாணவர்களுக்கு நிரலாக்க நடவடிக்கைகளைத் தொடர்ந்து கொண்டுவர, எங்கள் மணிநேர குறியீடு நிகழ்வை மிகப்பெரியதாக மாற்ற விரும்புகிறோம். தன்னார்வத் தொண்டு செய்ய, உள்ளூர் ஊடகங்களை அணுகவும், சமூக ஊடக சேனல்களில் செய்திகளைப் பகிரவும், சமூகத்தில் கூடுதல் மணிநேர குறியீடு நிகழ்வுகளை ஹோஸ்ட் செய்யவும் நான் உங்களை ஊக்குவிக்கிறேன்.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+[TOWN / CITY NAME] இல் கல்வியின் எதிர்காலத்தை மாற்ற இது ஒரு வாய்ப்பு.
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+விவரங்களுக்கு http://hourofcode.com/{{ country_language }} ஐப் பார்க்கவும், மேலும் இதைப் பரப்ப உதவவும்.<br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### உங்கள் நிகழ்வில் கலந்து கொள்ள ஊடகத்தை அழைக்கவும்:
 
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
+#### [உங்கள் நிகழ்வுக்கு ஊடகங்களை அழைப்பது பற்றிய கூடுதல் தகவலுக்கு எங்கள் பத்திரிகை கருவியைப் பாருங்கள்.]({{ promote/press_kit_url }})
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**பொருள் வரி**:கணினி அறிவியலுக்கு மாணவர்களை அறிமுகப்படுத்தும் நோக்கில் உள்ளூர் பள்ளி இணைகிறது
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. ஓரங்கட்டப்பட்ட இன மற்றும் இனத்தைச் சேர்ந்த இளம் பெண்கள் மற்றும் மாணவர்கள் கணினி அறிவியல் வகுப்புகளிலும், தொழில்நுட்பத் துறையிலும் கடுமையாக பிரதிநிதித்துவப்படுத்தப்படுகிறார்கள். நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
 
 கோட் ஹவர் உடன், கணினி அறிவியல் Google, MSN, Yahoo !, டிஸ்னி ஆகியவற்றின் முகப்புகளில் உள்ளது. இந்த இயக்கத்தை ஆதரிக்க 100 க்கும் மேற்பட்ட பங்காளிகள் ஒன்று சேர்ந்துள்ளனர். உலகில் ஒவ்வொரு ஆப்பிள் ஸ்டோர் கோடரியின் ஒரு மணி நேரமும் வழங்கப்படுகிறது. பிரச்சாரத்தின் ஒரு பகுதியாக, ஒபாமா கூட தனது முதல் கோட் குறியீட்டை எழுதினார்.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+அதனால்தான் [SCHOOL NAME] இல் உள்ள ஒவ்வொரு [X number] மாணவர்களும் வரலாற்றில் மிகப்பெரிய கற்றல் நிகழ்வில் இணைந்துள்ளனர்: தி ஹவர் ஆஃப் கோட், கணினி அறிவியல் கல்வி வாரத்தின் போது (டிசம்பர் 6-12).
 
 எங்கள் கிக்ஆஃப் சட்டமன்றத்தில் கலந்துகொள்ள உங்களை அழைக்கவும், [DATE] அன்று குழந்தைகளைத் தொடங்கவும் பார்க்கிறேன்.
 
 இன்றைய மாணவர்கள் 21 ஆம் நூற்றாண்டின் வெற்றிக்கான திறன்களைக் கற்றுக்கொள்ளத் தயாராக உள்ளனர் என்று நம்புகின்ற ஒரு உலகளாவிய இயக்கம் ஆகும். எங்களுக்கு சேரவும்.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+தொடர்புக்கு: [உங்கள் பெயர்], [தலைப்பு], செல்: (212) 555-5555 எப்போது: [உங்கள் நிகழ்வின் தேதி மற்றும் நேரம்] எங்கே: [ADDRESS மற்றும் DIRECTIONS]
 
-I look forward to being in touch. <br />
+நான் தொடர்பில் இருப்பதை எதிர்நோக்குகிறேன்.<br />
 
 * * *
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### உங்கள் பள்ளியின் நிகழ்வுக்கு உள்ளூர் அரசியல்வாதியை அழைக்கவும்:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [மேலும் தகவல் தேவையா? உங்கள் நிகழ்வில் கலந்து கொள்ள அரசியல்வாதிகளை அழைப்பதற்கான எங்கள் ஆதாரங்களைப் பாருங்கள்]({{ how_to_public_officials_url }}).
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**Subject line**: ஒரு மணிநேர குறியீட்டைக் கொண்டு எதிர்காலத்தை மாற்றும்போது எங்கள் பள்ளியில் சேருங்கள்
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+அன்புள்ள [மேயர் / ஆளுநர் / பிரதிநிதி / செனட்டர் கடைசி பெயர்]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+US இல் கம்ப்யூட்டிங் # 1 ஊதிய ஆதாரமாக இருப்பது உங்களுக்குத் தெரியுமா? நாடு முழுவதும் 500,000 க்கும் மேற்பட்ட கணினி வேலைகள் திறக்கப்பட்டுள்ளன, ஆனால் கடந்த ஆண்டு 42,969 கணினி அறிவியல் மாணவர்கள் மட்டுமே பணியாளர்களில் பட்டம் பெற்றனர்.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+அதனால்தான் எங்கள் முழு பள்ளியும் வரலாற்றில் மிகப்பெரிய கற்றல் நிகழ்வில் இணைகிறது: கணினி அறிவியல் கல்வி வாரத்தில் குறியீட்டு நேரம்{{ campaign_date/full }} உலகளவில் 100 மில்லியனுக்கும் அதிகமான மாணவர்கள் ஏற்கனவே ஒரு மணிநேர குறியீட்டை முயற்சித்திருக்கிறார்கள்.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+எங்கள் மணிநேர குறியீடு நிகழ்வில் சேரவும், எங்கள் கிக்ஆஃப் சட்டசபையில் பேசவும் உங்களை அழைக்க நான் எழுதுகிறேன். இது [DATE, TIME, PLACE] இல் நடைபெறும், மேலும் 21 ஆம் நூற்றாண்டின் முக்கியமான திறன்களை எங்கள் மாணவர்களுக்கு கற்பிக்க [மாநில அல்லது நகரத்தின் பெயர்] தயாராக உள்ளது என்று ஒரு வலுவான அறிக்கையை வெளியிடும். எதிர்கால தொழில்நுட்பத்தை உருவாக்குவதில் எங்கள் மாணவர்கள் முன்னணியில் இருப்பதை உறுதிப்படுத்த விரும்புகிறோம்-அதை உட்கொள்வது மட்டுமல்ல.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+[PHONE NUMBER OR EMAIL ADDRESS] இல் என்னை தொடர்பு கொள்ளவும். உங்கள் பதிலுக்காக காத்திருக்கிறேன்.
 
-{{signup_button}}
+{{ signup_button }}

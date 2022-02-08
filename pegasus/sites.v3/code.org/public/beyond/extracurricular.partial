@@ -13,7 +13,7 @@ social:
   "twitter:image": "/images/csjourneys/og-extracurricular.jpg"
 ---
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Extracurricular opportunities</h1>
+<h1><a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/></a><br/>Extracurricular opportunities</h1>
 <p>Extracurricular activities like hackathons, coding clubs, and summer camps are a great way to use and extend what you learn in the classroom and experience the collaborative nature of computer science. Explore the opportunities below to take the next step on your CS Journey.</p>
 
 <ul>
@@ -29,11 +29,11 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Hackathons and competitions</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/bgc-hackathons.html" target="_blank">
+<a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/bgc-hackathons.html" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
+  <a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
   <p>Community oriented "girls only" hackathons for girls between the ages of 12 and 17. Students participate in creating solutions to social issues within their communities while they build their skills, confidence, experience and have lots of fun!</p>
   <p><i>Check event calendar for dates.</i></p>
 </div>
@@ -92,20 +92,6 @@ social:
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 
-<div class="col-100" style="padding:25px; background-color: #0094ca; border-radius:15px">
-  <a class="linktag" id="local-clubs" href="https://code.org/learn/local" target="_blank">
-    <img style="width: 10%; float: left; margin-top: -1%; margin-right: 2%" src="/images/beyond/maps.png" alt="Map icon">
-  </a>
-  <div style="width: 87%; margin-top: 1%; float: left">
-    <a class="linktag" id="local-clubs" href="https://code.org/learn/local" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong>Find a local club</strong></h3></a>
-    <p style="color:#ffffff">Use our map to find a club or afterschool program in your area.</p>
-  </div>
-  <div style="clear:both"></div>
-</div>
-<div style="clear:both"></div>
-<br>
-<br>
-
 <a class="linktag" id="coderdojo" href="https://coderdojo.com/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/coderdojo.png" alt="CoderDojo logo">
 </a>
@@ -122,7 +108,7 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="girlswhocode-clubs" href="https://girlswhocode.com/programs/clubs-program" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Girls Who Code</strong></h3></a>
-  <p>Clubs are free after-school programs for 3rd-5th and 6th-12th grade girls to join our sisterhood of supportive peers and role models using computer science to change the world. There are Clubs in all 50 states and applications are open year-round! Start a Club by visiting <a href="https://girlswhocode.com/clubsapply" target="_blank">girlswhocode.com/clubsapply</a> or find one to join in your local area at <a href="https://girlswhocode/locations" target="_blank">girlswhocode.com/locations</a></p>
+  <p>Clubs are free after-school programs for 3rd-5th and 6th-12th grade girls to join our sisterhood of supportive peers and role models using computer science to change the world. There are Clubs in all 50 states and applications are open year-round! Start a Club by visiting <a href="https://girlswhocode.com/clubsapply" target="_blank">girlswhocode.com/clubsapply</a> or find one to join in your local area at <a href="https://girlswhocode.com/locations" target="_blank">girlswhocode.com/locations</a></p>
   <p><i>Join anytime.</i></p>
 </div>
 <div style="clear:both"></div>

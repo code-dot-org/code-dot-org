@@ -56,7 +56,7 @@ export default class ProgressTableDetailCell extends React.Component {
     return (
       <div>
         {level.sublevels.map(sublevel => {
-          const subStatus = this.props.studentProgress[sublevel.id]?.status;
+          const sublevelProgress = this.props.studentProgress[sublevel.id];
           return (
             <div
               key={sublevel.id}
@@ -64,12 +64,13 @@ export default class ProgressTableDetailCell extends React.Component {
               onClick={_ => this.recordBubbleClick(sublevel.id)}
             >
               <ProgressTableLevelBubble
-                levelStatus={subStatus}
+                levelStatus={sublevelProgress?.status}
                 bubbleSize={BubbleSize.letter}
                 isBonus={sublevel.bonus}
                 isConcept={sublevel.isConceptLevel}
                 title={sublevel.bubbleText}
                 url={this.buildBubbleUrl(sublevel)}
+                reviewState={sublevelProgress?.teacherFeedbackReviewState}
               />
             </div>
           );
@@ -95,6 +96,7 @@ export default class ProgressTableDetailCell extends React.Component {
             isConcept={level.isConceptLevel}
             title={level.bubbleText}
             url={url}
+            reviewState={levelProgress?.teacherFeedbackReviewState}
           />
         </div>
         {level.sublevels && this.renderSublevels(level)}

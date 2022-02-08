@@ -76,6 +76,27 @@ class Census::ApSchoolCode < ApplicationRecord
     end
   end
 
+  # Deconstructs an object key into multiple variables.
+  # @param [string] object_key - the AWS object name
+  # @return [array] [start_year, extension]
+  def self.deconstruct_object_key(object_key)
+    # "ap_school_codes/<start_year>-<end_year>.<file_extension>"
+    _, filename = object_key.split('/')
+    name, extension = filename.rpartition('.')
+    start_year, _ = name.split('-')
+    [
+      start_year.to_i,
+      extension
+    ]
+  end
+
+  # Extracts parameters for and dry runs a file from an s3 object key
+  # @param [string] object_key - the AWS object name
+  def self.dry_run_new_test_file(object_key)
+    start_year, file_extension = deconstruct_object_key(object_key)
+    dry_seed_s3_object(start_year, file_extension)
+  end
+
   # Test seeding an object from S3 to find issues.
   # This method does not check if the object had been seeded before
   # and does not write to the database.
@@ -85,7 +106,7 @@ class Census::ApSchoolCode < ApplicationRecord
   #   will seed from ap_school_codes/2017-2018.csv object.
   #
   #   Census::ApSchoolCode.dry_seed_s3_object(2019, 'txt')
-  #   will seed from ap_cs_offerings/2019-2020.txt object.
+  #   will seed from ap_school_codes/2019-2020.txt object.
   #
   # @note: A CSV file with a right format name in S3 will be automatically
   # picked up by the +seed_from_s3+ method as part of the build seeding process.

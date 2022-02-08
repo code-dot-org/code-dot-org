@@ -419,7 +419,7 @@ class ActivitySectionCard extends Component {
         }
       >
         <div style={styles.activitySectionCardHeader}>
-          <label>
+          <label style={styles.headerLabel}>
             {hasLessonPlan && (
               <span>
                 <span style={styles.title}>Title:</span>
@@ -552,6 +552,10 @@ const styles = {
     color: '#5b6770',
     marginBottom: 15,
     overflow: 'hidden'
+  },
+  headerLabel: {
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   labelAndCheckbox: {
     fontSize: 13,

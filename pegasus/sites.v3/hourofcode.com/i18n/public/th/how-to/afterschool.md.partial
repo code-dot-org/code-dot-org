@@ -6,15 +6,15 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# วิธีการสอน Hour of Code วันละ 1 ชั่วโมง ในช่วงหลังเลิกเรียน และ ในกลุ่มชมรม
+# จะสอนกิจกรรมชั่วโมงเขียนโค้ด 1 ชั่วโมงในช่วงหลังเลิกเรียนและภายในชมรมได้อย่างไร
 
-### Join the movement and introduce your students to computer science with these steps.
+### เข้าร่วมการเคลื่อนไหวและแนะนำนักเรียนให้รู้จักวิทยาการคอมพิวเตอร์โดยปฏิบัติตามขั้นตอนเหล่านี้
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+แนวคิดเชิงคำนวณจะช่วยเสริมทักษะด้านการแก้ไขปัญหา ตรรกะและความคิดสร้างสรรค์ และเทคโนโลยีกำลังจะเข้ามาเปลี่ยนแปลงทุกอุตสาหกรรมบนโลกใบนี้ ไม่เพียงแต่เรียนรู้วิธีใช้แต่นักเรียนยุคปัจจุบันจึงควรเรียนรู้วิธีการสร้างเทคโนโลยีไปด้วย ด้วยการเริ่มต้นอย่างรวดเร็วนี้นั้นจะเป็นรากฐานแห่งความสำเร็จด้านอาชีพของพวกเขาในศตวรรษที่ 21
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### นอกจากนี้ Hour of Code ยังสามารถใช้ทำงานจากระยะไกลได้อีกด้วย! ดูข้อมูลเพิ่มเติม [เพื่อเริ่มใช้งาน Hour of Code แบบเสมือนจริงในอีเวนต์](https://hourofcode.com/us/how-to/virtual)
 
 * * *
 
@@ -24,11 +24,11 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**บทเรียนของ Hour of Code ทั้งหมด**ใช้เวลาไม่มากในการเตรียมการสอน บทเรียนถูกออกแบบให้ผู้เรียนสามารถเรียนรู้ด้วยตนเอง ได้ตามระดับทักษะและความสามารถในการเรียนรู้
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+ต้องการแผนการสอน Hour of Code สำหรับชั่วโมงหลังเลิกเรียน? ลองเข้าไปดู [โครงร่างแผนการสอน](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. การประชาสัมพันธ์ชั้นเรียน Hour of Code ของคุณ
 
@@ -36,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. วางแผนเทคโนโลยีที่จำเป็นต้องใช้ในชั้นเรียน - คอมพิวเตอร์ มีหรือไม่มีก็ได้
 
-เพื่อประสบการณ์ Hour of Code ที่ดีที่สุด ควรจะมีคอมพิวเตอร์ที่เชื่อมต่อกับอินเทอร์เน็ต But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+เพื่อประสบการณ์ Hour of Code ที่ดีที่สุด ควรจะมีคอมพิวเตอร์ที่เชื่อมต่อกับอินเทอร์เน็ต เเต่คุณ**ไม่จำเป็นต้องมี**คอมพิวเตอร์สำหรับเด็กทุกคน เเละคุณยังสามารถทำ Hour of Code โดยไม่มีคอมพิวเตอร์เลยก็ได้
 
-อย่าลืมทดลองการสอนในคอมพิวเตอร์หรืออุปกรณ์ของนักเรียน เพื่อให้มั่นใจว่ามันใช้งานได้อย่างปกติบนเบราว์เซอร์โดยมีเสียงและวิดีโอ **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+อย่าลืมทดลองการสอนในคอมพิวเตอร์หรืออุปกรณ์ของนักเรียน เพื่อให้มั่นใจว่ามันใช้งานได้อย่างปกติบนเบราว์เซอร์โดยมีเสียงและวิดีโอ **มีแบนด์วิดท์ต่ำใช่หรือไม่?** วางแผนแสดงวิดีโอหน้าห้องเรียน เพื่อที่นักเรียนเเต่ละคนจะได้ไม่ต้องดาวน์โหลดวิดีโอของตัวเอง หรือลองการสอนแบบไม่เชื่อมต่อ/ออฟไลน์
 
 จัดหาหูฟังสำหรับชั้นเรียนของคุณ หรือให้นักเรียนนำมาเอง ถ้าการสอนที่คุณเลือกใช้งานได้ดีกับเสียง
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). เมื่อนักเรียนจับคู่กัน พวกเขาจะช่วยกันเองและพึ่งพาครูน้อยลง พวกเขาจะยังเห็นวิชาวิทยาการคอมพิวเตอร์เป็นสิ่งที่ช่วยเข้าสังคมและใช้ความร่วมมืออีกด้วย
+**มีอุปกรณ์ไม่พอใช่หรือไม่?** ใช้[การโปรแกรมเป็นคู่](https://www.youtube.com/watch?v=vgkahOzFH2Q) เมื่อนักเรียนจับคู่กัน พวกเขาจะช่วยกันเองและพึ่งพาครูน้อยลง พวกเขาจะยังเห็นวิชาวิทยาการคอมพิวเตอร์เป็นสิ่งที่ช่วยเข้าสังคมและใช้ความร่วมมืออีกด้วย
 
 ## 5. เปิดตัวชั้นเรียน Hour of Code ของคุณด้วยวิดีโอสร้างแรงบันดาลใจ
 
@@ -55,19 +55,19 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [ประธานาธิบดี Obama เชิญชวนให้นักเรียนทุกคนเรียนวิชาวิทยาการคอมพิวเตอร์](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - หาวิดีโอสร้างแรงบันดาลใจอื่นๆ[ที่นี่](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**มันโอเคถ้าคุณเป็นมือใหม่ในวิชาวิทยาการคอมพิวเตอร์ นี่เป็นแนวคิดสำหรับแนะนำกิจกรรม Hour of Code ของคุณ**
 
 - อธิบายถึงวิธีที่เทคโนโลยีส่งผลต่อชีวิตของเรา ใช้ตัวอย่างที่ทั้งเด็กผู้ชายและเด็กผู้หญิงให้สนใจ (พูดถึงแอปและเทคโนโลยีที่ใช้เพื่อช่วยชีวิตคน, ช่วยเหลือคน, เชื่อมต่อผู้คน เเละอื่นๆ)
 - เขียนรายชื่อของสิ่งที่ใช้โปรแกรมคอมพิวเตอร์ในชีวิตประจำวัน
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**ต้องการการแนะนำอีกหรือไม่?** ดาวน์โหลด[แผ่นแบบแผนการสอน](/files/AfterschoolEducatorLessonPlanOutline.docx)นี้
 
 ## 6. เขียนโปรแกรม!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**การนำผู้ร่วมเข้าสู่กิจกรรม** -เขียนลิงค์ของบทเรียนบนกระดาน Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. "ให้เราช่วยกันค้นหาคำตอบด้วยกัน" -"เทคโนโลยีบางครั้งก็ไม่ได้เป็นอย่างที่เราต้องการ" -"การเรียนการเขียนโปรแกรมก็เหมือนกับการเรียนภาษาใหม่ คุณจะไม่เก่งในทันที"
+**เมื่อผู้เรียนคนใดมีปัญหาในการเข้าใจบทเรียน คุณสามารถตอบว่า:** - "คุณก็ไม่รู้" "ให้เราช่วยกันค้นหาคำตอบด้วยกัน" -"เทคโนโลยีบางครั้งก็ไม่ได้เป็นอย่างที่เราต้องการ" -"การเรียนการเขียนโปรแกรมก็เหมือนกับการเรียนภาษาใหม่ คุณจะไม่เก่งในทันที"
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -80,13 +80,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## แหล่ง Hour of Code อื่นๆสำหรับนักการศึกษา
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- ลองดู[กิจกรรมที่ดีที่สุด](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)จากผู้จัด Hour of Code ครั้งก่อนๆ
+- ดูบันทึก[การสัมมนาผ่านเว็บไซต์เรื่องคู่มือ Hour of Code สำหรับนักการศึกษา](https://youtu.be/EJeMeSW2-Mw)ของเรา
+- เยี่ยมชม[ฟอรัม Hour of Code](http://forum.code.org/c/plc/hour-of-code) สำหรับคำแนะนำ, แนวคิด เเละความช่วยเหลือจากผู้จัดคนอื่นๆ
 - ทบทวน[คำถามที่พบบ่อยของ Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)
 
 ## จะทำอะไรต่อหลังจาก Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Hour of Code นี้เป็นเพียงแค่ก้าวแรกในเดินทางเพื่อเรียนรู้เกี่ยวกับการทำงานของเทคโนโลยี และ การสร้างซอฟต์แวร์ Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

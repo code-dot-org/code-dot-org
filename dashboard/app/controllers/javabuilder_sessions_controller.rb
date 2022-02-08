@@ -12,11 +12,15 @@ class JavabuilderSessionsController < ApplicationController
   def get_access_token
     channel_id = params[:channelId]
     project_version = params[:projectVersion]
+    # TODO: remove project_url after javabuilder is deployed with update to no longer need it
     project_url = params[:projectUrl]
     level_id = params[:levelId]
     options = params[:options]
+    execution_type = params[:executionType]
+    use_dashboard_sources = params[:useDashboardSources]
+    mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
-    if !channel_id || !project_version || !project_url
+    if !channel_id || !project_version || !project_url || !execution_type || !mini_app_type
       return render status: :bad_request, json: {}
     end
 
@@ -42,6 +46,9 @@ class JavabuilderSessionsController < ApplicationController
       project_version: project_version,
       project_url: project_url,
       level_id: level_id,
+      execution_type: execution_type,
+      mini_app_type: mini_app_type,
+      use_dashboard_sources: use_dashboard_sources,
       options: options
     }
 

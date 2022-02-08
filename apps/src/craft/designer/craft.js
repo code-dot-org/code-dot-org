@@ -13,6 +13,7 @@ import {
   utils as CraftUtils
 } from '@code-dot-org/craft';
 import dom from '../../dom';
+import {trySetLocalStorage} from '@cdo/apps/utils';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
 import MusicController from '../../MusicController';
 import {Provider} from 'react-redux';
@@ -25,12 +26,14 @@ import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {ARROW_KEY_NAMES} from '../utils';
+import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {
   showArrowButtons,
   hideArrowButtons,
   dismissSwipeOverlay
 } from '@cdo/apps/templates/arrowDisplayRedux';
+import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
+import reducers from '@cdo/apps/craft/redux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -140,20 +143,6 @@ const CHARACTER_STEVE = 'Steve';
 const CHARACTER_ALEX = 'Alex';
 const DEFAULT_CHARACTER = CHARACTER_ALEX;
 
-function trySetLocalStorageItem(key, value) {
-  try {
-    window.localStorage.setItem(key, value);
-  } catch (e) {
-    /**
-     * localstorage .setItem in iOS Safari Private Mode always causes an
-     * exception, see http://stackoverflow.com/a/14555361
-     */
-    if (console && console.log) {
-      console.log("Couldn't set local storage item for key " + key);
-    }
-  }
-}
-
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
@@ -199,14 +188,16 @@ Craft.init = function(config) {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        Craft.showPlayerSelectionPopup(function(selectedPlayer) {
-          trackEvent('MinecraftDesigner', 'ChoseCharacter', selectedPlayer);
-          Craft.clearPlayerState();
-          trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
-          Craft.updateUIForCharacter(selectedPlayer);
+        const onPlayerSelected = selectedPlayer => {
+          Craft.setCurrentCharacter(selectedPlayer);
           Craft.initializeAppLevel(config.level);
           showInstructions();
-        });
+        };
+        handlePlayerSelection(
+          DEFAULT_CHARACTER,
+          onPlayerSelected,
+          'MinecraftDesigner'
+        );
       }
     } else {
       showInstructions();
@@ -442,18 +433,30 @@ Craft.init = function(config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <CraftVisualizationColumn
-            showFinishButton={!config.level.isProjectLevel}
-            showScore={!!config.level.useScore}
-          />
-        }
-        onMount={onMount}
-      />
+      <div>
+        <AppView
+          visualizationColumn={
+            <CraftVisualizationColumn
+              showFinishButton={!config.level.isProjectLevel}
+              showScore={!!config.level.useScore}
+            />
+          }
+          onMount={onMount}
+        />
+        <PlayerSelectionDialog
+          players={[CHARACTER_ALEX, CHARACTER_STEVE]}
+          title={craftMsg.playerSelectChooseCharacter()}
+          titleClassName="minecraft-big-gray-header"
+          hideSubtitle
+        />
+      </div>
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+Craft.getAppReducers = function() {
+  return reducers;
 };
 
 const directionToFacing = {
@@ -501,6 +504,13 @@ Craft.getCurrentCharacter = function() {
   );
 };
 
+Craft.setCurrentCharacter = function(name = DEFAULT_CHARACTER) {
+  trackEvent('MinecraftDesigner', 'ChoseCharacter', name);
+  Craft.clearPlayerState();
+  trySetLocalStorage('craftSelectedPlayer', name);
+  Craft.updateUIForCharacter(name);
+};
+
 Craft.updateUIForCharacter = function(character) {
   let characters = eventsCharacters;
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
@@ -510,45 +520,6 @@ Craft.updateUIForCharacter = function(character) {
   Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
   studioApp().setIconsFromSkin(Craft.initialConfig.skin);
   $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
-};
-
-Craft.showPlayerSelectionPopup = function(onSelectedCallback) {
-  var selectedPlayer = DEFAULT_CHARACTER;
-  var popupDiv = document.createElement('div');
-  popupDiv.innerHTML = require('./dialogs/playerSelection.html.ejs')({
-    image: studioApp().assetUrl()
-  });
-  var popupDialog = studioApp().createModalDialog({
-    contentDiv: popupDiv,
-    defaultBtnSelector: '#choose-steve',
-    onHidden: function() {
-      onSelectedCallback(selectedPlayer);
-    },
-    id: 'craft-popup-player-selection'
-  });
-  dom.addClickTouchEvent(
-    $('#close-character-select')[0],
-    function() {
-      popupDialog.hide();
-    }.bind(this)
-  );
-  dom.addClickTouchEvent(
-    $('#choose-steve')[0],
-    function() {
-      selectedPlayer = CHARACTER_STEVE;
-      trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
-      popupDialog.hide();
-    }.bind(this)
-  );
-  dom.addClickTouchEvent(
-    $('#choose-alex')[0],
-    function() {
-      selectedPlayer = CHARACTER_ALEX;
-      trackEvent('MinecraftDesigner', 'ClickedCharacter', selectedPlayer);
-      popupDialog.hide();
-    }.bind(this)
-  );
-  popupDialog.show();
 };
 
 Craft.clearPlayerState = function() {

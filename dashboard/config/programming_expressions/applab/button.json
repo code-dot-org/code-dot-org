@@ -1,12 +1,14 @@
 {
-  "func": "button",
+  "key": "button",
+  "name": "button",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "text"
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "text"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "\"text\""
-  ]
+  "syntax": "button(id, text)"
 }

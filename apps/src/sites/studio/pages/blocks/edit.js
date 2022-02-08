@@ -1,4 +1,3 @@
-import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import $ from 'jquery';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
@@ -7,11 +6,11 @@ import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
   setInitialAnimationList
 } from '@cdo/apps/p5lab/redux/animationList';
-import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
+import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
 const VALID_COLOR = 'black';
@@ -21,6 +20,16 @@ let poolField, nameField, helperEditor, configEditor, validationDiv;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
+  getDefaultListMetadata()
+    .then(initializeEditPage)
+    .catch(() => {
+      console.error(
+        'Unable to render sprite costumes in block preview. Please refresh the page.'
+      );
+    });
+});
+
+function initializeEditPage(defaultSprites) {
   getStore().dispatch(setInitialAnimationList(defaultSprites));
 
   poolField = document.getElementById('block_pool');
@@ -65,7 +74,7 @@ $(document).ready(() => {
   $('.alert.alert-success')
     .delay(5000)
     .fadeOut(1000);
-});
+}
 
 function onUpdateLinting(_, errors) {
   const submitButton = document.querySelector('#block_submit');
@@ -128,13 +137,11 @@ function updateBlockPreview() {
   const blocksDom = parseElement(`<block type="${blockName}" />`);
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
-  Blockly.mainBlockSpace
-    .getCanvas()
-    .addEventListener('blocklyBlockSpaceChange', onBlockSpaceChange);
+  Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 
 function onBlockSpaceChange() {
-  document.getElementById('code-preview').innerText = codegen.workspaceCode(
-    Blockly
-  );
+  document.getElementById(
+    'code-preview'
+  ).innerText = Blockly.getWorkspaceCode();
 }

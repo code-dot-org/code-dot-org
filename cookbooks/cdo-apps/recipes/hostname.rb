@@ -1,3 +1,9 @@
-# Set hostname to the Chef node name (via chef_hostname cookbook)
+# Set hostname to the Chef node name via chef hostname resource.
+#
+# See https://docs.chef.io/resources/hostname/
+
 HOSTNAME_INVALID_CHAR = /[^[:alnum:]-]/
-hostname node.name.downcase.gsub(HOSTNAME_INVALID_CHAR, '-')
+
+hostname 'set to Chef node name' do
+  hostname node.name.downcase.gsub(HOSTNAME_INVALID_CHAR, '-')
+end

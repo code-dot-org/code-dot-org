@@ -11,11 +11,13 @@
     "csa8-pilot",
     "csa9-pilot"
   ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
   "properties": {
-    "has_numbered_units": true,
-    "version_year": "2020",
     "family_name": "csa",
-    "pilot_experiment": "csa-pilot"
+    "has_numbered_units": true,
+    "pilot_experiment": "csa-pilot",
+    "version_year": "2020"
   },
   "resources": [
 

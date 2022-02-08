@@ -339,6 +339,7 @@ fi-FI:
   homepage_hero_text_stat_students: "#student_count opiskelijoiden tilejä Code Studio:ssa"
   homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
   homepage_hero_hoc_is_coming: Tunti koodia on tulossa
+  homepage_hero_hoc_is_here: Koodaustunti on täällä
   homepage_slot_text_hoc: Koodaustunti
   homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
   homepage_slot_text_teacher: Opettajan päänäyttö
@@ -489,6 +490,8 @@ fi-FI:
   sports_basketball_title: Tee koripallopeli
   sports_featured_athletes: Suositeltavat urheilijat
   sports_athletes_title: Suositeltavat urheilijat
+  watch_inspirational_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista
+    videoista
   video_title_inspire_girl: Inspiroi tyttö
   video_title_cs_intro: Tutustuminen tietotekniikkaan
   video_title_anybody_can_learn: Kuka vain voi oppia
@@ -526,6 +529,7 @@ fi-FI:
   volunteer_engineer_submission_checkbox_after_hoc: Olen kiinnostunut vapaaehtoistyöstä
     Koodaustunnin jälkeen
   volunteer_engineer_submission_field_linkedin: LinkedIn-profiili
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook-profiili
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Kuvaus
@@ -686,6 +690,7 @@ fi-FI:
     kanssa:'
   dashboard_students_print_info: Tulosta kortit oppilaidesi kirjautumistiedoista.
   dashboard_students_secret_picture_title: Salainen kuva
+  dashboard_students_secret_picture: Salainen kuva
   dashboard_students_reset_picture: Voit nollata oppilaan salaisen kuvan koska tahansa
     valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salainen
     kuva luodaan oppilaalle käytettäväksi sisäänkirjautuessa.
@@ -728,6 +733,8 @@ fi-FI:
   dashboard_teacher_worksheet: Opettajan tehtävälista
   dashboard_curriculum_csina: 'Tietotekniikka algebrassa:'
   dashboard_curriculum_csins: 'Tietotekniikka luonnontieteissä:'
+  dashboard_curriculum_csp: 'Tietojenkäsittelytieteiden alkeet:'
+  dashboard_curriculum_ecs: 'Tutustu tietotekniikkaan:'
   dashboard_grade_k: leikkikoulu
   dashboard_grade_other: Muut
   dashboard_login_word: Sana
@@ -770,10 +777,13 @@ fi-FI:
   carousel_heading_domestic: Oppitunnit englanniksi
   carousel_heading_beginners: Oppitunnit aloittelijoille
   carousel_heading_javascript: JavaScriptiä opettavat oppitunnit
+  carousel_heading_beyond_javascript: Oppaat, jotka käsittelevät JavaScript kieltä
   carousel_heading_unplugged: Ei laitetta tai internetiä? Kokeile tietotekniikkaa
     ilman tietokonetta
   carousel_heading_devices: Opasohjelmat puhelimille ja tablettitietokoneille
+  carousel_heading_beyond_devices: Opasohjelmat puhelimille ja tablettitietokoneille
   carousel_heading_languages: Oppaat muista ohjelmointikielistä
+  carousel_heading_beyond_languages: Oppaat muista ohjelmointikielistä
   carousel_heading_apps_games: Tee omia sovelluksia tai pelejä
   carousel_heading_university: Yliopistokurssit verkossa
   carousel_heading_webpages: Opi tekemään verkkosivuja
@@ -819,6 +829,7 @@ fi-FI:
   robomindnl_name: Ohjelmoi virtuaalirobotti
   flappy_name: Tee Flappy-peli
   bitsbox_name: Bitsbox - tee peli
+  makeschool_name: Rakenna iPhone-peli selaimessasi!
   appinventor_name: AppInventor Koodaustunti
   blockly_name: Blockly
   projguts_name: Kivi, sakset, paperi
@@ -832,6 +843,7 @@ fi-FI:
   course4_name: Kurssi 4
   accelerated_name: Nopeutettu kurssi
   20-hour_name: Nopeutettu kurssi
+  gumball_name: Gumball
   classicmaze_name: Klassinen sokkelo
   iceage_name: Jääkausi
   minecraft_name: Minecraft
@@ -839,6 +851,9 @@ fi-FI:
   gamelab_name: Pelilabra
   basketball_name: Tee koripallopeli
   applab_gradelevel: Yli 13-vuotiaille
+  applab_shortdescription_congrats: Sovelluslabra on koodausympäristö, jossa voit
+    tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa lohkoilla tai javaScriptillä
+    kunnes se toimii, ja jaa työsi sekunneissa
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille
   khan_gradelevel: Yläaste +
@@ -892,16 +907,42 @@ fi-FI:
   course2_gradelevel: 6+ -vuotiaille (lukutaitoisille)
   course3_gradelevel: 8+ -vuotiaille (kurssin 2 jälkeen)
   course4_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
+  coursea_gradelevel: 4-7-vuotiaille
+  courseb_gradelevel: 5-8-vuotiaille
+  coursec_gradelevel: 6-10-vuotiaille
   coursed_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee_gradelevel: 8-12-vuotiaille
+  coursef_gradelevel: 9-13-vuotiaille
+  coursea-2017_gradelevel: 4-7-vuotiaille
+  courseb-2017_gradelevel: 5-8-vuotiaille
+  coursec-2017_gradelevel: 6-10-vuotiaille
   coursed-2017_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2017_gradelevel: 8-12-vuotiaille
+  coursef-2017_gradelevel: 9-13-vuotiaille
+  coursea-2018_gradelevel: 4-7-vuotiaille
+  courseb-2018_gradelevel: 5-8-vuotiaille
+  coursec-2018_gradelevel: 6-10-vuotiaille
   coursed-2018_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2018_gradelevel: 8-12-vuotiaille
+  coursef-2018_gradelevel: 9-13-vuotiaille
+  coursea-2019_gradelevel: 4-7-vuotiaille
+  courseb-2019_gradelevel: 5-8-vuotiaille
+  coursec-2019_gradelevel: 6-10-vuotiaille
   coursed-2019_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2019_gradelevel: 8-12-vuotiaille
+  coursef-2019_gradelevel: 9-13-vuotiaille
+  coursea-2020_gradelevel: 4-7-vuotiaille
+  courseb-2020_gradelevel: 5-8-vuotiaille
+  coursec-2020_gradelevel: 6-10-vuotiaille
   coursed-2020_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2020_gradelevel: 8-12-vuotiaille
+  coursef-2020_gradelevel: 9-13-vuotiaille
+  coursea-2021_gradelevel: 4-7-vuotiaille
+  courseb-2021_gradelevel: 5-8-vuotiaille
+  coursec-2021_gradelevel: 6-10-vuotiaille
+  coursed-2021_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursee-2021_gradelevel: 8-12-vuotiaille
+  coursef-2021_gradelevel: 9-13-vuotiaille
   accelerated_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
@@ -984,6 +1025,8 @@ fi-FI:
   flappy_shortdescription: Tee oma pelisi - Flappy Bird, Shark tai Submarine
   bitsbox_shortdescription: Koodaa useita sovelluksia pelaamiseen sekä jakamiseen
     käyttäen todellista JavaScriptiä.
+  makeschool_shortdescription: Tee iPhone-peli! Opi opettamaan hirviöllesi uusia liikkeitä
+    koodia kirjoittaen!
   touchdevelop_shortdescription: 'Ratkaise tehtäviä, luo pelejä, ja opi ohjelmointia
     puhelimellasi. '
   appinventor_shortdescription: Tee oma sovelluksesi! (vain Android)
@@ -1109,6 +1152,10 @@ fi-FI:
     sovelluksia, joita voit pelata ja jakaa. Yksinkertaiset läpikäyntiohjeet mahdollistavat
     jopa nuorten lasten ohjelmoinnin oikealla Javascriptillä, ja mitä enemmän perehdyt,
     sitä pidemmälle pääset.
+  makeschool_longdescription: Opi ohjelmoimaan tekemällä iPhone-peli käyttäen upouutta
+    ja aloittelijalle ystävällistä Swift-ohjelmointikieltä! Luo Pok&eacute;mon-teemainen
+    toimintopeli ja kirjoita koodia opettaaksesi hirviöllesi uusia liikkeitä. Opit
+    kuinka käyttää muuttujia, menetelmiä ja olioita auttaksesi hirviötäsi voittamaan!
   touchdevelop_longdescription: 'Kosketusystävällinen editori opastaa sinua pikselitaiteen
     luomisessa, karhuarvoituksen ratkaisemisessa ja tekemään oman pelin hyppivästä
     linnusta. '
@@ -1152,6 +1199,7 @@ fi-FI:
   groklearning_beyond_name: Opi Python-ohjelmointia
   hacketyhack_beyond_name: Opi Rubyä
   robomind_beyond_name: Ohjelmoi virtuaalirobotti
+  makeschool_beyond_name: Rakenna iPhone-peli selaimessasi!
   appinventor_beyond_name: AppInventor Koodaustunti
   codehs_beyond_name: Opettele koodaamaan Karel-koiran kanssa
   udemy_beyond_name: Ohjelmointikurssit verkossa
@@ -1247,6 +1295,7 @@ fi-FI:
   groklearning_beyond_shortdescription: Perusjohdanto Python-ohjelmointiin
   hacketyhack_beyond_shortdescription: Opi Rubyä perusteista lähtien
   robomind_beyond_shortdescription: Kirjoita koodia virtuaalirobotille
+  makeschool_beyond_shortdescription: Opi tekemään iPhone-peli tunnissa
   appinventor_beyond_shortdescription: Tee oma sovelluksesi! (vain Android)
   touchdevelop_beyond_shortdescription: Ohjelmoi mobiilisovelluksia suoraan puhelimeesi,
     tablettiisi tai kannettavaasi
@@ -1325,6 +1374,11 @@ fi-FI:
     omaa virtuaalista robottiaan. Tämä verkkokurssi sisältää kaiken tarvittavan: lyhyet
     esitykset, elokuvat, tietovisat ja automaattisen opastuksen/vinkit ohjelmointitehtävien
     avuksi. '
+  makeschool_beyond_longdescription: Osaatko hiukan ObjectiveC:tä? Opi iPhone-pelin
+    tekeminen tunnissa! Opastamme sinut prosessin läpi, ohjelmoimaan, testaamaan ja
+    pelaamaan pelisi täysin selaimessa, jonka jälkeen voit jakaa sen Facebookissa
+    ystävillesi kokeiltavaksi! Ei vaadi aikaisempaa kokemusta iPhonelle kehittämisestä.
+    Sinun täytyy ymmärtää mitä ovat muuttujat, metodit ja oliot.
   appinventor_beyond_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat
     sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi
     tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä
@@ -1483,12 +1537,14 @@ fi-FI:
   user_header_signin: Kirjaudu sisään
   user_header_create: 'Luo '
   user_header_applab: 'Sovelluslabra '
+  user_header_artist: 'Taiteilija '
   user_header_gamelab: Pelilabra
   user_header_playlab: Pelilabra
   user_header_dance: Tanssibileet
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Kaikki projektit...
+  user_header_view_project_gallery: Näytä projektit
   user_header_view_my_projects: Katso omia projektejasi
   applab_tile_start_tutorial: Aloita
   applab_tile_teacher_guide: Katso opettajan opas
@@ -1531,6 +1587,7 @@ fi-FI:
   hoc2018_mc_no_internet: Onko sinulla nettiyhteys?
   hoc2018_mc_download_adventurer: Lataa Minecraft seikkailijan offline-versio.
   hoc2018_mc_educators_box2_button: Lataa
+  hoc2018_mc_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
   hoc2018_mc_video_1min: 1 min
   hoc2018_mc_video_2min: 2 min
   hoc2018_mc_video_5min: 5 min
@@ -1546,6 +1603,8 @@ fi-FI:
     uudella toiminnolla! Matka Minecraftin läpi koodilla.
   hoc2018_mc_teacher_guide: Katso opettajan opas
   hoc2018_mc_minecraft_education: Minecraft koulutus
+  hoc2018_mc_short_description_shorter: Minecraft on palannut takaisin Hour of Code
+    -tunnille täysin uudella toiminnolla.
   hoc2018_dance_party_main_heading: Tanssibileet
   hoc2018_dance_create_your_own_dance_title: Luo oma Dance Party
   hoc2018_dance_party_box_title: Tanssibileet
@@ -1565,6 +1624,7 @@ fi-FI:
   hoc2018_dance_teacher_resources_tile2_button: Tietokoneeton tekeminen
   hoc2018_dance_amazon_about_future_engineer_button: Lue lisää
   hoc2018_dance_amazon_scholarship_programs_button: Liity nyt
+  page_not_found_title: Sivua ei löydy
   hoc2018_mc_thank_microsoft: Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa
     ja sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
     ja taitoja menestyä 2000-luvulla.
@@ -1575,6 +1635,7 @@ fi-FI:
   footer_donate: Lahjoita
   footer_support: Tuki
   footer_terms: Ehdot
+  ai_for_oceans_lesson_plan: tuntisuunnitelma
   ai_microsoft_thanks: Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa ja
     sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
     ja taitoja menestyä 2000-luvulla.

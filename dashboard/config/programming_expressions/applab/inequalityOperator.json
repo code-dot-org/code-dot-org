@@ -1,5 +1,6 @@
 {
-  "func": "inequalityOperator",
-  "block": "__ != __",
-  "category": "Math"
+  "key": "inequalityOperator",
+  "name": "inequalityOperator",
+  "category": "Math",
+  "syntax": "__ != __"
 }

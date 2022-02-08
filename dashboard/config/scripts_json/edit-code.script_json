@@ -2,13 +2,17 @@
   "script": {
     "name": "edit-code",
     "wrapup_video_id": 13,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:35 UTC",
+    "serialized_at": "2021-11-22 19:55:34 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "edit-code"
     }
@@ -104,23 +108,135 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "5c1b9899-fb07-4225-87f8-5a937936019d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c1b9899-fb07-4225-87f8-5a937936019d",
+        "lesson.key": "The Maze",
+        "lesson_group.key": "",
+        "script.name": "edit-code"
+      }
+    },
+    {
+      "key": "3c9acfde-380c-4f15-bb8a-8a1744267fec",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c9acfde-380c-4f15-bb8a-8a1744267fec",
+        "lesson.key": "Applab",
+        "lesson_group.key": "",
+        "script.name": "edit-code"
+      }
+    },
+    {
+      "key": "e6342efd-1320-49bc-81fd-dbeac73791a9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6342efd-1320-49bc-81fd-dbeac73791a9",
+        "lesson.key": "The Artist",
+        "lesson_group.key": "",
+        "script.name": "edit-code"
+      }
+    },
+    {
+      "key": "6d38b585-6dd4-4ea2-a7c8-dc6af31e8f83",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d38b585-6dd4-4ea2-a7c8-dc6af31e8f83",
+        "lesson.key": "Play Lab",
+        "lesson_group.key": "",
+        "script.name": "edit-code"
+      }
+    },
+    {
+      "key": "f3e8c1a8-210b-4baa-91a1-b145f282772c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3e8c1a8-210b-4baa-91a1-b145f282772c",
+        "lesson.key": "Hoc2015 Blockly",
+        "lesson_group.key": "",
+        "script.name": "edit-code"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d",
+        "lesson_activity.key": "5c1b9899-fb07-4225-87f8-5a937936019d"
+      }
+    },
+    {
+      "key": "eea745a8-b2b6-4b95-845b-c2bab55e2f8f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eea745a8-b2b6-4b95-845b-c2bab55e2f8f",
+        "lesson_activity.key": "3c9acfde-380c-4f15-bb8a-8a1744267fec"
+      }
+    },
+    {
+      "key": "62376436-c9f8-4dc1-a392-381cd2618152",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "62376436-c9f8-4dc1-a392-381cd2618152",
+        "lesson_activity.key": "e6342efd-1320-49bc-81fd-dbeac73791a9"
+      }
+    },
+    {
+      "key": "8fc88282-77a7-42b9-9c3b-94da662037b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8fc88282-77a7-42b9-9c3b-94da662037b9",
+        "lesson_activity.key": "6d38b585-6dd4-4ea2-a7c8-dc6af31e8f83"
+      }
+    },
+    {
+      "key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709",
+        "lesson_activity.key": "f3e8c1a8-210b-4baa-91a1-b145f282772c"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:MazeEC:3_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -128,7 +244,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       },
       "level_keys": [
         "blockly:MazeEC:3_1"
@@ -137,14 +254,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:MazeEC:3_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -152,7 +268,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       },
       "level_keys": [
         "blockly:MazeEC:3_2"
@@ -161,14 +278,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:MazeEC:3_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +292,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       },
       "level_keys": [
         "blockly:MazeEC:3_3"
@@ -185,14 +302,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:MazeEC:3_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -200,7 +316,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       },
       "level_keys": [
         "blockly:MazeEC:3_4"
@@ -209,14 +326,13 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Applab:ec_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -224,7 +340,8 @@
         ],
         "lesson.key": "Applab",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "eea745a8-b2b6-4b95-845b-c2bab55e2f8f"
       },
       "level_keys": [
         "blockly:Applab:ec_simple"
@@ -233,14 +350,13 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:ArtistEC:ec_1_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -248,7 +364,8 @@
         ],
         "lesson.key": "The Artist",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "62376436-c9f8-4dc1-a392-381cd2618152"
       },
       "level_keys": [
         "blockly:ArtistEC:ec_1_2"
@@ -257,14 +374,13 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:ArtistEC:ec_1_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -272,7 +388,8 @@
         ],
         "lesson.key": "The Artist",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "62376436-c9f8-4dc1-a392-381cd2618152"
       },
       "level_keys": [
         "blockly:ArtistEC:ec_1_10"
@@ -281,14 +398,13 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:StudioEC:ec_sandbox"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -296,7 +412,8 @@
         ],
         "lesson.key": "Play Lab",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "8fc88282-77a7-42b9-9c3b-94da662037b9"
       },
       "level_keys": [
         "blockly:StudioEC:ec_sandbox"
@@ -305,14 +422,13 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -320,7 +436,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_1"
@@ -329,14 +446,13 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +460,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_2"
@@ -353,14 +470,13 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -368,7 +484,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_3"
@@ -377,14 +494,13 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -392,7 +508,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_4"
@@ -401,14 +518,13 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -416,7 +532,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_5"
@@ -425,14 +542,13 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -440,7 +556,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_6"
@@ -449,14 +566,13 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -464,7 +580,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_7"
@@ -473,14 +590,13 @@
     {
       "chapter": 16,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -488,7 +604,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_8"
@@ -497,14 +614,13 @@
     {
       "chapter": 17,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +628,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_9"
@@ -521,14 +638,13 @@
     {
       "chapter": 18,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -536,7 +652,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_10"
@@ -545,14 +662,13 @@
     {
       "chapter": 19,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -560,7 +676,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_11"
@@ -569,14 +686,13 @@
     {
       "chapter": 20,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -584,7 +700,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_12"
@@ -593,14 +710,13 @@
     {
       "chapter": 21,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +724,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_13"
@@ -617,14 +734,13 @@
     {
       "chapter": 22,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -632,7 +748,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_14"
@@ -641,14 +758,13 @@
     {
       "chapter": 23,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:hoc2015_blockly_15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,7 +772,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       },
       "level_keys": [
         "blockly:Studio:hoc2015_blockly_15"
@@ -672,7 +789,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       }
     },
     {
@@ -683,7 +801,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       }
     },
     {
@@ -694,7 +813,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       }
     },
     {
@@ -705,7 +825,8 @@
         ],
         "lesson.key": "The Maze",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "d7f559a6-142f-4c6f-88ec-b87663b72d2d"
       }
     },
     {
@@ -716,7 +837,8 @@
         ],
         "lesson.key": "Applab",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "eea745a8-b2b6-4b95-845b-c2bab55e2f8f"
       }
     },
     {
@@ -727,7 +849,8 @@
         ],
         "lesson.key": "The Artist",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "62376436-c9f8-4dc1-a392-381cd2618152"
       }
     },
     {
@@ -738,7 +861,8 @@
         ],
         "lesson.key": "The Artist",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "62376436-c9f8-4dc1-a392-381cd2618152"
       }
     },
     {
@@ -749,7 +873,8 @@
         ],
         "lesson.key": "Play Lab",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "8fc88282-77a7-42b9-9c3b-94da662037b9"
       }
     },
     {
@@ -760,7 +885,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -771,7 +897,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -782,7 +909,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -793,7 +921,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -804,7 +933,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -815,7 +945,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -826,7 +957,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -837,7 +969,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -848,7 +981,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -859,7 +993,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -870,7 +1005,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -881,7 +1017,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -892,7 +1029,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -903,7 +1041,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     },
     {
@@ -914,7 +1053,8 @@
         ],
         "lesson.key": "Hoc2015 Blockly",
         "lesson_group.key": "",
-        "script.name": "edit-code"
+        "script.name": "edit-code",
+        "activity_section.key": "ee3381dd-ea0f-46c4-9b2c-1d8e3656d709"
       }
     }
   ],

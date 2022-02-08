@@ -12,7 +12,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
     section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType,
-    scriptDescription: PropTypes.string.isRequired,
+    unitDescription: PropTypes.string.isRequired,
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number
@@ -33,7 +33,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
               {this.props.scriptFriendlyName}
             </a>
           </h3>
-          <p>{this.props.scriptDescription} </p>
+          <p>{this.props.unitDescription} </p>
           <SafeMarkdown
             markdown={i18n.mapsToCSTAStandards({
               cstaLink: cstaStandardsURL

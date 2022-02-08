@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
 import {
   addAnimation,
@@ -75,6 +75,7 @@ describe('SpriteLab', () => {
         instance.onP5Setup = sinon.spy();
         instance.onIsDebuggingSpritesChange = sinon.spy();
         instance.onStepSpeedChange = sinon.spy();
+        instance.level = {};
 
         muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
       });
@@ -95,7 +96,7 @@ describe('SpriteLab', () => {
       });
 
       it('includes backgrounds if there are none', () => {
-        instance.isSpritelab = true;
+        instance.isBlockly = true;
         const initialAnimationList = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
@@ -112,7 +113,7 @@ describe('SpriteLab', () => {
       });
 
       it('does not modify the list if there is an animation in the backgrounds category', () => {
-        instance.isSpritelab = true;
+        instance.isBlockly = true;
         const initialAnimationList = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
@@ -129,7 +130,7 @@ describe('SpriteLab', () => {
       });
 
       it('does not modify the list if there is an animation that matches a background', () => {
-        instance.isSpritelab = true;
+        instance.isBlockly = true;
         const initialAnimationList = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
@@ -225,7 +226,7 @@ describe('SpriteLab', () => {
         it('does not dispatch event when animations do not change', () => {
           // Dispatch an action so the subscriber gets called
           store.dispatch(setIsRunning(true));
-          expect(eventSpy).not.to.have.beenCalled;
+          expect(eventSpy).not.to.have.been.called;
         });
       });
     });

@@ -89,7 +89,6 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     create(:script_level, script: @course_unit.script, levels: [@evaluation], lesson: @lesson_honesty)
     @user_level = create(:user_level, user: @user, script: @course_unit.script, level: @evaluation)
     @activity = create(:activity, user: @user, level: @evaluation)
-    @user_level = create(:user_level, user: @user, level: @evaluation)
   end
 
   test 'submit evaluation enrolls user in appropriate modules' do

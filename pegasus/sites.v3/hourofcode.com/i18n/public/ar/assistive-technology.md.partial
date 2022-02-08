@@ -1,21 +1,48 @@
 ---
-title: الانتهاء من أنشطة "ساعة البرمجة" باستخدام التقنية المساعدة
+title: الانتهاء من أنشطة "ساعة من البرمجة" باستخدام التقنية المساعدة
 ---
 
-# الانتهاء من أنشطة "ساعة البرمجة" باستخدام التقنية المساعدة
+<h1>الانتهاء من أنشطة "ساعة من البرمجة" باستخدام التقنية المساعدة</h1>
 
-يمكن لأي شخص تجربة أنشطة "ساعة البرمجة" أثناء الأسبوع العالمي للبرمجة وعلوم الحاسوب.
+<p>يمكن لأي شخص تجربة أنشطة "ساعة من البرمجة" أثناء الأسبوع العالمي للبرمجة وعلوم الحاسوب.</p>
 
-## استخدام قارئ الشاشة
+<h2>استخدام قارئ الشاشة</h2>
 
-إذا كنت تستخدم قارئ شاشة، فإن [البرنامج التعليمي لتعلم لغة "Quorum" للمبتدئين](https://quorumlanguage.com/hourofcode/astro1.html) أو [البرنامج التعليمي لتعلم لغة "Quorum" للطلاب الذين لديهم خلفية بسيطة في علوم الحاسوب](https://quorumlanguage.com/hourofcode/part1.html) هي برامج رائعة لبدء أنشطة "ساعة البرمجة". بدأ لغة "Quorum" كلغة مترجمة تم تصميمها في الأصل لتكون قابلة للوصول من خلال برامج قراءة الشاشة. لقد أصبحت لغة برمجة للأغراض العامة مصمَّمة لأي مستخدم. وإذا كنت تريد برامج تعليمية إضافية غير أنشطة "ساعة البرمجة"، فإن فريق "Quorum" لديه أدوات ومناهج إضافية.
+<p>The Hour of Code activities page now includes a <a href="https://hourofcode.com/us/learn?platform=screenreader" target="_blank">filter for activities compatible with screen readers</a>.</p>
 
-[![برنامج تعليمي للمبتدئين](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![برنامج تعليمي للطلاب الذين لديهم خلفية بسيطة في علوم الحاسوب](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+<p>If you use a screen reader, the <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">Quorum tutorial for beginners</a> or the <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">Quorum tutorial for comfortable students</a> are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. وإذا كنت تريد برامج تعليمية إضافية غير أنشطة "ساعة من البرمجة"، فإن فريق "Quorum" لديه أدوات ومناهج إضافية.</p>
 
-## دورات Code.org بدون صوت
+<p>If you use a screen reader and are interested in robotics, try the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">Dash Joins a Dance Circle activity</a> (for grades K-5) or the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">Dash Joins a Dance Circle with Functions activity</a> (for grades 6-8) from Lauren Milne.</p>
 
-يمكن استخدام[البرامج التعليمية على موقع Code.org](https://studio.code.org/courses) مع أو بدون صوت. جميع مقاطع الفيديو تحتوي على تعليقات توضيحية.
+<br />
 
-## البرمجة الثنائية
+<div class="row">
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/tutorials/hoc2017/quorum_astronomy.jpg" alt="Tutorial for beginners">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/quorum.jpg" alt="Tutorial for comfortable students">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225//tutorials/hoc2021/milne_dash.jpg" alt="Robotics tutorial for beginners">
+        </a>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">For grades K-5</a>
+        <br>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">For grades 6-8</a>
+    </div>
+</div>
 
-البرمجة الثنائية هي أداة يستخدمها علماء الحاسوب لحل المشاكل كثنائي أو كفريق. حاول العمل على تحديات "ساعة البرمجة" مع صديق أو زميل في الفصل الدراسي. لا تنس [مشاهدة هذا الفيديو](https://www.youtube.com/watch?v=vgkahOzFH2Q) لمعرفة أفضل التقنيات للبرمجة الثنائية.
+<div style="clear: both"></div>
+
+<h2>دورات Code.org بدون صوت</h2>
+
+<p>The <a href="https://studio.code.org/courses" target="_blank">Code.org tutorials</a> can all be used with or without sound. All the videos have captions.</p>
+
+<h2>البرمجة الثنائية</h2>
+
+<p>Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">check out this video</a> to learn the best techniques for pair programming.</p>

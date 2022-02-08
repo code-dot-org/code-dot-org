@@ -4,7 +4,13 @@ import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);
-  assert.deepEqual(expected.playbackOptions, actual.playbackOptions);
+  const playbackOptions = ['volume', 'loop', 'forceHTML5', 'allowHTML5Mobile'];
+  playbackOptions.forEach(opt => {
+    assert.deepEqual(
+      expected.playbackOptions[opt],
+      actual.playbackOptions[opt]
+    );
+  });
   assert.deepEqual(expected.profaneWords, actual.profaneWords);
   assert.equal(expected.error, actual.error);
 };

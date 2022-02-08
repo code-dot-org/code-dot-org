@@ -1,6 +1,6 @@
 {
-  "func": "play",
+  "key": "play",
+  "name": "play",
   "category": "Animations",
-  "modeOptionName": "anim_play",
-  "noAutocomplete": true
+  "syntax": "play"
 }

@@ -24,7 +24,7 @@ La Hora del Código es una introducción de una hora a las ciencias de la comput
 - [Cuando organizas un evento](#hosting-an-event)
 - [Haz correr la voz sobre la Hora del Código](#promote-hour-of-code)
 - [Más formas de apoyar la Hora del Código](#support-hour-of-code)
-- [Preguntas frecuentes para voluntarios](#faq)
+- [Preguntas frecuentes para voluntarios](#support-hour-of-code)
 
 Ya sea que te ofrezcas como voluntario de forma virtual, en persona o con tu empresa, tus esfuerzos pueden tener un gran impacto en la forma en que los estudiantes ven las ciencias de la computación y su propio potencial. Consulta nuestra [guía de participación si aún tienes preguntas]({{ localized_files/hoc_volunteer_toolkit }}).
 
@@ -129,7 +129,7 @@ Trabaja con la escuela o el docente para discutir qué tiene más sentido. ¡Hem
 #### Muestra de agenda:
 
 | Tiempo | Tema de la agenda | | \---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | | 1-5 minutos | Muestra un [video inspirador](https://hourofcode.com/us/promote/resources#videos)|  
-| 5-10 minutos | Preséntate y aprende más sobre los estudiantes: ¿Dónde trabajas, qué haces y qué es lo que más amas de su trabajo? ¿Qué o quién te inspiró? ¿Cómo te interesaste por las ciencias de la computación? ¿Tuviste un mentor? Haz preguntas a los estudiantes y asigna tiempo a una sesión de preguntas y respuestas. |  
+| 5-10 minutos | Preséntate y aprende más sobre los estudiantes: ¿Dónde trabajas, qué haces y qué es lo que más amas de tu trabajo? ¿Qué o quién te inspiró? ¿Cómo te interesaste por las ciencias de la computación? ¿Tuviste un mentor? Haz preguntas a los estudiantes y asigna tiempo a una sesión de preguntas y respuestas. |  
 | 30-60 minutos | ¡Código! Si tu evento es en persona, este es el momento de responder preguntas y guiar a los estudiantes a través de desafíos exigentes. Trata de no darles la solución abiertamente; en su lugar, haz preguntas a los estudiantes para que puedan responder por sí mismos qué salió mal y anímalos a hacerse preguntas unos a otros. Si te ofreces como voluntario virtualmente, trabaja con el docente sobre cuál podría ser el mejor abordaje. Puede que tenga más sentido regresar al final de la sesión para ver el progreso de los estudiantes. | | |1-3 minutos | Agradece a todos y comparte palabras de despedida inspiradoras. Reparte cualquiera de los materiales promocionales de tu empresa ([los stickers](#celebrate) son geniales). | | <br />
 
 #### Otras ideas para agregar a tu evento
@@ -141,7 +141,8 @@ Trabaja con la escuela o el docente para discutir qué tiene más sentido. ¡Hem
 
 ### 3. Planifica tus necesidades tecnológicas
 
-[![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
+[![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg
+)]({{ urls/learn }})
 
 #### Dispositivos:
 
@@ -149,12 +150,12 @@ Para tener una mejor experiencia con la Hora del Código, se recomienda contar c
 
 - **Prueba actividades** en computadoras o dispositivos. Asegúrate de que funcionen correctamente en navegadores con sonido y video.
 - **¿No tienes suficientes dispositivos?** Utiliza la programación en pareja. Al formar equipos, los estudiantes se ayudan entre sí y dependen menos del docente. Además verán que las ciencias de la computación son una actividad social y colaborativa.
-- **Proporciona auriculares** a tus participantes o pídeles que traigan los suyos si van a probar tutoriales que funcionan mejor con sonidos.
+- **Proporciona audífonos** a tus participantes o pídeles que traigan los suyos si van a probar tutoriales que funcionan mejor con sonidos.
 - **¿Tienes poco ancho de banda**? Planifica mostrar videos al principio del evento, para que cada participante no descargue sus propios videos. O prueba las actividades desconectadas/sin conexión.
 
 #### Eventos virtuales:
 
-Si tu evento va a ser virtual, deberás decidir sobre tu plataforma de conferencias (y probarla) antes de tu evento. Esto puede afectar la cantidad de estudiantes con los que te sientes cómodo participando, por lo que es mejor determinar esto antes de invitar a una clase o promocionar tu evento. Para obtener ideas sobre cómo ejecutar una Hora del Código remota, lee nuestros [consejos para un evento virtual de la Hora del Código](https://hourofcode.com/us/how-to/virtual).
+Si tu evento va a ser virtual, deberás decidir sobre tu plataforma de conferencias (y pruebala) antes de tu evento. Esto puede afectar la cantidad de estudiantes con los que te sientes cómodo participando, por lo que es mejor determinar esto antes de invitar a una clase o promocionar tu evento. Para obtener ideas sobre cómo ejecutar una Hora del Código remota, lee nuestros [consejos para un evento virtual de la Hora del Código](https://hourofcode.com/us/how-to/virtual).
 
 ### 4. Elige una actividad
 
@@ -162,7 +163,8 @@ Ofrecemos una variedad de tutoriales divertidos guiados por estudiantes para tod
 
 <a href="https://hourofcode.com/us/learn">Explora las actividades</a> y decide con anticipación si deseas elegir un solo tutorial para todos tus invitados o dejar que cada niño elija el suyo. **Todas las actividades de la Hora del Código** requieren un tiempo de preparación mínimo y son autoguiadas, lo que permite a los participantes trabajar a su propio ritmo y nivel de habilidad.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-700/tutorials.png
+)]({{ urls/learn }})
 
 Cuando tengas una hoja de ruta sólida para tu evento, puedes comenzar a invitar a estudiantes, una escuela o la comunidad en general. Recomendamos comenzar con una escuela local con la que tengas una relación o [navegar por nuestro mapa](https://hourofcode.com/us/map) de eventos de la Hora del Código.
 
@@ -170,7 +172,8 @@ Cuando tengas una hoja de ruta sólida para tu evento, puedes comenzar a invitar
 
 ### 5. Celebra
 
-[![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
+[![](/images/fit-600/Marketing/2018_HoC-391.jpg
+)]({{ urls/learn }})
 
 Cuando los estudiantes o invitados hayan completado su Hora del Código, será hora de celebrar su éxito. Estas son algunas ideas para hacer que tu evento sea aún más divertido:
 
@@ -225,7 +228,8 @@ Ayuda a crear conciencia sobre el movimiento de las ciencias de la computación 
 
 ## Más formas de apoyar la Hora del Código
 
-[![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
+[![](/images/fit-600/Marketing/girl-strong-coding.png
+)]({{ urls/learn }})
 
 - Difunde la conciencia exhibiendo los materiales promocionales de [ Code.org ](https://store.code.org/) (todos los ingresos se destinan a ayudar a que más estudiantes obtengan acceso a la educación en las ciencias de la computación).
 - Elige beneficiar a Code.org cuando compres en [AmazonSmile](https://code.org/donate/amazonsmile). 

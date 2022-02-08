@@ -1,0 +1,44 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "makeBurst",
+    "inline": true,
+    "blockText": "create {EFFECT} effect with {NUM} {ANIMATION_NAME} sprites",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "NUM",
+        "type": "Number"
+      },
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "burst",
+            "\"burst\""
+          ],
+          [
+            "pop",
+            "\"pop\""
+          ],
+          [
+            "rain",
+            "\"rain\""
+          ],
+          [
+            "spiral",
+            "\"spiral\""
+          ]
+        ]
+      }
+    ]
+  }
+}

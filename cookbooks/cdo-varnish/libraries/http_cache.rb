@@ -18,14 +18,23 @@ class HttpCache
   ].freeze
 
   # A list of script levels that should not be cached, even though they are
-  # in a cacheable script, because they are project-backed.
-  UNCACHED_SCRIPT_LEVEL_PATHS = [
+  # in a cacheable script, because teachers need to be able to review them.
+  # Currently, teachers are not able to review student work on cached levels.
+  UNCACHED_UNIT_LEVEL_PATHS = [
     '/s/dance/lessons/1/levels/13',
-    '/s/dance-2019/lessons/1/levels/10'
+    '/s/dance-2019/lessons/1/levels/10',
+    '/s/poem-art-2021/lessons/1/levels/9',
+    '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
+    '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
+    '/s/hello-world-food-2021/lessons/1/levels/11',
+    '/s/hello-world-animals-2021/lessons/1/levels/11',
+    '/s/hello-world-retro-2021/lessons/1/levels/11',
+    '/s/hello-world-emoji-2021/lessons/1/levels/11',
+    '/s/outbreak/lessons/1/levels/10'
   ]
 
   # A map from script name to script level URL pattern.
-  CACHED_SCRIPTS_MAP = %w(
+  CACHED_UNITS_MAP = %w(
     aquatic
     starwars
     starwarsblocks
@@ -39,6 +48,12 @@ class HttpCache
     dance
     dance-2019
     oceans
+    poem-art-2021
+    hello-world-food-2021
+    hello-world-animals-2021
+    hello-world-retro-2021
+    hello-world-emoji-2021
+    outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/lessons/*"]
@@ -49,7 +64,7 @@ class HttpCache
   ).freeze
 
   def self.cached_scripts
-    CACHED_SCRIPTS_MAP.keys
+    CACHED_UNITS_MAP.keys
   end
 
   ALLOWED_WEB_REQUEST_HEADERS = %w(
@@ -124,7 +139,7 @@ class HttpCache
               /amazon-future-engineer*
               /create-company-profile*
               /edit-company-profile*
-              /teacher-dashboard*
+              /review-hociyskvuwa*
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
               /pd-program-registration*
@@ -189,6 +204,13 @@ class HttpCache
             cookies: allowlisted_cookies
           },
           {
+            # Pass through cookies when requesting or deleting starter assets, as user authentication
+            # is required when deleting assets.
+            path: '/level_starter_assets/*',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies
+          },
+          {
             # Pass through the user agent to the /api/user_progress and
             # /milestone actions so the activity monitor can track script
             # completion by user agent. These responses are never cached so this
@@ -203,14 +225,14 @@ class HttpCache
           # Some script levels in cacheable scripts are project-backed and
           # should not be cached in CloudFront. Use CloudFront Behavior
           # precedence rules to not cache these paths, but all paths in
-          # CACHED_SCRIPTS_MAP that don't match this path will be cached.
+          # CACHED_UNITS_MAP that don't match this path will be cached.
           {
-            path: UNCACHED_SCRIPT_LEVEL_PATHS,
+            path: UNCACHED_UNIT_LEVEL_PATHS,
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },
           {
-            path: CACHED_SCRIPTS_MAP.values,
+            path: CACHED_UNITS_MAP.values,
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies
           },
@@ -231,7 +253,7 @@ class HttpCache
           },
           {
             # For static-asset paths, don't forward any cookies or additional headers.
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/*),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/* /media),
             headers: [],
             cookies: 'none'
           },
@@ -270,11 +292,11 @@ class HttpCache
   end
 
   def self.uncached_script_level_path?(script_level_path)
-    UNCACHED_SCRIPT_LEVEL_PATHS.include?(script_level_path)
+    UNCACHED_UNIT_LEVEL_PATHS.include?(script_level_path)
   end
 
   # Return true if the levels for the given script name can be publicly cached by proxies.
   def self.allows_public_caching_for_script(script_name)
-    CACHED_SCRIPTS_MAP.include?(script_name)
+    CACHED_UNITS_MAP.include?(script_name)
   end
 end

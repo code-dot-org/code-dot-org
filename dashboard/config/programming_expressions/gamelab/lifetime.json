@@ -1,6 +1,6 @@
 {
-  "func": "lifetime",
+  "key": "lifetime",
+  "name": "lifetime",
   "category": "Sprites",
-  "modeOptionName": "*.lifetime",
-  "type": "property"
+  "syntax": "lifetime"
 }

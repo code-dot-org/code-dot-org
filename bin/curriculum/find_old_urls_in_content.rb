@@ -5,7 +5,7 @@ def main
   current_year = '2021'
 
   course_names = ['csd-' + current_year, 'csp-' + current_year]
-  course_scripts = course_names.map {|name| UnitGroup.find_by(name: name)}.map(&:default_scripts).flatten
+  course_scripts = course_names.map {|name| UnitGroup.find_by(name: name)}.map(&:default_units).flatten
 
   script_names = ['coursea-' + current_year, 'courseb-' + current_year, 'coursec-' + current_year,
                   'coursed-' + current_year, 'coursee-' + current_year, 'coursef-' + current_year,

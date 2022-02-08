@@ -1,13 +1,14 @@
 {
-  "func": "pow",
+  "key": "pow",
+  "name": "pow",
   "category": "Math",
-  "paletteParams": [
-    "n",
-    "e"
+  "palette_params": [
+    {
+      "name": "n"
+    },
+    {
+      "name": "e"
+    }
   ],
-  "params": [
-    "10",
-    "2"
-  ],
-  "type": "value"
+  "syntax": "pow(n, e)"
 }

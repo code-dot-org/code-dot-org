@@ -5,14 +5,14 @@ import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
 export default storybook => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,
       sectionProgress,
-      scriptSelection
+      unitSelection
     })
   );
 

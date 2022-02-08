@@ -1,17 +1,20 @@
 {
-  "func": "setBlue",
+  "key": "setBlue",
+  "name": "setBlue",
   "category": "Canvas",
-  "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "b"
+  "palette_params": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "b"
+    }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0",
-    "255"
-  ],
-  "dontMarshal": true
+  "syntax": "setBlue(imgData, x, y, b)"
 }

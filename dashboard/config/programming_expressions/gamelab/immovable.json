@@ -1,7 +1,6 @@
 {
-  "func": "immovable",
+  "key": "immovable",
+  "name": "immovable",
   "category": "Sprites",
-  "modeOptionName": "*.immovable",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "immovable"
 }

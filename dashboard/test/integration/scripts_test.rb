@@ -47,4 +47,25 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     assert_select "#locked-lesson", 1
     assert_select "#locked-lesson[data-hidden]", 1
   end
+
+  test 'assigned student can follow script family redirect' do
+    unit = create(
+      :script, name: 'coursez-2020', family_name: 'coursez', version_year: 'unversioned', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(unit)
+
+    teacher = create :teacher
+    section = create :section, teacher: teacher, script: unit
+    student = create :student
+    create :follower, section: section, student_user: student
+
+    sign_in student
+
+    get "/s/#{unit.family_name}"
+    assert_response :redirect
+    assert_match %r{/s/#{unit.name}$}, @response.headers['Location']
+    follow_redirect!
+    assert_response :success
+  end
 end

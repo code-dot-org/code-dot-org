@@ -1,6 +1,6 @@
 {
-  "func": "mouseX",
+  "key": "mouseX",
+  "name": "mouseX",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "mouseX"
 }

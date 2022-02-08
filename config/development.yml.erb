@@ -35,12 +35,19 @@ db_writer: 'mysql://root@localhost/'
 
 custom_error_response: false
 
-# Used for the exporting teacher enrollment data to a gsheet
-enrollments_summer_2020_gsheet_key:
+# Used for exporting the workshop data to a gsheet
+applications_2022_2023_gsheet_key: !Secret
+
+# Used for decoding certain protected level sources
+properties_encryption_key: !Secret
 
 javabuilder_private_key: !Secret
 javabuilder_key_password: !Secret
 
+pardot_private_key: !Secret
+
 redshift_host: !Secret
 redshift_password: !Secret
 redshift_username: !Secret
+
+slack_bot_token: !Secret

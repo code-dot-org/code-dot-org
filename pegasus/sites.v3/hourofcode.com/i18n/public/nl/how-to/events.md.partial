@@ -6,62 +6,62 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Hoe een 'Hour of Code'-vergadering of evenement te organiseren
 
-### Get your entire school or community involved in an Hour of Code!
+### Laat uw hele school of gemeenschap deelnemen aan een 'Hour of Code'. 
 
 * * *
 
-## 1. Prepare for your event
+## 1. Bereid uw evenement voor
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Bepaal een locatie, datum en tijd
+- Stuur [een brief](https://hourofcode.com/promote/resources#sample-emails) naar uw burgemeester, parlementslid, commissaris van de koning of invloedrijke zakenman en nodig hen uit te spreken. Raadpleeg onze [Gebruiksaanwijzing toolkit]({{ localized_files/elected_official }}) als u een gekozen functionaris als gast laat optreden tijdens een 'Hour of Code' voor meer informatie.
+- Nodig de media, d.w.z. een locale nieuwszender, krant en bloggers die onderwijs/technologie als onderwerp hebben uit. Raadpleeg onze [persmap]({{ promote/press_kit_url }}) voor hulp.
 
-## 2. During your event
+## 2. Gedurende uw evenement
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Laat uw evenement beginnen met een van onze [inspirerende video's]({{ promote/videos }}).
+- Geef inleiding waarin een overzicht van het belang van informatica wordt gegeven, en gebruik daarbij deze [statistieken en infographics]({{ promote/stats_url }}).   
       
     
 - ** Andere ideeën voor evenementen **: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Nodig een locale marktleider uit om zijn of haar werk met betrekking tot informatica te bespreken.
+    - Nodig een locale politicus uit en laat studenten hem of haar leren hoe te programmeren.
+    - Laat een groep studenten demonstratie geven van een computerloze activiteit. 
+    - Laat een groep studenten de schooldirecteur of een groep leraren leren hoe ze moeten programmeren. 
+    - Als uw school reeds informatica onderwijst, laat uw studenten dan projecten demonstreren.
 
-## 3. Share how it went
+## 3. Deel hoe het ging
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Deel foto's van uw evenement op Facebook en Twitter en gebruik daarbij de hashtag **#HourOfCode**.
 
 * * *
 
-## Example plan for a school assembly or event
+## Host een Family Code Night met de 'Hour of Code' en nodig ouders uit om deel te nemen.
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Overweeg een evenement voor de lage klassen te hosten en nodig ouders uit mee te doen met hun kinderen met een uurtje informatica. Dit is een geweldige manier om de grotere gemeenschap erbij te betrekken en steun van ouders aan te moedigen voor informatica bij u op school. Onze partners van Family Code Night hebben een alles-in-een evenementenkit gecreëerd compleet met een checklist, script voor de presentator, uitnodigingen per e-mail, posters, powerpoints, en meer om uw eigen evenement te creëren. [Klik hier om de evenementenkit te downloaden](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## Voorbeeld van een vergadering of evenement op school
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Evenement:** Kickoff-vergadering van de informaticaweek voor de hele school.
+
+**Datum:**{{ campaign_date/start_short }} (start van de informaticaweek)
+
+**Tijd** Gedurende de schooldag. Het liefst in de ochtenduren. Ongeveer 1 uur.
+
+**Locatie:** Vergaderingzaal van de school (bv. theater, sportzaal, cafetaria)
 
 ## Programma
 
-| Tijdstip    | Actie                                                                                                                                 |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 10:15-10:30 | Speciale gasten praten over hun achtergrond en welke belangrijke rol programmeren in hun alledaagse leven heeft.                      |
-| 10:30-10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!             |
-| 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                |
-| 11:00-11:05 | De leraar die het evenement heeft georganiseerd sluit af.                                                                             |
+| Tijdstip    | Actie                                                                                                                                                                 |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 | Begin met een van onze [Inspirerende video's]({{ promote/videos }}).                                                                                                  |
+| 10:05-10:15 | De schooldirecteur geeft in inleiding waarin het belang van informatica wordt benadrukt. Gebruik deze [statistieken en infographics]({{ promote/stats_url }}).        |
+| 10:15-10:30 | Speciale gasten praten over hun achtergrond en welke belangrijke rol informatica in hun alledaagse leven speelt.                                                      |
+| 10:30-10:40 | Studenten demonstreren een 'Hour of Code' voor de school. Leuke wending: laat hen de schooldirecteur, politicus of andere studenten leren hoe ze moeten programmeren. |
+| 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                                                |
+| 11:00-11:05 | De leraar die het evenement heeft georganiseerd sluit af.                                                                                                             |
 
 {{ signup_button }}

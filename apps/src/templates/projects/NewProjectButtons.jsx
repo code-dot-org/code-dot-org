@@ -109,6 +109,10 @@ const PROJECT_INFO = {
   dance: {
     label: i18n.projectTypeDance(),
     thumbnail: '/shared/images/fill-70x70/courses/logo_dance.png'
+  },
+  poetry: {
+    label: i18n.projectTypePoetry(),
+    thumbnail: '/shared/images/fill-70x70/courses/logo_poetry.png'
   }
 };
 
@@ -142,6 +146,7 @@ class NewProjectButtons extends React.Component {
                     <img
                       style={thumbnailStyle}
                       src={PROJECT_INFO[projectType].thumbnail}
+                      alt={PROJECT_INFO[projectType].label}
                     />
                     <div style={styles.label}>
                       {PROJECT_INFO[projectType].label}

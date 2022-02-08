@@ -955,12 +955,20 @@ in-tl:
   coursed-2020_name: crwdns2370236:0crwdne2370236:0
   coursee-2020_name: crwdns2370238:0crwdne2370238:0
   coursef-2020_name: crwdns2370240:0crwdne2370240:0
+  coursea-2021_name: crwdns2688474:0crwdne2688474:0
+  courseb-2021_name: crwdns2688476:0crwdne2688476:0
+  coursec-2021_name: crwdns2688478:0crwdne2688478:0
+  coursed-2021_name: crwdns2688480:0crwdne2688480:0
+  coursee-2021_name: crwdns2688482:0crwdne2688482:0
+  coursef-2021_name: crwdns2688484:0crwdne2688484:0
   express-2018_name: crwdns135969:0crwdne135969:0
   pre-express-2018_name: crwdns135970:0crwdne135970:0
   express-2019_name: crwdns1625442:0crwdne1625442:0
   pre-express-2019_name: crwdns1625444:0crwdne1625444:0
   express-2020_name: crwdns2370242:0crwdne2370242:0
   pre-express-2020_name: crwdns2370244:0crwdne2370244:0
+  express-2021_name: crwdns2688486:0crwdne2688486:0
+  pre-express-2021_name: crwdns2688488:0crwdne2688488:0
   csd2_name: crwdns2066990:0crwdne2066990:0
   csd3_name: crwdns2043992:0crwdne2043992:0
   accelerated_name: crwdns2041128:0crwdne2041128:0
@@ -1069,6 +1077,12 @@ in-tl:
   coursed-2020_gradelevel: crwdns2485836:0crwdne2485836:0
   coursee-2020_gradelevel: crwdns2485838:0crwdne2485838:0
   coursef-2020_gradelevel: crwdns2485840:0crwdne2485840:0
+  coursea-2021_gradelevel: crwdns2710499:0crwdne2710499:0
+  courseb-2021_gradelevel: crwdns2710501:0crwdne2710501:0
+  coursec-2021_gradelevel: crwdns2710503:0crwdne2710503:0
+  coursed-2021_gradelevel: crwdns2710505:0crwdne2710505:0
+  coursee-2021_gradelevel: crwdns2710507:0crwdne2710507:0
+  coursef-2021_gradelevel: crwdns2710509:0crwdne2710509:0
   accelerated_gradelevel: crwdns56094:0crwdne56094:0
   codeorg_platformtext: crwdns21807:0crwdne21807:0
   codeintl_platformtext: crwdns23749:0crwdne23749:0
@@ -1201,6 +1215,12 @@ in-tl:
   coursed-2020_shortdescription_congrats: crwdns2485706:0crwdne2485706:0
   coursee-2020_shortdescription_congrats: crwdns2485708:0crwdne2485708:0
   coursef-2020_shortdescription_congrats: crwdns2485710:0crwdne2485710:0
+  coursea-2021_shortdescription_congrats: crwdns2688490:0crwdne2688490:0
+  courseb-2021_shortdescription_congrats: crwdns2688492:0crwdne2688492:0
+  coursec-2021_shortdescription_congrats: crwdns2688494:0crwdne2688494:0
+  coursed-2021_shortdescription_congrats: crwdns2688496:0crwdne2688496:0
+  coursee-2021_shortdescription_congrats: crwdns2688498:0crwdne2688498:0
+  coursef-2021_shortdescription_congrats: crwdns2688500:0crwdne2688500:0
   codeorg_longdescription: crwdns21574:0crwdne21574:0
   codeintl_longdescription: crwdns23751:0crwdne23751:0
   thinkersmithspanish_longdescription: crwdns25939:0crwdne25939:0
@@ -1707,6 +1727,12 @@ in-tl:
   hoc2020_mc_available_mee: crwdns2471966:0crwdne2471966:0
   hoc2020_mc_mee_title: crwdns2471968:0crwdne2471968:0
   hoc2020_mc_mee_description: crwdns2471970:0crwdne2471970:0
+  hoc2021_mc_mee_title: crwdns2711029:0crwdne2711029:0
+  hoc2021_mc_mee_description: crwdns2711031:0crwdne2711031:0
+  hoc2021_mc_mee_villages_title: crwdns2711033:0crwdne2711033:0
+  hoc2021_mc_mee_villages_description: crwdns2711035:0crwdne2711035:0
+  hoc2021_mc_mee_ai_title: crwdns2711037:0crwdne2711037:0
+  hoc2021_mc_mee_ai_description: crwdns2711039:0crwdne2711039:0
   footer_powered_by_aws: crwdns2474732:0crwdne2474732:0
   footer_built_on_github: crwdns2474734:0crwdne2474734:0
   codebytes_skinny_banner_title: crwdns2475102:0crwdne2475102:0
@@ -1769,3 +1795,6 @@ in-tl:
   ai_cognimates: crwdns2571378:0crwdne2571378:0
   ai_cognimates_description: crwdns2571380:0crwdne2571380:0
   ai_try_activity: crwdns2571382:0crwdne2571382:0
+  outbreak_tile_title: crwdns2711041:0crwdne2711041:0
+  outbreak_tile_subtitle: crwdns2711043:0crwdne2711043:0
+  outbreak_tile_alt: crwdns2715287:0crwdne2715287:0

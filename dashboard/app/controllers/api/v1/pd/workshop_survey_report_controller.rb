@@ -88,7 +88,7 @@ module Api::V1::Pd
       # 2 separate routes for CSF deep dive (201) workshop and summer/academic year workshop.
       # We don't compute survey result roll-up for CSF deep dive.
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
-      return create_generic_survey_report if [COURSE_CSP, COURSE_CSD].include?(@workshop.course)
+      return create_generic_survey_report if [COURSE_CSP, COURSE_CSD, COURSE_CSA].include?(@workshop.course)
 
       raise 'Action generic_survey_report should not be used for this workshop'
     rescue => e

@@ -1,7 +1,6 @@
 {
-  "func": "restitution",
+  "key": "restitution",
+  "name": "restitution",
   "category": "Sprites",
-  "modeOptionName": "*.restitution",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "restitution"
 }

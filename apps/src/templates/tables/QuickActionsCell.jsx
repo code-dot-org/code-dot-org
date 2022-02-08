@@ -54,8 +54,7 @@ export default class QuickActionsCell extends Component {
   };
 
   // Menu closed
-  beforeClose = (_, resetPortalState) => {
-    resetPortalState();
+  onClose = () => {
     this.setState({
       open: false,
       canOpen: true
@@ -117,7 +116,7 @@ export default class QuickActionsCell extends Component {
         <PopUpMenu
           targetPoint={targetPoint}
           isOpen={this.state.open}
-          beforeClose={this.beforeClose}
+          onClose={this.onClose}
           showTail={false}
         >
           {this.props.children}

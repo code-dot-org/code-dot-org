@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class BubbleChoice < DSLDefined
@@ -33,9 +34,11 @@ class BubbleChoice < DSLDefined
     description
   )
 
+  ALPHABET = ('a'..'z').to_a
+
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
 
@@ -46,8 +49,9 @@ class BubbleChoice < DSLDefined
   end
 
   # Returns all of the sublevels for this BubbleChoice level in order.
+  # TODO: replace calls to this method in the codebase
   def sublevels
-    Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
+    child_levels.sublevel
   end
 
   def sublevel_at(index)
@@ -120,15 +124,13 @@ class BubbleChoice < DSLDefined
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
-      alphabet = ('a'..'z').to_a
-
       level_info.merge!(
         {
           id: level.id.to_s,
           description: level.try(:bubble_choice_description),
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
-          letter: alphabet[index],
+          letter: ALPHABET[index],
           icon: level.try(:icon)
         }
       )
@@ -141,16 +143,17 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
-        level_info[:perfect] = UserLevel.find_by(
+        user_level = UserLevel.find_by(
           level: level,
           script: script_level.try(:script),
           user_id: user_id
-          )&.perfect?
-        level_info[:status] = if level_info[:perfect]
-                                SharedConstants::LEVEL_STATUS.perfect
-                              else
-                                SharedConstants::LEVEL_STATUS.not_tried
-                              end
+          )
+        level_info[:perfect] = user_level&.perfect?
+        level_info[:status] = activity_css_class(user_level)
+
+        level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
+        level_info[:teacher_feedback_review_state] = level_feedback&.review_state
+        level_info[:exampleSolutions] = script_level.get_example_solutions(level, User.find_by(id: user_id)) if script_level
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.
@@ -170,19 +173,21 @@ class BubbleChoice < DSLDefined
     summary
   end
 
-  # Returns the sublevel for a user that has the highest best_result.
-  # @param [User]
-  # @return [Integer]
-  def best_result_sublevel(user, script)
-    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
-    ul&.level
+  # Determine which sublevel's status to display in our progress bubble.
+  # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
+  # progress for sublevel that has the best result
+  def get_sublevel_for_progress(student, script)
+    keep_working_level = keep_working_sublevel(student, script)
+    return keep_working_level if keep_working_level.present?
+
+    return best_result_sublevel(student, script)
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
   # @param [String] level_name. The name of the sublevel.
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
   def self.parent_levels(level_name)
-    where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
+    includes(:child_levels).where(child_levels_levels: {name: level_name}).to_a
   end
 
   def supports_markdown?
@@ -196,17 +201,54 @@ class BubbleChoice < DSLDefined
   def clone_with_suffix(new_suffix, editor_experiment: nil)
     level = super(new_suffix, editor_experiment: editor_experiment)
 
-    new_sublevel_names = sublevels.map do |sublevel|
-      sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
-    end
-
-    update_params = {
-      properties: {
-        sublevels: new_sublevel_names
-      }
-    }
-    level.update!(update_params)
     level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
     level
+  end
+
+  def self.setup(data)
+    sublevel_names = data[:properties].delete(:sublevels)
+    level = super(data)
+    level.setup_sublevels(sublevel_names)
+    level
+  end
+
+  def setup_sublevels(sublevel_names)
+    # if our existing sublevels already match the given names, do nothing
+    return if sublevels.map(&:name) == sublevel_names
+
+    # otherwise, update sublevels to match
+    levels_child_levels.sublevel.destroy_all
+    Level.where(name: sublevel_names).each do |new_sublevel|
+      ParentLevelsChildLevel.create!(
+        child_level: new_sublevel,
+        kind: ParentLevelsChildLevel::SUBLEVEL,
+        parent_level: self,
+        position: sublevel_names.index(new_sublevel.name)
+      )
+    end
+
+    reload
+  end
+
+  private
+
+  # Returns the sublevel for a user that has the highest best_result.
+  # @param [User]
+  # @param [Script]
+  # @return [Level]
+  def best_result_sublevel(user, script)
+    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
+    ul&.level
+  end
+
+  def keep_working_sublevel(user, script)
+    # get latest feedback on sublevels where keepWorking is true
+    level_ids = sublevels.map(&:id)
+    latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
+
+    if latest_feedbacks.any?
+      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
+      return keep_working_feedback&.level
+    end
   end
 end

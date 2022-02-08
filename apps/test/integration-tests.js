@@ -1,9 +1,6 @@
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import {
-  throwOnConsoleErrorsEverywhere,
-  throwOnConsoleWarningsEverywhere
-} from './util/throwOnConsole';
+import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import stubFirehose from './util/stubFirehose';
 
@@ -11,7 +8,12 @@ var integrationContext = require.context('./integration', false, /Tests?\.js$/);
 
 describe('integration tests', function() {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
+
+  // TODO: Add warnings back once redux/react-redux and react-inspector have been upgraded.
+  // redux: https://codedotorg.atlassian.net/browse/XTEAM-376
+  // react-inspector: https://codedotorg.atlassian.net/browse/XTEAM-375
+  // throwOnConsoleWarningsEverywhere();
+
   clearTimeoutsBetweenTests();
   stubFirehose();
   integrationContext

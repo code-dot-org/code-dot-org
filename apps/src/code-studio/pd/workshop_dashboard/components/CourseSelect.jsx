@@ -8,7 +8,11 @@ import {
   ProgramManager,
   WorkshopAdmin
 } from '../permission';
-import {Courses} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  Courses,
+  ActiveCourses,
+  ArchivedCourses
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
  * A dropdown used on the Workshop form for selecting a course.
@@ -25,7 +29,11 @@ export default function CourseSelect({
   validation,
   onChange
 }) {
-  const allowedCourses = getAllowedCourses(permission, facilitatorCourses);
+  const allowedCourses = getAllowedCourses(
+    permission,
+    facilitatorCourses,
+    course
+  );
   return (
     <FormGroup validationState={validation.style.course}>
       <ControlLabel>Course</ControlLabel>
@@ -56,13 +64,17 @@ CourseSelect.propTypes = {
   permission: PermissionPropType.isRequired,
   readOnly: PropTypes.bool,
   inputStyle: PropTypes.object,
-  validation: PropTypes.object,
+  validation: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired
 };
 
-function getAllowedCourses(permission, facilitatorCourses) {
+export function getAllowedCourses(permission, facilitatorCourses, course) {
   if (permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
-    return Courses;
+    if (ArchivedCourses.includes(course)) {
+      return Courses;
+    } else {
+      return ActiveCourses;
+    }
   } else if (permission.has(Facilitator)) {
     return facilitatorCourses;
   }

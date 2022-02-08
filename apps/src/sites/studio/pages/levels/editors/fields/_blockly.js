@@ -10,7 +10,7 @@ if (window.Blockly && !data.uses_droplet) {
   window.Blockly.assetUrl = path => `/assets/${path}`;
   Blockly.Css.inject(document);
   let blocksLocation = data.app;
-  if (data.app === 'spritelab') {
+  if (data.app === 'spritelab' || data.app === 'poetry') {
     blocksLocation = 'p5lab/spritelab';
   }
   const appBlocks = require('@cdo/apps/' + blocksLocation + '/blocks');

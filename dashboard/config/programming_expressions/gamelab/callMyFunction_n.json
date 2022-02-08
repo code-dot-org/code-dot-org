@@ -1,5 +1,6 @@
 {
-  "func": "callMyFunction_n",
-  "block": "myFunction(n)",
-  "category": "Functions"
+  "key": "callMyFunction_n",
+  "name": "callMyFunction_n",
+  "category": "Functions",
+  "syntax": "myFunction(n)"
 }

@@ -20,7 +20,6 @@ class Vocabulary < ApplicationRecord
   include SerializedProperties
 
   has_and_belongs_to_many :lessons, join_table: :lessons_vocabularies
-  has_many :lessons_vocabularies
   belongs_to :course_version
 
   KEY_CHAR_RE = /[a-z_]/
@@ -55,14 +54,18 @@ class Vocabulary < ApplicationRecord
   end
 
   def summarize_for_lesson_show
-    {key: key, word: display_word, definition: display_definition}
+    {
+      key: key,
+      word: get_localized_property(:word),
+      definition: get_localized_property(:definition),
+    }
   end
 
   def summarize_for_lesson_edit
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_vocab_key(self),
+      markdownKey: Services::GloballyUniqueIdentifiers.build_vocab_key(self),
       word: word,
       definition: definition,
       commonSenseMedia: !!common_sense_media
@@ -122,14 +125,24 @@ class Vocabulary < ApplicationRecord
     end
   end
 
-  private
-
-  def display_word
-    word
+  def copy_to_course_version(destination_course_version)
+    return self if course_version == destination_course_version
+    persisted_vocab = Vocabulary.where(word: word, course_version_id: destination_course_version.id).first
+    if persisted_vocab && !!persisted_vocab.common_sense_media == !!common_sense_media
+      persisted_vocab
+    else
+      copied_vocab = Vocabulary.create!(word: word, definition: definition, common_sense_media: common_sense_media, course_version_id: destination_course_version.id)
+      copied_vocab
+    end
   end
 
-  def display_definition
-    definition
+  private
+
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_vocab_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
   end
 
   def check_readonly_fields

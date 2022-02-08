@@ -1,6 +1,6 @@
 {
-  "func": "keyIsPressed",
+  "key": "keyIsPressed",
+  "name": "keyIsPressed",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "keyIsPressed"
 }

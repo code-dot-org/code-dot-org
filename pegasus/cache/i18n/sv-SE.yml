@@ -37,6 +37,7 @@ sv-SE:
   og_title_soon: Hour of Code är på gång
   og_description: Alla elever i skolan förtjänar att kunna studera datavetenskap.
   csedweek_og_title: Timmen av kod är här
+  csedweek_og_description: Alla elever i skolan förtjänar att kunna studera datavetenskap.
   hoc2014_heading: Gå med i <a href="http://hourofcode.com"> kodtimmen</a> <br/> 8-14
     December 2014 <br/>
   hoc2014_students: Elever
@@ -83,6 +84,7 @@ sv-SE:
   congratulations_volunteer: 'Grattis: nu när du har provat Hour of Code, <a href="https://code.org/volunteer">
     Registrera dig som volontär i ett klassrum</a> och hjälp eleverna lära sig Hour
     of Code!'
+  congratulations_on_completing_course: Grattis till att klara av %{course}
   congrats_next_tutorials_title: Testa dessa nästa lektionerna
   congrats_next_tutorials_desc: Testa denna kortare, 1 timmes lektion eller testa
     <a href="%{current_path}/next">Partner lektioner</a>.
@@ -90,6 +92,10 @@ sv-SE:
   view_course: Visa kurs
   make_app: Skapa en app
   congrats_guest_speaker_cta: Hitta en gästföreläsare
+  third_party_gradelevel_2to8: Årskurs 2-8
+  third_party_gradelevel_4to12: Årskurs 4-12
+  third_party_gradelevel_5to12: Årskurs 5-12
+  third_party_gradelevel_6plus: Årskurs 6+
   third_party_platform_all: 'Plattform: Web, iPad & Android'
   third_party_price_varies: 'Avgift: Prisplaner varierar'
   third_party_price_free: 'Pris: gratis'
@@ -160,6 +166,7 @@ sv-SE:
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
+  hoc_is_here: "#HourOfCode/Timmen med Kod är här - kolla! @codeorg"
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
   learn_hoc: Lär dig med en Timme av Kod
   beyond_hoc: Efter en Timme
@@ -240,6 +247,7 @@ sv-SE:
   homepage_hero_text_stat_students: "#student_count student konton i Kod Studio"
   homepage_hero_text_stat_served: 'Timmen av kod: #served serverad'
   homepage_hero_hoc_is_coming: Hour of Code är på gång
+  homepage_hero_hoc_is_here: Timmen av kod är här
   homepage_slot_text_hoc: Timme med Kod
   homepage_slot_text_frozen: Frozen med Anna och Elsa
   homepage_slot_text_teacher: Lärare Dashboard
@@ -376,10 +384,12 @@ sv-SE:
   sports_watch_video: Titta på videon
   sports_basketball_title: Göra en basketmatch
   sports_all_sports_title: Koda din egen sport
+  watch_inspirational_videos: Innan du börjar, titta på en av dessa inspirerande videofilmer
   video_title_inspire_girl: Inspirera en flicka
   video_1min: 1 min
   video_2min: 2 min
   video_5min: 5 min
+  speak_another_language: Tala ett annat språk?
   help_translate: Hjälp oss att översätta.
   no_internet: Inte har Internet?
   download_offline: Ladda ned offline-versionen.
@@ -584,6 +594,7 @@ sv-SE:
   dashboard_navigation_all_sections: Elevkonton och framsteg
   dashboard_navigation_view_progress: Framsteg
   dashboard_navigation_view_text_responses: Textsvar
+  dashboard_navigation_view_assessments: Bedömningar
   dashboard_navigation_add_students: Lägg till elever
   dashboard_navigation_manage_students: Hantera elever
   dashboard_navigation_lesson_plans_resources: Standarder och ramverk
@@ -846,6 +857,7 @@ sv-SE:
   coursef_name: Kurs F
   accelerated_name: Snabbkurs
   20-hour_name: Snabbkurs
+  gumball_name: Gumball
   classicmaze_name: Klassisk labyrint
   iceage_name: Ice Age
   minecraft_name: Minecraft
@@ -854,6 +866,9 @@ sv-SE:
   basketball_name: Göra en basketmatch
   sports_name: Sport
   applab_gradelevel: Ålder 13+
+  applab_shortdescription_congrats: App Lab är en programmeringsmiljö där du kan göra
+    enkla appar. Skapa en app, koda med block eller JavaScript och få den att fungera.
+    Dela sedan med dig av den till andra inom några sekunder
   codeorg_gradelevel: Åldrarna 4-104
   codeintl_gradelevel: Åldrarna 4-104
   khan_gradelevel: Högstadiet +
@@ -907,11 +922,42 @@ sv-SE:
   course2_gradelevel: Åldrar 6 + (läsförmåga krävs)
   course3_gradelevel: Åldrar 8 + (efter kurs 2)
   course4_gradelevel: Åldrar 10 + (efter kurs 3)
+  coursea_gradelevel: Åldrarna 4-7
+  courseb_gradelevel: Åldrarna 5-8
+  coursec_gradelevel: Åldrarna 6-10
+  coursed_gradelevel: Åldrarna 7-11
   coursee_gradelevel: Åldrarna 8-12
+  coursef_gradelevel: Åldrarna 9-13
+  coursea-2017_gradelevel: Åldrarna 4-7
+  courseb-2017_gradelevel: Åldrarna 5-8
+  coursec-2017_gradelevel: Åldrarna 6-10
+  coursed-2017_gradelevel: Åldrarna 7-11
   coursee-2017_gradelevel: Åldrarna 8-12
+  coursef-2017_gradelevel: Åldrarna 9-13
+  coursea-2018_gradelevel: Åldrarna 4-7
+  courseb-2018_gradelevel: Åldrarna 5-8
+  coursec-2018_gradelevel: Åldrarna 6-10
+  coursed-2018_gradelevel: Åldrarna 7-11
   coursee-2018_gradelevel: Åldrarna 8-12
+  coursef-2018_gradelevel: Åldrarna 9-13
+  coursea-2019_gradelevel: Åldrarna 4-7
+  courseb-2019_gradelevel: Åldrarna 5-8
+  coursec-2019_gradelevel: Åldrarna 6-10
+  coursed-2019_gradelevel: Åldrarna 7-11
   coursee-2019_gradelevel: Åldrarna 8-12
+  coursef-2019_gradelevel: Åldrarna 9-13
+  coursea-2020_gradelevel: Åldrarna 4-7
+  courseb-2020_gradelevel: Åldrarna 5-8
+  coursec-2020_gradelevel: Åldrarna 6-10
+  coursed-2020_gradelevel: Åldrarna 7-11
   coursee-2020_gradelevel: Åldrarna 8-12
+  coursef-2020_gradelevel: Åldrarna 9-13
+  coursea-2021_gradelevel: Åldrarna 4-7
+  courseb-2021_gradelevel: Åldrarna 5-8
+  coursec-2021_gradelevel: Åldrarna 6-10
+  coursed-2021_gradelevel: Åldrarna 7-11
+  coursee-2021_gradelevel: Åldrarna 8-12
+  coursef-2021_gradelevel: Åldrarna 9-13
   accelerated_gradelevel: Åldrar 10 + (efter kurs 3)
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeintl_platformtext: Moderna webbläsare, smartphones, surfplattor
@@ -1547,6 +1593,9 @@ sv-SE:
   user_header_settings: Mitt konto
   user_header_logout: Logga ut
   user_header_signin: Logga in
+  user_header_create: 'Skapa '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Konstnären '
   user_header_playlab: Spel-labb
   user_header_dance: Dansparty
   user_header_minecraft: Minecraft
@@ -1584,6 +1633,7 @@ sv-SE:
   hoc2018_mc_start: Start
   hoc2018_mc_no_internet: Inte har Internet?
   hoc2018_mc_educators_box2_button: Ladda ned
+  hoc2018_mc_watch_videos: Innan du börjar, titta på en av dessa inspirerande videofilmer
   hoc2018_mc_video_1min: 1 min
   hoc2018_mc_video_2min: 2 min
   hoc2018_mc_video_5min: 5 min
@@ -1619,6 +1669,14 @@ sv-SE:
   hoc2018_mc_thank_microsoft: "  Vi tackar Microsoft som stöttar vår vision och målsättnng
     att säkerställa att alla barn har möjlighet att lära sig datavetenskap och får
     de färdigheter som behövs för att lyckas på 2000-talet.  "
+  hoc2021_mc_mee_description: 'Res bakåt i tiden och lär dig koda! Den nya självstudien
+    Minecraft Hour of Code är nu tillgänglig i Minecraft: Utbildningsversion för Windows,
+    Mac, Chromebook och iPad. Kom igång med kostnadsfria pedagogiska resurser, utbildningar
+    och videor.'
+  hoc2021_mc_mee_villages_description: 'Lär dig grundläggande kodning och utforska
+    mångfald och inkludering med dina elever i Minecraft: Utbildningsversion.'
+  hoc2021_mc_mee_ai_description: 'Utforska AI med dina elever och lär dig koda i Minecraft:
+    Utbildningsversion.'
   footer_powered_by_aws: Drivs av Amazon Web Services
   footer_privacy_policy: Sekretesspolicy
   footer_about: Om
@@ -1626,8 +1684,12 @@ sv-SE:
   footer_donate: Donera
   footer_support: Hjälp och Community
   footer_terms: Villkor
+  ai_for_oceans_lesson_plan: lektionsplaneringar
   ai_microsoft_thanks: "  Vi tackar Microsoft som stöttar vår vision och målsättnng
     att säkerställa att alla barn har möjlighet att lära sig datavetenskap och får
     de färdigheter som behövs för att lyckas på 2000-talet.  "
   ai_activity: Aktivitet
   ai_description: Beskrivning
+  outbreak_tile_title: Utbrott
+  outbreak_tile_subtitle: Ett virus har infekterat Monsterstaden! Koda en utbrottssimulator
+    och gör förutsägelser om vad som kommer att hända med Monsterstadens grannar.

@@ -1,4 +1,6 @@
 {
-  "func": "createEdgeSprites",
-  "category": "Sprites"
+  "key": "createEdgeSprites",
+  "name": "createEdgeSprites",
+  "category": "Sprites",
+  "syntax": "createEdgeSprites"
 }

@@ -1306,12 +1306,26 @@ ru-RU:
   coursed-2017_name: Курс D (2017)
   coursee-2017_name: Курс E (2017)
   coursef-2017_name: Курс F (2017)
+  coursea-2019_name: Курс A (2019)
+  courseb-2019_name: Курс B (2019)
+  coursec-2019_name: Курс C (2019)
+  coursed-2019_name: Курс D (2019)
+  coursee-2019_name: Курс E (2019)
+  coursef-2019_name: Курс F (2019)
+  coursea-2020_name: Курс A (2020)
+  courseb-2020_name: Курс B (2020)
+  coursec-2020_name: Курс C (2020)
+  coursed-2020_name: Курс D (2020)
+  coursee-2020_name: Курс E (2020)
+  coursef-2020_name: Курс F (2020)
+  coursed-2021_name: Курс D (2021)
   express-2018_name: Экспресс-курс (2018)
   pre-express-2018_name: Экспресс-курс для детей, еще не умеющих читать (2018)
   express-2019_name: Экспресс-курс (2017)
   pre-express-2019_name: Экспресс-курс для детей, еще не умеющих читать (2019)
   express-2020_name: Экспресс-курс (2017)
   pre-express-2020_name: Экспресс-курс для детей, еще не умеющих читать (2020)
+  pre-express-2021_name: Экспресс-курс для детей, еще не умеющих читать (2021)
   csd2_name: 'Раздел 2: Веб-разработка'
   csd3_name: 'Раздел 3: Анимация и игры'
   accelerated_name: Ускоренный курс
@@ -1327,6 +1341,7 @@ ru-RU:
   minecraft_name: Minecraft
   starwarsblocks_name: Звездные войны (блоки)
   hoc-encryption_name: Простое шифрование
+  text-compression_name: Сжатие текста
   applab_name: Лаборатория приложений
   gamelab_name: Лаборатория игр
   basketball_name: Создать игру в баскетбол
@@ -1419,6 +1434,12 @@ ru-RU:
   coursed-2020_gradelevel: Класс 8 и выше
   coursee-2020_gradelevel: Возраст 8-12
   coursef-2020_gradelevel: Возраст 9-13
+  coursea-2021_gradelevel: Возраст 4-7
+  courseb-2021_gradelevel: Возраст 5-8
+  coursec-2021_gradelevel: Возраст 6-10
+  coursed-2021_gradelevel: Класс 8 и выше
+  coursee-2021_gradelevel: Возраст 8-12
+  coursef-2021_gradelevel: Возраст 9-13
   accelerated_gradelevel: Возраст 10-18 лет
   codeorg_platformtext: Современные браузеры, смартфоны, планшеты
   codeintl_platformtext: Современные браузеры, смартфоны, планшеты
@@ -1606,6 +1627,10 @@ ru-RU:
   coursea-2020_shortdescription_congrats: Изучите основы информатики и интернет-безопасности.
     В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
   courseb-2020_shortdescription_congrats: Изучите основы информатики и интернет-безопасности.
+    В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
+  coursea-2021_shortdescription_congrats: Изучите основы информатики и интернет-безопасности.
+    В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
+  courseb-2021_shortdescription_congrats: Изучите основы информатики и интернет-безопасности.
     В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
   codeorg_longdescription: Изучите основные понятия информатики, написав программу
     путем перетаскивания блоков. Это уроки для самостоятельного изучения в игровой
@@ -2489,6 +2514,17 @@ ru-RU:
     доступна по этому адресу. Если вам всё ещё нужен доступ, пожалуйста, напишите
     нам по электронной почте [support@code.org](%{support_email_link}).
   page_not_available_button: Вернуться на домашнюю страницу
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Возвращайтесь вовремя и изучайте программирование!
+    Новое руководство «Minecraft Hour of Code» теперь доступно в Minecraft: Education
+    Edition для Windows, Mac, Chromebook и iPad. Начните с бесплатных ресурсов, обучающих
+    курсов и видеороликов для преподавателей.'
+  hoc2021_mc_mee_villages_title: Сказка о двух деревнях
+  hoc2021_mc_mee_villages_description: 'Изучите основы программирования и узнайте
+    о разнообразии и вовлеченности учащихся в Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: ИИ навсегда!
+  hoc2021_mc_mee_ai_description: 'Изучайте ИИ со своими учениками и учитесь программировать
+    код в Minecraft: Education Edition.'
   footer_powered_by_aws: Создано с помощью Amazon Web Services
   codebytes_skinny_banner_english_only: Только на английском языке
   footer_privacy_policy: Политика конфиденциальности
@@ -2498,9 +2534,13 @@ ru-RU:
   footer_support: Поддержка
   footer_terms: Условия использования
   ai_for_oceans: AI для океанов
+  ai_for_oceans_lesson_plan: план урока
   ai_in_partnership_with: В партнерстве с
   ai_microsoft_thanks: Благодарим компанию Microsoft за поддержку нашего видения и
     миссии предоставить каждому ребенку возможность изучить компьютерные науки и приобрести
     навыки, необходимые для преуспевания в XXI веке.
   ai_activity: Занятие
   ai_description: Описание
+  outbreak_tile_title: Эпидемия
+  outbreak_tile_subtitle: Вирус заразил Город Монстров! Создайте симулятор эпидемии
+    и сделайте прогнозы о том, что произойдет с соседями Города Монстров.

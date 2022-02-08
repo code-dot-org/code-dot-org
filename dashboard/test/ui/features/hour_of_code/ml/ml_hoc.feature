@@ -1,6 +1,10 @@
+@no_circle
+@no_mobile
+@no_safari
+@no_ie
+
 Feature: Oceans ML HoC
 
-  @no_circle @no_mobile @no_safari
   Scenario: Fish vs. Trash
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/lessons/1/levels/2?guide=off"
@@ -17,7 +21,6 @@ Feature: Oceans ML HoC
     And I wait until element "button:contains(Continue)" is visible
     And I wait for 3 seconds
 
-  @no_circle @no_mobile @no_safari
   Scenario: Sea Creatures
     # Initial Screen
     Given I am on "http://studio.code.org/s/oceans/lessons/1/levels/3?guide=off"
@@ -40,7 +43,6 @@ Feature: Oceans ML HoC
     And I wait until element "button:contains(Continue)" is visible
     And I wait for 3 seconds
 
-  @no_circle @no_mobile @no_safari
   Scenario: Short Word List
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/lessons/1/levels/6?guide=off"
@@ -58,7 +60,6 @@ Feature: Oceans ML HoC
     And I wait until element "button:contains(Continue)" is visible
     And I wait for 3 seconds
 
-  @no_circle @no_mobile @no_safari
   Scenario: Long Word List
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/lessons/1/levels/8?guide=off"

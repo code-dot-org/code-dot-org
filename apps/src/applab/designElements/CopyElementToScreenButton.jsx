@@ -66,8 +66,7 @@ class CopyElementToScreenButton extends React.Component {
     this.state.opened && this.setState({opened: false});
   }
 
-  beforeClose = (_, resetPortalState) => {
-    resetPortalState();
+  onClose = () => {
     this.closeMenu();
   };
 
@@ -98,7 +97,7 @@ class CopyElementToScreenButton extends React.Component {
             isOpen={this.state.opened}
             targetPoint={targetPoint}
             offset={{x: 0, y: 0}}
-            beforeClose={this.beforeClose}
+            onClose={this.onClose}
             style={styles.menu}
           >
             {otherScreens}

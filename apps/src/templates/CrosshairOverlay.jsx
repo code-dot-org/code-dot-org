@@ -42,7 +42,7 @@ export default class CrosshairOverlay extends React.Component {
     const flip = this.props.flip;
 
     return (
-      <g className="crosshair-overlay">
+      <svg className="crosshair-overlay">
         <line
           x1={this.props.mouseX}
           y1={flip ? this.props.height : 0}
@@ -57,7 +57,7 @@ export default class CrosshairOverlay extends React.Component {
           y2={this.props.mouseY}
           style={styles.line}
         />
-      </g>
+      </svg>
     );
   }
 }

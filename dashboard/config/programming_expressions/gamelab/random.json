@@ -1,13 +1,14 @@
 {
-  "func": "random",
+  "key": "random",
+  "name": "random",
   "category": "Math",
-  "paletteParams": [
-    "min",
-    "max"
+  "palette_params": [
+    {
+      "name": "min"
+    },
+    {
+      "name": "max"
+    }
   ],
-  "params": [
-    "1",
-    "5"
-  ],
-  "type": "value"
+  "syntax": "random(min, max)"
 }

@@ -18,7 +18,7 @@ import reducer, {
 import animationTab from '@cdo/apps/p5lab/redux/animationTab';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
 import {createStore} from '../../../util/redux';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -206,7 +206,7 @@ describe('animationList', function() {
     });
   });
 
-  let createAnimationList = function(count) {
+  let createAnimationList = function(count, v3Sources = false) {
     let orderedKeys = [];
     let propsByKey = {};
     let baseKey = 'animation';
@@ -216,7 +216,7 @@ describe('animationList', function() {
 
       propsByKey[key] = {
         name: key,
-        sourceUrl: null,
+        sourceUrl: v3Sources ? 'source/v3/url' : null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
         looping: true,
@@ -230,7 +230,7 @@ describe('animationList', function() {
   describe('action: set initial animationList', function() {
     let server, store;
     beforeEach(function() {
-      project.getCurrentId.returns('');
+      project.getCurrentId.returns('123');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -301,6 +301,19 @@ describe('animationList', function() {
       expect(
         store.getState().animationList.propsByKey['animation_3'].name
       ).to.equal('images (1).jpg_1_2');
+    });
+
+    it('when animationList has migratable animations, check that animation is substituted', function() {
+      let animationList = createAnimationList(2, true);
+      let defaultSprites = createAnimationList(2);
+      defaultSprites.propsByKey['animation_1'].sourceUrl = 'cat';
+
+      store.dispatch(
+        setInitialAnimationList(animationList, defaultSprites, true)
+      );
+      expect(
+        store.getState().animationList.propsByKey['animation_1'].sourceUrl
+      ).to.equal('cat');
     });
   });
 

@@ -165,7 +165,7 @@ export default class VariableFormGroup extends React.Component {
     this.state = {selected};
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.hasSingleSourceValue() && this.props.onChange) {
       // if we only have a single source value, we want to default to having it
       // already selected, so manually trigger an on change if we have one so

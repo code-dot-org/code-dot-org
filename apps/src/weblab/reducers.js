@@ -24,12 +24,10 @@ function inspectorOn(state, action) {
   }
 }
 
-function showError(state, action) {
-  state = state || false;
-
+function dialog(state = null, action) {
   switch (action.type) {
-    case ActionType.CHANGE_SHOW_ERROR:
-      return action.showError;
+    case ActionType.CHANGE_DIALOG:
+      return action.dialog;
     default:
       return state;
   }
@@ -60,7 +58,7 @@ function projectSize(state, action) {
 export default {
   fullScreenPreviewOn,
   inspectorOn,
-  showError,
+  dialog,
   maxProjectCapacity,
   projectSize
 };

@@ -9,6 +9,7 @@ import progress, {
   setLessonExtrasEnabled
 } from '../../progressRedux';
 import {TestResults} from '@cdo/apps/constants';
+import {allowConsoleWarnings} from '../../../../test/util/throwOnConsole';
 
 const activityPuzzle = {
   ids: ['123'],
@@ -90,6 +91,12 @@ const bonus = {
 };
 
 export default storybook => {
+  // TODO: allowConsoleWarnings can be removed once react-tooltip has been upgraded
+  // to a version that no longer uses unsafe lifecycle hooks.
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   const createStoreForLevels = (
     levels,
     currentLevelIndex,

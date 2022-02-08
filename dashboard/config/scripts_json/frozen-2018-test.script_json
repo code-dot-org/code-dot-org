@@ -2,13 +2,17 @@
   "script": {
     "name": "frozen-2018-test",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:26 UTC",
+    "serialized_at": "2021-11-22 19:56:59 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "frozen-2018-test"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "1810e376-6c2c-434f-8915-a203ed68446a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1810e376-6c2c-434f-8915-a203ed68446a",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "74bf56e3-3a16-4d60-98ce-ed944b66b769",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769",
+        "lesson_activity.key": "1810e376-6c2c-434f-8915-a203ed68446a"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen line_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen line_test"
@@ -77,14 +102,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen perpendicular_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -92,7 +116,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen perpendicular_test"
@@ -101,14 +126,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen_video_loops"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +140,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen_video_loops"
@@ -125,14 +150,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen square iterative_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +164,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen square iterative_test"
@@ -149,14 +174,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen square loop_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -164,7 +188,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen square loop_test"
@@ -173,14 +198,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen square loop 3x_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -188,7 +212,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen square loop 3x_test"
@@ -197,14 +222,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen square snowflake_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -212,7 +236,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen square snowflake_test"
@@ -221,14 +246,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen cross_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,7 +260,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen cross_test"
@@ -245,14 +270,13 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen cross rotate_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -260,7 +284,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen cross rotate_test"
@@ -269,14 +294,13 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen cross rotate dense_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -284,7 +308,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen cross rotate dense_test"
@@ -293,14 +318,13 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen diamond_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -308,7 +332,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen diamond_test"
@@ -317,14 +342,13 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen diamond mini snowflake_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -332,7 +356,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen diamond mini snowflake_test"
@@ -341,14 +366,13 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen diamond snowflake_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -356,7 +380,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen diamond snowflake_test"
@@ -365,14 +390,13 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen circle_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -380,7 +404,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen circle_test"
@@ -389,14 +414,13 @@
     {
       "chapter": 15,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen_variables_functions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -404,7 +428,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen_variables_functions"
@@ -413,14 +438,13 @@
     {
       "chapter": 16,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen circle function_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -428,7 +452,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen circle function_test"
@@ -437,14 +462,13 @@
     {
       "chapter": 17,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen circle function in circle_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -452,7 +476,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen circle function in circle_test"
@@ -461,14 +486,13 @@
     {
       "chapter": 18,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen circle function with parameter_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -476,7 +500,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen circle function with parameter_test"
@@ -485,14 +510,13 @@
     {
       "chapter": 19,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen snowflower_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -500,7 +524,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen snowflower_test"
@@ -509,14 +534,13 @@
     {
       "chapter": 20,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 20,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen snowflake branch_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -524,7 +548,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen snowflake branch_test"
@@ -533,14 +558,13 @@
     {
       "chapter": 21,
       "position": 21,
-      "activity_section_position": null,
+      "activity_section_position": 21,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen snowflake full_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -548,7 +572,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen snowflake full_test"
@@ -557,14 +582,13 @@
     {
       "chapter": 22,
       "position": 22,
-      "activity_section_position": null,
+      "activity_section_position": 22,
       "assessment": false,
       "properties": {
         "level_keys": [
           "frozen freeplay_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -572,7 +596,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       },
       "level_keys": [
         "frozen freeplay_test"
@@ -588,7 +613,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -599,7 +625,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -610,7 +637,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -621,7 +649,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -632,7 +661,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -643,7 +673,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -654,7 +685,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -665,7 +697,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -676,7 +709,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -687,7 +721,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -698,7 +733,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -709,7 +745,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -720,7 +757,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -731,7 +769,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -742,7 +781,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -753,7 +793,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -764,7 +805,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -775,7 +817,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -786,7 +829,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -797,7 +841,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -808,7 +853,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     },
     {
@@ -819,7 +865,8 @@
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
-        "script.name": "frozen-2018-test"
+        "script.name": "frozen-2018-test",
+        "activity_section.key": "74bf56e3-3a16-4d60-98ce-ed944b66b769"
       }
     }
   ],

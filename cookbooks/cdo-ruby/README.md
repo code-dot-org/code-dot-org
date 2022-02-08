@@ -18,3 +18,4 @@ If `version` is greater than `'2.0'`, the old manually-installed Ruby 2.0 packag
 - `node['cdo-ruby']['bundler_version']`: Updates the version of [Bundler](http://bundler.io/) installed.
 - `node['cdo-ruby']['rubygems_version']`: Updates the version of [RubyGems](https://rubygems.org/) installed.
 (This attribute will only apply to Ruby > `'2.0'`. The 2.0 recipe does not enforce any RubyGems version constraint.
+

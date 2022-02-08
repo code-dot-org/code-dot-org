@@ -1,5 +1,6 @@
 {
-  "func": "body",
+  "key": "body",
+  "name": "body",
   "category": "HTML Tags",
   "syntax": "<body></body>"
 }

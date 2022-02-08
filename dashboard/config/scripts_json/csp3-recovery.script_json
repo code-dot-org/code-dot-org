@@ -2,16 +2,20 @@
   "script": {
     "name": "csp3-recovery",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
       "has_verified_resources": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:12 UTC",
+    "serialized_at": "2021-11-22 19:56:34 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp3-recovery"
     }
@@ -47,16 +51,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "fa2af2ec-52ec-41be-99ea-559f4cf23f15",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa2af2ec-52ec-41be-99ea-559f4cf23f15",
+        "lesson.key": "Under the sea recovery",
+        "lesson_group.key": "",
+        "script.name": "csp3-recovery"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "5d1095ca-e761-435d-861a-b6952fd1f37d",
+      "position": 1,
+      "properties": {
+        "name": "Click here for instructions on how to recover your Under the Sea project code.",
+        "progression_name": "Click here for instructions on how to recover your Under the Sea project code."
+      },
+      "seeding_key": {
+        "activity_section.key": "5d1095ca-e761-435d-861a-b6952fd1f37d",
+        "lesson_activity.key": "fa2af2ec-52ec-41be-99ea-559f4cf23f15"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -64,7 +91,6 @@
         ],
         "progression": "Click here for instructions on how to recover your Under the Sea project code."
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -72,7 +98,8 @@
         ],
         "lesson.key": "Under the sea recovery",
         "lesson_group.key": "",
-        "script.name": "csp3-recovery"
+        "script.name": "csp3-recovery",
+        "activity_section.key": "5d1095ca-e761-435d-861a-b6952fd1f37d"
       },
       "level_keys": [
         "U3L08 - introUnderTheSea - clone for recovery"
@@ -88,7 +115,8 @@
         ],
         "lesson.key": "Under the sea recovery",
         "lesson_group.key": "",
-        "script.name": "csp3-recovery"
+        "script.name": "csp3-recovery",
+        "activity_section.key": "5d1095ca-e761-435d-861a-b6952fd1f37d"
       }
     }
   ],

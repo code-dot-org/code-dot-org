@@ -1,15 +1,17 @@
 {
-  "func": "constrain",
+  "key": "constrain",
+  "name": "constrain",
   "category": "Math",
-  "paletteParams": [
-    "num",
-    "low",
-    "high"
+  "palette_params": [
+    {
+      "name": "num"
+    },
+    {
+      "name": "low"
+    },
+    {
+      "name": "high"
+    }
   ],
-  "params": [
-    "1.1",
-    "0",
-    "1"
-  ],
-  "type": "value"
+  "syntax": "constrain(num, low, high)"
 }

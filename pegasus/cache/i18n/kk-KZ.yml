@@ -35,7 +35,11 @@ kk-KZ:
   twentyhours_text: Бірінші "Код жазу Сағатын" аяқтадыңыз ба? Информатика және бағдарламалау
     ұғымы туралы толығырақ келесі курста біліңіз.
   og_title: Әр бір бала мүмкіндікке лайық
+  og_title_soon: Компьютерлік технологияның білім беру апталығы
+  og_description: Кез келген мектептегі әр бір оқушы компьютер ғылымдарын оқуға лайық.
   csedweek_og_title: Компьютерлік технологияның білім беру апталығы
+  csedweek_og_description: Кез келген мектептегі әр бір оқушы компьютер ғылымдарын
+    оқуға лайық.
   hoc2014_heading: 8-14 желтоқсан 2014 ж. <br/><a href="http://hourofcode.com">"Код
     жазу Сағатына"</a> қатысыңыз <br/>'
   hoc2014_students: Оқушылар
@@ -84,6 +88,7 @@ kk-KZ:
     "Бағдарламалау сағатын" қооданып көргенен кейін, үйренгісі келетін сыныптастарыңызды
     сайтта тіркеңіз </a> және де оқушыларға "Бағдарламалау сағатын" оқып үйренуге
     көмектесіңіз!
+  congratulations_on_completing_course: "%{course} бітіруіңізбен құттықтаймыз"
   congrats_next_tutorials_title: Келесі
   congrats_next_tutorials_desc: 1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің
     сабақтарын</a> өтіп көріңіз.
@@ -170,10 +175,12 @@ kk-KZ:
   learn_online: Біздің басқа да онлайн курстарымызды көріңіз
   learn_classes: Бағдарламалауды үйрететін ұйымдарды іздеу
   learn_back_to_minecraft: 'Minecraftпен оқытуны жалғастыра беріңіз '
+  hoc_is_here: "#HourOfCode осы жерде - көріңіз! @codeorg"
   just_did_hoc: 'Мен #HourOfCode бітірдім- көріңіз! @codeorg'
   just_did_course1: Мен жаңа ғана 1-Курсты аяқтадым, @codeorg-тан нәтижесін көр
   just_did_course2: Мен жаңа ғана 2-Курсты аяқтадым, @codeorg-тан нәтижесін көр
   just_did_course3: Мен жаңа ғана 3-Курсты аяқтадым, @codeorg-тан нәтижесін көр
+  just_did_course4: Мен жаңа ғана 4-Курсты аяқтадым, @codeorg-тан нәтижесін көр
   learn_hoc: Код жазу Сағатымен бағдарламалауды үйреніңіз
   beyond_hoc: Бірінші сағаттан кейін
   what_gender: Сіздің жынысыңыз қандай?
@@ -241,6 +248,8 @@ kk-KZ:
   homepage_hero_text_stat_loc: 'Студенттердің жазған #loc код жолы'
   homepage_hero_text_stat_students: 'Студия Кодына тіркелген #student_count студент'
   homepage_hero_text_stat_served: 'Код Жазу Сағатын: #served байқап көрді'
+  homepage_hero_hoc_is_coming: Компьютерлік технологияның білім беру апталығы
+  homepage_hero_hoc_is_here: Компьютерлік технологияның білім беру апталығы
   homepage_slot_text_hoc: Код Жазу Сағаты
   homepage_slot_text_frozen: Анна және Эльзамен Суық жүрек бағдарламасы
   homepage_slot_text_studio: Біздің барлық оқулықтарымыз
@@ -375,11 +384,22 @@ kk-KZ:
   minecraft_adventurer_button: Бастау
   minecraft_download_adventurer: Minecraft Adventurer оффлайн нұсқасын жүктеп алыңыз.
   minecraft_subtitle: Minecraft Кодтау Сағаты
+  minecraft_signup_store_camps: Австралия, Пуэрто Рико немесе Ақштағы Майкрософт дүкендерінде
+    болатын тегін кодтау сағатына<a href="%{signup_store_camp}">жазылу</a>. Шығармашылық
+    пен кодтауды қалай қосуға болатынын үйрен.
+  minecraft_host_event: Minecraft Кодтау Сағаты - Іс-шараларды ұйымдастырып көріңіз
+  minecraft_teach_resources: Мұғалім ресурстар және сабақ жоспары.
+  minecraft_leader_guide: Жоспарлауға көмектесетін және іс-шараны өткізуді ресурстарды
+    жүктеңіз.
   sports_title: Спорттар
   sports_watch_video: Видеоны көріңіз
   sports_basketball_title: Баскетбол ойынды жасау
   sports_all_sports_title: Өзіңнің жеке спорт ойынын жаз
+  watch_inspirational_videos: Бастар алдында мына шабыттандырушы бейне-роликтерден
+    біреуін қараңыз
   video_title_inspire_girl: Қызды шабыттандыр
+  speak_another_language: Басқа тілде сөйлейсіз бе?
+  help_translate: Басқа тілге аударуға көмектес.
   download_offline: Оффлайн нұсқасын жүктеп алыңыз.
   are_you_teacher: Сіз оқутышысыз ба?
   volunteer_engineer_submission_title: Оқушылар мен еріктілерді шабыттандыру
@@ -543,6 +563,7 @@ kk-KZ:
     жылдық бағдарлама ұсынады. Кәсіби жетілуге қатысты сұрақтар бойынша семинарға
     тіркелу үшін, Code.org-тан <a href="/educate/districts">өзіңіздің ауданыңызда</a>
     өтініш қалдырыңыз.
+  dashboard_course_csina: Алгебрадағы информатика
   dashboard_course_csina_desc: Code.org өз серіктесі Bootstrap-пен бірге алгебра және
     геометрия негіздерін бағдарламалау көмегімен үйрететін бағдарлама жасап шықты.
   dashboard_course_csins: Информатика ғылымда
@@ -579,6 +600,7 @@ kk-KZ:
   dashboard_navigation_add_students: Оқушыларды қосу
   dashboard_navigation_manage_students: Оқушыларды басқару
   dashboard_navigation_lesson_plans_resources: Сабақ жоспары мен оқу материалдары
+  dashboard_navigation_view_stats: Статистика
   dashboard_navigation_section: 'Бөлім: %{section_name}'
   dashboard_navigation_student: 'Оқушы: %{student_name}'
   dashboard_progress_not_started: басталмады
@@ -829,6 +851,7 @@ kk-KZ:
   course4_name: Курс 4
   accelerated_name: Жеделдетілген курс
   20-hour_name: Жеделдетілген курс
+  gumball_name: Гамболдың таңғажайып әлемі
   classicmaze_name: Классикалық лабиринт
   iceage_name: Мұз дәуірі
   minecraft_name: Minecraft
@@ -836,6 +859,8 @@ kk-KZ:
   basketball_name: Баскетбол ойынды жасау
   sports_name: Спорттар
   applab_gradelevel: 13+ жастағылар үшін
+  applab_shortdescription_congrats: App Lab онай қосымшалар жасау үшін бағдарламалау
+    ортасы. Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес
   codeorg_gradelevel: Жас аралығы 4-14
   codeintl_gradelevel: Жас аралығы 4-14
   khan_gradelevel: Орта мектеп +
@@ -889,16 +914,42 @@ kk-KZ:
   course2_gradelevel: 6-18 жастағылар үшін
   course3_gradelevel: 8-18 жастағылар үшін
   course4_gradelevel: 10-18 жастағылар үшін
+  coursea_gradelevel: 4-7 жастағылар үшін
+  courseb_gradelevel: Жас аралығы 5-8
+  coursec_gradelevel: 6-10 жастағылар үшін
   coursed_gradelevel: 8-сыныптан бастап
   coursee_gradelevel: Жас аралығы 8-12
+  coursef_gradelevel: Жас аралығы 9-13
+  coursea-2017_gradelevel: 4-7 жастағылар үшін
+  courseb-2017_gradelevel: Жас аралығы 5-8
+  coursec-2017_gradelevel: 6-10 жастағылар үшін
   coursed-2017_gradelevel: 8-сыныптан бастап
   coursee-2017_gradelevel: Жас аралығы 8-12
+  coursef-2017_gradelevel: Жас аралығы 9-13
+  coursea-2018_gradelevel: 4-7 жастағылар үшін
+  courseb-2018_gradelevel: Жас аралығы 5-8
+  coursec-2018_gradelevel: 6-10 жастағылар үшін
   coursed-2018_gradelevel: 8-сыныптан бастап
   coursee-2018_gradelevel: Жас аралығы 8-12
+  coursef-2018_gradelevel: Жас аралығы 9-13
+  coursea-2019_gradelevel: 4-7 жастағылар үшін
+  courseb-2019_gradelevel: Жас аралығы 5-8
+  coursec-2019_gradelevel: 6-10 жастағылар үшін
   coursed-2019_gradelevel: 8-сыныптан бастап
   coursee-2019_gradelevel: Жас аралығы 8-12
+  coursef-2019_gradelevel: Жас аралығы 9-13
+  coursea-2020_gradelevel: 4-7 жастағылар үшін
+  courseb-2020_gradelevel: Жас аралығы 5-8
+  coursec-2020_gradelevel: 6-10 жастағылар үшін
   coursed-2020_gradelevel: 8-сыныптан бастап
   coursee-2020_gradelevel: Жас аралығы 8-12
+  coursef-2020_gradelevel: Жас аралығы 9-13
+  coursea-2021_gradelevel: 4-7 жастағылар үшін
+  courseb-2021_gradelevel: Жас аралығы 5-8
+  coursec-2021_gradelevel: 6-10 жастағылар үшін
+  coursed-2021_gradelevel: 8-сыныптан бастап
+  coursee-2021_gradelevel: Жас аралығы 8-12
+  coursef-2021_gradelevel: Жас аралығы 9-13
   accelerated_gradelevel: 10-18 жастағылар үшін
   codeorg_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   codeintl_platformtext: Заманауи браузерлер, смартфондар, планшеттер
@@ -1493,10 +1544,12 @@ kk-KZ:
   sphero_beyond_longdescription: Сіз мұғалім немесе ата-ана болсаңыз да, SPRK сабақтары
     бүлдіршіндерге роботтарды бағдарламалаудың жедетілген курсын өтуге мүмкіндік береді
     және де олардың математика мен нақты ғылым дағдыларын арттырады.
+  compatibility_hide_this_warning: Бұл ескертуді жасыру
   flappy_shortcode: қанат қағу
   header_courses: Курстар
   header_project_gallery: Жобалар
   header_educate_hoc: Код жазу Сағаты
+  header_stats: Статистика
   header_legal_privacy: Құпиялылық саясаты
   header_legal_tos: Қызмет көрсету шарттары
   user_header_label: Сәлем %{username}
@@ -1504,6 +1557,9 @@ kk-KZ:
   user_header_settings: Менің жеке парақшам
   user_header_logout: Шығу
   user_header_signin: Кіру
+  user_header_create: 'Құру '
+  user_header_applab: 'Қосымшалар Лабораториясы '
+  user_header_artist: 'Кейіпкер '
   user_header_playlab: Ойындар Лабораториясы
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
@@ -1521,6 +1577,8 @@ kk-KZ:
     оқиғаға алайық.
   hoc2018_mc_start: Бастау
   hoc2018_mc_download_adventurer: Minecraft Adventurer оффлайн нұсқасын жүктеп алыңыз.
+  hoc2018_mc_watch_videos: Бастар алдында мына шабыттандырушы бейне-роликтерден біреуін
+    қараңыз
   hoc2018_mc_video_title_inspire_girl: Қызды шабыттандыр
   hoc2018_mc_homepage_join_us: Бізге қосыл
   hoc2018_mc_homepage_try_it: Қолданып көріңіз
@@ -1533,4 +1591,5 @@ kk-KZ:
   footer_donate: Қайырымдылақ жасау
   footer_support: Қолдау
   footer_terms: Ережелер
+  ai_for_oceans_lesson_plan: оқу жоспары
   ai_description: Сипаттама

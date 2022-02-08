@@ -1,0 +1,37 @@
+---
+title: سلام دنیا
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# Hello World!
+
+کمپیوٹر سائنس 101 میں، بہت سے طلباء جو پہلا پروگرام بناتے ہیں وہ ایک سادہ سا ہے جو متن کی ایک شاندار لائن کو آؤٹ پٹ کرتا ہے: "ہیلو دنیا!" کمپیوٹر سائنس کی دنیا کو ایک تعارفی سرگرمی کے ساتھ ہیلو کر لیں جو طلباء کو کوڈ لکھنے کے بنیادی مہارتوں اور ایپس بنانے کے لیے خود اعتمادی سے لیس کرتی ہے۔ ہمارے دلچسپ تھیمز میں سے اپنے لیے انتخاب کریں تاکہ آپ اپنی تخلیق کردہ دنیا میں انٹریکٹیو کرداریں کوڈ لکھ کر بنا سکیں!
+
+# Hello World کے لیے اپنا تھیم چنیں
+
+{{ spritelab_module, title: "خوراک", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "جانور", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "ریٹرو", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "ایموجی", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "استاد کے لیے معلومات", title: "ہیلو ورلڈ کے بعد سیکھنا کیسے جاری رکھا جائے", description: "ہیلو ورلڈ کلاس رومز کے لیے ہمارے نئے نصاب، CS کنکشنز کے اندر اوپن اینڈ پراجیکٹس کو آزمانے سے پہلے بہترین پہلا قدم ہے! کوڈ لکھنے کی بنیادی باتیں سیکھنے کے بعد، طلباء ترقی پا کر کمپیوٹر سائنس کنکشنز کے مختلف مضامیں کے پراجیکٹس میں آ سکیں گے۔ ", button_text: "Learn more", url: "/educate/csc" }}
+
+## طلباء کی نمایاں تخلیقات
+
+{{ featured_project, title: "خوراک", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "ایموجی", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "جانور", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "ریٹرو", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

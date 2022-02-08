@@ -4,48 +4,35 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @admin = create(:admin)
-    @not_admin = create(:user)
-    @platformization_partner = create(:platformization_partner)
-    @levelbuilder = create(:levelbuilder)
-    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, pilot_experiment: 'my-experiment'
-    @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
-    @pilot_student = create(:follower, section: @pilot_section).student_user
-    @no_progress_or_assignment_student = create :student
+    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
-    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
-    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
-    @partner_script = create :script, editor_experiment: 'platformization-partners'
-
-    @student_coursez_2017 = create :student
-    @section_coursez_2017 = create :section, script: @coursez_2017
-    @section_coursez_2017.add_student(@student_coursez_2017)
-
-    @migrated_script = create :script, is_migrated: true
-    @unmigrated_script = create :script
+    @migrated_unit = create :script
+    @unmigrated_unit = create :script, is_migrated: false
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write)
   end
 
   test "should get index" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
     get :index
     assert_response :success
     assert_not_nil assigns(:scripts)
     assert_equal Script.all, assigns(:scripts)
   end
 
-  test "should redirect when script has a redirect_to property" do
-    script = create :script
-    new_script = create :script
-    script.update(redirect_to: new_script.name)
+  test "should redirect when unit has a redirect_to property" do
+    unit = create :script
+    new_unit = create :script
+    unit.update(redirect_to: new_unit.name)
 
-    get :show, params: {id: script.name}
-    assert_redirected_to "/s/#{new_script.name}"
+    get :show, params: {id: unit.name}
+    assert_redirected_to "/s/#{new_unit.name}"
   end
 
   test "should not get index if not signed in" do
@@ -55,7 +42,9 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should not get index if not levelbuilder" do
-    [@admin, @not_admin].each do |user|
+    admin = create(:admin)
+    not_admin = create(:user)
+    [admin, not_admin].each do |user|
       sign_in user
 
       get :index
@@ -74,13 +63,14 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get show of custom script" do
+  test "should get show of custom unit" do
     get :show, params: {id: 'course1'}
     assert_response :success
   end
 
   test "should get show of ECSPD if signed in" do
-    sign_in @not_admin
+    not_admin = create(:user)
+    sign_in not_admin
     get :show, params: {id: 'ECSPD'}
     assert_response :success
   end
@@ -133,31 +123,42 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show if not admin" do
-    sign_in @not_admin
+    not_admin = create(:user)
+    sign_in not_admin
     get :show, params: {id: Script::FLAPPY_NAME}
     assert_response :success
   end
 
   test 'should not get show if admin' do
-    sign_in @admin
+    admin = create(:admin)
+    sign_in admin
     get :show, params: {id: Script::FLAPPY_NAME}
     assert_response :forbidden
   end
 
-  test "should use script name as param where script name is words but looks like a number" do
-    script = create(:script, name: '15-16')
+  test "should use unit name as param where unit name is words but looks like a number" do
+    unit = create(:script, name: '15-16')
     get :show, params: {id: "15-16"}
 
     assert_response :success
-    assert_equal script, assigns(:script)
+    assert_equal unit, assigns(:script)
   end
 
-  test "should use script name as param where script name is words" do
-    script = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
+  test "should use unit name as param where unit name is words" do
+    unit = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
     get :show, params: {id: "Heure de Code"}
 
     assert_response :success
-    assert_equal script, assigns(:script)
+    assert_equal unit, assigns(:script)
+  end
+
+  test "show get show if family name matches script name" do
+    unit = create(:script, name: 'hoc-script', family_name: 'hoc-script', version_year: 'unversioned', is_course: true)
+    CourseOffering.add_course_offering(unit)
+    get :show, params: {id: 'hoc-script'}
+
+    assert_response :success
+    assert_equal unit, assigns(:script)
   end
 
   test "renders 404 when id is an invalid id" do
@@ -184,13 +185,13 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect when showing latest stable version in family for student" do
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2018.name}
     assert_response :success
   end
 
   test "show: redirect from older version to latest stable version in family for student" do
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2017.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
@@ -201,7 +202,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from new unstable version to latest stable version in family for student" do
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
@@ -212,7 +213,11 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from new unstable version to assigned version for student" do
-    sign_in @student_coursez_2017
+    student_coursez_2017 = create :student
+    section_coursez_2017 = create :section, script: @coursez_2017
+    section_coursez_2017.add_student(student_coursez_2017)
+
+    sign_in student_coursez_2017
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2017.name}?redirect_warning=true"
   end
@@ -220,9 +225,9 @@ class ScriptsControllerTest < ActionController::TestCase
   # There are tests on can_view_version? in script_test.rb which verify that it returns true if a student is assigned
   # or has made progress in a different version from the latest stable version. This test verifies that ultimately
   # the student is not redirected if true is returned.
-  test "show: do not redirect student to latest stable version in family if they can view the script version" do
+  test "show: do not redirect student to latest stable version in family if they can view the unit version" do
     Script.any_instance.stubs(:can_view_version?).returns(true)
-    sign_in @no_progress_or_assignment_student
+    sign_in create(:student)
     get :show, params: {id: @coursez_2017.name}
     assert_response :ok
   end
@@ -236,21 +241,21 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not get edit on production" do
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :forbidden
   end
 
   test "should get edit on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :ok
   end
 
   test "should not be able to edit on levelbuilder in locale besides en-US" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     with_default_locale(:de) do
       get :edit, params: {id: 'course1'}
     end
@@ -260,7 +265,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should get edit on test" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :ok
   end
@@ -268,7 +273,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not get edit on staging" do
     CDO.stubs(:rack_env).returns(:staging)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     get :edit, params: {id: 'course1'}
     assert_response :forbidden
   end
@@ -282,7 +287,9 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should not get edit if not levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    [@not_admin, @admin].each do |user|
+    admin = create(:admin)
+    not_admin = create(:user)
+    [not_admin, admin].each do |user|
       sign_in user
       get :edit, params: {id: 'course1'}
 
@@ -292,58 +299,59 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
-    script = Script.find_by_name('course1')
-    get :edit, params: {id: script.name}
+    sign_in create(:levelbuilder)
+    unit = Script.find_by_name('course1')
+    get :edit, params: {id: unit.name}
 
-    assert_equal script, assigns(:script)
+    assert_equal unit, assigns(:script)
   end
 
-  test 'platformization partner cannot create script' do
+  test 'platformization partner cannot create unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     post :create, params: {
-      script: {name: 'test-script-create'},
-      script_text: '',
+      script: {name: 'test-unit-create'},
       is_migrated: true
     }
     assert_response :forbidden
   end
 
-  test "platformization partner cannot edit our scripts" do
+  test "platformization partner cannot edit our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     get :edit, params: {id: @coursez_2019.id}
     assert_response :forbidden
   end
 
-  test "platformization partner can edit their scripts" do
+  test "platformization partner can edit their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
-    get :edit, params: {id: @partner_script.id}
+    sign_in create(:platformization_partner)
+    get :edit, params: {id: @partner_unit.id}
     assert_response :success
   end
 
-  test "platformization partner cannot update our scripts" do
+  test "platformization partner cannot update our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     patch :update, params: {
       id: @coursez_2019.id,
       script: {name: @coursez_2019.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
     }
     assert_response :forbidden
   end
 
-  test "platformization partner can update their scripts" do
+  test "platformization partner can update their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    stub_file_writes(@partner_script.name)
+    stub_file_writes(@partner_unit.name)
 
-    sign_in @platformization_partner
+    sign_in create(:platformization_partner)
     patch :update, params: {
-      id: @partner_script.id,
-      script: {name: @partner_script.name},
-      script_text: '',
+      id: @partner_unit.id,
+      script: {name: @partner_unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
     }
     assert_response :success
   end
@@ -353,7 +361,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should redirect old k-8" do
     get :show, params: {id: 1}
-    assert_redirected_to script_path(Script.twenty_hour_script)
+    assert_redirected_to script_path(Script.twenty_hour_unit)
   end
 
   test "show should redirect to flappy" do
@@ -362,53 +370,57 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    script_name = 'test-script-create'
+    unit_name = 'test-unit-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", "is_migrated true\n").once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
     end
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
     post :create, params: {
-      script: {name: script_name},
+      script: {name: unit_name},
+      lesson_groups: '[]',
       is_migrated: true
     }
-    assert_redirected_to edit_script_path id: script_name
+    assert_redirected_to edit_script_path id: unit_name
 
-    script = Script.find_by_name(script_name)
-    assert_equal script_name, script.name
-    assert script.is_migrated
+    unit = Script.find_by_name(unit_name)
+    assert_equal unit_name, unit.name
+    assert unit.is_migrated
+    assert_equal unit.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    assert_equal unit.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    assert_equal unit.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  test 'cannot create legacy script' do
+  test 'cannot create legacy unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
-    script_name = 'legacy'
+    unit_name = 'legacy'
     post :create, params: {
-      script: {name: script_name},
+      script: {name: unit_name},
     }
 
     assert_response :bad_request
-    refute Script.find_by_name(script_name)
+    refute Script.find_by_name(unit_name)
   end
 
   test 'destroy raises exception for evil filenames' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
-    # Note that these script names (intentionally) fail model validation.
+    # Note that these unit names (intentionally) fail model validation.
     [
-      '~/evil_script_name',
-      '../evil_script_name',
-      'subdir/../../../evil_script_name'
+      '~/evil_unit_name',
+      '../evil_unit_name',
+      'subdir/../../../evil_unit_name'
     ].each do |name|
-      evil_script = Script.new(name: name)
-      evil_script.save(validate: false)
+      evil_unit = Script.new(name: name)
+      evil_unit.save(validate: false)
       assert_raise ArgumentError do
-        delete :destroy, params: {id: evil_script.id}
+        delete :destroy, params: {id: evil_unit.id}
       end
     end
   end
@@ -416,369 +428,467 @@ class ScriptsControllerTest < ActionController::TestCase
   test "cannot update on production" do
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
-    script = create :script, hidden: true
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      hidden: false
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
-    script.reload
-    assert script.hidden
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
-    script = create :script, hidden: true
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      hidden: false
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
-    script.reload
-    refute script.hidden
-    assert_equal false, JSON.parse(@response.body)['hidden']
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
+  end
+
+  test "update instruction_type" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+  end
+
+  test "update published state to in_development" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+  end
+
+  test "update published state to pilot" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
+      pilot_experiment: 'my-pilot'
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.pilot
+  end
+
+  test "update published state to beta" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
+  end
+
+  test "update published state to preview" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
+  end
+
+  test "update published state to stable" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
-    script = create :script, hidden: true
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      hidden: false
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
-    script.reload
-    refute script.hidden
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
     CDO.stubs(:rack_env).returns(:staging)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
 
-    script = create :script, hidden: true
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      hidden: false
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
-    script.reload
-    assert script.hidden
+    unit.reload
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
-  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
-    sign_in @levelbuilder
+  test 'cannot update unmigrated unit' do
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script, is_migrated: false
+    stub_file_writes(unit.name)
 
-    error = assert_raises RuntimeError do
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+    }
+    assert_response :bad_request
+  end
+
+  test 'updating migrated unit without differences updates timestamp' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Timecop.freeze do
+      unit = create :script, is_migrated: true
+      lesson_group = create :lesson_group, script: unit
+      create :lesson, script: unit, lesson_group: lesson_group
+      stub_file_writes(unit.name)
+
+      unit.reload
+      lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
+      updated_at = unit.updated_at
+
+      Timecop.travel 1.minute
+
       post :update, params: {
-        id: script.id,
-        script: {name: script.name},
-        script_text: '',
-        old_script_text: 'different'
+        id: unit.id,
+        script: {name: unit.name},
+        is_migrated: true,
+        last_updated_at: updated_at.to_s,
+        lesson_groups: lesson_groups_json
+      }
+      assert_response :success
+      unit.reload
+      refute_equal updated_at, unit.updated_at
+    end
+  end
+
+  test 'cannot update migrated unit with outdated timestamp' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, script: unit, lesson_group: lesson_group
+    stub_file_writes(unit.name)
+
+    unit.reload
+    timestamp = (unit.updated_at - 1).to_s
+
+    e = assert_raises do
+      post :update, params: {
+        id: unit.id,
+        script: {name: unit.name},
+        is_migrated: true,
+        lesson_groups: '[]',
+        last_updated_at: timestamp
       }
     end
-
-    assert_includes error.message, 'Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
+    assert_includes e.message, 'Could not update the unit because it has been modified more recently outside of this editor.'
   end
 
-  test 'can update if database matches starting content for current edit page' do
-    sign_in @levelbuilder
+  test 'can update migrated unit containing migrated script levels' do
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    create(
-      :script_level,
-      script: script,
-      lesson: lesson,
-      levels: [create(:maze)]
-    )
-    stub_file_writes(script.name)
+    unit = create :script, :with_levels, name: 'migrated'
 
+    stub_file_writes(unit.name)
+    unit.reload
+    lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      old_script_text: ScriptDSL.serialize_lesson_groups(script)
-    }
-
-    assert_response :success
-  end
-
-  test 'can update migrated script containing migrated script levels' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    script = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    activity = create :lesson_activity, lesson: lesson
-    section = create :activity_section, lesson_activity: activity
-
-    # A migrated script level is one with an activity section.
-    create(
-      :script_level,
-      script: script,
-      lesson: lesson,
-      activity_section: section,
-      activity_section_position: 1,
-      levels: [create(:applab)]
-    )
-
-    stub_file_writes(script.name)
-
-    post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(script),
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s,
     }
     assert_response :success
-    assert script.is_migrated
-    assert script.script_levels.any?
+    assert unit.is_migrated
+    assert unit.script_levels.any?
   end
 
-  test 'cannot update migrated script containing legacy script levels' do
-    sign_in @levelbuilder
+  test 'cannot update migrated unit containing legacy script levels' do
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'problem lesson'
+    unit = create :script, name: 'migrated', is_migrated: true
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group, name: 'problem lesson'
 
     # A legacy script level is one without an activity section.
     create(
       :script_level,
-      script: script,
+      script: unit,
       lesson: lesson,
       levels: [create(:applab)]
     )
 
-    stub_file_writes(script.name)
-
+    stub_file_writes(unit.name)
+    unit.reload
+    lesson_groups_json = unit.lesson_groups.map(&:summarize_for_unit_edit).to_json
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(script),
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s,
     }
 
     assert_response :not_acceptable
-    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"problem lesson\"]'
+    msg = 'Legacy script levels are not allowed in migrated units. Problem lessons: [\"problem lesson\"]'
     assert_includes response.body, msg
-    assert script.is_migrated
-    assert script.script_levels.any?
-  end
-
-  test 'updates teacher resources' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    script = create :script
-    stub_file_writes(script.name)
-
-    post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      resourceTypes: ['curriculum', 'vocabulary', ''],
-      resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
-    }
-    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
+    assert unit.is_migrated
+    assert unit.script_levels.any?
   end
 
   test 'updates migrated teacher resources' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, hidden: true, is_migrated: true
-    stub_file_writes(script.name)
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
+    stub_file_writes(unit.name)
 
-    course_version = create :course_version, content_root: script
+    course_version = create :course_version, content_root: unit
     teacher_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version)
     ]
 
+    unit.reload
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
       resourceIds: teacher_resources.map(&:id),
-      is_migrated: true
+      is_migrated: true,
+      last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
+    assert_equal teacher_resources.map(&:key), Script.find_by_name(unit.name).resources.map {|r| r[:key]}
   end
 
   test 'updates migrated student resources' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, hidden: true, is_migrated: true
-    stub_file_writes(script.name)
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
+    stub_file_writes(unit.name)
 
-    course_version = create :course_version, content_root: script
+    course_version = create :course_version, content_root: unit
     student_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version)
     ]
 
+    unit.reload
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
       studentResourceIds: student_resources.map(&:id),
-      is_migrated: true
+      is_migrated: true,
+      last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal student_resources.map(&:key), Script.find_by_name(script.name).student_resources.map {|r| r[:key]}
+    assert_equal student_resources.map(&:key), Script.find_by_name(unit.name).student_resources.map {|r| r[:key]}
   end
 
   test 'updates pilot_experiment' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       pilot_experiment: 'pilot-experiment',
-      hidden: false
+      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     }
 
     assert_response :success
 
-    assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
-    # pilot scripts are always marked hidden
-    assert Script.find_by_name(script.name).hidden
+    assert_equal 'pilot-experiment', Script.find_by_name(unit.name).pilot_experiment
+    # pilot units are always marked with the pilot published state
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedCourseConstants::PUBLISHED_STATE.pilot
   end
 
-  test 'does not hide script with blank pilot_experiment' do
-    sign_in @levelbuilder
+  test 'does not hide unit with blank pilot_experiment' do
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       pilot_experiment: '',
-      hidden: false
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
 
     assert_response :success
 
-    assert_nil Script.find_by_name(script.name).pilot_experiment
-    # blank pilot_experiment does not cause script to be hidden
-    refute Script.find_by_name(script.name).hidden
+    assert_nil Script.find_by_name(unit.name).pilot_experiment
+    # blank pilot_experiment does not cause unit to have published_state of pilot
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
-    assert_nil script.project_sharing
-    assert_nil script.curriculum_umbrella
-    assert_nil script.family_name
-    assert_nil script.version_year
+    assert_nil unit.project_sharing
+    assert_nil unit.curriculum_umbrella
+    assert_nil unit.family_name
+    assert_nil unit.version_year
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
-      version_year: '2017'
+      version_year: '2017',
+      is_maker_unit: 'on'
     }
-    script.reload
+    unit.reload
 
-    assert script.project_sharing
-    assert_equal 'CSF', script.curriculum_umbrella
-    assert_equal 'my-fam', script.family_name
-    assert_equal '2017', script.version_year
-  end
-
-  test 'set_and_unset_teacher_resources' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    script = create :script
-    stub_file_writes(script.name)
-
-    # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
-    # which can cause incorrect behavior if it is removed during the Script.add_script while being added via the
-    # update_teacher_resources during the same call to Script.update_text
-    2.times do
-      post :update, params: {
-        id: script.id,
-        script: {name: script.name},
-        script_text: '',
-        resourceTypes: ['curriculum', 'something_else'],
-        resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
-      }
-      assert_response :success
-      script.reload
-
-      assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], script.teacher_resources
-    end
-
-    # Unset the properties.
-    post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
-      resourceTypes: [''],
-      resourceLinks: ['']
-    }
-    assert_response :success
-    script.reload
-
-    assert_nil script.teacher_resources
+    assert unit.project_sharing
+    assert_equal 'CSF', unit.curriculum_umbrella
+    assert_equal 'my-fam', unit.family_name
+    assert_equal '2017', unit.version_year
+    assert unit.is_maker_unit
   end
 
   test 'set and unset all general_params' do
-    sign_in @levelbuilder
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name, family_name: 'fake-family-z')
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -789,279 +899,732 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      is_stable: 'on',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+      participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       tts: 'on',
       project_sharing: 'on',
       is_course: 'on',
       peer_reviews_to_complete: 1,
       curriculum_path: 'fake_curriculum_path',
-      family_name: 'coursea',
+      family_name: 'fake-family-z',
       version_year: '2020',
       pilot_experiment: 'fake-pilot-experiment',
       editor_experiment: 'fake-editor-experiment',
       curriculum_umbrella: 'CSF',
       supported_locales: ['fake-locale'],
       project_widget_types: ['gamelab', 'weblab'],
-      background: 'fake-background',
     }
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
     }.merge(general_params)
     assert_response :success
-    script.reload
+    unit.reload
 
     general_params.each do |k, v|
       if v == 'on'
-        assert_equal !!v, !!script.send(k), "Property didn't update: #{k}"
+        assert_equal !!v, !!unit.send(k), "Property didn't update: #{k}"
       else
-        assert_equal v, script.send(k), "Property didn't update: #{k}"
+        assert_equal v, unit.send(k), "Property didn't update: #{k}"
       end
     end
 
     # Unset the properties.
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: '',
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       curriculum_path: '',
       version_year: '',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
       pilot_experiment: '',
       editor_experiment: '',
       curriculum_umbrella: '',
       supported_locales: [],
       project_widget_types: [],
-      background: ''
     }
     assert_response :success
-    script.reload
+    unit.reload
 
-    assert_equal({}, script.properties)
+    assert_equal({'is_migrated' => true}, unit.properties)
   end
 
-  test 'add lesson to script' do
-    sign_in @levelbuilder
+  test 'setting tts for unit triggers generation of tts for the unit' do
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    level = create :level
-    script = create :script
-    stub_file_writes(script.name)
+    Script.any_instance.stubs(:tts_update).once
 
-    assert_empty script.lessons
+    unit = create :script
+    stub_file_writes(unit.name)
 
-    script_text = <<~SCRIPT_TEXT
-      lesson 'lesson 1', display_name: 'lesson 1'
-      level '#{level.name}'
-    SCRIPT_TEXT
+    assert_nil unit.tts
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: script_text,
-    }
-    script.reload
-
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      tts: true
+    }, as: :json
     assert_response :success
-    assert_equal level, script.lessons.first.script_levels.first.level
+    unit.reload
+
+    assert_equal true, unit.tts
+  end
+
+  test 'setting tts to false does not trigger generation of tts for the unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Script.any_instance.stubs(:tts_update).never
+
+    unit = create :script, tts: true
+    stub_file_writes(unit.name)
+
+    assert_equal true, unit.tts
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      tts: false
+    }, as: :json
+    assert_response :success
+    unit.reload
+
+    assert_nil unit.tts
+  end
+
+  test 'published_state is set to nil for script within course' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    }
+    assert_response :success
+    unit.reload
+
+    assert_nil unit.published_state
+  end
+
+  test 'published_state is set for script within course when different' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
+    }
+    assert_response :success
+    unit.reload
+
+    refute_nil unit.published_state
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit.published_state
+  end
+
+  test 'add lesson to migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+      name == unit.name &&
+        i18n[unit.name]['lessons']['lesson-1']['name'] == 'lesson 1' &&
+        i18n[unit.name]['lesson_groups'].empty?
+    end.once
+
+    assert_empty unit.lessons
+
+    lesson_groups_json = [
+      {
+        key: "",
+        display_name: "Content",
+        userFacing: false,
+        lessons: [
+          {
+            key: "lesson-1",
+            name: "lesson 1",
+          }
+        ]
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
     assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
+
+    unit.reload
+    assert_equal 'lesson 1', unit.lessons.first.name
   end
 
-  no_access_msg = "You don&#39;t have access to this unit."
+  test 'add user facing lesson group to migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-  test_user_gets_response_for :show, response: :redirect, user: nil,
-    params: -> {{id: @pilot_script.name}},
-    name: 'signed out user cannot view pilot script'
+    unit = create :script, is_migrated: true
+    stub_file_writes(unit.name)
 
-  test_user_gets_response_for(:show, response: :success, user: :student,
-    params: -> {{id: @pilot_script.name}}, name: 'student cannot view pilot script'
-  ) do
-    assert response.body.include? no_access_msg
+    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+      name == unit.name &&
+        i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'lesson group 1'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: "lesson-group-1",
+        displayName: "lesson group 1",
+        userFacing: true,
+        lessons: [],
+        description: 'Description',
+        bigQuestions: 'Big Questions',
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'lesson group 1', lesson_group_data['display_name']
+    assert lesson_group_data['user_facing']
+    assert_not_nil lesson_group_data['id']
+    assert_empty lesson_group_data['lessons']
+    assert_equal 'Big Questions', lesson_group_data['big_questions']
+    assert_equal 'Description', lesson_group_data['description']
+
+    unit.reload
+    assert_empty unit.lessons
+    lesson_group = unit.lesson_groups.first
+    assert_equal 'lesson group 1', lesson_group.display_name
+    assert_equal 'Big Questions', lesson_group.big_questions
+    assert_equal 'Description', lesson_group.description
   end
 
-  test_user_gets_response_for(:show, response: :success, user: :teacher,
-    params: -> {{id: @pilot_script.name}},
-    name: 'teacher without pilot access cannot view pilot script'
-  ) do
-    assert response.body.include? no_access_msg
+  test 'update user facing lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, _, _|
+      i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'updated name'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'updated name',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson.id,
+            key: 'lesson-1',
+          },
+        ],
+        description: 'updated description',
+        bigQuestions: 'updated questions',
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'updated name', lesson_group_data['display_name']
+    assert_equal 'updated questions', lesson_group_data['big_questions']
+    assert_equal 'updated description', lesson_group_data['description']
+    assert_equal 'lesson 1', lesson_group_data['lessons'][0]['name']
+
+    lesson_group.reload
+    assert_equal 'updated name', lesson_group.display_name
+    assert_equal 'updated questions', lesson_group.big_questions
+    assert_equal 'updated description', lesson_group.description
+    assert_equal 'lesson 1', lesson_group.lessons.first.name
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
-    params: -> {{id: @pilot_script.name, section_id: @pilot_section.id}},
-    name: 'pilot teacher can view pilot script'
-  ) do
-    refute response.body.include? no_access_msg
+  test 'update to migrated unit does not update lesson name' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    stub_file_writes(unit.name)
+
+    Script.stubs(:merge_and_write_i18n).with do |i18n, _, _|
+      i18n[unit.name]['lessons'].empty? &&
+        i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'lesson group 1'
+    end.once
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson.id,
+            key: 'lesson-1',
+            name: 'bogus lesson name'
+          },
+        ],
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    assert_response :success
+    lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
+    assert_equal 'lesson 1', lesson_group_data['lessons'][0]['name']
+
+    lesson_group.reload
+    assert_equal 'lesson 1', lesson_group.lessons.first.name
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
-    params: -> {{id: @pilot_script.name}}, name: 'pilot student can view pilot script'
-  ) do
-    refute response.body.include? no_access_msg
+  test 'can move lesson to earlier lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
+    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+        ],
+      },
+      {
+        key: 'lesson-group-2',
+        displayName: 'lesson group 2',
+        userFacing: true,
+        lessons: [],
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_equal ['lesson 1', 'lesson 2'], unit.lesson_groups[0].lessons.map(&:name)
+    assert_equal [lesson_1.id, lesson_2.id], unit.lesson_groups[0].lessons.map(&:id)
+    assert_empty unit.lesson_groups[1].lessons
   end
 
-  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-    params: -> {{id: @pilot_script.name}}, name: 'levelbuilder can view pilot script'
-  ) do
-    refute response.body.include? no_access_msg
+  test 'can move lesson to later lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
+    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [],
+      },
+      {
+        key: 'lesson-group-2',
+        displayName: 'lesson group 2',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+        ],
+      }
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_empty unit.lesson_groups[0].lessons
+    assert_equal ['lesson 2', 'lesson 1'], unit.lesson_groups[1].lessons.map(&:name)
+    assert_equal [lesson_2.id, lesson_1.id], unit.lesson_groups[1].lessons.map(&:id)
   end
 
-  test 'should redirect to latest stable version in script family for student without progress or assignment' do
+  test 'can move lesson within lesson group in migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-2', name: 'lesson 2'
+    lesson_3 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-3', name: 'lesson 3'
+    unit.reload
+    assert_equal ['lesson 1', 'lesson 2', 'lesson 3'], unit.lesson_groups[0].lessons.map(&:name)
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+          {
+            id: lesson_3.id,
+            key: 'lesson-3',
+          },
+        ],
+      },
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_equal ['lesson 2', 'lesson 1', 'lesson 3'], unit.lesson_groups[0].lessons.map(&:name)
+    assert_equal [lesson_2.id, lesson_1.id, lesson_3.id], unit.lesson_groups[0].lessons.map(&:id)
+  end
+
+  test 'can move lesson group within migrated unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
+    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
+    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
+    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+
+    stub_file_writes(unit.name)
+
+    lesson_groups_json = [
+      {
+        key: 'lesson-group-2',
+        displayName: 'lesson group 2',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_2.id,
+            key: 'lesson-2',
+          },
+        ],
+      },
+      {
+        key: 'lesson-group-1',
+        displayName: 'lesson group 1',
+        userFacing: true,
+        lessons: [
+          {
+            id: lesson_1.id,
+            key: 'lesson-1',
+          },
+        ],
+      },
+    ].to_json
+
+    unit.reload
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: lesson_groups_json,
+      last_updated_at: unit.updated_at.to_s
+    }
+    unit.reload
+    assert_equal ['lesson group 2', 'lesson group 1'], unit.lesson_groups.map(&:display_name)
+    assert_equal [lesson_group_2.id, lesson_group_1.id], unit.lesson_groups.map(&:id)
+    assert_equal ['lesson 2'], unit.lesson_groups[0].lessons.map(&:name)
+    assert_equal ['lesson 1'], unit.lesson_groups[1].lessons.map(&:name)
+  end
+
+  class CoursePilotTests < ActionController::TestCase
+    setup do
+      @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+      @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+      @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
+      @pilot_student = create(:follower, section: @pilot_section).student_user
+    end
+
+    no_access_msg = "You don&#39;t have access to this unit."
+
+    test_user_gets_response_for :show, response: :redirect, user: nil,
+      params: -> {{id: @pilot_unit.name}},
+      name: 'signed out user cannot view pilot unit'
+
+    test_user_gets_response_for(:show, response: :success, user: :student,
+      params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: :teacher,
+      params: -> {{id: @pilot_unit.name}},
+      name: 'teacher without pilot access cannot view pilot unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+      params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
+      name: 'pilot teacher can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
+      params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+      params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
+  end
+
+  class CourseInDevelopmentTests < ActionController::TestCase
+    setup do
+      @in_development_unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
+    end
+
+    test_user_gets_response_for :show, response: :redirect, user: nil,
+      params: -> {{id: @in_development_unit.name}},
+      name: 'signed out user cannot view in-development unit'
+
+    test_user_gets_response_for(:show, response: :forbidden, user: :student,
+      params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
+    )
+
+    test_user_gets_response_for(:show, response: :forbidden, user: :teacher,
+      params: -> {{id: @in_development_unit.name}},
+      name: 'teacher cannot view in-development unit'
+    )
+
+    test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+      params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
+    )
+  end
+
+  test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', is_course: true
+    CourseOffering.add_course_offering(dogs1)
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'ui-test-versioned-script'}
     end
 
-    dogs1.update!(is_stable: true)
+    dogs1.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', is_stable: true
+    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', is_stable: true
+    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
   end
 
-  test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
-    sign_in @levelbuilder
+  no_access_msg = "You don&#39;t have access to this unit."
 
-    get :show, params: {id: 'course1'}
-    assert_response :success
-    refute response.body.include? 'visible after'
+  test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view vocab page for student facing course') do
+    refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
-    Timecop.freeze(Time.new(2020, 4, 2))
-    sign_in @levelbuilder
-
-    create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
-
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
+  test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view resources page for student facing course') do
+    refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in @levelbuilder
-
-    create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
-
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    assert response.body.include? 'The lesson lesson 1 will be visible after'
-    Timecop.return
+  test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view standards page for student facing course') do
+    refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test "student does not see visible after warning if lesson has visible_after property" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:student)
-
-    create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
-
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
+  test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view code page for student facing course') do
+    refute response.body.include? no_access_msg
   end
+  test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test "teacher does not see visible after warning if lesson has visible_after property" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:teacher)
-
-    create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
-
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
-  end
-
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
-
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
-
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
-
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
-
-  test "view all instructions page for migrated script" do
+  test "view all instructions page for migrated unit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
-    get :instructions, params: {id: @migrated_script.name}
+    get :instructions, params: {id: @migrated_unit.name}
     assert_response :success
   end
 
-  test "view all instructions page for unmigrated script" do
+  test "view all instructions page for unmigrated unit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
-    get :instructions, params: {id: @unmigrated_script.name}
+    get :instructions, params: {id: @unmigrated_unit.name}
     assert_response :success
   end
 
-  test "get_rollup_resources return rollups for a script with code, resources, standards, and vocab" do
+  test "get_rollup_resources return rollups for a unit with code, resources, standards, and vocab" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
-    course_version = create :course_version, content_root: @migrated_script
-    lesson_group = create :lesson_group, script: @migrated_script
+    course_version = create :course_version, content_root: @migrated_unit
+    lesson_group = create :lesson_group, script: @migrated_unit
     lesson = create :lesson, lesson_group: lesson_group
     lesson.programming_expressions = [create(:programming_expression)]
     lesson.resources = [create(:resource, course_version_id: course_version.id)]
     lesson.standards = [create(:standard)]
     lesson.vocabularies = [create(:vocabulary, course_version_id: course_version.id)]
 
-    get :get_rollup_resources, params: {id: @migrated_script.name}
+    get :get_rollup_resources, params: {id: @migrated_unit.name}
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 4, response_body.length
     assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
   end
 
-  test "get_rollup_resources doesn't return rollups if no lesson in a script has the associated object" do
+  test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in(@levelbuilder)
+    sign_in(create(:levelbuilder))
 
-    course_version = create :course_version, content_root: @migrated_script
-    lesson_group = create :lesson_group, script: @migrated_script
+    course_version = create :course_version, content_root: @migrated_unit
+    lesson_group = create :lesson_group, script: @migrated_unit
     lesson = create :lesson, lesson_group: lesson_group
     # Only add resources and standards, not programming expressions and vocab
     lesson.resources = [create(:resource, course_version_id: course_version.id)]
     lesson.standards = [create(:standard)]
 
-    get :get_rollup_resources, params: {id: @migrated_script.name}
+    get :get_rollup_resources, params: {id: @migrated_unit.name}
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 2, response_body.length
     assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
   end
 
-  def stub_file_writes(script_name)
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]
+  test "get_unit bypasses cache for edit route" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(create(:levelbuilder))
+
+    Script.expects(:get_from_cache).never
+    Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
+    get :edit, params: {id: @migrated_unit.name}
+
+    Script.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
+    Script.expects(:get_without_cache).never
+    get :show, params: {id: @migrated_unit.name}
+  end
+
+  def stub_file_writes(unit_name, family_name: nil)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
     File.stubs(:write).with do |filename, _|
-      filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
+      filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts.en.yml')
     end
   end
 end

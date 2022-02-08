@@ -1,8 +1,6 @@
 {
-  "func": "setStyle",
+  "key": "setStyle",
+  "name": "setStyle",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"color:red;\""
-  ]
+  "syntax": "setStyle"
 }

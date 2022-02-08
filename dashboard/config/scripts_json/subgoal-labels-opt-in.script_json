@@ -2,13 +2,17 @@
   "script": {
     "name": "subgoal-labels-opt-in",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:05 UTC",
+    "serialized_at": "2021-11-22 19:57:16 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "subgoal-labels-opt-in"
     }
@@ -44,16 +48,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ebc5b49d-7228-4e43-8194-57be345a13fc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ebc5b49d-7228-4e43-8194-57be345a13fc",
+        "lesson.key": "Subgoal Labels Study Opt-In",
+        "lesson_group.key": "",
+        "script.name": "subgoal-labels-opt-in"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "3c16ccf6-f9a6-4078-bb29-5eb41c65b2ac",
+      "position": 1,
+      "properties": {
+        "name": "Click here to participate in the subgoal labels study",
+        "progression_name": "Click here to participate in the subgoal labels study"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c16ccf6-f9a6-4078-bb29-5eb41c65b2ac",
+        "lesson_activity.key": "ebc5b49d-7228-4e43-8194-57be345a13fc"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -61,7 +88,6 @@
         ],
         "progression": "Click here to participate in the subgoal labels study"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -69,7 +95,8 @@
         ],
         "lesson.key": "Subgoal Labels Study Opt-In",
         "lesson_group.key": "",
-        "script.name": "subgoal-labels-opt-in"
+        "script.name": "subgoal-labels-opt-in",
+        "activity_section.key": "3c16ccf6-f9a6-4078-bb29-5eb41c65b2ac"
       },
       "level_keys": [
         "csp_subgoal_labels_consent_intro"
@@ -85,7 +112,8 @@
         ],
         "lesson.key": "Subgoal Labels Study Opt-In",
         "lesson_group.key": "",
-        "script.name": "subgoal-labels-opt-in"
+        "script.name": "subgoal-labels-opt-in",
+        "activity_section.key": "3c16ccf6-f9a6-4078-bb29-5eb41c65b2ac"
       }
     }
   ],

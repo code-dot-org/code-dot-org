@@ -1,11 +1,11 @@
 {
-  "func": "acos",
+  "key": "acos",
+  "name": "acos",
   "category": "Math",
-  "paletteParams": [
-    "value"
+  "palette_params": [
+    {
+      "name": "value"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "value"
+  "syntax": "acos(value)"
 }

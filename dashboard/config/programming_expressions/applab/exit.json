@@ -1,5 +1,6 @@
 {
-  "func": "exit",
+  "key": "exit",
+  "name": "exit",
   "category": "Maker",
-  "noAutocomplete": true
+  "syntax": "exit"
 }

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
+import CourseUnitsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseUnitsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -17,6 +17,13 @@ import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVers
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -25,14 +32,22 @@ class CourseEditor extends Component {
     initialVersionTitle: PropTypes.string,
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    initialVisible: PropTypes.bool.isRequired,
-    initialIsStable: PropTypes.bool.isRequired,
+    initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
+      .isRequired,
+    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
+      .isRequired,
+    initialInstructorAudience: PropTypes.oneOf(
+      Object.values(InstructorAudience)
+    ).isRequired,
+    initialParticipantAudience: PropTypes.oneOf(
+      Object.values(ParticipantAudience)
+    ).isRequired,
     initialPilotExperiment: PropTypes.string,
     initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
-    initialScriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
     initialHasVerifiedResources: PropTypes.bool.isRequired,
     initialHasNumberedUnits: PropTypes.bool.isRequired,
@@ -67,7 +82,6 @@ class CourseEditor extends Component {
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
-      visible: this.props.initialVisible,
       pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: teacherResources,
       title: this.props.initialTitle,
@@ -77,24 +91,18 @@ class CourseEditor extends Component {
       hasNumberedUnits: this.props.initialHasNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
-      isStable: this.props.initialIsStable,
-      scriptsInCourse: this.props.initialScriptsInCourse,
-      publishedState: this.props.initialVisible
-        ? this.props.initialIsStable
-          ? 'Recommended'
-          : 'Preview'
-        : this.props.initialPilotExperiment
-        ? 'Pilot'
-        : 'Beta'
+      savedFamilyName: this.props.initialFamilyName,
+      savedVersionYear: this.props.initialVersionYear,
+      unitsInCourse: this.props.initialUnitsInCourse,
+      publishedState: this.props.initialPublishedState,
+      instructionType: this.props.initialInstructionType,
+      instructorAudience: this.props.initialInstructorAudience,
+      participantAudience: this.props.initialParticipantAudience
     };
   }
 
   handleUpdateAnnouncements = newAnnouncements => {
     this.setState({announcements: newAnnouncements});
-  };
-
-  handleView = () => {
-    navigateToHref(linkWithQueryParams(this.props.coursePath));
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
@@ -105,6 +113,7 @@ class CourseEditor extends Component {
     let dataToSave = {
       title: this.state.title,
       version_title: this.state.versionTitle,
+      announcements: JSON.stringify(this.state.announcements),
       description_short: this.state.descriptionShort,
       description_student: this.state.descriptionStudent,
       description_teacher: this.state.descriptionTeacher,
@@ -112,10 +121,12 @@ class CourseEditor extends Component {
       has_numbered_units: this.state.hasNumberedUnits,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
-      is_stable: this.state.isStable,
-      visible: this.state.visible,
+      published_state: this.state.publishedState,
+      instruction_type: this.state.instructionType,
+      participant_audience: this.state.participantAudience,
+      instructor_audience: this.state.instructorAudience,
       pilot_experiment: this.state.pilotExperiment,
-      scripts: this.state.scriptsInCourse
+      scripts: this.state.unitsInCourse
     };
 
     if (this.props.migratedTeacherResources) {
@@ -131,7 +142,7 @@ class CourseEditor extends Component {
     }
 
     if (
-      this.state.publishedState === 'Pilot' &&
+      this.state.publishedState === PublishedState.pilot &&
       this.state.pilotExperiment === ''
     ) {
       this.setState({
@@ -140,6 +151,31 @@ class CourseEditor extends Component {
           'Please provide a pilot experiment in order to save with published state as pilot.'
       });
       return;
+    } else if (
+      (this.state.versionYear !== '' && this.state.familyName === '') ||
+      (this.state.versionYear === '' && this.state.familyName !== '')
+    ) {
+      this.setState({
+        isSaving: false,
+        error: 'Please set both version year and family name.'
+      });
+      return;
+    }
+
+    if (this.state.publishedState !== this.props.initialPublishedState) {
+      const msg =
+        'It looks like you are updating the published state. ' +
+        'Are you sure you want to update the published state? ' +
+        'Once you update the published state you can not go back to this published state. ' +
+        'For example once you set the published state to beta you can not go back to in development. ' +
+        'Also once a course as a published state of pilot it can not be fully launched (marked as preview or stable).';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
     }
 
     $.ajax({
@@ -155,7 +191,9 @@ class CourseEditor extends Component {
         } else {
           this.setState({
             lastSaved: Date.now(),
-            isSaving: false
+            isSaving: false,
+            savedVersionYear: data.version_year,
+            savedFamilyName: data.family_name
           });
         }
       })
@@ -165,7 +203,7 @@ class CourseEditor extends Component {
   };
 
   render() {
-    const {name, scriptNames, courseFamilies, versionYearOptions} = this.props;
+    const {name, unitNames, courseFamilies, versionYearOptions} = this.props;
     const {
       announcements,
       teacherResources,
@@ -179,10 +217,11 @@ class CourseEditor extends Component {
       familyName,
       versionYear,
       pilotExperiment,
-      isStable,
-      visible,
-      scriptsInCourse,
-      publishedState
+      unitsInCourse,
+      publishedState,
+      instructionType,
+      instructorAudience,
+      participantAudience
     } = this.state;
     return (
       <div>
@@ -259,16 +298,16 @@ class CourseEditor extends Component {
             <HelpTip>
               <p>
                 Check if this course has resources (such as lockable lessons and
-                answer keys) for verified teachers, and we want to notify
-                non-verified teachers that this is the case.
+                answer keys) for verified instructors, and we want to notify
+                non-verified instructors that this is the case.
               </p>
             </HelpTip>
             <input
               type="checkbox"
               defaultChecked={hasVerifiedResources}
               style={styles.checkbox}
-              onChange={e =>
-                this.setState({hasVerifiedResources: e.target.value})
+              onChange={() =>
+                this.setState({hasVerifiedResources: !hasVerifiedResources})
               }
             />
           </label>
@@ -284,7 +323,9 @@ class CourseEditor extends Component {
               type="checkbox"
               defaultChecked={hasNumberedUnits}
               style={styles.checkbox}
-              onChange={e => this.setState({hasNumberedUnits: e.target.value})}
+              onChange={() =>
+                this.setState({hasNumberedUnits: !hasNumberedUnits})
+              }
             />
           </label>
           <AnnouncementsEditor
@@ -294,15 +335,29 @@ class CourseEditor extends Component {
           />
         </CollapsibleEditorSection>
 
+        <CourseTypeEditor
+          instructorAudience={instructorAudience}
+          participantAudience={participantAudience}
+          instructionType={instructionType}
+          handleInstructionTypeChange={e =>
+            this.setState({instructionType: e.target.value})
+          }
+          handleInstructorAudienceChange={e =>
+            this.setState({instructorAudience: e.target.value})
+          }
+          handleParticipantAudienceChange={e =>
+            this.setState({participantAudience: e.target.value})
+          }
+          canChangeParticipantType={
+            publishedState === PublishedState.in_development
+          }
+        />
+
         <CollapsibleEditorSection title="Publishing Settings">
           <CourseVersionPublishingEditor
-            visible={visible}
-            isStable={isStable}
             pilotExperiment={pilotExperiment}
             versionYear={versionYear}
             familyName={familyName}
-            updateVisible={visible => this.setState({visible})}
-            updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
@@ -310,10 +365,16 @@ class CourseEditor extends Component {
             updateVersionYear={versionYear => this.setState({versionYear})}
             families={courseFamilies}
             versionYearOptions={versionYearOptions}
+            initialPublishedState={this.props.initialPublishedState}
             publishedState={publishedState}
             updatePublishedState={publishedState =>
               this.setState({publishedState})
             }
+            preventCourseVersionChange={
+              this.props.initialVersionYear !== '' ||
+              this.props.initialFamilyName !== ''
+            }
+            isCourse
           />
         </CollapsibleEditorSection>
 
@@ -351,26 +412,26 @@ class CourseEditor extends Component {
         <CollapsibleEditorSection title="Units">
           <label>
             <div>
-              The dropdown(s) below represent the ordered set of scripts in this
-              course. To remove a script, just set the dropdown to the default
+              The dropdown(s) below represent the ordered set of units in this
+              course. To remove a unit, just set the dropdown to the default
               (first) value.
             </div>
-            <CourseScriptsEditor
+            <CourseUnitsEditor
               inputStyle={styles.input}
-              scriptsInCourse={scriptsInCourse}
-              updateScriptsInCourse={scriptsInCourse =>
-                this.setState({scriptsInCourse})
+              unitsInCourse={unitsInCourse}
+              updateUnitsInCourse={unitsInCourse =>
+                this.setState({unitsInCourse})
               }
-              scriptNames={scriptNames}
+              unitNames={unitNames}
             />
           </label>
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
-          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
+          pathForShowButton={this.props.coursePath}
         />
       </div>
     );

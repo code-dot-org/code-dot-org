@@ -9,9 +9,10 @@ module Foorm
       @foorm_form = create :foorm_form
       @simple_survey_form = create :foorm_simple_survey_form, form_name: @foorm_form.name
       @disabled_simple_survey_form = create :foorm_simple_survey_form, form_name: @foorm_form.name, path: 'disabled_path'
+      @test_url_path = 'test_url_path'
 
       @base_success_params = {
-        path: 'test_url_path',
+        path: @test_url_path,
         kind: '',
         form_key: @foorm_form.key,
         allow_multiple_submissions: '1'
@@ -24,6 +25,16 @@ module Foorm
       sign_in @teacher
 
       get "/form/#{@simple_survey_form.path}"
+      assert_template :show
+      assert_response :success
+    end
+
+    test 'renders form if user is not signed in and form allows anonymous submissions' do
+      anonymous_form = create :foorm_simple_survey_form,
+        form_name: @foorm_form.name,
+        properties: {allow_signed_out: true}
+
+      get "/form/#{anonymous_form.path}"
       assert_template :show
       assert_response :success
     end
@@ -58,6 +69,27 @@ module Foorm
       assert_response :success
     end
 
+    test 'renders thanks if teacher has already submitted' do
+      create :foorm_simple_survey_submission, simple_survey_form: @simple_survey_form, user: @teacher
+
+      sign_in @teacher
+      get "/form/#{@simple_survey_form.path}"
+      assert_template :thanks
+      assert_response :success
+    end
+
+    test 'renders form if teacher has already submitted but form allows multiple submissions' do
+      multiple_submissions_form = create :foorm_simple_survey_form,
+        form_name: @foorm_form.name,
+        properties: {allow_multiple_submissions: true}
+      create :foorm_simple_survey_submission, simple_survey_form: multiple_submissions_form, user: @teacher
+
+      sign_in @teacher
+      get "/form/#{multiple_submissions_form.path}"
+      assert_template :show
+      assert_response :success
+    end
+
     test 'non-admin cannot access admin only simple survey forms' do
       sign_in @teacher
 
@@ -84,20 +116,31 @@ module Foorm
       post foorm_simple_survey_forms_path, params: @base_success_params
       assert_response :success
 
-      created_simple_survey_form = Foorm::SimpleSurveyForm.find_by(path: 'test_url_path')
+      created_simple_survey_form = Foorm::SimpleSurveyForm.find_by(path: @test_url_path)
       assert created_simple_survey_form
-      assert_equal 'test_url_path', created_simple_survey_form.path
+      assert_equal @test_url_path, created_simple_survey_form.path
       assert_nil created_simple_survey_form.kind
       assert_equal @foorm_form.name, created_simple_survey_form.form_name
       assert_equal @foorm_form.version, created_simple_survey_form.form_version
-      assert_equal({'allow_multiple_submissions' => true}, created_simple_survey_form.properties)
+      assert_equal true, created_simple_survey_form.allow_multiple_submissions
+    end
+
+    test 'admin can create new simple survey form that allows anonymous submissions' do
+      sign_in @admin
+
+      post foorm_simple_survey_forms_path, params: @base_success_params.merge({allow_signed_out: '1'})
+      assert_response :success
+
+      created_simple_survey_form = Foorm::SimpleSurveyForm.find_by(path: @test_url_path)
+      assert created_simple_survey_form
+      assert_equal true, created_simple_survey_form.allow_signed_out
     end
 
     test 'creating simple survey form with invalid form fails' do
       sign_in @admin
 
       post foorm_simple_survey_forms_path, params: {
-        path: 'test_url_path',
+        path: @test_url_path,
         form_key: 'a_form_that_does_not_exist.0',
         allow_multiple_submissions: '1'
       }
@@ -118,8 +161,8 @@ module Foorm
 
       expected_survey_data = {'a_key' => 'a_value'}
 
-      created_simple_survey_form = Foorm::SimpleSurveyForm.find_by(path: 'test_url_path')
-      assert_equal expected_survey_data, created_simple_survey_form.properties['survey_data']
+      created_simple_survey_form = Foorm::SimpleSurveyForm.find_by(path: @test_url_path)
+      assert_equal expected_survey_data, created_simple_survey_form.survey_data
     end
 
     test 'parse_survey_data raises error when key provided with no value' do

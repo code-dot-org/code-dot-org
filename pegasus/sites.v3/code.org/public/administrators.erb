@@ -3,6 +3,8 @@ title: Computer science in your school or district
 theme: responsive
 video_player: true
 ---
+ <%= view :professional_learning_apply_banner, :custom_text => "Learn about our Professional Learning program for teachers new to computer science", :button_text => "Learn more" %>
+
 <h1>Bring computer science to your school or district with Code.org</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
@@ -135,7 +137,7 @@ video_player: true
   <summary><strong>Explore curriculum and course options</strong></summary>
   <p>
   <br>
-The <a href="https://studio.code.org/courses?view=teacher" target="_blank">Code.org curriculum</a> is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. If you want to consider alternatives to the Code.org courses, take a look at our recommendations of <a href="https://code.org/educate/curriculum/3rd-party" target="_blank">3rd party computer science curriculum</a>, and particularly our recommendations for <a href="https://code.org/educate/curriculum/apcsa" target="_blank">AP Computer Science A</a>.</p>
+The <a href="https://studio.code.org/courses?view=teacher" target="_blank">Code.org curriculum</a> is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. If you want to consider alternatives to the Code.org courses, take a look at our recommendations of <a href="https://code.org/educate/curriculum/3rd-party" target="_blank">third-party computer science curriculum</a>.</p>
 <br>
 </details>
 
@@ -151,7 +153,9 @@ Code.orgâ€™s curriculum and platform will always be free to use, and we offer a 
   <summary><strong>Prepare teachers with professional development and determine any certification requirements</strong></summary>
   <p>
   <br>
-We offer <a href="https://code.org/educate/professional-learning" target="_blank">professional development</a> for each of our three courses: CS Fundamentals, CS Discoveries, and CS Principles. Our workshops are designed for teachers new to computer science, and <a href="https://medium.com/@codeorg/when-teachers-succeed-students-succeed-how-code-org-pd-aligns-with-essa-59eac5148401" target="_blank">meet the six key criteria of the Every Student Succeeds Act (ESSA)</a>. More than 100,000 educators have taken our workshops, and more than 90% say they would recommend our program to another teacher!â€‹</p>
+We offer <a href="https://code.org/educate/professional-learning" target="_blank">professional development</a> for each of our curricula : CS Fundamentals, CS Discoveries, CS Principles, and CSA. Teachers should understand the programming content from CS Principles before starting professional development for CSA.
+
+Our workshops <a href="https://medium.com/@codeorg/when-teachers-succeed-students-succeed-how-code-org-pd-aligns-with-essa-59eac5148401" target="_blank">meet the six key criteria of the Every Student Succeeds Act (ESSA)</a>. More than 100,000 educators have taken our workshops, and more than 90% say they would recommend our program to another teacher!â€‹</p>
 <br>
 â€‹</details>
 
@@ -242,7 +246,7 @@ Did you know the best way to encourage students to try CS is to tell them theyâ€
 	<summary style="font-size: 18px">Are Code.orgâ€™s courses aligned to any standards?</summary>
 	<p>
 	<br>
-<p>Yes! Specifically, our courses were written using both the K-12 Framework for Computer Science and the 2017 CSTA standards. Additionally, CS Principles was written to AP standards. View standards alignment for each of our courses here: <a href="https://curriculum.code.org/csf-20/standards/" target="_blank">CSF</a>, <a href="https://curriculum.code.org/csd-20/standards/" target="_blank">CSD</a>, <a href="https://curriculum.code.org/csp-20/standards/" target="_blank">CSP</a>.</p>
+<p>Yes! Specifically, our courses were written using both the K-12 Framework for Computer Science and the 2017 CSTA standards. Additionally, CS Principles was written to AP standards. View standards alignment for each of our courses here: <a href="https://curriculum.code.org/csf-20/standards/" target="_blank">CSF</a>, <a href="https://studio.code.org/courses/csd/standards/" target="_blank">CSD</a>, <a href="https://studio.code.org/courses/csp/standards/" target="_blank">CSP</a>.</p>
 <br>
 </details>
 
@@ -274,7 +278,7 @@ Did you know the best way to encourage students to try CS is to tell them theyâ€
     <param name='name' value='DistrictsthatTeachCSpublic&#47;DistrictMap' />
     <param name='tabs' value='no' />
     <param name='toolbar' value='yes' />
-    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DistrictsthatTeachCSpublic&#47;DistrictMap&#47;1.png' /> 
+    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DistrictsthatTeachCSpublic&#47;DistrictMap&#47;1.png' />
     <param name='animate_transition' value='yes' />
     <param name='display_static_image' value='yes' />
     <param name='display_spinner' value='yes' />
@@ -283,13 +287,13 @@ Did you know the best way to encourage students to try CS is to tell them theyâ€
     <param name='language' value='en' />
   </object>
 </div>
-<script type='text/javascript'>                   
-  var divElement = document.getElementById('viz1605032803545');                    
-  var vizElement = divElement.getElementsByTagName('object')[0];                    
-  if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';};                     
-  var scriptElement = document.createElement('script');                    
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1605032803545');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';};
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 </details>
 

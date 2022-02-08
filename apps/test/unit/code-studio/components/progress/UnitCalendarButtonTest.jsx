@@ -24,6 +24,7 @@ describe('UnitCalendarButton', () => {
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
           handleClose={wrapper.instance().closeDialog}
+          scriptId={1}
         />
       )
     ).to.be.true;

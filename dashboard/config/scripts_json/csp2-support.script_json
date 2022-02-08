@@ -2,16 +2,20 @@
   "script": {
     "name": "csp2-support",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "CSP Support",
+      "is_migrated": true,
       "peer_reviews_to_complete": 4,
+      "professional_learning_course": "CSP Support",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:54 UTC",
+    "serialized_at": "2021-11-22 19:56:33 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp2-support"
     }
@@ -222,23 +226,846 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "d195bfea-afea-4c1c-ad28-409eb32bd67a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d195bfea-afea-4c1c-ad28-409eb32bd67a",
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "b854f91f-999c-40d4-b19c-f61c3c349c0c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b854f91f-999c-40d4-b19c-f61c3c349c0c",
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45",
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "308c25ef-1dc7-4e15-9c8d-fca77212af51",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51",
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "cd55d610-1e9e-43a7-a369-09b1368309e9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd55d610-1e9e-43a7-a369-09b1368309e9",
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "52c687d5-5b2c-4428-b058-8b050b0495cb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb",
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "701c6462-0084-4f85-9364-3249c2d12c11",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "701c6462-0084-4f85-9364-3249c2d12c11",
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "ba769293-0eb6-4d91-a491-219c00c81084",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ba769293-0eb6-4d91-a491-219c00c81084",
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "10d00274-d14c-4d78-8fb5-79906751ef1e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10d00274-d14c-4d78-8fb5-79906751ef1e",
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "4fcbce66-c5d4-4dd7-b7e9-f7f78fc71b1b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4fcbce66-c5d4-4dd7-b7e9-f7f78fc71b1b",
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "6af93b62-d6ba-41c6-861a-b84ae241aa93",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6af93b62-d6ba-41c6-861a-b84ae241aa93",
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "48027189-8bc5-4ea2-bbbe-df63f37e84d5",
+      "position": 1,
+      "properties": {
+        "progression_name": "What's inside and how is it organized?"
+      },
+      "seeding_key": {
+        "activity_section.key": "48027189-8bc5-4ea2-bbbe-df63f37e84d5",
+        "lesson_activity.key": "d195bfea-afea-4c1c-ad28-409eb32bd67a"
+      }
+    },
+    {
+      "key": "bb7901c2-ce2b-4da5-8b22-104197b3ad8c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb7901c2-ce2b-4da5-8b22-104197b3ad8c",
+        "lesson_activity.key": "d195bfea-afea-4c1c-ad28-409eb32bd67a"
+      }
+    },
+    {
+      "key": "48507ed8-a8d5-486c-abf7-caf3c94502be",
+      "position": 3,
+      "properties": {
+        "progression_name": "Curriculum Framework Connections in Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "48507ed8-a8d5-486c-abf7-caf3c94502be",
+        "lesson_activity.key": "d195bfea-afea-4c1c-ad28-409eb32bd67a"
+      }
+    },
+    {
+      "key": "9e607290-8a8d-43b2-8e4e-cf1dd0d9559a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Unit 2 Tool Talk"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e607290-8a8d-43b2-8e4e-cf1dd0d9559a",
+        "lesson_activity.key": "d195bfea-afea-4c1c-ad28-409eb32bd67a"
+      }
+    },
+    {
+      "key": "2a7a9f3a-4739-4ca5-affc-1928062eadd3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice Performance Tasks in Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a7a9f3a-4739-4ca5-affc-1928062eadd3",
+        "lesson_activity.key": "d195bfea-afea-4c1c-ad28-409eb32bd67a"
+      }
+    },
+    {
+      "key": "1b4ebde7-c99d-4ba6-8b50-dc46c04fbd2c",
+      "position": 6,
+      "properties": {
+        "name": "Unit 2 Self-Assessment",
+        "progression_name": "Unit 2 Self-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b4ebde7-c99d-4ba6-8b50-dc46c04fbd2c",
+        "lesson_activity.key": "d195bfea-afea-4c1c-ad28-409eb32bd67a"
+      }
+    },
+    {
+      "key": "3d3ad936-298a-4fe2-b64c-b840b1248492",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 2 Vocab and Concept Review Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d3ad936-298a-4fe2-b64c-b840b1248492",
+        "lesson_activity.key": "b854f91f-999c-40d4-b19c-f61c3c349c0c"
+      }
+    },
+    {
+      "key": "45f23bba-d851-494a-8552-cabb3001639b",
+      "position": 2,
+      "properties": {
+        "name": "AP Test Prep Guidance",
+        "progression_name": "AP Test Prep Guidance"
+      },
+      "seeding_key": {
+        "activity_section.key": "45f23bba-d851-494a-8552-cabb3001639b",
+        "lesson_activity.key": "b854f91f-999c-40d4-b19c-f61c3c349c0c"
+      }
+    },
+    {
+      "key": "aa2ff135-8c4b-4600-b2bd-287db28ae503",
+      "position": 1,
+      "properties": {
+        "progression_name": "2.1 and 2.2 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa2ff135-8c4b-4600-b2bd-287db28ae503",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "5e565249-29e9-4f15-b9a3-4858abc5f848",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview of File Sizes and Metrics"
+      },
+      "seeding_key": {
+        "activity_section.key": "5e565249-29e9-4f15-b9a3-4858abc5f848",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "23f75f69-6333-47e6-8523-2a14f569e568",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to Lossless Compression and the Text Compression Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "23f75f69-6333-47e6-8523-2a14f569e568",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "c8f3b9cb-5f8c-42a6-830d-e90700da1a1c",
+      "position": 4,
+      "properties": {
+        "progression_name": "What is a Heuristic?"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8f3b9cb-5f8c-42a6-830d-e90700da1a1c",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "a12eeb30-fa7d-4145-9f53-4e54a833be1a",
+      "position": 5,
+      "properties": {
+        "progression_name": "How to: Text Compression Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "a12eeb30-fa7d-4145-9f53-4e54a833be1a",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "ff84a4f0-9fdc-45dc-9306-c39347baac8b",
+      "position": 6,
+      "properties": {
+        "progression_name": "Widget: Text Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff84a4f0-9fdc-45dc-9306-c39347baac8b",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "84f8a0cc-af43-4675-8bb9-62eb3cec0a4b",
+      "position": 7,
+      "properties": {
+        "progression_name": "Task: Write your own Heuristic"
+      },
+      "seeding_key": {
+        "activity_section.key": "84f8a0cc-af43-4675-8bb9-62eb3cec0a4b",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "bc588787-6daf-4b78-90b8-12c8e7e62265",
+      "position": 8,
+      "properties": {
+        "name": "U2 L1 - 2: Teaching and Student Support Plan",
+        "progression_name": "U2 L1 - 2: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc588787-6daf-4b78-90b8-12c8e7e62265",
+        "lesson_activity.key": "4aac959f-52f8-4a5a-b0aa-6152cd20ea45"
+      }
+    },
+    {
+      "key": "a68f69a8-f25f-4485-8fba-ab27f7d8efbb",
+      "position": 1,
+      "properties": {
+        "progression_name": "2.3 and 2.4 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "a68f69a8-f25f-4485-8fba-ab27f7d8efbb",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "96a597de-100f-4369-a152-b941dd3f2d7a",
+      "position": 2,
+      "properties": {
+        "progression_name": "How are Images Encoded?"
+      },
+      "seeding_key": {
+        "activity_section.key": "96a597de-100f-4369-a152-b941dd3f2d7a",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "86e7c2fc-82ab-4c3e-974d-de7847d76a24",
+      "position": 3,
+      "properties": {
+        "progression_name": "A Note On Metadata in the Curriculum Framework"
+      },
+      "seeding_key": {
+        "activity_section.key": "86e7c2fc-82ab-4c3e-974d-de7847d76a24",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "e9847a70-b7d1-4186-8eaa-0ef8a9715707",
+      "position": 4,
+      "properties": {
+        "progression_name": "Widget: Black and White Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9847a70-b7d1-4186-8eaa-0ef8a9715707",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "6153b7bb-60e6-4e38-88e1-137195977b2d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Binary, Hex, and Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "6153b7bb-60e6-4e38-88e1-137195977b2d",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "6c7b4f27-f4bb-41df-8ce2-6cfb5579b700",
+      "position": 6,
+      "properties": {
+        "progression_name": "Widget: Color Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c7b4f27-f4bb-41df-8ce2-6cfb5579b700",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "8ee3c180-c7c9-444f-bdb7-8600c6e36da0",
+      "position": 7,
+      "properties": {
+        "progression_name": "Task: Make your own Favicon"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ee3c180-c7c9-444f-bdb7-8600c6e36da0",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "bf8b3730-c371-484d-b850-eeb27441064c",
+      "position": 8,
+      "properties": {
+        "name": "U2 L3 - 4: Teaching and Student Support Plan",
+        "progression_name": "U2 L3 - 4: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf8b3730-c371-484d-b850-eeb27441064c",
+        "lesson_activity.key": "308c25ef-1dc7-4e15-9c8d-fca77212af51"
+      }
+    },
+    {
+      "key": "bf1a2b22-5087-4bc6-8e73-dc144c22f12f",
+      "position": 1,
+      "properties": {
+        "progression_name": "2.5 and 2.6 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf1a2b22-5087-4bc6-8e73-dc144c22f12f",
+        "lesson_activity.key": "cd55d610-1e9e-43a7-a369-09b1368309e9"
+      }
+    },
+    {
+      "key": "9270774b-9f61-4489-ae3d-c8e305345e8b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Lossy Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "9270774b-9f61-4489-ae3d-c8e305345e8b",
+        "lesson_activity.key": "cd55d610-1e9e-43a7-a369-09b1368309e9"
+      }
+    },
+    {
+      "key": "e287aeaa-3f92-4d59-9edf-f12e39725525",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lossy vs. Lossless Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "e287aeaa-3f92-4d59-9edf-f12e39725525",
+        "lesson_activity.key": "cd55d610-1e9e-43a7-a369-09b1368309e9"
+      }
+    },
+    {
+      "key": "f54818f1-6100-470b-8b42-ee91059f2965",
+      "position": 4,
+      "properties": {
+        "progression_name": "Task: Encode an Experience"
+      },
+      "seeding_key": {
+        "activity_section.key": "f54818f1-6100-470b-8b42-ee91059f2965",
+        "lesson_activity.key": "cd55d610-1e9e-43a7-a369-09b1368309e9"
+      }
+    },
+    {
+      "key": "03c90c76-7043-42e3-a38f-ccfca62f2092",
+      "position": 5,
+      "properties": {
+        "name": "U2 L5 - 6: Teaching and Student Support Plan",
+        "progression_name": "U2 L5 - 6: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "03c90c76-7043-42e3-a38f-ccfca62f2092",
+        "lesson_activity.key": "cd55d610-1e9e-43a7-a369-09b1368309e9"
+      }
+    },
+    {
+      "key": "2cc3ea21-1e22-4ac1-8666-8f9c4c690c85",
+      "position": 1,
+      "properties": {
+        "progression_name": "2.7 -  10 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "2cc3ea21-1e22-4ac1-8666-8f9c4c690c85",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "997e5b87-558d-4d3f-a52f-938f4ada5c69",
+      "position": 2,
+      "properties": {
+        "progression_name": "How to: Setup your Class Data Tracker"
+      },
+      "seeding_key": {
+        "activity_section.key": "997e5b87-558d-4d3f-a52f-938f4ada5c69",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "63bbe2de-54eb-4001-9f59-6652f14fde7b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Correlation vs Causation"
+      },
+      "seeding_key": {
+        "activity_section.key": "63bbe2de-54eb-4001-9f59-6652f14fde7b",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "80baf95e-8a98-4de3-baef-a95a7b0ba74e",
+      "position": 4,
+      "properties": {
+        "progression_name": "How to: Use Google Trends"
+      },
+      "seeding_key": {
+        "activity_section.key": "80baf95e-8a98-4de3-baef-a95a7b0ba74e",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "f686ffbc-f793-4e90-8943-e7eee7a2d9b7",
+      "position": 5,
+      "properties": {
+        "progression_name": "Task: Explore Google Trends"
+      },
+      "seeding_key": {
+        "activity_section.key": "f686ffbc-f793-4e90-8943-e7eee7a2d9b7",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "cdc11f17-3042-4fb7-afdc-7a2bb522f30c",
+      "position": 6,
+      "properties": {
+        "progression_name": "What Makes an Effective Visualization?"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdc11f17-3042-4fb7-afdc-7a2bb522f30c",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "e86445c6-512f-4972-960c-2852ec9386be",
+      "position": 7,
+      "properties": {
+        "progression_name": "Data Visualizations 101"
+      },
+      "seeding_key": {
+        "activity_section.key": "e86445c6-512f-4972-960c-2852ec9386be",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "8c53aa31-86ec-4cbb-b3e4-bb1631cea170",
+      "position": 8,
+      "properties": {
+        "name": "U2 L7 - 10: Teaching and Student Support Plan",
+        "progression_name": "U2 L7 - 10: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c53aa31-86ec-4cbb-b3e4-bb1631cea170",
+        "lesson_activity.key": "52c687d5-5b2c-4428-b058-8b050b0495cb"
+      }
+    },
+    {
+      "key": "f55e2123-af38-4ad5-8735-088f3dfdbcec",
+      "position": 1,
+      "properties": {
+        "progression_name": "2.11 - 15 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "f55e2123-af38-4ad5-8735-088f3dfdbcec",
+        "lesson_activity.key": "701c6462-0084-4f85-9364-3249c2d12c11"
+      }
+    },
+    {
+      "key": "70053b64-8ece-4cee-bc0b-a04470cd9694",
+      "position": 2,
+      "properties": {
+        "progression_name": "How to: Make Charts from your Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "70053b64-8ece-4cee-bc0b-a04470cd9694",
+        "lesson_activity.key": "701c6462-0084-4f85-9364-3249c2d12c11"
+      }
+    },
+    {
+      "key": "6865ce51-6b50-47bc-8ea1-444abf2096a1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Selecting an Appropriate Visualization for your Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "6865ce51-6b50-47bc-8ea1-444abf2096a1",
+        "lesson_activity.key": "701c6462-0084-4f85-9364-3249c2d12c11"
+      }
+    },
+    {
+      "key": "db758278-5b65-4059-8d52-7943159c3545",
+      "position": 4,
+      "properties": {
+        "progression_name": "Cleaning Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "db758278-5b65-4059-8d52-7943159c3545",
+        "lesson_activity.key": "701c6462-0084-4f85-9364-3249c2d12c11"
+      }
+    },
+    {
+      "key": "99fc41e1-016f-47d5-890a-cab63b8da6a3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Summary Tables 101"
+      },
+      "seeding_key": {
+        "activity_section.key": "99fc41e1-016f-47d5-890a-cab63b8da6a3",
+        "lesson_activity.key": "701c6462-0084-4f85-9364-3249c2d12c11"
+      }
+    },
+    {
+      "key": "b165f772-3e42-4cc7-8113-ac7621e67078",
+      "position": 6,
+      "properties": {
+        "name": "U2 L11 - 15: Teaching and Student Support Plan",
+        "progression_name": "U2 L11 - 15: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "b165f772-3e42-4cc7-8113-ac7621e67078",
+        "lesson_activity.key": "701c6462-0084-4f85-9364-3249c2d12c11"
+      }
+    },
+    {
+      "key": "0a26467e-125c-487c-8b4d-2cb43fcae09a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Group Work and Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a26467e-125c-487c-8b4d-2cb43fcae09a",
+        "lesson_activity.key": "ba769293-0eb6-4d91-a491-219c00c81084"
+      }
+    },
+    {
+      "key": "1876219f-ec3e-4bd8-9cbb-5eda99e4b7be",
+      "position": 2,
+      "properties": {
+        "progression_name": "Collaborative Learning and Group Work: Description and Strategies"
+      },
+      "seeding_key": {
+        "activity_section.key": "1876219f-ec3e-4bd8-9cbb-5eda99e4b7be",
+        "lesson_activity.key": "ba769293-0eb6-4d91-a491-219c00c81084"
+      }
+    },
+    {
+      "key": "67e73a70-1a44-438e-8239-c351ac9af5f5",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Official Peer Instruction Blog"
+      },
+      "seeding_key": {
+        "activity_section.key": "67e73a70-1a44-438e-8239-c351ac9af5f5",
+        "lesson_activity.key": "ba769293-0eb6-4d91-a491-219c00c81084"
+      }
+    },
+    {
+      "key": "2f6e5939-bb26-4168-8ddc-8c940e9baad7",
+      "position": 4,
+      "properties": {
+        "progression_name": "the Journal of Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f6e5939-bb26-4168-8ddc-8c940e9baad7",
+        "lesson_activity.key": "ba769293-0eb6-4d91-a491-219c00c81084"
+      }
+    },
+    {
+      "key": "b221f529-a62a-4cdd-a4b2-ef5093569cc4",
+      "position": 5,
+      "properties": {
+        "name": "Unit 2 Teaching Practice Plan: Group Work and Peer Learning",
+        "progression_name": "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "b221f529-a62a-4cdd-a4b2-ef5093569cc4",
+        "lesson_activity.key": "ba769293-0eb6-4d91-a491-219c00c81084"
+      }
+    },
+    {
+      "key": "3fbde0ec-e81f-4007-8575-4fa310958487",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Balancing Teachers and Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fbde0ec-e81f-4007-8575-4fa310958487",
+        "lesson_activity.key": "10d00274-d14c-4d78-8fb5-79906751ef1e"
+      }
+    },
+    {
+      "key": "1fcf2a2d-b503-4b9f-8db9-381b4c69c24a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Classroom Management Tips for School Computer Labs"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fcf2a2d-b503-4b9f-8db9-381b4c69c24a",
+        "lesson_activity.key": "10d00274-d14c-4d78-8fb5-79906751ef1e"
+      }
+    },
+    {
+      "key": "1b2eefb4-c530-4aca-9591-66949527c97b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Considerations for the 1-to-1 Classroom"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b2eefb4-c530-4aca-9591-66949527c97b",
+        "lesson_activity.key": "10d00274-d14c-4d78-8fb5-79906751ef1e"
+      }
+    },
+    {
+      "key": "40e990da-0667-4c20-af7f-218397d8fd94",
+      "position": 4,
+      "properties": {
+        "name": "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools",
+        "progression_name": "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "40e990da-0667-4c20-af7f-218397d8fd94",
+        "lesson_activity.key": "10d00274-d14c-4d78-8fb5-79906751ef1e"
+      }
+    },
+    {
+      "key": "e508b5bf-4411-4984-98d7-09f08460c1f9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Discovery Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "e508b5bf-4411-4984-98d7-09f08460c1f9",
+        "lesson_activity.key": "4fcbce66-c5d4-4dd7-b7e9-f7f78fc71b1b"
+      }
+    },
+    {
+      "key": "456e9c9a-b943-4d67-9a1e-07618e3cd2ad",
+      "position": 2,
+      "properties": {
+        "progression_name": "Discovery learning definition and history"
+      },
+      "seeding_key": {
+        "activity_section.key": "456e9c9a-b943-4d67-9a1e-07618e3cd2ad",
+        "lesson_activity.key": "4fcbce66-c5d4-4dd7-b7e9-f7f78fc71b1b"
+      }
+    },
+    {
+      "key": "2f76393a-2975-4b06-991f-bb75e532c45e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Discovery learning techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f76393a-2975-4b06-991f-bb75e532c45e",
+        "lesson_activity.key": "4fcbce66-c5d4-4dd7-b7e9-f7f78fc71b1b"
+      }
+    },
+    {
+      "key": "1dab5533-d18f-4317-b9ea-8173e0b92ab7",
+      "position": 4,
+      "properties": {
+        "name": "Unit 2 Teaching Practice Plan: Discovery Learning",
+        "progression_name": "Unit 2 Teaching Practice Plan: Discovery Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "1dab5533-d18f-4317-b9ea-8173e0b92ab7",
+        "lesson_activity.key": "4fcbce66-c5d4-4dd7-b7e9-f7f78fc71b1b"
+      }
+    },
+    {
+      "key": "86ece429-1747-4475-9e4d-192e25f08668",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Capturing Student Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "86ece429-1747-4475-9e4d-192e25f08668",
+        "lesson_activity.key": "6af93b62-d6ba-41c6-861a-b84ae241aa93"
+      }
+    },
+    {
+      "key": "a0b9b563-7483-432b-9f0b-4e4158dfe274",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is the difference between formative and summative assessment?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0b9b563-7483-432b-9f0b-4e4158dfe274",
+        "lesson_activity.key": "6af93b62-d6ba-41c6-861a-b84ae241aa93"
+      }
+    },
+    {
+      "key": "2fd4b79f-b559-44a6-ad47-b5b7c5491782",
+      "position": 3,
+      "properties": {
+        "progression_name": "Designing Assessment Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fd4b79f-b559-44a6-ad47-b5b7c5491782",
+        "lesson_activity.key": "6af93b62-d6ba-41c6-861a-b84ae241aa93"
+      }
+    },
+    {
+      "key": "565623c8-2f41-4904-9057-46d68abe1d91",
+      "position": 4,
+      "properties": {
+        "progression_name": "Classroom Assessment Techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "565623c8-2f41-4904-9057-46d68abe1d91",
+        "lesson_activity.key": "6af93b62-d6ba-41c6-861a-b84ae241aa93"
+      }
+    },
+    {
+      "key": "bebed090-0714-4696-bd2c-18100545d529",
+      "position": 5,
+      "properties": {
+        "name": "Unit 2 Teaching Practice Plan: Assessing Student Learning",
+        "progression_name": "Unit 2 Teaching Practice Plan: Assessing Student Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "bebed090-0714-4696-bd2c-18100545d529",
+        "lesson_activity.key": "6af93b62-d6ba-41c6-861a-b84ae241aa93"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "What's inside and how is it organized?"
-        ]
+        ],
+        "progression": "What's inside and how is it organized?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -246,7 +1073,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "48027189-8bc5-4ea2-bbbe-df63f37e84d5"
       },
       "level_keys": [
         "What's inside and how is it organized?"
@@ -255,14 +1083,14 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Introduction to Unit 2"
-        ]
+        ],
+        "progression": "Introduction to Unit 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -270,7 +1098,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bb7901c2-ce2b-4da5-8b22-104197b3ad8c"
       },
       "level_keys": [
         "Introduction to Unit 2"
@@ -279,14 +1108,14 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Curriculum Framework Connections in Unit 2"
-        ]
+        ],
+        "progression": "Curriculum Framework Connections in Unit 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -294,7 +1123,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "48507ed8-a8d5-486c-abf7-caf3c94502be"
       },
       "level_keys": [
         "Curriculum Framework Connections in Unit 2"
@@ -303,14 +1133,14 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Unit 2 Tool Talk"
-        ]
+        ],
+        "progression": "Unit 2 Tool Talk"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -318,7 +1148,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "9e607290-8a8d-43b2-8e4e-cf1dd0d9559a"
       },
       "level_keys": [
         "Unit 2 Tool Talk"
@@ -327,14 +1158,14 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Practice Performance Tasks in Unit 2"
-        ]
+        ],
+        "progression": "Practice Performance Tasks in Unit 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -342,7 +1173,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2a7a9f3a-4739-4ca5-affc-1928062eadd3"
       },
       "level_keys": [
         "Practice Performance Tasks in Unit 2"
@@ -351,14 +1183,14 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Unit 2 Self-Assessment"
-        ]
+        ],
+        "progression": "Unit 2 Self-Assessment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -366,7 +1198,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1b4ebde7-c99d-4ba6-8b50-dc46c04fbd2c"
       },
       "level_keys": [
         "Unit 2 Self-Assessment"
@@ -375,14 +1208,14 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Unit 2 Vocab and Concept Review Activity"
-        ]
+        ],
+        "progression": "Unit 2 Vocab and Concept Review Activity"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -390,7 +1223,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "3d3ad936-298a-4fe2-b64c-b840b1248492"
       },
       "level_keys": [
         "Unit 2 Vocab and Concept Review Activity"
@@ -399,14 +1233,14 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "AP Test Prep Guidance"
-        ]
+        ],
+        "progression": "AP Test Prep Guidance"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -414,7 +1248,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "45f23bba-d851-494a-8552-cabb3001639b"
       },
       "level_keys": [
         "AP Test Prep Guidance"
@@ -423,14 +1258,14 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "2.1 and 2.2 Lesson Connections"
-        ]
+        ],
+        "progression": "2.1 and 2.2 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -438,7 +1273,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "aa2ff135-8c4b-4600-b2bd-287db28ae503"
       },
       "level_keys": [
         "2.1 and 2.2 Lesson Connections"
@@ -447,14 +1283,14 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview of File Sizes and Metrics"
-        ]
+        ],
+        "progression": "Overview of File Sizes and Metrics"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -462,7 +1298,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "5e565249-29e9-4f15-b9a3-4858abc5f848"
       },
       "level_keys": [
         "Overview of File Sizes and Metrics"
@@ -471,14 +1308,14 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Introduction to Lossless Compression and the Text Compression Widget"
-        ]
+        ],
+        "progression": "Introduction to Lossless Compression and the Text Compression Widget"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -486,7 +1323,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "23f75f69-6333-47e6-8523-2a14f569e568"
       },
       "level_keys": [
         "Introduction to Lossless Compression and the Text Compression Widget"
@@ -495,14 +1333,14 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "What is a Heuristic?"
-        ]
+        ],
+        "progression": "What is a Heuristic?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -510,7 +1348,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "c8f3b9cb-5f8c-42a6-830d-e90700da1a1c"
       },
       "level_keys": [
         "What is a Heuristic?"
@@ -519,14 +1358,14 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "How to: Text Compression Widget"
-        ]
+        ],
+        "progression": "How to: Text Compression Widget"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -534,7 +1373,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "a12eeb30-fa7d-4145-9f53-4e54a833be1a"
       },
       "level_keys": [
         "How to: Text Compression Widget"
@@ -543,14 +1383,14 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Widget: Text Compression"
-        ]
+        ],
+        "progression": "Widget: Text Compression"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -558,7 +1398,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "ff84a4f0-9fdc-45dc-9306-c39347baac8b"
       },
       "level_keys": [
         "Widget: Text Compression"
@@ -567,14 +1408,14 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Task: Write your own Heuristic"
-        ]
+        ],
+        "progression": "Task: Write your own Heuristic"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -582,7 +1423,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "84f8a0cc-af43-4675-8bb9-62eb3cec0a4b"
       },
       "level_keys": [
         "Task: Write your own Heuristic"
@@ -591,14 +1433,14 @@
     {
       "chapter": 16,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2 L1 - 2: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U2 L1 - 2: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -606,7 +1448,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bc588787-6daf-4b78-90b8-12c8e7e62265"
       },
       "level_keys": [
         "U2 L1 - 2: Teaching and Student Support Plan"
@@ -615,14 +1458,14 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "2.3 and 2.4 Lesson Connections"
-        ]
+        ],
+        "progression": "2.3 and 2.4 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -630,7 +1473,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "a68f69a8-f25f-4485-8fba-ab27f7d8efbb"
       },
       "level_keys": [
         "2.3 and 2.4 Lesson Connections"
@@ -639,14 +1483,14 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "How are Images Encoded?"
-        ]
+        ],
+        "progression": "How are Images Encoded?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -654,7 +1498,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "96a597de-100f-4369-a152-b941dd3f2d7a"
       },
       "level_keys": [
         "How are Images Encoded?"
@@ -663,14 +1508,14 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "A Note On Metadata in the Curriculum Framework"
-        ]
+        ],
+        "progression": "A Note On Metadata in the Curriculum Framework"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -678,7 +1523,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "86e7c2fc-82ab-4c3e-974d-de7847d76a24"
       },
       "level_keys": [
         "A Note On Metadata in the Curriculum Framework"
@@ -687,14 +1533,14 @@
     {
       "chapter": 20,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Widget: Black and White Pixelation"
-        ]
+        ],
+        "progression": "Widget: Black and White Pixelation"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -702,7 +1548,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e9847a70-b7d1-4186-8eaa-0ef8a9715707"
       },
       "level_keys": [
         "Widget: Black and White Pixelation"
@@ -711,14 +1558,14 @@
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Binary, Hex, and Images"
-        ]
+        ],
+        "progression": "Binary, Hex, and Images"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -726,7 +1573,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "6153b7bb-60e6-4e38-88e1-137195977b2d"
       },
       "level_keys": [
         "Binary, Hex, and Images"
@@ -735,14 +1583,14 @@
     {
       "chapter": 22,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Widget: Color Pixelation"
-        ]
+        ],
+        "progression": "Widget: Color Pixelation"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -750,7 +1598,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "6c7b4f27-f4bb-41df-8ce2-6cfb5579b700"
       },
       "level_keys": [
         "Widget: Color Pixelation"
@@ -759,14 +1608,14 @@
     {
       "chapter": 23,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Task: Make your own Favicon"
-        ]
+        ],
+        "progression": "Task: Make your own Favicon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -774,7 +1623,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "8ee3c180-c7c9-444f-bdb7-8600c6e36da0"
       },
       "level_keys": [
         "Task: Make your own Favicon"
@@ -783,14 +1633,14 @@
     {
       "chapter": 24,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2 L3 - 4: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U2 L3 - 4: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -798,7 +1648,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bf8b3730-c371-484d-b850-eeb27441064c"
       },
       "level_keys": [
         "U2 L3 - 4: Teaching and Student Support Plan"
@@ -807,14 +1658,14 @@
     {
       "chapter": 25,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "2.5 and 2.6 Lesson Connections"
-        ]
+        ],
+        "progression": "2.5 and 2.6 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -822,7 +1673,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bf1a2b22-5087-4bc6-8e73-dc144c22f12f"
       },
       "level_keys": [
         "2.5 and 2.6 Lesson Connections"
@@ -831,14 +1683,14 @@
     {
       "chapter": 26,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Introduction to Lossy Compression"
-        ]
+        ],
+        "progression": "Introduction to Lossy Compression"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -846,7 +1698,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "9270774b-9f61-4489-ae3d-c8e305345e8b"
       },
       "level_keys": [
         "Introduction to Lossy Compression"
@@ -855,14 +1708,14 @@
     {
       "chapter": 27,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Lossy vs. Lossless Compression"
-        ]
+        ],
+        "progression": "Lossy vs. Lossless Compression"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -870,7 +1723,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e287aeaa-3f92-4d59-9edf-f12e39725525"
       },
       "level_keys": [
         "Lossy vs. Lossless Compression"
@@ -879,14 +1733,14 @@
     {
       "chapter": 28,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Task: Encode an Experience"
-        ]
+        ],
+        "progression": "Task: Encode an Experience"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -894,7 +1748,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "f54818f1-6100-470b-8b42-ee91059f2965"
       },
       "level_keys": [
         "Task: Encode an Experience"
@@ -903,14 +1758,14 @@
     {
       "chapter": 29,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2 L5 - 6: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U2 L5 - 6: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -918,7 +1773,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "03c90c76-7043-42e3-a38f-ccfca62f2092"
       },
       "level_keys": [
         "U2 L5 - 6: Teaching and Student Support Plan"
@@ -927,14 +1783,14 @@
     {
       "chapter": 30,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "2.7 -  10 Lesson Connections"
-        ]
+        ],
+        "progression": "2.7 -  10 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -942,7 +1798,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2cc3ea21-1e22-4ac1-8666-8f9c4c690c85"
       },
       "level_keys": [
         "2.7 -  10 Lesson Connections"
@@ -951,14 +1808,14 @@
     {
       "chapter": 31,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "How to: Setup your Class Data Tracker"
-        ]
+        ],
+        "progression": "How to: Setup your Class Data Tracker"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -966,7 +1823,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "997e5b87-558d-4d3f-a52f-938f4ada5c69"
       },
       "level_keys": [
         "How to: Setup your Class Data Tracker"
@@ -975,14 +1833,14 @@
     {
       "chapter": 32,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Correlation vs Causation"
-        ]
+        ],
+        "progression": "Correlation vs Causation"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -990,7 +1848,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "63bbe2de-54eb-4001-9f59-6652f14fde7b"
       },
       "level_keys": [
         "Correlation vs Causation"
@@ -999,14 +1858,14 @@
     {
       "chapter": 33,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "How to: Use Google Trends"
-        ]
+        ],
+        "progression": "How to: Use Google Trends"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1014,7 +1873,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "80baf95e-8a98-4de3-baef-a95a7b0ba74e"
       },
       "level_keys": [
         "How to: Use Google Trends"
@@ -1023,14 +1883,14 @@
     {
       "chapter": 34,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Task: Explore Google Trends"
-        ]
+        ],
+        "progression": "Task: Explore Google Trends"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1038,7 +1898,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "f686ffbc-f793-4e90-8943-e7eee7a2d9b7"
       },
       "level_keys": [
         "Task: Explore Google Trends"
@@ -1047,14 +1908,14 @@
     {
       "chapter": 35,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "What Makes an Effective Visualization?"
-        ]
+        ],
+        "progression": "What Makes an Effective Visualization?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1062,7 +1923,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "cdc11f17-3042-4fb7-afdc-7a2bb522f30c"
       },
       "level_keys": [
         "What Makes an Effective Visualization?"
@@ -1071,14 +1933,14 @@
     {
       "chapter": 36,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Data Visualizations 101"
-        ]
+        ],
+        "progression": "Data Visualizations 101"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1086,7 +1948,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e86445c6-512f-4972-960c-2852ec9386be"
       },
       "level_keys": [
         "Data Visualizations 101"
@@ -1095,14 +1958,14 @@
     {
       "chapter": 37,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2 L7 - 10: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U2 L7 - 10: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1110,7 +1973,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "8c53aa31-86ec-4cbb-b3e4-bb1631cea170"
       },
       "level_keys": [
         "U2 L7 - 10: Teaching and Student Support Plan"
@@ -1119,14 +1983,14 @@
     {
       "chapter": 38,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "2.11 - 15 Lesson Connections"
-        ]
+        ],
+        "progression": "2.11 - 15 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1134,7 +1998,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "f55e2123-af38-4ad5-8735-088f3dfdbcec"
       },
       "level_keys": [
         "2.11 - 15 Lesson Connections"
@@ -1143,14 +2008,14 @@
     {
       "chapter": 39,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "How to: Make Charts from your Data"
-        ]
+        ],
+        "progression": "How to: Make Charts from your Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1158,7 +2023,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "70053b64-8ece-4cee-bc0b-a04470cd9694"
       },
       "level_keys": [
         "How to: Make Charts from your Data"
@@ -1167,14 +2033,14 @@
     {
       "chapter": 40,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Selecting an Appropriate Visualization for your Data"
-        ]
+        ],
+        "progression": "Selecting an Appropriate Visualization for your Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1182,7 +2048,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "6865ce51-6b50-47bc-8ea1-444abf2096a1"
       },
       "level_keys": [
         "Selecting an Appropriate Visualization for your Data"
@@ -1191,14 +2058,14 @@
     {
       "chapter": 41,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Cleaning Data"
-        ]
+        ],
+        "progression": "Cleaning Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1206,7 +2073,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "db758278-5b65-4059-8d52-7943159c3545"
       },
       "level_keys": [
         "Cleaning Data"
@@ -1215,14 +2083,14 @@
     {
       "chapter": 42,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Summary Tables 101"
-        ]
+        ],
+        "progression": "Summary Tables 101"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1230,7 +2098,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "99fc41e1-016f-47d5-890a-cab63b8da6a3"
       },
       "level_keys": [
         "Summary Tables 101"
@@ -1239,14 +2108,14 @@
     {
       "chapter": 43,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2 L11 - 15: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U2 L11 - 15: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1254,7 +2123,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "b165f772-3e42-4cc7-8113-ac7621e67078"
       },
       "level_keys": [
         "U2 L11 - 15: Teaching and Student Support Plan"
@@ -1263,14 +2133,14 @@
     {
       "chapter": 44,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Overview: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1278,7 +2148,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "0a26467e-125c-487c-8b4d-2cb43fcae09a"
       },
       "level_keys": [
         "Overview: Group Work and Peer Learning"
@@ -1287,14 +2158,14 @@
     {
       "chapter": 45,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
-        ]
+        ],
+        "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1302,7 +2173,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1876219f-ec3e-4bd8-9cbb-5eda99e4b7be"
       },
       "level_keys": [
         "Collaborative Learning and Group Work: Description and Strategies"
@@ -1311,14 +2183,14 @@
     {
       "chapter": 46,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "The Official Peer Instruction Blog"
-        ]
+        ],
+        "progression": "The Official Peer Instruction Blog"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1326,7 +2198,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "67e73a70-1a44-438e-8239-c351ac9af5f5"
       },
       "level_keys": [
         "The Official Peer Instruction Blog"
@@ -1335,14 +2208,14 @@
     {
       "chapter": 47,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "the Journal of Peer Learning"
-        ]
+        ],
+        "progression": "the Journal of Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1350,7 +2223,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2f6e5939-bb26-4168-8ddc-8c940e9baad7"
       },
       "level_keys": [
         "the Journal of Peer Learning"
@@ -1359,14 +2233,14 @@
     {
       "chapter": 48,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1374,7 +2248,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "b221f529-a62a-4cdd-a4b2-ef5093569cc4"
       },
       "level_keys": [
         "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
@@ -1383,14 +2258,14 @@
     {
       "chapter": 49,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Balancing Teachers and Tools"
-        ]
+        ],
+        "progression": "Overview: Balancing Teachers and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1398,7 +2273,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "3fbde0ec-e81f-4007-8575-4fa310958487"
       },
       "level_keys": [
         "Overview: Balancing Teachers and Tools"
@@ -1407,14 +2283,14 @@
     {
       "chapter": 50,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Classroom Management Tips for School Computer Labs"
-        ]
+        ],
+        "progression": "Classroom Management Tips for School Computer Labs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1422,7 +2298,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1fcf2a2d-b503-4b9f-8db9-381b4c69c24a"
       },
       "level_keys": [
         "Classroom Management Tips for School Computer Labs"
@@ -1431,14 +2308,14 @@
     {
       "chapter": 51,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Considerations for the 1-to-1 Classroom"
-        ]
+        ],
+        "progression": "Considerations for the 1-to-1 Classroom"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1446,7 +2323,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1b2eefb4-c530-4aca-9591-66949527c97b"
       },
       "level_keys": [
         "Considerations for the 1-to-1 Classroom"
@@ -1455,14 +2333,14 @@
     {
       "chapter": 52,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
-        ]
+        ],
+        "progression": "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1470,7 +2348,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "40e990da-0667-4c20-af7f-218397d8fd94"
       },
       "level_keys": [
         "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
@@ -1479,14 +2358,14 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Discovery Learning"
-        ]
+        ],
+        "progression": "Overview: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1494,7 +2373,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e508b5bf-4411-4984-98d7-09f08460c1f9"
       },
       "level_keys": [
         "Overview: Discovery Learning"
@@ -1503,14 +2383,14 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Discovery learning definition and history"
-        ]
+        ],
+        "progression": "Discovery learning definition and history"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1518,7 +2398,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "456e9c9a-b943-4d67-9a1e-07618e3cd2ad"
       },
       "level_keys": [
         "Discovery learning definition and history"
@@ -1527,14 +2408,14 @@
     {
       "chapter": 55,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Discovery learning techniques"
-        ]
+        ],
+        "progression": "Discovery learning techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1542,7 +2423,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2f76393a-2975-4b06-991f-bb75e532c45e"
       },
       "level_keys": [
         "Discovery learning techniques"
@@ -1551,14 +2433,14 @@
     {
       "chapter": 56,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Unit 2 Teaching Practice Plan: Discovery Learning"
-        ]
+        ],
+        "progression": "Unit 2 Teaching Practice Plan: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1566,7 +2448,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1dab5533-d18f-4317-b9ea-8173e0b92ab7"
       },
       "level_keys": [
         "Unit 2 Teaching Practice Plan: Discovery Learning"
@@ -1575,14 +2458,14 @@
     {
       "chapter": 57,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overview: Capturing Student Learning"
-        ]
+        ],
+        "progression": "Overview: Capturing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1590,7 +2473,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "86ece429-1747-4475-9e4d-192e25f08668"
       },
       "level_keys": [
         "Overview: Capturing Student Learning"
@@ -1599,14 +2483,14 @@
     {
       "chapter": 58,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "What is the difference between formative and summative assessment?"
-        ]
+        ],
+        "progression": "What is the difference between formative and summative assessment?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1614,7 +2498,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "a0b9b563-7483-432b-9f0b-4e4158dfe274"
       },
       "level_keys": [
         "What is the difference between formative and summative assessment?"
@@ -1623,14 +2508,14 @@
     {
       "chapter": 59,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Designing Assessment Questions"
-        ]
+        ],
+        "progression": "Designing Assessment Questions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1638,7 +2523,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2fd4b79f-b559-44a6-ad47-b5b7c5491782"
       },
       "level_keys": [
         "Designing Assessment Questions"
@@ -1647,14 +2533,14 @@
     {
       "chapter": 60,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Classroom Assessment Techniques"
-        ]
+        ],
+        "progression": "Classroom Assessment Techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1662,7 +2548,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "565623c8-2f41-4904-9057-46d68abe1d91"
       },
       "level_keys": [
         "Classroom Assessment Techniques"
@@ -1671,14 +2558,14 @@
     {
       "chapter": 61,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Unit 2 Teaching Practice Plan: Assessing Student Learning"
-        ]
+        ],
+        "progression": "Unit 2 Teaching Practice Plan: Assessing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1686,7 +2573,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bebed090-0714-4696-bd2c-18100545d529"
       },
       "level_keys": [
         "Unit 2 Teaching Practice Plan: Assessing Student Learning"
@@ -1702,7 +2590,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "48027189-8bc5-4ea2-bbbe-df63f37e84d5"
       }
     },
     {
@@ -1713,7 +2602,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bb7901c2-ce2b-4da5-8b22-104197b3ad8c"
       }
     },
     {
@@ -1724,7 +2614,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "48507ed8-a8d5-486c-abf7-caf3c94502be"
       }
     },
     {
@@ -1735,7 +2626,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "9e607290-8a8d-43b2-8e4e-cf1dd0d9559a"
       }
     },
     {
@@ -1746,7 +2638,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2a7a9f3a-4739-4ca5-affc-1928062eadd3"
       }
     },
     {
@@ -1757,7 +2650,8 @@
         ],
         "lesson.key": "Unit 2 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1b4ebde7-c99d-4ba6-8b50-dc46c04fbd2c"
       }
     },
     {
@@ -1768,7 +2662,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "3d3ad936-298a-4fe2-b64c-b840b1248492"
       }
     },
     {
@@ -1779,7 +2674,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "45f23bba-d851-494a-8552-cabb3001639b"
       }
     },
     {
@@ -1790,7 +2686,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "aa2ff135-8c4b-4600-b2bd-287db28ae503"
       }
     },
     {
@@ -1801,7 +2698,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "5e565249-29e9-4f15-b9a3-4858abc5f848"
       }
     },
     {
@@ -1812,7 +2710,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "23f75f69-6333-47e6-8523-2a14f569e568"
       }
     },
     {
@@ -1823,7 +2722,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "c8f3b9cb-5f8c-42a6-830d-e90700da1a1c"
       }
     },
     {
@@ -1834,7 +2734,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "a12eeb30-fa7d-4145-9f53-4e54a833be1a"
       }
     },
     {
@@ -1845,7 +2746,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "ff84a4f0-9fdc-45dc-9306-c39347baac8b"
       }
     },
     {
@@ -1856,7 +2758,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "84f8a0cc-af43-4675-8bb9-62eb3cec0a4b"
       }
     },
     {
@@ -1867,7 +2770,8 @@
         ],
         "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bc588787-6daf-4b78-90b8-12c8e7e62265"
       }
     },
     {
@@ -1878,7 +2782,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "a68f69a8-f25f-4485-8fba-ab27f7d8efbb"
       }
     },
     {
@@ -1889,7 +2794,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "96a597de-100f-4369-a152-b941dd3f2d7a"
       }
     },
     {
@@ -1900,7 +2806,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "86e7c2fc-82ab-4c3e-974d-de7847d76a24"
       }
     },
     {
@@ -1911,7 +2818,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e9847a70-b7d1-4186-8eaa-0ef8a9715707"
       }
     },
     {
@@ -1922,7 +2830,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "6153b7bb-60e6-4e38-88e1-137195977b2d"
       }
     },
     {
@@ -1933,7 +2842,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "6c7b4f27-f4bb-41df-8ce2-6cfb5579b700"
       }
     },
     {
@@ -1944,7 +2854,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "8ee3c180-c7c9-444f-bdb7-8600c6e36da0"
       }
     },
     {
@@ -1955,7 +2866,8 @@
         ],
         "lesson.key": "Lessons 3 - 4 : Encoding Images",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bf8b3730-c371-484d-b850-eeb27441064c"
       }
     },
     {
@@ -1966,7 +2878,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bf1a2b22-5087-4bc6-8e73-dc144c22f12f"
       }
     },
     {
@@ -1977,7 +2890,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "9270774b-9f61-4489-ae3d-c8e305345e8b"
       }
     },
     {
@@ -1988,7 +2902,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e287aeaa-3f92-4d59-9edf-f12e39725525"
       }
     },
     {
@@ -1999,7 +2914,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "f54818f1-6100-470b-8b42-ee91059f2965"
       }
     },
     {
@@ -2010,7 +2926,8 @@
         ],
         "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "03c90c76-7043-42e3-a38f-ccfca62f2092"
       }
     },
     {
@@ -2021,7 +2938,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2cc3ea21-1e22-4ac1-8666-8f9c4c690c85"
       }
     },
     {
@@ -2032,7 +2950,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "997e5b87-558d-4d3f-a52f-938f4ada5c69"
       }
     },
     {
@@ -2043,7 +2962,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "63bbe2de-54eb-4001-9f59-6652f14fde7b"
       }
     },
     {
@@ -2054,7 +2974,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "80baf95e-8a98-4de3-baef-a95a7b0ba74e"
       }
     },
     {
@@ -2065,7 +2986,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "f686ffbc-f793-4e90-8943-e7eee7a2d9b7"
       }
     },
     {
@@ -2076,7 +2998,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "cdc11f17-3042-4fb7-afdc-7a2bb522f30c"
       }
     },
     {
@@ -2087,7 +3010,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e86445c6-512f-4972-960c-2852ec9386be"
       }
     },
     {
@@ -2098,7 +3022,8 @@
         ],
         "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "8c53aa31-86ec-4cbb-b3e4-bb1631cea170"
       }
     },
     {
@@ -2109,7 +3034,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "f55e2123-af38-4ad5-8735-088f3dfdbcec"
       }
     },
     {
@@ -2120,7 +3046,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "70053b64-8ece-4cee-bc0b-a04470cd9694"
       }
     },
     {
@@ -2131,7 +3058,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "6865ce51-6b50-47bc-8ea1-444abf2096a1"
       }
     },
     {
@@ -2142,7 +3070,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "db758278-5b65-4059-8d52-7943159c3545"
       }
     },
     {
@@ -2153,7 +3082,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "99fc41e1-016f-47d5-890a-cab63b8da6a3"
       }
     },
     {
@@ -2164,7 +3094,8 @@
         ],
         "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
         "lesson_group.key": "content",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "b165f772-3e42-4cc7-8113-ac7621e67078"
       }
     },
     {
@@ -2175,7 +3106,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "0a26467e-125c-487c-8b4d-2cb43fcae09a"
       }
     },
     {
@@ -2186,7 +3118,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1876219f-ec3e-4bd8-9cbb-5eda99e4b7be"
       }
     },
     {
@@ -2197,7 +3130,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "67e73a70-1a44-438e-8239-c351ac9af5f5"
       }
     },
     {
@@ -2208,7 +3142,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2f6e5939-bb26-4168-8ddc-8c940e9baad7"
       }
     },
     {
@@ -2219,7 +3154,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "b221f529-a62a-4cdd-a4b2-ef5093569cc4"
       }
     },
     {
@@ -2230,7 +3166,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "3fbde0ec-e81f-4007-8575-4fa310958487"
       }
     },
     {
@@ -2241,7 +3178,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1fcf2a2d-b503-4b9f-8db9-381b4c69c24a"
       }
     },
     {
@@ -2252,7 +3190,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1b2eefb4-c530-4aca-9591-66949527c97b"
       }
     },
     {
@@ -2263,7 +3202,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "40e990da-0667-4c20-af7f-218397d8fd94"
       }
     },
     {
@@ -2274,7 +3214,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "e508b5bf-4411-4984-98d7-09f08460c1f9"
       }
     },
     {
@@ -2285,7 +3226,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "456e9c9a-b943-4d67-9a1e-07618e3cd2ad"
       }
     },
     {
@@ -2296,7 +3238,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2f76393a-2975-4b06-991f-bb75e532c45e"
       }
     },
     {
@@ -2307,7 +3250,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "1dab5533-d18f-4317-b9ea-8173e0b92ab7"
       }
     },
     {
@@ -2318,7 +3262,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "86ece429-1747-4475-9e4d-192e25f08668"
       }
     },
     {
@@ -2329,7 +3274,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "a0b9b563-7483-432b-9f0b-4e4158dfe274"
       }
     },
     {
@@ -2340,7 +3286,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "2fd4b79f-b559-44a6-ad47-b5b7c5491782"
       }
     },
     {
@@ -2351,7 +3298,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "565623c8-2f41-4904-9057-46d68abe1d91"
       }
     },
     {
@@ -2362,7 +3310,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp2-support"
+        "script.name": "csp2-support",
+        "activity_section.key": "bebed090-0714-4696-bd2c-18100545d529"
       }
     }
   ],

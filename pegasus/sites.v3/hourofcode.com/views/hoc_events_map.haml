@@ -1,6 +1,5 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
 %link{href:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css', rel:'stylesheet'}
-%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
 %script{src: webpack_asset_path("js/hourofcode.com/views/hoc_events_map.js"), defer:true}
 
 %div{id: 'mapbox-map'}
@@ -11,7 +10,3 @@
   %div= hoc_s(:map_legend_hoc_events)
   .color.red
   %div= hoc_s(:map_legend_cs_tech_jam)
-
-
-:javascript
-  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";

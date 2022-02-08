@@ -1,0 +1,12 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-11-23T16:35:18.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-11-23T16:35:18.371+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L4\\\"\"],\"cloned_from\":\"CSA U6L6-L4\"},{\"changed_at\":\"2021-11-23 16:35:22 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 16:36:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "encrypted_properties": "aNsSnqBwpDD9ZtSljJLbajVf3SL+tP2rdlwe0XrqKncNB/xz62Jy/5yJH9Wl\nwBTffLJXXpKTd6jCVQG3gFNznLOwIOg7nYd8dMQhuw61UGpP2juaJo4gLee6\n+j3jte9jhvd3GML7Wgo0IkPSKSzBslbIgstQ45LtJNOLKhQvGnuHjzn0DY+I\n3mouYt5Map05T40ypfw+N8cNvq9LOoMxli1hlLh6UtWnFjaAAafNdrKe/9MA\nWT0GVyw9cYGWcC2xbzdb1AtmQsaHi7cmPiN1eysdxaIhXsewRmCcAVh8aVAh\nNghfCqKLDAObfFOdmN+KIIozk94TNp+gEMKwYeVvGEKhM2vL7kK+qTxvnUYT\nUcY5951j6CNIc6B42uVCYIn4U8ZhNZpOckSgviu7ZvEU3rvGCUgRY+5/t0XV\nYLAWfOvL03awAaLll54EX3kw3lTmFnYcMuoOm/u0dDwoNPlzvqinCknePadn\n+ERFADHCFJ7KNfZ0xKdVbhrWCAawzYcGeW7ogvfAI/goXP4iYAxcOAJAwUlS\nUQJ0Jy/CG1GXIlGwsKJLBFpZNONvjjR45CVfrN5kOoAyWUsYq9OI5c09AmRk\n9FqK7XkFQKvBqwUaPuMWFGxL6mJN4mVuf3mRUOoBuyn978CP+ZRBo0BlVyEf\nV0M1NsnbbL6+Uh3qk/PtlIRwLWTttNuzkA+zko0DQPo8nNfJqd6mgSglMNf8\nPV/kGY/qcNzEucQucL6otVP8ppmYB1d5FiYPqNUkqz1hOOxZSL4JF45IKgJG\nL7yOV6t+VbZ3Oa+5PYSljSvc2MC2y3JRd0XLCRhIt1LDILbznHOMOrgMnXpj\nYkaR144BGOyGLrPfmB5ZHBW9K68z/525+6ooe03rEMBOY6q52YUL0PhdzCFW\nn4auxUqPRHlnjcVSH72vY1EEUvl6ffufQFJZRUUXU3PwGsfNd+wiNBcJiAga\npK9L7MoHYQGyXR8ZqNvYsYmSmsh6TxIitBBjJF7ncHw1/02TiOfd7MQXpD1P\nIfuoKRHqK9YUqAf/GIhzuCPv9h83rmrbf7y6dJp5wOUCfH3ueZnHeqYrLztd\nUaOes62g3S8RSDfa2AiR442CVcaP0OkikU0IcAtysQMSOXXNsvqJUTmTpG15\nwAKPwsa0ee72rC0GDMUhdHm37tJ7jsaTHr6zT6gk4wMo+GaqjF6BStolrBh0\n/4Q/iDIFRZYWF+/Gcr256Jjj4cm+gA1MJ4mSevIoa+6uCMBAzcDY1XS3UTG6\nalpx4e6v4ZMwTfylXNOUm/MTW2V0ClSzNaWd2L+FmRrYTzRF8OHRIFI3bL6V\nKuvvLexnIIdczdusl9cBwr1XucpDk52LQVoZykeRjtlOhZqDuODuOz/awtSJ\n5kYd51rWwp05np6cE/AIjAEUKNGkp/Rvr5djovTD5WphTOQeILD99yGz/8Yn\nUo3qIWpEcBY=\n",
+  "encrypted_notes": null
+}]]></config>
+</Javalab>

@@ -10,7 +10,9 @@ import {
   EventType,
   utils as CraftUtils
 } from '@code-dot-org/craft';
+import {handlePlayerSelection} from '@cdo/apps/craft/utils';
 var dom = require('../../dom');
+import {trySetLocalStorage} from '@cdo/apps/utils';
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../../MusicController');
@@ -23,6 +25,8 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
+import reducers from '@cdo/apps/craft/redux';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -102,20 +106,6 @@ var CHARACTER_STEVE = 'Steve';
 var CHARACTER_ALEX = 'Alex';
 var DEFAULT_CHARACTER = CHARACTER_STEVE;
 
-function trySetLocalStorageItem(key, value) {
-  try {
-    window.localStorage.setItem(key, value);
-  } catch (e) {
-    /**
-     * localstorage .setItem in iOS Safari Private Mode always causes an
-     * exception, see http://stackoverflow.com/a/14555361
-     */
-    if (console && console.log) {
-      console.log("Couldn't set local storage item for key " + key);
-    }
-  }
-}
-
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
@@ -152,14 +142,12 @@ Craft.init = function(config) {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        Craft.showPlayerSelectionPopup(function(selectedPlayer) {
-          trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
-          Craft.clearPlayerState();
-          trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
-          Craft.updateUIForCharacter(selectedPlayer);
+        const onPlayerSelected = selectedPlayer => {
+          Craft.setCurrentCharacter(selectedPlayer);
           Craft.initializeAppLevel(config.level);
           showInstructions();
-        });
+        };
+        handlePlayerSelection(DEFAULT_CHARACTER, onPlayerSelected);
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
         Craft.showHouseSelectionPopup(function(selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
@@ -446,14 +434,17 @@ Craft.init = function(config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <CraftVisualizationColumn
-            showFinishButton={!config.level.isProjectLevel}
-          />
-        }
-        onMount={onMount}
-      />
+      <div>
+        <AppView
+          visualizationColumn={
+            <CraftVisualizationColumn
+              showFinishButton={!config.level.isProjectLevel}
+            />
+          }
+          onMount={onMount}
+        />
+        <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+      </div>
     </Provider>,
     document.getElementById(config.containerId)
   );
@@ -462,6 +453,10 @@ Craft.init = function(config) {
 var preloadImage = function(url) {
   var img = new Image();
   img.src = url;
+};
+
+Craft.getAppReducers = function() {
+  return reducers;
 };
 
 Craft.characterAssetPackName = function(playerName) {
@@ -474,6 +469,13 @@ Craft.getCurrentCharacter = function() {
   );
 };
 
+Craft.setCurrentCharacter = function(name) {
+  trackEvent('Minecraft', 'ChoseCharacter', name);
+  Craft.clearPlayerState();
+  trySetLocalStorage('craftSelectedPlayer', name);
+  Craft.updateUIForCharacter(name);
+};
+
 Craft.updateUIForCharacter = function(character) {
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
   Craft.initialConfig.skin.smallStaticAvatar =
@@ -482,45 +484,6 @@ Craft.updateUIForCharacter = function(character) {
   Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
   studioApp().setIconsFromSkin(Craft.initialConfig.skin);
   $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
-};
-
-Craft.showPlayerSelectionPopup = function(onSelectedCallback) {
-  var selectedPlayer = DEFAULT_CHARACTER;
-  var popupDiv = document.createElement('div');
-  popupDiv.innerHTML = require('./dialogs/playerSelection.html.ejs')({
-    image: studioApp().assetUrl()
-  });
-  var popupDialog = studioApp().createModalDialog({
-    contentDiv: popupDiv,
-    defaultBtnSelector: '#choose-steve',
-    onHidden: function() {
-      onSelectedCallback(selectedPlayer);
-    },
-    id: 'craft-popup-player-selection'
-  });
-  dom.addClickTouchEvent(
-    $('#close-character-select')[0],
-    function() {
-      popupDialog.hide();
-    }.bind(this)
-  );
-  dom.addClickTouchEvent(
-    $('#choose-steve')[0],
-    function() {
-      selectedPlayer = CHARACTER_STEVE;
-      trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
-      popupDialog.hide();
-    }.bind(this)
-  );
-  dom.addClickTouchEvent(
-    $('#choose-alex')[0],
-    function() {
-      selectedPlayer = CHARACTER_ALEX;
-      trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
-      popupDialog.hide();
-    }.bind(this)
-  );
-  popupDialog.show();
 };
 
 Craft.showHouseSelectionPopup = function(onSelectedCallback) {
@@ -582,7 +545,7 @@ Craft.clearPlayerState = function() {
 };
 
 Craft.onHouseSelected = function(houseType) {
-  trySetLocalStorageItem('craftSelectedHouse', houseType);
+  trySetLocalStorage('craftSelectedHouse', houseType);
 };
 
 Craft.initializeAppLevel = function(levelConfig) {
@@ -900,10 +863,7 @@ Craft.executeUserCode = function() {
               levelModel.actionPlane[i].blockType;
           }
         }
-        trySetLocalStorageItem(
-          'craftHouseBlocks',
-          JSON.stringify(newHouseBlocks)
-        );
+        trySetLocalStorage('craftHouseBlocks', JSON.stringify(newHouseBlocks));
       }
 
       var attemptInventoryTypes = levelModel.getInventoryTypes();
@@ -917,7 +877,7 @@ Craft.executeUserCode = function() {
           newInventorySet[type] = true;
         });
 
-      trySetLocalStorageItem(
+      trySetLocalStorage(
         'craftPlayerInventory',
         JSON.stringify(Object.keys(newInventorySet))
       );

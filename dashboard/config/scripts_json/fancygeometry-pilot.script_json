@@ -2,13 +2,17 @@
   "script": {
     "name": "fancygeometry-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:13 UTC",
+    "serialized_at": "2021-11-22 19:57:35 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "fancygeometry-pilot"
     }
@@ -45,7 +49,19 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "6f673572-e66d-4553-8154-02fff6d55a39",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f673572-e66d-4553-8154-02fff6d55a39",
+        "lesson.key": "Fancy Geometry",
+        "lesson_group.key": "Fancy Geometry",
+        "script.name": "fancygeometry-pilot"
+      }
+    }
   ],
   "activity_sections": [
 

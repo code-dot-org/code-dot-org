@@ -13,6 +13,7 @@
   courses_data[:codeorgurlprefix] = CDO.code_org_url
   courses_data[:signedout] = @is_signed_out
   courses_data[:modernelementarycoursesavailable] = @modern_elementary_courses_available
+  courses_data[:showAiCard] = DCDO.get('courses_show_ai', CDO.default_courses_show_ai)
 
   @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')
 

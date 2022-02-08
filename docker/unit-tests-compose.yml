@@ -12,14 +12,14 @@
 #
 # then run:
 # docker-compose -f unit-tests-compose.yml up
-# 
+#
 # To clean up:
 # docker-compose -f unit-tests-compose.yml down
 
-version: '3'
+version: "3"
 services:
   site:
-    image: wintercdo/code-dot-org:0.7
+    image: codedotorg/code-dot-org:1.1
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated

@@ -1118,6 +1118,7 @@ bg-BG:
   boxisland_name: Островът на кутиите
   texasinstruments_name: 10 минути код
   teacherled_name: Ръководство с учебни планове за учители
+  course1_name: Курс 1 - за малките читатели
   course2_name: Курс 2
   course3_name: Курс 3
   course4_name: Курс 4
@@ -1194,16 +1195,42 @@ bg-BG:
   course2_gradelevel: Възраст 6 + (необходими са умения за четене)
   course3_gradelevel: Възраст 8 + (след курс 2)
   course4_gradelevel: Възраст 10 + (след курс 3)
+  coursea_gradelevel: Възраст 4-7
+  courseb_gradelevel: Възраст 5-8
+  coursec_gradelevel: Възраст 6-10
   coursed_gradelevel: Клас 8 +
   coursee_gradelevel: Възраст 8-12
+  coursef_gradelevel: Възраст 9-13
+  coursea-2017_gradelevel: Възраст 4-7
+  courseb-2017_gradelevel: Възраст 5-8
+  coursec-2017_gradelevel: Възраст 6-10
   coursed-2017_gradelevel: Клас 8 +
   coursee-2017_gradelevel: Възраст 8-12
+  coursef-2017_gradelevel: Възраст 9-13
+  coursea-2018_gradelevel: Възраст 4-7
+  courseb-2018_gradelevel: Възраст 5-8
+  coursec-2018_gradelevel: Възраст 6-10
   coursed-2018_gradelevel: Клас 8 +
   coursee-2018_gradelevel: Възраст 8-12
+  coursef-2018_gradelevel: Възраст 9-13
+  coursea-2019_gradelevel: Възраст 4-7
+  courseb-2019_gradelevel: Възраст 5-8
+  coursec-2019_gradelevel: Възраст 6-10
   coursed-2019_gradelevel: Клас 8 +
   coursee-2019_gradelevel: Възраст 8-12
+  coursef-2019_gradelevel: Възраст 9-13
+  coursea-2020_gradelevel: Възраст 4-7
+  courseb-2020_gradelevel: Възраст 5-8
+  coursec-2020_gradelevel: Възраст 6-10
   coursed-2020_gradelevel: Клас 8 +
   coursee-2020_gradelevel: Възраст 8-12
+  coursef-2020_gradelevel: Възраст 9-13
+  coursea-2021_gradelevel: Възраст 4-7
+  courseb-2021_gradelevel: Възраст 5-8
+  coursec-2021_gradelevel: Възраст 6-10
+  coursed-2021_gradelevel: Клас 8 +
+  coursee-2021_gradelevel: Възраст 8-12
+  coursef-2021_gradelevel: Възраст 9-13
   accelerated_gradelevel: Възраст 10 + (след курс 3)
   codeorg_platformtext: Съвременни браузъри, смартфони, таблети
   codeintl_platformtext: Съвременни браузъри, смартфони, таблети
@@ -1886,10 +1913,14 @@ bg-BG:
   user_header_settings: Моят акаунт
   user_header_logout: Изход
   user_header_signin: Вход
+  user_header_create: 'Създай '
+  user_header_applab: 'Лаборатория за приложения '
+  user_header_artist: 'Художник '
   user_header_gamelab: Играта лаборатория
   user_header_playlab: Театрална лаборатория
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_project_gallery: Покажи Галерия с проекти
   user_header_view_my_projects: Покажи моите проекти
   view_all_sections: Покажи всички раздели
   hero_name: 'Minecraft: Пътуването на героя'
@@ -1901,6 +1932,7 @@ bg-BG:
     За ученици с ограничена или никаква техника или свързаност, споделете този пакет
     от [достъпни Hour of Code дейности](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc2018_creativity_create: Създай
+  hoc2018_creativity_hoc_coming: Hour of Code идва…
   hoc2018_mc_page_title: Minecraft Hour of Code уроци
   hoc2018_mc_details: Много езици | Съвременни браузъри и таблети | Клас 2 +
   hoc2018_mc_aquatic_title: 'Minecraft: Подводното пътешествие'
@@ -1951,17 +1983,22 @@ bg-BG:
   hoc2018_mc_minecraft_education: Minecraft образование
   hoc2018_mc_continue_learning: Продължете да учите с Minecraft.
   hoc2018_mc_go_to_mc_education: Отидете на Minecraft Education
+  hoc2018_dance_party_box_description: Продължи да задълбаваш в програмирането с Dance
+    Party уроците.
   hoc2018_dance_party_button: Старт
   hoc2018_dance_teacher_resources_tile1_button: План на урок
   hoc2018_dance_teacher_resources_tile2_button: Ънплъгд дейност
   hoc2018_dance_amazon_about_future_engineer_button: Научете повече
   hoc2018_dance_amazon_scholarship_programs_button: Регистрирай се сега
+  page_not_found_title: Страницата не е намерена
   footer_powered_by_aws: Създадено с Amazon Web Services
+  codebytes_skinny_banner_english_only: Само на английски
   footer_privacy_policy: Защита на личните данни
   footer_about: Относно
   footer_partners: Партньори
   footer_donate: Дарения
   footer_support: Помощ
   footer_terms: Условия
+  ai_for_oceans_lesson_plan: план на урок
   ai_activity: Упражнение
   ai_description: Описание

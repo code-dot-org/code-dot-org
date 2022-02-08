@@ -6,6 +6,40 @@ import msg from './locale';
 
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
+export class CollectorGemCounter extends React.Component {
+  static propTypes = {
+    currentCollected: PropTypes.number.isRequired,
+    minRequired: PropTypes.number
+  };
+
+  static defaultProps = {
+    minRequired: 1
+  };
+
+  render() {
+    const showCheckmark = this.props.currentCollected >= this.props.minRequired;
+
+    return (
+      <div style={styles.container}>
+        <div style={styles.label}>{msg.goal()}</div>
+        <div style={styles.gemImage}>
+          <i
+            style={{
+              ...styles.checkmark,
+              visibility: showCheckmark ? 'visible' : 'hidden'
+            }}
+            className="fa fa-check"
+            aria-hidden="true"
+          />
+        </div>
+        <span style={styles.gemCount}>
+          {this.props.currentCollected}/{this.props.minRequired}
+        </span>
+      </div>
+    );
+  }
+}
+
 const styles = {
   container: {
     display: 'inline-block',
@@ -51,40 +85,6 @@ const styles = {
     color: color.charcoal
   }
 };
-
-export class CollectorGemCounter extends React.Component {
-  static propTypes = {
-    currentCollected: PropTypes.number.isRequired,
-    minRequired: PropTypes.number
-  };
-
-  static defaultProps = {
-    minRequired: 1
-  };
-
-  render() {
-    const showCheckmark = this.props.currentCollected >= this.props.minRequired;
-
-    return (
-      <div style={styles.container}>
-        <div style={styles.label}>{msg.goal()}</div>
-        <div style={styles.gemImage}>
-          <i
-            style={{
-              ...styles.checkmark,
-              visibility: showCheckmark ? 'visible' : 'hidden'
-            }}
-            className="fa fa-check"
-            aria-hidden="true"
-          />
-        </div>
-        <span style={styles.gemCount}>
-          {this.props.currentCollected}/{this.props.minRequired}
-        </span>
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   currentCollected: state.maze.collectorCurrentCollected,

@@ -1,6 +1,6 @@
 {
-  "func": "maxDepth",
+  "key": "maxDepth",
+  "name": "maxDepth",
   "category": "Groups",
-  "modeOptionName": "*.maxDepth",
-  "type": "value"
+  "syntax": "maxDepth"
 }

@@ -1,4 +1,6 @@
 {
-  "func": "penUp",
-  "category": "Turtle"
+  "key": "penUp",
+  "name": "penUp",
+  "category": "Turtle",
+  "syntax": "penUp"
 }

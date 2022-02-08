@@ -10,71 +10,6 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 
-const styles = {
-  paneHeaderOverride: {
-    color: color.default_text
-  },
-  audioRTL: {
-    wrapper: {
-      float: 'left'
-    }
-  },
-  audio: {
-    button: {
-      height: 24,
-      marginTop: '3px',
-      marginBottom: '3px'
-    },
-    buttonImg: {
-      lineHeight: '24px',
-      fontSize: 15,
-      paddingLeft: 12
-    }
-  },
-  audioLTR: {
-    wrapper: {
-      float: 'right'
-    }
-  },
-  helpTabs: {
-    paddingTop: 6
-  },
-  helpTabsLtr: {
-    float: 'left',
-    paddingLeft: 30
-  },
-  helpTabsRtl: {
-    float: 'right',
-    paddingRight: 30
-  },
-  collapserIcon: {
-    showHideButton: {
-      position: 'absolute',
-      top: 0,
-      margin: 0,
-      lineHeight: styleConstants['workspace-headers-height'] + 'px',
-      fontSize: 18,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.white
-      }
-    },
-    showHideButtonLtr: {
-      left: 8
-    },
-    showHideButtonRtl: {
-      right: 8
-    },
-    teacherOnlyColor: {
-      color: color.lightest_cyan,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.default_text
-      }
-    }
-  }
-};
-
 function TopInstructionsHeader(props) {
   const {
     teacherOnly,
@@ -82,7 +17,7 @@ function TopInstructionsHeader(props) {
     isCSDorCSP,
     displayHelpTab,
     displayFeedback,
-    displayKeyConcept,
+    levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
     isViewingAsTeacher,
@@ -102,6 +37,8 @@ function TopInstructionsHeader(props) {
     isRtl,
     documentationUrl,
     teacherMarkdown,
+    exampleSolutions,
+    isViewingAsInstructorInTraining,
     isEmbedView,
     isCollapsed,
     collapsible
@@ -179,7 +116,7 @@ function TopInstructionsHeader(props) {
               className="uitest-feedback"
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
-              text={displayKeyConcept ? i18n.keyConcept() : i18n.feedback()}
+              text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
@@ -196,6 +133,7 @@ function TopInstructionsHeader(props) {
           )}
           {displayReviewTab && (
             <InstructionsTab
+              className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
               text={i18n.review()}
@@ -203,8 +141,10 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {isViewingAsTeacher &&
-            (teacherMarkdown || showContainedLevelAnswer) && (
+          {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
+            (teacherMarkdown ||
+              showContainedLevelAnswer ||
+              exampleSolutions.length > 0) && (
               <InstructionsTab
                 className="uitest-teacherOnlyTab"
                 onClick={handleTeacherOnlyTabClick}
@@ -222,6 +162,7 @@ function TopInstructionsHeader(props) {
           (isCSDorCSP || hasContainedLevels) &&
           !dynamicInstructions && (
             <CollapserIcon
+              id="ui-test-collapser"
               isCollapsed={isCollapsed}
               onClick={handleClickCollapser}
               style={collapserIconStyles}
@@ -232,13 +173,79 @@ function TopInstructionsHeader(props) {
   );
 }
 
+const styles = {
+  paneHeaderOverride: {
+    color: color.default_text
+  },
+  audioRTL: {
+    wrapper: {
+      float: 'left'
+    }
+  },
+  audio: {
+    button: {
+      height: 24,
+      marginTop: '3px',
+      marginBottom: '3px'
+    },
+    buttonImg: {
+      lineHeight: '24px',
+      fontSize: 15,
+      paddingLeft: 12
+    }
+  },
+  audioLTR: {
+    wrapper: {
+      float: 'right'
+    }
+  },
+  helpTabs: {
+    paddingTop: 6
+  },
+  helpTabsLtr: {
+    float: 'left',
+    paddingLeft: 30
+  },
+  helpTabsRtl: {
+    float: 'right',
+    paddingRight: 30
+  },
+  collapserIcon: {
+    showHideButton: {
+      position: 'absolute',
+      top: 0,
+      margin: 0,
+      cursor: 'pointer',
+      lineHeight: styleConstants['workspace-headers-height'] + 'px',
+      fontSize: 18,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.white
+      }
+    },
+    showHideButtonLtr: {
+      left: 8
+    },
+    showHideButtonRtl: {
+      right: 8
+    },
+    teacherOnlyColor: {
+      color: color.lightest_cyan,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.default_text
+      }
+    }
+  }
+};
+
 TopInstructionsHeader.propTypes = {
   teacherOnly: PropTypes.bool,
   tabSelected: PropTypes.string.isRequired,
   isCSDorCSP: PropTypes.bool,
   displayHelpTab: PropTypes.bool,
   displayFeedback: PropTypes.bool,
-  displayKeyConcept: PropTypes.bool,
+  levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
@@ -258,6 +265,8 @@ TopInstructionsHeader.propTypes = {
   isRtl: PropTypes.bool.isRequired,
   documentationUrl: PropTypes.string,
   teacherMarkdown: PropTypes.string,
+  exampleSolutions: PropTypes.array,
+  isViewingAsInstructorInTraining: PropTypes.bool,
   isEmbedView: PropTypes.bool.isRequired,
   isCollapsed: PropTypes.bool.isRequired,
   collapsible: PropTypes.bool.isRequired

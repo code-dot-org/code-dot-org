@@ -1,4 +1,4 @@
-require 'cdo/redis'
+require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
@@ -16,8 +16,9 @@ class I18nStringUrlTracker
   I18N_STRING_TRACKING_DCDO_KEY = 'i18n_string_tracking'.freeze
 
   # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
-  # TODO: increase this interval to 12.hours once we verify everything is working.
-  FLUSH_INTERVAL = 1.hour
+  # Select a random interval time between the MIN and MAX so we can avoid all the servers flushing data at the same time.
+  FLUSH_INTERVAL_MIN = 8.hours
+  FLUSH_INTERVAL_MAX = 16.hours
 
   MAX_BUFFER_SIZE = 250.megabytes
 
@@ -52,7 +53,8 @@ class I18nStringUrlTracker
     @buffer_size_max = MAX_BUFFER_SIZE
 
     # Flushes the buffer in a loop which executes at the given interval
-    @task = Concurrent::TimerTask.execute(execution_interval: FLUSH_INTERVAL) {flush}
+    interval = rand(FLUSH_INTERVAL_MIN...FLUSH_INTERVAL_MAX)
+    @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
   end
 
   # Records the given string_key and URL so we can analyze later what strings are present on what pages.
@@ -114,12 +116,15 @@ class I18nStringUrlTracker
       @buffer_size = 0
     end
 
+    # If the DCDO flag has changed since data was buffered, we want to clear the buffer and not log/flush the data.
+    return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
+
     # log every <string_key>:<url>:<source> combination to Firehose
     buffer&.each_key do |url|
       buffer[url].each_key do |string_key|
         buffer[url][string_key].each do |source|
           # record the string : url association.
-          RedisClient.instance.put_record(
+          FirehoseClient.instance.put_record(
             :i18n,
             {url: url, string_key: string_key, source: source}
           )
@@ -146,7 +151,7 @@ class I18nStringUrlTracker
     return true if parsed_url.path&.match(/\/projects\/.*/)
 
     # Allow script URLs
-    # Example: https://studio.code.org/s/dance-2019/stage/1/puzzle/1
+    # Example: https://studio.code.org/s/dance-2019/lessons/1/levels/1
     return true if parsed_url.path&.match(/\/s\/.*/)
 
     # Allow URLs where the path starts with anything in SIMPLE_PATHS
@@ -194,15 +199,15 @@ class I18nStringUrlTracker
     # motivation for this is to reduce the amount of data we are logging. There is a lot string reuse between levels
     # so we can reduce how much data we log by preemptively aggregating it. Strings which are unique to a particular
     # level usually have the specific level ID in the string key anyways.
-    # converts 'https://studio.code.org/s/dance-2019/stage/1/puzzle/1'
+    # converts 'https://studio.code.org/s/dance-2019/lessons/1/levels/1'
     # into 'https://studio.code.org/s/dance-2019'
     # Regex explanation:
     # (.*\/s\/) - The first major hint this this is a script URL is '/s/' in the URL. The parenthesis around
     # the expression make it a "capture group". Matches a string like "/s/"
     # .*?) - This matches the script name and year, and the '?' is included to make the matching is non-greedy.
     # Otherwise it would match to the end of the URL past the script year. Matches a string like "dance-2019"
-    # /\.* - This matches the specific level/puzzle/stage information. This is the part we want to omit. Matches a
-    # string like '/stage/1/puzzle/1'
+    # /\.* - This matches the specific level/lesson information. This is the part we want to omit. Matches a
+    # string like '/lessons/1/levels/1'
     script_regex = /(.*\/s\/.*?)\/.*/
     parsed_url.path&.match(script_regex) do |m|
       # capture group m[1] is the match in the first '()' group in the regex

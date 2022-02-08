@@ -38,14 +38,18 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-15.4';
+import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
+import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
+
+  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
+  // https://codedotorg.atlassian.net/browse/XTEAM-377
+  // throwOnConsoleWarningsEverywhere();
+
   ${runTests}
 });
 `;
@@ -83,6 +87,7 @@ describe('entry tests', () => {
     'jigsaw',
     'maze',
     'netsim',
+    'poetry',
     'studio',
     'turtle',
     'weblab'
@@ -584,11 +589,12 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
-    'admin_standards/index':
-      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
+    'course_offerings/edit':
+      './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -628,13 +634,27 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_environments/edit':
+      './src/sites/studio/pages/programming_environments/edit.js',
+    'programming_expressions/new':
+      './src/sites/studio/pages/programming_expressions/new.js',
+    'programming_expressions/edit':
+      './src/sites/studio/pages/programming_expressions/edit.js',
+    'programming_expressions/show':
+      './src/sites/studio/pages/programming_expressions/show.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js',
     'sprite_management/sprite_upload':
-      './src/sites/studio/pages/sprite_management/sprite_upload.js'
+      './src/sites/studio/pages/sprite_management/sprite_upload.js',
+    'sprite_management/sprite_management_directory':
+      './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
+    'sprite_management/default_sprites_editor':
+      './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/select_start_animations':
+      './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
 
   var pegasusEntries = {
@@ -684,10 +704,6 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/learn/local.js',
     'code.org/views/professional_learning_apply_banner':
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
-    'code.org/views/at_home_banner':
-      './src/sites/code.org/pages/views/at_home_banner.js',
-    'code.org/views/virtual_hoc_banner':
-      './src/sites/code.org/pages/views/virtual_hoc_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',

@@ -2,13 +2,17 @@
   "script": {
     "name": "gamelabprojects",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:50 UTC",
+    "serialized_at": "2021-11-22 19:57:00 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "gamelabprojects"
     }

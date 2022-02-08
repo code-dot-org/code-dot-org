@@ -1,0 +1,575 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Albemarle High,,510009000015,10019,AP Computer Science Principles,44,4,2,1,0,0,0,0,0
+Albemarle High,,510009000015,10152-I,Programming 6640,51,2,11,5,0,0,11,0,0
+Albemarle High,,510009000015,10157,AP Computer Science A,35,9,0,3,0,0,0,0,0
+Monticello High,,510009001747,10152-I,Programming 6640,26,1,0,5,0,0,11,0,0
+Monticello High,,510009001747,10152-II,Advanced Programming,4,0,0,2,0,0,0,0,0
+Western Albemarle High,,510009000035,10152-I,Programming 6640,21,1,0,4,0,0,0,0,0
+Western Albemarle High,,510009000035,10157,AP Computer Science A,46,9,2,0,0,0,0,0,0
+Alleghany High,,510015201883,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Alleghany High,,510015201883,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Amelia County High,,510018001828,10021,Computer Science Programming,4,0,0,1,0,0,0,0,0
+Appomattox County High,,510024000076,10152-I,Programming 6640,2,0,0,0,0,0,0,0,0
+Dorothy Hamm Middle,,510027003062,10152-I,Programming 6640,57,10,3,2,0,0,0,0,0
+Governor's Academy for Career and Technical Education in Arlington,,510027003003,10019,AP Computer Science Principles,30,4,1,10,0,0,0,0,0
+Governor's Academy for Career and Technical Education in Arlington,,510027003003,10021,Computer Science Programming,2,2,0,0,0,0,0,0,0
+Governor's Academy for Career and Technical Education in Arlington,,510027003003,10152-I,Programming 6640,21,6,1,5,0,0,0,0,0
+Governor's Academy for Career and Technical Education in Arlington,,510027003003,10152-II,Advanced Programming,4,2,0,1,0,0,0,0,0
+Gunston Middle,,510027000752,10152-I,Programming 6640,41,4,12,11,0,0,17,0,12
+HB Woodlawn Secondary Program,,510027002659,10152-I,Programming 6640,34,14,3,1,0,0,0,0,0
+HB Woodlawn Secondary Program,,510027002659,10157,AP Computer Science A,21,8,0,2,0,0,0,0,0
+Jefferson Middle,,510027000098,10152-I,Programming 6640,62,21,10,16,0,0,24,0,28
+Kenmore Middle,,510027000099,10152-I,Programming 6640,25,9,7,7,0,0,10,0,0
+Swanson Middle,,510027000107,10152-I,Programming 6640,58,14,2,7,0,0,0,0,0
+Technical Education & Career Center,,510027000109,10152-I,Programming 6640,1,0,0,1,0,0,0,0,0
+Wakefield High,,510027000111,10019,AP Computer Science Principles,30,10,9,5,0,0,0,0,10
+Wakefield High,,510027000111,10152-I,Programming 6640,55,14,15,15,0,0,33,0,24
+Wakefield High,,510027000111,10152-II,Advanced Programming,3,2,1,0,0,0,0,0,0
+Wakefield High,,510027000111,10157,AP Computer Science A,31,11,5,7,0,0,0,0,11
+Washington-Liberty High,,510027000112,10019,AP Computer Science Principles,27,7,2,1,0,0,0,0,0
+Washington-Liberty High,,510027000112,10152-I,Programming 6640,72,18,3,15,0,0,15,0,12
+Washington-Liberty High,,510027000112,10152-II,Advanced Programming,22,6,1,3,0,0,0,0,0
+Washington-Liberty High,,510027000112,10157,AP Computer Science A,34,14,1,7,0,0,0,0,0
+Washington-Liberty High,,510027000112,10159-HL,IB Computer Science,84,26,6,12,0,0,13,0,0
+Williamsburg Middle,,510027000113,10152-I,Programming 6640,71,13,0,6,0,0,0,0,0
+Yorktown High,,510027000115,10019,AP Computer Science Principles,83,12,4,3,0,0,0,0,0
+Yorktown High,,510027000115,10152-I,Programming 6640,56,14,5,5,0,0,11,0,0
+Yorktown High,,510027000115,10152-II,Advanced Programming,18,5,2,1,0,0,0,0,0
+Yorktown High,,510027000115,10157,AP Computer Science A,29,3,3,6,0,0,0,0,0
+Buffalo Gap High,,510030000117,10020,Computer Science Foundations,5,2,0,1,0,0,0,0,0
+Fort Defiance High,,510030000124,10019,AP Computer Science Principles,1,0,0,0,0,0,0,0,0
+Fort Defiance High,,510030000124,10020,Computer Science Foundations,22,1,0,0,0,0,0,0,0
+Riverheads High,,510030000129,10020,Computer Science Foundations,3,1,0,0,0,0,0,0,0
+Stuarts Draft High,,510030000132,10020,Computer Science Foundations,5,0,0,1,0,0,0,0,0
+Wilson Memorial High,,510030000138,10019,AP Computer Science Principles,1,0,0,0,0,0,0,0,0
+Wilson Memorial High,,510030000138,10020,Computer Science Foundations,11,3,0,2,0,0,0,0,0
+Wilson Memorial High,,510030000138,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Bath County High,,510033000139,10152-I,Programming 6640,7,0,1,0,0,0,0,0,0
+Bath County High,,510033000139,10152-II,Advanced Programming,7,2,0,0,0,0,0,0,0
+Jefferson Forest High,,510036002175,10019,AP Computer Science Principles,11,2,0,0,0,0,0,0,0
+Jefferson Forest High,,510036002175,10152-II,Advanced Programming,19,1,1,0,0,0,0,0,0
+Jefferson Forest High,,510036002175,10157,AP Computer Science A,30,4,0,0,0,0,0,0,0
+Liberty High,,510036000151,10019,AP Computer Science Principles,20,8,2,0,0,0,0,0,0
+Liberty High,,510036000151,10157,AP Computer Science A,7,0,1,0,0,0,0,0,0
+Staunton River High,,510036000156,10152-II,Advanced Programming,6,1,1,0,0,0,0,0,0
+Staunton River High,,510036000156,10157,AP Computer Science A,4,0,0,0,0,0,0,0,0
+Botetourt Technical Education Center,,510042000165,10152-I,Programming 6640,11,1,0,0,0,0,0,0,0
+Botetourt Technical Education Center,,510042000165,10152-II,Advanced Programming,9,2,0,0,0,0,0,0,0
+Brunswick High,,510048000183,10152-I,Programming 6640,19,3,14,1,0,0,13,0,0
+James S. Russell Middle,,510048000182,10022,Middle School Computer Science Elective,53,22,46,1,0,0,43,0,0
+Grundy High,,510051000198,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Buckingham County High,,510054000210,10152-I,Programming 6640,37,11,8,0,0,0,15,0,0
+Altavista High,,510060000220,10152-I,Programming 6640,3,1,0,0,0,0,0,0,0
+Altavista High,,510060000220,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Brookville High,,510060000223,10157,AP Computer Science A,3,0,1,0,0,0,0,0,0
+Brookville Middle,,510060000224,10022,Middle School Computer Science Elective,35,21,4,3,0,0,17,0,0
+Rustburg High,,510060000231,10157,AP Computer Science A,1,0,1,0,0,0,0,0,0
+Blue Ridge Crossroads Governor's Academy for Technical Education,,510069002985,10152-I,Programming 6640,15,4,0,2,0,0,0,0,0
+Blue Ridge Crossroads Governor's Academy for Technical Education,,510069002985,10152-II,Advanced Programming,9,2,0,1,0,0,0,0,0
+Randolph-Henry High,,510075000270,10152-I,Programming 6640,19,1,2,0,0,0,0,0,0
+Chesterfield Career and Technical Center at Courthouse,,510084000323,10055,Java Programming (Oracle),5,0,0,1,0,0,0,0,0
+Clover Hill High,,510084000324,10019,AP Computer Science Principles,28,9,2,1,0,0,0,0,0
+Clover Hill High,,510084000324,10152-I,Programming 6640,60,10,9,3,0,0,13,0,0
+Clover Hill High,,510084000324,10152-II,Advanced Programming,31,5,4,1,0,0,0,0,0
+Clover Hill High,,510084000324,10157,AP Computer Science A,16,1,1,1,0,0,0,0,0
+Cosby High,,510084002661,10019,AP Computer Science Principles,44,8,3,2,0,0,0,0,0
+Cosby High,,510084002661,10152-I,Programming 6640,44,3,8,2,0,0,10,0,0
+James River High,,510084000766,10019,AP Computer Science Principles,44,11,3,4,0,0,0,0,0
+Lloyd C. Bird High,,510084000337,10019,AP Computer Science Principles,46,7,12,4,0,0,28,0,0
+Lloyd C. Bird High,,510084000337,10152-II,Advanced Programming,28,3,8,4,0,0,0,0,0
+Lloyd C. Bird High,,510084000337,10157,AP Computer Science A,17,2,6,3,0,0,0,0,0
+Manchester High,,510084000056,10152-I,Programming 6640,83,7,20,17,0,0,28,14,0
+Matoaca High,,510084000340,10019,AP Computer Science Principles,64,12,17,5,0,0,0,0,0
+Matoaca High,,510084000340,10152-I,Programming 6640,19,1,4,2,0,0,0,0,0
+Meadowbrook High,,510084000342,10019,AP Computer Science Principles,15,4,12,1,0,0,0,0,0
+Meadowbrook High,,510084000342,10152-I,Programming 6640,48,13,33,11,0,0,37,0,0
+Meadowbrook High,,510084000342,10152-II,Advanced Programming,2,0,1,0,0,0,0,0,0
+Midlothian High,,510084002006,10019,AP Computer Science Principles,57,8,4,1,0,0,0,0,0
+Midlothian High,,510084002006,10157,AP Computer Science A,27,4,0,2,0,0,0,0,0
+Monacan High,,510084001833,10152-II,Advanced Programming,8,2,0,1,0,0,0,0,0
+Monacan High,,510084001833,10157,AP Computer Science A,22,15,6,1,0,0,0,0,0
+Thomas Dale High,,510084000350,10019,AP Computer Science Principles,4,1,0,1,0,0,0,0,0
+Thomas Dale High,,510084000350,10152-I,Programming 6640,84,9,19,20,0,0,43,11,10
+Thomas Dale High,,510084000350,10152-II,Advanced Programming,16,2,2,2,0,0,0,0,0
+Thomas Dale High,,510084000350,10157,AP Computer Science A,13,1,1,0,0,0,0,0,0
+Clarke County High,,510087002100,10152-I,Programming 6640,25,3,0,1,0,0,0,0,0
+Clarke County High,,510087002100,10152-II,Advanced Programming,5,0,0,0,0,0,0,0,0
+Craig County High,,510102002111,10019,AP Computer Science Principles,28,15,0,1,0,0,10,0,0
+Craig County High,,510102002111,10152-II,Advanced Programming,3,0,0,0,0,0,0,0,0
+Culpeper County High,,510105000376,10152-I,Programming 6640,17,4,2,3,0,0,0,0,0
+Culpeper County High,,510105000376,10152-II,Advanced Programming,3,0,0,0,0,0,0,0,0
+Culpeper County High,,510105000376,10157,AP Computer Science A,2,1,0,0,0,0,0,0,0
+Eastern View High,,510105002758,10152-I,Programming 6640,18,1,3,0,0,0,0,0,0
+Eastern View High,,510105002758,10152-II,Advanced Programming,7,1,1,0,0,0,0,0,0
+Eastern View High,,510105002758,10157,AP Computer Science A,5,0,0,1,0,0,0,0,0
+Cumberland High,,510108000057,10152-I,Programming 6640,2,0,0,0,0,0,0,0,0
+Ridgeview High,,510114002981,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Dinwiddie County High,,510117000410,10152-I,Programming 6640,12,2,6,2,0,0,0,0,0
+Dinwiddie County High,,510117000410,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Annandale High,,510126000423,10152-I,Programming 6640,60,11,8,17,0,0,35,14,24
+Annandale High,,510126000423,10152-II,Advanced Programming,14,1,2,2,0,0,0,0,0
+Centreville High,,510126002114,10152-I,Programming 6640,87,11,6,17,0,0,21,10,12
+Centreville High,,510126002114,10152-II,Advanced Programming,19,3,2,2,0,0,0,0,0
+Centreville High,,510126002114,10157,AP Computer Science A,94,32,4,4,0,0,12,0,0
+Chantilly High,,510126000059,10019,AP Computer Science Principles,150,52,3,4,0,0,10,0,0
+Chantilly High,,510126000059,10152-I,Programming 6640,87,15,2,18,0,0,20,0,13
+Chantilly High,,510126000059,10152-II,Advanced Programming,24,3,0,2,0,0,0,0,0
+Chantilly High,,510126000059,10157,AP Computer Science A,111,38,2,5,0,1,0,0,0
+Edison High,,510126000461,10152-I,Programming 6640,78,13,14,20,1,0,41,16,18
+Edison High,,510126000461,10152-II,Advanced Programming,26,2,2,5,1,0,0,0,0
+Fairfax High,,510126000463,10152-I,Programming 6640,27,5,1,7,0,0,0,0,0
+Fairfax High,,510126000463,10157,AP Computer Science A,69,21,4,7,0,0,10,0,0
+Falls Church High,,510126000468,10157,AP Computer Science A,45,2,1,9,0,0,11,0,0
+Hayfield Secondary,,510126000493,10157,AP Computer Science A,42,6,8,1,0,0,11,0,0
+Herndon High,,510126000495,10019,AP Computer Science Principles,46,19,2,5,0,0,14,0,0
+Herndon High,,510126000495,10152-I,Programming 6640,57,13,2,14,1,0,23,0,14
+Herndon High,,510126000495,10152-II,Advanced Programming,13,1,0,0,0,0,0,0,0
+Herndon High,,510126000495,10157,AP Computer Science A,60,11,4,11,0,0,14,0,0
+Lake Braddock Secondary,,510126000516,10019,AP Computer Science Principles,94,35,9,7,0,1,17,0,0
+Lake Braddock Secondary,,510126000516,10152-I,Programming 6640,49,9,4,5,0,0,0,0,0
+Lake Braddock Secondary,,510126000516,10152-II,Advanced Programming,30,5,2,2,0,0,0,0,0
+Lake Braddock Secondary,,510126000516,10157,AP Computer Science A,93,24,5,12,0,0,0,0,0
+Langley High,,510126000517,10152-I,Programming 6640,85,12,2,5,0,0,0,0,0
+Langley High,,510126000517,10152-II,Advanced Programming,41,5,1,3,0,0,0,0,0
+Langley High,,510126000517,10157,AP Computer Science A,101,26,1,4,1,0,0,0,0
+Lee High,,510126000521,10019,AP Computer Science Principles,16,4,2,2,0,0,0,0,0
+Lee High,,510126000521,10152-I,Programming 6640,62,13,9,17,0,0,36,0,0
+Lee High,,510126000521,10152-II,Advanced Programming,2,0,1,0,0,0,0,0,0
+Madison High,,510126000532,10019,AP Computer Science Principles,93,29,1,5,0,0,0,0,0
+Madison High,,510126000532,10152-I,Programming 6640,49,5,2,6,0,0,0,11,0
+Madison High,,510126000532,10157,AP Computer Science A,48,20,1,0,0,0,0,0,0
+Marshall High,,510126000535,10159-SL,IB Computer Science,18,5,0,1,0,0,0,0,0
+McLean High,,510126000538,10019,AP Computer Science Principles,125,51,3,9,0,0,0,0,11
+McLean High,,510126000538,10152-I,Programming 6640,43,11,0,5,0,0,0,0,0
+McLean High,,510126000538,10157,AP Computer Science A,50,12,1,3,0,0,0,0,0
+Mount Vernon High,,510126000542,10019,AP Computer Science Principles,18,5,6,2,0,0,0,0,0
+Mount Vernon High,,510126000542,10152-I,Programming 6640,49,6,11,20,0,0,25,0,13
+Mount Vernon High,,510126000542,10152-II,Advanced Programming,13,2,7,1,0,0,0,0,0
+Oakton High,,510126000550,10019,AP Computer Science Principles,125,36,3,6,0,0,11,0,0
+Oakton High,,510126000550,10152-I,Programming 6640,74,7,4,12,0,0,0,15,0
+Oakton High,,510126000550,10152-II,Advanced Programming,40,4,3,1,0,0,0,0,0
+Oakton High,,510126000550,10157,AP Computer Science A,114,32,3,6,0,0,0,0,0
+Robinson Secondary,,510126000561,10152-I,Programming 6640,88,12,6,9,0,0,12,12,10
+Robinson Secondary,,510126000561,10152-II,Advanced Programming,21,3,1,3,0,0,0,0,0
+Robinson Secondary,,510126000561,10159-SL,IB Computer Science,20,3,1,1,0,0,0,0,0
+South County High,,510126002436,10152-I,Programming 6640,50,6,11,8,0,0,13,0,0
+South County High,,510126002436,10152-II,Advanced Programming,27,5,3,5,0,0,0,0,0
+South County High,,510126002436,10157,AP Computer Science A,28,8,3,3,0,0,0,0,0
+South Lakes High,,510126000566,10152-I,Programming 6640,107,16,13,17,0,0,33,16,16
+South Lakes High,,510126000566,10152-II,Advanced Programming,35,3,3,5,0,0,0,0,0
+South Lakes High,,510126000566,10159-HL,IB Computer Science,5,2,1,0,0,0,0,0,0
+South Lakes High,,510126000566,10159-SL,IB Computer Science,30,10,0,6,0,0,0,0,0
+Thomas Jefferson High for Science and Technology,,510126002034,10157,AP Computer Science A,353,138,8,7,0,0,0,0,0
+West Potomac High,,510126000489,10152-I,Programming 6640,53,7,10,13,0,0,23,11,16
+West Potomac High,,510126000489,10157,AP Computer Science A,28,5,0,4,0,0,0,0,0
+West Springfield High,,510126000585,10157,AP Computer Science A,69,13,7,5,0,0,0,0,0
+Westfield High,,510126002529,10152-I,Programming 6640,56,14,7,14,0,1,21,0,15
+Westfield High,,510126002529,10152-II,Advanced Programming,17,2,0,1,0,0,0,0,0
+Westfield High,,510126002529,10157,AP Computer Science A,49,15,1,3,0,0,0,0,0
+Woodson High,,510126000600,10152-I,Programming 6640,50,14,2,3,0,0,0,0,0
+Woodson High,,510126000600,10152-II,Advanced Programming,4,1,0,0,0,0,0,0,0
+Woodson High,,510126000600,10157,AP Computer Science A,158,55,7,7,1,0,11,24,0
+Fauquier High,,510132000607,10019,AP Computer Science Principles,18,8,0,1,0,0,0,0,0
+Fauquier High,,510132000607,10157,AP Computer Science A,18,5,0,2,0,0,0,0,0
+Kettle Run High,,510132002785,10019,AP Computer Science Principles,26,4,0,0,0,0,0,0,0
+Kettle Run High,,510132002785,10157,AP Computer Science A,21,3,0,1,0,0,0,0,0
+Liberty High,,510132000854,10019,AP Computer Science Principles,12,1,0,2,0,0,0,0,0
+Liberty High,,510132000854,10157,AP Computer Science A,5,2,0,1,0,0,0,0,0
+Floyd County High,,510135000618,10152-I,Programming 6640,1,1,0,0,0,0,0,0,0
+Floyd County High,,510135000618,10157,AP Computer Science A,2,0,0,0,0,0,0,0,0
+Fluvanna County High,,510138000625,10019,AP Computer Science Principles,1,0,0,0,0,0,0,0,0
+Fluvanna County High,,510138000625,10152-I,Programming 6640,10,4,0,0,0,0,0,0,0
+Fluvanna County High,,510138000625,10157,AP Computer Science A,7,1,0,0,0,0,0,0,0
+Franklin County High,,510144000637,10152-I,Programming 6640,40,8,6,3,0,0,23,10,0
+Franklin County High,,510144000637,10152-II,Advanced Programming,41,7,2,2,0,0,19,0,0
+Franklin County High,,510144000637,10157,AP Computer Science A,13,1,0,2,0,0,0,0,0
+James Wood High,,510147000652,10157,AP Computer Science A,28,4,4,3,0,0,0,0,0
+Millbrook High,,510147002337,10020,Computer Science Foundations,1,0,0,0,0,0,0,0,0
+Millbrook High,,510147002337,10157,AP Computer Science A,26,3,1,2,0,0,0,0,0
+Sherando High,,510147000524,10019,AP Computer Science Principles,23,1,1,3,0,0,0,0,0
+Sherando High,,510147000524,10020,Computer Science Foundations,1,0,0,0,0,0,0,0,0
+Sherando High,,510147000524,10157,AP Computer Science A,25,4,1,3,0,0,0,0,0
+Giles High,,510159000669,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Homebased,,,10152-II,Advanced Programming,2,0,0,0,0,0,0,0,0
+Goochland High,,510165000686,10019,AP Computer Science Principles,27,12,3,0,0,0,0,0,0
+William Monroe High,,510171000702,10019,AP Computer Science Principles,8,5,0,2,0,0,0,0,0
+William Monroe High,,510171000702,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+William Monroe High,,510171000702,10152-II,Advanced Programming,13,1,0,1,0,0,0,0,0
+Halifax County High,,510177001848,10152-I,Programming 6640,19,1,8,1,0,0,10,0,0
+Atlee High,,510183000114,10019,AP Computer Science Principles,49,6,1,2,0,0,0,0,0
+Atlee High,,510183000114,10152-I,Programming 6640,71,14,9,1,0,0,0,0,0
+Atlee High,,510183000114,10152-II,Advanced Programming,18,3,4,0,0,0,0,0,0
+Hanover High,,510183002338,10152-I,Programming 6640,22,3,3,2,0,0,0,0,0
+Hanover High,,510183002338,10152-II,Advanced Programming,7,1,2,0,0,0,0,0,0
+Lee Davis High,,510183000772,10152-I,Programming 6640,32,4,6,2,1,0,0,0,0
+Lee Davis High,,510183000772,10152-II,Advanced Programming,18,0,3,0,0,0,0,0,0
+Lee Davis High,,510183000772,10157,AP Computer Science A,14,1,2,1,0,0,0,0,0
+Patrick Henry High,,510183000776,10152-I,Programming 6640,23,3,3,4,0,0,0,0,0
+Advanced Career Education Center at Hermitage,,510189000807,10152-I,Programming 6640,9,0,3,0,0,0,0,0,0
+Deep Run High,,510189002278,10019,AP Computer Science Principles,50,15,4,2,0,0,0,0,0
+Deep Run High,,510189002278,10152-I,Programming 6640,46,20,3,1,0,0,0,0,0
+Deep Run High,,510189002278,10157,AP Computer Science A,54,15,3,2,0,0,0,0,0
+Glen Allen High,,510189002837,10157,AP Computer Science A,82,27,7,3,0,0,0,0,0
+Henrico High,,510189000804,10019,AP Computer Science Principles,14,4,7,0,0,0,0,0,0
+Hermitage High,,510189000806,10019,AP Computer Science Principles,16,1,5,1,0,0,0,0,0
+Holman Middle ,,510189002833,10152-I,Programming 6640,24,4,0,1,0,0,0,0,0
+John Randolph Tucker High,,510189000811,10157,AP Computer Science A,30,13,3,2,0,0,0,0,0
+John Rolfe Middle,,510189001850,10152-I,Programming 6640,18,3,11,2,0,0,10,0,0
+Mills E. Godwin High,,510189001851,10019,AP Computer Science Principles,117,44,4,1,0,0,0,0,0
+Mills E. Godwin High,,510189001851,10157,AP Computer Science A,86,32,1,2,0,0,0,0,0
+Pocahontas Middle,,510189001911,10152-I,Programming 6640,24,1,3,0,0,0,0,0,0
+Short Pump Middle,,510189000123,10152-I,Programming 6640,18,0,4,1,0,0,0,0,0
+Bassett High,,510192000837,10020,Computer Science Foundations,12,4,2,0,0,0,0,0,0
+Magna Vista High,,510192002125,10020,Computer Science Foundations,14,1,5,0,0,0,0,0,0
+Highland High,,510195000862,10152-I,Programming 6640,6,5,0,2,0,0,0,0,0
+Smithfield High,,510201000875,10152-I,Programming 6640,46,11,10,2,0,0,17,0,0
+Smithfield High,,510201000875,10152-II,Advanced Programming,12,0,1,1,0,0,0,0,0
+Windsor High,,510201000877,10152-I,Programming 6640,20,3,2,0,0,1,0,0,0
+Windsor High,,510201000877,10152-II,Advanced Programming,8,0,3,1,0,0,0,0,0
+King George High,,510210000882,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+King George High,,510210000882,10157,AP Computer Science A,13,4,1,0,0,0,0,0,0
+King George Middle,,510210000883,10022,Middle School Computer Science Elective,128,40,25,10,1,0,46,18,0
+King William High,,510212000886,10020,Computer Science Foundations,9,0,3,0,0,0,0,0,0
+Lee High,,510219002152,10152-I,Programming 6640,4,2,0,0,0,0,0,0,0
+Thomas Walker High,,510219000904,10152-I,Programming 6640,7,1,0,0,0,0,0,0,0
+Academies of Loudoun,,510225002989,10157,AP Computer Science A,82,37,1,1,0,0,0,0,0
+Briar Woods High ,,510225002451,10157,AP Computer Science A,47,13,1,2,0,0,0,0,0
+Broad Run High,,510225000913,10157,AP Computer Science A,31,4,2,0,0,0,0,0,0
+Dominion High,,510225002411,10157,AP Computer Science A,25,5,1,1,0,0,0,0,0
+Freedom High ,,510225002447,10157,AP Computer Science A,50,12,2,0,0,0,0,0,0
+Heritage High,,510225002285,10157,AP Computer Science A,20,1,1,4,0,0,0,0,0
+Independence High,,510225003061,10157,AP Computer Science A,9,0,0,0,0,0,0,0,0
+John Champe High School,,510225002865,10157,AP Computer Science A,55,13,3,2,0,0,0,0,0
+Loudoun County High,,510225000923,10157,AP Computer Science A,25,3,0,3,0,0,0,0,0
+Loudoun Valley High,,510225000924,10157,AP Computer Science A,27,4,0,1,0,0,0,0,0
+Park View High,,510225000928,10157,AP Computer Science A,7,2,1,0,0,0,0,0,0
+Potomac Falls High,,510225001627,10157,AP Computer Science A,21,5,1,0,0,0,0,0,0
+Riverside High,,510225003001,10157,AP Computer Science A,57,9,3,3,0,0,0,0,0
+Rock Ridge High,,510225002969,10157,AP Computer Science A,70,23,2,2,1,0,0,0,0
+Stone Bridge High,,510225002538,10157,AP Computer Science A,44,13,1,2,0,0,0,0,0
+Tuscarora High,,510225002817,10157,AP Computer Science A,12,5,1,0,0,0,0,0,0
+Woodgrove High,,510225002812,10157,AP Computer Science A,23,1,0,2,0,0,0,0,0
+Louisa County High,,510228000939,10152-I,Programming 6640,22,1,2,2,1,0,0,0,0
+Louisa County High,,510228000939,10157,AP Computer Science A,1,0,0,1,0,0,0,0,0
+Louisa County Middle,,510228001930,10152-I,Programming 6640,34,5,4,0,0,1,11,0,0
+Central High,,510231000944,10055,Java Programming (Oracle),7,6,0,1,0,0,0,0,0
+Central High,,510231000944,10152-I,Programming 6640,14,6,7,0,0,0,0,0,0
+Madison County High,,510237000972,10019,AP Computer Science Principles,2,1,0,0,0,0,0,0,0
+Madison County High,,510237000972,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Mathews High,,510243000993,10157,AP Computer Science A,1,1,0,0,0,0,0,0,0
+Bluestone  High,,510246000996,10152-I,Programming 6640,8,1,0,0,0,0,0,0,0
+Bluestone  High,,510246000996,10152-II,Advanced Programming,4,0,0,0,0,0,0,0,0
+Park View High,,510246001008,10152-I,Programming 6640,1,1,0,0,0,0,0,0,0
+Auburn High,,510252001013,10020,Computer Science Foundations,1,0,0,1,0,0,0,0,0
+Auburn High,,510252001013,10152-I,Programming 6640,19,3,0,0,0,0,0,0,0
+Auburn Middle,,510252001916,10022,Middle School Computer Science Elective,37,10,0,1,0,0,22,0,0
+Blacksburg High,,510252001016,10019,AP Computer Science Principles,53,10,1,0,0,0,0,0,0
+Blacksburg High,,510252001016,10020,Computer Science Foundations,8,2,0,1,0,0,0,0,0
+Blacksburg High,,510252001016,10157,AP Computer Science A,28,9,0,2,0,0,0,0,0
+Blacksburg Middle,,510252001017,10022,Middle School Computer Science Elective,146,42,8,6,1,0,33,10,0
+Christiansburg High,,510252001019,10020,Computer Science Foundations,4,0,1,0,0,0,0,0,0
+Christiansburg Middle,,510252001020,10022,Middle School Computer Science Elective,52,11,4,2,0,0,21,0,0
+Eastern Montgomery High,,510252002541,10019,AP Computer Science Principles,8,2,0,0,0,0,0,0,0
+Eastern Montgomery High,,510252002541,10020,Computer Science Foundations,1,1,0,0,0,0,0,0,0
+Nottoway High,,510279001942,10011,Computer Science Principles,1,1,1,0,0,0,0,0,0
+Orange County High ,,510282001174,10020,Computer Science Foundations,9,1,2,0,0,0,0,0,0
+Luray High,,510285001180,10011,Computer Science Principles,139,62,7,6,1,1,80,14,0
+Page County High,,510285001181,10011,Computer Science Principles,133,64,2,6,0,0,75,0,0
+Patrick County High,,510288001188,10152-I,Programming 6640,9,0,0,1,0,0,0,0,0
+Chatham High,,510294001210,10152-I,Programming 6640,16,4,1,1,0,0,0,0,0
+Dan River High,,510294001214,10157,AP Computer Science A,2,0,0,0,0,0,0,0,0
+Gretna High,,510294001218,10152-I,Programming 6640,9,2,2,0,0,0,0,0,0
+Tunstall High,,510294001227,10152-I,Programming 6640,15,2,3,1,0,0,0,0,0
+Powhatan High,,510303001268,10019,AP Computer Science Principles,21,6,1,0,0,0,0,0,0
+Powhatan High,,510303001268,10152-II,Advanced Programming,24,5,0,0,0,0,0,0,0
+Powhatan High,,510303001268,10157,AP Computer Science A,19,3,1,3,0,0,0,0,0
+Prince Edward County High,,510306001271,10020,Computer Science Foundations,21,6,11,1,0,0,13,0,0
+Prince George High,,510309001280,10152-II,Advanced Programming,19,2,7,3,0,0,0,0,0
+Prince George High,,510309001280,10157,AP Computer Science A,11,1,1,0,0,0,0,0,0
+Battlefield High ,,510313002457,10152-I,Programming 6640,126,32,10,11,1,0,17,0,0
+Battlefield High ,,510313002457,10152-II,Advanced Programming,8,1,0,0,0,0,0,0,0
+Battlefield High ,,510313002457,10157,AP Computer Science A,155,44,13,11,0,1,0,0,0
+Brentsville District High,,510313001288,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Brentsville District High,,510313001288,10157,AP Computer Science A,1,1,0,0,0,0,0,0,0
+C.D. Hylton High,,510313000186,10157,AP Computer Science A,2,1,1,0,0,0,0,0,0
+Charles J. Colgan Sr. High,,510313003025,10019,AP Computer Science Principles,49,12,6,3,1,0,0,0,0
+Charles J. Colgan Sr. High,,510313003025,10152-I,Programming 6640,78,10,15,9,0,0,25,0,0
+Charles J. Colgan Sr. High,,510313003025,10152-II,Advanced Programming,89,11,10,15,0,0,24,18,0
+Charles J. Colgan Sr. High,,510313003025,10157,AP Computer Science A,26,5,4,3,0,0,0,0,0
+Forest Park High,,510313002542,10019,AP Computer Science Principles,28,4,10,7,0,0,11,0,0
+Forest Park High,,510313002542,10152-I,Programming 6640,30,3,9,6,0,0,0,0,0
+Forest Park High,,510313002542,10157,AP Computer Science A,135,25,27,25,0,1,29,0,0
+Freedom High ,,510313002458,10152-I,Programming 6640,26,7,4,14,0,0,19,0,0
+Freedom High ,,510313002458,10152-II,Advanced Programming,12,0,2,5,0,0,0,0,0
+Gar-Field High,,510313001299,10152-I,Programming 6640,46,13,9,22,1,0,32,0,15
+Gar-Field High,,510313001299,10152-II,Advanced Programming,10,2,1,6,0,0,0,0,0
+Gar-Field High,,510313001299,10157,AP Computer Science A,16,4,2,6,0,0,0,0,0
+Gar-Field High,,510313001299,10159-HL,IB Computer Science,20,7,4,7,0,0,0,0,0
+Gar-Field High,,510313001299,10159-SL,IB Computer Science,28,8,6,6,0,0,12,0,0
+Graham Park Middle,,510313001301,10152-II,Advanced Programming,10,3,2,1,0,0,0,0,0
+Osbourn Park High,,510313001313,10019,AP Computer Science Principles,60,20,7,14,0,0,16,0,0
+Osbourn Park High,,510313001313,10152-I,Programming 6640,1,0,1,0,0,0,0,0,0
+Osbourn Park High,,510313001313,10157,AP Computer Science A,64,33,10,11,0,0,16,0,0
+Patriot High,,510313002850,10157,AP Computer Science A,37,7,1,1,1,0,0,0,0
+Potomac High,,510313001857,10019,AP Computer Science Principles,24,5,9,1,0,0,13,0,0
+Potomac High,,510313001857,10152-I,Programming 6640,111,27,54,21,0,0,47,15,17
+Potomac High,,510313001857,10152-II,Advanced Programming,15,3,8,1,0,0,0,0,0
+Potomac High,,510313001857,10157,AP Computer Science A,56,26,24,9,1,0,29,0,0
+Stonewall Jackson High,,510313001321,10152-I,Programming 6640,62,5,12,30,1,0,37,0,0
+Stonewall Jackson High,,510313001321,10152-II,Advanced Programming,17,3,3,8,0,0,0,0,0
+Stonewall Jackson High,,510313001321,10157,AP Computer Science A,1,1,0,1,0,0,0,0,0
+Woodbridge High,,510313001327,10152-I,Programming 6640,75,12,12,27,0,0,41,0,14
+Woodbridge High,,510313001327,10152-II,Advanced Programming,8,1,2,0,0,0,0,0,0
+Woodbridge High,,510313001327,10157,AP Computer Science A,13,5,2,1,0,0,0,0,0
+Pulaski County Senior High,,510315001338,10152-I,Programming 6640,17,4,0,0,0,0,0,0,0
+Rappahannock County High,,510321001346,10152-I,Programming 6640,1,1,0,0,0,0,0,0,0
+Rappahannock High,,510327001409,10152-I,Programming 6640,5,3,3,1,0,0,0,0,0
+Burton Center for Arts and Technology,,510333001469,10152-I,Programming 6640,25,2,2,2,0,0,0,0,0
+Burton Center for Arts and Technology,,510333001469,10152-II,Advanced Programming,19,0,0,0,0,0,0,0,0
+Cave Spring High,,510333001447,10152-I,Programming 6640,21,4,1,0,0,0,0,0,0
+Cave Spring High,,510333001447,10157,AP Computer Science A,7,1,0,0,0,0,0,0,0
+Glenvar High,,510333001457,10152-I,Programming 6640,9,1,0,0,0,0,0,0,0
+Glenvar High,,510333001457,10157,AP Computer Science A,2,0,0,0,0,0,0,0,0
+Hidden Valley High,,510333002308,10152-I,Programming 6640,8,2,0,0,0,0,0,0,0
+Hidden Valley High,,510333002308,10157,AP Computer Science A,5,0,0,1,0,0,0,0,0
+Northside High,,510333001465,10157,AP Computer Science A,3,0,0,0,0,0,0,0,0
+Rockbridge County High,,510337000204,10157,AP Computer Science A,13,1,0,2,0,0,0,0,0
+Spotswood High,,510339001872,10019,AP Computer Science Principles,27,4,0,5,0,0,0,0,0
+Spotswood High,,510339001872,10157,AP Computer Science A,7,1,0,1,0,0,0,0,0
+Gate City High,,510348001532,10011,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Scott County Career and Technical Center,,510348001537,10152-I,Programming 6640,39,3,0,1,0,0,20,0,0
+Scott County Career and Technical Center,,510348001537,10152-II,Advanced Programming,7,0,0,1,0,0,0,0,0
+Central High,,510351001543,10152-I,Programming 6640,2,0,0,0,1,0,0,0,0
+Central High,,510351001543,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Central High,,510351001543,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Stonewall Jackson High,,510351001548,10152-I,Programming 6640,4,1,0,1,0,0,0,0,0
+Stonewall Jackson High,,510351001548,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Marion Senior High,,510352001562,10011,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Northwood High,,510352001563,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Southampton High,,510360001582,10152-I,Programming 6640,2,0,0,0,0,0,0,0,0
+Southampton High,,510360001582,10157,AP Computer Science A,2,0,0,0,0,0,0,0,0
+Chancellor High,,510364002134,10019,AP Computer Science Principles,14,3,2,1,0,0,0,0,0
+Chancellor High,,510364002134,10157,AP Computer Science A,15,3,2,1,0,0,0,0,0
+Courtland High,,510364001873,10019,AP Computer Science Principles,47,14,5,8,0,0,0,0,0
+Courtland High,,510364001873,10157,AP Computer Science A,16,1,2,2,0,0,0,0,0
+Massaponax High,,510364001881,10019,AP Computer Science Principles,49,14,5,4,0,0,0,0,0
+Massaponax High,,510364001881,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Massaponax High,,510364001881,10157,AP Computer Science A,13,2,3,0,0,0,0,0,0
+Ni River Middle,,510364001922,10022,Middle School Computer Science Elective,39,17,4,3,0,0,20,0,0
+Post Oak Middle,,510364001588,10022,Middle School Computer Science Elective,21,8,4,0,0,0,16,0,0
+Riverbend High ,,510364002462,10019,AP Computer Science Principles,51,9,3,6,0,0,0,0,0
+Riverbend High ,,510364002462,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Riverbend High ,,510364002462,10157,AP Computer Science A,23,4,1,3,0,0,0,0,0
+Spotsylvania High,,510364001593,10019,AP Computer Science Principles,13,3,1,2,0,0,0,0,0
+Spotsylvania High,,510364001593,10157,AP Computer Science A,10,2,0,2,0,0,0,0,0
+Thornburg Middle,,510364000981,10022,Middle School Computer Science Elective,74,15,18,11,0,0,33,11,0
+Brooke Point High,,510366000591,10152-I,Programming 6640,62,10,17,12,0,0,28,0,0
+Brooke Point High,,510366000591,10152-II,Advanced Programming,14,3,0,5,0,0,0,0,0
+Brooke Point High,,510366000591,10157,AP Computer Science A,5,0,0,0,0,0,0,0,0
+Colonial Forge High,,510366001923,10019,AP Computer Science Principles,19,4,4,2,0,0,0,0,0
+Colonial Forge High,,510366001923,10152-I,Programming 6640,57,5,15,9,0,1,0,0,0
+Colonial Forge High,,510366001923,10152-II,Advanced Programming,26,1,8,1,0,0,0,0,0
+Colonial Forge High,,510366001923,10157,AP Computer Science A,20,3,5,0,0,0,0,0,0
+Mountain View High ,,510366002464,10019,AP Computer Science Principles,15,6,1,1,0,0,0,0,0
+Mountain View High ,,510366002464,10152-I,Programming 6640,59,11,8,7,1,0,0,10,0
+Mountain View High ,,510366002464,10152-II,Advanced Programming,17,1,0,4,0,0,0,0,0
+Mountain View High ,,510366002464,10157,AP Computer Science A,14,1,0,3,0,0,0,0,0
+North Stafford High,,510366001979,10019,AP Computer Science Principles,23,8,4,6,0,0,0,0,0
+North Stafford High,,510366001979,10152-I,Programming 6640,58,15,7,19,0,0,21,0,0
+North Stafford High,,510366001979,10152-II,Advanced Programming,13,0,3,2,0,0,0,0,0
+North Stafford High,,510366001979,10157,AP Computer Science A,9,1,1,0,0,0,0,0,0
+Stafford Academy for Technolgy (STAT),,510366002984,10019,AP Computer Science Principles,26,6,3,3,0,0,0,0,0
+Stafford Academy for Technolgy (STAT),,510366002984,10152-II,Advanced Programming,23,7,1,3,0,0,0,0,0
+Stafford Academy for Technolgy (STAT),,510366002984,10157,AP Computer Science A,17,2,2,1,0,0,0,0,0
+Stafford Academy for Technolgy (STAT),,510366002984,10159-SL,IB Computer Science,15,7,5,2,0,0,0,0,0
+Stafford Senior High,,510366001602,10152-I,Programming 6640,115,21,17,15,1,1,30,22,0
+Stafford Senior High,,510366001602,10152-II,Advanced Programming,42,9,6,4,0,0,11,0,0
+Stafford Senior High,,510366001602,10157,AP Computer Science A,20,7,1,1,0,0,0,0,0
+Surry County High,,510375001635,10152-I,Programming 6640,9,4,6,0,0,0,0,0,0
+Surry County High,,510375001635,10152-II,Advanced Programming,5,4,3,0,0,0,0,0,0
+Sussex Central High,,510378001643,10152-I,Programming 6640,25,2,16,1,0,0,11,0,0
+Graham High,,510381001653,10152-I,Programming 6640,20,7,0,0,0,0,0,0,0
+Graham High,,510381001653,10152-II,Advanced Programming,1,1,0,0,0,0,0,0,0
+Graham High,,510381001653,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Graham Middle,,510381001654,10152-II,Advanced Programming,2,0,0,1,0,0,0,0,0
+Richlands High,,510381001661,10152-I,Programming 6640,39,5,0,0,0,0,17,0,0
+Richlands High,,510381001661,10152-II,Advanced Programming,22,2,0,0,0,0,0,0,0
+Richlands High,,510381001661,10157,AP Computer Science A,3,0,0,0,0,0,0,0,0
+Tazewell High,,510381001668,10152-I,Programming 6640,3,0,0,0,0,0,0,0,0
+Skyline High,,510387002657,10152-I,Programming 6640,4,0,0,0,0,0,0,0,0
+Skyline High,,510387002657,10157,AP Computer Science A,4,2,0,0,0,0,0,0,0
+Warren County High,,510387001733,10157,AP Computer Science A,4,1,0,1,0,0,0,0,0
+Warren County Middle School,,510387003038,10022,Middle School Computer Science Elective,52,7,1,3,1,0,21,0,0
+Abingdon High,,510390001736,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Abingdon High,,510390001736,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+John S. Battle High,,510390001746,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Union High,,510408001792,10011,Computer Science Principles,11,2,0,0,0,0,0,0,0
+Fort Chiswell High,,510411001800,10020,Computer Science Foundations,15,0,0,0,0,0,0,0,0
+George Wythe High,,510411001801,10020,Computer Science Foundations,9,2,1,0,0,0,0,0,0
+Rural Retreat High,,510411001805,10011,Computer Science Principles,14,4,0,0,0,0,0,0,0
+Bruton High,,510415001812,10011,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Bruton High,,510415001812,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Grafton High,,510415001443,10011,Computer Science Principles,10,1,1,1,0,0,0,0,0
+Grafton High,,510415001443,10157,AP Computer Science A,10,5,0,0,0,0,0,0,0
+Grafton Middle,,510415001445,10022,Middle School Computer Science Elective,57,10,5,4,0,0,0,0,0
+Queens Lake Middle,,510415001817,10022,Middle School Computer Science Elective,52,17,13,5,1,1,15,0,0
+Tabb High,,510415001820,10011,Computer Science Principles,8,1,1,1,0,0,0,0,0
+Tabb High,,510415001820,10157,AP Computer Science A,15,5,0,1,0,0,0,0,0
+Tabb Middle,,510415001821,10022,Middle School Computer Science Elective,126,35,20,17,0,0,23,11,0
+York High,,510415001823,10011,Computer Science Principles,8,0,0,1,0,0,0,0,0
+York High,,510415001823,10157,AP Computer Science A,4,1,0,0,0,0,0,0,0
+Yorktown Middle,,510415001825,10022,Middle School Computer Science Elective,106,26,16,9,0,0,28,13,0
+T.C. Williams High,,510012000054,10019,AP Computer Science Principles,88,33,30,17,0,0,56,0,17
+T.C. Williams High,,510012000054,10157,AP Computer Science A,52,14,19,9,0,0,26,0,0
+Virginia High,,510045000179,10152-I,Programming 6640,14,2,0,0,0,0,11,0,0
+Parry McCluer High School,,510056000217,10152-I,Programming 6640,9,2,1,0,0,0,0,0,0
+Parry McCluer High School,,510056000217,10152-II,Advanced Programming,6,2,0,0,0,0,0,0,0
+Charlottesville High,,510078000273,10019,AP Computer Science Principles,17,2,4,0,0,0,0,0,0
+Charlottesville High,,510078000273,10152-I,Programming 6640,20,3,5,0,0,0,0,0,0
+Charlottesville High,,510078000273,10152-II,Advanced Programming,27,4,8,5,0,0,16,0,0
+Charlottesville High,,510078000273,10157,AP Computer Science A,13,2,1,2,0,0,0,0,0
+Colonial Heights High,,510096000361,10020,Computer Science Foundations,20,2,6,1,0,0,10,0,0
+Colonial Heights High,,510096000361,10152-I,Programming 6640,27,2,6,2,0,0,12,0,0
+Colonial Heights High,,510096000361,10152-II,Advanced Programming,3,0,1,0,0,0,0,0,0
+Colonial Heights High,,510096000361,10157,AP Computer Science A,3,0,1,0,0,0,0,0,0
+Colonial Heights Middle,,510096000362,10020,Computer Science Foundations,11,3,2,0,0,0,0,0,0
+George Mason High,,510129000283,10152-II,Advanced Programming,73,33,6,4,0,0,0,0,0
+George Mason High,,510129000283,10159-HL,IB Computer Science,41,6,0,4,0,0,0,0,0
+George Mason High,,510129000283,10159-SL,IB Computer Science,12,4,0,0,0,0,0,0,0
+Mary Ellen Henderson Middle,,510129000284,10022,Middle School Computer Science Elective,40,6,1,7,0,0,0,0,0
+Mary Ellen Henderson Middle,,510129000284,10152-I,Programming 6640,24,6,2,0,0,0,0,0,0
+Lafayette Upper Elementary,,510151002468,10020,Computer Science Foundations,830,394,257,201,3,1,452,141,199
+Galax High,,510156000301,10152-I,Programming 6640,12,5,0,6,0,0,0,0,0
+Bethel High,,510180000731,10019,AP Computer Science Principles,38,10,25,1,0,0,16,0,0
+Bethel High,,510180000731,10152-I,Programming 6640,64,14,35,7,1,0,27,0,0
+Bethel High,,510180000731,10152-II,Advanced Programming,7,0,5,0,0,0,0,0,0
+Bethel High,,510180000731,10157,AP Computer Science A,1,1,1,0,0,0,0,0,0
+Hampton High,,510180000742,10152-I,Programming 6640,12,5,8,1,0,0,0,0,0
+Hampton High,,510180000742,10152-II,Advanced Programming,1,0,1,0,0,0,0,0,0
+Hampton High,,510180000742,10157,AP Computer Science A,1,1,1,0,0,0,0,0,0
+Kecoughtan High,,510180000747,10019,AP Computer Science Principles,18,4,4,1,0,0,0,0,0
+Kecoughtan High,,510180000747,10152-I,Programming 6640,2,0,0,0,0,0,0,0,0
+Kecoughtan High,,510180000747,10152-II,Advanced Programming,10,0,1,0,0,0,0,0,0
+Phoebus High,,510180000755,10152-I,Programming 6640,25,4,17,1,0,0,15,0,0
+Phoebus High,,510180000755,10152-II,Advanced Programming,17,0,11,1,0,0,10,0,0
+Harrisonburg High,,510186000782,10011,Computer Science Principles,81,41,4,25,0,0,28,0,0
+Harrisonburg High,,510186000782,10152-I,Programming 6640,99,14,10,41,0,0,64,0,23
+Harrisonburg High,,510186000782,10152-II,Advanced Programming,14,2,0,6,0,0,0,0,0
+Harrisonburg High,,510186000782,10157,AP Computer Science A,10,2,1,0,0,0,0,0,0
+E.C. Glass High ,,510234000956,10152-II,Advanced Programming,24,6,3,1,0,0,0,0,0
+Heritage High,,510234000960,10152-II,Advanced Programming,5,2,0,1,0,0,0,0,0
+Paul Laurence Dunbar Middle for Innovation ,,510234000955,10022,Middle School Computer Science Elective,324,151,180,17,0,0,239,62,14
+Martinsville High,,510240000988,10152-I,Programming 6640,10,1,6,1,0,0,0,0,0
+Denbigh High,,510264001047,10019,AP Computer Science Principles,20,4,9,1,1,1,11,0,0
+Denbigh High,,510264001047,10157,AP Computer Science A,1,1,0,0,0,0,0,0,0
+Heritage High School Governor's STEM Academy,,510264003015,10019,AP Computer Science Principles,33,10,21,2,0,1,18,0,0
+Heritage High School Governor's STEM Academy,,510264003015,10152-I,Programming 6640,39,7,23,6,0,0,19,0,0
+Menchville High,,510264001063,10157,AP Computer Science A,4,1,0,0,0,0,0,0,0
+Warwick High,,510264001076,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Warwick High,,510264001076,10157,AP Computer Science A,2,2,0,0,0,0,0,0,0
+Woodside High,,510264001453,10157,AP Computer Science A,3,0,0,0,0,0,0,0,0
+Booker T Washington High,,510267001079,10019,AP Computer Science Principles,13,3,12,0,0,0,0,0,0
+Granby High,,510267001098,10019,AP Computer Science Principles,63,21,20,9,1,0,25,0,0
+Lake Taylor High ,,510267001104,10019,AP Computer Science Principles,17,9,10,1,0,0,11,0,0
+Matthew Fontaine Maury High,,510267001117,10019,AP Computer Science Principles,48,21,18,1,0,0,13,0,0
+Norfolk Technical Center,,510267001119,10152-I,Programming 6640,25,5,13,1,0,0,17,0,0
+Norfolk Technical Center,,510267001119,10152-II,Advanced Programming,24,5,13,1,0,0,16,0,0
+Norview High,,510267001122,10019,AP Computer Science Principles,16,5,6,2,0,0,0,0,0
+Norview High,,510267001122,10157,AP Computer Science A,19,5,4,1,3,0,0,0,0
+J.I. Burton High ,,510276001162,10012,Computer Science Foundations,16,0,0,0,0,0,12,0,0
+Churchland High,,510300000375,10157,AP Computer Science A,1,1,0,0,0,0,0,0,0
+Cradock Middle,,510300001234,10152-I,Programming 6640,1,1,1,0,0,0,0,0,0
+Armstrong High ,,510324002082,10152-I,Programming 6640,21,9,20,0,0,0,18,0,0
+Franklin Military Academy,,510324002214,10152-I,Programming 6640,10,3,7,3,0,0,0,0,0
+Franklin Military Academy,,510324002214,10152-II,Advanced Programming,6,3,6,0,0,0,0,0,0
+George Wythe High,,510324002081,10152-I,Programming 6640,33,14,24,7,0,0,22,0,0
+Open High,,510324001373,10019,AP Computer Science Principles,3,2,1,0,0,0,0,0,0
+Open High,,510324001373,10152-I,Programming 6640,1,1,1,0,0,0,0,0,0
+Richmond Community High,,510324002075,10019,AP Computer Science Principles,13,6,7,2,0,0,0,0,0
+Richmond Community High,,510324002075,10157,AP Computer Science A,12,4,7,2,0,0,0,0,0
+Patrick Henry High,,510330001430,10152-I,Programming 6640,21,2,1,1,0,0,11,0,0
+Patrick Henry High,,510330001430,10152-II,Advanced Programming,8,0,1,0,0,0,0,0,0
+Patrick Henry High,,510330001430,10157,AP Computer Science A,6,2,3,0,0,0,0,0,0
+William Fleming High,,510330001438,10152-I,Programming 6640,17,3,5,2,0,0,11,0,0
+William Fleming High,,510330001438,10152-II,Advanced Programming,3,0,2,0,0,0,0,0,0
+Staunton High,,510369001606,10019,AP Computer Science Principles,11,0,0,0,0,0,0,0,0
+Staunton High,,510369001606,10152-I,Programming 6640,43,8,1,4,0,0,18,0,0
+Lakeland High,,510371002219,10019,AP Computer Science Principles,7,2,1,0,0,0,0,0,0
+Lakeland High,,510371002219,10020,Computer Science Foundations,14,3,8,2,0,0,0,0,0
+Advanced Technology Center,,510384002430,10152-I,Programming 6640,25,4,2,3,0,0,0,0,0
+Advanced Technology Center,,510384002430,10152-II,Advanced Programming,16,1,4,4,0,0,0,0,0
+Bayside High,,510384001675,10019,AP Computer Science Principles,27,13,5,5,0,0,11,0,0
+Bayside Middle,,510384001676,10022,Middle School Computer Science Elective,44,20,27,5,0,0,32,0,0
+First Colonial High,,510384001684,10019,AP Computer Science Principles,26,18,4,2,0,0,0,0,0
+First Colonial High,,510384001684,10157,AP Computer Science A,11,6,1,0,0,0,0,0,0
+Floyd Kellam High,,510384001685,10019,AP Computer Science Principles,20,5,1,4,0,0,0,0,0
+Floyd Kellam High,,510384001685,10157,AP Computer Science A,16,5,0,0,0,0,0,0,0
+Frank W. Cox High,,510384002049,10019,AP Computer Science Principles,33,11,1,3,0,0,0,0,0
+Frank W. Cox High,,510384002049,10157,AP Computer Science A,117,52,6,4,1,0,17,0,0
+"Gov STEM Academy for Engineering, Marketing and Information Technology Studies",,510384002986,10055,Java Programming (Oracle),11,0,3,0,0,0,0,0,0
+Green Run High,,510384001879,10019,AP Computer Science Principles,11,5,2,2,0,0,0,0,0
+Kempsville High,,510384001694,10019,AP Computer Science Principles,8,2,1,0,1,0,0,0,0
+Kempsville High,,510384001694,10157,AP Computer Science A,4,3,0,0,0,0,0,0,0
+Landstown High,,510384002323,10019,AP Computer Science Principles,40,5,3,2,0,0,0,0,0
+Landstown High,,510384002323,10157,AP Computer Science A,48,8,9,4,0,1,11,0,0
+Ocean Lakes High,,510384001046,10019,AP Computer Science Principles,32,13,3,0,0,0,0,0,0
+Ocean Lakes High,,510384001046,10157,AP Computer Science A,71,22,5,5,0,1,14,0,0
+Princess Anne High,,510384000412,10019,AP Computer Science Principles,74,22,1,5,0,0,10,0,0
+Princess Anne High,,510384000412,10157,AP Computer Science A,23,8,1,1,0,0,0,0,0
+Princess Anne High,,510384000412,10159-SL,IB Computer Science,12,4,1,2,0,0,0,0,0
+Salem High,,510384002166,10019,AP Computer Science Principles,11,4,3,2,0,0,0,0,0
+Salem High,,510384002166,10157,AP Computer Science A,13,8,2,2,0,0,0,0,0
+Jamestown High,,510402001665,10011,Computer Science Principles,12,0,0,1,0,0,0,0,0
+Jamestown High,,510402001665,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Lafayette High,,510402001773,10011,Computer Science Principles,1,1,0,1,0,0,0,0,0
+Warhill High,,510402002658,10011,Computer Science Principles,29,6,5,2,0,0,0,0,0
+John Handley High School,,510405001780,10152-I,Programming 6640,4,0,0,3,0,0,0,0,0
+Grassfield High,,510081002765,10020,Computer Science Foundations,10,2,2,0,0,0,0,0,0
+Grassfield High,,510081002765,10157,AP Computer Science A,8,2,3,1,0,0,0,0,0
+Grassfield High School Governor's STEM Academy,,510081002998,10152-I,Programming 6640,15,4,4,2,0,0,0,0,0
+Grassfield High School Governor's STEM Academy,,510081002998,10152-II,Advanced Programming,10,2,3,0,0,0,0,0,0
+Hickory High,,510081001482,10020,Computer Science Foundations,21,5,0,1,0,0,0,0,0
+Hickory High,,510081001482,10157,AP Computer Science A,4,1,0,0,0,0,0,0,0
+Western Branch High,,510081000312,10020,Computer Science Foundations,35,5,11,1,1,0,0,0,0
+Western Branch High,,510081000312,10157,AP Computer Science A,11,0,1,2,0,0,0,0,0
+Salem High,,510346002043,10011,Computer Science Principles,12,0,3,1,0,0,0,0,0
+Salem High,,510346002043,10020,Computer Science Foundations,20,2,4,2,0,0,0,0,0
+Salem High,,510346002043,10021,Computer Science Programming,28,4,5,1,0,0,16,0,0
+Salem High,,510346002043,10152-I,Programming 6640,4,0,0,0,0,0,0,0,0
+Salem High,,510346002043,10157,AP Computer Science A,15,1,0,0,0,0,0,0,0
+Poquoson High,,510298001231,10152-I,Programming 6640,27,4,0,0,0,1,0,0,0
+Poquoson High,,510298001231,10157,AP Computer Science A,2,0,0,0,0,0,0,0,0
+Osbourn High,,510236000978,10011,Computer Science Principles,5,2,0,2,0,0,0,0,0
+Osbourn High,,510236000978,10152-I,Programming 6640,57,11,12,20,0,0,27,0,11
+Manassas Park High,,510239000983,10152-I,Programming 6640,20,4,1,10,0,0,15,0,0
+Manassas Park High,,510239000983,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+Colonial Beach High,,510093001957,10020,Computer Science Foundations,36,16,6,3,1,0,15,0,0
+Colonial Beach High,,510093001957,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+West Point Middle/High,,510395001763,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Central Virginia Governor's School,,510217302229,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Central Virginia Governor's School,,510217302229,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Roanoke Valley Governor's School,,510217602232,10152-I,Programming 6640,3,0,0,0,0,0,0,0,0
+Roanoke Valley Governor's School,,510217602232,10157,AP Computer Science A,7,2,1,0,0,0,0,0,0
+Shenandoah Valley Governor's School,,510002801504,10157,AP Computer Science A,4,1,0,0,0,0,0,0,0
+Governor's School of Southside Virginia,,510002901505,10152-I,Programming 6640,1,1,0,0,0,0,0,0,0
+Appomattox Regional Governor's School,,510003201932,10019,AP Computer Science Principles,20,7,9,1,0,0,0,0,0
+Appomattox Regional Governor's School,,510003201932,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Appomattox Regional Governor's School,,510003201932,10152-II,Advanced Programming,1,0,0,0,0,0,0,0,0
+Appomattox Regional Governor's School,,510003201932,10157,AP Computer Science A,1,0,0,0,0,0,0,0,0
+A. Linwood Holton Governor's School,,510003301933,10152-I,Programming 6640,1,0,0,0,0,0,0,0,0
+Maggie L. Walker Governor's School,,510006102561,10019,AP Computer Science Principles,44,12,3,1,0,0,0,0,0
+Mountain Vista Governor's School,,510010702697,10157,AP Computer Science A,2,1,0,0,0,0,0,0,0
+New Horizons Woodside Campus,,510000902022,10152-I,Programming 6640,34,9,8,5,0,0,0,0,0
+New Horizons Woodside Campus,,510000902022,10152-II,Advanced Programming,34,9,8,5,0,0,0,0,0
+Bridging Communities STEM Academy,,510025503014,10152-I,Programming 6640,12,1,1,2,0,0,0,0,0
+Bridging Communities STEM Academy,,510025503014,10152-II,Advanced Programming,17,4,4,1,0,0,0,0,0
+CodeRVA Regional High School,,510025603031,10019,AP Computer Science Principles,108,42,48,14,1,0,52,12,0
+CodeRVA Regional High School,,510025603031,10021,Computer Science Programming,13,5,3,1,0,0,0,0,0
+CodeRVA Regional High School,,510025603031,10152-I,Programming 6640,13,5,3,1,0,0,0,0,0
+CodeRVA Regional High School,,510025603031,10157,AP Computer Science A,5,0,1,1,0,0,0,0,0
+Virtual Virginia,,,10011,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Virtual Virginia,,,10019,AP Computer Science Principles,2,1,0,0,0,0,0,0,0
+Virtual Virginia,,,10020,Computer Science Foundations,1,0,0,0,0,0,0,0,0
+Virtual Virginia,,,10152-I,Programming 6640,15,6,2,1,0,0,0,0,0
+Virtual Virginia,,,10152-II,Advanced Programming,8,4,1,0,0,0,0,0,0
+Virtual Virginia,,,10157,AP Computer Science A,44,11,7,2,0,0,0,0,0

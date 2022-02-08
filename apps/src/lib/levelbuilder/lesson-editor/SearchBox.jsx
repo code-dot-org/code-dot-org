@@ -12,13 +12,6 @@ export default class SearchBox extends Component {
     additionalQueryParams: PropTypes.object
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchValue: ''
-    };
-  }
-
   /**
    * Debounced function that will request search results from the server.
    * Because this function is debounced it is not guaranteed to execute
@@ -75,9 +68,8 @@ export default class SearchBox extends Component {
     return (
       <Select.Async
         loadOptions={this.getOptions}
-        value={this.state.searchValue}
         onChange={this.props.onSearchSelect}
-        placeholder={''}
+        filterOptions={false}
       />
     );
   }

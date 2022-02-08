@@ -1,3 +1,5 @@
+import {progressUrl, manageStudentsUrl} from './fakeSectionUtils';
+
 export const announcement = {
   heading: 'Go beyond an Hour of Code',
   buttonText: 'Go Beyond',
@@ -92,41 +94,35 @@ export const joinedSections = [
     id: 11,
     name: 'Period 1',
     teacherName: 'Ms. Frizzle',
-    linkToProgress:
-      'https://code.org/teacher-dashboard#/sections/111111/progress',
+    linkToProgress: progressUrl,
     assignedTitle: 'Course 1',
     linkToAssigned: 'https://studio.code.org/s/course1',
     numberOfStudents: 1,
-    linkToStudents:
-      'https://code.org/teacher-dashboard#/sections/111111/manage',
+    linkToStudents: manageStudentsUrl,
     code: 'ClassOneCode'
   },
   {
     id: 12,
     name: 'Period 2',
     teacherName: 'Ms. Frizzle',
-    linkToProgress:
-      'https://code.org/teacher-dashboard#/sections/222222/progress',
+    linkToProgress: progressUrl,
     assignedTitle: 'Course 2',
     linkToAssigned: 'https://studio.code.org/s/course2',
     currentUnitTitle: 'Unit 3',
     linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
     numberOfStudents: 2,
-    linkToStudents:
-      'https://code.org/teacher-dashboard#/sections/222222/manage',
+    linkToStudents: manageStudentsUrl,
     code: 'ClassTwoCode'
   },
   {
     id: 13,
     name: 'Period 3 (Google Classroom)',
     teacherName: 'Ms. Frizzle',
-    linkToProgress:
-      'https://code.org/teacher-dashboard#/sections/333333/progress',
+    linkToProgress: progressUrl,
     assignedTitle: 'Course 3',
     linkToAssigned: 'https://studio.code.org/s/course3',
     numberOfStudents: 3,
-    linkToStudents:
-      'https://code.org/teacher-dashboard#/sections/333333/manage',
+    linkToStudents: manageStudentsUrl,
     login_type: 'google_classroom',
     code: 'DoNotShowThis'
   },
@@ -134,13 +130,11 @@ export const joinedSections = [
     id: 14,
     name: 'Period 4 (Clever)',
     teacherName: 'Ms. Frizzle',
-    linkToProgress:
-      'https://code.org/teacher-dashboard#/sections/444444/progress',
+    linkToProgress: progressUrl,
     assignedTitle: 'Course 4',
     linkToAssigned: 'https://studio.code.org/s/course4',
     numberOfStudents: 4,
-    linkToStudents:
-      'https://code.org/teacher-dashboard#/sections/444444/manage',
+    linkToStudents: manageStudentsUrl,
     login_type: 'clever',
     code: 'OrThisEither'
   }
@@ -152,4 +146,11 @@ export const topCourse = {
   linkToOverview: 'http://localhost-studio.code.org:3000/s/course1',
   linkToLesson:
     'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
+};
+
+export const topPLCourse = {
+  assignableName: 'PL Course 1',
+  lessonName: 'Learning how to teacher',
+  linkToOverview: 'http://studio.code.org/s/vpl-csp-2021',
+  linkToLesson: 'http://studio.code.org/s/vpl-csp-2021/lessons/3/levels/1'
 };

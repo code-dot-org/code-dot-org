@@ -34,7 +34,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
     level1 = create :maze, name: 'level 1'
     error = assert_raises do
       create :script_level, script: script, lesson: lesson, levels: [level1],
-             activity_section: activity_section
+             activity_section: activity_section, activity_section_position: nil
     end
     assert_includes error.message, 'activity_section_position is required'
   end
@@ -49,7 +49,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
     activity_section = create :activity_section
     Services::MarkdownPreprocessor.expects(:process!).
       with(activity_section.description)
-    activity_section.summarize_for_lesson_show(false)
+    activity_section.summarize_for_lesson_show(false, create(:user))
   end
 
   test 'seeding_key' do
@@ -74,5 +74,27 @@ class ActivitySectionTest < ActiveSupport::TestCase
       }
       assert_equal expected, activity_section.seeding_key(seed_context)
     end
+  end
+
+  test "summarize retrives translations" do
+    activity_section = create(:activity_section, name: "English name", description: "English description")
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "activity_sections" => {
+          activity_section.key => {
+            "name" => "Translated name",
+            "description" => "Translated description"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English name", activity_section.summarize[:name])
+    assert_equal("English description", activity_section.summarize[:description])
+    I18n.locale = test_locale
+    assert_equal("Translated name", activity_section.summarize[:name])
+    assert_equal("Translated description", activity_section.summarize[:description])
+    I18n.locale = I18n.default_locale
   end
 end

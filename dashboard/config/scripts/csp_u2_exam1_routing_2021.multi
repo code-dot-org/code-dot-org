@@ -10,6 +10,17 @@ right ‘It is possible that the data travels through any of the devices in the 
 wrong ‘If the data travels through Device D then it will not travel through Device B’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** This is an example of redundancy, where there are multiple paths between these two devices and given the conditions on the network, the data may travel through any of the possible paths. 
+
+[Lesson 4 - Routers and Redundancy](https://studio.code.org/s/csp2-2021/lessons/4) showed students that messages take different paths between routers to get their destination on the Internet Simulator.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.A.5: A path between two computing devices on a computer network (a sender or a receiver) is a sequence of directly-connected computing devices beginning at the sender and ending at the receive
+
+* CSN-1.B.5: Routing on the Internet is usually dynamic; it is not specified in advance. 
+:::
+
 
 MARKDOWN
 

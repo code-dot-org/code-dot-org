@@ -1,13 +1,14 @@
 {
-  "func": "setVelocityEach",
+  "key": "setVelocityEach",
+  "name": "setVelocityEach",
   "category": "Groups",
-  "paletteParams": [
-    "x",
-    "y"
+  "palette_params": [
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "1",
-    "1"
-  ],
-  "modeOptionName": "*.setVelocityEach"
+  "syntax": "setVelocityEach(x, y)"
 }

@@ -1,8 +1,6 @@
 {
-  "func": "imageUploadButton",
+  "key": "imageUploadButton",
+  "name": "imageUploadButton",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"text\""
-  ]
+  "syntax": "imageUploadButton"
 }

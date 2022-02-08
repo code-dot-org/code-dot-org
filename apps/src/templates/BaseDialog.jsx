@@ -27,9 +27,13 @@ export default class BaseDialog extends React.Component {
     children: PropTypes.node,
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
+    bodyId: PropTypes.string,
+    bodyClassName: PropTypes.string,
     style: PropTypes.object,
     soundPlayer: PropTypes.object,
-    overflow: PropTypes.string
+    overflow: PropTypes.string,
+    // Temporary prop until AnimationPickerBody is redesigned
+    backdropStyle: PropTypes.object
   };
 
   componentDidMount() {
@@ -135,6 +139,7 @@ export default class BaseDialog extends React.Component {
       modalClassNames = '';
       modalBodyClassNames = '';
     }
+
     bodyStyle = {
       ...bodyStyle,
       ...(this.props.hideBackdrop && {
@@ -143,6 +148,11 @@ export default class BaseDialog extends React.Component {
       }),
       ...this.props.style
     };
+
+    modalBodyClassNames = [modalBodyClassNames, this.props.bodyClassName]
+      .filter(className => !!className)
+      .join(' ');
+
     let body = (
       <div
         style={bodyStyle}
@@ -151,7 +161,11 @@ export default class BaseDialog extends React.Component {
         ref="dialog"
         onKeyDown={this.handleKeyDown}
       >
-        <div style={modalBodyStyle} className={modalBodyClassNames}>
+        <div
+          style={modalBodyStyle}
+          id={this.props.bodyId}
+          className={modalBodyClassNames}
+        >
           {!this.props.uncloseable &&
             !this.props.hideCloseButton &&
             (this.props.useUpdatedStyles ? (
@@ -179,7 +193,11 @@ export default class BaseDialog extends React.Component {
 
     return (
       <div className={wrapperClassNames}>
-        <div className={modalBackdropClassNames} onClick={this.closeDialog} />
+        <div
+          className={modalBackdropClassNames}
+          style={this.props.backdropStyle}
+          onClick={this.closeDialog}
+        />
         {body}
       </div>
     );

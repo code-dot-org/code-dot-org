@@ -1,0 +1,7 @@
+{
+  "key": "getTime",
+  "name": "getTime",
+  "category": "World",
+  "block_name": "gamelab_getTime",
+  "syntax": "getTime"
+}

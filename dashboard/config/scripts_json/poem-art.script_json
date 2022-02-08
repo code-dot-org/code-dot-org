@@ -1,0 +1,763 @@
+{
+  "script": {
+    "name": "poem-art",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
+      "is_migrated": true,
+      "redirect_to": "poem-art-2021",
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "poem-art",
+    "serialized_at": "2021-11-22 17:09:16 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "poem-art"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Poem Art",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n",
+        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
+        "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "901e8625-9092-42fc-9fcc-9c665720b1f4",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    },
+    {
+      "key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    },
+    {
+      "key": "18913d21-3c6f-4dd8-864e-09b70f80e640",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18913d21-3c6f-4dd8-864e-09b70f80e640",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b16d189d-d990-44c4-be49-8f81ac81a96e",
+      "position": 1,
+      "properties": {
+        "description": "####Setting the Stage\nWelcome students to class and introduce the day’s activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/promote/resources#videos). Choose the one you think your students will find inspiring and share it now. For learners in the middle grades, we suggest [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b16d189d-d990-44c4-be49-8f81ac81a96e",
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4"
+      }
+    },
+    {
+      "key": "d99fc09e-a586-41df-84b2-e552cc4735e3",
+      "position": 2,
+      "properties": {
+        "description": "Today we are going to use our creativity while we learn to code. There are lots of ways to be creative. What are some ways you like to be creative? \n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d99fc09e-a586-41df-84b2-e552cc4735e3",
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4"
+      }
+    },
+    {
+      "key": "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a",
+      "position": 3,
+      "properties": {
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, or writing. As a follow-up question, ask students what they use to inspire their creativity. "
+      },
+      "seeding_key": {
+        "activity_section.key": "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a",
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4"
+      }
+    },
+    {
+      "key": "6fba9dd0-6069-402c-a641-53899ae667e2",
+      "position": 4,
+      "properties": {
+        "description": "Did you know that computer science can be very creative? In fact, you can make art with code. As a reminder, code is a set of instructions that a computer can understand. Just like choosing which colors of paint to use, choosing what code you write can be an opportunity to express your creativity too! \n\nWe’re going to use poetry to inspire our creative coding today. Does anyone know what poetry is? Do you have a favorite poem or poet? \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6fba9dd0-6069-402c-a641-53899ae667e2",
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4"
+      }
+    },
+    {
+      "key": "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102",
+      "position": 5,
+      "properties": {
+        "description": "**Read poetry together:** Read a [few poems](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. "
+      },
+      "seeding_key": {
+        "activity_section.key": "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102",
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4"
+      }
+    },
+    {
+      "key": "a49bc6c2-1b76-476d-98cd-7f040e8853a7",
+      "position": 1,
+      "properties": {
+        "description": "####General Support\nBy the end of this activity, students will have an animated poem that represents their visual interpretation of the poem they chose. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the poem. Staying on a level and tinkering with their code is highly encouraged. \n- **Find a poem you like:** The poem that displays for a student at a new level is just a suggestion. There is a poem dropdown menu with pre-loaded poems at the top of the playspace. Ask students to read through a few and find one that speaks to them. They can then start animating the poem they chose with code. \n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n\n",
+        "name": "Poem Art"
+      },
+      "seeding_key": {
+        "activity_section.key": "a49bc6c2-1b76-476d-98cd-7f040e8853a7",
+        "lesson_activity.key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93"
+      }
+    },
+    {
+      "key": "666a9a9d-687e-45a0-8928-1d719ea8e268",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268",
+        "lesson_activity.key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93"
+      }
+    },
+    {
+      "key": "065eda67-268c-4f91-9caf-efb2c34493fe",
+      "position": 3,
+      "properties": {
+        "description": "####Level-by-Level Support\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. \n\n**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. \n\n**Level 3:** This level introduces sound, students can use headphones if they have them. \n\n**Level 4:** Ask students to read the poem and find the line where the poem’s mood shifts or if there is a new image that the poet introduces. Use the event block to add corresponding effects to the identified lines of the poem. \n\n**Level 5:** In this exemplar, students should read the poem on their own first, then press Run. Ask the student whether the images matched the words of the poem. Ask them to elaborate on their answer. \n\n**Level 6, 7, 8:** See “Celebrate bugs” under the General Support section. Encourage students to build programs with more than one transition with their event blocks. \n\n**Level 9:** Encourage students to read through all the poems in the dropdown menu to find one they like. Tell students that they can share what they make in this final level with their friends and family. Now is the time to put all the coding and ELA skills together! \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "065eda67-268c-4f91-9caf-efb2c34493fe",
+        "lesson_activity.key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93"
+      }
+    },
+    {
+      "key": "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033",
+      "position": 1,
+      "properties": {
+        "description": "If you enjoyed learning to code today, you can continue learning by visiting code.org/learn. If you want to share what you made with your friends and family, click the “Share” button and send the link to whoever you like!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033",
+        "lesson_activity.key": "18913d21-3c6f-4dd8-864e-09b70f80e640"
+      }
+    },
+    {
+      "key": "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a",
+      "position": 2,
+      "properties": {
+        "description": "####(Optional) Assessment: Check For Understanding (4 minutes)\n\nPass out two sticky notes per student. "
+      },
+      "seeding_key": {
+        "activity_section.key": "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a",
+        "lesson_activity.key": "18913d21-3c6f-4dd8-864e-09b70f80e640"
+      }
+    },
+    {
+      "key": "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f",
+      "position": 3,
+      "properties": {
+        "description": "You have two sticky notes. On one, write one thing you learned about coding today. \nOn the second, write one thing you learned about poetry today. \n\nLet’s share with the whole class by raising your hand to answer this question: What else do you hope you can learn about coding and computer science next? \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f",
+        "lesson_activity.key": "18913d21-3c6f-4dd8-864e-09b70f80e640"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_backgroundEffects"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_exemplar1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_sounds"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_events1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_events1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_events1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_exemplar2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_addSprites"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_addSprites"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_spriteBehaviors"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_spriteSizes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_spriteSizes"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      },
+      "level_keys": [
+        "poetry_hoc_freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_backgroundEffects",
+        "script_level.level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_exemplar1",
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_sounds",
+        "script_level.level_keys": [
+          "poetry_hoc_sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_events1",
+        "script_level.level_keys": [
+          "poetry_hoc_events1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_exemplar2",
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_addSprites",
+        "script_level.level_keys": [
+          "poetry_hoc_addSprites"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_spriteBehaviors",
+        "script_level.level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_spriteSizes",
+        "script_level.level_keys": [
+          "poetry_hoc_spriteSizes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_freeplay",
+        "script_level.level_keys": [
+          "poetry_hoc_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "666a9a9d-687e-45a0-8928-1d719ea8e268"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "List of Poems",
+      "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+      "key": "list_of_poems_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "list_of_poems_1"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "list_of_poems_1"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "(v) to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "line",
+      "word": "Line",
+      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "line"
+      }
+    },
+    {
+      "key": "mood",
+      "word": "Mood",
+      "definition": "the expression of a feeling, atmosphere, or emotion in art or writing.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "mood"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "line"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "mood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "program"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f",
+      "properties": {
+        "description": "Represent figurative and literal language in a text."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f"
+      }
+    },
+    {
+      "key": "1e1c0724-7d86-4304-a73b-6f083be036fc",
+      "properties": {
+        "description": "Illustrate shifts in the mood of a poem."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "1e1c0724-7d86-4304-a73b-6f083be036fc"
+      }
+    },
+    {
+      "key": "ba0eef71-97bc-4525-824e-3abc2087dbaf",
+      "properties": {
+        "description": "Develop programs that respond to timed events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ba0eef71-97bc-4525-824e-3abc2087dbaf"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.RL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

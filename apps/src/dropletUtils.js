@@ -2,6 +2,7 @@ import _ from 'lodash';
 import color from './util/color';
 import {singleton as studioApp} from './StudioApp';
 import {globalFunctions} from './dropletUtilsGlobalFunctions';
+import dontMarshalApi from './dontMarshalApi';
 
 /**
  * @name DropletBlock
@@ -46,6 +47,12 @@ const COLOR_GREEN = '#68D995';
 const COLOR_WHITE = '#FFFFFF';
 const COLOR_BLUE = '#64B5F6';
 const COLOR_ORANGE = '#FFB74D';
+
+const stringMethodPrefix = '[string].';
+const arrayMethodPrefix = '[list].';
+
+const stringBlockPrefix = 'str.';
+const arrayBlockPrefix = 'list.';
 
 /**
  * @type {DropletBlock[]}
@@ -126,6 +133,132 @@ export const dropletBuiltinConfigBlocks = [
     type: 'value',
     params: ['__'],
     docFunc: 'mathSqrt'
+  }
+];
+
+export const dropletStringBlocks = [
+  {
+    func: 'declareAssign_str_hello_world',
+    block: 'var str = "Hello World";',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'substring',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    paletteParams: ['start', 'end'],
+    params: ['6', '11'],
+    modeOptionName: '*.substring',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'indexOf',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    paletteParams: ['searchValue'],
+    params: ['"World"'],
+    modeOptionName: '*.indexOf',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'includes',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    paletteParams: ['searchValue'],
+    params: ['"World"'],
+    modeOptionName: '*.includes',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'length',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.length',
+    tipPrefix: stringMethodPrefix,
+    type: 'property'
+  },
+  {
+    func: 'toUpperCase',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.toUpperCase',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'toLowerCase',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.toLowerCase',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  }
+];
+
+export const dropletArrayBlocks = [
+  {
+    func: 'declareAssign_list_123',
+    block: 'var list = [1, 2, 3];',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'declareAssign_list_abd',
+    block: 'var list = ["a", "b", "d"];',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'accessListItem',
+    block: 'list[0]',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'listLength',
+    block: 'list.length',
+    category: 'Variables',
+    noAutocomplete: true,
+    tipPrefix: arrayMethodPrefix,
+    type: 'property'
+  },
+  {
+    func: 'join',
+    blockPrefix: arrayBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.join',
+    tipPrefix: arrayBlockPrefix,
+    paletteParams: ['separator'],
+    params: ['"-"'],
+    type: 'value'
+  },
+  {
+    func: 'insertItem',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['list', 'index', 'item'],
+    params: ['list', '2', '"c"'],
+    dontMarshal: true
+  },
+  {
+    func: 'appendItem',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['list', 'item'],
+    params: ['list', '"f"'],
+    dontMarshal: true
+  },
+  {
+    func: 'removeItem',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['list', 'index'],
+    params: ['list', '0'],
+    dontMarshal: true
   }
 ];
 

@@ -70,6 +70,7 @@ ur-PK:
   cded_try_it: یہ آزمائیے
   try_now: مزید سیکھے
   california_heading: اپنے اسکول سے کمپیوٹر پڑھانے کے سلسلے میں بات کیجئے۔
+  california_button: مزید سیکھے
   view_english_site: انگریزی ویب سائٹ دیکھئں
   write_your_first_program: Apna pehla Computer ka Program likhiye
   all_ages: Her umer k log
@@ -81,10 +82,18 @@ ur-PK:
   congratulations_volunteer: 'مبارک باد: اب جب کہ آپ نے کوڈ کی گھڑی کی کوشش کی ہے،
     <a href="https://code.org/volunteer"> ایک کلاس روم میں رضاکارانہ کام کے لئے سائن
     اپ کریں</a> اور مدد کریں طالب علموں کو ایک کوڈ کی گھڑی سیکھنے میں!'
+  third_party_gradelevel_kto8: گریڈ 2-8
+  third_party_gradelevel_kto2: گریڈ 2-2
+  third_party_gradelevel_2to8: درجہ 2-8
+  third_party_gradelevel_4to12: گریڈز 4-8
+  third_party_gradelevel_5to12: گریڈز 5-8
+  third_party_gradelevel_6plus: درجہ 6+
   third_party_price_free: 'قیمت: بالکل مفت'
   third_party_price_299: 'قیمت: 2.99 ڈالر فی ڈاونلوڈ'
   third_party_appinv_btn_forum: ایپ اینوینٹر 2 فورم
   enter_valid_email: Spna sahi Email address ka indraj kijiye
+  get_a_certificate_message: We'll send you a certificate and information about how
+    to <a href='/learn/beyond'>Learn beyond One Hour</a>
   thanks_for_submitting: Jama kerwane ka shukarya!
   leaderboards_for_hoc: کوڈ کی گھڑی کے لیئے رہنما تختہ.
   support_url: http://support.code.org/
@@ -116,7 +125,12 @@ ur-PK:
   learn_next_level: Code Studio کا ایک اور کورس آزمائیں
   learn_online: دیگر آن لائن کورسز آزمائیں
   learn_classes: علاقائی کلاسوں کو تلاش کریں
+  hoc_is_here: "#HourOfCode یہاں ہے - اسے جانچيں! @codeorg"
   just_did_hoc: 'میں نے کیا #HourOfCode -اسے جانچیں! @codeorg'
+  just_did_accelerated: میں نے ابھی تیز کردہ کورس ختم کر لیا ہے – اس کی پڑتال کریں!
+    @codeorg
+  just_did_hoc_donor: 'میں صرف #HourOfCode تھا - اسے باہر کی جانچ پڑتال! (@codeorg
+    کی حمایت کے لئے شکریہ %{donor_twitter})'
   learn_hoc: سیکھیں ایک گھنٹے کا کوڈ
   beyond_hoc: ایک گھنٹے سے آگے
   what_gender: ap ka jinss kia hai?
@@ -196,6 +210,7 @@ ur-PK:
   homepage_hero_text_stat_students: "#student_count طلبہ کے اکاؤنٹس کوڈ سٹوڈیو پر"
   homepage_hero_text_stat_served: 'دا ہور کوڈ: #served لوگوں کی خدمات کی'
   homepage_hero_hoc_is_coming: آور آف کوڈ آرہا ہے۔
+  homepage_hero_hoc_is_here: کمپیوٹر سائنس کا تعلیمی ہفتہ
   homepage_slot_text_hoc: گھنٹے کا کوڈ
   homepage_slot_text_frozen: فروزن۔ اینا اور ایلسا کے ساتھ
   homepage_slot_text_teacher: ٹیچر کا ڈیش بورڈ
@@ -259,6 +274,8 @@ ur-PK:
   homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
   homepage_donors_seall: سبھی دیکھیں
   homepage_donors_donate: عطیہ کریں
+  homepage_below_hero_announcement_text: ہم آپ کی رازداری کے بارے میں دیکھ بھال اور
+    کچھ اپ ڈیٹس ہماری راز داری کی پالیسی کے لیے مؤثر 25 مئی کو کر رہے ہیں ۔
   homepage_below_hero_announcement_link_text: مزید سیکھے
   contact_form_topic_student: ميں طالب علم ہوں
   contact_form_topic_parent: میں ابو/امی ہوں
@@ -300,19 +317,32 @@ ur-PK:
   playlab_iceage_title: برفانی عہد - جلد آ رہا ہے
   playlab_iceage_title_live: برفانی عہد
   starwars_subtitle: ایک کہکشاں کی کوڈ کے ساتھ تعمیر
+  starwars_javascript_title: جاوا اسکرپٹ
+  starwars_javascript_description: ڈریگ-ڈراپ بلاکس اور جاوا اسکرپٹ استعمال کریں۔
+  starwars_javascript_specs: صرف انگریزی | جدید براؤزرز | عمر 11+
   starwars_blocks_title: مسدود کرتا ہے
+  starwars_blocks_description: ڈریگ-ڈراپ بلاکس استعمال کریں۔
+  starwars_blocks_specs: کئی زبانیں | جدید براؤزر، اسمارٹ فونز، ٹیبلٹس | عمر 6-106
   mc_name: Minecraft کوڈ کی گھڑی
+  mc_gradelevel: 'Ages 6-106
+
+'
   minecraft_agent_button: شروع کریں
   minecraft_designer_button: شروع کریں
   minecraft_adventurer_button: شروع کریں
   minecraft_subtitle: Minecraft کوڈ کی گھڑی
   sports_watch_video: ویڈیو دیکھے
   video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
+  video_1min: 1 منٹ
+  video_2min: 2 منٹ
+  video_5min: 5 منٹ
   are_you_teacher: کیا آپ استاد ہیں؟
   volunteer_engineer_submission_subtitle_generic: '100،000 اساتذہ اپنی کلاس روم میں
     رواں سال دسمبر 7-13، 2015 تک ایک کوڈ کی گھڑی کی میزبانی کے لئے جا رہے ہیں ۔ وہ
     آپ کی مدد چاہتے ہیں! '
   volunteer_engineer_submission_field_name: نام
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: تفصیل
   volunteer_engineer_submission_field_email: ای میل ایڈریس
   volunteer_engineer_submission_field_email_placeholder: ای میل ایڈریس
@@ -379,8 +409,15 @@ ur-PK:
   dashboard_action_delete_yes: جی
   dashboard_action_delete_no: نہيں
   dashboard_navigation_home_page: ٹیچر ہوم پیج
+  dashboard_navigation_add_students: طلباء کا ا ضافہ کریں
+  dashboard_progress_not_started: شروع نہیں کیا
   dashboard_sections_close: بند
+  dashboard_sections_move_to_section: 'کو سیکشن میں منتقل:'
   dashboard_students_name: نام
+  dashboard_students_join_link: اپنے اکاؤنٹ بنانے اور آپ کے سیکشن میں شامل ہونے کے
+    لیے اپنے طلبہ کو بتائیں
+  dashboard_pre-express: 'پری ریڈر ایکسپریس کورس:'
+  dashboard_curriculum_ecs: 'کمپیوٹر سائنس کی تلاش:'
   dashboard_grade_other: دیگر
   dashboard_login_none: Email
   dashboard_stage: اسٹیج
@@ -390,48 +427,290 @@ ur-PK:
   learn_more: مزید سیکھے
   hoc2014_try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
   frozen_name: اینا اور ایلسا کے ساتھ کوڈ
+  starwars_name: 'سٹار وارز: ایک کہکشاں کے کوڈ کے ساتھ عمارت'
+  flappy_name: ایک فلاپپی کر کھیل
   blockly_name: Blockly
+  coursea-draft_name: کورس A
+  coursea_name: کورس A
+  courseb-draft_name: کورس B
+  courseb_name: کورس B
+  coursec-draft_name: کورس C
+  coursec_name: کورس C
+  coursed-draft_name: کورس D
+  coursed_name: کورس D
+  coursee-draft_name: کورس E
+  coursee_name: کورس E
+  coursef-draft_name: کورس F
+  coursef_name: کورس F
+  coursea-2017_name: کورس A (2017)
+  coursec-2017_name: کورس C (2017)
+  coursed-2017_name: کورس D (2017)
+  coursee-2017_name: کورس E (2017)
+  coursef-2017_name: کورس F (2017)
+  coursed-2021_name: کورس D (2021)
+  pre-express-2018_name: پری ریڈر ایکسپریس کورس (2018)
+  pre-express-2019_name: پری ریڈر ایکسپریس کورس (2019)
+  pre-express-2020_name: پری ریڈر ایکسپریس کورس (2020)
+  accelerated_name: تیز کردہ کورس
+  pre-express_name: پری ریڈر ایکسپریس کورس
+  20-hour_name: تیز کردہ کورس
   iceage_name: برفانی عہد
+  starwarsblocks_name: اسٹار وارز (بلاکس)
+  codeorg_gradelevel: عمر 4-104
+  codeintl_gradelevel: عمر 4-104
+  tynker_gradelevel: 'Ages 5-13
+
+'
+  scratch_gradelevel: عمر 8+
   lightbot_gradelevel: Her umer k log
   thinkersmith_gradelevel: Her umer k log
+  condcards_gradelevel: 'Ages 8-12
+
+'
   lightbotintl_gradelevel: Her umer k log
   codehs_gradelevel: ہائی اسکول
   codecademy_gradelevel: ہائی اسکول
   processing_gradelevel: ہائی اسکول
+  robomind_gradelevel: 'Ages 8-13
+
+'
   codespark_gradelevel: ایلیمنٹری
   kodable_gradelevel: ایلیمنٹری
+  tynkerapp_gradelevel: 'Ages 5-13
+
+'
+  robomindnl_gradelevel: 'Ages 8-13
+
+'
+  flappy_gradelevel: 'Ages 6-106
+
+'
   bitsbox_gradelevel: ایلیمنٹری
   makeschool_gradelevel: ہائی اسکول
   touchdevelop_gradelevel: ہائی اسکول
   blockly_gradelevel: Her umer k log
+  thinkersmith2_gradelevel: عمر 8+
+  kodableunplugged_gradelevel: 'Ages 8-13
+
+'
+  projguts_gradelevel: 'Ages 10-13
+
+'
+  hourofcode_gradelevel: 'Ages 6-106
+
+'
   frozen_gradelevel: 'Ages 8-108
+
+'
+  starwars_gradelevel: 'Ages 6-106
+
+'
+  playlab_gradelevel: 'Ages 6-14
+
+'
+  infinity_gradelevel: 'Ages 6-14
 
 '
   artist_gradelevel: 'Ages 8-108
 
 '
+  monstercoding_gradelevel: 'Ages 5-13
+
+'
+  allcancode_gradelevel: 'Ages 5-10
+
+'
+  csfirst_gradelevel: 'Ages 9-14
+
+'
   boxisland_gradelevel: ایلیمنٹری
+  codesters_gradelevel: 'Ages 12-14
+
+'
+  texasinstruments_gradelevel: 'Ages 13-16
+
+'
+  teacherled_gradelevel: عمر 5+
+  course1_gradelevel: عمر 4-6
+  course2_gradelevel: 'Ages 6-18
+
+'
+  course3_gradelevel: 'Ages 8-18
+
+'
+  course4_gradelevel: 'Ages 10-18
+
+'
+  coursea_gradelevel: عمر 4-7
+  courseb_gradelevel: 'Ages 5-8
+
+'
+  coursec_gradelevel: 'Ages 6-10
+
+'
+  coursed_gradelevel: عمر 7-11
+  coursee_gradelevel: 'Ages 8-12
+
+'
+  coursef_gradelevel: 'Ages 9-13
+
+'
+  coursea-2017_gradelevel: عمر 4-7
+  courseb-2017_gradelevel: 'Ages 5-8
+
+'
+  coursec-2017_gradelevel: 'Ages 6-10
+
+'
+  coursed-2017_gradelevel: عمر 7-11
+  coursee-2017_gradelevel: 'Ages 8-12
+
+'
+  coursef-2017_gradelevel: 'Ages 9-13
+
+'
+  coursea-2018_gradelevel: عمر 4-7
+  courseb-2018_gradelevel: 'Ages 5-8
+
+'
+  coursec-2018_gradelevel: 'Ages 6-10
+
+'
+  coursed-2018_gradelevel: عمر 7-11
+  coursee-2018_gradelevel: 'Ages 8-12
+
+'
+  coursef-2018_gradelevel: 'Ages 9-13
+
+'
+  coursea-2019_gradelevel: عمر 4-7
+  courseb-2019_gradelevel: 'Ages 5-8
+
+'
+  coursec-2019_gradelevel: 'Ages 6-10
+
+'
+  coursed-2019_gradelevel: عمر 7-11
+  coursee-2019_gradelevel: 'Ages 8-12
+
+'
+  coursef-2019_gradelevel: 'Ages 9-13
+
+'
+  coursea-2020_gradelevel: عمر 4-7
+  courseb-2020_gradelevel: 'Ages 5-8
+
+'
+  coursec-2020_gradelevel: 'Ages 6-10
+
+'
+  coursed-2020_gradelevel: عمر 7-11
+  coursee-2020_gradelevel: 'Ages 8-12
+
+'
+  coursef-2020_gradelevel: 'Ages 9-13
+
+'
+  coursea-2021_gradelevel: عمر 4-7
+  courseb-2021_gradelevel: 'Ages 5-8
+
+'
+  coursec-2021_gradelevel: 'Ages 6-10
+
+'
+  coursed-2021_gradelevel: عمر 7-11
+  coursee-2021_gradelevel: 'Ages 8-12
+
+'
+  coursef-2021_gradelevel: 'Ages 9-13
+
+'
+  accelerated_gradelevel: 'Ages 10-18
+
+'
+  thinkersmithspanish_platformtext: پلگ نکالا ہوا
+  thinkersmith_platformtext: پلگ نکالا ہوا
+  condcards_platformtext: پلگ نکالا ہوا
+  thinkersmith2_platformtext: پلگ نکالا ہوا
+  kodableunplugged_platformtext: پلگ نکالا ہوا
+  projguts_platformtext: پلگ نکالا ہوا
   frozen_platformtext: ماڈرن براؤزر + ٹیبلٹس
   starwars_platformtext: ماڈرن براؤزر + ٹیبلٹس
   frozen_shortdescription: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں
     کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
+  starwars_shortdescription: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
+    میں اپنی اسٹار وارز گیم بنائیں۔
+  coursea_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس
+    A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں، پھر الگورتھمز،
+    نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ کریں
+    اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں
+    اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+  coursea-2017_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb-2017_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+    (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed-2017_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں،
+    پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee-2017_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ
+    کریں اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef-2017_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات
+    سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+  coursea-2018_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb-2018_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+    (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed-2018_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں،
+    پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee-2018_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ
+    کریں اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef-2018_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات
+    سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+  coursea-2019_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+  courseb-2019_shortdescription_congrats: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+    (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+  coursed-2019_shortdescription_congrats: کورس C سے تصورات کا تیزی سے احاطہ کریں،
+    پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+  coursee-2019_shortdescription_congrats: کورس C اور D میں تصورات کا تیزی سے احاطہ
+    کریں اور پھر فنکشنز کے ساتھ آگے بڑھیں۔
+  coursef-2019_shortdescription_congrats: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات
+    سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
   thinkersmith2_longdescription: 'سٹوڈنٹس آن اینڈ آف فنکشن کے زریعے حروف کو binary
     کوڈ میں محفوظ کرنا  سیکھتے ہیں۔ یہاں تک کے تمام کلاس اپنے initials انکوڈ کرنا
     سیکھ لیتے ہیں۔ '
+  hourofcode_longdescription: Apna pehla Computer ka Program likhiye
   frozen_longdescription: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک
     اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز
     تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں
     گے۔
+  starwars_longdescription: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
+    میں اپنی اسٹار وارز گیم بنائیں۔
   tynker_beyond_name: گھر بیٹھے پروگرامنگ سیکھیے
+  codeorg_beyond_gradelevel: عمر 4-104
+  tynker_beyond_gradelevel: 'Ages 5-13
+
+'
+  scratch_beyond_gradelevel: عمر 8+
   lightbot_beyond_gradelevel: Her umer k log
   codecademy_beyond_gradelevel: ہائی اسکول
   kodable_beyond_gradelevel: ایلیمنٹری
   scratchjr_beyond_gradelevel: ایلیمنٹری
   hacketyhack_beyond_gradelevel: ہائی اسکول
+  robomind_beyond_gradelevel: 'Ages 8-13
+
+'
   makeschool_beyond_gradelevel: ہائی اسکول
   touchdevelop_beyond_gradelevel: ہائی اسکول
   codehs_beyond_gradelevel: ہائی اسکول
+  kodu_beyond_gradelevel: عمر 8+
+  cargobot_beyond_gradelevel: عمر 8+
+  kidsruby_beyond_gradelevel: عمر 12+
+  w3schools_beyond_gradelevel: عمر 12+
+  mozilla_beyond_gradelevel: عمر 12+
+  finch_beyond_gradelevel: عمر 8+
   processing_beyond_gradelevel: ہائی اسکول
+  sphero_beyond_gradelevel: عمر 8+
   kidsruby_beyond_longdescription: 'گیمز بنانے اور Ruby سے اپنا ہوم ورک ہیک کرنے کا
     مزہ لیں! اپنے والدین اور ٹیچرس کو بتایں کے آپ Ruby پروگرامنگ سیکھ رہے ہیں... بالکل
     مفت اور کسی بھی کمپیوٹر پر!! [نوٹ: ڈیسک ٹاپ انسٹالیشن کی ضرورت ہوتی ہے]'
@@ -450,6 +729,7 @@ ur-PK:
   user_header_signin: سائن ان کریں
   user_header_create: 'تخلیق کریں '
   user_header_dance: ڈانس پارٹی
+  user_header_view_project_gallery: تمام منصوبوں کو دیکھیں
   user_header_view_my_projects: تمام منصوبوں کو دیکھیں
   view_all_sections: تمام سیکشن دیکھیں
   applab_tile_start_tutorial: شروع کریں
@@ -468,8 +748,13 @@ ur-PK:
     کی سرگرمیوں کا پیکٹ شیئر کریں.
   hoc2018_creativity_create: بنائیں
   hoc2018_creativity_what_will_you_create: آپ کیا بنائیں گے؟
+  hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.org
+    کورسز</a> کے ساتھ مزید آگے بڑھیں
   hoc2018_mc_start: شروع کریں
   hoc2018_mc_educators_box2_button: ڈاؤن لوڈ، اتارنا
+  hoc2018_mc_video_1min: 1 منٹ
+  hoc2018_mc_video_2min: 2 منٹ
+  hoc2018_mc_video_5min: 5 منٹ
   hoc2018_mc_video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
   hoc2018_mc_homepage_what_create: آپ کیا بنائیں گے؟
   hoc2018_mc_homepage_join_us: ہمارے ساتھ شامل ہوں
@@ -479,6 +764,8 @@ ur-PK:
   hoc2018_mc_go_to_mc_education: Minecraft تعلیم کے لئے جانا
   hoc2018_dance_party_main_heading: ڈانس پارٹی
   hoc2018_dance_party_box_title: ڈانس پارٹی
+  hoc2018_dance_party_box_description: گرووانگ اور پروگرامنگ ایک پیروی ڈانس پارٹی
+    کے سبق کے ساتھ رکھیں ۔
   hoc2018_dance_party_button: شروع کریں
   hoc2018_dance_amazon_about_future_engineer_button: مزید سیکھے
   hoc2018_dance_measure: پیمائش
@@ -486,11 +773,26 @@ ur-PK:
   hoc2018_mc_thank_microsoft: ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری
     بصیرت اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں
     سیکھنے کا موقع فراہم ہو کی حمایت کی.
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'وقت میں واپس سفر کریں اور کوڈ بنانا سیکھیں! نیا Minecraft
+    آور آف کوڈ ٹیوٹوریل اب Minecraft میں دستیاب ہے: ونڈوز، میک، کروم بک، اور آئی پیڈ
+    کے لیے تعلیمی ایڈیشن۔ مفت معلم وسائل، تربیت اور ویڈیوز کے ساتھ شروع کریں۔'
+  hoc2021_mc_mee_villages_title: دو گاؤں کی کہانی
+  hoc2021_mc_mee_villages_description: 'کوڈنگ کی بنیادی باتیں سیکھیں اور Minecraft
+    میں اپنے طلباء کے ساتھ تنوع اور شمولیت دریافت کریں: تعلیمی ایڈیشن۔'
+  hoc2021_mc_mee_ai_title: AI ہمیشہ کے لیے
+  hoc2021_mc_mee_ai_description: 'اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft
+    میں کوڈ سیکھیں: تعلیمی ایڈیشن۔'
   footer_privacy_policy: رازداری کی پالیسی
   footer_about: متعلق
   footer_donate: عطیہ کریں
+  ai_for_oceans_lesson_plan: سبق کا منصوبہ
   ai_microsoft_thanks: ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت
     اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے
     کا موقع فراہم ہو کی حمایت کی.
   ai_activity: سرگرمی
   ai_description: تفصیل
+  outbreak_tile_title: وباء کا پھیلنا
+  outbreak_tile_subtitle: ایک وائرس نے مونسٹر ٹاؤن کو متاثر کیا ہے! ایک وبا پھیلنے
+    کا سمیولیٹر کوڈ کریں اور اس بارے میں پیشین گوئیاں کریں کہ مونسٹر ٹاؤن کے پڑوسیوں
+    کے ساتھ کیا ہوگا۔

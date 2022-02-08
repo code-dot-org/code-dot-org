@@ -1,35 +1,37 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-export default class UploadImageDialog extends React.Component {
-  static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    handleClose: PropTypes.func.isRequired,
-    uploadImage: PropTypes.func.isRequired
+export default function UploadImageDialog({
+  isOpen,
+  handleClose,
+  uploadImage,
+  allowExpandable = true
+}) {
+  const [imgUrl, setImgUrl] = useState(undefined);
+  const [expandable, setExpandable] = useState(false);
+  const [error, setError] = useState(undefined);
+  const [isUploading, setIsUploading] = useState(false);
+
+  const resetState = () => {
+    setImgUrl(undefined);
+    setExpandable(false);
+    setError(undefined);
   };
 
-  state = {
-    imgUrl: undefined,
-    expandable: false,
-    error: undefined
-  };
-
-  resetState = () => {
-    this.setState({
-      imgUrl: undefined,
-      expandable: false,
-      error: undefined
-    });
-  };
-
-  handleChange = e => {
-    this.resetState();
+  const handleChange = e => {
+    if (!e.target.files[0]) {
+      resetState();
+      return;
+    }
+    resetState();
+    setIsUploading(true);
 
     // assemble upload data
     const formData = new FormData();
@@ -45,61 +47,63 @@ export default class UploadImageDialog extends React.Component {
       }
     })
       .then(response => response.json())
-      .then(this.handleResult)
-      .catch(this.handleError);
+      .then(handleResult)
+      .catch(err => {
+        setError(err);
+        setIsUploading(false);
+      });
   };
 
-  handleResult = result => {
+  const handleResult = result => {
     if (result && result.newAssetUrl) {
-      this.setState({imgUrl: result.newAssetUrl});
+      setImgUrl(result.newAssetUrl);
     } else if (result && result.message) {
-      this.handleError(result.message);
+      setError(result.message);
     } else {
-      this.handleError(result);
+      setError(result);
     }
+    setIsUploading(false);
   };
 
-  handleError = error => {
-    this.setState({error: error});
+  const handleDialogClose = () => {
+    resetState();
+    handleClose();
   };
 
-  handleClose = () => {
-    this.resetState();
-    this.props.handleClose();
-  };
-
-  handleCloseAndSave = () => {
-    if (this.state.imgUrl) {
-      this.props.uploadImage(this.state.imgUrl, this.state.expandable);
+  const handleCloseAndSave = () => {
+    if (imgUrl) {
+      uploadImage(imgUrl, expandable);
     }
 
-    this.handleClose();
+    handleDialogClose();
   };
 
-  render() {
-    return (
-      <LessonEditorDialog
-        isOpen={this.props.isOpen}
-        handleClose={this.handleClose}
-      >
-        <h2>Upload Image</h2>
+  return (
+    <LessonEditorDialog isOpen={isOpen} handleClose={handleDialogClose}>
+      <h2>Upload Image</h2>
 
-        {this.state.imgUrl && <img src={this.state.imgUrl} />}
-        <input type="file" name="file" onChange={this.handleChange} />
+      {imgUrl && <img src={imgUrl} />}
+      <input
+        type="file"
+        name="file"
+        onChange={handleChange}
+        disabled={isUploading}
+      />
 
-        {this.state.error && (
-          <div className="alert alert-error" role="alert">
-            <span>{this.state.error.toString()}</span>
-          </div>
-        )}
+      {error && (
+        <div className="alert alert-error" role="alert">
+          <span>{error.toString()}</span>
+        </div>
+      )}
 
+      {allowExpandable && (
         <label style={styles.label}>
           Expandable
           <input
             type="checkbox"
-            checked={this.state.expandable}
+            checked={expandable}
             style={styles.checkbox}
-            onChange={e => this.setState({expandable: e.target.checked})}
+            onChange={e => setExpandable(e.target.checked)}
           />
           <HelpTip>
             <p>
@@ -108,19 +112,32 @@ export default class UploadImageDialog extends React.Component {
             </p>
           </HelpTip>
         </label>
-
-        <hr />
-
+      )}
+      <hr />
+      <div style={{display: 'flex'}}>
         <Button
           text={i18n.closeAndSave()}
-          onClick={this.handleCloseAndSave}
+          onClick={handleCloseAndSave}
           color={Button.ButtonColor.orange}
           className="save-upload-image-button"
-        />
-      </LessonEditorDialog>
-    );
-  }
+          disabled={isUploading}
+        />{' '}
+        {isUploading && (
+          <div style={styles.spinner}>
+            <FontAwesome icon="spinner" className="fa-spin" />
+          </div>
+        )}
+      </div>
+    </LessonEditorDialog>
+  );
 }
+
+UploadImageDialog.propTypes = {
+  allowExpandable: PropTypes.bool,
+  isOpen: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  uploadImage: PropTypes.func.isRequired
+};
 
 const styles = {
   checkbox: {
@@ -128,5 +145,9 @@ const styles = {
   },
   label: {
     margin: '10px 0'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
   }
 };

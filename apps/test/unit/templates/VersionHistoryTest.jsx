@@ -56,7 +56,9 @@ describe('VersionHistory', () => {
     testVersionHistory({
       props: {
         handleClearPuzzle: () => {},
-        useFilesApi: false
+        isProjectTemplateLevel: false,
+        useFilesApi: false,
+        isReadOnly: false
       },
       finishVersionHistoryLoad: () => {
         sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
@@ -85,7 +87,9 @@ describe('VersionHistory', () => {
     testVersionHistory({
       props: {
         handleClearPuzzle: () => {},
-        useFilesApi: true
+        isProjectTemplateLevel: false,
+        useFilesApi: true,
+        isReadOnly: false
       },
       finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](
@@ -148,7 +152,7 @@ describe('VersionHistory', () => {
       expect(restoreSpy()).not.to.have.been.called;
 
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
@@ -158,7 +162,7 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
 
@@ -170,7 +174,7 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       wrapper
-        .find('.btn-info')
+        .find('.img-upload')
         .first()
         .simulate('click');
       expect(utils.reload).not.to.have.been.called;
@@ -190,8 +194,11 @@ describe('VersionHistory', () => {
       assert(
         wrapper.containsMatchingElement(
           <div>
-            <p>Are you sure you want to clear all progress for this level?</p>
-            <button type="button" id="confirm-button">
+            <p>
+              Are you sure you want to restart this level? This will clear all
+              of your code.
+            </p>
+            <button type="button" id="start-over-button">
               Start over
             </button>
             <button type="button" id="again-button">
@@ -210,11 +217,14 @@ describe('VersionHistory', () => {
       wrapper.find('.btn-danger').simulate('click');
 
       // Expect confirmation to show
-      expect(
+      assert(
         wrapper.containsMatchingElement(
           <div>
-            <p>Are you sure you want to clear all progress for this level?</p>
-            <button type="button" id="confirm-button">
+            <p>
+              Are you sure you want to restart this level? This will clear all
+              of your code.
+            </p>
+            <button type="button" id="start-over-button">
               Start over
             </button>
             <button type="button" id="again-button">
@@ -229,6 +239,16 @@ describe('VersionHistory', () => {
 
       // Rendered two version rows
       expect(wrapper.find(VersionRow)).to.have.length(2);
+    });
+
+    it('shows a confirmation with template project warning', () => {
+      wrapper = mount(<VersionHistory {...props} isProjectTemplateLevel />);
+      finishVersionHistoryLoad();
+
+      // Click "Start Over"
+      wrapper.find('.btn-danger').simulate('click');
+
+      expect(wrapper.find('.template-level-warning')).to.exist;
     });
 
     describe('confirming Start Over', () => {
@@ -250,7 +270,7 @@ describe('VersionHistory', () => {
         );
         finishVersionHistoryLoad();
         wrapper.find('.btn-danger').simulate('click');
-        wrapper.find('#confirm-button').simulate('click');
+        wrapper.find('#start-over-button').simulate('click');
       });
 
       afterEach(async () => {
@@ -282,6 +302,7 @@ describe('VersionHistory', () => {
               isOwner: true,
               currentUrl: window.location.href,
               shareUrl: 'fake-share-url',
+              isProjectTemplateLevel: false,
               currentSourceVersionId: FAKE_CURRENT_VERSION
             })
           },

@@ -1254,7 +1254,10 @@ uk-UA:
   coursed-2020_name: Курс D (2020)
   coursee-2020_name: Курс Е (2020)
   coursef-2020_name: Курс F (2020)
+  coursed-2021_name: Курс D (2021)
   express-2018_name: Експрес курс (2018)
+  express-2019_name: Експрес курс (2019)
+  express-2020_name: Експрес курс (2020)
   csd2_name: 'Блок 2: Веб-розробка'
   csd3_name: 'Блок 3: Анімація та ігри'
   accelerated_name: Прискорений курс
@@ -1361,6 +1364,12 @@ uk-UA:
   coursed-2020_gradelevel: 8+ класи
   coursee-2020_gradelevel: Вік 8-12
   coursef-2020_gradelevel: Вік 9-13
+  coursea-2021_gradelevel: Вік 4-7
+  courseb-2021_gradelevel: Вік 5-8
+  coursec-2021_gradelevel: Вік 6-10
+  coursed-2021_gradelevel: 8+ класи
+  coursee-2021_gradelevel: Вік 8-12
+  coursef-2021_gradelevel: Вік 9-13
   accelerated_gradelevel: Вік 10-18
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
@@ -2018,6 +2027,7 @@ uk-UA:
   user_header_logout: Вийти
   user_header_signin: Увійти
   user_header_create: 'Творіть '
+  user_header_applab: 'App Lab '
   user_header_artist: Художник
   user_header_gamelab: Ігрова лабораторія
   user_header_playlab: Ігрова студія
@@ -2222,9 +2232,11 @@ uk-UA:
   footer_donate: Підтримати
   footer_support: Довідка та спільнота
   footer_terms: Умови
+  ai_for_oceans_lesson_plan: план уроку
   ai_in_partnership_with: У партнерстві з
   ai_microsoft_thanks: Ми дякуємо Microsoft за підтримку нашого бачення та місії щодо
     забезпечення кожної дитини можливістю вивчати інформатику та навички, необхідні
     для досягнення успіху в 21 столітті.
   ai_activity: Активність
   ai_description: Опис
+  outbreak_tile_title: Спалах

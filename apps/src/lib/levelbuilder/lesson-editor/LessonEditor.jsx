@@ -34,6 +34,7 @@ class LessonEditor extends Component {
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonData: PropTypes.object,
+    unitInfo: PropTypes.object,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -61,8 +62,8 @@ class LessonEditor extends Component {
       unplugged: this.props.initialLessonData.unplugged,
       lockable: this.props.initialLessonData.lockable,
       hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
-      creativeCommonsLicense: this.props.initialLessonData
-        .creativeCommonsLicense,
+      creativeCommonsLicense:
+        this.props.initialLessonData.creativeCommonsLicense || '',
       assessment: this.props.initialLessonData.assessment,
       purpose: this.props.initialLessonData.purpose || '',
       preparation: this.props.initialLessonData.preparation || '',
@@ -71,12 +72,6 @@ class LessonEditor extends Component {
       originalLessonData: this.props.initialLessonData
     };
   }
-
-  handleView = () => {
-    navigateToHref(
-      linkWithQueryParams(this.state.originalLessonData.lessonPath)
-    );
-  };
 
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
@@ -120,9 +115,7 @@ class LessonEditor extends Component {
               linkWithQueryParams(this.state.originalLessonData.lessonPath)
             );
           } else {
-            navigateToHref(
-              linkWithQueryParams(this.state.originalLessonData.scriptPath)
-            );
+            navigateToHref(linkWithQueryParams(this.props.unitInfo.unitPath));
           }
         } else {
           const activities = mapActivityDataForEditor(data.activities);
@@ -196,13 +189,13 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={lockable}
-              disabled={this.props.initialLessonData.scriptIsVisible}
+              disabled={this.props.unitInfo.isLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
-              {this.props.initialLessonData.scriptIsVisible ? (
-                <p>Can't update lockable for visible script.</p>
+              {this.props.unitInfo.isLaunched ? (
+                <p>Can't update lockable for visible unit.</p>
               ) : (
                 <p>
                   Check this box if this lesson should be locked for students.
@@ -217,13 +210,13 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={hasLessonPlan}
-              disabled={this.props.initialLessonData.scriptIsVisible}
+              disabled={this.props.unitInfo.isLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
             />
             <HelpTip>
-              {this.props.initialLessonData.scriptIsVisible ? (
-                <p>Can't update has lesson plan for visible script.</p>
+              {this.props.unitInfo.isLaunched ? (
+                <p>Can't update has lesson plan for visible unit.</p>
               ) : (
                 <p>
                   Check this box if this lesson should have a lesson plan for
@@ -377,11 +370,9 @@ class LessonEditor extends Component {
               collapsed={true}
               fullWidth={true}
             >
-              {this.state.originalLessonData.courseVersionId ? (
+              {this.props.unitInfo.courseVersionId ? (
                 <ResourcesEditor
-                  courseVersionId={
-                    this.state.originalLessonData.courseVersionId
-                  }
+                  courseVersionId={this.props.unitInfo.courseVersionId}
                   resourceContext="lessonResource"
                   resources={this.props.resources}
                 />
@@ -399,11 +390,9 @@ class LessonEditor extends Component {
               collapsed={true}
               fullWidth={true}
             >
-              {this.state.originalLessonData.courseVersionId ? (
+              {this.props.unitInfo.courseVersionId ? (
                 <VocabulariesEditor
-                  courseVersionId={
-                    this.state.originalLessonData.courseVersionId
-                  }
+                  courseVersionId={this.props.unitInfo.courseVersionId}
                 />
               ) : (
                 <h4>
@@ -462,10 +451,14 @@ class LessonEditor extends Component {
 
         <SaveBar
           handleSave={this.handleSave}
-          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
+          pathForShowButton={
+            this.props.initialLessonData.hasLessonPlan
+              ? this.state.originalLessonData.lessonPath
+              : undefined
+          }
         />
       </div>
     );

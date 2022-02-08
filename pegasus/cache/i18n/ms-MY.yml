@@ -8,6 +8,7 @@ ms-MY:
   upgrade_ie_message: Code.org selepas ini tidak lagi menyokong Internet Explorer
     8, 9 dan 10. Sila naik taraf kepada pelayar terkini.
   upgrade_ie_link: Ketahui lebih lanjut
+  en: Sains Komputer
   computer_science_edweek: Minggu Pendidikan Sains Komputer
   csedweek_dates: 8-12 Disember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -70,6 +71,12 @@ ms-MY:
   congratulations_on_completing_hoc: Tahniah kerana telah menyiapkan satu Hour of
     Code
   get_a_certificate_of_achievement: Dapatkan sijil pencapaian
+  third_party_gradelevel_kto8: Gred K-8
+  third_party_gradelevel_kto2: Gred K-2
+  third_party_gradelevel_2to8: 'Gred 2-8 '
+  third_party_gradelevel_4to12: Gred 4-12
+  third_party_gradelevel_5to12: 'Gred 5-12 '
+  third_party_gradelevel_6plus: Gred 6+
   enter_valid_email: Sila masukkan alamat email yang sah
   get_a_certificate_message: Kami akan menghantar sijil dan maklumat mengenai cara
     untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>
@@ -81,6 +88,7 @@ ms-MY:
   if_you_enjoyed: Jika anda suka belajar, minta rakan-rakan anda cuba sekali! Kita
     mahu satu dunia untuk belajar.
   personalize_certificate: Ubah suai sijil anda
+  print_ice_art_from_frozen: Mencetak seni ais daripada tutorial Frozen
   share_achievement: kongsikan pencapaian anda
   beyond_hour_message: Teruskan dengan <a href='http://studio.code.org'>kursus-kursus
     lain</a> kami, atau lihat lebih pilihan untuk <a href='/learn/beyond'> Belajar
@@ -120,6 +128,7 @@ ms-MY:
   learn_next_level: Teruskan ke tahap seterusnya
   learn_online: Cuba kursus-kursus lain secara online
   learn_classes: cari kelas tempatan
+  hoc_is_here: "#SatuJamKod ada di sini - Jom tengok! @codeorg"
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
   just_did_accelerated: Saya baru sahaja menyelesaikan Kursus Dipercepatkan - lihat!
     @codeorg
@@ -146,10 +155,14 @@ ms-MY:
   studiobar_teacher_title: Dibuat untuk guru
   studiobar_teacher_body: Perkenalkan Studio Kod dalam kelas anda
   studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Mencipta alam ajaib musim sejuk bersama Anna dan Elsa
   studiobar_donate_title: Derma
   studiobar_shop_title: Kedai
   homepage_hero_hoc_is_coming: Jam Kod akan datang
+  homepage_hero_hoc_is_here: Minggu Pendidikan Sains Komputer
   homepage_slot_text_hoc: Satu Jam Kod
+  homepage_slot_text_frozen: Frozen dengan Anna dan Elsa
+  homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Kedai
   homepage_slot_text_flappy: Kod Flappy
   homepage_action_text_sign_up: Mendaftar
@@ -157,6 +170,7 @@ ms-MY:
   homepage_action_text_codevideo: Tonton Video
   homepage_action_text_teachervideo: Tonton Video
   homepage_action_text_watchvideo: Tonton Video
+  homepage_action_text_girlvideo: Memberikan inspirasi kepada anak gadis muda
   homepage_action_text_signpetition: Tandatangan petisyen
   homepage_signpetition_dropdown: Tandatangan petisyen kami &#x25BE;
   homepage_signpetition_dropdown_text: saya setuju
@@ -216,14 +230,56 @@ ms-MY:
   class_submission_level_college: Kolej
   class_submission_level_vocational: Vokasional
   class_submission_languages_other: Bahasa lain
+  videos_more: Lebih banyak video yang memberikan inspirasi <a href='%{inspiring_videos_playlist}'></a>
+    menampilkan model peranan dan selebriti
+  videos_more_markdown: Lebih banyak [inspirational videos](%{inspiring_videos_playlist})
+    menampilkan model peranan dan selebriti
   starwars_blocks_title: blok
+  starwars_blocks_specs: Banyak bahasa | Pelayar, telefon pintar, tablet moden | Umur
+    6-106
+  mc_name: Jam Kod Minecraft
   mc_gradelevel: Peringkat umur 4-104 tahun
+  minecraft_tutorials: Tutorial Jam Kod Minecraft
+  minecraft_agent_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu!
+    Perjalanan merentasi Minecraft dengan kod.
   minecraft_agent_button: Mula
   minecraft_designer_button: Mula
   minecraft_adventurer_button: Mula
+  minecraft_no_internet: Tidak mempunyai Internet?
+  minecraft_download_adventurer: Muat turun versi Pengembara Minecraft luar talian.
+  minecraft_subtitle: Jam Kod Minecraft
+  minecraft_og_designer: Minecraft kembali dengan aktiviti baharu untuk Jam Kod. Atur
+    cara haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.
+  minecraft_og_agent: Minecraft kembali untuk Jam Kod dan anda ialah wiranya! Tuliskan
+    kod untuk perjalanan merentasi biom Minecraft.
+  sports_page_title: Sukan Jam Kod
+  sports_og_title: Berikan galakan kepada diri anda. Sesiapa sahaja boleh belajar.
   sports_watch_video: Tonton Video
+  sports_video_title: Berikan galakan kepada diri anda. Sesiapa sahaja boleh belajar.
+  sports_select_theme: Pilih tema tutorial anda
+  sports_basketball_title: Membuat permainan bola keranjang
+  sports_featured_athletes: Lihat atlet yang ditampilkan
+  sports_athletes_title: Atlet yang ditampilkan
+  watch_inspirational_videos: Sebelum anda memulakan, sila tonton satu daripada video
+    yang memberikan inspirasi ini
+  video_title_cs_is_everything: Sains Komputer Mengubah Segalanya
+  video_title_inspire_girl: Memberikan inspirasi kepada anak gadis muda
+  video_title_cs_intro: Pengenalan Sains Komputer
+  video_title_schools_dont_teach: Perkara yang Tidak Diajar Di Kebanyakan Sekolah
+  video_title_obama: Pendapat Presiden Obama tentang sains komputer
+  video_title_hoc_is_here: Jam Kod Ada di Sini - Sesiapa Sahaja Boleh Belajar
+  video_title_anybody_can_learn: Sesiapa Sahaja Boleh Belajar
+  video_title_steph_curry: Jam Kod bersama Steph Curry
+  video_title_my_name_is_aracely: Nama Saya ialah Aracely
+  video_1min: 1 minit
+  video_2min: 2 minit
+  video_5min: 5 minit
+  no_internet: Tidak mempunyai Internet?
+  download_offline: Muat turun versi luar talian
   are_you_teacher: Adakah anda seorang guru?
   volunteer_engineer_submission_field_name: Nama
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Keterangan
   volunteer_engineer_submission_field_email: Alamat e-mel
   volunteer_engineer_submission_field_email_placeholder: Alamat e-mel
@@ -279,6 +335,7 @@ ms-MY:
   dashboard_navigation_add_students: Tambah Pelajar
   dashboard_navigation_manage_students: Mengurus Pelajar
   dashboard_navigation_lesson_plans_resources: Rancangan Pengajaran dan Sumber
+  dashboard_navigation_view_stats: Statistik
   dashboard_navigation_section: 'Seksyen: %{section_name}'
   dashboard_navigation_student: 'Pelajar: %{student_name}'
   dashboard_progress_not_completed: belum selesai
@@ -288,15 +345,19 @@ ms-MY:
     kecil supaya anda boleh menjejaki kemajuan mereka dan menguruskan akaun-akaun
     mereka.
   dashboard_sections_table_secret: Jenis log masuk
+  dashboard_sections_table_course: Kursus
   dashboard_sections_name: Nama seksyen
   dashboard_sections_switch_section: 'Tukar seksyen:'
+  dashboard_sections_close: Tutup
   dashboard_students_add_multiple: 'Taip atau salin nama pelajar anda, satu nama setiap
     baris:'
   dashboard_students_name: Nama
   dashboard_students_progress: Kemajuan
   dashboard_students_male: Lelaki
   dashboard_students_female: Perempuan
+  dashboard_students_secret_picture_title: Gambar rahsia
   dashboard_students_secret_picture: Gambar rahsia
+  dashboard_students_secret_word_title: Perkataan rahsia
   dashboard_students_secret_word: Perkataan rahsia
   dashboard_students_join_link: Beritahu kepada pelajar anda untuk buka akaun mereka
     sendiri dan sertai seksyen pada
@@ -305,15 +366,19 @@ ms-MY:
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
+  dashboard_course4: 'Kursus 4: '
   dashboard_pre-express: 'Kursus Ekspres Prapembaca:'
+  dashboard_overview: Gambaran Keseluruhan
   dashboard_sequence: Urutan
   dashboard_framework: Rangka kerja
   dashboard_standards: Piawaian
   dashboard_implementation_guide: Panduan pelaksanaan
   dashboard_glossary: Glosari
   dashboard_classroom_strategies: Strategi bilik darjah untuk guru-guru
+  dashboard_debugging: 'Penyahpepijatan:'
   dashboard_student_worksheet: lembaran kerja pelajar
   dashboard_teacher_worksheet: lembaran kerja guru
+  dashboard_curriculum_ecs: 'Meneroka Sains Komputer:'
   dashboard_grade_k: K
   dashboard_grade_other: Lain-lain
   dashboard_login_word: Perkataan
@@ -326,21 +391,40 @@ ms-MY:
   dashboard_student: pelajar
   dashboard_sections_sign_in_main: http://code.org dan klik "Daftar Masuk"
   dashboard_faq: Soalan yang kerap ditanya
+  learn_banner_desc: Jam Kod ialah pergerakan global yang menjangkau lebih daripada
+    100 juta pelajar di lebih daripada 180 negara. Sesiapa, di mana sahaja boleh menganjurkan
+    acara Jam Kod. Bantu kami memberikan peluang kepada setiap pelajar untuk mempelajari
+    sains komputer! Penganjur boleh mengikuti <a href='%{how_to_url}' target='_blank'>panduan
+    cara</a> kami untuk mengajar Jam Kod dan memberikan inspirasi kepada pelajar dengan
+    <a href='%{videos_url}' target='_blank'>video ini</a>.
   learn_more: Ketahui lebih lanjut
   learn_sign_up_button: Mendaftar
+  learn_are_you_educator: Adakah anda seorang pendidik? Ketahui <a href="http://hourofcode.com/resources/how-to">cara
+    untuk mengajar Jam Kod</a>
+  learn_how_to_hoc: Ikuti <a href="https://hourofcode.com/how-to">panduan cara kami</a>
+    untuk mengajar satu Jam Kod
   hoc2014_try_new_tutorials: Cuba tutorial 1 Jam Pengaturcaraan yang baru dari kami
+  hoc2014_try_frozen: Artis bersama Anna dan Elsa, daripada Frozen
   carousel_heading_international: Tutorial dalam bahasa anda
   educator_notes: Nota pendidik
   participants: peserta
   teachers_notes: Nota Guru
   previous: Sebelumnya
   next: Seterusnya
+  frozen_name: Kod dengan Anna dan Elsa
+  starwars_name: 'Star Wars: Membina Galaksi dengan Kod'
+  codeorg_name: Pagar Sesat Klasik
+  codeintl_name: Pagar Sesat Klasik
   flappy_name: Buat permainan Flappy
   bitsbox_name: Bitsbox - buat permainan
   blockly_name: Blockly
+  hourofcode_name: Pagar Sesat Klasik
+  infinity_name: Makmal Mainan Infiniti
+  artist_name: Artis
   course1_name: Kursus 1
   course2_name: Kursus 2
   course3_name: Kursus 3
+  course4_name: Kursus 4
   coursea-draft_name: Kursus A
   coursea_name: Kursus A
   courseb-draft_name: Kursus B
@@ -376,13 +460,25 @@ ms-MY:
   coursed-2020_name: Kursus D (2020)
   coursee-2020_name: Kursus E (2020)
   coursef-2020_name: Kursus F (2020)
+  coursea-2021_name: Kursus A (2021)
+  courseb-2021_name: Kursus B (2021)
+  coursec-2021_name: Kursus C (2021)
+  coursed-2021_name: Kursus D (2021)
+  coursee-2021_name: Kursus E (2021)
+  coursef-2021_name: Kursus F (2021)
   pre-express-2018_name: Kursus Ekspres Prapembaca (2018)
   express-2019_name: Kursus Dipercepatkan (2019)
   pre-express-2019_name: Kursus Ekspres Prapembaca (2019)
+  express-2020_name: Kursus Dipercepatkan (2020)
   pre-express-2020_name: Kursus Ekspres Prapembaca (2020)
+  pre-express-2021_name: Kursus Ekspres Prapembaca (2021)
   accelerated_name: Kursus Dipercepatkan
   pre-express_name: Kursus Ekspres Prapembaca
   20-hour_name: Kursus Dipercepatkan
+  classicmaze_name: Pagar Sesat Klasik
+  hoc-encryption_name: Penyulitan Mudah
+  text-compression_name: Pemampatan Teks
+  basketball_name: Membuat permainan bola keranjang
   codeorg_gradelevel: Peringkat umur 4-104 tahun
   codeintl_gradelevel: Peringkat umur 4-104 tahun
   khan_gradelevel: Sekolah Menengah +
@@ -420,20 +516,73 @@ ms-MY:
   kodableunplugged_gradelevel: Umur 8-13 tahun
   projguts_gradelevel: Umur 10-13 tahun
   hourofcode_gradelevel: Peringkat umur 4-104 tahun
-  frozen_gradelevel: Umur 8 keatas
+  frozen_gradelevel: Umur 8 tahun dan ke atas
   starwars_gradelevel: Peringkat umur 4-104 tahun
   playlab_gradelevel: Peringkat umur 4-104 tahun
   infinity_gradelevel: Peringkat umur 4-104 tahun
-  artist_gradelevel: Umur 8 keatas
+  artist_gradelevel: Umur 8 tahun dan ke atas
   monstercoding_gradelevel: Umur 5-13 tahun
+  allcancode_gradelevel: Umur 5-10 tahun
+  csfirst_gradelevel: Peringkat umur 9-14 tahun
   boxisland_gradelevel: Sekolah Rendah
+  codesters_gradelevel: Umur 12-14 tahun
+  texasinstruments_gradelevel: Umur 13-16 tahun
+  teacherled_gradelevel: Umur 5 keatas
+  course1_gradelevel: Peringkat umur 4-6 tahun
+  course2_gradelevel: Peringkat umur 6-18 tahun
+  course3_gradelevel: Umur 8-18 tahun
+  course4_gradelevel: Umur 10-18 tahun
+  coursea_gradelevel: Peringkat umur 4-7 tahun
+  courseb_gradelevel: Umur 5-8 tahun
+  coursec_gradelevel: Umur 6-10 tahun
+  coursed_gradelevel: Peringkat umur 7-11 tahun
   coursee_gradelevel: Umur 8-12 tahun
+  coursef_gradelevel: Umur 9-13 tahun
+  coursea-2017_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2017_gradelevel: Umur 5-8 tahun
+  coursec-2017_gradelevel: Umur 6-10 tahun
+  coursed-2017_gradelevel: Peringkat umur 7-11 tahun
   coursee-2017_gradelevel: Umur 8-12 tahun
+  coursef-2017_gradelevel: Umur 9-13 tahun
+  coursea-2018_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2018_gradelevel: Umur 5-8 tahun
+  coursec-2018_gradelevel: Umur 6-10 tahun
+  coursed-2018_gradelevel: Peringkat umur 7-11 tahun
   coursee-2018_gradelevel: Umur 8-12 tahun
+  coursef-2018_gradelevel: Umur 9-13 tahun
+  coursea-2019_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2019_gradelevel: Umur 5-8 tahun
+  coursec-2019_gradelevel: Umur 6-10 tahun
+  coursed-2019_gradelevel: Peringkat umur 7-11 tahun
   coursee-2019_gradelevel: Umur 8-12 tahun
+  coursef-2019_gradelevel: Umur 9-13 tahun
+  coursea-2020_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2020_gradelevel: Umur 5-8 tahun
+  coursec-2020_gradelevel: Umur 6-10 tahun
+  coursed-2020_gradelevel: Peringkat umur 7-11 tahun
   coursee-2020_gradelevel: Umur 8-12 tahun
+  coursef-2020_gradelevel: Umur 9-13 tahun
+  coursea-2021_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2021_gradelevel: Umur 5-8 tahun
+  coursec-2021_gradelevel: Umur 6-10 tahun
+  coursed-2021_gradelevel: Peringkat umur 7-11 tahun
+  coursee-2021_gradelevel: Umur 8-12 tahun
+  coursef-2021_gradelevel: Umur 9-13 tahun
+  accelerated_gradelevel: Umur 10-18 tahun
+  thinkersmithspanish_platformtext: Nirplag
+  thinkersmith_platformtext: Nirplag
+  condcards_platformtext: Nirplag
+  thinkersmith2_platformtext: Nirplag
+  kodableunplugged_platformtext: Nirplag
+  projguts_platformtext: Nirplag
   frozen_shortdescription: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa
     mereka meneroka keajaiban dan kecantikan ais.
+  starwars_shortdescription: Pelajari mengatur cara droid dan cipta permainan Star
+    Wars anda sendiri di galaksi yang amat jauh.
+  playlab_shortdescription: Cipta cerita atau buat permainan dengan Makmal Mainan!
+  infinity_shortdescription: Gunakan Makmal Mainan untuk mencipta cerita atau permainan
+    yang dibintangi oleh watak Disney Infinity.
+  artist_shortdescription: Lukis gambar and reka bentuk menarik dengan Artis!
   coursea_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
   courseb_shortdescription_congrats: Pengenalan kepada sains komputer untuk prapembaca.
     (Serupa dengan Kursus A, tetapi lebih banyak kepelbagaian untuk pelajar yang lebih
@@ -508,6 +657,38 @@ ms-MY:
     dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam
     bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh
     anda kongsikan dengan rakan dan keluarga.
+  coursea-2021_shortdescription_congrats: Pelajari asas sains komputer dan keselamatan
+    internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
+    anda kongsikan.
+  courseb-2021_shortdescription_congrats: Pelajari asas sains komputer dan keselamatan
+    internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
+    anda kongsikan.
+  coursec-2021_shortdescription_congrats: Cipta atur cara dengan penjujukan, gelung
+    dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian
+    masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada
+    akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+  coursed-2021_shortdescription_congrats: Pelajar membangunkan pemahaman mereka mengenai
+    gelung, bersyarat dan peristiwa. Di luar pengekodan, pelajar mempelajari tentang
+    kewarganegaraan digital.
+  coursee-2021_shortdescription_congrats: Mulakan pengekodan dengan algoritma, gelung,
+    bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian
+    kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan
+    dengan rakan dan keluarga anda.
+  coursef-2021_shortdescription_congrats: Pelajari menggunakan pelbagai jenis gelung,
+    peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza
+    dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam
+    bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh
+    anda kongsikan dengan rakan dan keluarga.
+  hourofcode_longdescription: Menulis atur cara komputer yang pertama
+  frozen_longdescription: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa
+    mereka meneroka keajaiban dan kecantikan ais. Anda akan mencipta emping salji
+    dan corak apabila anda meluncur ais dan membuat alam ajaib musim sejuk yang anda
+    boleh kongsikan dengan rakan anda nanti!
+  starwars_longdescription: Pelajari mengatur cara droid dan cipta permainan Star
+    Wars anda sendiri di galaksi yang amat jauh.
+  playlab_longdescription: Cipta cerita atau buat permainan dengan Makmal Mainan!
+    Buat haiwan, lanun, zombi, ninja dan banyak lagi watak yang bergerak, mengeluarkan
+    bunyi, mendapatkan mata dan malah melontarkan bola api!
   codeorg_beyond_gradelevel: Peringkat umur 4-104 tahun
   khan_beyond_gradelevel: Sekolah Menengah +
   tynker_beyond_gradelevel: Umur 5-13 tahun
@@ -527,7 +708,10 @@ ms-MY:
   codehs_beyond_gradelevel: Sekolah Menengah
   kodu_beyond_gradelevel: Umur 8 keatas
   cargobot_beyond_gradelevel: Umur 8 keatas
+  kidsruby_beyond_gradelevel: Umur 12 keatas
+  w3schools_beyond_gradelevel: Umur 12 keatas
   codeavengers_beyond_gradelevel: Sekolah Menengah +
+  mozilla_beyond_gradelevel: Umur 12 keatas
   codecombat_beyond_gradelevel: Sekolah Menengah +
   lego_beyond_gradelevel: Sekolah Menengah +
   finch_beyond_gradelevel: Umur 8 keatas
@@ -539,50 +723,255 @@ ms-MY:
   header_course_catalog: Katalog Kursus
   header_project_gallery: Projek
   header_educate_hoc: Hour of Code
+  header_stats: Statistik
   header_about: Tentang
   header_help_support: 'Bantuan dan sokongan '
   header_report_bug: Laporkan masalah
   header_legal_privacy: Dasar Privasi
   header_legal_tos: Terma Perkhidmatan
+  header_tutorials: Tutorial
+  header_documentation: Dokumentasi
   user_header_label: Hi %{username}
   user_header_settings: Akaun saya
   user_header_logout: Daftar keluar
   user_header_signin: Log masuk
   user_header_create: 'Cipta '
+  user_header_artist: 'Artis '
   user_header_dance: Majlis Tari-Menari
   user_header_flappy: Flappy
+  applab_tile_subtitle: Cipta aplikasi anda sendiri dalam JavaScript dengan menggunakan
+    pengaturcaraan berasaskan blok. Atau tingkatkan kemahiran anda kepada tahap seterusnya
+    dengan menggunakan pengaturcaraan berasaskan teks. (Bahasa Inggeris Sahaja)
   applab_tile_start_tutorial: Mula
+  applab_tile_teacher_guide: Lihat panduan guru
+  account_sign_up_email_opt_in: Bolehkah kami menghantar e-mel kepada anda mengenai
+    kemas kini kursus, peluang tempatan, atau berita sains komputer yang lain? (kira-kira
+    sekali sebulan)
+  account_sign_up_child_accept_terms: Saya mengesahkan bahawa saya mempunyai kebenaran
+    ibu bapa atau penjaga yang sah untuk menggunakan perkhidmatan Code.org.
   hoc_overview_dance_title: Majlis Tari-Menari
   hoc_overview_dance_subtitle: Kod Majlis Tari-Menari untuk berkongsi dengan rakan
-    anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan
+    anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara dan
     25 lagi!
   hoc_overview_dance_2019_subtitle: Kod Majlis Tari-Menari untuk berkongsi dengan
     rakan anda. Menampilkan Katy Perry, Shawn Mendes, Panic! Di Disko, Lil Nas X,
     Jonas Brothers, Nicki Minaj, dan 34 lagi!
+  hoc_overview_title: Aktiviti Jam Kod daripada Code.org
+  hoc_overview_subtitle_markdown: "[Hour of Code] (https://hourofcode.com) ialah pergerakan
+    global yang menjangkau puluhan juta pelajar di 180+ negara. Sesiapa, walaupun
+    di mana sahaja mereka berada boleh menganjurkan acara Jam Kod ini atau mencuba
+    mana-mana lebih daripada 500+ tutorial satu jam, yang tersedia dalam lebih daripada
+    45 bahasa."
+  hoc_overview_partner_activities_title: Lebih banyak aktiviti daripada rakan kongsi
+  hoc_overview_partner_activities_body: Laman web Jam Kod mempunyai lebih daripada
+    500 aktiviti sains komputer untuk semua peringkat umur dan pengalaman yang dibangunkan
+    oleh Code.org dan rakan kongsi.
+  hoc_overview_partner_activities_link: Lihat Aktiviti
   hoc_overview_start_tutorial: Mula
+  hoc_overview_more_resources: Untuk lebih banyak sumber mengenai cara berinteraksi
+    dengan kelas terpencil anda, lihat panduan kami untuk menganjurkan [virtual Hour
+    of Code](https://hourofcode.com/us/how-to/virtual). Untuk pelajar dengan teknologi
+    terhad atau tiada teknologi atau ketersambungan, sila kongsikan paket [unplugged
+    Hour of Code activities](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    ini.
+  hoc_overview_view_teacher_guide: Lihat panduan guru
   hoc2018_creativity_create: Buat
   hoc2018_creativity_courses_link: Pergi lebih jauh dengan <a href="https://studio.code.org/courses">kursus
     Code.org</a>
+  hoc2018_mc_page_title: Tutorial Jam Kod Minecraft
+  hoc2018_mc_aquatic_description: Minecraft kembali untuk Jam Kod dengan aktiviti
+    baharu! Perjalanan merentasi Minecraft dengan kod.
+  hoc2018_mc_hero_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu!
+    Perjalanan merentasi Minecraft dengan kod.
   hoc2018_mc_start: Mula
+  hoc2018_mc_no_internet: Tidak mempunyai Internet?
+  hoc2018_mc_download_adventurer: Muat turun versi Pengembara Minecraft luar talian.
+  hoc2018_mc_educators_box3_title: Menghadiri bengkel pelajar secara percuma
+  hoc2018_mc_educators_box3_desc: Kunjungi Kedai Microsoft di kawasan anda untuk bengkel
+    Jam Kod percuma. Dibuka kepada peserta daripada semua peringkat kemahiran, yang
+    berumur enam tahun dan ke atas.
+  hoc2018_mc_educators_box3_button: Cari bengkel
+  hoc2018_mc_educators_box4_title: Akses lebih banyak sumber sains komputer
+  hoc2018_mc_educators_box4_button: Terokai sumber
+  hoc2018_mc_watch_videos: Sebelum anda memulakan, sila tonton satu daripada video
+    yang memberikan inspirasi ini
+  hoc2018_mc_videos_more: Lebih banyak video yang memberikan inspirasi <a href='%{inspiring_videos_playlist}'></a>
+    menampilkan model peranan dan selebriti
+  hoc2018_mc_video_1min: 1 minit
+  hoc2018_mc_video_2min: 2 minit
+  hoc2018_mc_video_5min: 5 minit
+  hoc2018_mc_video_title_steph_curry: Jam Kod bersama Steph Curry
+  hoc2018_mc_video_title_sports: Berikan galakan kepada diri anda. Sesiapa sahaja
+    boleh belajar.
+  hoc2018_mc_video_title_cs_is_everything: Sains Komputer Mengubah Segalanya
+  hoc2018_mc_video_title_inspire_girl: Memberikan inspirasi kepada anak gadis muda
+  hoc2018_mc_video_title_cs_intro: Pengenalan Sains Komputer
+  hoc2018_mc_video_title_schools_dont_teach: Perkara yang Tidak Diajar Di Kebanyakan
+    Sekolah
+  hoc2018_mc_video_title_obama: Pendapat Presiden Obama tentang sains komputer
+  hoc2018_mc_video_title_hoc_is_here: Jam Kod Ada di Sini - Sesiapa Sahaja Boleh Belajar
+  hoc2018_mc_video_title_anybody_can_learn: Sesiapa Sahaja Boleh Belajar
+  hoc2018_mc_video_title_my_name_is_aracely: Nama Saya ialah Aracely
   hoc2018_mc_homepage_try_it: Selamat mencuba
+  hoc2018_mc_back_journey: Minecraft kembali untuk Jam Kod dengan aktiviti baharu!
+    Perjalanan merentasi Minecraft dengan kod.
+  hoc2018_mc_teacher_guide: Lihat panduan guru
+  hoc2018_mc_short_description_shorter: Gunakan kreativiti dan kemahiran menyelesaikan
+    masalah anda untuk meneroka dan membina dunia di bawah permukaan air dengan kod.
   hoc2018_dance_party_main_heading: Majlis Tari-Menari
+  hoc2018_dance_party_subheading: Bantu menterjemahkan Majlis Tari-Menari
   hoc2018_dance_party_box_title: Majlis Tari-Menari
+  hoc2018_dance_party_box_description: Kod Majlis Tari-Menari untuk berkongsi dengan
+    rakan anda!
   hoc2018_dance_party_button: Mula
-  hoc2018_dance_teacher_resources_tile2_button: Cabut aktiviti
+  hoc2018_dance_keep_on_dancing_box_title: Teruskan Menari
+  hoc2018_dance_keep_on_dancing_description: Melampaui jam pertama dengan idea projek
+    lanjutan.
+  hoc2018_dance_keep_on_dancing_specs: Bahasa | Format | Umur 13+
+  hoc2018_dance_keep_on_dancing_button: Mulakan Bahagian 2
+  hoc2018_dance_teacher_resources_title: Sumber Guru
+  hoc2018_dance_teacher_resources_tile1_description: Rancangan pelajaran, sijil dan
+    penapisan muzik.
+  hoc2018_dance_teacher_resources_tile1_button: Rancangan Pelajaran
+  hoc2018_dance_teacher_resources_tile2_title: Nirplag Majlis Tari-Menari
+  hoc2018_dance_teacher_resources_tile2_description: Komputer tidak diperlukan! Pelajari
+    konsep pengekodan untuk mereka tari majlis tari-menari bersama-sama.
+  hoc2018_dance_teacher_resources_tile2_button: Aktiviti Nirplag
+  hoc2018_dance_featured_student_creations_title: Menampilkan Penciptaan Pelajar
+  hoc2018_dance_videos_section_heading: Terinspirasi
+  hoc2018_dance_video_title_what_is_creativity: Apakah Kreativiti?
+  hoc2018_dance_view_creativity_video_playlist: Apakah Kreativiti? Tonton Siri Penuh
+    (5 minit)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: Bekerjasama dengan
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Jurutera Masa
+    Depan Amazon* ialah atur cara daripada peringkat kanak-kanak sehingga berkerjaya
+    yang menyeluruh untuk memberikan inspirasi, mendidik dan melatih kanak-kanak dan
+    orang muda lain yang berpendapatan rendah dan kurang bernasib baik merealisasikan
+    kerjaya mereka dalam sains komputer. <a href='%{amazon_future_engineer_link}'
+    target='_blank'>Ketahui lebih lanjut</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Jurutera
+    Masa Depan Amazon* ialah atur cara daripada peringkat kanak-kanak sehingga berkerjaya
+    yang menyeluruh untuk memberikan inspirasi, mendidik dan melatih kanak-kanak dan
+    orang muda lain yang berpendapatan rendah dan kurang bernasib baik merealisasikan
+    kerjaya mereka dalam sains komputer. [Learn more](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ketahui lebih
+    lanjut tentang Jurutera Masa Depan Amazon
+  hoc2018_dance_amazon_about_future_engineer_description: Ketahui tentang program
+    daripada tadika sehingga berkerjaya Amazon untuk meningkatkan akses kepada pendidikan
+    sains komputer. Dapatkan maklumat mengenai cara melibatkan diri dalam kem musim
+    panas, kelas CS sekolah menengah, biasiswa dan latihan praktikal kami.
   hoc2018_dance_amazon_about_future_engineer_button: Ketahui lebih lanjut
+  hoc2018_dance_amazon_future_engineer_footer: "* Artis yang muzik mereka digunakan
+    di dalam tutorial ini tidak menaja atau mengesahkan Amazon sebagai sebahagian
+    daripada penggunaan pelesenan muzik mereka kepada Code.org.\n"
   hoc2018_dance_measure: Corak Berirama
   hoc2018_dance_measure_colon: 'Corak Berirama:'
+  hoc2018_mc_with_microsoft: Bekerjasama dengan
   hoc2018_mc_thank_microsoft: "  Kami mengucapkan terima kasih kepada Microsoft kerana
     menyokong wawasan dan misi kami untuk memastikan setiap kanak-kanak mempunyai
     peluang mempelajari sains komputer dan kemahiran untuk berjaya pada abad ke-21.
     \ "
+  hoc2019_mc_mee_description1: 'Tutorial Jam Kod Minecraft baharu kini boleh didapati
+    di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac dan iPad. Pelajari asas
+    pengekodan dan terokai AI bersama pelajar anda!'
+  hoc2019_mc_more_coding_resources: Lebih Banyak Sumber Pengekodan
+  hoc2019_dance_previous_versions: "Mencari versi Majlis Tari-Menari yang Terdahulu?
+    \ \nKlik di sini untuk memulakan [Part 1](%{dance_2018_link}) dan [Part 2](%{dance_extras_2018_link})
+    dari 2018."
+  hoc2020_mc_available_code_org: Tersedia di Dalam Code.org
+  hoc2020_mc_available_mee: 'Tersedia di dalam Minecraft: Edisi Pendidikan'
+  hoc2020_mc_mee_description: 'Tutorial Jam Kod Minecraft baharu kini boleh didapati
+    di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad.
+    Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman bersama pelajar
+    anda! Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains
+    komputer, pelajaran kesaksamaan dan latihan para guru.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Mengembara kembali ke masa lalu dan belajar mengekod!
+    Tutorial Jam Kod Minecraft baharu kini tersedia dalam Minecraft: Edisi Pendidikan
+    untuk Windows, Mac, Chromebook dan iPad. Mulakan dengan sumber pendidik, latihan
+    dan video percuma.'
+  hoc2021_mc_mee_villages_title: Kisah Dua Kampung
+  hoc2021_mc_mee_villages_description: 'Pelajari asas pengekodan dan terokai kepelbagaian
+    dan perangkuman dengan pelajar anda dalam Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_ai_title: AI untuk Kebaikan
+  hoc2021_mc_mee_ai_description: 'Terokai AI dengan pelajar anda dan belajar mengekod
+    dalam Minecraft: Edisi Pendidikan.'
   footer_privacy_policy: Dasar Privasi
   footer_about: Tentang
   footer_donate: Derma
   footer_support: Bantuan dan Komuniti
   footer_terms: Terma
+  ai_for_oceans: Kecerdasan Buatan (AI) untuk Lautan
+  ai_for_oceans_lesson_plan: rancangan pelajaran
+  ai_for_oceans_tile_description: Bantu Kecerdasan Buatan (A.I.) membersihkan lautan
+    dengan melatihnya mengesan sampah! Ketahui tentang data dan kepincangan latihan,
+    serta cara AI boleh mengatasi masalah dunia. Lihat
+  how_ai_works: Cara AI Berfungsi
+  how_ai_works_tile_description: Ketahui tentang cara AI berfungsi dan sebab ia penting
+    dengan menonton siri video pendek ini. Video ini menampilkan Ketua Pegawai Eksekutif
+    Microsoft, Satya Nadella dan pelbagai pakar bidang.
+  watch_the_videos: Sila tonton video tersebut
+  ai_and_ethics: AI dan Etika
+  ai_and_ethics_tile_description: Pelajar merenung implikasi etika AI, kemudian berusaha
+    bersama mencipta sumber “Kod Etika AI” untuk pencipta dan penggubal undang-undang
+    AI di mana-mana sahaja.
+  view_lesson_plan: Lihat rancangan pelajaran
+  ai_in_partnership_with: Bekerjasama dengan
   ai_microsoft_thanks: "  Kami mengucapkan terima kasih kepada Microsoft kerana menyokong
     wawasan dan misi kami untuk memastikan setiap kanak-kanak mempunyai peluang mempelajari
     sains komputer dan kemahiran untuk berjaya pada abad ke-21.  "
+  ai_ethics_panel_header: Meneroka Etika perbincangan panel AI
+  ai_ethics_panel_description_1: Mengkaji lebih mendalam dengan beberapa pakar AI
+    kegemaran kami! Perbincangan panel ini menyentuh isu penting seperti kepincangan
+    algoritma dan masa depan kerja. Padankan dengan
+  ai_ethics_lesson_plan: rancangan pelajaran AI & Etika kami
+  ai_ethics_panel_description_2: untuk pengenalan hebat kepada etika kecerdasan buatan!
+  cs_for_good: 'CS untuk Kebaikan  '
+  cs_for_good_tile_description: Sumber bertujuan memberikan inspirasi kepada pelajar
+    untuk berfikir secara mendalam tentang peranan yang boleh dimainkan oleh sains
+    komputer dalam mewujudkan dunia yang lebih saksama dan mampan.
+  view_resources: Lihat Sumber
+  imagine_cup_junior: Bayangkan Piala Junior
+  imagine_cup_junior_tile_description: AI global untuk cabaran yang Baik ini memperkenalkan
+    pelajar kepada AI untuk inisiatif yang Baik Microsoft, memperkasakan mereka untuk
+    menyelesaikan masalah di dunia dengan kuasa AI.
   ai_activity: Aktiviti
   ai_description: Keterangan
+  ai_seeing_ai: Melihat AI
+  ai_seeing_ai_description: Aplikasi percuma yang menceritakan tentang dunia di sekeliling
+    anda dalam pelbagai bahasa.
+  ai_quick_draw: Cepat, Lukis!
+  ai_quick_draw_description: Bolehkah rangkaian neural belajar mengenali contengan?
+  ai_teachable_machine: Mesin Boleh Diajar
+  ai_teachable_machine_description: Melatih komputer mengenali imej, suara dan gaya
+    anda sendiri.
+  ai_google: Eksperimen AI dengan Google
+  ai_google_description: Mula meneroka pembelajaran mesin melalui gambar, lukisan,
+    bahasa, muzik dan lebih banyak lagi.
+  ai_zooniverse: Zooniverse - Syot Kilat Zebra Gunung
+  ai_zooniverse_description: Bantu melindungi Zebra Gunung Tanjung yang terancam dengan
+    mengenal pasti haiwan berbeza di dalam imej.
+  ai_audience: Hadirin
+  ai_minecraft_description: 'Akses sumber percuma termasuk rancangan pelajaran, video,
+    kurikulum sains komputer dan latihan para guru. (Memerlukan Minecraft: Edisi Pendidikan)'
+  ai_k_12_audience: K-12 (Pembacaan diperlukan)
+  ai_microsoft_workshop: Bengkel maya secara percuma daripada Microsoft
+  ai_microsoft_workshop_description: Cetuskan rasa ingin tahu dengan bengkel STEM
+    dan pengekodan percuma
+  ai_machine_learning_for_kids: Pembelajaran Mesin untuk Kanak-kanak
+  ai_machine_learning_for_kids_description: Latih model pembelajaran mesin dengan
+    teks, nombor, atau imej dan gunakannya untuk membuat permainan di dalam Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: Pembelajaran Mesin untuk Kanak-kanak'
+  ai_ecs: 'ECS: Kecerdasan Buatan (AI)'
+  ai_ecs_description: Unit kurikulum berselang-seli yang baharu untuk kurikulum Meneroka
+    Sains Komputer (ECS).
+  ai_elements: Elemen AI
+  ai_elements_description: Siri kursus dalam talian percuma yang dicipta oleh Reaktor
+    dan Universiti Helsinki.
+  ai_cognimates: Cognimates
+  ai_cognimates_description: Platform pendidikan AI untuk membina permainan, mengatur
+    cara robot dan latihan.
+  ai_try_activity: Cuba lakukan aktiviti
+  outbreak_tile_title: Wabak
+  outbreak_tile_subtitle: Virus telah menjangkiti Monster Town! Kodkan simulator wabak
+    dan buat ramalan tentang perkara yang akan berlaku kepada jiran Monster Town.

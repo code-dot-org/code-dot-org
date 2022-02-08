@@ -2,13 +2,17 @@
   "script": {
     "name": "events",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:35 UTC",
+    "serialized_at": "2021-11-22 19:55:34 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "events"
     }
@@ -89,23 +93,112 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a613bddc-d8c0-4904-858f-2a7e6f5be226",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a613bddc-d8c0-4904-858f-2a7e6f5be226",
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "events"
+      }
+    },
+    {
+      "key": "2ad4d234-7415-4d96-a615-38f17d236b32",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ad4d234-7415-4d96-a615-38f17d236b32",
+        "lesson.key": "Studio",
+        "lesson_group.key": "",
+        "script.name": "events"
+      }
+    },
+    {
+      "key": "deb7a5d8-03f7-4827-99c7-35253777c80d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "deb7a5d8-03f7-4827-99c7-35253777c80d",
+        "lesson.key": "Calc",
+        "lesson_group.key": "",
+        "script.name": "events"
+      }
+    },
+    {
+      "key": "9451b66f-6867-4a87-837c-db45a423921a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9451b66f-6867-4a87-837c-db45a423921a",
+        "lesson.key": "Eval",
+        "lesson_group.key": "",
+        "script.name": "events"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95",
+        "lesson_activity.key": "a613bddc-d8c0-4904-858f-2a7e6f5be226"
+      }
+    },
+    {
+      "key": "86d47c94-ba3d-4329-8467-c5bbb5f2f813",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "86d47c94-ba3d-4329-8467-c5bbb5f2f813",
+        "lesson_activity.key": "2ad4d234-7415-4d96-a615-38f17d236b32"
+      }
+    },
+    {
+      "key": "9882a2a7-85b8-4f9a-bd0b-e595e34f1ef0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9882a2a7-85b8-4f9a-bd0b-e595e34f1ef0",
+        "lesson_activity.key": "deb7a5d8-03f7-4827-99c7-35253777c80d"
+      }
+    },
+    {
+      "key": "c6ac7afb-c9c5-44fe-93e6-108a5818872a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c6ac7afb-c9c5-44fe-93e6-108a5818872a",
+        "lesson_activity.key": "9451b66f-6867-4a87-837c-db45a423921a"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -113,7 +206,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_1"
@@ -122,14 +216,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -137,7 +230,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_2"
@@ -146,14 +240,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -161,7 +254,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_3"
@@ -170,14 +264,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -185,7 +278,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_4"
@@ -194,14 +288,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -209,7 +302,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_5"
@@ -218,14 +312,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -233,7 +326,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_6"
@@ -242,14 +336,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -257,7 +350,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_7"
@@ -266,14 +360,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -281,7 +374,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_10"
@@ -290,14 +384,13 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -305,7 +398,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_11"
@@ -314,14 +408,13 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "bounce_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +422,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       },
       "level_keys": [
         "bounce_12"
@@ -338,14 +432,13 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:full_sandbox"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,7 +446,8 @@
         ],
         "lesson.key": "Studio",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "86d47c94-ba3d-4329-8467-c5bbb5f2f813"
       },
       "level_keys": [
         "blockly:Studio:full_sandbox"
@@ -362,14 +456,13 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Studio:full_sandbox_infinity"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +470,8 @@
         ],
         "lesson.key": "Studio",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "86d47c94-ba3d-4329-8467-c5bbb5f2f813"
       },
       "level_keys": [
         "blockly:Studio:full_sandbox_infinity"
@@ -386,14 +480,13 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Calc:example1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,7 +494,8 @@
         ],
         "lesson.key": "Calc",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "9882a2a7-85b8-4f9a-bd0b-e595e34f1ef0"
       },
       "level_keys": [
         "blockly:Calc:example1"
@@ -410,14 +504,13 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "blockly:Eval:eval1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,7 +518,8 @@
         ],
         "lesson.key": "Eval",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "c6ac7afb-c9c5-44fe-93e6-108a5818872a"
       },
       "level_keys": [
         "blockly:Eval:eval1"
@@ -441,7 +535,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -452,7 +547,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -463,7 +559,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -474,7 +571,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -485,7 +583,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -496,7 +595,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -507,7 +607,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -518,7 +619,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -529,7 +631,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -540,7 +643,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "326b9856-a00a-49c5-80b8-0dd9ada4eb95"
       }
     },
     {
@@ -551,7 +655,8 @@
         ],
         "lesson.key": "Studio",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "86d47c94-ba3d-4329-8467-c5bbb5f2f813"
       }
     },
     {
@@ -562,7 +667,8 @@
         ],
         "lesson.key": "Studio",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "86d47c94-ba3d-4329-8467-c5bbb5f2f813"
       }
     },
     {
@@ -573,7 +679,8 @@
         ],
         "lesson.key": "Calc",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "9882a2a7-85b8-4f9a-bd0b-e595e34f1ef0"
       }
     },
     {
@@ -584,7 +691,8 @@
         ],
         "lesson.key": "Eval",
         "lesson_group.key": "",
-        "script.name": "events"
+        "script.name": "events",
+        "activity_section.key": "c6ac7afb-c9c5-44fe-93e6-108a5818872a"
       }
     }
   ],

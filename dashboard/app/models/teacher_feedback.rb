@@ -35,12 +35,14 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
-  REVIEW_STATES = [
-    "keepWorking",
-    "completed"
-  ]
+  REVIEW_STATES = OpenStruct.new(
+    {
+      keepWorking: 'keepWorking',
+      completed: 'completed'
+    }
+).freeze
 
-  validates_inclusion_of :review_state, in: REVIEW_STATES, allow_nil: true
+  validates_inclusion_of :review_state, in: REVIEW_STATES.to_h.values, allow_nil: true
 
   # Finds the script level associated with this object, using script id and
   # level id.
@@ -48,43 +50,82 @@ class TeacherFeedback < ApplicationRecord
     script_level = level.script_levels.find {|sl| sl.script_id == script_id}
     return script_level if script_level
 
-    # This will be somewhat expensive, but will only be executed for feedbacks
-    # which were are associated with a Bubble Choice sublevel.
-    bubble_choice_levels = script.levels.where(type: 'BubbleChoice').all
-    parent_level = bubble_choice_levels.find {|bc| bc.sublevels.include?(level)}
+    # accomodate feedbacks associated with a Bubble Choice sublevel
+    script_level = BubbleChoice.
+      parent_levels(level.name).
+      map(&:script_levels).
+      flatten.
+      find {|sl| sl.script_id == script_id}
 
-    script_level = parent_level.script_levels.find {|sl| sl.script_id == script_id}
     raise "no script level found for teacher feedback #{id}" unless script_level
     script_level
   end
 
-  def self.get_student_level_feedback(student_id, level_id, teacher_id, script_id)
-    where(
-      student_id: student_id,
-      level_id: level_id,
-      teacher_id: teacher_id,
-      script_id: script_id
-    ).latest
+  def self.get_latest_feedback_given(student_id, level_id, teacher_id, script_id)
+    get_latest_feedbacks_given(student_id, level_id, script_id, teacher_id).first
   end
 
-  def self.get_all_feedback_for_section(student_ids, level_ids, teacher_id)
+  # returns the latest feedback from each teacher for the student on the level
+  def self.get_latest_feedbacks_received(student_id, level_id, script_id)
+    query = {
+      student_id: student_id,
+      level_id: level_id,
+      script_id: script_id
+    }.compact
+
+    where(query).
+      latest_per_teacher.
+      order(created_at: :desc)
+  end
+
+  # Returns the latest feedback for each student on every level in a script given by the teacher
+  # Get number of passed levels per user for the given set of user IDs
+  # @param [Array<Integer>|Integer] student_ids: (optional) one or a list of student_ids. If nil student_id is excluded from the query
+  # @param [Array<Integer>|Integer] level_ids: (optional) one or a list of level_ids. If nil level_id is excluded from the query
+  # @param [Integer] script_id: (optional) if nil, script_id will be excluded from the query
+  # @param [Integer] teacher_id: (optional) if nil, teacher_id will be excluded from the query
+  # @return [Array<TeacherFeedback>] Array of TeacherFeedbacks
+  def self.get_latest_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
+    query = {
+      student_id: student_ids,
+      level_id: level_ids,
+      script_id: script_id,
+      teacher_id: teacher_id
+    }.compact
+
     find(
       where(
-        student_id: student_ids,
-        level_id: level_ids,
-        teacher_id: teacher_id
+        query
       ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
     )
   end
 
   def self.latest_per_teacher
-    #Only select feedback from teachers who lead sections in which the student is still enrolled
-    find(
-      joins(:student_sections).
+    # Only select feedback from teachers who lead sections in which the student is still enrolled
+    # and get the latest feedback per teacher for each student on each level
+    where(id: joins(:student_sections).
         where('sections.user_id = teacher_id').
-        group([:teacher_id, :student_id]).
+        group([:teacher_id, :student_id, :level_id]).
         pluck('MAX(teacher_feedbacks.id)')
-    )
+  )
+  end
+
+  def self.has_feedback?(student_id)
+    where(
+      student_id: student_id
+    ).count > 0
+  end
+
+  def self.get_unseen_feedback_count(student_id)
+    all_unseen_feedbacks = where(
+      student_id: student_id,
+      seen_on_feedback_page_at: nil,
+      student_first_visited_at: nil
+    ).select do |feedback|
+      User.find(feedback.teacher_id).verified_instructor?
+    end
+
+    all_unseen_feedbacks.count
   end
 
   def self.latest
@@ -100,16 +141,10 @@ class TeacherFeedback < ApplicationRecord
     return student_last_visited_at if student_last_visited_at && student_last_visited_at > created_at
   end
 
-  def student_updated_since_feedback?
-    user_level.present? && user_level.updated_at > created_at
-  end
-
   # TODO: update to use camelcase
-  def summarize
+  def summarize(is_latest = false)
     {
       id: id,
-      teacher_name: teacher.name,
-      feedback_provider_id: teacher.id,
       student_id: student_id,
       script_id: script_id,
       level_id: level_id,
@@ -119,7 +154,51 @@ class TeacherFeedback < ApplicationRecord
       student_seen_feedback: student_seen_feedback,
       review_state: review_state,
       student_last_updated: user_level&.updated_at,
-      student_updated_since_feedback: student_updated_since_feedback?
+      seen_on_feedback_page_at: seen_on_feedback_page_at,
+      student_first_visited_at: student_first_visited_at,
+      is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
+    }
+  end
+
+  def summarize_for_csv(level, script_level, student, sublevel_index = nil)
+    rubric_performance_json_to_ruby = {
+      performanceLevel1: "rubric_performance_level_1",
+      performanceLevel2: "rubric_performance_level_2",
+      performanceLevel3: "rubric_performance_level_3",
+      performanceLevel4: "rubric_performance_level_4"
+    }
+
+    rubric_performance_headers = {
+      performanceLevel1: "Extensive Evidence",
+      performanceLevel2: "Convincing Evidence",
+      performanceLevel3: "Limited Evidence",
+      performanceLevel4: "No Evidence"
+    }
+
+    review_state_labels = {
+      keepWorking: "Needs more work",
+      completed: "Reviewed, completed",
+    }
+
+    review_state_label = awaiting_teacher_review?(true) ? "Waiting for review" : review_state_labels[review_state&.to_sym]
+    level_num = script_level.position.to_s
+
+    if sublevel_index
+      level_num += BubbleChoice::ALPHABET[sublevel_index]
+    end
+
+    {
+      studentName: student.name,
+      lessonNum: script_level.lesson.relative_position.to_s,
+      lessonName: script_level.lesson.localized_title,
+      levelNum: level_num,
+      keyConcept: (level.rubric_key_concept || ''),
+      performanceLevelDetails: (level.properties[rubric_performance_json_to_ruby[performance&.to_sym]] || ''),
+      performance: rubric_performance_headers[performance&.to_sym],
+      comment: comment,
+      timestamp: updated_at.localtime.strftime("%D at %r"),
+      reviewStateLabel: review_state_label || "Never reviewed",
+      studentSeenFeedback: student_seen_feedback&.localtime&.strftime("%D at %r"),
     }
   end
 
@@ -139,5 +218,22 @@ class TeacherFeedback < ApplicationRecord
 
     self.student_last_visited_at = now
     save
+  end
+
+  # When a teacher updates their feedback on a level, a new feedback record is created.
+  # Only the latest feedback from the teacher is considered up-to-date and displayed for the
+  # student on the level. We store other feedbacks to keep track of historical feedback given,
+  # which is displayed on the /feedback page. Only the up-to-date feedback (latest feedback record)
+  # can be awaiting review since it's the only relevant feedback to the student.
+  def awaiting_teacher_review?(is_latest = false)
+    return false unless is_latest
+
+    return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
+  end
+
+  private
+
+  def student_updated_since_feedback?
+    user_level.present? && user_level.updated_at > created_at
   end
 end

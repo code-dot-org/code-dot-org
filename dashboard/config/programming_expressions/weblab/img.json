@@ -1,5 +1,6 @@
 {
-  "func": "img",
+  "key": "img",
+  "name": "img",
   "category": "HTML Tags",
   "syntax": "<img >"
 }

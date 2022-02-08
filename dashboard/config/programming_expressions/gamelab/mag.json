@@ -1,13 +1,14 @@
 {
-  "func": "mag",
+  "key": "mag",
+  "name": "mag",
   "category": "Math",
-  "paletteParams": [
-    "a",
-    "b"
+  "palette_params": [
+    {
+      "name": "a"
+    },
+    {
+      "name": "b"
+    }
   ],
-  "params": [
-    "100",
-    "100"
-  ],
-  "type": "value"
+  "syntax": "mag(a, b)"
 }

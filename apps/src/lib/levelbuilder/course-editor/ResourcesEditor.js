@@ -84,9 +84,23 @@ export default class ResourcesEditor extends Component {
     if (useMigratedResources && !this.props.courseVersionId) {
       return (
         <strong>
-          Cannot add resources to migrated script without course version. A
-          script must belong to a course or have 'Is a Standalone Course'
-          checked to have a course version.
+          Cannot add resources to migrated unit without course version. A unit
+          must belong to a course or have 'Is a Standalone Unit' checked to have
+          a course version.
+        </strong>
+      );
+    }
+
+    // In order to migrate teacher resources for translated units, we must have
+    // both migrated and unmigrated teacher resources so that we can serve the
+    // unmigrated resources while we translate the migrated ones. During this
+    // time, there's no practical way to allow editing, so instead just disable
+    // editing of teacher resources during this time.
+    if (this.props.resources?.length && this.props.migratedResources?.length) {
+      return (
+        <strong>
+          Cannot edit resources because they are being translated. If you need
+          to make an urgent edit, please ask an engineer.
         </strong>
       );
     }

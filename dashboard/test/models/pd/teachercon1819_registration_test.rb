@@ -50,11 +50,11 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
 
   test 'waitlisting or declining the registration will also update the application status' do
     {
-      accepted: 'accepted',
+      accepted: 'accepted_not_notified',
       waitlisted: 'waitlisted',
       declined: 'withdrawn'
     }.each do |registration_status, expected_application_status|
-      application = create(:pd_teacher1819_application, :locked)
+      application = create(:pd_teacher_application, :locked)
 
       create(:pd_teachercon1819_registration, pd_application: application, hash_trait: registration_status)
       assert_equal expected_application_status, application.reload.status

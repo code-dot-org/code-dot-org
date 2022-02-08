@@ -1,6 +1,6 @@
 {
-  "func": "allSprites",
+  "key": "allSprites",
+  "name": "allSprites",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "allSprites"
 }

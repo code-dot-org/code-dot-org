@@ -1,42 +1,28 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
-import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
-import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
-import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
-import {getHiddenLessons, initializeHiddenScripts} from './hiddenLessonRedux';
+import {getHiddenLessons} from './hiddenLessonRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   overwriteResults,
   setScriptProgress,
   disablePostMilestone,
-  setIsHocScript,
   setIsAge13Required,
-  setStudentDefaultsSummaryView,
   setLessonExtrasEnabled,
   queryUserProgress as reduxQueryUserProgress,
   useDbProgress
 } from './progressRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {
-  selectSection,
-  setSections,
-  setPageType,
-  pageTypes
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import googlePlatformApi, {
-  loadGooglePlatformApi
-} from '@cdo/apps/templates/progress/googlePlatformApiRedux';
-import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
 
@@ -102,7 +88,7 @@ progress.generateLessonProgress = function(
 ) {
   const store = getStore();
 
-  const {name, disablePostMilestone, isHocScript, age_13_required} = scriptData;
+  const {name, disablePostMilestone, age_13_required} = scriptData;
 
   initializeStoreWithProgress(
     store,
@@ -120,8 +106,6 @@ progress.generateLessonProgress = function(
     isLessonExtras,
     currentPageNumber
   );
-
-  store.dispatch(setIsHocScript(isHocScript));
 
   if (lessonExtrasEnabled) {
     store.dispatch(setLessonExtrasEnabled(true));
@@ -145,14 +129,14 @@ function populateProgress(store, signedIn, progressData, scriptName) {
     if (data.usingDbProgress) {
       store.dispatch(useDbProgress());
       clientState.clearProgress();
-      store.dispatch(setScriptProgress(data.scriptProgress));
+      store.dispatch(setScriptProgress(data.unitProgress));
     }
 
     if (data.levelResults) {
       store.dispatch(overwriteResults(data.levelResults));
     }
 
-    if (data.isVerifiedTeacher) {
+    if (data.isVerifiedInstructor) {
       store.dispatch(setVerified());
     }
 
@@ -185,7 +169,7 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       return Promise.resolve({
         usingDbProgress: true,
         levelResults: extractLevelResults(progressData),
-        scriptProgress: progressData.progress
+        unitProgress: progressData.progress
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
@@ -197,13 +181,16 @@ function getLevelProgress(signedIn, progressData, scriptName) {
     case null:
       // We do not know if user is signed in or not, send a request to the server
       // to find out if the user is signed in and retrieve progress information
-      return $.ajax(`/api/user_progress/${scriptName}`)
+      return $.ajax({
+        url: `/api/user_progress/${scriptName}`,
+        data: {user_id: clientState.queryParams('user_id')}
+      })
         .then(data => {
           if (data.signedIn) {
             return {
               usingDbProgress: true,
               levelResults: extractLevelResults(data),
-              scriptProgress: data.progress
+              unitProgress: data.progress
             };
           } else {
             return {
@@ -240,96 +227,42 @@ function extractLevelResults(userProgressResponse) {
  * @param {object[]} scriptData.lessons
  * @param {string} scriptData.name
  * @param {boolean} scriptData.hideable_lessons
- * @param {boolean} scriptData.isHocScript
  * @param {boolean} scriptData.age_13_required
- * Render our progress on the course overview page.
+ * Fetch and store progress for the course overview page.
  */
-progress.renderCourseProgress = function(scriptData) {
+progress.initCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
-  initializeStoreWithSections(store, scriptData);
-  if (scriptData.user_type === 'teacher') {
-    initializeGooglePlatformApi(store);
-  }
-
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-  progress.initViewAs(store, scriptData);
   queryUserProgress(store, scriptData, null);
-
-  const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({
-      type,
-      link
-    })
-  );
-
-  store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
-
-  store.dispatch(setPageType(pageTypes.scriptOverview));
-
-  const mountPoint = document.createElement('div');
-  $('.user-stats-block').prepend(mountPoint);
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <ScriptOverview
-        id={scriptData.id}
-        courseId={scriptData.course_id}
-        onOverviewPage={true}
-        excludeCsfColumnInLegend={!scriptData.csf}
-        teacherResources={teacherResources}
-        migratedTeacherResources={scriptData.migrated_teacher_resources}
-        studentResources={scriptData.student_resources || []}
-        showCourseUnitVersionWarning={
-          scriptData.show_course_unit_version_warning
-        }
-        showScriptVersionWarning={scriptData.show_script_version_warning}
-        showRedirectWarning={scriptData.show_redirect_warning}
-        redirectScriptUrl={scriptData.redirect_script_url}
-        versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
-        courseName={scriptData.course_name}
-        showAssignButton={scriptData.show_assign_button}
-        userId={scriptData.user_id}
-        assignedSectionId={scriptData.assigned_section_id}
-        showCalendar={scriptData.showCalendar}
-        weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
-        unitCalendarLessons={scriptData.calendarLessons}
-        isMigrated={scriptData.is_migrated}
-        scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
-        scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-      />
-    </Provider>,
-    mountPoint
-  );
 };
 
-progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
-  const store = getStore();
-  $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
-    initializeStoreWithProgress(store, scriptData, currentLevelId, true);
-    queryUserProgress(store, scriptData, currentLevelId);
-  });
-};
-
-/* Set our initial view type (Student or Teacher) from current user's user_type
+/* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
-progress.initViewAs = function(store, scriptData) {
-  // Default to Student, unless current user is a teacher
-  let initialViewAs = ViewType.Student;
-  if (scriptData.user_type === 'teacher') {
-    initialViewAs = ViewType.Teacher;
+progress.initViewAs = function(store, userType) {
+  // Default to Participant, unless current user is a teacher
+  let initialViewAs = ViewType.Participant;
+  if (userType === 'teacher') {
+    //TODO(dmcavoy): Update to check instructor
+    initialViewAs = ViewType.Instructor;
   }
 
   // If current user is not a student (ie, a teacher or signed out), allow the
   // 'viewAs' query parameter to override;
-  if (scriptData.user_type !== 'student') {
+  if (userType !== 'student') {
+    //TODO(dmcavoy): Update to check participant
     const query = queryString.parse(location.search);
     initialViewAs = query.viewAs || initialViewAs;
   }
 
   store.dispatch(setViewType(initialViewAs));
+};
+
+progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
+  const store = getStore();
+  return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
+    initializeStoreWithProgress(store, scriptData, currentLevelId, true);
+    queryUserProgress(store, scriptData, currentLevelId);
+  });
 };
 
 /**
@@ -356,7 +289,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     const postMilestoneDisabled = store.getState().progress
       .postMilestoneDisabled;
-    if (data.signedIn && postMilestoneDisabled && !scriptData.isHocScript) {
+    if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
     }
 
@@ -364,17 +297,11 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isTeacher || data.teacherViewingStudent) &&
       !data.professionalLearningCourse
     ) {
-      const pageType = currentLevelId ? 'level' : 'script_overview';
-      queryLockStatus(store, scriptData.id, pageType);
-      renderTeacherPanel(
-        store,
-        scriptData.id,
-        scriptData.section,
-        scriptData.name,
-        null,
-        pageType,
-        onOverviewPage
-      );
+      const pageType = currentLevelId
+        ? pageTypes.level
+        : pageTypes.scriptOverview;
+
+      renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
     }
   });
 }
@@ -418,10 +345,9 @@ function initializeStoreWithProgress(
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
-      scriptTitle: scriptData.title,
-      scriptDescription: scriptData.description,
-      scriptStudentDescription: scriptData.studentDescription,
-      betaTitle: scriptData.beta_title,
+      unitTitle: scriptData.title,
+      unitDescription: scriptData.description,
+      unitStudentDescription: scriptData.studentDescription,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
@@ -439,35 +365,4 @@ function initializeStoreWithProgress(
   }
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
-}
-
-function initializeStoreWithSections(store, scriptData) {
-  const sections = scriptData.sections;
-  if (!sections) {
-    return;
-  }
-
-  const currentSection = scriptData.section;
-  if (!currentSection) {
-    // If we don't have a selected section, simply set sections and we're done.
-    store.dispatch(setSections(sections));
-    return;
-  }
-
-  // If we do have a selected section, merge it with the minimal data in the
-  // `sections` array before storing in redux.
-  const idx = sections.findIndex(section => section.id === currentSection.id);
-  if (idx >= 0) {
-    sections[idx] = {
-      ...sections[idx],
-      ...currentSection
-    };
-  }
-  store.dispatch(setSections(sections));
-  store.dispatch(selectSection(currentSection.id.toString()));
-}
-
-function initializeGooglePlatformApi(store) {
-  registerReducers({googlePlatformApi});
-  store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
 }

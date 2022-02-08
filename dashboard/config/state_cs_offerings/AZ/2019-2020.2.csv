@@ -1,0 +1,518 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+San Simon School,,40743000631,AZ10152,Computer Programming,14,0,0,0,0,0,12,0,0
+Center for Academic Success #1 - Sierra Vista 9-12,,40146003524,AZ10014,PLTW Computer Science Applications,19,7,0,0,0,0,14,0,0
+Center for Academic Success #1 - Sierra Vista 9-12,,40146003524,AZ10013,PLTW Introduction to Computer Science,18,0,0,0,0,0,16,0,0
+Flagstaff High School,,40286000215,AZ10152,Computer Programming,30,5,0,0,0,0,14,0,0
+Coconino High School,,40286000212,AZ10157,AP Computer Science A,17,4,0,0,0,0,0,0,0
+Grand Canyon High School,,40355000291,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Northland Preparatory Academy,,40009701178,AZ10161,Computer Science Principles,13,2,0,0,0,0,0,0,0
+San Carlos High School,,40696001502,AZ10151,Software and App Design II,16,0,0,0,16,0,15,0,0
+Miami Junior Senior High School,,40503001077,AZ10906,Software and App Design I,13,0,0,0,0,0,0,0,0
+Liberty High School,,40009901182,AZ21009,Robotics,0,0,0,0,0,0,0,0,0
+Liberty High School,,40009901182,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Mesa High School,,40497000404,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Mesa High School,,40497000404,AZ10906,Software and App Design I,13,1,0,0,0,0,0,0,0
+Westwood High School,,40497000419,AZ10151,Software and App Design II,20,2,0,11,0,0,14,0,0
+Westwood High School,,40497000419,AZ10159,IB Computing Studies,0,0,0,0,0,0,0,0,0
+Westwood High School,,40497000419,AZ10906,Software and App Design I,14,0,0,0,0,0,13,0,0
+Mountain View High School,,40497000406,AZ10906,Software and App Design I,28,5,0,0,0,0,0,0,0
+Dobson High School,,40497001132,AZ10906,Software and App Design I,23,3,0,12,0,0,17,0,0
+Red Mountain High School,,40497001411,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Red Mountain High School,,40497001411,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Red Mountain High School,,40497001411,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Red Mountain High School,,40497001411,AZ10906,Software and App Design I,25,3,0,0,0,0,0,0,0
+Peoria High School,,40625000514,AZ10906,Software and App Design I,68,12,0,32,0,0,44,13,0
+Peoria High School,,40625000514,AZ10157,AP Computer Science A,18,3,0,0,0,0,0,0,0
+Peoria High School,,40625000514,AZ10205,Computer Gaming and Design,21,2,0,0,0,0,12,0,0
+Cactus High School,,40625000508,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Cactus High School,,40625000508,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Cactus High School,,40625000508,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Cactus High School,,40625000508,AZ10205,Computer Gaming and Design,11,0,0,0,0,0,0,0,0
+Cactus High School,,40625000508,AZ10906,Software and App Design I,68,7,0,15,0,0,35,0,0
+Ironwood High School,,40625001315,AZ10906,Software and App Design I,117,23,0,39,0,0,60,16,0
+Ironwood High School,,40625001315,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Ironwood High School,,40625001315,AZ10161,Computer Science Principles,15,1,0,0,0,0,0,0,0
+Ironwood High School,,40625001315,AZ10205,Computer Gaming and Design,27,4,0,0,0,0,11,0,0
+Ironwood High School,,40625001315,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Ironwood High School,,40625001315,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Ironwood High School,,40625001315,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Centennial High School,,40625001500,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Centennial High School,,40625001500,AZ10911,Software and App Design IV,13,0,0,0,0,0,0,0,0
+Centennial High School,,40625001500,AZ10157,AP Computer Science A,20,4,0,0,0,0,0,0,0
+Centennial High School,,40625001500,AZ10161,Computer Science Principles,26,2,0,0,0,0,13,0,0
+Centennial High School,,40625001500,AZ10205,Computer Gaming and Design,34,3,0,11,0,0,17,0,0
+Centennial High School,,40625001500,AZ10906,Software and App Design I,111,16,0,39,0,0,42,11,0
+Sunrise Mountain High School,,40625000589,AZ10906,Software and App Design I,92,11,0,0,0,0,25,11,0
+Sunrise Mountain High School,,40625000589,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Sunrise Mountain High School,,40625000589,AZ10205,Computer Gaming and Design,22,0,0,0,0,0,0,0,0
+Sunrise Mountain High School,,40625000589,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Sunrise Mountain High School,,40625000589,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Gilbert High School,,40340000258,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Gilbert High School,,40340000258,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Gilbert High School,,40340000258,AZ10205,Computer Gaming and Design,31,2,0,11,0,0,17,0,0
+Gilbert High School,,40340000258,AZ10906,Software and App Design I,29,8,0,0,0,0,12,0,0
+Highland High School,,40340000246,AZ10205,Computer Gaming and Design,79,2,0,12,0,0,28,16,0
+Highland High School,,40340000246,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Highland High School,,40340000246,AZ10157,AP Computer Science A,12,0,0,0,0,0,0,0,0
+Highland High School,,40340000246,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Highland High School,,40340000246,AZ10906,Software and App Design I,52,5,0,0,0,0,0,0,0
+Highland High School,,40340000246,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Highland High School,,40340000246,AZ21009,Robotics,32,6,0,0,0,0,0,0,0
+Arcadia High School,,40757000640,AZ21009,Robotics,23,3,0,0,0,0,0,0,0
+Arcadia High School,,40757000640,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Saguaro High School,,40757000659,AZ21009,Robotics,32,7,0,0,0,0,0,0,0
+Chaparral High School,,40757000641,AZ10157,AP Computer Science A,33,16,0,0,0,0,0,0,0
+Chaparral High School,,40757000641,AZ21009,Robotics,27,5,0,0,0,0,0,0,0
+Chaparral High School,,40757000641,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Chaparral High School,,40757000641,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Desert Mountain High School,,40757000604,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Desert Mountain High School,,40757000604,AZ10906,Software and App Design I,19,4,0,0,0,0,0,0,0
+Desert Mountain High School,,40757000604,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Desert Mountain High School,,40757000604,AZ10159,IB Computing Studies,13,0,0,0,0,0,0,0,0
+Desert Mountain High School,,40757000604,AZ21009,Robotics,25,10,0,0,0,0,0,0,0
+Paradise Valley High School,,40593001553,AZ10157,AP Computer Science A,36,4,0,0,0,0,0,0,0
+Paradise Valley High School,,40593001553,AZ10910,Software and App Design III,14,1,0,0,0,0,0,0,0
+Paradise Valley High School,,40593001553,AZ10911,Software and App Design IV,14,1,0,0,0,0,0,0,0
+Paradise Valley High School,,40593001553,AZ10151,Software and App Design II,28,4,0,0,0,0,0,0,0
+Paradise Valley High School,,40593001553,AZ10161,Computer Science Principles,50,11,0,0,0,0,0,0,0
+Paradise Valley High School,,40593001553,AZ10906,Software and App Design I,130,48,0,17,0,0,0,0,0
+Horizon High School,,40593001084,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+North Canyon High School,,40593000488,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Shadow Mountain High School,,40593000491,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Chandler High School,,40187000123,AZ10151,Software and App Design II,13,0,0,0,0,0,0,0,0
+Chandler High School,,40187000123,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Chandler High School,,40187000123,AZ10159,IB Computing Studies,0,0,0,0,0,0,0,0,0
+Chandler High School,,40187000123,AZ21009,Robotics,15,0,0,0,0,0,0,0,0
+Chandler High School,,40187000123,AZ10157,AP Computer Science A,15,0,0,0,0,0,0,0,0
+Chandler High School,,40187000123,AZ10161,Computer Science Principles,56,17,0,24,0,0,31,0,0
+Cactus Shadows High School,,40000101204,AZ10161,Computer Science Principles,69,10,0,0,0,0,0,0,0
+Cactus Shadows High School,,40000101204,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Queen Creek High School,,40681001383,AZ10013,PLTW Introduction to Computer Science,38,3,0,0,0,0,0,0,0
+Deer Valley High School,,40775001045,AZ10906,Software and App Design I,64,8,0,13,0,0,25,0,0
+Deer Valley High School,,40775001045,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Deer Valley High School,,40775001045,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Deer Valley High School,,40775001045,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Barry Goldwater High School,,40775001331,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Barry Goldwater High School,,40775001331,AZ10906,Software and App Design I,55,7,0,17,0,0,37,0,0
+Mountain Ridge High School,,40775000636,AZ10906,Software and App Design I,67,13,0,0,0,0,0,0,0
+Mountain Ridge High School,,40775000636,AZ10157,AP Computer Science A,25,5,0,0,0,0,0,0,0
+Mountain Ridge High School,,40775000636,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Mountain Ridge High School,,40775000636,AZ10161,Computer Science Principles,18,5,0,0,0,0,0,0,0
+Mountain Ridge High School,,40775000636,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Fountain Hills High School,,40304000038,AZ10161,Computer Science Principles,18,3,0,0,0,0,0,0,0
+Fountain Hills High School,,40304000038,AZ10199,Computer Programming-Other,17,1,0,0,0,0,0,0,0
+Buckeye Union High School,,40141000075,AZ10157,AP Computer Science A,14,0,0,0,0,0,11,0,0
+Buckeye Union High School,,40141000075,AZ10161,Computer Science Principles,29,4,0,16,0,0,19,0,0
+Glendale High School,,40345000278,AZ10906,Software and App Design I,121,23,0,91,0,0,87,0,0
+Sunnyslope High School,,40345000281,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Washington High School,,40345000283,AZ10906,Software and App Design I,97,19,12,47,0,0,76,0,0
+Cortez High School,,40345000277,AZ10906,Software and App Design I,42,7,0,22,0,0,13,0,0
+Moon Valley High School,,40345000280,AZ10906,Software and App Design I,123,26,20,58,0,0,83,18,0
+Thunderbird High School,,40345000282,AZ10906,Software and App Design I,90,9,0,26,0,0,41,13,0
+Greenway High School,,40345000279,AZ10906,Software and App Design I,66,14,0,18,0,0,33,0,0
+Independence High School,,40345000284,AZ10906,Software and App Design I,92,16,0,70,0,0,62,12,0
+Alhambra High School,,40633000538,AZ10162,Exploring Computer Science,89,16,0,68,0,0,89,0,0
+Alhambra High School,,40633000538,AZ10906,Software and App Design I,53,8,0,35,0,0,53,0,0
+Alhambra High School,,40633000538,AZ10151,Software and App Design II,20,4,0,13,0,0,20,0,0
+Trevor Browne High School,,40633000554,AZ10151,Software and App Design II,16,3,0,13,0,0,16,0,0
+Trevor Browne High School,,40633000554,AZ10162,Exploring Computer Science,75,22,0,64,0,0,75,14,11
+Trevor Browne High School,,40633000554,AZ10906,Software and App Design I,83,15,0,66,0,0,83,15,0
+Trevor Browne High School,,40633000554,AZ21009,Robotics,25,1,0,23,0,0,25,0,0
+Carl Hayden High School,,40633000541,AZ10162,Exploring Computer Science,197,73,0,182,0,0,197,49,23
+Carl Hayden High School,,40633000541,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Carl Hayden High School,,40633000541,AZ10161,Computer Science Principles,12,0,0,0,0,0,12,0,0
+Maryvale High School,,40633000549,AZ10161,Computer Science Principles,24,13,0,20,0,0,24,0,0
+Maryvale High School,,40633000549,AZ10162,Exploring Computer Science,32,7,0,28,0,0,32,0,0
+North High School,,40633001244,AZ21009,Robotics,14,0,0,11,0,0,14,0,0
+South Mountain High School,,40633000552,AZ10162,Exploring Computer Science,106,17,21,77,0,0,106,14,0
+South Mountain High School,,40633000552,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+South Mountain High School,,40633000552,AZ10906,Software and App Design I,26,6,0,22,0,0,26,0,0
+South Mountain High School,,40633000552,AZ21009,Robotics,60,6,0,47,0,0,60,0,0
+Corona Del Sol High School,,40834000790,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Corona Del Sol High School,,40834000790,AZ10906,Software and App Design I,12,0,0,0,0,0,0,0,0
+Mountain Pointe High School,,40834001567,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Desert Vista High School,,40834000680,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Desert Vista High School,,40834000680,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Tolleson Union High School,,40852000805,AZ10906,Software and App Design I,106,26,16,69,0,0,72,0,0
+Tolleson Union High School,,40852000805,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Tolleson Union High School,,40852000805,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Tolleson Union High School,,40852000805,AZ10151,Software and App Design II,38,4,0,24,0,0,28,0,0
+Westview High School,,40852001478,AZ10151,Software and App Design II,24,2,0,13,0,0,18,0,0
+Westview High School,,40852001478,AZ10906,Software and App Design I,71,7,0,45,0,0,40,0,0
+Agua Fria High School,,40045000001,AZ10161,Computer Science Principles,83,18,0,44,0,0,48,0,0
+Sequoia Choice School Arizona Distance Learning School,,40015701728,AZ10155,Java Programming,0,0,0,0,0,0,0,0,0
+Sequoia Choice School Arizona Distance Learning School,,40015701728,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Sequoia Choice School Arizona Distance Learning School,,40015701728,AZ10156,Computer Programming-Other Language,0,0,0,0,0,0,0,0,0
+Lake Havasu High School,,40428000433,AZ10906,Software and App Design I,28,2,0,0,0,0,14,0,0
+Lake Havasu High School,,40428000433,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Lake Havasu High School,,40428000433,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Lake Havasu High School,,40428000433,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Lake Havasu High School,,40428000433,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Mohave High School,,40008201457,AZ10151,Software and App Design II,17,6,0,0,0,0,12,0,0
+Mohave High School,,40008201457,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Mohave High School,,40008201457,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Mohave High School,,40008201457,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Mohave High School,,40008201457,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Mohave High School,,40008201457,AZ10906,Software and App Design I,56,11,0,30,0,0,38,0,0
+River Valley High School,,40008200006,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+River Valley High School,,40008200006,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Alchesay High School,,40916000005,AZ21009,Robotics,38,4,0,0,37,0,38,0,0
+Alchesay High School,,40916000005,AZ10199,Computer Programming-Other,21,14,0,0,21,0,21,0,0
+Blue Ridge High School,,40658000561,AZ10906,Software and App Design I,12,0,0,0,0,0,0,0,0
+Cholla High School,,40880001443,AZ10199,Computer Programming-Other,28,8,0,21,0,0,22,0,0
+Cholla High School,,40880001443,AZ10906,Software and App Design I,32,13,0,27,0,0,23,0,0
+Palo Verde High Magnet School,,40880001263,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Palo Verde High Magnet School,,40880001263,AZ10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Palo Verde High Magnet School,,40880001263,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Palo Verde High Magnet School,,40880001263,AZ10906,Software and App Design I,11,0,0,0,0,0,0,0,0
+Palo Verde High Magnet School,,40880001263,AZ10199,Computer Programming-Other,0,0,0,0,0,0,0,0,0
+Pueblo High School,,40880001445,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Sabino High School,,40880000827,AZ10199,Computer Programming-Other,0,0,0,0,0,0,0,0,0
+Sabino High School,,40880000827,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Sahuaro High School,,40880001447,AZ10906,Software and App Design I,22,4,0,0,0,0,14,0,0
+Sahuaro High School,,40880001447,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Sahuaro High School,,40880001447,AZ10199,Computer Programming-Other,12,0,0,0,0,0,0,0,0
+Santa Rita High School,,40880001448,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Santa Rita High School,,40880001448,AZ10199,Computer Programming-Other,0,0,0,0,0,0,0,0,0
+Santa Rita High School,,40880001448,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Tucson Magnet High School,,40880001268,AZ10906,Software and App Design I,30,8,0,24,0,0,13,0,0
+Tucson Magnet High School,,40880001268,AZ10199,Computer Programming-Other,28,8,0,22,0,0,13,0,0
+University High School,,40880001441,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Marana High School,,40463000370,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Marana High School,,40463000370,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Marana High School,,40463000370,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Marana High School,,40463000370,AZ10906,Software and App Design I,28,2,0,0,0,0,21,0,0
+Mountain View High School,,40497000406,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Mountain View High School,,40497000406,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Mountain View High School,,40497000406,AZ10906,Software and App Design I,28,5,0,0,0,0,0,0,0
+Mountain View High School,,40497000406,AZ10157,AP Computer Science A,21,6,0,11,0,0,11,0,0
+Flowing Wells High School,,40301000231,AZ10157,AP Computer Science A,20,9,0,0,0,0,14,0,0
+Canyon Del Oro High School,,40068000033,AZ10159,IB Computing Studies,0,0,0,0,0,0,0,0,0
+Canyon Del Oro High School,,40068000033,AZ10151,Software and App Design II,14,0,0,0,0,0,0,0,0
+Canyon Del Oro High School,,40068000033,AZ10157,AP Computer Science A,36,5,0,0,0,0,0,0,0
+Canyon Del Oro High School,,40068000033,AZ10161,Computer Science Principles,13,2,0,0,0,0,0,0,0
+Canyon Del Oro High School,,40068000033,AZ10906,Software and App Design I,50,11,0,16,0,0,0,0,0
+Desert View High School,,40817001438,AZ10906,Software and App Design I,41,9,0,31,0,0,29,0,0
+Desert View High School,,40817001438,AZ10151,Software and App Design II,12,1,0,0,0,0,0,0,0
+Desert View High School,,40817001438,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Sunnyside High School,,40817000743,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Sunnyside High School,,40817000743,AZ10151,Software and App Design II,17,2,0,17,0,0,12,0,0
+Sunnyside High School,,40817000743,AZ10906,Software and App Design I,57,11,0,50,0,0,51,0,0
+Catalina Foothills High School,,40176000011,AZ10906,Software and App Design I,92,21,0,21,0,0,16,0,0
+Accelerated Learning Laboratory,,40012901790,AZ10157,AP Computer Science A,19,0,0,12,0,0,0,0,0
+Ray JR/SR High School,,40685000576,AZ21009,Robotics,0,0,0,0,0,0,0,0,0
+Patagonia Union High School,,40603000499,AZ10197,Computer Programming-Independent Study,0,0,0,0,0,0,0,0,0
+Hamilton High School,,40187001677,AZ10161,Computer Science Principles,94,29,0,12,0,0,0,0,0
+Hamilton High School,,40187001677,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Hamilton High School,,40187001677,AZ10014,PLTW Computer Science Applications,17,5,0,0,0,0,0,0,0
+Hamilton High School,,40187001677,AZ10157,AP Computer Science A,77,22,0,0,0,0,0,0,0
+Amphitheater High School,,40068000032,AZ10151,Software and App Design II,12,0,0,0,0,0,12,0,0
+Amphitheater High School,,40068000032,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Amphitheater High School,,40068000032,AZ10161,Computer Science Principles,21,6,0,12,0,0,21,0,0
+Amphitheater High School,,40068000032,AZ10906,Software and App Design I,48,12,0,27,0,0,46,19,0
+Ash Fork High School,,40091000048,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Yuma High School,,40963000997,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Cibola High School,,40963001388,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Metro Tech High School,,40633000539,AZ10906,Software and App Design I,33,4,0,27,0,0,33,0,0
+Metro Tech High School,,40633000539,AZ10151,Software and App Design II,30,3,0,25,0,0,30,0,0
+Sun Valley High School,,40035401733,AZ10205,Computer Gaming and Design,11,0,0,0,0,0,11,0,0
+West Phoenix High School,,40035501734,AZ10205,Computer Gaming and Design,34,5,0,31,0,0,34,0,0
+Skyview High School,,40038801736,AZ10157,AP Computer Science A,26,9,0,12,0,0,21,0,0
+EVIT - East Valley Institute of Technology,,40973101514,AZ10151,Software and App Design II,47,6,0,15,0,0,16,0,0
+EVIT - East Valley Institute of Technology,,40973101514,AZ10906,Software and App Design I,51,6,0,16,0,0,17,0,0
+EVIT - East Valley Institute of Technology,,40973101514,AZ10910,Software and App Design III,25,2,0,0,0,0,0,0,0
+EVIT - Chandler High School,,40973101515,AZ10161,Computer Science Principles,56,17,0,24,0,0,31,0,0
+EVIT - Chandler High School,,40973101515,AZ10157,AP Computer Science A,15,0,0,0,0,0,0,0,0
+EVIT - Chandler High School,,40973101515,AZ10159,IB Computing Studies,0,0,0,0,0,0,0,0,0
+EVIT - Chandler High School,,40973101515,AZ10151,Software and App Design II,13,0,0,0,0,0,0,0,0
+Arizona College Prep Academy,,40086201783,AZ10152,Computer Programming,24,12,0,0,0,0,17,0,0
+Vail Academy & High School,,40885001955,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Crestview College Preparatory High School,,40038502016,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Peoria Accelerated High School,,40035301896,AZ10205,Computer Gaming and Design,28,14,0,21,0,0,28,0,0
+Cesar Chavez High School,,40633001882,AZ10906,Software and App Design I,52,4,0,27,0,0,52,0,0
+Cesar Chavez High School,,40633001882,AZ10161,Computer Science Principles,25,5,0,17,0,0,25,0,0
+Academy of Tucson High School,,40020201959,AZ10199,Computer Programming-Other,11,0,0,0,0,0,0,0,0
+Academy of Tucson High School,,40020201959,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Academy of Tucson High School,,40020201959,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Kaizen Education Foundation dba El Dorado High School,,40014901897,AZ10161,Computer Science Principles,13,0,0,0,0,0,12,0,0
+Kaizen Education Foundation dba El Dorado High School,,40014901897,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Estrella High School,,40035201898,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Skyline High School,,40497001830,AZ10151,Software and App Design II,27,5,0,13,0,0,14,0,0
+Skyline High School,,40497001830,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Skyline High School,,40497001830,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Skyline High School,,40497001830,AZ10906,Software and App Design I,15,4,0,0,0,0,12,0,0
+Millennium High School,,40045001884,AZ10161,Computer Science Principles,67,9,0,17,0,0,15,0,0
+Millennium High School,,40045001884,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Millennium High School,,40045001884,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Mesa Distance Learning Program,,40497001832,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+NAVIT - Blue Ridge High School,,40019701945,AZ10906,Software and App Design I,13,0,0,0,0,0,0,0,0
+Southern Arizona Community Academy,,40025402074,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+PACE Preparatory Academy,,40026602089,AZ21009,Robotics,21,5,0,0,0,0,17,0,0
+Career and College Prep,,40027402020,AZ10152,Computer Programming,38,21,0,27,0,0,38,0,0
+Sonoran Science Academy - Tucson,,40022302199,AZ10161,Computer Science Principles,91,43,0,36,0,0,39,0,0
+Sonoran Science Academy - Tucson,,40022302199,AZ10157,AP Computer Science A,16,4,0,0,0,0,0,0,0
+Tech Campus,,40021902011,AZ10152,Computer Programming,23,12,0,17,0,0,23,0,0
+Pinnacle High School,,40593001995,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Pinnacle High School,,40593001995,AZ10157,AP Computer Science A,28,3,0,0,0,0,0,0,0
+Pinnacle High School,,40593001995,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Kingman Academy of Learning - High School,,40007402185,AZ21009,Robotics,26,8,0,0,0,0,13,0,0
+Higley High School,,40378002119,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Estrella Foothills High School,,40141002137,AZ10161,Computer Science Principles,52,7,0,12,0,0,17,0,0
+Ironwood Ridge High School,,40068002198,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Ironwood Ridge High School,,40068002198,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Ironwood Ridge High School,,40068002198,AZ10161,Computer Science Principles,25,2,0,0,0,0,0,0,0
+Ironwood Ridge High School,,40068002198,AZ10906,Software and App Design I,96,17,0,24,0,0,18,0,0
+Omega Alpha Academy School,,40028402095,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Pan-American Charter School,,40029002177,AZ10161,Computer Science Principles,15,0,0,14,0,0,15,0,0
+Pan-American Charter School,,40029002177,AZ21009,Robotics,15,0,0,15,0,0,15,0,0
+Linda Abril Educational Academy,,40633002138,AZ10162,Exploring Computer Science,13,0,0,12,0,0,13,0,0
+Basha High School,,40187002250,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Basha High School,,40187002250,AZ10161,Computer Science Principles,33,7,0,0,0,0,0,0,0
+Cienega High School,,40885002195,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Cienega High School,,40885002195,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Cienega High School,,40885002195,AZ10155,Java Programming,15,0,0,0,0,0,0,0,0
+EVIT - Higley High School,,40973102272,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+EVIT - Higley High School,,40973102272,AZ10161,Computer Science Principles,13,1,0,0,0,0,0,0,0
+Desert Edge High School,,40045002273,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Desert Edge High School,,40045002273,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Desert Ridge High,,40340002283,AZ10157,AP Computer Science A,30,6,0,0,0,0,0,0,0
+Desert Ridge High,,40340002283,AZ10205,Computer Gaming and Design,74,6,0,20,0,0,19,14,0
+Intelli-School,,40036302300,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Desert Marigold School,,40036602302,AZ21009,Robotics,0,0,0,0,0,0,0,0,0
+La Joya Community High School,,40852002339,AZ10161,Computer Science Principles,20,5,0,13,0,0,15,0,0
+Sandra Day O'Connor High School,,40775002357,AZ10161,Computer Science Principles,96,11,0,0,0,0,12,0,0
+EVIT - Queen Creek High School,,40973102377,AZ10013,PLTW Introduction to Computer Science,17,2,0,0,0,0,0,0,0
+EVIT - Hamilton High School,,40973103087,AZ10161,Computer Science Principles,94,29,0,12,0,0,0,0,0
+EVIT - Hamilton High School,,40973103087,AZ10014,PLTW Computer Science Applications,17,5,0,0,0,0,0,0,0
+Sonoran Science Academy - Phoenix,,40077602387,AZ10161,Computer Science Principles,52,25,29,0,0,0,39,0,0
+Canyon Rose Academy,,40063303106,AZ10054,Data Systems/Processing,0,0,0,0,0,0,0,0,0
+Willow Canyon High School,,40269003126,AZ10906,Software and App Design I,53,7,0,20,0,0,20,0,0
+Willow Canyon High School,,40269003126,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Willow Canyon High School,,40269003126,AZ10151,Software and App Design II,22,0,0,0,0,0,0,0,0
+Primavera - Online,,40032903159,AZ21009,Robotics,99,21,0,36,0,0,68,13,0
+Hope High School Online,,40063603163,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Pantano High School,,40885003175,AZ10152,Computer Programming,18,0,0,0,0,0,0,0,0
+City High School,,40040702404,AZ10152,Computer Programming,18,4,0,0,0,0,0,0,0
+Copper Canyon High School,,40852002416,AZ10151,Software and App Design II,27,3,0,21,0,0,23,0,0
+Copper Canyon High School,,40852002416,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Copper Canyon High School,,40852002416,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Copper Canyon High School,,40852002416,AZ10906,Software and App Design I,108,18,0,86,0,0,92,11,0
+Raymond S. Kellis,,40625002426,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Raymond S. Kellis,,40625002426,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Boulder Creek High School,,40775002433,AZ10151,Software and App Design II,22,0,0,0,0,0,0,0,0
+Boulder Creek High School,,40775002433,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Boulder Creek High School,,40775002433,AZ10155,Java Programming,0,0,0,0,0,0,0,0,0
+Boulder Creek High School,,40775002433,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Boulder Creek High School,,40775002433,AZ10906,Software and App Design I,76,13,0,0,0,0,13,0,0
+EVIT - Mesa High School,,40973102456,AZ10906,Software and App Design I,44,6,0,23,0,0,34,0,0
+EVIT - Mesa High School,,40973102456,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+EVIT - Westwood High School,,40973102457,AZ10151,Software and App Design II,46,7,0,24,0,0,33,0,0
+EVIT - Westwood High School,,40973102457,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+EVIT - Westwood High School,,40973102457,AZ10159,IB Computing Studies,0,0,0,0,0,0,0,0,0
+EVIT - Westwood High School,,40973102457,AZ10906,Software and App Design I,23,4,0,0,0,0,18,0,0
+EVIT - Mountain View High School,,40973102458,AZ10906,Software and App Design I,87,24,0,22,0,0,44,17,0
+EVIT - Mountain View High School,,40973102458,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+EVIT - Dobson High School,,40973102459,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+EVIT - Dobson High School,,40973102459,AZ10906,Software and App Design I,46,8,0,22,0,0,34,11,0
+EVIT - Red Mountain High School,,40973102460,AZ10906,Software and App Design I,44,6,0,0,0,0,17,0,0
+EVIT - Red Mountain High School,,40973102460,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+EVIT - Red Mountain High School,,40973102460,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+EVIT - Skyline High School,,40973102461,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+EVIT - Skyline High School,,40973102461,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+EVIT - Skyline High School,,40973102461,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+EVIT - Skyline High School,,40973102461,AZ10906,Software and App Design I,28,8,0,12,0,0,15,0,0
+EVIT - Corona Del Sol High School,,40973102465,AZ10906,Software and App Design I,43,13,0,0,0,0,0,0,0
+EVIT - Corona Del Sol High School,,40973102465,AZ10157,AP Computer Science A,15,0,0,0,0,0,0,0,0
+EVIT - Corona Del Sol High School,,40973102465,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+EVIT - Mountain Pointe High School,,40973102466,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+EVIT - Mountain Pointe High School,,40973102466,AZ10906,Software and App Design I,41,5,0,0,0,0,0,0,0
+EVIT - Desert Vista High School,,40973102467,AZ10906,Software and App Design I,30,8,0,0,0,0,0,0,0
+EVIT - Desert Vista High School,,40973102467,AZ10157,AP Computer Science A,16,3,0,0,0,0,0,0,0
+EVIT - Desert Vista High School,,40973102467,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+EVIT - Coronado High School,,40973102502,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+EVIT - Coronado High School,,40973102502,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+EVIT - Chaparral High School,,40973102504,AZ10906,Software and App Design I,21,1,0,0,0,0,0,0,0
+EVIT - Chaparral High School,,40973102504,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+EVIT - Desert Mountain High School,,40973102505,AZ10151,Software and App Design II,17,1,0,0,0,0,0,0,0
+EVIT - Desert Mountain High School,,40973102505,AZ10906,Software and App Design I,27,6,0,0,0,0,0,0,0
+West-MEC - Central Campus,,40061502521,AZ10911,Software and App Design IV,32,6,0,19,0,0,12,0,0
+West-MEC - Central Campus,,40061502521,AZ10910,Software and App Design III,36,6,0,20,0,0,14,0,0
+West-MEC - Central Campus,,40061502521,AZ10906,Software and App Design I,44,10,0,19,0,0,17,0,0
+West-MEC - Central Campus,,40061502521,AZ10151,Software and App Design II,41,9,0,18,0,0,16,0,0
+Tanque Verde High School,,40828002550,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Tanque Verde High School,,40828002550,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+CAVIAT - Coconino High School,,40034702470,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Liberty High School,,40009901182,AZ10906,Software and App Design I,133,16,0,25,0,0,22,12,0
+Liberty High School,,40009901182,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Liberty High School,,40009901182,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Liberty High School,,40009901182,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Liberty High School,,40009901182,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Liberty High School,,40009901182,AZ10161,Computer Science Principles,27,1,0,0,0,0,0,0,0
+Empire High School,,40885002552,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Empire High School,,40885002552,AZ10906,Software and App Design I,18,3,0,0,0,0,0,0,0
+Verrado High School,,40045002592,AZ10161,Computer Science Principles,102,10,0,30,0,0,33,0,0
+Verrado High School,,40045002592,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Verrado High School,,40045002592,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+South Ridge High School,,40044702671,AZ10205,Computer Gaming and Design,15,1,0,14,0,0,14,0,0
+Valley Vista High School,,40269002684,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Valley Vista High School,,40269002684,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Valley Vista High School,,40269002684,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+Youngker High School,,40141002786,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Youngker High School,,40141002786,AZ10157,AP Computer Science A,12,1,0,0,0,0,0,0,0
+Youngker High School,,40141002786,AZ10161,Computer Science Principles,62,8,0,29,0,0,41,0,0
+Gila Ridge High School,,40963002775,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Williams Field High School,,40378002835,AZ10162,Exploring Computer Science,66,23,0,12,0,0,19,0,0
+Williams Field High School,,40378002835,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Williams Field High School,,40378002835,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Arizona College Prep Erie Campus,,40187002822,AZ10157,AP Computer Science A,30,7,0,0,0,0,0,0,0
+Arizona College Prep Erie Campus,,40187002822,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Arizona College Prep Erie Campus,,40187002822,AZ10161,Computer Science Principles,73,25,0,12,0,0,0,0,0
+Arizona College Prep Erie Campus,,40187002822,AZ21009,Robotics,23,11,0,0,0,0,0,0,0
+Gilbert Classical Academy 7-12,,40340002840,AZ10157,AP Computer Science A,21,4,0,0,0,0,0,0,0
+Perry High School,,40187002806,AZ10161,Computer Science Principles,94,21,0,16,0,0,0,0,0
+Perry High School,,40187002806,AZ21009,Robotics,14,0,0,0,0,0,0,0,0
+Perry High School,,40187002806,AZ10014,PLTW Computer Science Applications,22,2,0,0,0,0,0,0,0
+Perry High School,,40187002806,AZ10157,AP Computer Science A,21,4,0,0,0,0,0,0,0
+EVIT - Perry High School,,40973102821,AZ10014,PLTW Computer Science Applications,22,2,0,0,0,0,0,0,0
+EVIT - Perry High School,,40973102821,AZ10157,AP Computer Science A,21,4,0,0,0,0,0,0,0
+EVIT - Perry High School,,40973102821,AZ10161,Computer Science Principles,94,21,0,16,0,0,0,0,0
+EVIT - Williams Field High School,,40973102785,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+EVIT - Williams Field High School,,40973102785,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+PCJTED - Cholla High School,,40075202774,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+PCJTED - Palo Verde High School,,40075202809,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+PCJTED - Palo Verde High School,,40075202809,AZ10161,Computer Science Principles,11,0,0,0,0,0,0,0,0
+PCJTED - Palo Verde High School,,40075202809,AZ10158,AP Computer Science AB,17,11,0,0,0,0,13,0,0
+PCJTED - Pueblo High School,,40075202810,AZ10157,AP Computer Science A,17,5,0,15,0,0,13,0,0
+PCJTED - Rincon High School,,40075202815,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+PCJTED - University High School,,40075202796,AZ10157,AP Computer Science A,56,21,0,20,0,0,13,0,0
+PCJTED - University High School,,40075202796,AZ10161,Computer Science Principles,88,24,0,29,0,0,28,0,0
+PCJTED - Sabino High School,,40075202848,AZ10161,Computer Science Principles,20,2,0,0,0,0,0,0,0
+PCJTED - Sahuaro High School,,40075202801,AZ10161,Computer Science Principles,19,6,0,0,0,0,0,0,0
+PCJTED - Santa Rita High School,,40075202834,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+PCJTED - Marana High School,,40075202843,AZ10151,Software and App Design II,48,4,0,14,0,0,25,0,0
+PCJTED - Marana High School,,40075202843,AZ10906,Software and App Design I,32,3,0,0,0,0,18,0,0
+PCJTED - Marana High School,,40075202843,AZ10205,Computer Gaming and Design,11,0,0,0,0,0,0,0,0
+PCJTED - Marana High School,,40075202843,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+PCJTED - Mountain View High School,,40075202803,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+PCJTED - Mountain View High School,,40075202803,AZ10151,Software and App Design II,17,3,0,0,0,0,0,0,0
+PCJTED - Mountain View High School,,40075202803,AZ10205,Computer Gaming and Design,15,1,0,0,0,0,0,0,0
+PCJTED - Mountain View High School,,40075202803,AZ21009,Robotics,15,2,0,0,0,0,0,0,0
+PCJTED - Amphitheater High School,,40075202793,AZ10151,Software and App Design II,11,0,0,0,0,0,11,0,0
+PCJTED - Amphitheater High School,,40075202793,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+PCJTED - Amphitheater High School,,40075202793,AZ10161,Computer Science Principles,15,3,0,0,0,0,15,0,0
+PCJTED - Amphitheater High School,,40075202793,AZ10906,Software and App Design I,21,6,0,13,0,0,21,0,0
+PCJTED - Canyon Del Oro High School,,40075202772,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+PCJTED - Canyon Del Oro High School,,40075202772,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+PCJTED - Canyon Del Oro High School,,40075202772,AZ10151,Software and App Design II,13,0,0,0,0,0,0,0,0
+PCJTED - Canyon Del Oro High School,,40075202772,AZ10157,AP Computer Science A,27,4,0,0,0,0,0,0,0
+PCJTED - Ironwood Ridge High School,,40075202841,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+PCJTED - Ironwood Ridge High School,,40075202841,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+PCJTED - Ironwood Ridge High School,,40075202841,AZ10906,Software and App Design I,16,3,0,0,0,0,0,0,0
+PCJTED - Ironwood Ridge High School,,40075202841,AZ10161,Computer Science Principles,19,2,0,0,0,0,0,0,0
+PCJTED - Tanque Verde High School,,40075202814,AZ10906,Software and App Design I,26,2,0,0,0,0,0,0,0
+PCJTED - Tanque Verde High School,,40075202814,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+PCJTED - Catalina Foothills High School,,40075202797,AZ10906,Software and App Design I,65,11,0,14,0,0,11,0,0
+Imagine Prep Surprise,,40077002903,AZ10152,Computer Programming,58,7,0,20,0,0,31,17,0
+Combs High School,,40399002895,AZ10906,Software and App Design I,32,3,0,0,0,0,11,0,0
+Combs High School,,40399002895,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Sky Islands,,40077102899,AZ10197,Computer Programming-Independent Study,0,0,0,0,0,0,0,0,0
+San Tan Foothills High School,,40292002896,AZ10152,Computer Programming,35,5,0,0,0,0,18,0,0
+Sierra Linda High School,,40852002912,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Sierra Linda High School,,40852002912,AZ10911,Software and App Design IV,0,0,0,0,0,0,0,0,0
+Sierra Linda High School,,40852002912,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Sierra Linda High School,,40852002912,AZ10906,Software and App Design I,71,12,0,58,0,0,53,0,0
+Paragon Science Academy,,40077802902,AZ10161,Computer Science Principles,129,64,23,0,0,0,73,0,0
+West Point High School,,40852002975,AZ10906,Software and App Design I,194,54,27,126,0,0,143,16,0
+Campo Verde High School,,40340002965,AZ10161,Computer Science Principles,33,4,0,0,0,0,0,0,0
+Campo Verde High School,,40340002965,AZ10205,Computer Gaming and Design,44,3,0,0,0,0,16,0,0
+Campo Verde High School,,40340002965,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Shadow Ridge High School,,40269002971,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Shadow Ridge High School,,40269002971,AZ10151,Software and App Design II,15,2,0,0,0,0,0,0,0
+Shadow Ridge High School,,40269002971,AZ10906,Software and App Design I,84,16,0,24,0,0,22,0,0
+Sonoran Science Academy - Davis Monthan,,40080702976,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Sonoran Science Academy - Davis Monthan,,40080702976,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+WAVE - Lake Havasu High School,,40079403037,AZ10151,Software and App Design II,37,1,0,0,0,0,14,0,0
+WAVE - Lake Havasu High School,,40079403037,AZ10906,Software and App Design I,33,3,0,0,0,0,21,0,0
+WAVE - Lake Havasu High School,,40079403037,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+WAVE - Mohave High School,,40079403045,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+WAVE - Mohave High School,,40079403045,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+WAVE - Mohave High School,,40079403045,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+WAVE - Mohave High School,,40079403045,AZ10151,Software and App Design II,12,0,0,0,0,0,0,0,0
+WAVE - Mohave High School,,40079403045,AZ10906,Software and App Design I,32,7,0,22,0,0,24,0,0
+WAVE - River Valley High School,,40079403055,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+WAVE - River Valley High School,,40079403055,AZ10910,Software and App Design III,0,0,0,0,0,0,0,0,0
+Poston Butte High School,,40292002972,AZ10161,Computer Science Principles,11,0,0,0,0,0,0,0,0
+Poston Butte High School,,40292002972,AZ10152,Computer Programming,42,6,0,16,0,0,23,0,0
+EVIT - Campo Verde High School,,40973102969,AZ10161,Computer Science Principles,33,4,0,0,0,0,0,0,0
+EVIT - Campo Verde High School,,40973102969,AZ10205,Computer Gaming and Design,44,3,0,0,0,0,16,0,0
+EVIT - Campo Verde High School,,40973102969,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+EVIT - Combs High School,,40973103017,AZ10906,Software and App Design I,37,6,0,0,0,0,15,0,0
+EVIT - Combs High School,,40973103017,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+EVIT - Combs High School,,40973103017,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+University High School,,40880001441,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+University High School,,40880001441,AZ10906,Software and App Design I,16,0,0,0,0,0,0,0,0
+"American Leadership Academy, Queen Creek K-12",,40011203179,AZ10906,Software and App Design I,27,3,0,0,0,0,0,0,0
+"American Leadership Academy, Queen Creek K-12",,40011203179,AZ21009,Robotics,19,2,0,0,0,0,0,0,0
+"American Leadership Academy, Queen Creek K-12",,40011203179,AZ10161,Computer Science Principles,16,4,0,0,0,0,0,0,0
+pvONLINE,,40593003216,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Walden Grove High School,,40730003183,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Walden Grove High School,,40730003183,AZ10161,Computer Science Principles,17,0,0,0,0,0,0,0,0
+Red Rock Academy,,40973303188,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+EdOptions HS Learning Center,,40081603219,AZ21009,Robotics,0,0,0,0,0,0,0,0,0
+Dysart iSchool,,40269003193,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Pima Rose Academy,,40083903273,AZ10054,Data Systems/Processing,0,0,0,0,0,0,0,0,0
+BASIS Chandler,,40083003253,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+BASIS Chandler,,40083003253,AZ10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+Mission Heights Preparatory High School,,40082303296,AZ10205,Computer Gaming and Design,27,1,0,0,0,0,24,0,0
+Astravo Online Academy,,40082703252,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Astravo Online Academy,,40082703252,AZ10199,Computer Programming-Other,0,0,0,0,0,0,0,0,0
+Scottsdale Online Learning,,40757003250,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Andrada Polytechnic High School,,40885003272,AZ10152,Computer Programming,25,0,0,0,0,0,0,0,0
+ASU Preparatory Academy- Phoenix High School,,40085803286,AZ21009,Robotics,65,12,0,47,0,0,52,11,0
+ASU Preparatory Academy-Polytechnic High School,,40085903251,AZ21009,Robotics,0,0,0,0,0,0,0,0,0
+BASIS Phoenix,,40084303351,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+BASIS Phoenix,,40084303351,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Leading Edge Academy Online,,40039503335,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Amphi Academy Online,,40068003330,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+BASIS Tucson North,,40087803350,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+BASIS Mesa,,40089803393,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+BASIS Ahwatukee,,40089703376,AZ10157,AP Computer Science A,11,0,0,0,0,0,0,0,0
+Desert Heights Preparatory Academy,,40061003363,AZ10152,Computer Programming,31,8,0,0,0,0,11,0,0
+Heritage Academy Laveen,,40092603451,AZ10161,Computer Science Principles,13,2,0,0,0,0,0,0,0
+Heritage Academy Queen Creek,,40091103440,AZ10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Madison Highland Prep,,40090903461,AZ10157,AP Computer Science A,13,0,0,0,0,0,0,0,0
+Westland School Brighton Campus,,40040203429,AZ10205,Computer Gaming and Design,14,0,0,0,0,0,11,0,0
+EVIT - Arizona College Prep Erie Campus,,40973103468,AZ10157,AP Computer Science A,30,7,0,0,0,0,0,0,0
+EVIT - Arizona College Prep Erie Campus,,40973103468,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+EVIT - Arizona College Prep Erie Campus,,40973103468,AZ10161,Computer Science Principles,73,25,0,12,0,0,0,0,0
+BASIS Goodyear,,40094103502,AZ10157,AP Computer Science A,13,0,0,0,0,0,0,0,0
+EVIT - Casteel High School,,40973103487,AZ10161,Computer Science Principles,39,2,0,0,0,0,0,0,0
+EVIT - Casteel High School,,40973103487,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+EVIT - Casteel High School,,40973103487,AZ10014,PLTW Computer Science Applications,12,1,0,0,0,0,0,0,0
+"American Leadership Academy, Ironwood K12",,40011203475,AZ10161,Computer Science Principles,33,3,0,11,0,0,18,0,0
+Dr. Camille Casteel High School,,40187003483,AZ10161,Computer Science Principles,39,2,0,0,0,0,0,0,0
+Dr. Camille Casteel High School,,40187003483,AZ10014,PLTW Computer Science Applications,12,1,0,0,0,0,0,0,0
+Dr. Camille Casteel High School,,40187003483,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+"Arizona Autism Charter School, Upper School Campus",,40091303512,AZ21009,Robotics,0,0,0,0,0,0,0,0,0
+Northeast Campus,,40061503528,AZ10151,Software and App Design II,21,3,0,0,0,0,0,0,0
+Northeast Campus,,40061503528,AZ10906,Software and App Design I,25,5,0,0,0,0,0,0,0
+EVIT North Fountain Hills,,40973103544,AZ10906,Software and App Design I,14,2,0,0,0,0,0,0,0
+EVIT North Fountain Hills,,40973103544,AZ10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Maricopa Institute of Technology,,40095503519,AZ10157,AP Computer Science A,51,19,0,42,0,0,39,0,0
+Maricopa Institute of Technology,,40095503519,AZ10152,Computer Programming,71,32,0,48,0,0,52,0,0
+Phoenix Coding Academy,,40633003509,AZ10906,Software and App Design I,58,17,0,31,0,0,58,0,0
+Phoenix Coding Academy,,40633003509,AZ10151,Software and App Design II,33,9,0,14,0,0,33,0,0
+Phoenix Coding Academy,,40633003509,AZ10162,Exploring Computer Science,91,20,0,47,0,0,91,0,0
+Northern Arizona Distance Learning,,40286003506,AZ10906,Software and App Design I,0,0,0,0,0,0,0,0,0
+"American Leadership Academy, Gilbert North K-12",,40011203573,AZ10161,Computer Science Principles,0,0,0,0,0,0,0,0,0
+"American Leadership Academy, Gilbert North K-12",,40011203573,AZ10906,Software and App Design I,32,7,0,0,0,0,0,0,0
+"American Leadership Academy, Gilbert North K-12",,40011203573,AZ21009,Robotics,35,7,0,0,0,0,0,0,0
+Canyon Rose Academy-East,,40063303536,AZ10054,Data Systems/Processing,0,0,0,0,0,0,0,0,0
+ASU Preparatory Academy - Casa Grande HS,,40094703526,AZ10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+ASU Preparatory Academy Digital,,40096503556,AZ21009,Robotics,0,0,0,0,0,0,0,0,0
+Canyon View High School,,40045003559,AZ10161,Computer Science Principles,41,7,0,13,0,0,0,0,0
+STEDY- Central Campus,,40092003577,AZ10151,Software and App Design II,0,0,0,0,0,0,0,0,0
+Eastmark High School,,40681003606,AZ10013,PLTW Introduction to Computer Science,24,5,0,0,0,0,0,0,0
+EVIT Eastmark High School,,40973103669,AZ10013,PLTW Introduction to Computer Science,0,0,0,0,0,0,0,0,0
+Shonto Preparatory School,BI-D33N16-D33N16,590012800186,AZ10161,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Theodore Roosevelt School,BI-D52H21-D52H21,590013200060,AZ10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

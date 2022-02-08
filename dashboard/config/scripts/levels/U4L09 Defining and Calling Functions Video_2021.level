@@ -1,7 +1,7 @@
 <StandaloneVideo>
   <config><![CDATA[{
   "properties": {
-    "video_key": "csp_applab_functions",
+    "video_key": "csp_defining_calling_functions",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -15,6 +15,8 @@
   "level_num": "custom",
   "user_id": 684,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-04 17:15:19 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2021-05-25 16:50:44 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-03-04 17:15:19 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2021-05-25 16:50:44 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-06-09 18:38:30 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

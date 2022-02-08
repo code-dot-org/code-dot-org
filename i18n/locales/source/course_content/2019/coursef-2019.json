@@ -1440,6 +1440,10 @@
   },
   "https://studio.code.org/s/coursef-2019/lessons/16/levels/1": {
     "long_instructions": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**.",
+    "placeholder_texts": {
+      "22661453237feb87f1b00dd17bc39666": "Yum! Energy increased!",
+      "4ac000226dd5bc7fc14ecde063245731": "Yuck! Energy reset!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "mystery": "mystery",
@@ -1454,10 +1458,6 @@
       "moving west": "moving west",
       "growing": "growing",
       "patrolling": "patrolling"
-    },
-    "placeholder_texts": {
-      "22661453237feb87f1b00dd17bc39666": "Yum! Energy increased!",
-      "4ac000226dd5bc7fc14ecde063245731": "Yuck! Energy reset!"
     }
   },
   "https://studio.code.org/s/coursef-2019/lessons/16/levels/2": {

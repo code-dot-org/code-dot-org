@@ -36,6 +36,7 @@ bs-BA:
   twentyhours_text: Završio si prvi Hour of Code? Nauci još o računarskim naukama
     i programskim konceptima u sledećem kursu.
   og_title: 'Code.org: Svako može naučiti'
+  og_title_soon: Obrazovna nedjelja računarskih nauka
   og_description: Svaki učenik u svakoj školi zaslužuje priliku studirati računarstvo.
   csedweek_og_title: Obrazovna nedjelja računarskih nauka
   csedweek_og_description: Decembar 4-10, 2017. Računarstvo je temelj koji svaki student
@@ -87,6 +88,7 @@ bs-BA:
   congratulations_volunteer: 'Čestitamo: Sada kada si probao/la Sat Kodiranja, <a
     href="https://code.org/volunteer"> prijavi se kao volonter u učionici </a> i pomozi
     učenicima da nauče Sat Kodiranja!'
+  congratulations_on_completing_course: Čestitamo na kompletiranju %{course}
   congrats_next_tutorials_title: Probaj sada ove tutorijale
   congrats_next_tutorials_desc: Probaj ove kraće, tutorijale od 1 sat ili probaj <a
     href="%{current_path}/next">partnerski tutorijal</a>.
@@ -220,6 +222,7 @@ bs-BA:
   learn_next_level: Pređi na sljedeći nivo
   learn_online: Isprobaj druge online kurseve
   learn_classes: Pronađi lokalne nastave
+  hoc_is_here: "#HourOfCode je ovdje - provjeri! @codeorg"
   just_did_hoc: 'Upravo sam završio #HourOfCode - provjeri! @codeorg'
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Više nego One Hour
@@ -297,6 +300,8 @@ bs-BA:
   homepage_hero_text_stat_loc: "#loc linija koda napisano od strane učenika"
   homepage_hero_text_stat_students: "#student_count učeničkih računa u Studiju Kodiranja"
   homepage_hero_text_stat_served: 'Sat Kodiranja: #served posluženo'
+  homepage_hero_hoc_is_coming: Obrazovna nedjelja računarskih nauka
+  homepage_hero_hoc_is_here: Obrazovna nedjelja računarskih nauka
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Frozen sa Anna i Elsa
   homepage_slot_text_teacher: Nadzorna Ploča za Nastavnike
@@ -397,6 +402,7 @@ bs-BA:
   playlab_choose_theme: Izaberite vaše ime za Play Lab temu
   playlab_classic_title: Klasični
   playlab_iceage_title: Ledeno doba - Uskoro
+  playlab_iceage_title_live: Ledeno Doba
   starwars_subtitle: Kreiranje Galaksije sa Kôdom
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Iskoristi povuci-ispusti blokove i JavaScript.
@@ -668,9 +674,11 @@ bs-BA:
   dashboard_navigation_section_speakers: Računarstvo <br/> Gost Predavači
   dashboard_navigation_all_sections: Računi i Napredak Studenata
   dashboard_navigation_view_progress: Napredak
+  dashboard_navigation_view_assessments: Procjene
   dashboard_navigation_add_students: Dodaj Učenike
   dashboard_navigation_manage_students: Rukovodi Učenike
   dashboard_navigation_lesson_plans_resources: Nastavni Planovi i Resursi
+  dashboard_navigation_view_stats: Prikaži Statistiku
   dashboard_navigation_section: 'Odjeljenje: %{section_name}'
   dashboard_navigation_student: 'Učenik: %{student_name}'
   dashboard_progress_not_started: nije započeto
@@ -889,6 +897,7 @@ bs-BA:
   courseb_name: Kurs B
   accelerated_name: Ubrzani Kurs
   20-hour_name: Ubrzani Kurs
+  iceage_name: Ledeno Doba
   applab_name: Laboratorij za Aplikacije
   basketball_name: Napravi igru košarke
   codeorg_gradelevel: Dob 4-104
@@ -934,21 +943,52 @@ bs-BA:
   infinity_gradelevel: Dob 4-104
   artist_gradelevel: Dob 8+
   monstercoding_gradelevel: Dob 5-13
+  allcancode_gradelevel: Dob 5-10
+  csfirst_gradelevel: Dob 9-14
   boxisland_gradelevel: Osnovna škola
+  codesters_gradelevel: Dob 12-14
+  texasinstruments_gradelevel: Dob 13-16
+  teacherled_gradelevel: Dob 5+
   course1_gradelevel: Uzrast 4+ (predškolski uzrast)
   course2_gradelevel: Dobi 6-18
   course3_gradelevel: Godine 8+ (poslije Kursa 2)
   course4_gradelevel: Dob 10+ (nakon Kursa 3)
+  coursea_gradelevel: Dob 4-7
+  courseb_gradelevel: Dob 5-8
+  coursec_gradelevel: Dobi 6-10
   coursed_gradelevel: Razred 8+
   coursee_gradelevel: Dob 8-12
+  coursef_gradelevel: Dob 9-13
+  coursea-2017_gradelevel: Dob 4-7
+  courseb-2017_gradelevel: Dob 5-8
+  coursec-2017_gradelevel: Dobi 6-10
   coursed-2017_gradelevel: Razred 8+
   coursee-2017_gradelevel: Dob 8-12
+  coursef-2017_gradelevel: Dob 9-13
+  coursea-2018_gradelevel: Dob 4-7
+  courseb-2018_gradelevel: Dob 5-8
+  coursec-2018_gradelevel: Dobi 6-10
   coursed-2018_gradelevel: Razred 8+
   coursee-2018_gradelevel: Dob 8-12
+  coursef-2018_gradelevel: Dob 9-13
+  coursea-2019_gradelevel: Dob 4-7
+  courseb-2019_gradelevel: Dob 5-8
+  coursec-2019_gradelevel: Dobi 6-10
   coursed-2019_gradelevel: Razred 8+
   coursee-2019_gradelevel: Dob 8-12
+  coursef-2019_gradelevel: Dob 9-13
+  coursea-2020_gradelevel: Dob 4-7
+  courseb-2020_gradelevel: Dob 5-8
+  coursec-2020_gradelevel: Dobi 6-10
   coursed-2020_gradelevel: Razred 8+
   coursee-2020_gradelevel: Dob 8-12
+  coursef-2020_gradelevel: Dob 9-13
+  coursea-2021_gradelevel: Dob 4-7
+  courseb-2021_gradelevel: Dob 5-8
+  coursec-2021_gradelevel: Dobi 6-10
+  coursed-2021_gradelevel: Razred 8+
+  coursee-2021_gradelevel: Dob 8-12
+  coursef-2021_gradelevel: Dob 9-13
   accelerated_gradelevel: Dob 10+ (nakon Kursa 3)
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
   codeintl_platformtext: Savremeni browser-i, mobiteli, tableti
@@ -1052,6 +1092,10 @@ bs-BA:
   coursea-2020_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
     Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
   courseb-2020_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
+    Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+  coursea-2021_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
+    Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+  courseb-2021_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
     Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
   codeorg_longdescription: Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti"
     programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije
@@ -1509,6 +1553,7 @@ bs-BA:
   header_about_donors: Donatori
   header_about_jobs: Poslovi
   header_teach: Podučavaj
+  header_stats: Prikaži Statistiku
   header_help_us: Pomogni nam
   header_help_support: 'Pomoć i podrška '
   header_legal_privacy: Pravila Privatnosti
@@ -1519,6 +1564,9 @@ bs-BA:
   user_header_settings: Moj račun
   user_header_logout: Odjava
   user_header_signin: Prijava
+  user_header_create: 'Kreiraj '
+  user_header_applab: 'Laboratorij za Aplikacije '
+  user_header_artist: 'Umjetnik '
   user_header_playlab: Play Lab
   user_header_dance: Plesna zabava
   user_header_flappy: Flappy

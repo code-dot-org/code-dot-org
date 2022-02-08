@@ -37,9 +37,12 @@ eu-ES:
   twentyhours_text: Bukatu duzu zure Kode Ordua? Ikasi informatika eta programazio
     kontzeptu gehiago ondorengo jarraipen ikastaroan.
   og_title: Ume guztiek merezi dute aukera bat
+  og_title_soon: Informatikaren Ikaskuntzaren astea
   og_description: Ikastetxe guztietako ikasle denek merezi dute Informatika Zientziak
     ikasteko aukera izatea.
   csedweek_og_title: Informatikaren Ikaskuntzaren astea
+  csedweek_og_description: Ikastetxe guztietako ikasle denek merezi dute Informatika
+    Zientziak ikasteko aukera izatea.
   hoc2014_heading: Bat egin <a href="http://hourofcode.com">Kode Orduarekin</a><br/>2014ko
     abenduaren 8tik 14era<br/>
   hoc2014_students: Ikasle
@@ -87,6 +90,7 @@ eu-ES:
   congratulations_volunteer: 'Zorionak: Kode Ordua probatu duzunez, orain <a href="https://code.org/volunteer">laguntzaile
     izan zaitezke eskola batean</a> eta lagundu ikasle gazteei programazioa ikasten
     Kode Orduan!'
+  congratulations_on_completing_course: Zorionak %{course} betetzeagatik
   congrats_next_tutorials_title: Jarraian saiatu gida-liburu hauekin
   congrats_next_tutorials_desc: Saiatu ordu bateko tutorial laburrago hauekin edo
     saiatu <a href="%{current_path}/next">honako honekin</a>.
@@ -104,6 +108,10 @@ eu-ES:
   congrats_guest_speaker_cta: Hizlari gonbidatua aurkitu
   congrats_third_party_title: Berriki ikasitakoak erabili aplikazio eta web gune hauekin
   third_party_gradelevel_kto8: DBHko 2. maila
+  third_party_gradelevel_2to8: 2-8 kalifikazioak
+  third_party_gradelevel_4to12: 4-12 kalifikazioak
+  third_party_gradelevel_5to12: 5-12 kalifikazioak
+  third_party_gradelevel_6plus: 6+ kalifikazioak
   third_party_platform_all: 'Plataforma: Web, iPad eta Android'
   third_party_platform_mobile: 'Plataforma: iPad eta Android'
   third_party_platform_web: 'Plataforma: Web'
@@ -179,6 +187,7 @@ eu-ES:
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
+  hoc_is_here: "#KodeOrdua hemen dago - probatu! @codeorg"
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   twitter_teach_cs: 10 pertsonetatik 9 adosten dute, eskolek informatika irakatsi
     behar zutela. http://youtu.be/nKIu9yen5nc. Bisitatu https://code.org/.
@@ -255,6 +264,8 @@ eu-ES:
   homepage_hero_text_stat_loc: 2.5 milioi neskak eman dute izena Code Studio-n, ikasteko
   homepage_hero_text_stat_students: "#student_count ikasle kopurua Code Studio-n"
   homepage_hero_text_stat_served: 'Kode Ordua: #served artatuak'
+  homepage_hero_hoc_is_coming: Informatikaren Ikaskuntzaren astea
+  homepage_hero_hoc_is_here: Informatikaren Ikaskuntzaren astea
   homepage_slot_text_hoc: Kode Ordua
   homepage_slot_text_frozen: Frozen Anna eta Elsarekin
   homepage_slot_text_teacher: Irakaslearen arbela
@@ -314,6 +325,9 @@ eu-ES:
   homepage_header_donors: Code.org-eko laguntzaileei eskerrak
   homepage_donors_seall: Guztia ikusi
   homepage_donors_donate: Diruz lagundu
+  homepage_below_hero_announcement_text: Zure pribatutasunaz arduratzen gara eta gure
+    pribatutasun politikan aldaketa batzuk egiten ari gara, maiatzaren 25ean indarrean
+    jarriko dira.
   homepage_below_hero_announcement_link_text: Ikasi gehiago
   contact_form_topic_student: Ikaslea naiz
   contact_form_topic_parent: Gurasoa naiz
@@ -383,7 +397,11 @@ eu-ES:
   minecraft_adventurer_button: Hasiera
   minecraft_subtitle: Minecraft Kode Ordua
   sports_watch_video: Ikusi bideoa
+  watch_inspirational_videos: Hasi baino lehen, ikus ezazu bideo hauetakoren bat,
+    animatzeko
   video_title_inspire_girl: Animatu neska bat
+  speak_another_language: Beste hizkuntza bat erabiltzen duzu?
+  help_translate: Lagundu guri itzulpenak egiten.
   are_you_teacher: Irakaslea al zara?
   volunteer_engineer_submission_title: Animatu ikasleak Kode Orduan parte hartzeko
     eta egin zaitez boluntario.
@@ -581,6 +599,7 @@ eu-ES:
   dashboard_navigation_add_students: Ikasleak Gehitu
   dashboard_navigation_manage_students: Ikasleak Kudeatu
   dashboard_navigation_lesson_plans_resources: Ikasgaien Plangintza eta Baliabideak
+  dashboard_navigation_view_stats: Estatistikak Ikusi
   dashboard_navigation_section: 'Atala: %{section_name}'
   dashboard_navigation_student: 'Ikaslea: %{student_name}'
   dashboard_progress_not_started: hasi gabe
@@ -825,6 +844,7 @@ eu-ES:
   course4_name: 4. Kurtsoa
   accelerated_name: Ikastaro Azeleratua
   20-hour_name: Ikastaro Azeleratua
+  gumball_name: Gumball
   classicmaze_name: Labirinto klasikoa
   iceage_name: Izotz Aroa
   minecraft_name: Minecraft
@@ -882,11 +902,42 @@ eu-ES:
   course2_gradelevel: 6-18 urte bitarteko adinak
   course3_gradelevel: 8-18 bitarteko adina
   course4_gradelevel: 10-18 bitarteko adina
+  coursea_gradelevel: 4-7 adinentzat
+  courseb_gradelevel: 5 eta 8 urte bitartean
+  coursec_gradelevel: 6-10 urte bitarteko adinak
+  coursed_gradelevel: 7-11 adinentzat
   coursee_gradelevel: 8 eta 12 urte bitartean
+  coursef_gradelevel: 9-13 adinak
+  coursea-2017_gradelevel: 4-7 adinentzat
+  courseb-2017_gradelevel: 5 eta 8 urte bitartean
+  coursec-2017_gradelevel: 6-10 urte bitarteko adinak
+  coursed-2017_gradelevel: 7-11 adinentzat
   coursee-2017_gradelevel: 8 eta 12 urte bitartean
+  coursef-2017_gradelevel: 9-13 adinak
+  coursea-2018_gradelevel: 4-7 adinentzat
+  courseb-2018_gradelevel: 5 eta 8 urte bitartean
+  coursec-2018_gradelevel: 6-10 urte bitarteko adinak
+  coursed-2018_gradelevel: 7-11 adinentzat
   coursee-2018_gradelevel: 8 eta 12 urte bitartean
+  coursef-2018_gradelevel: 9-13 adinak
+  coursea-2019_gradelevel: 4-7 adinentzat
+  courseb-2019_gradelevel: 5 eta 8 urte bitartean
+  coursec-2019_gradelevel: 6-10 urte bitarteko adinak
+  coursed-2019_gradelevel: 7-11 adinentzat
   coursee-2019_gradelevel: 8 eta 12 urte bitartean
+  coursef-2019_gradelevel: 9-13 adinak
+  coursea-2020_gradelevel: 4-7 adinentzat
+  courseb-2020_gradelevel: 5 eta 8 urte bitartean
+  coursec-2020_gradelevel: 6-10 urte bitarteko adinak
+  coursed-2020_gradelevel: 7-11 adinentzat
   coursee-2020_gradelevel: 8 eta 12 urte bitartean
+  coursef-2020_gradelevel: 9-13 adinak
+  coursea-2021_gradelevel: 4-7 adinentzat
+  courseb-2021_gradelevel: 5 eta 8 urte bitartean
+  coursec-2021_gradelevel: 6-10 urte bitarteko adinak
+  coursed-2021_gradelevel: 7-11 adinentzat
+  coursee-2021_gradelevel: 8 eta 12 urte bitartean
+  coursef-2021_gradelevel: 9-13 adinak
   accelerated_gradelevel: 10-18 bitarteko adina
   codeorg_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
   codeintl_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
@@ -1478,11 +1529,13 @@ eu-ES:
   sphero_beyond_longdescription: Hezitzailea edo gurasoa izan, SPRK ikasgaiak haurrei
     jarduera dibertigarri bat ematen die robotak programatzen beraien lagunekin beraien
     matematika eta zientzia gaitasunak elkarbanatzen dituzten bitartean.
+  compatibility_hide_this_warning: Ezkutatu ohar hau
   flappy_shortcode: hegoei eragin
   header_courses: Mailak
   header_course_catalog: Ikastaroak
   header_project_gallery: Proiektuak
   header_educate_hoc: Kode Ordua
+  header_stats: Estatistikak Ikusi
   header_about: Code.org-i buruz
   header_legal_privacy: Pribatutasun politika
   header_legal_tos: Erabilera baldintzak
@@ -1491,6 +1544,8 @@ eu-ES:
   user_header_logout: Amaitu saioa
   user_header_signin: Hasi saioa
   user_header_create: Sortu
+  user_header_applab: 'App laborategia '
+  user_header_artist: 'Artista '
   user_header_playlab: Jolas Laborategia
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
@@ -1499,6 +1554,7 @@ eu-ES:
   hoc2018_creativity_create: Sortu
   hoc2018_mc_start: Hasiera
   hoc2018_mc_educators_box2_button: Deskargatu
+  hoc2018_mc_watch_videos: Hasi baino lehen, ikus ezazu bideo hauetakoren bat, animatzeko
   hoc2018_mc_video_title_inspire_girl: Animatu neska bat
   hoc2018_mc_homepage_join_us: Elkartu gurekin
   hoc2018_mc_homepage_try_it: Saiatu
@@ -1512,5 +1568,6 @@ eu-ES:
   footer_donate: Diruz lagundu
   footer_support: Laguntza
   footer_terms: Baldintzak
+  ai_for_oceans_lesson_plan: ikasketa plana
   ai_activity: Aktibitatea
   ai_description: Deskribapena

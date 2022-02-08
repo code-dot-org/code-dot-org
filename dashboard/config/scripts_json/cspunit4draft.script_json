@@ -2,13 +2,17 @@
   "script": {
     "name": "cspunit4draft",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:45 UTC",
+    "serialized_at": "2021-11-22 19:56:46 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspunit4draft"
     }
@@ -449,23 +453,664 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "8f70675c-c1ec-475f-bdc4-d268f5cedf93",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f70675c-c1ec-475f-bdc4-d268f5cedf93",
+        "lesson.key": "Finding Trends with Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "53b13d8b-1c7b-4d18-aff7-f8f0b0409e72",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53b13d8b-1c7b-4d18-aff7-f8f0b0409e72",
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "7aceb6c5-b91f-40c4-bac2-3e5ea3b24f5b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7aceb6c5-b91f-40c4-bac2-3e5ea3b24f5b",
+        "lesson.key": "Check Your Assumptions",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "56cc13b0-2bd1-442c-a92a-afd63e7e6fbe",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "56cc13b0-2bd1-442c-a92a-afd63e7e6fbe",
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "a4ce61e5-2c49-4e9a-b424-00c9bbd39610",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4ce61e5-2c49-4e9a-b424-00c9bbd39610",
+        "lesson.key": "Discover a Data Story",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "a7236505-1cf2-4c40-9d0b-a2d1e9f63a51",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7236505-1cf2-4c40-9d0b-a2d1e9f63a51",
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "336f0cb2-79b2-4870-8abc-b2e01dbda014",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "336f0cb2-79b2-4870-8abc-b2e01dbda014",
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "6e838964-c013-45fd-988a-345a1c949066",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e838964-c013-45fd-988a-345a1c949066",
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "44af80b2-1911-4dcc-b40c-d0c3fa091400",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "44af80b2-1911-4dcc-b40c-d0c3fa091400",
+        "lesson.key": "Why Make Apps?",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "e0ca73d2-31ff-4b1e-9fe8-ff9a0fef8c55",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0ca73d2-31ff-4b1e-9fe8-ff9a0fef8c55",
+        "lesson.key": "Creating Javascript Objects",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "09ab60c2-956f-47d9-b7bf-b8aec78d6065",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09ab60c2-956f-47d9-b7bf-b8aec78d6065",
+        "lesson.key": "Permanent Data Storage",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "1dde682d-f960-4c67-b58d-d6c2ee2ded60",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1dde682d-f960-4c67-b58d-d6c2ee2ded60",
+        "lesson.key": "Reading Records",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "7e1defb6-c99d-4247-81f7-6c254c0e6d4d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e1defb6-c99d-4247-81f7-6c254c0e6d4d",
+        "lesson.key": "Search Terms",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "646eb020-3729-4395-a062-b708e5239642",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "646eb020-3729-4395-a062-b708e5239642",
+        "lesson.key": "Unique IDs, Delete and Update Records",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "405ddd09-601a-4eda-9613-d4c15a4d7433",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "405ddd09-601a-4eda-9613-d4c15a4d7433",
+        "lesson.key": "Import, Export, and Visualize Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "4475e7d3-12f0-401a-9398-d5ba825559e9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4475e7d3-12f0-401a-9398-d5ba825559e9",
+        "lesson.key": "Interpreting Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "b47a3792-6908-4921-a411-28c8ecc53cb8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b47a3792-6908-4921-a411-28c8ecc53cb8",
+        "lesson.key": "How is Data Collected?",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "3c4a99ce-394c-472d-ac4f-b6d141ef01bf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c4a99ce-394c-472d-ac4f-b6d141ef01bf",
+        "lesson.key": "Using Data in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "e88f9f20-6e2c-4239-9553-f05a5dda441d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e88f9f20-6e2c-4239-9553-f05a5dda441d",
+        "lesson.key": "Web Requests and APIs",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "493a9a26-a63c-4756-b796-00e133c10285",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "493a9a26-a63c-4756-b796-00e133c10285",
+        "lesson.key": "Data, Security, and Privacy",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "236f259d-b7df-4965-8fc4-e2d3355caf92",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "236f259d-b7df-4965-8fc4-e2d3355caf92",
+        "lesson.key": "Privacy vs Utility",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "6b65326d-b189-4e32-9c7c-f5557862b8e8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b65326d-b189-4e32-9c7c-f5557862b8e8",
+        "lesson.key": "Privacy in a Digital World",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "e8caeccd-6447-45d1-8379-6ca6c4497355",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8caeccd-6447-45d1-8379-6ca6c4497355",
+        "lesson.key": "Compiling Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "041f9a48-a932-4404-b9f4-69fb7b06d194",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "041f9a48-a932-4404-b9f4-69fb7b06d194",
+        "lesson.key": "Designing Data Collection",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "cdb82eff-32c6-461e-a74b-8a60252b0d50",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cdb82eff-32c6-461e-a74b-8a60252b0d50",
+        "lesson.key": "Designing for Your User",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "f735b9b9-a440-4f8d-8ebe-2c62f87018c3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f735b9b9-a440-4f8d-8ebe-2c62f87018c3",
+        "lesson.key": "Practice Create PT: Data App",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "5386c385-c66a-45ae-91cc-a32f5958017f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5386c385-c66a-45ae-91cc-a32f5958017f",
+        "lesson.key": "What Data Can Tell Us",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    },
+    {
+      "key": "a03ef923-85a9-4d5e-a5c7-66d451932e81",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a03ef923-85a9-4d5e-a5c7-66d451932e81",
+        "lesson.key": "Permanent Data Storage and Clicker Completion",
+        "lesson_group.key": "",
+        "script.name": "cspunit4draft"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "9ed14391-c7b8-433f-9c62-8f571afd9dd0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9ed14391-c7b8-433f-9c62-8f571afd9dd0",
+        "lesson_activity.key": "8f70675c-c1ec-475f-bdc4-d268f5cedf93"
+      }
+    },
+    {
+      "key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39",
+        "lesson_activity.key": "53b13d8b-1c7b-4d18-aff7-f8f0b0409e72"
+      }
+    },
+    {
+      "key": "db741b22-3ae5-49ff-b2fe-711954a83460",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "db741b22-3ae5-49ff-b2fe-711954a83460",
+        "lesson_activity.key": "7aceb6c5-b91f-40c4-bac2-3e5ea3b24f5b"
+      }
+    },
+    {
+      "key": "08ad2b51-b642-4118-9870-f285e8f6e4b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9",
+        "lesson_activity.key": "56cc13b0-2bd1-442c-a92a-afd63e7e6fbe"
+      }
+    },
+    {
+      "key": "c6ac66f5-b221-47f2-9e2b-23ed8372c1e7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c6ac66f5-b221-47f2-9e2b-23ed8372c1e7",
+        "lesson_activity.key": "a4ce61e5-2c49-4e9a-b424-00c9bbd39610"
+      }
+    },
+    {
+      "key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff",
+        "lesson_activity.key": "a7236505-1cf2-4c40-9d0b-a2d1e9f63a51"
+      }
+    },
+    {
+      "key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c",
+        "lesson_activity.key": "336f0cb2-79b2-4870-8abc-b2e01dbda014"
+      }
+    },
+    {
+      "key": "89f3998a-8663-48ae-95b1-4e22fdc18e48",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "89f3998a-8663-48ae-95b1-4e22fdc18e48",
+        "lesson_activity.key": "6e838964-c013-45fd-988a-345a1c949066"
+      }
+    },
+    {
+      "key": "ab954f16-4a20-492a-8561-45e2c477a28a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a",
+        "lesson_activity.key": "44af80b2-1911-4dcc-b40c-d0c3fa091400"
+      }
+    },
+    {
+      "key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12",
+        "lesson_activity.key": "e0ca73d2-31ff-4b1e-9fe8-ff9a0fef8c55"
+      }
+    },
+    {
+      "key": "8897f85a-af3b-480e-9551-2b51f848af3d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d",
+        "lesson_activity.key": "09ab60c2-956f-47d9-b7bf-b8aec78d6065"
+      }
+    },
+    {
+      "key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac",
+        "lesson_activity.key": "1dde682d-f960-4c67-b58d-d6c2ee2ded60"
+      }
+    },
+    {
+      "key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6",
+        "lesson_activity.key": "7e1defb6-c99d-4247-81f7-6c254c0e6d4d"
+      }
+    },
+    {
+      "key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6",
+        "lesson_activity.key": "646eb020-3729-4395-a062-b708e5239642"
+      }
+    },
+    {
+      "key": "6345d146-cea6-4fa8-8e00-26f59d7c7901",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901",
+        "lesson_activity.key": "405ddd09-601a-4eda-9613-d4c15a4d7433"
+      }
+    },
+    {
+      "key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19",
+        "lesson_activity.key": "4475e7d3-12f0-401a-9398-d5ba825559e9"
+      }
+    },
+    {
+      "key": "a140870a-950d-4816-ac92-e978221b2dcd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd",
+        "lesson_activity.key": "b47a3792-6908-4921-a411-28c8ecc53cb8"
+      }
+    },
+    {
+      "key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5",
+        "lesson_activity.key": "3c4a99ce-394c-472d-ac4f-b6d141ef01bf"
+      }
+    },
+    {
+      "key": "05d30aeb-a8ec-4548-abbf-fe357581596e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e",
+        "lesson_activity.key": "e88f9f20-6e2c-4239-9553-f05a5dda441d"
+      }
+    },
+    {
+      "key": "57dce72f-2861-492c-b5c9-f765ebf1ca65",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65",
+        "lesson_activity.key": "493a9a26-a63c-4756-b796-00e133c10285"
+      }
+    },
+    {
+      "key": "0956bb13-95af-4b39-b45f-d2fee90db355",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355",
+        "lesson_activity.key": "236f259d-b7df-4965-8fc4-e2d3355caf92"
+      }
+    },
+    {
+      "key": "80403599-7fef-43a8-9764-44eb9b5e9b17",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17",
+        "lesson_activity.key": "6b65326d-b189-4e32-9c7c-f5557862b8e8"
+      }
+    },
+    {
+      "key": "e2e34528-27c7-4c85-82f8-6c7b40b40019",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019",
+        "lesson_activity.key": "e8caeccd-6447-45d1-8379-6ca6c4497355"
+      }
+    },
+    {
+      "key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c",
+        "lesson_activity.key": "041f9a48-a932-4404-b9f4-69fb7b06d194"
+      }
+    },
+    {
+      "key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15",
+        "lesson_activity.key": "cdb82eff-32c6-461e-a74b-8a60252b0d50"
+      }
+    },
+    {
+      "key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4",
+        "lesson_activity.key": "f735b9b9-a440-4f8d-8ebe-2c62f87018c3"
+      }
+    },
+    {
+      "key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab",
+        "lesson_activity.key": "5386c385-c66a-45ae-91cc-a32f5958017f"
+      }
+    },
+    {
+      "key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc",
+        "lesson_activity.key": "a03ef923-85a9-4d5e-a5c7-66d451932e81"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L02v2 - Finding Trends"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -473,7 +1118,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ed14391-c7b8-433f-9c62-8f571afd9dd0"
       },
       "level_keys": [
         "U4L02v2 - Finding Trends"
@@ -482,14 +1128,13 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L04v2 - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +1142,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39"
       },
       "level_keys": [
         "U4L04v2 - Student Introduction"
@@ -506,14 +1152,13 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "GoodBadVisualizations_v1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -521,7 +1166,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39"
       },
       "level_keys": [
         "GoodBadVisualizations_v1"
@@ -530,14 +1176,13 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "GoodBadVisualizations_v2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -545,7 +1190,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39"
       },
       "level_keys": [
         "GoodBadVisualizations_v2"
@@ -554,14 +1200,13 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L03v2 - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,7 +1214,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "db741b22-3ae5-49ff-b2fe-711954a83460"
       },
       "level_keys": [
         "U4L03v2 - Student Introduction"
@@ -578,14 +1224,13 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Making Data Visualizations - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -593,7 +1238,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Student Introduction"
@@ -602,14 +1248,13 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Making Data Visualizations - Getting Started"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,7 +1262,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Getting Started"
@@ -626,14 +1272,13 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Making Data Visualizations - Scatter Plot"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,7 +1286,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Scatter Plot"
@@ -650,14 +1296,13 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Making Data Visualizations - Line Chart"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,7 +1310,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Line Chart"
@@ -674,14 +1320,13 @@
     {
       "chapter": 10,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Making Data Visualizations - Bar Chart"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -689,7 +1334,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Bar Chart"
@@ -698,14 +1344,13 @@
     {
       "chapter": 11,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Making Data Visualizations - Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -713,7 +1358,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Free Play"
@@ -722,14 +1368,13 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L06v2 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -737,7 +1382,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c6ac66f5-b221-47f2-9e2b-23ed8372c1e7"
       },
       "level_keys": [
         "U4L06v2 Student Lesson Introduction"
@@ -746,14 +1392,13 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L16 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -761,7 +1406,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       },
       "level_keys": [
         "U4L16 Student Lesson Introduction"
@@ -770,14 +1416,13 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Cleaning Data - Activity Guide"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -785,7 +1430,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       },
       "level_keys": [
         "U4 - Cleaning Data - Activity Guide"
@@ -794,14 +1440,13 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 Cleaning Data Activity Guide Pt2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -809,7 +1454,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       },
       "level_keys": [
         "U4 Cleaning Data Activity Guide Pt2"
@@ -818,14 +1464,13 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 Cleaning Data Activity Guide Pt3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -833,7 +1478,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       },
       "level_keys": [
         "U4 Cleaning Data Activity Guide Pt3"
@@ -842,14 +1488,13 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L16 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -857,7 +1502,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       },
       "level_keys": [
         "U4L16 Free Response"
@@ -866,14 +1512,13 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L16 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -881,7 +1526,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       },
       "level_keys": [
         "U4L16 Choose 2"
@@ -890,14 +1536,13 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L16 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -905,7 +1550,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       },
       "level_keys": [
         "U4L16 Multiple Choice"
@@ -914,14 +1560,13 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L08v2 Student Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -929,7 +1574,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       },
       "level_keys": [
         "U4L08v2 Student Intro"
@@ -938,14 +1584,13 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L08v2 Making Pivot Tables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -953,7 +1598,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       },
       "level_keys": [
         "U4L08v2 Making Pivot Tables"
@@ -962,14 +1608,13 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L08v2 Making Pivot Tables Part 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -977,7 +1622,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       },
       "level_keys": [
         "U4L08v2 Making Pivot Tables Part 2"
@@ -986,14 +1632,13 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L08v2 Making Pivot Tables Part 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1001,7 +1646,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       },
       "level_keys": [
         "U4L08v2 Making Pivot Tables Part 3"
@@ -1010,14 +1656,13 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L12 - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1025,7 +1670,8 @@
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "89f3998a-8663-48ae-95b1-4e22fdc18e48"
       },
       "level_keys": [
         "U4L12 - Student Introduction"
@@ -1034,14 +1680,13 @@
     {
       "chapter": 25,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L01 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,7 +1694,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       },
       "level_keys": [
         "U4L01 Student Lesson Introduction"
@@ -1058,14 +1704,13 @@
     {
       "chapter": 26,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L01 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1073,7 +1718,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       },
       "level_keys": [
         "U4L01 Free Response"
@@ -1082,14 +1728,13 @@
     {
       "chapter": 27,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L01 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1097,7 +1742,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       },
       "level_keys": [
         "U4L01 Choose 2"
@@ -1106,14 +1752,13 @@
     {
       "chapter": 28,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L01 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1121,7 +1766,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       },
       "level_keys": [
         "U4L01 Multiple Choice"
@@ -1130,14 +1776,13 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L02 Student Lesson Introduction Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1145,7 +1790,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4L02 Student Lesson Introduction Video"
@@ -1154,14 +1800,13 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - eventParameter"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1169,7 +1814,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - eventParameter"
@@ -1178,14 +1824,13 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - dotNotation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1193,7 +1838,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - dotNotation"
@@ -1202,14 +1848,13 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - createDotNotation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1217,7 +1862,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - createDotNotation"
@@ -1226,14 +1872,13 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - arraysOfObjects"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1241,7 +1886,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - arraysOfObjects"
@@ -1250,14 +1896,13 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - accessingPropertiesInArray"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1265,7 +1910,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - accessingPropertiesInArray"
@@ -1274,14 +1920,13 @@
     {
       "chapter": 35,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - exemplarContactsApp"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1289,7 +1934,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - exemplarContactsApp"
@@ -1298,14 +1944,13 @@
     {
       "chapter": 36,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - readStarterCode"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1313,7 +1958,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - readStarterCode"
@@ -1322,14 +1968,13 @@
     {
       "chapter": 37,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - createContactsData"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1337,7 +1982,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - createContactsData"
@@ -1346,14 +1992,13 @@
     {
       "chapter": 38,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - showContact1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1361,7 +2006,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - showContact1"
@@ -1370,14 +2016,13 @@
     {
       "chapter": 39,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - showContact2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1385,7 +2030,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - showContact2"
@@ -1394,14 +2040,13 @@
     {
       "chapter": 40,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - showContact3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1409,7 +2054,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - showContact3"
@@ -1418,14 +2064,13 @@
     {
       "chapter": 41,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - pullValues"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1433,7 +2078,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - pullValues"
@@ -1442,14 +2088,13 @@
     {
       "chapter": 42,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - createContactObject"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1457,7 +2102,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - createContactObject"
@@ -1466,14 +2112,13 @@
     {
       "chapter": 43,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - resetIndexAndShow"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1481,7 +2126,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - resetIndexAndShow"
@@ -1490,14 +2136,13 @@
     {
       "chapter": 44,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Objects - showSampleImage"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1505,7 +2150,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4 - Objects - showSampleImage"
@@ -1514,14 +2160,13 @@
     {
       "chapter": 45,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L02 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1529,7 +2174,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4L02 Free Response"
@@ -1538,14 +2184,13 @@
     {
       "chapter": 46,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L02 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1553,7 +2198,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4L02 Choose 2"
@@ -1562,14 +2208,13 @@
     {
       "chapter": 47,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L02 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1577,7 +2222,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       },
       "level_keys": [
         "U4L02 Multiple Choice"
@@ -1586,14 +2232,13 @@
     {
       "chapter": 48,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L03 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1601,7 +2246,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4L03 Student Lesson Introduction"
@@ -1610,14 +2256,13 @@
     {
       "chapter": 49,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - CreateRecord - 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1625,7 +2270,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - CreateRecord - 1"
@@ -1634,14 +2280,13 @@
     {
       "chapter": 50,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - CreateRecord - 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1649,7 +2294,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - CreateRecord - 2"
@@ -1658,14 +2304,13 @@
     {
       "chapter": 51,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - CreateRecord - 2.5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1673,7 +2318,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - CreateRecord - 2.5"
@@ -1682,14 +2328,13 @@
     {
       "chapter": 52,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - CreateRecord - 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1697,7 +2342,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - CreateRecord - 3"
@@ -1706,14 +2352,13 @@
     {
       "chapter": 53,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - CreateRecord - 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1721,7 +2366,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - CreateRecord - 4"
@@ -1730,14 +2376,13 @@
     {
       "chapter": 54,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - CreateRecord - 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1745,7 +2390,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - CreateRecord - 5"
@@ -1754,14 +2400,13 @@
     {
       "chapter": 55,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Edit Data Table by Hand"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1769,7 +2414,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - Edit Data Table by Hand"
@@ -1778,14 +2424,13 @@
     {
       "chapter": 56,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - debug column names are case sensitive"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1793,7 +2438,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - debug column names are case sensitive"
@@ -1802,14 +2448,13 @@
     {
       "chapter": 57,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Add Row By Hand"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1817,7 +2462,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - Add Row By Hand"
@@ -1826,14 +2472,13 @@
     {
       "chapter": 58,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - add createRecord to contacts App"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1841,7 +2486,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - add createRecord to contacts App"
@@ -1850,14 +2496,13 @@
     {
       "chapter": 59,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - fix contacts by hand in data table"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1865,7 +2510,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - fix contacts by hand in data table"
@@ -1874,14 +2520,13 @@
     {
       "chapter": 60,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - last stage test adding contcts"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1889,7 +2534,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       },
       "level_keys": [
         "U4 - last stage test adding contcts"
@@ -1898,14 +2544,13 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L04 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1913,7 +2558,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4L04 Student Lesson Introduction"
@@ -1922,14 +2568,13 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1937,7 +2582,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - 1"
@@ -1946,14 +2592,13 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - 1.2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1961,7 +2606,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - 1.2"
@@ -1970,14 +2616,13 @@
     {
       "chapter": 64,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - 1.3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1985,7 +2630,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - 1.3"
@@ -1994,14 +2640,13 @@
     {
       "chapter": 65,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2009,7 +2654,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - 2"
@@ -2018,14 +2664,13 @@
     {
       "chapter": 66,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2033,7 +2678,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - 3"
@@ -2042,14 +2688,13 @@
     {
       "chapter": 67,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - 4.1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2057,7 +2702,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - 4.1"
@@ -2066,14 +2712,13 @@
     {
       "chapter": 68,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2081,7 +2726,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - 5"
@@ -2090,14 +2736,13 @@
     {
       "chapter": 69,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Unique Ids Explanation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2105,7 +2750,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Unique Ids Explanation"
@@ -2114,14 +2760,13 @@
     {
       "chapter": 70,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - deleteRecords 0"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2129,7 +2774,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - deleteRecords 0"
@@ -2138,14 +2784,13 @@
     {
       "chapter": 71,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - deleteRecords 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2153,7 +2798,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - deleteRecords 1"
@@ -2162,14 +2808,13 @@
     {
       "chapter": 72,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - deleteRecords 2 delete object"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2177,7 +2822,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - deleteRecords 2 delete object"
@@ -2186,14 +2832,13 @@
     {
       "chapter": 73,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - ReadRecords - Contacts App 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2201,7 +2846,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 1"
@@ -2210,14 +2856,13 @@
     {
       "chapter": 74,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Read Record - Local vs Remote Data External"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2225,7 +2870,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - Read Record - Local vs Remote Data External"
@@ -2234,14 +2880,13 @@
     {
       "chapter": 75,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - ReadRecords - Contacts App 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2249,7 +2894,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 2"
@@ -2258,14 +2904,13 @@
     {
       "chapter": 76,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - ReadRecords - Contacts App 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2273,7 +2918,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 3"
@@ -2282,14 +2928,13 @@
     {
       "chapter": 77,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - ReadRecords - Contacts App 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2297,7 +2942,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 4"
@@ -2306,14 +2952,13 @@
     {
       "chapter": 78,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - ReadRecords - Contacts App 5 make delete work"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2321,7 +2966,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 5 make delete work"
@@ -2330,14 +2976,13 @@
     {
       "chapter": 79,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L05 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2345,7 +2990,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       },
       "level_keys": [
         "U4L05 Student Lesson Introduction"
@@ -2354,14 +3000,13 @@
     {
       "chapter": 80,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L05 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2369,7 +3014,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       },
       "level_keys": [
         "U4L05 Free Response"
@@ -2378,14 +3024,13 @@
     {
       "chapter": 81,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L05 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2393,7 +3038,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       },
       "level_keys": [
         "U4L05 Choose 2"
@@ -2402,14 +3048,13 @@
     {
       "chapter": 82,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L05 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2417,7 +3062,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       },
       "level_keys": [
         "U4L05 Multiple Choice"
@@ -2426,14 +3072,13 @@
     {
       "chapter": 83,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L06 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2441,7 +3086,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       },
       "level_keys": [
         "U4L06 Student Lesson Introduction"
@@ -2450,14 +3096,13 @@
     {
       "chapter": 84,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L06 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2465,7 +3110,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       },
       "level_keys": [
         "U4L06 Free Response"
@@ -2474,14 +3120,13 @@
     {
       "chapter": 85,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L06 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2489,7 +3134,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       },
       "level_keys": [
         "U4L06 Choose 2"
@@ -2498,14 +3144,13 @@
     {
       "chapter": 86,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L06 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2513,7 +3158,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       },
       "level_keys": [
         "U4L06 Multiple Choice"
@@ -2522,14 +3168,13 @@
     {
       "chapter": 87,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L07 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2537,7 +3182,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4L07 Student Lesson Introduction"
@@ -2546,14 +3192,13 @@
     {
       "chapter": 88,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - Import Data 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2561,7 +3206,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - Import Data 1"
@@ -2570,14 +3216,13 @@
     {
       "chapter": 89,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - Import Data 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2585,7 +3230,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - Import Data 2"
@@ -2594,14 +3240,13 @@
     {
       "chapter": 90,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - Remixing Apps with Data"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2609,7 +3254,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - Remixing Apps with Data"
@@ -2618,14 +3264,13 @@
     {
       "chapter": 91,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - Export Data"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2633,7 +3278,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - Export Data"
@@ -2642,14 +3288,13 @@
     {
       "chapter": 92,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - drawChartFromRecords 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2657,7 +3302,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - drawChartFromRecords 1"
@@ -2666,14 +3312,13 @@
     {
       "chapter": 93,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - Scatter Chart"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2681,7 +3326,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - Scatter Chart"
@@ -2690,14 +3336,13 @@
     {
       "chapter": 94,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - Line Chart 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2705,7 +3350,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - Line Chart 1"
@@ -2714,14 +3360,13 @@
     {
       "chapter": 95,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - Line Chart 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2729,7 +3374,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - Line Chart 2"
@@ -2738,14 +3384,13 @@
     {
       "chapter": 96,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - drawChartFromRecords Options 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2753,7 +3398,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - drawChartFromRecords Options 1"
@@ -2762,14 +3408,13 @@
     {
       "chapter": 97,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 - Charts - drawChartFromRecords Options 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2777,7 +3422,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4 - Charts - drawChartFromRecords Options 2"
@@ -2786,14 +3432,13 @@
     {
       "chapter": 98,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L07 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2801,7 +3446,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4L07 Free Response"
@@ -2810,14 +3456,13 @@
     {
       "chapter": 99,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L07 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2825,7 +3470,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4L07 Choose 2"
@@ -2834,14 +3480,13 @@
     {
       "chapter": 100,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L07 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2849,7 +3494,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       },
       "level_keys": [
         "U4L07 Multiple Choice"
@@ -2858,14 +3504,13 @@
     {
       "chapter": 101,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L08 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2873,7 +3518,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       },
       "level_keys": [
         "U4L08 Student Lesson Introduction"
@@ -2882,14 +3528,13 @@
     {
       "chapter": 102,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L08 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2897,7 +3542,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       },
       "level_keys": [
         "U4L08 Free Response"
@@ -2906,14 +3552,13 @@
     {
       "chapter": 103,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L08 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2921,7 +3566,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       },
       "level_keys": [
         "U4L08 Choose 2"
@@ -2930,14 +3576,13 @@
     {
       "chapter": 104,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L08 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2945,7 +3590,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       },
       "level_keys": [
         "U4L08 Multiple Choice"
@@ -2954,14 +3600,13 @@
     {
       "chapter": 105,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L09 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2969,7 +3614,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       },
       "level_keys": [
         "U4L09 Student Lesson Introduction"
@@ -2978,14 +3624,13 @@
     {
       "chapter": 106,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L09 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2993,7 +3638,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       },
       "level_keys": [
         "U4L09 Free Response"
@@ -3002,14 +3648,13 @@
     {
       "chapter": 107,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L09 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3017,7 +3662,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       },
       "level_keys": [
         "U4L09 Choose 2"
@@ -3026,14 +3672,13 @@
     {
       "chapter": 108,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L09 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3041,7 +3686,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       },
       "level_keys": [
         "U4L09 Multiple Choice"
@@ -3050,14 +3696,13 @@
     {
       "chapter": 109,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L10 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3065,7 +3710,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       },
       "level_keys": [
         "U4L10 Student Lesson Introduction"
@@ -3074,14 +3720,13 @@
     {
       "chapter": 110,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L10 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3089,7 +3734,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       },
       "level_keys": [
         "U4L10 Free Response"
@@ -3098,14 +3744,13 @@
     {
       "chapter": 111,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L10 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3113,7 +3758,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       },
       "level_keys": [
         "U4L10 Choose 2"
@@ -3122,14 +3768,13 @@
     {
       "chapter": 112,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L10 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3137,7 +3782,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       },
       "level_keys": [
         "U4L10 Multiple Choice"
@@ -3146,14 +3792,13 @@
     {
       "chapter": 113,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L11 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3161,7 +3806,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       },
       "level_keys": [
         "U4L11 Student Lesson Introduction"
@@ -3170,14 +3816,13 @@
     {
       "chapter": 114,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L11 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3185,7 +3830,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       },
       "level_keys": [
         "U4L11 Free Response"
@@ -3194,14 +3840,13 @@
     {
       "chapter": 115,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L11 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3209,7 +3854,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       },
       "level_keys": [
         "U4L11 Choose 2"
@@ -3218,14 +3864,13 @@
     {
       "chapter": 116,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L11 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3233,7 +3878,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       },
       "level_keys": [
         "U4L11 Multiple Choice"
@@ -3242,14 +3888,13 @@
     {
       "chapter": 117,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L12 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3257,7 +3902,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       },
       "level_keys": [
         "U4L12 Student Lesson Introduction"
@@ -3266,14 +3912,13 @@
     {
       "chapter": 118,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L12 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3281,7 +3926,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       },
       "level_keys": [
         "U4L12 Free Response"
@@ -3290,14 +3936,13 @@
     {
       "chapter": 119,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L12 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3305,7 +3950,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       },
       "level_keys": [
         "U4L12 Choose 2"
@@ -3314,14 +3960,13 @@
     {
       "chapter": 120,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L12 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3329,7 +3974,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       },
       "level_keys": [
         "U4L12 Multiple Choice"
@@ -3338,14 +3984,13 @@
     {
       "chapter": 121,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L13 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3353,7 +3998,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       },
       "level_keys": [
         "U4L13 Student Lesson Introduction"
@@ -3362,14 +4008,13 @@
     {
       "chapter": 122,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L13 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3377,7 +4022,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       },
       "level_keys": [
         "U4L13 Free Response"
@@ -3386,14 +4032,13 @@
     {
       "chapter": 123,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L13 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3401,7 +4046,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       },
       "level_keys": [
         "U4L13 Choose 2"
@@ -3410,14 +4056,13 @@
     {
       "chapter": 124,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L13 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3425,7 +4070,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       },
       "level_keys": [
         "U4L13 Multiple Choice"
@@ -3434,14 +4080,13 @@
     {
       "chapter": 125,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L14 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3449,7 +4094,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       },
       "level_keys": [
         "U4L14 Student Lesson Introduction"
@@ -3458,14 +4104,13 @@
     {
       "chapter": 126,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L14 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3473,7 +4118,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       },
       "level_keys": [
         "U4L14 Free Response"
@@ -3482,14 +4128,13 @@
     {
       "chapter": 127,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L14 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3497,7 +4142,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       },
       "level_keys": [
         "U4L14 Choose 2"
@@ -3506,14 +4152,13 @@
     {
       "chapter": 128,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L14 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3521,7 +4166,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       },
       "level_keys": [
         "U4L14 Multiple Choice"
@@ -3530,14 +4176,13 @@
     {
       "chapter": 129,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L15 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3545,7 +4190,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       },
       "level_keys": [
         "U4L15 Student Lesson Introduction"
@@ -3554,14 +4200,13 @@
     {
       "chapter": 130,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L15 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3569,7 +4214,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       },
       "level_keys": [
         "U4L15 Free Response"
@@ -3578,14 +4224,13 @@
     {
       "chapter": 131,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L15 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3593,7 +4238,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       },
       "level_keys": [
         "U4L15 Choose 2"
@@ -3602,14 +4248,13 @@
     {
       "chapter": 132,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L15 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3617,7 +4262,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       },
       "level_keys": [
         "U4L15 Multiple Choice"
@@ -3626,14 +4272,13 @@
     {
       "chapter": 133,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L17 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3641,7 +4286,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       },
       "level_keys": [
         "U4L17 Student Lesson Introduction"
@@ -3650,14 +4296,13 @@
     {
       "chapter": 134,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L17 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3665,7 +4310,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       },
       "level_keys": [
         "U4L17 Free Response"
@@ -3674,14 +4320,13 @@
     {
       "chapter": 135,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L17 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3689,7 +4334,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       },
       "level_keys": [
         "U4L17 Choose 2"
@@ -3698,14 +4344,13 @@
     {
       "chapter": 136,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L17 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3713,7 +4358,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       },
       "level_keys": [
         "U4L17 Multiple Choice"
@@ -3722,14 +4368,13 @@
     {
       "chapter": 137,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L18 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3737,7 +4382,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       },
       "level_keys": [
         "U4L18 Student Lesson Introduction"
@@ -3746,14 +4392,13 @@
     {
       "chapter": 138,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L18 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3761,7 +4406,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       },
       "level_keys": [
         "U4L18 Free Response"
@@ -3770,14 +4416,13 @@
     {
       "chapter": 139,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L18 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3785,7 +4430,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       },
       "level_keys": [
         "U4L18 Choose 2"
@@ -3794,14 +4440,13 @@
     {
       "chapter": 140,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L18 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3809,7 +4454,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       },
       "level_keys": [
         "U4L18 Multiple Choice"
@@ -3818,14 +4464,13 @@
     {
       "chapter": 141,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4L19 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3833,7 +4478,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       },
       "level_keys": [
         "U4L19 Student Lesson Introduction"
@@ -3842,14 +4488,13 @@
     {
       "chapter": 142,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L19 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3857,7 +4502,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       },
       "level_keys": [
         "U4L19 Free Response"
@@ -3866,14 +4512,13 @@
     {
       "chapter": 143,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L19 Choose 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3881,7 +4526,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       },
       "level_keys": [
         "U4L19 Choose 2"
@@ -3890,14 +4536,13 @@
     {
       "chapter": 144,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U4L19 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3905,7 +4550,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       },
       "level_keys": [
         "U4L19 Multiple Choice"
@@ -3914,14 +4560,13 @@
     {
       "chapter": 145,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSP Data Unit -Counting Records - Hard Way"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3929,7 +4574,8 @@
         ],
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab"
       },
       "level_keys": [
         "CSP Data Unit -Counting Records - Hard Way"
@@ -3938,14 +4584,13 @@
     {
       "chapter": 146,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSP Data Unit -Counting Records - Easy Way"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3953,7 +4598,8 @@
         ],
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab"
       },
       "level_keys": [
         "CSP Data Unit -Counting Records - Easy Way"
@@ -3962,14 +4608,13 @@
     {
       "chapter": 147,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSP Data Unit - Counting Multiple Things"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3977,7 +4622,8 @@
         ],
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab"
       },
       "level_keys": [
         "CSP Data Unit - Counting Multiple Things"
@@ -3986,14 +4632,13 @@
     {
       "chapter": 148,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L22 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4001,7 +4646,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L22 Student Lesson Introduction"
@@ -4010,14 +4656,13 @@
     {
       "chapter": 149,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L17 - introKeyValue"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4025,7 +4670,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L17 - introKeyValue"
@@ -4034,14 +4680,13 @@
     {
       "chapter": 150,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L17 - setKeyValue"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4049,7 +4694,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L17 - setKeyValue"
@@ -4058,14 +4704,13 @@
     {
       "chapter": 151,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L17 - twoSetKeyValue"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4073,7 +4718,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L17 - twoSetKeyValue"
@@ -4082,14 +4728,13 @@
     {
       "chapter": 152,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L17 - introCallbacks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4097,7 +4742,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L17 - introCallbacks"
@@ -4106,14 +4752,13 @@
     {
       "chapter": 153,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3L17 - getKeyValue"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4121,7 +4766,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L17 - getKeyValue"
@@ -4130,14 +4776,13 @@
     {
       "chapter": 154,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U3L22 Free Response Getting Started"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4145,7 +4790,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L22 Free Response Getting Started"
@@ -4154,14 +4800,13 @@
     {
       "chapter": 155,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U3L22 Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4169,7 +4814,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L22 Assessment"
@@ -4178,14 +4824,13 @@
     {
       "chapter": 156,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U3L22 Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4193,7 +4838,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       },
       "level_keys": [
         "U3L22 Reflection"
@@ -4209,7 +4855,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ed14391-c7b8-433f-9c62-8f571afd9dd0"
       }
     },
     {
@@ -4220,7 +4867,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39"
       }
     },
     {
@@ -4231,7 +4879,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39"
       }
     },
     {
@@ -4242,7 +4891,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "017c15e3-74f8-4f73-ab9b-2e50cd640b39"
       }
     },
     {
@@ -4253,7 +4903,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "db741b22-3ae5-49ff-b2fe-711954a83460"
       }
     },
     {
@@ -4264,7 +4915,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       }
     },
     {
@@ -4275,7 +4927,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       }
     },
     {
@@ -4286,7 +4939,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       }
     },
     {
@@ -4297,7 +4951,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       }
     },
     {
@@ -4308,7 +4963,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       }
     },
     {
@@ -4319,7 +4975,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "08ad2b51-b642-4118-9870-f285e8f6e4b9"
       }
     },
     {
@@ -4330,7 +4987,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c6ac66f5-b221-47f2-9e2b-23ed8372c1e7"
       }
     },
     {
@@ -4341,7 +4999,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       }
     },
     {
@@ -4352,7 +5011,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       }
     },
     {
@@ -4363,7 +5023,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       }
     },
     {
@@ -4374,7 +5035,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       }
     },
     {
@@ -4385,7 +5047,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       }
     },
     {
@@ -4396,7 +5059,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       }
     },
     {
@@ -4407,7 +5071,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9b2eb08d-3050-46ed-8447-c3a2c80a8bff"
       }
     },
     {
@@ -4418,7 +5083,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       }
     },
     {
@@ -4429,7 +5095,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       }
     },
     {
@@ -4440,7 +5107,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       }
     },
     {
@@ -4451,7 +5119,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e0bfc2ad-9392-48d2-984e-1cfba3cfc23c"
       }
     },
     {
@@ -4462,7 +5131,8 @@
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "89f3998a-8663-48ae-95b1-4e22fdc18e48"
       }
     },
     {
@@ -4473,7 +5143,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       }
     },
     {
@@ -4484,7 +5155,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       }
     },
     {
@@ -4495,7 +5167,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       }
     },
     {
@@ -4506,7 +5179,8 @@
         ],
         "lesson.key": "Why Make Apps?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ab954f16-4a20-492a-8561-45e2c477a28a"
       }
     },
     {
@@ -4517,7 +5191,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4528,7 +5203,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4539,7 +5215,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4550,7 +5227,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4561,7 +5239,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4572,7 +5251,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4583,7 +5263,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4594,7 +5275,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4605,7 +5287,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4616,7 +5299,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4627,7 +5311,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4638,7 +5323,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4649,7 +5335,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4660,7 +5347,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4671,7 +5359,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4682,7 +5371,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4693,7 +5383,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4704,7 +5395,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4715,7 +5407,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "2c08b456-c3a6-46d4-84fb-cd8b26bf1d12"
       }
     },
     {
@@ -4726,7 +5419,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4737,7 +5431,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4748,7 +5443,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4759,7 +5455,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4770,7 +5467,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4781,7 +5479,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4792,7 +5491,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4803,7 +5503,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4814,7 +5515,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4825,7 +5527,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4836,7 +5539,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4847,7 +5551,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4858,7 +5563,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "8897f85a-af3b-480e-9551-2b51f848af3d"
       }
     },
     {
@@ -4869,7 +5575,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4880,7 +5587,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4891,7 +5599,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4902,7 +5611,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4913,7 +5623,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4924,7 +5635,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4935,7 +5647,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4946,7 +5659,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4957,7 +5671,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4968,7 +5683,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4979,7 +5695,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -4990,7 +5707,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -5001,7 +5719,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -5012,7 +5731,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -5023,7 +5743,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -5034,7 +5755,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -5045,7 +5767,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -5056,7 +5779,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "9ebcd05a-2125-490d-ba7e-23d47b4b4aac"
       }
     },
     {
@@ -5067,7 +5791,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       }
     },
     {
@@ -5078,7 +5803,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       }
     },
     {
@@ -5089,7 +5815,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       }
     },
     {
@@ -5100,7 +5827,8 @@
         ],
         "lesson.key": "Search Terms",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1338328f-96e8-47dd-bf2b-27fea42d8ff6"
       }
     },
     {
@@ -5111,7 +5839,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       }
     },
     {
@@ -5122,7 +5851,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       }
     },
     {
@@ -5133,7 +5863,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       }
     },
     {
@@ -5144,7 +5875,8 @@
         ],
         "lesson.key": "Unique IDs, Delete and Update Records",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "df13e6e2-700b-41f0-b6a7-6a2eb5418af6"
       }
     },
     {
@@ -5155,7 +5887,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5166,7 +5899,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5177,7 +5911,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5188,7 +5923,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5199,7 +5935,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5210,7 +5947,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5221,7 +5959,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5232,7 +5971,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5243,7 +5983,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5254,7 +5995,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5265,7 +6007,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5276,7 +6019,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5287,7 +6031,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5298,7 +6043,8 @@
         ],
         "lesson.key": "Import, Export, and Visualize Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "6345d146-cea6-4fa8-8e00-26f59d7c7901"
       }
     },
     {
@@ -5309,7 +6055,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       }
     },
     {
@@ -5320,7 +6067,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       }
     },
     {
@@ -5331,7 +6079,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       }
     },
     {
@@ -5342,7 +6091,8 @@
         ],
         "lesson.key": "Interpreting Data Visualizations",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "38d5c2b4-4ece-428b-9305-5b5d0218ee19"
       }
     },
     {
@@ -5353,7 +6103,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       }
     },
     {
@@ -5364,7 +6115,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       }
     },
     {
@@ -5375,7 +6127,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       }
     },
     {
@@ -5386,7 +6139,8 @@
         ],
         "lesson.key": "How is Data Collected?",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "a140870a-950d-4816-ac92-e978221b2dcd"
       }
     },
     {
@@ -5397,7 +6151,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       }
     },
     {
@@ -5408,7 +6163,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       }
     },
     {
@@ -5419,7 +6175,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       }
     },
     {
@@ -5430,7 +6187,8 @@
         ],
         "lesson.key": "Using Data in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "ea18577b-eedd-40f1-9208-f00ff8ce6ad5"
       }
     },
     {
@@ -5441,7 +6199,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       }
     },
     {
@@ -5452,7 +6211,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       }
     },
     {
@@ -5463,7 +6223,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       }
     },
     {
@@ -5474,7 +6235,8 @@
         ],
         "lesson.key": "Web Requests and APIs",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "05d30aeb-a8ec-4548-abbf-fe357581596e"
       }
     },
     {
@@ -5485,7 +6247,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       }
     },
     {
@@ -5496,7 +6259,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       }
     },
     {
@@ -5507,7 +6271,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       }
     },
     {
@@ -5518,7 +6283,8 @@
         ],
         "lesson.key": "Data, Security, and Privacy",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "57dce72f-2861-492c-b5c9-f765ebf1ca65"
       }
     },
     {
@@ -5529,7 +6295,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       }
     },
     {
@@ -5540,7 +6307,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       }
     },
     {
@@ -5551,7 +6319,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       }
     },
     {
@@ -5562,7 +6331,8 @@
         ],
         "lesson.key": "Privacy vs Utility",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "0956bb13-95af-4b39-b45f-d2fee90db355"
       }
     },
     {
@@ -5573,7 +6343,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       }
     },
     {
@@ -5584,7 +6355,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       }
     },
     {
@@ -5595,7 +6367,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       }
     },
     {
@@ -5606,7 +6379,8 @@
         ],
         "lesson.key": "Privacy in a Digital World",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "80403599-7fef-43a8-9764-44eb9b5e9b17"
       }
     },
     {
@@ -5617,7 +6391,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       }
     },
     {
@@ -5628,7 +6403,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       }
     },
     {
@@ -5639,7 +6415,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       }
     },
     {
@@ -5650,7 +6427,8 @@
         ],
         "lesson.key": "Compiling Data",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "e2e34528-27c7-4c85-82f8-6c7b40b40019"
       }
     },
     {
@@ -5661,7 +6439,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       }
     },
     {
@@ -5672,7 +6451,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       }
     },
     {
@@ -5683,7 +6463,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       }
     },
     {
@@ -5694,7 +6475,8 @@
         ],
         "lesson.key": "Designing Data Collection",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "95ca1a1e-3c9f-4e1d-95af-cf59696f634c"
       }
     },
     {
@@ -5705,7 +6487,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       }
     },
     {
@@ -5716,7 +6499,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       }
     },
     {
@@ -5727,7 +6511,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       }
     },
     {
@@ -5738,7 +6523,8 @@
         ],
         "lesson.key": "Designing for Your User",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c8a60c6a-6037-47dc-be4c-48fd3f3abf15"
       }
     },
     {
@@ -5749,7 +6535,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       }
     },
     {
@@ -5760,7 +6547,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       }
     },
     {
@@ -5771,7 +6559,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       }
     },
     {
@@ -5782,7 +6571,8 @@
         ],
         "lesson.key": "Practice Create PT: Data App",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1dbfad7a-23d8-407e-ac99-bd61212d68d4"
       }
     },
     {
@@ -5793,7 +6583,8 @@
         ],
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab"
       }
     },
     {
@@ -5804,7 +6595,8 @@
         ],
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab"
       }
     },
     {
@@ -5815,7 +6607,8 @@
         ],
         "lesson.key": "What Data Can Tell Us",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "1a98130a-ce66-4a7c-adef-1d8e20ceebab"
       }
     },
     {
@@ -5826,7 +6619,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5837,7 +6631,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5848,7 +6643,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5859,7 +6655,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5870,7 +6667,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5881,7 +6679,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5892,7 +6691,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5903,7 +6703,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     },
     {
@@ -5914,7 +6715,8 @@
         ],
         "lesson.key": "Permanent Data Storage and Clicker Completion",
         "lesson_group.key": "",
-        "script.name": "cspunit4draft"
+        "script.name": "cspunit4draft",
+        "activity_section.key": "c9b3e252-23a3-4fbc-b080-fee28ef0cdfc"
       }
     }
   ],

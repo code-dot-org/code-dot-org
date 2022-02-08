@@ -2,13 +2,17 @@
   "script": {
     "name": "vigenere",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:45 UTC",
+    "serialized_at": "2021-11-22 19:57:18 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "vigenere"
     }
@@ -44,23 +48,43 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c728edf8-b7ed-465b-99f4-78f27e751d2b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c728edf8-b7ed-465b-99f4-78f27e751d2b",
+        "lesson.key": "Vigenere",
+        "lesson_group.key": "",
+        "script.name": "vigenere"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6ba26197-11be-4d8b-89cf-4f429ee2bf1b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6ba26197-11be-4d8b-89cf-4f429ee2bf1b",
+        "lesson_activity.key": "c728edf8-b7ed-465b-99f4-78f27e751d2b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Vigenere"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -68,7 +92,8 @@
         ],
         "lesson.key": "Vigenere",
         "lesson_group.key": "",
-        "script.name": "vigenere"
+        "script.name": "vigenere",
+        "activity_section.key": "6ba26197-11be-4d8b-89cf-4f429ee2bf1b"
       },
       "level_keys": [
         "Vigenere"
@@ -84,7 +109,8 @@
         ],
         "lesson.key": "Vigenere",
         "lesson_group.key": "",
-        "script.name": "vigenere"
+        "script.name": "vigenere",
+        "activity_section.key": "6ba26197-11be-4d8b-89cf-4f429ee2bf1b"
       }
     }
   ],

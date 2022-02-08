@@ -7,7 +7,7 @@ nav: how_to_nav
 {{ signup_button }}
 
 # Ako priniesť Hodinu Kódu do Vašej spoločnosti
-### Find out how you and your employees can inspire students to try computer science!
+### Zistite, ako môžete vy a vaši zamestnanci inšpirovať študentov, aby vyskúšali informatiku!
 
 ***
 
@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 
 ## 1. Promote your Hour of Code
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+- Povzbuďte programátorov vo Vašej spoločnosti, aby navštívili miestnu triedu a pomohli viesť Hodinu Kódu a tým inšpirovali študentov k štúdiu informatiky. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
@@ -49,12 +49,12 @@ Pre čo najlepší zážitok s Hodinou Kódu sú potrebné počítače s pripoje
 **Plan Ahead!** Do the following before your event starts:
 
 - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
+- Poskytnite slúchadlá alebo požiadajte účastníkov, aby si priniestli vlastné, ak ste vybrali aktivity, ktoré fungujú najlepšie so zvukom.
+- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Keď sa účastníci spoja, pomáhajú si navzájom a menej zaťažujú organizátora. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
 - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 ## 5.  Start your Hour of Code off with an inspiring video
-Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počítačové technológie ovplyvňujú každú oblasť nášho života. Share more about what inspired you to pursue computer science and your role at your company.
+Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počítačové technológie ovplyvňujú každú oblasť nášho života. Zdieľajte, čo vás inšpirovalo k absolvovaniu informatiky a Vašu pozíciu v spoločnosti.
 
 **Ukážte inšpiratívne video:**
 
@@ -63,21 +63,21 @@ Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počíta�
 - [Prezident Obama vyzýva všetkých študentov, aby sa učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Pozrite si viac inšpirujúcich videí [tu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity to students:**
+**Nápady, ako uviesť aktivity Hodiny Kódu pre študentov:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Vysvetlite, ako technológie ovplyvňujú naše životy vrátane príkladov, ktoré pochopia chlapci i dievčatá - hovorte o záchrane životov, pomáhaní ľuďom, spájaní ľudí.
+- Ak pracujete v technologickej spoločnosti, predveďte zábavné, inovatívne produkty, ktoré vyvíjate vo Vašej spoločnosti.
+- Ak nie ste technologická spoločnosť, hovorte o spôsoboch, ako technológie riešia Vaše problémy a pomáhajú pri plnení cieľov.
+- Pozvite programátorov z Vašej spoločnosti, aby povedali, prečo sa rozhodli študovať informatiku a predstavili projekty, na ktorých pracujú.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Code!
 **Nasmerujte účastníkov na aktivity**
 
 - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Pre mladších študentov načítajte stránku s aktivitami pred samotnou aktivitou alebo ju uložte do záložiek.
 
-**When participants come across difficulties it's okay to respond:**
+**Ak sa budú účastníci potýkať s ťažkosťami, môžete im odpovedať nasledovne:**
 
 - “I don’t know. Let’s figure this out together.”
 - “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
@@ -85,13 +85,13 @@ Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počíta�
 **Čo robiť, ak niekto skončí v predstihu?**
 
 - They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- Alebo ich požiadajte, aby pomohli ich kamarátovi, ktorému sa nedarí pokročiť v aktivite.
 
 ## 7. Oslavujte
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- [Objednajte tričká na mieru](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pre Vašich zamestnancov.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 {{ signup_button }}

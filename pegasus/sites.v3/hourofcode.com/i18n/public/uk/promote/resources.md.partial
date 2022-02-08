@@ -18,7 +18,7 @@ nav: promote_nav
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Повісьте плакати у школі
 
 A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
 
@@ -28,21 +28,21 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="social"></a>
 
-## Post these on social media
+## Розмістіть у соціальних мережах
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Використайте логотип Години коду для поширення інформації
 
 [![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![image]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Завантажити версії з високою роздільністю](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
@@ -66,7 +66,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Надрукуйте ці наклейки і роздайте учням
 
 (Stickers are 1" diameter, 63 per sheet) <br />
 
@@ -86,15 +86,15 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 **Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Комп'ютери є скрізь, вони змінюють кожну галузь на планеті. But only 51% of all high schools offer computer science. Good news is, we’re on our way to change this! Якщо ви чули про Годину коду раніше, ви можете знати, що вона творить історію. Годину коду спробували понад 100 мільйонів учнів.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Для підтримки цього руху об'єдналися понад 100 партнерів. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Поширюйте інформацію. Проведіть захід. Запросіть місцеву школу приєднатися. Або спробуйте Годину коду самі — від вивчення основ виграти може кожен.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -112,7 +112,7 @@ Between {{ campaign_date/short }}, ten percent of students around the world will
 
 The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Комп'ютери є скрізь, вони змінюють кожну галузь на планеті. But only 51% of all high schools offer computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
@@ -120,41 +120,41 @@ You can read more about the event at http://hourofcode.com. Or, let us know if y
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### Повідомте батьків про заходи у вашій школі:
 
 **Subject line:** Our students are changing the future with an Hour of Code
 
-Dear Parents,
+Шановні батьки,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+Ми живемо у світі, наповненому технологіями. І ми знаємо, що яку б професію не обрали наші учні у майбутньому, їхній успіх все більше залежатиме від розуміння принципів роботи цих технологій.
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. Щоби пропонувати більше занять з програмування нашим учням, ми хочемо зробити нашу подію Години коду величезною. Я закликаю вас стати волонтером, донести цю інформацію до місцевих ЗМІ, поширити ці новини каналами соціальних мереж та розглянути можливість проведення додаткових подій Години коду в нашій громаді.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+Це — шанс змінити майбутнє освіти в [НАСЕЛЕНИЙ ПУНКТ].
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### Запросіть ЗМІ на свій захід:
 
 #### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Доброю новиною є те, що ми змінюємо це.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Доброю новиною є те, що ми змінюємо це.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Для підтримки цього руху об'єдналися понад 100 партнерів. Кожен з магазинів Apple у світі провів Годину коду. Even President Obama wrote his first line of code as part of the campaign.
 
-Тому кожен з [X number] учнів [SCHOOL NAME] приєднується до найбільшої навчальної події в історії — "Години коду", яка проводиться протягом Тижня інформатики (3–9 грудня).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Будь ласка, приєднуйтесь до нас.
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 
@@ -164,22 +164,22 @@ I look forward to being in touch. <br />
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### Запросіть місцевих політиків на захід у Вашій школі:
 
 #### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
 
 **Subject line**: Join our school as we change the future with an Hour of Code
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+Шановний [мере/губернаторе/народний депутате ІМ'Я ПРІЗВИЩЕ]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+Чи знали Ви, що інформаційні технології є джерелом №1 зарплат у США? В інформаційних технологіях є понад 500 000 вільних робочих місць, але попереднього року робочу силу поповнили лише 42 969 випускників з інформатики.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. Ми хочемо бути впевнені, що наші учні знаходяться на передньому краї створення технологій майбутнього — а не лише споживання їх.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+Будь ласка, зв'яжіться зі мною за [НОМЕР ТЕЛЕФОНУ АБО АДРЕСА ЕЛЕКТРОННОЇ ПОШТИ]. Я з нетерпінням чекаю на Вашу відповідь.
 
 {{ signup_button }}

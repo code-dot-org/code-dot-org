@@ -3,7 +3,7 @@ title: CS Curriculum for grades 9-12
 video_player: true
 theme: responsive
 ---
- <%= view :professional_learning_apply_banner, :link_suffix => "middle-high", :style => {"padding-bottom" => "10px"} %>	
+ <%= view :professional_learning_apply_banner, :link_suffix => "program-information" %>	
 
 [solid-block-header]
 
@@ -28,12 +28,18 @@ For high schools, we offer two years computer science courses for beginners: Com
 <br>
 <hr>
 
-<%@show_csa = DCDO.get('courses_show_csa', CDO.default_courses_show_csa)%>
-<% if @show_csa %>
 # Computer Science A (coming in 2022)
 <%=view :csa_information %>
 <hr>
-<% end %>
+
+# Artificial Intelligence and Machine Learning
+
+Artificial intelligence (AI) and machine learning (ML) are shaping the world around us. As these technologies touch more and more of our daily lives, they have become an essential part of foundational computer science education. In this <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher">standalone module</a>, which spans roughly 5 weeks, students can learn the fundamentals of these technologies and discuss their ethical implications.
+
+[<button>Learn about AI</button>](/ai)&nbsp;&nbsp;[<button>Explore the AI module</button>](https://studio.code.org/s/aiml-2021?viewAs=Teacher)&nbsp;&nbsp;
+
+<br>
+<hr>
 
 # Computer Science Fundamentals - Express
 

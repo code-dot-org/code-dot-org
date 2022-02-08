@@ -12,12 +12,6 @@ import {SelectStyleProps} from '../constants';
 import {setRegionalPartnerFilter} from './regional_partners_reducers';
 import {WorkshopAdmin} from '../workshop_dashboard/permission';
 
-const styles = {
-  select: {
-    maxWidth: '500px'
-  }
-};
-
 export const ALL_PARTNERS_LABEL = 'All Regional Partners';
 export const ALL_PARTNERS_VALUE = 'all';
 export const UNMATCHED_PARTNER_LABEL = 'No Partner/Unmatched';
@@ -64,7 +58,7 @@ export class RegionalPartnerDropdown extends React.Component {
     return additionalOptions;
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.regionalPartners = this.props.regionalPartners.map(v => ({
       value: v.id,
       label: v.name
@@ -98,6 +92,12 @@ export class RegionalPartnerDropdown extends React.Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    maxWidth: '500px'
+  }
+};
 
 export default connect(
   state => ({

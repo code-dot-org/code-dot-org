@@ -1,13 +1,14 @@
 {
-  "func": "atan2",
+  "key": "atan2",
+  "name": "atan2",
   "category": "Math",
-  "paletteParams": [
-    "y",
-    "x"
+  "palette_params": [
+    {
+      "name": "y"
+    },
+    {
+      "name": "x"
+    }
   ],
-  "params": [
-    "10",
-    "10"
-  ],
-  "type": "value"
+  "syntax": "atan2(y, x)"
 }

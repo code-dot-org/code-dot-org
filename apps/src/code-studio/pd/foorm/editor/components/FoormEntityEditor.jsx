@@ -25,6 +25,7 @@ class FoormEntityEditor extends React.Component {
     saveBar: PropTypes.node,
     validateURL: PropTypes.string,
     validateDataKey: PropTypes.string,
+    validateInExistingEntityContext: PropTypes.bool,
 
     // populated by redux
     questions: PropTypes.object
@@ -201,6 +202,9 @@ class FoormEntityEditor extends React.Component {
           livePreviewStatus={this.state.livePreviewStatus}
           validateURL={this.props.validateURL}
           validateDataKey={this.props.validateDataKey}
+          validateInExistingEntityContext={
+            this.props.validateInExistingEntityContext
+          }
           headerTitle={this.props.headerTitle}
         />
         <div style={styles.foormEditor}>

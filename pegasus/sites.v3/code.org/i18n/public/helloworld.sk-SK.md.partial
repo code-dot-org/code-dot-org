@@ -1,0 +1,37 @@
+---
+title: Ahoj svet
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# Ahoj svet!
+
+Na úvodnej hodine počítačovej vedy je prvým programom, ktorý mnohí žiaci vytvoria, jednoduchý program, ktorého výstupom je veľmi známy riadok textu: "Ahoj svet!" Pozdravte svet informatiky touto úvodnou aktivitou, ktorá vybaví študentov základnými kódovacími zručnosťami a sebadôverou pri vytváraní aplikácií. Vyberte si zo štyroch zábavných tém na kódovanie interaktívnych postáv vo svete, ktorý vytvoríte!
+
+# Vyber si tému Ahoj svet
+
+{{ spritelab_module, title: "Jedlo", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "Zvieratá", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "Emodži", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "Informácie pre učiteľa", title: "Ako pokračovať v učení po Ahoj, svet", description: "Ahoj svet je dokonalým prvým krokom pre triedy predtým ako vyskúšate otvorené projekty v rámci nášho nového učebného plánu, medzipredmetové vzťahy a informatika! Po zvládnutí základov kódovania budú študenti schopní postúpiť do medzipredmetových projektov v rámci medzipredmetových vzťahov a informatiky.", button_text: "Nauč sa viac", url: "/educate/csc" }}
+
+## Vybrané výtvory študentov
+
+{{ featured_project, title: "Jedlo", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Emodži", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "Zvieratá", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

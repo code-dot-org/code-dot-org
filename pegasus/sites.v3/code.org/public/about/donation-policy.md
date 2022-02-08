@@ -6,7 +6,7 @@ theme: responsive
 # Donation Policy
 ## Types of donation
 Code.org accepts monetary donations of any size so long as they consist of:
- 
+
 * Checks drawn on U.S. banks
 * Online donations
 * Wire transfers of cash or publicly-traded securities
@@ -20,7 +20,7 @@ Code.org may also accept in-kind donations of goods and/or professional services
 
 
 ## All gifts to Code.org are unrestricted
-All of Code.org’s funding is “unrestricted,” which means we don’t have contractual accounting “strings attached” that prescribe how the money is spent. A donor may specify desired philanthropic / educational outcomes aligned to our core mission, but it is up to our team to decide how to spend the money to achieve these goals. 
+All of Code.org’s funding is “unrestricted,” which means we don’t have contractual accounting “strings attached” that prescribe how the money is spent. A donor may specify desired philanthropic / educational outcomes aligned to our core mission, but it is up to our team to decide how to spend the money to achieve these goals.
 
 Because our donors give unrestricted funding and do not work directly on our programs, they do not have an editorial say in our curriculum, nor access to student data.
 
@@ -36,7 +36,7 @@ We are thankful for our donors’ commitment to students and teachers. While we 
 
 
 ## We reserve the right to choose whether to accept offers of support
-In some cases, we will choose not to accept an offer of support. Although we would like to welcome all donors, we will not accept illegal donations or donations that significantly harm our ability to execute on our mission for any reason. To help us manage these exceptions, before we accept a donation from a highly controversial donor, our CEO will seek the advice of our [Leadership Team, our Board of directors, select advisors, and (in relevant cases) our Diversity Advisory Council](/about/leadership). Our decisions may often be complex, difficult, or unpopular. Our guiding principle is to maximize positive impact for children and students in classrooms. If we have reason to doubt the legality of a gift (for example, if we have reason to believe that the funds were criminally obtained, or that accepting the funds would be a violation of sanctions or other laws), we will also consult with counsel.
+In some cases, we will choose not to accept an offer of support. Although we would like to welcome all donors, we will not accept illegal donations or donations that significantly harm our ability to execute on our mission for any reason. To help us manage these exceptions, before we accept a donation from a highly controversial donor, our CEO will seek the advice of our [Leadership Team, our Board of directors, select advisors, and (in relevant cases) our Diversity Advisory Council](/about/leadership). In most cases, a decision to reject a donation will be made by our CEO. In rare cases where the decision is adequately nuanced, the CEO may ask the Executive Committee of our Board to weigh in and vote to approve or reject a donation. Our decisions may often be complex, difficult, or unpopular. Our guiding principle is to maximize positive impact for children and students in classrooms. If we have reason to doubt the legality of a gift (for example, if we have reason to believe that the funds were criminally obtained, or that accepting the funds would be a violation of sanctions or other laws), we will also consult with counsel.
 
 ## Thank you
 We’re thankful to all of the [donors](/about/donors) who have supported us in our mission to give every student in every school the opportunity to learn computer science. The millions of students we’ve impacted over the years have received an initial introduction to computer science thanks in part to the generosity of these donors. Our ultimate ethical compass on these matters is to optimize for helping and supporting students and classrooms.

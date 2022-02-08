@@ -36,6 +36,7 @@ sl-SI:
   twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih
     programiranja v tem spremljanjem tečaju.
   og_title: Vsak otrok si zasluži priložnost
+  og_title_soon: Ura za kodo je tu
   og_description: Vsak učenec v vsaki šoli si zasluži priložnost, da se uči računalništva.
   csedweek_og_title: Ura za kodo je tu
   csedweek_og_description: Ura za koda je globalno gibanje, ki je doseglo desetine
@@ -87,6 +88,7 @@ sl-SI:
   congratulations_volunteer: 'Čestitamo: Sedaj, ko si preizkusil Uro kode, <a href="https://code.org/volunteer">se
     lahko vpišeš med prostovoljce v razredu</a> in pomagaš drugim,dase učijo na svoji
     Uri kode!'
+  congratulations_on_completing_course: Čestitke za dokončan %{course}
   congrats_next_tutorials_title: Poskusi naslednje tutoriale
   congrats_next_tutorials_desc: Preizkusi te krajše, 1 urne tutoriale ali pa poskusi
     <a href="%{current_path}/next"> podoben tutorial</a>.
@@ -99,6 +101,8 @@ sl-SI:
   third_party_gradelevel_kto8: 8. razred
   third_party_gradelevel_kto2: 2. razred
   third_party_gradelevel_2to8: 2. - 8. razred
+  third_party_gradelevel_4to12: 4. - 12. razred
+  third_party_gradelevel_5to12: 5. - 12. razred
   third_party_gradelevel_6plus: 6. razred in višje
   third_party_gradelevel_8plus: 8. razred in višje
   third_party_platform_all: 'Platforma: Splet, iPad & Android'
@@ -166,9 +170,12 @@ sl-SI:
   learn_online: Poskusite druge spletne tečaje
   learn_classes: Poišči lokalne tečaje
   learn_back_to_minecraft: Nadaljuj učenje z Minecraftom
+  hoc_is_here: "#UraZaKodo je tu! @codeorg"
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
+  just_did_course1: Pravkar sem končal Tečaj 1! @codeorg
   just_did_course2: Pravkar sem končal Tečaj 2! @codeorg
   just_did_course3: Pravkar sem končal Tečaj 3! @codeorg
+  just_did_course4: Pravkar sem končal Tečaj 4! @codeorg
   just_did_accelerated: Pravkar sem končal Pospešeni Tečaj! @codeorg
   learn_hoc: Več o Uri za kodo
   beyond_hoc: Po Uri za kodo
@@ -252,6 +259,8 @@ sl-SI:
     Code Studio
   homepage_hero_text_stat_students: 'učenci imajo na Code Studio #student_count računov'
   homepage_hero_text_stat_served: 'The Hour of Code: #served sodelujočih'
+  homepage_hero_hoc_is_coming: Ura za kodo je tu
+  homepage_hero_hoc_is_here: Ura za kodo je tu
   homepage_slot_text_hoc: Ura za kodo
   homepage_slot_text_frozen: Frozen (Ledeno kraljestvo) z Ano in Elso
   homepage_slot_text_studio: Vsi naši vodiči
@@ -390,6 +399,7 @@ sl-SI:
   minecraft_download_adventurer: Prenesi različico Minecraft Pustolovca, ki deluje
     tudi brez internetne povezave.
   minecraft_subtitle: Minecraft Ura za kodo
+  minecraft_host_event: Priredi Minecraft Ura za kodo dogodek
   sports_watch_video: Oglej si video
   watch_inspirational_videos: Preden začneš, si oglej enega izmed teh navdihujočih
     video posnetkov
@@ -514,6 +524,7 @@ sl-SI:
     ponudijo redni predmet računalništva, in sicer tako, da pripravi obstoječe učitelje
     na predajo tega znanja. Za prijavo na delavnice strokovnega usposabljanja, zaprosite
     za <a href="/educate/districts">partnerstvo s</a> Code.org.
+  dashboard_course_csina: Računalništvo v računstvu
   dashboard_course_csina_desc: Code.org je v sodelovanju z Bootstrap razvila kurikulum,
     ki vključuje učenje konceptov iz geometrije in algebre preko računalniškega programiranja.
   dashboard_course_csins: Računalništvo v znanosti
@@ -547,6 +558,7 @@ sl-SI:
   dashboard_navigation_add_students: Dodaj učence
   dashboard_navigation_manage_students: Upravljaj z učenci
   dashboard_navigation_lesson_plans_resources: Učni načrti in viri
+  dashboard_navigation_view_stats: Pokaži statistiko
   dashboard_navigation_section: 'Poglavje: %{section_name}'
   dashboard_navigation_student: 'Učenec: %{student_name}'
   dashboard_progress_not_started: ni začeto
@@ -579,6 +591,7 @@ sl-SI:
     o računu in jih razdelite vsakemu učencu posebej.
   dashboard_sections_switch_section: 'Zamenjaj razdelek:'
   dashboard_sections_close: Zapri
+  dashboard_sections_enter_code: 'Vnesi kodo razdelka:'
   dashboard_sections_code_placeholder: Koda s 6 znaki (ABCDEF)
   dashboard_students_add_multiple: 'Vnesite ali prilepite imena svojih učencev, enega
     na vrstico:'
@@ -689,10 +702,13 @@ sl-SI:
   carousel_heading_domestic: Vaje na voljo v angleškem jeziku
   carousel_heading_beginners: Vaje za začetnike
   carousel_heading_javascript: Vodiči, ki učijo JavaScript
+  carousel_heading_beyond_javascript: Vodiči, ki učijo JavaScript
   carousel_heading_unplugged: Nimate naprave ali interneta? Poskusite računalništvo
     "brez prijave"
   carousel_heading_devices: Aplikacije z vajami za telefone in tablice
+  carousel_heading_beyond_devices: Aplikacije z vajami za telefone in tablice
   carousel_heading_languages: Vaje v drugih programskih jezikih
+  carousel_heading_beyond_languages: Vaje v drugih programskih jezikih
   carousel_heading_apps_games: Izdelajte lastno aplikacijo ali igro
   carousel_heading_university: Univerzitetni tečaji na spletu
   carousel_heading_webpages: Naučite se izdelati spletne strani
@@ -740,6 +756,7 @@ sl-SI:
   robomindnl_name: Programiraj virtualega robota
   flappy_name: Ustvari Flappy igro
   bitsbox_name: Bitsbox - izdelaj igro
+  makeschool_name: Ustvari iPhone igro v brskalniku!
   appinventor_name: AppInventor Ura Za Kodo
   blockly_name: Blockly
   projguts_name: Kamen, papir, škarje
@@ -753,6 +770,7 @@ sl-SI:
   course4_name: Tečaj 4
   accelerated_name: Pospešeni Tečaj
   20-hour_name: Pospešeni Tečaj
+  gumball_name: Gumballov fantastični svet
   classicmaze_name: Klasičen labirint
   iceage_name: Ledena doba
   minecraft_name: Minecraft
@@ -814,16 +832,42 @@ sl-SI:
   course2_gradelevel: Starost 6-18
   course3_gradelevel: Starost 8-18
   course4_gradelevel: Starost 10-18
+  coursea_gradelevel: Starost 4-7
+  courseb_gradelevel: Starost 5-8
+  coursec_gradelevel: Starost 6-10
   coursed_gradelevel: 8. razred in višje
   coursee_gradelevel: Starost 8-12
+  coursef_gradelevel: Starost 9-13
+  coursea-2017_gradelevel: Starost 4-7
+  courseb-2017_gradelevel: Starost 5-8
+  coursec-2017_gradelevel: Starost 6-10
   coursed-2017_gradelevel: 8. razred in višje
   coursee-2017_gradelevel: Starost 8-12
+  coursef-2017_gradelevel: Starost 9-13
+  coursea-2018_gradelevel: Starost 4-7
+  courseb-2018_gradelevel: Starost 5-8
+  coursec-2018_gradelevel: Starost 6-10
   coursed-2018_gradelevel: 8. razred in višje
   coursee-2018_gradelevel: Starost 8-12
+  coursef-2018_gradelevel: Starost 9-13
+  coursea-2019_gradelevel: Starost 4-7
+  courseb-2019_gradelevel: Starost 5-8
+  coursec-2019_gradelevel: Starost 6-10
   coursed-2019_gradelevel: 8. razred in višje
   coursee-2019_gradelevel: Starost 8-12
+  coursef-2019_gradelevel: Starost 9-13
+  coursea-2020_gradelevel: Starost 4-7
+  courseb-2020_gradelevel: Starost 5-8
+  coursec-2020_gradelevel: Starost 6-10
   coursed-2020_gradelevel: 8. razred in višje
   coursee-2020_gradelevel: Starost 8-12
+  coursef-2020_gradelevel: Starost 9-13
+  coursea-2021_gradelevel: Starost 4-7
+  courseb-2021_gradelevel: Starost 5-8
+  coursec-2021_gradelevel: Starost 6-10
+  coursed-2021_gradelevel: 8. razred in višje
+  coursee-2021_gradelevel: Starost 8-12
+  coursef-2021_gradelevel: Starost 9-13
   accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
@@ -910,6 +954,8 @@ sl-SI:
   flappy_shortdescription: Naredi svojo igro - Flappy Bird, Shark ali Submarine
   bitsbox_shortdescription: Uporabi pravi JavaScript in ustvari vrsto aplikacij za
     igro in objavo.
+  makeschool_shortdescription: Naredi igro za iPhone! Nauči se s pisanjem kode, kako
+    naučiš svojo pošast novih potez!
   touchdevelop_shortdescription: 'Reši uganke, ustvari igre in nauči se programirati.
     Vse to na tvojem telefonu. '
   appinventor_shortdescription: Izdelaj svoj lasten app! (Samo za android)
@@ -1030,6 +1076,11 @@ sl-SI:
   bitsbox_longdescription: |-
     Ustvari virtualno tablico in napiši nekaj aplikacij za igro in deljenje prijateljem.
     Tudi najmlajši otroci se lahko naučijo programiranja v JavaScriptu. Več kot že znaš, dlje lahko prideš.
+  makeschool_longdescription: Nauči se programiranja z izdelavo iPhone igrice, tako
+    da uporabiš čisto nov, uporabniku prijazen programski jezik Swift. Izdelaj Pok&eacute;mon
+    akcijsko igro in napiši kodo, ki bo naučila tvojo zver novih premikov. Naučil
+    se boš kako uporabiti spremenljivke, metode in objekte, ki bodo pomagali tvoji
+    zverini, da zmaga!
   touchdevelop_longdescription: 'Za dotik prijazen urejevalnik te bo vodil v ustvarjanju
     pixel umetnosti, v reševanju medvedje uganke ali pri izdelavi lastne igre Skakajoči
     ptič. '
@@ -1074,6 +1125,7 @@ sl-SI:
   groklearning_beyond_name: Nauči se programirati v Python
   hacketyhack_beyond_name: Nauči se Ruby
   robomind_beyond_name: Programiraj virtualega robota
+  makeschool_beyond_name: Ustvari iPhone igro v brskalniku!
   appinventor_beyond_name: AppInventor Ura Za Kodo
   codehs_beyond_name: Naučite se kodirati s psom Karlom
   udemy_beyond_name: Spletni tečaji programiranja
@@ -1169,6 +1221,7 @@ sl-SI:
   groklearning_beyond_shortdescription: Osnovni uvod v python programiranje
   hacketyhack_beyond_shortdescription: Nauči se Ruby od spodaj navzgor
   robomind_beyond_shortdescription: Napiši kodo za virtualnega robota
+  makeschool_beyond_shortdescription: Naučite se narediti iPhone igro v eni uri
   appinventor_beyond_shortdescription: Izdelaj svoj lasten app! (Samo za android)
   touchdevelop_beyond_shortdescription: Napiši mobilne aplikacije neposredno na tvojem
     telefonu, tablici ali prenosniku
@@ -1244,6 +1297,11 @@ sl-SI:
   robomind_beyond_longdescription: 'Učenci se naučijo osnov programiranja z nadzorovanjem
     lastnega virtualnega robota. Spletni tečaj je zaključena celota z kratkimi predstavitvami,
     filmi, testi in avtomatičnimi namigi za pomoč pri programskih nalogah. '
+  makeschool_beyond_longdescription: Ali poznaš nekaj ObjectiveC? Nauči se narediti
+    iPhone igro v zgolj eni uri! Pomagali ti bomo skozi process; pisanje kode, testov
+    in igranja svoje igre, v celoti skozi brksalnik. Po tem boš svojo igro lahko delila
+    preko Facebook-a, da jo lahko probajo še tvoji prijatelji. Obstoječe znanje razvoja
+    za iPhone ni potrebno. Potrebno je znanje o spremenljivkah, metodah in objektih.
   appinventor_beyond_longdescription: Zabavni, kratki video vodiči vodijo skozi gradnjo
     treh preprostih aplikacij za Android telefon ali tablico. Zasnovana za začetnike
     in strokovnjake, te bo ura za kodo pripravila za začetek gradnje svoje aplikacije,
@@ -1347,6 +1405,7 @@ sl-SI:
   sphero_beyond_longdescription: Ne glede na to ali ste vzgojitelj ali starš, SPRK
     lekcije dajejo otrokom zabaven uvod v programiranje robotov in hkrati ostrijo
     njihove spretnosti v matematiki in znanosti.
+  compatibility_hide_this_warning: Skrij to opozorilo
   flappy_shortcode: plahutaj
   header_home: Domov
   header_my_dashboard: Moja nadzorna plošča
@@ -1375,6 +1434,7 @@ sl-SI:
   header_about_faqs: Pogosta vprašanja
   header_learn: Učenje
   header_teach: Predavaj
+  header_stats: Pokaži statistiko
   header_help_us: Pomagaj nam
   header_about: O programu
   header_legal_privacy: Izjava o zasebnosti
@@ -1384,6 +1444,8 @@ sl-SI:
   user_header_settings: Moj račun
   user_header_logout: Izpis
   user_header_signin: Prijava
+  user_header_create: 'Ustvari '
+  user_header_artist: 'Umetnik '
   user_header_playlab: Play Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
@@ -1432,5 +1494,6 @@ sl-SI:
   footer_donate: Prispevaj
   footer_support: Pomoč in Skupnosti
   footer_terms: Pravila
+  ai_for_oceans_lesson_plan: po učnem načrtu
   ai_activity: Dejavnost
   ai_description: Opis

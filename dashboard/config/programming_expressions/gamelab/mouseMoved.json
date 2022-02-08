@@ -1,7 +1,6 @@
 {
-  "func": "mouseMoved",
-  "block": "function mouseMoved() {}",
-  "expansion": "function mouseMoved() {\n  __;\n}",
+  "key": "mouseMoved",
+  "name": "mouseMoved",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "function mouseMoved() {}"
 }

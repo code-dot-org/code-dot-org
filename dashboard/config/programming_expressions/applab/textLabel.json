@@ -1,12 +1,14 @@
 {
-  "func": "textLabel",
+  "key": "textLabel",
+  "name": "textLabel",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "text"
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "text"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "\"text\""
-  ]
+  "syntax": "textLabel(id, text)"
 }

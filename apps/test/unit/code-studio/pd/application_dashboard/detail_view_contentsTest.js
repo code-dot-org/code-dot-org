@@ -9,11 +9,21 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
+import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 describe('DetailViewContents', () => {
+  allowConsoleWarnings();
+
   // We aren't testing any of the responses of the workshop selector control, so just
   // have a fake server to handle calls and suppress warnings
-  sinon.fakeServer.create();
+  let server;
+  before(() => {
+    server = sinon.fakeServer.create();
+  });
+
+  after(() => {
+    server.restore();
+  });
 
   let context;
 
@@ -374,6 +384,7 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is enabled
+      // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
       expect(
         getLastRow()
           .find('Select')
@@ -434,13 +445,10 @@ describe('DetailViewContents', () => {
       });
     }
 
-    for (const applicationStatus of [
-      'unreviewed',
-      'pending',
-      'waitlisted',
-      'declined',
-      'withdrawn'
-    ]) {
+    for (const applicationStatus of _.difference(
+      Object.keys(getApplicationStatuses('teacher')),
+      ScholarshipStatusRequiredStatuses
+    )) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
         detailView = mountDetailView('Teacher', {
           applicationData: {

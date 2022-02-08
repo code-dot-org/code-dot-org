@@ -54,7 +54,7 @@ namespace :test do
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
       failed_browser_count = RakeUtils.system_with_chat_logging(
         'bundle', 'exec', './runner.rb',
-        '-c', 'Chrome,iPhone,IE11',
+        '-c', 'Chrome,iPhone',
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
         '--db', # Ensure features that require database access are run even if the server name isn't "test"
@@ -85,7 +85,7 @@ namespace :test do
   # Run the eyes tests and ui test suites in parallel. If one of these suites
   # raises, allow the other suite to complete, then make sure this task raises.
   task :ui_all do
-    Parallel.each([:eyes_ui, :regular_ui, :lighthouse], in_threads: 3) do |target|
+    Parallel.each([:eyes_ui, :regular_ui], in_threads: 3) do |target|
       Rake::Task["test:#{target}"].invoke
     end
   end

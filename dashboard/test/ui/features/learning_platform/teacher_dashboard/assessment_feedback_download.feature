@@ -5,7 +5,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     Given I create an authorized teacher-associated student named "Sally"
 
   Scenario: Assessments tab has feedback download
-    # Assign a script with a survey but no assessment
+    # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally"
     Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
     And I wait for the page to fully load
@@ -16,9 +16,9 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('18-'19)" once I see it
+    And I click selector ".assignment-version-title:contains('19-'20)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 3 - Intro to Programming ('18-'19)" option in dropdown "uitest-secondary-assignment"
+    And I select the "CSP Unit 3 - Intro to Programming ('19-'20)" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
     And I wait until element ".modal-backdrop" is gone
 
@@ -38,7 +38,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
 
   Scenario: Assessments tab does not have feedback download
 
-   # Assign a script without feedback
+   # Assign a unit without feedback
     When I sign in as "Teacher_Sally" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"

@@ -1,18 +1,17 @@
 {
-  "func": "text",
+  "key": "text",
+  "name": "text",
   "category": "Drawing",
-  "paletteParams": [
-    "str",
-    "x",
-    "y"
+  "palette_params": [
+    {
+      "name": "str"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "\"text\"",
-    "0",
-    "15"
-  ],
-  "paramButtons": {
-    "minArgs": 3,
-    "maxArgs": 5
-  }
+  "syntax": "text(str, x, y)"
 }

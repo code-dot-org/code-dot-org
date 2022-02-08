@@ -333,6 +333,14 @@ Resources:
       Action: 'lambda:InvokeFunction'
       Principal: events.amazonaws.com
       SourceArn: !GetAtt SessionEvent.Arn
+  AcceptLanguageFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: AcceptLanguage
+      FunctionCode: <%=js_erb 'accept-language.js.erb', max: FUNCTION_MAX %>
+      FunctionConfig:
+        Comment: "Normalizes Accept-Language header from viewer requests"
+        Runtime: cloudfront-js-1.0
 Outputs:
   AMIManager:
     Value: !GetAtt AMIManager.Arn

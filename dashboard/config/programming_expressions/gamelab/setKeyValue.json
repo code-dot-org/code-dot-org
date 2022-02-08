@@ -1,5 +1,6 @@
 {
-  "func": "setKeyValue",
+  "key": "setKeyValue",
+  "name": "setKeyValue",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "setKeyValue"
 }

@@ -1,0 +1,11 @@
+{
+  "key": "soundSensor.getAveragedValue",
+  "name": "soundSensor.getAveragedValue",
+  "category": "Circuit",
+  "palette_params": [
+    {
+      "name": "ms"
+    }
+  ],
+  "syntax": "soundSensor.getAveragedValue(ms)"
+}

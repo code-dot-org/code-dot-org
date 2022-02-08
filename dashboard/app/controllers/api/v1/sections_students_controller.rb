@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   load_and_authorize_resource :section
   load_resource :student, class: 'User', through: :section, parent: false, only: [:update, :remove]
@@ -17,7 +19,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     render json: summaries
   end
 
-  use_database_pool completed_levels_count: :persistent
+  use_reader_connection_for_route(:completed_levels_count)
 
   # GET /sections/<section_id>/students/completed_levels_count
   def completed_levels_count
@@ -49,6 +51,33 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   def bulk_add
     unless @section.login_type == Section::LOGIN_TYPE_WORD || @section.login_type == Section::LOGIN_TYPE_PICTURE
       return render json: {errors: 'Not a valid section type'}, status: :bad_request
+    end
+
+    if @section.will_be_over_capacity?(params[:students].size)
+
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'section capacity restriction',
+          event: "Section owner attempted to add #{params[:students].size > 1 ? 'multiple students' : 'a student'} to a full section",
+          data_json: {
+            section_id: @section.id,
+            section_code: @section.code,
+            date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
+            joiner_id: params[:students],
+            section_teacher_id: @section.user_id
+          }.to_json
+        }
+      )
+
+      render json: {
+        result: 'full',
+        sectionCapacity: @section.capacity,
+        numStudents: params[:students].size,
+        sectionCode: @section.code,
+        sectionStudentCount: @section.summarize[:numberOfStudents]
+      }, status: :forbidden
+      return
     end
 
     errors = []

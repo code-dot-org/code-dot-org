@@ -1,6 +1,6 @@
 {
-  "func": "camera",
+  "key": "camera",
+  "name": "camera",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "camera"
 }

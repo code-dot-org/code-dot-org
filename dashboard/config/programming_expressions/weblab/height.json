@@ -1,5 +1,6 @@
 {
-  "func": "height",
+  "key": "height",
+  "name": "height",
   "category": "CSS Properties",
   "syntax": "height: value;"
 }

@@ -380,6 +380,12 @@ body.modal-open .supreme-container{
   border-color: white;
 }
 
+#homepage #actions .herohocbutton-solid-grey {
+  color: black;
+  background-color: lightgrey;
+  border-color: lightgrey;
+}
+
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
   border-color: white;

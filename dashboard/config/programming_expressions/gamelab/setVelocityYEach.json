@@ -1,11 +1,11 @@
 {
-  "func": "setVelocityYEach",
+  "key": "setVelocityYEach",
+  "name": "setVelocityYEach",
   "category": "Groups",
-  "paletteParams": [
-    "velocityY"
+  "palette_params": [
+    {
+      "name": "velocityY"
+    }
   ],
-  "params": [
-    "3"
-  ],
-  "modeOptionName": "*.setVelocityYEach"
+  "syntax": "setVelocityYEach(velocityY)"
 }

@@ -1,6 +1,6 @@
 {
-  "func": "debug",
+  "key": "debug",
+  "name": "debug",
   "category": "Sprites",
-  "modeOptionName": "*.debug",
-  "type": "property"
+  "syntax": "debug"
 }

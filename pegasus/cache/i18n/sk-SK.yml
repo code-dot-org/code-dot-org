@@ -623,7 +623,7 @@ sk-SK:
   video_title_obama: Prezident Obama na informatike
   video_title_hoc_is_here: Hodina Kódu je tu - učiť sa môže každý
   video_title_anybody_can_learn: Ktokoľvek sa môže učiť
-  video_title_steph_curry: Hodina Kódu so Steph Curry
+  video_title_steph_curry: Hodina Kódu so Stephom Currym
   video_title_draymond_green: Hodine Kódu s Draymond Green
   video_title_russell_okung: Hodina Kódu s Russell Okung
   video_title_real_madrid: Hodinu Kódu s Real Madrid
@@ -819,6 +819,7 @@ sk-SK:
     ponúknuť celoročný kurz informatiky prostredníctvom školení učiteľov. Pre registráciu
     na školenie pre učiteľov sa prihláste <a href="/educate/districts">o partnerstvo</a>
     s code.org.
+  dashboard_course_csina: Informatika v algebre
   dashboard_course_csina_desc: Code.org spolupracuje s Bootstrap na rozvoji učebných
     osnov, ktoré učia algebrické a geometrické pojmy cez počítačové programovanie.
   dashboard_course_csins: Inforamtika vo vede
@@ -1234,12 +1235,14 @@ sk-SK:
   coursed-2020_name: Kurz D (2019)
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
+  coursed-2021_name: Kurz D (2021)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
   pre-express-2019_name: Zrýchlený kurz pre predškolákov (2019)
   express-2020_name: Zrýchlený kurz (2019)
   pre-express-2020_name: Zrýchlený kurz pre predškolákov (2020)
+  pre-express-2021_name: Zrýchlený kurz pre predškolákov (2021)
   csd2_name: 'Lekcia 2: Vývoj webových stránok'
   csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
@@ -1347,6 +1350,12 @@ sk-SK:
   coursed-2020_gradelevel: Vek 7-11
   coursee-2020_gradelevel: Vek 8-12
   coursef-2020_gradelevel: Vek 9-13
+  coursea-2021_gradelevel: Vek 4-7
+  courseb-2021_gradelevel: Vek 5-8
+  coursec-2021_gradelevel: Vek 6-10
+  coursed-2021_gradelevel: Vek 7-11
+  coursee-2021_gradelevel: Vek 8-12
+  coursef-2021_gradelevel: Vek 9-13
   accelerated_gradelevel: Vek 10-18
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
@@ -1535,6 +1544,22 @@ sk-SK:
     cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
     programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
   coursee-2020_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
+    podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+    nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
+  coursea-2021_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  courseb-2021_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  coursec-2021_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami
+    a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky
+    riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si
+    vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2021_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených
+    cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
+    programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2021_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
     podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
     nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
   codeorg_longdescription: Nauč sa základné koncepty informatiky pomocou vizuálneho
@@ -2091,7 +2116,7 @@ sk-SK:
   hoc2018_mc_video_2min: 2 min
   hoc2018_mc_video_3min: 3 minúty
   hoc2018_mc_video_5min: 5 min
-  hoc2018_mc_video_title_steph_curry: Hodina Kódu so Steph Curry
+  hoc2018_mc_video_title_steph_curry: Hodina Kódu so Stephom Currym
   hoc2018_mc_video_title_sports: Premôž sa. Každý sa dokáže naučiť.
   hoc2018_mc_video_title_cs_is_everything: Informatika mení svet okolo nás
   hoc2018_mc_video_title_inspire_girl: Inšpiruj dievča
@@ -2177,6 +2202,17 @@ sk-SK:
   page_not_found_button: Späť na domovskú stránku
   hoc2018_mc_with_microsoft: V spolupráci s
   page_not_available_button: Späť na domovskú stránku
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Cestujte späť v čase a naučte sa programovať! Nový
+    tutoriál Minecraft Hour of Code je teraz dostupný v hre Minecraft: vzdelávacie
+    vydanie pre Windows, Mac, Chromebook a iPad. Začnite s bezplatnými zdrojmi pre
+    pedagógov a videami.'
+  hoc2021_mc_mee_villages_title: Rozprávka o dvoch dedinách
+  hoc2021_mc_mee_villages_description: 'Naučte sa základy programovania a objavte
+    diverzitu a inklúziu so svojimi žiakmi v hre Minecraft: vzdelávacie vydanie'
+  hoc2021_mc_mee_ai_title: Umelá inteligencia pre dobro
+  hoc2021_mc_mee_ai_description: 'Objavte AI so svojimi žiakmi a naučte sa programovať
+    v hre Minecraft: vzdelávacie vydanie'
   footer_powered_by_aws: Poháňaný službami Amazon Web Services
   codebytes_skinny_banner_english_only: Len v anglickom jazyku
   footer_privacy_policy: Zásady ochrany súkromia
@@ -2186,6 +2222,10 @@ sk-SK:
   footer_support: Podpora
   footer_terms: Podmienky
   ai_for_oceans: AI pomáha oceánom
+  ai_for_oceans_lesson_plan: učebný plán
   ai_in_partnership_with: V spolupráci s
   ai_activity: Aktivita
   ai_description: Popis
+  outbreak_tile_title: Nákaza
+  outbreak_tile_subtitle: Mesto Monster Town napadol vírus! Naprogramujte simulátor
+    ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town.

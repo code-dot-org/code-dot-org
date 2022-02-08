@@ -1,4 +1,6 @@
 {
-  "func": "soundSensor",
-  "category": "Circuit"
+  "key": "soundSensor",
+  "name": "soundSensor",
+  "category": "Circuit",
+  "syntax": "soundSensor"
 }

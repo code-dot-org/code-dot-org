@@ -11,6 +11,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  course_offering_id :integer
+#  published_state    :string(255)      default("in_development")
 #
 # Indexes
 #
@@ -26,14 +27,21 @@ class CourseVersion < ApplicationRecord
   has_many :resources
   has_many :vocabularies
 
-  KEY_CHAR_RE = /\d/
+  attr_readonly :content_root_type
+  attr_readonly :content_root_id
+
+  KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key,
     with: KEY_RE,
-    message: "must contain only digits; got \"%{value}\"."
+    message: "must contain only digits, letters, or dashes; got \"%{value}\"."
+
+  # Placeholder key for curriculum that will not be updated but want the
+  # features that come with a course version (resources, vocab, etc)
+  UNVERSIONED = 'unversioned'.freeze
 
   def units
-    content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
+    content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
   end
 
   # "Interface" for content_root:
@@ -66,15 +74,25 @@ class CourseVersion < ApplicationRecord
     if content_root.is_course?
       raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
 
-      course_version = CourseVersion.find_or_create_by!(
+      course_version = CourseVersion.find_or_initialize_by(
         course_offering: course_offering,
         key: content_root.version_year,
         display_name: content_root.version_year,
         content_root: content_root,
       )
+      course_version.published_state = content_root.published_state
     else
       course_version = nil
     end
+
+    # Check if we should prevent saving the new course version:
+    # - We can always add a course version if the content_root didn't previously have one
+    # - If the content root's previous course version equals the new one, then there's no change
+    # - If the content_root doesn't prevent a course version change, we can safely change it
+    if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
+      raise "cannot change course version of #{content_root.name}"
+    end
+    course_version.save! if course_version
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed
@@ -100,5 +118,15 @@ class CourseVersion < ApplicationRecord
 
   def all_standards_url
     content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
+  end
+
+  def self.should_cache?
+    Script.should_cache?
+  end
+
+  def self.course_offering_keys(content_root_type)
+    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
+      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
+    end
   end
 end

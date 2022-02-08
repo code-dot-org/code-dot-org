@@ -1,5 +1,6 @@
 {
-  "func": "orOperator",
-  "block": "__ || __",
-  "category": "Math"
+  "key": "orOperator",
+  "name": "orOperator",
+  "category": "Math",
+  "syntax": "__ || __"
 }

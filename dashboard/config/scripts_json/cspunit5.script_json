@@ -2,14 +2,18 @@
   "script": {
     "name": "cspunit5",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "serialized_at": "2021-11-22 19:56:47 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspunit5"
     }
@@ -90,23 +94,112 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "bd2f874d-8fce-46c0-8f7c-f46ef315650c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd2f874d-8fce-46c0-8f7c-f46ef315650c",
+        "lesson.key": "Explore PT Prep",
+        "lesson_group.key": "",
+        "script.name": "cspunit5"
+      }
+    },
+    {
+      "key": "b9e53f70-9b76-4198-98e3-214f744a9b0e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9e53f70-9b76-4198-98e3-214f744a9b0e",
+        "lesson.key": "Explore PT",
+        "lesson_group.key": "",
+        "script.name": "cspunit5"
+      }
+    },
+    {
+      "key": "f71337e1-7e58-481c-99e4-7df4db47b8aa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f71337e1-7e58-481c-99e4-7df4db47b8aa",
+        "lesson.key": "Create PT Prep",
+        "lesson_group.key": "",
+        "script.name": "cspunit5"
+      }
+    },
+    {
+      "key": "e83e47b0-976d-49ab-84ca-1a6a4b539606",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e83e47b0-976d-49ab-84ca-1a6a4b539606",
+        "lesson.key": "Create PT",
+        "lesson_group.key": "",
+        "script.name": "cspunit5"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a24ce031-36bf-40cb-851b-4c800b7db8fb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a24ce031-36bf-40cb-851b-4c800b7db8fb",
+        "lesson_activity.key": "bd2f874d-8fce-46c0-8f7c-f46ef315650c"
+      }
+    },
+    {
+      "key": "deb1fe87-a6d4-4159-8f82-31aeea4bdaeb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "deb1fe87-a6d4-4159-8f82-31aeea4bdaeb",
+        "lesson_activity.key": "b9e53f70-9b76-4198-98e3-214f744a9b0e"
+      }
+    },
+    {
+      "key": "b676eddb-cf9e-421f-9996-e8b1d8ca0a82",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b676eddb-cf9e-421f-9996-e8b1d8ca0a82",
+        "lesson_activity.key": "f71337e1-7e58-481c-99e4-7df4db47b8aa"
+      }
+    },
+    {
+      "key": "ea554295-712b-4577-96a2-06e85f953081",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea554295-712b-4577-96a2-06e85f953081",
+        "lesson_activity.key": "e83e47b0-976d-49ab-84ca-1a6a4b539606"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U5 - Explore PT Prep - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -114,7 +207,8 @@
         ],
         "lesson.key": "Explore PT Prep",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "a24ce031-36bf-40cb-851b-4c800b7db8fb"
       },
       "level_keys": [
         "U5 - Explore PT Prep - Student Introduction"
@@ -123,14 +217,13 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U5 - Explore PT - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -138,7 +231,8 @@
         ],
         "lesson.key": "Explore PT",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "deb1fe87-a6d4-4159-8f82-31aeea4bdaeb"
       },
       "level_keys": [
         "U5 - Explore PT - Student Introduction"
@@ -147,14 +241,13 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U5 - Create PT Prep - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -162,7 +255,8 @@
         ],
         "lesson.key": "Create PT Prep",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "b676eddb-cf9e-421f-9996-e8b1d8ca0a82"
       },
       "level_keys": [
         "U5 - Create PT Prep - Student Introduction"
@@ -171,14 +265,13 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U5 - Create PT - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -186,7 +279,8 @@
         ],
         "lesson.key": "Create PT",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "ea554295-712b-4577-96a2-06e85f953081"
       },
       "level_keys": [
         "U5 - Create PT - Student Introduction"
@@ -202,7 +296,8 @@
         ],
         "lesson.key": "Explore PT Prep",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "a24ce031-36bf-40cb-851b-4c800b7db8fb"
       }
     },
     {
@@ -213,7 +308,8 @@
         ],
         "lesson.key": "Explore PT",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "deb1fe87-a6d4-4159-8f82-31aeea4bdaeb"
       }
     },
     {
@@ -224,7 +320,8 @@
         ],
         "lesson.key": "Create PT Prep",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "b676eddb-cf9e-421f-9996-e8b1d8ca0a82"
       }
     },
     {
@@ -235,7 +332,8 @@
         ],
         "lesson.key": "Create PT",
         "lesson_group.key": "",
-        "script.name": "cspunit5"
+        "script.name": "cspunit5",
+        "activity_section.key": "ea554295-712b-4577-96a2-06e85f953081"
       }
     }
   ],

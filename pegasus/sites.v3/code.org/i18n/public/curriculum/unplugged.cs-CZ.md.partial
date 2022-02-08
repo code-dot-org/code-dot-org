@@ -1,0 +1,234 @@
+---
+title: Základy informatiky bez počítačů
+video_player: true
+theme: responsive
+---
+
+# Základy informatiky bez počítačů
+
+Sestavili jsme seznam všech našich „unplugged“ lekcí bez počítačů, které můžete využívat ve své třídě. Díky nim můžete učit základy informatiky, i když nemáte ve třídě žádné počítače!
+<br>
+<div class="col-50">
+Jako „unplugged“ označujeme lekce, ve kterých studenti nepracují na počítači Studenti v nich často pracují s tužkou a papírem nebo fyzickými objekty.  Jde o záměrně zařazované kinestetické příležitosti pomáhající studentům vstřebávat složité koncepty způsobem, který se týká jejich vlastních životů. <br><br>
+Lekce bez počítačů se hodí zejména k budování a udržování ducha spolupráce ve třídě. Vytvářejí užitečné stavební kameny, na které se můžete odkazovat při vysvětlování abstraktnějších konceptů. Každou z těchto aktivit lze provádět samostatně nebo společně s jinými lekcemi z informatiky, které se zabývají podobnými tématy.
+</div>
+
+<div class="col-50" style="text-align:center">
+<img src="/images/new-main.jpg" width="90%">
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Od 4 let, jen v angličtině
+</div>
+
+<div style="clear: both;"></div>
+
+***
+## Lekce bez počítačů v Základech informatiky 2021–22
+Ve studijním programu <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">Základy informatiky 2021–22</a>můžete najít následující lekce. <br><br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+#t01 {
+  width: 10%;
+  background-color: #ffa400;
+}
+#t02 {
+  width: 10%;
+  background-color: #ffb81d;
+}
+#t03 {
+  width: 10%;
+  background-color: #b9bf15;
+}
+#t04 {
+  width: 10%;
+  background-color: #00adbc;
+}
+#t05 {
+  width: 10%;
+  background-color: #0094ca;
+}
+#t06 {
+  width: 10%;
+  background-color: #7765a0;
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th><center><big>Kurz</th>
+    <th><center><big>Plán lekce</th> 
+    <th width=10%><center><big>Koncept</th>
+    <th width=20%><center><big>Video</th>
+     <tr>
+    <th rowspan="3" id="t01">Kurz A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 – Šťastné mapy</a><br><small>Tato lekce bez počítačů dává dohromady týmy s jednoduchým úkolem: dostat tvora jménem Flurb k ovoci. Studenti si budou procvičovat psaní přesných pokynů a tyto pokyny budou převádět na symboly, které mají k dispozici. Pokud se v kódu objeví problémy, měli by studenti pracovat společně, aby nacházeli chyby a vymýšleli řešení.</td><td>Posloupnosti</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 – Šťastné cykly</a><br><small>V této aktivitě znovu navštívíme Šťastné mapy. Tentokrát budou studenti svým kódem řešit složitější a delší hádanky, aby poznali užitečnost struktur, které jim umožní snadněji psát delší kód.</td><td>Cykly</td> <td><img src="/images/a7.png" width="90%"></td>
+  <tr>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 – Velká událost ml.</a><br><small>Události jsou skvělým způsobem, jak zpestřit již předem napsaný algoritmus. Někdy chcete, aby váš program dokázal reagovat na uživatele přesně ve chvíli, kdy si to uživatel přeje. Právě k tomu slouží události.</td><td>Události</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+  </tr>
+       <tr>
+    <th rowspan="3" id="t02">Kurz B</th>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 – Pohyb, pohyb</a><br><small>Tato lekce má za úkol studenty duševně připravit na kódovací cvičení, se kterými se v tomto kurzu setkají. Studenti budou v malých týmech vyvíjet fyzickou aktivitu, aby naprogramovali své spolužáky k opatrné chůzi z místa na místo, dokud nedorazí k cíli.</td><td>Posloupnosti</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 – Bláznění s cykly</a><br><small>Jakmile začneme psát delší a zajímavější programy, bude náš kód často obsahovat mnoho opakování. V této lekci se studenti naučí, jak využívat cykly ke snadnějšímu předávání mnohokrát opakovaných pokynů. Využijí k tomu sledování opakovaných vzorů pohybu při tanci.</td><td>Cykly</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 – Ta správná aplikace</a><br><small>V této lekci studenti poznají, že informatika může pomáhat lidem ve skutečném životě. Nejprve se studenti seznámí s několika fiktivními uživateli chytrých telefonů, aby jim pomohli najít „tu správnou aplikaci“, která vyřeší jejich potřeby. Pak studenti využijí své empatie a kreativity k tomu, aby navrhli svou vlastní aplikaci pro chytrý telefon, která vyřeší potřeby dalšího uživatele.</td><td>Dopady informatiky</td> <td><img src="/images/b10.png" width="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Kurz C</th>
+    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 – Moji robotičtí přátelé ml.</a><br><i>*Potřeby: plastové kelímky (10 na skupinu 2–3 osob)</i><br><small>Pomocí symbolů, které představují kód, budou studenti navrhovat algoritmy pro „roboty“, aby pokládali kelímky podle různých vzorů. Studenti se budou střídat ve hře na roboty, kdy budou reagovat pouze na algoritmy, které navrhli jejich spolužáci. Tento segment učí studenty chápat spojení mezi symboly a akcemi, rozdíly mezi algoritmem a programem a cenné dovednosti odhalování chyb.</td><td>Posloupnosti</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr> 
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 – Moji zacyklení robotičtí přátelé m</a><br><i>*Potřeby: Papírové kelímky (20 na skupinu 4 osob)</i><br><small>PřehledTato aktivita staví na původní aktivitě „Moji robotičtí přátelé“. Studenti řeší větší a složitější konstrukce. Aby dokázali naprogramovat své „roboty“ k vytváření těchto větších konstrukcí, musejí studenti identifikovat ve svých instrukcích opakované vzory, které je možné nahradit cyklem.</td><td>Cykly</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr> 
+      <tr>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 – Velká událost</a><br><small>Studenti se brzy naučí, že události jsou skvělým způsobem, jak přidat předem napsanému algoritmu pružnost. Někdy chcete, aby váš program dokázal reagovat na uživatele přesně ve chvíli, kdy si to uživatel přeje. Díky událostem bude váš program zajímavější a interaktivnější.</td><td>Události</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr> 
+       </tr> 
+     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 – Binární náramky</a><br><i>*Potřeby: Fixy. Volitelně 18 černých / 18 bílých korálků, 1 žinylkový drátek na studenta</i><br><small>Binární kód je ve světě počítačů nesmírně důležitý. Většina dnešních počítačů ukládá různé typy informací v binární podobě. Tato lekce pomůže předvést, jak je možné vzít něco ze skutečného života a převést to na řadu jedniček a nul.</td><td>Binární kód</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+  </tr>
+         <tr>
+    <th rowspan="3" id="t04">Kurz D</th>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 – Programování na čtverečkovaném papíru<br></a><small>Studenti se budou vzájemně „programovat“ ke kreslení obrázků a tak budou mít příležitost vyzkoušet si zábavným a přístupným způsobem některé ze základních konceptů programování. Hodina začíná tím, že studenti musejí používat symboly k tomu, aby si vzájemně dávali pokyny k vybarvování čtverečků na čtverečkovaném papíře a snažili se obkreslit existující obrázek. Pokud je čas, je možné lekci uzavřít obrázky, které studenti vytvoří sami.</td><td>Posloupnosti</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 – Štafetové programování<br></a><small>Tato aktivita začíná krátkou lekcí o odhalování chyb a vytrvalosti a pak se brzy přesune na závod s časem, kdy se studenti rozdělí do týmů a společně pracují na psaní programu, kdy každý zapíše vždy jednu instrukci.</td><td>Posloupnosti</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+      </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 – Podmínky s kartami</a><br><small>Tato lekce předvádí, jak lze používat podmínky k úpravě programu podle konkrétních informací. Při psaní programu nemáme pokaždé k dispozici všechny potřebné informace. Někdy chcete v jedné situaci udělat něco jiného než v jiné situaci, i když nevíte, jaká situace nastane, až se váš kód spustí. Právě k tomu jsou určené podmínky. Podmínky umožňují, aby se počítač rozhodoval na základě informací, které budou platit v době, kdy bude váš kód spuštěn.+</td><td>Podmínky</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+
+    </tr>
+         <tr>
+    <th rowspan="3" id="t05">Kurz E</th>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 – Digitální sdílení</a><br><i>*Potřeby: Chytrý telefon nebo tablet</i><br><small>Tuto lekci si Základy informatiky vypůjčily od týmu Autorského práva a kreativity. Pomáhá studentům pochopit problémy a výhody respektování vlastnictví a autorského práva, zejména v digitálním prostředí. Studenti by měli být vedeni k tomu, aby respektovali práva umělců, což tvoří důležitou součást etického digitálního občanství.</td><td>Digitální občanství</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 – Skládání písniček</a><br><small>Jednou z nejúžasnějších struktur v informatice jsou funkce. Funkce (někdy také označované jako procedury) jsou malé programy, které můžete ve svém velkém programu používat stále znovu a znovu. Tato lekce pomůže studentům intuitivně pochopit, proč je slučování částí kódu do funkcí tak užitečné.</td><td>Funkce</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 – Návrh pro přístupnost</a><br><small>V této lekci se studenti dovědí o přístupnosti a důležitosti empatie. Budou diskutovat o svých nápadech a navrhovat přístupná řešení hypotetických aplikací.</td><td>Dopady informatiky</td><td><img src="/images/e18.png" width="90%"></td>
+  </tr>
+    </tr>
+         <tr>
+    <th rowspan="3" id="t06">Kurz F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 – Příběhy prázdného prostoru</a><br><i>*Potřeby: 6 obálek (také se hodí: papíry nebo kartotékové lístky, přeložené napůl)</i><br><small>Studenti budou doplňovat prázdná místa do příběhů (podobně jako u knih Mad Libs®), aby pochopili, jak počítače přijímají a ukládají vstupní data od uživatelů, aby je pak využily při běhu programu.
+   </td><td>Proměnné</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
+  </tr>
+        <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 – For cyklus zábavy</a><br><i>*Potřeby: hrací kostky (3 kostky na skupinu 2–4 osob)</i><br><small>Už víme, že cykly umožňují provádět stejné věci znovu a znovu, ale teď se dozvíme, jak používat cykly, které mají zabudované ještě další struktury. Tyto nové struktury umožní studentům vytvářet výkonnější a dynamičtější kód.</td><td>Cykly For</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 – Internet</a><br><small>Přestože mnoho lidí internet každý den používá, jen málo z nich ví, jak funguje. IV této lekci budou studenti dělat, že putují internetem, a přitom se naučí něco o spojeních a pojmech, jako jsou URL, DNS a IP adresy.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+  </tr>
+</table>
+
+<p style="clear:both"></p>
+
+***
+## Další lekce bez počítače
+
+Následující lekce jsou seřazené podle konceptu a můžete je najít v předchozích verzích našich kurzů Základů informatiky. Mezi další zdroje, které můžete při plánování těchto lekcí využít, patří:
+* [Průvodce osnovami kurzů A–F 2019](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [Seznam potřeb ke kurzům A–F 2019](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [Amazon seznam ke kurzům 2019](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
+* [Průvodce osnovami kurzu A–F 2018](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
+* [Průvodce osnovami kurzu A–F 2017 (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
+* [Průvodce osnovami kurzu 1–4](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
+* [Výukové kartičky k základům informatiky](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+#t07 {
+  width: 10%;
+  background-color: #c6cacd;
+  color: #000000
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th><center><big>Koncept</th>
+    <th width=65%><center><big>Plán lekce <br>
+<small> Plán lekce obsahuje další zdroje (prezentace, videa, klíč s odpověďmi atd).
+</th> 
+    <th><center><big>Zdroje</th>
+     <tr>
+    <th rowspan="2" id=t07 width=5%>Digitální občanství</th>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+      <td colspan="2">*Na stránkách Common Sense Education najdete <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">úplné osnovy digitálního občanství</a> jejichž součástí je i mnoho aktivit bez počítače.</td>
+    <tr>
+    <th id=t07>Binární kód</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Potřeby: Volitelné – sady opačných předmětů k ukázání studentům. Přestože mnoho lidí vnímá binární kód jen jako jedničky a nuly, studentům se představí myšlenka, že informace mohou být reprezentovány různými binárními alternativami. Lekce posouvá tento koncept ještě o krok dál a ukazuje, jak může počítač ukládat v binárním kódu také složitější informace (například obrázky a barvy).</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+ </tr>
+    <tr>
+    <th id=t07>Cykly</th>
+        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">Moji zacyklení robotičtí přátelé</a><br><small>Zde se studenti seznámí s jednoduchostí a užitečností cyklů při „programování“ svých přátel pomocí jazyka z aktivity „Moji robotičtí přátelé.“ Po představení cyklů studenti zjistí, že mohou rychleji vytvářet větší struktury.
+</td> <td>{{ curriculum/unplugged/archive_two_video_thumbnail }}</td>
+  </tr>
+     <th rowspan="2" id=t07>Functions</th>
+    <td><a href="https://code.org/curriculum/course3/4/Teacher">Funkční lapače slunce</a><br><small>V této lekci budou studenti vyrábět z provázků, korálků a zvláštního talismanu lapač slunce. Studenti budou postupovat podle řady opakujících se kroků a pak budou požádáni, aby identifikovali určité sady „dovedností“, které se několikrát opakují. Jakmile tyto dovednosti definují, budou je volat z hlavního programu a celý nádherný postup tvorby bude zaznamenán na jediném listu papíru. Výsledný program bude zaměřen na celou třídu bez ohledu na typ provázku, korálků a talismanů. Za tím účelem budou studenti požádáni, aby si odmysleli konkrétní detaily jejich vlastních materiálů a vymýšleli pro používané potřeby obecně uplatnitelné termíny. Toto používání obecných zástupných termínů je skvělou příležitostí, jak studentům představit proměnné.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Video lekce</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">Podívejte se na lekci v akci</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">Klíč s odpověďmi pro aktivitu <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Klíč s odpověďmi pro hodnocení</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Skládání písniček s parametry</a><br><small>Jednou z nejúžasnějších struktur v informatice jsou funkce. Funkce (někdy také označované jako procedury) jsou malé programy, které můžete ve svém velkém programu používat stále znovu a znovu. Tato lekce pomůže studentům intuitivně pochopit, proč je slučování částí kódu do funkcí tak užitečné a jak mohou tyto struktury využívat, i když se budou části kódu trochu lišit.
+</td> <td>{{ curriculum/unplugged/archive_three_video_thumbnail }}</td>
+  </tr>
+     <th rowspan="6" id=t07>Algoritmyi</th>
+    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Závody s kostkami</a><br><small>V této lekci si studenti spojí koncept algoritmů s aktivitami ze skutečného života prostřednictvím hry na závody s kostkami. Cílem je začít si budovat schopnost převádět situace z reálného života do online scénářů a naopak.
+</td> <td>{{ curriculum/unplugged/archive_four_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursee/1">Moji robotičtí přátelé</a><br><small>Vaši studenti se budou pomocí předdefinovaného klíče symbolů snažit pochopit, jak mohou jeden druhého řídit při provádění konkrétních úkolů, aniž by přitom používali slovní příkazy. Tento segment učí studenty chápat spojení mezi symboly a akcemi, rozdíly mezi algoritmem a programem a cenné dovednosti odhalování chyb.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Algoritmy ve skutečném životě: Papírové vlaštovky</a><br><small>V této lekci si studenti spojí koncept algoritmů s každodenními aktivitami. Po diskusi o algoritmech budou studenti podle algoritmu skládat papírové vlaštovky. Cílem je začít si budovat schopnost převádět situace z reálného života do online scénářů a naopak.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Algoritmy ve skutečném životě: Zasetí semínka</a><br><small>V této lekci si studenti spojí koncept algoritmů s každodenními aktivitami prostřednictvím zasetí skutečného semínka. Cílem je začít si budovat schopnost převádět situace z reálného života do online scénářů a naopak.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangramy</a><br><small>Tato lekce nám ukáže něco důležitého o algoritmech. Dokud budou vaše algoritmy jednoduché, bude je možné používat mnoha způsoby. Pokud ale chcete zajistit, aby každý došel k těm samým výsledkům, budou muset být vaše algoritmy podrobnější. Studenti se naučí chápat rozdíly mezi podrobnými a obecnými algoritmy při hraní s tangramy.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
+  </tr>
+  </tr>
+    <tr>
+  </tr>
+    </tr>
+     <th id=t07 rowspan="4">Informatické myšlení</th>
+        <tr>
+        <td><a href="https://code.org/curriculum/course3/1/Teacher">Informatické myšlení</a><br><small>V této aktivitě nejsou žádné instrukce. Studenti budou muset vycházet z příkladů toho, co udělali imaginární hráči, aby pochopili, jak mají hrát hru. Tato lekce dává studentům příležitost procvičit si v jedné kompaktní aktivitě čtyři umění informatického myšlení (rozklad na části, hledání vzorů, abstrakci a algoritmizaci).</td> <td><a href="https://youtu.be/TlAaklrolA0">Video lekce</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">Podívejte se na lekci v akci</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Klíč s odpověďmi pro aktivitu </a></td>
+        </tr>
+        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Informatické myšlení s příšerami</a><br><small>Studenti se naučí čtyři kroky informatického myšlení jen s pomocí papíru a fixů. Po krátkém úvodu budou studenti rozděleni do skupin, ve kterých budou muset pro ostatní studenty vytvářet pokyny ke kreslení určité příšery (z katalogu předpřipravených příšer). Celý úkol je nutné rozložit na části, pak mohou týmy analyzovat všechny příšery z katalogu a hledat vzory, abstrahovat podobné detaily jednotlivých příšer a z těchto informací pak pro druhý tým vytvořit algoritmus (pokyny) k nakreslení určité příšery. Týmy si pak algoritmy vymění s jinou skupinou a podle pokynů z algoritmu nakreslí příšeru. Odpovídá kresba tomu, co původní tým zamýšlel?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Unspotted Bugs</a><br><small>Tato lekce provede studenty jednotlivými kroky odhalování chyb. Studenti se naučí mantru: „Co se stalo? Co se mělo stát? Co z toho plyne?“ </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
+  </tr>
+    </tr>
+     <th rowspan="2" id=t07>Vytrvalost</th>
+  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">Stavění základů</a><br><small>Nové a nevyřešené problémy jsou často velmi těžké. Pokud chceme mít šanci vytvářet něco kreativního, užitečného a chytrého, musíme být ochotní řešit těžké problémy, i když to znamená, že několikrát neuspějeme, než se nám to konečně podaří. V této lekci budou studenti stavět konstrukci z běžných materiálů. Pak budou zkoušet, jestli konstrukce udrží po dobu alespoň deseti sekund učebnici. Většina studentů napoprvé neuspěje, ale je důležité, aby se nevzdávali a zkoušeli to dál.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
+  </tr>
+  <tr>
+ <td><a href="https://curriculum.code.org/csf-18/coursea/2/">Stevie a její velký projekt</a><br><small>Když studenti při odpovídání na otázky nebo při práci na projektu narazí na překážky, jsou z toho obvykle frustrovaní a vzdávají se. Tato lekce představí studentům myšlenku, že frustrace může být důležitou součástí učení. Frustrace je zde prezentována jako krok v kreativním procesu, nikoli jako známka neúspěchu. Tuto lekci je možné probrat během jedné nebo dvou výukových hodin. Pokud máte více času, můžete prodloužit stavěcí a revizní fázi aktivity Kuličkodráha.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
+  </tr>
+     <th id=t07>Abstrakce</th>
+    <td><a href="https://code.org/curriculum/course4/5/Teacher">Mad Glibs</a><br><small>Abstrakce je jednou z nejdůležitějších schopností, kterou musí informatik ovládat. Umožňuje zjednodušovat problémy a vyhýbat se zbytečnému opakování. Dobrý kodér používá abstrakci prakticky pokaždé, když vytváří nějaký program. V této aktivitě budou vaši studenti analyzovat příběhy a hledat rozdíly, aby si je dokázali odmyslet. Tyto abstrahované příběhy se stanou šablonami pro zábavu a nové bláznivé příběhy.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Video lekce</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Klíč s odpověďmi pro aktivitu</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Klíč s odpověďmi pro hodnocení </a></td>
+  </tr>
+<tr>
+   <th id=t07>Proměnné</th>
+​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Obálkové proměnné</a><br><i>*Potřeby: Obálky (1–4 na skupinu 2–4 osob)</i><br><small>Proměnné se používají jako zástupné symboly pro hodnoty, kterými mohou být například čísla nebo slova. Proměnné umožňují v programování získat vysokou míru svobody. Namísto opakovaného vypisování fráze nebo nutnosti pamatovat si těžko zapamatovatelné číslo mohou informatici používat proměnné, které tyto hodnoty zastupují. Tato lekce pomůže vysvětlit, co to proměnné jsou a jak je můžeme různými způsoby využívat. Představa proměnných není snadno pochopitelná, proto doporučujeme vyhradit na konci lekce dostatek času na diskusi.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+</tr>
+</table>
+
+
+<p style="clear:both"></p>
+

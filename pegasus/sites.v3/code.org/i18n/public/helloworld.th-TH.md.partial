@@ -1,0 +1,37 @@
+---
+title: Hello World
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# Hello World!
+
+โปรแกรมแรกที่นักเรียนจำนวนมากสร้างขึ้นในวิทยาการคอมพิวเตอร์ 101 เป็นโปรแกรมง่าย ๆ ที่แสดงบรรทัดข้อความสัญลักษณ์: "สวัสดีชาวโลก!" กล่าวสวัสดีทุกๆคนในโลกแห่งวิทยาการคอมพิวเตอร์ไปกับกิจกรรมความรู้ที่จะช่วยสร้างทักษะการเขียนโค้ดเบื้องต้นพร้อมทั้งสร้างความมั่นใจในการสร้างแอปให้กับนักเรียน เลือกธีมจากทั้งหมด 4 ธีมเพื่อทำการเขียนโค้ดสร้างตัวละครเชิงโต้ตอบในโลกที่คุณสร้างขึ้น!
+
+# เลือกธีมให้ Hello World ของคุณ
+
+{{ spritelab_module, title: "อาหาร", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "สัตว์", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "ย้อนยุค", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "อีโมจิ", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "ข้อมูลผู้สอน", title: "สานต่ออย่างไรหลังจากสวัสดีชาวโลก", description: "สวัสดีชาวโลกเป็นก้าวแรกของนักเรียนทั้งชั้นก่อนได้รู้จักกับโปรเจกต์ปลายเปิดภายใน CS Connections ซึ่งเป็นหลักสูตรใหม่ของเรา! หลังจากที่ได้เรียนรู้การเขียนโค้ดเบื้องต้นไปบ้างแล้ว นักเรียนจะสามารถสร้างความเปลี่ยนแปลงใน โปรเจกต์การศึกษาข้ามหลักสูตร CS Connections ได้", button_text: "เรียนรู้เพิ่มเติม", url: "/educate/csc" }}
+
+## ผลงานสร้างสรรค์ของนักเรียน
+
+{{ featured_project, title: "อาหาร", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "อีโมจิ", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "สัตว์", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "ย้อนยุค", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

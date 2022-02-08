@@ -1243,14 +1243,23 @@ is-IS:
   coursee-2019_name: Námskeið E (2019)
   coursef-2019_name: Námskeið F (2019)
   coursea-2020_name: Námskeið A (2019)
+  courseb-2020_name: Námskeið B (2020)
+  coursec-2020_name: Námskeið C (2020)
+  coursed-2020_name: Námskeið D (2020)
+  coursee-2020_name: Námskeið E (2020)
+  coursef-2020_name: Námskeið F (2020)
+  coursed-2021_name: Námskeið D (2021)
   express-2018_name: Hraðnámskeið (2018)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
   express-2019_name: Hraðnámskeið (2019)
   pre-express-2019_name: Hraðnámskeið fyrir forlæsa (2019)
+  express-2020_name: Hraðnámskeið (2020)
   pre-express-2020_name: Hraðnámskeið fyrir forlæsa (2020)
+  pre-express-2021_name: Hraðnámskeið fyrir forlæsa (2021)
   csd2_name: 'Eining 2: Vefsíðugerð'
   csd3_name: 'Eining 3: Hreyfing og leikir'
   accelerated_name: Hraðnámskeiðið
+  express_name: Hraðnámskeið
   pre-express_name: Hraðnámskeið fyrir forlæsa
   20-hour_name: Hraðnámskeiðið
   algebra_name: TF í algebru
@@ -1355,6 +1364,12 @@ is-IS:
   coursed-2020_gradelevel: 14 ára og eldri
   coursee-2020_gradelevel: 8 - 12 ára
   coursef-2020_gradelevel: Bekkur 10+
+  coursea-2021_gradelevel: Bekkur 5+
+  courseb-2021_gradelevel: Bekkur 6+
+  coursec-2021_gradelevel: Bekkur 7+
+  coursed-2021_gradelevel: 14 ára og eldri
+  coursee-2021_gradelevel: 8 - 12 ára
+  coursef-2021_gradelevel: Bekkur 10+
   accelerated_gradelevel: Fyrir 10-18 ára
   codeorg_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
@@ -1534,6 +1549,12 @@ is-IS:
     öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt
     með öðrum.
   courseb-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og
+    öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt
+    með öðrum.
+  coursea-2021_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og
+    öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt
+    með öðrum.
+  courseb-2021_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og
     öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt
     með öðrum.
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
@@ -2333,6 +2354,7 @@ is-IS:
   footer_donate: Styrkja
   footer_support: Stuðningur
   footer_terms: Skilmálar
+  ai_for_oceans_lesson_plan: kennsluáætlun
   ai_in_partnership_with: Í samstarfi við
   ai_microsoft_thanks: Við þökkum Microsoft fyrir að styðja við hugsjón og stefnumið
     okkar sem er að tryggja að hvert barn hafi tækifæri til að læra tölvunarfræði

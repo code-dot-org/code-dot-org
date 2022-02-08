@@ -16,7 +16,7 @@ export default class StudentFeedbackNotification extends Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const {studentId} = this.props;
 
     $.ajax({
@@ -35,20 +35,20 @@ export default class StudentFeedbackNotification extends Component {
       numFeedbackLevels: this.state.numFeedbackLevels
     });
 
+    if (!this.state.numFeedbackLevels) {
+      return null;
+    }
+
     return (
-      <div>
-        {this.state.numFeedbackLevels > 0 && (
-          <Notification
-            type={NotificationType.feedback}
-            notice={i18n.feedbackNotification()}
-            details={notificationDetails}
-            buttonText={i18n.feedbackNotificationButton()}
-            buttonLink="/feedback"
-            dismissible={false}
-            googleAnalyticsId="student-feedback"
-          />
-        )}
-      </div>
+      <Notification
+        type={NotificationType.feedback}
+        notice={i18n.feedbackNotification()}
+        details={notificationDetails}
+        buttonText={i18n.feedbackNotificationButton()}
+        buttonLink="/feedback"
+        dismissible={false}
+        googleAnalyticsId="student-feedback"
+      />
     );
   }
 }

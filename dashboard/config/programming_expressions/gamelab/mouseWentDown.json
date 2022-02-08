@@ -1,11 +1,11 @@
 {
-  "func": "mouseWentDown",
-  "paletteParams": [
-    "button"
-  ],
-  "params": [
-    "\"leftButton\""
-  ],
+  "key": "mouseWentDown",
+  "name": "mouseWentDown",
   "category": "World",
-  "type": "value"
+  "palette_params": [
+    {
+      "name": "button"
+    }
+  ],
+  "syntax": "mouseWentDown(button)"
 }

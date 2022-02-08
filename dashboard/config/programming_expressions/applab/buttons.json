@@ -1,4 +1,6 @@
 {
-  "func": "buttons",
-  "category": "Circuit"
+  "key": "buttons",
+  "name": "buttons",
+  "category": "Circuit",
+  "syntax": "buttons"
 }

@@ -33,7 +33,12 @@ lt-LT:
   twentyhours_text: Baigėte savo „Programavimo valandą“?  Išmokite daugiau apie informatiką
     ir programavimą kituose kursuose.
   og_title: Kiekvienas vaikas nusipelno galimybės
+  og_title_soon: Programavimo švietimo savaitė
+  og_description: Kiekvienas moksleivis kiekvienoje mokykloje nusipelno galimybės
+    mokytis kompiuterių mokslo.
   csedweek_og_title: Programavimo švietimo savaitė
+  csedweek_og_description: Kiekvienas moksleivis kiekvienoje mokykloje nusipelno galimybės
+    mokytis kompiuterių mokslo.
   hoc2014_heading: Prisijunkite prie <a href="http://hourofcode.com">Programavimo
     valandos</a><br/>2014 gruodžio 8–14 dienomis<br/>
   hoc2014_students: Mokiniai
@@ -79,9 +84,16 @@ lt-LT:
   congratulations_volunteer: Sveikiname! Dabar jūs išbandėte „Programavimo valandą”,
     <a href="https://code.org/volunteer">savanoriškai užsiregistruokite klasėje</a>
     ir padėkite mokiniams išmokti programuoti naudojant „Programavimo valandą”!
+  congratulations_on_completing_course: Sveikiname pabaigus %{course}
   congrats_next_tutorials_title: Pabandyk šias instrukcijas toliau
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
   view_course: Peržiūrėti kursą
+  third_party_gradelevel_kto8: Iki 8 Klasės
+  third_party_gradelevel_kto2: Iki 2 Klasės
+  third_party_gradelevel_2to8: 2-8 Klasės
+  third_party_gradelevel_4to12: 4-12 Klasės
+  third_party_gradelevel_5to12: 5-12 Klasės
+  third_party_gradelevel_6plus: 6+ Klasės
   third_party_platform_all: 'Platforma: Internetas, iPad ir Android'
   third_party_platform_mobile: 'Platforma: iPad ir Android'
   third_party_platform_web: 'Platforma: internetas'
@@ -139,6 +151,7 @@ lt-LT:
   learn_next_level: Pabandykite kitą Code Studio kursą
   learn_online: Išmėginkite kitus internetinius kursus
   learn_classes: Suraskite kursus savo gyvenvietėje
+  hoc_is_here: "#HourOfCode jau čia – išmėginkite! @codeorg"
   just_did_hoc: 'Aš užbaigiau #HourOfCode - pažiūrėk! @codeorg'
   learn_hoc: Mokykitės „Programavimo valandos“ kursuose
   beyond_hoc: Užbaigusiems „Programavimo valandą“
@@ -210,6 +223,8 @@ lt-LT:
   homepage_hero_text_stat_students: 'Kodavimo studijoje yra užsiregistravę #student_count
     mokiniai'
   homepage_hero_text_stat_served: "„Programavimo valandą“: #served išbandė"
+  homepage_hero_hoc_is_coming: Programavimo švietimo savaitė
+  homepage_hero_hoc_is_here: Programavimo švietimo savaitė
   homepage_slot_text_hoc: "„Programavimo valanda“"
   homepage_slot_text_frozen: Ledo šalis su Anna ir Elsa
   homepage_slot_text_teacher: Mokytojo prietaisų skydelis
@@ -264,6 +279,8 @@ lt-LT:
   homepage_header_donors: Code.org dėkoja savo rėmėjams
   homepage_donors_seall: Žr. viską
   homepage_donors_donate: Paremkite
+  homepage_below_hero_announcement_text: Mes rūpinamės jūsų privatumu ir atnaujiname
+    mūsų privatumo politiką, galiojančią gegužės 25 d.
   homepage_below_hero_announcement_link_text: Sužinok daugiau
   contact_form_topic_student: Aš esu mokinys
   contact_form_topic_parent: Aš esu tėvas
@@ -325,6 +342,8 @@ lt-LT:
   sports_basketball_title: Sukurk kreipšinio žaidimą
   sports_all_sports_title: Sukurk savo sportą
   video_title_inspire_girl: Suteik įkvėpimo mergaitei
+  speak_another_language: Kalbi kita kalba?
+  help_translate: Padėk mums išversti.
   are_you_teacher: Ar jūs mokytojas?
   volunteer_engineer_submission_title: Įkvėpk moksleivius ir savanoriauk
   volunteer_engineer_submission_field_name: Vardas
@@ -414,9 +433,11 @@ lt-LT:
     svečiai
   dashboard_navigation_all_sections: Mokinių paskyros ir pažanga
   dashboard_navigation_view_progress: Pažanga
+  dashboard_navigation_view_assessments: Žinių patikrinimas
   dashboard_navigation_add_students: Pridėti mokinius
   dashboard_navigation_manage_students: Tvarkyti ir pridėti mokinius
   dashboard_navigation_lesson_plans_resources: Pamokų planai ir ištekliai
+  dashboard_navigation_view_stats: Statistika
   dashboard_navigation_section: 'Grupė: %{section_name}'
   dashboard_navigation_student: 'Mokinys: %{student_name}'
   dashboard_progress_not_started: nepradėta
@@ -500,6 +521,8 @@ lt-LT:
   dashboard_puzzle_solving: 'Galvosūkių sprendimas:'
   dashboard_student_worksheet: mokinio darbo lapas
   dashboard_teacher_worksheet: mokytojo darbo lapas
+  dashboard_curriculum_csina: 'Informatika algebroje:'
+  dashboard_curriculum_ecs: 'Informatikos tyrinėjimas:'
   dashboard_grade_k: K
   dashboard_grade_other: Kita
   dashboard_login_word: Žodžiai
@@ -510,6 +533,7 @@ lt-LT:
   dashboard_question: Klausimas
   dashboard_response: Atsakymas
   dashboard_correctness_correct: Teisingai
+  dashboard_status: Statusas/Būsena
   stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai.
     Per vieną savaitę:'
   stats_hoc_2013_image_alt: "„Programavimo valandos“ statistika nuo 2013 metų"
@@ -540,10 +564,13 @@ lt-LT:
   carousel_heading_domestic: Daugiau pamokėlių anglų kalba
   carousel_heading_beginners: Pamokos pradedantiesiems
   carousel_heading_javascript: Pamokos, kurios moko JavaScript
+  carousel_heading_beyond_javascript: Pamokos, kurios moko JavaScript
   carousel_heading_unplugged: Neturite kompiuterio ar interneto? Išmėginkite informatiką
     be kompiuterių
   carousel_heading_devices: Pamokėlės telefonams ir planšetėms
+  carousel_heading_beyond_devices: Pamokėlės telefonams ir planšetėms
   carousel_heading_languages: Pamokėlės kitomis programavimo kalbomis
+  carousel_heading_beyond_languages: Pamokėlės kitomis programavimo kalbomis
   carousel_heading_apps_games: Sukurkite savo programas ir žaidimus
   carousel_heading_university: Universiteto kursai internete
   carousel_heading_webpages: Išmokite sukurti interneto svetaines
@@ -587,6 +614,7 @@ lt-LT:
   robomindnl_name: Virtualaus roboto programavimas
   flappy_name: Sukurk Flappy žaidimą
   bitsbox_name: Bitsbox - sukurkite žaidimą
+  makeschool_name: Sukurk iPhone žaidimą savo naršyklėje!
   appinventor_name: "„Programavimo valanda“ su AppInventor"
   blockly_name: Blockly
   kodableunplugged_name: fuzzFamily Frenzy
@@ -610,6 +638,9 @@ lt-LT:
   basketball_name: Sukurk kreipšinio žaidimą
   sports_name: Sportas
   applab_gradelevel: Amžius 13+
+  applab_shortdescription_congrats: App Lab yra programavimo aplinka, su kuria galima
+    sukurti paprastas programėles. Kurti galima su blokeliais arba su JavaScript,
+    o po to ja pasidalinti su draugais
   codeorg_gradelevel: Amžius 4-104
   codeintl_gradelevel: Amžius 4-104
   khan_gradelevel: Vidurinėms mokykloms +
@@ -653,16 +684,52 @@ lt-LT:
   infinity_gradelevel: Amžius 4-104
   artist_gradelevel: Amžius 8+
   monstercoding_gradelevel: Amžius 5-13
+  allcancode_gradelevel: Amžius 5-10
+  csfirst_gradelevel: Amžius 9-14
   boxisland_gradelevel: Pradinės klasės
+  codesters_gradelevel: Amžius 12-14
+  texasinstruments_gradelevel: Amžius 13-16
+  teacherled_gradelevel: Amžius 5+
   course1_gradelevel: Amžius 4-6 metai
   course2_gradelevel: Amžius 6-18 metų
   course3_gradelevel: Amžius 8-18 metų
   course4_gradelevel: Amžius 10-18
+  coursea_gradelevel: Amžius 4-7
+  courseb_gradelevel: Amžius 5-8
+  coursec_gradelevel: Amžius 6-10 metų
+  coursed_gradelevel: Amžius 7-11
   coursee_gradelevel: Amžius 8-12
+  coursef_gradelevel: Amžius 9-13
+  coursea-2017_gradelevel: Amžius 4-7
+  courseb-2017_gradelevel: Amžius 5-8
+  coursec-2017_gradelevel: Amžius 6-10 metų
+  coursed-2017_gradelevel: Amžius 7-11
   coursee-2017_gradelevel: Amžius 8-12
+  coursef-2017_gradelevel: Amžius 9-13
+  coursea-2018_gradelevel: Amžius 4-7
+  courseb-2018_gradelevel: Amžius 5-8
+  coursec-2018_gradelevel: Amžius 6-10 metų
+  coursed-2018_gradelevel: Amžius 7-11
   coursee-2018_gradelevel: Amžius 8-12
+  coursef-2018_gradelevel: Amžius 9-13
+  coursea-2019_gradelevel: Amžius 4-7
+  courseb-2019_gradelevel: Amžius 5-8
+  coursec-2019_gradelevel: Amžius 6-10 metų
+  coursed-2019_gradelevel: Amžius 7-11
   coursee-2019_gradelevel: Amžius 8-12
+  coursef-2019_gradelevel: Amžius 9-13
+  coursea-2020_gradelevel: Amžius 4-7
+  courseb-2020_gradelevel: Amžius 5-8
+  coursec-2020_gradelevel: Amžius 6-10 metų
+  coursed-2020_gradelevel: Amžius 7-11
   coursee-2020_gradelevel: Amžius 8-12
+  coursef-2020_gradelevel: Amžius 9-13
+  coursea-2021_gradelevel: Amžius 4-7
+  courseb-2021_gradelevel: Amžius 5-8
+  coursec-2021_gradelevel: Amžius 6-10 metų
+  coursed-2021_gradelevel: Amžius 7-11
+  coursee-2021_gradelevel: Amžius 8-12
+  coursef-2021_gradelevel: Amžius 9-13
   accelerated_gradelevel: Amžius 10-18
   codeorg_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   codeintl_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
@@ -728,6 +795,8 @@ lt-LT:
   flappy_shortdescription: Sukurk savo žaidimą - Flappy paukštį, ryklį ar povandeninį
     laivą
   bitsbox_shortdescription: Sukurkite keletą programėlių naudodami JavaScript.
+  makeschool_shortdescription: Sukurkite iPhone žaidimą! Mokykitės rašyti komandas
+    ir išmokykite jų savo monstrą!
   touchdevelop_shortdescription: 'Spręsk galvosūkius, kurk žaidimus ir mokykis programuoti
     su savo telefonu. '
   appinventor_shortdescription: Sukurk savo programėlę! (Tik Android prietaisams)
@@ -792,6 +861,7 @@ lt-LT:
   projguts_longdescription: Ši veikla be kompiuterio padės mokiniams suprasti, kaip
     vyksta kompiuterių simuliacija ir modeliavimas. Mokiniai grupelėmis žais žaidimą
     „Akmuo, popierius, žirklės“ ir užfiksuos gautus rezultatus kaip modeliavimo eksperimentus.
+  hourofcode_longdescription: Sukurk savo pirmą kompiuterinę programą
   frozen_longdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais
     galėsite pasidalinti su draugais!
@@ -801,6 +871,7 @@ lt-LT:
   groklearning_beyond_name: Išmokite programuoti su Python
   hacketyhack_beyond_name: Išmokite Ruby
   robomind_beyond_name: Virtualaus roboto programavimas
+  makeschool_beyond_name: Sukurk iPhone žaidimą savo naršyklėje!
   appinventor_beyond_name: "„Programavimo valanda“ su AppInventor"
   codehs_beyond_name: Išmokite programuoti su šunimi Karel
   teachingtree_beyond_name: Universiteto kursai internete
@@ -871,6 +942,8 @@ lt-LT:
   groklearning_beyond_shortdescription: Įvadas į programavimą su Python
   hacketyhack_beyond_shortdescription: Išmokite programuoti su Ruby
   robomind_beyond_shortdescription: Parašykite kodą virtualiam robotui
+  makeschool_beyond_shortdescription: Išmokite sukurti žaidimą iPhone telefonui per
+    valandą
   appinventor_beyond_shortdescription: Sukurk savo programėlę! (Tik Android prietaisams)
   codehs_beyond_shortdescription: Išmokite programuoti su JavaScript įdomioje aplinkoje
   udemy_beyond_shortdescription: Daug įvairių internetinių programavimo kursų
@@ -904,6 +977,12 @@ lt-LT:
     galima išmokti CS ir JavaScript interaktyviu būdu. Čia mokosi daugiau nei dešimt
     milijonų mokinių visame Pasaulyje. Čia yra paruoštas „Programavimo valandos“ kursas
     su įvairiais testais, prezentacijomis ir kt.
+  makeschool_beyond_longdescription: Moki programuoti su ObjectiveC? Tuomet išmoksi
+    sukurti iPhone žaidimą per valandą! Susipažinsi su kūrimo procesu, testavimu ir
+    galėsi žaisti savo žaidimą naršyklėje bei pasidalinti juo per Facebook su savo
+    draugais! Nereikia turėti iPhone programų kūrimo žinių, tačiau reikia žinoti,
+    kas yra kintamieji ir objektai.
+  compatibility_hide_this_warning: Slėpti šį įspėjimą
   flappy_shortcode: plasnok
   header_home: Pradžia
   header_my_dashboard: Valdymo skydelis
@@ -919,6 +998,7 @@ lt-LT:
   header_educate_inspire: Įkvėpkite mokinius
   header_educate_community: Virtuali bendruomenė
   header_educate_tools: Įrankiai ir vaizdo įrašai
+  header_stats: Statistika
   header_teacher_community: Mokytojų bendruomenė
   header_report_bug: Pranešti apie klaidą
   header_legal_privacy: Privatumo politika
@@ -928,6 +1008,9 @@ lt-LT:
   user_header_settings: Mano paskyra
   user_header_logout: Atsijungti
   user_header_signin: Prisijungti
+  user_header_create: 'Sukurti '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Menininkas '
   user_header_gamelab: Žaidimų laboratorija
   user_header_playlab: Laboratorija
   user_header_minecraft: Minecraft
@@ -946,10 +1029,12 @@ lt-LT:
   hoc2018_dance_teacher_resources_tile1_button: Pamokos planas
   hoc2018_dance_teacher_resources_tile2_button: Veikla be kompiuterių
   hoc2018_dance_amazon_about_future_engineer_button: Sužinok daugiau
+  page_not_found_title: Puslapis nerastas
   footer_powered_by_aws: 'Rėmėjas: Amazon Web Services'
   footer_privacy_policy: Privatumo politika
   footer_donate: Paremkite
   footer_support: Pagalba
   footer_terms: Sąlygos
+  ai_for_oceans_lesson_plan: pamokos planas
   ai_activity: Veikla
   ai_description: Aprašymas

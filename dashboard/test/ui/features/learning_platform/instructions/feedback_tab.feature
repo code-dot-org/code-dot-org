@@ -12,10 +12,10 @@ Background:
   And I press "finishButton"
 
 Scenario: As student 'Feedback' tab is not visible if no feedback
-  #As student, with no feedback, can see Key Concept tab on rubric level
+  #As student, with no feedback, can see Rubric tab on rubric level
   And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
   And I wait to see ".uitest-feedback"
-  And element ".editor-column" contains text "Key Concept"
+  And element ".editor-column" contains text "Rubric"
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
@@ -25,9 +25,6 @@ Scenario: As student 'Feedback' tab is not visible if no feedback
   And element "ui-test-feedback-input" does not exist
   Then I sign out
 
-@no_ie
-# Disabling IE due to bug where text changes in the feedback text input are not registered
-# so submit button remains disabled
 Scenario: As teacher, when viewing a level with student work,
 feedback can be submitted and displayed. If there is a mini rubric, teacher can give feedback on rubric.
 If a teacher on a level with mini rubric can see the rubric without viewing student work.
@@ -48,7 +45,7 @@ Otherwise don't show feedback tab
   And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
   And I wait for the page to fully load
   And I wait to see ".uitest-feedback"
-  And element ".editor-column" contains text "Key Concept"
+  And element ".editor-column" contains text "Rubric"
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."

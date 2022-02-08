@@ -1,0 +1,47 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Belle Fourche High School - 01,,46056100038,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Bon Homme High School - 01,,46074000065,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Britton-Hecla High School - 01,,46000411141,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Britton-Hecla High School - 01,,46000411141,10157,PLTW Computer Science A,0,0,0,0,0,0,0,0,0
+Brookings High School - 01,,46085200082,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Brookings High School - 01,,46085200082,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Central High School - 41,,46598200529,10014,PLTW Computer Science Principles,0,0,0,0,0,0,0,0,0
+Chamberlain High School - 01,,46120000119,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Dakota Valley High School - 01,,46369900345,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Dakota Valley High School - 01,,46369900345,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Dell Rapids High School - 01,,46181200165,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Deubrook High School - 01,,46783000012,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Doland Jr. High - 02,,46191700895,10604,PLTW MS Computer Science,0,0,0,0,0,0,0,0,0
+Douglas High School - 03,,46194100174,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Estelline High School - 01,,46224100192,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Ethan High School - 01,,46225000194,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Flandreau High School - 01,,46243900206,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Holgate Middle School - 02,,46020700005,10604,PLTW MS Computer Science,0,0,0,0,0,0,0,0,0
+Howard High School - 01,,46000250305,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Howard Jr. High - 05,,46000250913,10604,PLTW MS Computer Science,0,0,0,0,0,0,0,0,0
+Irene-Wakonda High School - 01,,46804391254,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Lead-Deadwood High School - 01,,46413000374,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Leola High School - 01,,46416400391,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Madison High School - 01,,46396000363,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Marty High School - 02,,590005500132,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+McLaughlin High School - 01,,46463800416,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Milbank High School - 01,,46000020424,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Redfield High School - 01,,46604500552,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Roosevelt High School - 03,,46662701063,10157,PLTW Computer Science A,0,0,0,0,0,0,0,0,0
+Scotland High School - 01,,46651800569,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Scotland High School - 01,,46651800569,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Simmons Middle School - 03,,46020700011,10604,PLTW MS Computer Science,0,0,0,0,0,0,0,0,0
+Spearfish Middle School - 05,,46669300622,10604,PLTW MS Computer Science,0,0,0,0,0,0,0,0,0
+Tea Area High School - 03,,46000521235,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Tea Area Middle School - 02,,46000520853,10014,PLTW Computer Science Principles,0,0,0,0,0,0,0,0,0
+Todd County High School - 01,,46720900678,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Todd County High School - 01,,46720900678,21009,Mechatronics/Robotics,0,0,0,0,0,0,0,0,0
+Tri-Valley High School - 01,,46449400405,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Warner High School - 01,,46760200709,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Washington High School - 01,,46662700610,10157,PLTW Computer Science A,0,0,0,0,0,0,0,0,0
+Watertown High School - 01,,46766200717,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+West Central High School - 01,,46317100274,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+White River Middle School - 04,,46785700951,10604,PLTW MS Computer Science,0,0,0,0,0,0,0,0,0
+Willow Lake High School - 01,,46793500756,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Wilmot Jr. High - 03,,46000030872,10604,PLTW MS Computer Science,0,0,0,0,0,0,0,0,0
+Yankton High School - 01,,46804300798,10152,Computer Programming,0,0,0,0,0,0,0,0,0

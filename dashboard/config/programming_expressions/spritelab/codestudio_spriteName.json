@@ -1,7 +1,6 @@
 {
+  "key": "codestudio_spriteName",
+  "name": "sprite_variables_get",
   "category": "Sprites",
-  "config": {
-    "docFunc": "codestudio_spriteName",
-    "func": "sprite_variables_get"
-  }
+  "syntax": "sprite_variables_get"
 }

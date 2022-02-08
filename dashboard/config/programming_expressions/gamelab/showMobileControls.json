@@ -1,16 +1,20 @@
 {
-  "func": "showMobileControls",
-  "paletteParams": [
-    "spaceButtonVisible",
-    "dpadVisible",
-    "dpadFourWay",
-    "mobileOnly"
+  "key": "showMobileControls",
+  "name": "showMobileControls",
+  "category": "World",
+  "palette_params": [
+    {
+      "name": "spaceButtonVisible"
+    },
+    {
+      "name": "dpadVisible"
+    },
+    {
+      "name": "dpadFourWay"
+    },
+    {
+      "name": "mobileOnly"
+    }
   ],
-  "params": [
-    "true",
-    "true",
-    "true",
-    "true"
-  ],
-  "category": "World"
+  "syntax": "showMobileControls(spaceButtonVisible, dpadVisible, dpadFourWay, mobileOnly)"
 }

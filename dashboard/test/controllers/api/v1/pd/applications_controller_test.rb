@@ -670,6 +670,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -713,6 +714,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -756,6 +758,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -807,6 +810,7 @@ module Api::V1::Pd
         application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
         application.lock!
@@ -851,6 +855,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -893,6 +898,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -975,23 +981,26 @@ module Api::V1::Pd
         "Which professional learning program would you like to join for the #{APPLICATION_CURRENT_YEAR} school year?",
         "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
         "How will you offer CS Principles?",
-        "How many minutes will your CS Program class last?",
+        "How many minutes will your CS program class last?",
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
         "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "Which existing course or curriculum will it replace? Mark all that apply.",
+        "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
-        "Do you want to be considered for Code.org’s national virtual academic year workshops?",
         "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",
         "How did you hear about this program? (Teacher's response)",
         "Principal Approval Form URL",
+        "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
+        "Home street address",
+        "Home city",
+        "Home state",
         "Principal's title (provided by principal)",
         "Principal's first name (provided by principal)",
         "Principal's last name (provided by principal)",

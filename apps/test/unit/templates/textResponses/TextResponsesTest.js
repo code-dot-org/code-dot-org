@@ -11,7 +11,7 @@ const responses = {
       puzzle: 2,
       question: 'Free Response',
       response: 'Lorem ipsum dolor sit amet, postea pericula',
-      stage: 'Lesson 1',
+      lesson: 'Lesson 1',
       studentId: 1,
       studentName: 'Student A',
       url: 'http://fake.url'
@@ -20,7 +20,7 @@ const responses = {
       puzzle: 3,
       question: 'Free Response',
       response: 'Lorem ipsum dolor sit amet, postea pericula',
-      stage: 'Lesson 2',
+      lesson: 'Lesson 2',
       studentId: 1,
       studentName: 'Student A',
       url: 'http://fake.url'
@@ -29,7 +29,7 @@ const responses = {
       puzzle: 3,
       question: 'Free Response',
       response: 'Lorem ipsum dolor sit amet, postea pericula',
-      stage: 'Lesson 2',
+      lesson: 'Lesson 2',
       studentId: 3,
       studentName: 'Student C',
       url: 'http://fake.url'
@@ -39,7 +39,7 @@ const responses = {
 };
 
 describe('TextResponses', () => {
-  it('renders the ScriptSelector dropdown', () => {
+  it('renders the UnitSelector dropdown', () => {
     const wrapper = shallow(
       <TextResponses
         sectionId={2}
@@ -52,7 +52,7 @@ describe('TextResponses', () => {
       />
     );
 
-    expect(wrapper.find('ScriptSelector').exists()).to.be.true;
+    expect(wrapper.find('UnitSelector').exists()).to.be.true;
   });
 
   it('renders the TextResponsesTable', () => {

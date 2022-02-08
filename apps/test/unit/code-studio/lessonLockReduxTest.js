@@ -1,7 +1,8 @@
 import {assert} from 'chai';
 import _ from 'lodash';
+import $ from 'jquery';
 import sinon from 'sinon';
-import fakeSectionData from './fakeSectionData';
+import fakeSectionData, {scriptId} from './fakeSectionData';
 import {
   stubRedux,
   restoreRedux,
@@ -24,7 +25,8 @@ import reducer, {
   FINISH_SAVE,
   CLOSE_LOCK_DIALOG,
   fullyLockedLessonMapping,
-  setSectionLockStatus
+  setSectionLockStatus,
+  refetchSectionLockStatus
 } from '@cdo/apps/code-studio/lessonLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
@@ -421,5 +423,46 @@ describe('fullyLockedLessonMapping', () => {
 
   it('returns an empty object if no selectedSection', () => {
     assert.deepEqual(fullyLockedLessonMapping(sections['9999']), {});
+  });
+});
+
+describe('refetchSectionLockStatus', () => {
+  let store;
+  const lockStatusResponse = _.cloneDeep(fakeSectionData);
+  lockStatusResponse[section1Id]['lessons'][lesson1Id][1].locked = true;
+
+  // Intercept all XHR requests, storing the last one
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({lessonLock: reducer});
+    store = getStore();
+
+    sinon.stub($, 'ajax').returns({
+      done: successCallback => {
+        successCallback(lockStatusResponse);
+        return {fail: () => {}};
+      }
+    });
+  });
+
+  afterEach(() => {
+    restoreRedux();
+    $.ajax.restore();
+  });
+
+  it('updates lessonsBySectionId', async () => {
+    // Initial set up of lessonLockRedux with fakeSectionData
+    store.dispatch(setSectionLockStatus(fakeSectionData));
+    let student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
+      lesson1Id
+    ][1];
+    assert.equal(student2.locked, false);
+
+    // Refetch lessonLock data with updated lock status for lesson1 student 2
+    store.dispatch(refetchSectionLockStatus(section1Id, scriptId));
+    student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
+      lesson1Id
+    ][1];
+    assert.equal(student2.locked, true);
   });
 });

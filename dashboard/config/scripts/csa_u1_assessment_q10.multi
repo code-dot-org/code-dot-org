@@ -1,0 +1,21 @@
+name 'CSA U1 Assessment q10'
+height 'auto'
+
+wrong ‘“has-a”’
+wrong ‘“has-many”’
+right ‘"is-a"’
+wrong ‘None of the above.’
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+
+MARKDOWN
+
+markdown <<MARKDOWN
+ Fill in the blank. Inheritance implies a/an _______ relationship.
+
+
+MARKDOWN

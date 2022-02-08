@@ -1,0 +1,14 @@
+{
+  "key": "lightSensor.setScale",
+  "name": "lightSensor.setScale",
+  "category": "Circuit",
+  "palette_params": [
+    {
+      "name": "low"
+    },
+    {
+      "name": "high"
+    }
+  ],
+  "syntax": "lightSensor.setScale(low, high)"
+}

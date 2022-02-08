@@ -34,6 +34,8 @@ class Resource < ApplicationRecord
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%{value}\"."
 
+  validates_presence_of :name
+
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   has_and_belongs_to_many :scripts, join_table: :scripts_resources
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
@@ -80,12 +82,19 @@ class Resource < ApplicationRecord
     return !!include_in_pdf
   end
 
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_resource_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
+  end
+
   def summarize_for_lesson_plan
     {
       id: id,
       key: key,
-      name: I18n.t("data.resource.#{key}.name", default: name),
-      url: url,
+      name: get_localized_property(:name),
+      url: get_localized_property(:url),
       download_url: download_url,
       audience: audience || 'All',
       type: type
@@ -96,7 +105,7 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
+      markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: name,
       url: url,
       downloadUrl: download_url || '',
@@ -112,9 +121,9 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
-      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
-      name: name,
-      url: url
+      markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
+      name: get_localized_property(:name),
+      url: get_localized_property(:url)
     }
   end
 
@@ -123,6 +132,17 @@ class Resource < ApplicationRecord
       scripts_to_serialize = lessons.map(&:script).concat(scripts).uniq
       scripts_to_serialize.each(&:write_script_json)
       unit_groups.each(&:write_serialization)
+    end
+  end
+
+  def copy_to_course_version(destination_course_version)
+    return self if course_version == destination_course_version
+    persisted_resource = Resource.where(name: name, url: url, course_version_id: destination_course_version.id).first
+    if persisted_resource
+      persisted_resource
+    else
+      copied_resource = Resource.create!(attributes.slice('name', 'url', 'properties').merge({course_version_id: destination_course_version.id}))
+      copied_resource
     end
   end
 

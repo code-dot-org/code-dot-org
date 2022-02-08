@@ -992,12 +992,14 @@ zh-TW:
   coursed-2020_name: 課程 D（2019）
   coursee-2020_name: 課程 E（2019）
   coursef-2020_name: 課程 F（2019）
+  coursed-2021_name: 課程 D（2021）
   express-2018_name: 速學課程（2018）
   pre-express-2018_name: 學前兒童的速學課程（2018）
   express-2019_name: 速學課程（2019）
   pre-express-2019_name: 學前兒童的速學課程（2019）
   express-2020_name: 速學課程（2019）
   pre-express-2020_name: 學前兒童的速學課程（2020）
+  pre-express-2021_name: 學前兒童的速學課程（2021）
   csd2_name: 單元 2：網頁開發
   csd3_name: 單元 3：動畫與遊戲
   accelerated_name: 速成課程
@@ -1012,6 +1014,8 @@ zh-TW:
   iceage_name: 冰原歷險記
   minecraft_name: Minecraft
   starwarsblocks_name: 星際大戰（程式積木）
+  hoc-impact-study_name: 經典迷宮與調查
+  flappy-impact-study_name: 帶調查的輕鬆代碼
   hoc-encryption_name: 簡單加密
   text-compression_name: 文字壓縮
   applab_name: App Lab
@@ -1104,6 +1108,12 @@ zh-TW:
   coursed-2020_gradelevel: 年級 8+
   coursee-2020_gradelevel: 年齡 8-12
   coursef-2020_gradelevel: 年齡 9-13
+  coursea-2021_gradelevel: 年齡 4-7
+  courseb-2021_gradelevel: 年齡 5-8
+  coursec-2021_gradelevel: 年齡 6-10
+  coursed-2021_gradelevel: 年級 8+
+  coursee-2021_gradelevel: 年齡 8-12
+  coursef-2021_gradelevel: 年齡 9-13
   accelerated_gradelevel: 年齡 10-18
   codeorg_platformtext: 主流的瀏覽器、手機、平板
   codeintl_platformtext: 主流的瀏覽器、手機、平板
@@ -1239,6 +1249,14 @@ zh-TW:
   coursee-2020_shortdescription_congrats: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
     2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
   coursef-2020_shortdescription_congrats: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
+    2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
+  coursea-2021_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  courseb-2021_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  coursec-2021_shortdescription_congrats: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
+  coursed-2021_shortdescription_congrats: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+  coursee-2021_shortdescription_congrats: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
+    2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
+  coursef-2021_shortdescription_congrats: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
     2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
   codeorg_longdescription: 使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有
     34 種語言可用。
@@ -1799,8 +1817,16 @@ zh-TW:
   page_not_available_button: 返回主頁
   hoc2020_mc_available_code_org: 可於 Code.org 取得
   hoc2020_mc_available_mee: 可於 Minecraft 教育版取得
+  hoc2020_mc_mee_title: 我的世界兩個村莊的故事
   hoc2020_mc_mee_description: 現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新
     Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。
+  hoc2021_mc_mee_title: "「最新世界」計時"
+  hoc2021_mc_mee_description: 回到過去，學習編寫程式碼！全新的「我的世界一小時程式編程」教學課程現已在 Windows、Mac、色彩筆記本和
+    iPad 版的「我的世界：教育版」中推出。開始使用免費的教育工作者資源、訓練和影片。
+  hoc2021_mc_mee_villages_title: 兩個村莊的故事
+  hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中，與您的學生一起學習編碼基礎知識，並探索多元化和包容性。
+  hoc2021_mc_mee_ai_title: 人工智慧
+  hoc2021_mc_mee_ai_description: 與您的學生一起探索人工智慧，並在 Minecraft：教育版中學習編寫程式碼。
   footer_powered_by_aws: Powered by Amazon Web Services
   footer_built_on_github: 構建於 Microsoft 的 Github
   codebytes_skinny_banner_title: 12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。
@@ -1818,7 +1844,52 @@ zh-TW:
   footer_support: 支援
   footer_terms: 條款
   ai_for_oceans: 在海洋中使用的 AI
+  ai_for_oceans_lesson_plan: 教學計劃
+  ai_for_oceans_tile_description: 訓練偵測垃圾的人工智慧來幫忙清理海洋！學習訓練資料和偏誤的知識、如何應用人工智慧來解決真實世界的問題。點擊看更多
+  how_ai_works: 人工智慧是如何運作的
+  how_ai_works_tile_description: 我們將透過一系列的影片學習人工智慧的重要性以及人工智慧是怎麼運作的。影片是由微軟執行長Satya
+    Nadella和他的專業團隊製作。
+  watch_the_videos: 觀看影片
+  ai_and_ethics: 人工智慧和倫理
+  ai_and_ethics_tile_description: 學生們仔細思量了倫理對人工智慧的含義以後，一同創造出了”人工智慧倫理準則“給世界各地的人工智慧創造者和立法者。
+  view_lesson_plan: 瀏覽教學計劃
   ai_in_partnership_with: 合作夥伴
   ai_microsoft_thanks: 感謝Microsoft支持我們的願景與使命，以確保每位孩童都有機會學習電腦科學及掌握在21世紀獲得成功的技能。
+  ai_ethics_panel_header: 查看人工智慧倫理的討論
+  ai_ethics_panel_description_1: 跟著人工智慧的專家們一同研究！這個討論包含一些重要的課題像是演算法偏誤和未來可以持續發展的研究。
+  ai_ethics_lesson_plan: 人工智慧和倫理的教學計劃
+  ai_ethics_panel_description_2: "，了解人工智能倫理的一個很好的介紹！"
+  cs_for_good: CS 的良好
+  cs_for_good_tile_description: 一些資源讓學生們去思考計算機科學在使世界變得更公平和永續經營上所扮演的角色
+  view_resources: 檢視資源
+  imagine_cup_junior: 想像杯少年
+  imagine_cup_junior_tile_description: 這項全球 AI 為良好的挑戰介紹了 Microsoft 的 AI in Good 計畫，讓他們利用人工智慧的力量來解決世界上的問題。
   ai_activity: 活動
   ai_description: 描述
+  ai_seeing_ai: 看到人工智慧
+  ai_seeing_ai_description: 一個可以用多種語言描述你身處環境的免費應用程式。
+  ai_quick_draw: 限時塗鴉！
+  ai_quick_draw_description: 類神經網路能學會怎麼辨識塗鴉嗎？
+  ai_teachable_machine: 可教導的機器
+  ai_teachable_machine_description: 讓電腦學會去辨識你的圖片、聲音和姿勢。
+  ai_google: 人工智慧實驗與谷歌
+  ai_google_description: 從圖片、塗鴉、語言、音樂和其他東西來開始探索機器學習。
+  ai_zooniverse: 祖尼爾斯-快照山斑馬
+  ai_zooniverse_description: 幫助保護瀕危的開普山斑馬通過識別不同的動物的圖像。
+  ai_audience: 觀眾
+  ai_minecraft_description: 免費取得包含課程計畫、影片、計算機科學課程和教師培訓等各種資源。（需要當個創世神：教育版）
+  ai_k_12_audience: K-12 (需要閱讀)
+  ai_microsoft_workshop: 免費的微軟線上工作坊
+  ai_microsoft_workshop_description: 透過免費 STEM 和編碼工作坊激發好奇心。
+  ai_machine_learning_for_kids: 給小孩的機器學習
+  ai_machine_learning_for_kids_description: 在Scratch裡面使用文字、數字和圖片來訓練機器學習模型，並用模型來製作遊戲。
+  ai_ibm_machine_learning_for_kids: IBM：給小孩的機器學習
+  ai_ecs: ECS：人工智慧（AI）
+  ai_ecs_description: 計算機科學探索 (ECS) 課程的新替代課程單元。
+  ai_elements: 人工智慧的要素
+  ai_elements_description: 由Reaktor和赫爾辛基大學共同製作的免費線上課程。
+  ai_cognimates: 認知
+  ai_cognimates_description: 一個人工智能教育平台，用於構建遊戲，編程機器人和訓練。
+  ai_try_activity: 嘗試紀錄
+  outbreak_tile_title: 疫情爆發
+  outbreak_tile_subtitle: 病毒感染了怪物鎮編寫疫情爆發模擬器，並預測怪物鎮的鄰居會發生什麼事。

@@ -236,7 +236,6 @@ class ContactRollupsProcessed < ApplicationRecord
     form_kinds = extract_field contact_data, 'pegasus.forms', 'kind'
     roles.merge(form_kinds.map {|kind| FORM_KIND_TO_ROLE_MAP[kind&.to_sym]})
 
-    # @see UnitGroup::FAMILY_NAMES
     # TODO: extract course family_name (in properties column) instead of course name.
     courses = extract_field contact_data, 'dashboard.sections', 'course_name'
     roles.add 'CSD Teacher' if courses.any? {|course| course&.start_with? 'csd'}

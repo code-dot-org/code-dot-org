@@ -9,11 +9,13 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import classNames from 'classnames';
 
 const ButtonColor = {
   orange: 'orange',
   gray: 'gray',
   blue: 'blue',
+  teal: 'teal',
   white: 'white',
   red: 'red',
   green: 'green',
@@ -39,6 +41,7 @@ class Button extends React.Component {
     text: PropTypes.string.isRequired,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
+    styleAsText: PropTypes.bool,
     icon: PropTypes.string,
     iconClassName: PropTypes.string,
     iconStyle: PropTypes.object,
@@ -65,9 +68,9 @@ class Button extends React.Component {
 
   render() {
     const {
-      className,
       href,
       text,
+      styleAsText,
       icon,
       iconClassName,
       iconStyle,
@@ -114,11 +117,20 @@ class Button extends React.Component {
     // potential exploits. Therefore, we do so here.
     const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
 
+    let tagStyle, className;
+    if (styleAsText) {
+      tagStyle = [styles.main, styles.textButton, style];
+      className = classNames(this.props.className, 'button-active-no-border');
+    } else {
+      tagStyle = [styles.main, styles.colors[color], sizeStyle, style];
+      className = this.props.className;
+    }
+
     return (
       <Tag
         className={className}
-        style={[styles.main, styles.colors[color], sizeStyle, style]}
-        href={disabled ? 'javascript:void(0);' : href}
+        style={tagStyle}
+        href={disabled ? '#' : href}
         target={target}
         rel={rel}
         disabled={disabled}
@@ -222,6 +234,24 @@ const styles = {
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
+    [ButtonColor.teal]: {
+      color: color.white,
+      backgroundColor: color.teal,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.teal,
+        borderColor: color.teal,
+        backgroundColor: color.lightest_teal
+      },
+      ':disabled': {
+        color: color.lighter_cyan,
+        backgroundColor: color.lightest_cyan,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
+    },
+
     [ButtonColor.white]: {
       color: color.charcoal,
       backgroundColor: color.white,
@@ -302,6 +332,18 @@ const styles = {
       paddingLeft: 10,
       paddingRight: 10,
       lineHeight: '40px'
+    }
+  },
+  textButton: {
+    color: color.teal,
+    borderWidth: 0,
+    backgroundColor: 'unset',
+    fontFamily: '"Gotham 5r", sans-serif',
+    boxShadow: 'none',
+    padding: 0,
+    margin: 0,
+    ':hover': {
+      backgroundColor: 'unset'
     }
   }
 };

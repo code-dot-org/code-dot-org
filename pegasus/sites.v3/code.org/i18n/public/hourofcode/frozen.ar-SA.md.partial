@@ -1,0 +1,47 @@
+---
+title: موارد المعلم - الكود مع Anna وElsa
+nav: hoc_teacher_resources_nav
+theme: responsive
+video_player: true
+---
+
+# الكود مع Anna وElsa: دورة تعليمية لـAn Hour of Code
+
+{{ hoc_frozen_video }}
+
+[col-50]
+
+## Teacher Resources
+
+### Lesson Plans:
+
+- [الكود مع Anna وElsa]({{ hoc_frozen_cb_url }})
+- [ورقة الإجابة](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- اختياري:[ماكينة السحب](http://code.org/curriculum/misc/hocunplugged/Teacher)
+
+### أنشطة الامتداد:
+
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+
+### موارد أخرى للمُعلِّم:
+
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+
+[/col-50]
+
+[col-50]
+
+## نظرة عامة
+
+لنستخدم الكود لمشاركة Anna وElsa وهما يستكشفان سحر وجمال الثلج. ستُنشئ رقاقات ثلج وأنماطًا وأنت تتزحلق على الجليد ونصنع أرض عجائب شتوية ثم يمكنك مشاركة ذلك مع أصدقائك!
+
+**الفئة العمرية الموصى بها:** 8+
+
+**متطلبات التكنولوجيا:** متصفحات حديثة + هواتف لوحية
+
+<a href="http://studio.code.org/s/frozen/reset"><button>جرِّب الدورة التعليمية</button></a>
+
+[/col-50]

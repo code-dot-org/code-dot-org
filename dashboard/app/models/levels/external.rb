@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class External < DSLDefined
@@ -42,7 +43,7 @@ class External < DSLDefined
 
   def dsl_default
     <<~TEXT
-      name '#{name || 'unique level name here'}'
+      name '#{name || DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
     TEXT

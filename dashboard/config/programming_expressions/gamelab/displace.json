@@ -1,12 +1,11 @@
 {
-  "func": "displace",
+  "key": "displace",
+  "name": "displace",
   "category": "Sprites",
-  "paletteParams": [
-    "target"
+  "palette_params": [
+    {
+      "name": "target"
+    }
   ],
-  "params": [
-    "target"
-  ],
-  "modeOptionName": "*.displace",
-  "type": "either"
+  "syntax": "displace(target)"
 }

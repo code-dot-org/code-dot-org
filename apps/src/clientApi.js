@@ -57,13 +57,23 @@ class CollectionsApi {
     return apiPath(this.collectionType, this.getProjectId(), encodedPath);
   }
 
-  ajax(method, file, success, error, data) {
+  ajax(method, file, success, error, data, params = []) {
     error = error || function() {};
     if (!window.dashboard && !this.getProjectId()) {
       error({status: 'No dashboard'});
       return;
     }
-    return ajaxInternal(method, this.basePath(file), success, error, data);
+    let url = this.basePath(file);
+    if (params.length > 0) {
+      url += '?';
+      params.forEach((param, i) => {
+        url += param;
+        if (i < params.length - 1) {
+          url += '&';
+        }
+      });
+    }
+    return ajaxInternal(method, url, success, error, data);
   }
 
   getFile(file, version, success, error, data) {
@@ -241,8 +251,11 @@ class FilesApi extends CollectionsApi {
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed (includes xhr parameter)
    */
-  getVersionHistory(success, error) {
-    var path = apiPath('files-version', this.getProjectId());
+  getVersionHistory(success, error, getCommitComments = false) {
+    let path = apiPath('files-version', this.getProjectId());
+    if (getCommitComments) {
+      path += '?with_comments=true';
+    }
     return ajaxInternal('GET', path, success, error);
   }
 

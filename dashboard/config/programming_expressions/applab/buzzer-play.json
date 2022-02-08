@@ -1,0 +1,14 @@
+{
+  "key": "buzzer.play",
+  "name": "buzzer.play",
+  "category": "Circuit",
+  "palette_params": [
+    {
+      "name": "notes"
+    },
+    {
+      "name": "tempo"
+    }
+  ],
+  "syntax": "buzzer.play(notes, tempo)"
+}

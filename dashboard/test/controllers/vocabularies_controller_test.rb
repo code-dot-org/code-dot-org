@@ -5,6 +5,7 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     @levelbuilder = create :levelbuilder
     # We don't want to actually write to the file system here
     Vocabulary.any_instance.stubs(:serialize_scripts)
@@ -63,8 +64,8 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can load vocab edit page of unit group course version" do
     sign_in @levelbuilder
-    course_version = create :course_version
-    unit_group = create :unit_group, name: 'fake-course-2021', course_version: course_version
+    unit_group = create :unit_group, name: 'fake-course-2021'
+    course_version = create :course_version, content_root: unit_group
     vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
 
     get :edit, params: {course_name: unit_group.name}
@@ -75,13 +76,33 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can load vocab edit page of standalone script course version" do
     sign_in @levelbuilder
-    course_version = create :course_version
-    script = create :script, name: 'fake-standalone-script-2021', is_course: true, course_version: course_version
+    script = create :script, name: 'fake-standalone-script-2021', is_course: true
+    course_version = create :course_version, content_root: script
     vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
 
     get :edit, params: {course_name: script.name}
     assert_response :success
     assert_equal assigns(:course_version), course_version
     assert_equal assigns(:vocabularies), [vocabulary.summarize_for_edit]
+  end
+
+  class AuthTests < ActionController::TestCase
+    setup do
+      course_version = create :course_version
+      @vocabulary = create :vocabulary, course_version: course_version
+      @new_params = {word: 'algorithm', definition: 'a list of steps', course_version_id: course_version.id}
+      @update_params = {id: @vocabulary.id, word: @vocabulary.word, definition: 'an updated definition', course_version_id: course_version.id}
+      Vocabulary.any_instance.stubs(:serialize_scripts)
+    end
+
+    test_user_gets_response_for :create, params: -> {@new_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
   end
 end

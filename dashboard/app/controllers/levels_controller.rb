@@ -47,6 +47,7 @@ class LevelsController < ApplicationController
     NetSim,
     Odometer,
     Pixelation,
+    Poetry,
     PublicKeyCryptography,
     StandaloneVideo,
     StarWarsGrid,
@@ -97,6 +98,10 @@ class LevelsController < ApplicationController
   # GET /levels/get_filtered_levels/
   # Get all the information for levels after filtering
   def get_filtered_levels
+    if params[:name]&.start_with?('blockly:')
+      @levels = [Level.find_by_key(params[:name]).summarize_for_edit]
+      return render json: {numPages: 1, levels: @levels}
+    end
     filter_levels(params)
 
     @levels = @levels.limit(150)
@@ -111,7 +116,7 @@ class LevelsController < ApplicationController
   def filter_levels(params)
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
-    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%").or(@levels.where('levels.level_num LIKE ?', "%#{params[:name]}%")) if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
@@ -129,7 +134,7 @@ class LevelsController < ApplicationController
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?,
-      useGoogleBlockly: params[:blocklyVersion] == "Google"
+      blocklyVersion: params[:blocklyVersion]
     )
   end
 
@@ -137,13 +142,13 @@ class LevelsController < ApplicationController
   def edit
     # Make sure that the encrypted property is a boolean
     @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
-    scripts = @level.script_levels.map(&:script)
-    @visible = scripts.reject(&:hidden).any?
-    @pilot = scripts.select(&:pilot_experiment).any?
+    @in_script = @level.script_levels.any?
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     fb = FirebaseHelper.new('shared')
     @dataset_library_manifest = fb.get_library_manifest
   end
+
+  use_reader_connection_for_route(:get_rubric)
 
   # GET /levels/:id/get_rubric
   # Get all the information for the mini rubric
@@ -161,8 +166,9 @@ class LevelsController < ApplicationController
   # GET /levels/:id/get_serialized_maze
   # Get the serialized_maze for the level, if it exists.
   def get_serialized_maze
-    return head :no_content unless @level.properties['serialized_maze'].presence && @level.serialized_maze
-    render json: @level.serialized_maze
+    serialized_maze = @level.try(:get_serialized_maze)
+    return head :no_content unless serialized_maze
+    render json: serialized_maze
   end
 
   # GET /levels/:id/edit_blocks/:type
@@ -189,12 +195,15 @@ class LevelsController < ApplicationController
       toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
     end
 
+    validation = @level.respond_to?(:validation) ? @level.validation : nil
+
     level_view_options(
       @level.id,
       start_blocks: blocks_xml,
       toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
-      skip_instructions_popup: true
+      skip_instructions_popup: true,
+      validation: validation
     )
     view_options(full_width: true)
     @game = @level.game
@@ -221,6 +230,7 @@ class LevelsController < ApplicationController
     blocks_xml = params[:program]
     type = params[:type]
     set_solution_image_url(@level) if type == 'solution_blocks'
+    blocks_xml = Blockly.remove_counter_mutations(blocks_xml)
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
     @level.log_changes(current_user)
@@ -228,9 +238,10 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
-  def update_properties
+  def update_properties(ignored_keys: [])
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
+      next if ignored_keys.include?(key)
       @level.properties[key] = value
     end
 
@@ -265,6 +276,18 @@ class LevelsController < ApplicationController
     end
   end
 
+  # POST /levels/:id/update_start_code
+  # Update start code for a level. If params contains "validation",
+  # set validation directly to ensure it is encrypted.
+  # Then set any remaining properties with update_properties.
+  def update_start_code
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:validation)
+      @level.validation = changes["validation"]
+    end
+    return update_properties(ignored_keys: ["validation"])
+  end
+
   # POST /levels
   # POST /levels.json
   def create
@@ -289,7 +312,9 @@ class LevelsController < ApplicationController
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params[:user] = current_user
 
-    create_level_params = level_params
+    # safely convert params to hash now so that if they are modified later, it
+    # will not result in a ActionController::UnfilteredParameters error.
+    create_level_params = level_params.to_h
 
     # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
@@ -312,8 +337,14 @@ class LevelsController < ApplicationController
   # DELETE /levels/1
   # DELETE /levels/1.json
   def destroy
-    @level.destroy
-    redirect_to(params[:redirect] || levels_url)
+    result = @level.destroy
+    if result
+      flash.notice = "Deleted #{@level.name.inspect}"
+      redirect_to(params[:redirect] || levels_url)
+    else
+      flash.alert = @level.errors.full_messages.join(". ")
+      redirect_to(edit_level_path(@level))
+    end
   end
 
   def new

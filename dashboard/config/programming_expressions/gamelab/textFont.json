@@ -1,10 +1,11 @@
 {
-  "func": "textFont",
+  "key": "textFont",
+  "name": "textFont",
   "category": "Drawing",
-  "paletteParams": [
-    "font"
+  "palette_params": [
+    {
+      "name": "font"
+    }
   ],
-  "params": [
-    "\"Arial\""
-  ]
+  "syntax": "textFont(font)"
 }

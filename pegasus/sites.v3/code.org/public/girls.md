@@ -1,13 +1,24 @@
 ---
-title: Inspiring Female Students
+title: Inspiring Female Students to Learn Computer Science
 video_player: true
 theme: responsive
 ---
-# Inspiring Girls to Learn Computer Science
+<h1>Inspiring Girls to Learn Computer Science</h1>
+<div style="text-align: center;">
+<img src="/images/code_like_a_girl.jpg" width="1000">
+</div>
+<p><br>
+In U.S. high schools, the Advanced Placement exam in Computer Science has historically (since the beginning of the century) had only <strong>22 percent participation by young women</strong>. This gender gap problem extends to university programs and to the software workplace, which suffer a similar lack of diversity. 
+<p>
+While things are starting to move in the right direction, we have a long way to go to reach a balanced population in computer science. Code.org focuses on K-12 learning because data shows that experiences in K-12 directly impact students’ future in computer science. <strong>Among young women, those who try AP Computer Science in high school are 10 times more likely to major in computer science.</strong>
+<p><br>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
 
-Computer science is foundational to many fields and students of all genders report being not only interested in the subject but confident of their abilities as well. Despite this, not enough girls are choosing to study it. Here are some proven methods for encouraging girls to try computer science:*
+<h1>How You Can Help</h1>
 
-## It’s Simple. Start by telling them they’d be great at it!
+Computer science is foundational to many fields and students of all genders report being not only interested in the subject but confident of their abilities as well. Despite this, not enough girls are choosing to study it. <strong>Here are some proven methods for encouraging girls to try computer science:</strong>*
+
+<h2>Start by telling them they’d be great at it!</h2>
 
 <div class="col-50" style="padding-right: 30px;">
 
@@ -18,9 +29,9 @@ Computer science is foundational to many fields and students of all genders repo
 
 <div class="col-50" style="padding-right: 30px; padding-bottom: 70px">
 
-Research shows that around age 12 both boys and girls have a similar level of interest in computer science. This difference is that <b>women are half as likely to be encouraged to explore it</b>.  That’s especially important considering that students who are told by a parent or a teacher that they’d be good at the subject are up to 3x more likely to be interested in learning CS in the future.
+Research shows that around age 12, both boys and girls have a similar level of interest in computer science. This difference is that <b>women are half as likely to be encouraged to explore it</b>. That’s especially important considering that students who are told by a parent or a teacher that they’d be good at the subject are up to three times more likely to be interested in learning CS in the future.
 
-Perhaps the single most effective way to get women into CS classes is also one of the simplest! Take a moment out of each day to tell a female student that you think she’d be great at CS. 
+Perhaps the single most effective way to get women into CS classes is also one of the simplest: <strong>Take a moment out of each day to tell a female student that you think she’d be great at CS.</strong> 
 
 </div>
 
@@ -29,16 +40,16 @@ Perhaps the single most effective way to get women into CS classes is also one o
 
 <table style="border-style:hidden;">
   <tr>
-    <td colspan="10" style="background-color:#0094ca; color:white; text-align:center; font-style:bold; border-style:hidden;""> If your students are in High School, encourage them to take the AP exam too! Women who had the opportunity to take the AP Computer Science exam were <b>46% more likely</b> to indicate interest in a Computer Science major.
+    <td colspan="10" style="background-color:#0094ca; color:white; text-align:center; font-style:bold; border-style:hidden;""> If your students are in high school, encourage them to take the AP exam too! Women who had the opportunity to take the AP Computer Science exam were <b>46% more likely</b> to indicate interest in a Computer Science major.
       </td>
     </tr>
   </table>
 
 </div>
   
-## Challenge stereotypes and present positive role models
+<h2>Challenge stereotypes and present positive role models</h2>
 
-Research has found that simply seeing someone “like me” can be a powerful influencer for girls, and that spans more than gender. Displaying [images of role models](https://hourofcode.com/us/promote/resources#posters) in your classroom can be a powerful tool for motivating girls. Defy stereotypes and show a diversity of race, cultural backgrounds, and even passions or interests so that students don’t feel like they have to fit into a one mold in order to belong. 
+Research has found that simply seeing someone “like me” can be a powerful influencer for girls, and that spans more than gender. Displaying <a href="https://hourofcode.com/us/promote/resources#posters">images of role models</a> in your classroom can be a powerful tool for motivating girls. Defy stereotypes and show a diversity of race, cultural backgrounds, and even passions or interests so that students don’t feel like they have to fit into a particular mold in order to belong. 
 
 <div style="clear: both;">
 
@@ -111,7 +122,7 @@ Model and Software Developer
 <b><br>Miral Kotb</b>
 <br>
 <img src="/images/fit-150/marketing/mmiral-kotb-400.png"><br>
-Producer, Choreographer, and Coder
+Producer/Choreographer and Coder
 <br>
 <details>
   <summary><b>What Miral Says</b></summary>
@@ -126,13 +137,13 @@ Producer, Choreographer, and Coder
 <div style="clear: both;"></div>
 <br>
 
-## Explain that computer science can impact the world in every field
+<h2>Explain that computer science can impact the world in every field</h2>
 
-Both boys and girls care about making the world a better place and may not be aware of how computer science can contribute to this. In fact, only 22% of girls say they’re very likely to one day have a job where they need to know CS. 
+Both boys and girls care about making the world a better place and may not be aware of how computer science can contribute to this. <strong>In fact, only 22% of girls say they’re very likely to one day have a job where they need to know CS.</strong> 
 
 You can help by showing examples of CS careers that blend academic skills such as problem solving with intrinsic social causes like conservation or medical care. When students see that a career in CS can be rewarding in a variety of ways, they’re more likely to continue pursuing their interest. 
 
-Take a look at some [great examples](https://code.org/careers-in-tech) of how everyday people are using CS in their careers. 
+Take a look at some <a href="https://code.org/careers-in-tech">great examples</a> of how everyday people use CS in their careers. 
 
 [col-50]
 
@@ -142,11 +153,11 @@ Take a look at some [great examples](https://code.org/careers-in-tech) of how ev
 
 [col-50]
 
-<center><iframe width="375" height="246" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br><Br>
+<center><iframe width="375" height="246" src="https://www.youtube.com/embed/RfbbDgx6l1g" frameborder="0" allowfullscreen></iframe><br><Br>
 
 [/col-50]
 
-## Show them a day in the life of a CS professional
+<h2>Show them a day in the life of a CS professional</h2>
 
 Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/educate/resources/inspire), many of which feature women in a variety of creative and impactful industries! 
 
@@ -175,11 +186,11 @@ Students have positive attitudes about science careers when they’re able to se
    
 [/breakoutquote]
 
-### For more ideas, check out these helpful links:
-- [10 ways to recruit girls to CS](https://www.ncwit.org/resources/top-10-ways-recruiting-high-school-women-your-computing-classes/top-10-ways-recruiting)
+<h3>For more ideas, check out these helpful links:</h3>
+- [10 ways to recruit young women to CS in high school](https://ncwit.org/resource/top10recruithighschool/)
 - [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
 - [Outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
-- [Fact sheet for participation by women](http://www.ncwit.org/infographic/3435)
+- [7 ways to eliminate the barriers to young women's participation in CS](https://ncwit.org/blog/seven-ways-you-can-help-eliminate-the-barriers-to-young-womens-participation-in-computing/)
 
 <a id="notes"></a>
 *Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), Google, and other organizations dedicated to growing participation of women in technology. 

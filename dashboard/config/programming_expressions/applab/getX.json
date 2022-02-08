@@ -1,5 +1,6 @@
 {
-  "func": "getX",
+  "key": "getX",
+  "name": "getX",
   "category": "Turtle",
-  "type": "value"
+  "syntax": "getX"
 }

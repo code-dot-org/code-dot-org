@@ -1,11 +1,11 @@
 {
-  "func": "sqrt",
+  "key": "sqrt",
+  "name": "sqrt",
   "category": "Math",
-  "paletteParams": [
-    "num"
+  "palette_params": [
+    {
+      "name": "num"
+    }
   ],
-  "params": [
-    "9"
-  ],
-  "type": "value"
+  "syntax": "sqrt(num)"
 }

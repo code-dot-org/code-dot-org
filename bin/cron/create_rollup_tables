@@ -8,6 +8,7 @@ require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
+require 'honeybadger/ruby'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
@@ -16,7 +17,7 @@ TIME_NOW = DateTime.now.strftime('%F %T').freeze
 #   quotations escaped. Returns nil on nil input.
 def sanitize_string_for_db(unsanitized)
   return nil if unsanitized.nil?
-  unsanitized.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
+  unsanitized.gsub(/[\r\n]+/, '').dump
 end
 
 # @param contained_level [Level] The level to parse.
@@ -33,7 +34,7 @@ def get_contained_question(contained_level)
   end
 
   if contained_question_markdown.nil?
-    return contained_question_text
+    return contained_question_text || ""
   end
   if contained_question_text.nil?
     return contained_question_markdown
@@ -80,7 +81,6 @@ def main
 
   Level.find_each do |level|
     begin
-      next unless level.script_levels.map(&:script).select(&:k5_draft_course?)
     # The RecordNotFound exception happens when a Level does not belong to any ScriptLevel.
     # The NoMethodError exception happens when a ScriptLevel does not have a Script.
     # TODO(asher): Fix the corrupt data on staging, eliminating the need for this rescue clause.
@@ -128,14 +128,14 @@ def main
   end
 
   Level.where(type: 'BubbleChoice').find_each do |level|
-    level.properties['sublevels']&.each_with_index do |sublevel_name, sublevel_index|
-      sublevel = Level.find_by_name(sublevel_name)
+    level.sublevels&.each_with_index do |sublevel, sublevel_index|
       contained_levels << {
         level_id: level.id,
         contained_level_id: sublevel.id,
         contained_level_type: sublevel.type,
         contained_level_page: 1,
-        contained_level_position: sublevel_index
+        contained_level_position: sublevel_index,
+        contained_level_text: sanitize_string_for_db("")
       }
     end
   end
@@ -149,53 +149,74 @@ def main
   batch_size = 2000
 
   # Write the data to the DB tables.
-  ActiveRecord::Base.connection.execute 'TRUNCATE contained_levels'
-  contained_levels.each_slice(batch_size) do |batch|
-    ActiveRecord::Base.connection.execute <<~SQL
-      INSERT INTO contained_levels (
-        created_at,
-        updated_at,
-        level_group_level_id,
-        contained_level_id,
-        contained_level_type,
-        contained_level_page,
-        contained_level_position,
-        contained_level_text
-      )
-      VALUES
-      #{batch.map {|row| contained_levels_row(row)}.join(",\n")}
-    SQL
+  begin
+    ActiveRecord::Base.connection.execute 'TRUNCATE contained_levels'
+    contained_levels.each_slice(batch_size) do |batch|
+      ActiveRecord::Base.connection.execute <<~SQL
+        INSERT INTO contained_levels (
+          created_at,
+          updated_at,
+          level_group_level_id,
+          contained_level_id,
+          contained_level_type,
+          contained_level_page,
+          contained_level_position,
+          contained_level_text
+        )
+        VALUES
+        #{batch.map {|row| contained_levels_row(row)}.join(",\n")}
+      SQL
+    end
+  rescue => e
+    Honeybadger.notify(
+      e,
+      error_message: "Error when writing contained_levels"
+    )
   end
 
-  ActiveRecord::Base.connection.execute 'TRUNCATE contained_level_answers'
-  contained_level_answers.each_slice(batch_size) do |batch|
-    ActiveRecord::Base.connection.execute <<~SQL
-      INSERT INTO contained_level_answers (
-        created_at,
-        updated_at,
-        level_id,
-        answer_number,
-        answer_text,
-        correct
-      )
-      VALUES
-      #{batch.map {|row| contained_level_answers_row(row)}.join(",\n")}
-    SQL
+  begin
+    ActiveRecord::Base.connection.execute 'TRUNCATE contained_level_answers'
+    contained_level_answers.each_slice(batch_size) do |batch|
+      ActiveRecord::Base.connection.execute <<~SQL
+        INSERT INTO contained_level_answers (
+          created_at,
+          updated_at,
+          level_id,
+          answer_number,
+          answer_text,
+          correct
+        )
+        VALUES
+        #{batch.map {|row| contained_level_answers_row(row)}.join(",\n")}
+      SQL
+    end
+  rescue => e
+    Honeybadger.notify(
+      e,
+      error_message: "Error when writing contained_level_answers"
+    )
   end
 
-  ActiveRecord::Base.connection.execute 'TRUNCATE level_sources_multi_types'
-  level_sources_multi_types.each_slice(batch_size) do |batch|
-    ActiveRecord::Base.connection.execute <<~SQL
-      INSERT INTO level_sources_multi_types (
-        level_source_id,
-        level_id,
-        data,
-        md5,
-        hidden
-      )
-      VALUES
-      #{batch.map {|row| level_sources_multi_types_row(row)}.join(",\n")}
-    SQL
+  begin
+    ActiveRecord::Base.connection.execute 'TRUNCATE level_sources_multi_types'
+    level_sources_multi_types.each_slice(batch_size) do |batch|
+      ActiveRecord::Base.connection.execute <<~SQL
+        INSERT INTO level_sources_multi_types (
+          level_source_id,
+          level_id,
+          data,
+          md5,
+          hidden
+        )
+        VALUES
+        #{batch.map {|row| level_sources_multi_types_row(row)}.join(",\n")}
+      SQL
+    end
+  rescue => e
+    Honeybadger.notify(
+      e,
+      error_message: "Error when writing level_sources_multi_type"
+    )
   end
 end
 
@@ -209,7 +230,7 @@ def contained_levels_row(row_hash)
       "#{row_hash[:contained_level_type]}",
       #{row_hash[:contained_level_page]},
       #{row_hash[:contained_level_position]},
-      "#{row_hash[:contained_level_text]}"
+      #{row_hash[:contained_level_text]}
     )
   ROW
 end
@@ -221,7 +242,7 @@ def contained_level_answers_row(row_hash)
       "#{TIME_NOW}",
       #{row_hash[:contained_level_id]},
       #{row_hash[:answer_number]},
-      "#{row_hash[:answer_text]}",
+      #{row_hash[:answer_text]},
       #{row_hash[:correct]}
     )
   ROW

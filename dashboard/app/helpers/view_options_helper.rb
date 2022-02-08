@@ -12,6 +12,7 @@ module ViewOptionsHelper
     :autoplay_video,
     :channel,
     :readonly_workspace,
+    :is_code_reviewing,
     :is_external_project_level,
     :is_legacy_share,
     :legacy_share_style,
@@ -24,6 +25,7 @@ module ViewOptionsHelper
     :server_level_id,
     :server_project_level_id,
     :game_display_name,
+    :app_name,
     :script_name,
     :lesson_position,
     :level_position,
@@ -37,8 +39,11 @@ module ViewOptionsHelper
     :signed_replay_log_url,
     :azure_speech_service_voices,
     :authenticity_token,
-    :useGoogleBlockly,
-    :disallowed_html_tags
+    :blocklyVersion,
+    :disallowed_html_tags,
+    :backpack_channel,
+    :level_requires_channel,
+    :reduce_channel_updates,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
@@ -68,10 +73,12 @@ module ViewOptionsHelper
     :unsubmit_url,
     :iframe_embed,
     :iframe_embed_app_and_code,
+    :is_navigator,
     :pairing_driver,
     :pairing_attempt,
     :pairing_channel_id,
-    :project_type
+    :project_type,
+    :validation
   )
   # Sets custom level options to be used by the view layer. The option hash is
   # frozen once read. Accepts a level_id argument. If an option isn't naturally

@@ -256,6 +256,7 @@ class ProjectsListTest < ActionController::TestCase
       k1: [],
       spritelab: [],
       dance: [],
+      poetry: [],
       library: []
     }
     fake_recent_projects = {
@@ -272,6 +273,7 @@ class ProjectsListTest < ActionController::TestCase
       k1: [],
       spritelab: [],
       dance: [],
+      poetry: [],
       library: []
     }
     ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)

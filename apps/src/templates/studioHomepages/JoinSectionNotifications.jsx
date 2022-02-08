@@ -4,7 +4,13 @@ import React from 'react';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default function JoinSectionNotifications({action, result, name, id}) {
+export default function JoinSectionNotifications({
+  action,
+  result,
+  name,
+  id,
+  sectionCapacity
+}) {
   if (action === 'join' && result === 'success') {
     return <JoinSectionSuccessNotification sectionName={name} />;
   } else if (action === 'leave' && result === 'success') {
@@ -21,6 +27,13 @@ export default function JoinSectionNotifications({action, result, name, id}) {
     return <JoinSectionOwnedNotification sectionId={id} />;
   } else if (action === 'join' && result === 'section_restricted') {
     return <JoinSectionRestrictedNotification sectionId={id} />;
+  } else if (action === 'join' && result === 'section_full') {
+    return (
+      <JoinSectionFullNotification
+        sectionId={id}
+        sectionCapacity={sectionCapacity}
+      />
+    );
   }
   return null;
 }
@@ -28,7 +41,8 @@ JoinSectionNotifications.propTypes = {
   action: PropTypes.string,
   result: PropTypes.string,
   name: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.string,
+  sectionCapacity: PropTypes.number
 };
 
 const JoinSectionSuccessNotification = ({sectionName}) => (
@@ -64,6 +78,22 @@ const JoinSectionNotFoundNotification = ({sectionId}) => (
 );
 JoinSectionNotFoundNotification.propTypes = {
   sectionId: PropTypes.string.isRequired
+};
+
+const JoinSectionFullNotification = ({sectionId, sectionCapacity}) => (
+  <Notification
+    type="failure"
+    notice={i18n.sectionsNotificationFailure()}
+    details={i18n.sectionsNotificationJoinFull({
+      sectionId,
+      sectionCapacity
+    })}
+    dismissible={true}
+  />
+);
+JoinSectionFullNotification.propTypes = {
+  sectionId: PropTypes.string.isRequired,
+  sectionCapacity: PropTypes.number.isRequired
 };
 
 const JoinSectionRestrictedNotification = ({sectionId}) => (

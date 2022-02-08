@@ -1,16 +1,14 @@
 {
-  "func": "getKeyValue",
+  "key": "getKeyValue",
+  "name": "getKeyValue",
   "category": "Data",
-  "paletteParams": [
-    "key",
-    "callback"
+  "palette_params": [
+    {
+      "name": "key"
+    },
+    {
+      "name": "callback"
+    }
   ],
-  "params": [
-    "\"key\"",
-    "function (value) {\n  \n}"
-  ],
-  "allowFunctionDrop": {
-    "1": true,
-    "2": true
-  }
+  "syntax": "getKeyValue(key, callback)"
 }

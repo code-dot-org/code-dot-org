@@ -3,11 +3,7 @@ import {Provider} from 'react-redux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import {LevelKind} from '@cdo/apps/util/sharedConstants';
-import {
-  initProgress,
-  lessons,
-  showTeacherInfo
-} from '@cdo/apps/code-studio/progressRedux';
+import {initProgress, lessons} from '@cdo/apps/code-studio/progressRedux';
 import {
   authorizeLockable,
   setSectionLockStatus
@@ -29,7 +25,9 @@ const lockableLesson = {
   })),
   lockable: true,
   name: 'CS Principles Pre-survey',
-  position: 1
+  position: 1,
+  lessonStartUrl:
+    'https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true'
 };
 
 const nonLockableLesson = {
@@ -73,8 +71,7 @@ const createStore = ({
   if (teacherVerified) {
     store.dispatch(authorizeLockable());
   }
-  store.dispatch(showTeacherInfo());
-  store.dispatch(setViewType(ViewType.Teacher));
+  store.dispatch(setViewType(ViewType.Instructor));
   store.dispatch(
     setHiddenLessons(
       {
@@ -130,7 +127,6 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -165,7 +161,6 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -200,7 +195,6 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -208,7 +202,7 @@ export default storybook => {
         }
       },
       {
-        name: 'non-verified teacher view for lockable lesson',
+        name: 'non-verified instructor view for lockable lesson',
         story: () => {
           const store = createStore({teacherVerified: false});
           const state = store.getState();
@@ -217,7 +211,6 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -252,7 +245,6 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -288,7 +280,6 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[3]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>

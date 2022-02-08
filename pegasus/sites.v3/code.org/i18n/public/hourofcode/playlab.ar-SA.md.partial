@@ -1,0 +1,45 @@
+---
+title: موارد المعلم - معمل الألعاب
+nav: hoc_teacher_resources_nav
+theme: responsive
+video_player: true
+---
+
+# معمل الألعاب - دورة تعليمية لـAn Hour of Code
+
+{{ hoc_playlab_video }}
+
+[col-50]
+
+## Teacher Resources
+
+### Lesson Plans:
+
+- [معمل الألعاب]({{ hoc_playlab_cb_url }})
+
+### أنشطة الامتداد:
+
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+
+### موارد أخرى للمُعلِّم:
+
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+
+[/col-50]
+
+[col-50]
+
+## نظرة عامة
+
+انشئ قصة أو اصنع لعبة باستخدام معمل الألعاب! انشئ حيوانات وقراصنة والأموات الأحياء ونينجا والمزيد من الشخصيات المتحركة وقم بعمل أصوات ونقاط تسجيل وكرات نار!
+
+**الفئة العمرية الموصى بها:** 4-104
+
+**متطلبات التكنولوجيا:** متصفحات حديثة، هواتف ذكية + هواتف لوحية
+
+<a href="http://studio.code.org/s/playlab/reset"><button>جرِّب الدورة التعليمية</button></a>
+
+[/col-50]

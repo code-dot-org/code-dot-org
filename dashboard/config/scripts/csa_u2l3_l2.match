@@ -1,0 +1,15 @@
+name 'CSA U2L3-L2'
+title 'Check for Understanding'
+description 'Match the term to the correct definition.'
+
+question 'constructor signature'
+answer 'includes the constructor name and lists object\'s characteristics'
+
+question 'formal parameters'
+answer 'the name of the characteristics in the constructor signature'
+
+question 'public'
+answer 'allows other classes to access'
+
+question 'constructor'
+answer 'tells the computer how to create a new object'

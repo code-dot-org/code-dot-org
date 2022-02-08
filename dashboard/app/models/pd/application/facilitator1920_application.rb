@@ -37,6 +37,7 @@
 module Pd::Application
   class Facilitator1920Application < FacilitatorApplicationBase
     include Pd::Facilitator1920ApplicationConstants
+    include Pd::SharedApplicationConstants
 
     has_one :pd_fit_weekend1920_registration,
       class_name: 'Pd::FitWeekend1920Registration',

@@ -127,6 +127,14 @@ export class LevelTokenContents extends Component {
         })[0]
       : scriptLevel.levels[0];
 
+    const inactiveLevelNames = hasVariants
+      ? scriptLevel.levels
+          .filter(level => {
+            return level.id !== activeLevel.id;
+          })
+          .map(level => level.name)
+      : [];
+
     const progressBubbleLevel = this.scriptLevelForProgressBubble(activeLevel);
     return (
       <div
@@ -149,18 +157,30 @@ export class LevelTokenContents extends Component {
         >
           <span style={styles.levelArea}>
             <span style={styles.titleAndBubble}>
-              <ProgressBubble
-                hideToolTips={true}
-                level={progressBubbleLevel}
-                disabled={true}
-              />
+              <span style={styles.bubble}>
+                <ProgressBubble
+                  hideToolTips={true}
+                  level={progressBubbleLevel}
+                  disabled={true}
+                />
+              </span>
               <span style={styles.levelTitle}>{scriptLevel.key}</span>
             </span>
-            {activeLevel.assessment && (
-              <span style={styles.tag}>assessment</span>
-            )}
-            {activeLevel.bonus && <span style={styles.tag}>bonus</span>}
-            {activeLevel.challenge && <span style={styles.tag}>challenge</span>}
+            <span style={styles.levelDetails}>
+              {scriptLevel.instructor_in_training && (
+                <span style={styles.tag}>instructor in training</span>
+              )}
+              {scriptLevel.assessment && (
+                <span style={styles.tag}>assessment</span>
+              )}
+              {scriptLevel.bonus && <span style={styles.tag}>bonus</span>}
+              {scriptLevel.challenge && (
+                <span style={styles.tag}>challenge</span>
+              )}
+              {scriptLevel.levels.length > 1 && (
+                <span style={styles.tag}>variants</span>
+              )}
+            </span>
           </span>
         </span>
         <div
@@ -180,6 +200,7 @@ export class LevelTokenContents extends Component {
             scriptLevel={scriptLevel}
             activitySectionPosition={this.props.activitySectionPosition}
             activityPosition={this.props.activityPosition}
+            inactiveLevelNames={inactiveLevelNames}
           />
         )}
       </div>
@@ -221,7 +242,10 @@ const styles = {
     padding: '3px 5px',
     lineHeight: '12px',
     borderRadius: 5,
-    marginLeft: 3
+    marginLeft: 5,
+    marginTop: 5,
+    display: 'flex',
+    flexWrap: 'nowrap'
   },
   remove: {
     fontSize: 14,
@@ -254,10 +278,18 @@ const styles = {
   titleAndBubble: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexGrow: 2
   },
   levelTitle: {
     marginLeft: 5
+  },
+  levelDetailsArea: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  bubble: {
+    width: 34
   }
 };
 

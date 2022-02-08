@@ -497,6 +497,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Cleaned 1 UserLevel"
   end
 
+  test "Disconnects soft-deleted user_levels from level_sources" do
+    user_level = create :user_level, level_source: create(:level_source)
+
+    refute_nil user_level.level_source_id
+
+    # Same test as above except that we soft-delete the user_level before
+    # calling purge_user
+    user_level.destroy
+    assert user_level.deleted?
+
+    purge_user user_level.user
+    user_level.reload
+
+    assert_nil user_level.level_source_id
+
+    assert_logged "Cleaned 1 UserLevel"
+  end
+
   #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
@@ -863,12 +881,42 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.code_review_comments
+  #
+
+  test "soft deletes and clears comments written by purged user" do
+    student = create :student
+
+    comment = create :code_review_comment, commenter: student
+    refute comment.deleted?
+    refute_nil comment.comment
+
+    # Confirm that the contents of soft deleted comments
+    # are fully deleted.
+    deleted_comment = create :code_review_comment, commenter: student, deleted_at: Time.now
+    assert deleted_comment.deleted?
+    refute_nil deleted_comment.comment
+
+    purge_user student
+
+    comment.reload
+    assert comment.deleted?
+    assert_nil comment.comment
+
+    deleted_comment.reload
+    assert deleted_comment.deleted?
+    assert_nil deleted_comment.comment
+
+    assert_logged 'Cleared 2 CodeReviewComment'
+  end
+
+  #
   # Table: dashboard.pd_applications
   #
 
   test "soft-deletes pd_applications for user" do
     # The user soft-delete actually does this.
-    application = create :pd_teacher1819_application
+    application = create :pd_teacher_application
     refute application.deleted?
 
     purge_user application.user
@@ -878,7 +926,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears form_data from pd_applications for user" do
-    application = create :pd_teacher1819_application
+    application = create :pd_teacher_application
     refute_equal '{}', application.form_data
 
     purge_user application.user
@@ -888,7 +936,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears notes from pd_applications for user" do
-    application = create :pd_teacher1819_application, notes: 'Test notes'
+    application = create :pd_teacher_application, notes: 'Test notes'
     refute_nil application.notes
 
     purge_user application.user
@@ -1695,6 +1743,62 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       assert_empty storage_apps.where(id: storage_app_id).first[:updated_ip]
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_empty app[:updated_ip]
+      end
+    end
+  end
+
+  #
+  # Table: dashboard.project_versions
+  #
+
+  test "clears 'comment' on any version of all of a purged user's projects" do
+    student = create :student
+    with_channel_for student do |storage_app_id|
+      comment_text = 'a comment'
+      ProjectVersion.create(
+        storage_app_id: storage_app_id,
+        object_version_id: 'xyz',
+        comment: comment_text
+      )
+      assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id).count
+      assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id).first.comment
+
+      purge_user student
+
+      assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id).count
+      assert_nil ProjectVersion.where(storage_app_id: storage_app_id).first.comment
+      assert_logged "Cleared 1 ProjectVersion comments"
+    end
+  end
+
+  test "does not clear 'comment' on any version of anyone else's projects" do
+    student_to_purge = create :student
+    other_student = create :student
+    with_channel_for student_to_purge do |storage_app_id_to_purge|
+      with_channel_for other_student do |storage_app_id_other|
+        comment_text = 'a comment'
+        ProjectVersion.create(
+          storage_app_id: storage_app_id_to_purge,
+          object_version_id: 'xyz',
+          comment: comment_text
+        )
+        ProjectVersion.create(
+          storage_app_id: storage_app_id_other,
+          object_version_id: 'xyz',
+          comment: comment_text
+        )
+
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).count
+        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).first.comment
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_other).count
+        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_other).first.comment
+
+        purge_user student_to_purge
+
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).count
+        assert_nil ProjectVersion.where(storage_app_id: storage_app_id_to_purge).first.comment
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_other).count
+        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_other).first.comment
       end
     end
   end

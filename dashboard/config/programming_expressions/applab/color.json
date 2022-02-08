@@ -1,15 +1,11 @@
 {
-  "func": "color",
+  "key": "color",
+  "name": "color",
   "category": "Circuit",
-  "paletteParams": [
-    "color"
+  "palette_params": [
+    {
+      "name": "color"
+    }
   ],
-  "params": [
-    "\"#FF00FF\""
-  ],
-  "paramButtons": {
-    "minArgs": 1,
-    "maxArgs": 3
-  },
-  "modeOptionName": "*.color"
+  "syntax": "color(color)"
 }

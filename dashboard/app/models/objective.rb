@@ -27,12 +27,17 @@ class Objective < ApplicationRecord
     description
   )
 
+  validates_presence_of :description
+
   def summarize_for_edit
     {id: id, description: description, key: key}
   end
 
   def summarize_for_lesson_show
-    {id: id, description: display_description}
+    {
+      id: id,
+      description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description)
+    }
   end
 
   def seeding_key(seed_context)
@@ -43,12 +48,5 @@ class Objective < ApplicationRecord
       'lesson.key': my_lesson.key,
       'objective.key': key,
     }.stringify_keys
-  end
-
-  private
-
-  def display_description
-    # TODO: localize the descriptions
-    description
   end
 end

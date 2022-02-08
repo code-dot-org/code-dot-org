@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {assert} from '../../../../util/deprecatedChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import manageLinkedAccounts, {
   initializeState,
   convertServerAuthOptions

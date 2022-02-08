@@ -156,7 +156,7 @@ class BufferBench < Minitest::Benchmark
 
   def bench_linear_performance
     buffer = BufferTest::TestBuffer.new(batch_count: 500, min_interval: 0.01)
-    assert_performance_linear do |n|
+    assert_performance_linear(0.95) do |n|
       n.times {buffer.buffer({})}
       buffer.flush!
     end
