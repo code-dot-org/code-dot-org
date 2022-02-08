@@ -85,4 +85,13 @@ class ProgrammingEnvironment < ApplicationRecord
       categories: categories.map(&:serialize_for_edit)
     }
   end
+
+  def summarize_for_index
+    {
+      name: name,
+      title: title,
+      imageUrl: image_url,
+      description: description
+    }
+  end
 end
