@@ -59,6 +59,26 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'can create a new programming environment' do
+    sign_in @levelbuilder
+
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "new-ide.json"}.once
+    post :create, params: {
+      name: 'new-ide'
+    }
+    assert_redirected_to '/programming_environments/new-ide/edit'
+  end
+
+  test 'creating a new programming environment with an invalid name returns an error' do
+    sign_in @levelbuilder
+
+    File.expects(:write).never
+    post :create, params: {
+      name: 'new ide with ~bad symbols~'
+    }
+    assert_response :not_acceptable
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
@@ -66,6 +86,11 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
       @update_params = {name: @programming_environment.name, title: 'new title'}
     end
+
+    test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :new, user: :student, response: :forbidden
+    test_user_gets_response_for :new, user: :teacher, response: :forbidden
+    test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :student, response: :forbidden
