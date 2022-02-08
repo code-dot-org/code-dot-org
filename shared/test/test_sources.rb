@@ -36,7 +36,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_rejects_files_besides_main_json
     filename = 'different.json'
-    file_data = '{"someData":"abc 123"}'
+    file_data = '{"source":"abc 123"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     @api.put_object(filename, file_data, file_headers)
     assert bad_request?
@@ -45,14 +45,14 @@ class SourcesTest < FilesApiTestBase
   def test_source_versions
     # Upload a source file.
     filename = MAIN_JSON
-    file_data = '{"someData":"abc 123"}'
+    file_data = '{"source":"abc 123"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
     # Overwrite it.
-    new_file_data = '{"someData":"def 456"}'
+    new_file_data = '{"source":"def 456"}'
     @api.put_object(filename, new_file_data, file_headers)
     assert successful?
 
@@ -95,7 +95,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_sources_public
     filename = MAIN_JSON
-    file_data = '{"someData":"abc 123"}'
+    file_data = '{"source":"abc 123"}'
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     max_age = 20
     s_max_age = 10
@@ -133,7 +133,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_404_on_malformed_version_id
     filename = MAIN_JSON
-    file_data = '{"someData":"abc 123"}'
+    file_data = '{"source":"abc 123"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
 
@@ -155,7 +155,7 @@ class SourcesTest < FilesApiTestBase
   def test_404_on_version_not_found
     filename = MAIN_JSON
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
-    file_data = '{"src":"first"}'
+    file_data = '{"source":"first"}'
     delete_all_source_versions(filename)
 
     # Upload a file
@@ -165,7 +165,7 @@ class SourcesTest < FilesApiTestBase
 
     # Overwrite the first version
     # (This operation deletes the first version)
-    new_file_data = '{"src":"second"}'
+    new_file_data = '{"source":"second"}'
     @api.put_object_version(filename, v1, new_file_data, file_headers)
     assert successful?
     v2 = JSON.parse(last_response.body)['versionId']
@@ -278,7 +278,7 @@ class SourcesTest < FilesApiTestBase
 
     # Upload a source file.
     filename = MAIN_JSON
-    file_data = '{"src":"version 1"}'
+    file_data = '{"source":"version 1"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
@@ -286,7 +286,7 @@ class SourcesTest < FilesApiTestBase
     response = JSON.parse(last_response.body)
 
     # Overwrite it, specifying the same version.
-    new_file_data = '{"src":"version 2"}'
+    new_file_data = '{"source":"version 2"}'
     @api.put_object_version(filename, response['versionId'], new_file_data, file_headers)
     assert successful?
 
@@ -306,7 +306,7 @@ class SourcesTest < FilesApiTestBase
     Timecop.freeze
 
     filename = 'main.json'
-    file_data = '{"src":"version 1"}'
+    file_data = '{"source":"version 1"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -318,7 +318,7 @@ class SourcesTest < FilesApiTestBase
 
     Timecop.travel 1
 
-    file_data = '{"src":"version 2"}'
+    file_data = '{"source":"version 2"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?
@@ -335,7 +335,7 @@ class SourcesTest < FilesApiTestBase
         stream == :analysis
     end
 
-    file_data = '{"src":"version 3"}'
+    file_data = '{"source":"version 3"}'
     @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
     assert conflict?
 
