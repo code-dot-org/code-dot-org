@@ -562,9 +562,25 @@ zh-CN:
         poembot-pilot-prompts: 俳句机器人-带选择的提示[PILOT]
         poembot-pilot-text: 俳句机器人-存储文本[PILOT]
         poembot-pilot-haiku: 俳句机器人-显示你的俳句[PILOT]
+        csd_ml_intro_to_ai_lab: 人工智能实验室的介绍
         csd_ml_import_model: 导入AI模型
+        csf_lots_of_sprites: 精灵图实验室：许多精灵
         playlab_2021: 游戏实验室的介绍
         playlab_2021_reader: 游戏实验室的介绍
+        csp_defining_calling_functions: 定义和调用函数
+        csp_tutorial_datatab: 应用实验室中的数据标签
+        csp_tutorial_libraries: 应用实验室中的库
+        PL-Video-21: 欢迎来到Code.org的专业学习！
+        csp_tutorial_datavis1: 应用实验室中的数据可视化工具 - 第1部分
+        csp_tutorial_datavis2: 应用实验室中的数据可视化工具 - 第2部分
+        csd_ml_intro_ai_lab_july2021: 人工智能实验室的介绍
+        csd_ml_training_testing_ai_lan: 人工智能实验室中的训练和测试
+        csd_ml_model_cards_july2021: 人工智能实验室中的模型卡
+        Gettting_Started_Progress: 进度、反馈和评估
+        Gettting_Started_ClassSection: 创建类部件
+        Gettting_Started_StudentExperience: 学生体验
+        Getting_Started_BasicFeatures: Code.org的基本功能
+        PL_overview_CSD: 什么是计算机科学探索？
         PL_CSD_TeacherTips_Advise: 教师提示 - 给新教师的建议
         PL_CSD_TeacherTips_IntroToCSD: 教师提示 - 计算机科学发现简介
         PL_CSD_TeacherTips_ProblemSolvingProcess: 教师提示 - 解决问题的流程
@@ -577,6 +593,7 @@ zh-CN:
         hello_world_intro: 你好世界 - 欢迎来到精灵图实验室
         hello_world_events: 你好世界 - 使用事件编程
         hello_world_congrats: 你好世界 - 做你想做的
+        csp_global_vs_local: 调试全局变量与局部变量
         rough_poemart_intro: v1 诗歌艺术入门
         rough_poemart_events: v1 诗歌艺术事件
         rough_poemart_imagery: v1 诗歌艺术意象
@@ -587,6 +604,17 @@ zh-CN:
         poetry_module_multichoiceprompts: 多选题提示 - 编程如写诗
         poetry_module_conditionals: 条件语句 - 编程如写诗
         poemart_intro: 诗歌艺术介绍
+        poemart_events: 诗歌艺术事件
+        poemart_imagery: 诗歌艺术意象
+        poemart_celebration: 诗歌艺术庆典
+        csd_u6_variables_part2: 变量 —— 第2部分
+        csd_ml_ethics_ai: 伦理与人工智能
+        outbreak_intro: 爆发模拟：简介
+        outbreak_events: 爆发模拟器：事件
+        outbreak_scientist: 爆发模拟器：像科学家一样思考
+        outbreak_outro: 爆发模拟：自由发挥
+        PL_overview_CSP: 什么是计算机科学原则？
+        PL_CSP_EIPMOverview: EIPM课程指南
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

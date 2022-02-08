@@ -1,43 +1,43 @@
 ---
-title: Návod na používanie Hodiny kódu
+title: Návod na zorganizovanie Hodiny kódu
 ---
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Ako si naplánovať Hodinu kódu
 
-### Pridajte sa k nám a zoznámte svojich študentov s informatikou pomocou týchto krokov.
+### Pridajte sa k nám a oboznámte svojich žiakov s informatikou pomocou týchto krokov.
 
-Výpočtové myslenie pomáha vyvíjať schopnosť riešenia problémov, logiku a tvorivosť. A technológie pretvárajú všetky odvetvia priemyslu na svete. Študenti by sa dnes mali učiť, ako technológie vytvárať, nie len používať. Čím skôr začnú, tým rýchlejšie si položia základy pre úspech v akejkoľvek profesii 21. storočia. 
+Algoritmické myslenie pomáha rozvijať logiku, tvorivosť a schopnosť riešiť problémy. A technológie v súčasnosti menia všetky odvetvia na svete. Žiaci by sa dnes mali učiť, ako technológie vytvárať, nie len používať. Čím skôr začnú, tým rýchlejšie si vytvoria základy na to, aby dokázali uspieť v akejkoľvek profesii 21. storočia. 
 
-Hodina Kódu je jednoduchý a zábavný spôsob, ako študentov zoznámiť s informatikou, hoci aj po prvýkrát, a dá sa využiť priamo na hodine či počas mimoškolských aktivít. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Hodina kódu je jednoduchý a zábavný spôsob, ako žiakov oboznámiť s informatikou, hoci aj po prvýkrát, a dá sa využiť priamo na hodine či počas mimoškolských aktivít. Ak máte ďalšie otázky, pozrite si náš [návod, ako sa zúčastniť Hodiny kódu]({{ localized_files/participation_guide }}).
 
-- [Pozrite si inštruktážne video o Hodine Kódu](#how-to-video)
-- [Prezrite si lekcie a návody](#explore-activities)
-- [Vytvorte si denný plán](#create-your-plan)
-- [Promote your Hour of Code](#promote-your-hour)
-- [Ako efektívne začať Vašu Hodinou Kódu?](#how-to-start)
-- [Začnite kódovať](#code)
-- [Oslávte úspechy svojich študentov](#celebrate)
-- [Ďalšie zdroje k Hodine Kódu pre vyučujúcich](#other-resources)
+- [Pozrite si video o organizovaní Hodiny kódu](#how-to-video)
+- [Prezrite si aktivity a lekcie](#explore-activities)
+- [Vytvorte si plán dňa](#create-your-plan)
+- [Spropagujte svoju Hodinu kódu](#promote-your-hour)
+- [Ako efektívne začať s Hodinou kódu?](#how-to-start)
+- [Pustite sa do programovania](#code)
+- [Oslávte úspechy svojich žiakov](#celebrate)
+- [Ďalšie zdroje k Hodine kódu pre pedagógov](#other-resources)
 
-### Hodinu Kódu môžete organizovať aj na diaľku. Najskôr si pozrite naše [tipy pre diaľkovú výučbu virtuálnej Hodiny Kódu](https://hourofcode.com/us/how-to/virtual).
+### Hodinu kódu môžete organizovať aj na diaľku. Najskôr si pozrite naše [tipy na diaľkovú výučbu virtuálnej Hodiny kódu](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Pozrite si inštruktážne video o Hodine Kódu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Pozrite si video o organizovaní Hodiny kódu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Prezrite si lekcie a návody
+## 2. Prezrite si aktivity a lekcie
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Ponúkame množstvo [zábavných kurzov a aktivít]({{ urls/learn }}) pre začiatočníkov aj pokročilých zo všetkých vekových kategórií, ktoré môžu žiaci robiť samostatne. Žiaci radi pracujú na kurzoch a aktivitách samostatne, no k mnohým z nich poskytujeme aj plány hodín, pomocou ktorých môžu učitelia viesť diskusiu o danej téme alebo rozšíriť aktivitu.
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Prezrite si ponúkané aktivity a vopred sa rozhodnite, či vyberiete jednu aktivitu pre všetkých svojich žiakov, alebo dovolíte každému vybrať si vlastnú aktivitu.
 
 [![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
@@ -45,92 +45,92 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Vytvorte si denný plán
+## 3. Vytvorte si plán dňa
 
-### Think about your technology needs - computers are optional!
+### Zamyslite sa nad tým, aké technické vybavenie potrebujete. Ak nemáte k dispozícii počítače, nič sa nedeje!
 
-- Pre čo najlepší zážitok s Hodinou Kódu sú potrebné počítače s pripojením na internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Otestujte si návody na počítačoch alebo zariadeniach študentov a skontrolujte, že fungujú správne v prehliadačoch so zvukom a videom. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
-- Poskytnite slúchadlá alebo požiadajte študentov, aby si priniesli vlastné, ak ste vybrali návody, ktoré fungujú najlepšie so zvukom.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Keď sa študenti spoja, pomáhajú si navzájom a menej zaťažujú učiteľa. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
+- Hodina kódu funguje najlepšie, ak máte počítače s pripojením na internet. Nepotrebujete však mať počítač pre každého žiaka. Hodinu kódu dokonca môžete zorganizovať aj bez počítača. Ak si chcete vybrať [aktivity bez počítača](/learn), pri filtrovaní aktivít vyberte v sekcii „Použité technológie“ možnosť „Bez počítačov či iných zariadení“.
+- Otestujte si aktivity na počítačoch alebo zariadeniach, ktoré budú používať žiaci, a skontrolujte, či v prehliadačoch fungujú správne so zvukom aj videami. Máte pomalý internet? Prehrajte videá na začiatku podujatia pred celou triedou, aby nemuseli žiaci sťahovať videá osobitne. Alebo vyskúšajte off‑line aktivity.
+- Ak ste vybrali aktivity, ktoré fungujú najlepšie so zvukom, poskytnite žiakom slúchadlá alebo ich požiadajte, aby si priniesli vlastné.
+- Nemáte dostatok zariadení? Využite [párové programovanie](https://www.youtube.com/watch?v=vgkahOzFH2Q). Keď žiaci spoja sily, dokážu si navzájom pomáhať a menej sa spoliehajú učiteľa. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
 
 <img src="/images/fit-600/group_ipad.jpg" />
 
-### Pick a day and time
+### Vyberte deň a čas
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Počas Týždňa informatiky (9. – 13. decembra) sa do Hodiny kódu zapájajú ľudia po celom svete, keďže práve vtedy zverejňujeme nové kurzy a aktivity. Hodinu kódu však môžete zorganizovať kedykoľvek počas roka!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Ukážte svoju Hodinu Kódu
+## 4. Spropagujte svoju Hodinu kódu
 
-Now that you've planned your event, it's time to start promoting it!
+Keď už ste svoje podujatie naplánovali, je čas začať ho propagovať!
 
-### Tell your School and Community
+### Informujte svoju školu a komunitu
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Propagujte Hodinu kódu medzi ostatnými učiteľmi, ktorí by sa k vám mohli chcieť pridať. Zároveň máte výbornú príležitosť propagovať túto aktivitu prostredníctvom združenia rodičov a priateľov školy, prípadne využiť rodičovský newsletter, aby boli rodičia informovaní o tom, že ich deti môžu prísť po škole domov s chuťou vyskúšať si ďalšie aktivity a kurzy.
 
-### Let Volunteers Know by Registering Your Event
+### Informujte dobrovoľníkov tým, že svoje podujatie zaregistrujete
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Keď svoje [podujatie Hodiny kódu zaregistrujete](/), budete dostávať užitočnú e-mailovú komunikáciu s novinkami a tipmi, ako Hodinu kódu úspešne usporiadať. Takýmto spôsobom tiež informujete miestnych dobrovoľníkov o tom, že vaša škola sa zapája do Hodiny kódu. Dobrovoľníci sú výborným zdrojom pomoci. Môžu napríklad prísť do triedy a porozprávať vašim žiakom o informatike alebo im jednoducho pomáhať s aktivitami, ktoré budú robiť v rámci Hodiny kódu. 
 
-### Get your Students Excited
+### Snažte sa svojich žiakov nadchnúť
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Pred podujatím sa so žiakmi podeľte o [inšpiratívne videá](/promote/resources), ktoré ukazujú rozmanitých ľudí a tvorivé spôsoby, ako sa dá informatika využiť. Alebo si do triedy zaobstarajte inšpiratívne plagáty! Žiaci budú ochotnejší zapojiť sa do učenia informatiky, keď budú vidieť, že ju propagujú im podobní ľudia.
 
-{{ nové_propagačné_plagáty }}
+{{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Získajte viac informácií o plagátoch, videách, nálepkách a ďalších spôsoboch, [ako plánované podujatie spropagovať](/promote/resources#posters) vo vašej komunite.
 
 * * *
 
 <a id="how-to-start"></a>
 
-## 5. Ako efektívne začať s Hodinou Kódu?
+## 5. Ako efektívne začať s Hodinou kódu?
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Ak chcete svoju Hodinu kódu dobre odštartovať, môžete využiť niektoré z týchto nástrojov a tipov.
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Pozvite na hodinu [miestneho dobrovoľníka]({{ urls/volunteer_local }}), ktorý vašich žiakov inširuje rozprávaním o tom, čo všetko sa dá dosiahnuť pomocou informatiky. Po celom svete máme tisíce dobrovoľníkov, ktorí sú pripravení pomôcť vám úspešne zorganizovať Hodinu kódu, či už priamo v triede alebo prostredníctvom videohovoru s vašimi žiakmi.
 
-Ukážte inšpiratívne video:
+Prehrajte inšpiratívne video:
 
-- Pôvodné Code.org úvodné video s Billom Gatesom, Markom Zuckerbergom a NBA hviezdou Chrisom Boshom. (Na výber je [1-minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutová](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9-minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verzia)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Pôvodné video vytvorené pri príležitosti spustenia Code.org, v ktorom vystupujú Bill Gates, Mark Zuckerberg a hviezda NBA Chris Bosh. Na výber je [1-minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutová](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9-minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verzia.
+- Pozrite si ďalšie inšpiratívne [zdroje]({{ urls/inspire }}) a [videá](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-Nevadí, ak sa Vy či študenti nevyznáte v počítačoch a informačných technológiach. Ponúkame Vám niektoré návrhy na Vašu Hodinu Kódu:
+Nie je problém, ak sa vy alebo vaši žiaci nevyznáte v počítačoch a informatike. Pri uvádzaní Hodiny kódu môžete využiť niektorý z nasledujúcich nápadov:
 
-- Vysvetlite, ako technológie ovplyvňujú naše životy vrátane príkladov, ktoré pochopia chlapci i dievčatá (hovorte o záchrane životov, pomáhaní ľuďom, spájaní ľudí atď.).
-- Spolu s triedou spravte zoznam vecí z bežného života, ktoré používajú počítačový kód.
-- [Tu]({{ urls/girls }}) nájdete tipy, ako zatraktívniť informatiku pre dievčatá.
+- Vysvetlite, ako technológie ovplyvňujú naše životy. Uveďte príklady, ktoré pochopia chlapci aj dievčatá (záchrana životov, pomáhanie ľuďom, spájanie ľudí atď.).
+- Spolu s triedou spravte zoznam vecí z bežného života, ktoré využívajú počítačový kód.
+- [Na tomto odkaze]({{ urls/girls }}) nájdete tipy, ako zatraktívniť informatiku pre dievčatá.
 
 * * *
 
 <a id="code"></a>
 
-## 6. Začnite kódovať
+## 6. Pustite sa do programovania
 
-Nasmerujte študentov na aktivity
+Nasmerujte žiakov na aktivitu
 
-- Na tabuľu napíšte odkaz k návodu. Nájdete ho na stránke s [informáciami pre Váš vybraný návod]({{ urls/learn }}) podľa počtu účastníkov.
+- Na tabuľu napíšte webový odkaz na aktivitu. Nájdete ho na stránke s [informáciami k vybranej aktivite]({{ urls/learn }}), kde je uvedený pod počtom účastníkov.
 
-Ak sa budú študenti potýkať s ťažkosťami, môžete im odpovedať nasledovne:
+Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 
-- “Neviem. Skúsme to spoločne.”
-- “Technológie nefungujú vždy tak, ako by sme práve chceli.”
-- “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
+- „Neviem. Skúsme na to prísť spolu.“
+- „Technológie nefungujú vždy tak, ako by sme práve chceli.“
+- „Učiť sa programovať je ako učiť sa nový jazyk – človek ním nedokáže hneď hovoriť plynulo.“
 
-Čo ak študent skončí skôr?
+Čo ak niektorý žiak skončí skôr?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
-- Alebo požiadajte študentov, ktorí skončili skôr, aby pomohli ostatným spolužiakom, ktorí ešte neskončili.
+- Žiaci si môžu prezrieť všetky aktivity k Hodine kódu [a vyskúšať si ďalšiu]({{ urls/learn }}).
+- Alebo požiadajte žiakov, ktorí skončili skôr, aby pomohli spolužiakom, ktorí narazili na nejaký problém.
 
 * * *
 
 <a id="celebrate"></a>
 
-## 7. Oslávte úspechy svojich študentov
+## 7. Oslávte úspechy svojich žiakov
 
 [col-33]
 
@@ -138,22 +138,22 @@ Ak sa budú študenti potýkať s ťažkosťami, môžete im odpovedať nasledov
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Objednajte tričká na mieru](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pre Vašu školu.
-- Zdieľajte fotky a videá z Vašej Hodiny Kódu na sociálnych sieťach. Použite #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť Váš úspech!
+- Vytlačte pre svojich žiakov [certifikáty]({{ urls/certificates }}).
+- Vytlačte pre žiakov [nálepky s textom „I did the Hour of Code!“]({{ urls/promote_stickers }}) (Mám za sebou Hodinu kódu!).
+- Objednajte pre svoju školu [špeciálne tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- Zdieľajte na sociálnych sieťach fotky a videá z vašej Hodiny kódu. Použite hashtag #HourOfCode a označenie @codeorg, aby sme sa o vaše úspechy mohli podeliť aj my!
 
 * * *
 
 <a id="other-resources"></a>
 
-## Ďalšie zdroje k Hodine Kódu pre vyučujúcich:
+## Ďalšie zdroje k Hodine kódu pre pedagógov
 
-- Navštívte [Fórum Vyučujúcich Hodiny Kódu](http://forum.code.org/c/plc/hour-of-code), kde nájdete rady, postrehy a podporu od ostatných vyučujúcich.
-- Pozrite si [Časté otázky o Hodine Kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Navštívte [učiteľské fórum k Hodine kódu](http://forum.code.org/c/plc/hour-of-code), kde získate rady, postrehy a podporu od ostatných pedagógov.
+- Pozrite si [najčastejšie otázky o Hodine kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-### Čo nasleduje po Hodine Kódu?
+### Čo nasleduje po Hodine kódu?
 
-Informatika s Hodinou Kódu nekončí. Naše lekcie sú vždy online a zadarmo. [Naučte sa](/beyond), ako predstaviť informatiku svojej škole a študentom.
+Informatika sa Hodinou kódu nekončí. Naše lekcie sú stále k dispozícii on‑line, a to úplne zadarmo. Prečítajte si viac o tom, [ako na vašu školu priniesť kvalitné vyučovanie informatiky](/beyond).
 
 {{ signup_button }}

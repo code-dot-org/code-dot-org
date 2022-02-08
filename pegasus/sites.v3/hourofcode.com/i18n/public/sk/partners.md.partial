@@ -2,7 +2,7 @@
 title: Partneri
 ---
 
-Hodina Kódu je riadená Komisiou a poradným výborom Hodiny Kódu a Tyždňom výuky informatiky.
+Hodinu kódu majú na starosti poradný a revízny výbor Hodiny Kódu a Týždňa informatiky.
 
 The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Tento výbor vedie stratégiu kampane Hodiny Kódu.
 

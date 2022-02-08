@@ -979,6 +979,19 @@ nn:
             '"seconds"': sekund
       gamelab_hideTitleScreen:
         text: skjul tittelskjerm
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1120,6 +1133,10 @@ nn:
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": hopp
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): er flyttbar
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
         options:
@@ -1189,6 +1206,14 @@ nn:
             '"scale"': størrelse
             '"width"': breidde
             '"height"': høgd
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': sakte
+            '5': normal
+            '7': rask
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

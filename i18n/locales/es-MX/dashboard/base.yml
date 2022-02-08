@@ -290,6 +290,7 @@ es-MX:
       provider_managed_section: "No puedes unirte a esta sección, porque está a cargo de otro proveedor. Consulta con tu docente para que te agregue a través de %{provider} y vuelve a sincronizar la sección."
       restricted_section: "No hemos podido añadirte a la sección %{section_code} porque está bloqueada. Por favor, póngase en contacto con su profesor para obtener ayuda."
       full_section: "No hemos podido añadirte a la sección %{section_code} porque ya existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor para que te ayude."
+      not_participant_type: "No hemos podido añadirte a la sección %{section_code} porque no reúnes el criterio de participante para la sección."
     mail:
       student_disassociated:
         subject: "Aviso de Code.org: %{student_name} ya no está asociado como tu estudiante."
@@ -549,6 +550,7 @@ es-MX:
     all_students_must_be_in_current_section: "Todos los estudiantes deben estar inscritos en tu sección."
     already_enrolled_in_new_section: "No puedes mover a estos estudiantes, porque ya están en la nueva sección."
     third_party_login: "No puedes mover estudiantes a una sección sincronizada con una herramienta de otro proveedor."
+    not_correct_participant_type: "No puedes mover a estos usuarios porque no tienen permisos para ser participantes en la nueva sección."
   share:
     title: "Aprender en Code Studio"
     description: "Cualquier persona puede aprender Ciencias de la Computación. Crear juegos, aplicaciones y arte con código."
@@ -590,6 +592,7 @@ es-MX:
     how_it_works: 'Cómo funciona (ver el código)'
     try_hour_of_code: '¡Prueba una Hora del Código!'
     store: 'Tienda'
+    cookie_notice: 'Aviso de Cookies'
   reference_area:
     title: '¿Necesitas ayuda?'
     subtitle: 'Mira estos videos y sugerencias'
@@ -1126,3 +1129,4 @@ es-MX:
     this_sprite: "este sprite"
   unit_prefix: "Unidad %{n}"
   code_org_logo_alt: "Inicio de Code.org"
+  teacher_feedback: "Retroalimentación del docente"
