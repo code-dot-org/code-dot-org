@@ -248,3 +248,23 @@ end
 Then /^I open the section action dropdown$/ do
   steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
 end
+
+Then /^I add the first student to the first code review group$/ do
+  steps <<-STEPS
+    And I focus selector "#uitest-unassign-all-button"
+    And I press keys ":tab"
+    And I press keys ":space"
+    And I press keys ":arrow_right"
+    And I press keys ":space"
+  STEPS
+end
+
+Then /^I create a new code review group for the section I saved$/ do
+  steps <<-STEPS
+    And I navigate to teacher dashboard for the section I saved
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    And I click selector "#uitest-code-review-groups-button" once I see it
+    And I wait for 2 seconds
+    And I click selector "#uitest-create-code-review-group" once I see it
+  STEPS
+end
