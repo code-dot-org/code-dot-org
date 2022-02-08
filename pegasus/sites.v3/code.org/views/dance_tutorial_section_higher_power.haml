@@ -30,7 +30,7 @@
     %img.img-dance-stars.mobile-only{src: "/images/fit-300x300/dance-hoc/dance_party_higher_power_band.png"}
 
   %img.mobile-only{style: "width: 100%", src: "/images/dance-hoc/dance_party_higher_power_band_glow.png"}
-  .higher-power-text.mobile-only{style: "font-family: 'Gotham 5r', sans-serif; color: dimgray; text-align: center; padding: 20px; font-size: 18px; line-height: 1.5em;"}
+  .higher-power-text.mobile-only{style: "width: 100%; font-family: 'Gotham 5r', sans-serif; color: dimgray; text-align: center; padding: 20px; font-size: 18px; line-height: 1.5em;"}
     %div
       = "Code a dance to Coldplay's \"Higher Power\" and you could get the chance to see the band live!"
     .higher-power-text
@@ -52,15 +52,15 @@
         %a{href: CDO.studio_url('/s/dance-extras-2019/reset'), target: '_self'}
           %button.tutorial-button.dance-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
 
-  .higher-power-text.desktop-only.tablet-only{style: "font-family: 'Gotham 5r', sans-serif; position: absolute; color: white; text-align: center; padding: 20px; font-size: 18px; line-height: 1.5em;"}
+  .higher-power-text.desktop-only.tablet-only{style: "width: 100%; font-family: 'Gotham 5r', sans-serif; position: absolute; color: white; text-align: center; padding: 20px; font-size: 18px; line-height: 1.5em;"}
     %div
-      = "Code a dance to Coldplay's \"Higher Power\" and you could get the chance to see the band live!"
+      = I18n.t(:dance_box_higher_power_line_1)
     .higher-power-text
-      != "Check out <a>code.org/coldplay</a> for more information."
+      != I18n.t(:dance_box_higher_power_line_2, path: "/coldplay")
 
 .dance-clear-element
 
-%div{style: "text-align: center; padding-top: 10px"}
+%div{style: "text-align: center; padding-top: 10px; font-family: 'Gotham 5r', sans-serif;"}
   .foot-note-heading= hoc_s(:codeorg_homepage_hoc2018_musician_before)
   .artist-names
     - Homepage.get_dance_stars.each do |star|
