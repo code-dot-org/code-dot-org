@@ -14,16 +14,6 @@ Feature: Using the teacher homepage sections feature
     When I create a new section and go home
     Then the section table should have 2 rows
 
-  Scenario: Loading teacher homepage with course experiment enabled
-    Given I am on "http://studio.code.org/home"
-    Given I enable the "subgoals-group-a" course experiment
-    And I reload the page
-    And I wait to see ".uitest-newsection"
-    And check that the URL contains "/home"
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 3 - Subgoals Group A *"
-    Then the section table should have 1 row
-    And the section table row at index 0 has secondary assignment path "/s/csp3-a"
-
   @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
