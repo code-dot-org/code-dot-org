@@ -21,7 +21,41 @@
             DNSName: !GetAtt [<%=app%>RedirectDistribution, DomainName]
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for CloudFront aliases
         <%- end -%>
+
+  # Health checks and alarms for each DNS record we're handling 
+<%- redirected_domains.each do |domain_name| -%>
+  <%-
+    # Convert something like "autoscale-prod.code.org" to "AutoscaleProdCodeOrg"
+    logical_id = domain_name.titleize.gsub(/[^a-zA-Z0-9]/, "")
+  -%>
   
+  <%=app%><%=logical_id%>HealthCheck:
+    Type: 'AWS::Route53::HealthCheck'
+    Properties: 
+      HealthCheckConfig: 
+        Type: HTTP
+        Port: 80
+        FailureThreshold: 3
+        FullyQualifiedDomainName: <%=domain_name%>
+        RequestInterval: 30
+
+
+  <%=app%><%=logical_id%>HealthCheckAlarm
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: "Health Check for <%=domain_name%>"
+      AlarmName: ""
+      Namespace: AWS/Route53
+      MetricName: HealthCheckStatus
+      ComparisonOperator: GreaterThanThreshold
+      Period: '60'
+      EvaluationPeriods: '3'
+      Threshold: '1'
+      Statistic: Average
+      AlarmActions:
+      - arn:aws:sns:us-east-1:475661607190:CDO-Urgent
+<%- end -%>
+
   <%=app%>RedirectDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
