@@ -31,9 +31,9 @@
   %img.mobile-only{style: "width: 100%", src: "/images/dance-hoc/dance_party_higher_power_band_glow.png"}
   .higher-power-text.mobile-only{style: "width: 100%; font-family: 'Gotham 5r', sans-serif; color: dimgray; text-align: center; padding: 20px; font-size: 18px; line-height: 1.5em;"}
     %div
-      = "Code a dance to Coldplay's \"Higher Power\" and you could get the chance to see the band live!"
+      = I18n.t(:dance_box_higher_power_line_1)
     .higher-power-text
-      != "Check out <a>code.org/coldplay</a> for more information."
+      != I18n.t(:dance_box_higher_power_line_2, path: "/coldplay")
 
   .col-25.specific-tutorial.right-tutorial.dance-tutorial{:class => ('right-to-left' if language_dir_class == 'rtl' )}
     .tutorial-box{style: "background-color: rgba(34, 99, 183, 0.37)"}
