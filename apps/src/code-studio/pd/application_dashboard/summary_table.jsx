@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
 import {StatusColors, getApplicationStatuses} from './constants';
 import _ from 'lodash';
+import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 
 const ApplicationDataPropType = PropTypes.shape({
@@ -39,20 +40,27 @@ export class SummaryTable extends React.Component {
       all: 0
     };
     const categoryRows = Object.keys(this.props.data).map((status, i) => {
-      const statusData = this.props.data[status];
-      totals.locked += statusData.locked;
-      totals.all += statusData.total;
-      return (
-        <tr key={i}>
-          <td style={{...styles.statusCell[status]}}>
-            {getApplicationStatuses(this.props.applicationType)[status] ||
-              _.upperFirst(status)}
-          </td>
-          {this.showLocked && <td>{statusData.locked}</td>}
-          {this.showLocked && <td>{statusData.total - statusData.locked}</td>}
-          <td>{statusData.total}</td>
-        </tr>
-      );
+      // [MEG] TODO: Eliminate this check once experiment is complete
+      // Don't show an application of "incomplete" status if there is no experiment
+      if (
+        status !== 'incomplete' ||
+        experiments.isEnabled(experiments.TEACHER_APPLICATION_SAVING_REOPENING)
+      ) {
+        const statusData = this.props.data[status];
+        totals.locked += statusData.locked;
+        totals.all += statusData.total;
+        return (
+          <tr key={i}>
+            <td style={{...styles.statusCell[status]}}>
+              {getApplicationStatuses(this.props.applicationType)[status] ||
+                _.upperFirst(status)}
+            </td>
+            {this.showLocked && <td>{statusData.locked}</td>}
+            {this.showLocked && <td>{statusData.total - statusData.locked}</td>}
+            <td>{statusData.total}</td>
+          </tr>
+        );
+      }
     });
 
     return [
