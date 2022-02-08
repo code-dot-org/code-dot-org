@@ -318,7 +318,7 @@ const FormController = props => {
   };
 
   const makeRequest = applicationStatus => {
-    const dataWithStatus = {status: applicationStatus, ...data};
+    const dataWithStatus = {...data, status: applicationStatus};
     setData(dataWithStatus);
 
     const ajaxRequest = (method, endpoint) =>
