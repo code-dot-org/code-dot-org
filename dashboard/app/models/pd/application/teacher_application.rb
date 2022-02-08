@@ -104,6 +104,8 @@ module Pd::Application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info
     # 2. User doesn't have a specific school? overwrite with the custom school info.
+    # Will only update the school info if we have enough information for it because
+    # an incomplete application may not have all the information we need to update
     def update_user_school_info!
       return unless school_id || user.school_info.try(&:school).nil?
       school_info = school_info_attr
