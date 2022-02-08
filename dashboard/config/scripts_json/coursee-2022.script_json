@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-01-27 18:39:55 UTC",
+    "serialized_at": "2022-02-08 19:17:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3863,6 +3863,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
@@ -3885,6 +3888,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_say"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3982,6 +3988,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -4004,6 +4013,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_events"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4026,6 +4038,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4048,6 +4063,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4070,6 +4088,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4092,6 +4113,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4114,6 +4138,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4136,6 +4163,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo"
+        ],
         "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
@@ -4158,6 +4188,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -9132,6 +9165,32 @@
       }
     },
     {
+      "name": "CSF - Course E - Slides 2022-2023",
+      "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
+      "key": "csf_-_course_e_-_slides_2022-2023",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "name": "CSF - Course E - Slides 2022-2023",
+      "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
+      "key": "csf_-_course_e_-_slides_2022-2023_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/explore/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_course_e_-_slides_2022-2023_1"
+      }
+    },
+    {
       "name": "CSTA Standards Mapping",
       "url": "https://studio.code.org/s/coursee-2021/standards",
       "key": "csta_standards_mapping",
@@ -9165,18 +9224,6 @@
       },
       "seeding_key": {
         "resource.key": "debugging_guide"
-      }
-    },
-    {
-      "name": "Designing for Accessibility",
-      "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
-      "key": "designing_for_accessibility",
-      "properties": {
-        "audience": "Student",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_for_accessibility"
       }
     },
     {
@@ -9490,6 +9537,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with the Farmer",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Conditionals with the Farmer",
         "resource.key": "pause_and_think_online"
       }
@@ -9497,13 +9556,19 @@
     {
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
-        "resource.key": "designing_for_accessibility"
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
         "resource.key": "types_of_disabilities"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Sharing",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9520,6 +9585,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "cs_fundamentals_final_project"
       }
@@ -9527,7 +9598,19 @@
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
         "resource.key": "end_of_course_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9551,7 +9634,19 @@
     {
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9562,8 +9657,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: About Me",
         "resource.key": "about_me_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: About Me",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9576,6 +9689,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: About Me",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9611,6 +9730,12 @@
     {
       "seeding_key": {
         "lesson.key": "Songwriting",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriting",
         "resource.key": "functions_unplugged_songwriting"
       }
     },
@@ -9636,6 +9761,12 @@
       "seeding_key": {
         "lesson.key": "Songwriting",
         "resource.key": "songwriting_with_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {

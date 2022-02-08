@@ -43,7 +43,7 @@ Až ste si prezreli návody, skúste spustiť vybrané lekcie na Vašom zariaden
 <h3>Máte doma viac detí?</h3>
 Ak deti používajú rôzne zariadenia, zvážte možnosť rozdať všetkým vlastné slúchadlá. Umožníte im tak hranie so zapnutým zvukom a bez vzájomného vyrušovania.
 
-Ak používate len jedno zariadenie alebo ak chcete umožniť interaktívnu Hodinu kódu, vyskúšajte <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">párové programovanie</a>. Párové programovanie nabáda deti k spolupráci. Pri práci v dvojiciach si jeden druhému navzájom pomáhajú. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
+Ak používate len jedno zariadenie alebo ak chcete, aby bola vaša Hodina kódu interaktívnejšia, vyskúšajte <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">párové programovanie</a>. Párové programovanie nabáda deti k spolupráci. Pri práci v dvojiciach si jeden druhému navzájom pomáhajú. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
 
 <h3>Nadchnite deti </h3>
 Práve ste objavili skvelý spôsob, ako deťom oživiť dni novou aktivitou. Návody už máte za sebou, teraz skúste niečo ďalšie:
@@ -69,8 +69,8 @@ Nebojte sa ani v prípade, ak ste obaja nováčikovia v informatike. Ponúkame z
 <h3>Problémy riešte spoločne</h3>
 Až sa dieťa zastaví pred prekážkou, môžete mu odpovedať nasledovne:
 - “I don’t know. Let’s figure this out together.”
-- “Technológie nefungujú vždy tak, ako by sme práve chceli.”
-- “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
+- „Technológie nefungujú vždy tak, ako by sme práve chceli.“
+- „Učiť sa programovať je ako učiť sa nový jazyk – človek ním nedokáže hneď hovoriť plynulo.“
 
 Informatika je o hľadaní spôsobov, ako sa vymotať zo situácií, do ktorých sme sa v dobrej nádeji zaplietli. Spoločnými silami a s dávkou kreativity spoločne zdoláte každú prekážku.
 
@@ -85,6 +85,6 @@ Hodina kódu je celosvetovým podujatím, takže s rodinou máte ďalší dôvod
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-<h2>Čo nasleduje po Hodine Kódu?</h2>
+<h2>Čo nasleduje po Hodine kódu?</h2>
 
 Computer science doesn’t have to end with the Hour of Code! Až 90% rodičov si praje, aby sa ich dieťa učilo informatiku, no väčšina škôl ju ani nevyučuje. Preto Vám chceme pomôcť učivom, ktoré je aj bude naveky voľne dostupné na internete. <a href="https://code.org/yourschool">Ako viete pomôcť</a> priviesť informatiku aj na školu, ktorú Vaše dieťa navštevuje.
