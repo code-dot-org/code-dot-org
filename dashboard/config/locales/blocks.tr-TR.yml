@@ -344,6 +344,7 @@ tr:
             '"column"': sütun
             '"x"': çapraz geçiş
             '"plus"': artı
+            '"spiral"': sarmal
             '"random"': gelişigüzel
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} 'de yeni bir {COSTUME} yapın"
@@ -448,6 +449,7 @@ tr:
             '"column"': sütun
             '"x"': çapraz geçiş
             '"plus"': artı
+            '"spiral"': sarmal
             '"random"': gelişigüzel
       Dancelab_mixColors:
         text: "{COLOR1} ve {COLOR2}’yi karıştır"
@@ -937,7 +939,21 @@ tr:
       gamelab_clickedOn:
         text: "{SPRITE} tıklandığında"
       gamelab_clickedSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa dönme
+            new Behavior(spinning_left, []): sola dönme
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): kararsızlık
+            new Behavior(wobbling, []): sallanma
+            new Behavior(wandering, []): gezinme
+            new Behavior(patrolling, []): kontrol sağlama
+            new Behavior(moving_west_and_looping, []): batıya doğru hareket ve döngü
+            new Behavior(moving_east_and_looping, []): doğuya doğru hareket ve döngü
+            new Behavior(moving_north_and_looping, []): kuzeye hareket ve döngü
+            new Behavior(moving_south_and_looping, []): güneye hareket ve döngü
       gamelab_comment:
         text: 'yorum: {COMMENT}'
       gamelab_costumeImage:
@@ -990,6 +1006,19 @@ tr:
         text: |-
           eğer {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}'ın kostümü {COSTUME}'dir."
       gamelab_isKeyPressed:
@@ -1110,9 +1139,9 @@ tr:
       gamelab_moveToward:
         text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
       gamelab_newSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: yukarı ve aşağı kontrol sağla
       gamelab_playSound:
@@ -1162,6 +1191,12 @@ tr:
             "'sound://category_digital/jump_7.mp3'": zıpla
       gamelab_playSpeech:
         text: konuşmayı çal {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ok tuşları ile hareket
+            new Behavior(driving_with_arrow_keys, []): ok tuşları ile hareket
+            draggable(): sürüklenebilir olmak
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1279,6 +1314,14 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': yavaş
+            '5': normal
+            '7': hızlı
+            '9': extra fast
       gamelab_setTint:
         text: renk değiştirme {THIS} Hedef {COLOR}
       gamelab_setupScoreboard:
@@ -1319,7 +1362,7 @@ tr:
       gamelab_stopGliding:
         text: "{SPRITE} süzülmeyi durdurur"
       gamelab_subjectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

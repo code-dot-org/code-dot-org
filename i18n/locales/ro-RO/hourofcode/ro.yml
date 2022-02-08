@@ -243,7 +243,7 @@ ro:
   hoc2018_tutorial_mchoc_description: Folosește blocuri de coduri pentru a-l conduce
     pe Steve sau pe Alex într-o aventură prin lumea Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Încearcă noua <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Sprijin pentru părinții și profesorii care se
     confruntă cu închiderea școlilor.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1030,6 +1030,7 @@ ro:
   footer_menu_support: Suport
   footer_menu_terms: Termeni
   footer_menu_privacy: Politică de Confidenţialitate
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Încearcă un tutorial de o oră conceput pentru toate vârstele
     în peste 45 de limbi.  Alătură-te milioanelor de elevi și profesori din peste

@@ -231,8 +231,8 @@ kk:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Алекс немесе Стивті Minecraft әлеміндегі саяхаттарына
     көмектесу үшін код блоктарын қолданыңыз.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -973,6 +973,7 @@ kk:
   footer_menu_support: Қолдау
   footer_menu_terms: терминдер
   footer_menu_privacy: Құпиялылық саясаты
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Кодтау сағаты
   learn_banner_blurb: Барлық жасқа арналған 45 астам тілде дайындалған бірсағаттық
     сабақтан өтіп көріңіз. Кодтау сағатына 180 астам елден қатысатын миллиондаған

@@ -60,7 +60,7 @@ Ponúkame vám nové plagáty so známymi osobnosťami, medzi ktoré patrí Mala
 1. Na webových stránkach či v popisoch aplikácií použite pri najvýraznejších zmienkach o Hodine kódu symbol „™" a pri zmienkach o Hora del Código uveďte symbol "Ⓡ".
 2. Na webových stránkach umiestnite odkazy na Týždeň venovaný výučbe informatiky a rovnako aj odkaz na stránku [Code.org]({{ codeorg_link }}), vrátane textu s nasledujúcim znením: 
     
-    *„Projekt Hour of Code™ / Hora del Código® je súčasťou iniciatívy Týždeň venovaný výučby informatiky [csedweek.org] a portálu Code.org [code.org]. Jeho ambíciou je predstaviť žiakom základy informatiky a programovania.“*
+    *„Projekt Hour of Code™ / Hora del Código® je súčasťou iniciatívy Týždeň informatiky [csedweek.org] a portálu Code.org [code.org]. Jeho ambíciou je predstaviť žiakom základy informatiky a programovania.“*
 
 3. Žiadne aplikácie nemožno pomenovať názvami Hour of Code alebo Hora del Código.
 
@@ -90,7 +90,7 @@ Počítače zmenili tvár celého sveta a nájdeme ich na každom rohu. But only
 
 Vďaka Hodine Kódu, informatika bola na predných stránkach Googlu, MSN, Yahoo! a Disney. Viac ako 100 partnerov sa pridalo pre podporu tohto hnutia. Hodinu kódu organizoval už každý Apple Store na svete a dokonca aj osobnosti ako prezident Obama či kanadský premiér Justin Trudeau napísali prvé riadky kódu ako súčasť kampane.
 
-Tento rok to spravíme v ešte väčšom štýle. Pridajte sa s nami k Hodine kódu {{ kampaň_dátum/rok }}. Zapojte sa do podujatia Hodiny kódu počas Týždňa venovaného výučbe informatiky {{ kampaň_dátum }}.
+Tento rok to spravíme v ešte väčšom štýle. Pridajte sa s nami k Hodine kódu {{ kampaň_dátum/rok }}. Zapojte sa do podujatia Hodina kódu počas Týždňa informatiky {{ campaign_date/full }}.
 
 Povedzte o Hodine kódu aj svojmu okoliu. Zorganizujte podujatie. Požiadajte najbližšiu školu, aby sa do projektu zapojila. Hodinu Kódu však môžete absolvovať aj sami – naučiť sa základy programovania predsa pomôže každému.
 
@@ -106,7 +106,7 @@ Všetky informácie nájdete cez http://hourofcode.com/{{ country_language }}<br
 
 **Predmet:** Pomôžeme vám zorganizovať Hodinu kódu
 
-Desať percent žiakov z celého sveta oslávi {{ kampaň_dátum/short }} Týždeň venovaný výučbe informatiky a na školách sa zapoja do Hodiny kódu. Deti tak získajú vzácnu príležitosť naučiť sa o fungovaní technológií.
+Desať percent žiakov z celého sveta oslávi {{ kampaň_dátum/short }} Týždeň informatiky a na školách sa zapoja do Hodiny kódu. Deti tak získajú vzácnu príležitosť naučiť sa o fungovaní technológií.
 
 [Naša organizácia/moje meno] má záujem pomôcť [názov danej školy] zorganizovať Hodinu Kódu. Učiteľom radi pomôžeme pripraviť Hodinu Kódu priamo v ich triede (nepotrebujeme k tomu ani počítače). Pokiaľ máte záujem o celoškolské podujatie, radi vám zabezpečíme odborníka, ktorý žiakom vysvetlí základné informácie o fungovaní technológií a práci programátora.
 
@@ -130,7 +130,7 @@ iste viete, že celý svet je dnes obklopený technológiami. Hoci si naše deti
 
 But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
-Počas Týždňa venovanému výučbe informatiky sa naša škola preto chce pridať k Hodine kódu, najväčšiemu vzdelávaciemu projektu na svete. Viac ako 100 miliónov študentov po celom svete Hodinu Kódu už absolvovalo. S Hodinou kódu chceme dať najavo, že [NÁZOV ŠKOLY] má záujem učiť žiakov dôležité zručnosti potrebné do života v 21. storočí. Chceme zorganizovať obrovské podujatie, aby sa čo najviac žiakov dostalo k základom programovania. Budeme vám veľmi vďační nielen za účasť, ale i za kontaktovanie médií a zdieľanie správ o Hodine kódu na sociálnych sietiach. Veríme, že vás Hodina kódu osloví natoľko, že zvážite aj zorganizovanie ďaľších podujatí vo svojom okolí.
+Počas Týždňa informatiky sa naša škola preto chce pridať k Hodine kódu, najväčšiemu vzdelávaciemu projektu na svete. Viac ako 100 miliónov študentov po celom svete Hodinu Kódu už absolvovalo. S Hodinou kódu chceme dať najavo, že [NÁZOV ŠKOLY] má záujem učiť žiakov dôležité zručnosti potrebné do života v 21. storočí. Chceme zorganizovať obrovské podujatie, aby sa čo najviac žiakov dostalo k základom programovania. Budeme vám veľmi vďační nielen za účasť, ale i za kontaktovanie médií a zdieľanie správ o Hodine kódu na sociálnych sietiach. Veríme, že vás Hodina kódu osloví natoľko, že zvážite aj zorganizovanie ďaľších podujatí vo svojom okolí.
 
 Niet lepšej príležitosti na zmenu budúcnosti vzdelávania v [NÁZOV MESTA/OBCE].
 
@@ -150,7 +150,7 @@ Computers are everywhere, changing every industry on the planet, but only 51% of
 
 Vďaka Hodine Kódu, informatika bola na predných stránkach Googlu, MSN, Yahoo! a Disney. Viac ako 100 partnerov sa pridalo pre podporu tohto hnutia. Dokonca aj Apple Store vo svete organizoval Hodiny Kódu. Aj prezident Obama napísal svoj prvý riadok kódu v rámci tejto kampane.
 
-Preto sa až [číslo] našich študentov z [názov školy] pridá k najväčšiemu vzdelávaciemu podujatiu všetkých čias – k Hodine kódu, ktorú organizujeme v rámci Týždňa venovaného výučbe informatiky (6. – 12. december).
+Preto sa až [číslo] našich študentov z [názov školy] pridá k najväčšiemu vzdelávaciemu podujatiu všetkých čias – k Hodine kódu, ktorú organizujeme v rámci Týždňa informatiky (6. – 12. december).
 
 Týmto Vás pozývam na účasť na našom úvodnom stretnutí, aby ste mohli sledovať deti priamo v akcií dňa [DATE].
 
@@ -176,7 +176,7 @@ Viete, že IT sektor tvorí najväčší zdroj príjmov v USA? Celosvetovo síce
 
 Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
-Počas Týždňa venovanému výučbe informatiky sa naša škola preto chce pridať k Hodine kódu, najväčšiemu vzdelávaciemu projektu na svete. Viac ako 100 miliónov študentov po celom svete Hodinu Kódu už absolvovalo.
+Počas Týždňa informatiky sa naša škola preto chce pridať k Hodine kódu, najväčšiemu vzdelávaciemu projektu na svete. Viac ako 100 miliónov študentov po celom svete Hodinu Kódu už absolvovalo.
 
 Dovoľujeme si Vás pozvať na naše úvodné stretnutie a predniesť na ňom príhovor. Podujatie sa bude konať [dátum, miesto, čas] a vďaka nemu vyšleme jasný signál, že [mesto, obec] má záujem učiť svojich žiakov dôležité zručnosti potrebné do života v 21. storočí. Chceme mať istotu, že naši žiaci nebudú technológie len používať, no zvládnu sa podieľať aj na ich vývoji.
 

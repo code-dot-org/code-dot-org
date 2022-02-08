@@ -43,9 +43,9 @@ Porozmýšľajte o zorganizovaní večernej akcie pre žiakov prvého stupňa z�
 
 ## Príklad plánu pre školské zhromaždenie alebo podujatie
 
-**Udalosť:** Školský týždeň informatického vzdelávania - úvodné zhromaždenie
+**Podujatie:** Celoškolský Týždeň informatiky – úvodné stretnutie
 
-**Dátum:** {{ campaign_date/start_short }} (začiatok Školského týždňa informatického vzdelávania)
+**Dátum:** {{ campaign_date/start_short }} (začiatok Týždňa informatiky)
 
 **Čas:** Počas školského vyučovania. Ideálne počas predpoludnia. Trvanie približne 1 hodinu.
 

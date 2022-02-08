@@ -20,6 +20,24 @@
         },
         "helloworld_retro_click": {
           "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
+        "course1_artist_loops_challenge4": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2018": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2019": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2020": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
         }
       }
     }
