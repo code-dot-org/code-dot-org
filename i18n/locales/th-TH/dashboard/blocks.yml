@@ -9,15 +9,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -63,15 +63,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -123,15 +123,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -147,15 +147,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -304,15 +304,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -332,15 +332,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -358,6 +358,7 @@ th:
             '"right"': คอลัมน์ขวา
             '"x"': กากบาท
             '"plus"': เครื่องหมายบวก
+            '"spiral"': วงก้นหอย
             '"random"': สุ่ม
       Dancelab_makeAnonymousDanceSprite:
         text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
@@ -369,7 +370,7 @@ th:
             '"DOG"': สุนัข
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
             '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
@@ -398,7 +399,7 @@ th:
             '"DOG"': สุนัข
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
             '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
@@ -441,15 +442,15 @@ th:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -467,6 +468,7 @@ th:
             '"right"': คอลัมน์ขวา
             '"x"': กากบาท
             '"plus"': เครื่องหมายบวก
+            '"spiral"': วงก้นหอย
             '"random"': สุ่ม
       Dancelab_mixColors:
         text: ผสม{COLOR1} กับ {COLOR2}
@@ -570,15 +572,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -644,15 +646,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -680,15 +682,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -707,15 +709,15 @@ th:
         options:
           THIS:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -724,15 +726,15 @@ th:
         options:
           THIS:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -749,15 +751,15 @@ th:
         options:
           THIS:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -784,15 +786,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -829,15 +831,15 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
             '"DOG"': สุนัขทั้งหมด
             '"DUCK"': เป็ด
             '"FROG"': กบ
-            '"MOOSE"': กวางมูสทั้งหมด
+            '"MOOSE"': กวางมูส
             '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"ROBOT"': หุ่นยนต์
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
@@ -895,7 +897,6 @@ th:
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
-            '"5"': '5'
             '"6"': '6'
             '"7"': '7'
             '"8"': '8'
@@ -941,7 +942,6 @@ th:
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
-            '"5"': '5'
             '"6"': '6'
             '"7"': '7'
             '"8"': '8'
@@ -985,8 +985,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
             '"speed"': ความเร็ว
       gamelab_checkTouching:
@@ -999,6 +999,12 @@ th:
         text: เมื่อคลิก {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(wandering, []): เคลื่อนที่
+            new Behavior(moving_north_and_looping, []): เคลื่อนไปทางทิศเหนือแล้วลูป
+            new Behavior(moving_south_and_looping, []): เคลื่อนไปทางทิศใต้แล้วลูป
       gamelab_comment:
         text: 'แสดงความคิดเห็น: {COMMENT}'
       gamelab_costumeImage:
@@ -1025,8 +1031,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
             '"tint"': ระดับอ่อนสี
             '"speed"': ความเร็ว
@@ -1049,6 +1055,19 @@ th:
         text: |-
           หาก {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: เครื่องแต่งกายของ {SPRITE} คือ {COSTUME}
       gamelab_isKeyPressed:
@@ -1150,8 +1169,10 @@ th:
         text: สร้างเอฟเฟกต์ {EFFECT} ด้วยสไปร์ท {NUM} {ANIMATION_NAME}
         options:
           EFFECT:
+            '"burst"': ระเบิด
             '"pop"': กระโดด
             '"rain"': มีฝน
+            '"spiral"': วงก้นหอย
       gamelab_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       gamelab_makeNumSprites:
@@ -1202,6 +1223,7 @@ th:
             "'sound://category_digital/boing_2.mp3'": โบอิ้ง
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": กระโดด
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": ทวิงเกิล
+            "'sound://category_app/app_button_1.mp3'": ปุ่ม
             "'sound://category_collect/clicky_crunch.mp3'": ครัชช์
             "'sound://category_swish/quick_swing.mp3'": สวิง
             "'sound://category_nature/summer_night_loop.mp3'": คืนฤดูร้อน
@@ -1211,22 +1233,35 @@ th:
             "'sound://category_animals/bear.mp3'": หมี
             "'sound://category_animals/cat.mp3'": แมว
             "'sound://category_animals/cow.mp3'": วัว
+            "'sound://category_animals/pig.mp3'": หมู
             "'sound://category_animals/sheep.mp3'": แกะ
+            "'sound://category_animals/goat.mp3'": แพะ
             "'sound://category_animals/chicken.mp3'": ไก่
+            "'sound://category_animals/rooster.mp3'": ไก่ตัวผู้
+            "'sound://category_animals/elephant.mp3'": ช้าง
             "'sound://category_animals/dolphin.mp3'": โลมา
             "'sound://category_nature/thunderstorm_1.mp3'": พายุฟ้าคะนอง
+            "'sound://category_animals/chick.mp3'": ไก่
             "'sound://category_animals/dog.mp3'": สุนัข
+            "'sound://category_animals/tiger.mp3'": เสือ
             "'sound://category_collect/trill_stings.mp3'": ทริล
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": พิณ
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": แท็ป
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": โทนอลฮิต
             "'sound://category_transition/trippy_robotic_transition.mp3'": การแปลงร่างเป็นหุ่นยนต์
             "'sound://category_transition/star_dust_particle_10.mp3'": ละอองดาว
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": จานบิน
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": มนตร์คาถา
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": เลือก
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": เสียงทุ้มนุ่มลึก
             "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
       gamelab_playSpeech:
         text: เล่นเสียงพูด {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): เคลื่อนไหวด้วยปุ่มลูกศร
+            draggable(): ลากได้
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
         options:
@@ -1272,16 +1307,20 @@ th:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ตาข่าย
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': ห้องครัว
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': ห้องนั่งเล่น
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ทุ่งหญ้า
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': ทิวทัศน์สวน
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ต้นสน
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': รุ้งกินน้ำ
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ไซไฟ
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': สนามฟุตบอล
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ขั้นตอน
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ดาว
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': รถไฟใต้ดิน
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ดวงอาทิตย์และสายรุ้ง
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': แสงอาทิตย์สาดส่อง
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': สนามเทนนิส
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': เกาะแห่งพืชพันธุ์
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ใต้ดิน
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ใต้น้ำ
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
             undefined: ไม่เลย
@@ -1305,8 +1344,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
             '"speed"': ความเร็ว
       gamelab_setProp_dropdown:
@@ -1326,6 +1365,14 @@ th:
             '"scale"': ขนาด
             '"width"': ความกว้าง
             '"height"': ความสูง
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': ช้า
+            '5': ธรรมดา
+            '7': เร็ว
+            '9': extra fast
       gamelab_setTint:
         text: เปลี่ยนสีของ {THIS} {COLOR}
       gamelab_setupScoreboard:
@@ -1470,8 +1517,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_createNewSprite:
         options:
@@ -1492,8 +1539,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupChangeAnim:
         text: เปลี่ยน {SELECT} {COSTUME} เป็น {COSTUME2}
@@ -1510,8 +1557,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupCreateNewSprite:
         text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
@@ -1544,8 +1591,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupRemoveAllBehaviors:
         text: หยุด {SELECT} {COSTUME} พฤติกรรม
@@ -1574,8 +1621,8 @@ th:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupSetTint:
         text: เปลี่ยนสีของ {SELECT} {COSTUME} ถึง {COLOR}
@@ -1667,20 +1714,24 @@ th:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': หน้าบ้าน
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': ห้องครัว
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': ห้องนั่งเล่น
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ทุ่งหญ้า
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': ทิวทัศน์สวน
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ต้นสน
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': สนามฟุตบอล
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ขั้นตอน
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': รถไฟใต้ดิน
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ดวงอาทิตย์และสายรุ้ง
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': แสงอาทิตย์สาดส่อง
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': สนามเทนนิส
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': เกาะแห่งพืชพันธุ์
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ใต้ดิน
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': ขนาด
             '"rotation"': การหมุน
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
             '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_setupSim:
         text: |-
@@ -1767,11 +1818,14 @@ th:
         options:
           BRUSH:
             '"brick"': อิฐ
+            '"fire"': ไฟ
             '"flowers"': ดอกไม้
             '"hearts"': หัวใจ
             '"iceCream"': ไอศกรีม
+            '"leaves"': ออก
             '"rainbow"': รุ้งกินน้ำ
             '"stars"': ดาว
+            '"waves"': คลื่น
       Poetry_addLine:
         text: เพิ่มบรรทัด {LINE}
       Poetry_animateText:
@@ -1786,8 +1840,10 @@ th:
         text: สร้างเอฟเฟกต์ {EFFECT} ด้วยสไปร์ท {NUM} {ANIMATION_NAME}
         options:
           EFFECT:
+            '"burst"': ระเบิด
             '"pop"': กระโดด
             '"rain"': มีฝน
+            '"spiral"': วงก้นหอย
       Poetry_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       Poetry_makeNumSprites:
@@ -1798,11 +1854,15 @@ th:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': สงบ
             '"sound://category_nature/steady_campfire_loop.mp3"': แคมป์ไฟ
             '"sound://category_nature/rain_loop.mp3"': ฝนพรำ
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ป่า
             '"sound://category_loops/faultering_desicion_loop1.mp3"': หลอน
             '"sound://category_background/inside_plane.mp3"': ฮัม
             '"sound://category_loops/red_flag_loop1.mp3"': ภารกิจ
             '"sound://category_nature/summer_night_loop.mp3"': กลางคืน
+            '"sound://category_background/ocean_waves.mp3"': มหาสมุทร
+            '"sound://category_background/rainforest_ambient_sound.mp3"': ป่าฝน
             '"sound://category_background/repitition.mp3"': ขี่
+            '"sound://category_background/wavering_wind.mp3"': ง่วงนอน
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': ช้า
       Poetry_playSound:
         text: เล่นเสียง {SOUND}
@@ -1816,6 +1876,7 @@ th:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ล้มเหลว
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': กระพือปีก
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': กระโดด
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': แสงสว่าง
             '"sound://category_poof/puzzle_game_poof_04.mp3"': กะเทย
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': สแกน
             '"sound://category_background/typewriter.mp3"': พิมพ์ดีด
@@ -1849,6 +1910,7 @@ th:
             '"sunrise"': รุ่งอรุณ
             '"sunset"': อัสดง
             '"grayscale"': ขาวดำ
+            '"ocean"': มหาสมุทร
             '"rainbow"': รุ้งกินน้ำ
             '"roses"': ดอกกุหลาบ
             '"sky"': ท้องฟ้า
@@ -1906,11 +1968,13 @@ th:
         text: 'สไปร์ท {ANIMATION_NAME} เริ่ม {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"swimming_left_and_right"': ว่ายน้ำ
             '"wandering"': เคลื่อนที่
       Poetry_stopBehavior:
         text: 'สไปร์ท {ANIMATION_NAME} หยุด {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"swimming_left_and_right"': ว่ายน้ำ
             '"wandering"': เคลื่อนที่
             '"all"': "--ทุกพฤติกรรม--"
       Poetry_stringValue:

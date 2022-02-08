@@ -2422,6 +2422,10 @@ fa:
               display_name: فهرست‌ها
             csp_loops:
               display_name: حلقه‌ها
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: الگوریتم ها
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2646,3 +2650,167 @@ fa:
           lessons:
             lesson-1:
               name: زنبور عسل هجی کن
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+          lesson_groups:
+            lessonGroup-8:
+              display_name: ساعت کد نویسی
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرها
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: نقشه های شاد
+            'Programming: Happy Maps':
+              name: نقشه های شاد
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        express-2022:
+          lessons:
+            Dance Party:
+              name: جشن و رقص
+            lesson-1:
+              name: جشن و رقص
+          lesson_groups:
+            lessonGroup-9:
+              display_name: رویدادها
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_functions:
+              display_name: توابع
+            csf_variables:
+              display_name: متغیرها
+            csf_for_loops:
+              display_name: حلقه های "برای"
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
+              key: اشکال‌زدایی
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: فهرست‌ها
+            csp_loops:
+              display_name: حلقه‌ها
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+              key: حرکت کن، حرکت کن
+            Getting Loopy:
+              name: سر گیجه گرفتن
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: رویداد بزرگ
+            Binary Bracelets:
+              name: دستبند دودویی
+              key: دستبند دودویی
+            'Events: The Big Event':
+              name: رویداد بزرگ
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+              key: برنامه نویسی دست به دست
+            Dance Party:
+              name: جشن و رقص
+              key: جشن و رقص
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+              key: شرطی ها با کارتها
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+          lesson_groups:
+            lessonGroup-6:
+              display_name: شهروندی دیجیتالی
+            csf_events:
+              display_name: رویدادها
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: ترانه سرایی
+            'Functions: Songwriting':
+              name: ترانه سرایی
+            Conditionals:
+              key: شرطی ها
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            ramp_up:
+              display_name: حلقه های تو در تو
+            csf_functions:
+              display_name: توابع
+            csf_nested_loops:
+              display_name: شرطی ها
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+              key: برای تفریح حلقه ای
+            The Internet:
+              name: اینترنت
+            Internet:
+              key: اینترنت
+              name: اینترنت
+          lesson_groups:
+            lessonGroup-7:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-8:
+              display_name: متغیرها
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: شرطی ها
+            lesson-16:
+              name: اشکال‌زدایی
+            lesson-19:
+              name: اشکال‌زدایی

@@ -103,7 +103,23 @@
         "helloworld_food_sizes": "سائز",
         "helloworld_food_sounds": "آوازیں",
         "helloworld_retro_sizes": "سائز",
-        "helloworld_retro_sounds": "آوازیں"
+        "helloworld_retro_sounds": "آوازیں",
+        "App Lab Intro 8 - Video Design Mode": "ویڈیو: ڈیزائن موڈ",
+        "App Lab Intro 8 - Video Images and Sounds": "ویڈیو: تصاویر اور آوازیں",
+        "App Lab Intro 8 - Video Make It Interactive": "ویڈیو: اسے انٹرایکٹو بنائیں",
+        "App Lab Intro 8 - Video Share Your App": "ویڈیو: اپنی ایپ کا اشتراک کریں",
+        "AppLab Intro 7 - Full Text": "دو بٹن",
+        "AppLab Intro 7 - onEvent intro": "بٹن کارآمد کریں",
+        "AppLab Intro 7 - onEvent twoButtons": "مزید onEvent پریکٹس",
+        "AppLab Intro 7 - playSound": "پلے ساؤنڈ کا استعمال",
+        "AppLab Intro 7 - thisOrThatAddButton": "یہ یا وہ",
+        "AppLab Intro 7 - thisOrThatAddScreen": "یہ یا وہ",
+        "AppLab Intro 7 - thisOrThatPersonalize": "یہ یا وہ",
+        "AppLab Intro 7 - thisOrThatSetScreen": "یہ یا وہ",
+        "helloworld_animals_costumes": "ملبوسات",
+        "helloworld_emoji_costumes": "ملبوسات",
+        "helloworld_food_costumes": "ملبوسات",
+        "helloworld_retro_costumes": "ملبوسات"
       }
     }
   }
