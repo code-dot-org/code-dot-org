@@ -14,7 +14,7 @@ theme: responsive
 
   <div class="col-50 careers-video">
     <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
-    <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+    <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{CdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
     <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
   </div>
 
@@ -107,7 +107,7 @@ Code.org is based in Seattle, but many of our team members are remote; remote ca
 
 _We embrace diverse perspectives, ideas, and backgrounds at Code.org. We are committed to providing an equal opportunity to all employees and applicants. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability (mental and physical) status._
 
-_We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org_ 
+_We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org_
 
 <div class="careers__banner--faq" style="margin-top: 28px">
   <i class="fa fa-question-circle-o"></i>

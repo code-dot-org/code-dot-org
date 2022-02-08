@@ -74,7 +74,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-30T22:41:25.031+00:00\",\"changed\":[\"cloned from \\\"CSD U6 add LED button_2021\\\"\"],\"cloned_from\":\"CSD U6 add LED button_2021\"},{\"changed_at\":\"2021-08-30 22:41:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-30T22:41:25.031+00:00\",\"changed\":[\"cloned from \\\"CSD U6 add LED button_2021\\\"\"],\"cloned_from\":\"CSD U6 add LED button_2021\"},{\"changed_at\":\"2021-08-30 22:41:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-02 18:51:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

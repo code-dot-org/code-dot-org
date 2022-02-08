@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-25 18:17:11 UTC",
+    "serialized_at": "2022-02-08 19:34:23 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -213,6 +213,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**",
+        "purpose": "This lesson temporarily shifts away from variables and instead focuses on programming with groups of sprites. Later in the course, students will learn more about variables and simulations. The types of programs students create in this lesson will provide additional context for those lessons.",
+        "student_overview": "You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!"
       },
       "seeding_key": {
         "lesson.key": "Lots of Sprites",
@@ -228,6 +231,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**",
+        "purpose": "In previous lessons, students learn to use variables to store data that can be retrieved later. In this lesson, students will begin learning to modify the data stored in a variable. This key understanding of how variables work will also enable them to create more advanced projects.",
+        "student_overview": "You will learn to use variables to make a counter or keep track of a score in a game."
       },
       "seeding_key": {
         "lesson.key": "Counting with Variables",
@@ -243,6 +249,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this **mini-project** lesson, students will create a customized \"collector game\", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**",
+        "purpose": "This project is designed to allow students to apply their new knowledge of variables in a fun way. By understanding how to modify the value stored in a variable, students can create a game that automatically keeps the score based on the player's actions.",
+        "student_overview": "Collect all the sprites! In this project, you will create a game that others can play."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Collector Game",
@@ -3284,6 +3293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4668,6 +4680,19 @@
       }
     },
     {
+      "name": "CSF - Course F - Slides 2022-2023",
+      "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
+      "key": "csf_-_course_f_-_slides_2022-2023",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
       "name": "Design Process",
       "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
       "key": "design_process",
@@ -4871,8 +4896,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Counting with Variables",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "cs_fundamentals_final_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -4913,6 +4950,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lots of Sprites",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Making Sprites",
         "resource.key": "making_sprites"
       }
@@ -4921,6 +4964,12 @@
       "seeding_key": {
         "lesson.key": "Making Sprites",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Collector Game",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {

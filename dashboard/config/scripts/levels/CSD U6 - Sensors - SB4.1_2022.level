@@ -51,7 +51,7 @@
     "start_blocks": "// Set the text of \"sound_value\"\r\n// to the current sound sensor value\r\nsetText(\"soundValue\", soundSensor.value);",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px; transform: scale(0.9375);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 33px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 71px; position: absolute; left: 2.22045e-16px; top: 20px; text-align: center;\" id=\"soundLabel\">Sound Sensor Reading</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 100px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 105px; position: absolute; left: 0px; top: 190px; text-align: center;\" id=\"soundValue\">value</label></div></div>",
     "top_level_procedure_autopopulate": "false",
-    "encrypted_examples": "IrI0d/Rghi7HHclK+wKIiY//SzuTJk936pU0yUPsBd+ILVnh1ZDQS12MasgY\nPXARFUkUG12z8O8bJCynCzSwWQ==\n",
+    "encrypted_examples": "qXxrr3BtsjPfN0qhBckl6Sv4SfLgmv0x6HdBSomUMcieNyPJTQzxgKBATxKG\njheVtGwBfUMYI5q9h2rnuA8KiQ==\n",
     "parent_level_id": 20457,
     "name_suffix": "_2021",
     "reference_links": [
@@ -72,7 +72,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-01T00:25:48.630+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB3_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB3_2022\"},{\"changed_at\":\"2021-12-01 00:29:29 +0000\",\"changed\":[\"name\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:22:16 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-01T00:25:48.630+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB3_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB3_2022\"},{\"changed_at\":\"2021-12-01 00:29:29 +0000\",\"changed\":[\"name\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:22:16 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:30:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 20:31:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

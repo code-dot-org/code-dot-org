@@ -2,6 +2,7 @@
 #
 #   code.org/
 #   code.org/challenge
+#   code.org/challenge-new
 #   code.org/dance
 #   code.org/minecraft
 #   code.org/oceans
@@ -29,6 +30,7 @@ def get_social_metadata_for_page(request)
     cs_is_everything_thumbnail: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
     hoc_2018_creativity: {path: "/images/social-media/hoc-2018-creativity.png", width: 1200, height: 630},
     hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
+    hoc_student_challenge_new: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
     mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
     mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
@@ -75,6 +77,13 @@ def get_social_metadata_for_page(request)
         title: "Celebrity Challenge",
         description: "Win a celebrity video chat for your class!",
         image: images[:celeb_challenge]
+      }
+    },
+    "challenge-new" => {
+      "default" => {
+        title: "Join the Band Dance Party",
+        description: "Win tickets to see Band!",
+        image: images[:hoc_student_challenge_new]
       }
     },
     "minecraft" => {
@@ -138,6 +147,8 @@ def get_social_metadata_for_page(request)
 
   if request.path == "/challenge" && request.site == "code.org"
     page = "challenge"
+  elsif request.path == "/challenge-new" && request.site == "code.org"
+    page = "challenge-new"
   elsif request.path == "/minecraft" && request.site == "code.org"
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"
