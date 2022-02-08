@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-01-26 15:28:20 UTC",
+    "serialized_at": "2022-02-08 19:38:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6290,6 +6290,19 @@
       }
     },
     {
+      "name": "CSF - Course F - Slides 2022-2023",
+      "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
+      "key": "csf_-_course_f_-_slides_2022-2023",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
       "name": "CSTA Standards Mapping",
       "url": "https://studio.code.org/s/coursef-2021/standards",
       "key": "csta_standards_mapping",
@@ -6413,18 +6426,6 @@
     },
     {
       "name": "Introducing Sprite Lab",
-      "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview",
-      "key": "introducing_sprite_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introducing_sprite_lab"
-      }
-    },
-    {
-      "name": "Introducing Sprite Lab",
       "url": "https://youtu.be/yd-9xZ275dM",
       "key": "introducing_sprite_lab_1",
       "properties": {
@@ -6522,18 +6523,6 @@
       }
     },
     {
-      "name": "Sprites in Action",
-      "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
-      "key": "sprites_in_action",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprites_in_action"
-      }
-    },
-    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum",
@@ -6555,18 +6544,6 @@
       },
       "seeding_key": {
         "resource.key": "teacher_sandbox_level"
-      }
-    },
-    {
-      "name": "Text and Prompts",
-      "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
-      "key": "text_and_prompts",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "text_and_prompts"
       }
     },
     {
@@ -6655,18 +6632,6 @@
       }
     },
     {
-      "name": "Variables: Blank Space Stories",
-      "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview",
-      "key": "variables_blank_space_stories",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "variables_blank_space_stories"
-      }
-    },
-    {
       "name": "Virtual Lesson Modifications",
       "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
       "key": "virtual_lesson_modifications",
@@ -6700,6 +6665,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "AI For Oceans",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Blank Space Stories",
         "resource.key": "blank_space_stories"
       }
@@ -6713,7 +6684,7 @@
     {
       "seeding_key": {
         "lesson.key": "Blank Space Stories",
-        "resource.key": "variables_blank_space_stories"
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -6725,7 +6696,19 @@
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
         "resource.key": "final_project_design_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introducing Sprite Lab",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -6743,13 +6726,13 @@
     {
       "seeding_key": {
         "lesson.key": "Introducing Sprite Lab",
-        "resource.key": "introducing_sprite_lab"
+        "resource.key": "introducing_sprite_lab_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Introducing Sprite Lab",
-        "resource.key": "introducing_sprite_lab_1"
+        "lesson.key": "Making Sprites",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -6762,6 +6745,12 @@
       "seeding_key": {
         "lesson.key": "Making Sprites",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: User Input Programs",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -6791,7 +6780,25 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Virtual Pet",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Virtual Pet",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outbreak",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -6803,7 +6810,13 @@
     {
       "seeding_key": {
         "lesson.key": "Sprites in Action",
-        "resource.key": "sprites_in_action"
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Text and Prompts",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -6814,8 +6827,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Text and Prompts",
-        "resource.key": "text_and_prompts"
+        "lesson.key": "The Internet",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
