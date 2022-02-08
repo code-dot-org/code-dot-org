@@ -5,7 +5,7 @@
 
   "banners": {
     "higherPower": {
-      "environments": ["development", "staging", "test"],
+      "dcdo": "higher-power-promotion",
       "desktopImage": "/images/marketing/homepage-higher-power-background.jpg",
       "items": [
         {
