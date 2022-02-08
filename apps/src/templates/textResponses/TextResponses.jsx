@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
@@ -37,7 +37,13 @@ function TextResponses({
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
 
+  const prevSectionId = useRef(sectionId);
+
   useEffect(() => {
+    if (prevSectionId.current !== sectionId) {
+      setTextResponsesByScript({});
+      prevSectionId.current = sectionId;
+    }
     asyncLoadTextResponses(sectionId, scriptId);
   }, [scriptId, sectionId]);
 
