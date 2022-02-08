@@ -85,13 +85,13 @@ module Pd::Application
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
     before_validation :set_course_from_program, if: -> {form_data_changed?}
-    before_validation :set_total_course_hours, if: -> {form_data_changed?}
-    before_validation :update_user_school_info!, if: -> {form_data_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :set_total_course_hours, if: -> {form_data_changed?}
+    before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed?}
 
     serialized_attrs %w(
