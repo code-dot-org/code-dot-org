@@ -3,18 +3,49 @@
 Feature: Code review
 
 Background:
-  Given I create a teacher named "Dumbledore"
-  And I create a new section
+  Given I create a levelbuilder named "Dumbledore"
+  And I sign in as "Dumbledore" and go home
+  And I create a new section named "CSA Section" assigned to "CSA Pilot"
+  And I save the section url
+  And I save the section id from row 0 of the section table
+#  I create a code review group for the section I saved
+#  And I add "Harry" to the code review group
+#  And I add "Hermione" to the code review group
   Given I create a student named "Hermione"
   And I join the section
+  Given I create a student named "Harry"
+  And I join the section
+  Given I sign in as "Dumbledore" and go home
+  And I navigate to teacher dashboard for the section I saved
+  And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+  And I click selector "#uitest-code-review-groups-button" once I see it
+    # Sometimes this click isn't happening, waiting seems to make it more consistent
+  And I wait for 2 seconds
+    # Create group
+  And I click selector "#uitest-create-code-review-group" once I see it
+    # Put students in group
+  And I focus selector "#uitest-unassign-all-button"
+  And I press keys ":tab"
+  And I press keys ":space"
+  And I press keys ":arrow_right"
+  And I press keys ":space"
+  And I focus selector "#uitest-unassign-all-button"
+  And I press keys ":tab"
+  And I press keys ":space"
+  And I press keys ":arrow_right"
+  And I press keys ":space"
+    # Save groups
+  And I click selector ".uitest-base-dialog-confirm"
+    # Enable code review
+  And I click selector "#uitest-code-review-groups-toggle"
+  Given I sign in as "Hermione"
   And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
   And I load the review tab
   And I enable code review
 
   Scenario: Students can see each others comments
     When I write a code review comment with text "Hermione's comment"
-    Given I create a student named "Harry"
-    And I join the section
+    Given I sign in as "Harry"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the peer project for peer number 1 in the list
     And I wait until element ".code-review-comment-body" is visible
@@ -23,8 +54,7 @@ Background:
   Scenario: Students who do not have code review enabled don't show up in peer dropdown
     And I press ".enable-review-checkbox" using jQuery
     And I wait until element ".enable-review-checkbox" is not checked
-    Given I create a student named "Harry"
-    And I join the section
+    Given I sign in as "Harry"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     When I press ".peer-dropdown-button" using jQuery
@@ -33,7 +63,8 @@ Background:
   Scenario: The author can see teacher comments
     When I sign in as "Dumbledore"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
-    And I load student number 1's project from the blue teacher panel
+    Then I press "#levelbuilder-menu-toggle" using jQuery
+    And I load student number 2's project from the blue teacher panel
     And I wait to see ".code-review-comment-input"
     And I write a code review comment with text "Teacher's comment"
     When I sign in as "Hermione"
@@ -44,11 +75,11 @@ Background:
   Scenario: The other student cannot see teacher comments
     When I sign in as "Dumbledore"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
-    And I load student number 1's project from the blue teacher panel
+    Then I press "#levelbuilder-menu-toggle" using jQuery
+    And I load student number 2's project from the blue teacher panel
     And I wait to see ".code-review-comment-input"
     And I write a code review comment with text "Teacher's comment"
-    Given I create a student named "Harry"
-    And I join the section
+    Given I sign in as "Harry"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the peer project for peer number 1 in the list
     Then element ".code-review-comment-body" is not visible
@@ -65,8 +96,7 @@ Background:
   Scenario: The other student can reveal a completed comment
     When I write a code review comment with text "Hermione's comment"
     And I mark the review comment complete
-    Given I create a student named "Harry"
-    And I join the section
+    Given I sign in as "Harry"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the peer project for peer number 1 in the list
     And element ".code-review-comment-body" is not visible
@@ -81,7 +111,8 @@ Background:
     And I mark the review comment complete
     When I sign in as "Dumbledore"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
-    And I load student number 1's project from the blue teacher panel
+    Then I press "#levelbuilder-menu-toggle" using jQuery
+    And I load student number 2's project from the blue teacher panel
     And I wait to see ".code-review-comment-input"
     And I press ".comment-right-header button" using jQuery
     And I wait to see ".comment-menu-item"
@@ -95,35 +126,39 @@ Background:
   Scenario: The teacher can mark a comment complete
     When I sign in as "Dumbledore"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
-    And I load student number 1's project from the blue teacher panel
+    Then I press "#levelbuilder-menu-toggle" using jQuery
+    And I load student number 2's project from the blue teacher panel
     And I wait to see ".code-review-comment-input"
     And I write a code review comment with text "Teacher's comment"
     Then I mark the review comment complete
 
   Scenario: Other student does not have comment menu if comment is not complete
-    Given I create a student named "Harry"
-    And I join the section
+    Given I sign in as "Harry"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     And I load the peer project for peer number 1 in the list
     And I write a code review comment with text "Harry's comment"
     Then element ".comment-right-header button" is not visible
 
+  # Note that because we are using a levelbuilder account to to give access to CSA,
+  # we encounter a bug in this scenario that hides the "resolve comment" option scenario.
+  # See this Jira ticket/PR for related information:
+  # https://codedotorg.atlassian.net/browse/LP-2142
   Scenario: Teacher can delete comments
     When I write a code review comment with text "Hermione's comment"
     When I sign in as "Dumbledore"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
-    And I load student number 1's project from the blue teacher panel
+    Then I press "#levelbuilder-menu-toggle" using jQuery
+    And I load student number 2's project from the blue teacher panel
     And I wait to see ".code-review-comment-input"
     And I press ".comment-right-header button" using jQuery
     And I wait to see ".comment-menu-item"
-    And element ".comment-menu-item:nth-child(2)" has text "Delete"
-    And I click selector ".comment-menu-item:nth-child(2)"
+    And element ".comment-menu-item:nth-child(1)" has text "Delete"
+    And I click selector ".comment-menu-item:nth-child(1)"
     Then I wait until element ".code-review-comment-body" is not visible
 
   Scenario: Student cannot toggle another students review state
-    Given I create a student named "Harry"
-    And I join the section
+    Given I sign in as "Harry"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     And I load the peer project for peer number 1 in the list
