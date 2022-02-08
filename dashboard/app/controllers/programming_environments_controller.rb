@@ -29,7 +29,7 @@ class ProgrammingEnvironmentsController < ApplicationController
             end
           end
       end
-      programming_environment.save!
+      programming_environment.save! if programming_environment.changed?
       programming_environment.write_serialization
       render json: programming_environment.summarize_for_edit.to_json
     rescue ActiveRecord::RecordInvalid => e
