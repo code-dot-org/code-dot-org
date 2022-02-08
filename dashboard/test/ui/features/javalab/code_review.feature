@@ -124,10 +124,11 @@ Background:
     And I write a code review comment with text "Harry's comment"
     Then element ".comment-right-header button" is not visible
 
-  # Note that because we are using a levelbuilder account to to give access to CSA,
-  # we encounter a bug in this scenario that hides the "resolve comment" option
+  # Note that because we are using a levelbuilder account for the teacher in this scenario
+  # to give access to the code review groups UI (only visible if section is assigned CSA),
+  # we encounter a bug here that hides the "resolve comment" option
   # from the list of comment menu items. For "normal" teacher accounts,
-  # the "resolve comment" option appears.
+  # the "resolve comment" option appears, but does not in these UI tests.
   # See this Jira ticket and Slack thread for related information:
   # https://codedotorg.atlassian.net/browse/LP-2142
   # https://codedotorg.slack.com/archives/C01EF4GJ9GE/p1638989368018100
