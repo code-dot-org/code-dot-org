@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-02-07 21:32:06 UTC",
+    "serialized_at": "2022-02-08 19:17:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9227,18 +9227,6 @@
       }
     },
     {
-      "name": "Designing for Accessibility",
-      "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
-      "key": "designing_for_accessibility",
-      "properties": {
-        "audience": "Student",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_for_accessibility"
-      }
-    },
-    {
       "name": "Digital Sharing Ethics (Video)",
       "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
       "key": "digital_sharing_ethics_video_",
@@ -9549,6 +9537,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with the Farmer",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Conditionals with the Farmer",
         "resource.key": "pause_and_think_online"
       }
@@ -9556,13 +9556,19 @@
     {
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
-        "resource.key": "designing_for_accessibility"
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
         "resource.key": "types_of_disabilities"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Sharing",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9579,6 +9585,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "cs_fundamentals_final_project"
       }
@@ -9586,7 +9598,19 @@
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
         "resource.key": "end_of_course_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9610,13 +9634,31 @@
     {
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
         "resource.key": "unplugged_blocks_courses_c-f_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Artist",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9651,6 +9693,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Private and Personal Information",
         "resource.key": "private_and_personal_information_exit_ticket"
       }
@@ -9677,6 +9725,12 @@
       "seeding_key": {
         "lesson.key": "Private and Personal Information",
         "resource.key": "private_and_personal_information_private_and_personal_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriting",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
