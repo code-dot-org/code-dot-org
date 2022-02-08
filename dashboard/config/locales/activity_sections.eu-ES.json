@@ -350,6 +350,12 @@
             null
           ]
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Sarrera"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Joku askea"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Sarrera",
           "tips": [
@@ -451,8 +457,14 @@
         "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
           "progression_name": "Aldagaiak"
         },
+        "9950874e-2903-4dd5-993b-756daf5d7e7d": {
+          "progression_name": "Animazio fitxa"
+        },
         "9fcb88d4-d160-48f1-839b-a859098936ba": {
           "progression_name": "Sprite-n Propietateak"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "Abiadura"
         },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
           "progression_name": "Funtzioak"
@@ -586,8 +598,14 @@
         "13d78339-15e3-4fa2-9b87-22412794083d": {
           "progression_name": "Aldagaiak"
         },
+        "fe842642-97e4-423d-af5a-a5ffc35984b4": {
+          "progression_name": "Animazio fitxa"
+        },
         "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
           "progression_name": "Sprite-n Propietateak"
+        },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "Abiadura"
         },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "Funtzioak"
@@ -628,6 +646,9 @@
           "name": "Joku askea",
           "progression_name": "Joku askea"
         },
+        "aef969c1-d9bd-43d4-aa4a-2c88df5c1908": {
+          "progression_name": "Animazio fitxa"
+        },
         "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
           "name": "Joku askea",
           "progression_name": "Joku askea"
@@ -654,6 +675,9 @@
         "af0c5a51-2804-4dd1-996f-de522aa7b283": {
           "name": "Joku askea",
           "progression_name": "Joku askea"
+        },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "Abiadura"
         },
         "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
           "name": "Joku askea",
@@ -722,12 +746,6 @@
           "tips": [
             null
           ]
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Sarrera"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Joku askea"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

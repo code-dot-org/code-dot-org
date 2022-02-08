@@ -98,6 +98,22 @@
         "implementation_guide/courseb/2021": {
           "name": "Практика впровадження"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Моє Інтернет-сусідство",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Безпека рулить!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Хвилинка на зупинку",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Парне програмування"
         },

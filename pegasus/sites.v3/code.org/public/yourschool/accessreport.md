@@ -15,7 +15,7 @@ social:
 
 # Computer Science Access Report Data
 
-The K–12 Computer Science Access Report is a collaborative partnership (with the help of many state education agencies and education organizations) to identify on a school-by-school basis where foundational computer science is taught and to identify disparities in students’ access to and participation in computer science. The annual [State of Computer Science Education](https://advocacy.code.org/stateofcs) (published each fall) includes a description and summary of this data. 
+The K–12 Computer Science Access Report is a collaborative partnership (with the help of many state education agencies and education organizations, including the CSTA, University of Texas at Austin, the College Board, TEALS, PLTW, and BootUp PD) to identify on a school-by-school basis where foundational computer science is taught and to identify disparities in students’ access to and participation in computer science. The annual [State of Computer Science Education](https://advocacy.code.org/stateofcs) (published each fall) includes a description and summary of this data. 
 
 
 The interactive visualization below provides data nationally and per state for the most recent school year of data reported in the K–12 Computer Science Access Report. Some tabs allow filtering by state, county, district, and legislative districts. The following data is also available:

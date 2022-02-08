@@ -279,13 +279,16 @@
           "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
@@ -334,7 +337,8 @@
           "snowflake_dropdown": "Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!"
         },
         "frozen line": {
-          "move_elsa_forward": "Saat Elsan siirtymään eteenpäin, kun vedät \"liiku eteenpäin\" -lohkoa ja kiinnität sen \"suoritettaessa\" -lohkon alle"
+          "move_elsa_forward": "Saat Elsan siirtymään eteenpäin, kun vedät \"liiku eteenpäin\" -lohkoa ja kiinnität sen \"suoritettaessa\" -lohkon alle",
+          "run": "Paina \"Suorita\" kokeillaksesi ohjelmaa!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Käytä \"käänny\" lohkoa niin saat Elsan kääntymään. Alasvetovalikossa oleva numero määrittää kuinka paljon Elsa kääntyy"
@@ -399,7 +403,8 @@
           "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
@@ -472,6 +477,18 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Uusi blokki!",
           "poetry_remove_sprite": "Uusi blokki!"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Paina \"Suorita\" -painiketta suorittaaksesi ohjelman kun olet valmis."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Paina \"Suorita\" aloittaaksesi liikkumisen."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
         }
       }
     }

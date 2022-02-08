@@ -2768,6 +2768,10 @@ sq:
               display_name: Listat
             csp_loops:
               display_name: cikle
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmet
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3083,10 +3087,21 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Qef me Ciklet For
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Ora e Kodimit
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: variabla
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3096,6 +3111,173 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Hartat e Gëzuara
+            'Programming: Happy Maps':
+              name: Hartat e Gëzuara
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_conditionals:
+              display_name: Kushtet
+            csf_functions:
+              display_name: funksione
+            csf_variables:
+              display_name: variabla
+            csf_for_loops:
+              display_name: Për Ciklet
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Rregullimi
+              key: Rregullimi
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Lëvize atë, lëvize atë
+              key: Lëvize atë, lëvize atë
+            Getting Loopy:
+              name: Duke u Çmëndur
+            'Loops: Getting Loopy':
+              name: Duke u Çmëndur
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Eventi i Madh
+            Binary Bracelets:
+              name: Byzylykët Binarë
+              key: Byzylykët Binarë
+            'Events: The Big Event':
+              name: Eventi i Madh
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+            csf_data:
+              display_name: të dhëna
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programimi Grafik me Letër
+            Relay Programming:
+              name: Programimi i Besuar
+              key: Programimi i Besuar
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+              key: Kushtoret me Karta
+            'Algorithms: Graph Paper Programming':
+              name: Programimi Grafik me Letër
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_conditionals:
+              display_name: Kushtet
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Të shkruarit e Këngëve
+            'Functions: Songwriting':
+              name: Të shkruarit e Këngëve
+            Conditionals:
+              key: Kushtet
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            ramp_up:
+              display_name: Përsëritjet e Mbivendosura
+            csf_functions:
+              display_name: funksione
+            csf_nested_loops:
+              display_name: Kushtet
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Qef me Ciklet For
+              key: Qef me Ciklet For
+            The Internet:
+              name: Interneti
+            Internet:
+              key: Internet
+              name: Interneti
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-8:
+              display_name: variabla
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Kushtet
+            lesson-16:
+              name: Rregullimi
+            lesson-19:
+              name: Rregullimi
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja

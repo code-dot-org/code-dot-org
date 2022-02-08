@@ -217,7 +217,7 @@ th:
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: ลองเกม <span class="highlight-word">Dance&nbsp;Party!</span>
     ใหม่ๆ
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  สนับสนุนผู้ปกครองและผู้สอนที่เจอกับสถานการณ์การปิดโรงเรียน
     \ "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -909,6 +909,7 @@ th:
   footer_menu_support: Support
   footer_menu_terms: เงื่อนไข
   footer_menu_privacy: นโยบายความเป็นส่วนตัว
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: ชั่วโมงแห่ง Code
   learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
     millions of students and teachers in over 180 countries starting with an Hour

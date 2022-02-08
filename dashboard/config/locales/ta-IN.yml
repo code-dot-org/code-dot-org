@@ -37,6 +37,7 @@ ta:
   submit: சமர்ப்பிக்க
   next_page: அடுத்த பக்கம்
   cancel: ரத்து செய்
+  okay: சரி.
   or: அல்லது
   join_section:
     code:
@@ -197,6 +198,7 @@ ta:
     only_one_parent_email_supported_warning: 'குறிப்பு: இந்த நேரத்தில் ஒரு மாணவர்
       கணக்கிற்கு ஒரு பெற்றோர் / பாதுகாவலர் மின்னஞ்சல் முகவரியை மட்டுமே நாங்கள் ஆதரிக்க
       முடியும்.'
+    encrypted: மறை குறியீடு
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது
@@ -279,6 +281,15 @@ ta:
       audience: வயது 14+
   landing:
     help_support: உதவி மற்றும் ஆதரவு
+  multi-submittable:
+    wrong_title: நன்றி.
+    correct_title: நன்றி.
+  level_group:
+    wrong_title: நன்றி.
+    correct_title: நன்றி.
+  level_group-submittable:
+    wrong_title: நன்றி.
+    correct_title: நன்றி.
   dialog:
     ok: சரி
     startover_title: உறுதியாக மீண்டும் தொடங்க வேண்டுகிறீரா?
@@ -325,6 +336,8 @@ ta:
       subjects:
         cs: கணினி அறிவியல்
         math: கணிதம்
+        science: அறிவியல்
+        la: மொழி கலைகள்
       workshop_course:
         csf_express: CS அடிப்படைகள்(Pre-Express or Express)
         not_applicable: பொருந்தாது
@@ -358,3 +371,4 @@ ta:
       மற்றும் திட்டங்களைப் பற்றி புதுப்பிக்க உங்கள் கணக்கில் இந்த மின்னஞ்சலை இணைக்கவும்!"
     link_your_email: உங்கள் மின்னஞ்சலை இணைக்கவும்
     not_now: இப்போது இல்லை
+  teacher_feedback: ஆசிரியர் கருத்து

@@ -311,6 +311,15 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Ampliación del aprendizaje"
         },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Calentamiento"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Actividad Principal"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Actividad de cierre"
+        },
         "05180d31-d1ff-422e-8227-69f7d07884a6": {
           "name": "Calentamiento"
         },
@@ -2870,15 +2879,6 @@
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Actividad de cierre"
         },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Calentamiento"
-        },
-        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
-          "name": "Actividad Principal"
-        },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
-          "name": "Actividad de cierre"
-        },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Niveles"
         },
@@ -3441,16 +3441,16 @@
           "name": "Ampliación del aprendizaje"
         },
         "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
-          "name": "Ver: Sigue el Rastro Digital"
+          "name": "Ver: sigue el rastro digital"
         },
         "a9572124-af86-4d97-b4a8-929d761473af": {
-          "name": "Juego: Huellas de Animales"
+          "name": "Jugar: rastro animal"
         },
         "de382430-d529-490d-b4fd-a7f020c4802b": {
-          "name": "Revisión: ¿Se puede compartir?"
+          "name": "Revisión: ¿está bien compartir esto?"
         },
         "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
-          "name": "Recapitulación: Momento de Pausa y Reflexión"
+          "name": "Actividad de cierre: momento para reflexionar"
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Ampliación del aprendizaje"
@@ -3552,7 +3552,7 @@
           "name": "Actividad Principal"
         },
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
-          "name": " Actividad de Cierre"
+          "name": " Actividad de cierre"
         },
         "352bcbca-fe70-41d4-8d38-7cfed390e991": {
           "name": "Oportunidad multidisciplinaria"
@@ -3621,16 +3621,16 @@
           "name": "Actividad de cierre"
         },
         "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
-          "name": "Ver: Mi Barrio en Línea"
+          "name": "Ver: mi vecindario en línea"
         },
         "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
-          "name": "Leer: ¡Seguridad, Reglas!"
+          "name": "Leer: seguridad, ¡la lleva!"
         },
         "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
-          "name": "Explora: Excursión por Internet"
+          "name": "Explorar: de excursión en internet"
         },
         "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
-          "name": "Momento de Pausa y Reflexión"
+          "name": "Pausa para reflexionar"
         },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
           "name": "Ampliación del aprendizaje"
@@ -3717,13 +3717,13 @@
           "name": "Calentamiento"
         },
         "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
-          "name": " Actividad Puente - Escoge Una"
+          "name": " Actividad puente: elige una"
         },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Actividad Principal"
         },
         "647827d3-b6a3-4697-9cb8-fec35c819d12": {
-          "name": " Actividad de Cierre"
+          "name": " Actividad de cierre"
         },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Ampliación del aprendizaje"
@@ -3768,7 +3768,7 @@
           "name": "Calentamiento"
         },
         "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
-          "name": "Actividad puente - Eventos - Elige uno"
+          "name": "Actividad puente: eventos - Elige una"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Actividad Principal"
@@ -3798,7 +3798,7 @@
           "name": "Explorar: STOP a la Maldad"
         },
         "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
-          "name": "Recapitulación: Momento de Pausa y Reflexión"
+          "name": "Actividad de cierre: momento para reflexionar"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Ampliación del aprendizaje"
@@ -4113,7 +4113,7 @@
           "name": "Actividad Principal"
         },
         "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
-          "name": " Actividad de Cierre"
+          "name": " Actividad de cierre"
         },
         "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
           "name": "Ampliación del aprendizaje"
@@ -4560,7 +4560,7 @@
           "name": "Actividad Principal"
         },
         "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
-          "name": " Actividad de Cierre"
+          "name": " Actividad de cierre"
         },
         "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
           "name": "Ampliación del aprendizaje"
@@ -4575,7 +4575,7 @@
           "name": "Actividad Principal"
         },
         "e6a1f5df-d8d4-41a1-8649-d518965997af": {
-          "name": " Actividad de Cierre"
+          "name": " Actividad de cierre"
         },
         "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
           "name": "Calentamiento"
