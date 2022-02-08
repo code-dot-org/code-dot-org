@@ -1650,7 +1650,7 @@ class Script < ApplicationRecord
 
   # Returns an array of objects showing the name and version year for all units
   # sharing the family_name of this course, including this one.
-  def summarize_versions(user)
+  def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless has_other_versions?
     return [] unless unit_groups.empty?
