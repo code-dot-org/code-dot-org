@@ -1,4 +1,5 @@
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
+import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
   getAnimationsInUse() {
@@ -119,11 +120,21 @@ export const commands = {
       this.currentFrame() * commands.calculateBarScale(this.validationTimes);
     drawUtils.validationBar(this.p5, barWidth, state, {});
 
-    if (this.previous.eventLogLength === undefined) {
-      this.previous.eventLogLength = this.eventLog.length;
-    }
-    commands.initializePreviousCostumes.call(this, this.getSpriteIdsInUse());
-
+    commands.initializePrevious.call(
+      this,
+      'eventLogLength',
+      this.getSpriteIdsInUse()
+    );
+    commands.initializePrevious.call(
+      this,
+      'behaviorsById',
+      this.getSpriteIdsInUse()
+    );
+    commands.initializePrevious.call(
+      this,
+      'costumesById',
+      this.getSpriteIdsInUse()
+    );
     //check criteria and update complete status
     if (this.currentFrame() <= this.validationTimes.wait) {
       commands.checkAllCriteria(this.criteria);
@@ -144,10 +155,24 @@ export const commands = {
           feedback: commands.reportSuccess(this.criteria)
         };
       }
+      console.log(this.criteria);
       return results;
     }
-    this.previous.eventLogLength = this.eventLog.length;
-    commands.updatePreviousCostumes.call(this, this.getSpriteIdsInUse());
+    commands.updatePrevious.call(
+      this,
+      'eventLogLength',
+      this.getSpriteIdsInUse()
+    );
+    commands.updatePrevious.call(
+      this,
+      'behaviorsById',
+      this.getSpriteIdsInUse()
+    );
+    commands.updatePrevious.call(
+      this,
+      'costumesById',
+      this.getSpriteIdsInUse()
+    );
   },
 
   getPassState(criteria) {
@@ -248,33 +273,104 @@ export const commands = {
     return result;
   },
 
-  initializePreviousCostumes(spriteIds) {
-    if (this.previous.costumesById === undefined) {
-      this.previous.costumesById = {
-        frame: this.currentFrame(),
-        costumes: []
-      };
-      spriteIds.forEach(id => {
-        this.previous.costumesById.costumes.push(
-          this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
-        );
-      });
+  anyBehaviorChangedThisFrame(spriteIds) {
+    let result = false;
+    spriteIds.forEach(id => {
+      let currentBehaviors = this.getBehaviorsForSpriteId(id);
+      let previousBehaviors = this.previous.behaviorsById.behaviors[id];
+      if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
+        result = true;
+      }
+    });
+    return result;
+  },
+
+  onlyEventSpritesBehaviorChanged(spriteIds) {
+    let result = false;
+    spriteIds.forEach(id => {
+      let currentBehaviors = this.getBehaviorsForSpriteId(id);
+      let previousBehaviors = this.previous.behaviorsById.behaviors[id];
+      if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
+        result = true;
+        if (!commands.currentFrameEventSpriteIds.call(this).includes(id)) {
+          result = false;
+        }
+      }
+    });
+    return result;
+  },
+
+  initializePrevious(type, spriteIds) {
+    switch (type) {
+      case 'eventLogLength':
+        if (this.previous.eventLogLength === undefined) {
+          this.previous.eventLogLength = this.eventLog.length;
+        }
+        break;
+      case 'behaviorsById':
+        if (this.previous.behaviorsById === undefined) {
+          this.previous.behaviorsById = {
+            frame: this.currentFrame(),
+            behaviors: []
+          };
+          spriteIds.forEach(id => {
+            this.previous.behaviorsById.behaviors[
+              id
+            ] = this.getBehaviorsForSpriteId(id);
+          });
+        }
+        break;
+      case 'costumesById':
+        if (this.previous.costumesById === undefined) {
+          this.previous.costumesById = {
+            frame: this.currentFrame(),
+            costumes: []
+          };
+          spriteIds.forEach(id => {
+            this.previous.costumesById.costumes.push(
+              this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
+            );
+          });
+        }
+        break;
     }
   },
 
-  updatePreviousCostumes(spriteIds) {
-    if (this.previous.costumesById !== undefined) {
-      if (this.previous.costumesById.frame !== this.currentFrame()) {
-        this.previous.costumesById = {
-          frame: this.currentFrame(),
-          costumes: []
-        };
-        spriteIds.forEach(id => {
-          this.previous.costumesById.costumes.push(
-            this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
-          );
-        });
-      }
+  updatePrevious(type, spriteIds) {
+    switch (type) {
+      case 'eventLogLength':
+        this.previous.eventLogLength = this.eventLog.length;
+        break;
+      case 'behaviorsById':
+        if (this.previous.behaviorsById !== undefined) {
+          if (this.previous.behaviorsById.frame !== this.currentFrame()) {
+            this.previous.behaviorsById = {
+              frame: this.currentFrame(),
+              behaviors: []
+            };
+            spriteIds.forEach(id => {
+              this.previous.behaviorsById.behaviors.push(
+                this.getBehaviorsForSpriteId(id)
+              );
+            });
+          }
+        }
+        break;
+      case 'costumesById':
+        if (this.previous.costumesById !== undefined) {
+          if (this.previous.costumesById.frame !== this.currentFrame()) {
+            this.previous.costumesById = {
+              frame: this.currentFrame(),
+              costumes: []
+            };
+            spriteIds.forEach(id => {
+              this.previous.costumesById.costumes.push(
+                this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
+              );
+            });
+          }
+        }
+        break;
     }
   },
 
@@ -300,17 +396,10 @@ export const commands = {
     return result;
   },
 
-  clickEventFound() {
+  anySpritesTouched() {
     let result = false;
-    let eventLog = this.eventLog;
-    eventLog.forEach(currentEvent => {
-      if (
-        currentEvent.includes('whenClick: ') ||
-        currentEvent.includes('whileClick: ')
-      ) {
-        result = true;
-      }
-    });
+    let allSprites = this.p5.World.allSprites;
+    result = allSprites.isTouching(allSprites);
     return result;
   },
 
@@ -328,6 +417,57 @@ export const commands = {
     }
 
     return result;
+  },
+
+  touchEventFoundThisFrame() {
+    let result = false;
+
+    //Only check for values that are new this frame
+    for (let i = this.previous.eventLogLength; i < this.eventLog.length; i++) {
+      if (
+        this.eventLog[i].includes('whenTouch: ') ||
+        this.eventLog[i].includes('whileTouch: ')
+      ) {
+        result = true;
+      }
+    }
+
+    return result;
+  },
+
+  currentFrameEventSpriteIds() {
+    // We want to store any ids that are included in events logged this frame.
+    // Touch events include two distinct sprite ids.
+    let idArray = [];
+
+    //Only check for values that are new this frame
+    for (let i = this.previous.eventLogLength; i < this.eventLog.length; i++) {
+      if (
+        // Check for each event type that includes sprite ids (NOT time or key events).
+        this.eventLog[i].includes('whenClick: ') ||
+        this.eventLog[i].includes('whileClick: ') ||
+        this.eventLog[i].includes('whenTouch: ') ||
+        this.eventLog[i].includes('whileTouch: ') ||
+        this.eventLog[i].includes('spriteCreated: ')
+      ) {
+        // Use .concat because it's possible for multiple events to be logged in the same frame.
+        idArray = idArray.concat(
+          // Take whatever was in the current eventLog entry...
+          this.eventLog[i]
+            // ...remove the spaces and create an array...
+            .split(' ')
+            // ...convert each string in the array to a number...
+            .map(Number)
+            // ...remove NaN values. (ex. 'whenClick: 0' results in [Nan, 0] above)
+            .filter(function(value) {
+              return !Number.isNaN(value);
+            })
+        );
+      }
+    }
+    //console.log(idArray);
+
+    return idArray;
   }
 };
 class criteria {
