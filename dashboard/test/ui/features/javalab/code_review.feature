@@ -3,41 +3,25 @@
 Feature: Code review
 
 Background:
+  # Create a section
   Given I create a levelbuilder named "Dumbledore"
   And I sign in as "Dumbledore" and go home
   And I create a new section named "CSA Section" assigned to "CSA Pilot"
   And I save the section url
   And I save the section id from row 0 of the section table
-#  I create a code review group for the section I saved
-#  And I add "Harry" to the code review group
-#  And I add "Hermione" to the code review group
   Given I create a student named "Hermione"
   And I join the section
   Given I create a student named "Harry"
   And I join the section
+  # Create a code review group with students in it.
+  # Save the group, and enable code review for the section.
   Given I sign in as "Dumbledore" and go home
-  And I navigate to teacher dashboard for the section I saved
-  And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
-  And I click selector "#uitest-code-review-groups-button" once I see it
-    # Sometimes this click isn't happening, waiting seems to make it more consistent
-  And I wait for 2 seconds
-    # Create group
-  And I click selector "#uitest-create-code-review-group" once I see it
-    # Put students in group
-  And I focus selector "#uitest-unassign-all-button"
-  And I press keys ":tab"
-  And I press keys ":space"
-  And I press keys ":arrow_right"
-  And I press keys ":space"
-  And I focus selector "#uitest-unassign-all-button"
-  And I press keys ":tab"
-  And I press keys ":space"
-  And I press keys ":arrow_right"
-  And I press keys ":space"
-    # Save groups
+  And I create a new code review group for the section I saved
+  And I add the first student to the first code review group
+  And I add the first student to the first code review group
   And I click selector ".uitest-base-dialog-confirm"
-    # Enable code review
   And I click selector "#uitest-code-review-groups-toggle"
+  # Visit Javalab level as student, and enabl
   Given I sign in as "Hermione"
   And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
   And I load the review tab
@@ -141,9 +125,12 @@ Background:
     Then element ".comment-right-header button" is not visible
 
   # Note that because we are using a levelbuilder account to to give access to CSA,
-  # we encounter a bug in this scenario that hides the "resolve comment" option scenario.
-  # See this Jira ticket/PR for related information:
+  # we encounter a bug in this scenario that hides the "resolve comment" option
+  # from the list of comment menu items. For "normal" teacher accounts,
+  # the "resolve comment" option appears.
+  # See this Jira ticket and Slack thread for related information:
   # https://codedotorg.atlassian.net/browse/LP-2142
+  # https://codedotorg.slack.com/archives/C01EF4GJ9GE/p1638989368018100
   Scenario: Teacher can delete comments
     When I write a code review comment with text "Hermione's comment"
     When I sign in as "Dumbledore"
