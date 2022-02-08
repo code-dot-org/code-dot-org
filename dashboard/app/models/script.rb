@@ -334,7 +334,7 @@ class Script < ApplicationRecord
   end
 
   def self.maker_units
-    @@maker_units ||= launched_units.select(&:is_maker_unit?)
+    @@maker_units ||= visible_units.select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
@@ -346,7 +346,19 @@ class Script < ApplicationRecord
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    visible_units(user)
+    return all_scripts if user.levelbuilder?
+
+    units = visible_units
+
+    if has_any_pilot_access?(user)
+      units += all_scripts.select {|s| s.has_pilot_access?(user)}
+    end
+
+    if user.permission?(UserPermission::LEVELBUILDER)
+      units += all_scripts.select(&:in_development?)
+    end
+
+    units
   end
 
   class << self
@@ -363,13 +375,8 @@ class Script < ApplicationRecord
 
     private
 
-    def launched_units
-      @@launched_units ||= all_scripts.select(&:launched?).to_a.freeze
-    end
-
-    def visible_units(user)
-      ability = Ability.new(user)
-      @@visible_units ||= all_scripts.select {|s| ability.can?(:read, s) && (s.in_development? || s.pilot? || s.launched?)}.to_a.freeze
+    def visible_units
+      @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
   end
 
@@ -1668,7 +1675,6 @@ class Script < ApplicationRecord
     @@unit_family_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
-    @@launched_units = nil
     @@visible_units = nil
     @@maker_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
