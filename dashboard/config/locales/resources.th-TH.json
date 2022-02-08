@@ -156,6 +156,7 @@
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "การ์ดที่อยู่ IP และบัตรประเภทการจัดส่ง",
           "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "csf-internet-assessment/coursef/2021": {
@@ -773,7 +774,7 @@
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "password_power-up_lesson_slides/coursed/2021": {
-          "name": "เพิ่มความยากให้โค้ดผ่าน: สไลด์บทเรียน-----------------------------",
+          "name": "เพิ่มความยากให้รหัสผ่าน: สไลด์บทเรียน",
           "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit"
         },
         "password_power-up_power-up_your_password/coursed/2021": {
@@ -829,26 +830,35 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+          "name": "โปรแกรมการถ่ายทอดข้อมูล",
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
         },
         "relay-assessment/coursed/2021": {
-          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+          "name": "โปรแกรมการถ่ายทอดข้อมูล",
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+          "name": "โปรแกรมการถ่ายทอดข้อมูล",
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+          "name": "โปรแกรมการถ่ายทอดข้อมูล",
+          "url": "https://youtu.be/l5MKkXbzOsk"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+          "name": "โปรแกรมการถ่ายทอดข้อมูล",
+          "url": "https://youtu.be/ZULpfAVJOBo"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+          "name": "โปรแกรมการถ่ายทอดข้อมูล",
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": " บล็อกแบบออฟไลน์ (คอร์ส C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "หยุดคิดสักนิดบนโลกออนไลน์",
@@ -859,10 +869,18 @@
           "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "เลเวลต่าง ๆ ของการเขียนโปรแกรมแบบปลายเปิด"
+          "name": "เลเวลต่าง ๆ ของการเขียนโปรแกรมแบบปลายเปิด",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view"
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "คู่มือโปรเจ็กต์ปาร์ตี้เต้นรำ",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
           "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "url": "https://curriculum.code.org/hoc/unplugged/4/"
         },
         "open-ended_programming_levels_2/coursed/2021": {
           "name": "เลเวลต่าง ๆ ของการเขียนโปรแกรมแบบปลายเปิด",
@@ -877,19 +895,32 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "เงื่อนไข"
+          "name": "เงื่อนไข",
+          "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "เงื่อนไข"
+          "name": "เงื่อนไข",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "การใช้เงื่อนไขกับโปรแกรมตัวอย่างไพ่",
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "เงื่อนไข"
+          "name": "เงื่อนไข",
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "เงื่อนไข"
+          "name": "เงื่อนไข",
+          "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "เงื่อนไข"
+          "name": "เงื่อนไข",
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+        },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "คู่มือการวางแผนโปรเจกต์ในช่วงท้ายของคอร์ส D ของ CSF",
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "การแมปมาตรฐาน CSTA",
@@ -920,6 +951,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
+          "name": "คู่มือหลักสูตร",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursed/2021": {
@@ -927,6 +959,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursed/2021": {
+          "name": "ฟอรัมสำหรับผู้สอน",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
@@ -967,6 +1000,10 @@
         "pause_and_think_online/express/2021": {
           "name": "หยุดคิดสักนิดบนโลกออนไลน์",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "dance-party-project-guide/express/2021": {
+          "name": "คู่มือโปรเจ็กต์ปาร์ตี้เต้นรำ",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
           "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
@@ -1082,7 +1119,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "การเป็นพลเมืองดิจิทัลที่มีประสิทธิภาพ: สไลด์บทเรียน",
+          "name": "การเป็นพลเมืองดิจิทัลที่เป็นซุปเปอร์ฮีโร่: สไลด์บทเรียน",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
@@ -1098,7 +1135,7 @@
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "ข้อมูลส่วนตัวและข้อมูลส่วนบุคคล: Exit Ticket",
+          "name": "ข้อมูลส่วนตัวและข้อมูลส่วนบุคคล: ตั๋วออก",
           "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
@@ -1157,7 +1194,7 @@
           "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
         },
         "types_of_disabilities/coursee/2021": {
-          "name": "ภาวะทุพลาภาพประเภทต่าง ๆ",
+          "name": "ประเภทของความทุพลาภาพ",
           "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
         },
         "end-of-course-project-guide/coursee/2021": {

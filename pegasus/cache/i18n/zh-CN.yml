@@ -1871,3 +1871,4 @@ zh-CN:
   ai_try_activity: 尝试活动
   outbreak_tile_title: 疫情爆发
   outbreak_tile_subtitle: 有病毒感染了怪物城！编写一个爆发模拟器，并预测怪物城的邻居会发生什么。
+  outbreak_tile_alt: 模拟病毒如何通过一群紫色怪物传播。

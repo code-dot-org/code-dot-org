@@ -357,6 +357,7 @@ cs:
             '"right"': pravý sloupec
             '"x"': křížem krážem
             '"plus"': plus
+            '"spiral"': spirála
             '"random"': náhodně
       Dancelab_makeAnonymousDanceSprite:
         text: vytvoř nový {COSTUME} na {LOCATION}
@@ -466,6 +467,7 @@ cs:
             '"right"': pravý sloupec
             '"x"': křížem krážem
             '"plus"': plus
+            '"spiral"': spirála
             '"random"': náhodně
       Dancelab_mixColors:
         text: smíchat {COLOR1} a {COLOR2}
@@ -995,7 +997,12 @@ cs:
       gamelab_clickedOn:
         text: po klepnutí na {SPRITE}
       gamelab_clickedSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): posuv na sever a zacyklení
+            new Behavior(moving_south_and_looping, []): posuv na jih a zacyklení
       gamelab_comment:
         text: 'komentář: {COMMENT}'
       gamelab_costumeImage:
@@ -1048,6 +1055,19 @@ cs:
         text: |-
           pokud {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} kostým je {COSTUME}"
       gamelab_isKeyPressed:
@@ -1152,6 +1172,7 @@ cs:
             '"burst"': hoření
             '"pop"': kuk
             '"rain"': déšť
+            '"spiral"': spirála
       gamelab_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
@@ -1187,9 +1208,9 @@ cs:
       gamelab_moveToward:
         text: pohni {SPRITE} o {DISTANCE} pixelů směrem k {TARGET}
       gamelab_newSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: hlídkovat nahoru a dolů
       gamelab_playSound:
@@ -1202,6 +1223,7 @@ cs:
             "'sound://category_digital/boing_2.mp3'": odskočení
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": kuk
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": zablikání
+            "'sound://category_app/app_button_1.mp3'": tlačítko
             "'sound://category_collect/clicky_crunch.mp3'": křupnutí
             "'sound://category_swish/quick_swing.mp3'": zhoupnutí
             "'sound://category_nature/summer_night_loop.mp3'": letní noc
@@ -1212,13 +1234,19 @@ cs:
             "'sound://category_animals/bear.mp3'": Medvěd
             "'sound://category_animals/cat.mp3'": kočka
             "'sound://category_animals/cow.mp3'": kráva
+            "'sound://category_animals/pig.mp3'": prase
             "'sound://category_animals/sheep.mp3'": ovce
+            "'sound://category_animals/goat.mp3'": koza
             "'sound://category_animals/chicken.mp3'": slepice
+            "'sound://category_animals/rooster.mp3'": kohout
             "'sound://category_animals/elephant.mp3'": slon
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_nature/thunderstorm_1.mp3'": bouře
+            "'sound://category_animals/chick.mp3'": kuře
             "'sound://category_animals/dog.mp3'": pes
+            "'sound://category_animals/tiger.mp3'": tygr
             "'sound://category_collect/trill_stings.mp3'": trylek
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": klepnutí
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tón
               při zásahu
@@ -1229,11 +1257,17 @@ cs:
               loď
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magické
               kouzlo
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": vybrat
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bizarní
               basy
             "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_playSpeech:
         text: přehrát řeč {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): pohyb pomocí kláves se šipkami
+            draggable(): přetažení
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
@@ -1285,6 +1319,7 @@ cs:
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchyně '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': obývací
               pokoj
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': louka
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': výhled
               do parku
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': borovice
@@ -1292,7 +1327,9 @@ cs:
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': fotbalové
               hřiště
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': pódium
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': hvězdy
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': slunce
               a duha
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': slunečné
@@ -1301,6 +1338,7 @@ cs:
               kurt
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': stromový
               ostrov
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podzemka
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod
               vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
@@ -1346,6 +1384,14 @@ cs:
             '"scale"': velikost
             '"width"': šířka
             '"height"': výška
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': pomalá
+            '5': normální
+            '7': rychlá
+            '9': extra fast
       gamelab_setTint:
         text: změň barvu {THIS} na {COLOR}
       gamelab_setupScoreboard:
@@ -1384,7 +1430,7 @@ cs:
       gamelab_stopGliding:
         text: "{SPRITE} přestane klouzat"
       gamelab_subjectSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1697,11 +1743,14 @@ cs:
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchyně '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': obývací
               pokoj
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': louka
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': výhled
               do parku
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': borovice
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': fotbalové
               hřiště
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': pódium
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': slunce
               a duha
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': slunečné
@@ -1710,6 +1759,7 @@ cs:
               kurt
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': stromový
               ostrov
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podzemka
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1824,10 +1874,14 @@ cs:
         options:
           BRUSH:
             '"brick"': cihla
+            '"fire"': oheň
+            '"flowers"': květiny
             '"hearts"': srdce
             '"iceCream"': Zmrzlina
+            '"leaves"': listy
             '"rainbow"': duha
             '"stars"': hvězdy
+            '"waves"': vlny
       Poetry_addLine:
         text: přidat řádek {LINE}
       Poetry_animateText:
@@ -1845,6 +1899,7 @@ cs:
             '"burst"': hoření
             '"pop"': kuk
             '"rain"': déšť
+            '"spiral"': spirála
       Poetry_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       Poetry_makeNumSprites:
@@ -1855,11 +1910,15 @@ cs:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Klid
             '"sound://category_nature/steady_campfire_loop.mp3"': Táborák
             '"sound://category_nature/rain_loop.mp3"': Mírný déšť
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': les
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Tajemno
             '"sound://category_background/inside_plane.mp3"': Hučení
             '"sound://category_loops/red_flag_loop1.mp3"': Mise
             '"sound://category_nature/summer_night_loop.mp3"': noc
+            '"sound://category_background/ocean_waves.mp3"': oceán
+            '"sound://category_background/rainforest_ambient_sound.mp3"': deštný prales
             '"sound://category_background/repitition.mp3"': Jízda
+            '"sound://category_background/wavering_wind.mp3"': ospalý
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Pomalost
       Poetry_playSound:
         text: přehraj zvuk {SOUND}
@@ -1873,6 +1932,7 @@ cs:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Neúspěch
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Vibrace
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Skok
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': světlo
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Vžum
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Sken
             '"sound://category_background/typewriter.mp3"': Psací stroj
@@ -1906,6 +1966,7 @@ cs:
             '"sunrise"': Svítání
             '"sunset"': Soumrak
             '"grayscale"': Odstíny šedé
+            '"ocean"': oceán
             '"rainbow"': duha
             '"roses"': Růže
             '"sky"': Nebe
@@ -1963,10 +2024,14 @@ cs:
         text: zobrazit text
       Poetry_startBehavior:
         text: 'sprajt {ANIMATION_NAME} začne {BEHAVIOR} '
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': plavání
       Poetry_stopBehavior:
         text: 'sprajt {ANIMATION_NAME} zastaví {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"swimming_left_and_right"': plavání
             '"all"': "--všechna chování--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

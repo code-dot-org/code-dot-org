@@ -2220,6 +2220,10 @@ gl:
               display_name: Listas
             csp_loops:
               display_name: Bucles
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmos
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2425,3 +2429,150 @@ gl:
           lessons:
             lesson-1:
               name: Abella que Soletrea
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hora de Código
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Mapas Felices
+            'Programming: Happy Maps':
+              name: Mapas Felices
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Creando camiños
+              key: Creando camiños
+            Getting Loopy:
+              name: Bucleándose
+            'Loops: Getting Loopy':
+              name: Bucleándose
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: O Gran Evento
+            Binary Bracelets:
+              name: Pulseiras Binarias
+              key: Pulseiras Binarias
+            'Events: The Big Event':
+              name: O Gran Evento
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programación en Papel Cadriculado
+            Relay Programming:
+              name: Programación por relevos
+              key: Programación por relevos
+            Conditionals with Cards:
+              name: Condicionais con cartas
+              key: Condicionais con cartas
+            'Algorithms: Graph Paper Programming':
+              name: Programación en Papel Cadriculado
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Composición
+            'Functions: Songwriting':
+              name: Composición
+            Conditionals:
+              key: Condicionais
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            ramp_up:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Condicionais
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+              key: Diversión con bucles "para" (for)
+            The Internet:
+              name: A Internet
+            Internet:
+              key: Internet
+              name: A Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Condicionais

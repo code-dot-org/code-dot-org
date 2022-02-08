@@ -453,7 +453,9 @@ cs:
       artist_k1: Umělec (předškolák)
       basketball: Basketbal
       bounce: Bounce
+      calc: Calc
       dance: Taneční večírek
+      eval: Eval
       flappy: Flappy
       frozen: Frozen
       gamelab: Game Lab
@@ -1224,9 +1226,11 @@ cs:
       gender: Rod
       school: Škola
       school_name: Název školy
+      school_city: Město, kde škola sídlí
       school_city_district: Město / školní obvod
       school_country: Země školy
       school_department_region: Školní okrsek / region
+      colombian_school_city: Město, kde škola sídlí
       colombian_chilean_school_department: Školní okrsek / region
       colombian_school_municipality: Školní městský obvod
       colombian_chilean_school_name: Název školy
@@ -1362,3 +1366,4 @@ cs:
     this_sprite: tento sprajt
   unit_prefix: Jednotka %{n}
   code_org_logo_alt: Hlavní strana Code.org
+  teacher_feedback: Zpětná vazba učitele

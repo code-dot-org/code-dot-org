@@ -353,6 +353,7 @@ is:
             '"right"': hægri röð
             '"x"': þvers-og-kruss
             '"plus"': plús
+            '"spiral"': spírall
             '"random"': eitthvað
       Dancelab_makeAnonymousDanceSprite:
         text: búa til {COSTUME} á stað {LOCATION}
@@ -462,6 +463,7 @@ is:
             '"right"': hægri röð
             '"x"': þvers-og-kruss
             '"plus"': plús
+            '"spiral"': spírall
             '"random"': eitthvað
       Dancelab_mixColors:
         text: blanda litum {COLOR1} og {COLOR2}
@@ -985,7 +987,7 @@ is:
       gamelab_clickedOn:
         text: þegar smellt á {SPRITE}
       gamelab_clickedSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'athugasemd: {COMMENT}'
       gamelab_costumeImage:
@@ -1031,6 +1033,19 @@ is:
         text: |-
           ef {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: búningur {SPRITE} er {COSTUME}
       gamelab_isKeyPressed:
@@ -1168,9 +1183,9 @@ is:
       gamelab_moveToward:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
       gamelab_newSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: rásar upp og niður
       gamelab_playSound:
@@ -1198,6 +1213,10 @@ is:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": harpa
             "'sound://category_retro/retro_game_ui_select_6.mp3'": velja
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): er hægt að draga
       gamelab_pointInDirection:
         text: beina {SPRITE} {DIRECTION}
         options:
@@ -1286,6 +1305,14 @@ is:
             '"scale"': stærð
             '"width"': breidd
             '"height"': hæð
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': hægt
+            '5': venjulegt
+            '7': hratt
+            '9': extra fast
       gamelab_setTint:
         text: breyta lit {THIS} í {COLOR}
       gamelab_setupSim:
@@ -1306,7 +1333,7 @@ is:
       gamelab_spriteSay:
         text: "{SPRITE} segir {SPEECH}"
       gamelab_subjectSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:

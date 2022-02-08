@@ -982,7 +982,12 @@ nl:
       gamelab_clickedOn:
         text: wanneer {SPRITE} klikte
       gamelab_clickedSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): Naar het noorden bewegen en lussen
+            new Behavior(moving_south_and_looping, []): Naar het zuiden bewegen en lussen
       gamelab_comment:
         text: 'commentaar: {COMMENT}'
       gamelab_costumeImage:
@@ -1033,6 +1038,19 @@ nl:
         text: |-
           als {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} kostuum is {COSTUME}"
       gamelab_isKeyPressed:
@@ -1171,9 +1189,9 @@ nl:
       gamelab_moveToward:
         text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
       gamelab_newSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: omhoog en omlaag patrouilleren
       gamelab_playSound:
@@ -1213,6 +1231,11 @@ nl:
             "'sound://category_digital/jump_7.mp3'": spring
       gamelab_playSpeech:
         text: Spraak afspelen {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): bewegen met de pijtjestoetsen
+            draggable(): slepbaar
       gamelab_pointInDirection:
         text: punt {SPRITE} {DIRECTION}
         options:
@@ -1312,6 +1335,14 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': langzaam
+            '5': normaal
+            '7': snel
+            '9': extra fast
       gamelab_setTint:
         text: kleur van {THIS} veranderen naar {COLOR}
       gamelab_setupScoreboard:
@@ -1350,7 +1381,7 @@ nl:
       gamelab_stopGliding:
         text: "{SPRITE} stopt met glijden"
       gamelab_subjectSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
