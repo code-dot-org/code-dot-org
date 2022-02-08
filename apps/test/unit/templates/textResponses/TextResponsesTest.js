@@ -4,7 +4,7 @@ import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
 import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 
 // responses (object) - keys are scriptIds, values are
 // array of student text responses for that script
