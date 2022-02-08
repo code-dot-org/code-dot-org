@@ -20,6 +20,9 @@ class Homepage
     # If the banner has an array of environments, then the current environment must be one of them.
     return nil if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
 
+    # If the banner has a required DCDO flag, then it must be set.
+    return nil if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+
     banner ? banner.merge({"id": banner_id_for_page}) : nil
   end
 
