@@ -39,7 +39,7 @@ function TextResponses({
 
   useEffect(() => {
     asyncLoadTextResponses(sectionId, scriptId);
-  }, [scriptId]);
+  }, [scriptId, sectionId]);
 
   const asyncLoadTextResponses = (sectionId, scriptId) => {
     // Don't load data if it's already stored in state.
