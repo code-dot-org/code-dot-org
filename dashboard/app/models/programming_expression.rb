@@ -72,12 +72,17 @@ class ProgrammingExpression < ApplicationRecord
     programming_environment = ProgrammingEnvironment.find_by(name: environment_name)
     throw "Cannot find ProgrammingEnvironment #{environment_name}" unless programming_environment
     env_category = programming_environment.categories.find_by_key(expression_config['category_key'])
-    puts "Cannot find category #{expression_config['category_key']} in #{environment_name}" unless env_category
+    color =
+      if env_category
+        nil
+      else
+        environment_name == 'spritelab' ? expression_config['color'] : ProgrammingExpression.get_category_color(expression_config['category'])
+      end
     expression_config.symbolize_keys.except(:category_key).merge(
       {
         programming_environment_id: programming_environment.id,
         programming_environment_category_id: env_category&.id,
-        color: environment_name == 'spritelab' ? expression_config['color'] : ProgrammingExpression.get_category_color(expression_config['category'])
+        color: color
       }
     )
   end
@@ -178,7 +183,7 @@ class ProgrammingExpression < ApplicationRecord
       key: key,
       name: name,
       blockName: block_name,
-      categoryKey: programming_environment_category.key,
+      categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
       environmentEditorType: programming_environment.editor_type,
       imageUrl: image_url,
@@ -198,7 +203,7 @@ class ProgrammingExpression < ApplicationRecord
     {
       name: name,
       blockName: block_name,
-      category: programming_environment_category.name,
+      category: programming_environment_category&.name,
       color: get_color,
       externalDocumentation: external_documentation,
       content: content,
@@ -244,7 +249,7 @@ class ProgrammingExpression < ApplicationRecord
       key: key,
       name: name,
       category: category,
-      category_key: programming_environment_category.key
+      category_key: programming_environment_category&.key
     }.merge(properties.except('color').sort.to_h)
   end
 

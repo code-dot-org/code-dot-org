@@ -11,7 +11,7 @@ describe('OrderableList', () => {
     setListSpy = sinon.spy();
     renderItemSpy = sinon.spy();
     defaultProps = {
-      list: [{key: 1}, {key: 2}, {key: 3}],
+      list: [{key: '1'}, {key: '2'}, {key: '3'}],
       setList: setListSpy,
       addButtonText: 'Add New',
       renderItem: renderItemSpy
@@ -22,9 +22,9 @@ describe('OrderableList', () => {
     shallow(<OrderableList {...defaultProps} />);
     expect(renderItemSpy.callCount).to.equal(3);
     expect(renderItemSpy.getCalls().map(c => c.args[0])).to.eql([
-      {key: 1},
-      {key: 2},
-      {key: 3}
+      {key: '1'},
+      {key: '2'},
+      {key: '3'}
     ]);
   });
 
@@ -39,9 +39,12 @@ describe('OrderableList', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     wrapper
       .find('.fa-trash')
-      .at(1)
+      .at('1')
       .simulate('click');
-    expect(setListSpy).to.be.calledOnce.and.calledWith([{key: 1}, {key: 3}]);
+    expect(setListSpy).to.be.calledOnce.and.calledWith([
+      {key: '1'},
+      {key: '3'}
+    ]);
   });
 
   it('can move item up in list', () => {
@@ -52,9 +55,9 @@ describe('OrderableList', () => {
       .at(0)
       .simulate('click');
     expect(setListSpy).to.be.calledOnce.and.calledWith([
-      {key: 2},
-      {key: 1},
-      {key: 3}
+      {key: '2'},
+      {key: '1'},
+      {key: '3'}
     ]);
   });
 
@@ -65,9 +68,19 @@ describe('OrderableList', () => {
       .at(0)
       .simulate('click');
     expect(setListSpy).to.be.calledOnce.and.calledWith([
-      {key: 2},
-      {key: 1},
-      {key: 3}
+      {key: '2'},
+      {key: '1'},
+      {key: '3'}
     ]);
+  });
+
+  it('hides delete button if item isnt deletable', () => {
+    const wrapper = shallow(
+      <OrderableList
+        {...defaultProps}
+        checkItemDeletionAllowed={item => item.key === '3'}
+      />
+    );
+    expect(wrapper.find('.fa-trash').length).to.equal(1);
   });
 });
