@@ -1,7 +1,11 @@
 class ProgrammingEnvironmentsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index]
+
+  def index
+    @programming_environments = ProgrammingEnvironment.all.map(&:summarize_for_index)
+  end
 
   def new
   end
