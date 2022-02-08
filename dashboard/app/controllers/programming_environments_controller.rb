@@ -12,7 +12,7 @@ class ProgrammingEnvironmentsController < ApplicationController
       programming_environment.write_serialization
       redirect_to edit_programming_environment_url(programming_environment.name)
     else
-      render :not_acceptable, json: programming_environment.errors
+      render(status: :not_acceptable, json: programming_environment.errors)
     end
   end
 

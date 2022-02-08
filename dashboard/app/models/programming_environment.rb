@@ -15,6 +15,10 @@
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
+  NAME_CHAR_RE = /[a-z0-9\-\_]/
+  NAME_RE = /\A#{NAME_CHAR_RE}+\Z/
+  validates_format_of :name, with: NAME_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%{value}\"."
+
   validates_uniqueness_of :name, case_sensitive: false
 
   alias_attribute :categories, :programming_environment_categories
