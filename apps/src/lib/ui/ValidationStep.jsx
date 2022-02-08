@@ -62,7 +62,11 @@ export default class ValidationStep extends Component {
           <div style={style.icon}>{iconFor(stepStatus)}</div>
           <div style={style.headerText}>{stepName}</div>
         </div>
-        {showChildren && <div style={style.body}>{children}</div>}
+        {showChildren && (
+          <div style={style.body} className="validation-children">
+            {children}
+          </div>
+        )}
       </div>
     );
   }
