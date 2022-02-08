@@ -18,12 +18,10 @@ theme: responsive
 
 %div{dir: language_dir_class}
 
-  - if true
+  - if DCDO.get("higher-power-promotion", false)
     =view :dance_tutorial_section_higher_power
-
   - else
-    =view :dance_tutorial-section
-    
+    =view :dance_tutorial_section
     .dance-text-icon-container.desktop-only
       %a.translate-link{href: "/translate/dance"}
         .dance-translate-link-text
