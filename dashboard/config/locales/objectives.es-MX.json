@@ -459,118 +459,118 @@
           "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
-          "description": "Aprender que la información que comparten en línea deja una huella digital o \"rastro\"."
+          "description": "Aprender que la información que comparten en internet deja una huella digital o “rastro”."
         },
         "5efa6c72-000c-40a0-ace0-55f47117305b": {
-          "description": "Explorar qué información está bien que se comparta en línea."
+          "description": "Explorar qué clase de información está bien compartir en internet."
         },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
-          "description": "Definir una lista de pasos (algoritmo) para llevar a un amigo desde su posición inicial hasta su objetivo"
+          "description": "Definir una lista de pasos (algoritmos) para que un amigo llegue desde una posición inicial hasta el objetivo."
         },
         "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
-          "description": "Transformar una lista de pasos en una serie de acciones físicas"
+          "description": "Traducir una lista de pasos en una serie de acciones físicas."
         },
         "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
-          "description": "Identificar y corregir errores en la ejecución de un algoritmo"
+          "description": "Identificar y solucionar errores durante la ejecución de un algoritmo."
         },
         "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
-          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
+          "description": "Comportarse apropiadamente en el laboratorio de computación"
         },
         "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
-          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
+          "description": "Experimentar con acciones de programación básica basada en bloques, tales como hacer clic, arrastrar y soltar, etc."
         },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
-          "description": "Traducir movimientos en una serie de comandos."
+          "description": "Traducir movimientos a una serie de comandos."
         },
         "bffe609e-4319-4507-b643-b2a2ab2507b9": {
-          "description": "Construir un programa reorganizando los movimientos secuenciales."
+          "description": "Desarrollar un programa reorganizando movimientos secuenciales."
         },
         "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
-          "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas."
+          "description": "Desarrollar un programa informático a partir de un conjunto de instrucciones escritas."
         },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
-          "description": "Traducir movimientos en una serie de comandos."
+          "description": "Traducir movimientos a una serie de comandos."
         },
         "d5f927b9-727a-423e-90d3-80faad21aa34": {
-          "description": "Identificar y localizar errores en un programa."
+          "description": "Identificar y encontrar bugs en un programa."
         },
         "6c67256a-a8d5-4a57-9744-092686fb01a0": {
-          "description": "Repetir las acciones iniciadas por el instructor."
+          "description": "Repetir acciones iniciadas por un instructor."
         },
         "368e8edc-290d-4737-a616-a543e5298c66": {
-          "description": "Convertir un programa de imágenes en un baile del mundo real."
+          "description": "Traducir un programa de imágenes a un baile en la vida real."
         },
         "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
-          "description": "Convertir una serie de acciones en un solo bucle."
+          "description": "Convertir una serie de varias acciones en un solo bucle."
         },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
-          "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más pequeña posible."
+          "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
         },
         "8293f536-510e-44a0-880b-397b3f97deeb": {
-          "description": "Crear un programa para una tarea determinada que repita una secuencia de comandos."
+          "description": "Crear un programa que repita una secuencia de comandos para una tarea específica."
         },
         "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
-          "description": "Emplear una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
+          "description": "Utilizar una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
         },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
-          "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más pequeña posible."
+          "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
         },
         "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
-          "description": "Contar el número de veces que una acción debería repetirse y representarla como un bucle."
+          "description": "Contar la cantidad de veces que una acción debe ser repetida y representarla como un bucle."
         },
         "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
-          "description": "Descomponer una forma en su secuencia repetible más grande."
+          "description": "Descomponer una forma en su secuencia repetible más larga."
         },
         "61329a99-1c0a-414f-9694-78f7f9c81372": {
-          "description": "Crear un programa que repita secuencias simples para dibujar formas complejas."
+          "description": "Crear un programa que dibuje formas complejas repitiendo secuencias simples."
         },
         "11d46ade-3342-4157-932b-ce46acd1e6b4": {
-          "description": "Enumera varios ejemplos diferentes de aplicaciones para teléfonos inteligentes."
+          "description": "Enumerar varios ejemplos de apps de smartphones."
         },
         "595564b5-94b4-4104-9613-05eadc30663e": {
-          "description": "Recomendar la tecnología a otras personas en función de sus necesidades particulares. "
+          "description": "Recomendar tecnología a otros, basándose en sus necesidades particulares."
         },
         "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
-          "description": "Aplicar la empatía y la creatividad al diseñar tecnología para los demás. "
+          "description": "Aplicar empatía y creatividad para diseñar tecnología para otros."
         },
         "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
-          "description": "Repetir los comandos dados por un instructor."
+          "description": "Repetir comandos dados por un instructor."
         },
         "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
-          "description": "Reconocer las acciones del docente como señales para iniciar comandos."
+          "description": "Reconocer acciones del docente como una señal para iniciar comandos."
         },
         "86c93634-0b7d-46de-82dd-50b86576bd56": {
-          "description": "Practicar la diferenciación entre acciones predefinidas y acciones basadas en eventos."
+          "description": "Practicar el diferenciar acciones preestablecidas y acciones disparadas por eventos."
         },
         "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
         },
         "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
-          "description": "Crear una historia animada e interactiva mediante secuencias y controladores de eventos."
+          "description": "Crear una historia animada e interactiva usando secuencias y controladores de eventos."
         },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
         "8023306a-d106-4097-8205-5bc1e92ffade": {
-          "description": "Aplicar los conceptos de la informática en un proyecto abierto."
+          "description": "Aplicar los conceptos de las ciencias de la computación en un proyecto libre."
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
-          "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
+          "description": "Superar obstáculos como limitaciones de tiempo o errores."
         },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Descubre que Internet puede servir para visitar lugares lejanos y aprender cosas nuevas."
+          "description": "Saber que internet puede ser usada para visitar lugares muy lejanos y aprender nuevas cosas."
         },
         "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "Compara cómo la seguridad en línea es similar a la seguridad en el mundo real."
+          "description": "Comparar que estar seguro en internet es igual a estar seguro en la vida real."
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
-          "description": "Explica las normas para viajar con seguridad por Internet."
+          "description": "Explicar las reglas para viajar seguro en internet."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
@@ -579,85 +579,85 @@
           "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "Convertir un algoritmo en un programa"
+          "description": "Traducir un algoritmo a un programa"
         },
         "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "Decodificar y ejecutar un programa creado por otra persona"
+          "description": "Decodificar y ejecutar un programa creado por alguien más"
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
-          "description": "Identificar y solucionar fallos o errores en las instrucciones secuenciadas"
+          "description": "Identificar y solucionar errores en secuencias de instrucciones"
         },
         "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
-          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
+          "description": "Comportarse apropiadamente en el laboratorio de computación"
         },
         "6df3d067-06bb-4e95-856f-ef980543a15e": {
-          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
+          "description": "Experimentar con acciones de programación básica basada en bloques, tales como hacer clic, arrastrar y soltar, etc."
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
-          "description": "Construir un programa reorganizando los movimientos secuenciales"
+          "description": "Desarrollar un programa reorganizando movimientos secuenciales"
         },
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
-          "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas"
+          "description": "Desarrollar un programa informático a partir de un conjunto de instrucciones escritas"
         },
         "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Elegir las prácticas de depuración apropiadas a la hora de resolver problemas"
+          "description": "Elegir y aplicar estrategias de depuración apropiadas al resolver problemas"
         },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
           "description": "Secuenciar comandos en un orden lógico."
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Reconocer los problemas o \"errores \" en un programa y desarrollar un plan para resolverlos."
+          "description": "Reconocer problemas o \"bugs\" en un programa y desarrollar un plan para solucionar el inconveniente."
         },
         "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "Identificar código repetitivo y sintetizar varias acciones en un solo bucle."
+          "description": "Identificar códigos repetitivos y simplificar varias acciones en un único bucle."
         },
         "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
-          "description": "Interpretar un programa con bucles como una serie de acciones."
+          "description": "Interpretar un programa con bucles como una serie de varias acciones."
         },
         "cb7cab91-20ca-495a-a429-621631cb0507": {
-          "description": "Crear un programa mediante estructuras que repitan áreas de código"
+          "description": "Construir un programa usando estructuras que repitan áreas de código"
         },
         "381b89ab-336f-41cd-b755-78142a1f1f90": {
-          "description": "Mejorar el código existente al encontrar áreas de repetición y moverlas a estructuras en bucle"
+          "description": "Mejorar un código existente al encontrar áreas de repetición y transformarlas en estructuras de bucle"
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "ea6a44e1-0175-4ecc-a257-4489b703c063": {
-          "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más pequeña posible."
+          "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
         },
         "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
-          "description": "Contar el número de veces que una acción debería repetirse y representarla como un bucle."
+          "description": "Contar la cantidad de veces que una acción debe ser repetida y representarla como un bucle."
         },
         "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
-          "description": "Descomponer una forma en su secuencia repetible más grande."
+          "description": "Descomponer una forma en su secuencia repetible más larga."
         },
         "66267233-8532-4f63-aea5-3a214dac119a": {
-          "description": "Crear un programa que repita secuencias simples para dibujar formas complejas."
+          "description": "Crear un programa que dibuje formas complejas repitiendo secuencias simples."
         },
         "134f184c-8865-44d2-8921-5740c749bcd5": {
-          "description": "Repetir los comandos dados por un instructor."
+          "description": "Repetir comandos dados por un instructor."
         },
         "b7973aec-afbf-4f81-820c-daced7731b0f": {
-          "description": "Reconocer las acciones del docente como señales para iniciar comandos."
+          "description": "Reconocer acciones del docente como una señal para iniciar comandos."
         },
         "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
-          "description": "Practicar la diferenciación entre acciones predefinidas y acciones basadas en eventos."
+          "description": "Practicar el diferenciar acciones preestablecidas y acciones disparadas por eventos."
         },
         "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
         },
         "b366b41e-9396-4c1b-9d35-164052448c1c": {
-          "description": "Crear una historia animada e interactiva mediante secuencia y controladores de eventos."
+          "description": "Crear una historia interactiva animada usando secuencias y controladores de eventos."
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
         "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
-          "description": "Aplicar los conceptos de la informática en un proyecto abierto."
+          "description": "Aplicar los conceptos de las ciencias de la computación en un proyecto libre."
         },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
-          "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
+          "description": "Superar obstáculos como limitaciones de tiempo o errores."
         },
         "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
           "description": "Entender cómo puede ser la maldad en línea y cómo puede hacer sentir a la gente."
@@ -669,13 +669,13 @@
           "description": "Prestar atención a la precisión a la hora de crear instrucciones"
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
-          "description": "Identificar y solucionar fallos o errores en las instrucciones secuenciadas"
+          "description": "Identificar y solucionar errores en secuencias de instrucciones"
         },
         "560e14ee-7390-4244-aee5-a0c2737112e5": {
-          "description": "Traducir movimientos en una serie de comandos."
+          "description": "Traducir movimientos a una serie de comandos."
         },
         "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
-          "description": "Identificar y localizar errores en un programa."
+          "description": "Identificar y encontrar bugs en un programa."
         },
         "ce53a40d-db75-451a-a901-93f93226306a": {
           "description": "Predecir dónde fallará un programa."
@@ -714,7 +714,7 @@
           "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más grande."
         },
         "8e76410f-b4db-446b-88c0-00013d9c05bd": {
-          "description": "Emplear una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
+          "description": "Utilizar una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
         },
         "ff15ce2c-8445-442a-89f0-7a50e741850a": {
           "description": "Escribir un programa para una tarea determinada que repita un solo comando."
@@ -732,13 +732,13 @@
           "description": "Diferenciar entre comandos que deben repetirse en bucles y comandos que deben usarse solos."
         },
         "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
-          "description": "Repetir los comandos dados por un instructor."
+          "description": "Repetir comandos dados por un instructor."
         },
         "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
           "description": "Reconocer los movimientos del docente como señales para iniciar comandos."
         },
         "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
-          "description": "Practicar la diferenciación entre acciones predefinidas y acciones basadas en eventos."
+          "description": "Practicar el diferenciar acciones preestablecidas y acciones disparadas por eventos."
         },
         "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
           "description": "Hacer coincidir los bloques con el controlador de eventos apropiado."
@@ -777,7 +777,7 @@
           "description": "Utiliza un diseño planificado como un plano para la creación."
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
-          "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
+          "description": "Superar obstáculos como limitaciones de tiempo o errores."
         },
         "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
           "description": "Define el término \"contraseña\" y describe el propósito de una contraseña."
@@ -843,10 +843,10 @@
           "description": "Crear animaciones de baile a través del código"
         },
         "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
-          "description": "Crear un programa mediante estructuras que repitan áreas de código"
+          "description": "Construir un programa usando estructuras que repitan áreas de código"
         },
         "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
-          "description": "Mejorar el código existente al encontrar áreas de repetición y moverlas a estructuras en bucle"
+          "description": "Mejorar un código existente al encontrar áreas de repetición y transformarlas en estructuras de bucle"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
@@ -897,13 +897,13 @@
           "description": "Convertir sentencias condicionales de lenguaje hablado y bucles en un programa."
         },
         "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
-          "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
+          "description": "Superar obstáculos como limitaciones de tiempo o errores."
         },
         "8c021568-46ed-4243-a4d1-f2037138c01a": {
-          "description": "Traducir movimientos en una serie de comandos."
+          "description": "Traducir movimientos a una serie de comandos."
         },
         "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
-          "description": "Identificar y localizar errores en un programa."
+          "description": "Identificar y encontrar bugs en un programa."
         },
         "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
           "description": "Predecir dónde fallará un programa."
@@ -972,7 +972,7 @@
           "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más grande."
         },
         "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
-          "description": "Emplear una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
+          "description": "Utilizar una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
@@ -1086,7 +1086,7 @@
           "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
-          "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
+          "description": "Superar obstáculos como limitaciones de tiempo o errores."
         },
         "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
           "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
@@ -1095,67 +1095,67 @@
           "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
         },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
-          "description": "Modelar los comportamientos adecuados en el laboratorio de informática"
+          "description": "Comportarse apropiadamente en el laboratorio de computación"
         },
         "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
-          "description": "Experimenta con acciones de programación estándar basadas en bloques como: hacer clic, arrastrar y soltar, etc."
+          "description": "Experimentar con acciones de programación básica basada en bloques, tales como hacer clic, arrastrar y soltar, etc."
         },
         "a5a52414-42a7-4b32-897b-819a70572328": {
-          "description": "Traducir movimientos en una serie de comandos."
+          "description": "Traducir movimientos a una serie de comandos."
         },
         "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
-          "description": "Construir un programa reorganizando los movimientos secuenciales"
+          "description": "Desarrollar un programa reorganizando movimientos secuenciales"
         },
         "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
-          "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas"
+          "description": "Desarrollar un programa informático a partir de un conjunto de instrucciones escritas"
         },
         "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
           "description": "Secuenciar comandos en un orden lógico."
         },
         "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
-          "description": "Reconocer los problemas o \"errores \" en un programa y desarrollar un plan para resolverlos."
+          "description": "Reconocer problemas o \"bugs\" en un programa y desarrollar un plan para solucionar el inconveniente."
         },
         "620da514-ad6e-4049-a9d3-d189a79af01e": {
-          "description": "Traducir movimientos en una serie de comandos."
+          "description": "Traducir movimientos a una serie de comandos."
         },
         "adabe26f-78e0-47f4-92b2-535a38f53f15": {
-          "description": "Identificar y localizar errores en un programa."
+          "description": "Identificar y encontrar bugs en un programa."
         },
         "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
-          "description": "Crear un programa mediante estructuras que repitan áreas de código"
+          "description": "Construir un programa usando estructuras que repitan áreas de código"
         },
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
-          "description": "Mejorar el código existente al encontrar áreas de repetición y moverlas a estructuras en bucle"
+          "description": "Mejorar un código existente al encontrar áreas de repetición y transformarlas en estructuras de bucle"
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
-          "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más pequeña posible."
+          "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
         },
         "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
-          "description": "Contar el número de veces que una acción debería repetirse y representarla como un bucle."
+          "description": "Contar la cantidad de veces que una acción debe ser repetida y representarla como un bucle."
         },
         "6aac3c12-4427-43d1-877c-727d0665ab49": {
-          "description": "Descomponer una forma en su secuencia repetible más grande."
+          "description": "Descomponer una forma en su secuencia repetible más larga."
         },
         "6dbab2fb-7a17-4269-885e-84768be03a1f": {
-          "description": "Crear un programa que repita secuencias simples para dibujar formas complejas."
+          "description": "Crear un programa que dibuje formas complejas repitiendo secuencias simples."
         },
         "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
-          "description": "Contar el número de veces que una acción debería repetirse y representarla como un bucle."
+          "description": "Contar la cantidad de veces que una acción debe ser repetida y representarla como un bucle."
         },
         "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
-          "description": "Descomponer una forma en su secuencia repetible más grande."
+          "description": "Descomponer una forma en su secuencia repetible más larga."
         },
         "dc83123d-d493-40aa-a543-9daa1421c2c8": {
-          "description": "Crear un programa que repita secuencias simples para dibujar formas complejas."
+          "description": "Crear un programa que dibuje formas complejas repitiendo secuencias simples."
         },
         "15115c43-46c8-4ab4-93e4-947e2fd42703": {
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
         },
         "2fa04500-f1d4-4924-aa39-70292711d432": {
-          "description": "Crear una historia animada e interactiva mediante secuencia y controladores de eventos."
+          "description": "Crear una historia interactiva animada usando secuencias y controladores de eventos."
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
@@ -1164,7 +1164,7 @@
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
         },
         "70e87cab-0d62-4974-9061-425a179bcb2d": {
-          "description": "Crear una historia animada e interactiva mediante secuencias y controladores de eventos."
+          "description": "Crear una historia animada e interactiva usando secuencias y controladores de eventos."
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
@@ -1215,7 +1215,7 @@
           "description": "Combinar formas simples en diseños complejos con bucles anidados."
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
-          "description": "Contar el número de veces que una acción debería repetirse y representarla como un bucle."
+          "description": "Contar la cantidad de veces que una acción debe ser repetida y representarla como un bucle."
         },
         "5b77c883-5479-4cfe-a31a-605957dd083d": {
           "description": "Dividir las tareas complejas en secciones repetibles más pequeñas."

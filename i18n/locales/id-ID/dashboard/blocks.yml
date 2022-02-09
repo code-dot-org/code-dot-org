@@ -1001,6 +1001,16 @@ id:
         text: ketika {SPRITE} diklik
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(jittering, []): gugup
+            new Behavior(wandering, []): pengembaraan
+            new Behavior(patrolling, []): perondaan
+            new Behavior(moving_north_and_looping, []): bergerak ke utara dan berulang
+            new Behavior(moving_south_and_looping, []): bergerak ke selatan dan berulang
       gamelab_comment:
         text: 'komentar: {COMMENT}'
       gamelab_costumeImage:
@@ -1052,6 +1062,19 @@ id:
         text: |-
           jika {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: kostum {SPRITE} adalah {COSTUME}
       gamelab_isKeyPressed:
@@ -1242,6 +1265,11 @@ id:
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): bergerak dengan tanda panah
+            draggable(): yang diseret
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
         options:
@@ -1345,6 +1373,14 @@ id:
             '"scale"': ukuran
             '"width"': lebar
             '"height"': tinggi
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lambat
+            '5': normal
+            '7': cepat
+            '9': extra fast
       gamelab_setTint:
         text: ubah warna {THIS} menjadi {COLOR}
       gamelab_setupScoreboard:

@@ -4,9 +4,9 @@ title: Guía de instrucciones para funcionarios públicos
 
 {{ signup_button }}
 
-# Cómo involucrar a toda tu comunidad
+# Cómo involucrar a tu entorno en el proceso
 
-### Muestra tu compromiso con las ciencias de la computación a tu estado, distrito o ciudad
+### Muestra a tu comunidad, distrito o ciudad tu compromiso con la informática
 
 * * *
 
@@ -24,7 +24,7 @@ De izquierda a derecha: *los gobernadores de Arkansas, California del Norte y Ar
 
 ### 1. Lee nuestra página informativa
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+Descubre [por qué es importante la enseñanza de la informática]({{ localized_files/hoc_one_pager }}), y cómo puedes contribuir a este esfuerzo apoyando la Hora del Código.
 
 ### 2. Involucra a escuelas locales y distritos
 

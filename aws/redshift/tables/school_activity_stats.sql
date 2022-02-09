@@ -15,13 +15,14 @@ with pledged as
 -- will show, for example, HocSignup2019 from July 1, 2019-June 30, 2020
 hoc_event as
 (
-  select distinct
-    json_extract_path_text(data, 'nces_school_s') school_id,
+ select 
+    distinct json_extract_path_text(f.data, 'nces_school_s') school_id,
     1 as hoc_event
-  from pegasus_pii.forms
-  where left(kind, 9) = 'HocSignup'
-  and right(kind, 4) = (select school_year_int from analysis.school_years where getdate() between started_at and ended_at)
-  and json_extract_path_text(data, 'nces_school_s') not in ('','-1')
+  from pegasus_pii.forms f
+  where len(data) < 32768
+  and left(f.kind, 9) = 'HocSignup'
+  and right(f.kind, 4) = (select school_year_int from analysis.school_years where getdate() between started_at and ended_at)
+  and json_extract_path_text(f.data, 'nces_school_s') NOT IN ('',-1)
 ),
 -- which schools have had someone already apply to CSP or CSD PD?
 -- starts showing applications for the 2020-2021 application cycle

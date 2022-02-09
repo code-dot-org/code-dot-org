@@ -2,7 +2,7 @@ import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormCo
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
@@ -180,10 +180,11 @@ describe('FormController', () => {
     });
 
     describe('Saving', () => {
-      it('Adds application status as incomplete to data', () => {
+      it('Overrides application status as incomplete to data', () => {
         const testData = {
           field1: 'value 1',
-          field2: 'value 2'
+          field2: 'value 2',
+          status: 'something'
         };
 
         form = isolateComponent(
@@ -191,7 +192,7 @@ describe('FormController', () => {
         );
         form.findAll('Button')[1].props.onClick();
 
-        expect(getData(DummyPage1)).to.eql({status: 'incomplete', ...testData});
+        expect(getData(DummyPage1)).to.eql({...testData, status: 'incomplete'});
       });
 
       it('Disables the save button during save', () => {
@@ -374,10 +375,11 @@ describe('FormController', () => {
           expect(form.findOne('#submit').props.disabled).to.be.false;
         });
 
-        it('Adds application status as unreviewed on submit', () => {
+        it('Overrides application status as unreviewed on submit', () => {
           const testData = {
             field1: 'value 1',
-            field2: 'value 2'
+            field2: 'value 2',
+            status: 'incomplete'
           };
 
           form = isolateComponent(
@@ -387,8 +389,8 @@ describe('FormController', () => {
           triggerSubmit();
 
           expect(getData(DummyPage3)).to.eql({
-            status: 'unreviewed',
-            ...testData
+            ...testData,
+            status: 'unreviewed'
           });
         });
 

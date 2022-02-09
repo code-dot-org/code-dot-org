@@ -185,7 +185,19 @@
         "poetry_hoc_spriteSizes": "Anda boleh mengubah saiz pari-pari yang telah anda buat. ",
         "New Gumball Project": "Buat apa sahaja yang anda suka dan kongsi!",
         "New Ice Age Project": "Buat apa sahaja yang anda suka dan kongsi!",
-        "New Infinity Project": "Buat apa sahaja yang anda suka dan kongsi!"
+        "New Infinity Project": "Buat apa sahaja yang anda suka dan kongsi!",
+        "NetSim Standalone Automatic DNS": "Dalam versi Simulator Internet ini, Sistem Nama Domain (DNS) disediakan untuk anda dan mengetahui alamat IP semua komputer yang disambungkan. Hantar mesej dalam borang GET [hostname] kepada perkhidmatan DNS di alamat <yourRouterNumber>.15 untuk mendapatkan alamat pelajar.",
+        "NetSim Standalone Broadcast": "Dalam versi Simulator Internet ini, anda boleh menyambung kepada sehingga 5 orang lain dalam satu bilik. Apabila anda menghantar mesej di dalam bilik, semua orang menerimanya. Apakah beberapa cabaran sistem ini, dan bagaimana anda boleh menyelesaikannya?",
+        "NetSim Standalone Classroom Routers": "Dalam versi Simulator Internet ini, semua orang menyambung ke penghala dan mempunyai alamat tertentu. Untuk menghantar mesej, anda perlu menghantar mesej anda ke alamat tertentu penerima, dan penghala akan menguruskan penghantarannya ke komputer yang betul. Jika terdapat penghala lain yang dibuat dalam kelas anda, minta alamat salah seorang rakan sekelas anda dan hantar mesej kepada mereka! Lihat Penghala Log untuk melihat laluan yang telah diambil oleh mesej melalui rangkaian.",
+        "NetSim Standalone Freeplay": "Dalam konfigurasi ini, kebanyakan pilihan dihidupkan dan anda boleh bermain dengannya. Semoga berseronok!",
+        "NetSim Standalone Manual DNS": "Dalam versi simulator ini, anda tidak dapat melihat alamat pelajar lain. Sebaliknya, salah seorang daripada anda mesti bertindak sebagai perkhidmatan nama, untuk membantu berkongsi alamat antara satu sama lain.",
+        "NetSim Standalone Packets TCP": "Mesej di Internet boleh mengambil banyak laluan untuk sampai ke destinasi mereka, dan kadangkala sepanjang perjalanan mesej itu digugurkan. Dalam versi Simulator Internet ini, terdapat 10% kemungkinan paket digugurkan, berbilang paket mungkin mengambil laluan berbeza ke destinasi dan saiz paket maks lalai ditetapkan kepada 6 aksara tambahan.",
+        "NetSim Standalone SendAB": "Anda dan pasangan anda berkongsi wayar tunggal yang hanya boleh berada dalam keadaan A atau keadaan B. Anda boleh menetapkan wayar kepada sama ada keadaan pada bila-bila masa dan anda boleh membaca keadaan wayar pada bila-bila masa. Bolehkah anda memikirkan cara untuk berkomunikasi dengan berkesan hanya dengan sistem ini?",
+        "NetSim Standalone Sending Numbers": "Anda dan pasangan anda kini boleh menghantar mesej berulang-alik tanpa penyelarasan tambahan! Walaupun anda sentiasa menghantar bit ke sana ke mari, anda juga boleh mewakili bit tersebut sebagai nombor perpuluhan. Apakah jenis maklumat yang boleh anda wakili dengan sistem ini?",
+        "NetSim Standalone Sending Numbers Ascii": "Memandangkan anda telah menghantar maklumat yang diwakili sebagai nombor perpuluhan, anda boleh memetakan nombor tersebut kepada aksara teks untuk menghantar maklumat berasaskan teks berulang-alik. Dengan protokol berasaskan teks, anda boleh mewakili dan menyampaikan semua jenis maklumat dengan mudah.",
+        "iceage_hello1": "Bantu Sid berkata \"Hello!\" dengan menyeret keluar blok `katakan` dan menyambungkannya ke bahagian bawah acara `apabila dijalankan`.",
+        "iceage_hello2": "Bantu Manny dan Sid bertegur sapa dengan menggunakan blok `pelakon ___ sebut` dua kali.",
+        "iceage_move_to_flag": "Scrat sedang mencari buah pokok oaknya! Bolehkah anda membantunya mengalihkan 200 piksel terakhir?"
       }
     }
   }

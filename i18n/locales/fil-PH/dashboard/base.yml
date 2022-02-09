@@ -182,6 +182,7 @@ fil:
     accept_terms: "Kailangan mong sumang-ayon para gumawa ng account"
     error: "May problemang naganap."
     email_preference_question: "Maaari ba kaming mag-email sa iyo tungkol sa mga pag-update sa aming mga kurso, lokal na mga oportunidad, o iba pang balita sa agham ng computer? (halos isang beses sa isang buwan)"
+    email_preference_privacy: "(Tingnan ang aming patakaran sa pagkapribado)"
     email_preference_yes: "Oo"
     email_preference_no: "Hindi"
     email_preference_required: "Dapat mong tukuyin ang isang kagustuhan sa email."
@@ -993,3 +994,4 @@ fil:
     text: "**Ikaw ba ay magulang o tagapag-alaga?** I-link ang email mo sa account na ito para manatiling updated sa progreso at mga proyekto ng anak mo!"
     link_your_email: "I-link ang email mo"
     not_now: "Hindi ngayon"
+  teacher_feedback: "Feedback ng Guro"

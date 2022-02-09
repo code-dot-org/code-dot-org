@@ -244,7 +244,7 @@ de:
   hoc2018_tutorial_mchoc_description: Verwende Code-Blöcke, um Steve oder Alex in
     ein Abenteuer durch die Minecraft-Welt zu schicken.
   codeorg_homepage_hoc2019_dance_heading: Probieren Sie die neue <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  Unterstützung für Eltern und Lehrer, dessen
     Schule vor der Schließung steht.  "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1047,6 +1047,7 @@ de:
   footer_menu_support: Support
   footer_menu_terms: AGB
   footer_menu_privacy: Datenschutzerklärung
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Stunde des Codes
   learn_banner_blurb: Probieren Sie ein einstündiges Tutorial für alle Altersgruppen
     in mehr als 45 Sprachen aus.  Schließen Sie sich in der Stunde des Codes Millionen

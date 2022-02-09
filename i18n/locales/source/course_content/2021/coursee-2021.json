@@ -15,22 +15,22 @@
             {
               "text": "Nothing will happen.",
               "correct": false,
-              "feedback": "Incorrect. The tumbleweed will begin tumbling"
+              "feedback": "Incorrect. The goldfish will begin wandering"
             },
             {
-              "text": "The tumbleweed will float to the top of the screen",
+              "text": "The goldfish will float to the top of the screen",
               "correct": false,
-              "feedback": "Incorrect. The tumbleweed will begin tumbling"
+              "feedback": "Incorrect. The goldfish will begin wandering"
             },
             {
-              "text": "The tumbleweed will begin tumbling",
+              "text": "The goldfish will begin wandering",
               "correct": true,
               "feedback": "Correct!"
             },
             {
-              "text": "The tumbleweed will blink on and off.",
+              "text": "The goldfish will blink on and off.",
               "correct": false,
-              "feedback": "Incorrect. The tumbleweed will begin tumbling"
+              "feedback": "Incorrect. The goldfish will begin wandering"
             }
           ],
           "questions": [
@@ -258,7 +258,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2021/lessons/3/levels/7": {
-    "short_instructions": "Add an event that makes each alien stop moving after 3 seconds.",
+    "short_instructions": "Add an event that makes each alien stop moving after 5 seconds.",
     "long_instructions": "These aliens are running wild! Let's calm them down.\n\nAdd an event that makes each alien stop moving after 5 seconds, using [blockly block][0]!",
     "teacher_markdown": "This lesson contains a **mini-project**. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   All alien sprites must stop their behaviors.",
     "behavior_names": {
