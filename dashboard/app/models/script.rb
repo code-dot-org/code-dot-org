@@ -350,6 +350,13 @@ class Script < ApplicationRecord
 
     units = visible_units
 
+    if has_any_course_experiments
+      units = units.map do |unit|
+        alternate_script = unit.alternate_script(user)
+        alternate_script.presence || unit
+      end
+    end
+
     if has_any_pilot_access?(user)
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
@@ -1654,7 +1661,11 @@ class Script < ApplicationRecord
     return [] unless family_name
     return [] unless has_other_versions?
     return [] unless unit_groups.empty?
-    units = Script.where(family_name: family_name).all.select(&:launched?).map do |s|
+    units = Script.
+      where(family_name: family_name).
+      all.
+      select {|unit| user.levelbuilder? || unit.launched?}.
+      map do |s|
       {
         name: s.name,
         version_year: s.version_year,
