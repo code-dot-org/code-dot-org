@@ -356,6 +356,7 @@ hi:
             '"right"': दायां कॉलम
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
+            '"spiral"': घुमावदार
             '"random"': यादृच्छिक
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} पर एक नया {COSTUME} बनाएं"
@@ -461,6 +462,7 @@ hi:
             '"right"': दायां कॉलम
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
+            '"spiral"': घुमावदार
             '"random"': यादृच्छिक
       Dancelab_mixColors:
         text: "{COLOR1} और {COLOR2} को मिलाएं"
@@ -996,7 +998,21 @@ hi:
       gamelab_clickedOn:
         text: जब {SPRITE} पर क्लिक किया
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): दाएं घुमाना
+            new Behavior(spinning_left, []): बाएं घुमाना
+            new Behavior(fluttering, []): फड़फड़ाना
+            new Behavior(jittering, []): कलमलाना
+            new Behavior(wobbling, []): लड़खड़ाना
+            new Behavior(wandering, []): घूमना
+            new Behavior(patrolling, []): गश्त लगाना
+            new Behavior(moving_west_and_looping, []): पश्चिम की ओर मूव और लूप करना
+            new Behavior(moving_east_and_looping, []): पूर्व की ओर मूव और लूप करना
+            new Behavior(moving_north_and_looping, []): उत्तर की ओर मूव और लूप करना
+            new Behavior(moving_south_and_looping, []): दक्षिण की ओर मूव और लूप करना
       gamelab_comment:
         text: 'टिप्पणी: {COMMENT}'
       gamelab_costumeImage:
@@ -1048,6 +1064,19 @@ hi:
         text: |-
           यदि {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} की पोशाक {COSTUME} है"
       gamelab_isKeyPressed:
@@ -1188,9 +1217,9 @@ hi:
       gamelab_moveToward:
         text: "{SPRITE} पिक्सल्स {DISTANCE} को {TARGET} की ओर घुमाएं"
       gamelab_newSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: ऊपर-नीचे गश्त लगाना
       gamelab_playSound:
@@ -1237,6 +1266,12 @@ hi:
             "'sound://category_digital/jump_7.mp3'": कूदें
       gamelab_playSpeech:
         text: प्ले स्पीच {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): तीर वाली कुंजियों के साथ मूव करना
+            new Behavior(driving_with_arrow_keys, []): तीर वाली कुंजियों के साथ ड्राइव करना
+            draggable(): ड्रैग करने योग्य हो रहा है
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
         options:
@@ -1340,6 +1375,14 @@ hi:
             '"scale"': आकार
             '"width"': चौड़ाई
             '"height"': ऊंचाई
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': धीमा
+            '5': normal
+            '7': तेज़
+            '9': extra fast
       gamelab_setTint:
         text: "{THIS} का रंग {COLOR} पर सेट करें"
       gamelab_setupScoreboard:
@@ -1378,7 +1421,7 @@ hi:
       gamelab_stopGliding:
         text: "{SPRITE} फिसलना बंद करता है"
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

@@ -546,6 +546,32 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "文本压缩"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "介绍"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "疫情爆发",
+          "description": "_在今天的课上，你将去“怪兽城镇”，那里即将发生病毒疫情爆发。怪物博士需要你的帮助来减缓病毒的传播。_\n\n_你将在精灵图实验室中创建一个疫情爆发模拟器，然后使用它来了解病毒如何传播。你还将帮助所有的怪物恢复健康！_",
+          "progression_name": "疫情爆发"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "progression_name": "欢迎来到怪物城镇"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "progression_name": "技能建设"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "progression_name": "小项目：疫情爆发模拟器"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "自由发挥"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_模拟是学习现实世界中难以观察的事物的好方法。模拟可以帮助科学家解决问题，预测如何解决问题，并安全有效地测试新想法。你的模拟是展示怪物城镇病毒疫情爆发的一种方法。_"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "反射"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "介绍",
           "tips": [
@@ -912,6 +938,9 @@
         "c976e8f5-74a0-4521-9a84-0e03fdcd0819": {
           "progression_name": "精灵图的动画"
         },
+        "4077416b-c478-4152-89f5-488e727c32fb": {
+          "progression_name": "创建您自己的动画"
+        },
         "c519bcfe-03e6-4b78-837b-d419778b96ab": {
           "name": "课程概述",
           "progression_name": "课程概述"
@@ -927,6 +956,9 @@
         },
         "e39e4847-df25-4795-9abc-d46ad9b6c3ce": {
           "progression_name": "布尔值和比较运算符"
+        },
+        "a90b9313-7969-47c6-9d6d-8eb20b587cc7": {
+          "progression_name": "布尔比较"
         },
         "8e75eaa9-c25d-40e7-9119-14029e42fee0": {
           "progression_name": "视频: \"If/else\" 声明"
@@ -1028,6 +1060,10 @@
         "74c2ffd9-d39f-40f6-b86a-b3b22f0430d3": {
           "progression_name": "示例游戏"
         },
+        "5852ebde-c874-4120-8211-aa786ef26ea0": {
+          "name": "蛋糕卫士",
+          "progression_name": "蛋糕卫士"
+        },
         "62a65044-e84a-4423-87c4-58a1a284f13f": {
           "progression_name": "课程概述"
         },
@@ -1065,6 +1101,10 @@
         },
         "424abab8-abcd-4961-bcf9-522b71b21365": {
           "progression_name": "情绪机器示例"
+        },
+        "db8d9f01-122e-4e38-8b20-7ad2414b1086": {
+          "name": "创建一个应用程序",
+          "progression_name": "创建一个应用程序"
         },
         "c26ef3cd-6946-42be-9cbb-abb4cc3db2a2": {
           "progression_name": "课程概述"
@@ -2036,6 +2076,9 @@
         "3e4020d5-71e5-4d49-921e-d444ec051bbc": {
           "progression_name": "使用监视器调试"
         },
+        "91f98c4f-fc3c-4c0a-bb2e-af9d7a1f9270": {
+          "progression_name": "创建您自己的动画"
+        },
         "19da345a-dda1-4675-8b38-f7bdee89e704": {
           "name": "课程概述",
           "progression_name": "课程概述"
@@ -2048,6 +2091,9 @@
         },
         "17467c46-11b0-4f1d-9976-41d373d99e95": {
           "progression_name": "视频: 布尔值"
+        },
+        "f3e8bebe-fac6-4925-9423-ec3ed6d039ca": {
+          "progression_name": "布尔比较"
         },
         "ab9a5e47-058a-49d3-993d-eddbd66e1934": {
           "progression_name": "布尔值和比较运算符"
@@ -2157,6 +2203,10 @@
         },
         "2f731ea3-9491-42f0-aebe-4d8bfb9f8af4": {
           "progression_name": "示例游戏"
+        },
+        "d134b6a0-9d53-4050-9ed3-bdb03cecaa48": {
+          "name": "蛋糕卫士",
+          "progression_name": "蛋糕卫士"
         },
         "2f8ac29c-474f-4fc2-bbbc-9df38f3c5bf9": {
           "progression_name": "课程概述"
@@ -2699,6 +2749,10 @@
         "da39537c-01a9-4613-bc81-c20b9baf0747": {
           "progression_name": "结课项目"
         },
+        "a66e8ec0-572b-44e2-9069-dd3bdddcded2": {
+          "name": "开始计划您的项目",
+          "progression_name": "开始计划您的项目"
+        },
         "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
           "progression_name": "结课项目"
         },
@@ -2711,12 +2765,20 @@
         "f147a0c8-7d8f-4acd-a8d7-feb39d52e0ab": {
           "progression_name": "外星人辩护人"
         },
+        "4db4c162-d334-4c10-99d1-cdd9aa2bdbb8": {
+          "name": "开始计划您的项目",
+          "progression_name": "开始计划您的项目"
+        },
         "a78fef77-4dfa-4b0a-9034-948d959a70a9": {
           "name": "课程E 艺术家项目",
           "progression_name": "课程E 艺术家项目"
         },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "结课项目"
+        },
+        "ed74084a-54be-443d-a9c8-d998da62ce9a": {
+          "name": "开始计划您的项目",
+          "progression_name": "开始计划您的项目"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "课程概述"
@@ -2844,6 +2906,9 @@
         "320963c5-5464-49fa-8116-cd522a51e88e": {
           "progression_name": "精灵图的动画"
         },
+        "fbea8a90-b621-4189-8f2f-5b5338d7ae09": {
+          "progression_name": "创建您自己的动画"
+        },
         "76616c94-01ef-48fd-9d26-e0e33a34cd1f": {
           "progression_name": "挑战"
         },
@@ -2866,6 +2931,9 @@
         },
         "2ac1181c-3f5f-41d1-9d8a-dff95ada0303": {
           "progression_name": "布尔值和比较运算符"
+        },
+        "586fbd28-f37c-401d-b660-2536ef45eca0": {
+          "progression_name": "布尔比较"
         },
         "e8435c3f-8689-4689-887f-ea764c3cf6c1": {
           "progression_name": "If 语句"
@@ -2999,6 +3067,10 @@
         "46103cd2-4b16-40b6-8d34-4d6b489b0997": {
           "progression_name": "示例游戏"
         },
+        "cafb2d84-1d56-4201-a96c-e7933aeaf73a": {
+          "name": "蛋糕卫士",
+          "progression_name": "蛋糕卫士"
+        },
         "1586b613-84ab-4c64-96cc-2f18a1228596": {
           "progression_name": "课程概述"
         },
@@ -3033,6 +3105,10 @@
         },
         "5c43c2a8-3da5-4127-9cbb-269b0709b66c": {
           "progression_name": "情绪机器示例"
+        },
+        "44e3ffdb-ef64-47a5-bdd5-1520778f694e": {
+          "name": "创建一个应用程序",
+          "progression_name": "创建一个应用程序"
         },
         "38c450dd-db4d-4662-b493-c40b418d561a": {
           "progression_name": "课程概述"
@@ -3590,32 +3666,6 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "你可以使用2张便签纸。在其中一张上面，写下你今天所学到的一项编程内容。在另一张上面，写下你今天所学到的一项诗歌内容。\n\n鼓励学生们举手回答问题，与全班同学分享：你希望在接下来的编程和计算机科学课程中学习哪些其他知识？"
         },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "介绍"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "疫情爆发",
-          "description": "_在今天的课上，你将去“怪兽城镇”，那里即将发生病毒疫情爆发。怪物博士需要你的帮助来减缓病毒的传播。_\n\n_你将在精灵图实验室中创建一个疫情爆发模拟器，然后使用它来了解病毒如何传播。你还将帮助所有的怪物恢复健康！_",
-          "progression_name": "疫情爆发"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "progression_name": "欢迎来到怪物城镇"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "progression_name": "技能建设"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "progression_name": "小项目：疫情爆发模拟器"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "自由发挥"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_模拟是学习现实世界中难以观察的事物的好方法。模拟可以帮助科学家解决问题，预测如何解决问题，并安全有效地测试新想法。你的模拟是展示怪物城镇病毒疫情爆发的一种方法。_"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "反射"
-        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
             null
@@ -3634,6 +3684,10 @@
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "反射"
+        },
+        "f108ae93-f672-4062-b6d6-522901659990": {
+          "name": "计算机科学发现课课后调查",
+          "progression_name": "计算机科学发现课课后调查"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "介绍"
@@ -3908,6 +3962,9 @@
         "de52214d-6afd-4af7-90e5-3e85484e0877": {
           "name": "反射"
         },
+        "b69c8e63-7778-4a44-b127-e4c083af98c9": {
+          "progression_name": "自定义"
+        },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "介绍"
         },
@@ -3995,6 +4052,9 @@
           "tips": [
             null
           ]
+        },
+        "211604af-3347-4da2-ae2b-e5a81fd6d49d": {
+          "progression_name": "创建您的项目"
         },
         "e1f77c6c-fd3c-4f0d-b13b-d6846b5625c0": {
           "tips": [
@@ -5125,6 +5185,9 @@
             null
           ]
         },
+        "cc80e93e-054f-4dfb-acf9-75c0fa999f10": {
+          "progression_name": "创建您的项目"
+        },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "介绍",
           "tips": [
@@ -5642,6 +5705,10 @@
           "tips": [
             null
           ]
+        },
+        "3d53701a-e90f-4938-977a-ca8ee2584163": {
+          "name": "创建您的项目",
+          "progression_name": "创建您的项目"
         },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "介绍",
@@ -6180,6 +6247,9 @@
         "66272c77-39c2-4816-9cef-6d3fa0468581": {
           "name": "第1天 - 探索项目构思"
         },
+        "f8b211c2-4c26-4946-ab95-74efdb7ca40a": {
+          "progression_name": "创建您的项目"
+        },
         "076a8517-ba6d-4f59-804d-d40a49d9f184": {
           "tips": [
             null
@@ -6201,6 +6271,10 @@
         "a277a288-e8d5-4788-aef0-cb7851045427": {
           "name": "其他",
           "description": "如果学生们已经理解了编程原理，就让他们在其它平台上创建自己的项目，例如[Scratch](https://scratch.mit.edu/) 或 [Alice](http://www.alice.org/index.php)。"
+        },
+        "4430b310-61e8-44d7-9033-9b5f7099ddb1": {
+          "name": "创建您的项目",
+          "progression_name": "创建您的项目"
         },
         "cef1dcf2-8240-4b77-b667-040c16bc6526": {
           "progression_name": "结对编程"
@@ -6308,6 +6382,10 @@
         },
         "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
           "progression_name": "自由发挥"
+        },
+        "c81e44f6-ab58-47eb-8573-234c9a9e0f0e": {
+          "name": "创建您的项目",
+          "progression_name": "创建您的项目"
         },
         "4f8e01e3-039b-4253-992b-d0d3e8343559": {
           "progression_name": "挑战"
@@ -6440,6 +6518,10 @@
         "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
           "progression_name": "挑战"
         },
+        "dc5d2770-baaa-4bd2-a210-0335bdb5a6b9": {
+          "name": "创建您的项目",
+          "progression_name": "创建您的项目"
+        },
         "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
           "progression_name": "结对编程"
         },
@@ -6527,6 +6609,10 @@
         },
         "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
           "progression_name": "自由发挥"
+        },
+        "b1fc46a7-4dc0-42fd-a720-10e96229aa5f": {
+          "name": "创建您的项目",
+          "progression_name": "创建您的项目"
         }
       }
     }

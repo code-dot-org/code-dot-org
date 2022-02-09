@@ -37,6 +37,7 @@ import {
 } from '../components/regional_partner_dropdown';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
+// eslint-disable-next-line react-hooks/rules-of-hooks
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });

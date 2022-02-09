@@ -329,3 +329,44 @@ te:
               name: నైబర్‌హుడ్ లిట్ ఫెస్ట్ ప్రాజెక్టు - దినం 2
             lesson-13:
               name: నైబర్‌హుడ్ లిట్ ఫెస్ట్ ప్రాజెక్టు - దినం 3
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: అవర్ ఆఫ్ కోడ్
+        coursea-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        express-2022:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+            lesson-1:
+              name: డాన్స్ పార్టీ
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ఈవెంట్లు
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursed-2022:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+              key: డాన్స్ పార్టీ
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        cs4all-invasive-species:
+          lessons:
+            lesson-17:
+              name: ప్రాజెక్టు ప్రేరణ

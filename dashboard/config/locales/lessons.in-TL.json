@@ -139,6 +139,12 @@
           "purpose": "crwdns2700231:0[0]crwdne2700231:0",
           "student_overview": "crwdns2700233:0crwdne2700233:0"
         },
+        "outbreak/Outbreak": {
+          "overview": "crwdns2700887:0crwdne2700887:0",
+          "preparation": "crwdns2700889:0crwdne2700889:0",
+          "purpose": "crwdns2700891:0crwdne2700891:0",
+          "student_overview": "crwdns2700893:0crwdne2700893:0"
+        },
         "sports/Sports": {
           "overview": "crwdns2700305:0crwdne2700305:0",
           "preparation": "crwdns2700307:0[0]crwdnd2700307:0[1]crwdnd2700307:0[2]crwdnd2700307:0[3]crwdnd2700307:0[4]crwdnd2700307:0[certificate]crwdnd2700307:0[5]crwdne2700307:0",
@@ -185,12 +191,6 @@
           "overview": "crwdns2710883:0[0]crwdne2710883:0",
           "preparation": "crwdns2710885:0[0]crwdnd2710885:0[Optional]crwdnd2710885:0[Optional]crwdnd2710885:0[video]crwdnd2710885:0[1]crwdnd2710885:0[Support]crwdnd2710885:0[2]crwdne2710885:0",
           "student_overview": "crwdns2710887:0crwdne2710887:0"
-        },
-        "outbreak/Outbreak": {
-          "overview": "crwdns2700887:0crwdne2700887:0",
-          "preparation": "crwdns2700889:0crwdne2700889:0",
-          "purpose": "crwdns2700891:0crwdne2700891:0",
-          "student_overview": "crwdns2700893:0crwdne2700893:0"
         },
         "jigsaw/Jigsaw": {
           "overview": "crwdns2700945:0crwdne2700945:0",

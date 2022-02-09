@@ -371,6 +371,7 @@
   homepage_donors_donate: "crwdns35790:0crwdne35790:0"
   homepage_below_hero_announcement_text: "crwdns134766:0crwdne134766:0"
   homepage_below_hero_announcement_link_text: "crwdns134767:0crwdne134767:0"
+  homepage_higher_power_body: "crwdns2865696:0crwdne2865696:0"
   contact_form_topic_student: "crwdns4686:0crwdne4686:0"
   contact_form_topic_parent: "crwdns4687:0crwdne4687:0"
   contact_form_topic_teacher: "crwdns4688:0crwdne4688:0"
@@ -1736,7 +1737,6 @@
   page_not_available_title: "crwdns2465558:0crwdne2465558:0"
   page_not_available_description: "crwdns2465560:0%{support_email_link}crwdne2465560:0"
   page_not_available_button: "crwdns2465562:0crwdne2465562:0"
-  ! '': crwdns2471962:0crwdne2471962:0
   hoc2020_mc_available_code_org: "crwdns2471964:0crwdne2471964:0"
   hoc2020_mc_available_mee: 'crwdns2471966:0crwdne2471966:0'
   hoc2020_mc_mee_title: "crwdns2471968:0crwdne2471968:0"
@@ -1812,3 +1812,4 @@
   outbreak_tile_title: "crwdns2711041:0crwdne2711041:0"
   outbreak_tile_subtitle: "crwdns2711043:0crwdne2711043:0"
   outbreak_tile_alt: "crwdns2715287:0crwdne2715287:0"
+  footer_cookie_notice: "crwdns2864047:0crwdne2864047:0"
