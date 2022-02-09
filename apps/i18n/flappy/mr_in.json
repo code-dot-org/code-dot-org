@@ -1,7 +1,11 @@
 {
   "continue": "सुरू ठेवा",
   "elseCode": "किंवा",
+  "incrementPlayerScoreTooltip": "सध्याच्या खेळाडूच्या स्कोअरमध्ये एक मिळवा.",
   "no": "नाही",
+  "playSoundCrunch": "क्रंचचा आवाज प्ले करा",
+  "playSoundTooltip": "निवडलेला आवाज प्ले करा.",
   "reinfFeedbackMsg": "तुमचा गेम खेळण्यासाठी मागे जाण्याकरता तुम्ही \"Try again\" बटण दाबू शकता.",
+  "soundRandom": "कोणताही",
   "yes": "होय"
 }

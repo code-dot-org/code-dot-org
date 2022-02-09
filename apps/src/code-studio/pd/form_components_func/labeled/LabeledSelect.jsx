@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {SelectFieldGroupFromOptions} from '../form/SelectFieldGroup';
-import {defaultOptions} from '../LabeledFormComponent';
+import {useDefaultOptions} from '../LabeledFormComponent';
 
 export const LabeledSelect = (props = {}) => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'select',
     ...props
   };

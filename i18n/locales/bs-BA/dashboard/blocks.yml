@@ -879,6 +879,19 @@ bs:
         options:
           UNIT:
             '"seconds"': sekunde
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1014,6 +1027,14 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': sporo
+            '5': normal
+            '7': brzo
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

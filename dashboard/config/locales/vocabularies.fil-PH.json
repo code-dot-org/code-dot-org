@@ -74,6 +74,9 @@
         "code/poem-art/unversioned": {
           "word": "Code"
         },
+        "behavior/coursef/2021": {
+          "word": "Paggawi"
+        },
         "variable/coursef/2021": {
           "word": "Variable"
         },
@@ -113,6 +116,9 @@
         "debugging/express/2021": {
           "word": "Pagdedebug"
         },
+        "behavior/express/2021": {
+          "word": "Paggawi"
+        },
         "conditionals/express/2021": {
           "word": "Mga conditional"
         },
@@ -130,6 +136,9 @@
         },
         "debugging/pre-express/2021": {
           "word": "Pagdedebug"
+        },
+        "behavior/coursee/2021": {
+          "word": "Paggawi"
         },
         "copyright/coursee/2021": {
           "word": "Karapatang-ari"

@@ -1,5 +1,5 @@
 ---
-title: Hodina kódu Návody pre kraje
+title: Návod k Hodine kódu pre samosprávy
 ---
 
 {{ signup_button }}
@@ -32,7 +32,7 @@ Dajte návštevníkom vedieť o svojej účasti v projekte a o podujatiach Hodin
 
 Pozrite si našu [príručku tvorby podujatí]({{ urls/how_to_events }}), v ktorej nájdete vzorovú šou, návod na prácu v médiách a iné rady.
 
-## Čo nasleduje po Hodine Kódu?
+## Čo nasleduje po Hodine kódu?
 
 Hodina Kódu je len prvým krokom na ceste učenia sa o tom, ako fungujú technológie a ako vytvárať softvérové aplikácie. Pre pokračovanie po tejto ceste:
 
