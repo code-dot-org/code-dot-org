@@ -430,6 +430,7 @@ FeedbackUtils.prototype.displayFeedback = function(
           level_id: options.response.level_id
         });
       }
+      options.onContinue();
     });
   }
 
