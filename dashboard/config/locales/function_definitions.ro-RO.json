@@ -960,7 +960,7 @@
         },
         "Standalone_Artist_9": {
           "my function": {
-            "name": "funcţia mea"
+            "name": "funcţiunea mea"
           }
         },
         "course3_artist_functions_challenge1": {
@@ -2299,7 +2299,7 @@
         },
         "Course E: Artist Project_examples_2021": {
           "my function": {
-            "name": "funcţia mea"
+            "name": "funcţiunea mea"
           }
         },
         "Course E: Frozen Project_examples_2021": {
@@ -2590,6 +2590,110 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "sfârşitul jocului"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "construiește podul"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "construiește podul"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "construiește podul"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "construiește podul"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "curăță calea"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "curăță calea"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "curăță calea"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "curăță calea"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "repară calea lungă"
+          },
+          "fix short path": {
+            "name": "repară calea scurtă"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "repară calea lungă"
+          },
+          "fix short path": {
+            "name": "repară calea scurtă"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "repară calea lungă"
+          },
+          "fix short path": {
+            "name": "repară calea scurtă"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "repară calea lungă"
+          },
+          "fix short path": {
+            "name": "repară calea scurtă"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "construiește un pod scurt"
+          },
+          "build long bridge": {
+            "name": "construiește un pod lung"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "construiește un pod scurt"
+          },
+          "build long bridge": {
+            "name": "construiește un pod lung"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "construiește un pod scurt"
+          },
+          "build long bridge": {
+            "name": "construiește un pod lung"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "construiește un pod scurt"
+          },
+          "build long bridge": {
+            "name": "construiește un pod lung"
           }
         }
       }

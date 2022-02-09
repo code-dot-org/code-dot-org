@@ -61,3 +61,12 @@ Feature: Script overview page
     And I wait until element "td:contains(Minecraft)" is visible
     # verify script name overrides lesson name when there is only one lesson
     And element "td:contains(1. Minecraft Hour of Code)" is visible
+
+  Scenario: Script overview end-of-lesson
+    Given I create a student named "Jean"
+    # On last level of the lesson
+    And I am on "http://studio.code.org/s/csp3-2019/lessons/3/levels/1"
+    And I click selector ".submitButton"
+    And I wait until element ".uitest-end-of-lesson-header:contains(You finished Lesson 3!)" is visible
+    And I reload the page
+    And  element ".uitest-end-of-lesson-header:contains(You finished Lesson 3!)" is not visible

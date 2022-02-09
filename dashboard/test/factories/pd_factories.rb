@@ -809,6 +809,14 @@ FactoryGirl.define do
       school_type 'Public school'
     end
 
+    trait :incomplete do
+      status 'incomplete'
+    end
+
+    trait :with_no_school do
+      school(-1)
+    end
+
     trait :with_multiple_workshops do
       able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
 
@@ -854,12 +862,6 @@ FactoryGirl.define do
       after(:create) do |application|
         application.update!(status: 'accepted_not_notified')
         application.lock!
-      end
-    end
-
-    trait :incomplete do
-      after(:create) do |application|
-        application.update!(status: 'incomplete')
       end
     end
   end

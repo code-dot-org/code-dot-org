@@ -48,7 +48,7 @@
     "makerlab_enabled": "false",
     "project_template_level_name": "CSD U6 - Screen Outputs - SB template_2022",
     "palette_category_at_start": "math",
-    "encrypted_examples": "re7GsJ/pvPTb0/HLaxpG3E54VP1wg2PpIQZPUvIZFRaE7Oo4pvs9EVDBgI7c\nV5Rwjjq+pbZH3MD5TAljnIGz8g==\n",
+    "encrypted_examples": "fCA5szSx4Ql6gpIiFONtdGfnMQiu00CBJUvieuzRojDfOelbiYSvlAVlhC5d\nfgY4+MNyl+USELGOTHqdyFQVLw==\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20381,
     "name_suffix": "_2021",
@@ -71,7 +71,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T15:43:21.533+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty xy random_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty xy random_2021\"},{\"changed_at\":\"2021-08-31 15:43:35 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:59:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-12 15:04:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T15:43:21.533+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty xy random_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty xy random_2021\"},{\"changed_at\":\"2021-08-31 15:43:35 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:59:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-12 15:04:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-02 19:50:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

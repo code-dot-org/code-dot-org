@@ -16,11 +16,11 @@ import teacherSections, {
   setValidGrades,
   setTextToSpeechUnitIds,
   setLessonExtrasUnitIds,
-  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
+  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
+  setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
-import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
@@ -31,7 +31,6 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import testJavabuilderWebsocketConnection from '@cdo/apps/util/testJavabuilderWebsocketConnection';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -45,8 +44,7 @@ const {
   hasSeenStandardsReportInfo,
   localeCode,
   textToSpeechUnitIds,
-  lessonExtrasUnitIds,
-  isJavabuilderConnectionTestEnabled
+  lessonExtrasUnitIds
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -58,7 +56,6 @@ $(document).ready(function() {
     sectionProgress,
     unitSelection,
     stats,
-    textResponses,
     sectionAssessments,
     currentUser,
     sectionStandardsProgress,
@@ -72,6 +69,7 @@ $(document).ready(function() {
   store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
+  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setValidAssignments(validCourses, validScripts));
@@ -108,8 +106,6 @@ $(document).ready(function() {
         />
       </Router>
     </Provider>,
-    document.getElementById('teacher-dashboard'),
-    () =>
-      isJavabuilderConnectionTestEnabled && testJavabuilderWebsocketConnection()
+    document.getElementById('teacher-dashboard')
   );
 });

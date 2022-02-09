@@ -39,6 +39,9 @@
         "implementation_guide/coursef/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/coursef/2021": {
           "name": "Pagtitipon ng Guro"
         },
@@ -91,6 +94,9 @@
         "implementation_guide/courseb/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/courseb/2021": {
           "name": "Pagtitipon ng Guro"
         },
@@ -115,6 +121,9 @@
         },
         "implementation_guide/coursea/2021": {
           "name": "Gabay sa Pagpapatupad"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Gabay sa Kurikulum"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Pagtitipon ng Guro"
@@ -167,6 +176,9 @@
         },
         "implementation_guide/coursec/2021": {
           "name": "Gabay sa Pagpapatupad"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Gabay sa Kurikulum"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Pagtitipon ng Guro"
@@ -232,6 +244,9 @@
         "implementation_guide/coursed/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/coursed/2021": {
           "name": "Pagtitipon ng Guro"
         },
@@ -256,6 +271,9 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Gabay sa Pagpapatupad"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Gabay sa Kurikulum"
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Pagtitipon ng Guro"

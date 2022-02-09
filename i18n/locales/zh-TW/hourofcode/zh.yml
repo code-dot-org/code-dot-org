@@ -192,7 +192,7 @@ zh:
   codeorg_homepage_csc_title: 電腦科學聯繫
   hoc2018_tutorial_mchoc_description: 用程式積木帶著 Alex 或 Steve 在 Minecraft 遊戲世界中四處冒險。
   codeorg_homepage_hoc2019_dance_heading: 嘗試新版 <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  為面臨學校停課的家長和教師提供支援。  "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
@@ -766,6 +766,7 @@ zh:
   footer_menu_support: 支援服務
   footer_menu_terms: 服務條款
   footer_menu_privacy: 隱私政策
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: 一小時玩程式
   learn_banner_blurb: 體驗為所有年齡層設計的一小時玩程式教程（支援超過 45 種語言）。參加超過 180 個國家、數以百萬計的學生、教師都加入的一小時玩程式活動。
   learn_banner_beyond: 想要不斷地學習嗎？ <a id='learn_banner_beyond'> 超越一小時</a>

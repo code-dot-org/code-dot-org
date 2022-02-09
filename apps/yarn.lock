@@ -1600,10 +1600,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.3.tgz#93fbd9827a89cc3f240bafc33ab7b82f7643b200"
-  integrity sha512-92Ja8B0ktsadnEqNsJDgFEX39ZLtYL4SkFlpo50s2t8YRNTKx67QkAu9Kvxi/vlqDxZemMvpldkbHgRsZLtpsg==
+"@code-dot-org/dance-party@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.4.tgz#1bee70b0b1f392293b23719a9b257c142ba2e304"
+  integrity sha512-l9LEQRUiLNkIaWtK/rGOV1PHHorx5x/lliFTwEFlWMEJ00v4EZyf/+JdxSOrNmpBrCtAtEXXMIwKZ5gVFnQ/2w==
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
@@ -6375,6 +6375,11 @@ eslint-plugin-prettier@^3.3.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
+eslint-plugin-react-hooks@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
+  integrity sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==
+
 eslint-plugin-react@^7.11.0:
   version "7.12.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.12.4.tgz#b1ecf26479d61aee650da612e425c53a99f48c8c"
@@ -9193,17 +9198,10 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isolate-components@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/isolate-components/-/isolate-components-1.4.0.tgz#324082d596f8224b8e027b1b94a46fa13471ab57"
-  integrity sha512-kO99YeQIXZyDwR8wn45M7zFvuKVxCOl71cqCCwZ9Xzx0Ff33d3Mgd7jghkv5KpoBuBt6KkPUcubJczlC+G3+cQ==
-  dependencies:
-    isolate-hooks "^1.5.0"
-
-isolate-hooks@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/isolate-hooks/-/isolate-hooks-1.5.0.tgz#232d98ea3fb6393210a72965d67f4218e1efed59"
-  integrity sha512-IRGJvwngCuWr1FadRpI9L4V2HS+vR2pUK6O3hcNBlk3Mk/zM6VytSfV8Rpcb3/duxJHy+JUVHW7Yk4BPK4FrVA==
+isolate-react@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isolate-react/-/isolate-react-2.0.0.tgz#4c88cb773baff929c15908f4a9af60c04a2b6826"
+  integrity sha512-quxb6hTC5FyEzoMrh0nwAzmmPwmkUZCgHHPMeIfi1FyhEHxEaJif1coYOKZq2F8sHl0fB7uoT4rpuKdX5poM3g==
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"

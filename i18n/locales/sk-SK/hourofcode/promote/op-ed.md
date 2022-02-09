@@ -1,5 +1,5 @@
 ---
-title: Ukážka podporujúca Týždeň vyučovania informatiky a Hodiny kódu
+title: Ukážkový článok napísaný na podporu Týždňa informatiky a Hodiny kódu
 ---
 
 {{ signup_button }}

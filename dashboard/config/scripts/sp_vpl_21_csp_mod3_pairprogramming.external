@@ -3,45 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Pair programming
-##
+# Video: Teacher Tips - Pair Programming
 
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
+## Consider the following when watching this video:
 
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">
-I recommend that you have timers, and make the timers fun! Ask the students to stand up from their chairs when they have to change roles from navigator to driver, and have the timer go in different chunks of time. Start giving the students a minute, then make it shorter, maybe 30 seconds. And after you prime them with this, you will notice that the students actually start switching on their own. Because they learn the routine, they learn the technique, and they switch from navigator to driver without you prompting them to do so.
+### In your role as the teacher, what can do to support students through the process of pair programming?
 
- </p>
- <br>
-<p style="font-size: 70px; text-align: right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 70px; margin-top: -20px; ">
-Luna Ramirez, New York
-</p>
-
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">I think the greatest asset to this course is collaboration. I have my students working together from the first lesson. And I usually keep those groups together going through the course with modifications here and there. But that teamwork that they established from day one gives them the confidence to get through the rest of the course where they know they can rely on their partner who's sitting beside them, or they can talk to someone else in the classroom and feel like they can share their ideas, get feedback, and get some problem solving strategies. And I think it's one of the greatest assets of this course.</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Terence Stone, Maryland
-</p>
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">One that I motivate students is to really encourage them to work with each other. When debugging becomes a collaborative experience, it starts to become a lot more fun, it becomes more like an investigation. Encouraging collaboration, pair programming can help them debug.</p>
-
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Eilene Klaka, Washington
-</p>
-</div>
+<a href="https://youtu.be/zEXrtOXxUV4" target="blank" rel="noopener noreferrer">![](https://images.code.org/c80b1b0ad79a94e045232d6aec77537d-image-1643662017177.45.01 PM.jpg)</a>
 MARKDOWN
