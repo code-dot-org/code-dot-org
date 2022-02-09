@@ -12,7 +12,7 @@
   <%=app%>DNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
-      HostedZoneId: <%=www_redirect_hosted_zone_id%>%
+      HostedZoneId: <%=www_redirect_hosted_zone_id%>
       RecordSets:
         <%- redirected_domains.each do |record_set_name| -%>
         - Name: <%=record_set_name%>
