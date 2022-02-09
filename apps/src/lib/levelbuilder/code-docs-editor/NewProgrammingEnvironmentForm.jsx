@@ -18,8 +18,8 @@ export default function NewProgrammingEnvironmentForm() {
           <p>
             The programming environment slug is used in URLs and cannot be
             updated once set. A slug can only contain lowercase letters,
-            numbers, underscores, and dashes. Likely, this should be the same at
-            the project name for this programming environment.
+            numbers, and dashes. Likely, this should be the same at the project
+            name for this programming environment.
           </p>
         </HelpTip>
       </label>
