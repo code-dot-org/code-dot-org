@@ -258,8 +258,17 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(expected_record, @firehose_records&.first)
   end
 
-  def test_log_given_actual_scope_should_call_firehose
+  def test_log_given_populated_scope_array_should_call_firehose
     test_record = {url: 'https://code.org/url', source: 'test', string_key: 'string.key', scope: ['test', 'keys'], separator: '.'}
+    expected_record = {normalized_key: 'test -> keys -> string.key', url: 'https://code.org/url', source: 'test', string_key: 'string.key', scope: "[\"test\", \"keys\"]", separator: '.'}
+    I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source], test_record[:string_key], test_record[:scope], test_record[:separator])
+    I18nStringUrlTracker.instance.send(:flush)
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_records&.first)
+  end
+
+  def test_log_given_string_scope_should_call_firehose
+    test_record = {url: 'https://code.org/url', source: 'test', string_key: 'string.key', scope: 'test.keys', separator: '.'}
     expected_record = {normalized_key: 'test -> keys -> string.key', url: 'https://code.org/url', source: 'test', string_key: 'string.key', scope: "[\"test\", \"keys\"]", separator: '.'}
     I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source], test_record[:string_key], test_record[:scope], test_record[:separator])
     I18nStringUrlTracker.instance.send(:flush)

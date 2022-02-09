@@ -65,14 +65,18 @@ class I18nStringUrlTracker
   # @param separator [String] The separator string used by I18n to concatenate the string_key hierarchy
   #        into a single normalized string.
   def log(url, source, string_key, scope = nil, separator = nil)
-    scope ||= []
-    separator ||= I18n.default_separator
+    # Return if DCDO flag is unset, or we get incomplete info
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
+    return unless string_key && url && source
+
     # Skip URLs we are not interested in.
     return unless allowed(url)
-
     url = normalize_url(url)
-    return unless string_key && url && source
+
+    # Scope could come in as empty or a normalized string, so make sure it's an array
+    separator ||= I18n.default_separator
+    scope = [] if scope.nil? || scope.empty?
+    scope = scope.split(separator) if scope.is_a? String
 
     # We use -> as the separator in the normalized_key for ease of searching in Crowdin, and to prevent keys
     # that include a . from getting split in two.
@@ -81,8 +85,8 @@ class I18nStringUrlTracker
     # Reverse the URL encoding on special characters so the human readable characters are logged.
     logged_url = CGI.unescape(url)
 
-    # stringify all items in the scope array so we can JSON stringify and parse it
-    stringified_scope = (scope&.map(&:to_s)).to_s
+    # Stringify all items in the scope array so we can JSON stringify and parse it.
+    stringified_scope = scope.map(&:to_s).to_s
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
