@@ -350,7 +350,7 @@ class Script < ApplicationRecord
 
     units = visible_units
 
-    if has_any_course_experiments
+    if UnitGroup.has_any_course_experiments?(user)
       units = units.map do |unit|
         alternate_script = unit.alternate_script(user)
         alternate_script.presence || unit
