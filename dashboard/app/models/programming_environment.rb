@@ -77,11 +77,8 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       imageUrl: image_url,
       description: description,
-      editorType: editor_type
+      editorType: editor_type,
+      categories: categories
     }
-  end
-
-  def category_options
-    programming_expressions.pluck(:category).uniq
   end
 end
