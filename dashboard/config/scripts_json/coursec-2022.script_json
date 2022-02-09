@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2022-02-08 19:56:54 UTC",
+    "serialized_at": "2022-02-08 20:28:54 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "key": "My Robotic Friends Jr.",
+      "key": "My Robotic Friends Jr",
       "name": "My Robotic Friends Jr.",
       "absolute_position": 2,
       "lockable": false,
@@ -138,7 +138,7 @@
         "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups."
       },
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2022"
       }
@@ -224,7 +224,7 @@
       }
     },
     {
-      "key": "My Loopy Robotic Friends Jr.",
+      "key": "My Loopy Robotic Friends Jr",
       "name": "My Loopy Robotic Friends Jr.",
       "absolute_position": 7,
       "lockable": false,
@@ -238,7 +238,7 @@
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems."
       },
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022"
       }
@@ -516,7 +516,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e56a02fc-2b09-45ef-91bc-40a40ba87709",
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2022"
       }
@@ -530,7 +530,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d0023712-1596-4547-ad29-d742aab5fea5",
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2022"
       }
@@ -544,7 +544,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "cf3b92c1-1534-4b5f-aee0-d1d0fc689f07",
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2022"
       }
@@ -833,7 +833,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "85aac025-b9a7-410d-aa32-833228487252",
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022"
       }
@@ -847,7 +847,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "bc37d277-781e-45ce-a009-5b860924fd0f",
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022"
       }
@@ -859,7 +859,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f206c869-2761-46c7-9acd-f237e9b66d5e",
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022"
       }
@@ -873,7 +873,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "23a470c7-c3b7-472d-b6bf-f1788fb36b22",
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022"
       }
@@ -886,7 +886,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e45b301d-d9e3-4217-a048-dc3bd80bbb09",
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022"
       }
@@ -3503,7 +3503,7 @@
         "script_level.level_keys": [
           "MyRoboticFriends-Unplugged2022"
         ],
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2022",
         "activity_section.key": "4e9eaee6-773f-429b-b274-d6c22d4c6457"
@@ -4832,7 +4832,7 @@
         "script_level.level_keys": [
           "MyLoopyRoboticFriends-Unplugged2022"
         ],
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022",
         "activity_section.key": "3ff8ec4d-fe12-413a-975d-69e143845e37"
@@ -6738,7 +6738,7 @@
         "script_level.level_keys": [
           "MyRoboticFriends-Unplugged2022"
         ],
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2022",
         "activity_section.key": "4e9eaee6-773f-429b-b274-d6c22d4c6457"
@@ -7374,7 +7374,7 @@
         "script_level.level_keys": [
           "MyLoopyRoboticFriends-Unplugged2022"
         ],
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2022",
         "activity_section.key": "3ff8ec4d-fe12-413a-975d-69e143845e37"
@@ -8988,67 +8988,67 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "resource.key": "feeling_faces_emotion_image"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "resource.key": "my_robotic_friends"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "resource.key": "my_robotic_friends_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "resource.key": "my_robotic_friends_3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "resource.key": "my_robotic_friends_4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "resource.key": "csf_-_course_c_-_slides_2022-2023"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "resource.key": "my_robotic_friends"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "resource.key": "my_robotic_friends_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "resource.key": "my_robotic_friends_2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "resource.key": "my_robotic_friends_3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "resource.key": "my_robotic_friends_4"
       }
     },
@@ -9367,37 +9367,37 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "vocabulary.key": "program"
       }
     },
@@ -9632,7 +9632,7 @@
         "description": "Identify repeated patterns in code that could be replaced with a loop"
       },
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "objective.key": "81c36d87-10e0-4f7e-91f2-88b6065ab543"
       }
     },
@@ -9642,7 +9642,7 @@
         "description": "Attend to precision when creating instructions"
       },
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "objective.key": "87841dc9-5cfa-4c68-9c56-9ca76b2668f8"
       }
     },
@@ -9752,7 +9752,7 @@
         "description": "Identify and address bugs or errors in sequenced instructions"
       },
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "objective.key": "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d"
       }
     },
@@ -9772,7 +9772,7 @@
         "description": "Write instructions that use loops to repeat patterns"
       },
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "objective.key": "d96017f7-e2b0-45e1-aa9f-12055fcee5fe"
       }
     },
@@ -10043,35 +10043,35 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Loopy Robotic Friends Jr.",
+        "lesson.key": "My Loopy Robotic Friends Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "My Robotic Friends Jr.",
+        "lesson.key": "My Robotic Friends Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
       }

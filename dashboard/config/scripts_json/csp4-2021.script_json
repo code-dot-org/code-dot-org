@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-03 19:47:42 UTC",
+    "serialized_at": "2022-02-09 18:39:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2390,7 +2390,7 @@
       "key": "5dbc1c3e-7f32-4d94-aa08-f1461f674f72",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the reaminder that is left after a number is divided by another number.\n\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\n\nNow let's get back to another app investigation with functions with parameters and return values.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the reaminder that is left after a number is divided by another number.\n\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\n\nNow let's get back to another app investigation with if-else-if statements.",
         "remarks": true
       },
       "seeding_key": {
