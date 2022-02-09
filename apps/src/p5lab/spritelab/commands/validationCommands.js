@@ -141,6 +141,7 @@ export const commands = {
       'costumesById',
       this.getSpriteIdsInUse()
     );
+    commands.initializePrevious.call(this, 'sprites', this.getSpriteIdsInUse());
     //check criteria and update complete status
     if (this.currentFrame() <= this.validationTimes.wait) {
       commands.checkAllCriteria(this.criteria);
@@ -148,6 +149,7 @@ export const commands = {
       //If wait time is over, determine if student passes or fails
       var results = {};
       if (state === 'fail') {
+        console.log(this.criteria);
         results = {
           state: 'failed',
           feedback: commands.reportFailure(this.criteria)
@@ -161,7 +163,6 @@ export const commands = {
           feedback: commands.reportSuccess(this.criteria)
         };
       }
-      console.log(this.criteria);
       return results;
     }
     commands.updatePrevious.call(this, 'eventLogLength');
@@ -176,6 +177,7 @@ export const commands = {
       'costumesById',
       this.getSpriteIdsInUse()
     );
+    commands.updatePrevious.call(this, 'sprites', this.getSpriteIdsInUse());
   },
 
   initializePrevious(type, spriteIds) {
@@ -216,6 +218,22 @@ export const commands = {
           }
         }
         break;
+      case 'sprites':
+        if (!this.previous.sprites === undefined) {
+          this.previous.sprites = [];
+          for (let i = 0; i < spriteIds.length; i++) {
+            let spriteId = spriteIds[i];
+            this.previous.sprites.push({
+              id: spriteId,
+              costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
+              x: this.nativeSpriteMap[spriteId].x,
+              y: this.nativeSpriteMap[spriteId].y,
+              behaviors: this.getBehaviorsForSpriteId(spriteId)
+            });
+          }
+          console.log(this.previous.sprites);
+        }
+        break;
     }
   },
 
@@ -237,7 +255,7 @@ export const commands = {
             };
             for (let i = 0; i < spriteIds.length; i++) {
               this.previous.behaviorsById.behaviors.push(
-                this.getBehaviorsForSpriteId(i)
+                this.getBehaviorsForSpriteId(spriteIds[i])
               );
             }
           }
@@ -255,6 +273,23 @@ export const commands = {
                 this.nativeSpriteMap[spriteIds[i]].getAnimationLabel()
               );
             }
+          }
+        }
+        break;
+      case 'sprites':
+        if (!this.previous.sprites !== undefined) {
+          if (this.previous.frame !== this.currentFrame()) {
+            this.previous.sprites = [];
+          }
+          for (let i = 0; i < spriteIds.length; i++) {
+            let spriteId = spriteIds[i];
+            this.previous.sprites.push({
+              id: spriteId,
+              costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
+              x: this.nativeSpriteMap[spriteId].x,
+              y: this.nativeSpriteMap[spriteId].y,
+              behaviors: this.getBehaviorsForSpriteId(spriteId)
+            });
           }
         }
         break;
@@ -371,8 +406,12 @@ export const commands = {
   // Returns false if non-event sprites are removed, or if no sprites are removed.
   onlyEventSpriteRemoved() {
     let result = false;
-    let previousSpriteIds = this.previous.spriteIds;
-    let currentSpriteIds = this.getSpriteIdsInUse();
+    const currentSpriteIds = this.getSpriteIdsInUse();
+    const previousSpriteIds =
+      this.previous.sprites === undefined
+        ? []
+        : this.previous.sprites.map(sprite => sprite.id);
+
     let eventSpriteIds = commands.getEventSpriteIds.call(this);
     for (let i = 0; i < previousSpriteIds.length; i++) {
       if (!currentSpriteIds.includes(previousSpriteIds[i])) {
