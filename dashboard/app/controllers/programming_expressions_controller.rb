@@ -35,7 +35,7 @@ class ProgrammingExpressionsController < ApplicationController
   def edit
     @programming_expression = ProgrammingExpression.find_by_id(params[:id])
     return render :not_found unless @programming_expression
-    @environment_categories = @programming_expression.programming_environment.category_options
+    @environment_categories = @programming_expression.programming_environment.categories.map {|c| c['name']}
   end
 
   def update
