@@ -1,6 +1,71 @@
 class Homepage
   MAX_HEROES_IN_ROTATION = 6
 
+  @@announcements_data = nil
+  @@loaded = false
+  @@load_error = false
+  @@json_path = pegasus_dir 'sites.v3/code.org/homepage.json'
+
+  # gets special announcement data for a page, or nil if not found
+  def self.get_announcement_for_page(page)
+    load_announcements
+    return nil if @@load_error || !@@announcements_data
+    pages = @@announcements_data[:pages]
+    banners = @@announcements_data[:banners]
+    banner_id_for_page = pages[page]
+    return nil unless banner_id_for_page
+
+    banner = banners[banner_id_for_page]
+
+    # If the banner has an array of environments, then the current environment must be one of them.
+    return nil if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
+
+    # If the banner has a required DCDO flag, then it must be set.
+    return nil if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+
+    banner ? banner.merge({"id": banner_id_for_page}) : nil
+  end
+
+  def self.load_announcements
+    # Reloads JSON file with announcement data on each page load
+    # in non-production environments
+    unless (@@load_error || @@loaded) && rack_env?(:production)
+      unless File.file?(@@json_path)
+        @@load_error = true
+        return
+      end
+      begin
+        @@announcements_data = JSON.parse(
+          IO.read(@@json_path),
+          symbolize_names: true,
+          object_class: HashWithIndifferentAccess
+        )
+        unless validate_announcements_data(@@announcements_data)
+          @@load_error = true
+        end
+      rescue JSON::ParserError
+        @@load_error = true
+      end
+      @@loaded = true
+    end
+  end
+
+  def self.validate_announcements_data(announcements_data)
+    return false unless announcements_data && announcements_data[:pages] &&
+      announcements_data[:banners] &&
+      announcements_data[:banners].respond_to?("each_value")
+
+    announcements_data[:banners].each_value do |banner|
+      return false unless validate_banner(banner)
+    end
+    return true
+  end
+
+  # validate a banner has the required fields
+  def self.validate_banner(banner)
+    banner[:desktopImage] && banner[:items] && banner[:actions]
+  end
+
   def self.get_heroes
     [
       {
@@ -108,6 +173,7 @@ class Homepage
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
+
     if latam_language_codes.include?(I18n.locale)
       youtube_id = "EGgdCryC8Uo"
       download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
@@ -121,8 +187,17 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
+    custom_banner = get_announcement_for_page("homepage")
 
-    if hoc_mode == "actual-hoc"
+    if custom_banner
+      custom_banner["actions"].map do |action|
+        {
+          text: action["text"],
+          type: action["type"],
+          url: action["url"]
+        }
+      end
+    elsif hoc_mode == "actual-hoc"
       [
         {
           text: "get_started",
@@ -352,7 +427,12 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    "changeworld"
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner
+      "custom"
+    else
+      "changeworld"
+    end
   end
 
   def self.get_heroes_arranged(request)
@@ -362,7 +442,11 @@ class Homepage
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if show_single_hero(request) == "changeworld"
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner
+      heroes_arranged =
+        [{centering: "50% 30%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
+    elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
     else
       # The order alternates person & stat.  Person alternates non-celeb and
