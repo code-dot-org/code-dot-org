@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {UsPhoneNumberInput} from '../form/UsPhoneNumberInput';
-import {defaultOptions} from '../LabeledFormComponent';
+import {useDefaultOptions} from '../LabeledFormComponent';
 
 export const LabeledUsPhoneNumberInput = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     ...props
   };
   return <UsPhoneNumberInput {...passProps} />;

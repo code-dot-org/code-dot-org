@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';

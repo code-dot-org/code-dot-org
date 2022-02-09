@@ -10,6 +10,14 @@
       = hoc_s(:hoc2019_header_line1_mobile)
     .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
       = hoc_s(:hoc2019_header_line2_mobile)
+  - elsif show_single_hero == "custom"
+    .hero-messages{style: "padding-top: 60px; padding-bottom: 60px"}
+      - heroes_arranged[0][:items].map do |item|
+        - if item["type"] == "text"
+          .hero-message-line{style: "color: white; font-size: 24px; line-height: 1.5em; padding-bottom: 0px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
+            = I18n.t(item["text"])
+        - elsif item["type"] == "image"
+          %img{src: item["url"], style: "width: 100%; max-width: 600px; margin-bottom: 20px"}
 
   .action_buttons
     - actions.each do |entry|

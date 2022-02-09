@@ -34,11 +34,16 @@
     "disable_if_else_editing": "false",
     "parent_level_id": 21182,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:22.212+00:00\",\"changed\":[\"cloned from \\\"grade2_collector_10_2021\\\"\"],\"cloned_from\":\"grade2_collector_10_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:22.212+00:00\",\"changed\":[\"cloned from \\\"grade2_collector_10_2021\\\"\"],\"cloned_from\":\"grade2_collector_10_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

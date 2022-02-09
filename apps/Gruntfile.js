@@ -591,6 +591,8 @@ describe('entry tests', () => {
   var internalEntries = {
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
+    'course_offerings/edit':
+      './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
@@ -632,6 +634,8 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_environments/new':
+      './src/sites/studio/pages/programming_environments/new.js',
     'programming_environments/edit':
       './src/sites/studio/pages/programming_environments/edit.js',
     'programming_expressions/new':
