@@ -1664,7 +1664,7 @@ class Script < ApplicationRecord
     units = Script.
       where(family_name: family_name).
       all.
-      select {|unit| user.levelbuilder? || unit.launched?}.
+      select {|unit| user&.levelbuilder? || unit.launched?}.
       map do |s|
       {
         name: s.name,
