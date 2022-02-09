@@ -1,7 +1,3 @@
-- certificate_data = {}
-- certificate_data[:imageUrl] = @certificate_image_url
-- certificate_data[:printUrl] = @certificate_print_url
-
-%script{src: webpack_asset_path('js/certificates/show.js'), data: {certificate: certificate_data.to_json}}
+%script{src: webpack_asset_path('js/certificates/show.js'), data: {certificate: @certificate_data.to_json}}
 
 #certificate-share
