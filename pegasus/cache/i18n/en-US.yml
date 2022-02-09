@@ -1738,6 +1738,8 @@
   hoc2018_dance_video2: "Dance Party - Events"
   hoc2018_dance_video3: "Dance Party - Properties"
   hoc2018_dance_video4: "Dance Party - Congratulations"
+  dance_box_higher_power_line_1: "Code a dance to Coldplay's \"Higher Power\" and you could get the chance to see the band live!"
+  dance_box_higher_power_line_2: "Check out <a href=\"%{path}\">code.org/coldplay</a> for more information."
   page_not_found_title: "Page Not Found"
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
