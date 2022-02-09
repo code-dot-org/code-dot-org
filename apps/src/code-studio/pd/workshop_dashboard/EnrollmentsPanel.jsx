@@ -10,7 +10,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {
-  useFoormSurvey,
+  shouldUseFoormSurvey,
   shouldShowSurveyResults
 } from './workshop_summary_utils';
 
@@ -191,7 +191,7 @@ export default class EnrollmentsPanel extends React.Component {
       return null;
     }
 
-    if (useFoormSurvey(subject, lastSessionDate)) {
+    if (shouldUseFoormSurvey(subject, lastSessionDate)) {
       return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
     } else if (subject === SubjectNames.SUBJECT_CSF_101) {
       // Pegasus-based results are no longer offered.
