@@ -69,22 +69,22 @@ export const commands = {
 
   anySpriteSpeaksThisFrame(spriteIds) {
     let result = false;
-    spriteIds.forEach(spriteId => {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, spriteId)) {
+    for (let i = 0; i < spriteIds.length; i++) {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
         result = true;
       }
-    });
+    }
     return result;
   },
 
   singleSpriteSpeaksThisFrame(spriteIds) {
     let result = false;
     let count = 0;
-    spriteIds.forEach(spriteId => {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, spriteId)) {
+    for (let i = 0; i < spriteIds.length; i++) {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
         count++;
       }
-    });
+    }
     result = count === 1;
     return result;
   },
@@ -120,9 +120,10 @@ export const commands = {
       this.currentFrame() * commands.calculateBarScale(this.validationTimes);
     drawUtils.validationBar(this.p5, barWidth, state, {});
 
+    commands.initializePrevious.call(this, 'eventLogLength');
     commands.initializePrevious.call(
       this,
-      'eventLogLength',
+      'spriteIds',
       this.getSpriteIdsInUse()
     );
     commands.initializePrevious.call(
@@ -158,11 +159,8 @@ export const commands = {
       console.log(this.criteria);
       return results;
     }
-    commands.updatePrevious.call(
-      this,
-      'eventLogLength',
-      this.getSpriteIdsInUse()
-    );
+    commands.updatePrevious.call(this, 'eventLogLength');
+    commands.updatePrevious.call(this, 'spriteIds', this.getSpriteIdsInUse());
     commands.updatePrevious.call(
       this,
       'behaviorsById',
@@ -227,6 +225,39 @@ export const commands = {
     return this.getSpriteIdsInUse().length >= min;
   },
 
+  spriteRemoved() {
+    let result = false;
+    let previousSpriteIds = this.previous.spriteIds;
+    let currentSpriteIds = this.getSpriteIdsInUse();
+    if (currentSpriteIds.length < previousSpriteIds.length) {
+      result = true;
+    } else {
+      for (let i = 0; i < previousSpriteIds.length; i++) {
+        if (!currentSpriteIds.includes(previousSpriteIds[i])) {
+          result = true;
+        }
+      }
+    }
+    return result;
+  },
+
+  onlyClickedSpriteRemoved() {
+    let result = false;
+    let previousSpriteIds = this.previous.spriteIds;
+    let currentSpriteIds = this.getSpriteIdsInUse();
+    let eventSpriteIds = commands.currentFrameEventSpriteIds.call(this);
+    for (let i = 0; i < previousSpriteIds.length; i++) {
+      if (!currentSpriteIds.includes(previousSpriteIds[i])) {
+        result = true;
+        if (!eventSpriteIds.includes(previousSpriteIds[i])) {
+          result = false;
+          break;
+        }
+      }
+    }
+    return result;
+  },
+
   allSpriteHaveDifferentCostumes() {
     return this.getAnimationsInUse().length === this.getSpriteIdsInUse().length;
   },
@@ -237,31 +268,31 @@ export const commands = {
 
   anyCostumeChangedThisFrame(spriteIds) {
     let result = false;
-    spriteIds.forEach(id => {
+    for (let i = 0; i < spriteIds.length; i++) {
       let currentCostume = this.nativeSpriteMap[
-        spriteIds[id]
+        spriteIds[i]
       ].getAnimationLabel();
-      let previousCostume = this.previous.costumesById.costumes[id];
+      let previousCostume = this.previous.costumesById.costumes[i];
       if (currentCostume !== previousCostume) {
         result = true;
       }
-    });
+    }
     return result;
   },
 
   onlyClickedCostumeChangedThisFrame(spriteIds) {
     let result = false;
-    spriteIds.forEach(id => {
+    for (let i = 0; i < spriteIds.length; i++) {
       let currentCostume = this.nativeSpriteMap[
-        spriteIds[id]
+        spriteIds[i]
       ].getAnimationLabel();
-      let previousCostume = this.previous.costumesById.costumes[id];
+      let previousCostume = this.previous.costumesById.costumes[i];
       if (currentCostume !== previousCostume) {
         //sprite change costume
         result = true;
         if (
           !(
-            this.p5.mouseIsOver(this.nativeSpriteMap[spriteIds[id]]) &&
+            this.p5.mouseIsOver(this.nativeSpriteMap[spriteIds[i]]) &&
             this.p5.mouseWentDown('left')
           )
         ) {
@@ -269,34 +300,34 @@ export const commands = {
           result = false;
         }
       }
-    });
+    }
     return result;
   },
 
   anyBehaviorChangedThisFrame(spriteIds) {
     let result = false;
-    spriteIds.forEach(id => {
-      let currentBehaviors = this.getBehaviorsForSpriteId(id);
-      let previousBehaviors = this.previous.behaviorsById.behaviors[id];
+    for (let i = 0; i < spriteIds.length; i++) {
+      let currentBehaviors = this.getBehaviorsForSpriteId(i);
+      let previousBehaviors = this.previous.behaviorsById.behaviors[i];
       if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
         result = true;
       }
-    });
+    }
     return result;
   },
 
   onlyEventSpritesBehaviorChanged(spriteIds) {
     let result = false;
-    spriteIds.forEach(id => {
-      let currentBehaviors = this.getBehaviorsForSpriteId(id);
-      let previousBehaviors = this.previous.behaviorsById.behaviors[id];
+    for (let i = 0; i < spriteIds.length; i++) {
+      let currentBehaviors = this.getBehaviorsForSpriteId(i);
+      let previousBehaviors = this.previous.behaviorsById.behaviors[i];
       if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
         result = true;
-        if (!commands.currentFrameEventSpriteIds.call(this).includes(id)) {
+        if (!commands.currentFrameEventSpriteIds.call(this).includes(i)) {
           result = false;
         }
       }
-    });
+    }
     return result;
   },
 
@@ -307,17 +338,22 @@ export const commands = {
           this.previous.eventLogLength = this.eventLog.length;
         }
         break;
+      case 'spriteIds':
+        if (this.previous.spriteIds === undefined) {
+          this.previous.spriteIds = spriteIds;
+        }
+        break;
       case 'behaviorsById':
         if (this.previous.behaviorsById === undefined) {
           this.previous.behaviorsById = {
             frame: this.currentFrame(),
             behaviors: []
           };
-          spriteIds.forEach(id => {
+          for (let i = 0; i < spriteIds.length; i++) {
             this.previous.behaviorsById.behaviors[
-              id
-            ] = this.getBehaviorsForSpriteId(id);
-          });
+              i
+            ] = this.getBehaviorsForSpriteId(i);
+          }
         }
         break;
       case 'costumesById':
@@ -326,20 +362,24 @@ export const commands = {
             frame: this.currentFrame(),
             costumes: []
           };
-          spriteIds.forEach(id => {
+          for (let i = 0; i < spriteIds.length; i++) {
             this.previous.costumesById.costumes.push(
-              this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
+              this.nativeSpriteMap[spriteIds[i]].getAnimationLabel()
             );
-          });
+          }
         }
         break;
     }
   },
 
-  updatePrevious(type, spriteIds) {
+  updatePrevious(type) {
+    let spriteIds = this.getSpriteIdsInUse();
     switch (type) {
       case 'eventLogLength':
         this.previous.eventLogLength = this.eventLog.length;
+        break;
+      case 'spriteIds':
+        this.previous.spriteIds = spriteIds;
         break;
       case 'behaviorsById':
         if (this.previous.behaviorsById !== undefined) {
@@ -348,11 +388,11 @@ export const commands = {
               frame: this.currentFrame(),
               behaviors: []
             };
-            spriteIds.forEach(id => {
+            for (let i = 0; i < spriteIds.length; i++) {
               this.previous.behaviorsById.behaviors.push(
-                this.getBehaviorsForSpriteId(id)
+                this.getBehaviorsForSpriteId(i)
               );
-            });
+            }
           }
         }
         break;
@@ -363,11 +403,11 @@ export const commands = {
               frame: this.currentFrame(),
               costumes: []
             };
-            spriteIds.forEach(id => {
+            for (let i = 0; i < spriteIds.length; i++) {
               this.previous.costumesById.costumes.push(
-                this.nativeSpriteMap[spriteIds[id]].getAnimationLabel()
+                this.nativeSpriteMap[spriteIds[i]].getAnimationLabel()
               );
-            });
+            }
           }
         }
         break;
@@ -376,22 +416,23 @@ export const commands = {
 
   spritesDefaultSize(spriteIds) {
     let result = true;
-    spriteIds.forEach(id => {
-      if (this.nativeSpriteMap[spriteIds[id]].getScale() !== 1) {
+    for (let i = 0; i < spriteIds.length; i++) {
+      if (this.nativeSpriteMap[spriteIds[i]].getScale() !== 1) {
         result = false;
       }
-    });
+    }
     return result;
   },
 
-  anySpriteClicked(spriteIds) {
+  anySpriteClicked() {
+    let spriteIds = this.getSpriteIdsInUse();
     let result = false;
     if (this.p5.mouseWentDown('left')) {
-      spriteIds.forEach(id => {
-        if (this.p5.mouseIsOver(this.nativeSpriteMap[spriteIds[id]])) {
+      for (let i = 0; i < spriteIds.length; i++) {
+        if (this.p5.mouseIsOver(this.nativeSpriteMap[spriteIds[i]])) {
           result = true;
         }
-      });
+      }
     }
     return result;
   },
@@ -465,8 +506,6 @@ export const commands = {
         );
       }
     }
-    //console.log(idArray);
-
     return idArray;
   }
 };

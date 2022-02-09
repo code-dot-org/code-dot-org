@@ -141,6 +141,8 @@
   "printWithEvent": "Make sure a `print` block is under an event block, like `at 3 seconds` or `when up pressed`.",
   "promptExplore": "Good! Did everything work how you expected? Press \"Keep Playing\" to make changes or \"Continue\" to move on.",
   "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
+  "removeSpriteWhenClicked": "A sprite needs to be removed when it is clicked.",
+  "removeOnlyClickedSprite": "All of the sprites were removed instead of just the one that was clicked. Try using the `clicked sprite` block inside your event block with the `remove` block.",
   "sayBlock": "Type something for the sprite to say in a `say` block. \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "secondClickButNoPrint": "You clicked on more than one sprite but no text was printed. Add a `print` block under each `when clicked` event block.",
   "secondClickButNoSpeech": "You clicked on more than one sprite but one of your clicks didn't cause a sprite to say anything. Add a `say` block under each `when clicked` event. \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
