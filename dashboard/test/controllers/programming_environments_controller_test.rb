@@ -49,6 +49,27 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_equal 'blockly', programming_environment.editor_type
   end
 
+  test 'can update programming expression categories from params' do
+    sign_in @levelbuilder
+
+    programming_environment = create :programming_environment
+    category_to_keep = create :programming_environment_category, programming_environment: programming_environment
+    category_to_destroy = create :programming_environment_category, programming_environment: programming_environment
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_environment.name}.json"}.once
+    post :update, params: {
+      name: programming_environment.name,
+      title: 'title',
+      editorType: 'blockly',
+      categories: [{id: category_to_keep.id, name: category_to_keep.name, color: category_to_keep.color}, {name: 'brand new category', color: '#00FFFF'}]
+    }
+    assert_response :ok
+
+    programming_environment.reload
+    assert programming_environment.categories.include?(category_to_keep)
+    refute programming_environment.categories.include?(category_to_destroy)
+    assert_equal 2, programming_environment.categories.count
+  end
+
   test 'returns not_found if updating a non-existant programming environment' do
     sign_in @levelbuilder
 
