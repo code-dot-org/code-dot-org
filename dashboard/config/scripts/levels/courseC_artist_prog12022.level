@@ -40,11 +40,16 @@
     "disable_if_else_editing": "false",
     "name_suffix": "2022",
     "parent_level_id": 21186,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:24.443+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog1_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:24.443+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog1_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

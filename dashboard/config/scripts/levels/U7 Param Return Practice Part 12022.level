@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:19:08.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -64,7 +60,7 @@
     "validation_enabled": "true",
     "text_mode_at_start": "false",
     "hide_view_data_button": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "debugger_disabled": "true",
     "show_turtle_before_run": "false",
@@ -91,9 +87,13 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T23:29:14.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:19:08.820+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Part 1_2021\\\"\"],\"cloned_from\":\"U7 Param Return Practice Part 1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:19:08.820+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Part 1_2021\\\"\"],\"cloned_from\":\"U7 Param Return Practice Part 1_2021\"},{\"changed_at\":\"2022-01-21 19:01:33 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

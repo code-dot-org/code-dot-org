@@ -73,11 +73,16 @@
       "downButton",
       "upButton"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:56.443+00:00\",\"changed\":[\"cloned from \\\"Virtual Pet 7_2021\\\"\"],\"cloned_from\":\"Virtual Pet 7_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:56.443+00:00\",\"changed\":[\"cloned from \\\"Virtual Pet 7_2021\\\"\"],\"cloned_from\":\"Virtual Pet 7_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 3
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

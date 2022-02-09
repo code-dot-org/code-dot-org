@@ -5,12 +5,18 @@ import ContentContainer from '../ContentContainer';
 import Button from '../Button';
 import shapes from './shapes';
 import color from '../../util/color';
+import PropTypes from 'prop-types';
 
-// This component - used on the teacher and student homepages - shows a button to view more courses if the user has more than a few courses. Students and teachers will see up to 5 courses, with their most recent as a TopCourse, and the button if they have more. Clicking the button will show CoursesCards for all of the users' courses beyond the top 5.
+// This component - used on the teacher and student homepages -
+// shows a button to view more courses if the user has more than a few courses.
+// Students and teachers will see up to 5 courses, with their most recent as a
+// TopCourse, and the button if they have more. Clicking the button will
+// show CoursesCards for all of the users' courses beyond the top 5.
 
 export default class SeeMoreCourses extends Component {
   static propTypes = {
-    courses: shapes.courses
+    courses: shapes.courses,
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   state = {
@@ -22,7 +28,7 @@ export default class SeeMoreCourses extends Component {
   }
 
   render() {
-    const {courses} = this.props;
+    const {courses, isProfessionalLearningCourse} = this.props;
 
     return (
       <div>
@@ -34,6 +40,7 @@ export default class SeeMoreCourses extends Component {
                   title={course.title}
                   description={course.description}
                   link={course.link}
+                  isProfessionalLearningCourse={isProfessionalLearningCourse}
                 />
                 {index % 2 === 0 && <div style={styles.spacer}>.</div>}
               </div>
