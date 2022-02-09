@@ -21,7 +21,7 @@ class BaseDSL
     object = new
     object.name(name) if name.present?
     # Use consistent apostrophe symbol, and remove no-break space
-    parsed_string = str ? str.gsub(/‘|’/, "'").gsub(/ /, "") : ''
+    parsed_string = str ? str.gsub(/‘|’/, "'").gsub(/ /, " ") : ''
     object.instance_eval(parsed_string, filename)
     [object.parse_output, object.i18n_hash]
   end
