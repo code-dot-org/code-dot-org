@@ -18,13 +18,15 @@ theme: responsive
 
 %div{dir: language_dir_class}
 
-  =view :dance_tutorial_section
-
-  .dance-text-icon-container.desktop-only
-    %a.translate-link{href: "/translate/dance"}
-      .dance-translate-link-text
-        =I18n.t(:hoc2018_dance_party_subheading)
-      %i.fa.fa-chevron-right.dance-chevron-icon
+  - if DCDO.get("higher-power-promotion", false)
+    =view :dance_tutorial_section_higher_power
+  - else
+    =view :dance_tutorial_section
+    .dance-text-icon-container.desktop-only
+      %a.translate-link{href: "/translate/dance"}
+        .dance-translate-link-text
+          =I18n.t(:hoc2018_dance_party_subheading)
+        %i.fa.fa-chevron-right.dance-chevron-icon
 
   =view :dance_teacher_resources
 
