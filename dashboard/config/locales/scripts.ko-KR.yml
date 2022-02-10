@@ -20858,6 +20858,8 @@ ko:
             'Lesson 18: Assessment Day':
               key: '레슨 18: 평가일'
               name: 평가일
+            lesson-1:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_lists:
               display_name: 리스트
@@ -20867,6 +20869,8 @@ ko:
               display_name: " 트래버스"
             csp_project:
               display_name: 프로젝트
+            lessonGroup-5:
+              display_name: 과정 후 설문조사
           name: csp5-2021
         csp6-2021:
           lessons:
@@ -20888,9 +20892,13 @@ ko:
             'Lesson 6: Assessment Day':
               key: '레슨 6: 평가일'
               name: 평가일
+            lesson-1:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_unit6_2020:
-              display_name: '단원 6: 알고리즘'
+              display_name: 알고리즘
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
           name: csp6-2021
         csp7-2021:
           lessons:
@@ -20927,11 +20935,15 @@ ko:
             'Lesson 11: Assessment Day':
               key: '레슨 11: 평가일'
               name: 평가일
+            lesson-1:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_parameters_return_values:
               display_name: 매개변수 및 반환값
             csp_libraries:
               display_name: 라이브러리
+            lessonGroup-3:
+              display_name: 설문조사
           name: csp7-2021
         csp8-2021:
           lessons:
@@ -20944,6 +20956,13 @@ ko:
             Create PT - Complete the Task:
               key: PT 만들기 준비 -과제 완료
               name: PT 만들기 -작업 완료 (12시간)
+            lesson-1:
+              name: CS 원리 과정 후 설문 조사
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT 만들기
+            lessonGroup-3:
+              display_name: 설문조사
           name: csp8-2021
         csp9-2021:
           lessons:
@@ -20973,9 +20992,13 @@ ko:
             'Lesson 9: Assessment Day':
               key: '레슨 9: 평가일'
               name: 평가일
+            lesson-1:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_unit9_2020:
               display_name: '단원 9: 데이터'
+            lessonGroup-2:
+              display_name: 설문조사
           name: csp9-2021
         csp10-2021:
           lessons:
@@ -21021,9 +21044,13 @@ ko:
             'Lesson 14: Unit Assessment Day':
               key: '레슨 14: 단원  평가일'
               name: 평가일
+            lesson-1:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_unit10_2020:
               display_name: '단원 10: 사이버보안 및 세계적 영향'
+            lessonGroup-2:
+              display_name: 설문조사
           name: csp10-2021
         coursea-2021:
           title: 과정 A (2021)
@@ -23125,6 +23152,8 @@ ko:
               name: 물리적 컴퓨팅
         self-paced-pl-csd6-2021:
           lessons:
+            lesson-4:
+              name: 데이터와 사회
             lesson-6:
               name: 데이터와 사회
         csa1-exemplars:
@@ -24262,6 +24291,61 @@ ko:
               name: 발생 시뮬레이터
             lesson-5:
               name: 스프라이트 랩으로 자기 소개
+            Drawing with Loops:
+              name: 루프로 그리기
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+              description_teacher: 학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들
+                얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이
+                될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다.
+            Using Variables with the Artist:
+              description_student: 이 레슨에서는 프로그램이 실행하면서 변하는 변수를 사용하여 그림을 그릴 것입니다.
+              description_teacher: 이 레슨에서 학생들은 아티스트 환경 내에서 변수를 사용하여 반복적인 디자인 생성에 대해
+                탐구할 것입니다. 학생들은 코드를 더 쉽게 읽고 쓰도록 변수를 사용하는 방법을 배울 것입니다. 안내된 퍼즐을 마친 후,
+                학생들은 그 동안 배운 내용을 보여주고 자신의 디자인을 만들며 프리플레이 레벨을 끝냅니다.
+            Programming with the Bee:
+              name: 미로 내 중첩 루프
+              description_student: 루프 안의 루프 안의 루프. 무슨 의미일까요? 이 레슨은 루프를 또 다른 루프 안에
+                넣을 때 어떻게 되는지 알려드릴 거예요.
+              description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
+                가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다.
+                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다.
+            Variables with the Bee:
+              name: 변하는 변수와 벌
+              description_student: 이 벌은 변수를 좋아합니다!
+              description_teacher: 이 레슨은 변수가 코드 실행 중에도 값의 변화를 허용함으로써 프로그램을 더 강력하게
+                만드는 방법을 보여줄 것입니다.
+            For Loop Fun:
+              name: 재미있는 반복
+              description_student: "`For` 루프에 관해 배우며 배우는 재미를 얻게 될 것입니다!"
+              description_teacher: 우리는 루프가 어떤 일을 계속해서 다시 하도록 허용한다는 점을 알고 있지만 이제 우리는
+                바로 그 안에 세워진 추가적 구조를 갖고 있는 루프 사용법을 배울 것입니다. 이러한 새 구조는 학생들에게 더 강력하고
+                역동적인 코드를 만들도록 허용합니다.
+            For Loops with Bee:
+              name: For 루프와 벌
+              description_student: 윙윙. 이 퍼즐에서는 `for` 루프를 사용하여 벌을 과즙과 꿀로 안내할 것입니다.
+              description_teacher: 벌이 나오는 이 레슨은 더 복잡한 퍼즐을 풀기 위해 `for` 루프와 증가하는 변수
+                사용에 중점을 둡니다. 학생들은 이전 레슨의 루프를 복습하는 것으로 시작하여 더 복잡한 문제를 더 효과적으로 풀 수 있도록
+                `for` 루프의 도입에 대해 살펴 봅니다.
+            For Loops with Artist:
+              name: For 루프와 아티스트
+              description_student: 다음 작품을 만들 준비를 하세요. 여기서 `for` 루프를 사용하여 감탄을 금치 못할
+                그림을 만들게 될 것입니다.
+              description_teacher: 이 레슨에서 학생들은 `for` 루프를 계속 연습하지만 이번에는 아티스트로 합니다.
+                학생들은 변수와 루프, `for` 루프 아이디어를 결합하여 복잡한 디자인을 만들어 퍼즐을 완성할 것입니다. 끝에서, 프리플레이
+                레벨에서 자신의 작품을 만들 기회를 갖게 될 것입니다.
+            Follow the Algorithm:
+              description_student: 게임을 하고 맞는 결과를 얻기 위해 어떤 명령어가 필요한지 생각해 보세요.
+              description_teacher: 이 레슨에서 학생들은 맞는 결과를 산출하기 위해 명령어를 어떻게 제공해야 하는지 생각해
+                보게 할 의도를 지닌 게임을 할 것입니다. 이것은 그들이 앞으로 하게 될 레슨에서의 스프라이트 랩로 더 넘어 가게 하는
+                데 도움을 줄 것입니다.
+            Alien Dance Party with Sprite Lab:
+              name: 외계인 댄스 파티와 스프라이트 랩
+              description_student: 학우들과 공유할 수 있는 인터랙티브 프로젝트를 만드세요.
+              description_teacher: 이 레슨은 학생들이 인터랙티브 애니메이션과 게임을 만들 수 있는 플랫폼인 스프라이트
+                랩으로 구성됩니다. 행동 외에, 오늘 학생들은 사용자 인풋을 이벤트로서 통합하여 "외계인 댄스 파티"를 만들 것입니다.
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
           description_short: 내부
         csa7-exemplars:
           lessons:
@@ -24274,6 +24358,42 @@ ko:
           lessons:
             lesson-2:
               name: 변수를 이용하여 계산하기
+            Introducing Sprite Lab:
+              name: 스프라이트 랩 소개
+            Making Sprites:
+              name: 스프라이트 만들기
+            Sprites in Action:
+              name: 스프라이트 인 액션
+            'Mini-Project: Virtual Pet':
+              name: '미니 프로젝트: 가상 애완동물'
+              description_student: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+              description_teacher: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+            Text and Prompts:
+              name: 텍스트 저장 및 검색
+            'Mini-Project: User Input Programs':
+              name: 챗봇 만들기
+            Simulating Experiments:
+              name: 실험 시뮬레이션
+              description_student: 컴퓨터에서 시뮬레이션을 실행하고 변수를 변경하여 실험하세요.
+              description_teacher: 스프라이트 랩에서 간단한 시뮬레이션을 실행함으로써 학생들은 트렌드 또는 패턴을 식별하는
+                데이터를 수집할 때 컴퓨팅을 어떻게 사용하는지 경험할 것입니다. 시뮬레이션을 여러 번 실행한 후, 학생들은 시뮬레이션
+                내 변수에 변화를 주면 결과물에 어떤 영향이 미치는지 예측하고 그 가설을 테스트할 기회를 갖게 될 것입니다.
+            End of Course Project:
+              description_student: 이 정도의 큰 프로젝트는 시간과 많은 계획을 들여야 합니다. 영감을 찾고, 계획을 발전시키며,
+                창의성을 맘껏 발휘해야 합니다!
+              description_teacher: 이 머릿돌 레슨은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 쇼케이스하는 프로세스를
+                익히게 합니다.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 스프라이트
+            lessonGroup-3:
+              display_name: 변수
+            lessonGroup-4:
+              display_name: 과정말 프로젝트
           title: CS 기초 2021 파일럿
         csa8-exemplars:
           lessons:
@@ -24372,3 +24492,1840 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 샌드박스
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: 내 온라인 이웃에서 안전
+              description_student: 온라인에서 안전하게 장소로 가는법을 배우세요.
+              key: 내 온라인 이웃에서 안전
+            Learn to Drag and Drop:
+              name: 드래그와 드롭 방법 배우기
+              description_student: 클릭 및 드래그하여 퍼즐을 완성하세요.
+              description_teacher: 이 레슨은 학생들에게 컴퓨터 랩으로 갈 때 무엇을 기대할지에 관한 아이디어를 줄 것입니다.
+                컴퓨터 랩에서의 매너를 소개하는 짧은 토론으로 시작하며, 컴퓨터를 사용해 온라인 퍼즐을 완성하는 활동까지 진행합니다.
+              key: 드래그와 드롭 방법 배우기
+            Happy Maps:
+              name: 즐거운 맵
+              description_student: 플러브를 과일로 가도록 지시사항을 작성하세요.
+              description_teacher: 이 언플러그드 레슨은 팀을 "플러브"를 과일로 가게 하는 간단한 과제로 한데 모이게
+                만듭니다. 학생들은 지시사항을 제공받은 기호로 바꿔야 하는 일을 하기 때문에 지시사항을 정확하게 작성하는 법을 연습할
+                것입니다. 코드 내 문제가 발생하면, 학생들은 또한 함께 버그를 찾아내고 해결책을 수립해야 합니다.
+            Sequencing with Scrat:
+              name: 스크랫으로 시퀸싱
+              description_student: 스크랫이 도토리에 도달하도록 프로그램하세요.
+              description_teacher: 아이스 에이지 프랜차이즈에 나오는 스크랫을 사용하여 학생들은 다람쥐 캐릭터를 미로의
+                한 쪽에서 다른 쪽에 있는 도토리로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로
+                쌓을 것입니다.
+              key: 스크랫으로 시퀸싱
+            Programming with Scrat:
+              name: 스크랫으로 프로그래밍
+              description_student: 스크랫이 도토리에 도달하도록 돕기 위해 프로그램을 작성하세요.
+              description_teacher: 아이스 에이지에 나오는 캐릭터를 사용하여 학생들은 스크랫을 미로의 한 쪽에서 다른 쪽에
+                있는 도토리로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓고 그것을 똑바로
+                이동 또는 좌회전, 우회전하게 만들 것입니다.
+            Programming with Rey and BB-8:
+              name: 레이와 BB-8로 프로그래밍
+              description_student: BB-8가 고철을 모을 수 있게 도와 주세요.
+              description_teacher: 이 레슨에서 학생들은 새로 찾아낸 프로그래밍 스킬을 더 복잡한 방식으로 사용하여 BB-8과
+                함께 까다로운 코스에서 길을 찾아 나올 것입니다.
+              key: 레이와 BB-8로 프로그래밍
+            Happy Loops:
+              name: 해피 루프
+              description_student: 플러브가 루프를 사용해 더 큰 문제를 풀도록 도와주세요.
+              description_teacher: 이 활동은 해피 맵을 다시 방문합니다. 이번에는 학생들이 코드로 더 크고 더 긴 퍼즐을
+                풀 것이며 더 긴 코드를 더 쉬운 방법으로 작성하게 하는 구조 내 유틸리티를 보게 될 것입니다.
+            Loops with Scrat:
+              name: 스크랫을 사용한 루프
+              description_student: 루프를 사용하여 스크랫이 더 많은 땅을 덮도록 도와 주세요.
+              description_teacher: '"해피 루프"에서 반복되는 지시사항이라는 개념 위에, 이 단계는 학생들에게 Code.org에서
+                루프를 사용하여 도토리로 더 효율적으로 가게 할 것입니다.'
+            Loops with Laurel:
+              name: 라우렐을 사용한 루프
+              description_student: 모험가 라우렐이 지하에서 보물을 모으도록 도와 주세요.
+              description_teacher: 이 레슨에서 학생들은 루프의 개념을 계속 배웁니다. 이전 레슨에서 학생들은 미로 속을
+                옮겨 다니며 옥수수를 따게 하는 루프를 소개 받았습니다. 여기서 루프는 열린 동굴 공간에서 보물을 모으기 위해 사용합니다.
+            Ocean Scene with Loops:
+              name: 루프를 사용한 해양 장면
+              description_student: 루프와 패턴을 사용하여 이미지를 완성하세요.
+              description_teacher: 루프로 다시 돌아와, 학생들은 설명문의 간단한 시퀸스를 반복하여 이미지를 그리는 법을
+                배웁니다. 이전 플러그드 레슨에서, 루프는 미로를 이동하여 보물을 모으는데 사용했습니다. 여기서는 루프로 패턴을 만들
+                것입니다. 이 단계의 끝에서, 학생들은 루프를 사용해 이미지를 만들 기회를 갖게 될 것입니다.
+              key: 루프를 사용한 해양 장면
+            The Big Event Jr.:
+              name: 빅 이벤트 주니어
+              description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
+              description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의
+                프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
+            'Mini-Project: On the Move with Play Lab':
+              description_student: 게임 또는 스토리 만들기
+              description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
+                코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 스토리를 만들 시간입니다!
+            End of Course Project:
+              name: 과정말 프로젝트
+            'Programming: Happy Maps':
+              key: '프로그래밍: 해피 맵'
+              name: 즐거운 맵
+              description_student: 플러브를 과일로 가도록 지시사항을 작성하세요.
+              description_teacher: 이 언플러그드 레슨은 팀을 "플러브"를 과일로 가게 하는 간단한 과제로 한데 모이게
+                만듭니다. 학생들은 지시사항을 제공받은 기호로 바꿔야 하는 일을 하기 때문에 지시사항을 정확하게 작성하는 법을 연습할
+                것입니다. 코드 내 문제가 발생하면, 학생들은 또한 함께 버그를 찾아내고 해결책을 수립해야 합니다.
+            Programming in Ice Age:
+              key: 아이스 에이지 내 프로그래밍
+              name: 스크랫으로 프로그래밍
+              description_student: 스크랫이 도토리에 도달하도록 돕기 위해 프로그램을 작성하세요.
+              description_teacher: 아이스 에이지에 나오는 캐릭터를 사용하여 학생들은 스크랫을 미로의 한 쪽에서 다른 쪽에
+                있는 도토리로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓고 그것을 똑바로
+                이동 또는 좌회전, 우회전하게 만들 것입니다.
+            'Loops: Happy Loops':
+              key: '루프: 해피 루프'
+              name: 해피 루프
+              description_student: 플러브가 루프를 사용해 더 큰 문제를 풀도록 도와주세요.
+              description_teacher: 이 활동은 해피 맵을 다시 방문합니다. 이번에는 학생들이 코드로 더 크고 더 긴 퍼즐을
+                풀 것이며 더 긴 코드를 더 쉬운 방법으로 작성하게 하는 구조 내 유틸리티를 보게 될 것입니다.
+            Loops in Ice Age:
+              key: 아이스 에이지 내 루프
+              name: 스크랫을 사용한 루프
+              description_student: 루프를 사용하여 스크랫이 더 많은 땅을 덮도록 도와 주세요.
+              description_teacher: '"해피 루프"에서 반복되는 지시사항이라는 개념 위에, 이 단계는 학생들에게 Code.org에서
+                루프를 사용하여 도토리로 더 효율적으로 가게 할 것입니다.'
+            Loops in Collector:
+              key: 수집가 내 루프
+              name: 라우렐을 사용한 루프
+              description_student: 모험가 라우렐이 지하에서 보물을 모으도록 도와 주세요.
+              description_teacher: 이 레슨에서 학생들은 루프의 개념을 계속 배웁니다. 이전 레슨에서 학생들은 미로 속을
+                옮겨 다니며 옥수수를 따게 하는 루프를 소개 받았습니다. 여기서 루프는 열린 동굴 공간에서 보물을 모으기 위해 사용합니다.
+            'Events: The Big Event':
+              key: '이벤트: 빅 이벤트'
+              name: 빅 이벤트 주니어
+              description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
+              description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의
+                프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
+            Events in Play Lab:
+              key: 플레이 랩 내 이벤트
+              description_student: 게임 또는 스토리 만들기
+              description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
+                코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 스토리를 만들 시간입니다!
+            lesson-1:
+              key: 레슨-1
+              name: 과정말 프로젝트
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+            lessonGroup-5:
+              display_name: 과정말 프로젝트
+          title: 과정 A (2021)
+          student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의
+            게임 또는 스토리를 만드세요.
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
+          description_audience: '나이: 4-7'
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: 앵그리 버드로 프로그래밍
+              description_student: 앵그리버드로 시퀸스와 알고리즘 배우기.
+              description_teacher: 앵그리버드 게임에 나오는 캐릭터를 사용하여 학생들은 새를 미로의 한 쪽에서 다른 쪽에
+                있는 돼지에게로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓을 것입니다.
+              key: 앵그리 버드로 프로그래밍
+            Debugging in Maze:
+              name: 미로 내 디버깅
+              description_student: 퍼즐 안에서 문제를 찾아내고 디버깅 스킬을 연습하세요.
+              description_teacher: 디버깅은 프로그램 학습에서 필수 요소입니다. 학생들은 틀리게 푼 일부 퍼즐을 보게 될
+                것입니다. 그들은 기존 코드를 한 단계 한 단계 살피며 잘못된 루프와 누락된 블록, 과다한 블록, 순서가 맞지 않은 블록
+                등을 포함하여 오류를 식별할 것입니다
+            Collecting Treasure with Laurel:
+              name: 라우렐로 보물 모으기
+              key: 라우렐로 보물 모으기
+            Creating Art with Code:
+              name: 코드로 아트 창작
+              description_student: 아티스트로 프로그래밍하여 아름다운 이미지를 만드세요.
+              description_teacher: 이 레슨에서 학생들은 아티스트를 컨트롤하여 화면 위 그림을 완성할 것입니다. 이 아티스트
+                단계는 학생들에게 '100 픽셀 앞으로 이동'과 '90도 우회전'과 같은 새 블록을 사용하여 점점 더 복잡해 지는 이미지를
+                만들 수 있게 합니다.
+              key: 코드로 아트 창작
+            Swimming Fish in Sprite Lab:
+              name: 스프라이트 랩 내 헤엄치는 물고기
+              description_student: 스프라이트 만들기와 편집하기에 대해 배웁니다.
+              description_teacher: 이 레슨에서 학생들은 스프라이트 랩의 중심에 있는 두 가지 개념인 스프라이트와 행동에
+                관해 배울 것입니다. 스프라이트는 화면에 나오는 캐릭터 또는 객체이며 학생은 이것들을 이동 및 변경, 조작할 수 있습니다.
+                행동은 스파라이트가 계속 취하는 동작으로 멈쳐질 때까지 계속 합니다.
+              key: 스프라이트 랩 내 헤엄치는 물고기
+            Making Sprites:
+              name: 스프라이트 만들기
+            Sprites in Action:
+              name: 스프라이트 인 액션
+            Virtual Pet with Sprite Lab:
+              name: 가상 펫과 스프라이트 랩
+              description_student: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+              description_teacher: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+              key: 가상 펫과 스프라이트 랩
+            Dance Party:
+              name: 댄스 파티
+              description_student: 축하할 시간입니다! 이 레슨에서 자신의 인터랙티브 댄스 파티를 프로그램하게 될 것이니다.
+              description_teacher: 이 레슨에서 학생들은 자신의 인터랙티브 댄스 파티를 프로그램할 것입니다. 이 활동에는
+                툴이 음악에 반응하도록 만들어 졌기 때문에 사운드가 있어야 합니다.
+            Loops with Rey and BB-8:
+              name: 레이와 BB-8을 사용한 루프
+              description_student: '루프를 사용하여 BB-8가 미로를 빠져 나오도록 도와 주세요! '
+              key: 레이와 BB-8을 사용한 루프
+            'Mini-Project: Sticker Art':
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+              description_teacher: 학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들
+                얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이
+                될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다.
+            Nested Loops in Maze:
+              name: 미로 내 중첩 루프
+              description_student: 루프 안의 루프 안의 루프. 이것의 의미는? 이 레슨은 중첩 루프를 만들면 어떻게 되는지
+                가르쳐 줄거예요.
+              description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
+                가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다.
+                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다.
+              key: 미로 내 중첩 루프
+            Snowflakes with Anna and Elsa:
+              name: 안나, 엘사와 눈송이
+              description_student: '안나와 엘사는 아이스 스케이트를 정말 잘 타지만 아이스 위에 패턴을 만들기 위해 여러분의
+                도움이 필요해요. 중첩 루프를 사용하여 뭔가 굉장히 멋진 것을 만드세요. '
+              description_teacher: 이제 학생들은 루프를 층으로 만드는 방법을 알았으며 그래서 많은 아름다운 것들을 만들
+                수 있습니다. 이 레슨은 학생들에게 일련의 연습 활동을 하게 하여 안나와 엘사의 우수한 아이스 스케이팅 스킬을 사용하여
+                포트폴리오에 넣을 이미지를 준비하도록 도움을 줍니다.
+              key: 안나, 엘사와 눈송이
+            Looking Ahead with Minecraft:
+              name: 마인크래프트로 미리보기
+              description_student: 용암을 피하세요! 여기서 여러분은 마인크래프트 세상 내 조건에 대해 배우게 될 것입니다.
+              description_teacher: 이 레슨은 원래 아워오브코드를 위해 마인트래프트 팀과 함께 만들었습니다. 학생들은 지금까지
+                배운 아이디어를 연습함은 물론 조건을 살짝 엿 볼 기회를 가질 것입니다!
+            If/Else with Bee:
+              name: '"If/Else" 와 벌'
+              description_student: 이제 조건에 대해 이해했으니 벌이 그러한 조건을 사용해 꿀과 과즙을 모으도록 프로그래밍할
+                시간입니다.
+              description_teacher: 이 지점까지 올 때까지 학생들은 실행할 때 마다 항상 동일한 방식으로 작동되는 신뢰할
+                수 있지만 유연하지 않는 코드를 작성해 왔습니다. 이 레슨에서 여러분의 학급은 프로그램이 마주하는 특정 조건에 따라 다륵
+                기능하는 코드를 작성하도록 허용하는, 조건으로 코딩을 하기 시작할 것입니다.
+              key: '"If/Else" 와 벌'
+            While Loops in Farmer:
+              name: 농부 내 while 루프
+              description_student: '루프는 또한 코딩에서도 유용합니다. 이 레슨은 새로운 종류의 루프: while 루프에
+                대해 알려드립니다!'
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: '마인크래프트 내 조건: 보야지 아쿠아틱'
+              description_student: 여기서 여러분은 마인크래프트 세계 속 조건에 대해 배우게 될 것입니다.
+              description_teacher: 이 레슨은 원래 아워오브코드를 위해 마인트래프트 팀과 함께 만들었습니다. 학생들은 지금까지
+                배운 아이디어를 연습함은 물론 조건을 살짝 엿 볼 기회를 가질 것입니다!
+              key: '마인크래프트 내 조건: 보야지 아쿠아틱'
+            Until Loops in Maze:
+              name: 미로 내 until 루프
+              description_student: "`Until` 루프를 사용할 때 멋진 놀라운 일을 할 수 있습니다!"
+              description_teacher: 이 레슨에서 학생들은 `until` 루프에 대해 배울 것입니다. 학생들은 그들이 원하는
+                정지 지점에 도달할 때 '까지(until)' 주인공이 동작을 반복하도록 프로그램을 작성할 것입니다.
+              key: 미로 내 until 루프
+            Harvesting with Conditionals:
+              name: 수확과 조건문
+              description_student: 각 조건은 언제 사용해야 할지 항상 분명하지는 않습니다. 이 레슨은 해야 할 일을 결정하는
+                연습을 하는데 도움을 줄 것입니다.
+              description_teacher: 학생들은 `while` 루프와 `until` 루프, `if / else` 문을 연습할
+                것입니다. 이러한 블록 모두는 조건을 사용합니다. 세 가지 모두를 연습함으로써, 학생들은 복잡하고 유연한 코드 작성법을
+                배울 것입니다.
+              key: 수확과 조건문
+            Functions in Minecraft:
+              name: 마인크래프트 내 함수
+              description_student: 가장 효율적인 코드를 위한 함수 활용법을 알아낼 수 있어요?
+              description_teacher: 학생들은 이 재미있고 인터랙티브한 마인크래프트 모험에서 함수가 얼마나 많이 도움이 되는지
+                이해하기 시작할 것입니다.
+              key: 마인크래프트 내 함수
+            Functions with Artist:
+              name: 함수와 아티스트
+              description_student: 복잡한 그림을 함수로 더 쉽게 그리세요!
+              description_teacher: 학생들은 아티스트로 함수 사용법에 관해 배울 것입니다. 훌륭한 이미지를 만들고 수정할
+                것입니다. 더 복잡한 패턴을 위해 학생들은 또 다른 함수의 내부에 있는 함수를 호출하는 중첩 함수에 대해 배울 것입니다.
+              key: 함수와 아티스트
+            Functions with Harvester:
+              name: 함수와 수확인
+              description_student: 농부의 수확을 도울 때 함수는 많은 일을 덜어 줄 것입니다.
+              description_teacher: 학생들은 아티스트에서 인상적인 디자인을 만들고 벌에서 미로에서 빠져 나오는 길을 찾는
+                연습을 했지만 오늘은 수확인에서 함수를 사용해 작물을 수확하기 위해 함수를 사용할 것입니다. 이 레슨은 학생들에게 함수를
+                `while` 루프와 `if / else`문에 결합함으로써 새로운 방식으로 함수를 사용하게 합니다.
+              key: 함수와 수확인
+            Text and Prompts:
+              name: 텍스트 저장 및 검색
+            Using Variables with the Artist:
+              description_student: 이 레슨에서는 프로그램이 실행하면서 변하는 변수를 사용하여 그림을 그릴 것입니다.
+              description_teacher: 이 레슨에서 학생들은 아티스트 환경 내에서 변수를 사용하여 반복적인 디자인 생성에 대해
+                탐구할 것입니다. 학생들은 코드를 더 쉽게 읽고 쓰도록 변수를 사용하는 방법을 배울 것입니다. 안내된 퍼즐을 마친 후,
+                학생들은 그 동안 배운 내용을 보여주고 자신의 디자인을 만들며 프리플레이 레벨을 끝냅니다.
+            Variables with the Bee:
+              name: 변하는 변수와 벌
+              description_student: 이 벌은 변수를 좋아합니다!
+              description_teacher: 이 레슨은 변수가 코드 실행 중에도 값의 변화를 허용함으로써 프로그램을 더 강력하게
+                만드는 방법을 보여줄 것입니다.
+            For Loops with Bee:
+              name: For 루프와 벌
+              description_student: 윙윙. 이 퍼즐에서는 `for` 루프를 사용하여 벌을 과즙과 꿀로 안내할 것입니다.
+              description_teacher: 벌이 나오는 이 레슨은 더 복잡한 퍼즐을 풀기 위해 `for` 루프와 증가하는 변수
+                사용에 중점을 둡니다. 학생들은 이전 레슨의 루프를 복습하는 것으로 시작하여 더 복잡한 문제를 더 효과적으로 풀 수 있도록
+                `for` 루프의 도입에 대해 살펴 봅니다.
+              key: For 루프와 벌
+            For Loops with Artist:
+              name: For 루프와 아티스트
+              description_student: 다음 작품을 만들 준비를 하세요. 여기서 `for` 루프를 사용하여 감탄을 금치 못할
+                그림을 만들게 될 것입니다.
+              description_teacher: 이 레슨에서 학생들은 `for` 루프를 계속 연습하지만 이번에는 아티스트로 합니다.
+                학생들은 변수와 루프, `for` 루프 아이디어를 결합하여 복잡한 디자인을 만들어 퍼즐을 완성할 것입니다. 끝에서, 프리플레이
+                레벨에서 자신의 작품을 만들 기회를 갖게 될 것입니다.
+              key: For 루프와 아티스트
+            End of Course Project:
+              name: 과정말 프로젝트
+              description_student: 수 많은 코딩을 할 준비를 하세요! 자신의 프로젝트를 만들기 시작할 시간입니다.
+              description_teacher: 이 머릿돌 레슨은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 쇼케이스하는 프로세스를
+                익히게 합니다.
+              key: 과정말 프로젝트
+            Debugging with Scrat:
+              key: 스크랫으로 디버깅
+              name: 미로 내 디버깅
+              description_student: 퍼즐 안에서 문제를 찾아내고 디버깅 스킬을 연습하세요.
+              description_teacher: 디버깅은 프로그램 학습에서 필수 요소입니다. 학생들은 틀리게 푼 일부 퍼즐을 보게 될
+                것입니다. 그들은 기존 코드를 한 단계 한 단계 살피며 잘못된 루프와 누락된 블록, 과다한 블록, 순서가 맞지 않은 블록
+                등을 포함하여 오류를 식별할 것입니다
+            lesson-2:
+              key: 레슨--2
+              name: 스프라이트 만들기
+            lesson-3:
+              key: 레슨--3
+              name: 스프라이트 인 액션
+            lesson-1:
+              key: 레슨-1
+              name: 댄스 파티
+              description_student: 축하할 시간입니다! 이 레슨에서 자신의 인터랙티브 댄스 파티를 프로그램하게 될 것이니다.
+              description_teacher: 이 레슨에서 학생들은 자신의 인터랙티브 댄스 파티를 프로그램할 것입니다. 이 활동에는
+                툴이 음악에 반응하도록 만들어 졌기 때문에 사운드가 있어야 합니다.
+            Sticker Art with Loops:
+              key: 루프를 사용한 스티커 아트
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+              description_teacher: 학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들
+                얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이
+                될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다.
+            'Looking Ahead with Minecraft ':
+              key: '마인크래프트로 미리보기 '
+              name: 마인크래프트로 미리보기
+              description_student: 용암을 피하세요! 여기서 여러분은 마인크래프트 세상 내 조건에 대해 배우게 될 것입니다.
+              description_teacher: 이 레슨은 원래 아워오브코드를 위해 마인트래프트 팀과 함께 만들었습니다. 학생들은 지금까지
+                배운 아이디어를 연습함은 물론 조건을 살짝 엿 볼 기회를 가질 것입니다!
+            While Loops with the Farmer:
+              key: While 루프와 농부
+              name: 농부 내 while 루프
+              description_student: '루프는 또한 코딩에서도 유용합니다. 이 레슨은 새로운 종류의 루프: while 루프에
+                대해 알려드립니다!'
+            lesson-4:
+              key: 레슨-4
+              name: 텍스트 저장 및 검색
+            Variables with Artist:
+              key: 변수와 아티스트
+              description_student: 이 레슨에서는 프로그램이 실행하면서 변하는 변수를 사용하여 그림을 그릴 것입니다.
+              description_teacher: 이 레슨에서 학생들은 아티스트 환경 내에서 변수를 사용하여 반복적인 디자인 생성에 대해
+                탐구할 것입니다. 학생들은 코드를 더 쉽게 읽고 쓰도록 변수를 사용하는 방법을 배울 것입니다. 안내된 퍼즐을 마친 후,
+                학생들은 그 동안 배운 내용을 보여주고 자신의 디자인을 만들며 프리플레이 레벨을 끝냅니다.
+            Changing Variables with Bee:
+              key: 변하는 변수와 벌
+              name: 변하는 변수와 벌
+              description_student: 이 벌은 변수를 좋아합니다!
+              description_teacher: 이 레슨은 변수가 코드 실행 중에도 값의 변화를 허용함으로써 프로그램을 더 강력하게
+                만드는 방법을 보여줄 것입니다.
+          lesson_groups:
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_sprites:
+              display_name: 스프라이트
+            lessonGroup-9:
+              display_name: 이벤트
+            csf_loops:
+              display_name: 반복
+            csf_conditionals:
+              display_name: 조건
+            csf_functions:
+              display_name: 함수
+            csf_variables:
+              display_name: 변수
+            csf_for_loops:
+              display_name: 반복을 위한
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램 만들기와
+            문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를 만드세요.
+          student_description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램
+            만들기와 문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를
+            만드세요.
+          description_short: '컴퓨터 과학 소개: 고학년 학생을 위해 초등학교 커리큘럼 중 최고의 커리큘럼을 결합합니다.'
+          description_audience: '나이: 9-18'
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS 원리 사전 설문조사
+              key: CS 원리 사전 설문조사
+            Welcome to CSP:
+              name: " CSP에 오신 걸 환영합니다."
+              key: " CSP에 오신 걸 환영합니다."
+            Representing Information:
+              name: 정보 표현
+              key: 정보 표현
+            Circle Square Patterns:
+              name: 원 사각형 패턴
+              key: 원 사각형 패턴
+            Binary Numbers:
+              name: 바이너리 수
+              key: 바이너리 수
+            Overflow and Rounding:
+              name: 오버플로우와 반올림
+              key: 오버플로우와 반올림
+            Representing Text:
+              name: 텍스트 표시
+              key: 텍스트 표시
+            Black and White Images:
+              name: 흑백 이미지
+              key: 흑백 이미지
+            Color Images:
+              name: 컬러 이미지
+              key: 컬러 이미지
+            Lossless Compression:
+              name: 무손실 압축
+              key: 무손실 압축
+            Lossy Compression:
+              name: 손실 압축
+              key: 손실 압축
+            Intellectual Property:
+              name: 지적 재산
+              key: 지적 재산
+            Project   Digital Information Dilemmas Part 1:
+              name: 프로젝트 디지털 정보 딜레마 1부
+            Project   Digital Information Dilemmas Part 2:
+              name: 프로젝트 디지털 정보 딜레마 2부
+            Assessment Day:
+              name: 평가일
+            Project - Digital Information Dilemmas Part 1:
+              key: 프로젝트 - 디지털 정보 딜레마 1부
+              name: 프로젝트 디지털 정보 딜레마 1부
+            Project - Digital Information Dilemmas Part 2:
+              key: 프로젝트 - 디지털 정보 딜레마 2부
+              name: 프로젝트 디지털 정보 딜레마 2부
+            'Lesson 14: Assessment Day':
+              key: '레슨 14: 평가일'
+              name: 평가일
+          lesson_groups:
+            cspSurvey:
+              display_name: 설문조사
+            csp_unit1_2020:
+              display_name: '단원 1: 디지털 정보'
+        csp2-2022:
+          lessons:
+            Welcome to the Internet:
+              name: 인터넷에 오신 걸 환영합니다
+              key: 인터넷에 오신 걸 환영합니다
+            Building a Network:
+              name: 네트워크 구축
+              key: 네트워크 구축
+            The Need for Addressing:
+              name: 주소 필요성
+              key: 주소 필요성
+            Routers and Redundancy:
+              name: 라우터 및 반복
+              key: 라우터 및 반복
+            Packets:
+              name: 패킷
+              key: 패킷
+            HTTP and DNS:
+              name: HTTP 및 DNS
+            Project   Internet Dilemmas Part 1:
+              name: 프로젝트  인터넷 딜레마 1부
+            Project   Internet Dilemmas Part 2:
+              name: 프로젝트 인터넷 딜레마 2부
+            Assessment Day:
+              name: 평가일
+            DNS and HTTP:
+              key: DNS 및 HTTP
+              name: HTTP 및 DNS
+            Project - Internet Dilemmas Part 1:
+              key: 프로젝트 - 인터넷 딜레마 1부
+              name: 프로젝트  인터넷 딜레마 1부
+            Project - Internet Dilemmas Part 2:
+              key: 프로젝트 - 인터넷 딜레마 2부
+              name: 프로젝트 인터넷 딜레마 2부
+            'Lesson 9: Assessment Day':
+              key: '레슨 9: 평가일'
+              name: 평가일
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '단원 2: 인터넷'
+        csp3-2022:
+          lessons:
+            Introduction to Apps:
+              name: 앱 소개
+              key: 앱 소개
+            Project   Designing an App Part 1:
+              name: " 프로젝트 앱 설계 1부"
+            Project   Designing an App Part 2:
+              name: " 프로젝트 앱 설계 2부"
+            The Need for Programming Languages:
+              name: 프로그래밍 언어의 필요성
+              key: 프로그래밍 언어의 필요성
+            Intro to Programming:
+              name: 프로그래밍 소개
+              key: 프로그래밍 소개
+            Debugging:
+              name: 디버깅
+              key: 디버깅
+            Project   Designing an App Part 3:
+              name: " 프로젝트 앱 설계 3부"
+            Project   Designing an App Part 4:
+              name: " 프로젝트 앱 설계 4부"
+            Project   Designing an App Part 5:
+              name: " 프로젝트 앱 설계 5부"
+            Assessment Day:
+              name: 평가일
+            Project - Designing an App Part 1:
+              key: " 프로젝트: 앱 설계 1부"
+              name: " 프로젝트 앱 설계 1부"
+            Project - Designing an App Part 2:
+              key: " 프로젝트: 앱 설계 2부"
+              name: " 프로젝트 앱 설계 2부"
+            Project - Designing an App Part 3:
+              key: " 프로젝트: 앱 설계 3부"
+              name: " 프로젝트 앱 설계 3부"
+            Project - Designing an App Part 4:
+              key: " 프로젝트: 앱 설계 4부"
+              name: " 프로젝트 앱 설계 4부"
+            Project - Designing an App Part 5:
+              key: " 프로젝트: 앱 설계 5부"
+              name: " 프로젝트 앱 설계 5부"
+            'Lesson 11: Assessment Day':
+              key: '레슨 11: 평가일'
+              name: 평가일
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 단원 1 - 앱 설계 소개
+        csp4-2022:
+          lessons:
+            Variables Explore:
+              name: 변수 탐구
+              key: 변수 탐구
+            Variables Investigate:
+              name: 변수 조사
+              key: 변수 조사
+            Variables Practice:
+              name: 변수 연습
+              key: 변수 연습
+            Variables Make:
+              name: 변수 만들기
+              key: 변수 만들기
+            Conditionals Explore:
+              name: 조건 탐구
+              key: 조건 탐구
+            Conditionals Investigate:
+              name: 조건 조사
+              key: 조건 조사
+            Conditionals Practice:
+              name: 조건 연습
+              key: 조건 연습
+            Functions Explore / Investigate:
+              name: 함수 탐구 / 조사
+              key: 함수 탐구 / 조사
+            Functions Practice:
+              name: 함수 연습
+              key: 함수 연습
+            Functions Make:
+              name: 함수 만들기
+              key: 함수 만들기
+            Project   Decision Maker App Part 1:
+              name: 프로젝트  의사결정자 앱 1부
+            Project   Decision Maker App Part 2:
+              name: 프로젝트  의사결정자 앱 2부
+            Project   Decision Maker App Part 3:
+              name: 프로젝트  의사결정자 앱 3부
+            Assessment Day:
+              name: 평가일
+            Conditional Make:
+              key: 조건 만들기
+            Project - Decision Maker App Part 1:
+              key: 프로젝트 - 의사결정자 앱 1부
+              name: 프로젝트  의사결정자 앱 1부
+            Project - Decision Maker App Part 2:
+              key: 프로젝트 - 의사결정자 앱 2부
+              name: 프로젝트  의사결정자 앱 2부
+            Project - Decision Maker App Part 3:
+              key: 프로젝트 - 의사결정자 앱 3부
+              name: 프로젝트  의사결정자 앱 3부
+            'Lesson 15: Assessment Day':
+              key: '레슨 15: 평가일'
+              name: 평가일
+          lesson_groups:
+            csp_variables:
+              display_name: 변수
+            csp_conditionals:
+              display_name: 조건
+            csp_functions:
+              display_name: 함수
+            csp_project:
+              display_name: 프로젝트
+        csp5-2022:
+          lessons:
+            Lists Explore:
+              name: 목록 탐구
+              key: 목록 탐구
+            Lists Investigate:
+              name: 목록 조사
+              key: 목록 조사
+            Lists Practice:
+              name: 목록 연습
+              key: 목록 연습
+            Lists Make:
+              name: 목록 만들기
+              key: 목록 만들기
+            Loops Explore:
+              name: 루프 탐구
+              key: 루프 탐구
+            Loops Investigate:
+              name: 루프 조사
+              key: 루프 조사
+            Loops Practice:
+              name: 루프 연습
+              key: 루프 연습
+            Loops Make:
+              name: 루프 만들기
+              key: 루프 만들기
+            Traversals Explore:
+              name: " 트래버스 탐구"
+              key: " 트래버스 탐구"
+            Traversals Investigate:
+              name: " 트래버스 조사"
+              key: " 트래버스 조사"
+            Traversals Practice:
+              name: " 트래버스 연습"
+              key: " 트래버스 연습"
+            Traversals Make:
+              name: " 트래버스 만들기"
+              key: " 트래버스 만들기"
+            Project   Hackathon Part 1:
+              name: 프로젝트 해커톤 1부
+            Project   Hackathon Part 2:
+              name: 프로젝트 해커톤 2부
+            Project   Hackathon Part 3:
+              name: 프로젝트 해커톤 3부
+            Project   Hackathon Part 4:
+              name: 프로젝트 해커톤 4부
+            Project   Hackathon Part 5:
+              name: 프로젝트 해커톤 5부
+            Assessment Day:
+              name: 평가일
+            Semester Hackathon Part 1:
+              key: 해커톤 학기 1부
+              name: 프로젝트 해커톤 1부
+            Semester Hackathon Part 2:
+              key: 해커톤 학기 2부
+              name: 프로젝트 해커톤 2부
+            Semester Hackathon Part 3:
+              key: 해커톤 학기 3부
+              name: 프로젝트 해커톤 3부
+            Semester Hackathon Part 4:
+              key: 해커톤 학기 4부
+              name: 프로젝트 해커톤 4부
+            Semester Hackathon Part 5:
+              key: 해커톤 학기 5부
+              name: 프로젝트 해커톤 5부
+            'Lesson 18: Assessment Day':
+              key: '레슨 18: 평가일'
+              name: 평가일
+          lesson_groups:
+            csp_lists:
+              display_name: 리스트
+            csp_loops:
+              display_name: 반복
+            csp_traversals:
+              display_name: " 트래버스"
+            csp_project:
+              display_name: 프로젝트
+        courseb-2022:
+          lessons:
+            Digital Trails:
+              name: 디지털 흔적
+              description_student: '디지털 발자국과 웹사이트 방문 시 안전을 유지하는 방법에 관해 배웁니다. '
+              key: 디지털 흔적
+            Move It, Move It:
+              name: 빨리 빨리 움직이자!
+              description_student: 학급 친구들이 조심스럽게 한 장소에서 다른 장소로 가도록 프로그램하세요.
+              description_teacher: 이 레슨은 학생들이 이 긴 과정 동안 앞으로 하게 될 코딩 연습에 정신적으로 준비를
+                하게 할 것입니다. 작은 규모의 팀 안에서 학생들은 물리적 활동을 통해 학급원들을 조심스럽게 한 장소에서 다른 장소로
+                목표지점에 도달할 때까지 옮겨 가게 프로그래밍합니다.
+              key: 빨리 빨리 움직이자!
+            Sequencing with Angry Birds:
+              name: 앵그리버드로 시퀸싱
+              description_student: 앵그리버드 레드가 경로를 따라 버릇없는 돼지로 가도록 도와 주세요.
+              description_teacher: 앵그리버드 게임에 나오는 캐릭터를 사용하여 학생들은 새를 미로의 한 쪽에서 다른 쪽에
+                있는 돼지에게로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 그들은 함께 코드 블록을 선형 시퀸스로 쌓을
+                것입니다.
+            Programming with Angry Birds:
+              name: 앵그리 버드로 프로그래밍
+              description_student: 앵그리버드가 미로를 통과하도록 도와줄 프로그램을 만드세요.
+              description_teacher: 아이스 에이지에 나오는 캐릭터를 사용하여 학생들은 스크랫을 미로의 한 쪽에서 다른 쪽에
+                있는 도토리로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓고 그것을 똑바로
+                이동 또는 좌회전, 우회전하게 만들 것입니다.
+            Programming with Harvester:
+              name: 수확인으로 프로그래밍
+              description_student: 수확인이 경로를 따라 가며 야채를 모을 수 있게 도와 주세요.
+              description_teacher: 학생들은 지금까지 배웠던 프로그래밍 개념을 수확인 환경에 적용할 것입니다. 이제는 단순히
+                캐릭터를 목표지점에 가게 하는 것이 아니라 그 대신, 학생들이 새 블록을 사용하여 옥수수를 모아야 합니다. 학생들은 시퀸스
+                알고리즘 기량을 계속 키우고 디버깅 프로세스를 사용하기 시작할 것입니다.
+            Getting Loopy:
+              name: 반복시키기
+              description_student: 이 레슨에서, 우리는 반복 루프를 사용해 댄스 파티를 할 것예요!
+              description_teacher: 더 길고, 더 흥미로운 프로그램을 작성하기 위해 시작했기 때문에, 코드에는 종종 많은
+                반복이 들어 있을 수 있습니다. 이 레슨에서 학생들은 춤에서 반복되는 동작 패턴을 봄으로써 반복이 많이 들어 있는 지시사항을
+                더 쉽게 소통하기 위한 루프 사용법에 관해 배울 것입니다.
+            Loops with Harvester:
+              name: 수확인을 사용한 루프
+              description_student: 루프를 사용하여 수확인이 더 많이 모을 수 있게 도와 주세요!
+              description_teacher: '"게팅 루피 (Getting Loopy)"에서 반복되는 지시사항이라는 개념 위에,
+                이 단계는 학생들에게 Code.org에서 루프를 사용하여 옥수수를 더 효율적으로 따게 할 것입니다.'
+            Loops with Laurel:
+              name: 라우렐을 사용한 루프
+              description_student: 모험가 라우렐이 열린 동굴에서 보물을 모으도록 프로그램하세요.
+              description_teacher: 이 레슨에서 학생들은 루프 개념을 계속해서 배웁니다. 여기서 모험가 라우렐은 루프를
+                사용해 열린 동굴 공간에서 보물을 모웁니다. 새 '보물 얻기' 블록이 그녀의 여정에서 그녀를 돕기 위해 소개됩니다.
+            Drawing Gardens with Loops:
+              name: 루프로 정원 그리기
+              description_student: 패턴과 루프를 사용하여 이미지를 완성하세요.
+              description_teacher: '루프로 다시 돌아와, 학생들은 설명문의 간단한 시퀸스를 반복하여 이미지를 그리는 법을
+                배웁니다. 이전 온라인 레슨에서, 루프는 미로를 횡단하여 보물을 모으는데 사용했습니다. 여기서는 루프로 패턴을 만들 것입니다.
+                이 단계의 끝에서, 학생들은 루프를 사용해 이미지를 만들 기회를 갖게 될 것입니다. '
+            The Right App:
+              name: 바른 앱
+              description_student: 스마트폰 앱 스케치
+              description_teacher: 이 레슨은 학생들에게 컴퓨터 과학이 실생활에서 사람들에게 도움을 줄 수 있음을 인식하게
+                만듭니다. 먼저, 학생들은 서너 명의 허구의 스마트폰 사용자에게 그들의 필요에 "맞는 앱"을 찾아 주기 위해 그들의 입장이
+                되어 그들과 공감합니다. 그 다음, 공감력과 창의성을 발휘하여 한 명의 추가적인 사용자의 필요를 만족하는 스마트폰 앱을
+                스케치합니다.
+              key: 바른 앱
+            The Big Event Jr.:
+              name: 빅 이벤트 주니어
+              description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
+              description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의
+                프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
+            'Mini-Project: A Royal Battle with Events':
+              description_student: 이벤트를 사용하여 스토리를 만들거나 인터랙티브 게임을 만드세요.
+              description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
+                코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 게임을 만들 시간입니다!
+            End of Course Project:
+              name: 과정말 프로젝트
+            Sequencing in Maze:
+              key: 미로 내 시퀸싱
+              name: 앵그리버드로 시퀸싱
+              description_student: 앵그리버드 레드가 경로를 따라 버릇없는 돼지로 가도록 도와 주세요.
+              description_teacher: 앵그리버드 게임에 나오는 캐릭터를 사용하여 학생들은 새를 미로의 한 쪽에서 다른 쪽에
+                있는 돼지에게로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 그들은 함께 코드 블록을 선형 시퀸스로 쌓을
+                것입니다.
+            Programming in Maze:
+              key: 미로 내 프로그래밍
+              name: 앵그리 버드로 프로그래밍
+              description_student: 앵그리버드가 미로를 통과하도록 도와줄 프로그램을 만드세요.
+              description_teacher: 아이스 에이지에 나오는 캐릭터를 사용하여 학생들은 스크랫을 미로의 한 쪽에서 다른 쪽에
+                있는 도토리로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓고 그것을 똑바로
+                이동 또는 좌회전, 우회전하게 만들 것입니다.
+            Programming in Harvester:
+              key: 수확인 내 프로그래밍
+              name: 수확인으로 프로그래밍
+              description_student: 수확인이 경로를 따라 가며 야채를 모을 수 있게 도와 주세요.
+              description_teacher: 학생들은 지금까지 배웠던 프로그래밍 개념을 수확인 환경에 적용할 것입니다. 이제는 단순히
+                캐릭터를 목표지점에 가게 하는 것이 아니라 그 대신, 학생들이 새 블록을 사용하여 옥수수를 모아야 합니다. 학생들은 시퀸스
+                알고리즘 기량을 계속 키우고 디버깅 프로세스를 사용하기 시작할 것입니다.
+            'Loops: Getting Loopy':
+              key: '루프: 게팅 루피 (Getting Loopy)'
+              name: 반복시키기
+              description_student: 이 레슨에서, 우리는 반복 루프를 사용해 댄스 파티를 할 것예요!
+              description_teacher: 더 길고, 더 흥미로운 프로그램을 작성하기 위해 시작했기 때문에, 코드에는 종종 많은
+                반복이 들어 있을 수 있습니다. 이 레슨에서 학생들은 춤에서 반복되는 동작 패턴을 봄으로써 반복이 많이 들어 있는 지시사항을
+                더 쉽게 소통하기 위한 루프 사용법에 관해 배울 것입니다.
+            Loops in Harvester:
+              key: 수확인 내 루프
+              name: 수확인을 사용한 루프
+              description_student: 루프를 사용하여 수확인이 더 많이 모을 수 있게 도와 주세요!
+              description_teacher: '"게팅 루피 (Getting Loopy)"에서 반복되는 지시사항이라는 개념 위에,
+                이 단계는 학생들에게 Code.org에서 루프를 사용하여 옥수수를 더 효율적으로 따게 할 것입니다.'
+            Loops in Collector:
+              key: 수집가 내 루프
+              name: 라우렐을 사용한 루프
+              description_student: 모험가 라우렐이 열린 동굴에서 보물을 모으도록 프로그램하세요.
+              description_teacher: 이 레슨에서 학생들은 루프 개념을 계속해서 배웁니다. 여기서 모험가 라우렐은 루프를
+                사용해 열린 동굴 공간에서 보물을 모웁니다. 새 '보물 얻기' 블록이 그녀의 여정에서 그녀를 돕기 위해 소개됩니다.
+            Loops in Artist:
+              key: 아티스트 내 루프
+              name: 루프로 정원 그리기
+              description_student: 패턴과 루프를 사용하여 이미지를 완성하세요.
+              description_teacher: '루프로 다시 돌아와, 학생들은 설명문의 간단한 시퀸스를 반복하여 이미지를 그리는 법을
+                배웁니다. 이전 온라인 레슨에서, 루프는 미로를 횡단하여 보물을 모으는데 사용했습니다. 여기서는 루프로 패턴을 만들 것입니다.
+                이 단계의 끝에서, 학생들은 루프를 사용해 이미지를 만들 기회를 갖게 될 것입니다. '
+            'Events: The Big Event':
+              key: '이벤트: 빅 이벤트'
+              name: 빅 이벤트 주니어
+              description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
+              description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의
+                프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
+            Events in Play Lab:
+              key: 플레이 랩 내 이벤트
+              description_student: 이벤트를 사용하여 스토리를 만들거나 인터랙티브 게임을 만드세요.
+              description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
+                코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 게임을 만들 시간입니다!
+            lesson-1:
+              key: 레슨-1
+              name: 과정말 프로젝트
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_impacts:
+              display_name: 컴퓨팅의 영향
+            csf_events:
+              display_name: 이벤트
+            lessonGroup-6:
+              display_name: 과정말 프로젝트
+          student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의
+            게임 또는 스토리를 만드세요.
+          description_short: 아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개. 과정 A와 유사하지만 개념의 깊이가 추가되었습니다.
+          description_audience: '나이: 5-8'
+        coursec-2022:
+          lessons:
+            Putting a STOP to Online Meanness:
+              name: 온라인 상에서 비열한 행동을 멈추게 함
+              description_student: 이 레슨에서는 비열한 짓이 무엇인지 그리고 온라인 상에서 이런 일에 닥쳤을 때 할 일에
+                대해 배웁니다.
+              key: 온라인 상에서 비열한 행동을 멈추게 함
+            My Robotic Friends Jr.:
+              name: 내 로봇 친구 주니어
+              description_student: 이 레슨에서는 학급 친구들을 로봇이라고 생각하고 그들이 컵 쌓는 패턴을 만들도록 프로그래밍합니다.
+              description_teacher: 코드 대신에 기호를 사용하여 학생들은 "로봇"에게 컵을 여러 패턴으로 쌓으라고 지시하는
+                알고리즘을 설계할 것입니다. 학생들은 교대로 로봇이 되어 친구가 정의한 알고리즘에만 반응합니다. 이 부분은 학생들에게
+                기호와 동작 간의 연관성과 알고리즘과 프로그램의 차이, 가치 있는 디버깅 스킬에 대해 가르칩니다.
+            Programming with Angry Birds:
+              name: 앵그리 버드로 프로그래밍
+              description_student: 앵그리버드로 시퀸스와 알고리즘 배우기.
+              description_teacher: 앵그리버드 게임에 나오는 캐릭터를 사용하여 학생들은 새를 미로의 한 쪽에서 다른 쪽에
+                있는 돼지에게로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓고 그것을 똑바로
+                이동 또는 좌회전, 우회전하게 만들 것입니다.
+            Debugging in Maze:
+              name: 미로 내 디버깅
+              description_student: 퍼즐 안에서 문제를 찾아내고 디버깅 스킬을 연습하세요.
+              description_teacher: 디버깅은 프로그램 학습에서 필수 요소입니다. 학생들은 틀리게 푼 일부 퍼즐을 보게 될
+                것입니다. 그들은 기존 코드를 한 단계 한 단계 살피며 잘못된 루프와 누락된 블록, 과다한 블록, 순서가 맞지 않은 블록
+                등을 포함하여 오류를 식별할 것입니다
+              key: 미로 내 디버깅
+            Collecting Treasure with Laurel:
+              name: 라우렐로 보물 모으기
+              description_student: 알고리즘을 작성하여 모험가 라우렐이 많은 보석을 모으도록 도와주세요!
+              description_teacher: 이 일련의 퍼즐에서, 학생들은 알고리즘과 디버깅에 대한 이해를 높일 것입니다. 새 캐릭터인
+                모험가 라우렐로, 학생들은 시퀸스 알고리즘을 개발하여 라우렐이 경로를 따라 걸으며 보물을 집게 할 것입니다.
+            Creating Art with Code:
+              name: 코드로 아트 창작
+              description_student: 아티스트로 프로그래밍하여 아름다운 이미지를 만드세요.
+              description_teacher: 이 레슨에서 학생들은 아티스트를 컨트롤하여 화면 위 그림을 완성할 것입니다. 이 아티스트
+                단계는 학생들에게 '100 픽셀 앞으로 이동'과 '90도 우회전'과 같은 새 블록을 사용하여 점점 더 복잡해 지는 이미지를
+                만들 수 있게 합니다.
+            My Loopy Robotic Friends Jr.:
+              name: 내 루피 로봇 친구 주니어
+              description_student: 이 레슨에서 다시 한번 학급원으로 프로그래밍을 하지만 이번에는 루프를 사용해 더 크고
+                더 복잡한 문제를 풀 수 있습니다.
+              description_teacher: 이니셜 "내 로봇 친구" 활동에 기반하여, 학생들은 더 크고 더 복잡한 설계를 다룹니다.
+                "로봇"이 다음의 더 큰 설계를 완료하도록 프로그래밍하기 위해, 학생들은 루프로 대체할 수 있는 반복된 패턴을 설명서에서
+                식별해야 합니다.
+            Loops with Rey and BB-8:
+              name: 레이와 BB-8을 사용한 루프
+              description_student: '루프를 사용하여 BB-8가 미로를 빠져 나오도록 도와 주세요! '
+              description_teacher: '"게팅 루피(Getting Loopy)"에서 반복되는 지시사항이라는 개념 위에 세워진
+                이 단계는 학생들에게 루프를 사용하여 BB-8이 이전 보다 더 효율적으로 미로를 가로지르도록 도와 주게 할 것입니다.'
+              key: 레이와 BB-8을 사용한 루프
+            Harvesting Crops with Loops:
+              name: 루프로 작물 수확
+              description_student: 루프를 사용하여 수확인이 야채를 모으도록 도와 줍시다!
+            'Mini-Project: Sticker Art':
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+            The Big Event:
+              name: 큰 이벤트
+              description_student: 재미있는 게임을 하고 이벤트를 배워보세요.
+              description_teacher: 학생들은 이벤트가 미리 작성된 알고리즘에 유연성을 추가하는 좋은 방법임을 곧 배우게
+                될 것입니다. 종종 여러분은 자신의 프로그램이 사용자가 원할 때 정확히 사용자에게 반응할 수 있기를 원합니다. 이벤트는
+                프로그램을 더 흥미롭고 인터랙티브하게 만들 수 있습니다.
+            Build a Flappy Game:
+              name: 플래피 게임 만들기
+              description_student: 좋아하는 플래피 버드 게임을 만들어 친구들과 공유하세요!
+              description_teacher: 이 특별한 단계에서, 학생들은 마우스 클릭과 객체 충돌을 감지하기 위해 이벤트 핸들러들을
+                이용해 자기만의 플래피 버드 게임을 만들거예요. 이 레벨이 끝나면, 학생들은 비주얼 또는 규칙을 변경하여 게임을 맞춤형으로
+                구성할 수 있게 될 것입니다.
+              key: 플래피 게임 만들기
+            'Mini-Project: Chase Game':
+              description_student: 창의력을 발휘해 플래이 랩에서 게임을 만들 시간입니다!
+              description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
+                코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 게임을 만들 시간입니다!
+            Picturing Data:
+              name: 데이터 묘사
+              description_student: 데이터는 학생들이 그들의 세계를 이해하고 흥미로운 질문에 답을 하는데 도움을 주기 위해
+                사용할 수 있습니다. 이 레슨에서 학생들은 플레이 랩 프로젝트에서 데이터를 모아 여러 종류의 그래프를 사용해 이를 시각화할
+                것입니다.
+              description_teacher: 데이터는 학생들이 그들의 세계를 이해하고 흥미로운 질문에 답을 하는데 도움을 주기 위해
+                사용할 수 있습니다. 이 레슨에서 학생들은 플레이 랩 프로젝트에서 데이터를 모아 여러 종류의 그래프를 사용해 이를 시각화할
+                것입니다.
+              key: 데이터 묘사
+            Binary Bracelets:
+              name: 2진 팔찌
+              description_student: 바이너리 팔찌를 만들고 컴퓨터의 정보 기억 방법을 배우세요
+              description_teacher: 바이너리는 컴퓨터 세계에서 매우 중요합니다. 오늘날 대부분의 컴퓨터는 모든 종류의 정보를
+                바이너리 형태로 저장합니다. 이 레슨은 실생활에서 어떤 한 가지를 가져와 그것을 일련의 on과 off로 바꿀 수 있음을
+                보여주는데 도움을 줍니다.
+              key: 2진 팔찌
+            End of Course Project:
+              name: 과정말 프로젝트
+              description_student: 수 많은 코딩을 할 준비를 하세요! 자신의 프로젝트를 만들기 시작할 시간입니다.
+              description_teacher: 이 최고 기준이 되는 레슨은 학생들을 플레이 랩 프로젝트를 설계 및 개발, 발표하는
+                프로세스로 데려다 줍니다! 이 프로세스를 원활하게 진행하기 위해, 학생들이 따를 종이 위 계획 수립부터 웹 사이트 상의
+                코딩까지 스텝 바이 스텝 구조를 제공합니다. 또한, 우리는 교사들이 쇼케이스 파이널을 수월하게 준비할 수 있도록 유용한
+                아이디어를 제공합니다.
+            'Programming: My Robotic Friends':
+              key: '프로그래밍: 내 로봇 친구'
+              name: 내 로봇 친구 주니어
+              description_student: 이 레슨에서는 학급 친구들을 로봇이라고 생각하고 그들이 컵 쌓는 패턴을 만들도록 프로그래밍합니다.
+              description_teacher: 코드 대신에 기호를 사용하여 학생들은 "로봇"에게 컵을 여러 패턴으로 쌓으라고 지시하는
+                알고리즘을 설계할 것입니다. 학생들은 교대로 로봇이 되어 친구가 정의한 알고리즘에만 반응합니다. 이 부분은 학생들에게
+                기호와 동작 간의 연관성과 알고리즘과 프로그램의 차이, 가치 있는 디버깅 스킬에 대해 가르칩니다.
+            Programming in Maze:
+              key: 미로 내 프로그래밍
+              name: 앵그리 버드로 프로그래밍
+              description_student: 앵그리버드로 시퀸스와 알고리즘 배우기.
+              description_teacher: 앵그리버드 게임에 나오는 캐릭터를 사용하여 학생들은 새를 미로의 한 쪽에서 다른 쪽에
+                있는 돼지에게로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓고 그것을 똑바로
+                이동 또는 좌회전, 우회전하게 만들 것입니다.
+            Programming in Collector:
+              key: 수집가 내 프로그래밍
+              name: 라우렐로 보물 모으기
+              description_student: 알고리즘을 작성하여 모험가 라우렐이 많은 보석을 모으도록 도와주세요!
+              description_teacher: 이 일련의 퍼즐에서, 학생들은 알고리즘과 디버깅에 대한 이해를 높일 것입니다. 새 캐릭터인
+                모험가 라우렐로, 학생들은 시퀸스 알고리즘을 개발하여 라우렐이 경로를 따라 걸으며 보물을 집게 할 것입니다.
+            Programming in Artist:
+              key: 아티스트 내 프로그래밍
+              name: 코드로 아트 창작
+              description_student: 아티스트로 프로그래밍하여 아름다운 이미지를 만드세요.
+              description_teacher: 이 레슨에서 학생들은 아티스트를 컨트롤하여 화면 위 그림을 완성할 것입니다. 이 아티스트
+                단계는 학생들에게 '100 픽셀 앞으로 이동'과 '90도 우회전'과 같은 새 블록을 사용하여 점점 더 복잡해 지는 이미지를
+                만들 수 있게 합니다.
+            'Loops: My Loopy Robotic Friends':
+              key: '루프: 내 루피 로봇 친구'
+              name: 내 루피 로봇 친구 주니어
+              description_student: 이 레슨에서 다시 한번 학급원으로 프로그래밍을 하지만 이번에는 루프를 사용해 더 크고
+                더 복잡한 문제를 풀 수 있습니다.
+              description_teacher: 이니셜 "내 로봇 친구" 활동에 기반하여, 학생들은 더 크고 더 복잡한 설계를 다룹니다.
+                "로봇"이 다음의 더 큰 설계를 완료하도록 프로그래밍하기 위해, 학생들은 루프로 대체할 수 있는 반복된 패턴을 설명서에서
+                식별해야 합니다.
+            Loops in Harvester:
+              key: 수확인 내 루프
+              name: 루프로 작물 수확
+              description_student: 루프를 사용하여 수확인이 야채를 모으도록 도와 줍시다!
+            Sticker Art with Loops:
+              key: 루프를 사용한 스티커 아트
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+            'Events: The Big Event':
+              key: '이벤트: 빅 이벤트'
+              name: 큰 이벤트
+              description_student: 재미있는 게임을 하고 이벤트를 배워보세요.
+              description_teacher: 학생들은 이벤트가 미리 작성된 알고리즘에 유연성을 추가하는 좋은 방법임을 곧 배우게
+                될 것입니다. 종종 여러분은 자신의 프로그램이 사용자가 원할 때 정확히 사용자에게 반응할 수 있기를 원합니다. 이벤트는
+                프로그램을 더 흥미롭고 인터랙티브하게 만들 수 있습니다.
+            Events in Play Lab:
+              key: 플레이 랩 내 이벤트
+              description_student: 창의력을 발휘해 플래이 랩에서 게임을 만들 시간입니다!
+              description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
+                코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 게임을 만들 시간입니다!
+            'End of Course Project: Create a Play Lab Game':
+              key: '과정 말 프로젝트: 플레이 랩 게임 만들기'
+              name: 과정말 프로젝트
+              description_student: 수 많은 코딩을 할 준비를 하세요! 자신의 프로젝트를 만들기 시작할 시간입니다.
+              description_teacher: 이 최고 기준이 되는 레슨은 학생들을 플레이 랩 프로젝트를 설계 및 개발, 발표하는
+                프로세스로 데려다 줍니다! 이 프로세스를 원활하게 진행하기 위해, 학생들이 따를 종이 위 계획 수립부터 웹 사이트 상의
+                코딩까지 스텝 바이 스텝 구조를 제공합니다. 또한, 우리는 교사들이 쇼케이스 파이널을 수월하게 준비할 수 있도록 유용한
+                아이디어를 제공합니다.
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을
+            조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
+          description_short: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+          description_audience: '나이: 6-10'
+        csp6-2022:
+          lessons:
+            Algorithms Solve Problems:
+              name: 알고리즘 문제해결
+              key: 알고리즘 문제해결
+            Algorithm Efficiency:
+              name: 알고리즘 효율성
+              key: 알고리즘 효율성
+            Unreasonable Time:
+              name: 불합리한 시간
+              key: 불합리한 시간
+            The Limits of Algorithms:
+              name: 알고리즘의 한계
+              key: 알고리즘의 한계
+            Parallel and Distributed Algorithms:
+              name: 병렬 및 분산 알고리즘
+              key: 병렬 및 분산 알고리즘
+            Assessment Day:
+              name: 평가일
+            'Lesson 6: Assessment Day':
+              key: '레슨 6: 평가일'
+              name: 평가일
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '단원 6: 알고리즘'
+        csp7-2022:
+          lessons:
+            Parameters and Return Explore:
+              name: 매개변수 및 반환 탐구
+              key: 매개변수 및 반환 탐구
+            Parameters and Return Investigate:
+              name: 매개변수 및 반환 조사
+              key: 매개변수 및 반환 조사
+            Parameters and Return Practice:
+              name: 매개변수 및 반환 연습
+              key: 매개변수 및 반환 연습
+            Parameters and Return Make:
+              name: 매개변수 및 반환 만들기
+              key: 매개변수 및 반환 만들기
+            Libraries Explore:
+              name: 라이브러리 탐구
+              key: 라이브러리 탐구
+            Libraries Investigate:
+              name: 라이브러리 조사
+              key: 라이브러리 조사
+            Libraries Practice:
+              name: 라이브러리 연습
+              key: 라이브러리 연습
+            Project   Make a Library Part 1:
+              name: 프로젝트  라이브러리 만들기 1부
+            Project   Make a Library Part 2:
+              name: 프로젝트  라이브러리 만들기 2부
+            Project   Make a Library Part 3:
+              name: 프로젝트  라이브러리 만들기 3부
+            Assessment Day:
+              name: 평가일
+            Project - Make a Library Part 1:
+              key: 프로젝트 - 라이브러리 만들기 1부
+              name: 프로젝트  라이브러리 만들기 1부
+            Project - Make a Library Part 2:
+              key: 프로젝트 - 라이브러리 만들기 2부
+              name: 프로젝트  라이브러리 만들기 2부
+            Project - Make a Library Part 3:
+              key: 프로젝트 - 라이브러리 만들기 3부
+              name: 프로젝트  라이브러리 만들기 3부
+            'Lesson 11: Assessment Day':
+              key: '레슨 11: 평가일'
+              name: 평가일
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 매개변수 및 반환값
+            csp_libraries:
+              display_name: 라이브러리
+        csp8-2022:
+          lessons:
+            Create PT   Review the Task:
+              name: PT 제작  과제 검토
+            Create PT   Make a Plan:
+              name: PT 제작  계획 수립
+            Create PT - Complete the Task (12 hrs):
+              name: PT 만들기 -작업 완료 (12시간)
+            Create PT - Review the Task:
+              key: PT 제작 - 과제 검토
+              name: PT 제작  과제 검토
+            lesson-4:
+              key: 레슨-4
+            Create PT - Make a Plan:
+              key: PT 제작 - 계획 수립
+              name: PT 제작  계획 수립
+            Create PT - Complete the Task:
+              key: PT 만들기 준비 -과제 완료
+              name: PT 만들기 -작업 완료 (12시간)
+        csp9-2022:
+          lessons:
+            Exploring One Column:
+              name: 한 개 열 탐구
+              key: 한 개 열 탐구
+            Filtering and Cleaning Data:
+              name: 데이터 필터링 및 지우기
+              key: 데이터 필터링 및 지우기
+            Exploring Two Columns:
+              name: 두 개 열 탐구
+              key: 두 개 열 탐구
+            Big, Open, and Crowdsourced Data:
+              name: 빅, 오픈, 크라우드소싱 데이터
+            Machine Learning:
+              name: 머신 러닝
+            Project   Tell a Data Story Part 1:
+              name: 프로젝트 데이터 스토리 말하기 1부
+            Project   Tell a Data Story Part 2:
+              name: 프로젝트  데이터 스토리 말하기  2부
+            Assessment Day:
+              name: 평가일
+            Learning From Data:
+              key: 데이터에서 학습
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: 빅 데이터, 크라우드소싱, 머신러닝
+              name: 빅, 오픈, 크라우드소싱 데이터
+            Machine Learning and Bias:
+              key: 머신러닝 및 편견
+              name: 머신 러닝
+            lesson-10:
+              key: 레슨--10
+            Project - Tell a Data Story - Part 1:
+              key: 프로젝트 - 데이터 스토리 말하기 - 1부
+              name: 프로젝트 데이터 스토리 말하기 1부
+            Project - Tell a Data Story - Part 2:
+              key: 프로젝트 - 데이터 스토리 말하기 - 2부
+              name: 프로젝트  데이터 스토리 말하기  2부
+            'Lesson 9: Assessment Day':
+              key: '레슨 9: 평가일'
+              name: 평가일
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '단원 9: 데이터'
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 1:
+              name: 프로젝트  혁신 시뮬레이션 1부
+            Project   Innovation Simulation Part 2:
+              name: 프로젝트  혁신 시뮬레이션 2부
+            Data Policies and Privacy:
+              name: 데이터 방침 및 프라이버시
+              key: 데이터 방침 및 프라이버시
+            The Value of Privacy:
+              name: 프라이버시의 가치
+              key: 프라이버시의 가치
+            Project   Innovation Simulation Part 3:
+              name: 프로젝트  혁신 시뮬레이션 3부
+            Security Risks Part 1:
+              name: 보안 위험 1부
+              key: 보안 위험 1부
+            Security Risks Part 2:
+              name: 보안 위험 2부
+              key: 보안 위험 2부
+            Project   Innovation Simulation Part 4:
+              name: 프로젝트  혁신 시뮬레이션 4부
+            Protecting Data Part 1:
+              name: 데이터 보호 1부
+              key: 데이터 보호 1부
+            Protecting Data Part 2:
+              name: 데이터 보호 2부
+              key: 데이터 보호 2부
+            Project   Innovation Simulation Part 5:
+              name: 프로젝트  혁신 시뮬레이션 5부
+            Project   Innovation Simulation Part 6:
+              name: 프로젝트  혁신 시뮬레이션 6부
+            Project   Innovation Simulation Part 7:
+              name: 프로젝트  혁신 시뮬레이션 7부
+            Assessment Day:
+              name: 평가일
+            Project - Innovation Simulation Part 1:
+              key: 프로젝트 - 혁신 시뮬레이션 1부
+              name: 프로젝트  혁신 시뮬레이션 1부
+            Project - Innovation Simulation Part 2:
+              key: 프로젝트 - 혁신 시뮬레이션 2부
+              name: 프로젝트  혁신 시뮬레이션 2부
+            Project - Innovation Simulation Part 3:
+              key: 프로젝트 - 혁신 시뮬레이션 3부
+              name: 프로젝트  혁신 시뮬레이션 3부
+            'Project: Innovation Simulation Part 4':
+              key: '프로젝트: 혁신 시뮬레이션 4부'
+              name: 프로젝트  혁신 시뮬레이션 4부
+            'Project: Innovation Simulation Part 5':
+              key: '프로젝트: 혁신 시뮬레이션 5부'
+              name: 프로젝트  혁신 시뮬레이션 5부
+            'Project: Innovation Simulation Part 6':
+              key: '프로젝트: 혁신 시뮬레이션 6부'
+              name: 프로젝트  혁신 시뮬레이션 6부
+            'Project: Innovation Simulation Part 7':
+              key: '프로젝트: 혁신 시뮬레이션 7부'
+              name: 프로젝트  혁신 시뮬레이션 7부
+            'Lesson 14: Unit Assessment Day':
+              key: '레슨 14: 단원  평가일'
+              name: 평가일
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '단원 10: 사이버보안 및 세계적 영향'
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              name: 비밀번호 보안 강화
+              description_student: 이 레슨에서는 비밀번호가 개인 정보를 보호하는 방식과 좋은 비밀번호를 만드는 법에 관해
+                배울 것입니다.
+            Graph Paper Programming:
+              name: 모눈 종이 프로그래밍
+              description_student: 이 레슨에서는 학우들에게 그림을 그리게 프로그램 할 것입니다!
+              description_teacher: '서로 그림을 그리도록 "프로그래밍"을 함으로써 학생들은 프로그래밍의 핵심 개념 중
+                일부를 재미있고 접근 가능한 방식으로 경험할 기회를 얻습니다. 학생들은 한 명은 지시하고 그 지시에 따라 다른 한 명이
+                모눈종이 위 사각형에 색칠하여 기존 그림을 그대로 다시 그립니다. 시간이 있으면, 학생들에게 직접 자신의 이미지를 만들게
+                하여 레슨을 마칠 수 있습니다.  '
+            Introduction to Online Puzzles:
+              name: 온라인 퍼즐 소개
+              description_student: 이 레슨에서는 이 과정에서 필요한 기량을 연습합니다.
+              description_teacher: 이 퍼즐 세트에서 학생들은 Code.org의 온라인 작업공간에 관한 소개 (또는 수업
+                경험에 따라 검토)로 시작합니다. `실행`과 `재설정,` `단계` 버튼을 포함하여 작업공간의 기본 기능이 비디오로 소개됩니다.
+                또한 그러한 비디오에서는 블러클리 블록 드래그 및 블러클리 블록 삭제, 블러클리 블록 연결 등에 관한 내용이 논의됩니다.
+                그 다음, 학생들은 미로 내 _시퀸싱_ 및 _디버깅_ 스킬을 연습하게 됩니다. 거기서에서 학생들은 루프의\_기초를 배울
+                때 수집가와 아티스트, 수확인 등 새로운 유형의 퍼즐을 보게 될 것입니다.
+              key: 온라인 퍼즐 소개
+            Relay Programming:
+              name: 릴레이 프로그래밍
+              description_student: 과정 초반에 코드로 그림을 그릴 때를 기억하세요? 이 레슨에서는 팀과 함께 이와 매우
+                유사할 일을 할 것입니다!
+              key: 릴레이 프로그래밍
+            Debugging with Laurel:
+              name: 라우렐로 디버깅
+              description_student: 코딩을 하며 문제점에 닥쳤던 적이 있습니까? 이 레슨에서는 디버깅의 비밀에 관해 배울
+                것입니다. 디버깅은 코드 내 문제를 찾아내고 고치는 과정입니다.
+              description_teacher: 이 온라인 활동에서 학생들은 "수집가" 환경에서 디버깅을 연습합니다. 학생들은 퍼즐을
+                간단한 알고리즘과 루프, 중첩 루프로 고치기 위해 코딩을 읽고 편집하는 연습을 합니다.
+            Events in Bounce:
+              name: 바운스 내 이벤트
+              description_student: 학교에서 비디오 게임을 맘대로 해봤으면 하고 원해 본 적 있으세요? 이 레슨에서는 직접
+                비디오 게임을 만들거예요.
+              description_teacher: 이 온라인 활동에서, 학생들은 이벤트가 무엇이고, 컴퓨터가 그것을 비디오 게임 등과
+                같은 프로그램에서 어떻게 사용하는지 배우게 될 것입니다. 학생들은 퍼즐을 하며 프로그램이 이벤트 (화살표 버튼이 눌러지는
+                등)에 반응하게 만들 것입니다. 퍼즐의 끝에서, 학생들은 속도와 소리를 다르게 함으로써 자신만의 게임으로 만들 기회를
+                갖습니다.
+              key: 바운스 내 이벤트
+            Build a Star Wars Game:
+              name: 스타워즈 게임 만들기
+              description_student: 이 레슨에서 자신의 스타워즈 게임을 만들며 어떤 힘을 느껴 보세요.
+              description_teacher: 이 레슨에서 학생들은 이벤트를 사용하여 온라인으로 공유할 수 있는 게임을 만드는 법을
+                연습할 것입니다. 학생들은 이벤트에 의해 진행되고 주어진 공간 안에 펼쳐지는 R2-D2와 다른 스타워즈 캐릭터가 나오는
+                게임을 직접 만들 것입니다.
+              key: 스타워즈 게임 만들기
+            Dance Party:
+              name: 댄스 파티
+              description_student: 축하할 시간입니다! 이 레슨에서 자신의 인터랙티브 댄스 파티를 프로그램하게 될 것이니다.
+              description_teacher: 이 레슨에서 학생들은 자신의 인터랙티브 댄스 파티를 프로그램할 것입니다. 이 활동에는
+                툴이 음악에 반응하도록 만들어 졌기 때문에 사운드가 있어야 합니다.
+              key: 댄스 파티
+            Loops in Ice Age:
+              name: 아이스 에이지 내 루프
+              description_student: 이 레슨에서, 여러분은 반복 블록을 사용하여 스크랫이 가능한 효율적으로 도토리에 도달하도록
+                도와줄 거예요.
+              description_teacher: 루프 사용으로 빠르게 업데이트 (또는 소개)하여, 이 단계는 학생들에게 `반복` 블록을
+                사용하여 스크랫을 더 효율적으로 도토리로 가게 할거예요.
+              key: 아이스 에이지 내 루프
+            Drawing Shapes with Loops:
+              name: 루프로 모양 그리기
+              description_student: 이 레슨에서 루프는 아티스트로 멋진 이미지를 쉽게 만듭니다!
+              description_teacher: 이 레슨은 이전 레슨에서의 루프에 대한 이해 위에 수립되었으며 학생들에게 진정으로 창의적이
+                될 기회를 줍니다. 이 활동은 추가 문제해결 연습을 위해 디버깅 연습으로서도 활용될 수 있습니다.
+            Nested Loops in Maze:
+              name: 미로 내 중첩 루프
+              description_student: 루프 안의 루프 안의 루프. 이것의 의미는? 이 레슨은 중첩 루프를 만들면 어떻게 되는지
+                가르쳐 줄거예요.
+              description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
+                가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다.
+                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다.
+            Conditionals with Cards:
+              name: 조건선택 카드
+              description_student: 일정 조건 하에서만 포인트를 얻는 게임을 할 시간입니다!
+              key: 조건선택 카드
+            Looking Ahead with Minecraft:
+              name: 마인크래프트로 미리보기
+              description_student: 용암을 피하세요! 여기서 여러분은 마인크래프트 세상 내 조건에 대해 배우게 될 것입니다.
+              description_teacher: 이 레슨은 원래 아워오브코드를 위해 마인트래프트 팀과 함께 만들었습니다. 학생들은 지금까지
+                배운 아이디어를 연습함은 물론 조건을 살짝 엿 볼 기회를 가질 것입니다!
+            If/Else with Bee:
+              name: '"If/Else" 와 벌'
+              description_student: 이제 조건에 대해 이해했으니 벌이 그러한 조건을 사용해 꿀과 과즙을 모으도록 프로그래밍할
+                시간입니다.
+              description_teacher: 이 지점까지 올 때까지 학생들은 실행할 때 마다 항상 동일한 방식으로 작동되는 신뢰할
+                수 있지만 유연하지 않는 코드를 작성해 왔습니다. 이 레슨에서 여러분의 학급은 프로그램이 마주하는 특정 조건에 따라 다륵
+                기능하는 코드를 작성하도록 허용하는, 조건으로 코딩을 하기 시작할 것입니다.
+            While Loops in Farmer:
+              name: 농부 내 while 루프
+              description_student: '루프는 또한 코딩에서도 유용합니다. 이 레슨은 새로운 종류의 루프: while 루프에
+                대해 알려드립니다!'
+              key: 농부 내 while 루프
+            Until Loops in Maze:
+              name: 미로 내 until 루프
+              description_student: "`Until` 루프를 사용할 때 멋진 놀라운 일을 할 수 있습니다!"
+              description_teacher: 이 레슨에서 학생들은 `until` 루프에 대해 배울 것입니다. 학생들은 그들이 원하는
+                정지 지점에 도달할 때 '까지(until)' 주인공이 동작을 반복하도록 프로그램을 작성할 것입니다.
+              key: 미로 내 until 루프
+            End of Course Project:
+              name: 과정말 프로젝트
+              description_student: 수 많은 코딩을 할 준비를 하세요! 자신의 프로젝트를 만들기 시작할 시간입니다.
+              description_teacher: 이 머릿돌 레슨은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 쇼케이스하는 프로세스를
+                익히게 합니다.
+              key: 과정말 프로젝트
+            lesson-5:
+              key: 레슨--5
+              name: 비밀번호 보안 강화
+              description_student: 이 레슨에서는 비밀번호가 개인 정보를 보호하는 방식과 좋은 비밀번호를 만드는 법에 관해
+                배울 것입니다.
+            'Algorithms: Graph Paper Programming':
+              key: '알고리즘: 모눈종이 프로그래밍'
+              name: 모눈 종이 프로그래밍
+              description_student: 이 레슨에서는 학우들에게 그림을 그리게 프로그램 할 것입니다!
+              description_teacher: '서로 그림을 그리도록 "프로그래밍"을 함으로써 학생들은 프로그래밍의 핵심 개념 중
+                일부를 재미있고 접근 가능한 방식으로 경험할 기회를 얻습니다. 학생들은 한 명은 지시하고 그 지시에 따라 다른 한 명이
+                모눈종이 위 사각형에 색칠하여 기존 그림을 그대로 다시 그립니다. 시간이 있으면, 학생들에게 직접 자신의 이미지를 만들게
+                하여 레슨을 마칠 수 있습니다.  '
+            Debugging in Collector:
+              key: 수집가 내 디버깅
+              name: 라우렐로 디버깅
+              description_student: 코딩을 하며 문제점에 닥쳤던 적이 있습니까? 이 레슨에서는 디버깅의 비밀에 관해 배울
+                것입니다. 디버깅은 코드 내 문제를 찾아내고 고치는 과정입니다.
+              description_teacher: 이 온라인 활동에서 학생들은 "수집가" 환경에서 디버깅을 연습합니다. 학생들은 퍼즐을
+                간단한 알고리즘과 루프, 중첩 루프로 고치기 위해 코딩을 읽고 편집하는 연습을 합니다.
+            Loops in Artist:
+              key: 아티스트 내 루프
+              name: 루프로 모양 그리기
+              description_student: 이 레슨에서 루프는 아티스트로 멋진 이미지를 쉽게 만듭니다!
+              description_teacher: 이 레슨은 이전 레슨에서의 루프에 대한 이해 위에 수립되었으며 학생들에게 진정으로 창의적이
+                될 기회를 줍니다. 이 활동은 추가 문제해결 연습을 위해 디버깅 연습으로서도 활용될 수 있습니다.
+            Nested Loops in Bee:
+              key: 벌 내 중첩 루프
+              name: 미로 내 중첩 루프
+              description_student: 루프 안의 루프 안의 루프. 이것의 의미는? 이 레슨은 중첩 루프를 만들면 어떻게 되는지
+                가르쳐 줄거예요.
+              description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
+                가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다.
+                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다.
+            lesson-6:
+              key: 레슨--6
+              name: 마인크래프트로 미리보기
+              description_student: 용암을 피하세요! 여기서 여러분은 마인크래프트 세상 내 조건에 대해 배우게 될 것입니다.
+              description_teacher: 이 레슨은 원래 아워오브코드를 위해 마인트래프트 팀과 함께 만들었습니다. 학생들은 지금까지
+                배운 아이디어를 연습함은 물론 조건을 살짝 엿 볼 기회를 가질 것입니다!
+            Conditionals in Bee:
+              key: 벌 내 조건
+              name: '"If/Else" 와 벌'
+              description_student: 이제 조건에 대해 이해했으니 벌이 그러한 조건을 사용해 꿀과 과즙을 모으도록 프로그래밍할
+                시간입니다.
+              description_teacher: 이 지점까지 올 때까지 학생들은 실행할 때 마다 항상 동일한 방식으로 작동되는 신뢰할
+                수 있지만 유연하지 않는 코드를 작성해 왔습니다. 이 레슨에서 여러분의 학급은 프로그램이 마주하는 특정 조건에 따라 다륵
+                기능하는 코드를 작성하도록 허용하는, 조건으로 코딩을 하기 시작할 것입니다.
+          lesson_groups:
+            lessonGroup-6:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_events:
+              display_name: 이벤트
+            csf_loops:
+              display_name: 반복
+            csf_conditionals:
+              display_name: 조건
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          title: 과정 D (2021)
+          description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.
+          description_audience: '나이: 7-11'
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              description_student: 게임을 하고 맞는 결과를 얻기 위해 어떤 명령어가 필요한지 생각해 보세요.
+              description_teacher: 이 레슨에서 학생들은 맞는 결과를 산출하기 위해 명령어를 어떻게 제공해야 하는지 생각해
+                보게 할 의도를 지닌 게임을 할 것입니다. 이것은 그들이 앞으로 하게 될 레슨에서의 스프라이트 랩로 더 넘어 가게 하는
+                데 도움을 줄 것입니다.
+            Swimming Fish with Sprite Lab:
+              name: 헤엄치는 물고기와 스프라이트 랩
+              description_student: 스프라이트 만들기와 편집하기에 대해 배웁니다.
+              description_teacher: 이 레슨에서 학생들은 스프라이트 랩의 중심에 있는 두 가지 개념인 스프라이트와 행동에
+                관해 배울 것입니다. 스프라이트는 화면에 나오는 캐릭터 또는 객체이며 학생은 이것들을 이동 및 변경, 조작할 수 있습니다.
+                행동은 스파라이트가 계속 취하는 동작으로 멈쳐질 때까지 계속 합니다.
+            Alien Dance Party with Sprite Lab:
+              name: 외계인 댄스 파티와 스프라이트 랩
+              description_student: 학우들과 공유할 수 있는 인터랙티브 프로젝트를 만드세요.
+              description_teacher: 이 레슨은 학생들이 인터랙티브 애니메이션과 게임을 만들 수 있는 플랫폼인 스프라이트
+                랩으로 구성됩니다. 행동 외에, 오늘 학생들은 사용자 인풋을 이벤트로서 통합하여 "외계인 댄스 파티"를 만들 것입니다.
+              key: 외계인 댄스 파티와 스프라이트 랩
+            Be A Super Digital Citizen:
+              name: 슈퍼 디지털 시민 되기
+              description_student: 사이버 폭력을 볼 때 나서서 행동하는 사람이 되는법을 배우세요.
+            Private and Personal Information:
+              name: 사적 정보와 개인 정보
+              description_student: 인터넷은 재미 있고 흥미롭지만 안전을 유지하는 것 역시 중요합니다. 이 레슨은 공유해도
+                안전한 정보와 사적 정보의 차이를 가르쳐 줍니다.
+              key: 사적 정보와 개인 정보
+            'Mini-Project: About Me':
+              name: 스프라이트 랩으로 자기 소개
+              description_student: 스트라이트 랩으로 인터랙티브 포스터를 만듦으로써 학생들은 웹 상에서 그들의 개인 정보와
+                사적 정보의 공유에 관한 그들의 이해력을 적용할 것입니다.
+            Digital Sharing:
+              name: 디지털 공유
+              description_student: '이 레슨에서는 소유권과 저작권의 도전과 혜택에 대해 배울 것입니다. '
+              key: 디지털 공유
+            Drawing with Loops:
+              name: 루프로 그리기
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+              description_teacher: '학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때
+                그들 얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로
+                창의적이 될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다. '
+            Fancy Shapes using Nested Loops:
+              name: 중첩 루프를 사용한 멋진 모양
+              description_student: 더 많은 중첩 루프! 이번에는 중첩 루프로 놀라운 그림을 그릴 것입니다.
+            'Mini-Project: Design a Snowflake':
+              description_student: '안나와 엘사는 아이스 스케이트를 정말 잘 타지만 아이스 위에 패턴을 만들기 위해 여러분의
+                도움이 필요해요. 중첩 루프를 사용하여 뭔가 굉장히 멋진 것을 만드세요. '
+            Songwriting:
+              name: 노래 만들기
+              description_student: 심지어 록스타도 프로그래밍 능력이 있어야 합니다. 이 레슨은 노래의 노랫말을 사용하여
+                함수에 관해 가르칩니다.
+              description_teacher: 컴퓨터 과학 세계에서 가장 훌륭한 구조 중 하나는 함수입니다. 함수(종종 절차로 불림)는
+                더 큰 프로그램 안에서 계속해서 다시 사용할 수 있도록 미니 프로그램입니다. 이 레슨은  여러 개의 코드를 결합하여 함수로
+                만드는 이유를 학생들이 직관적으로 이해하도록 돕습니다.
+            Functions in Minecraft:
+              name: 마인크래프트 내 함수
+              description_student: 가장 효율적인 코드를 위한 함수 활용법을 알아낼 수 있어요?
+              description_teacher: 학생들은 이 재미있고 인터랙티브한 마인크래프트 모험에서 함수가 얼마나 많이 도움이 되는지
+                이해하기 시작할 것입니다.
+              key: 마인크래프트 내 함수
+            Functions with Artist:
+              name: 함수와 아티스트
+              description_student: 복잡한 그림을 함수로 더 쉽게 그리세요!
+              description_teacher: 학생들은 아티스트로 함수 사용법에 관해 배울 것입니다. 훌륭한 이미지를 만들고 수정할
+                것입니다. 더 복잡한 패턴을 위해 학생들은 또 다른 함수의 내부에 있는 함수를 호출하는 중첩 함수에 대해 배울 것입니다.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: '마인크래프트 내 조건: 보야지 아쿠아틱'
+              description_student: 여기서 여러분은 마인크래프트 세계 속 조건에 대해 배우게 될 것입니다.
+              description_teacher: 이 레슨은 원래 아워오브코드를 위해 마인트래프트 팀과 함께 만들었습니다. 학생들은 지금까지
+                배운 아이디어를 연습함은 물론 조건을 살짝 엿 볼 기회를 가질 것입니다!
+              key: '마인크래프트 내 조건: 보야지 아쿠아틱'
+            Conditionals with the Farmer:
+              name: 농부 조건문
+              description_student: 이 재미있고 도전적인 시리즈에서 일정 조건 하에서 컴퓨터에게 해야 할 일을 말하게  될
+                것입니다.
+              description_teacher: '이 레슨은 학생들에게 `while` 루프와`if / else` 문을 소개합니다. _While
+                루프_ 는 조건이 참인 한 계속 명령을 반복하는 루프입니다. While 루프는 프로그램이 정확하게 명령을 몇 번 반복해야
+                하는지 모르지만 프로그래머는 루프가 계속 반복되게 하기 위해 어떤 조건이 참이어야 하는지 알 때 사용합니다. `If /
+                Else` 문은 뭔가가 참일 때만 코드의 전체 섹션을 실행하고 그렇지 않을 때는 다른 것을 실행함으로써 프로그래밍에 유연성을
+                제공합니다. '
+            Functions with Harvester:
+              name: 함수와 수확인
+              description_student: 농부의 수확을 도울 때 함수는 많은 일을 덜어 줄 것입니다.
+              description_teacher: 학생들은 아티스트에서 인상적인 디자인을 만들고 벌에서 미로에서 빠져 나오는 길을 찾는
+                연습을 했지만 오늘은 수확인에서 함수를 사용해 작물을 수확하기 위해 함수를 사용할 것입니다. 이 레슨은 학생들에게 함수를
+                `while` 루프와 `if / else`문에 결합함으로써 새로운 방식으로 함수를 사용하게 합니다.
+            Designing for Accessibility:
+              name: 접근가능성을 위한 설계
+              description_teacher: '이 레슨에서 학생들은 가상의 앱을 위한 접근 가능한 솔루션을 브레인스토밍하고 설계함으로써
+                접근 가능성과 공감의 가치에 관해 배울 것입니다.  '
+            End of Course Project:
+              name: 과정말 프로젝트
+              description_student: 이 정도의 큰 프로젝트는 시간과 많은 계획을 들여야 합니다. 영감을 찾고, 계획을 발전시키며,
+                창의성을 맘껏 발휘해야 합니다!
+              description_teacher: "다음의 네 개의 레슨은 학생들에게 그들의 코딩 기술을 최고 기준이 되는 프로젝트에
+                적용할 기회를 제공합니다. 이 프로젝트는 코딩 경험을 얻게 하고 또래와 사랑하는 이들과 공유할 모범이 되는 작품을 제작할
+                수 있게 해줍니다. 여러 레슨과 여러 주 동안의 경험이 될 것으로 의도되어, 학생들은 브레인스토밍과 설계 프로세스 학습,
+                최종 작품 만들기 및 발표를 위한 시간을 보낼 것입니다. \\\r\n \\\r\n\"탐구\" 단계에서, 학생들은 영감을
+                얻기 위해 사전 제작된 아티스트와 스프라이트 랩 프로그램을 사용해 볼 것입니다. 그 다음, 설계 프로세스와 그것을 프로젝트
+                내 실행하는 방식에 대해 배울 것입니다. 또한 아티스트와 스프라이트 랩 또는 그들에게 익숙한 또 다른 인터페이스로 자신의
+                프로젝트를 직접 만들 공간을 제공받을 것입니다 (이것은 프로젝트에서 가장 긴 단계가 될 것입니다). 학생들은 테스트와
+                또래 검토를 받은 후 코드를 수정할 것입니다. 마침내 학생들은 완성된 작업을 또래 앞에서 발표할 수 있게 될 것입니다.
+                \ "
+              key: 과정말 프로젝트
+            Simon Says:
+              key: 사이몬 가라사대
+              description_student: 게임을 하고 맞는 결과를 얻기 위해 어떤 명령어가 필요한지 생각해 보세요.
+              description_teacher: 이 레슨에서 학생들은 맞는 결과를 산출하기 위해 명령어를 어떻게 제공해야 하는지 생각해
+                보게 할 의도를 지닌 게임을 할 것입니다. 이것은 그들이 앞으로 하게 될 레슨에서의 스프라이트 랩로 더 넘어 가게 하는
+                데 도움을 줄 것입니다.
+            Learning Sprites with Sprite Lab:
+              key: 스프라이트 랩으로 스프라이트 배우기
+              name: 헤엄치는 물고기와 스프라이트 랩
+              description_student: 스프라이트 만들기와 편집하기에 대해 배웁니다.
+              description_teacher: 이 레슨에서 학생들은 스프라이트 랩의 중심에 있는 두 가지 개념인 스프라이트와 행동에
+                관해 배울 것입니다. 스프라이트는 화면에 나오는 캐릭터 또는 객체이며 학생은 이것들을 이동 및 변경, 조작할 수 있습니다.
+                행동은 스파라이트가 계속 취하는 동작으로 멈쳐질 때까지 계속 합니다.
+            lesson-4:
+              key: 레슨-4
+              name: 슈퍼 디지털 시민 되기
+              description_student: 사이버 폭력을 볼 때 나서서 행동하는 사람이 되는법을 배우세요.
+            About Me:
+              key: 내 소개
+              name: 스프라이트 랩으로 자기 소개
+              description_student: 스트라이트 랩으로 인터랙티브 포스터를 만듦으로써 학생들은 웹 상에서 그들의 개인 정보와
+                사적 정보의 공유에 관한 그들의 이해력을 적용할 것입니다.
+            Programming and Loops with the Artist:
+              key: 아티스트로 프로그래밍 및 루프
+              name: 루프로 그리기
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+              description_teacher: '학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때
+                그들 얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로
+                창의적이 될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다. '
+            Nested Loops in Artist:
+              key: 아티스트 내 중첩 루프
+              name: 중첩 루프를 사용한 멋진 모양
+              description_student: 더 많은 중첩 루프! 이번에는 중첩 루프로 놀라운 그림을 그릴 것입니다.
+            Nested Loops in Frozen:
+              key: 겨울 왕국 내 중첩 루프
+              description_student: '안나와 엘사는 아이스 스케이트를 정말 잘 타지만 아이스 위에 패턴을 만들기 위해 여러분의
+                도움이 필요해요. 중첩 루프를 사용하여 뭔가 굉장히 멋진 것을 만드세요. '
+            'Functions: Songwriting':
+              key: '함수: 작곡'
+              name: 노래 만들기
+              description_student: 심지어 록스타도 프로그래밍 능력이 있어야 합니다. 이 레슨은 노래의 노랫말을 사용하여
+                함수에 관해 가르칩니다.
+              description_teacher: 컴퓨터 과학 세계에서 가장 훌륭한 구조 중 하나는 함수입니다. 함수(종종 절차로 불림)는
+                더 큰 프로그램 안에서 계속해서 다시 사용할 수 있도록 미니 프로그램입니다. 이 레슨은  여러 개의 코드를 결합하여 함수로
+                만드는 이유를 학생들이 직관적으로 이해하도록 돕습니다.
+            Functions in Artist:
+              key: 아티스트 내 함수
+              name: 함수와 아티스트
+              description_student: 복잡한 그림을 함수로 더 쉽게 그리세요!
+              description_teacher: 학생들은 아티스트로 함수 사용법에 관해 배울 것입니다. 훌륭한 이미지를 만들고 수정할
+                것입니다. 더 복잡한 패턴을 위해 학생들은 또 다른 함수의 내부에 있는 함수를 호출하는 중첩 함수에 대해 배울 것입니다.
+            Conditionals:
+              key: 조건
+              name: 농부 조건문
+              description_student: 이 재미있고 도전적인 시리즈에서 일정 조건 하에서 컴퓨터에게 해야 할 일을 말하게  될
+                것입니다.
+              description_teacher: '이 레슨은 학생들에게 `while` 루프와`if / else` 문을 소개합니다. _While
+                루프_ 는 조건이 참인 한 계속 명령을 반복하는 루프입니다. While 루프는 프로그램이 정확하게 명령을 몇 번 반복해야
+                하는지 모르지만 프로그래머는 루프가 계속 반복되게 하기 위해 어떤 조건이 참이어야 하는지 알 때 사용합니다. `If /
+                Else` 문은 뭔가가 참일 때만 코드의 전체 섹션을 실행하고 그렇지 않을 때는 다른 것을 실행함으로써 프로그래밍에 유연성을
+                제공합니다. '
+            Functions in Harvester:
+              key: 수확인 내 함수
+              name: 함수와 수확인
+              description_student: 농부의 수확을 도울 때 함수는 많은 일을 덜어 줄 것입니다.
+              description_teacher: 학생들은 아티스트에서 인상적인 디자인을 만들고 벌에서 미로에서 빠져 나오는 길을 찾는
+                연습을 했지만 오늘은 수확인에서 함수를 사용해 작물을 수확하기 위해 함수를 사용할 것입니다. 이 레슨은 학생들에게 함수를
+                `while` 루프와 `if / else`문에 결합함으로써 새로운 방식으로 함수를 사용하게 합니다.
+            lesson-1:
+              key: 레슨-1
+              name: 접근가능성을 위한 설계
+              description_teacher: '이 레슨에서 학생들은 가상의 앱을 위한 접근 가능한 솔루션을 브레인스토밍하고 설계함으로써
+                접근 가능성과 공감의 가치에 관해 배울 것입니다.  '
+            'Hello World: Food':
+              name: 헬로우 월드
+          lesson_groups:
+            csf_sprites:
+              display_name: 스프라이트
+            csf_digcit:
+              display_name: 디지털 시민의식
+            ramp_up:
+              display_name: 중첩 반복
+            csf_functions:
+              display_name: 함수
+            csf_nested_loops:
+              display_name: 조건
+            lessonGroup-7:
+              display_name: 컴퓨팅의 영향
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          description_audience: '나이: 8-12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: 스프라이트 랩 소개
+            Making Sprites:
+              name: 스프라이트 만들기
+            Sprites in Action:
+              name: 스프라이트 인 액션
+            'Mini-Project: Virtual Pet':
+              name: '미니 프로젝트: 가상 애완동물'
+              description_student: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+              description_teacher: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+            The Power of Words:
+              name: 말의 힘
+              description_student: 괴롭힘은 어떤 경우에도 괜찮지 않습니다. 이 레슨은 온라인에서 말해도 괜찮은 것과 그렇지
+                않은 것에 대해 말해 줍니다.
+            Text and Prompts:
+              name: 텍스트 저장 및 검색
+            'Mini-Project: User Input Programs':
+              name: 챗봇 만들기
+            Drawing with Loops:
+              name: 루프로 그리기
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+              description_teacher: 학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들
+                얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이
+                될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다.
+            Using Variables with the Artist:
+              description_student: 이 레슨에서는 프로그램이 실행하면서 변하는 변수를 사용하여 그림을 그릴 것입니다.
+              description_teacher: 이 레슨에서 학생들은 아티스트 환경 내에서 변수를 사용하여 반복적인 디자인 생성에 대해
+                탐구할 것입니다. 학생들은 코드를 더 쉽게 읽고 쓰도록 변수를 사용하는 방법을 배울 것입니다. 안내된 퍼즐을 마친 후,
+                학생들은 그 동안 배운 내용을 보여주고 자신의 디자인을 만들며 프리플레이 레벨을 끝냅니다.
+            Programming with the Bee:
+              name: 미로 내 중첩 루프
+              description_student: 루프 안의 루프 안의 루프. 무슨 의미일까요? 이 레슨은 루프를 또 다른 루프 안에
+                넣을 때 어떻게 되는지 알려드릴 거예요.
+              description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
+                가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다.
+                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다.
+            Variables with the Bee:
+              name: 변하는 변수와 벌
+              description_student: 이 벌은 변수를 좋아합니다!
+              description_teacher: 이 레슨은 변수가 코드 실행 중에도 값의 변화를 허용함으로써 프로그램을 더 강력하게
+                만드는 방법을 보여줄 것입니다.
+            For Loop Fun:
+              name: 재미있는 반복
+              description_student: "`For` 루프에 관해 배우며 배우는 재미를 얻게 될 것입니다!"
+              description_teacher: 우리는 루프가 어떤 일을 계속해서 다시 하도록 허용한다는 점을 알고 있지만 이제 우리는
+                바로 그 안에 세워진 추가적 구조를 갖고 있는 루프 사용법을 배울 것입니다. 이러한 새 구조는 학생들에게 더 강력하고
+                역동적인 코드를 만들도록 허용합니다.
+              key: 재미있는 반복
+            For Loops with Bee:
+              name: For 루프와 벌
+              description_student: 윙윙. 이 퍼즐에서는 `for` 루프를 사용하여 벌을 과즙과 꿀로 안내할 것입니다.
+              description_teacher: 벌이 나오는 이 레슨은 더 복잡한 퍼즐을 풀기 위해 `for` 루프와 증가하는 변수
+                사용에 중점을 둡니다. 학생들은 이전 레슨의 루프를 복습하는 것으로 시작하여 더 복잡한 문제를 더 효과적으로 풀 수 있도록
+                `for` 루프의 도입에 대해 살펴 봅니다.
+            For Loops with Artist:
+              name: For 루프와 아티스트
+              description_student: 다음 작품을 만들 준비를 하세요. 여기서 `for` 루프를 사용하여 감탄을 금치 못할
+                그림을 만들게 될 것입니다.
+              description_teacher: 이 레슨에서 학생들은 `for` 루프를 계속 연습하지만 이번에는 아티스트로 합니다.
+                학생들은 변수와 루프, `for` 루프 아이디어를 결합하여 복잡한 디자인을 만들어 퍼즐을 완성할 것입니다. 끝에서, 프리플레이
+                레벨에서 자신의 작품을 만들 기회를 갖게 될 것입니다.
+            Simulating Experiments:
+              name: 실험 시뮬레이션
+              description_student: 컴퓨터에서 시뮬레이션을 실행하고 변수를 변경하여 실험하세요.
+              description_teacher: 스프라이트 랩에서 간단한 시뮬레이션을 실행함으로써 학생들은 트렌드 또는 패턴을 식별하는
+                데이터를 수집할 때 컴퓨팅을 어떻게 사용하는지 경험할 것입니다. 시뮬레이션을 여러 번 실행한 후, 학생들은 시뮬레이션
+                내 변수에 변화를 주면 결과물에 어떤 영향이 미치는지 예측하고 그 가설을 테스트할 기회를 갖게 될 것입니다.
+              key: 실험 시뮬레이션
+            AI For Oceans:
+              name: 바다를 위한 AI
+              description_student: '튜토리얼 요약: 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 "물고기"
+                또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육
+                데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다.
+                이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.'
+              description_teacher: "**튜토리얼 요약:** 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 \"물고기\"
+                또는 \"물고기가 아님\"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의
+                교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을
+                선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수
+                있어야 합니다.\\\r\n\\\r\n\\\r\n**정확성 확인:** 이 튜토리얼은 학생들에게 그들이 레벨을 맞게 완료했는지
+                말하지 않습니다. 활동 중 어려운 부분은 빠르게 건너 뛸 수 있습니다. 학생들에게 동영상을 시청하고 설명서를 읽으며 어려운
+                일은 시도해 보라고 장려합니다. 그들은 언제든 교사 또는 학급원과 그들이 발견한 내용을 공유할 수 있습니다.\\\r"
+            The Internet:
+              name: 인터넷
+              description_student: 정보가 인터넷 상에 어떻게 이동하는지 궁금해 해본적이 있어요? 이 레슨은 인터넷 작동방식의
+                기초를 가르쳐 줄 것입니다.
+              description_teacher: 많은 사람들이 매일 인터넷을 사용하지만, 그 많은 이들이 인터넷의 작동방식에 대해서는
+                모릅니다. 이 레슨에서는 학생들이 자신들이 인터넷 안에서 여기 저기로 흘러 가는 것처럼 여기며 연결부와 URL, IP
+                주소,  DNS에 관해 배웁니다.
+            End of Course Project:
+              name: 과정말 프로젝트
+              description_student: 이 정도의 큰 프로젝트는 시간과 많은 계획을 들여야 합니다. 영감을 찾고, 계획을 발전시키며,
+                창의성을 맘껏 발휘해야 합니다!
+              description_teacher: 이 머릿돌 레슨은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 쇼케이스하는 프로세스를
+                익히게 합니다.
+              key: 과정말 프로젝트
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+              name: 스프라이트 만들기
+            lesson-8:
+              key: 레슨-8
+              name: 스프라이트 인 액션
+            Virtual Pet:
+              key: 가상 펫
+              name: '미니 프로젝트: 가상 애완동물'
+              description_student: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+              description_teacher: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다.
+                학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지
+                배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+            lesson-2:
+              key: 레슨--2
+              name: 말의 힘
+              description_student: 괴롭힘은 어떤 경우에도 괜찮지 않습니다. 이 레슨은 온라인에서 말해도 괜찮은 것과 그렇지
+                않은 것에 대해 말해 줍니다.
+            lesson-9:
+              key: 레슨--9
+            lesson-10:
+              key: 레슨--10
+              name: 텍스트 저장 및 검색
+            lesson-11:
+              key: 레슨-11
+              name: 챗봇 만들기
+            Loops with the Artist:
+              key: 아티스트와의 루프
+              name: 루프로 그리기
+              description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.
+              description_teacher: 학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들
+                얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이
+                될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다.
+            Variables that Change in Artist:
+              key: 아티스트 내 변경되는 변수
+              description_student: 이 레슨에서는 프로그램이 실행하면서 변하는 변수를 사용하여 그림을 그릴 것입니다.
+              description_teacher: 이 레슨에서 학생들은 아티스트 환경 내에서 변수를 사용하여 반복적인 디자인 생성에 대해
+                탐구할 것입니다. 학생들은 코드를 더 쉽게 읽고 쓰도록 변수를 사용하는 방법을 배울 것입니다. 안내된 퍼즐을 마친 후,
+                학생들은 그 동안 배운 내용을 보여주고 자신의 디자인을 만들며 프리플레이 레벨을 끝냅니다.
+            Nested Loops in the Maze:
+              key: 미로 내 중첩 루프
+              name: 미로 내 중첩 루프
+              description_student: 루프 안의 루프 안의 루프. 무슨 의미일까요? 이 레슨은 루프를 또 다른 루프 안에
+                넣을 때 어떻게 되는지 알려드릴 거예요.
+              description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
+                가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다.
+                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다.
+            Variables that Change in Bee:
+              key: 벌 내 변경되는 변수
+              name: 변하는 변수와 벌
+              description_student: 이 벌은 변수를 좋아합니다!
+              description_teacher: 이 레슨은 변수가 코드 실행 중에도 값의 변화를 허용함으로써 프로그램을 더 강력하게
+                만드는 방법을 보여줄 것입니다.
+            For Loops in Bee:
+              key: 벌 내 for 함수
+              name: For 루프와 벌
+              description_student: 윙윙. 이 퍼즐에서는 `for` 루프를 사용하여 벌을 과즙과 꿀로 안내할 것입니다.
+              description_teacher: 벌이 나오는 이 레슨은 더 복잡한 퍼즐을 풀기 위해 `for` 루프와 증가하는 변수
+                사용에 중점을 둡니다. 학생들은 이전 레슨의 루프를 복습하는 것으로 시작하여 더 복잡한 문제를 더 효과적으로 풀 수 있도록
+                `for` 루프의 도입에 대해 살펴 봅니다.
+            For Loops in Artist:
+              key: 아티스트 내 for 루프
+              name: For 루프와 아티스트
+              description_student: 다음 작품을 만들 준비를 하세요. 여기서 `for` 루프를 사용하여 감탄을 금치 못할
+                그림을 만들게 될 것입니다.
+              description_teacher: 이 레슨에서 학생들은 `for` 루프를 계속 연습하지만 이번에는 아티스트로 합니다.
+                학생들은 변수와 루프, `for` 루프 아이디어를 결합하여 복잡한 디자인을 만들어 퍼즐을 완성할 것입니다. 끝에서, 프리플레이
+                레벨에서 자신의 작품을 만들 기회를 갖게 될 것입니다.
+            lesson-5:
+              key: 레슨--5
+              name: 변수를 이용하여 계산하기
+            AI for Oceans:
+              key: 바다를 위한 AI
+              name: 바다를 위한 AI
+              description_student: '튜토리얼 요약: 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 "물고기"
+                또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육
+                데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다.
+                이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.'
+              description_teacher: "**튜토리얼 요약:** 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 \"물고기\"
+                또는 \"물고기가 아님\"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의
+                교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을
+                선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수
+                있어야 합니다.\\\r\n\\\r\n\\\r\n**정확성 확인:** 이 튜토리얼은 학생들에게 그들이 레벨을 맞게 완료했는지
+                말하지 않습니다. 활동 중 어려운 부분은 빠르게 건너 뛸 수 있습니다. 학생들에게 동영상을 시청하고 설명서를 읽으며 어려운
+                일은 시도해 보라고 장려합니다. 그들은 언제든 교사 또는 학급원과 그들이 발견한 내용을 공유할 수 있습니다.\\\r"
+            Internet:
+              key: 인터넷
+              name: 인터넷
+              description_student: 정보가 인터넷 상에 어떻게 이동하는지 궁금해 해본적이 있어요? 이 레슨은 인터넷 작동방식의
+                기초를 가르쳐 줄 것입니다.
+              description_teacher: 많은 사람들이 매일 인터넷을 사용하지만, 그 많은 이들이 인터넷의 작동방식에 대해서는
+                모릅니다. 이 레슨에서는 학생들이 자신들이 인터넷 안에서 여기 저기로 흘러 가는 것처럼 여기며 연결부와 URL, IP
+                주소,  DNS에 관해 배웁니다.
+          lesson_groups:
+            ramp_up:
+              display_name: 스프라이트
+            lessonGroup-7:
+              display_name: 디지털 시민의식
+            lessonGroup-8:
+              display_name: 변수
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+          description_audience: '나이: 9-13'
+        csp-post-survey-2021:
+          title: CS 원리 과정 후 설문 조사
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              key: 드래그와 드롭 방법 배우기
+              name: 드래그와 드롭 방법 배우기
+            Sequencing with Scrat:
+              key: 스크랫으로 시퀸싱
+              name: 스크랫으로 시퀸싱
+            Programming with Angry Birds:
+              key: 앵그리 버드로 프로그래밍
+              name: 앵그리 버드로 프로그래밍
+            Programming with Rey and BB-8:
+              key: 레이와 BB-8로 프로그래밍
+              name: 레이와 BB-8로 프로그래밍
+            Programming with Harvester:
+              key: 수확인으로 프로그래밍
+              name: 수확인으로 프로그래밍
+            Loops with Scrat:
+              key: 스크랫을 사용한 루프
+              name: 스크랫을 사용한 루프
+            Loops with Laurel:
+              key: 라우렐을 사용한 루프
+              name: 라우렐을 사용한 루프
+            Ocean Scene with Loops:
+              key: 루프를 사용한 해양 장면
+              name: 루프를 사용한 해양 장면
+            Drawing Gardens with Loops:
+              key: 루프로 정원 그리기
+              name: 루프로 정원 그리기
+            On the Move with Events:
+              key: 이벤트로 이동
+              name: 이벤트로 이동
+            A Royal Battle with Events:
+              key: 이벤트가 있는 왕가의 전투
+              name: 이벤트가 있는 왕가의 전투
+          lesson_groups:
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+        csa2-2022:
+          lessons:
+            lesson-5:
+              name: 단원 2 평가
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: 조건
+            lesson-14:
+              name: 마인크래프트 내 조건
+            lesson-16:
+              name: 디버깅
+            lesson-17:
+              name: 프로젝트 영감
+            lesson-19:
+              name: 디버깅
+        csa4-2022:
+          lessons:
+            lesson-2:
+              name: 단원 4 평가
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa5-2022:
+          lessons:
+            lesson-2:
+              name: 단원 5 평가
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠

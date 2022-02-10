@@ -14,8 +14,8 @@
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
-#  notes                 :text(16777215)
-#  audit_log             :text(16777215)
+#  notes                 :text(65535)
+#  audit_log             :text(65535)
 #
 # Indexes
 #

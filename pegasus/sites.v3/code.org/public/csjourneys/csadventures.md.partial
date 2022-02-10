@@ -65,7 +65,7 @@ social:
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One tour per week</strong></div>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
-        <p style="margin-top:12px"><strong>Returning in February</strong></p>
+       <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>

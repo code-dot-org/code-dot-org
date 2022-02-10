@@ -21,6 +21,9 @@
           "name": "Pjesnička umjetnost 1 - Uvod",
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: Strojno učenje"
+        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentacija za Lab likova"
         },
@@ -38,6 +41,9 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "For Petlja Zabava"
+        },
+        "ai-ml/coursef/2021": {
+          "name": "AI: Strojno učenje"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet"

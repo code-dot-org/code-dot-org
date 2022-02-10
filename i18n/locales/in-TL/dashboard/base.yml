@@ -290,6 +290,7 @@ in:
       provider_managed_section: "crwdns88682:0%{provider}crwdne88682:0"
       restricted_section: "crwdns2546984:0%{section_code}crwdne2546984:0"
       full_section: "crwdns2547480:0%{section_code}crwdnd2547480:0%{section_capacity}crwdne2547480:0"
+      not_participant_type: "crwdns2864049:0%{section_code}crwdne2864049:0"
     mail:
       student_disassociated:
         subject: "crwdns4337:0%{student_name}crwdne4337:0"
@@ -549,6 +550,7 @@ in:
     all_students_must_be_in_current_section: "crwdns56527:0crwdne56527:0"
     already_enrolled_in_new_section: "crwdns56528:0crwdne56528:0"
     third_party_login: "crwdns134927:0crwdne134927:0"
+    not_correct_participant_type: "crwdns2864051:0crwdne2864051:0"
   share:
     title: "crwdns45291:0crwdne45291:0"
     description: "crwdns45292:0crwdne45292:0"
@@ -590,6 +592,7 @@ in:
     how_it_works: 'crwdns55146:0crwdne55146:0'
     try_hour_of_code: 'crwdns55879:0crwdne55879:0'
     store: 'crwdns2689313:0crwdne2689313:0'
+    cookie_notice: 'crwdns2864053:0crwdne2864053:0'
   reference_area:
     title: 'crwdns2625:0crwdne2625:0'
     subtitle: 'crwdns3090:0crwdne3090:0'
@@ -1174,3 +1177,4 @@ in:
     this_sprite: "crwdns2465554:0crwdne2465554:0"
   unit_prefix: "crwdns2465940:0%{n}crwdne2465940:0"
   code_org_logo_alt: "crwdns2481346:0crwdne2481346:0"
+  teacher_feedback: "crwdns2859059:0crwdne2859059:0"
