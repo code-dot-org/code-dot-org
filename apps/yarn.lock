@@ -1585,8 +1585,7 @@
   integrity sha512-Aex5zpSmWDvTBRGNJWwI12qYWhXG+u0bnb74LD917EdE94tsz4P2p7B/tby3NZdsE4DvNHjUG0dxCwxTbcitHg==
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.0.0"
-  uid ""
+  version "0.1.0"
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
