@@ -2,6 +2,7 @@
   "key": "includes",
   "name": "includes",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "searchValue"

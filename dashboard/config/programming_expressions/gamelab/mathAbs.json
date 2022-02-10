@@ -2,5 +2,6 @@
   "key": "mathAbs",
   "name": "Math.abs",
   "category": "Math",
+  "category_key": "math",
   "syntax": "Math.abs"
 }

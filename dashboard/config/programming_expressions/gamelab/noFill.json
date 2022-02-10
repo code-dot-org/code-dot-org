@@ -2,5 +2,6 @@
   "key": "noFill",
   "name": "noFill",
   "category": "Drawing",
+  "category_key": "drawing",
   "syntax": "noFill"
 }

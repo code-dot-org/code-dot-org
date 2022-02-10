@@ -2,5 +2,6 @@
   "key": "assign_x",
   "name": "assign_x",
   "category": "Variables",
+  "category_key": "variables",
   "syntax": "x = __;"
 }
