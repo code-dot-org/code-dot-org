@@ -18,11 +18,11 @@ it may be significantly or entirely redesigned in the future (starting SY23-24).
 
 The Playground views consist of:
 
-- [`PlaygroundVisualizationColumn.jsx`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/PlaygroundVisualizationColumn.jsx):
+- [`PlaygroundVisualizationColumn.jsx`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/playground/PlaygroundVisualizationColumn.jsx):
   contains the Playground visualization, which is rendered within left sidebar
-- [`PlaygroundImage.jsx`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/PlaygroundImage.jsx):
+- [`PlaygroundImage.jsx`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/playground/PlaygroundImage.jsx):
   renders a single Playground image
-- [`PlaygroundText.jsx`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/PlaygroundText.jsx):
+- [`PlaygroundText.jsx`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/playground/PlaygroundText.jsx):
   renders a single Playground text view
 
 `PlaygroundImage` and `PlaygroundText` items are visualizations of corresponding item data
@@ -33,10 +33,10 @@ is presenting a clickable item, it also has a click listener function that is in
 
 Presentation and business logic is managed by:
 
-- [`Playground.js`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/Playground.js):
+- [`Playground.js`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/playground/Playground.js):
   manages the state of the mini-app, consumes updates from Javabuilder, updates
   items in the Playground, and sends messages back to Javabuilder
-- [`playgroundRedux.js`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/playgroundRedux.js):
+- [`playgroundRedux.js`](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/javalab/playground/playgroundRedux.js):
   contains action creators and a reducer for the Playground state. The Playground
   state consists of all the items on the Playground and their display properties.
 
