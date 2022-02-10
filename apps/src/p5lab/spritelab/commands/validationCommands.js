@@ -119,29 +119,12 @@ export const commands = {
   // Used in levels (typically every frame) to validate based on all criteria
   validate() {
     // Get the current (ie. previous frame) pass/fail state prior to validation
-    let state = commands.getPassState(this.criteria);
+    const state = commands.getPassState(this.criteria);
 
-    let barWidth =
+    const barWidth =
       this.currentFrame() * commands.calculateBarScale(this.validationTimes);
     drawUtils.validationBar(this.p5, barWidth, state, {});
 
-    commands.initializePrevious.call(this, 'eventLogLength');
-    commands.initializePrevious.call(
-      this,
-      'spriteIds',
-      this.getSpriteIdsInUse()
-    );
-    commands.initializePrevious.call(
-      this,
-      'behaviorsById',
-      this.getSpriteIdsInUse()
-    );
-    commands.initializePrevious.call(
-      this,
-      'costumesById',
-      this.getSpriteIdsInUse()
-    );
-    commands.initializePrevious.call(this, 'sprites', this.getSpriteIdsInUse());
     //check criteria and update complete status
     if (this.currentFrame() <= this.validationTimes.wait) {
       commands.checkAllCriteria(this.criteria);
@@ -165,134 +148,22 @@ export const commands = {
       }
       return results;
     }
-    commands.updatePrevious.call(this, 'eventLogLength');
-    commands.updatePrevious.call(this, 'spriteIds', this.getSpriteIdsInUse());
-    commands.updatePrevious.call(
-      this,
-      'behaviorsById',
-      this.getSpriteIdsInUse()
-    );
-    commands.updatePrevious.call(
-      this,
-      'costumesById',
-      this.getSpriteIdsInUse()
-    );
-    commands.updatePrevious.call(this, 'sprites', this.getSpriteIdsInUse());
+    commands.updatePrevious.call(this);
   },
 
-  initializePrevious(type, spriteIds) {
-    switch (type) {
-      case 'eventLogLength':
-        if (this.previous.eventLogLength === undefined) {
-          this.previous.eventLogLength = this.eventLog.length;
-        }
-        break;
-      case 'spriteIds':
-        if (this.previous.spriteIds === undefined) {
-          this.previous.spriteIds = spriteIds;
-        }
-        break;
-      case 'behaviorsById':
-        if (this.previous.behaviorsById === undefined) {
-          this.previous.behaviorsById = {
-            frame: this.currentFrame(),
-            behaviors: []
-          };
-          for (let i = 0; i < spriteIds.length; i++) {
-            this.previous.behaviorsById.behaviors[
-              i
-            ] = this.getBehaviorsForSpriteId(i);
-          }
-        }
-        break;
-      case 'costumesById':
-        if (this.previous.costumesById === undefined) {
-          this.previous.costumesById = {
-            frame: this.currentFrame(),
-            costumes: []
-          };
-          for (let i = 0; i < spriteIds.length; i++) {
-            this.previous.costumesById.costumes.push(
-              this.nativeSpriteMap[spriteIds[i]].getAnimationLabel()
-            );
-          }
-        }
-        break;
-      case 'sprites':
-        if (!this.previous.sprites === undefined) {
-          this.previous.sprites = [];
-          for (let i = 0; i < spriteIds.length; i++) {
-            let spriteId = spriteIds[i];
-            this.previous.sprites.push({
-              id: spriteId,
-              costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
-              x: this.nativeSpriteMap[spriteId].x,
-              y: this.nativeSpriteMap[spriteId].y,
-              behaviors: this.getBehaviorsForSpriteId(spriteId)
-            });
-          }
-          console.log(this.previous.sprites);
-        }
-        break;
-    }
-  },
-
-  updatePrevious(type) {
-    let spriteIds = this.getSpriteIdsInUse();
-    switch (type) {
-      case 'eventLogLength':
-        this.previous.eventLogLength = this.eventLog.length;
-        break;
-      case 'spriteIds':
-        this.previous.spriteIds = spriteIds;
-        break;
-      case 'behaviorsById':
-        if (this.previous.behaviorsById !== undefined) {
-          if (this.previous.behaviorsById.frame !== this.currentFrame()) {
-            this.previous.behaviorsById = {
-              frame: this.currentFrame(),
-              behaviors: []
-            };
-            for (let i = 0; i < spriteIds.length; i++) {
-              this.previous.behaviorsById.behaviors.push(
-                this.getBehaviorsForSpriteId(spriteIds[i])
-              );
-            }
-          }
-        }
-        break;
-      case 'costumesById':
-        if (this.previous.costumesById !== undefined) {
-          if (this.previous.costumesById.frame !== this.currentFrame()) {
-            this.previous.costumesById = {
-              frame: this.currentFrame(),
-              costumes: []
-            };
-            for (let i = 0; i < spriteIds.length; i++) {
-              this.previous.costumesById.costumes.push(
-                this.nativeSpriteMap[spriteIds[i]].getAnimationLabel()
-              );
-            }
-          }
-        }
-        break;
-      case 'sprites':
-        if (!this.previous.sprites !== undefined) {
-          if (this.previous.frame !== this.currentFrame()) {
-            this.previous.sprites = [];
-          }
-          for (let i = 0; i < spriteIds.length; i++) {
-            let spriteId = spriteIds[i];
-            this.previous.sprites.push({
-              id: spriteId,
-              costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
-              x: this.nativeSpriteMap[spriteId].x,
-              y: this.nativeSpriteMap[spriteId].y,
-              behaviors: this.getBehaviorsForSpriteId(spriteId)
-            });
-          }
-        }
-        break;
+  updatePrevious() {
+    const spriteIds = this.getSpriteIdsInUse();
+    this.previous.eventLogLength = this.eventLog.length;
+    this.previous.sprites = [];
+    for (let i = 0; i < spriteIds.length; i++) {
+      let spriteId = spriteIds[i];
+      this.previous.sprites.push({
+        id: spriteId,
+        costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
+        x: this.nativeSpriteMap[spriteId].x,
+        y: this.nativeSpriteMap[spriteId].y,
+        behaviors: this.getBehaviorsForSpriteId(spriteId)
+      });
     }
   },
 
@@ -388,8 +259,11 @@ export const commands = {
   // Returns true if any sprite(s) was removed this frame.
   spriteRemoved() {
     let result = false;
-    let previousSpriteIds = this.previous.spriteIds;
-    let currentSpriteIds = this.getSpriteIdsInUse();
+    const currentSpriteIds = this.getSpriteIdsInUse();
+    const previousSpriteIds =
+      this.previous.sprites === undefined
+        ? []
+        : this.previous.sprites.map(sprite => sprite.id);
     if (currentSpriteIds.length < previousSpriteIds.length) {
       result = true;
     } else {
@@ -412,7 +286,7 @@ export const commands = {
         ? []
         : this.previous.sprites.map(sprite => sprite.id);
 
-    let eventSpriteIds = commands.getEventSpriteIds.call(this);
+    const eventSpriteIds = commands.getEventSpriteIds.call(this);
     for (let i = 0; i < previousSpriteIds.length; i++) {
       if (!currentSpriteIds.includes(previousSpriteIds[i])) {
         result = true;
@@ -448,7 +322,11 @@ export const commands = {
       let currentCostume = this.nativeSpriteMap[
         spriteIds[i]
       ].getAnimationLabel();
-      let previousCostume = this.previous.costumesById.costumes[i];
+      const previousCostume =
+        this.previous.sprites === undefined
+          ? currentCostume
+          : this.previous.sprites.find(sprite => sprite.id === spriteIds[i])
+              .costume;
       if (currentCostume !== previousCostume) {
         result = true;
       }
@@ -459,37 +337,44 @@ export const commands = {
   // Returns true if sprite costumes change, but only event sprites.
   // Returns false if non-event sprites change costume, or if no sprites change costume.
   onlyClickedCostumeChanged() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
+    const eventSpriteIds = commands.getEventSpriteIds.call(this);
     let result = false;
+    let foundEventSpriteChange = false;
+    let foundNoneventSpriteChange = false;
     for (let i = 0; i < spriteIds.length; i++) {
-      let currentCostume = this.nativeSpriteMap[
+      const currentCostume = this.nativeSpriteMap[
         spriteIds[i]
       ].getAnimationLabel();
-      let previousCostume = this.previous.costumesById.costumes[i];
-      if (currentCostume !== previousCostume) {
-        //sprite change costume
-        result = true;
-        if (
-          !(
-            this.p5.mouseIsOver(this.nativeSpriteMap[spriteIds[i]]) &&
-            this.p5.mouseWentDown('left')
-          )
-        ) {
-          //sprite was not clicked this frame
-          result = false;
-        }
+      const previousCostume =
+        this.previous.sprites === undefined
+          ? currentCostume
+          : this.previous.sprites.find(sprite => sprite.id === spriteIds[i])
+              .costume;
+      if (
+        currentCostume !== previousCostume &&
+        eventSpriteIds.includes(spriteIds[i])
+      ) {
+        foundEventSpriteChange = true;
+      } else if (currentCostume !== previousCostume) {
+        foundNoneventSpriteChange = true;
       }
     }
+    result = foundEventSpriteChange && !foundNoneventSpriteChange;
     return result;
   },
 
   // Returns true if any sprite changed (started or stopped) behaviors this frame.
   anyBehaviorChanged() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     for (let i = 0; i < spriteIds.length; i++) {
-      let currentBehaviors = this.getBehaviorsForSpriteId(i);
-      let previousBehaviors = this.previous.behaviorsById.behaviors[i];
+      const currentBehaviors = this.getBehaviorsForSpriteId(i);
+      const previousBehaviors =
+        this.previous.sprites === undefined
+          ? currentBehaviors
+          : this.previous.sprites.find(sprite => sprite.id === spriteIds[i])
+              .behaviors;
       if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
         result = true;
       }
@@ -500,18 +385,28 @@ export const commands = {
   // Returns true if only event sprite(s) change behaviors.
   // Returns false if non-event sprites or no sprites changed behaviors.
   onlyEventSpritesBehaviorChanged() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
+    const eventSpriteIds = commands.getEventSpriteIds.call(this);
     let result = false;
+    let foundEventSpriteChange = false;
+    let foundNoneventSpriteChange = false;
     for (let i = 0; i < spriteIds.length; i++) {
-      let currentBehaviors = this.getBehaviorsForSpriteId(i);
-      let previousBehaviors = this.previous.behaviorsById.behaviors[i];
-      if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
-        result = true;
-        if (!commands.getEventSpriteIds.call(this).includes(i)) {
-          result = false;
-        }
+      const currentBehaviors = this.getBehaviorsForSpriteId(i);
+      const previousBehaviors =
+        this.previous.sprites === undefined
+          ? currentBehaviors
+          : this.previous.sprites.find(sprite => sprite.id === spriteIds[i])
+              .behaviors;
+      if (
+        !utils.arrayEquals(currentBehaviors, previousBehaviors) &&
+        eventSpriteIds.includes(spriteIds[i])
+      ) {
+        foundEventSpriteChange = true;
+      } else if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
+        foundNoneventSpriteChange = true;
       }
     }
+    result = foundEventSpriteChange && !foundNoneventSpriteChange;
     return result;
   },
 
