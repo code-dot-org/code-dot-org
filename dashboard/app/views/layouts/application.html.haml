@@ -26,7 +26,6 @@
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
     -# webpack-runtime.js must appear exactly once on any page containing webpack entries
-
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
     -# essential.js is ordered above application.js to filter new relic errors
     %script{src: webpack_asset_path('js/essential.js')}
