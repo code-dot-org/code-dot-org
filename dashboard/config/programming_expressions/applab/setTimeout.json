@@ -2,6 +2,7 @@
   "key": "setTimeout",
   "name": "setTimeout",
   "category": "Control",
+  "category_key": "control",
   "palette_params": [
     {
       "name": "callback"

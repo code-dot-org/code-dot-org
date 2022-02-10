@@ -2,6 +2,7 @@
   "key": "removeItem",
   "name": "removeItem",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "list"

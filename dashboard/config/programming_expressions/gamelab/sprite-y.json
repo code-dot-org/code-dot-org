@@ -2,5 +2,6 @@
   "key": "sprite.y",
   "name": "sprite.y",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "sprite.y"
 }

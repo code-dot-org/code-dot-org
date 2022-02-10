@@ -2,5 +2,6 @@
   "key": "border-color",
   "name": "border-color",
   "category": "CSS Properties",
+  "category_key": "css_properties",
   "syntax": "border-color: value;"
 }
