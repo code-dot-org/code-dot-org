@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 
 function ProgrammingEnvironmentBox({programmingEnvironment}) {
   return (
@@ -17,7 +18,7 @@ function ProgrammingEnvironmentBox({programmingEnvironment}) {
         __useDeprecatedTag
         color={Button.Orange}
         href={`/docs/${programmingEnvironment.name}`}
-        text="View Code Docs"
+        text={i18n.viewCodeDocs()}
       />
     </div>
   );
@@ -25,13 +26,19 @@ function ProgrammingEnvironmentBox({programmingEnvironment}) {
 
 export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
   return (
-    <div style={styles.all}>
-      {programmingEnvironments.map(env => (
-        <ProgrammingEnvironmentBox
-          key={env.name}
-          programmingEnvironment={env}
-        />
-      ))}
+    <div>
+      <div style={styles.header}>
+        <h1>{i18n.ides()}</h1>
+        {i18n.ideDescription()}
+      </div>
+      <div style={styles.all}>
+        {programmingEnvironments.map(env => (
+          <ProgrammingEnvironmentBox
+            key={env.name}
+            programmingEnvironment={env}
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -64,5 +71,8 @@ const styles = {
   },
   image: {
     width: '100%'
+  },
+  header: {
+    margin: 5
   }
 };
