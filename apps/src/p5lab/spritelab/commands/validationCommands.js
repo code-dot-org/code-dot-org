@@ -162,7 +162,11 @@ export const commands = {
         costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
         x: this.nativeSpriteMap[spriteId].x,
         y: this.nativeSpriteMap[spriteId].y,
-        behaviors: this.getBehaviorsForSpriteId(spriteId)
+        behaviors: this.getBehaviorsForSpriteId(spriteId),
+        tint: this.nativeSpriteMap[spriteId].tint || '',
+        scale: this.nativeSpriteMap[spriteId].getScale(),
+        speed: this.nativeSpriteMap[spriteId].speed,
+        rotation: this.nativeSpriteMap[spriteId].rotation
       });
     }
   },
@@ -227,7 +231,7 @@ export const commands = {
 
   // Return true if any sprite began speaking.
   anySpriteSpeaks() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     for (let i = 0; i < spriteIds.length; i++) {
       if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
@@ -239,7 +243,7 @@ export const commands = {
 
   // Return true if exactly one sprite began speaking.
   singleSpriteSpeaks() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     let count = 0;
     for (let i = 0; i < spriteIds.length; i++) {
@@ -314,12 +318,23 @@ export const commands = {
     return this.getAnimationsInUse().length >= count;
   },
 
+  // Returns true if any sprite has a tint
+  anySpriteHasTint() {
+    const spriteIds = this.getSpriteIdsInUse();
+    for (let i = 0; i < spriteIds.length; i++) {
+      if (this.nativeSpriteMap[spriteIds[i]].tint) {
+        return true;
+      }
+    }
+    return false;
+  },
+
   // Returns true if any sprite's costume changed this frame.
   anyCostumeChanged() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     for (let i = 0; i < spriteIds.length; i++) {
-      let currentCostume = this.nativeSpriteMap[
+      const currentCostume = this.nativeSpriteMap[
         spriteIds[i]
       ].getAnimationLabel();
       const previousCostume =
@@ -357,6 +372,80 @@ export const commands = {
       ) {
         foundEventSpriteChange = true;
       } else if (currentCostume !== previousCostume) {
+        foundNoneventSpriteChange = true;
+      }
+    }
+    result = foundEventSpriteChange && !foundNoneventSpriteChange;
+    return result;
+  },
+
+  // Returns true if any-sprite specified-property changes this frame.
+  anyPropChanged(prop) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let result = false;
+    let currentProp;
+    let previousProp;
+    for (let i = 0; i < spriteIds.length; i++) {
+      switch (prop) {
+        case 'costume':
+          currentProp = this.nativeSpriteMap[spriteIds[i]].getAnimationLabel();
+          break;
+        case 'scale':
+          currentProp = this.nativeSpriteMap[spriteIds[i]].getScale();
+          break;
+        default:
+          currentProp = this.nativeSpriteMap[spriteIds[i]][prop];
+      }
+      previousProp =
+        this.previous.sprites === undefined
+          ? currentProp
+          : this.previous.sprites.find(sprite => sprite.id === spriteIds[i])[
+              prop
+            ];
+      if (currentProp !== previousProp) {
+        result = true;
+      }
+    }
+    return result;
+  },
+
+  // Returns true if sprite property changes, but only event sprites.
+  // Returns false if non-event sprites change costume, or if no sprites change costume.
+  onlyClickedPropChanged(prop) {
+    const spriteIds = this.getSpriteIdsInUse();
+    const eventSpriteIds = commands.getEventSpriteIds.call(this);
+    let currentProp;
+    let previousProp;
+    let result = false;
+    let foundEventSpriteChange = false;
+    let foundNoneventSpriteChange = false;
+    for (let i = 0; i < spriteIds.length; i++) {
+      switch (prop) {
+        case 'costume':
+          currentProp = this.nativeSpriteMap[spriteIds[i]].getAnimationLabel();
+          break;
+        case 'scale':
+          currentProp = this.nativeSpriteMap[spriteIds[i]].getScale();
+          break;
+        // .tint is undefined for a sprite until set with a command
+        case 'tint':
+          currentProp = this.nativeSpriteMap[spriteIds[i]].tint || '';
+          break;
+        default:
+          currentProp = this.nativeSpriteMap[spriteIds[i]][prop];
+      }
+      previousProp =
+        this.previous.sprites === undefined
+          ? currentProp
+          : this.previous.sprites.find(sprite => sprite.id === spriteIds[i])[
+              prop
+            ];
+      if (
+        currentProp !== previousProp &&
+        eventSpriteIds.includes(spriteIds[i])
+      ) {
+        foundEventSpriteChange = true;
+      } else if (currentProp !== previousProp) {
         foundNoneventSpriteChange = true;
       }
     }
@@ -412,7 +501,7 @@ export const commands = {
 
   // Returns true if all sprites have the default size (100 for students)
   spritesDefaultSize() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
     let result = true;
     for (let i = 0; i < spriteIds.length; i++) {
       if (this.nativeSpriteMap[spriteIds[i]].getScale() !== 1) {
@@ -424,7 +513,7 @@ export const commands = {
 
   // Returns true if any sprite was clicked, regardless of the eventLog.
   anySpriteClicked() {
-    let spriteIds = this.getSpriteIdsInUse();
+    const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     if (this.p5.mouseWentDown('left')) {
       for (let i = 0; i < spriteIds.length; i++) {
@@ -439,7 +528,7 @@ export const commands = {
   // Returns true if any two sprites touched, regardless of the eventLog.
   anySpritesTouched() {
     let result = false;
-    let allSprites = this.p5.World.allSprites;
+    const allSprites = this.p5.World.allSprites;
     result = allSprites.isTouching(allSprites);
     return result;
   },
