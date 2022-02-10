@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-01-04 18:41:54 UTC",
+    "serialized_at": "2022-02-10 19:57:13 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -40,13 +40,182 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Mini-Project: On-The-Go App",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Project: Human Device Interaction",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Mini-Project: Interactive Art",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "b052c205-04cc-459b-9617-23b6d3ef609e",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "0a90718a-ced0-4294-b9da-36d33df1702c",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "4f881f94-5be8-49a8-bae9-9a35e5161def",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "0a9e26fc-6f86-44fe-8b7c-18b56ef13f20",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a9e26fc-6f86-44fe-8b7c-18b56ef13f20",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "8db5d6f3-6042-4d59-a60d-54538d5f66b4",
+      "position": 2,
+      "properties": {
+        "description": "**Slides**: Present an overview of the project and the steps students will take to complete it."
+      },
+      "seeding_key": {
+        "activity_section.key": "8db5d6f3-6042-4d59-a60d-54538d5f66b4",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "215c98cc-d07f-4e25-8024-a24eb7618e0b",
+      "position": 3,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "215c98cc-d07f-4e25-8024-a24eb7618e0b",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1",
+      "position": 4,
+      "properties": {
+        "name": "Code Studio"
+      },
+      "seeding_key": {
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "25522e21-1d74-4215-9246-cc505bf7e6d1",
+      "position": 5,
+      "properties": {
+        "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
+        "name": "(Optional) Gallery Walk",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to formalize this process by having each student write down one positive quality of each project, or having students \"draw names\" to comment on one particular classmate's work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "25522e21-1d74-4215-9246-cc505bf7e6d1",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
+        "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
+      }
+    }
   ],
   "script_levels": [
 
@@ -55,10 +224,100 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Exemplar 1 - Loose Papers App",
+      "url": "https://docs.google.com/document/d/1wPwZJNHnVE9rxORwh2hdYQz4JgOUnKLxwEo5gTruGC0/view",
+      "key": "exemplar_1_-_loose_papers_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_1_-_loose_papers_app"
+      }
+    },
+    {
+      "name": "Exemplar 2 - Cats vs Dogs App",
+      "url": "https://docs.google.com/document/d/1YwosNn1Apef3mMpn8eYP10rI0G8AEyX3sKrP-zTDDvQ/view",
+      "key": "exemplar_2_-_cats_vs_dogs_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_2_-_cats_vs_dogs_app"
+      }
+    },
+    {
+      "name": "Exemplar 3 - Bird Survey",
+      "url": "https://docs.google.com/document/d/1jZE-PYVkKx8_gv7MAmzzP6vuOsX5XMDWohuz7ma7tB0/view",
+      "key": "exemplar_3_-_bird_survey",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_3_-_bird_survey"
+      }
+    },
+    {
+      "name": "Project Guide - On-The-Go App",
+      "url": "https://docs.google.com/document/d/1cWvcddxBCTku-YAtHWreeoIJVD8v1_8CwlydofZ_Dlo/view",
+      "key": "project_guide_on-the-go_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "project_guide_on-the-go_app"
+      }
+    },
+    {
+      "name": "Rubric - On-The-Go App",
+      "url": "https://docs.google.com/document/d/11wbS2tB6eOzkyY0Q-JFqpgR14XaY7wZBKhlRHrBBVQI/view",
+      "key": "rubric_-_on-the-go_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "rubric_-_on-the-go_app"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exemplar_1_-_loose_papers_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exemplar_2_-_cats_vs_dogs_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exemplar_3_-_bird_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "project_guide_on-the-go_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "rubric_-_on-the-go_app"
+      }
+    }
   ],
   "scripts_resources": [
 
