@@ -2,6 +2,7 @@
   "key": "changeFrame",
   "name": "changeFrame",
   "category": "Animations",
+  "category_key": "animations",
   "palette_params": [
     {
       "name": "frame"

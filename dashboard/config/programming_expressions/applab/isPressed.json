@@ -2,5 +2,6 @@
   "key": "isPressed",
   "name": "isPressed",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "isPressed"
 }

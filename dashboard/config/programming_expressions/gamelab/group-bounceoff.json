@@ -2,6 +2,7 @@
   "key": "group.bounceOff",
   "name": "group.bounceOff",
   "category": "Groups",
+  "category_key": "groups",
   "palette_params": [
     {
       "name": "target"

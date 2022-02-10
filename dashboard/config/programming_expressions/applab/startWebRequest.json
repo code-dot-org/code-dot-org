@@ -2,6 +2,7 @@
   "key": "startWebRequest",
   "name": "startWebRequest",
   "category": "Data",
+  "category_key": "data",
   "palette_params": [
     {
       "name": "url"

@@ -173,7 +173,7 @@ export const UnconnectedTextResponses = TextResponses;
 
 export default connect(
   state => ({
-    sectionId: state.sectionData.section.id,
+    sectionId: state.teacherSections.selectedSectionId,
     validScripts: state.unitSelection.validScripts,
     scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)

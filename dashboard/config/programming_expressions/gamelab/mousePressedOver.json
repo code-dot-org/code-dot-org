@@ -2,6 +2,7 @@
   "key": "mousePressedOver",
   "name": "mousePressedOver",
   "category": "World",
+  "category_key": "world",
   "palette_params": [
     {
       "name": "sprite"
