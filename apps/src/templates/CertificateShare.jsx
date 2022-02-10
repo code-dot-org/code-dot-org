@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 
 export default function CertificateShare(props) {
   return (
     <a href={props.printUrl}>
       <img
         src={props.imageUrl}
-        alt="Certificate for Completion of One Hour of Code"
+        alt={i18n.certificateForCompletion()}
         width="100%"
       />
     </a>
