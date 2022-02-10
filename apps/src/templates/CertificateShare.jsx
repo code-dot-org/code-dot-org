@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 
 export default function CertificateShare(props) {
+  const {announcement} = props;
   return (
     <a href={props.printUrl}>
       <img
@@ -10,11 +13,25 @@ export default function CertificateShare(props) {
         alt={i18n.certificateForCompletion()}
         width="100%"
       />
+      <TwoColumnActionBlock
+        responsiveSize="lg"
+        imageUrl={pegasus(announcement.image)}
+        subHeading={announcement.title}
+        description={announcement.body}
+        buttons={[
+          {
+            id: announcement.buttonId,
+            url: announcement.buttonUrl,
+            text: announcement.buttonText
+          }
+        ]}
+      />
     </a>
   );
 }
 
 CertificateShare.propTypes = {
   imageUrl: PropTypes.string.isRequired,
-  printUrl: PropTypes.string.isRequired
+  printUrl: PropTypes.string.isRequired,
+  announcement: PropTypes.object.isRequired
 };

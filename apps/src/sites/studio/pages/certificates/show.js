@@ -5,9 +5,13 @@ import CertificateShare from '@cdo/apps/templates/CertificateShare';
 
 $(document).ready(function() {
   const certificateData = getScriptData('certificate');
-  const {imageUrl, printUrl} = certificateData;
+  const {imageUrl, printUrl, announcement} = certificateData;
   ReactDOM.render(
-    <CertificateShare imageUrl={imageUrl} printUrl={printUrl} />,
+    <CertificateShare
+      imageUrl={imageUrl}
+      printUrl={printUrl}
+      announcement={announcement}
+    />,
     document.getElementById('certificate-share')
   );
 });
