@@ -43,7 +43,7 @@ class ManageStudentsActionsCell extends Component {
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
     addStudent: PropTypes.func,
-    asyncLoadSectionData: PropTypes.func
+    loadSectionData: PropTypes.func
   };
 
   state = {
@@ -52,7 +52,7 @@ class ManageStudentsActionsCell extends Component {
   };
 
   onConfirmDelete = () => {
-    const {removeStudent, id, sectionId, asyncLoadSectionData} = this.props;
+    const {removeStudent, id, sectionId, loadSectionData} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
       url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
@@ -72,7 +72,7 @@ class ManageStudentsActionsCell extends Component {
           },
           {includeUserId: true}
         );
-        asyncLoadSectionData(sectionId);
+        loadSectionData(sectionId);
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -319,7 +319,7 @@ export default connect(
     addStudent(id) {
       dispatch(addStudents([id]));
     },
-    asyncLoadSectionData(sectionId) {
+    loadSectionData(sectionId) {
       dispatch(asyncLoadSectionData(sectionId));
     }
   })

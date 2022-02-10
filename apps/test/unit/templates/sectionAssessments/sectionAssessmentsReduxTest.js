@@ -1614,10 +1614,8 @@ describe('sectionAssessmentsRedux', () => {
       it('returns an empty object when no assessments in redux', () => {
         const result = getStudentsMCandMatchSummaryForCurrentAssessment({
           ...rootState,
-          sectionData: {
-            section: {
-              students: []
-            }
+          teacherSections: {
+            selectedStudents: []
           }
         });
         assert.deepEqual(result, []);
@@ -1627,15 +1625,13 @@ describe('sectionAssessmentsRedux', () => {
         const date = new Date();
         const stateWithAssessment = {
           ...rootState,
-          sectionData: {
-            section: {
-              students: [
-                {
-                  name: 'Issac',
-                  id: 99
-                }
-              ]
-            }
+          teacherSections: {
+            selectedStudents: [
+              {
+                name: 'Issac',
+                id: 99
+              }
+            ]
           },
           sectionAssessments: {
             ...rootState.sectionAssessments,
@@ -1690,15 +1686,13 @@ describe('sectionAssessmentsRedux', () => {
     it('returns summary data for specific student', () => {
       const stateWithAssessment = {
         ...rootState,
-        sectionData: {
-          section: {
-            students: [
-              {
-                name: 'Issac',
-                id: 99
-              }
-            ]
-          }
+        teacherSections: {
+          selectedStudents: [
+            {
+              name: 'Issac',
+              id: 99
+            }
+          ]
         },
         sectionAssessments: {
           ...rootState.sectionAssessments,
