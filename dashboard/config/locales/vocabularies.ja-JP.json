@@ -218,6 +218,14 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "可逆圧縮"
         },
+        "event/outbreak/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "モデルとシミュレーション",
+          "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
+        },
         "event/sports/unversioned": {
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
@@ -304,14 +312,6 @@
         "line/poem-art/unversioned": {
           "word": "行",
           "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
-        },
-        "event/outbreak/unversioned": {
-          "word": "イベント",
-          "definition": "何かを引き起こすアクション。"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "モデルとシミュレーション",
-          "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
         },
         "sprite/coursef/2021": {
           "word": "スプライト",

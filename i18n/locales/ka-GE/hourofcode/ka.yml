@@ -230,8 +230,8 @@ ka:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი
     ან სტივი Minecraft-ის სამყაროში.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -972,6 +972,7 @@ ka:
   footer_menu_support: მხარდაჭერა
   footer_menu_terms: პირობები
   footer_menu_privacy: კონფიდენციალურობის პოლიტიკა
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: კოდის ერთი საათი
   learn_banner_blurb: სცადეთ ერთსაათიანი ტუტორიალები, რომლებიც ყველა ასაკზე არის მორგებული
     და 45 ენაზეა ხელმისაწვდომი. შემოუერთდით მილიონობით მოსწავლესა და მასწავლებელს

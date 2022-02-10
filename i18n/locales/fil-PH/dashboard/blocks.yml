@@ -356,6 +356,7 @@ fil:
             '"right"': kanang kolum
             '"x"': criss-cross
             '"plus"': idagdag
+            '"spiral"': paikid
             '"random"': nang hindi pinipili
       Dancelab_makeAnonymousDanceSprite:
         text: gumawa ng bagong {COSTUME} sa {LOCATION}
@@ -465,6 +466,7 @@ fil:
             '"right"': kanang kolum
             '"x"': criss-cross
             '"plus"': idagdag
+            '"spiral"': paikid
             '"random"': nang hindi pinipili
       Dancelab_mixColors:
         text: mix {COLOR1} and {COLOR2}
@@ -996,7 +998,12 @@ fil:
       gamelab_clickedOn:
         text: Kapag {SPRITE} nag-click
       gamelab_clickedSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): gumagalaw sa hilaga at umiikot
+            new Behavior(moving_south_and_looping, []): gumagalaw sa timog at umiikot
       gamelab_comment:
         text: komento {COMMENT}
       gamelab_costumeImage:
@@ -1048,6 +1055,19 @@ fil:
         text: |-
           kung {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ang costume ay {COSTUME}"
       gamelab_isKeyPressed:
@@ -1149,8 +1169,10 @@ fil:
         text: gumawa ng {EFFECT} epekto na may {NUM} {ANIMATION_NAME} mga tiyanak
         options:
           EFFECT:
+            '"burst"': sumabog
             '"pop"': pop
             '"rain"': ulan
+            '"spiral"': paikid
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       gamelab_makeNumSprites:
@@ -1188,9 +1210,9 @@ fil:
       gamelab_moveToward:
         text: ilipat {SPRITE} pixels {DISTANCE} sa {TARGET}
       gamelab_newSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: nagpapatrolya ng pataas at pababa
       gamelab_playSound:
@@ -1203,19 +1225,26 @@ fil:
             "'sound://category_digital/boing_2.mp3'": boing
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": kislap
+            "'sound://category_app/app_button_1.mp3'": pindutan
             "'sound://category_collect/clicky_crunch.mp3'": crunch
             "'sound://category_swish/quick_swing.mp3'": ugoy
             "'sound://category_nature/summer_night_loop.mp3'": gabi ng tag-init
             "'sound://category_background/ocean_waves.mp3'": alon sa dagat
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": ripple sa dalampasigan
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bula
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": pusa
             "'sound://category_animals/cow.mp3'": baka
             "'sound://category_animals/sheep.mp3'": tupa
+            "'sound://category_animals/goat.mp3'": kambing
             "'sound://category_animals/chicken.mp3'": manok
+            "'sound://category_animals/rooster.mp3'": tandang
+            "'sound://category_animals/elephant.mp3'": elepante
             "'sound://category_animals/dolphin.mp3'": dolphin
             "'sound://category_nature/thunderstorm_1.mp3'": pagkulog at pagkidlat
+            "'sound://category_animals/chick.mp3'": sisiw
             "'sound://category_animals/dog.mp3'": aso
+            "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_collect/trill_stings.mp3'": trill
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": mag-tap
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonal hit
@@ -1223,10 +1252,16 @@ fil:
             "'sound://category_transition/star_dust_particle_10.mp3'": star dust
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": barko ng alien
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": gayuma
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": pumili
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": kakaibang bass
             "'sound://category_digital/jump_7.mp3'": talon
       gamelab_playSpeech:
         text: i-play ang salita {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): gumagalaw gamit ang mga arrow key
+            draggable(): pagiging draggable
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
         options:
@@ -1272,16 +1307,19 @@ fil:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grid
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': kusina
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': parang
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': tanawin ng parke
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': mga puno ng pino
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': bahaghari
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': entablado
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': mga bituin
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': araw at bahaghari
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': pagbuhos ng sikat ng araw
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': palaruan ng tennis
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': isla ng kahoy
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ilalim ng lupa
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sa ilalim ng tubig
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: wala
@@ -1326,6 +1364,14 @@ fil:
             '"scale"': sukat
             '"width"': lapad
             '"height"': taas
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': mabagal
+            '5': normal
+            '7': mabilis
+            '9': extra fast
       gamelab_setTint:
         text: baguhin ang kulay ng {THIS} sa {COLOR}
       gamelab_setupScoreboard:
@@ -1366,7 +1412,7 @@ fil:
       gamelab_stopGliding:
         text: "{SPRITE} huminto sa pagdausdos"
       gamelab_subjectSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1673,13 +1719,16 @@ fil:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': harap ng bahay
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': kusina
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': parang
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': tanawin ng parke
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': mga puno ng pino
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': entablado
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': araw at bahaghari
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': pagbuhos ng sikat ng araw
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': palaruan ng tennis
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': isla ng kahoy
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ilalim ng lupa
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1724,7 +1773,9 @@ fil:
             '"left"': kaliwang arrow
             '"right"': kanang arrow
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1733,7 +1784,9 @@ fil:
             '"left"': kaliwang arrow
             '"right"': kanang arrow
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenMouseClicked:
         text: Kapag mouse ay nag-klik
       Mikelab_whenYesNoClicked:
@@ -1756,10 +1809,15 @@ fil:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': laryo
+            '"fire"': apoy
+            '"flowers"': mga bulaklak
             '"hearts"': mga puso
             '"iceCream"': Sorbetes
+            '"leaves"': mga dahon
             '"rainbow"': bahaghari
             '"stars"': mga bituin
+            '"waves"': mga alon
       Poetry_addLine:
         text: magdagdag ng linya {LINE}
       Poetry_animateText:
@@ -1774,8 +1832,10 @@ fil:
         text: gumawa ng {EFFECT} epekto na may {NUM} {ANIMATION_NAME} mga tiyanak
         options:
           EFFECT:
+            '"burst"': sumabog
             '"pop"': pop
             '"rain"': ulan
+            '"spiral"': paikid
       Poetry_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       Poetry_makeNumSprites:
@@ -1784,14 +1844,21 @@ fil:
         options:
           SOUND:
             '"sound://category_nature/steady_campfire_loop.mp3"': campfire
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': kagubatan
             '"sound://category_nature/summer_night_loop.mp3"': gabi
+            '"sound://category_background/ocean_waves.mp3"': karagatan
+            '"sound://category_background/rainforest_ambient_sound.mp3"': maulang kagubatan
+            '"sound://category_background/wavering_wind.mp3"': inaantok
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': mabagal
       Poetry_playSound:
         text: Ang ... {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': kampana
             '"sound://category_digital/boing_2.mp3"': boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': bula
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': talon
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ilaw
             '"sound://category_background/typewriter.mp3"': Makinilya
       Poetry_setAuthor:
         text: itakda ang may-akda {AUTHOR}
@@ -1818,6 +1885,7 @@ fil:
             '"sunrise"': Madaling araw
             '"sunset"': Takipsilim
             '"grayscale"': Abuhin
+            '"ocean"': karagatan
             '"rainbow"': bahaghari
             '"roses"': Rosas
             '"sky"': Langit

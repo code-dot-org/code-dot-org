@@ -295,7 +295,7 @@
       }
     },
     {
-      "key": "The Big Event Jr.",
+      "key": "The Big Event Jr",
       "name": "The Big Event Jr.",
       "absolute_position": 11,
       "lockable": false,
@@ -310,7 +310,7 @@
         "unplugged": true
       },
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022"
       }
@@ -1006,7 +1006,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e68d3049-5654-4527-9c7b-8dc1426e138d",
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022"
       }
@@ -1020,7 +1020,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4e7b48ba-7b86-4f01-bd21-92b42a1081af",
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022"
       }
@@ -1034,7 +1034,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c146bd03-a9f6-417b-a954-161f2e3e0872",
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022"
       }
@@ -1046,7 +1046,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "9ee4e1b3-41a4-4d3b-9bbd-7f7793daff4b",
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022"
       }
@@ -1059,7 +1059,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "636ae3fe-7476-4fdc-a8f2-b97bdf300491",
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022"
       }
@@ -4843,7 +4843,7 @@
         "script_level.level_keys": [
           "BigEvent-Unplugged2022"
         ],
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022",
         "activity_section.key": "bad82d8b-8e16-4d89-bad6-d2d9581d3f01"
@@ -6194,7 +6194,7 @@
         "script_level.level_keys": [
           "BigEvent-Unplugged2022"
         ],
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2022",
         "activity_section.key": "bad82d8b-8e16-4d89-bad6-d2d9581d3f01"
@@ -7141,31 +7141,31 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "resource.key": "feeling_faces_-_emotion_image_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "resource.key": "the_big_event"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "resource.key": "the_big_event_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "resource.key": "the_big_event_2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "resource.key": "the_big_event_courses_a_b_"
       }
     }
@@ -7528,7 +7528,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "vocabulary.key": "event"
       }
     }
@@ -7563,7 +7563,7 @@
         "description": "Practice differentiating pre-defined actions and event-driven ones."
       },
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "objective.key": "11ae4f6e-9a22-4fe7-b476-d0251076f65b"
       }
     },
@@ -7663,7 +7663,7 @@
         "description": "Recognize actions of the teacher as signals to initiate commands."
       },
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "objective.key": "699d524a-9ba6-430d-8ab4-fdce1b832b6f"
       }
     },
@@ -7683,7 +7683,7 @@
         "description": "Repeat commands given by an instructor."
       },
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "objective.key": "805cf72f-fb59-4003-b6b5-1879ced802b9"
       }
     },
@@ -8092,14 +8092,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Big Event Jr.",
+        "lesson.key": "The Big Event Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }

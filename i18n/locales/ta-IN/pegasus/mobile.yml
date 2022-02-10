@@ -434,6 +434,7 @@
   hoc2018_mc_start: "தொடங்குக"
   hoc2018_mc_no_internet: "இணையம் இல்லையா?"
   hoc2018_mc_download_adventurer: "Minecraft Adventurer இன் ஆஃப்லைன் பதிப்பைப் பதிவிறக்கவும்."
+  hoc2018_mc_educators_box2_button: "தரவிறக்கு"
   hoc2018_mc_educators_box3_title: "இலவச மாணவர் பட்டறையில் கலந்து கொள்ளுங்கள்"
   hoc2018_mc_educators_box3_desc: "இலவச Hour of Code பட்டறைக்கு உங்கள் பகுதியில் உள்ள மைக்ரோசாஃப்ட் ஸ்டோரைப் பார்வையிடவும். அனைத்து திறன் நிலைகளிலும் பங்கேற்பாளர்களுக்கு, ஆறு வயது மற்றும் அதற்கு மேற்பட்டவர்கள்."
   hoc2018_mc_educators_box3_button: "ஒரு பட்டறை கண்டுபிடிக்கவும்"
@@ -501,6 +502,7 @@
   hoc2021_mc_mee_villages_description: 'குறியீடாக்கத்தின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள், Minecraft -இல் உங்கள் மாணவர்களுடன் பன்முகத்தன்மையையும் அனைவரையும் உள்ளடக்குகின்ற வழியையும் ஆராயுங்கள்: கல்விப் பதிப்பு.'
   hoc2021_mc_mee_ai_title: "நன்மைக்கான AI"
   hoc2021_mc_mee_ai_description: 'உங்கள் மாணவர்களுடன் AI -ஐ ஆராய்ந்து, Minecraft -இல் குறியீட்டைக் கற்றுக்கொள்ளுங்கள்: கல்விப் பதிப்பு.'
+  codebytes_skinny_banner_english_only: "ஆங்கிலம்-மட்டும்"
   footer_privacy_policy: "தனியுரிமை கொள்கை"
   footer_about: "பற்றி"
   footer_support: "ஆதரவு"

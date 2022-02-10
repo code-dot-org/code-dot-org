@@ -1273,8 +1273,8 @@
           "hint1": "इव्हेंट ब्लॉकमधील  `+`  बटणावर क्लिक करा. `change costume` ब्लॉकमधील `subject` ब्लॉक आत असलेली रिकामी जागा शोधा.\n\n <xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "राक्षसांना मास्क्स देण्यासाठी, `when clicked` इव्हेंटबरोबर  `change costume` ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nछोटा लाल `clicked` ब्लॉकसुद्धा ड्रॅग करायला विसरू नका!",
-          "hint2": "या पातळीसाठीचा नवा कोड असा दिसला पाहिजे:\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>\n "
+          "hint1": "राक्षसांना मास्क्स देण्यासाठी, `when clicked` इव्हेंटबरोबर  `change costume` ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nछोटा लाल `clicked` ब्लॉकसुद्धा ड्रॅग करायला विसरू नका!",
+          "hint2": "या पातळीसाठीचा नवा कोड असा दिसला पाहिजे:\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>\n "
         },
         "CourseF_outbreak4": {
           "challenge": "## अधिक आव्हान हवे आहे?\n\nतुम्ही राक्षसांना थोडी जलद किंवा थोडी सावकाश हालचालसुद्धा करायला लावू शकता.\n\n1.  या ब्लॉकमध्ये 'एडीट' क्लिक करा  <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  या ब्लॉकमधली संख्या वाढवा किंवा कमी करा: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nराक्षसांना सावकाश हालचाल करायला लावण्यासाठी, `0.5` किंवा `0.25` सारखी एक दशांश संख्या वापरा. त्यांना जलद हालचाल करायला लावण्यासाठी, 1 पेक्षा मोठी कोणतीही संख्या वापरा."
@@ -1284,7 +1284,7 @@
           "hint1": "निरोगी आणि संसर्ग झालेल्या स्प्राईट्समधील स्पर्शांची सर्व संभाव्य कॉम्बिनेशन्स तपासण्यासाठी तुम्ही अजून 3 `when touches` इव्हेंट्स जोडण्याची गरज आहे."
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## लशी\n\nराक्षसांवर क्लिक करून त्यांना लस देण्याचे सिम्युलेशन तुम्ही करू शकता. हे करण्यासाठी,  या इव्हेंटमध्ये `change costume` ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## लशी\n\nराक्षसांवर क्लिक करून त्यांना लस देण्याचे सिम्युलेशन तुम्ही करू शकता. हे करण्यासाठी,  या इव्हेंटमध्ये `change costume` ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "अडकल्यासारखे वाटत आहे? तुम्ही नेहमीच तुमचा कोड खाली `Version History` वर क्लिक करून आणि मग \"Start Over\" निवडून रीसेट करू शकता."
         },
         "courseA_harvester_loops1_2021": {
@@ -1965,7 +1965,7 @@
           "courseD_bee_conditionals_challenge1_b": "या कोड्यात, प्रत्येक जागी एक फूल, एक मधाचे पोळे असू शकते किंवा काहीही नसू शकते. म्हणजे तुम्ही प्रत्येक चौरसात  तुमची `if/else` कंडीशनल्स रिपीट करू शकता."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "`if at flower` ब्लॉक्सप्रमाणेच,  `while nectar > 0` मधला कोड जेव्हा मधमाशी फुलाजवळ असेल फक्त तेव्हाच रन होईल. यातील फरक असा आहे की सगळे परागकण संपेपर्यंत आतला कोड पुन्हा पुन्हा रन होत राहील. हा पॅटर्न वापरून पहा.\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`if at flower` ब्लॉक्सप्रमाणेच,  `while nectar > 0` मधला कोड जेव्हा मधमाशी फुलाजवळ असेल फक्त तेव्हाच रन होईल. यातील फरक असा आहे की सगळे परागकण संपेपर्यंत आतला कोड पुन्हा पुन्हा रन होत राहील. हा पॅटर्न वापरून पहा.\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "नीट काम करत नाही? प्रत्येक ओळीला काय घडते ते पाहण्यासाठी \"Step\" बटण वापरण्याचा प्रयत्न करा. ",
@@ -2287,7 +2287,8 @@
           "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
+          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
+          "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
@@ -2315,7 +2316,8 @@
           "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
+          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
+          "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
@@ -2343,7 +2345,8 @@
           "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
+          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
+          "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
@@ -2804,6 +2807,56 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "हा ब्लॉक शोधा आणि `150` वर क्लिक करा.\n\\[ब्लॉकली ब्लॉक[0]\n\nजेव्हा संख्या `25` असते तेव्हा काय होते?\n\\[ब्लॉकली ब्लॉक[1]"
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "हे कोडे पूर्ण करण्यासाठी `when clicked` इव्हेंटला एक किंवा अधिक `actor 1 say` ब्लॉक्स जोडा."
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "तुम्ही सिडला आणि मॅनीला बर्फाच्या स्फटिकांनी मारामारी करायला लावू शकता का? ",
+          "iceage_free_play_b": "आजीला डीएगोचा पाठलाग करायला लावा. जर तिने त्याला पकडले तर गेम जिंकला म्हणून थांबवा.",
+          "iceage_free_play_c": "तुम्ही सिडला डीएगोकडे हिमकण फेकायला लावू शकता का आणि एखादा हिमकण लागल्यावर  डीएगोला अधिक मोठा करू शकता का? जर  डीएगोला 5 वेळा लागले तर गेम जिंकला म्हणून थांबवा."
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "हे कोडे सोडवण्यासाठी तुम्हाला फक्त एकच ब्लॉक जोडायचा आहे. एक `say` ब्लॉक टूलबारमधून बाहेर काढा आणि वर्कस्पेसमध्ये आधीच असलेल्या `when run` इव्हेंट ब्लॉकला तो जोडा. नंतर त्याच्या आत \"Hello!\" टाईप करा.     "
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "हे कोडे सोडवण्यासाठी, तुम्हाला `actor 1 say` ब्लॉक वापरून सिदला काहीतरी म्हणायला लावणे आवश्यक आहे. तसेच तुम्हाला `actor 2 say` ब्लॉक वापरून मॅनीला काहीतरी म्हणायला लावणे आवश्यक आहे.      "
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": "हे कोडे सोडवण्यासाठी प्रत्येक `when ___ arrow` इव्हेंटला वेगळी  `move actor 1` कमांड जोडलेली असणे आवश्यक आहे."
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "हे कोडे सोडवण्यासाठी प्रत्येक `when ___ arrow` इव्हेंटला वेगळी  `move actor 1` कमांड जोडलेली असणे आवश्यक आहे."
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "या कोड्यासाठी, तुम्हाला एकतर डीएगोला 200 पिक्सेल्स खाली न्यावे लागेल किंवा मॅनीला 200 पिक्सेल्स वर न्यावे लागेल.",
+          "iceage_move_to_actor_b": "हे आव्हान संपवण्यासाठी  `when actor 1 touches actor 2` इव्हेंटला `play ___ sound` ब्लॉक जोडा.  "
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "हे कोडे सोडवण्यासाठी `move actor 1 right by 200 pixels` ब्लॉक वापरा."
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "हे कोडे सोडवण्यासाठी `move actor 1 left` आणि `move actor 1 right` हे दोन्ही ब्लॉक्स वापरा."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "`when actor 1 touches actor 2` इव्हेंटच्या खाली तुम्हाला दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_sound_and_points_b": "ही पातळी उत्तीर्ण करण्यासाठी तुम्हाला `score a point` ब्लॉक आणि  'play \\_\\_\\_\\_ sound\\` ब्लोक, हे दोन्ही ब्लॉक्स वापरावे लागतील."
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "`when actor 1 touches actor 2` इव्हेंटच्या खाली तुम्हाला दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_sound_and_points_b": "ही पातळी उत्तीर्ण करण्यासाठी तुम्हाला `score a point` ब्लॉक आणि  'play \\_\\_\\_\\_ sound\\` ब्लोक, हे दोन्ही ब्लॉक्स वापरावे लागतील."
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "तुम्हाला आजीच्या दिशेत बदाम कधी फेकायचे आहेत? ॲरो दाबल्यावर? तुम्ही सिडवर क्लिक केल्यावर? तुम्ही आजीवर क्लिक केल्यावर? निवड तुम्हाला करायची आहे!",
+          "iceage_throw_hearts_b": "जेव्हा आजीला बदाम मिळतो, तेव्हा तिला आनंदी करण्यासाठी, तुम्हाला `when actor 2 touches projectile` इव्हेंटच्या खाली `set actor 2 mood to happy` ब्लॉक जोडावा लागेल."
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "हे कोडे जिथे न्यायचे आहे त्यासाठी तुम्हाला फक्त दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_warn_ice_age_b": "`when run` इव्हेंटच्या खाली दोन्ही नवीन ब्लॉक्स जोडा म्हणजे प्रोग्रॅम सुरू झाल्यावर ते लगेचच रन होतील."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "हे कोडे जिथे न्यायचे आहे त्यासाठी तुम्हाला फक्त दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_warn_ice_age_b": "`when run` इव्हेंटच्या खाली दोन्ही नवीन ब्लॉक्स जोडा म्हणजे प्रोग्रॅम सुरू झाल्यावर ते लगेचच रन होतील."
         }
       }
     }

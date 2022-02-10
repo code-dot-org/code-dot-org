@@ -2,8 +2,17 @@
   "az-AZ": {
     "data": {
       "lesson_activities": {
+        "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
+          "name": "Başlayaq (5 dəqiqə)"
+        },
+        "b5a5dd70-3968-40ab-bcb5-5d0e7df30880": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
           "name": "Yekun"
+        },
+        "13553f81-6547-4b09-b32e-7aab19725967": {
+          "name": "Virala gedin"
         },
         "7e5f5376-de4c-478e-a70d-d4ddb97b0564": {
           "name": "Qiymətləndirmə (2 dəqiqə)"
@@ -14,6 +23,9 @@
         "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
           "name": "Başlanğıc"
         },
+        "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
           "name": "Yekun"
         },
@@ -22,6 +34,12 @@
         },
         "e4041676-353d-409e-a7aa-bcfcc62bab09": {
           "name": "Əlavə təlim"
+        },
+        "e85d6071-2762-4dbb-843e-2f65408a30f8": {
+          "name": "Başlayaq (5 dəqiqə)"
+        },
+        "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
           "name": "Yekun"
@@ -41,6 +59,9 @@
         "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
           "name": "Başlanğıc"
         },
+        "3ff80342-0510-45ed-bf69-4cf19ebaf5c1": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
           "name": "Yekun"
         },
@@ -53,6 +74,9 @@
         "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
           "name": "Başlanğıc"
         },
+        "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
           "name": "Yekun"
         },
@@ -61,6 +85,15 @@
         },
         "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
           "name": "Əlavə təlim"
+        },
+        "7f4844a0-3455-4cf0-932b-ba3eba761758": {
+          "name": "Fərqləndirmə Təklifləri"
+        },
+        "5cb4e862-56b7-445e-a99a-22cc738504a1": {
+          "name": "Başlayaq (5 dəqiqə)"
+        },
+        "84586f7e-4b74-4a9f-936e-d358a0e7670b": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "633ec4e2-ea0b-496f-8878-d4178882a69e": {
           "name": "Yekun"
@@ -73,6 +106,9 @@
         },
         "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
           "name": "Başlanğıc"
+        },
+        "b3fd8108-41b8-46f8-9382-f19c73c597cb": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
           "name": "Yekun"
@@ -101,6 +137,9 @@
         "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
           "name": "Başlanğıc"
         },
+        "d31e813b-9457-415f-8632-009132bb5e48": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
           "name": "Yekun"
         },
@@ -116,11 +155,17 @@
         "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Səviyyələr"
         },
+        "14d674a9-18e0-43f3-ae74-d593dfc0fbda": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
           "name": "Yekun"
         },
         "2d33d18f-944d-4408-992a-31d1311733fc": {
           "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "74e90ab8-051a-45fd-bfd7-ec1e72686dc4": {
+          "name": "Virala gedin"
         },
         "48bd058b-2012-4d4a-9fba-52d20d8a922f": {
           "name": "Əsas Aktivlik"
@@ -130,6 +175,9 @@
         },
         "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
           "name": "Başlanğıc"
+        },
+        "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "09d516b6-38b7-42e0-900c-5d427b051b65": {
           "name": "Yekunlaşdır (5 dəqiqə)"
@@ -158,6 +206,12 @@
         "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
           "name": "Yekun"
         },
+        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
+          "name": "Başlayaq (5 dəqiqə)"
+        },
+        "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
           "name": "Yekun"
         },
@@ -170,6 +224,9 @@
         "37f266a7-4b80-449e-805a-4a06aad37292": {
           "name": "Başlanğıc"
         },
+        "301e5420-a6e3-46c3-a76f-c2e042652974": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "3664c675-1dd2-468f-b854-a7daa9b0dc38": {
           "name": "Qiymətləndirmə (2 dəqiqə)"
         },
@@ -181,6 +238,9 @@
         },
         "f266050e-62e6-415d-8735-b80cb922587d": {
           "name": "Başlanğıc"
+        },
+        "974b1dfa-682c-4556-89d8-af3f0d0a9d69": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "308d7e22-610e-46cb-be15-54fab1e436bb": {
           "name": "Yekun"
@@ -203,6 +263,12 @@
         "20701fc4-d308-49af-8988-34896fd12713": {
           "name": "Yekun"
         },
+        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
+          "name": "Başlayaq (5 dəqiqə)"
+        },
+        "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "d77010f1-4c38-4b28-8b5f-ef931622b016": {
           "name": "Yekunlaşdır (5 dəqiqə)"
         },
@@ -224,6 +290,12 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Əlavə təlim"
         },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Əsas Aktivlik"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Yekun"
+        },
         "6a240b51-f019-4729-a5df-cbe901844a7e": {
           "name": "Əsas Aktivlik"
         },
@@ -232,6 +304,12 @@
         },
         "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
           "name": "Əlavə təlim"
+        },
+        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
+          "name": "Başlayaq (5 dəqiqə)"
+        },
+        "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
           "name": "Yekunlaşdır (5 dəqiqə)"
@@ -254,6 +332,9 @@
         "ad2299c9-28bf-4e9f-b320-cb44ff94bdba": {
           "name": "Başlamaq"
         },
+        "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Səviyyələr"
         },
@@ -272,11 +353,17 @@
         "0f7585ce-d117-4b61-aee9-d54444cd83b0": {
           "name": "Başlamaq"
         },
+        "82dec89b-f375-4238-a251-ffae17c2dfd1": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
+        },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Səviyyələr"
         },
         "239ba7ce-544c-4508-9e5c-e956de964002": {
           "name": "Yekun"
+        },
+        "4cf19609-58ef-497b-b48d-2b9a0281a490": {
+          "name": "Virala gedin"
         },
         "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
           "name": "Qiymətləndirmə (2 dəqiqə)"
@@ -289,6 +376,9 @@
         },
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Əlavə təlim"
+        },
+        "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
+          "name": "Məlumat Görünüşünə qazma"
         },
         "899fd6a9-1214-43ec-a159-77c421de2c8a": {
           "name": "Səviyyələr"
@@ -2750,12 +2840,6 @@
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Yekun"
         },
-        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
-          "name": "Əsas Aktivlik"
-        },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
-          "name": "Yekun"
-        },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Səviyyələr"
         },
@@ -3224,6 +3308,12 @@
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Əlavə təlim"
         },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Baxın:rəqəmsal izi izləyin"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Oyun: Heyvan izləri"
+        },
         "de382430-d529-490d-b4fd-a7f020c4802b": {
           "name": "Baxış: Paylaşmaq üçün OK-dir?"
         },
@@ -3461,6 +3551,12 @@
         "5feda2e8-7d86-483b-9e66-959252a75a9a": {
           "name": "Öyrən:Alçaqlıq nə deməkdir?"
         },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "İcra edin: Onlayn və Üz-üzə"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Araşdırın: Mənalılığı STOP"
+        },
         "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
           "name": "Sonluq:Pauza və Düşünmək zamanı"
         },
@@ -3596,6 +3692,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Yekun"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "İstiləşmə: Pssst ... Parol nədir?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Qiymətləndirin: Uh-Oh! Əgər... Onda..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Yaradın: Parolunuzu gücləndirin"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Ümumiləşdirin: Parol Məsləhətləri Qeydləri"
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Əlavə təlim"
         },
@@ -3613,6 +3721,9 @@
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Əlavə təlim"
+        },
+        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
+          "name": "Körpü Fəaliyyətləri - Proqramlaşdırma"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Əsas Aktivlik"
@@ -3649,6 +3760,12 @@
         },
         "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
           "name": "Yekun"
+        },
+        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
+          "name": "Başlayaq (5 dəqiqə)"
+        },
+        "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Yekun"
@@ -3781,6 +3898,9 @@
         },
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Yekun"
+        },
+        "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
+          "name": "Fəaliyyət (30-45 dəqiqə)"
         },
         "bc6111e2-2d2b-4d09-ba39-ad4f401202c0": {
           "name": "Yekun"

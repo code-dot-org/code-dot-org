@@ -218,6 +218,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "无损压缩"
         },
+        "event/outbreak/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
         "event/sports/unversioned": {
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
@@ -304,10 +308,6 @@
         "line/poem-art/unversioned": {
           "word": "诗歌行",
           "definition": "（诗歌）- 一篇诗歌的组成部分，采用单行格式，在右侧结束。 "
-        },
-        "event/outbreak/unversioned": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
         },
         "sprite/coursef/2021": {
           "word": "精灵"
