@@ -1585,7 +1585,8 @@
   integrity sha512-Aex5zpSmWDvTBRGNJWwI12qYWhXG+u0bnb74LD917EdE94tsz4P2p7B/tby3NZdsE4DvNHjUG0dxCwxTbcitHg==
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.1.0"
+  version "0.0.0"
+  uid ""
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
@@ -1879,6 +1880,20 @@
     "@codemirror/text" "^0.19.0"
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
+
+"@dsco_/common@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dsco_/common/-/common-1.1.0.tgz#2309bc19fe90323330b9b0000fc27f80475c5b67"
+  integrity sha512-t+ZKe9Dg67Ap9mxzKtkdHOt95tVsJFtRLpUQcr/LEdPNcsojgqmc1L/nWMv/UbWv7I0GO3Kxd2Www/tLqE1IVg==
+
+"@dsco_/link@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dsco_/link/-/link-1.1.0.tgz#580e7d1cb48d2df262ece2660e40dcc3acf8abdc"
+  integrity sha512-jwdceiJ5vDf54k1LcAVgUpFagtu2+4YDtg5JHLsZruGUXYHLrS6ajYSNeYMUU+uIqtSGYN9GmR98G1R7FFjG4Q==
+  dependencies:
+    "@dsco_/common" "^1.1.0"
+    classnames "^2.3.1"
+    prop-types "^15.8.1"
 
 "@emotion/cache@^0.8.8":
   version "0.8.8"
@@ -4605,6 +4620,11 @@ classnames@^2.2.3, classnames@^2.2.4:
 classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-css@4.2.x:
   version "4.2.1"
@@ -12365,6 +12385,15 @@ prop-types@^15.7.2:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.8.1"
+
+prop-types@^15.8.1:
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
 
 property-information@^4.0.0:
   version "4.2.0"
