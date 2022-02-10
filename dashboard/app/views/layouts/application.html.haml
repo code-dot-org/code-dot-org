@@ -37,8 +37,7 @@
     = javascript_include_tag 'https://cdn.optimizely.com/js/12977480133.js' if Rails.env.production?
     %script{src: webpack_asset_path('js/code-studio-common.js')}
     = csrf_meta_tags
-    -# TODO: Move this to a separate HAML file.
-    -# TODO: Add some kind of Weblab or experiment flag for this feature.
+    -# Load the manifest.json for Maze if user is in the offline pilot
     - if request.cookies[:offline_pilot] && !@script.nil? && @script.name == 'express-2021' && !@lesson.nil? && @lesson.absolute_position == 1
       %link{rel: 'manifest', href: '/s/#{@script.name}/lessons/#{@lesson.absolute_position}/manifest.webmanifest'}
     = yield :head
