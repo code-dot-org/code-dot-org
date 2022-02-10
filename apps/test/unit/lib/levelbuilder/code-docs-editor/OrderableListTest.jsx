@@ -39,7 +39,7 @@ describe('OrderableList', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     wrapper
       .find('.fa-trash')
-      .at('1')
+      .at(1)
       .simulate('click');
     expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '1'},
