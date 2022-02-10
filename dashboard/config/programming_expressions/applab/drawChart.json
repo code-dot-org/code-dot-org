@@ -2,6 +2,7 @@
   "key": "drawChart",
   "name": "drawChart",
   "category": "Data",
+  "category_key": "data",
   "palette_params": [
     {
       "name": "chartId"

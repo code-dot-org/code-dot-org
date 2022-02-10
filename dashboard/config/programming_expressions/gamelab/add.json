@@ -2,6 +2,7 @@
   "key": "add",
   "name": "add",
   "category": "Groups",
+  "category_key": "groups",
   "palette_params": [
     {
       "name": "sprite"

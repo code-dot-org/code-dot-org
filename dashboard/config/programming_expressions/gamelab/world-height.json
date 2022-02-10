@@ -2,5 +2,6 @@
   "key": "World.height",
   "name": "World.height",
   "category": "World",
+  "category_key": "world",
   "syntax": "World.height"
 }
