@@ -1181,7 +1181,7 @@ uz:
       gamelab_moveForward:
         text: "{SPRITE} {DISTANCE} piksel masofaga oldinga siljitish"
       gamelab_moveInDirection:
-        text: "{SPRITE} piksel masofaga {DISTANCE} ga siljitish"
+        text: move {SPRITE} {DISTANCE} pixels {DIRECTION}
         options:
           DIRECTION:
             '"North"': Shimol
