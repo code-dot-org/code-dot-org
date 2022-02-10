@@ -377,6 +377,8 @@ def localize_shared_functions
   end
 end
 
+# Aggregate every CourseOffering record's `key` as the translation key, and
+# each record's `display_name` as the translation string.
 def localize_course_offerings
   puts "Preparing course offerings"
 
@@ -384,8 +386,8 @@ def localize_course_offerings
   CourseOffering.all.sort.each do |co|
     hash[co.key] = co.display_name
   end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.yml"), "w+") do |f|
-    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"course_offerings" => hash}}}))
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.json"), "w+") do |f|
+    f.write(JSON.pretty_generate(hash))
   end
 end
 
