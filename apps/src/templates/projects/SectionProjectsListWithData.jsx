@@ -55,5 +55,5 @@ class SectionProjectsListWithData extends Component {
 export const UnconnectedSectionProjectsListWithData = SectionProjectsListWithData;
 
 export default connect(state => ({
-  sectionId: state.sectionData.section.id
+  sectionId: state.teacherSections.selectedSectionId
 }))(SectionProjectsListWithData);
