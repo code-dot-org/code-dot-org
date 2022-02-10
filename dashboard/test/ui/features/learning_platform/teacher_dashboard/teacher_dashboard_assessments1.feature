@@ -6,7 +6,7 @@ Feature: Using the assessments tab in the teacher dashboard
 
     # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible

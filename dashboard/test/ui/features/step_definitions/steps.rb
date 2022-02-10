@@ -1035,10 +1035,6 @@ And(/^I submit this level$/) do
   }
 end
 
-And(/^I get hidden script access$/) do
-  browser_request(url: '/api/test/hidden_script_access', method: 'POST')
-end
-
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
