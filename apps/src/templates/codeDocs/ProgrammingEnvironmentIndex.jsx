@@ -8,7 +8,7 @@ function ProgrammingEnvironmentBox({programmingEnvironment}) {
     <div style={styles.box}>
       <div>
         {programmingEnvironment.imageUrl && (
-          <img src={programmingEnvironment.imageUrl} />
+          <img style={styles.image} src={programmingEnvironment.imageUrl} />
         )}
         <h2>{programmingEnvironment.title}</h2>
         <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
@@ -25,7 +25,7 @@ function ProgrammingEnvironmentBox({programmingEnvironment}) {
 
 export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
   return (
-    <div style={styles.flex}>
+    <div style={styles.all}>
       {programmingEnvironments.map(env => (
         <ProgrammingEnvironmentBox
           key={env.name}
@@ -49,16 +49,20 @@ const styles = {
     borderStyle: 'solid',
     borderColor: 'black',
     borderWidth: 1,
+    borderRadius: 5,
     width: '30%',
-    padding: 5,
+    padding: '5px 5px 10px',
     margin: 5,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'space-between'
   },
-  flex: {
+  all: {
     display: 'flex',
     flexWrap: 'wrap'
+  },
+  image: {
+    width: '100%'
   }
 };
