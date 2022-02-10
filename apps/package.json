@@ -153,7 +153,7 @@
     "moment": "^2.19.3",
     "newrelic": "^1.27.2",
     "node-js-marker-clusterer": "^1.0.0",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "pepjs": "^0.4.3",
     "pixelmatch": "^5.2.0",
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.0",
