@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {TextLink} from '@dsco_/link';
 import FontAwesome from './FontAwesome';
-import color from '../util/color';
 import {makeEnum} from '@cdo/apps/utils';
 
 const ChevronSide = makeEnum('left', 'right');
 
-export default class SmallChevronLink extends Component {
+export class SmallChevronLink extends Component {
   static propTypes = {
     linkText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
@@ -14,59 +15,27 @@ export default class SmallChevronLink extends Component {
     chevronSide: PropTypes.oneOf(Object.values(ChevronSide))
   };
 
-  renderChevron = () => {
-    const {isRtl} = this.props;
-    const icon = isRtl ? 'chevron-left' : 'chevron-right';
-
-    return (
-      <FontAwesome
-        icon={icon}
-        style={isRtl ? styles.chevronRtl : styles.chevron}
-      />
-    );
-  };
-
   render() {
-    const {link, linkText, chevronSide} = this.props;
+    const {link, linkText, chevronSide, isRtl} = this.props;
 
     return (
-      <div style={styles.linkBox}>
-        <a href={link} style={styles.link}>
-          {chevronSide === ChevronSide.left && this.renderChevron()}
-          <h3 style={styles.link}>{linkText}</h3>
-          {(!chevronSide || chevronSide === ChevronSide.right) &&
-            this.renderChevron()}
-        </a>
+      <div style={{margin: '10px 0'}}>
+        <TextLink
+          href={link}
+          text={linkText}
+          icon={
+            <FontAwesome
+              icon={chevronSide === 'left' ? 'chevron-left' : 'chevron-right'}
+              className={isRtl && 'fa-flip-horizontal'}
+            />
+          }
+          iconBefore={chevronSide === 'left'}
+        />
       </div>
     );
   }
 }
 
-const styles = {
-  link: {
-    color: color.teal,
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
-    display: 'inline',
-    textDecoration: 'none'
-  },
-  chevron: {
-    display: 'inline',
-    color: color.teal,
-    fontSize: 12,
-    fontWeight: 'bold',
-    marginLeft: 8
-  },
-  chevronRtl: {
-    display: 'inline',
-    color: color.teal,
-    fontSize: 12,
-    fontWeight: 'bold',
-    marginRight: 8
-  },
-  linkBox: {
-    display: 'block',
-    textDecoration: 'none'
-  }
-};
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(SmallChevronLink);
