@@ -1208,7 +1208,7 @@ pt:
       gamelab_mouseLocation:
         text: posição do mouse
       gamelab_moveBackward:
-        text: mover [SPRITE] [0] [DISTANCE] [1] pixels para trás
+        text: mover {SPRITE} [0] {DISTANCE} [1] pixels para trás
       gamelab_moveForward:
         text: mover {SPRITE} {DISTANCE} pixels pra frente
       gamelab_moveInDirection:
