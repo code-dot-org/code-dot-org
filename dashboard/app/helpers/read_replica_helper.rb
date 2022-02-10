@@ -2,22 +2,25 @@ require 'dynamic_config/gatekeeper'
 
 module ReadReplicaHelper
   def self.included(base)
-    #SeamlessDatabasePool::ControllerFilter.prepend GatekeeperReadReplica
+    ActiveRecord::Base.include GatekeeperReadReplica
   end
 
-  # Wrap SeamlessDatabasePool::ControllerFilter methods in Gatekeeper flag
-  # to allow dynamic control over offloading queries to the read pool.
+  # Wrap ActiveRecord::ConnectionHandling methods in Gatekeeper flag to allow
+  # dynamic control over offloading queries to the read pool.
   module GatekeeperReadReplica
-    def read_replica?
-      Gatekeeper.allows('dashboard_read_replica')
-    end
+    extend ActiveSupport::Concern
+    module ClassMethods
+      def read_replica?
+        Gatekeeper.allows('dashboard_read_replica')
+      end
 
-    def use_master_db_connection_on_next_request
-      super if read_replica?
-    end
-
-    def set_read_only_connection_for_block(action)
-      read_replica? ? super : yield
+      def lookup_connection_handler(handler_key)
+        if read_replica?
+          super(handler_key)
+        else
+          super(ActiveRecord::Base.writing_role)
+        end
+      end
     end
   end
 end
