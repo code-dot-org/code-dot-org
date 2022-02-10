@@ -99,7 +99,8 @@
           "get nectar": {
             "parameters": {
               "counter": "Kaunter"
-            }
+            },
+            "name": "dapatkan  nektar"
           }
         },
         "Course 4 SCF 3": {
@@ -234,7 +235,8 @@
         "NEW Course 4 Artist Params 15": {
           "draw a star": {
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             },
             "name": "lukiskan satu  bentuk bintang"
           },
@@ -370,7 +372,8 @@
         "New Artist Project": {
           "draw a star": {
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             },
             "name": "lukiskan satu  bentuk bintang"
           },
@@ -934,7 +937,8 @@
         "courseF_artist_fwp9": {
           "draw a star": {
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             },
             "name": "lukiskan satu  bentuk bintang"
           },
@@ -1061,7 +1065,8 @@
         "CourseD_EOC_artist": {
           "draw a star": {
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             },
             "name": "lukiskan satu  bentuk bintang"
           },
@@ -1146,11 +1151,23 @@
         "Geometric Sun": {
           "draw a house": {
             "name": "lukiskan sebuah rumah"
+          },
+          "sun": {
+            "name": "matahari"
+          },
+          "diamond": {
+            "name": "berlian"
           }
         },
         "Geometric Sun_2018": {
           "draw a house": {
             "name": "lukiskan sebuah rumah"
+          },
+          "sun": {
+            "name": "matahari"
+          },
+          "diamond": {
+            "name": "berlian"
           }
         },
         "NEW Course 4 Artist Functions 8": {
@@ -1242,7 +1259,8 @@
           "draw a star": {
             "name": "lukiskan satu  bentuk bintang",
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             }
           },
           "draw a circle": {
@@ -1282,7 +1300,8 @@
           "draw a star": {
             "name": "lukiskan satu  bentuk bintang",
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             }
           },
           "draw a circle": {
@@ -1322,7 +1341,8 @@
           "draw a star": {
             "name": "lukiskan satu  bentuk bintang",
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             }
           },
           "draw a circle": {
@@ -1362,7 +1382,8 @@
           "draw a star": {
             "name": "lukiskan satu  bentuk bintang",
             "parameters": {
-              "length": "panjang"
+              "length": "panjang",
+              "points": "mata"
             }
           },
           "draw a circle": {
@@ -1501,6 +1522,74 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "permainan tamat"
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "parameters": {
+              "honey": "madu"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "mata"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "mata"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "tetapkan markah"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "tetapkan markah"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "mata"
+            }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "kumpul"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "kumpul"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "kumpul"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "kumpul"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "kumpul"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "kumpul"
           }
         }
       }

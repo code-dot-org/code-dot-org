@@ -1306,6 +1306,7 @@ fr:
       school_country: Pays de l’École
       colombian_school_city: Ville de l’École
       colombian_chilean_school_name: Nom de l'école
+      chilean_school_commune: Commune
       ages: Quelle est la tranche d'âge de vos étudiants, cette année ?
       subjects: Quelle(s) matière(s) enseignez-vous, cette année ?
       resources: Parmi les ressources d’éducation en informatique suivantes, lesquelles
@@ -1345,6 +1346,7 @@ fr:
         malaysia: Malaisie
         mexico: Mexique
         thailand: Thaïlande
+        uzbekistan: Ouzbékistan
       ages:
         ages_under_6: Moins de 6 ans
         ages_7_8: 7-8 ans
@@ -1468,3 +1470,4 @@ fr:
   behaviors:
     this_sprite: ce sprite
   unit_prefix: Unité %{n}
+  teacher_feedback: FeedBack enseignants

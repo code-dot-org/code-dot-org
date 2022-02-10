@@ -99,7 +99,7 @@
           "frozen_snowflake_branch": "\"ایک سنوفلیک برانچ بنائیں\" بلاک استعمال کریں"
         },
         "frozen square iterative": {
-          "frozen_create_square": "ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ کریں"
+          "frozen_create_square": "ایک مربع بنانے کے لیے یہاں مزید بلاک منسلک کریں"
         },
         "outbreak2": {
           "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
@@ -406,7 +406,24 @@
           "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "یہاں کوڈ بلاکس تلاش کریں."
+          "poetry_background": "یہاں کوڈ بلاکس تلاش کریں.",
+          "run_button": "اپنے اینیمیشن کو اس بٹن کے ساتھ آزمائیں."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "اب آپ ڈیزائن موڈ میں ہیں۔"
+        },
+        "frozen line": {
+          "run": "اپنے پروگرام کو آزمانے کے لیے \"Run\" دبائیں!",
+          "move_elsa_forward": "ایلسا کو آگے کی جانب حرکت دینے کے لیے ایک \"Move Forward\" بلاک کو \"When Run\" بلاک کے نیچے رکھ لیں۔"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "ایلسا کو موڑنے کے لیے \"Turn\" بلاک استعمال کریں۔ ڈراپ ڈاون فہرست میں نمبر متعین کرتا ہے کہ ایلسا کتنا مڑے گی۔"
+        },
+        "frozen square loop": {
+          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
         }
       }
     }

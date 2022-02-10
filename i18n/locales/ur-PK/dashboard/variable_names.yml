@@ -6,6 +6,7 @@ ur:
       Red: سرخ
       actor: اداکار
       age: عمر
+      birds: پرندے
       cats: بلیاں
       color: رنگ
       counter: گنتی کرنے والا
@@ -16,11 +17,17 @@ ur:
       left: بائیں
       length: لمبائی
       name: نام
+      nectar: امرت
+      planet: سیارہ
+      points: نقاط
       random: بےترتیب
       repeat: دوبارہ
       right: درست
       score: اسکور
+      shout: چلانا
       size: سائز
+      speed: رفتار
       variable: متغیر
       width: چوڑائی
+      wizard: جادوگر
       x: x

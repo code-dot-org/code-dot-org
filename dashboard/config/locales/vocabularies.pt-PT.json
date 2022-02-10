@@ -218,6 +218,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressão sem perdas"
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
         "event/sports/unversioned": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
@@ -304,10 +308,6 @@
         "line/poem-art/unversioned": {
           "word": "Linha",
           "definition": "(poesia) - uma subdivisão de um poema disposto em uma linha que termina na margem direita."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Evento",
-          "definition": "Uma ação que faz com que algo aconteça."
         },
         "sprite/coursef/2021": {
           "word": "Sprite",

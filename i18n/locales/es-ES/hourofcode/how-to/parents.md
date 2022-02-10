@@ -4,7 +4,7 @@ title: Hora de Código - Guía práctica para padres
 
 # Cómo hacer una Hora de Código con tus hijos
 
-Probar una Hora del Código es una forma sencilla y divertida de introducir a tus estudiantes en las ciencias de la computación, quizás por primera vez. Las ciencias de la computacion es fundacional para todos campos de estudio, tambien [recientes estudions muestran](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): que los niños que estudian ciencas de la computacion muestras mejores resultados en areas como resolicion de problemas y hay un <font color="00adbc"><b>17% mas de posibilidades que concurran a la universidad</b></font>.
+Probar una Hora del Código es una forma sencilla y divertida de introducir a los niños en la informática, posiblemente por primera vez. La informática no sólo es fundamental para todos los campos de estudio, sino que [estudios recientes muestran](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): Los niños que estudian informática obtienen mejores resultados en otras asignaturas, destacan en la resolución de problemas y tienen <font color="00adbc"><b>un 17% más de probabilidades de matricularse en la universidad</b></font>.
 
 Puedes unirte a decenas de millones de estudiantes en todo el mundo en este evento global. Juntos, podemos inspirar a los niños a aprender, romper estereotipos y ayudar a los niños a descubrir un nuevo interés. Lo mejor de todo es que ya tienes todo lo que necesitas para llevar la Hora del Código a tu hogar.
 
@@ -29,7 +29,7 @@ Hay innumerables [actividades de la Hora del Código](https://hourofcode.com/us/
 Todas nuestras actividades integran la resolución de problemas y el pensamiento crítico con diversión y creatividad, pero estas son algunas de las favoritas de los estudiantes:
 
 - Para el niño/a al que le encanta jugar: [Minecraft](https://code.org/minecraft) o [Fiesta de baile](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Para los niños que les encanta Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Para el niño/a al que le encanta aprender: [IA para océanos](https://code.org/oceans) o [Hacer música con Scratch ](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>¿Poca tecnología o sin tecnología?</h3>
@@ -64,7 +64,7 @@ Esta es una gran oportunidad para agregar un nuevo tipo de actividad al día de 
 
 ## 3) Consejos para introducir a tu hijo las Ciencias de la Computación
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+No pasa nada si tanto tú como tu hijo sois nuevos en la informática. Aquí tienes algunas ideas para introducir tu actividad de la Hora del Código y hacer que ambos penséis en la informática:
 
 - Explica las formas en que la tecnología impacta nuestras vidas, con ejemplos específicos que puedan interesar a tu hijo. Por ejemplo, podrías hablar sobre medicina o cómo conectar personas virtualmente. Además, consulta [Code.org/CSforGood ](https://code.org/csforgood) para ver sugerencias de preguntas de debate.
 - Juntos, hagan una lista de las cosas cotidianas que usan código para funcionar correctamente.
@@ -81,7 +81,7 @@ Por último, cuando tu hijo encuentre dificultades, está bien responder: - "No 
 
 La ciencia de la computación tiene que ver con aprender a "depurar" situaciones que no resultaron como pensábamos. ¡Juntos, tú y tu hijo pueden pensar en formas creativas de resolver el problema!
 
-## 4) Don’t forget to celebrate!
+## 4) ¡No te olvides celebrarlo!
 
 La Hora del Código es un evento mundial y tu familia merece celebrarlo. Estas son algunas formas de hacer que tu Hora del Código sea muy especial:
 
@@ -93,6 +93,6 @@ La Hora del Código es un evento mundial y tu familia merece celebrarlo. Estas s
 
 <h2>¿Qué viene después de la Hora de Código?</h2>
 
-¡Las ciencias de la computación no tienen que terminar con la Hora del Código! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Descubre cómo](https://code.org/yourschool) llevar la Ciencia de la Computación a la escuela de tu hijo hoy.
+¡Las ciencias de la computación no tienen que terminar con la Hora del Código! Aunque el 90% de los padres quieren que sus hijos aprendan informática, la mayoría de las escuelas siguen sin enseñarla. Para ayudar, nuestro plan de estudios está basado en la web y es de uso gratuito para siempre. [Descubre cómo](https://code.org/yourschool) llevar la Ciencia de la Computación a la escuela de tu hijo hoy.
 
 [<button>Ver Guía en PDF</button>]({{ localized_files/hourofcode_parent_how_to }})

@@ -1020,35 +1020,214 @@ ro-RO:
           Mai Încet\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n
           \n"
       Dance_Party_extras_intro_2019:
-        markdown: '„# Continuă să dansezi!În partea a doua vei crea propriul proiect.
-          Aici nu ne jucăm cu puzzle-uri, ci cu proiecte care îți prezintă diferite
-          metode prin care petrecerile dansante pot deveni mai complexe.Poți parcurge
-          aceste niveluri _în orice ordine_. Mergi încoace și încolo pentru a vedea
-          cum s-a făcut ceva la un nivel anterior sau combină conceptele din mai multe
-          proiecte. Încearcă-le pe toate, alege-ți favoritul și petrece-ți timpul
-          îmbunătățind proiectul respectiv pentru a-l face să fie special.<a class=""btn
-          btn-large btn-primary next-stage submitButton pull-right"">Continuă</a><div
-          class=""clearfix""></div><div style=""float: left; margin: 10px""><a href=""2""><h2>Înainte
-          și înapoi</h2><img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a></div><div
-          style=""float: left; margin: 10px""><a href=""3""><h2>Mai multe butoane</h2><img
-          src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a></div><div
-          style=""float: left; margin: 10px""><a href=""4""><h2>Intră în formație</h2><img
-          src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a></div><div
-          style=""float: left; margin: 10px""><a href=""5""><h2>Unde au dispărut?</h2><img
-          src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a></div><div
-          style=""float: left; margin: 10px""><a href=""6""><h2>Grupuri de dansatori</h2><img
-          src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a></div><div
-          style=""float: left; margin: 10px""><a href=""7""><h2>Pătrimi</h2><img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a></div><div
-          style=""float: left; margin: 10px""><a href=""8""><h2>Note joase, medii
-          și înalte</h2><img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a></div><div
-          style=""float: left; margin: 10px""><a href=""9""><h2>Mărește viteza, Micșorează
-          viteza</h2><img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a></div>"'
+        markdown: |+
+          # Continuă să dansezi!
+
+          Pentru partea 2, vei crea propriul proiect. Aici nu ne jucăm cu puzzle-uri, ci cu proiecte care îți prezintă diferite metode prin care petrecerile dansante pot deveni mai complexe. Poți parcurge aceste niveluri _în orice ordine_. Sari ici și colo pentru a vedea cum s-a făcut ceva la un nivel anterior sau combină conceptele din mai multe proiecte. Încearcă-le pe toate, alege-ți favoritul și petrece-ți timpul îmbunătățind proiectul respectiv pentru a-l face să fie al tău.
+
+          <div class="clearfix">
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Înainte și Înapoi
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Mai Multe Butoane
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Treci în Formație
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Unde Au Dispărut?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Echipe de Dans
+          <h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Pătrimi
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bass, Mediu, Acut
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Mărește Micșorează
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+
+
       Internet Simulator Setup:
         content1: descrierea aici
+        markdown: "#Simulatorul de Internet al Code.org_Notă:\nAceste instrucțiuni
+          enumerate în prezentul tutorial sunt pentru profesorii care doresc să utilizeze
+          Simulatorul de Internet ca un instrument independent, separat de materia
+          curiculară Principiile Informaticii de la Code.org. Dacă plănuiești să utilizezi
+          activitățile desemnate ca parte a curiculei CSP Code.org, atunci te rugăm
+          să mergi la [CSP curriculum page.](https://code.org/educate/csp)_\n\n###
+          Cuprins\n\nExistă 3 pagini de fundal și informațiile cuprinse aici:\n* Ce
+          este Simulatorul de Internet? Prezentare generală (a se vedea mai jos)\n*
+          [setup instructions](/s/netsim/lessons/1/levels/2) \n* [FAQ](/s/netsim/lessons/1/levels/3)\n\n###
+          Ce este Simulatorul de Internet? Prezentare generală:\n\nSimulatorul de
+          Internet este un instrument dezvoltat de Code.org pentru noua noastră clasă
+          de liceu [Computer Science Principles](https://code.org/educate/csp). Instrumentul
+          este conceput pentru a le permite elevilor să experimenteze și să rezolve
+          diferite tipuri de probleme asociate cu calculatoarele în rețea. Simulatorul
+          de Internet este utilizat în mai multe lecții pe parcursul unităților 1
+          și 2 din programa noastră școlară pentru a construi succesiv diferitele
+          straturi ale internetului. \n\nDacă iei în considerare să utilizezi instrumentului
+          în clasa ta cu activități pe care le concepi, îți recomandăm să te familiarizezi
+          cu instrumentul prin intermediul [planurilor de lecție](https://curriculum.code.org/csp/unit1).
+          \n\nInstrumentul în sine nu_predă_aceste concepte, ci mai degrabă oferă
+          un mediu pentru ca mai mulți elevi să se unească și să își trimită unul
+          altuia sau altor colegi de clasă mesaje binare, zecimale sau ascii. Instrumentul
+          în sine nu predă aceste concepte, ci mai degrabă oferă un mediu în care
+          mai mulți elevi se pot reuni și trimite mesaje binare, zecimale sau ascii
+          unul altuia sau altor colegi de clasă.  \n**Mediul poate fi configurat**
+          într-o varietate de moduri pentru a expune diferite tipuri de probleme,
+          pentru a vizualiza datele și conexiunile dintre gazde și pentru a sprijini
+          învățarea diferitelor concepte legate de internet.\nSimulatorul de Internet
+          a fost conceptul să fie utilizat într-o *clasă*, elevii lucrând în colaborare
+          în-persoană pentru a rezolva probleme. Adesea, aceste probleme implică inventarea
+          unui protocol de comunicare sau inventarea unor modalități de codificare
+          a informațiilor într-un mod structurat care să facă posibilă transportarea
+          lor pe internet.\n\n**În programa Code.org Principiile Informaticii** structurăm
+          de obicei lecțiile și activitățile în felul următor:\n* **Prima dată prezintă
+          elevilor o provocare**\n * De exemplu, internetul fizic este în mod inerent
+          nesigur și poate pierde mesaje.\n* Oferă-le posibilitatea de a se experimenta
+          cu simulatorul pentru a înțelege problemele**. \n * De exemplu, uită-te
+          la jurnalele routerului pentru a descoperi că 10-20% din toate mesajele
+          sunt pierdute și că pachetele pot fi rutate în altă ordine.\n* **Oferă posibilitatea
+          de a inventa propria soluție la provocare**. \n  * de exemplu, să inventeze
+          propriul protocol pentru a trimite mesaje în mod fiabil pe această rețea
+          nesigură.\n* **În cele din urmă, elevii cercetează modul în care acel protocol
+          sau invenție funcționează \"în lumea reală \"**.\n * de exemplu, cercetează
+          cum funcționează cu adevărat TCP și urmăresc un videoclip\n\n### Ce Poate
+          Fi Configurat Simulatorul de Internet Să Facă?\nLa modul cel mai elementar,
+          simulatorul de Internet poate comunica un singur bit de informație prin
+          intermediul unui singur fir partajat, fără coordonare sau sincronizare.
+          \ În varianta cea mai avansată, acesta poate simula conexiuni nesigure prin
+          intermediul mai multor routere, folosind adrese IP, un DNS și pachete de
+          dimensiuni fixe care necesită crearea unor protocoale similare cu TCP/IP
+          sau HTTP.\n\nAm creat un Simulator de Internet într-o varietate de configurări,
+          care conduc la învățarea anumitor subiecte. Dar pentru utilizarea Simulatorului
+          de Internet la clasă trebuie să ai în vedere anumite setări ale interfeței
+          de utilizator, pe care ai dori să le controlezi sau să le spui elevilor
+          să se stabilească într-un mod aparte.\nDe exemplu: una dintre caracteristicile
+          Simulatorului de Internet este că poți afișa reprezentările binare, zecimale,
+          hexagonale și ASCII ale oricăror date pe care le trimiți.  În unele configurații,
+          utilizatorul poate seta, de asemenea, \"chunk size\" pentru a dicta modul
+          în care sunt interpretați biții.  Pentru o lecție de concepție proprie,
+          ai putea alege una dintre configurațiile pe care le-am furnizat, dar poate
+          că ar putea fi necesar să le impui elevilor să afișeze doar o anumită reprezentare
+          a biților sau poate că dorești ca dimensiunea \"chunk size\" să fie setată
+          la o anumită valoare.\n\nCeea ce contează mai mult este faptul că configurațiile
+          furnizate aici sunt menite să fie un punct de plecare pentru predarea unui
+          anumit subiect.  S-ar putea să fie nevoie de ingeniozitate și de strategii
+          de predare pentru a rafina în continuare utilizarea Simulatorului pentru
+          a se potrivi nevoilor tale.\n\n<br><br> <img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/> <br><br>\n\nUrmează: Instrucțiuni
+          de instalare_"
       Internet Simulator Setup 2:
         content1: descrierea aici
+        markdown: "# Simulator de Internet: Instrucțiuni de Instalare Instructions
+          \n1.\t**Creează o secțiune în Code Studio.** Pentru ca elevii din clasă
+          să poată comunica cu ceilalți, ei toți trebuie să fie asociați cu aceeași
+          secțiune în Code Studio. Dacă te autentifici cu un cont de profesor, va
+          trebui să creezi o secțiune la care toți elevii tăi să adere. Pentru a crea
+          o secțiune:\n *Navighează către zona [sections](https://code.org/teacher-dashboard#/sections)
+          panoului de bord al profesorului\n* Fă clic pe butonul Secțiune Nouă'. Îți
+          recomandăm să alegi Tipul de Autentificare 'Email' și 'cspunit1' pentru
+          curs.\n\n<br> <img src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" /> <br><br> 2.\n\n2.\t**Spune elevilor să se alăture secțiunii
+          tale** Odată creată secțiunea, fă clic pe link-ul pentru secțiune 'Gestionare
+          Elevi'. Vei vede un cod al secțiunii, pe care îl vei comunica elevilor pentru
+          intrare odată ce și-au creat propriile conturi Code Studio. \n\n<br> <img
+          src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" /> <br><br> \n\n3.\t**Furnizează elevilor URL-ul versiunii
+          Simulatorului de Internet pe care dorești să o utilizezi.** Am creat mai
+          multe configurații diferite ale Simulatorului de Internet disponibile la
+          [code.org/internetsimulator](http://code.org/internetsimulator). Când găsești
+          o configurație care funcționează pentru activitatea ta, partajează URL-ul
+          cu elevii. Dacă toți se află în aceeași secțiune, atunci ei vor putea să
+          se conecteze automat cu ceilalți atunci când toți ajung la același URL.\n_Urmează:
+          Întrebări Frecvente_ "
       Internet Simulator Setup 3:
         content1: descrierea aici
+        markdown: "# Simulator de Internet: FAQ /Întrebări Frecvente\n\n#### Unde
+          pot găsi activitățile pe care le-ați conceput a fi utilizate cu Simulatorul
+          de Internet? Activitățile concepute de noi pentru materia noastră de predate
+          Principiile Informaticii, inclusiv configurațiile specifice Simulatorului
+          de Internet pot fi găsite în planurile Lecțiilor [here](https://code.org/educate/csp).
+          Multe dintre planurile lecțiilor au suport video „Sfaturile & Trucurile
+          Profesorului”, care arată demonstrații ale Simulatorului de Internet utilizate
+          ca parte a activităților din clasă. Poți utiliza aceste activități așa cum
+          sunt, sau poți să le modifici pentru a se potrivi cel mai bine clasei tale!
+          \n\n#### Pot să personalizez Simulatorul de Internet pentru clasa mea?\nAcum,
+          din păcate nu avem un mod pentru ca cei din afara Code.org să creeze configurări
+          și instrucțiuni specifice pentru Simulatorul de Internet. Ne-am străduit
+          să expunem o varietate de configurații diferite, care ar putea să funcționeze
+          pentru clasa și activitatea ta. Pe termen lung, ne-ar plăcea să avem un
+          mod de a le permite altora să configureze instrumentul.\n\n#### Elevii mei
+          nu se pot vedea când merg la URL-ul pe care l-am dat pentru Simulatorul
+          de Internet. Ce să fac? Pentru ca elevii să se poată vedea în holul Simulatorului
+          de Internet, ei trebuie să fie în aceeași secțiune. Verifică de două ori
+          dacă ai completat instrucțiunile de configurare a secțiunii din pagina anterioară
+          și dacă elevii în cauză s-au înscris în acel cod de secțiune specific. De
+          asemenea, este posibil ca unii studenți să facă parte din mai multe secțiuni
+          dacă au mai făcut cursuri cu Code.org, așa că asigurați-vă că știu numele
+          secțiunii tale și că au ales-o din lista derulantă înainte de a intra în
+          hol. "
       K-1 Artist 1 Multi 1:
         answers:
         - correct: true
@@ -1251,6 +1430,26 @@ ro-RO:
         content1: descrierea aici
       New Challenge Introduction:
         content1: descrierea aici
+        markdown: "### Provocare Nouă: Sparge un Cifru de Înlocuire Aleatoriu... cu
+          un nou widget\n\nCe-ar fi dacă în loc să deplasăm întreg alfabetul, am asocia
+          fiecare literă a alfabetului cu o literă diferită aleatorie din alfabet?
+          Asta s-ar numi un **cifru de înlocuire aleatoriu**.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAcum,
+          în locul mesajului secret codat cu o simplă mutare alfabetică, te vei confrunta
+          cu mesaje codate cu **înlocuire aleatorie**.\n\nAceastă metodă este mult
+          mai dificil de spart și necesită un instrument mult mai sofisticat, așadar...
+          \ \n\nCând apeși pe continuă, vei vedea o **versiune nouă, mai sofisticată
+          a instrumentului de criptare**, care îți afișează multe, diferite lucruri.\n\nDar
+          ceea ce face, este să adauge un pic de mister!  \n\n### Sarcina Ta:\n\n
+          * Află ce se întâmplă în această nouă versiune a instrumentului\n * Ce informații
+          îți sunt prezentate?\n * Află ce îți permite instrumentul să faci\n * Ca
+          de obicei: nu poți să-l strici.  Așa că fă clic pe lucruri, cercetează.\n
+          * Dacă îți dai seama, ai putea fi capabil să spargi un mesaj codat cu înlocuire
+          aleatorie.\n \n### Indiciu\n\n* Știai că **E** este litera cea mai populară
+          utilizată în limba engleză?\n\n### Reunește-te și Discută\n După ce ai petrecut
+          ceva timp jucându-te cu el, ar trebui să te reunești cu cineva - partener,
+          grup mic, întreaga clasă - pentru a discuta despre ceea ce ai descoperit
+          și pentru a verifica dacă știi ce se întâmplă și care sunt diferitele moduri
+          în care poți utiliza instrumentul."
       OPD-K5 Reviewing Reflections:
         content1: descrierea aici
       OPD-K5 Stage3aGo:
@@ -1315,8 +1514,54 @@ ro-RO:
         content1: descrierea aici
       'Technique: Frequency Analysis':
         content1: descrierea aici
+        markdown: "# Spargerea Cifrurilor de Înlocuire\n\nCea mai bună tehnică de
+          spargere a unui cifru de înlocuire aleatorie este cunoscută drept **analiza
+          frecvenței**\n\nParafrazat din: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Analiza frecvenței** este o tehnică ce se bazează pe cât de *frecvent*
+          apar anumite litere comparativ cu altele în limba engleză.\n\n* De exemplu,
+          dată fiind o secțiune a textului în limba engleză, *E*, *T*, *A* și *O*
+          sunt cele mai obișnuite, în timp ce *Z*, *Q* și *X* sunt rare. De asemenea,
+          *TH*, *ER*, *ON*, și *AN* sunt cele mai obișnuite perechi de litere care
+          apar unele lângă altele.\n* De fapt, distribuția literelor este aproximativ
+          fel pentru aproape *toate* modelele de text în limba engleză. \n\nVersiunea
+          widget-ului din pagina anterioară are scopul să te ajute **să spargi un
+          cifru de înlocuire prin analiza frecvenței**.\n\nAnalizând frecvența literelor
+          din mesajul criptat în comparație cu frecvența literelor dintr-o proză tipică
+          în limba engleză, poți începe să îți dați seama care ar putea fi unele dintre
+          corespondențele de litere. \n\nInstrumentul îți arată modul în care frecvența
+          literelor din textul criptat (portocaliu) se compară cu frecvența din textul
+          tipic în limba engleză (albastru).\n\n### Indiciu: De unde pornesc?\n\n1.
+          Caută cuvintele scurte și „sparge-le” primele. Câte cuvinte dintr-o literă
+          cunoști?\n (\"a\"). Un cuvând foarte comun din 3 litere este \"the\".\n2.
+          Odată ce ai făcut asta, ai înlocuiri pentru câteva dintre cele mai obișnuite
+          litere. Ai  putea să te folosești de intuiție pentru a te uita la alte cuvinte
+          cu aceste înlocuiri parțiale și să faci presupuneri bune.\n3. După ce găsești
+          doar un pumn de litere obținute cu greu, restul se vor prăbuși rapid.\n4.
+          Compararea frecvențelor literelor oferă o perspectivă bună pentru a face
+          presupuneri raționale.\n\n### Încearcă asta:\nAnimația de mai jos arată
+          câteva persoane care sunt la început.  Iată ce au încercat\n\n* Mai întâi
+          sortează caracterele după frecvență. \n* Identifică un grup de caractere
+          care ar putea corespunde cuvântului `the`.  \nEste un început bun!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Este bună înlocuirea aleatorie?\n* După puțină practică, cât timp îți ia
+          să spargi un cifru de înlocuire aleatorie?\n* Este bună sau nu? \n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Este bună înlocuirea aleatorie?\n* După puțină practică, cât timp îți ia
+          să spargi un cifru de înlocuire aleatorie?\n* Este bună sau nu?"
       Terminology Recap:
         content1: descrierea aici
+        markdown: "# Pauză și Recapitulare\n\nMesajele criptate cu **cifrul Caesar**
+          sunt foarte ușor de spart, în special cu un instrument cu capacitate de
+          calcul. Acum că ai făcut puțină practică spărgând un cifru cu deplasare
+          alfabetică (destul de ușor, nu?), hai să încercăm ceva mai dificil.\n\n**Recapitularea
+          terminologiei:**\n\n* **Criptare** - un proces de codare a mesajelor pentru
+          a le păstra secrete, astfel încât că doar părțile „autorizate” le pot citi.\n*
+          **Decriptare** - un proces care inversează criptarea, luând un mesaj secret
+          și reproducând textul clar original\n* **Cifru** - termenul generic pentru
+          o tehnică (sau algoritm) care efectuează criptarea\n* **Cifrul lui Caesar**
+          - o tehnică pentru criptare, care schimbă/deplasează alfabetul cu un anumit
+          număr de caractere.\n* **Spargerea criptării** - Atunci când încerci să
+          decodifici un mesaj secret *fără* să cunoști toate detaliile cifrului, încerci
+          să **spargi** criptarea. \n\n\nApasă pe Continuă ca să vezi **Următoarea
+          Provocare**..."
       Unit 1 Lesson 2 Overview:
         markdown: |
           #Prezentare generală
@@ -2602,10 +2847,10 @@ ro-RO:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nÎncet, virusul s-a  împrăștiat la alți monștri din
-          apropiere. Monștrii sănătoși au început să se îngrijoreze că s-ar putea
-          îmbolnăvi. Monștrii bolnavi au început să se îngrijoreze că ar putea să
-          îi îmbolnăvească pe ceilalți.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nThe virus slowly spread to other monsters who were
+          nearby. The healthy monsters began to worry that they were all going to
+          get sick. The sick monsters began to worry that they were going to give
+          the virus to everyone else.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"

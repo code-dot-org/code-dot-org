@@ -1034,14 +1034,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, versions.length
     assert_equal 'foo-2018', versions[0][:name]
     assert_equal 'foo-2017', versions[1][:name]
-
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-    versions = foo17.summarize(true, teacher)[:versions]
-    assert_equal 3, versions.length
-    assert_equal 'foo-2019', versions[0][:name]
-    assert_equal 'foo-2018', versions[1][:name]
-    assert_equal 'foo-2017', versions[2][:name]
   end
 
   test 'summarize includes show assign button' do
@@ -1579,44 +1571,11 @@ class ScriptTest < ActiveSupport::TestCase
     refute has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: returns unlaunched units when user is an admin" do
+  test "self.valid_scripts: does not return unlaunched units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-
-    units = Script.valid_scripts(teacher)
-    assert has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-unit')
-    alternate_unit = build(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
-
-    units = Script.valid_scripts(user)
-    assert_equal [alternate_unit], units
-  end
-
-  test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    unit = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(nil)
-
-    units = Script.valid_scripts(user)
-    assert_equal [unit], units
+    refute has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: omits in-development units" do
