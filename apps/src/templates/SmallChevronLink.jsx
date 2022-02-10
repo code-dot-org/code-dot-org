@@ -19,7 +19,7 @@ export function SmallChevronLink({
         icon={
           <FontAwesome
             icon={iconBefore ? 'chevron-left' : 'chevron-right'}
-            className={isRtl && 'fa-flip-horizontal'}
+            className={isRtl ? 'fa-flip-horizontal' : undefined}
           />
         }
         iconBefore={iconBefore}
