@@ -2,6 +2,7 @@
   "key": "locationModifier",
   "name": "locationModifier",
   "category": "Location",
+  "category_key": "location",
   "block_name": "gamelab_locationModifier",
   "syntax": "locationModifier"
 }

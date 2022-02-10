@@ -2,5 +2,6 @@
   "key": "toUpperCase",
   "name": "toUpperCase",
   "category": "Variables",
+  "category_key": "variables",
   "syntax": "toUpperCase"
 }

@@ -2,5 +2,6 @@
   "key": "on",
   "name": "on",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "on"
 }

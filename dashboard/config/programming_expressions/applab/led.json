@@ -2,5 +2,6 @@
   "key": "led",
   "name": "led",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "led"
 }

@@ -2,6 +2,7 @@
   "key": "createCapacitiveTouchSensor",
   "name": "createCapacitiveTouchSensor",
   "category": "Maker",
+  "category_key": "maker",
   "palette_params": [
     {
       "name": "pin"

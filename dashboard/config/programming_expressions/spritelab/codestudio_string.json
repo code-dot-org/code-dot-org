@@ -2,6 +2,7 @@
   "key": "codestudio_string",
   "name": "text",
   "category": "Text",
+  "category_key": "text",
   "block_name": "text",
   "syntax": "text"
 }
