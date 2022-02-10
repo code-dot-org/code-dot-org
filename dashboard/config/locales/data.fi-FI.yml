@@ -700,7 +700,13 @@ fi:
         applab_intro_designmode: Sovelluslabra - Suunnittelumoodi
         applab_intro_share: Sovelluslabra - Jaa Sovelluksesi
         CSF_loops_AB: Silmukat
+        mc_2018_intro: 'Minecraft: Merellinen matka  - Esittely'
+        MC_2018_loops: 'Minecraft: Merellinen matka - Toista kunnes'
+        mc_2018_conditionals: 'Minecraft: Merellinen matka - Ehtolauseet'
+        mc_2018_closing: 'Minecraft: Merellinen matka - Onnittelut'
         hoc_dance_warmup: Tanssibileet - Lämmittely
+        hoc_dance_events: Tanssibileet - Tapahtumat
+        hoc_dance_properties: Tanssibileet - Ominaisuudet
         hoc_dance_congrats: Tanssibileet - Bileet päälle!
         csd_pair_programming: Pariohjelmointi
         csd_applab_parameters: Parametrilliset funktiot
@@ -708,7 +714,7 @@ fi:
         hoc_dance_congrats_2019: Tanssibileet 2019 - Bileet päälle!
         hoc_dance_warmup_2019: Tanssibileet 2019 - Lämmittely
         hoc_dance_events_2019: Tanssibileet 2019 - Tapahtumat
-        hoc_dance_measures_2019: Tanssibileet 2019 - Mittayksiköt
+        hoc_dance_measures_2019: Tanssibileet 2019 - Tahdit
         hoc_dance_properties_2019: Tanssibileet 2019 - Ominaisuudet
         playlab_2021: Johdanto Pelilabraan
         playlab_2021_reader: Johdanto Pelilabraan

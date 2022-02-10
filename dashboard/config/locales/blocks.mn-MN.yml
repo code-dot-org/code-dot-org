@@ -978,7 +978,7 @@ mn:
       gamelab_clickedOn:
         text: "{SPRITE} дээр дарах үед"
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'сэтгэгдэл: {COMMENT}'
       gamelab_costumeImage:
@@ -1015,6 +1015,19 @@ mn:
             '"seconds"': секундууд
       gamelab_hideTitleScreen:
         text: гарчигны дэлгэцийг нуух
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1140,9 +1153,9 @@ mn:
       gamelab_moveToward:
         text: "{SPRITE}-г {DISTANCE} пикселээр {TARGET} руу хөдөлгөх"
       gamelab_newSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_playSound:
         text: хөгжимтоглох {SOUND}
       gamelab_playSoundOptions:
@@ -1158,6 +1171,10 @@ mn:
             "'sound://category_animals/dolphin.mp3'": далайн гахай
             "'sound://category_animals/dog.mp3'": нохой
             "'sound://category_digital/jump_7.mp3'": үсрэх
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): татаж болохуйц
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
         options:
@@ -1241,6 +1258,14 @@ mn:
             '"scale"': хэмжээ
             '"width"': өргөн
             '"height"': өндөр
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': удаан
+            '5': хэвийн
+            '7': хурдан
+            '9': extra fast
       gamelab_setTint:
         text: "{THIS}-г {COLOR} руу өөрчлөх"
       gamelab_setupSim:
@@ -1259,7 +1284,7 @@ mn:
             '"when"': хэзээ
             '"while"': байхад
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_turn:

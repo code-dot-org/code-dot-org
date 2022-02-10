@@ -986,7 +986,7 @@ sv:
       gamelab_clickedOn:
         text: när {SPRITE} klickade
       gamelab_clickedSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
       gamelab_costumeImage:
@@ -1038,6 +1038,19 @@ sv:
         text: |-
           om {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} kostym är {COSTUME}"
       gamelab_isKeyPressed:
@@ -1230,6 +1243,11 @@ sv:
             "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_playSpeech:
         text: spela tal {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): flytta med piltangenter
+            draggable(): vara dragbar
       gamelab_pointInDirection:
         text: Punkt {SPRITE} {DIRECTION}
         options:
@@ -1339,6 +1357,14 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': långsam
+            '5': normal
+            '7': snabb
+            '9': extra fast
       gamelab_setTint:
         text: ändra färg på {THIS} Att {COLOR}
       gamelab_setupScoreboard:

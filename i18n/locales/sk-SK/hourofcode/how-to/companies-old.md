@@ -5,7 +5,7 @@ title: Ako zogranizovať Hodinu kódu - Spoločnosti
 {{ signup_button }}
 
 # Ako priniesť Hodinu Kódu do Vašej spoločnosti
-### Zistite, ako môžete vy a vaši zamestnanci inšpirovať študentov, aby vyskúšali informatiku!
+### Zistite, ako môžete vy a vaši zamestnanci inšpirovať žiakov, aby si vyskúšali informatiku!
 
 ***
 
@@ -27,7 +27,7 @@ For more instructions on encouraging employees and connecting your employees wit
 
 # Ako zorganizovať Hodinu Kódu s Vašimi študentami
 
-## 1. Promote your Hour of Code
+## 1. Spropagujte svoju Hodinu kódu
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Povzbuďte programátorov vo Vašej spoločnosti, aby navštívili miestnu triedu a pomohli viesť Hodinu Kódu a tým inšpirovali študentov k štúdiu informatiky. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
@@ -42,24 +42,24 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 
 ## 4. Plan your technology needs - computers are optional
 
-Pre čo najlepší zážitok s Hodinou Kódu sú potrebné počítače s pripojením na internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Hodina kódu funguje najlepšie, ak máte počítače s pripojením na internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
 **Plan Ahead!** Do the following before your event starts:
 
 - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
 - Poskytnite slúchadlá alebo požiadajte účastníkov, aby si priniestli vlastné, ak ste vybrali aktivity, ktoré fungujú najlepšie so zvukom.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Keď sa účastníci spoja, pomáhajú si navzájom a menej zaťažujú organizátora. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Nemáte dostatok zariadení?** Využite [párové programovanie](https://www.youtube.com/watch?v=vgkahOzFH2Q). Keď sa účastníci spoja, pomáhajú si navzájom a menej zaťažujú organizátora. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
+- **Máte pomalý internet?** Prehrajte videá na začiatku podujatia pred celou triedou, aby nemuseli žiaci sťahovať videá osobitne. Or try the unplugged / offline activities.
 
 ## 5.  Start your Hour of Code off with an inspiring video
 Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počítačové technológie ovplyvňujú každú oblasť nášho života. Zdieľajte, čo vás inšpirovalo k absolvovaniu informatiky a Vašu pozíciu v spoločnosti.
 
-**Ukážte inšpiratívne video:**
+**Prehrajte inšpiratívne video:**
 
-- Pôvodné Code.org úvodné video s Billom Gatesom, Markom Zuckerbergom a hviezdou NBA Chrisom Boshom (Na výber sú [1 minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutová](https://www.youtube.com/watch?v=nKIu9yen5nc), a [9 minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verzia).
+- Pôvodné video vytvorené pri príležitosti spustenia Code.org, v ktorom vystupujú Bill Gates, Mark Zuckerberg a hviezda NBA Chris Bosh ([1-minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutová](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9-minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verzia).
 - [Celosvetové video Hodiny Kódu](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [Prezident Obama vyzýva všetkých študentov, aby sa učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Pozrite si viac inšpirujúcich videí [tu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Ďalšie inšpiratívne videá [nájdete tu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Nápady, ako uviesť aktivity Hodiny Kódu pre študentov:**
 
@@ -78,7 +78,7 @@ Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počíta�
 **Ak sa budú účastníci potýkať s ťažkosťami, môžete im odpovedať nasledovne:**
 
 - “I don’t know. Let’s figure this out together.”
-- “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
+- „Učiť sa programovať je ako učiť sa nový jazyk – človek ním nedokáže hneď hovoriť plynulo.“
 
 **Čo robiť, ak niekto skončí v predstihu?**
 
@@ -89,7 +89,7 @@ Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počíta�
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Objednajte tričká na mieru](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pre Vašich zamestnancov.
+- Objednajte pre svojich zamestnancov [špeciálne tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 {{ signup_button }}

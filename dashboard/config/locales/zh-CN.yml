@@ -54,6 +54,7 @@ zh-CN:
   previous_page: 上一页
   next_page: 下一页
   next_resource: 下一个资源
+  done_with_module: 完成本学习模块
   cancel: 取消
   okay: 好吧
   or: 或
@@ -289,6 +290,7 @@ zh-CN:
       cant_join_own_section: 对不起，不能加入自己的小组。
       provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。
       restricted_section: 我们无法将您添加到%{section_code}小组，因为它被锁定。请联系你的老师寻求帮助。
+      full_section: 我们无法将您添加到%{section_code}部分，因为其中已经有%{section_capacity}个学生。请联系你的老师寻求帮助。
     mail:
       student_disassociated:
         subject: Code.org 提醒：%{student_name} 已不再是您的学生。
@@ -942,6 +944,7 @@ zh-CN:
     instructor_feedback: 教师反馈
     peer_feedback: 同伴反馈
     outdated: 这个反馈是添加给以前提交的版本
+    review_count: 您必须完成本单元的%{review_count}审核
     peer_review: 互相检查
   external_links:
     disclaimer: 免责声明
@@ -1027,9 +1030,13 @@ zh-CN:
       school_city: 学校所在城市
       school_city_district: 学校城市/区
       school_country: 学校所在国家
+      school_department_region: 学校部门/地区
       colombian_school_city: 学校所在城市
+      colombian_chilean_school_department: 学校部门/地区
       colombian_school_municipality: 学校政府
       colombian_chilean_school_name: 学校名称
+      chilean_school_commune: 社群
+      chilean_school_id: 学校编号
       ages: 今年将教什么年纪的学生？
       subjects: 今年教的科目是什么？
       resources: 您使用以下哪种计算机科学教育资源？
@@ -1056,6 +1063,7 @@ zh-CN:
         malaysia: 马来西亚
         mexico: 墨西哥
         thailand: 泰国
+        uzbekistan: 乌兹别克斯坦
       ages:
         ages_under_6: 6岁以下
         ages_7_8: 7-8岁
@@ -1150,3 +1158,4 @@ zh-CN:
     this_sprite: 这个精灵
   unit_prefix: 单位%{n}
   code_org_logo_alt: Code.org首页
+  teacher_feedback: 老师反馈

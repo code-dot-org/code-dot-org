@@ -2049,6 +2049,10 @@ sl:
               display_name: Seznami
             csp_loops:
               display_name: Zanke
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2314,10 +2318,21 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Zabava s "for" zankami
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Ura kode
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Spremenljivke
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2327,6 +2342,162 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Veseli zemljevidi
+            'Programming: Happy Maps':
+              name: Veseli zemljevidi
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Spremenljivke
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Odpravljanje napak
+              key: Odpravljanje napak
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Premakni se, premakni
+              key: Premakni se, premakni
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Veliki dogodek
+            'Events: The Big Event':
+              name: Veliki dogodek
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Obarvajmo kvadratke
+            Relay Programming:
+              name: Relejsko programiranje
+              key: Relejsko programiranje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+              key: Pogojniki s kartami
+            'Algorithms: Graph Paper Programming':
+              name: Obarvajmo kvadratke
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Napiši pesem
+            'Functions: Songwriting':
+              name: Napiši pesem
+            Conditionals:
+              key: Pogoji
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            ramp_up:
+              display_name: Gnezdenje zank
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Pogoji
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Zabava s "for" zankami
+              key: Zabava s "for" zankami
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno državljanstvo
+            lessonGroup-8:
+              display_name: Spremenljivke
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Pogoji
+            lesson-16:
+              name: Odpravljanje napak
+            lesson-19:
+              name: Odpravljanje napak
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina

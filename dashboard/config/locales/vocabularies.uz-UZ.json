@@ -208,6 +208,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compression"
         },
+        "event/outbreak/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
         "event/sports/unversioned": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
@@ -284,10 +288,6 @@
         },
         "program/poem-art/unversioned": {
           "word": "Dastur"
-        },
-        "event/outbreak/unversioned": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "sprite/coursef/2021": {
           "word": "Sprait",
