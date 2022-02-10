@@ -2,6 +2,7 @@
   "key": "animation",
   "name": "animation",
   "category": "Animations",
+  "category_key": "animations",
   "palette_params": [
     {
       "name": "animation"

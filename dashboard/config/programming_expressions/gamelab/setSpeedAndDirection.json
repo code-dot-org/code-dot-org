@@ -2,6 +2,7 @@
   "key": "setSpeedAndDirection",
   "name": "setSpeedAndDirection",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "speed"

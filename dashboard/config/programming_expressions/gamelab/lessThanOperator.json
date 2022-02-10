@@ -2,5 +2,6 @@
   "key": "lessThanOperator",
   "name": "lessThanOperator",
   "category": "Math",
+  "category_key": "math",
   "syntax": "__ < __"
 }

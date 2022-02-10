@@ -2,5 +2,6 @@
   "key": "declareAssign_str_hello_world",
   "name": "declareAssign_str_hello_world",
   "category": "Variables",
+  "category_key": "variables",
   "syntax": "var str = \"Hello World\";"
 }
