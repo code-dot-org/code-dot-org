@@ -2,5 +2,6 @@
   "key": "declareAssign_x_promptNum",
   "name": "declareAssign_x_promptNum",
   "category": "Variables",
+  "category_key": "variables",
   "syntax": "var x = promptNum(\"Enter a value\");"
 }

@@ -2,5 +2,6 @@
   "key": "soundSensor",
   "name": "soundSensor",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "soundSensor"
 }

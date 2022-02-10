@@ -2,5 +2,6 @@
   "key": "getY",
   "name": "getY",
   "category": "Turtle",
+  "category_key": "turtle",
   "syntax": "getY"
 }

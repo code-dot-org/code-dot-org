@@ -2,5 +2,6 @@
   "key": "colorLeds",
   "name": "colorLeds",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "colorLeds"
 }

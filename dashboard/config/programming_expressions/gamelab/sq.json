@@ -2,6 +2,7 @@
   "key": "sq",
   "name": "sq",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "num"

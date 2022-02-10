@@ -2,5 +2,6 @@
   "key": "restitution",
   "name": "restitution",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "restitution"
 }
