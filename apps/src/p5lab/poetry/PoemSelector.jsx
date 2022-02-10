@@ -142,11 +142,11 @@ PoemEditor.defaultProps = {
 };
 
 function PoemSelector(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
   if (appOptions.level.standaloneAppName !== PoetryStandaloneApp.PoetryHoc) {
     return null;
   }
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = poem => {
     // If the dialog is dismissed, poem will be falsy. Don't update selected poem.
