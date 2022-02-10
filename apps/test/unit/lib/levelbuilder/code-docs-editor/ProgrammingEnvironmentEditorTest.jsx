@@ -16,7 +16,8 @@ describe('ProgrammingEnvironmentEditor', () => {
         title: 'Spritelab',
         imageUrl: 'images.code.org/spritelab',
         description: 'A description of spritelab',
-        editorType: 'blockly'
+        editorType: 'blockly',
+        categories: [{id: 1, key: 'sprites', name: 'Sprites', color: '#00FF00'}]
       }
     };
     fetchSpy = sinon.stub(window, 'fetch');
@@ -46,6 +47,11 @@ describe('ProgrammingEnvironmentEditor', () => {
     const editorTypeSelect = wrapper.find('select').at(0);
     expect(editorTypeSelect.props().value).to.equal('blockly');
     expect(editorTypeSelect.find('option').length).to.equal(3);
+
+    const categoriesSection = wrapper.find('CollapsibleEditorSection');
+    expect(
+      categoriesSection.find('OrderableList').props().list.length
+    ).to.equal(1);
   });
 
   it('shows upload image dialog when choose image button is pressed', () => {
@@ -76,7 +82,7 @@ describe('ProgrammingEnvironmentEditor', () => {
     expect(fetchCall.args[0]).to.equal('/programming_environments/spritelab');
     const fetchCallBody = JSON.parse(fetchCall.args[1].body);
     expect(Object.keys(fetchCallBody).sort()).to.eql(
-      ['title', 'description', 'editorType', 'imageUrl'].sort()
+      ['title', 'description', 'editorType', 'imageUrl', 'categories'].sort()
     );
     expect(fetchCallBody.title).to.equal('Spritelab');
     expect(fetchCallBody.description).to.equal('A description of spritelab');

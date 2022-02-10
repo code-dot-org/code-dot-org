@@ -32,6 +32,7 @@
           "word": "प्रोग्रॅम"
         },
         "function/hero/unversioned": {
+          "word": "फंक्शन",
           "definition": "कोडचा एक भाग ज्याला आपण परत परत सहजपणे कॉल करू शकता"
         },
         "event/poem-art/2021": {
@@ -135,6 +136,13 @@
         "program/starwarsblocks/unversioned": {
           "word": "प्रोग्रॅम"
         },
+        "event/outbreak/unversioned": {
+          "word": "इव्हेंट",
+          "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "मॉडेल आणि सिम्युलेशन"
+        },
         "event/sports/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
@@ -188,13 +196,6 @@
         "program/poem-art/unversioned": {
           "word": "प्रोग्रॅम"
         },
-        "event/outbreak/unversioned": {
-          "word": "इव्हेंट",
-          "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "मॉडेल आणि सिम्युलेशन"
-        },
         "sprite/coursef/2021": {
           "word": "स्प्राईट",
           "definition": "स्क्रीनवर स्थान, आकार आणि देखावा असलेले ग्राफिक."
@@ -218,6 +219,7 @@
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "variable/coursef/2021": {
+          "word": "व्हेरीएबल",
           "definition": "प्रोग्राममध्ये वापरलेल्या माहितीच्या भागासाठी लेबल."
         },
         "prompt/coursef/2021": {
@@ -559,9 +561,11 @@
           "definition": "एक कमांड जो आपणास काहीतरी करायला सांगतो  जे काहीतरी पुढे जाऊन  सत्यात उतरते."
         },
         "function/express/2021": {
+          "word": "फंक्शन",
           "definition": "कोडचा एक भाग ज्याला आपण परत परत सहजपणे कॉल करू शकता"
         },
         "variable/express/2021": {
+          "word": "व्हेरीएबल",
           "definition": "प्रोग्राममध्ये वापरलेल्या माहितीच्या भागासाठी लेबल."
         },
         "prompt/express/2021": {
@@ -667,6 +671,7 @@
           "definition": "परत काहीतरी करा"
         },
         "function/coursee/2021": {
+          "word": "फंक्शन",
           "definition": "कोडचा एक भाग ज्याला आपण परत परत सहजपणे कॉल करू शकता"
         },
         "condition/coursee/2021": {

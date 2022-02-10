@@ -15,7 +15,7 @@ Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on t
 
 Code.org là trang chủ nơi tập trung rất nhiều những hoạt động, bài học và video của Giờ Lập Trình trên (các) trang web Code.org, Hour of Code, và CSEdWeek. Bạn có thể vào xem tất cả hoạt động đang diễn ra ở [hourofcode.com/learn]({{ urls/learn }}).
 
-Bạn muốn gửi những trò chơi tự hướng dẫn của mình, bài học được giáo viên hướng dẫn, hay hoạt động giải thích nguyên tác cơ bản của khoa học máy tính? Hãy tham gia vào hoạt động toàn cầu này và giúp những người tham gia khắp thế giới bắt đầu với một giờ học mã hóa hay xa hơn nữa là những hoạt động với đa dạng bài học, kéo dài một ngày hay một tuần. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.</strong> If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+Bạn muốn gửi những trò chơi tự hướng dẫn của mình, bài học được giáo viên hướng dẫn, hay hoạt động giải thích nguyên tác cơ bản của khoa học máy tính? Hãy tham gia vào hoạt động toàn cầu này và giúp những người tham gia khắp thế giới bắt đầu với một giờ học mã hóa hay xa hơn nữa là những hoạt động với đa dạng bài học, kéo dài một ngày hay một tuần. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.</strong> If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
 A few tips:
 
@@ -294,4 +294,4 @@ Please promote your activity to your network! Direct them to your Hour of Code p
 
 [**Back to the top**](#top)
 
-{{ signup_button }}
+{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-02-01 20:12:56 UTC",
+    "serialized_at": "2022-02-08 19:34:23 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4680,6 +4680,19 @@
       }
     },
     {
+      "name": "CSF - Course F - Slides 2022-2023",
+      "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
+      "key": "csf_-_course_f_-_slides_2022-2023",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
       "name": "Design Process",
       "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
       "key": "design_process",
@@ -4883,8 +4896,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Counting with Variables",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "cs_fundamentals_final_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -4925,6 +4950,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lots of Sprites",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Making Sprites",
         "resource.key": "making_sprites"
       }
@@ -4933,6 +4964,12 @@
       "seeding_key": {
         "lesson.key": "Making Sprites",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Collector Game",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {

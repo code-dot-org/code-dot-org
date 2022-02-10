@@ -777,6 +777,19 @@ dv:
             '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
             '"tint"': ކުލަ
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': 2 (ދޭއް)
+            '3': 3 (ތިނެއް)
+            '4': 4 (ހަތަރެއް)
+            '5': 5 (ފަހެއް)
+            '6': 6 (ހައެއް)
+            '7': 7 (ހަތެއް)
+            '8': 8 (އަށެއް)
+            '9': 9 (ނުވައެއް)
+            '10': 10 (ދިހައެއް)
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -838,6 +851,14 @@ dv:
           PROPERTY:
             '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': ލަސް
+            '5': normal
+            '7': އަވަސް
+            '9': extra fast
       gamelab_whenKey:
         text: "{KEY} އަށް ފިތުމުން"
         options:

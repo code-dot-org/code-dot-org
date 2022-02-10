@@ -971,7 +971,7 @@ mi:
       gamelab_clickedOn:
         text: ina pāwhiria {SPRITE}
       gamelab_clickedSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_getProp:
@@ -987,6 +987,19 @@ mi:
         options:
           UNIT:
             '"seconds"': ngā hēkona
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1077,9 +1090,9 @@ mi:
             '"right"': matau
             '"left"': mauī
       gamelab_newSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSoundOptions:
         options:
           SOUND:
@@ -1144,13 +1157,21 @@ mi:
             '"scale"': te rahi
             '"width"': whānui
             '"height"': teitei
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': pōturi
+            '5': noa
+            '7': tere
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': ina
             '"while"': i te
       gamelab_subjectSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:

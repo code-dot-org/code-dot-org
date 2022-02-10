@@ -91,7 +91,7 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-<h2>Čo nasleduje po Hodine Kódu?</h2>
+<h2>Čo nasleduje po Hodine kódu?</h2>
 
 Computer science doesn’t have to end with the Hour of Code! Až 90% rodičov si praje, aby sa ich dieťa učilo informatiku, no väčšina škôl ju ani nevyučuje. Preto Vám chceme pomôcť učivom, ktoré je aj bude naveky voľne dostupné na internete. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 

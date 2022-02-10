@@ -2,7 +2,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';

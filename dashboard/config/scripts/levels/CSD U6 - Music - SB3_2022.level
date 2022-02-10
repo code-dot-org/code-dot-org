@@ -68,9 +68,7 @@
     "ai_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L13.6 - sharp_notes\",\r\n  \"callout_text\": \"These events are for the sharp notes\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"sharp_notes\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//Sharp note events\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "JKJUe6GVa3V1eZ6i3lapUvggJGObtXK6+/71Od05O6a/p+0645MXkQl4yS25\nr5+yh1S7Bta1ZOj9QICUNjZ1ZQ==\n"
   },
   "game_id": 41,
   "published": true,
@@ -78,7 +76,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-06T16:20:44.649+00:00\",\"changed\":[\"cloned from \\\"CSD U6 array piano_2021\\\"\"],\"cloned_from\":\"CSD U6 array piano_2021\"},{\"changed_at\":\"2021-12-06 16:32:52 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 16:33:48 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 16:34:55 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"callout_json\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 16:53:28 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:24:20 +0000\",\"changed\":[\"hide_share_and_remix\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-06T16:20:44.649+00:00\",\"changed\":[\"cloned from \\\"CSD U6 array piano_2021\\\"\"],\"cloned_from\":\"CSD U6 array piano_2021\"},{\"changed_at\":\"2021-12-06 16:32:52 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 16:33:48 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 16:34:55 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"callout_json\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-06 16:53:28 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:24:20 +0000\",\"changed\":[\"hide_share_and_remix\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:39:02 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

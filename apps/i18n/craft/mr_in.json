@@ -1,10 +1,13 @@
 {
+  "absolute": "केवल",
   "blockActionRepeat": "पुन्हा करा",
   "blockIf": "जर",
+  "blockWhileXAheadWhile": "जेव्हा",
   "directionDown": "खाली",
   "directionLeft": "डावा",
   "directionRight": "उजवा",
   "directionUp": "वर",
   "downloadButton": "डाउनलोड करा",
+  "timeRandom": "कोणताही",
   "to": "पर्यंत"
 }

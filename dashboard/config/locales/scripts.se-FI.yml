@@ -9038,10 +9038,35 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Iskkadeapmi
+        csp5-2021:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Iskkadeapmi
         csp8-2021:
           lessons:
             Create PT - Complete the Task:
               key: Ráhkat PT - Válbme Barggu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Iskkadeapmi
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -9456,10 +9481,18 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -9469,6 +9502,152 @@ se:
             lessonGroup-2:
               display_name: Sisdoallu
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Movttegis Kárttat
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        express-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+              key: CS Prinsihpat Ovdal Iskkadeapmi
+            Binary Numbers:
+              name: Binára Nummarat
+              key: Binára Nummarat
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp2-2022:
+          lessons:
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
+              key: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
+              key: Routarat ja Dárbbašmeahttumat
+        courseb-2022:
+          lessons:
+            Getting Loopy:
+              name: Šaddat Gáiggasin
+            The Right App:
+              name: Dat Rievttes App:a
+              key: Dat Rievttes App:a
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Stuora Dáhpáhus
+            Picturing Data:
+              name: Presenteret Dátaid
+              key: Presenteret Dátaid
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+              key: Binára Giehtabáttit
+            'Loops: My Loopy Robotic Friends':
+              key: 'Mohkit: Mu Mohkke Robota Olbmát'
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        csp8-2022:
+          lessons:
+            Create PT - Complete the Task:
+              key: Ráhkat PT - Válbme Barggu
+        coursed-2022:
+          lessons:
+            Build a Star Wars Game:
+              name: Ráhkat Náste Soahti Spealu
+              key: Ráhkat Náste Soahti Spealu
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
+              key: Priváhta ja Persovnnlaš Dieđut
+            Digital Sharing:
+              name: Digitála Juohkin
+              key: Digitála Juohkin
+            Songwriting:
+              name: Lávlagiid čállit
+            Simon Says:
+              key: Simmon Sihtá
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+              key: Suohttasat Mohkiid váste
+            AI For Oceans:
+              name: AI Mearaide
+            AI for Oceans:
+              key: AI Mearaide
+              name: AI Mearaide
+            Internet:
+              key: Interneahtta
+          lesson_groups:
+            ramp_up:
+              display_name: Sprite:at
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2022:
+          lessons:
+            lesson-2:
+              name: Unit 5 Árvvoštallan
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu

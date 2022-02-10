@@ -163,6 +163,14 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "event/outbreak/unversioned": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Model dan Simulasi",
+          "definition": "program yang mereplikasi atau meniru ciri utama peristiwa dunia sebenar untuk menyiasat kelakuannya tanpa kos, masa atau bahaya menjalankan eksperimen dalam kehidupan sebenar."
+        },
         "event/sports/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
@@ -237,14 +245,6 @@
           "word": "Baris",
           "definition": "(puisi) - subbahagian sajak yang disusun dalam barisan yang berakhir di jidar sebelah kanan."
         },
-        "event/outbreak/unversioned": {
-          "word": "Acara",
-          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Model dan Simulasi",
-          "definition": "program yang mereplikasi atau meniru ciri utama peristiwa dunia sebenar untuk menyiasat kelakuannya tanpa kos, masa atau bahaya menjalankan eksperimen dalam kehidupan sebenar."
-        },
         "sprite/coursef/2021": {
           "word": "Peperi",
           "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
@@ -254,6 +254,7 @@
           "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
         },
         "behavior/coursef/2021": {
+          "word": "Tingkah laku",
           "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "program/coursef/2021": {
@@ -574,6 +575,7 @@
           "definition": "Seni mencipta atur cara."
         },
         "behavior/express/2021": {
+          "word": "Tingkah laku",
           "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "sprite/express/2021": {
@@ -694,6 +696,7 @@
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "behavior/coursee/2021": {
+          "word": "Tingkah laku",
           "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "algorithm/coursee/2021": {
