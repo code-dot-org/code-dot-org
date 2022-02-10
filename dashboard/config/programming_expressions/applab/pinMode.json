@@ -2,6 +2,7 @@
   "key": "pinMode",
   "name": "pinMode",
   "category": "Maker",
+  "category_key": "maker",
   "palette_params": [
     {
       "name": "pin"

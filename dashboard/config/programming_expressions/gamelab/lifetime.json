@@ -2,5 +2,6 @@
   "key": "lifetime",
   "name": "lifetime",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "lifetime"
 }

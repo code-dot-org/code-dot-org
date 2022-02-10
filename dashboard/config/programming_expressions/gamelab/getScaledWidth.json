@@ -2,5 +2,6 @@
   "key": "getScaledWidth",
   "name": "getScaledWidth",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "getScaledWidth"
 }

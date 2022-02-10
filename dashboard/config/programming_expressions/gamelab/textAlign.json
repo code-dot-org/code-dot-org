@@ -2,6 +2,7 @@
   "key": "textAlign",
   "name": "textAlign",
   "category": "Drawing",
+  "category_key": "drawing",
   "palette_params": [
     {
       "name": "horiz"

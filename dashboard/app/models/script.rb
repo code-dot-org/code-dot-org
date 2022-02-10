@@ -346,18 +346,18 @@ class Script < ApplicationRecord
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
-    with_hidden = !has_any_course_experiments && user.hidden_script_access?
-    units = with_hidden ? all_scripts : visible_units
+    return all_scripts if user.levelbuilder?
 
-    if has_any_course_experiments
+    units = visible_units
+
+    if UnitGroup.has_any_course_experiments?(user)
       units = units.map do |unit|
         alternate_script = unit.alternate_script(user)
         alternate_script.presence || unit
       end
     end
 
-    if !with_hidden && has_any_pilot_access?(user)
+    if has_any_pilot_access?(user)
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
@@ -1661,22 +1661,21 @@ class Script < ApplicationRecord
     return [] unless family_name
     return [] unless has_other_versions?
     return [] unless unit_groups.empty?
-    with_hidden = user&.hidden_script_access?
     units = Script.
       where(family_name: family_name).
       all.
-      select {|unit| with_hidden || unit.launched?}.
+      select {|unit| user&.levelbuilder? || unit.launched?}.
       map do |s|
-        {
-          name: s.name,
-          version_year: s.version_year,
-          version_title: s.version_year,
-          can_view_version: s.can_view_version?(user),
-          is_stable: s.stable?,
-          locales: s.supported_locale_names,
-          locale_codes: s.supported_locales
-        }
-      end
+      {
+        name: s.name,
+        version_year: s.version_year,
+        version_title: s.version_year,
+        can_view_version: s.can_view_version?(user),
+        is_stable: s.stable?,
+        locales: s.supported_locale_names,
+        locale_codes: s.supported_locales
+      }
+    end
 
     units.sort_by {|info| info[:version_year]}.reverse
   end
