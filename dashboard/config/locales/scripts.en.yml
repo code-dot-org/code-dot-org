@@ -28321,6 +28321,8 @@ en:
               description_teacher: 
             lesson-2:
               name: 'Project: Human Device Interaction'
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: 'Mini-Project: Interactive Art'
           lesson_groups: {}
