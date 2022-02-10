@@ -7,15 +7,39 @@ require 'haml/template'
 require 'redcarpet'
 require 'sinatra/base'
 
+# Helper module to allow us to use ActionView's template rendering
+# functionality within the context of Sinatra.
 module ActionViewSinatra
+  # Factory method to accommodate the complex initialization logic required.
+  # ActionView itself (as of Rails 6) includes some template caching
+  # protections which require it to be initialized via the
+  # `with_empty_template_cache` factory method, and our own modifications
+  # require us to set an instance variable on the resulting object. So we
+  # simply call the Rails 6 factory, then manually set our instance variable.
+  def self.create_view(sinatra)
+    # Rails 6 added the `with_empty_template_cache` method and some new
+    # initialization logic that requires us to use it rather than instantiating
+    # directly. To provide support for both Rails 5 and 6, we conditionally
+    # invoke that pathway.
+    # Once we have fully upgraded to Rails 6, this can be simplified.
+    view = ActionViewSinatra::Base.respond_to?(:with_empty_template_cache) ?
+      ActionViewSinatra::Base.with_empty_template_cache.empty :
+      ActionViewSinatra::Base.new
+    view.set_sinatra(sinatra)
+    view
+  end
+
   class Base < ActionView::Base
-    def initialize(sinatra, *args)
-      @sinatra = sinatra
-      super(*args)
+    def initialize(*args)
+      super
 
       Cdo::Markdown::Handler.register(Cdo::Markdown::Renderer, Cdo::Markdown::Renderer::OPTIONS)
       Cdo::Markdown::Handler.register_html_safe(Redcarpet::Render::Safe)
       Cdo::Markdown::Handler.register_inline(Redcarpet::Render::Inline.new({filter_html: true}))
+    end
+
+    def set_sinatra(sinatra)
+      @sinatra = sinatra
     end
 
     def response
