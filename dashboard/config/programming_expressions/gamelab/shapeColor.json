@@ -2,5 +2,6 @@
   "key": "shapeColor",
   "name": "shapeColor",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "shapeColor"
 }
