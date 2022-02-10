@@ -2,6 +2,7 @@
   "key": "floor",
   "name": "floor",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "num"

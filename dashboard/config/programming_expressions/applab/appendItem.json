@@ -2,6 +2,7 @@
   "key": "appendItem",
   "name": "appendItem",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "list"

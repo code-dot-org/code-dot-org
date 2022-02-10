@@ -2,6 +2,7 @@
   "key": "degrees",
   "name": "degrees",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "radians"

@@ -2,6 +2,7 @@
   "key": "pow",
   "name": "pow",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "n"

@@ -2,5 +2,6 @@
   "key": "play",
   "name": "play",
   "category": "Animations",
+  "category_key": "animations",
   "syntax": "play"
 }

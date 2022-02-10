@@ -2,5 +2,6 @@
   "key": "ul",
   "name": "ul",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<ul></ul>"
 }

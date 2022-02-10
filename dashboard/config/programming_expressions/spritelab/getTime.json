@@ -2,6 +2,7 @@
   "key": "getTime",
   "name": "getTime",
   "category": "World",
+  "category_key": "world",
   "block_name": "gamelab_getTime",
   "syntax": "getTime"
 }

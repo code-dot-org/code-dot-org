@@ -2,6 +2,7 @@
   "key": "arcLeft",
   "name": "arcLeft",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "angle"

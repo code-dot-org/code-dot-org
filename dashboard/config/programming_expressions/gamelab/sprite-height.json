@@ -2,5 +2,6 @@
   "key": "sprite.height",
   "name": "sprite.height",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "sprite.height"
 }
