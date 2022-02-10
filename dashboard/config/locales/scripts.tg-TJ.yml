@@ -66,3 +66,7 @@ tg:
           lessons:
             Surveys:
               name: Тадқиқҳо
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Соати рамз

@@ -5,12 +5,12 @@ th:
       'AI: Impact on Society - Video': 'AI: ผลกระทบต่อสังคม - วิดีโอ'
       'AI: Training Data & Bias - Video': 'AI: ข้อมูลการฝึกฝนและอคติ - วิดีโอ'
       App Lab Intro - Video: ความรู้เบื้องต้นเกี่ยวกับ App Lab - วิดีโอ
-      Artist Project: โปรเจ็กต์ศิลปิน
+      Artist Project: โปรเจกต์ศิลปิน
       'Artist: Variables': 'ศิลปิน: ตัวแปร'
       Back and Forth: เดินหน้าถอยหลัง
       Bass, Mid, and Treble: เสียงต่ำ เสียงกลาง เสียงสูง
       Code Your Own Flappy Game: เขียนโค้ดเกมนกน้อยตะลุยโลกกว้างของคุณเอง
-      Dance Crews: ประชันนักเต้น
+      Dance Crews: ทีมเต้นรำ
       Debugging: การแก้ไขจุดบกพร่อง
       Design Mode: สถานะการออกแบบ
       Designing for Accessibility: การออกแบบสำหรับการช่วยการเข้าถึง
@@ -26,6 +26,7 @@ th:
       Hello World: Hello World
       Learning from Simulations: เรียนรู้จากแบบจำลอง
       Lesson Extras: บทเรียนเพิ่มเติม
+      Levels: เลเวล
       Lists: รายการ
       Measures: ห้องดนตรี
       'Minecraft: Hero''s Journey': 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
@@ -38,14 +39,16 @@ th:
       Quarter Notes: โน๊ตหนึ่งจังหวะ
       Review: ตรวจสอบ
       Speed it Up, Slow it Down: เร่งจังหวะขึ้น ลดความเร็วลง
+      Sprite Lab Project: โปรเจกต์สไปรท์แล็บ
       Teach AI a New Word: สอนคำศัพท์ใหม่ให้ AI
       Text Compression: การบีบอัดข้อความ
       The Harvester: เกษตรกรผู้เก็บเกี่ยว
       Variables: ตัวแปร
+      Video: วิดีโอ
       'Video: Outbreak Simulator: Introduction': 'วิดีโอ: เครื่องจำลองการแพร่ระบาดของไวรัส: บทนำ'
       'Video: What Makes a Computer, a Computer?': 'วีดีโอ: อะไรทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์ได้?'
       Warm Up: อุ่นเครื่อง
       Welcome to Monster Town: ยินดีต้อนรับเข้าสู่ Monster Town
-      Where'd They Go?: พวกเขาหายไปไหนกัน
+      Where'd They Go?: พวกเขาหายไปไหนกัน?
       While Loops with the Farmer: ลูปขณะที่ (while loops) กับเกมเกษตรกร
       Wrap-up: Wrap-up

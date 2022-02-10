@@ -240,6 +240,14 @@
           "word": "Compresión sin pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
+        },
         "event/sports/unversioned": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
@@ -327,14 +335,6 @@
         "line/poem-art/unversioned": {
           "word": "Línea",
           "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
-        },
-        "event/outbreak/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modelos y Simulaciones",
-          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
         "sprite/coursef/2021": {
           "word": "Sprite",
@@ -446,10 +446,10 @@
         },
         "algorithm/courseb/2021": {
           "word": "Algoritmo",
-          "definition": "una lista de tareas para finalizar una tarea. "
+          "definition": "una lista de pasos para terminar una tarea. "
         },
         "bug/courseb/2021": {
-          "word": "Bug o error",
+          "word": "Bug (error)",
           "definition": "parte de un programa que no funciona correctamente."
         },
         "debugging/courseb/2021": {
@@ -457,20 +457,20 @@
           "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
         "click/courseb/2021": {
-          "word": "Haga clic en",
-          "definition": "presionar el botón del ratón."
+          "word": "Clic",
+          "definition": "Presionar el botón del mouse"
         },
         "drag/courseb/2021": {
           "word": "Arrastrar",
-          "definition": "hacer clic en el botón del ratón y mantenerlo presionado mientras se mueve el puntero a una nueva ubicación."
+          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
         },
         "drop/courseb/2021": {
           "word": "Caída",
-          "definition": "dejar de presionar el botón del ratón para \"soltar\" un elemento que estás arrastrando."
+          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
         },
         "double_click/courseb/2021": {
           "word": "Doble clic",
-          "definition": "presionar el botón del ratón muy rápidamente."
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
         },
         "program/courseb/2021": {
           "word": "Programa",
@@ -478,11 +478,11 @@
         },
         "programming/courseb/2021": {
           "word": "Programación",
-          "definition": "el arte de crear un programa."
+          "definition": "El arte de crear un programa"
         },
         "persistence/courseb/2021": {
           "word": "Perseverancia",
-          "definition": "intentar algo una y otra vez, incluso si es muy difícil."
+          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
         },
         "loop/courseb/2021": {
           "word": "Bucle",
@@ -498,7 +498,7 @@
         },
         "algorithm/coursea/2021": {
           "word": "Algoritmo",
-          "definition": "una lista de tareas para finalizar una tarea. "
+          "definition": "una lista de pasos para terminar una tarea. "
         },
         "debugging/coursea/2021": {
           "word": "Depuración",
@@ -509,28 +509,28 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "click/coursea/2021": {
-          "word": "Haga clic en",
-          "definition": "presionar el botón del ratón."
+          "word": "Clic",
+          "definition": "Presionar el botón del mouse"
         },
         "drag/coursea/2021": {
           "word": "Arrastrar",
-          "definition": "hacer clic en el botón del ratón y mantenerlo presionado mientras se mueve el puntero a una nueva ubicación."
+          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
         },
         "drop/coursea/2021": {
           "word": "Caída",
-          "definition": "dejar de presionar el botón del ratón para \"soltar\" un elemento que estás arrastrando."
+          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
         },
         "double_click/coursea/2021": {
           "word": "Doble clic",
-          "definition": "presionar el botón del ratón muy rápidamente."
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
         },
         "bug/coursea/2021": {
-          "word": "Bug o error",
+          "word": "Bug (error)",
           "definition": "parte de un programa que no funciona correctamente."
         },
         "programming/coursea/2021": {
           "word": "Programación",
-          "definition": "el arte de crear un programa."
+          "definition": "El arte de crear un programa"
         },
         "loop/coursea/2021": {
           "word": "Bucle",
@@ -546,10 +546,10 @@
         },
         "algorithm/coursec/2021": {
           "word": "Algoritmo",
-          "definition": "una lista de tareas para finalizar una tarea. "
+          "definition": "una lista de pasos para terminar una tarea. "
         },
         "bug/coursec/2021": {
-          "word": "Bug o error",
+          "word": "Bug (error)",
           "definition": "parte de un programa que no funciona correctamente."
         },
         "debugging/coursec/2021": {
@@ -566,7 +566,7 @@
         },
         "programming/coursec/2021": {
           "word": "Programación",
-          "definition": "el arte de crear un programa."
+          "definition": "El arte de crear un programa"
         },
         "loop/coursec/2021": {
           "word": "Bucle",
@@ -586,14 +586,14 @@
         },
         "algorithm/coursed/2021": {
           "word": "Algoritmo",
-          "definition": "una lista de tareas para finalizar una tarea. "
+          "definition": "una lista de pasos para terminar una tarea. "
         },
         "program/coursed/2021": {
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "bug/coursed/2021": {
-          "word": "Bug o error",
+          "word": "Bug (error)",
           "definition": "parte de un programa que no funciona correctamente."
         },
         "debugging/coursed/2021": {
@@ -606,7 +606,7 @@
         },
         "programming/coursed/2021": {
           "word": "Programación",
-          "definition": "el arte de crear un programa."
+          "definition": "El arte de crear un programa"
         },
         "frustrated/coursed/2021": {
           "word": "Frustrado",
@@ -614,7 +614,7 @@
         },
         "persistence/coursed/2021": {
           "word": "Perseverancia",
-          "definition": "intentar algo una y otra vez, incluso si es muy difícil."
+          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
         },
         "event/coursed/2021": {
           "word": "Evento",
@@ -653,10 +653,10 @@
         },
         "algorithm/express/2021": {
           "word": "Algoritmo",
-          "definition": "una lista de tareas para finalizar una tarea. "
+          "definition": "una lista de pasos para terminar una tarea. "
         },
         "bug/express/2021": {
-          "word": "Bug o error",
+          "word": "Bug (error)",
           "definition": "parte de un programa que no funciona correctamente."
         },
         "debugging/express/2021": {
@@ -673,7 +673,7 @@
         },
         "programming/express/2021": {
           "word": "Programación",
-          "definition": "el arte de crear un programa."
+          "definition": "El arte de crear un programa"
         },
         "behavior/express/2021": {
           "word": "Comportamiento",
@@ -751,27 +751,27 @@
           "definition": "intentar hacer algo."
         },
         "click/pre-express/2021": {
-          "word": "Haga clic en",
-          "definition": "presionar el botón del ratón."
+          "word": "Clic",
+          "definition": "Presionar el botón del mouse"
         },
         "drag/pre-express/2021": {
           "word": "Arrastrar",
-          "definition": "hacer clic en el botón del ratón y mantenerlo presionado mientras se mueve el puntero a una nueva ubicación."
+          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
         },
         "drop/pre-express/2021": {
           "word": "Caída",
-          "definition": "dejar de presionar el botón del ratón para \"soltar\" un elemento que estás arrastrando."
+          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
         },
         "double_click/pre-express/2021": {
           "word": "Doble clic",
-          "definition": "presionar el botón del ratón muy rápidamente."
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
         },
         "algorithm/pre-express/2021": {
           "word": "Algoritmo",
-          "definition": "una lista de tareas para finalizar una tarea. "
+          "definition": "una lista de pasos para terminar una tarea. "
         },
         "bug/pre-express/2021": {
-          "word": "Bug o error",
+          "word": "Bug (error)",
           "definition": "parte de un programa que no funciona correctamente."
         },
         "debugging/pre-express/2021": {
@@ -784,11 +784,11 @@
         },
         "programming/pre-express/2021": {
           "word": "Programación",
-          "definition": "el arte de crear un programa."
+          "definition": "El arte de crear un programa"
         },
         "persistence/pre-express/2021": {
           "word": "Perseverancia",
-          "definition": "intentar algo una y otra vez, incluso si es muy difícil."
+          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
         },
         "loop/pre-express/2021": {
           "word": "Bucle",

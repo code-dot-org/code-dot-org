@@ -14,7 +14,7 @@ title: Príručka - Ako na to pre dobrovoľníkov Hodiny kódu
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- "Bol som VEĽMI RÁD, keď deti prejavili nadšenie. Úžasnou vecou bolo, že učitelia si všimli, že niektorí zo študentov, ktorí nemali až tak dobré školské výsledky, boli vynikajúci v myslení z pohľadu developera a pomáhali ostatným učiť sa. To im dodalo istotu a dôveru."
+- „Bolo ÚŽASNÉ vidieť, aké boli deti nadšené. Úžasnou vecou bolo, že učitelia si všimli, že niektorí zo študentov, ktorí nemali až tak dobré školské výsledky, boli vynikajúci v myslení z pohľadu developera a pomáhali ostatným učiť sa. To im dodalo istotu a dôveru."
 
 ## Hocikto sa môže stať dobrovoľníkom
 ### Volunteers and speakers in tech:

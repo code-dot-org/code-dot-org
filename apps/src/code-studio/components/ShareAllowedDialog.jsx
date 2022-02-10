@@ -21,6 +21,7 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
+import DCDO from '@cdo/apps/dcdo';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -197,12 +198,19 @@ class ShareAllowedDialog extends React.Component {
     const tweetText = artistTwitterHandle
       ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
       : 'Check out what I made on @codeorg!';
+    const hashtags =
+      artistTwitterHandle === 'Coldplay' &&
+      !!DCDO.get('higher-power-promotion', false)
+        ? ['codeplay', 'HourOfCode']
+        : ['HourOfCode'];
+    const comma = '%2C';
     const twitterShareUrl =
       'https://twitter.com/intent/tweet?text=' +
       encodeURIComponent(tweetText) +
       '&url=' +
       encodeURIComponent(this.props.shareUrl) +
-      '&hashtags=HourOfCode&related=codeorg';
+      `&hashtags=${hashtags.join(comma)}` +
+      '&related=codeorg';
 
     const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;

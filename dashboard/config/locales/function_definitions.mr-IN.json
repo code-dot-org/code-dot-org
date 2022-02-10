@@ -1094,6 +1094,27 @@
           "move and get nectar with counter": {
             "name": "हालचाल करा आणि काऊंटर वापरून परागकण गोळा करा."
           }
+        },
+        "Geometric Sun": {
+          "sun": {
+            "name": "सूर्य"
+          },
+          "square": {
+            "name": "चौरस"
+          }
+        },
+        "Geometric Sun_2018": {
+          "sun": {
+            "name": "सूर्य"
+          },
+          "square": {
+            "name": "चौरस"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "माझे फंक्शन"
+          }
         }
       }
     }
