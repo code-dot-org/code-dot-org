@@ -17,8 +17,7 @@ import {
 import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
-import {getCurrentSection} from '@cdo/apps/util/userSectionClient';
-import {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -44,7 +43,7 @@ class ManageStudentsActionsCell extends Component {
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
     addStudent: PropTypes.func,
-    setSection: PropTypes.func
+    asyncLoadSectionData: PropTypes.func
   };
 
   state = {
@@ -53,7 +52,7 @@ class ManageStudentsActionsCell extends Component {
   };
 
   onConfirmDelete = () => {
-    const {removeStudent, id, sectionId, setSection} = this.props;
+    const {removeStudent, id, sectionId, asyncLoadSectionData} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
       url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
@@ -73,7 +72,7 @@ class ManageStudentsActionsCell extends Component {
           },
           {includeUserId: true}
         );
-        getCurrentSection(sectionId, section => setSection(section));
+        asyncLoadSectionData(sectionId);
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -320,8 +319,8 @@ export default connect(
     addStudent(id) {
       dispatch(addStudents([id]));
     },
-    setSection(section) {
-      dispatch(setSection(section));
+    asyncLoadSectionData(sectionId) {
+      dispatch(asyncLoadSectionData(sectionId));
     }
   })
 )(ManageStudentsActionsCell);
