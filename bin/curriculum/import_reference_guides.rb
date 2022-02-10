@@ -6,7 +6,6 @@ require 'optparse'
 require 'uri'
 require 'net/http'
 require_relative '../../deployment'
-require 'cdo/lesson_import_helper'
 
 raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
