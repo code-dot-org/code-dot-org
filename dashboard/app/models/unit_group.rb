@@ -359,6 +359,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def summarize(user = nil, for_edit: false)
+    puts edit_course_offering_path(course_version.course_offering.key)
     {
       name: name,
       id: id,
@@ -390,7 +391,7 @@ class UnitGroup < ApplicationRecord
       announcements: announcements,
       course_version_id: course_version&.id,
       course_path: link,
-      course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering) : nil
+      course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
     }
   end
 
