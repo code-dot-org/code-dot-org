@@ -730,12 +730,13 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SET_STUDENT_SECTION) {
-    const students = action.students.map(student =>
+    const students = action.students || [];
+    const selectedStudents = students.map(student =>
       studentFromServerStudent(student, action.sectionId)
     );
     return {
       ...state,
-      selectedStudents: students
+      selectedStudents
     };
   }
 
