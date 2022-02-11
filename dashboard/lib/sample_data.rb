@@ -231,9 +231,9 @@ class SampleData
   # For the given user id, looks up the storage id, or creates a new one if the user doesn't have one.
   def self.find_or_create_storage_id_for_user_id(user_id)
     environment_check!
-    row = user_storage_ids_table.where(user_id: user_id)
-    return row[:id] if row
-    user_storage_ids_table.insert(user_id: user_id)
+    storage_id = storage_id_for_user_id(user_id)
+    return storage_id if storage_id
+    create_storage_id_for_user(user_id)
   end
 
   # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
