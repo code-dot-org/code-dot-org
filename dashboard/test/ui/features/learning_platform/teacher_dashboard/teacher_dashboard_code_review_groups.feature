@@ -11,7 +11,7 @@ Background:
   And I join the section
   Given I sign in as "Dumbledore" and go home
 
-  Scenario: Create a code review group, add a student to it, and save it
+  Scenario: Create a code review group, add a student to it, save it, and unassign all from group
     Given I create a new code review group for the section I saved
     When I add the first student to the first code review group
     Then element ".uitest-code-review-group:first-of-type" has text "Hermione"
