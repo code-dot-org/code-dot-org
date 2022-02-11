@@ -40,9 +40,10 @@ class ReferenceGuide < ApplicationRecord
     }
   end
 
+  # writes reference guide to a seed file in the config directory
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    offering_and_version = "#{course_version.course_offering.key}_#{course_version.key}"
+    offering_and_version = "#{course_version.course_offering.key}-#{course_version.key}"
     file_path = Rails.root.join("config/reference_guides/#{offering_and_version}/#{key}.json")
     object_to_serialize = serialize
     dirname = File.dirname(file_path)
@@ -52,6 +53,7 @@ class ReferenceGuide < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
+  # runs through all seed files, creating and deleting records to match the seed files
   def self.seed_all
     # collect all existing ids
     removed_records = all.pluck(:id)
@@ -64,6 +66,7 @@ class ReferenceGuide < ApplicationRecord
     where(id: removed_records).destroy_all
   end
 
+  # parses a seed file and generates a hash with the course version mapped
   def self.properties_from_file(content)
     config = JSON.parse(content)
     course_version_id = CourseOffering.find_by(key: config['course_offering_key'])&.
@@ -78,6 +81,7 @@ class ReferenceGuide < ApplicationRecord
     }
   end
 
+  # returns the local id of the reference guide that was created/updated
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     reference_guide = ReferenceGuide.find_or_initialize_by(
