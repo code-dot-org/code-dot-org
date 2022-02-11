@@ -2,6 +2,7 @@
   "key": "map",
   "name": "map",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "value"

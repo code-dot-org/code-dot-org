@@ -2,6 +2,7 @@
   "key": "codestudio_join",
   "name": "text_join",
   "category": "Text",
+  "category_key": "text",
   "block_name": "text_join",
   "syntax": "text_join"
 }

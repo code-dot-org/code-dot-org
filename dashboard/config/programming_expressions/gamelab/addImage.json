@@ -2,6 +2,7 @@
   "key": "addImage",
   "name": "addImage",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "label"
