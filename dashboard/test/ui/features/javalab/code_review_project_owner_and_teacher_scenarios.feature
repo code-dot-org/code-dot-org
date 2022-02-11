@@ -6,11 +6,6 @@
 @no_ie
 Feature: Code review (project owner/teacher scenarios)
 
-# For performance purposes,
-# we split code review scenarios into those that require
-# creating a second student in the section (code_review_peer_scenarios.feature)
-# and those that do not (code_review.feature)
-
 # At the end of the setup, we will have created
 # a CSA section with an associated code review group.
 # That code review group should have two students in it.
