@@ -53,7 +53,7 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "palette_category_at_start": "Circuit",
-    "encrypted_examples": "ufT3PJVTzno38cJLVqPImeOXirSQe71gfyDPrw83YBgR0PN+A2kUbZyqO39z\nk+Npwp56G2mXLJ9X1F8eWcKdsg==\n",
+    "encrypted_examples": "VobdRff7kv2h27XJOy3WPCMzf004VLHz/9fIoUVFOu7SaoKO2mOgIJ8Pq1vH\nyucb4QJS0/9QIl0q8Dy+rrvSkg==\n",
     "parent_level_id": 20510,
     "name_suffix": "_2021",
     "reference_links": [
@@ -73,7 +73,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T18:08:23.338+00:00\",\"changed\":[\"cloned from \\\"CSD U6 colorLED on_2021\\\"\"],\"cloned_from\":\"CSD U6 colorLED on_2021\"},{\"changed_at\":\"2021-08-31 18:08:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:33:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:34:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T18:08:23.338+00:00\",\"changed\":[\"cloned from \\\"CSD U6 colorLED on_2021\\\"\"],\"cloned_from\":\"CSD U6 colorLED on_2021\"},{\"changed_at\":\"2021-08-31 18:08:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:33:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:34:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 19:56:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -2,6 +2,7 @@
   "key": "withPercentChance",
   "name": "withPercentChance",
   "category": "Control",
+  "category_key": "control",
   "block_name": "gamelab_withPercentChance",
   "syntax": "withPercentChance"
 }
