@@ -106,24 +106,25 @@ def main(options)
 
     # find a unique key based on the end of the slug
     # if there are duplicates, append _N where N is a number that makes it unique
-    key = guide['slug'].rpartition('/').last
+    key_base = guide['slug'].rpartition('/').last
+    unique_key = key_base
     iteration = 2
-    while guide_key_set.include?(key)
-      key = "#{key.chomp("_#{iteration - 1}")}_#{iteration}"
+    while guide_key_set.include?(unique_key)
+      unique_key = "#{key_base}-#{iteration}"
       iteration += 1
     end
 
     # don't reuse that key
-    guide_key_set.add(key)
+    guide_key_set.add(unique_key)
 
     # store the children with their parent key
-    guide_stack.concat(guide['children'].map {|child| [child, key]})
+    guide_stack.concat(guide['children'].map {|child| [child, unique_key]})
 
     next if options.dry_run
 
     reference_guide = ReferenceGuide.find_or_initialize_by(
       {
-        key: key,
+        key: unique_key,
         course_version_id: course_version.id
       }
     )
