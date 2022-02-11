@@ -87,6 +87,12 @@ const TeacherApplication = props => {
     <FormController
       {...props}
       pageComponents={pageComponents}
+      autoComputedFields={[
+        'cs_total_course_hours',
+        'regionalPartnerGroup',
+        'regionalPartnerId',
+        'regionalPartnerWorkshopIds'
+      ]}
       getPageProps={getPageProps}
       getInitialData={getInitialData}
       onSetPage={onSetPage}
