@@ -23,19 +23,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'merge_from_csv in dry run mode with blank table makes no database writes' do
-    # Clear tables with hard dependencies (ie, MySQL foreign keys)
-    # on the schools table.
-    Census::ApSchoolCode.delete_all
-    Census::IbSchoolCode.delete_all
-    Census::CensusOverride.delete_all
-    Census::CensusSummary.delete_all
-    Census::OtherCurriculumOffering.delete_all
-    Census::StateCsOffering.delete_all
-    SchoolInfo.delete_all
-    SchoolStatsByYear.delete_all
-    CircuitPlaygroundDiscountApplication.delete_all
-
-    School.delete_all
+    clear_schools_and_dependent_models
 
     # Populate school districts, since schools depends on them as a foreign key.
     SchoolDistrict.seed_all(stub_school_data: true, force: true)
