@@ -119,6 +119,7 @@ describe('TeacherHomepage', () => {
   it('renders two RecentCourses component', () => {
     const wrapper = setUp();
     const recentCourses = wrapper.find('RecentCourses');
+    assert.equal(recentCourses.length, 2);
     assert.deepEqual(recentCourses.at(0).props(), {
       showAllCoursesLink: true,
       isTeacher: true,
@@ -133,6 +134,61 @@ describe('TeacherHomepage', () => {
       isProfessionalLearningCourse: true,
       courses: plCourses,
       topCourse: topPlCourse
+    });
+  });
+
+  it('does not render PL recentCourse if no topPlCourse or plCourses', () => {
+    const wrapper = setUp({plCourses: [], topPlCourse: null});
+    const recentCourses = wrapper.find('RecentCourses');
+    assert.equal(recentCourses.length, 1);
+    assert.deepEqual(recentCourses.at(0).props(), {
+      showAllCoursesLink: true,
+      isTeacher: true,
+      hasFeedback: false,
+      courses: courses,
+      topCourse: topCourse
+    });
+  });
+
+  it('renders PL recentCourse if topPlCourse but no plCourses', () => {
+    const wrapper = setUp({plCourses: [], topPlCourse: topPlCourse});
+    const recentCourses = wrapper.find('RecentCourses');
+    assert.equal(recentCourses.length, 2);
+    assert.deepEqual(recentCourses.at(0).props(), {
+      showAllCoursesLink: true,
+      isTeacher: true,
+      hasFeedback: false,
+      courses: courses,
+      topCourse: topCourse
+    });
+    assert.deepEqual(recentCourses.at(1).props(), {
+      showAllCoursesLink: true,
+      isTeacher: false,
+      hasFeedback: false,
+      isProfessionalLearningCourse: true,
+      courses: [],
+      topCourse: topPlCourse
+    });
+  });
+
+  it('renders PL recentCourse if plCourses but no topPlCourse', () => {
+    const wrapper = setUp({plCourses: plCourses, topPlCourse: null});
+    const recentCourses = wrapper.find('RecentCourses');
+    assert.equal(recentCourses.length, 2);
+    assert.deepEqual(recentCourses.at(0).props(), {
+      showAllCoursesLink: true,
+      isTeacher: true,
+      hasFeedback: false,
+      courses: courses,
+      topCourse: topCourse
+    });
+    assert.deepEqual(recentCourses.at(1).props(), {
+      showAllCoursesLink: true,
+      isTeacher: false,
+      hasFeedback: false,
+      isProfessionalLearningCourse: true,
+      courses: plCourses,
+      topCourse: null
     });
   });
 
