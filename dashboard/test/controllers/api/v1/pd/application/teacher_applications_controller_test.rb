@@ -153,6 +153,17 @@ module Api::V1::Pd::Application
       assert_response :ok
     end
 
+    test 'RP can update application status without modifying form data' do
+      original_data = @application.form_data_hash
+      sign_in @program_manager
+
+      put :update, params: {id: @application.id, status: 'incomplete'}
+      @application.reload
+      assert_equal original_data, @application.form_data_hash
+      assert_equal 'incomplete', @application.status
+      assert_response :ok
+    end
+
     test 'updating an application with an error renders bad_request' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
